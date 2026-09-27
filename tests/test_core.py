@@ -27,7 +27,7 @@ from ai_kids_video_agent.series import (
     CHARACTERS,
     PILOT_DIALOGUE,
     SERIES_TITLE,
-    _draw_beat_frame,
+    _compose_captions,
     _join_audio,
     series_bible,
 )
@@ -74,15 +74,19 @@ def test_borough_file_pilot_is_an_open_ended_two_voice_serial():
     assert [character.age for character in CHARACTERS] == [17, 16]
     assert {beat.speaker for beat in PILOT_DIALOGUE} == {"Maya", "Noah"}
     assert bible["episode_one"]["ending"] == "Cliffhanger; the story is not resolved."
-    assert "wet" in PILOT_DIALOGUE[-2].line
+    assert "platform" in PILOT_DIALOGUE[-2].line
+    assert "coat" in PILOT_DIALOGUE[-1].line
 
 
-def test_borough_file_draws_portrait_dialogue_scene(tmp_path):
+def test_borough_file_upscales_and_subtitles_rendered_frames(tmp_path):
     from PIL import Image
 
-    frame = tmp_path / "frame.png"
-    _draw_beat_frame(PILOT_DIALOGUE[0], 0, 0, frame)
-    with Image.open(frame) as image:
+    raw_frames = tmp_path / "raw"
+    raw_frames.mkdir()
+    Image.new("RGB", (540, 960), (30, 40, 60)).save(raw_frames / "frame_00000.png")
+    output = tmp_path / "captioned"
+    _compose_captions(raw_frames, output, [0])
+    with Image.open(output / "frame_00000.png") as image:
         assert image.size == (720, 1280)
 
 

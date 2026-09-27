@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import shutil
 import subprocess
 import sys
@@ -14,6 +15,8 @@ from textwrap import wrap
 
 WIDTH = 720
 HEIGHT = 1280
+RENDER_WIDTH = 540
+RENDER_HEIGHT = 960
 INPUT_FPS = 4
 OUTPUT_FPS = 24
 AUDIO_SAMPLE_RATE = 24000
@@ -28,9 +31,10 @@ class Character:
     voice: str
     voice_rate: int
     pitch: float
-    jacket: tuple[int, int, int]
-    hair: tuple[int, int, int]
-    skin: tuple[int, int, int]
+    gender: str
+    seed: int
+    hair_filter: str
+    upper_clothing: str
 
 
 @dataclass(frozen=True)
@@ -48,9 +52,10 @@ CHARACTERS = (
         "Microsoft Zira Desktop",
         1,
         1.08,
-        (205, 114, 58),
-        (48, 34, 30),
-        (229, 181, 145),
+        "female",
+        1821,
+        "bob",
+        "joepal_crude_t-shirt_female",
     ),
     Character(
         "Noah",
@@ -59,40 +64,48 @@ CHARACTERS = (
         "Microsoft David Desktop",
         0,
         0.96,
-        (53, 91, 139),
-        (40, 32, 27),
-        (169, 120, 91),
+        "male",
+        4927,
+        "short",
+        "elvs_crude_t-shirt_male",
     ),
 )
 
 PILOT_DIALOGUE = (
-    Dialogue("Maya", "The bodega was locked before sunrise. Mom says it is just paperwork.", "ASTORIA, QUEENS"),
-    Dialogue("Noah", "Then why was this envelope taped under the counter?", "A CLOSED CORNER STORE"),
-    Dialogue("Maya", "That is my mother in this photo. But it was taken in 2009.", "THE ENVELOPE"),
-    Dialogue("Noah", "My aunt is there too. She left Queens that summer, and nobody says why.", "A NAME FROM THE PAST"),
-    Dialogue("Maya", "The note says, tomorrow, the old ferry landing. That is all.", "A MESSAGE"),
-    Dialogue("Noah", "Maya, look. Someone wrote your name here. The ink is still wet.", "SOMEONE WAS HERE"),
-    Dialogue("Maya", "Then we go together. But if they know we are looking, we need to know who they are.", "TO BE CONTINUED"),
+    Dialogue("Maya", "This bodega's been shut for months. Then who turned the lights on?", "ASTORIA, QUEENS"),
+    Dialogue("Noah", "Nobody. The power's cut. But that envelope is fresh.", "THE CLOSED BODEGA"),
+    Dialogue("Maya", "There's a photo. That's my mom. She said she'd never met your aunt.", "A PHOTO FROM 2009"),
+    Dialogue("Noah", "The date is May fourteenth, 2009. The night they both left Queens.", "A SHARED PAST"),
+    Dialogue("Maya", "The note says, 'Meet where the train stops singing.'", "A MESSAGE"),
+    Dialogue("Noah", "The old platform under the elevated tracks. It closed before we were born.", "THE OLD PLATFORM"),
+    Dialogue("Maya", "Noah, that figure on the platform—it's wearing my mom's coat.", "TO BE CONTINUED"),
 )
 
 
 def series_bible() -> dict:
     return {
         "title": SERIES_TITLE,
-        "format": "Open-ended, continuous animated mystery set in present-day Queens, New York.",
+        "format": "Open-ended, continuous realistic 3D mystery serial set in present-day Queens, New York.",
         "story_engine": (
             "Maya and Noah follow ordinary clues through their borough and uncover how their "
             "families' pasts connect. Every episode answers one small question and opens a new one."
         ),
         "characters": [asdict(character) for character in CHARACTERS],
-        "visual_style": "Original illustrated 2D animation with New York street details and readable dialogue.",
+        "visual_style": (
+            "Rigged 3D human characters, close cinematic camera shots, a modeled Astoria bodega set, "
+            "PBR materials, facial expressions and dialogue mouth movement."
+        ),
         "voice_note": (
-            "Uses the closest installed Windows voices (Zira for Maya, David for Noah), with a "
-            "slight pitch adjustment. These are adult system voices, not recordings of teenagers."
+            "Uses installed Microsoft Zira and David desktop voices with slight pitch adjustments. "
+            "They are adult system voices, not actual teen voice actors."
+        ),
+        "asset_note": (
+            "Character generator: MPFB (GPL-3.0-or-later). MakeHuman Community base and selected "
+            "hair/clothing/material assets are CC0. No paid assets are used."
         ),
         "episode_one": {
             "title": "The Envelope",
-            "setting": "Astoria, Queens, present day",
+            "setting": "A shuttered bodega in Astoria, Queens, before sunrise",
             "dialogue": [asdict(beat) for beat in PILOT_DIALOGUE],
             "ending": "Cliffhanger; the story is not resolved.",
         },
@@ -102,131 +115,19 @@ def series_bible() -> dict:
 def _font(bold: bool, size: int):
     from PIL import ImageFont
 
-    names = (
-        (r"C:\Windows\Fonts\arialbd.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
-        if bold
-        else (r"C:\Windows\Fonts\arial.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
-    )
-    for name in names:
-        if Path(name).is_file():
-            return ImageFont.truetype(name, size)
+    path = r"C:\Windows\Fonts\arialbd.ttf" if bold else r"C:\Windows\Fonts\arial.ttf"
+    fallback = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    chosen = path if Path(path).is_file() else fallback
+    if Path(chosen).is_file():
+        return ImageFont.truetype(chosen, size)
     return ImageFont.load_default()
-
-
-def _draw_city_background(draw, scene_index: int, place: str) -> None:
-    sky_top = (14, 27, 54)
-    sky_bottom = (72, 93, 119)
-    for y in range(HEIGHT):
-        amount = y / HEIGHT
-        color = tuple(round(a * (1 - amount) + b * amount) for a, b in zip(sky_top, sky_bottom))
-        draw.line((0, y, WIDTH, y), fill=color)
-
-    draw.ellipse((515, 100, 580, 165), fill=(241, 214, 167))
-    building_colors = ((44, 55, 76), (60, 66, 80), (72, 69, 78), (48, 61, 78))
-    for index, x in enumerate(range(-35, WIDTH + 40, 88)):
-        height = 245 + (index * 79 % 190)
-        top = 720 - height
-        draw.rectangle((x, top, x + 92, 745), fill=building_colors[index % len(building_colors)])
-        for wx in range(x + 12, x + 82, 24):
-            for wy in range(top + 20, 700, 38):
-                if ((wx + wy + scene_index * 11) // 7) % 3:
-                    draw.rectangle((wx, wy, wx + 10, wy + 17), fill=(224, 184, 112))
-
-    if scene_index == 0:
-        draw.rectangle((0, 565, WIDTH, 617), fill=(27, 35, 49))
-        draw.rectangle((0, 616, WIDTH, 636), fill=(132, 143, 150))
-        for x in range(-40, WIDTH, 105):
-            draw.line((x, 565, x + 58, 616), fill=(149, 159, 164), width=8)
-        draw.rectangle((47, 425, 190, 490), fill=(20, 111, 106))
-        draw.text((63, 441), "ASTORIA", font=_font(True, 25), fill=(255, 249, 225))
-        draw.rectangle((0, 744, WIDTH, HEIGHT), fill=(45, 48, 57))
-        draw.line((0, 1095, WIDTH, 1065), fill=(241, 194, 91), width=7)
-        draw.polygon(((0, 1130), (720, 1060), (720, 1280), (0, 1280)), fill=(35, 42, 52))
-    elif scene_index in (1, 2, 3):
-        draw.rectangle((55, 320, 665, 780), fill=(43, 39, 43), outline=(199, 158, 91), width=8)
-        draw.rectangle((78, 344, 642, 760), fill=(29, 41, 49))
-        draw.rectangle((88, 366, 632, 411), fill=(151, 87, 54))
-        draw.text((111, 374), "CORNER DELI", font=_font(True, 24), fill=(255, 238, 196))
-        for x in range(105, 626, 76):
-            draw.rectangle((x, 440, x + 54, 575), fill=(77, 96, 85), outline=(223, 187, 123), width=3)
-        draw.rectangle((0, 746, WIDTH, HEIGHT), fill=(43, 46, 53))
-        draw.line((0, 1080, WIDTH, 1080), fill=(217, 177, 105), width=5)
-        draw.rounded_rectangle((270, 700, 451, 780), radius=9, fill=(99, 67, 46), outline=(197, 151, 96), width=4)
-        if scene_index == 2:
-            draw.rounded_rectangle((277, 664, 445, 699), radius=5, fill=(224, 204, 159), outline=(78, 56, 39), width=3)
-            draw.rectangle((291, 672, 430, 691), fill=(220, 231, 216), outline=(52, 67, 62), width=2)
-    else:
-        draw.rectangle((0, 746, WIDTH, HEIGHT), fill=(40, 50, 62))
-        draw.line((80, 810, 645, 780), fill=(205, 212, 213), width=5)
-        draw.line((80, 835, 645, 805), fill=(205, 212, 213), width=5)
-        for x in range(150, 650, 130):
-            draw.line((x, 800, x - 42, 1000), fill=(221, 224, 221), width=4)
-        draw.rectangle((495, 460, 630, 710), fill=(34, 47, 63), outline=(186, 168, 137), width=5)
-        draw.text((506, 510), "FERRY", font=_font(True, 22), fill=(245, 226, 186))
-        draw.text((506, 540), "PIER", font=_font(True, 22), fill=(245, 226, 186))
-
-    draw.rounded_rectangle((38, 54, 682, 112), radius=20, fill=(9, 17, 34, 220))
-    draw.text((60, 69), f"THE BOROUGH FILE   /   {place}", font=_font(True, 20), fill=(235, 226, 201))
-
-
-def _draw_character(draw, character: Character, center_x: int, speaking: bool, highlighted: bool) -> None:
-    cx = center_x
-    head_y = 838
-    body_top = 930
-    draw.ellipse((cx - 87, body_top - 15, cx + 87, 1330), fill=(15, 23, 36))
-    draw.rounded_rectangle(
-        (cx - 80, body_top, cx + 80, 1270),
-        radius=38,
-        fill=character.jacket,
-        outline=(245, 223, 184) if highlighted else (26, 33, 45),
-        width=5 if highlighted else 2,
-    )
-    draw.polygon(((cx - 25, body_top + 2), (cx + 25, body_top + 2), (cx, body_top + 62)), fill=(220, 208, 188))
-    draw.ellipse((cx - 59, head_y - 82, cx + 59, head_y + 62), fill=character.skin, outline=(31, 31, 36), width=3)
-    draw.pieslice((cx - 64, head_y - 92, cx + 64, head_y + 21), 180, 360, fill=character.hair)
-    draw.rectangle((cx - 61, head_y - 22, cx - 41, head_y + 1), fill=character.hair)
-    draw.rectangle((cx + 41, head_y - 40, cx + 61, head_y - 7), fill=character.hair)
-    draw.ellipse((cx - 28, head_y - 12, cx - 18, head_y - 2), fill=(31, 37, 41))
-    draw.ellipse((cx + 18, head_y - 12, cx + 28, head_y - 2), fill=(31, 37, 41))
-    if speaking:
-        draw.ellipse((cx - 13, head_y + 20, cx + 13, head_y + 39), fill=(83, 37, 39))
-        draw.arc((cx - 12, head_y + 21, cx + 12, head_y + 35), 5, 175, fill=(242, 178, 158), width=3)
-    else:
-        draw.arc((cx - 14, head_y + 14, cx + 14, head_y + 34), 10, 170, fill=(92, 47, 42), width=3)
-    draw.text((cx, 1222), character.name.upper(), font=_font(True, 22), fill=(255, 245, 224), anchor="mm")
-
-
-def _draw_beat_frame(beat: Dialogue, beat_index: int, frame_index: int, frame_path: Path) -> None:
-    from PIL import Image, ImageDraw
-
-    image = Image.new("RGB", (WIDTH, HEIGHT))
-    draw = ImageDraw.Draw(image, "RGBA")
-    _draw_city_background(draw, beat_index, beat.place)
-    speaker = next(character for character in CHARACTERS if character.name == beat.speaker)
-    other = next(character for character in CHARACTERS if character.name != beat.speaker)
-    _draw_character(draw, other, 226, False, False)
-    _draw_character(draw, speaker, 500, frame_index % 2 == 0, True)
-
-    box = (60, 155, 660, 380)
-    draw.rounded_rectangle(box, radius=28, fill=(248, 246, 236, 248), outline=(26, 39, 54), width=5)
-    draw.polygon(((485, 375), (535, 375), (515, 414)), fill=(248, 246, 236, 248))
-    lines = wrap(beat.line, width=32)
-    font = _font(True, 31)
-    total_height = len(lines) * 43
-    y = (box[1] + box[3] - total_height) // 2
-    for line in lines:
-        draw.text((box[0] + 31, y), line, font=font, fill=(23, 34, 47))
-        y += 43
-    draw.rounded_rectangle((72, 394, 297, 438), radius=14, fill=speaker.jacket)
-    draw.text((184, 416), speaker.name.upper(), font=_font(True, 21), fill=(255, 255, 255), anchor="mm")
-    frame_path.parent.mkdir(parents=True, exist_ok=True)
-    image.save(frame_path, optimize=True)
 
 
 def _synthesize_line(dialogue: Dialogue, output_path: Path, character: Character, ffmpeg: str) -> float:
     powershell = shutil.which("powershell.exe") or shutil.which("powershell")
     if not powershell:
         raise RuntimeError("Windows PowerShell is required for the local character voices.")
+
     raw_path = output_path.with_name(f"{output_path.stem}_raw.wav")
     payload = json.dumps(
         {
@@ -297,6 +198,8 @@ def _join_audio(
     durations: list[float],
     frame_counts: list[int],
 ) -> None:
+    if not paths or len(paths) != len(durations) or len(paths) != len(frame_counts):
+        raise ValueError("Audio paths, line durations, and frame counts must have the same non-zero length.")
     with wave.open(str(paths[0]), "rb") as first:
         parameters = first.getparams()
     if parameters.framerate != AUDIO_SAMPLE_RATE or parameters.nchannels != 1 or parameters.sampwidth != 2:
@@ -313,24 +216,53 @@ def _join_audio(
             output.writeframes(b"\0" * silence_frames * parameters.sampwidth)
 
 
+def _compose_captions(raw_frames: Path, final_frames: Path, frame_map: list[int]) -> None:
+    from PIL import Image, ImageDraw
+
+    final_frames.mkdir(parents=True, exist_ok=True)
+    label_font = _font(True, 28)
+    caption_font = _font(False, 34)
+    character_colors = {"Maya": (211, 125, 75), "Noah": (63, 116, 174)}
+
+    for frame_index, dialogue_index in enumerate(frame_map):
+        source = raw_frames / f"frame_{frame_index:05d}.png"
+        if not source.is_file():
+            raise FileNotFoundError(f"Blender did not render expected frame {source}")
+        with Image.open(source) as image:
+            frame = image.convert("RGB").resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
+        overlay = Image.new("RGBA", frame.size, (0, 0, 0, 0))
+        draw = ImageDraw.Draw(overlay)
+        dialogue = PILOT_DIALOGUE[dialogue_index]
+        speaker = dialogue.speaker
+        color = character_colors[speaker]
+
+        if frame_index < INPUT_FPS * 3:
+            draw.rounded_rectangle((36, 38, 684, 89), radius=17, fill=(9, 15, 28, 192))
+            draw.text((56, 49), "THE BOROUGH FILE  /  EPISODE 01", font=label_font, fill=(241, 225, 195, 255))
+
+        draw.rounded_rectangle((35, 1018, 685, 1220), radius=25, fill=(7, 12, 20, 204))
+        draw.rounded_rectangle((57, 1040, 185, 1082), radius=13, fill=(*color, 255))
+        draw.text((121, 1060), speaker.upper(), font=label_font, fill=(255, 255, 255, 255), anchor="mm")
+        lines = wrap(dialogue.line, width=45)
+        if len(lines) > 3:
+            lines = wrap(dialogue.line, width=55)
+        y = 1094
+        for line in lines[:3]:
+            draw.text((59, y), line, font=caption_font, fill=(255, 255, 255, 255), stroke_width=1, stroke_fill=(0, 0, 0, 180))
+            y += 42
+        frame = Image.alpha_composite(frame.convert("RGBA"), overlay).convert("RGB")
+        frame.save(final_frames / f"frame_{frame_index:05d}.png", optimize=True)
+
+
 def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "series_bible.json").write_text(
         json.dumps(series_bible(), indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    (output_dir / "episode_01_script.json").write_text(
-        json.dumps(
-            {"series": SERIES_TITLE, "episode": 1, "title": "The Envelope", "dialogue": [asdict(line) for line in PILOT_DIALOGUE]},
-            indent=2,
-            ensure_ascii=False,
-        )
-        + "\n",
-        encoding="utf-8",
-    )
-
     audio_dir = output_dir / "audio"
     audio_dir.mkdir(exist_ok=True)
+
     audio_paths: list[Path] = []
     durations: list[float] = []
     for index, dialogue in enumerate(PILOT_DIALOGUE):
@@ -341,16 +273,74 @@ def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
         audio_paths.append(path)
 
     frame_counts = [max(4, math.ceil((duration + 0.38) * INPUT_FPS)) for duration in durations]
+    frame_map = [
+        dialogue_index
+        for dialogue_index, frame_count in enumerate(frame_counts)
+        for _ in range(frame_count)
+    ]
     narration_path = output_dir / "episode_01_dialogue.wav"
     _join_audio(audio_paths, narration_path, durations, frame_counts)
-    frames_dir = output_dir / "frames"
-    frame_index = 0
-    for beat_index, (dialogue, frame_count) in enumerate(zip(PILOT_DIALOGUE, frame_counts, strict=True)):
-        for local_frame in range(frame_count):
-            frame_path = frames_dir / f"frame_{frame_index:05d}.png"
-            _draw_beat_frame(dialogue, beat_index, local_frame, frame_path)
-            frame_index += 1
 
+    dialogue_payload = [
+        {
+            **asdict(dialogue),
+            "duration_seconds": duration,
+            "frame_count": frame_count,
+        }
+        for dialogue, duration, frame_count in zip(PILOT_DIALOGUE, durations, frame_counts, strict=True)
+    ]
+    dialogue_json = output_dir / "episode_01_dialogue.json"
+    dialogue_json.write_text(
+        json.dumps(
+            {
+                "series": SERIES_TITLE,
+                "episode": 1,
+                "title": "The Envelope",
+                "fps": INPUT_FPS,
+                "render_size": [RENDER_WIDTH, RENDER_HEIGHT],
+                "characters": [asdict(character) for character in CHARACTERS],
+                "dialogue": dialogue_payload,
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    blender = os.environ.get("BLENDER_PATH") or shutil.which("blender")
+    if not blender:
+        candidate = Path(r"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe")
+        if candidate.is_file():
+            blender = str(candidate)
+    if not blender or not Path(blender).is_file():
+        raise FileNotFoundError("Blender 5.2 or newer is required. Install Blender or set BLENDER_PATH.")
+
+    repository_root = Path(__file__).resolve().parents[2]
+    blender_script = repository_root / "tools" / "render_borough_scene.py"
+    raw_frames = output_dir / "frames_raw"
+    raw_frames.mkdir(exist_ok=True)
+    blender_command = [
+        blender,
+        "--background",
+        "--python",
+        str(blender_script),
+        "--",
+        "--dialogue-json",
+        str(dialogue_json.resolve()),
+        "--frames-dir",
+        str(raw_frames.resolve()),
+        "--render-width",
+        str(RENDER_WIDTH),
+        "--render-height",
+        str(RENDER_HEIGHT),
+    ]
+    print("[3/5] Building rigged 3D characters and the Astoria bodega set in Blender...", flush=True)
+    subprocess.run(blender_command, check=True)
+
+    final_frames = output_dir / "frames"
+    print("[4/5] Upscaling frames and adding crisp English subtitles...", flush=True)
+    _compose_captions(raw_frames, final_frames, frame_map)
     video_path = output_dir / "the_borough_file_episode_01.mp4"
     command = [
         ffmpeg,
@@ -361,11 +351,11 @@ def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
         "-framerate",
         str(INPUT_FPS),
         "-i",
-        str(frames_dir / "frame_%05d.png"),
+        str(final_frames / "frame_%05d.png"),
         "-i",
         str(narration_path),
         "-vf",
-        "zoompan=z='min(zoom+0.00025,1.04)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=6:s=1080x1920:fps=24,format=yuv420p",
+        f"minterpolate=fps={OUTPUT_FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir,format=yuv420p",
         "-map",
         "0:v:0",
         "-map",
@@ -380,7 +370,7 @@ def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
         "-preset",
         "medium",
         "-crf",
-        "21",
+        "19",
         "-r",
         str(OUTPUT_FPS),
         "-c:a",
@@ -393,7 +383,7 @@ def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
         "+faststart",
         str(video_path),
     ]
-    print("[video] Assembling the illustrated New York episode...", flush=True)
+    print("[5/5] Interpolating motion and encoding the 720p vertical episode...", flush=True)
     subprocess.run(command, check=True)
     if not video_path.is_file() or video_path.stat().st_size == 0:
         raise RuntimeError("FFmpeg finished without creating the episode video.")
@@ -401,19 +391,17 @@ def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Create the first episode of The Borough File.")
+    parser = argparse.ArgumentParser(description="Render the first cinematic 3D episode of The Borough File.")
     parser.add_argument("--output-dir", type=Path, default=Path("output/borough-file"))
     args = parser.parse_args()
     if sys.platform != "win32":
-        raise RuntimeError("The local teen-character voices currently require Windows Speech.")
-    ffmpeg = shutil.which("ffmpeg")
-    if not ffmpeg:
-        try:
-            import imageio_ffmpeg
+        raise RuntimeError("The character voices and current render setup require Windows.")
+    try:
+        import imageio_ffmpeg
 
-            ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
-        except ImportError as exc:
-            raise RuntimeError('Install the render extra with: python -m pip install -e ".[render,automation]"') from exc
+        ffmpeg = shutil.which("ffmpeg") or imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError as exc:
+        raise RuntimeError('Install the render extra with: python -m pip install -e ".[render,automation]"') from exc
     video = render_pilot(args.output_dir, ffmpeg)
     print(f"Episode ready (not uploaded): {video.resolve()}", flush=True)
     return 0

@@ -31,14 +31,16 @@ python -m ai_kids_video_agent.ocean_cli preview
 
 ### Animated New York serial
 
-Create episode one of **The Borough File**, an original, open-ended illustrated mystery about Maya (17) and Noah (16) in Astoria, Queens. They speak in separate English voices over dialogue captions. The episode ends on a cliffhanger; the series story bible and script are saved alongside the video. On Windows, the workflow uses the installed Microsoft Zira and David voices with light pitch adjustments. Those are adult system voices, not actual teen voice actors. No upload occurs.
+Create episode one of **The Borough File**, an original, open-ended 3D mystery about Maya (17) and Noah (16) in Astoria, Queens. Blender generates rigged, textured characters and a modeled bodega; facial expressions, approximate mouth movement, head motion, and conversational close-ups are rendered as a 9:16 episode with English captions. The episode ends on a cliffhanger, and the scene, dialogue, audio, and series bible are saved alongside the MP4. No upload occurs.
 
 ```powershell
 python -m pip install -e ".[render,automation]"
 borough-file
 ```
 
-The MP4 and series files are written to `output/borough-file/`. Review the voices, dialogue, and visuals before publishing. The first episode is a pilot foundation; each future episode still needs an authored continuation.
+Install Blender 5.2 or newer and the MPFB extension from Blender's **Get Extensions** preferences. In MPFB, install its free asset packs `makehuman_system_assets`, `hair01`, `pants01`, `shirts01`, `system_eye_materials01`, and `faceunits01`; the renderer checks for these and names any missing packs. The selected MakeHuman Community assets are CC0; MPFB is GPL-3.0-or-later. Set `BLENDER_PATH` if Blender is not on `PATH`.
+
+The MP4 and series files are written to `output/borough-file/`, including `the_borough_file_episode_01.mp4` and the editable `episode_01_scene.blend`. Frames render in Blender at 540×960 and are upscaled to a 720×1280 video with crisp captions. Rendering can take several minutes on integrated graphics. The free character and desktop voice assets are a local prototype, not Netflix-level production: the character voices are adult Microsoft Zira and David voices with light pitch adjustments, lip movement is approximate, and the pilot uses restrained upper-body performance rather than full-body choreography. Review the voices, dialogue, and visuals before publishing. Each future episode still needs an authored continuation.
 
 ### Connect your own YouTube channel
 
