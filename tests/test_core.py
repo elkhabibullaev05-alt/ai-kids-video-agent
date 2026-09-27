@@ -27,8 +27,10 @@ from ai_kids_video_agent.series import (
     CHARACTERS,
     PILOT_DIALOGUE,
     SERIES_TITLE,
+    _font,
     _compose_captions,
     _join_audio,
+    _wrap_caption,
     series_bible,
 )
 from ai_kids_video_agent.speech import DEFAULT_VOICE, synthesize_speech
@@ -79,7 +81,14 @@ def test_borough_file_pilot_is_an_open_ended_two_voice_serial():
 
 
 def test_borough_file_upscales_and_subtitles_rendered_frames(tmp_path):
-    from PIL import Image
+    from PIL import Image, ImageDraw
+
+    caption_font = _font(False, 34)
+    draw = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+    for beat in PILOT_DIALOGUE:
+        lines = _wrap_caption(beat.line, caption_font, draw, max_width=590)
+        assert len(lines) <= 3
+        assert all(draw.textlength(line, font=caption_font) <= 590 for line in lines)
 
     raw_frames = tmp_path / "raw"
     raw_frames.mkdir()

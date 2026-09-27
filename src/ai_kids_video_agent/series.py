@@ -10,7 +10,6 @@ import sys
 import wave
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from textwrap import wrap
 
 
 WIDTH = 720
@@ -121,6 +120,21 @@ def _font(bold: bool, size: int):
     if Path(chosen).is_file():
         return ImageFont.truetype(chosen, size)
     return ImageFont.load_default()
+
+
+def _wrap_caption(text: str, font, draw, max_width: int) -> list[str]:
+    lines: list[str] = []
+    current = ""
+    for word in text.split():
+        candidate = f"{current} {word}".strip()
+        if current and draw.textlength(candidate, font=font) > max_width:
+            lines.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        lines.append(current)
+    return lines
 
 
 def _synthesize_line(dialogue: Dialogue, output_path: Path, character: Character, ffmpeg: str) -> float:
@@ -246,15 +260,13 @@ def _compose_captions(raw_frames: Path, final_frames: Path, frame_map: list[int]
         draw.rounded_rectangle((35, 1018, 685, 1220), radius=25, fill=(7, 12, 20, 204))
         draw.rounded_rectangle((57, 1040, 185, 1082), radius=13, fill=(*color, 255))
         draw.text((121, 1060), speaker.upper(), font=label_font, fill=(255, 255, 255, 255), anchor="mm")
-        lines = wrap(dialogue.line, width=45)
-        if len(lines) > 3:
-            lines = wrap(dialogue.line, width=55)
+        lines = _wrap_caption(dialogue.line, caption_font, draw, max_width=590)
         y = 1094
         for line in lines[:3]:
             draw.text((59, y), line, font=caption_font, fill=(255, 255, 255, 255), stroke_width=1, stroke_fill=(0, 0, 0, 180))
             y += 42
         frame = Image.alpha_composite(frame.convert("RGBA"), overlay).convert("RGB")
-        frame.save(final_frames / f"frame_{frame_index:05d}.png", optimize=True)
+        frame.save(final_frames / f"frame_{frame_index:05d}.png", compress_level=1)
 
 
 def render_pilot(output_dir: Path, ffmpeg: str) -> Path:
