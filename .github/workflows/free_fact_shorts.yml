@@ -1,0 +1,132 @@
+name: Free English Fact Shorts
+
+on:
+  schedule:
+    # Paired UTC times handle both US standard time and daylight time.
+    - cron: "0 12 * * *"
+    - cron: "0 13 * * *"
+    - cron: "0 17 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 21 * * *"
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Preview safely, or upload and schedule a Short"
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - publish
+      slot:
+        description: "Which Short to prepare and schedule"
+        required: true
+        type: choice
+        options:
+          - morning
+          - afternoon
+          - evening
+
+permissions:
+  contents: read
+
+concurrency:
+  group: free-fact-shorts-${{ github.event.schedule || github.event.inputs.slot || 'manual' }}
+  cancel-in-progress: false
+
+jobs:
+  create-and-schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      YOUTUBE_TOKEN_FILE: ${{ runner.temp }}/youtube-token.json
+      YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check whether this UTC trigger matches an Eastern preparation slot
+        id: slot-check
+        env:
+          REQUESTED_SLOT: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.slot || 'auto' }}
+          EVENT_SCHEDULE: ${{ github.event.schedule || '' }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime, time, timedelta, timezone
+          from zoneinfo import ZoneInfo
+
+          requested = os.environ["REQUESTED_SLOT"]
+          slot = requested if requested != "auto" else ""
+          now_utc = datetime.now(timezone.utc)
+          if not slot:
+              fields = os.environ["EVENT_SCHEDULE"].split()
+              if len(fields) == 5 and fields[0] == "0" and fields[2:] == ["*", "*", "*"]:
+                  try:
+                      utc_hour = int(fields[1])
+                  except ValueError:
+                      utc_hour = -1
+                  if 0 <= utc_hour <= 23:
+                      scheduled = datetime.combine(now_utc.date(), time(utc_hour), timezone.utc)
+                      if scheduled > now_utc:
+                          scheduled -= timedelta(days=1)
+                      local_time = scheduled.astimezone(ZoneInfo("America/New_York"))
+                      if now_utc - scheduled <= timedelta(minutes=90):
+                          slot = {8: "morning", 13: "afternoon", 17: "evening"}.get(local_time.hour, "")
+          output = os.environ["GITHUB_OUTPUT"]
+          with open(output, "a", encoding="utf-8") as result:
+              print(f"slot={slot}", file=result)
+              print(f"run={'true' if slot else 'false'}", file=result)
+          print(f"Selected slot: {slot or 'none'}")
+          PY
+
+      - name: Install free system tools
+        if: steps.slot-check.outputs.run == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg espeak-ng fonts-dejavu-core
+
+      - name: Install agent
+        if: steps.slot-check.outputs.run == 'true'
+        run: python -m pip install ".[automation,publish]"
+
+      - name: Prepare YouTube OAuth token
+        if: steps.slot-check.outputs.run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.mode == 'publish')
+        shell: bash
+        run: |
+          if [ -z "$YOUTUBE_TOKEN_JSON" ]; then
+            echo "::error::Add the YOUTUBE_TOKEN_JSON Actions secret before running this workflow."
+            exit 1
+          fi
+          printf '%s' "$YOUTUBE_TOKEN_JSON" > "$YOUTUBE_TOKEN_FILE"
+          chmod 600 "$YOUTUBE_TOKEN_FILE"
+
+      - name: Render preview or publish one scheduled Short
+        if: steps.slot-check.outputs.run == 'true'
+        env:
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule || '' }}
+          REQUESTED_SLOT: ${{ steps.slot-check.outputs.slot }}
+          PREVIEW_ONLY: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'preview' }}
+        run: |
+          if [ "$PREVIEW_ONLY" = "true" ]; then
+            python main.py --slot "$REQUESTED_SLOT" --output-dir output --preview-only
+          else
+            python main.py --slot "$REQUESTED_SLOT" --output-dir output
+          fi
+
+      - name: Keep generated video for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-fact-shorts-${{ github.run_id }}
+          path: output/*.mp4
+          if-no-files-found: ignore
+          retention-days: 3
