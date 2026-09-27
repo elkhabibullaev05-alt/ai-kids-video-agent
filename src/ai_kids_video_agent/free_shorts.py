@@ -176,11 +176,15 @@ def _find_font(bold: bool) -> str | None:
         (
             "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
             "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+            r"C:\Windows\Fonts\arialbd.ttf",
+            r"C:\Windows\Fonts\segoeuib.ttf",
         )
         if bold
         else (
             "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
             "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+            r"C:\Windows\Fonts\arial.ttf",
+            r"C:\Windows\Fonts\segoeui.ttf",
         )
     )
     return next((candidate for candidate in candidates if Path(candidate).is_file()), None)
