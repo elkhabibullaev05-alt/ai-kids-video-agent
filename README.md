@@ -29,6 +29,17 @@ The separate `ocean-shorts` agent creates original, silent 20-second 3D hologram
 python -m ai_kids_video_agent.ocean_cli preview
 ```
 
+### Animated New York serial
+
+Create episode one of **The Borough File**, an original, open-ended illustrated mystery about Maya (17) and Noah (16) in Astoria, Queens. They speak in separate English voices over dialogue captions. The episode ends on a cliffhanger; the series story bible and script are saved alongside the video. On Windows, the workflow uses the installed Microsoft Zira and David voices with light pitch adjustments. Those are adult system voices, not actual teen voice actors. No upload occurs.
+
+```powershell
+python -m pip install -e ".[render,automation]"
+borough-file
+```
+
+The MP4 and series files are written to `output/borough-file/`. Review the voices, dialogue, and visuals before publishing. The first episode is a pilot foundation; each future episode still needs an authored continuation.
+
 ### Connect your own YouTube channel
 
 The agent cannot create a Google account/channel or accept Google's terms on your behalf. Create/sign in to the channel yourself at [youtube.com/create](https://www.youtube.com/create), then:

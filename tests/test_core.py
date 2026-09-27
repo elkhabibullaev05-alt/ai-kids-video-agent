@@ -23,6 +23,14 @@ from ai_kids_video_agent.free_shorts import (
 from ai_kids_video_agent.cli import main
 from ai_kids_video_agent.news import NewsItem, _parse_feed, choose_story
 from ai_kids_video_agent.render import ensure_executable
+from ai_kids_video_agent.series import (
+    CHARACTERS,
+    PILOT_DIALOGUE,
+    SERIES_TITLE,
+    _draw_beat_frame,
+    _join_audio,
+    series_bible,
+)
 from ai_kids_video_agent.speech import DEFAULT_VOICE, synthesize_speech
 from ai_kids_video_agent.story import (
     MAX_SCRIPT_WORDS,
@@ -56,6 +64,43 @@ def test_fallback_summary_is_not_empty():
     summary = fallback_summary("AI launches new model")
     assert "AI launches new model" in summary
     assert len(summary) > 20
+
+
+def test_borough_file_pilot_is_an_open_ended_two_voice_serial():
+    bible = series_bible()
+    assert bible["title"] == SERIES_TITLE
+    assert "open-ended" in bible["format"].lower()
+    assert [character.name for character in CHARACTERS] == ["Maya", "Noah"]
+    assert [character.age for character in CHARACTERS] == [17, 16]
+    assert {beat.speaker for beat in PILOT_DIALOGUE} == {"Maya", "Noah"}
+    assert bible["episode_one"]["ending"] == "Cliffhanger; the story is not resolved."
+    assert "wet" in PILOT_DIALOGUE[-2].line
+
+
+def test_borough_file_draws_portrait_dialogue_scene(tmp_path):
+    from PIL import Image
+
+    frame = tmp_path / "frame.png"
+    _draw_beat_frame(PILOT_DIALOGUE[0], 0, 0, frame)
+    with Image.open(frame) as image:
+        assert image.size == (720, 1280)
+
+
+def test_borough_file_audio_pauses_match_animation_timing(tmp_path):
+    clips = []
+    for index in range(2):
+        path = tmp_path / f"line_{index}.wav"
+        with wave.open(str(path), "wb") as audio:
+            audio.setnchannels(1)
+            audio.setsampwidth(2)
+            audio.setframerate(24000)
+            audio.writeframes(b"\0\0" * 12000)
+        clips.append(path)
+
+    joined = tmp_path / "joined.wav"
+    _join_audio(clips, joined, [0.5, 0.5], [4, 4])
+    with wave.open(str(joined), "rb") as audio:
+        assert audio.getnframes() / audio.getframerate() == 2
 
 
 def test_build_story_plan_sets_defaults():
