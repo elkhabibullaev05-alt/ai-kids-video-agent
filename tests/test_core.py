@@ -85,7 +85,10 @@ def test_borough_file_upscales_and_subtitles_rendered_frames(tmp_path):
     raw_frames.mkdir()
     Image.new("RGB", (540, 960), (30, 40, 60)).save(raw_frames / "frame_00000.png")
     output = tmp_path / "captioned"
+    output.mkdir()
+    Image.new("RGB", (720, 1280), (255, 0, 0)).save(output / "frame_00142.png")
     _compose_captions(raw_frames, output, [0])
+    assert not (output / "frame_00142.png").exists()
     with Image.open(output / "frame_00000.png") as image:
         assert image.size == (720, 1280)
 

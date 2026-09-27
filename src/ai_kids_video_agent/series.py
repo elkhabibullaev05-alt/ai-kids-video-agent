@@ -220,6 +220,9 @@ def _compose_captions(raw_frames: Path, final_frames: Path, frame_map: list[int]
     from PIL import Image, ImageDraw
 
     final_frames.mkdir(parents=True, exist_ok=True)
+    for stale_frame in final_frames.glob("frame_*.png"):
+        if stale_frame.is_file():
+            stale_frame.unlink()
     label_font = _font(True, 28)
     caption_font = _font(False, 34)
     character_colors = {"Maya": (211, 125, 75), "Noah": (63, 116, 174)}
