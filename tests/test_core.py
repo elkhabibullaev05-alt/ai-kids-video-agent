@@ -23,6 +23,16 @@ from ai_kids_video_agent.free_shorts import (
 from ai_kids_video_agent.cli import main
 from ai_kids_video_agent.news import NewsItem, _parse_feed, choose_story
 from ai_kids_video_agent.render import ensure_executable
+from ai_kids_video_agent.series import (
+    CHARACTERS,
+    PILOT_DIALOGUE,
+    SERIES_TITLE,
+    _font,
+    _compose_captions,
+    _join_audio,
+    _wrap_caption,
+    series_bible,
+)
 from ai_kids_video_agent.speech import DEFAULT_VOICE, synthesize_speech
 from ai_kids_video_agent.story import (
     MAX_SCRIPT_WORDS,
@@ -56,6 +66,57 @@ def test_fallback_summary_is_not_empty():
     summary = fallback_summary("AI launches new model")
     assert "AI launches new model" in summary
     assert len(summary) > 20
+
+
+def test_borough_file_pilot_is_an_open_ended_two_voice_serial():
+    bible = series_bible()
+    assert bible["title"] == SERIES_TITLE
+    assert "open-ended" in bible["format"].lower()
+    assert [character.name for character in CHARACTERS] == ["Maya", "Noah"]
+    assert [character.age for character in CHARACTERS] == [17, 16]
+    assert {beat.speaker for beat in PILOT_DIALOGUE} == {"Maya", "Noah"}
+    assert bible["episode_one"]["ending"] == "Cliffhanger; the story is not resolved."
+    assert "platform" in PILOT_DIALOGUE[-2].line
+    assert "coat" in PILOT_DIALOGUE[-1].line
+
+
+def test_borough_file_upscales_and_subtitles_rendered_frames(tmp_path):
+    from PIL import Image, ImageDraw
+
+    caption_font = _font(False, 34)
+    draw = ImageDraw.Draw(Image.new("RGB", (1, 1)))
+    for beat in PILOT_DIALOGUE:
+        lines = _wrap_caption(beat.line, caption_font, draw, max_width=590)
+        assert len(lines) <= 3
+        assert all(draw.textlength(line, font=caption_font) <= 590 for line in lines)
+
+    raw_frames = tmp_path / "raw"
+    raw_frames.mkdir()
+    Image.new("RGB", (540, 960), (30, 40, 60)).save(raw_frames / "frame_00000.png")
+    output = tmp_path / "captioned"
+    output.mkdir()
+    Image.new("RGB", (720, 1280), (255, 0, 0)).save(output / "frame_00142.png")
+    _compose_captions(raw_frames, output, [0])
+    assert not (output / "frame_00142.png").exists()
+    with Image.open(output / "frame_00000.png") as image:
+        assert image.size == (720, 1280)
+
+
+def test_borough_file_audio_pauses_match_animation_timing(tmp_path):
+    clips = []
+    for index in range(2):
+        path = tmp_path / f"line_{index}.wav"
+        with wave.open(str(path), "wb") as audio:
+            audio.setnchannels(1)
+            audio.setsampwidth(2)
+            audio.setframerate(24000)
+            audio.writeframes(b"\0\0" * 12000)
+        clips.append(path)
+
+    joined = tmp_path / "joined.wav"
+    _join_audio(clips, joined, [0.5, 0.5], [4, 4])
+    with wave.open(str(joined), "rb") as audio:
+        assert audio.getnframes() / audio.getframerate() == 2
 
 
 def test_build_story_plan_sets_defaults():
