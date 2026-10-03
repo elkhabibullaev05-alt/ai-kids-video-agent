@@ -19,7 +19,7 @@ On Windows, narration uses the built-in Speech API (default voice: Microsoft Zir
 python -m pip install -e ".[render]"
 ```
 
-The `render` extra supplies a Windows-compatible FFmpeg executable through `imageio-ffmpeg`. You can also use your own installation on `PATH` or point `FFMPEG_PATH` at its executable. The provided `ffmpeg-9.0.2.tar.xz` is the FFmpeg **source code** (not a ready-to-run Windows executable); the pipeline does not need to compile it.
+The `render` extra supplies a Windows-compatible FFmpeg executable through `imageio-ffmpeg`. You can also use your own installation on `PATH` or point `FFMPEG_PATH` at its executable.
 
 ## Daily hologram aquarium channel
 
@@ -67,8 +67,7 @@ Paste the copied text at the hidden token prompt; the setup extracts the token f
 
 Set the optional script-generation settings:
 
-```bash
-# PowerShell
+```powershell
 $env:OPENAI_API_KEY = "your-api-key"
 $env:OPENAI_MODEL = "gpt-4o-mini"
 # Optional for another OpenAI-compatible service:
@@ -112,8 +111,9 @@ The first spoken line is written as a truthful hook; captions and a source credi
 
 This packaging is based on [YouTube's Shorts discovery guidance](https://support.google.com/youtube/answer/11914225?hl=en): recommendations are personalized and consider whether viewers choose to watch, how long and what percentage they watch, satisfaction signals, topic interest, and competition. No title, hashtag, VPN, or upload schedule can guarantee a top ranking in 24 hours. After publishing, compare **viewed vs. swiped away**, first-seconds drop-off, and audience retention in YouTube Analytics; use those results to test different animal designs, openings, pacing, and music. The schedule provides an experiment, not a view guarantee.
 
-Run the tests with:
+Install the test dependencies and run the tests with:
 
 ```bash
+python -m pip install -e ".[dev]"
 python -m pytest
 ```
