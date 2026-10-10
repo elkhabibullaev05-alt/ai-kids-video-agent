@@ -688,7 +688,7 @@ def main():
                 print(f"  frame {i}/{n}", flush=True)
     ff.stdin.close(); ff.wait()
 
-    fs = (13, 1.6, 18) if c.fmt == "long" else (8, 1.2, 70)
+    fs = (13, 1.6, 18) if c.fmt == "long" else (8, 1.2, 28)
     style = (f"FontName=DejaVu Sans,Bold=1,FontSize={fs[0]},PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
              f"BorderStyle=1,Outline={fs[1]},Shadow=0.8,MarginV={fs[2]}")
     srt = os.path.join(out, "subs_es.srt").replace("\\", "/").replace(":", "\\:")
