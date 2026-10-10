@@ -1,0 +1,40 @@
+{
+  "id": "ep001_short3",
+  "format": "short",
+  "title": "Would YOU open the freezer? 🥶 #shorts",
+  "hook": "Would YOU open the freezer?",
+  "description": "Something is whispering inside the freezer... Comment YES or NO! #shorts #animation #doughbros #spooky",
+  "tags": ["shorts", "animation", "cartoon", "dough bros", "spooky cartoon", "freezer ghost"],
+  "thumbnail": {"bg": "freezer", "villain": "frost", "heroes": ["zeek", "pim"], "text": "DON'T OPEN IT!"},
+  "scenes": [
+    {
+      "bg": "freezer", "music": "heartbeat",
+      "heroes": {"zeek": 600, "pim": 380},
+      "moods": {"pim": "scared"},
+      "villain": {"type": "frost", "x": 1300, "state": "hidden", "scale": 0.85},
+      "beats": [
+        {"say": "zeek", "en": "The freezer is minus eighteen degrees. Nothing can live here.",
+         "es": "El congelador está a menos dieciocho grados. Nada puede vivir aquí.",
+         "de": "Der Gefrierschrank hat minus achtzehn Grad. Hier kann nichts leben.",
+         "fr": "Le congélateur est à moins dix-huit degrés. Rien ne peut vivre ici.",
+         "it": "Il congelatore è a meno diciotto gradi. Niente può vivere qui.",
+         "pt": "O freezer está a menos dezoito graus. Nada pode viver aqui."},
+        {"sfx": "ice", "wait": 0.6},
+        {"say": "pim", "en": "Then... who is whispering?",
+         "es": "Entonces... ¿quién está susurrando?", "de": "Und... wer flüstert dann?",
+         "fr": "Alors... qui est-ce qui chuchote ?", "it": "Allora... chi sta sussurrando?", "pt": "Então... quem está sussurrando?"},
+        {"villain": "show"},
+        {"say": "villain", "en": "Stay... with me... forever...",
+         "es": "Quédense... conmigo... para siempre...", "de": "Bleibt... bei mir... für immer...",
+         "fr": "Restez... avec moi... pour toujours...", "it": "Restate... con me... per sempre...", "pt": "Fiquem... comigo... para sempre..."},
+        {"villain": "lunge", "to": 900},
+        {"act": ["pim", "zeek"], "do": "scream"},
+        {"say": "narr", "en": "Would YOU open the freezer? Comment yes or no!",
+         "es": "¿TÚ abrirías el congelador? ¡Comenta sí o no!", "de": "Würdest DU den Gefrierschrank öffnen? Schreib ja oder nein!",
+         "fr": "Et TOI, tu ouvrirais le congélateur ? Écris oui ou non !", "it": "TU apriresti il congelatore? Scrivi sì o no!",
+         "pt": "VOCÊ abriria o freezer? Comente sim ou não!"}
+      ],
+      "tail": 1.0
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ep001_short2",
+  "format": "short",
+  "title": "NEVER make Lolly angry 😳 #shorts",
+  "hook": "Never make Lolly angry...",
+  "description": "She's sweet. She's polite. She's a cookie. But DON'T make her angry. #shorts #animation #cartoon #doughbros #funny",
+  "tags": ["shorts", "animation", "cartoon", "dough bros", "funny cartoon", "spooky cartoon"],
+  "thumbnail": {"bg": "pantry", "villain": "mixer", "heroes": ["lolly"], "text": "UH OH..."},
+  "scenes": [
+    {
+      "bg": "pantry", "music": "music_box",
+      "heroes": {"lolly": 620},
+      "villain": {"type": "mixer", "x": 2300, "state": "awake", "scale": 0.8},
+      "beats": [
+        {"say": "lolly", "en": "La la la... what a lovely quiet night!",
+         "es": "La la la... ¡qué noche tan tranquila!", "de": "La la la... was für eine schöne ruhige Nacht!",
+         "fr": "La la la... quelle belle nuit tranquille !", "it": "La la la... che bella notte tranquilla!", "pt": "Lá lá lá... que noite tranquila!"},
+        {"move": "villain", "to": 1250, "speed": "run"},
+        {"say": "villain", "en": "Hee hee! Let's MIX you up, cookie!",
+         "es": "¡Ji ji! ¡Vamos a MEZCLARTE, galletita!", "de": "Hihi! Lass uns dich VERRÜHREN, Keks!",
+         "fr": "Hi hi ! On va te MÉLANGER, petit biscuit !", "it": "Ih ih! Ti MESCOLIAMO, biscottino!", "pt": "Hi hi! Vamos te MISTURAR, biscoitinho!"},
+        {"mood": "lolly", "is": "angry"},
+        {"act": "lolly", "do": "shake"},
+        {"say": "lolly", "en": "Excuse me. Did you just call me... a COOKIE?!",
+         "es": "Disculpa. ¿Me acabas de llamar... GALLETA?", "de": "Entschuldigung. Hast du mich gerade... KEKS genannt?!",
+         "fr": "Pardon. Tu viens de m'appeler... BISCUIT ?!", "it": "Scusa. Mi hai appena chiamata... BISCOTTO?!", "pt": "Com licença. Você me chamou de... BISCOITO?!"},
+        {"move": "lolly", "to": 1000, "speed": "run"},
+        {"shake": 0.8, "power": 25},
+        {"move": "villain", "to": "off_right", "speed": "run"},
+        {"mood": "lolly", "is": "happy"},
+        {"say": "lolly", "en": "I'm a STAR. Have a lovely night!",
+         "es": "Soy una ESTRELLA. ¡Que tengas linda noche!", "de": "Ich bin ein STERN. Schöne Nacht noch!",
+         "fr": "Je suis une ÉTOILE. Bonne nuit !", "it": "Sono una STELLA. Buona notte!", "pt": "Eu sou uma ESTRELA. Tenha uma ótima noite!"}
+      ],
+      "tail": 0.8
+    }
+  ]
+}

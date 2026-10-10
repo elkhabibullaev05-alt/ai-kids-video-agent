@@ -1,0 +1,39 @@
+{
+  "id": "ep001_short1",
+  "format": "short",
+  "title": "Never wake up the POT 😱 #shorts",
+  "hook": "Never wake up the pot...",
+  "description": "Pim just wanted a midnight snack... but something in the kitchen is waking up. Full episode on the channel!\n#shorts #animation #cartoon #doughbros #spooky",
+  "tags": ["shorts", "animation", "cartoon", "dough bros", "spooky cartoon", "mr pot", "kids animation"],
+  "thumbnail": {"bg": "kitchen", "villain": "pot", "heroes": ["pim"], "text": "DON'T WAKE IT!"},
+  "scenes": [
+    {
+      "bg": "kitchen",
+      "music": "heartbeat",
+      "heroes": {"pim": -200},
+      "moods": {"pim": "scared"},
+      "villain": {"type": "pot", "x": 1350, "state": "asleep", "scale": 0.7},
+      "beats": [
+        {"move": "pim", "to": 760},
+        {"say": "pim", "en": "Just one little snack... nobody will know...",
+         "es": "Solo un bocadito... nadie se enterará...",
+         "de": "Nur ein kleiner Snack... niemand wird es merken...",
+         "fr": "Juste un petit goûter... personne ne saura...",
+         "it": "Solo uno spuntino... nessuno lo saprà...",
+         "pt": "Só um lanchinho... ninguém vai saber..."},
+        {"sfx": "thump", "wait": 0.8},
+        {"act": "pim", "do": "shake"},
+        {"villain": "wake"},
+        {"say": "villain", "en": "I... know.",
+         "es": "Yo... lo sé.", "de": "Ich... weiß es.", "fr": "Moi... je sais.", "it": "Io... lo so.", "pt": "Eu... sei."},
+        {"villain": "roar"},
+        {"act": "pim", "do": "scream"},
+        {"move": "pim", "to": "off_left", "speed": "run"},
+        {"say": "villain", "en": "Run, little dough. Run!",
+         "es": "Corre, masita. ¡Corre!", "de": "Lauf, kleiner Teig. Lauf!", "fr": "Cours, petite pâte. Cours !",
+         "it": "Corri, piccolo impasto. Corri!", "pt": "Corre, massinha. Corre!"}
+      ],
+      "tail": 0.8
+    }
+  ]
+}
