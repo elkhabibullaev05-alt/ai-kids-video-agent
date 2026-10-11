@@ -27,11 +27,11 @@ Output in `out/<id>/`: `<id>.mp4` (English voices, Spanish subtitles burned in),
 
 ```json
 {
-  "bg": "kitchen | freezer | pantry | oven | table",
+  "bg": "kitchen | freezer | pantry | oven | table | bathroom | garden | attic | fridge | lunchbox",
   "music": "drone | heartbeat | music_box | none",
   "heroes": {"bup": 700, "pim": -300},          // starting x. Stage is 0..1920. <0 or >1920 = off screen
   "moods": {"pim": "scared"},                     // optional start mood: normal|scared|happy|angry
-  "villain": {"type": "pot | frost | toaster | mixer", "x": 1450, "state": "asleep | awake | hidden", "scale": 0.8},
+  "villain": {"type": "pot | frost | toaster | mixer | vacuum | jelly | kettle | scarecrow", "x": 1450, "state": "asleep | awake | hidden", "scale": 0.8},
   "beats": [ ... ],
   "tail": 0.6                                     // seconds to hold after the last beat
 }

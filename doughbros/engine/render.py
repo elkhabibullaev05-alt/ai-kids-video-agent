@@ -25,7 +25,8 @@ BASE_MOUTH = {"bup": "stitch", "pim": "wobble", "zeek": "flat", "lolly": "grin",
 SUB_LANGS = ["es", "de", "fr", "it", "pt"]
 HERO_Y, VIL_Y = 680, 540
 WALK, RUN = 260.0, 950.0
-GLOW = {"pot": "#ff4a10", "frost": "#5ab8ff", "toaster": "#ff8a1a", "mixer": "#9aff3a"}
+GLOW = {"pot": "#ff4a10", "frost": "#5ab8ff", "toaster": "#ff8a1a", "mixer": "#9aff3a",
+        "vacuum": "#ff2a3a", "jelly": "#6aff5a", "kettle": "#ffd23a", "scarecrow": "#ff9a1a"}
 IMPACT = "font-family='Inter Display Black, Inter Black, Impact, Arial Black, DejaVu Sans, sans-serif' font-weight='900'"
 
 

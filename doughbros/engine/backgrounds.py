@@ -10,6 +10,11 @@ BACKGROUNDS = {
     "pantry":  "Pantry: tall wooden shelves with jars and sacks, a single swinging bulb.",
     "oven":    "Inside a huge oven: glowing orange heating coils, metal racks, heat haze.",
     "table":   "Dinner table at dusk: giant plates, cups and cutlery, candle light.",
+    "bathroom": "Dark bathroom: dripping tap, tiles, bathtub edge, foggy mirror, green night light.",
+    "garden":  "Night garden outside the kitchen door: full moon, fence, pumpkins, tall grass, fireflies.",
+    "attic":   "Dusty attic: wooden beams, cobwebs, boxes, an old rocking chair, round window with lightning.",
+    "fridge":  "Inside the fridge: bright cold shelves, milk cartons, jars, eggs, humming light.",
+    "lunchbox": "Inside a giant school lunchbox: plastic walls, apple, sandwich, juice box, crayons.",
 }
 
 
@@ -131,7 +136,98 @@ def table():
     return "".join(s)
 
 
-DRAW = {"kitchen": kitchen, "freezer": freezer, "pantry": pantry, "oven": oven, "table": table}
+def bathroom():
+    s = [f'<defs>{_grad("wall", "#0d1f1c", "#1d3330")}</defs><rect width="{W}" height="{H}" fill="url(#wall)"/>', _tiles("#9fe0d0", 0.06, 70)]
+    s.append('<rect x="1250" y="120" width="420" height="330" rx="20" fill="#2a4a46" stroke="#081210" stroke-width="12"/>'
+             '<rect x="1270" y="140" width="380" height="290" rx="12" fill="#b8d8d0" opacity="0.18"/>'
+             '<path d="M1300,180 q60,40 0,80 M1420,170 q40,60 -20,110" stroke="#fff" stroke-width="6" opacity="0.15" fill="none"/>')
+    s.append('<path d="M120,560 L880,560 Q900,560 900,600 L880,790 L140,790 L120,600 Q100,560 120,560 Z" fill="#dfe9e6" stroke="#081210" stroke-width="10"/>'
+             '<rect x="110" y="545" width="800" height="30" rx="14" fill="#f2f7f6" stroke="#081210" stroke-width="8"/>'
+             '<path d="M760,545 L760,470 Q760,440 800,440 L840,440" fill="none" stroke="#8a9a98" stroke-width="18"/>'
+             '<path d="M840,440 l0,24" stroke="#8a9a98" stroke-width="14"/><ellipse cx="840" cy="488" rx="6" ry="10" fill="#9fe0ff"/>')
+    s.append('<circle cx="1750" cy="600" r="16" fill="#7aff9a"/><circle cx="1750" cy="600" r="260" fill="url(#bg_bulb)" opacity="0.6"/>')
+    s.append(_floor("#cfe0dc", "#3a4a48", stripe="#000", edge="#e8f2f0"))
+    s.append(f'<rect width="{W}" height="{H}" fill="#0a3a2a" opacity="0.18"/>')
+    return "".join(s)
+
+
+def garden():
+    r = random.Random(11)
+    s = [f'<defs>{_grad("wall", "#050a1a", "#16203a")}</defs><rect width="{W}" height="{H}" fill="url(#wall)"/>']
+    for _ in range(60):
+        s.append(f'<circle cx="{r.uniform(0,W)}" cy="{r.uniform(0,420)}" r="{r.uniform(1,2.6)}" fill="#fff" opacity="{r.uniform(0.3,0.9)}"/>')
+    s.append('<circle cx="1500" cy="200" r="110" fill="#f4f0d8"/><circle cx="1500" cy="200" r="260" fill="#f4f0d8" opacity="0.08"/>'
+             '<circle cx="1470" cy="180" r="18" fill="#d8d2b0"/><circle cx="1530" cy="235" r="12" fill="#d8d2b0"/>')
+    s.append('<path d="M0,620 Q300,540 600,600 T1200,580 T1920,600 L1920,800 L0,800 Z" fill="#0d1a12"/>')
+    for x in range(-20, W, 70):  # fence
+        s.append(f'<path d="M{x},780 L{x},{560+(x%3)*8} L{x+25},{535+(x%3)*8} L{x+50},{560+(x%3)*8} L{x+50},780 Z" fill="#2a2420" stroke="#0a0806" stroke-width="5"/>')
+    s.append('<rect x="0" y="620" width="1920" height="16" fill="#1e1a16"/><rect x="0" y="720" width="1920" height="16" fill="#1e1a16"/>')
+    for px, ps in ((300, 1.0), (1650, 1.3), (1100, 0.8)):
+        s.append(f'<g transform="translate({px},770) scale({ps})"><ellipse rx="70" ry="52" fill="#e8822a" stroke="#0a0806" stroke-width="5"/>'
+                 '<path d="M-30,-48 Q0,-60 30,-48 M-55,-20 Q-62,10 -50,40 M55,-20 Q62,10 50,40" stroke="#b85a14" stroke-width="4" fill="none"/>'
+                 '<path d="M0,-50 q5,-25 20,-30" stroke="#3a6a1a" stroke-width="9" fill="none"/></g>')
+    s.append(_floor("#1a2a16", "#060a05", stripe="#000", edge="#2a3a1e"))
+    for _ in range(14):
+        s.append(f'<circle cx="{r.uniform(0,W)}" cy="{r.uniform(300,760)}" r="5" fill="#d8ff6a" opacity="0.8"/>'
+                 f'<circle cx="{r.uniform(0,W)}" cy="{r.uniform(300,760)}" r="16" fill="#d8ff6a" opacity="0.12"/>')
+    return "".join(s)
+
+
+def attic():
+    r = random.Random(13)
+    s = [f'<defs>{_grad("wall", "#1a120c", "#2e2016")}</defs><rect width="{W}" height="{H}" fill="url(#wall)"/>']
+    s.append('<path d="M0,0 L960,-200 L1920,0 L1920,120 L960,-60 L0,120 Z" fill="#0e0a06"/>')
+    for x in range(120, W, 300):
+        s.append(f'<rect x="{x}" y="0" width="40" height="{FLOOR}" fill="#3a2614" stroke="#120a04" stroke-width="5"/>')
+    s.append('<circle cx="960" cy="230" r="120" fill="#141c34" stroke="#120a04" stroke-width="18"/>'
+             '<line x1="840" y1="230" x2="1080" y2="230" stroke="#120a04" stroke-width="10"/><line x1="960" y1="110" x2="960" y2="350" stroke="#120a04" stroke-width="10"/>'
+             '<path d="M990,140 l-30,50 l25,0 l-35,60" stroke="#e8f0ff" stroke-width="5" fill="none" opacity="0.8"/>')
+    for (cx, cy) in ((0, 0), (1920, 0), (500, 120)):
+        s.append(f'<g stroke="#d8d0c0" stroke-width="2" opacity="0.35" fill="none">' + "".join(f'<path d="M{cx},{cy} L{cx+(200 if cx<960 else -200)*__import__("math").cos(a/5)},{cy+200*__import__("math").sin(a/5)}"/>' for a in range(0, 8)) +
+                 "".join(f'<path d="M{cx+(60*k if cx<960 else -60*k)},{cy} Q{cx+(40*k if cx<960 else -40*k)},{cy+40*k} {cx},{cy+60*k}"/>' for k in range(1, 4)) + '</g>')
+    for i, (bx, bw, bh) in enumerate([(200, 220, 150), (380, 160, 110), (1500, 260, 180), (1720, 160, 240)]):
+        s.append(f'<rect x="{bx}" y="{FLOOR-bh}" width="{bw}" height="{bh}" fill="#7a5a34" stroke="#1a1006" stroke-width="6"/>'
+                 f'<path d="M{bx},{FLOOR-bh+30} h{bw}" stroke="#5a3e20" stroke-width="5"/>')
+    s.append('<g transform="translate(1250,640)" fill="none" stroke="#2a1a0c" stroke-width="12"><path d="M-80,140 Q0,175 80,140"/><path d="M-60,140 L-60,-20 L60,-20 L60,140 M-60,40 L60,40 M-60,-20 L-70,-150 L70,-150 L60,-20"/></g>')
+    s.append(_floor("#4a3218", "#120a04", edge="#5a3e20"))
+    return "".join(s)
+
+
+def fridge():
+    s = [f'<defs>{_grad("wall", "#cfe6ee", "#8fb4c4")}</defs><rect width="{W}" height="{H}" fill="url(#wall)"/>']
+    s.append('<rect x="0" y="0" width="1920" height="40" fill="#fffef0" opacity="0.9"/><rect x="0" y="40" width="1920" height="200" fill="#fffef0" opacity="0.25"/>')
+    for y in (300, 560):
+        s.append(f'<rect x="0" y="{y}" width="1920" height="18" fill="#e8f4f8" stroke="#6a8a98" stroke-width="4" opacity="0.9"/>')
+    items = [(120, 300, 110, 200, "#f4f4f4", "#3a7ad0"), (280, 300, 90, 140, "#ffd060", "#c08010"), (1500, 300, 120, 220, "#f4f4f4", "#d03a3a"),
+             (1680, 300, 100, 120, "#b0e070", "#508020"), (700, 560, 140, 90, "#ffe0b0", "#c08040"), (1250, 560, 110, 160, "#ff9aa0", "#b03040")]
+    for x, base, w, h, c1, c2 in items:
+        s.append(f'<rect x="{x}" y="{base-h}" width="{w}" height="{h}" rx="12" fill="{c1}" stroke="#3a5a68" stroke-width="5"/>'
+                 f'<rect x="{x}" y="{base-h*0.6}" width="{w}" height="{h*0.25}" fill="{c2}" opacity="0.8"/>')
+    for i in range(6):
+        s.append(f'<ellipse cx="{860+i*60}" cy="{530}" rx="26" ry="32" fill="#fff8ec" stroke="#8a7a68" stroke-width="3"/>')
+    s.append(_floor("#e8f4f8", "#9ab8c6", stripe="#ffffff", edge="#ffffff"))
+    s.append(f'<rect width="{W}" height="{H}" fill="#9fd8ff" opacity="0.12"/>')
+    return "".join(s)
+
+
+def lunchbox():
+    s = [f'<defs>{_grad("wall", "#2a6ad0", "#173e80")}</defs><rect width="{W}" height="{H}" fill="url(#wall)"/>']
+    s.append('<rect x="40" y="40" width="1840" height="740" rx="60" fill="none" stroke="#0e2a5a" stroke-width="20"/>')
+    s.append('<g transform="translate(1790,660) scale(0.75)"><circle r="150" fill="#d8282a" stroke="#4a0808" stroke-width="8"/>'
+             '<path d="M0,-150 q10,-60 50,-80" stroke="#4a2a10" stroke-width="16" fill="none"/><path d="M20,-200 q60,-40 110,0 q-50,30 -110,0" fill="#4aa02a"/>'
+             '<path d="M-80,-80 q-30,60 0,120" stroke="#fff" stroke-width="14" opacity="0.4" fill="none"/></g>')
+    s.append('<path d="M180,780 L260,520 L760,520 L840,780 Z" fill="#f2d49a" stroke="#6a4a1a" stroke-width="8"/>'
+             '<path d="M220,690 L800,690" stroke="#5aa02a" stroke-width="22"/><path d="M230,650 L790,650" stroke="#d84a3a" stroke-width="16"/>')
+    s.append('<rect x="960" y="430" width="220" height="350" rx="16" fill="#ff9a2a" stroke="#6a3a08" stroke-width="8"/>'
+             '<rect x="1130" y="360" width="16" height="90" fill="#fff" stroke="#6a3a08" stroke-width="3" transform="rotate(12 1138 405)"/>')
+    for i, c in enumerate(("#e83a3a", "#3a9ae8", "#e8d83a", "#3ae86a")):
+        s.append(f'<rect x="{300+i*80}" y="140" width="40" height="300" rx="8" fill="{c}" stroke="#0e2a5a" stroke-width="5" transform="rotate({-10+i*7} {320+i*80} 290)"/>')
+    s.append(_floor("#4a8ae8", "#1a3a7a", stripe="#ffffff", edge="#0e2a5a"))
+    return "".join(s)
+
+
+DRAW = {"kitchen": kitchen, "freezer": freezer, "pantry": pantry, "oven": oven, "table": table,
+        "bathroom": bathroom, "garden": garden, "attic": attic, "fridge": fridge, "lunchbox": lunchbox}
 _cache = {}
 
 

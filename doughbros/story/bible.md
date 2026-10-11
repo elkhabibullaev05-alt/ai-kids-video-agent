@@ -24,6 +24,13 @@
 | toaster | **Toastmaw** | old chrome toaster, short-tempered, shoots burning toast | "You're TOAST!" |
 | mixer | **Whisker** | hand mixer on spinning beaters, giggles, hyper | "Let's MIX it up! Hee hee!" |
 
+| vacuum | **Gulpzilla** | greedy vacuum in the closet/attic, sucks up anything small, burps dust | "MINE! All mine! *slurp*" |
+| jelly | **Wobblor** | huge green jelly blob, swallows things, slow and giggly-creepy | "Stay inside me... it's comfy..." |
+| kettle | **Old Hissy** | ancient grumpy whistling kettle, screams steam | "Ssssilence! I'm BOILING!" |
+| scarecrow | **Sir Stuffing** | towel scarecrow with a pumpkin head in the night garden, speaks in riddles | "Answer my riddle... or stay forever." |
+
+World now also includes: `bathroom`, `garden` (night, outside the kitchen door), `attic`, `fridge`, `lunchbox`. See `story/themes.md` for daily theme rotation.
+
 ## Story rules
 - Every long episode: **cold open** (scary moment in first 10 s) → problem → plan → chase/escape → twist → **cliffhanger** ending ("TO BE CONTINUED...").
 - Each episode has one main villain. Rotate villains and places so two days in a row never feel the same. Mr. Pot returns at least every 3rd episode; big arc: Mr. Pot is gathering the other appliances.

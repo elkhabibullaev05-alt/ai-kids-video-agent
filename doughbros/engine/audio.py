@@ -19,6 +19,10 @@ CAST = {
     "frost":   ("af_nicole", 0.85, -4, "aecho=0.8:0.9:120|240:0.5|0.35"),
     "toaster": ("am_michael", 0.95, -5, "acrusher=bits=8:mode=log:aa=1,aecho=0.8:0.6:40:0.3"),
     "mixer":   ("am_adam",   1.10,  3, "tremolo=f=14:d=0.5"),
+    "vacuum":  ("am_onyx",   0.95, -5, "tremolo=f=30:d=0.3,aecho=0.7:0.6:40:0.3"),
+    "jelly":   ("af_bella",  0.85, -3, "vibrato=f=5:d=0.6"),
+    "kettle":  ("bm_lewis",  0.95, -2, "highpass=f=300,aecho=0.6:0.5:25:0.3"),
+    "scarecrow": ("bm_fable", 0.80, -4, "aecho=0.8:0.8:110:0.4"),
 }
 
 _kokoro = None

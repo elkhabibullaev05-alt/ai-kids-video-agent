@@ -14,6 +14,7 @@ bash setup.sh            # installs python deps + downloads the TTS model from G
 - `story/bible.md` — characters, villains, tone, rules (kid-safe, original only).
 - `story/SCRIPT_FORMAT.md` — the JSON format.
 - `story/log.json` — every published episode. Continue from the **last cliffhanger**.
+- `story/themes.md` — pick today's theme; it must differ from the last 14 days, and the villain from yesterday's.
 - Look at `scripts/ep001_long.json` and one short as style examples.
 
 ## 3. Write 4 scripts
@@ -37,7 +38,7 @@ For each MP4: `ffprobe` the duration; extract 3 frames (`ffmpeg -ss T -i file -f
 ## 6. Save progress
 Append to `story/log.json` → `episodes`:
 ```json
-{"episode": N, "date": "YYYY-MM-DD", "title": "...", "villain": "...", "bg": ["..."], "summary": "2 sentences", "cliffhanger": "...", "shorts": ["title1", "title2", "title3"]}
+{"episode": N, "date": "YYYY-MM-DD", "theme": "...", "title": "...", "villain": "...", "bg": ["..."], "summary": "2 sentences", "cliffhanger": "...", "shorts": ["title1", "title2", "title3"]}
 ```
 Then commit the 4 scripts + log.json (NOT the out/ folder) and `git push`. If push fails, still continue and mention it.
 
