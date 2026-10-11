@@ -11,7 +11,7 @@ bash setup.sh            # installs python deps + downloads the TTS model from G
 ```
 
 ## 2. Read
-- `story/bible.md` — characters, villains, tone, rules (kid-safe, original only).
+- `story/bible.md` — characters, villains, tone, rules (general audience 13+, family-friendly but not child-directed, original only).
 - `story/SCRIPT_FORMAT.md` — the JSON format.
 - `story/log.json` — every published episode. Continue from the **last cliffhanger**.
 - `story/themes.md` — pick today's theme; it must differ from the last 14 days, and the villain from yesterday's.
@@ -21,7 +21,7 @@ bash setup.sh            # installs python deps + downloads the TTS model from G
 Next episode number N = last `episode` in log.json + 1 (3 digits: `ep002`).
 - `scripts/epNNN_long.json` — follow the long-episode structure in the bible. **Target 180–300 s.** Run `--check` and if shorter than 180 s add scenes/lines.
 - `scripts/epNNN_short1.json` (teaser of today's episode), `epNNN_short2.json` (character moment), `epNNN_short3.json` (question/cliffhanger). 15–45 s each.
-- Every `say` line needs `en` + `es`, `de`, `fr`, `it`, `pt`. Natural kid-friendly translations.
+- Every `say` line needs `en` + `es`, `de`, `fr`, `it`, `pt`. Natural, simple translations.
 - Rotate backgrounds and villains vs. the last 2 episodes in the log.
 
 ## 4. Validate, then render
@@ -52,7 +52,7 @@ Send with SendUserFile (status "proactive"): the 4 MP4s, the 4 thumbnail.png fil
 Then a short Uzbek message:
 - EP number and title; one-sentence story summary.
 - Which videos were uploaded and their scheduled times (or, if upload failed, the suggested schedule: long → 01:00 (15:00 New York); Shorts → 19:00, 22:00, 04:00 (09:00, 12:00, 18:00 New York). From November to mid-March (US winter time) add +1 hour to the Bishkek times. Easiest: in YouTube Studio set the schedule time zone to New York.)
-- Reminders: "Made for kids = Yes", upload .srt files in YouTube Studio → Subtitles.
+- Reminders: audience = "Not made for kids", upload .srt files in YouTube Studio → Subtitles.
 - Any problems (failed push, re-renders).
 
 ## Never

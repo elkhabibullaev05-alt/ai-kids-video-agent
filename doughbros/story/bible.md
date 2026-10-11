@@ -1,8 +1,8 @@
 # DOUGH BROS — story bible
 
-**Channel:** Dough Bros — spooky-funny 2D animation for kids 6–12 in the USA and Europe.
+**Channel:** Dough Bros — spooky-funny 2D horror-comedy animation for a **general audience (teens and adults, 13+)** in the USA and Europe. The channel is set to **"Not made for kids"** — write for a general audience: no "for kids" wording in titles, descriptions or tags.
 **Language:** English voices. Spanish subtitles burned in; DE/FR/IT/PT subtitles as .srt files.
-**Tone:** creepy-cute, like a kids' horror cartoon. Suspense, chases, jump scares, silly jokes. **Never** gore, blood, injury detail, death, weapons used on characters, bad words, or real brands/characters/games/memes. 100% original.
+**Tone:** creepy-cute horror-comedy (think late-night cartoon, not preschool). Suspense, chases, jump scares, silly jokes. **Never** gore, blood, injury detail, death, weapons used on characters, bad words, or real brands/characters/games/memes. 100% original.
 
 ## World
 **Table Land** — the kitchen world where the Dough Bros live. Places (= backgrounds): `kitchen` (moonlit, home base), `freezer`, `pantry`, `oven`, `table` (dinner table).
@@ -49,6 +49,6 @@ World now also includes: `bathroom`, `garden` (night, outside the kitchen door),
 Villain huge on the right roaring, 1–3 scared heroes on the left, 2–3 word yellow text: "IT'S AWAKE!", "DON'T OPEN IT!", "YOU'RE TOAST!".
 
 ## Publishing (USA + Europe)
-- Made for kids: **Yes**.
+- Made for kids: **No** (general audience). Never use "kids", "for kids", "children" in titles, descriptions or tags.
 - Long: publish 15:00 New York (= 01:00 Bishkek). Shorts: 09:00, 12:00, 18:00 New York.
 - Upload all 5 .srt files in YouTube Studio → Subtitles.

@@ -44,7 +44,7 @@ window.__fill = async (title, desc, tags) => { const sleep=ms=>new Promise(r=>se
  const dlg=document.querySelector('ytcp-uploads-dialog');
  const setTb=(el,txt)=>{el.focus(); document.execCommand('selectAll',false,null); document.execCommand('insertText',false,txt); el.dispatchEvent(new Event('input',{bubbles:true}));};
  const tbs=[...dlg.querySelectorAll('#textbox')]; setTb(tbs[0], title); await sleep(500); setTb(tbs[1], desc); await sleep(500);
- const mfk=dlg.querySelector('tp-yt-paper-radio-button[name=VIDEO_MADE_FOR_KIDS_MFK]'); mfk.click(); await sleep(800);
+ const mfk=dlg.querySelector('tp-yt-paper-radio-button[name=VIDEO_MADE_FOR_KIDS_NOT_MFK]'); mfk.click(); await sleep(800);
  dlg.querySelector('#toggle-button')?.click(); await sleep(1200);
  const tag=dlg.querySelector('input[aria-label="Теги"]'); tag.focus(); document.execCommand('insertText',false,tags+',');
  tag.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,bubbles:true})); await sleep(800);
@@ -66,7 +66,7 @@ window.__done = async () => { document.querySelector('ytcp-uploads-dialog #done-
 
 ## 4. For each video (separate calls, check every result)
 1. `await window.__open('epNNN_short1.mp4')` → "uploading …"
-2. `await window.__fill(title, description, tags)` → title echoed, `"true"`, chip count > 0 (title/description/tags from that video's `upload.txt`; **remove any "comment" call-to-action** — comments are off on kids videos)
+2. `await window.__fill(title, description, tags)` → title echoed, `"true"`, chip count > 0 (title/description/tags from that video's `upload.txt`; asking viewers to comment is fine — the channel is not made for kids)
 3. long video only: `window.__thumb('epNNN_long_thumb.png')`
 4. `await window.__sched(DAY, 'HH:MM')` → returns the date and time you asked for. If the date is wrong, take a screenshot and click the right day in the calendar.
 5. `await window.__done()` → must say "Публикация видео запланирована" with the right date/time.

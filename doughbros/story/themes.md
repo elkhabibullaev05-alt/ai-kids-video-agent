@@ -38,6 +38,6 @@ Seasonal: late Oct → Halloween; Dec → winter/snow; Feb 14 → friendship car
 ## Shorts — 3 different types each day
 1. **Teaser** of today's long episode (the scariest moment).
 2. **Character moment** — rotate the hero each day (bup → pim → zeek → lolly → crispy).
-3. **Question / dare** for the viewer ("Would YOU…?", "Which villain is scarier?"). Don't ask for comments (comments are off on kids videos) — use "Think about it…" or "Watch the full episode!".
+3. **Question / dare** for the viewer ("Would YOU…?", "Which villain is scarier?"). Comment questions are allowed ("Comment YES or NO!") — the channel is not made for kids.
 
 Hook text and title must be different from the last 7 days.

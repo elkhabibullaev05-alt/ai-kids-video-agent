@@ -634,7 +634,7 @@ def upload_txt(script, path, dur):
     tags = ", ".join(s.get("tags", []))
     txt = (f"TITLE:\n{s.get('title','')}\n\nDESCRIPTION:\n{s.get('description','')}\n\nTAGS:\n{tags}\n\n"
            f"LENGTH: {dur:.0f}s   FORMAT: {s.get('format')}\n"
-           "AUDIENCE: Made for kids = YES\nSUBTITLES: upload subs_es/de/fr/it/pt.srt in YouTube Studio > Subtitles\n")
+           "AUDIENCE: Not made for kids (general audience)\nSUBTITLES: upload subs_es/de/fr/it/pt.srt in YouTube Studio > Subtitles\n")
     open(path, "w", encoding="utf-8").write(txt)
 
 
