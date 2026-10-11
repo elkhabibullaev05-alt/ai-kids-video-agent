@@ -38,8 +38,10 @@ For each MP4: `ffprobe` the duration; extract 3 frames (`ffmpeg -ss T -i file -f
 ## 6. Save progress
 Append to `story/log.json` → `episodes`:
 ```json
-{"episode": N, "date": "YYYY-MM-DD", "theme": "...", "title": "...", "villain": "...", "bg": ["..."], "summary": "2 sentences", "cliffhanger": "...", "shorts": ["title1", "title2", "title3"]}
+{"episode": N, "date": "YYYY-MM-DD", "theme": "...", "title": "...", "villain": "...", "bg": ["..."], "summary": "2 sentences", "cliffhanger": "...", "shorts": ["title1", "title2", "title3"],
+ "uploads": [{"title": "...", "publish_at": "2026-10-12T13:00:00Z"}]}
 ```
+`uploads` = the videos actually scheduled on YouTube (UTC times); fill it in after step 7 and push again. The user's "Agentlar markazi" desktop app reads this file to show Dough Bros status.
 Then commit the 4 scripts + log.json (NOT the out/ folder) and `git push`. If push fails, still continue and mention it.
 
 ## 7. Upload to YouTube
