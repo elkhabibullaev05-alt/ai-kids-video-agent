@@ -41,15 +41,18 @@ Append to `story/log.json` → `episodes`:
 ```
 Then commit the 4 scripts + log.json (NOT the out/ folder) and `git push`. If push fails, still continue and mention it.
 
-## 7. Deliver
+## 7. Upload to YouTube
+Follow `UPLOAD.md`: schedule all four videos on the Dough Bros channel through the Claude app's built-in browser on the user's computer. If the computer or browser can't be reached, skip this step and say so.
+
+## 8. Deliver
 Send with SendUserFile (status "proactive"): the 4 MP4s, the 4 thumbnail.png files, and the 4 upload.txt files. The .srt files for the long video too (subs_de/fr/it/pt/es).
 Then a short Uzbek message:
 - EP number and title; one-sentence story summary.
-- Suggested YouTube schedule (Bishkek time): long → 01:00 (15:00 New York); Shorts → 19:00, 22:00, 04:00 (09:00, 12:00, 18:00 New York). From November to mid-March (US winter time) add +1 hour to the Bishkek times. Easiest: in YouTube Studio set the schedule time zone to New York.
+- Which videos were uploaded and their scheduled times (or, if upload failed, the suggested schedule: long → 01:00 (15:00 New York); Shorts → 19:00, 22:00, 04:00 (09:00, 12:00, 18:00 New York). From November to mid-March (US winter time) add +1 hour to the Bishkek times. Easiest: in YouTube Studio set the schedule time zone to New York.)
 - Reminders: "Made for kids = Yes", upload .srt files in YouTube Studio → Subtitles.
 - Any problems (failed push, re-renders).
 
 ## Never
-- Never upload/publish anything to YouTube or anywhere else.
+- Never upload anywhere except scheduling the day's 4 videos on the Dough Bros channel (@DoughBrosTV) as described in UPLOAD.md. Never type passwords or change account settings.
 - Never use real brands, existing characters, songs, games or memes.
 - Never put gore, blood, weapons or real-world danger in scripts.
