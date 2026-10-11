@@ -1,0 +1,110 @@
+{
+ "id": "ep002_short3",
+ "format": "short",
+ "title": "Would YOU wake up the toaster? 🍞 #shorts",
+ "hook": "Would YOU wake it up?",
+ "description": "It's old. It's chrome. It's VERY grumpy. Would you press the button? Tell us in the comments! #shorts #animation #cartoon #doughbros #spooky",
+ "tags": [
+  "shorts",
+  "animation",
+  "cartoon",
+  "dough bros",
+  "spooky cartoon",
+  "kids animation",
+  "toastmaw",
+  "toaster",
+  "scary cartoon for kids"
+ ],
+ "thumbnail": {
+  "bg": "oven",
+  "villain": "toaster",
+  "heroes": [
+   "bup",
+   "pim"
+  ],
+  "text": "YOU'RE TOAST!"
+ },
+ "scenes": [
+  {
+   "bg": "oven",
+   "music": "drone",
+   "heroes": {
+    "bup": 660,
+    "pim": 360
+   },
+   "moods": {
+    "pim": "scared"
+   },
+   "villain": {
+    "type": "toaster",
+    "x": 1300,
+    "state": "asleep",
+    "scale": 0.85
+   },
+   "beats": [
+    {
+     "say": "bup",
+     "en": "Shh. That's the old toaster. Don't. Touch. Anything.",
+     "es": "Shh. Esa es la vieja tostadora. No. Toquen. Nada.",
+     "de": "Psst. Das ist der alte Toaster. Nichts. Anfassen.",
+     "fr": "Chut. C'est le vieux grille-pain. Ne. Touchez. À rien.",
+     "it": "Shh. È il vecchio tostapane. Non. Toccate. Niente.",
+     "pt": "Shh. É a torradeira velha. Não. Toquem. Em nada."
+    },
+    {
+     "sfx": "ding",
+     "wait": 0.4
+    },
+    {
+     "act": "pim",
+     "do": "jump"
+    },
+    {
+     "say": "pim",
+     "en": "I didn't touch it! I sneezed on it! That's different!",
+     "es": "¡No la toqué! ¡Le estornudé! ¡Es diferente!",
+     "de": "Ich hab ihn nicht angefasst! Ich hab nur geniest! Das ist was anderes!",
+     "fr": "Je ne l'ai pas touché ! J'ai éternué dessus ! C'est différent !",
+     "it": "Non l'ho toccato! Gli ho starnutito addosso! È diverso!",
+     "pt": "Eu não toquei! Eu espirrei nela! É diferente!"
+    },
+    {
+     "villain": "wake"
+    },
+    {
+     "mood": "bup",
+     "is": "scared"
+    },
+    {
+     "say": "villain",
+     "en": "WHO... woke... me... UP?!",
+     "es": "¿QUIÉN... me... DESPERTÓ?",
+     "de": "WER... hat mich... GEWECKT?!",
+     "fr": "QUI... m'a... RÉVEILLÉ ?!",
+     "it": "CHI... mi ha... SVEGLIATO?!",
+     "pt": "QUEM... me... ACORDOU?!"
+    },
+    {
+     "villain": "roar"
+    },
+    {
+     "act": [
+      "bup",
+      "pim"
+     ],
+     "do": "scream"
+    },
+    {
+     "say": "narr",
+     "en": "Would YOU press the button? Tell us in the comments!",
+     "es": "¿TÚ apretarías el botón? ¡Dinos en los comentarios!",
+     "de": "Würdest DU den Knopf drücken? Schreib es in die Kommentare!",
+     "fr": "Est-ce que TOI, tu appuierais sur le bouton ? Dis-le en commentaire !",
+     "it": "TU premeresti il pulsante? Scrivilo nei commenti!",
+     "pt": "VOCÊ apertaria o botão? Conta pra gente nos comentários!"
+    }
+   ],
+   "tail": 0.8
+  }
+ ]
+}
