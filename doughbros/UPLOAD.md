@@ -35,43 +35,52 @@ Poll: `Object.fromEntries(Object.entries(window.__dl).map(([k,v])=>[k,v.size]))`
 
 ## 3. Helper functions (define once)
 ```js
-window.__open = async (file) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+window.__new = async () => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
  [...document.querySelectorAll('ytcp-video-share-dialog ytcp-button, ytcp-video-share-dialog button')].find(b=>b.innerText.trim()==='Закрыть')?.click(); await sleep(1500);
- if(!document.querySelector('ytcp-uploads-file-picker input[type=file]')){ document.querySelector('#create-icon')?.click(); await sleep(1000);
-  [...document.querySelectorAll('tp-yt-paper-item')].find(e=>e.innerText.includes('Добавить видео'))?.click(); await sleep(2000);}
- const inp=document.querySelector('ytcp-uploads-file-picker input[type=file]'); if(!inp) return 'no picker';
+ if(!document.querySelector('ytcp-uploads-file-picker input[type=file]')){ document.querySelector('#create-icon, [aria-label="Создать"]')?.click(); await sleep(1200); document.querySelector('#text-item-0')?.click(); await sleep(2500);}
+ return !!document.querySelector('ytcp-uploads-file-picker input[type=file]'); };
+window.__open = async (file) => { await window.__new(); const inp=document.querySelector('ytcp-uploads-file-picker input[type=file]'); if(!inp) return 'no picker';
  const dt=new DataTransfer(); dt.items.add(new File([window.__dl[file]], file, {type:'video/mp4'})); inp.files=dt.files; inp.dispatchEvent(new Event('change',{bubbles:true})); return 'uploading '+file; };
-window.__fill = async (title, desc, tags) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms)); await sleep(3000);
- const dlg=document.querySelector('ytcp-uploads-dialog');
- const setTb=(el,txt)=>{el.focus(); document.execCommand('selectAll',false,null); document.execCommand('insertText',false,txt); el.dispatchEvent(new Event('input',{bubbles:true}));};
- const tbs=[...dlg.querySelectorAll('#textbox')]; setTb(tbs[0], title); await sleep(500); setTb(tbs[1], desc); await sleep(500);
+window.__fill = async (title, desc, tags) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+ let dlg; for (let i=0;i<20;i++){ dlg=document.querySelector('ytcp-uploads-dialog'); if (dlg && dlg.querySelectorAll('#textbox').length>=2 && dlg.querySelector('#textbox').innerText.trim()) break; await sleep(1000);} await sleep(1500);
+ const setTb=async (el,txt)=>{ el.click(); el.focus(); await sleep(300); const sel=window.getSelection(); const rg=document.createRange(); rg.selectNodeContents(el); sel.removeAllRanges(); sel.addRange(rg); document.execCommand('insertText',false,txt); el.dispatchEvent(new Event('input',{bubbles:true}));};
+ const tbs=[...dlg.querySelectorAll('#textbox')]; await setTb(tbs[0], title); await sleep(500); await setTb(tbs[1], desc); await sleep(500);
  const mfk=dlg.querySelector('tp-yt-paper-radio-button[name=VIDEO_MADE_FOR_KIDS_NOT_MFK]'); mfk.click(); await sleep(800);
- dlg.querySelector('#toggle-button')?.click(); await sleep(1200);
+ if(!dlg.querySelector('input[aria-label="Теги"]')){ dlg.querySelector('#toggle-button')?.click(); await sleep(1500);}
  const tag=dlg.querySelector('input[aria-label="Теги"]'); tag.focus(); document.execCommand('insertText',false,tags+',');
  tag.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,bubbles:true})); await sleep(800);
  return [tbs[0].innerText, mfk.getAttribute('aria-checked'), dlg.querySelectorAll('ytcp-chip').length]; };
 window.__thumb = (file) => { const t=document.querySelector('ytcp-uploads-dialog #file-loader');
  const dt=new DataTransfer(); dt.items.add(new File([window.__dl[file]],'thumb.png',{type:'image/png'})); t.files=dt.files; t.dispatchEvent(new Event('change',{bubbles:true})); return 'thumb set'; };
+window.__pickDay = async (day) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms)); const c=document.querySelector('ytcp-uploads-dialog #second-container');
+ if (c.querySelector('#datepicker-trigger').innerText.trim().startsWith(day+' ')) return 'already';
+ c.querySelector('#datepicker-trigger').click();
+ for (let i=0;i<10;i++){ await sleep(500); const cand=[...document.querySelectorAll('ytcp-scrollable-calendar *, ytcp-date-picker *')].filter(e=>e.children.length===0 && e.textContent.trim()===String(day) && e.getClientRects().length && !/disabled/.test(e.className+e.parentElement.className));
+  if (cand.length){ (cand[0].closest('[class*=calendar-day]')||cand[0]).click(); await sleep(1000); return c.querySelector('#datepicker-trigger').innerText.trim(); } }
+ return 'day not found'; };
+window.__pickTime = async (time) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms)); const c=document.querySelector('ytcp-uploads-dialog #second-container'); const t=c.querySelector('input'); t.click();
+ for (let i=0;i<10;i++){ await sleep(500); const it=[...document.querySelectorAll('tp-yt-paper-item')].find(e=>e.getClientRects().length && e.innerText.trim()===time); if (it){ it.scrollIntoView(); it.click(); await sleep(1000); return t.value; } }
+ return 'time not found'; };
+// time can't be typed — it must be picked from the 15-minute list (typing silently keeps 00:00)
 window.__sched = async (day, time) => { const sleep=ms=>new Promise(r=>setTimeout(r,ms)); const dlg=document.querySelector('ytcp-uploads-dialog');
- for (let i=0;i<3;i++){ dlg.querySelector('#next-button').click(); await sleep(1800);} dlg.querySelector('#second-container-expand-button').click(); await sleep(1200);
- const c=dlg.querySelector('#second-container');
- if (!c.querySelector('#datepicker-trigger').innerText.trim().startsWith(day+' ')) { c.querySelector('#datepicker-trigger').click(); await sleep(1200);
-  [...document.querySelectorAll('ytcp-date-picker [class*=day]')].find(e=>e.innerText.trim()===String(day) && e.offsetParent)?.click(); await sleep(800); }
- const t=c.querySelector('input'); t.focus(); t.select(); document.execCommand('insertText',false,time); t.dispatchEvent(new Event('input',{bubbles:true})); t.dispatchEvent(new Event('change',{bubbles:true})); t.blur(); await sleep(1000);
- return [c.querySelector('#datepicker-trigger').innerText.trim(), t.value]; };
-window.__done = async () => { document.querySelector('ytcp-uploads-dialog #done-button').click(); await new Promise(r=>setTimeout(r,5000));
- return document.querySelector('ytcp-video-share-dialog')?.innerText?.slice(0,140); };
+ for (let i=0;i<3;i++){ dlg.querySelector('#next-button').click(); await sleep(1800);} dlg.querySelector('#second-container-expand-button').click(); await sleep(1500);
+ const a=await window.__pickDay(day); await sleep(600); const b=await window.__pickTime(time); const c=dlg.querySelector('#second-container'); return [a,b,c.querySelector('#datepicker-trigger').innerText.trim(), c.querySelector('input').value]; };
+window.__done = async () => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+ for(let i=0;i<40;i++){ const b=document.querySelector('ytcp-uploads-dialog #done-button'); if(b.getAttribute('aria-disabled')!=='true') break; await sleep(1000);}
+ document.querySelector('ytcp-uploads-dialog #done-button').click(); await sleep(5000);
+ return document.querySelector('ytcp-video-share-dialog')?.innerText?.slice(0,140) || 'no share dialog yet — wait and check'; };
 'ok'
 ```
 (The Studio UI is in Russian on this account. Keep each javascript_tool call short — they time out after 45 s.)
 
 ## 4. For each video (separate calls, check every result)
 1. `await window.__open('epNNN_short1.mp4')` → "uploading …"
-2. `await window.__fill(title, description, tags)` → title echoed, `"true"`, chip count > 0 (title/description/tags from that video's `upload.txt`; asking viewers to comment is fine — the channel is not made for kids)
+2. `await window.__fill(title, description, tags)` → title echoed (if it echoes the file name like "ep004 short3", the dialog was still loading: wait 8 s and call it again), `"true"`, chip count > 0 (title/description/tags from that video's `upload.txt`; asking viewers to comment is fine — the channel is not made for kids)
 3. long video only: `window.__thumb('epNNN_long_thumb.png')`
 4. `await window.__sched(DAY, 'HH:MM')` → returns the date and time you asked for. If the date is wrong, take a screenshot and click the right day in the calendar.
-5. `await window.__done()` → must say "Публикация видео запланирована" with the right date/time.
-Order: short1, short2, long, short3.
+5. `await window.__done()` → must say "Публикация видео запланирована" with the right date/time. **Check the date/time in that text.** If it is wrong, open `studio.youtube.com/video/<id>/edit` → Параметры доступа → pick the time from the list → ОК → Сохранить.
+   If the dialog stays on "Сохранение…" for minutes, reload the upload page (re-download the blobs) and upload again — it is a transient browser-pane block.
+Order: short1, short2, long, short3. After the long video, close the "Обработка видео" dialog (button "Закрыть" in `ytcp-uploads-still-processing-dialog`) before the next `__open`.
 
 ## 5. Clean up
 `git push https://github.com/elkhabibullaev05-alt/ai-kids-video-agent --delete uploads` after all four are scheduled.
