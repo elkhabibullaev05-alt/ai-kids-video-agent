@@ -41,9 +41,9 @@ World now also includes: `bathroom`, `garden` (night, outside the kitchen door),
 ## Formats
 **Long (3–5 min):** 5–8 scenes, 40–60 spoken lines (≈4.5 s per line incl. action; check the duration with `--check` and add scenes if under 180 s), title `Dough Bros vs <VILLAIN IN CAPS> <emoji> | Animation EP <n>`.
 **Shorts (15–45 s):** 1 scene, a scary/funny hook in the first 2 seconds, 3–6 lines, ends on a punch (scream, villain line, or question). `hook` text on screen. Three types each day:
-1. **Teaser** — the scariest moment from today's long episode.
-2. **Character moment** — a gag or jump scare with one or two heroes.
-3. **Question / cliffhanger** — ends asking the viewer something ("Would YOU open the freezer?").
+1. **Funny character moment** (main Short) — a gag or jump scare with one hero; title names the hero.
+2. **Question / dare** — ends asking the viewer something ("Would YOU open the freezer? 👇").
+3. **Teaser** — the scariest moment from today's long episode.
 
 ## Thumbnails
 Villain huge on the right roaring, 1–3 scared heroes on the left, 2–3 word yellow text: "IT'S AWAKE!", "DON'T OPEN IT!", "YOU'RE TOAST!".

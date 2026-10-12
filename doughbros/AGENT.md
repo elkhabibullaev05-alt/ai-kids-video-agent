@@ -20,7 +20,7 @@ bash setup.sh            # installs python deps + downloads the TTS model from G
 ## 3. Write 4 scripts
 Next episode number N = last `episode` in log.json + 1 (3 digits: `ep002`).
 - `scripts/epNNN_long.json` — follow the long-episode structure in the bible. **Target 180–300 s.** Run `--check` and if shorter than 180 s add scenes/lines.
-- `scripts/epNNN_short1.json` (teaser of today's episode), `epNNN_short2.json` (character moment), `epNNN_short3.json` (question/cliffhanger). 15–45 s each.
+- `scripts/epNNN_short1.json` (funny character moment — the main Short), `epNNN_short2.json` (viewer question/dare), `epNNN_short3.json` (teaser of today's episode). 15–45 s each. See `story/themes.md` → Shorts.
 - Every `say` line needs `en` + `es`, `de`, `fr`, `it`, `pt`. Natural, simple translations.
 - Rotate backgrounds and villains vs. the last 2 episodes in the log.
 

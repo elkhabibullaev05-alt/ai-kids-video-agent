@@ -36,8 +36,10 @@ Each day pick ONE theme for the long episode. Never reuse a theme that appears i
 Seasonal: late Oct → Halloween; Dec → winter/snow; Feb 14 → friendship cards; spring → garden.
 
 ## Shorts — 3 different types each day
-1. **Teaser** of today's long episode (the scariest moment).
-2. **Character moment** — rotate the hero each day (bup → pim → zeek → lolly → crispy).
-3. **Question / dare** for the viewer ("Would YOU…?", "Which villain is scarier?"). Comment questions are allowed ("Comment YES or NO!") — the channel is not made for kids.
+Analytics (12 Oct): the funny character-moment Short (Zeek, ~200 views) clearly beat the teaser. So **2 of the 3 Shorts are now funny character moments or viewer questions**; only one is a teaser.
+1. **Funny character moment** — the main Short of the day. One hero, one silly gag that pays off in a jump scare or a punchline (Pim faints, Zeek's invention backfires, Lolly snaps, Bup's plan fails, Crispy appears from nowhere). Rotate the hero each day (bup → pim → zeek → lolly → crispy). Title names the hero: "Zeek's Invention Went TOO Far 😱".
+2. **Question / dare** for the viewer — ends on a direct question on screen and in the last line ("Would YOU open the freezer? 👇", "Which villain is scarier — Mr. Pot or Frostbite?", "Comment YES or NO!"). Comment questions are allowed — the channel is not made for kids.
+3. **Teaser** of today's long episode (the scariest moment) — ends with "Full episode on the channel".
+File names stay `short1/short2/short3`, publish order 09:00 = character moment, 12:00 = question, 18:00 = teaser.
 
 Hook text and title must be different from the last 7 days.
