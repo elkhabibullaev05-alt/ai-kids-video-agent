@@ -188,6 +188,8 @@ class Compiler:
             c = S["creatures"].get(b["lunge"])
             if not c:
                 self.err(f"shot {S['i']}: lunge unknown {b['lunge']}"); return t
+            if c["vis"].at(t) < 0.5:
+                c["vis"].to(t, t + 0.05, 1.0)   # a lunge always reveals the creature
             c["x"].to(t, t + 0.45, float(b.get("to", c["x"].at(t) - 300)))
             c["mouth"].to(t, t + 0.2, 1.0); c["mouth"].to(t + 0.9, t + 1.2, 0.0)
             c["rage"].to(t, t + 0.2, 1.0)

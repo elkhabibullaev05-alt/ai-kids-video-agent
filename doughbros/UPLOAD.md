@@ -1,7 +1,7 @@
 # Uploading the day's videos to YouTube (Dough Bros channel)
 
 Channel: **Dough Bros** — @DoughBrosTV — Studio id `UCsQ8TVoioR_IIJpU_1RE_IA` (Google account habibullaeveldorbek57@gmail.com).
-Uploads go through the **Claude app's built-in browser** on the user's computer (tools `mcp__remote-devices__Claude_Browser__*`), where the user is already signed in. Never type passwords; if Google asks to sign in, stop and tell the user.
+Uploads go through the **Claude app's built-in browser** on the user's computer (tools `mcp__remote-devices__Claude_Browser__*`), where the user is already signed in. Never type passwords; if Google asks to sign in, stop and tell the user. Open your **own tab** with `preview_start` and pass its `tabId` to every call (the Hollowmere task may use the browser at the same time).
 
 ## Schedule (Bishkek time = New York + 10 h; Nov–mid-March New York + 11 h)
 Each episode goes to ONE New York day — the day chosen in AGENT.md step 0 (the earliest day with nothing scheduled yet).
