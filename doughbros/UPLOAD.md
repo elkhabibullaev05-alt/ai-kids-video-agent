@@ -4,13 +4,14 @@ Channel: **Dough Bros** — @DoughBrosTV — Studio id `UCsQ8TVoioR_IIJpU_1RE_IA
 Uploads go through the **Claude app's built-in browser** on the user's computer (tools `mcp__remote-devices__Claude_Browser__*`), where the user is already signed in. Never type passwords; if Google asks to sign in, stop and tell the user.
 
 ## Schedule (Bishkek time = New York + 10 h; Nov–mid-March New York + 11 h)
-| video | New York | Bishkek (summer time) |
+Each episode goes to ONE New York day — the day chosen in AGENT.md step 0 (the earliest day with nothing scheduled yet).
+| video | New York (that day) | Bishkek (summer time) |
 |---|---|---|
-| short1 | 09:00 same day | 19:00 today |
-| short2 | 12:00 | 22:00 today |
-| long   | 15:00 | 01:00 tomorrow |
-| short3 | 18:00 | 04:00 tomorrow |
-If a slot is already in the past, use the same slot one day later.
+| short1 (character moment) | 09:00 | 19:00 same date |
+| short2 (question) | 12:00 | 22:00 same date |
+| long   | 15:00 | 01:00 next date |
+| short3 (teaser) | 18:00 | 04:00 next date |
+Studio's schedule picker shows **Bishkek time** on this computer, so pass the Bishkek date/time to `__sched` (e.g. NY 13 Oct 15:00 → Bishkek 14 Oct 01:00). Never pick a slot less than 30 min in the future.
 
 ## 1. Host the files temporarily
 The browser can't read the cloud workspace, so push the day's files to the orphan branch `uploads` (force-push replaces the previous day):
