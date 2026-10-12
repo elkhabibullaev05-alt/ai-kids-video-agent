@@ -15,11 +15,12 @@ cd <repo>/hollow && bash setup.sh
 ```
 
 ## 2. Read
+**From EP 2 the channel tells TRUE STORIES** — real events, documented mysteries and recorded legends from Europe and North America. Read `story/true_stories.md` first (rules + story bank), pick a story not used in the last 30 episodes, then **research it with web search (2–4 reliable sources) before writing**. No invented facts; keep `sources` (URLs) in log.json and put 2–3 of them under "Sources:" in the long video's description.
 `story/bible.md` (world, characters, creatures, rules, structure), `story/SCRIPT_FORMAT.md`, `story/themes.md`, `story/log.json` (continue from the last cliffhanger), and `scripts/_build_ep001.py` as the style example.
 
 ## 3. Write the scripts
 N = last episode + 1 (3 digits). Write `scripts/_build_epNNN.py` (same helper style as `_build_ep001.py`) producing:
-- `epNNN_long.json` — 5–7 shots, **180–300 s** (`--check`; add shots/lines if shorter). Title `<Scary title> | Hollowmere Tales EP <n>`.
+- `epNNN_long.json` — 5–7 shots, **180–300 s** (`--check`; add shots/lines if shorter). Title `<Hook> | True Story | Hollowmere Tales EP <n>`. The Narrator tells the real story ("This is a true story…"); Odo and Mothwick walk through the places as silent witnesses / short reactions — never claim they were part of the real event. Use `figure` (historical people, `seed` picks hat style), `ghost`, `ship`, `crow`, `gloamhound` (for beasts) and the backgrounds `lighthouse`, `sea`, `manor`, `village`, `forest`, `swamp`, `chapel`.
 - `epNNN_short1.json` (the rule), `epNNN_short2.json` (Would YOU…?), `epNNN_short3.json` (scariest moment). 15–45 s each, `hook` set.
 - Every line has `en es de fr it pt`. Keep lines ≤ 16 words.
 - Place characters/creatures per SCRIPT_FORMAT (ground y≈905; Odo 450–900; creatures 1250–1600).
@@ -41,7 +42,7 @@ Schedule the 4 videos on Hollowmere Tales via the Claude app's built-in browser 
 ```json
 {"episode": N, "date": "YYYY-MM-DD", "theme": "...", "rule": "...", "title": "...", "creature": "...", "bg": ["..."],
  "summary": "2 sentences", "cliffhanger": "...", "shorts": ["t1","t2","t3"],
- "uploads": [{"title": "...", "publish_at": "2026-10-13T15:00:00Z"}]}
+ "sources": ["https://..."], "uploads": [{"title": "...", "publish_at": "2026-10-13T15:00:00Z"}]}
 ```
 Commit the build script + 4 JSON scripts + log.json (NOT `out/`) and `git push` (on rejection: `git pull --rebase` and push again).
 

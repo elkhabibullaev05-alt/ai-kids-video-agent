@@ -22,7 +22,7 @@ Output in `out/<id>/`: `<id>.mp4` (English voices + English subtitles burned in)
 ## Shot
 ```json
 {
-  "bg": "forest | clearing | swamp | graveyard | chapel | mill | village | cave",
+  "bg": "forest | clearing | swamp | graveyard | chapel | mill | village | cave | lighthouse | sea | manor",
   "seed": 3,                          // background variation (same seed = same trees)
   "music": "drone | heartbeat | lullaby | choir | none",
   "wind": true,
@@ -39,7 +39,8 @@ Output in `out/<id>/`: `<id>.mp4` (English voices + English subtitles burned in)
 }
 ```
 Ground is at y≈905. Good x: Odo 450–900, creatures 1250–1600 (x is the creature's feet/centre). `hollowmother` uses `y` ≈ 480–560 (body centre) and starts hanging high: use `act` `drop` to lower it.
-Creature types: `gloamhound`, `rootwraith`, `crow` (add `"fly": 1` for flying; y ≈ 300–600), `hollowmother`, `wickeater`, `shepherd`.
+Creature types: `gloamhound`, `rootwraith`, `crow` (add `"fly": 1` for flying; y ≈ 300–600), `hollowmother`, `wickeater`, `shepherd`, `figure` (a historical person; `"seed"`: 0 wide hat, 1 sailor cap, 2 hood/shawl; speaks with the `stranger` voice), `ghost` (pale translucent figure), `ship` (a ship far out at sea; use on `sea`/`lighthouse`, y ≈ 650–700, scale 0.4–0.8).
+Extra backgrounds: `lighthouse` (island, tower, keeper's cottage), `sea` (night sea seen from a ship's deck), `manor` (big old house).
 Creature ids are your own names (`h1`, `wraith`, `pale`) — use them in beats and as speakers.
 
 ## Beats (one after another; `"and": true` = start together with the previous beat)

@@ -104,7 +104,11 @@ PAL = {   # sky top, sky horizon, far trees, mid trees, ground, fog colour, moon
     "mill":      ("#0b0505", "#5a1c14", "#28100c", "#150807", "#100807", "#c86a50", False),
     "village":   ("#05070c", "#22304a", "#141b2a", "#0b0f18", "#0a0c12", "#8fa2c8", True),
     "cave":      ("#050403", "#2a1a10", "#1a100a", "#0e0806", "#0a0605", "#a07a50", False),
+    "lighthouse":("#05080b", "#2a3a46", "#16212a", "#0b1218", "#0a0e12", "#a8bccb", True),
+    "sea":       ("#04070a", "#22323e", "#121c24", "#0a1218", "#081014", "#9fb4c4", True),
+    "manor":     ("#08060a", "#33243a", "#1a1420", "#0f0b14", "#0c0a0e", "#b09cc0", True),
 }
+NO_TREES = ("lighthouse", "sea")
 BACKGROUNDS = list(PAL)
 
 
@@ -168,6 +172,8 @@ def background(kind, seed=1):
     else:
         # ember horizon glow
         g.append('<ellipse cx="960" cy="820" rx="1300" ry="420" fill="url(#warm)" opacity="0.7"/>')
+    if kind in NO_TREES:
+        return sea_background(kind, rnd, p, "".join(g))
     # far trees
     d = []
     for i in range(26):
@@ -216,8 +222,58 @@ def background(kind, seed=1):
     return "".join(g)
 
 
+def sea_background(kind, rnd, p, sky):
+    g = [sky]
+    # distant waves band
+    g.append(f'<rect x="-300" y="640" width="2520" height="800" fill="{p[2]}"/>')
+    for k in range(14):
+        y = 650 + k * 30
+        g.append(f'<path d="M-300,{y} ' + " ".join(f"Q{x+60},{y-10-k} {x+120},{y}" for x in range(-300, 2300, 120)) + f'" stroke="{p[5]}" stroke-width="2" fill="none" opacity="{0.05+0.01*k:.2f}"/>')
+    if kind == "lighthouse":
+        # cliff island + tower + keeper's cottage
+        g.append(f'<path d="{smooth(jag([(-300,1300),(-300,760),(300,700),(700,640),(1100,650),(1500,720),(1900,780),(2220,820),(2220,1300)], 18, rnd, 2))}" fill="{p[3]}"/>')
+        x = 1280
+        g.append(f'<path d="M{x-70},660 L{x-48},250 L{x+48},250 L{x+70},660 Z" fill="{p[2]}" stroke="{INK}" stroke-width="6"/>')
+        g.append(f'<rect x="{x-62}" y="200" width="124" height="54" fill="{INK}"/><path d="M{x-70},200 L{x},140 L{x+70},200 Z" fill="{INK}"/>')
+        g.append(f'<rect x="{x-44}" y="208" width="88" height="40" fill="#1a1a14"/>')
+        for k in range(3):
+            g.append(f'<rect x="{x-60}" y="{330+k*100}" width="120" height="16" fill="{INK}" opacity="0.6"/>')
+        g.append(f'<path d="M{x-420},700 L{x-420},600 L{x-330},540 L{x-240},600 L{x-240},700 Z" fill="{p[3]}" stroke="{INK}" stroke-width="5"/>'
+                 f'<rect x="{x-360}" y="620" width="34" height="40" fill="#000"/>')
+        # ground for characters
+        g.append(f'<path d="{smooth(ground_line(rnd, 905, 14))}" fill="{p[4]}"/>')
+        g.append(grass(rnd, 905, p[4], 60))
+    else:
+        # deck of a ship in the foreground: planks + rail + mast
+        g.append(f'<rect x="-300" y="880" width="2520" height="500" fill="#140e0a"/>')
+        g.append("".join(f'<rect x="-300" y="{900+k*40}" width="2520" height="3" fill="{INK}" opacity="0.7"/>' for k in range(6)))
+        g.append(f'<rect x="-300" y="800" width="2520" height="14" fill="#1a120c" stroke="{INK}" stroke-width="4"/>'
+                 + "".join(f'<rect x="{x}" y="812" width="10" height="70" fill="#1a120c" stroke="{INK}" stroke-width="3"/>' for x in range(-280, 2220, 110)))
+        g.append(f'<rect x="1520" y="-300" width="44" height="1190" fill="#1a120c" stroke="{INK}" stroke-width="6"/>'
+                 f'<rect x="1300" y="120" width="480" height="14" fill="#1a120c" stroke="{INK}" stroke-width="5"/>')
+        g.append(f'<path d="M1320,134 Q1470,330 1330,560 L1760,560 Q1640,330 1760,134 Z" fill="#cfc4ae" opacity="0.55" stroke="{INK}" stroke-width="4"/>')
+        for k in range(6):
+            g.append(f'<path d="M1542,{-200+k*10} L{1100+k*70},800" stroke="{INK}" stroke-width="2" opacity="0.6"/>')
+    # fog
+    for k in range(5):
+        g.append(f'<ellipse cx="{f(rnd.uniform(0,1920))}" cy="{f(rnd.uniform(600,880))}" rx="{f(rnd.uniform(500,900))}" ry="50" fill="{p[5]}" opacity="0.06"/>')
+    return "".join(g)
+
+
 def props(kind, rnd, p):
     c = p[3]
+    if kind == "manor":
+        x = 1100
+        body = (f'<path d="M{x-520},905 L{x-520},520 L{x-430},430 L{x-340},520 L{x-340},560 L{x+300},560 L{x+300},430 L{x+380},330 L{x+460},430 L{x+460},905 Z" fill="{c}"/>'
+                f'<rect x="{x-60}" y="440" width="40" height="120" fill="{c}"/>')
+        wins = []
+        for i, wx in enumerate(range(x - 480, x + 440, 110)):
+            for wy in (600, 730):
+                lit = rnd.random() < 0.12
+                wins.append(f'<rect x="{wx}" y="{wy}" width="44" height="70" fill="{"#ffb24a" if lit else "#000"}" opacity="0.85"/>'
+                            + (f'<circle cx="{wx+22}" cy="{wy+35}" r="70" fill="url(#warm)"/>' if lit else ""))
+        door = f'<path d="M{x-40},905 L{x-40},800 Q{x},770 {x+40},800 L{x+40},905 Z" fill="#000"/>'
+        return body + "".join(wins) + door
     if kind == "graveyard":
         d = []
         for i in range(9):
@@ -534,7 +590,46 @@ def shepherd(x, y, t, s=1.0, face=-1, raise_=0.0, seed=0):
     return "".join(g), em
 
 
+def figure(x, y, t, s=1.0, face=-1, ghost=0.0, seed=0):
+    """generic historical person silhouette (coat + hat), optionally a pale ghost"""
+    rr = random.Random(seed)
+    hat = seed % 3
+    sway = math.sin(t * 1.3 + seed) * 2
+    X = lambda v: x + v * face * s + sway
+    Y = lambda v: y + v * s
+    col = "#cfd8e0" if ghost else "#17110e"
+    op = 0.55 if ghost else 1.0
+    coat = [(-34, -230), (34, -232), (46, -120), (56, 0), (16, 0), (8, -60), (-8, -60), (-16, 0), (-56, 0), (-46, -120)]
+    g = [f'<path d="{smooth([(X(a),Y(b)) for a,b in coat])}" fill="{col}" stroke="{INK}" stroke-width="{f(4*s)}" opacity="{op}"/>']
+    g.append(f'<circle cx="{f(X(0))}" cy="{f(Y(-262))}" r="{f(30*s)}" fill="{BONE if not ghost else "#e8f0f8"}" stroke="{INK}" stroke-width="{f(4*s)}" opacity="{op}"/>')
+    g.append(f'<circle cx="{f(X(8))}" cy="{f(Y(-266))}" r="{f(4*s)}" fill="{INK}"/><circle cx="{f(X(-10))}" cy="{f(Y(-266))}" r="{f(4*s)}" fill="{INK}"/>')
+    if hat == 0:   # tricorn / wide hat
+        g.append(f'<path d="M{f(X(-52))},{f(Y(-282))} Q{f(X(0))},{f(Y(-300))} {f(X(52))},{f(Y(-282))} L{f(X(28))},{f(Y(-322))} L{f(X(-28))},{f(Y(-322))} Z" fill="{INK}" opacity="{op}"/>')
+    elif hat == 1:  # sailor cap
+        g.append(f'<path d="M{f(X(-34))},{f(Y(-280))} L{f(X(-30))},{f(Y(-306))} L{f(X(32))},{f(Y(-306))} L{f(X(44))},{f(Y(-282))} Z" fill="{INK}" opacity="{op}"/>')
+    else:          # hood / shawl
+        g.append(f'<path d="M{f(X(-40))},{f(Y(-240))} Q{f(X(-44))},{f(Y(-310))} {f(X(0))},{f(Y(-306))} Q{f(X(44))},{f(Y(-310))} {f(X(40))},{f(Y(-240))} L{f(X(30))},{f(Y(-262))} Q{f(X(0))},{f(Y(-298))} {f(X(-30))},{f(Y(-262))} Z" fill="{col}" stroke="{INK}" stroke-width="{f(3*s)}" opacity="{op}"/>')
+    em = f'<ellipse cx="{f(X(0))}" cy="{f(Y(-150))}" rx="{f(80*s)}" ry="{f(170*s)}" fill="url(#paleglow)" opacity="{0.35 if ghost else 0}"/>'
+    return "".join(g), em
+
+
+def ghostship(x, y, t, s=1.0, face=-1, extra=0.0, seed=0):
+    """a ship far out on the water, tattered sails, faint light"""
+    bob = math.sin(t * 0.8 + seed) * 6
+    X = lambda v: x + v * face * s
+    Y = lambda v: y + v * s + bob
+    hull = [(-260, -20), (260, -20), (220, 40), (-210, 40)]
+    g = [f'<path d="{poly([(X(a),Y(b)) for a,b in hull])}" fill="#0c0a08" stroke="{INK}" stroke-width="{f(4*s)}"/>']
+    for mx, h in ((-110, 300), (40, 380), (170, 260)):
+        g.append(f'<rect x="{f(X(mx)-4*s)}" y="{f(Y(-20-h))}" width="{f(8*s)}" height="{f(h*s)}" fill="#0c0a08"/>')
+        rr = random.Random(seed + mx)
+        sail = [(mx - 70, -20 - h * 0.9), (mx + 70, -20 - h * 0.9), (mx + 60, -50), (mx - 60, -50)]
+        g.append(f'<path d="{smooth(jag([(X(a),Y(b)) for a,b in sail], 8*s, rr, 2))}" fill="#c8c0ac" opacity="0.45" stroke="{INK}" stroke-width="{f(2*s)}"/>')
+    em = f'<circle cx="{f(X(200))}" cy="{f(Y(-40))}" r="{f(40*s)}" fill="url(#ambglow)" opacity="0.6"/>'
+    return "".join(g), em
+
+
 CREATURES = {"gloamhound": gloamhound, "rootwraith": rootwraith, "crow": crow, "hollowmother": hollowmother,
-             "wickeater": wickeater, "shepherd": shepherd}
+             "wickeater": wickeater, "shepherd": shepherd, "figure": figure, "ghost": figure, "ship": ghostship}
 CREATURE_VOICE = {"rootwraith": "rootwraith", "hollowmother": "hollowmother", "wickeater": "wickeater",
-                  "shepherd": "shepherd", "gloamhound": "hound", "crow": "crow"}
+                  "shepherd": "shepherd", "gloamhound": "hound", "crow": "crow", "figure": "stranger", "ghost": "grandma", "ship": "narr"}

@@ -1,5 +1,7 @@
 # HOLLOWMERE TALES — story bible
 
+> **Since EP 2: true stories.** Each episode retells a real event, documented mystery or recorded legend from Europe/North America (see `true_stories.md`). The world, characters and look below stay the same: Odo and Mothwick are the lantern-bearers who carry us to the places where it happened; the Narrator tells what the records say.
+
 **Channel:** Hollowmere Tales — narrated gothic horror storybook animation for a **general audience (13+)** in the USA and Europe. YouTube setting: **"Not made for kids"**. Never use "kids", "for kids", "children" in titles, descriptions or tags.
 **Look:** dark hand-inked storybook: twisted black trees, warm lantern/fire light in a sea of darkness, red eyes watching from the woods, fog, embers, grain. (Mood reference only — every character, creature and story is our own.)
 **Language:** English narration and voices; **English subtitles burned in**; ES/DE/FR/IT/PT as .srt files.

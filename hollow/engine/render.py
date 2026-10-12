@@ -100,7 +100,7 @@ class Compiler:
             S["creatures"][kid] = {"type": typ, "x": Track(c.get("x", 1450)), "y": Track(c.get("y", 905 if typ != "hollowmother" else 520)),
                                    "s": c.get("scale", 1.0), "face": c.get("face", -1), "vis": Track(0.0 if st == "hidden" else 1.0),
                                    "mouth": Track(0.0), "rage": Track(c.get("rage", 0.0)), "extra": Track(c.get("extra", 0.0 if typ != "hollowmother" else 1.0)),
-                                   "fly": c.get("fly", 0)}
+                                   "fly": c.get("fly", 0), "seed": c.get("seed", 0)}
         S["eyes_pos"] = self.eye_positions(S)
         last = t0
         for b in sh.get("beats", []):
@@ -344,11 +344,14 @@ def world_layers(S, t):
             body, e = fn(x, y, t, c["s"], c["extra"].at(t), seed)
         elif typ == "wickeater":
             body, e = fn(x, y, t, c["s"], c["face"], 0.4 + 0.6 * c["mouth"].at(t) + 0.3 * (1 - min(1, lv)), seed)
+        elif typ in ("figure", "ghost"):
+            body, e = fn(x, y, t, c["s"], c["face"], 1.0 if typ == "ghost" else 0.0, c.get("seed", seed))
         else:
             body, e = fn(x, y, t, c["s"], c["face"], c["extra"].at(t), seed)
         lit.append(f'<g opacity="{v:.3f}">{body}</g>')
         glow = {"shepherd": ((0.75, 0.80, 1.0), -600), "rootwraith": ((1.0, 0.65, 0.3), -400), "hollowmother": ((0.75, 0.82, 1.0), 0),
-                "wickeater": ((1.0, 0.7, 0.3), -60), "gloamhound": ((1.0, 0.25, 0.12), -210), "crow": ((1.0, 0.3, 0.2), -40)}[typ]
+                "wickeater": ((1.0, 0.7, 0.3), -60), "gloamhound": ((1.0, 0.25, 0.12), -210), "crow": ((1.0, 0.3, 0.2), -40),
+                "figure": ((1.0, 0.8, 0.6), -200), "ghost": ((0.75, 0.82, 1.0), -200), "ship": ((1.0, 0.75, 0.4), -150)}[typ]
         lights.append((x, y + glow[1] * c["s"], 260 * c["s"], 0.30 * v, glow[0]))
         em.append(f'<g opacity="{v:.3f}">{e}</g>')
     # characters
@@ -384,7 +387,8 @@ def world_layers(S, t):
         blockers = []
         for c in S["creatures"].values():
             if c["vis"].at(t) > 0.3:
-                w = {"shepherd": 170, "rootwraith": 260, "gloamhound": 300, "hollowmother": 260, "wickeater": 80, "crow": 70}[c["type"]] * c["s"]
+                w = {"shepherd": 170, "rootwraith": 260, "gloamhound": 300, "hollowmother": 260, "wickeater": 80, "crow": 70,
+                     "figure": 80, "ghost": 80, "ship": 300}[c["type"]] * c["s"]
                 blockers.append((c["x"].at(t) - w, c["x"].at(t) + w))
         for ch in S["chars"].values():
             blockers.append((ch["x"].at(t) - 110, ch["x"].at(t) + 190))
