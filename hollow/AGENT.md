@@ -5,7 +5,7 @@ Goal: keep the YouTube channel **Hollowmere Tales** (@HollowmereTalesTV, channel
 ## 0. Buffer check FIRST (this task fires several times a day)
 1. `git pull`, read `story/log.json`; collect every `uploads[].publish_at` → the set of **New York dates** already covered.
 2. Target = the next **2 New York days after today** (NY = UTC−4, Nov–mid-March UTC−5). Today counts only if its 11:00 NY slot is still ≥ 90 min away.
-3. All target days covered → **stop**: no render; one Uzbek line ("Bufer to'la: videolar DD.MM gacha rejalashtirilgan.").
+3. All target days covered **and** no episode with missing uploads (step 5) → **stop**: no render; one Uzbek line ("Bufer to'la: videolar DD.MM gacha rejalashtirilgan.").
 4. Otherwise make **one episode per uncovered day, at most 2 per run**, earliest day first; that day is the episode's `date`.
 5. If an episode in log.json has fewer than 4 `uploads` (or a `pending_uploads` list), first re-render the missing videos from its saved scripts (`scripts/epNNN_*.json`) and upload them (to the `publish_at` in `pending_uploads`; if that time is already past, use the same slot on the next free day), move them into `uploads`, delete `pending_uploads`. Then continue with step 4.
 
