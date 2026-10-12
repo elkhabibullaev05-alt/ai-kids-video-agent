@@ -1,0 +1,124 @@
+{
+ "id": "ep001_short3",
+ "format": "short",
+ "title": "The hounds only come when the light fails 🐺 #shorts",
+ "hook": "KEEP THE LANTERN LIT",
+ "description": "In Hollowmere, the Gloamhounds only step into the light when it starts to fail. Full story on the channel. #shorts #horror #animation #hollowmere",
+ "tags": [
+  "shorts",
+  "horror animation",
+  "scary stories",
+  "animated horror",
+  "creepy",
+  "hollowmere",
+  "gothic",
+  "dark fairy tale",
+  "horror story",
+  "spooky",
+  "lantern",
+  "gloamhound"
+ ],
+ "thumbnail": {
+  "bg": "forest",
+  "seed": 5,
+  "creature": "gloamhound",
+  "text": "KEEP IT LIT"
+ },
+ "shots": [
+  {
+   "bg": "forest",
+   "seed": 5,
+   "music": "heartbeat",
+   "eyes": 10,
+   "ambient": 0.4,
+   "chars": {
+    "odo": {
+     "x": 700
+    },
+    "moth": {
+     "x": 820,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1250,
+     "state": "hidden"
+    }
+   },
+   "focus": [
+    "odo",
+    "h1"
+   ],
+   "beats": [
+    {
+     "say": "narr",
+     "en": "In Hollowmere, the shadows have teeth.",
+     "es": "En Hollowmere, las sombras tienen dientes.",
+     "de": "In Hollowmere haben die Schatten Zähne.",
+     "fr": "À Hollowmere, les ombres ont des crocs.",
+     "it": "A Hollowmere, le ombre hanno i denti.",
+     "pt": "Em Hollowmere, as sombras têm dentes."
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "show": "h1"
+    },
+    {
+     "growl": "h1"
+    },
+    {
+     "say": "moth",
+     "en": "Lift the lantern! Make it burn!",
+     "es": "¡Levanta el farol! ¡Haz que arda!",
+     "de": "Heb die Laterne! Lass sie brennen!",
+     "fr": "Lève la lanterne ! Fais-la brûler !",
+     "it": "Alza la lanterna! Falla ardere!",
+     "pt": "Levante a lanterna! Faça ela queimar!"
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "hide": "h1",
+     "dur": 0.5
+    },
+    {
+     "say": "odo",
+     "en": "They're gone...",
+     "es": "Se han ido...",
+     "de": "Sie sind weg...",
+     "fr": "Ils sont partis...",
+     "it": "Se ne sono andati...",
+     "pt": "Eles foram embora..."
+    },
+    {
+     "lunge": "h1",
+     "to": 1000
+    },
+    {
+     "show": "h1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Full story on the channel.",
+     "es": "Historia completa en el canal.",
+     "de": "Die ganze Geschichte auf dem Kanal.",
+     "fr": "L'histoire complète sur la chaîne.",
+     "it": "Storia completa sul canale.",
+     "pt": "História completa no canal."
+    }
+   ],
+   "tail": 0.8
+  }
+ ]
+}

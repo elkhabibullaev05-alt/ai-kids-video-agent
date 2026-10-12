@@ -1,0 +1,108 @@
+{
+ "id": "ep001_short1",
+ "format": "short",
+ "title": "Never answer the woods at night 🕯️ #shorts",
+ "hook": "NEVER ANSWER THE WOODS",
+ "description": "Rule #1 of Hollowmere: never answer when the woods call your name. #shorts #horror #animation #scarystories #hollowmere",
+ "tags": [
+  "shorts",
+  "horror animation",
+  "scary stories",
+  "animated horror",
+  "creepy",
+  "hollowmere",
+  "gothic",
+  "dark fairy tale",
+  "horror story"
+ ],
+ "thumbnail": {
+  "bg": "forest",
+  "seed": 5,
+  "creature": "gloamhound",
+  "text": "DON'T ANSWER"
+ },
+ "shots": [
+  {
+   "bg": "forest",
+   "seed": 5,
+   "music": "heartbeat",
+   "eyes": 12,
+   "ambient": 0.4,
+   "focus": "odo",
+   "chars": {
+    "odo": {
+     "x": 760
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1150,
+     "state": "hidden"
+    }
+   },
+   "beats": [
+    {
+     "sfx": "howl",
+     "wait": 1.4
+    },
+    {
+     "say": "narr",
+     "en": "Rule one of Hollowmere: never answer when the woods call your name.",
+     "es": "Regla uno de Hollowmere: nunca respondas cuando el bosque diga tu nombre.",
+     "de": "Regel eins von Hollowmere: Antworte nie, wenn der Wald deinen Namen ruft.",
+     "fr": "Règle numéro un de Hollowmere : ne réponds jamais quand la forêt appelle ton nom.",
+     "it": "Regola uno di Hollowmere: non rispondere mai quando il bosco chiama il tuo nome.",
+     "pt": "Regra um de Hollowmere: nunca responda quando a floresta chamar seu nome."
+    },
+    {
+     "say": "wren",
+     "en": "Odo... over here...",
+     "es": "Odo... aquí...",
+     "de": "Odo... hier drüben...",
+     "fr": "Odo... par ici...",
+     "it": "Odo... qui...",
+     "pt": "Odo... aqui..."
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "odo",
+     "en": "...Hello?",
+     "es": "...¿Hola?",
+     "de": "...Hallo?",
+     "fr": "...Allô ?",
+     "it": "...Ciao?",
+     "pt": "...Olá?"
+    },
+    {
+     "light": "out"
+    },
+    {
+     "lunge": "h1",
+     "to": 980,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "wait": 0.8
+    },
+    {
+     "say": "narr",
+     "en": "He answered.",
+     "es": "Él respondió.",
+     "de": "Er hat geantwortet.",
+     "fr": "Il a répondu.",
+     "it": "Ha risposto.",
+     "pt": "Ele respondeu."
+    }
+   ],
+   "tail": 1.8
+  }
+ ]
+}
