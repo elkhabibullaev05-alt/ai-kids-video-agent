@@ -501,7 +501,7 @@ def frame(fi):
     gy, gx = (fi * 37) % (OH // 2), (fi * 53) % (OW // 2)
     gr = np.roll(np.roll(GRAIN, gy, 0), gx, 1)
     gr = np.repeat(np.repeat(gr, 2, 0), 2, 1)[:OH, :OW]
-    out = out + gr[..., None] * 0.028
+    out = out + gr[..., None] * 0.018
     ys, xs = np.ogrid[0:OH, 0:OW]
     vig = 1 - 0.55 * (((xs - OW / 2) / (OW / 1.6)) ** 2 + ((ys - OH / 2) / (OH / 1.5)) ** 2)
     out *= np.clip(vig, 0.25, 1)[..., None]
@@ -671,9 +671,9 @@ def thumbnail(script, path):
     for k in range(10):
         x, y = rnd.uniform(80, 1000), rnd.uniform(380, 700)
         em.append(art.red_eye(x, y, 4, t, k) + art.red_eye(x + 18, y, 4, t, k))
-    lights = [(lp[0], lp[1], 600, 1.4, (1.0, 0.70, 0.38)), (1350, 600, 700, 0.5, (1.0, 0.25, 0.15))]
+    lights = [(lp[0], lp[1], 650, 1.5, (1.0, 0.70, 0.38)), (1300, 650, 750, 0.9, (1.0, 0.30, 0.18)), (960, 700, 1200, 0.3, (1.0, 0.75, 0.55))]
     base = svg_png("".join(body), WW, WH, R)[..., :3]
-    base *= light_mask(lights, 0.45, base.shape)
+    base *= light_mask(lights, 0.6, base.shape)
     emi = svg_png("".join(em), WW, WH, R)
     base = base + emi[..., :3] * emi[..., 3:4]
     img = Image.fromarray((np.clip(base, 0, 1) * 255).astype(np.uint8)).resize((1280, 720), Image.LANCZOS)
@@ -751,7 +751,7 @@ def main():
     final = os.path.join(out, f"{sid}.mp4")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", os.path.join(out, "audio.wav"),
                     "-vf", f"subtitles='{srt}':force_style='{style}'", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", "48000",
-                    "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
+                    "-c:v", "libx264", "-preset", "medium", "-crf", "24", "-maxrate", ("2800k" if c.fmt == "long" else "4M"), "-bufsize", ("5600k" if c.fmt == "long" else "8M"), "-pix_fmt", "yuv420p",
                     "-c:a", "aac", "-b:a", "192k", "-shortest", final], check=True)
     os.remove(raw)
     print("DONE", final)
