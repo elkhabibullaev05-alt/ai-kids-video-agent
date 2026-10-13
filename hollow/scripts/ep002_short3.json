@@ -1,0 +1,115 @@
+{
+ "id": "ep002_short3",
+ "format": "short",
+ "title": "They fired a flare. Nothing answered. 🚩 #shorts",
+ "hook": "NOTHING ANSWERED",
+ "description": "December 26, 1900: the relief boat reaches the Flannan Isles lighthouse. No flag. No keepers. Full true story on the channel. #shorts #truestory #unsolvedmystery #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Flannan Isles",
+  "Eilean Mor",
+  "lighthouse mystery",
+  "Scotland",
+  "horror animation",
+  "scary stories",
+  "hollowmere"
+ ],
+ "thumbnail": {
+  "bg": "sea",
+  "seed": 4,
+  "creature": "ghost",
+  "text": "NO ONE"
+ },
+ "shots": [
+  {
+   "bg": "lighthouse",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "chars": {
+    "odo": {
+     "x": 700
+    },
+    "moth": {
+     "x": 820,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 1250,
+     "state": "hidden",
+     "face": -1
+    }
+   },
+   "focus": [
+    "odo",
+    "g1"
+   ],
+   "beats": [
+    {
+     "say": "narr",
+     "en": "December 26, 1900. The relief boat finally reaches the lighthouse.",
+     "es": "26 de diciembre de 1900. El barco de relevo llega por fin al faro.",
+     "de": "26. Dezember 1900. Das Versorgungsschiff erreicht endlich den Leuchtturm.",
+     "fr": "26 décembre 1900. Le bateau de relève atteint enfin le phare.",
+     "it": "26 dicembre 1900. La nave di soccorso raggiunge finalmente il faro.",
+     "pt": "26 de dezembro de 1900. O barco de troca finalmente chega ao farol."
+    },
+    {
+     "say": "narr",
+     "en": "No flag. No one at the landing. The captain fires a flare.",
+     "es": "Sin bandera. Nadie en el embarcadero. El capitán dispara una bengala.",
+     "de": "Keine Flagge. Niemand am Anleger. Der Kapitän schießt eine Leuchtrakete.",
+     "fr": "Pas de drapeau. Personne au débarcadère. Le capitaine tire une fusée.",
+     "it": "Nessuna bandiera. Nessuno all'approdo. Il capitano spara un razzo.",
+     "pt": "Sem bandeira. Ninguém no cais. O capitão dispara um sinalizador."
+    },
+    {
+     "flash": true
+    },
+    {
+     "wait": 1.0
+    },
+    {
+     "say": "moth",
+     "en": "Nothing answered.",
+     "es": "Nada respondió.",
+     "de": "Nichts antwortete.",
+     "fr": "Rien ne répondit.",
+     "it": "Nulla rispose.",
+     "pt": "Nada respondeu."
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "lunge": "g1",
+     "to": 1000
+    },
+    {
+     "show": "g1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Full true story on the channel.",
+     "es": "Historia real completa en el canal.",
+     "de": "Die ganze wahre Geschichte auf dem Kanal.",
+     "fr": "L'histoire vraie complète sur la chaîne.",
+     "it": "Storia vera completa sul canale.",
+     "pt": "História real completa no canal."
+    }
+   ],
+   "tail": 0.8
+  }
+ ]
+}
