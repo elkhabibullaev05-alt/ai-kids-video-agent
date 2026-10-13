@@ -10,6 +10,7 @@ The task runs 4× a day (08:54, 13:54, 18:54, 22:54 Bishkek) so that it catches 
 2. Target = the next **2 New York days after today** (NY time now = UTC−4, Nov–mid-March UTC−5). Today counts too only if its 09:00 NY slot is still ≥ 90 min away.
 3. If all target days are covered → **stop right here**: no render, no files; reply with one Uzbek line ("Bufer to'la: videolar DD.MM gacha rejalashtirilgan.").
 4. Otherwise make **one episode per uncovered day, at most 2 per run**, earliest day first. Each episode's 4 videos go to that day's slots (09:00, 12:00, 15:00 long, 18:00 NY). Use that day as the episode's `date` in log.json.
+5a. If the last episodes have `pending_uploads` (e.g. YouTube's daily upload limit was hit), schedule those first (files on the `uploads` branch, or re-render from the saved script), move them into `uploads`, and remove `pending_uploads`. If Studio says "Загрузка недоступна… через 24 часа", stop uploading for this run — never do the phone verification it offers.
 5. If the computer/browser can't be reached for uploading, still render and push the scripts + log (without `uploads`) — the next run will see the episode has no uploads and must re-render it from the saved script (`python3 engine/render.py scripts/epNNN_*.json`) and upload it, instead of writing a new episode.
 
 ## 1. Setup (≈2 min)
