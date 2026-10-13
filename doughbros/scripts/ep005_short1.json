@@ -1,0 +1,118 @@
+{
+ "id": "ep005_short1",
+ "format": "short",
+ "title": "Bup's plan lasted 3 SECONDS 😅 #shorts",
+ "hook": "Bup has a PLAN...",
+ "description": "Okay team, here's the plan. Step one... oh no. #shorts #animation #cartoon #doughbros #funny",
+ "tags": [
+  "shorts",
+  "animation",
+  "cartoon",
+  "dough bros",
+  "spooky cartoon",
+  "funny cartoon",
+  "horror comedy",
+  "animated series",
+  "bup",
+  "jump scare"
+ ],
+ "thumbnail": {
+  "bg": "attic",
+  "villain": "pot",
+  "heroes": [
+   "bup",
+   "pim"
+  ],
+  "text": "PLAN FAILED!"
+ },
+ "scenes": [
+  {
+   "bg": "attic",
+   "music": "heartbeat",
+   "heroes": {
+    "bup": 700,
+    "pim": 420
+   },
+   "moods": {
+    "pim": "scared"
+   },
+   "villain": {
+    "type": "pot",
+    "x": 1480,
+    "state": "asleep",
+    "scale": 0.85
+   },
+   "beats": [
+    {
+     "say": "bup",
+     "en": "Okay team, here's the plan. Step one: be VERY quiet.",
+     "es": "Bien, equipo, este es el plan. Paso uno: MUCHO silencio.",
+     "de": "Okay Team, hier ist der Plan. Schritt eins: GANZ leise sein.",
+     "fr": "Bon, l'équipe, voici le plan. Étape un : TRÈS silencieux.",
+     "it": "Ok squadra, ecco il piano. Primo: fare MOLTO silenzio.",
+     "pt": "Certo, equipe, o plano é este. Passo um: MUITO silêncio."
+    },
+    {
+     "move": "bup",
+     "to": 960,
+     "speed": "walk"
+    },
+    {
+     "sfx": "clank",
+     "wait": 0.3
+    },
+    {
+     "act": "bup",
+     "do": "jump"
+    },
+    {
+     "villain": "wake"
+    },
+    {
+     "villain": "roar"
+    },
+    {
+     "act": [
+      "bup",
+      "pim"
+     ],
+     "do": "scream"
+    },
+    {
+     "say": "pim",
+     "en": "What's step two?!",
+     "es": "¡¿Cuál es el paso dos?!",
+     "de": "Was ist Schritt zwei?!",
+     "fr": "C'est quoi l'étape deux ?!",
+     "it": "Qual è il passo due?!",
+     "pt": "Qual é o passo dois?!"
+    },
+    {
+     "say": "bup",
+     "en": "Step two: RUN!",
+     "es": "Paso dos: ¡CORRAN!",
+     "de": "Schritt zwei: RENNT!",
+     "fr": "Étape deux : COUREZ !",
+     "it": "Passo due: CORRETE!",
+     "pt": "Passo dois: CORRAM!"
+    },
+    {
+     "move": "bup",
+     "to": "off_left",
+     "speed": "run"
+    },
+    {
+     "move": "pim",
+     "to": "off_left",
+     "speed": "run",
+     "and": true
+    },
+    {
+     "villain": "lunge",
+     "to": 1100
+    }
+   ],
+   "tail": 0.8
+  }
+ ]
+}
