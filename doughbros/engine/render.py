@@ -122,7 +122,7 @@ class Compiler:
         if s.get("end_card", True) and s.get("format") == "long":
             ec = s.get("end_card") if isinstance(s.get("end_card"), dict) else {}
             self.card(ec.get("en", "TO BE CONTINUED..."), ec.get("es", "CONTINUARÁ..."), 4.0, sting=True)
-        self.total = self.t + 0.3
+        self.total = self.t + (0.0 if s.get("format") == "short" else 0.3)
         return self
 
     def card(self, en, es, dur, sting=False):
@@ -155,7 +155,9 @@ class Compiler:
                 v = Villain(vs["type"], float(vs.get("x", 1450)), vs.get("state", "awake"), float(vs.get("scale", 0.8)))
         S = {"t0": t0, "bg": bg, "heroes": heroes, "villain": v, "music": sc.get("music", "drone")}
         self.scenes.append(S)
-        self.t += 0.4  # fade in
+        # retention: the very first frame must already be moving (no fade-in on scene 0)
+        S["fin"] = 0.0 if i == 0 else 0.4
+        self.t += S["fin"]  # fade in
         prev_start = end = self.t
         for j, b in enumerate(sc.get("beats", [])):
             start = prev_start if b.get("and") else end
@@ -170,7 +172,10 @@ class Compiler:
             self.t = end
         self.t += float(sc.get("tail", 0.6))
         S["t1"] = self.t
-        self.t += 0.35  # fade out
+        # Shorts loop: no fade-out to black after the last scene
+        last = i == len(self.s.get("scenes", [])) - 1
+        S["fout"] = 0.0 if (last and self.s.get("format") == "short") else 0.35
+        self.t += S["fout"]  # fade out
 
     # ------------------------------------------------------------------
     def who(self, S, k):
@@ -445,11 +450,12 @@ def overlays(t, W, H):
     o = []
     # fade at scene boundaries
     for S in C.scenes:
-        if S["t0"] <= t < S["t0"] + 0.4:
-            o.append(f'<rect width="{W}" height="{H}" fill="#000" opacity="{1-ease((t-S["t0"])/0.4):.2f}"/>')
-        if S["t1"] <= t < S["t1"] + 0.35:
-            o.append(f'<rect width="{W}" height="{H}" fill="#000" opacity="{ease((t-S["t1"])/0.35):.2f}"/>')
-    if t >= C.scenes[-1]["t1"] + 0.35:
+        fi_, fo_ = S.get("fin", 0.4), S.get("fout", 0.35)
+        if fi_ and S["t0"] <= t < S["t0"] + fi_:
+            o.append(f'<rect width="{W}" height="{H}" fill="#000" opacity="{1-ease((t-S["t0"])/fi_):.2f}"/>')
+        if fo_ and S["t1"] <= t < S["t1"] + fo_:
+            o.append(f'<rect width="{W}" height="{H}" fill="#000" opacity="{ease((t-S["t1"])/fo_):.2f}"/>')
+    if C.scenes[-1].get("fout", 0.35) and t >= C.scenes[-1]["t1"] + 0.35:
         o.append(f'<rect width="{W}" height="{H}" fill="#000"/>')
     for t0, t1, en, es in C.cards:
         if t0 - 0.3 <= t < t1:
@@ -500,6 +506,12 @@ def frame(fi):
         z = 1 + 0.03 * clamp((t - S["t0"]) / 20)
         body = (f'<g transform="translate({960+sx},{560+sy}) scale({z}) translate(-960,-560)">{world}</g>'
                 f'<rect width="{W}" height="{H}" fill="url(#vign)"/>')
+        hook, hd = C.s.get("hook", ""), float(C.s.get("hook_dur", 3.5))
+        if hook and t < hd:
+            a = 1.0 if t < hd - 0.4 else max(0.0, (hd - t) / 0.4)
+            hl = wrap(hook.upper(), 18)
+            body += (f'<g opacity="{a:.2f}"><rect x="0" y="0" width="{W}" height="{90 + 150 * len(hl)}" fill="url(#fadeUp)"/>'
+                     + "".join(bold_text(960, 150 + n * 140, l, 128, stroke=14) for n, l in enumerate(hl)) + '</g>')
     else:
         W, H = 1080, 1920
         k = 1.3
