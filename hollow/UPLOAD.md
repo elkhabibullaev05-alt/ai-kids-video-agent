@@ -90,3 +90,4 @@ If anything fails (not signed in, wrong channel, computer unreachable): skip upl
 - On the video edit page, the Save button (`#save`) often ignores a JS `.click()` — click it with the computer tool and reload to verify.
 - The browser downloads at ~150 KB/s; an 80 MB long takes ~8–10 min — use a streaming reader with a progress counter and never start the same download twice.
 - The cloud container can restart mid-run and kill background renders: check `uptime`/`pgrep -f render.py` when polling and restart the loop (it skips finished videos).
+- **Daily upload limit:** the channel is not phone-verified, so YouTube allows only ~10 uploads per rolling 24 h ("Загрузка недоступна… через 24 часа"). When it appears, close the dialog (nothing is created), keep the rest in `pending_uploads` and stop uploading. Never try to verify the channel yourself — that is the owner's decision.
