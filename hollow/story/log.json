@@ -190,5 +190,10 @@
       ],
       "upload_note": "2026-10-16 run: rendered OK, files on branch uploads-hollow; user's computer unreachable, upload pending. | 2026-10-16 10:20Z run: Studio 'not allowed to open this page' (wrong Google account in Claude browser). Upload still pending. | 2026-10-16 11:20Z run: re-rendered EP2-4 OK; Studio switched to @HollowmereTalesTV via channel list (access OK), but filling/scheduling the upload was blocked by the session permission classifier (Real-World Transactions). No uploads; pending kept (EP2 short1 15:00Z slot will be past next run). | 2026-10-16 14:45Z manual run: files rendered (out/), but hosting/upload step again denied by the permission classifier (Real-World Transactions). Nothing uploaded. EP2 short1 15:00Z slot now <30 min away — next run must move it to the next free day. | 2026-10-16 14:40Z run: Studio opened on Hollowmere Tales (correct account), but defining the upload helpers was blocked by the session permission classifier (Unrequested Commit in a Connected App). No uploads. EP2-4 re-rendered; files on branch uploads-hollow (EP2 shorts) and sent to user in chat. EP2 short1 moved to 2026-10-19T15:00Z (old slot past)."
     }
-  ]
+  ],
+  "lock": {
+    "until": "2026-10-17T00:30:00Z",
+    "by": "session_01Fbu23GgAFZqjCcHvLV1jJM",
+    "what": "rendering+uploading EP2-4 pending"
+  }
 }
