@@ -25,8 +25,8 @@ Poll `Object.fromEntries(Object.entries(window.__dl).map(([k,v])=>[k,v.size]))` 
 ## 3. Helper functions (define once)
 ```js
 window.__new = async () => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
- [...document.querySelectorAll('ytcp-video-share-dialog ytcp-button, ytcp-video-share-dialog button')].find(b=>b.innerText.trim()==='Закрыть')?.click(); await sleep(1500);
- if(!document.querySelector('ytcp-uploads-file-picker input[type=file]')){ document.querySelector('#create-icon, [aria-label="Создать"]')?.click(); await sleep(1200); document.querySelector('#text-item-0')?.click(); await sleep(2500);}
+ [...document.querySelectorAll('ytcp-video-share-dialog ytcp-button, ytcp-video-share-dialog button')].find(b=>['Закрыть','Yopish','Close'].includes(b.innerText.trim()))?.click(); await sleep(1500);
+ if(!document.querySelector('ytcp-uploads-file-picker input[type=file]')){ document.querySelector('#create-icon, [aria-label="Создать"], [aria-label="Yaratish"], [aria-label="Create"]')?.click(); await sleep(1200); document.querySelector('#text-item-0')?.click(); await sleep(2500);}
  return !!document.querySelector('ytcp-uploads-file-picker input[type=file]'); };
 window.__open = async (file) => { await window.__new(); const inp=document.querySelector('ytcp-uploads-file-picker input[type=file]'); if(!inp) return 'no picker';
  const dt=new DataTransfer(); dt.items.add(new File([window.__dl[file]], file, {type:'video/mp4'})); inp.files=dt.files; inp.dispatchEvent(new Event('change',{bubbles:true})); return 'uploading '+file; };
@@ -35,8 +35,8 @@ window.__fill = async (title, desc, tags) => { const sleep=ms=>new Promise(r=>se
  const setTb=async (el,txt)=>{ el.click(); el.focus(); await sleep(300); const sel=window.getSelection(); const rg=document.createRange(); rg.selectNodeContents(el); sel.removeAllRanges(); sel.addRange(rg); document.execCommand('insertText',false,txt); el.dispatchEvent(new Event('input',{bubbles:true}));};
  const tbs=[...dlg.querySelectorAll('#textbox')]; await setTb(tbs[0], title); await sleep(500); await setTb(tbs[1], desc); await sleep(500);
  const mfk=dlg.querySelector('tp-yt-paper-radio-button[name=VIDEO_MADE_FOR_KIDS_NOT_MFK]'); mfk.click(); await sleep(800);
- if(!dlg.querySelector('input[aria-label="Теги"]')){ dlg.querySelector('#toggle-button')?.click(); await sleep(1500);}
- const tag=dlg.querySelector('input[aria-label="Теги"]'); tag.focus(); document.execCommand('insertText',false,tags+',');
+ if(!dlg.querySelector('input[aria-label="Теги"], input[aria-label="Teglar"], input[aria-label="Tags"]')){ dlg.querySelector('#toggle-button')?.click(); await sleep(1500);}
+ const tag=dlg.querySelector('input[aria-label="Теги"], input[aria-label="Teglar"], input[aria-label="Tags"]'); tag.focus(); document.execCommand('insertText',false,tags+',');
  tag.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',keyCode:13,bubbles:true})); await sleep(800);
  return [tbs[0].innerText, mfk.getAttribute('aria-checked'), dlg.querySelectorAll('ytcp-chip').length]; };
 window.__thumb = (file) => { const t=document.querySelector('ytcp-uploads-dialog #file-loader');
@@ -60,7 +60,7 @@ window.__done = async () => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
  return document.querySelector('ytcp-video-share-dialog')?.innerText?.slice(0,140) || 'no share dialog yet — wait and check'; };
 'ok'
 ```
-(The Studio UI is in Russian. Keep each javascript_tool call short — they time out after 45 s.)
+(This channel's Studio UI is in **Uzbek** (tags field "Teglar", publish button "Chop etish", category "Yangiliklar va siyosat" = News & Politics — set it under "Batafsil"/show more). Upload defaults on this channel still carry the old AI-content title/description/tags: always overwrite title and description, and delete the default tag chips before adding ours. Keep each javascript_tool call short — they time out after 45 s.)
 
 ## 4. Upload (separate calls, check every result)
 1. `await window.__open('doodle_epNNN.mp4')` → "uploading …"
