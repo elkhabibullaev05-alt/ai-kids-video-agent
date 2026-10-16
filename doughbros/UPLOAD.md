@@ -86,3 +86,9 @@ Order: short1, short2, long, short3. After the long video, close the "Обраб
 `git push https://github.com/elkhabibullaev05-alt/ai-kids-video-agent --delete uploads` after all four are scheduled.
 
 If anything fails (not signed in, wrong channel, computer not reachable): skip uploading, still deliver the files to the user, and explain in the final message.
+
+## Notes from 2026-10-16/17 (read these first)
+- `execCommand('insertText')` no longer fills the title/description/tags. Focus the field with JS (select its contents), then type with the browser `computer` `type` action; for tags type them comma-separated and press Return.
+- Custom thumbnails need channel phone verification ("Подтвердите личность"). That is the owner's step — do not attempt it; skip thumbnails until the user has verified.
+- Subtitles (`studio.youtube.com/video/<id>/translations`): first time per video it asks for the video language — UNCHECK "По умолчанию показывать мой канал на этом языке" (channel setting), pick Английский, Подтвердить. Then per language: "Добавить перевод на другой язык" → pick language (list is virtualized: scroll it, then click the item) → hover the new row → pencil → "Загрузить файл" → set the hidden `input#captions-file-loader` inside `YTVE-CAPTIONS-EDITOR-UPLOAD-DIALOG` via DataTransfer with the .srt text (push .srt files to the `uploads` branch and fetch them) → Опубликовать.
+- Times in Studio's picker are Bishkek; only :00/:15/:30/:45 exist.
