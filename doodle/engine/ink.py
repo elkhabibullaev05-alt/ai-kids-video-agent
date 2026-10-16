@@ -560,6 +560,62 @@ def _houseofgov(p, t, color, text):
         p.text(text, 0, 40, 40)
 
 
+def _sportscar(p, t, color, text):
+    p.shape([(-200, -30), (-195, -70), (-120, -90), (-40, -135), (40, -140), (110, -100), (200, -80), (215, -30)], color or "white")
+    p.shape([(-30, -125), (35, -130), (90, -98), (-60, -95)], "dark")
+    p.line([(-200, -60), (200, -60)], 3)
+    for wx in (-125, 135):
+        p.circle(wx, -28, 30, "dark", 5)
+        p.circle(wx, -28, 11, "grey", 3)
+    if text:
+        p.text(text, 0, -175, 40, "red")
+
+
+def _rocket(p, t, color, text):
+    p.shape([(0, -330), (55, -230), (55, -40), (-55, -40), (-55, -230)], color or "white")
+    p.circle(0, -210, 24, "sky", 4)
+    p.shape([(-55, -110), (-100, -20), (-55, -40)], "red")
+    p.shape([(55, -110), (100, -20), (55, -40)], "red")
+    fl = 30 + 15 * math.sin(t * 20)
+    p.shape([(-30, -40), (0, -40 + fl + 40), (30, -40)], "orange")
+    if text:
+        p.text(text, 0, -360, 40, "dark")
+
+
+def _stopwatch(p, t, color, text):
+    p.rect(-18, -330, 36, 30, "dark", 4)
+    p.circle(0, -170, 130, color or "white")
+    a = t * 6
+    p.line([(0, -170), (60 * math.sin(a), -170 - 60 * math.cos(a))], 7)
+    p.dot(0, -170, 9)
+    if text:
+        p.text(text, 0, -72, 40, "red")
+
+
+def _tank(p, t, color, text):
+    p.rect(-55, -280, 110, 280, color or "grey")
+    p.rect(-18, -310, 36, 34, "dark", 4)
+    if text:
+        p.text(text, 0, -140, 34, "white", outline="dark")
+
+
+def _fan(p, t, color, text):
+    p.circle(0, -120, 110, color or "white")
+    for k in range(3):
+        a = t * 12 + k * 2.094
+        p.shape([(0, -120), (85 * math.cos(a - 0.35), -120 + 85 * math.sin(a - 0.35)), (85 * math.cos(a + 0.35), -120 + 85 * math.sin(a + 0.35))], "grey")
+    p.dot(0, -120, 12)
+    if text:
+        p.text(text, 0, 30, 40, "dark")
+
+
+def _trophy(p, t, color, text):
+    p.shape([(-80, -260), (80, -260), (60, -150), (20, -120), (20, -60), (-20, -60), (-20, -120), (-60, -150)], color or "gold")
+    p.rect(-60, -60, 120, 40, "brown", 4)
+    if text:
+        p.text(text, 0, -200, 34, "dark")
+
+
 PROPS = {
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
@@ -567,4 +623,5 @@ PROPS = {
     "desk": _desk, "tv": _tv, "strait": _strait, "calendar": _calendar, "ballot": _ballot, "moneybag": _moneybag,
     "scale": _scale, "arrowup": _arrowup, "arrowdown": _arrowdown, "pricetag": _pricetag, "egg": _egg,
     "podium": _podium, "speech": _speech, "bomb": _bomb, "capitol": _houseofgov,
+    "sportscar": _sportscar, "rocket": _rocket, "stopwatch": _stopwatch, "tank": _tank, "fan": _fan, "trophy": _trophy,
 }
