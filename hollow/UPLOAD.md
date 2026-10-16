@@ -82,3 +82,11 @@ window.__done = async () => { const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 Order: short1, short2, long, short3.
 
 If anything fails (not signed in, wrong channel, computer unreachable): skip uploading, still deliver the files and explain in the final message.
+
+## Known pitfalls (2026-10-16)
+- YouTube may first show a **"Choose a channel"** picker (Hollowmere Tales / Dough Bros) — click Hollowmere Tales.
+- The channel has old **upload defaults** (title "#FunnyVideos…", description "Funny pranks…", tags prank/funny/viral/prankpop/comedy/joke/fun). `__fill` must replace them, and the default tag chips must be removed (click each chip's `#delete-icon`). Check the echo: if the title still shows "#FunnyVideos…", `execCommand` had no focus — do one real `left_click` into the title box with the computer tool, then call `__fill` again.
+- `__pickDay`/`__pickTime` can miss while the pane is hidden: retry with a loop over `ytcp-scrollable-calendar span.calendar-day` and visible `tp-yt-paper-item`. The time list has 15-minute steps → use minutes :15 or :45.
+- On the video edit page, the Save button (`#save`) often ignores a JS `.click()` — click it with the computer tool and reload to verify.
+- The browser downloads at ~150 KB/s; an 80 MB long takes ~8–10 min — use a streaming reader with a progress counter and never start the same download twice.
+- The cloud container can restart mid-run and kill background renders: check `uptime`/`pgrep -f render.py` when polling and restart the loop (it skips finished videos).
