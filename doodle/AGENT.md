@@ -5,8 +5,10 @@ Goal: keep the YouTube channel **The Doodle Desk** supplied with **2 long videos
 ## 0. Buffer check (this task fires several times a day)
 1. `git pull`; read `story/log.json`. LOCK: if `"lock"` has `"until"` in the future → stop with one Uzbek line. Otherwise set `"lock": {"until": now+4h, "by": "<session>"}`, commit + push at once (on rejection `git pull --rebase`; if a newer lock appears, stop). Remove the lock in your final commit, also when stopping early.
 2. Channel: `log.json → channel.id`. If it is null, look in Studio (built-in browser, account switcher) for a channel named "The Doodle Desk" (or any channel whose name contains "Doodle"); if found, save name/id/handle to log.json. If none exists yet: still make the video, keep it in `pending_uploads`, deliver the files, and tell the user the channel still has to be created.
-3. Upload any `pending_uploads` first (re-render from the saved script if `out/` is gone). A news video older than 4 days is not uploaded — mark it `"skipped": "too old"`.
+3. Upload any `pending_uploads` first, oldest first (re-render from the saved script `scripts/epNNN.json` if `out/` is gone — the cloud workspace is new every run). Give each one the earliest free release slot (rules in step 4: 14:00–17:45 / 20:00–23:45 UTC, :15 or :45, ≥ 30 min ahead, max 2 per UTC day), schedule it in Studio, move it from `pending_uploads` to `uploads` with `publish_at` + `video_id`. A news video older than 4 days is not uploaded — mark it `"skipped": "too old"`.
+   Computer check first: call `mcp__remote-devices__Claude_Browser__tabs_context` (or `get_device_info`). If it fails, the computer is off: don't retry, keep everything in `pending_uploads`.
 4. Count long videos scheduled (`uploads[].publish_at`, UTC dates) for today and the next UTC day. Both days have 2 → stop (remove lock). Otherwise make ONE episode for the earliest open slot.
+   Offline limit: if the computer is off and 2 or more videos are already waiting in `pending_uploads` (not skipped), don't make another one — stop with one Uzbek line (they would only go stale).
 
 ## 1. Setup
 `cd <repo>/doodle && bash setup.sh`
