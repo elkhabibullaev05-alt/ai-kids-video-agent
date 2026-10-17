@@ -35,5 +35,8 @@ Commit `scripts/_build_epNNN.py`, `scripts/epNNN.json`, `story/log.json` (NOT `o
 ## 5. Deliver
 SendUserFile (status "proactive"): the MP4 and its thumbnail. Then a short Uzbek message: episode, title, one-line summary, scheduled Bishkek time, problems.
 
+## 6. Agentlar markazi
+Update the owner's hub (https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r) with ArtifactData: get `agents/doodle`, then `update` it (pin `if_version`) — append one activity line `[YYYY-MM-DD HH:MM] ...` (Bishkek time) per thing done, keep the last 12; refresh `videos` (newest first: at, id, kind "long", s "scheduled"/"out", t, v null), `next` (future publish times), `numbers`, `status`/`status_text`, `last_seen`. If the doc is missing, create it with the same fields.
+
 ## Never
 Never type passwords, never add accounts, never change account/channel settings. Upload only to The Doodle Desk. No invented facts or quotes, no likeness of real people, no partisan side-taking (STYLE.md).
