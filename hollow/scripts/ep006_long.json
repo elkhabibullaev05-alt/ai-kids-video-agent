@@ -1,0 +1,899 @@
+{
+ "id": "ep006_long",
+ "format": "long",
+ "title": "Who Was Talking Inside the Walls?",
+ "hook": "DON'T ANSWER THE VOICE",
+ "hook_dur": 4.5,
+ "description": "Based on real records and a famous American legend. From 1817 to 1821, the Bell family farm near the Red River in Robertson County, Tennessee (near today's Adams) was troubled by knocking in the walls, scratching, gnawing on the bedposts and, at last, a voice that spoke, sang and called the family by name. It was called 'Kate'. The fullest account was written down by M. V. Ingram in 1894; many details are legend, and sceptics think someone in the house faked it. No one ever proved how.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bell_Witch\nhttps://www.mentalfloss.com/article/12828/bell-witch-tennessee\nhttps://www.worldhistory.org/article/2810/the-bell-witch/\n\n#truestory #bellwitch #tennessee #legend #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Bell Witch",
+  "Tennessee",
+  "Adams Tennessee",
+  "Robertson County",
+  "1817",
+  "American legend",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 6",
+  "voice in the walls",
+  "haunted farm"
+ ],
+ "thumbnail": {
+  "bg": "manor",
+  "seed": 3,
+  "creature": "ghost",
+  "text": "WHO'S THERE?"
+ },
+ "shots": [
+  {
+   "bg": "manor",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "lantern": 1.0,
+   "ambient": 0.4,
+   "fade": false,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.22
+    ],
+    "to": [
+     1060,
+     610,
+     1.08
+    ]
+   },
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 620,
+     "r": 480
+    }
+   ],
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 640,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 780,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Something was knocking inside the walls of this farmhouse... and then it started to talk.",
+     "es": "Algo golpeaba dentro de las paredes de esta granja... y luego empezó a hablar.",
+     "de": "Etwas klopfte in den Wänden dieses Farmhauses... und dann begann es zu sprechen.",
+     "fr": "Quelque chose frappait dans les murs de cette ferme... puis ça s'est mis à parler.",
+     "it": "Qualcosa bussava dentro i muri di questa fattoria... e poi iniziò a parlare.",
+     "pt": "Algo batia dentro das paredes desta casa... e depois começou a falar.",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.2
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.2
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "This is a real legend from Tennessee, 1817. It was first written down in full in 1894.",
+     "es": "Es una leyenda real de Tennessee, 1817. Se escribió completa en 1894.",
+     "de": "Das ist eine echte Legende aus Tennessee, 1817. Ganz aufgeschrieben wurde sie 1894.",
+     "fr": "C'est une vraie légende du Tennessee, 1817. Écrite en entier en 1894.",
+     "it": "È una leggenda vera del Tennessee, 1817. Fu scritta per intero nel 1894.",
+     "pt": "É uma lenda real do Tennessee, 1817. Foi escrita por inteiro em 1894."
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... did the wall just knock back at me?",
+     "es": "Mothwick... ¿la pared me acaba de responder?",
+     "de": "Mothwick... hat die Wand gerade zurückgeklopft?",
+     "fr": "Mothwick... le mur vient de me répondre ?",
+     "it": "Mothwick... il muro ha appena bussato?",
+     "pt": "Mothwick... a parede acabou de bater de volta?"
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Whatever it says... don't answer it.",
+     "es": "Diga lo que diga... no le contestes.",
+     "de": "Was es auch sagt... antworte nicht.",
+     "fr": "Quoi qu'il dise... ne réponds pas.",
+     "it": "Qualsiasi cosa dica... non rispondere.",
+     "pt": "O que quer que diga... não responda."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "forest",
+   "seed": 4,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.44,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1040,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "john": {
+     "type": "figure",
+     "x": 1050,
+     "seed": 0,
+     "face": 1,
+     "state": "hidden"
+    },
+    "h1": {
+     "type": "gloamhound",
+     "x": 1520,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1350,
+     "y": 420,
+     "state": "hidden",
+     "fly": 1,
+     "scale": 1.3
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "A farmer named John Bell lived near the Red River with his wife Lucy and their children.",
+     "es": "Un granjero, John Bell, vivía junto al río Red con su esposa Lucy y sus hijos.",
+     "de": "Ein Farmer namens John Bell lebte am Red River mit seiner Frau Lucy und den Kindern.",
+     "fr": "Un fermier, John Bell, vivait près de la Red River avec sa femme Lucy et leurs enfants.",
+     "it": "Un contadino, John Bell, viveva vicino al Red River con la moglie Lucy e i figli.",
+     "pt": "Um fazendeiro, John Bell, vivia perto do rio Red com a esposa Lucy e os filhos."
+    },
+    {
+     "show": "john",
+     "dur": 0.8,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "In 1817, he saw a strange animal in his field. Like a dog... but wrong.",
+     "es": "En 1817 vio un animal extraño en su campo. Como un perro... pero raro.",
+     "de": "1817 sah er ein seltsames Tier auf seinem Feld. Wie ein Hund... aber falsch.",
+     "fr": "En 1817, il vit une bête étrange dans son champ. Comme un chien... mais pas tout à fait.",
+     "it": "Nel 1817 vide uno strano animale nel campo. Come un cane... ma sbagliato.",
+     "pt": "Em 1817 viu um animal estranho no campo. Como um cão... mas errado."
+    },
+    {
+     "show": "h1",
+     "dur": 0.5
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "He fired his gun at it. The creature simply vanished.",
+     "es": "Le disparó con su escopeta. La criatura simplemente desapareció.",
+     "de": "Er schoss darauf. Das Wesen verschwand einfach.",
+     "fr": "Il tira dessus. La créature disparut, tout simplement.",
+     "it": "Gli sparò. La creatura svanì e basta.",
+     "pt": "Ele atirou nela. A criatura simplesmente sumiu."
+    },
+    {
+     "flash": true
+    },
+    {
+     "hide": "h1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "narr",
+     "en": "His son Drew saw a bird of enormous size sitting on a fence.",
+     "es": "Su hijo Drew vio un pájaro enorme posado en una cerca.",
+     "de": "Sein Sohn Drew sah einen riesigen Vogel auf einem Zaun sitzen.",
+     "fr": "Son fils Drew vit un oiseau énorme posé sur une clôture.",
+     "it": "Suo figlio Drew vide un uccello enorme su uno steccato.",
+     "pt": "O filho Drew viu um pássaro enorme pousado numa cerca."
+    },
+    {
+     "show": "c1",
+     "dur": 0.4
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "That's no ordinary crow. It's watching the house.",
+     "es": "Ese no es un cuervo normal. Está mirando la casa.",
+     "de": "Das ist keine normale Krähe. Sie beobachtet das Haus.",
+     "fr": "Ce n'est pas un corbeau normal. Il surveille la maison.",
+     "it": "Non è un corvo normale. Sta guardando la casa.",
+     "pt": "Isso não é um corvo comum. Está vigiando a casa."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.6
+    },
+    {
+     "hide": "john",
+     "dur": 0.8,
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "manor",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 4,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1200,
+     "y": 620,
+     "r": 480
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     600,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 560
+    },
+    "moth": {
+     "x": 720,
+     "y": 640
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Then the noises came indoors. Knocking along the doors and the walls.",
+     "es": "Luego los ruidos entraron en la casa. Golpes en puertas y paredes.",
+     "de": "Dann kamen die Geräusche ins Haus. Klopfen an Türen und Wänden.",
+     "fr": "Puis les bruits entrèrent dans la maison. Des coups le long des portes et des murs.",
+     "it": "Poi i rumori entrarono in casa. Colpi lungo porte e muri.",
+     "pt": "Depois os barulhos entraram na casa. Batidas nas portas e paredes."
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.3
+    },
+    {
+     "say": "narr",
+     "en": "Scratching. Gnawing, like teeth on the bedposts. The sound of chains on the floor.",
+     "es": "Arañazos. Roídos en las patas de la cama. Ruido de cadenas en el suelo.",
+     "de": "Kratzen. Nagen an den Bettpfosten. Das Geräusch von Ketten auf dem Boden.",
+     "fr": "Des grattements. Des dents rongeant les lits. Un bruit de chaînes au sol.",
+     "it": "Graffi. Qualcosa che rosicchia i letti. Rumore di catene sul pavimento.",
+     "pt": "Arranhões. Roeduras nos pés da cama. Barulho de correntes no chão."
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "narr",
+     "en": "The story says the children felt their blankets pulled off in the dark.",
+     "es": "Dicen que los niños sentían cómo les quitaban las mantas a oscuras.",
+     "de": "Man erzählt, den Kindern wurden im Dunkeln die Decken weggezogen.",
+     "fr": "On raconte que les enfants sentaient leurs couvertures tirées dans le noir.",
+     "it": "Si racconta che ai bambini venivano tirate via le coperte al buio.",
+     "pt": "Dizem que as crianças sentiam os cobertores puxados no escuro."
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The youngest daughter, Betsy, was troubled most of all.",
+     "es": "La hija menor, Betsy, fue la más atormentada.",
+     "de": "Die jüngste Tochter, Betsy, traf es am schlimmsten.",
+     "fr": "La plus jeune fille, Betsy, fut la plus tourmentée.",
+     "it": "La figlia più piccola, Betsy, fu la più tormentata.",
+     "pt": "A filha mais nova, Betsy, foi a mais atormentada."
+    },
+    {
+     "say": "moth",
+     "en": "Every night it came back. And every night it was closer.",
+     "es": "Cada noche volvía. Y cada noche más cerca.",
+     "de": "Jede Nacht kam es zurück. Und jede Nacht war es näher.",
+     "fr": "Chaque nuit il revenait. Et chaque nuit plus près.",
+     "it": "Ogni notte tornava. E ogni notte più vicino.",
+     "pt": "Toda noite voltava. E toda noite mais perto."
+    },
+    {
+     "light": "on"
+    },
+    {
+     "eyes": "close",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "manor",
+   "seed": 8,
+   "music": "choir",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.34,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 540
+    },
+    "moth": {
+     "x": 700,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "kate": {
+     "type": "ghost",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.85
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "At first it was only a faint singing, like an old woman, too soft to understand.",
+     "es": "Al principio solo era un canto débil, como de una anciana.",
+     "de": "Zuerst war es nur ein leiser Gesang, wie von einer alten Frau.",
+     "fr": "D'abord, ce n'était qu'un chant faible, comme une vieille femme.",
+     "it": "All'inizio era solo un canto debole, come di una vecchia.",
+     "pt": "No começo era só um canto fraco, como de uma velha."
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Then the voice grew louder. It sang hymns. It quoted scripture.",
+     "es": "Luego la voz creció. Cantaba himnos. Citaba la Biblia.",
+     "de": "Dann wurde die Stimme lauter. Sie sang Lieder. Sie zitierte die Bibel.",
+     "fr": "Puis la voix devint plus forte. Elle chantait des cantiques, citait la Bible.",
+     "it": "Poi la voce si fece più forte. Cantava inni. Citava la Bibbia.",
+     "pt": "Depois a voz ficou mais alta. Cantava hinos. Citava a Bíblia."
+    },
+    {
+     "show": "kate",
+     "dur": 1.2
+    },
+    {
+     "say": "narr",
+     "en": "And it called every person in the house by name.",
+     "es": "Y llamaba a cada persona de la casa por su nombre.",
+     "de": "Und sie rief jeden im Haus beim Namen.",
+     "fr": "Et elle appelait chaque personne de la maison par son nom.",
+     "it": "E chiamava per nome ogni persona della casa.",
+     "pt": "E chamava cada pessoa da casa pelo nome."
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "kate",
+     "en": "I was once very happy.",
+     "es": "Una vez fui muy feliz.",
+     "de": "Ich war einmal sehr glücklich.",
+     "fr": "J'ai été très heureuse, autrefois.",
+     "it": "Un tempo ero molto felice.",
+     "pt": "Um dia eu fui muito feliz."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Asked who it was, it said it was a spirit. The family called it Kate.",
+     "es": "Le preguntaron quién era: dijo que un espíritu. La familia la llamó Kate.",
+     "de": "Gefragt, wer es sei, sagte es: ein Geist. Die Familie nannte es Kate.",
+     "fr": "À la question qui es-tu, elle répondit : un esprit. On l'appela Kate.",
+     "it": "Interrogata, disse di essere uno spirito. La famiglia la chiamò Kate.",
+     "pt": "Perguntada quem era, disse que era um espírito. A família a chamou de Kate."
+    },
+    {
+     "hide": "kate",
+     "dur": 0.4
+    },
+    {
+     "say": "odo",
+     "en": "People came from miles away just to hear it talk.",
+     "es": "La gente venía de lejos solo para oírla hablar.",
+     "de": "Leute kamen von weit her, nur um es sprechen zu hören.",
+     "fr": "Des gens venaient de loin juste pour l'entendre parler.",
+     "it": "La gente veniva da lontano solo per sentirla parlare.",
+     "pt": "Gente vinha de longe só para ouvi-la falar."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 9,
+   "music": "drone",
+   "wind": true,
+   "eyes": 5,
+   "ambient": 0.38,
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "gen": {
+     "type": "figure",
+     "x": 1380,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden"
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "One famous tale says that General Andrew Jackson rode out to see the witch.",
+     "es": "Un relato famoso dice que el general Andrew Jackson fue a ver a la bruja.",
+     "de": "Eine berühmte Geschichte sagt, General Andrew Jackson ritt hin, um die Hexe zu sehen.",
+     "fr": "Un récit célèbre dit que le général Andrew Jackson vint voir la sorcière.",
+     "it": "Un racconto famoso dice che il generale Andrew Jackson andò a vedere la strega.",
+     "pt": "Uma história famosa diz que o general Andrew Jackson foi ver a bruxa."
+    },
+    {
+     "show": "gen",
+     "dur": 1.0
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Near the farm, his wagon stopped. The horses pulled. It would not move.",
+     "es": "Cerca de la granja su carreta se paró. Los caballos tiraban. No se movía.",
+     "de": "Nahe der Farm blieb sein Wagen stehen. Die Pferde zogen. Er rührte sich nicht.",
+     "fr": "Près de la ferme, son chariot s'arrêta. Les chevaux tiraient. Rien.",
+     "it": "Vicino alla fattoria il carro si fermò. I cavalli tiravano. Non si muoveva.",
+     "pt": "Perto da fazenda a carroça parou. Os cavalos puxavam. Nada se movia."
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "eyes": "open"
+    },
+    {
+     "say": "narr",
+     "en": "Then a woman's voice told them they could go on... and she would see them tonight.",
+     "es": "Entonces una voz de mujer dijo que siguieran... y que los vería esa noche.",
+     "de": "Dann sagte eine Frauenstimme, sie dürften weiter... und sie sehe sie heute Nacht.",
+     "fr": "Alors une voix de femme dit qu'ils pouvaient repartir... et qu'elle les verrait cette nuit.",
+     "it": "Poi una voce di donna disse che potevano andare... e che li avrebbe visti stanotte.",
+     "pt": "Então uma voz de mulher disse que podiam seguir... e que os veria à noite."
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "narr",
+     "en": "But careful: there is no proof Jackson ever visited. This part may be only legend.",
+     "es": "Pero ojo: no hay prueba de que Jackson fuera. Quizá sea solo leyenda.",
+     "de": "Aber Vorsicht: Es gibt keinen Beweis, dass Jackson dort war. Vielleicht nur Legende.",
+     "fr": "Mais attention : rien ne prouve que Jackson soit venu. C'est peut-être une légende.",
+     "it": "Ma attenzione: non c'è prova che Jackson ci sia mai andato. Forse è solo leggenda.",
+     "pt": "Mas cuidado: não há prova de que Jackson foi lá. Talvez seja só lenda."
+    },
+    {
+     "hide": "gen",
+     "dur": 0.8
+    },
+    {
+     "eyes": "close",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Legend or not... the horses believed it.",
+     "es": "Leyenda o no... los caballos se lo creyeron.",
+     "de": "Legende oder nicht... die Pferde glaubten es.",
+     "fr": "Légende ou pas... les chevaux, eux, y ont cru.",
+     "it": "Leggenda o no... i cavalli ci credettero.",
+     "pt": "Lenda ou não... os cavalos acreditaram."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "chapel",
+   "seed": 4,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.42,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1200,
+     "y": 600,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "betsy": {
+     "type": "figure",
+     "x": 1250,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden"
+    },
+    "kate": {
+     "type": "ghost",
+     "x": 1550,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Betsy grew up and wanted to marry a young man named Joshua Gardner.",
+     "es": "Betsy creció y quiso casarse con un joven llamado Joshua Gardner.",
+     "de": "Betsy wurde älter und wollte einen jungen Mann, Joshua Gardner, heiraten.",
+     "fr": "Betsy grandit et voulut épouser un jeune homme, Joshua Gardner.",
+     "it": "Betsy crebbe e volle sposare un giovane di nome Joshua Gardner.",
+     "pt": "Betsy cresceu e quis casar com um jovem chamado Joshua Gardner."
+    },
+    {
+     "show": "betsy",
+     "dur": 1.0,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The voice warned her again and again: do not marry him.",
+     "es": "La voz le advirtió una y otra vez: no te cases con él.",
+     "de": "Die Stimme warnte sie immer wieder: Heirate ihn nicht.",
+     "fr": "La voix la mit en garde encore et encore : ne l'épouse pas.",
+     "it": "La voce la avvertì più e più volte: non sposarlo.",
+     "pt": "A voz a avisou de novo e de novo: não case com ele."
+    },
+    {
+     "show": "kate",
+     "dur": 0.6
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "In 1821, Betsy broke off the engagement. And the voice said goodbye.",
+     "es": "En 1821 Betsy rompió el compromiso. Y la voz se despidió.",
+     "de": "1821 löste Betsy die Verlobung. Und die Stimme verabschiedete sich.",
+     "fr": "En 1821, Betsy rompit ses fiançailles. Et la voix fit ses adieux.",
+     "it": "Nel 1821 Betsy ruppe il fidanzamento. E la voce si congedò.",
+     "pt": "Em 1821 Betsy rompeu o noivado. E a voz se despediu."
+    },
+    {
+     "hide": "betsy",
+     "dur": 1.0
+    },
+    {
+     "say": "kate",
+     "en": "I will come back... in seven years.",
+     "es": "Volveré... dentro de siete años.",
+     "de": "Ich komme wieder... in sieben Jahren.",
+     "fr": "Je reviendrai... dans sept ans.",
+     "it": "Tornerò... tra sette anni.",
+     "pt": "Eu voltarei... daqui a sete anos."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "The story says that in 1828, right on time... it came back.",
+     "es": "La historia dice que en 1828, puntual... volvió.",
+     "de": "Die Geschichte sagt: 1828, pünktlich... kam es zurück.",
+     "fr": "L'histoire dit qu'en 1828, à l'heure... elle revint.",
+     "it": "La storia dice che nel 1828, puntuale... tornò.",
+     "pt": "A história diz que em 1828, pontual... ela voltou."
+    },
+    {
+     "flash": true
+    },
+    {
+     "hide": "kate",
+     "dur": 0.2,
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "manor",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.34,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1500,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "kate": {
+     "type": "ghost",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.95
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Some say a person in the house faked it all. But no one ever proved how.",
+     "es": "Algunos dicen que alguien de la casa lo fingió todo. Nadie probó cómo.",
+     "de": "Manche sagen, jemand im Haus hat alles vorgetäuscht. Niemand bewies, wie.",
+     "fr": "Certains disent qu'un habitant de la maison a tout simulé. Personne n'a prouvé comment.",
+     "it": "Alcuni dicono che qualcuno in casa finse tutto. Nessuno provò come.",
+     "pt": "Alguns dizem que alguém da casa fingiu tudo. Ninguém provou como."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "And people near Adams, Tennessee, still tell of strange voices in the dark.",
+     "es": "Y cerca de Adams, en Tennessee, aún hablan de voces extrañas en la oscuridad.",
+     "de": "Und bei Adams in Tennessee erzählt man noch heute von seltsamen Stimmen im Dunkeln.",
+     "fr": "Et près d'Adams, au Tennessee, on parle encore de voix étranges dans le noir.",
+     "it": "E vicino ad Adams, in Tennessee, si parla ancora di voci strane nel buio.",
+     "pt": "E perto de Adams, no Tennessee, ainda se fala de vozes estranhas no escuro."
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.3
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.3
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... it's knocking again. Right behind this wall.",
+     "es": "Mothwick... está golpeando otra vez. Justo detrás de esta pared.",
+     "de": "Mothwick... es klopft wieder. Direkt hinter dieser Wand.",
+     "fr": "Mothwick... ça frappe encore. Juste derrière ce mur.",
+     "it": "Mothwick... bussa di nuovo. Proprio dietro questo muro.",
+     "pt": "Mothwick... está batendo de novo. Bem atrás desta parede."
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "show": "kate",
+     "dur": 0.3
+    },
+    {
+     "say": "kate",
+     "en": "Odo... I know your name.",
+     "es": "Odo... sé cómo te llamas.",
+     "de": "Odo... ich kenne deinen Namen.",
+     "fr": "Odo... je connais ton nom.",
+     "it": "Odo... conosco il tuo nome.",
+     "pt": "Odo... eu sei o seu nome."
+    },
+    {
+     "light": "out"
+    },
+    {
+     "shake": 0.6,
+     "power": 16,
+     "and": true
+    },
+    {
+     "card": "WHO KNOWS YOUR NAME?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}
