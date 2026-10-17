@@ -515,12 +515,24 @@ def frame(fi):
     for a, b in C.flashes:
         if a <= t <= b:
             out = out + (1 - (t - a) / (b - a)) * 0.85
-    if C.fmt == "short" and HOOK is not None:
+    if HOOK is not None and (C.fmt == "short" or t < getattr(C, "hook_dur", 0)):
         out = over(out, HOOK)
     return (np.clip(out, 0, 1) * 255).astype(np.uint8).tobytes()
 
 
 HOOK = None
+
+
+def hook_layer_long(text):
+    lines = wrap(text.upper(), 20)
+    t = "".join(f'<text x="960" y="{190 + n * 130}" text-anchor="middle" {TITLE_FONT} font-size="128" fill="{art.BONE}" '
+                f'stroke="#3a0804" stroke-width="10">{esc(l)}</text>' for n, l in enumerate(lines[:2]))
+    s1 = t.replace(f'fill="{art.BONE}"', 'fill="#3a0804"')
+    s2 = t.replace('stroke="#3a0804" stroke-width="10"', '')
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"><defs><linearGradient id="tf" x1="0" y1="0" x2="0" y2="1">'
+           f'<stop offset="0%" stop-color="#000" stop-opacity="0.85"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></linearGradient></defs>'
+           f'<rect width="1920" height="460" fill="url(#tf)"/>{s1}{s2}</svg>')
+    return np.asarray(Image.open(io.BytesIO(cairosvg.svg2png(bytestring=svg.encode()))).convert("RGBA"), np.float32) / 255.0
 
 
 def hook_layer(text):
@@ -725,7 +737,10 @@ def main():
         return
     n = int(c.total * FPS)
     camx = camera_track(c, n) if c.fmt == "short" else None
-    hook = hook_layer(script.get("hook", "")) if c.fmt == "short" and script.get("hook") else None
+    hook = None
+    if script.get("hook"):
+        hook = hook_layer(script["hook"]) if c.fmt == "short" else hook_layer_long(script["hook"])
+        c.hook_dur = float(script.get("hook_dur", 4.0))
     OW, OH = (1920, 1080) if c.fmt == "long" else (1080, 1920)
     if args.preview is not None:
         init_worker(c, camx, hook)
