@@ -30,6 +30,8 @@ long_scenes = [
           "Il nous t-tire des TOASTS dessus !", "Ci sta s-sparando TOAST addosso!", "Está a-atirando TORRADAS na gente!"),
         S("zeek", "My calculations say... RUN!", "Mis cálculos dicen... ¡CORRED!", "Meine Berechnungen sagen... LAUFT!",
           "Mes calculs disent... COUREZ !", "I miei calcoli dicono... CORRETE!", "Meus cálculos dizem... CORRAM!"),
+        S("bup", "Everybody! Behind the oven mitt!", "¡Todos! ¡Detrás del guante de cocina!", "Alle! Hinter den Ofenhandschuh!",
+          "Tout le monde ! Derrière le gant de cuisine !", "Tutti! Dietro il guanto da forno!", "Todo mundo! Atrás da luva de forno!"),
         {"move": "bup", "to": 250, "speed": "run"},
         {"move": "zeek", "to": 450, "speed": "run", "and": True},
         {"sfx": "ding", "wait": 0.3},
@@ -157,6 +159,9 @@ long_scenes = [
         S("lolly", "Then we stop running. We go to the timer.", "Entonces dejamos de huir. Vamos al temporizador.",
           "Dann hören wir auf zu rennen. Wir gehen zur Uhr.", "Alors on arrête de fuir. On va au minuteur.",
           "Allora smettiamo di scappare. Andiamo al timer.", "Então a gente para de fugir. Vamos até o timer."),
+        S("pim", "Can the next loop p-please just be a nap?", "¿Puede el próximo bucle ser una s-siesta, por favor?",
+          "Kann die nächste Schleife b-bitte ein Nickerchen sein?", "La prochaine boucle peut être une s-sieste, s'il vous plaît ?",
+          "Il prossimo loop può essere un p-pisolino, per favore?", "O próximo loop pode ser uma s-soneca, por favor?"),
         S("bup", "To the table. It's the shortest way down to the oven!", "A la mesa. ¡Es el camino más corto al horno!",
           "Zum Tisch. Das ist der kürzeste Weg zum Ofen!", "À la table. C'est le chemin le plus court vers le four !",
           "Al tavolo. È la strada più corta per il forno!", "Pra mesa. É o caminho mais curto até o forno!"),
@@ -225,6 +230,8 @@ long_scenes = [
           "Maintenant, Pim ! Tourne le cadran sur ZÉRO !", "Ora, Pim! Gira la manopola su ZERO!", "Agora, Pim! Gira o botão pro ZERO!"),
         S("pim", "It's h-heavy! It's... it's TURNING!", "¡Pesa m-mucho! ¡Está... está GIRANDO!", "Es ist s-schwer! Es... es DREHT sich!",
           "C'est l-lourd ! Ça... ça TOURNE !", "È p-pesante! Sta... sta GIRANDO!", "Tá p-pesado! Tá... tá GIRANDO!"),
+        S("crispy", "Push, little bean. PUSH!", "Empuja, judía. ¡EMPUJA!", "Drück, kleine Bohne. DRÜCK!",
+          "Pousse, petit haricot. POUSSE !", "Spingi, fagiolino. SPINGI!", "Empurra, feijãozinho. EMPURRA!"),
         {"sfx": "clank", "wait": 0.2},
         {"villain": "rage", "level": 0.0},
         S("villain", "My heat... my beautiful heat... is GONE!", "Mi calor... mi precioso calor... ¡se FUE!",
@@ -245,7 +252,7 @@ long_scenes = [
           "Quaranta volte ci ho provato da solo. Serviva un amico.", "Tentei sozinho quarenta vezes. Precisava de um amigo."),
      ]},
     # 7 table: celebration + clue
-    {"cut": True, "bg": "table", "music": "music_box", "heroes": {"pim": 540, "bup": 300, "zeek": 780, "lolly": 1020},
+    {"cut": True, "bg": "table", "music": "music_box", "heroes": {"pim": 540, "bup": 300, "zeek": 780, "lolly": 1020, "crispy": 1260},
      "moods": {"pim": "happy", "bup": "happy", "zeek": "happy", "lolly": "happy"}, "tail": 0.3,
      "beats": [
         {"act": ["bup", "zeek", "lolly"], "do": "bounce"},
@@ -277,12 +284,15 @@ long_scenes = [
         S("pim", "T-tomorrow? Can we just have ONE normal minute first?", "¿M-mañana? ¿Podemos tener UN minuto normal antes?",
           "M-morgen? Können wir erst mal EINE normale Minute haben?", "D-demain ? On peut avoir UNE minute normale d'abord ?",
           "D-domani? Possiamo avere prima UN minuto normale?", "A-amanhã? Dá pra ter UM minuto normal antes?"),
+        S("crispy", "There are no normal minutes in Table Land, little bean.", "No hay minutos normales en Table Land, judía.",
+          "In Table Land gibt es keine normalen Minuten, kleine Bohne.", "Il n'y a pas de minute normale à Table Land, petit haricot.",
+          "Non ci sono minuti normali a Table Land, fagiolino.", "Não existem minutos normais em Table Land, feijãozinho."),
         {"sfx": "sting", "wait": 0.3},
      ]},
     # 8 cliffhanger: kitchen, Whisker
     {"cut": True, "bg": "kitchen", "music": "drone", "heroes": {"pim": 320, "bup": 560, "zeek": 800},
      "moods": {"pim": "scared", "bup": "scared", "zeek": "scared"}, "villain": {"type": "mixer", "x": 1450, "state": "hidden", "scale": 0.85},
-     "tail": 0.8,
+     "tail": 1.6,
      "beats": [
         {"sfx": "creak", "wait": 0.3},
         S("pim", "D-do you hear... whirring?", "¿O-oís... un zumbido?", "H-hört ihr... das Surren?", "V-vous entendez... ce vrombissement ?",
@@ -301,10 +311,67 @@ long_scenes = [
         {"act": ["pim", "bup", "zeek"], "do": "scream", "and": True},
         S("villain", "Let's MIX it up!", "¡Vamos a MEZCLARLO todo!", "Lasst uns alles MIXEN!", "On va tout MÉLANGER !",
           "MESCOLIAMO tutto!", "Vamos MISTURAR tudo!"),
+        S("pim", "N-no! I just got my minute BACK!", "¡N-no! ¡Acabo de recuperar mi minuto!", "N-nein! Ich habe meine Minute gerade erst ZURÜCK!",
+          "N-non ! Je viens de récupérer ma minute !", "N-no! Ho appena riavuto il mio minuto!", "N-não! Eu acabei de recuperar meu minuto!"),
+        S("bup", "Okay team... RUN!", "Vale, equipo... ¡CORRED!", "Okay, Team... LAUFT!", "Ok l'équipe... COUREZ !", "Ok squadra... CORRETE!", "Certo, equipe... CORRAM!"),
+        {"move": "bup", "to": "off_left", "speed": "run"},
+        {"move": "zeek", "to": "off_left", "speed": "run", "and": True},
         {"villain": "lunge", "to": 1150},
         {"shake": 0.9, "power": 30, "and": True},
      ]},
 ]
+
+
+# loop resets: short hard-cut flashes in the bright fridge (fast visual change every loop)
+def reset(heroes, narr, react):
+    hs = {h: x for h, x in zip(heroes, (330, 560, 800, 1040))}
+    return {"cut": True, "bg": "fridge", "music": "heartbeat", "heroes": hs, "moods": {h: "scared" for h in heroes}, "tail": 0.2,
+            "beats": [{"sfx": "ding", "wait": 0.1}, {"shake": 0.6, "power": 26, "and": True},
+                      {"act": list(heroes), "do": "jump", "and": True}, dict(narr, **A), react]}
+
+
+RESETS = {
+    1: reset(["pim", "bup", "zeek"],
+             S("narr", "Eleven fifty-nine. Again.", "Las once y cincuenta y nueve. Otra vez.", "Dreiundzwanzig Uhr neunundfünfzig. Schon wieder.",
+               "Vingt-trois heures cinquante-neuf. Encore.", "Le undici e cinquantanove. Di nuovo.", "Onze e cinquenta e nove. De novo."),
+             S("bup", "Why are we in the FRIDGE?", "¿Por qué estamos en la NEVERA?", "Warum sind wir im KÜHLSCHRANK?",
+               "Pourquoi on est dans le FRIGO ?", "Perché siamo nel FRIGO?", "Por que a gente tá na GELADEIRA?")),
+    3: reset(["pim", "lolly", "bup"],
+             S("narr", "DING. Loop number three.", "DING. Bucle número tres.", "DING. Schleife Nummer drei.",
+               "DING. Boucle numéro trois.", "DING. Loop numero tre.", "DING. Loop número três."),
+             S("pim", "I h-hate this fridge. It's SO cold.", "O-odio esta nevera. Hace TANTO frío.", "Ich h-hasse diesen Kühlschrank. So KALT.",
+               "Je d-déteste ce frigo. Il fait SI froid.", "O-odio questo frigo. Fa COSÌ freddo.", "Eu o-odeio essa geladeira. É TÃO fria.")),
+    4: reset(["pim", "bup", "zeek", "lolly"],
+             S("narr", "DING. Back to the start.", "DING. De vuelta al principio.", "DING. Zurück zum Anfang.",
+               "DING. Retour au début.", "DING. Di nuovo all'inizio.", "DING. De volta ao começo."),
+             S("lolly", "Okay. Now I am a LITTLE bit angry.", "Vale. Ahora estoy UN POCO enfadada.", "Okay. Jetzt bin ich ein BISSCHEN wütend.",
+               "Bon. Maintenant je suis UN PEU fâchée.", "Ok. Adesso sono UN PO' arrabbiata.", "Tá. Agora eu tô UM POUCO brava.")),
+    5: reset(["pim", "bup", "zeek", "lolly"],
+             S("narr", "Loop seven. Still eleven fifty-nine.", "Bucle siete. Siguen siendo las once y cincuenta y nueve.", "Schleife sieben. Immer noch dreiundzwanzig neunundfünfzig.",
+               "Boucle sept. Toujours vingt-trois heures cinquante-neuf.", "Loop sette. Ancora le undici e cinquantanove.", "Loop sete. Ainda onze e cinquenta e nove."),
+             S("zeek", "My watch is starting to feel dizzy.", "Mi reloj empieza a marearse.", "Meiner Uhr wird langsam schwindelig.",
+               "Ma montre commence à avoir le tournis.", "Il mio orologio comincia a girare la testa.", "Meu relógio tá ficando tonto.")),
+    6: reset(["pim", "bup", "crispy"],
+             S("narr", "Loop eight. The last try.", "Bucle ocho. El último intento.", "Schleife acht. Der letzte Versuch.",
+               "Boucle huit. Le dernier essai.", "Loop otto. L'ultimo tentativo.", "Loop oito. A última tentativa."),
+             S("crispy", "This time... we finish it.", "Esta vez... lo terminamos.", "Diesmal... beenden wir es.",
+               "Cette fois... on en finit.", "Questa volta... la finiamo.", "Desta vez... a gente termina.")),
+}
+# keep villain-less talk scenes moving: the speaker bounces on every 2nd line
+for sc in long_scenes:
+    if sc.get("villain"):
+        continue
+    out, n = [], 0
+    for b in sc["beats"]:
+        out.append(b)
+        if b.get("say") in sc["heroes"]:
+            n += 1
+            if n % 2 == 0:
+                out.append({"act": b["say"], "do": "bounce", "and": True})
+    sc["beats"] = out
+
+for i in sorted(RESETS, reverse=True):
+    long_scenes.insert(i, RESETS[i])
 
 long_script = {
     "id": "ep012_long",

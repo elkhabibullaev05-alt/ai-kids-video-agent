@@ -103,6 +103,15 @@
      "pt": "Meus cálculos dizem... CORRAM!"
     },
     {
+     "say": "bup",
+     "en": "Everybody! Behind the oven mitt!",
+     "es": "¡Todos! ¡Detrás del guante de cocina!",
+     "de": "Alle! Hinter den Ofenhandschuh!",
+     "fr": "Tout le monde ! Derrière le gant de cuisine !",
+     "it": "Tutti! Dietro il guanto da forno!",
+     "pt": "Todo mundo! Atrás da luva de forno!"
+    },
+    {
      "move": "bup",
      "to": 250,
      "speed": "run"
@@ -130,6 +139,61 @@
      "fr": "DING. Minuit. Et puis...",
      "it": "DING. Mezzanotte. E poi...",
      "pt": "DING. Meia-noite. E então..."
+    }
+   ]
+  },
+  {
+   "cut": true,
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 330,
+    "bup": 560,
+    "zeek": 800
+   },
+   "moods": {
+    "pim": "scared",
+    "bup": "scared",
+    "zeek": "scared"
+   },
+   "tail": 0.2,
+   "beats": [
+    {
+     "sfx": "ding",
+     "wait": 0.1
+    },
+    {
+     "shake": 0.6,
+     "power": 26,
+     "and": true
+    },
+    {
+     "act": [
+      "pim",
+      "bup",
+      "zeek"
+     ],
+     "do": "jump",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Eleven fifty-nine. Again.",
+     "es": "Las once y cincuenta y nueve. Otra vez.",
+     "de": "Dreiundzwanzig Uhr neunundfünfzig. Schon wieder.",
+     "fr": "Vingt-trois heures cinquante-neuf. Encore.",
+     "it": "Le undici e cinquantanove. Di nuovo.",
+     "pt": "Onze e cinquenta e nove. De novo.",
+     "and": true
+    },
+    {
+     "say": "bup",
+     "en": "Why are we in the FRIDGE?",
+     "es": "¿Por qué estamos en la NEVERA?",
+     "de": "Warum sind wir im KÜHLSCHRANK?",
+     "fr": "Pourquoi on est dans le FRIGO ?",
+     "it": "Perché siamo nel FRIGO?",
+     "pt": "Por que a gente tá na GELADEIRA?"
     }
    ]
   },
@@ -181,6 +245,11 @@
      "pt": "A gente acabou de... fazer isso?"
     },
     {
+     "act": "pim",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "say": "bup",
      "en": "Okay team. Same minute, new plan. We hide in the pantry!",
      "es": "Vale, equipo. Mismo minuto, nuevo plan. ¡A la despensa!",
@@ -197,6 +266,11 @@
      "fr": "Ou ! Je construis un bouclier anti-toast. Avec une cuillère !",
      "it": "Oppure! Costruisco uno scudo anti-toast. Con un cucchiaio!",
      "pt": "Ou! Eu construo um escudo anti-torrada. Com uma colher!"
+    },
+    {
+     "act": "zeek",
+     "do": "bounce",
+     "and": true
     },
     {
      "act": "zeek",
@@ -228,6 +302,11 @@
      "fr": "Garde-manger. TOUT DE SUITE.",
      "it": "Dispensa. SUBITO.",
      "pt": "Despensa. AGORA."
+    },
+    {
+     "act": "bup",
+     "do": "bounce",
+     "and": true
     },
     {
      "move": "bup",
@@ -377,6 +456,61 @@
   },
   {
    "cut": true,
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 330,
+    "lolly": 560,
+    "bup": 800
+   },
+   "moods": {
+    "pim": "scared",
+    "lolly": "scared",
+    "bup": "scared"
+   },
+   "tail": 0.2,
+   "beats": [
+    {
+     "sfx": "ding",
+     "wait": 0.1
+    },
+    {
+     "shake": 0.6,
+     "power": 26,
+     "and": true
+    },
+    {
+     "act": [
+      "pim",
+      "lolly",
+      "bup"
+     ],
+     "do": "jump",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "DING. Loop number three.",
+     "es": "DING. Bucle número tres.",
+     "de": "DING. Schleife Nummer drei.",
+     "fr": "DING. Boucle numéro trois.",
+     "it": "DING. Loop numero tre.",
+     "pt": "DING. Loop número três.",
+     "and": true
+    },
+    {
+     "say": "pim",
+     "en": "I h-hate this fridge. It's SO cold.",
+     "es": "O-odio esta nevera. Hace TANTO frío.",
+     "de": "Ich h-hasse diesen Kühlschrank. So KALT.",
+     "fr": "Je d-déteste ce frigo. Il fait SI froid.",
+     "it": "O-odio questo frigo. Fa COSÌ freddo.",
+     "pt": "Eu o-odeio essa geladeira. É TÃO fria."
+    }
+   ]
+  },
+  {
+   "cut": true,
    "bg": "kitchen",
    "music": "drone",
    "heroes": {
@@ -518,6 +652,64 @@
   },
   {
    "cut": true,
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 330,
+    "bup": 560,
+    "zeek": 800,
+    "lolly": 1040
+   },
+   "moods": {
+    "pim": "scared",
+    "bup": "scared",
+    "zeek": "scared",
+    "lolly": "scared"
+   },
+   "tail": 0.2,
+   "beats": [
+    {
+     "sfx": "ding",
+     "wait": 0.1
+    },
+    {
+     "shake": 0.6,
+     "power": 26,
+     "and": true
+    },
+    {
+     "act": [
+      "pim",
+      "bup",
+      "zeek",
+      "lolly"
+     ],
+     "do": "jump",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "DING. Back to the start.",
+     "es": "DING. De vuelta al principio.",
+     "de": "DING. Zurück zum Anfang.",
+     "fr": "DING. Retour au début.",
+     "it": "DING. Di nuovo all'inizio.",
+     "pt": "DING. De volta ao começo.",
+     "and": true
+    },
+    {
+     "say": "lolly",
+     "en": "Okay. Now I am a LITTLE bit angry.",
+     "es": "Vale. Ahora estoy UN POCO enfadada.",
+     "de": "Okay. Jetzt bin ich ein BISSCHEN wütend.",
+     "fr": "Bon. Maintenant je suis UN PEU fâchée.",
+     "it": "Ok. Adesso sono UN PO' arrabbiata.",
+     "pt": "Tá. Agora eu tô UM POUCO brava."
+    }
+   ]
+  },
+  {
+   "cut": true,
    "bg": "attic",
    "music": "music_box",
    "heroes": {
@@ -642,6 +834,20 @@
      "pt": "Então a gente para de fugir. Vamos até o timer."
     },
     {
+     "act": "lolly",
+     "do": "bounce",
+     "and": true
+    },
+    {
+     "say": "pim",
+     "en": "Can the next loop p-please just be a nap?",
+     "es": "¿Puede el próximo bucle ser una s-siesta, por favor?",
+     "de": "Kann die nächste Schleife b-bitte ein Nickerchen sein?",
+     "fr": "La prochaine boucle peut être une s-sieste, s'il vous plaît ?",
+     "it": "Il prossimo loop può essere un p-pisolino, per favore?",
+     "pt": "O próximo loop pode ser uma s-soneca, por favor?"
+    },
+    {
      "say": "bup",
      "en": "To the table. It's the shortest way down to the oven!",
      "es": "A la mesa. ¡Es el camino más corto al horno!",
@@ -649,6 +855,69 @@
      "fr": "À la table. C'est le chemin le plus court vers le four !",
      "it": "Al tavolo. È la strada più corta per il forno!",
      "pt": "Pra mesa. É o caminho mais curto até o forno!"
+    },
+    {
+     "act": "bup",
+     "do": "bounce",
+     "and": true
+    }
+   ]
+  },
+  {
+   "cut": true,
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 330,
+    "bup": 560,
+    "zeek": 800,
+    "lolly": 1040
+   },
+   "moods": {
+    "pim": "scared",
+    "bup": "scared",
+    "zeek": "scared",
+    "lolly": "scared"
+   },
+   "tail": 0.2,
+   "beats": [
+    {
+     "sfx": "ding",
+     "wait": 0.1
+    },
+    {
+     "shake": 0.6,
+     "power": 26,
+     "and": true
+    },
+    {
+     "act": [
+      "pim",
+      "bup",
+      "zeek",
+      "lolly"
+     ],
+     "do": "jump",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Loop seven. Still eleven fifty-nine.",
+     "es": "Bucle siete. Siguen siendo las once y cincuenta y nueve.",
+     "de": "Schleife sieben. Immer noch dreiundzwanzig neunundfünfzig.",
+     "fr": "Boucle sept. Toujours vingt-trois heures cinquante-neuf.",
+     "it": "Loop sette. Ancora le undici e cinquantanove.",
+     "pt": "Loop sete. Ainda onze e cinquenta e nove.",
+     "and": true
+    },
+    {
+     "say": "zeek",
+     "en": "My watch is starting to feel dizzy.",
+     "es": "Mi reloj empieza a marearse.",
+     "de": "Meiner Uhr wird langsam schwindelig.",
+     "fr": "Ma montre commence à avoir le tournis.",
+     "it": "Il mio orologio comincia a girare la testa.",
+     "pt": "Meu relógio tá ficando tonto."
     }
    ]
   },
@@ -700,6 +969,11 @@
      "pt": "Eu vivi este minuto... quarenta vezes."
     },
     {
+     "act": "crispy",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "act": "pim",
      "do": "faint"
     },
@@ -731,6 +1005,11 @@
      "pt": "Toda vez que eu falo... vocês gritam. Depois DING."
     },
     {
+     "act": "crispy",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "say": "crispy",
      "en": "The timer dial is behind Toastmaw. Only the smallest can slip past.",
      "es": "El dial está detrás de Toastmaw. Solo el más pequeño puede pasar.",
@@ -758,6 +1037,11 @@
      "pt": "O m-menor? Por que todo mundo tá olhando pra MIM?"
     },
     {
+     "act": "pim",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "say": "lolly",
      "en": "Because you're the bravest bean we know, sweetie.",
      "es": "Porque eres la judía más valiente que conocemos, cielo.",
@@ -774,6 +1058,61 @@
      "shake": 1.0,
      "power": 30,
      "and": true
+    }
+   ]
+  },
+  {
+   "cut": true,
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 330,
+    "bup": 560,
+    "crispy": 800
+   },
+   "moods": {
+    "pim": "scared",
+    "bup": "scared",
+    "crispy": "scared"
+   },
+   "tail": 0.2,
+   "beats": [
+    {
+     "sfx": "ding",
+     "wait": 0.1
+    },
+    {
+     "shake": 0.6,
+     "power": 26,
+     "and": true
+    },
+    {
+     "act": [
+      "pim",
+      "bup",
+      "crispy"
+     ],
+     "do": "jump",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Loop eight. The last try.",
+     "es": "Bucle ocho. El último intento.",
+     "de": "Schleife acht. Der letzte Versuch.",
+     "fr": "Boucle huit. Le dernier essai.",
+     "it": "Loop otto. L'ultimo tentativo.",
+     "pt": "Loop oito. A última tentativa.",
+     "and": true
+    },
+    {
+     "say": "crispy",
+     "en": "This time... we finish it.",
+     "es": "Esta vez... lo terminamos.",
+     "de": "Diesmal... beenden wir es.",
+     "fr": "Cette fois... on en finit.",
+     "it": "Questa volta... la finiamo.",
+     "pt": "Desta vez... a gente termina."
     }
    ]
   },
@@ -912,6 +1251,15 @@
      "pt": "Tá p-pesado! Tá... tá GIRANDO!"
     },
     {
+     "say": "crispy",
+     "en": "Push, little bean. PUSH!",
+     "es": "Empuja, judía. ¡EMPUJA!",
+     "de": "Drück, kleine Bohne. DRÜCK!",
+     "fr": "Pousse, petit haricot. POUSSE !",
+     "it": "Spingi, fagiolino. SPINGI!",
+     "pt": "Empurra, feijãozinho. EMPURRA!"
+    },
+    {
      "sfx": "clank",
      "wait": 0.2
     },
@@ -995,7 +1343,8 @@
     "pim": 540,
     "bup": 300,
     "zeek": 780,
-    "lolly": 1020
+    "lolly": 1020,
+    "crispy": 1260
    },
    "moods": {
     "pim": "happy",
@@ -1031,6 +1380,11 @@
      "fr": "Je ne me suis pas évanoui ! Pas une fois ! ...Bon, une fois.",
      "it": "Non sono svenuto! Neanche una volta! ...Ok, una.",
      "pt": "Eu não desmaiei! Nem uma vez! ...Tá, uma vez."
+    },
+    {
+     "act": "pim",
+     "do": "bounce",
+     "and": true
     },
     {
      "act": "pim",
@@ -1073,6 +1427,11 @@
      "pt": "Diz: O timer falhou? Tudo bem. Passo dois... a BATEDEIRA."
     },
     {
+     "act": "bup",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "say": "zeek",
      "en": "Step two? How many steps does Mr. Pot HAVE?",
      "es": "¿Paso dos? ¿Cuántos pasos TIENE Mr. Pot?",
@@ -1091,6 +1450,11 @@
      "pt": "Chaleira, aspirador, gelatina, torradeira... ele manda TODOS."
     },
     {
+     "act": "lolly",
+     "do": "bounce",
+     "and": true
+    },
+    {
      "say": "bup",
      "en": "Okay team. Tomorrow we find the mixer FIRST.",
      "es": "Vale, equipo. Mañana encontramos la batidora PRIMERO.",
@@ -1107,6 +1471,20 @@
      "fr": "D-demain ? On peut avoir UNE minute normale d'abord ?",
      "it": "D-domani? Possiamo avere prima UN minuto normale?",
      "pt": "A-amanhã? Dá pra ter UM minuto normal antes?"
+    },
+    {
+     "act": "pim",
+     "do": "bounce",
+     "and": true
+    },
+    {
+     "say": "crispy",
+     "en": "There are no normal minutes in Table Land, little bean.",
+     "es": "No hay minutos normales en Table Land, judía.",
+     "de": "In Table Land gibt es keine normalen Minuten, kleine Bohne.",
+     "fr": "Il n'y a pas de minute normale à Table Land, petit haricot.",
+     "it": "Non ci sono minuti normali a Table Land, fagiolino.",
+     "pt": "Não existem minutos normais em Table Land, feijãozinho."
     },
     {
      "sfx": "sting",
@@ -1134,7 +1512,7 @@
     "state": "hidden",
     "scale": 0.85
    },
-   "tail": 0.8,
+   "tail": 1.6,
    "beats": [
     {
      "sfx": "creak",
@@ -1209,6 +1587,35 @@
      "fr": "On va tout MÉLANGER !",
      "it": "MESCOLIAMO tutto!",
      "pt": "Vamos MISTURAR tudo!"
+    },
+    {
+     "say": "pim",
+     "en": "N-no! I just got my minute BACK!",
+     "es": "¡N-no! ¡Acabo de recuperar mi minuto!",
+     "de": "N-nein! Ich habe meine Minute gerade erst ZURÜCK!",
+     "fr": "N-non ! Je viens de récupérer ma minute !",
+     "it": "N-no! Ho appena riavuto il mio minuto!",
+     "pt": "N-não! Eu acabei de recuperar meu minuto!"
+    },
+    {
+     "say": "bup",
+     "en": "Okay team... RUN!",
+     "es": "Vale, equipo... ¡CORRED!",
+     "de": "Okay, Team... LAUFT!",
+     "fr": "Ok l'équipe... COUREZ !",
+     "it": "Ok squadra... CORRETE!",
+     "pt": "Certo, equipe... CORRAM!"
+    },
+    {
+     "move": "bup",
+     "to": "off_left",
+     "speed": "run"
+    },
+    {
+     "move": "zeek",
+     "to": "off_left",
+     "speed": "run",
+     "and": true
     },
     {
      "villain": "lunge",
