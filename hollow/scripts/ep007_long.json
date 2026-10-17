@@ -1,0 +1,948 @@
+{
+ "id": "ep007_long",
+ "format": "long",
+ "title": "What Was Screaming in the Pine Barrens?",
+ "hook": "DON'T LOOK UP",
+ "hook_dur": 4.5,
+ "description": "Based on real newspaper reports and a famous American legend. The story says that in 1735, at Leeds Point in the New Jersey Pine Barrens, Mother Leeds' thirteenth child turned into a winged creature and flew up the chimney. Then, in the week of 16 to 23 January 1909, newspapers across South Jersey and Philadelphia printed hundreds of reports: strange tracks in the snow that crossed fences and rooftops, a winged thing with a horse-like head, police firing at shadows. Schools closed, people stayed home, hunters searched the pines. Historians call it a famous case of mass panic, and some tracks were hoaxes. No creature was ever caught.\n\nSources:\nhttps://en.wikipedia.org/wiki/Jersey_Devil\nhttps://www.nj.gov/nj/about/famous/nj_devil.shtml\nhttps://www.inquirer.com/news/new-jersey/jersey-devil-history-fake-news-norman-jeffries-20190123.html\n\n#truestory #jerseydevil #pinebarrens #legend #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Jersey Devil",
+  "Leeds Devil",
+  "Pine Barrens",
+  "New Jersey",
+  "1909",
+  "American legend",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 7",
+  "1909 sightings",
+  "cryptid",
+  "Leeds Point"
+ ],
+ "thumbnail": {
+  "bg": "swamp",
+  "seed": 4,
+  "creature": "gloamhound",
+  "text": "DON'T LOOK UP"
+ },
+ "shots": [
+  {
+   "bg": "swamp",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 5,
+   "lantern": 1.0,
+   "ambient": 0.38,
+   "fade": false,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.22
+    ],
+    "to": [
+     1060,
+     610,
+     1.08
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "c1": {
+     "type": "crow",
+     "x": 1300,
+     "y": 360,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 640,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 780,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Something screamed over the pine trees... and then the whole state was afraid.",
+     "es": "Algo gritó sobre los pinos... y todo el estado tuvo miedo.",
+     "de": "Etwas schrie über den Kiefern... und dann hatte der ganze Staat Angst.",
+     "fr": "Quelque chose hurla au-dessus des pins... et tout l'État eut peur.",
+     "it": "Qualcosa urlò sopra i pini... e tutto lo stato ebbe paura.",
+     "pt": "Algo gritou sobre os pinheiros... e o estado inteiro teve medo.",
+     "and": true
+    },
+    {
+     "sfx": "flutter",
+     "wait": 0.2
+    },
+    {
+     "show": "c1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "This is a real American legend. New Jersey. The Pine Barrens.",
+     "es": "Esta es una leyenda real de América. Nueva Jersey. Los Pine Barrens.",
+     "de": "Dies ist eine echte amerikanische Legende. New Jersey. Die Pine Barrens.",
+     "fr": "Ceci est une vraie légende américaine. New Jersey. Les Pine Barrens.",
+     "it": "Questa è una vera leggenda americana. New Jersey. I Pine Barrens.",
+     "pt": "Esta é uma lenda americana real. Nova Jersey. Os Pine Barrens."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.5,
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... something big just flew over us.",
+     "es": "Mothwick... algo grande acaba de volar sobre nosotros.",
+     "de": "Mothwick... gerade ist etwas Großes über uns geflogen.",
+     "fr": "Mothwick... quelque chose de grand vient de passer au-dessus de nous.",
+     "it": "Mothwick... qualcosa di grande ci è appena volato sopra.",
+     "pt": "Mothwick... algo grande acabou de voar sobre nós."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Then whatever you do... don't look up.",
+     "es": "Entonces, hagas lo que hagas... no mires arriba.",
+     "de": "Dann, was du auch tust... schau nicht nach oben.",
+     "fr": "Alors, quoi que tu fasses... ne lève pas les yeux.",
+     "it": "Allora, qualunque cosa accada... non guardare in alto.",
+     "pt": "Então, aconteça o que acontecer... não olhe para cima."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "manor",
+   "seed": 3,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 640,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1020,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "mother": {
+     "type": "figure",
+     "x": 1420,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden"
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 330,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The legend begins in 1735, on a stormy night at Leeds Point.",
+     "es": "La leyenda empieza en 1735, en una noche de tormenta en Leeds Point.",
+     "de": "Die Legende beginnt 1735, in einer Sturmnacht in Leeds Point.",
+     "fr": "La légende commence en 1735, une nuit d'orage à Leeds Point.",
+     "it": "La leggenda inizia nel 1735, in una notte di tempesta a Leeds Point.",
+     "pt": "A lenda começa em 1735, numa noite de tempestade em Leeds Point."
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "show": "mother",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "A woman called Mother Leeds was having her thirteenth child.",
+     "es": "Una mujer llamada Madre Leeds iba a tener su hijo número trece.",
+     "de": "Eine Frau namens Mutter Leeds bekam ihr dreizehntes Kind.",
+     "fr": "Une femme, la Mère Leeds, attendait son treizième enfant.",
+     "it": "Una donna chiamata Madre Leeds aspettava il suo tredicesimo figlio.",
+     "pt": "Uma mulher chamada Mãe Leeds esperava o seu décimo terceiro filho."
+    },
+    {
+     "say": "narr",
+     "en": "Tired and angry, the story says, she cried: let this one be a devil!",
+     "es": "Cansada y furiosa, dice la historia, gritó: ¡que este sea un diablo!",
+     "de": "Müde und wütend, so heißt es, rief sie: Soll dieses doch ein Teufel sein!",
+     "fr": "Épuisée, raconte-t-on, elle cria : que celui-ci soit un diable !",
+     "it": "Stanca e arrabbiata, si dice, gridò: che questo sia un diavolo!",
+     "pt": "Cansada e furiosa, diz a história, gritou: que este seja um diabo!"
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "narr",
+     "en": "The baby looked normal. Then it grew wings, hooves and a tail...",
+     "es": "El bebé parecía normal. Luego le salieron alas, pezuñas y cola...",
+     "de": "Das Baby sah normal aus. Dann wuchsen ihm Flügel, Hufe und ein Schwanz...",
+     "fr": "Le bébé semblait normal. Puis lui poussèrent des ailes, des sabots, une queue...",
+     "it": "Il bambino sembrava normale. Poi gli crebbero ali, zoccoli e una coda...",
+     "pt": "O bebê parecia normal. Depois cresceram asas, cascos e um rabo..."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "...and with a shriek, it flew up the chimney into the pines.",
+     "es": "...y con un chillido, voló por la chimenea hacia los pinos.",
+     "de": "...und mit einem Schrei flog es durch den Kamin in die Kiefern.",
+     "fr": "...et dans un cri, il s'envola par la cheminée vers les pins.",
+     "it": "...e con uno strillo volò su per il camino, tra i pini.",
+     "pt": "...e com um grito voou pela chaminé para os pinheiros."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "hide": "mother",
+     "dur": 0.8,
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "That part is only a legend. What came next was in the newspapers.",
+     "es": "Eso es solo leyenda. Lo que vino después salió en los periódicos.",
+     "de": "Das ist nur Legende. Was danach kam, stand in den Zeitungen.",
+     "fr": "Ça, c'est la légende. La suite était dans les journaux.",
+     "it": "Questa è solo leggenda. Quello che venne dopo finì sui giornali.",
+     "pt": "Isso é só lenda. O que veio depois saiu nos jornais."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "village",
+   "seed": 5,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.42,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     600,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 560
+    },
+    "moth": {
+     "x": 720,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "man": {
+     "type": "figure",
+     "x": 1400,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden"
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "January 1909. One week of snow and fear across South Jersey.",
+     "es": "Enero de 1909. Una semana de nieve y miedo en el sur de Nueva Jersey.",
+     "de": "Januar 1909. Eine Woche voller Schnee und Angst in South Jersey.",
+     "fr": "Janvier 1909. Une semaine de neige et de peur dans le sud du New Jersey.",
+     "it": "Gennaio 1909. Una settimana di neve e paura nel sud del New Jersey.",
+     "pt": "Janeiro de 1909. Uma semana de neve e medo no sul de Nova Jersey."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "show": "man",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "People woke up and found strange hoof prints in the snow.",
+     "es": "La gente despertó y encontró extrañas huellas de pezuña en la nieve.",
+     "de": "Die Leute wachten auf und fanden seltsame Hufspuren im Schnee.",
+     "fr": "Les gens trouvèrent au réveil d'étranges traces de sabots dans la neige.",
+     "it": "La gente si svegliò e trovò strane impronte di zoccoli nella neve.",
+     "pt": "As pessoas acordaram e acharam estranhas pegadas de casco na neve."
+    },
+    {
+     "say": "narr",
+     "en": "The tracks went over fences, through backyards... and across rooftops.",
+     "es": "Las huellas pasaban vallas, patios... y cruzaban los tejados.",
+     "de": "Die Spuren gingen über Zäune, durch Gärten... und über die Dächer.",
+     "fr": "Les traces franchissaient les clôtures, les jardins... et les toits.",
+     "it": "Le tracce scavalcavano recinti, cortili... e attraversavano i tetti.",
+     "pt": "As pegadas passavam cercas, quintais... e cruzavam os telhados."
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "narr",
+     "en": "In Hammonton, it was said, the bloodhounds refused to follow the trail.",
+     "es": "En Hammonton, se decía, los sabuesos se negaron a seguir el rastro.",
+     "de": "In Hammonton, hieß es, wollten die Spürhunde der Spur nicht folgen.",
+     "fr": "À Hammonton, disait-on, les chiens refusèrent de suivre la piste.",
+     "it": "A Hammonton, si diceva, i segugi si rifiutarono di seguire la pista.",
+     "pt": "Em Hammonton, diziam, os cães farejadores se recusaram a seguir o rastro."
+    },
+    {
+     "sfx": "howl",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Dogs that won't follow a trail? What were they smelling?",
+     "es": "¿Perros que no siguen un rastro? ¿Qué olían?",
+     "de": "Hunde, die keiner Spur folgen? Was haben sie gerochen?",
+     "fr": "Des chiens qui refusent une piste ? Qu'ont-ils senti ?",
+     "it": "Cani che non seguono una pista? Cosa sentivano?",
+     "pt": "Cães que não seguem um rastro? O que eles farejaram?"
+    },
+    {
+     "hide": "man",
+     "dur": 0.8
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 6,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 6,
+   "ambient": 0.34,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": -150
+    },
+    "moth": {
+     "x": -60,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1500,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1200,
+     "y": 300,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 720,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Then the newspapers printed hundreds of sightings.",
+     "es": "Entonces los periódicos publicaron cientos de avistamientos.",
+     "de": "Dann druckten die Zeitungen Hunderte von Sichtungen.",
+     "fr": "Puis les journaux publièrent des centaines de témoignages.",
+     "it": "Poi i giornali pubblicarono centinaia di avvistamenti.",
+     "pt": "Então os jornais publicaram centenas de avistamentos.",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Witnesses described wings... a head like a horse... glowing eyes.",
+     "es": "Los testigos hablaban de alas... cabeza de caballo... ojos brillantes.",
+     "de": "Zeugen sprachen von Flügeln... einem Kopf wie ein Pferd... glühenden Augen.",
+     "fr": "Les témoins parlaient d'ailes... d'une tête de cheval... d'yeux luisants.",
+     "it": "I testimoni parlavano di ali... una testa di cavallo... occhi che brillavano.",
+     "pt": "Testemunhas falavam de asas... cabeça de cavalo... olhos brilhando."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.3
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "And a scream so loud it woke whole streets.",
+     "es": "Y un grito tan fuerte que despertaba calles enteras.",
+     "de": "Und ein Schrei, so laut, dass ganze Straßen erwachten.",
+     "fr": "Et un cri si fort qu'il réveillait des rues entières.",
+     "it": "E un urlo così forte da svegliare strade intere.",
+     "pt": "E um grito tão alto que acordava ruas inteiras."
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "show": "h1",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "growl": "h1"
+    },
+    {
+     "say": "narr",
+     "en": "Police in Camden, and in Bristol, Pennsylvania, said they fired at it.",
+     "es": "La policía de Camden y de Bristol, Pensilvania, dijo que le disparó.",
+     "de": "Polizisten in Camden und in Bristol, Pennsylvania, sagten, sie hätten geschossen.",
+     "fr": "La police de Camden et de Bristol, en Pennsylvanie, dit avoir tiré.",
+     "it": "La polizia di Camden e di Bristol, in Pennsylvania, disse di aver sparato.",
+     "pt": "A polícia de Camden e de Bristol, Pensilvânia, disse que atirou."
+    },
+    {
+     "flash": true
+    },
+    {
+     "hide": "h1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Nothing happened. It simply flew away.",
+     "es": "No pasó nada. Simplemente se fue volando.",
+     "de": "Nichts geschah. Es flog einfach davon.",
+     "fr": "Rien. La chose s'envola, tout simplement.",
+     "it": "Niente. Volò semplicemente via.",
+     "pt": "Nada aconteceu. Simplesmente voou para longe."
+    },
+    {
+     "light": "on"
+    },
+    {
+     "eyes": "close",
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": "off_right",
+     "speed": "run"
+    },
+    {
+     "move": "moth",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "village",
+   "seed": 8,
+   "music": "choir",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1200,
+     "y": 600,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "hunter": {
+     "type": "figure",
+     "x": 1400,
+     "seed": 1,
+     "face": -1,
+     "state": "hidden"
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The fear spread fast. Some schools closed. Workers stayed at home.",
+     "es": "El miedo se extendió. Algunas escuelas cerraron. Obreros se quedaron en casa.",
+     "de": "Die Angst breitete sich aus. Schulen schlossen. Arbeiter blieben zu Hause.",
+     "fr": "La peur se répandit. Des écoles fermèrent. Des ouvriers restèrent chez eux.",
+     "it": "La paura si diffuse. Alcune scuole chiusero. Gli operai restarono a casa.",
+     "pt": "O medo se espalhou. Escolas fecharam. Trabalhadores ficaram em casa."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "show": "hunter",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Groups of hunters went into the pines with guns and lanterns.",
+     "es": "Grupos de cazadores entraron en los pinares con armas y faroles.",
+     "de": "Jäger zogen mit Gewehren und Laternen in die Kiefernwälder.",
+     "fr": "Des groupes de chasseurs partirent dans les pins, fusils et lanternes en main.",
+     "it": "Gruppi di cacciatori entrarono nelle pinete con fucili e lanterne.",
+     "pt": "Grupos de caçadores entraram nos pinhais com armas e lanternas."
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The Philadelphia Zoo, it was reported, offered ten thousand dollars to catch it.",
+     "es": "El zoo de Filadelfia, se dijo, ofreció diez mil dólares por atraparlo.",
+     "de": "Der Zoo von Philadelphia bot angeblich zehntausend Dollar für den Fang.",
+     "fr": "Le zoo de Philadelphie aurait offert dix mille dollars pour sa capture.",
+     "it": "Lo zoo di Filadelfia, si disse, offrì diecimila dollari per catturarlo.",
+     "pt": "O zoológico da Filadélfia, dizia-se, ofereceu dez mil dólares pela captura."
+    },
+    {
+     "say": "odo",
+     "en": "Ten thousand dollars... and nobody caught anything?",
+     "es": "Diez mil dólares... ¿y nadie atrapó nada?",
+     "de": "Zehntausend Dollar... und niemand fing etwas?",
+     "fr": "Dix mille dollars... et personne n'a rien attrapé ?",
+     "it": "Diecimila dollari... e nessuno prese niente?",
+     "pt": "Dez mil dólares... e ninguém pegou nada?"
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "moth",
+     "en": "Nobody. Not then. Not ever.",
+     "es": "Nadie. Ni entonces. Ni nunca.",
+     "de": "Niemand. Nicht damals. Niemals.",
+     "fr": "Personne. Ni alors. Ni jamais.",
+     "it": "Nessuno. Né allora. Né mai.",
+     "pt": "Ninguém. Nem naquela época. Nem nunca."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    },
+    {
+     "hide": "hunter",
+     "dur": 1.0
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "chapel",
+   "seed": 4,
+   "music": "drone",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.38,
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Later, some of the tracks turned out to be fakes, made as a prank.",
+     "es": "Más tarde, algunas huellas resultaron ser falsas, hechas como broma.",
+     "de": "Später stellten sich manche Spuren als Fälschungen heraus, ein Streich.",
+     "fr": "Plus tard, certaines traces se révélèrent fausses, une farce.",
+     "it": "Più tardi, alcune tracce si rivelarono false, uno scherzo.",
+     "pt": "Depois, algumas pegadas se revelaram falsas, feitas como brincadeira."
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Historians call that week a famous case of mass panic.",
+     "es": "Los historiadores llaman a esa semana un famoso caso de pánico colectivo.",
+     "de": "Historiker nennen jene Woche einen berühmten Fall von Massenpanik.",
+     "fr": "Les historiens y voient un célèbre cas de panique collective.",
+     "it": "Gli storici la chiamano un famoso caso di panico collettivo.",
+     "pt": "Historiadores chamam aquela semana de famoso caso de pânico coletivo."
+    },
+    {
+     "act": "odo",
+     "do": "calm"
+    },
+    {
+     "say": "narr",
+     "en": "But hundreds of people swore they saw or heard something.",
+     "es": "Pero cientos de personas juraron haber visto u oído algo.",
+     "de": "Aber Hunderte schworen, etwas gesehen oder gehört zu haben.",
+     "fr": "Mais des centaines de gens jurèrent avoir vu ou entendu quelque chose.",
+     "it": "Ma centinaia di persone giurarono di aver visto o sentito qualcosa.",
+     "pt": "Mas centenas de pessoas juraram ter visto ou ouvido algo."
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "g1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... the lantern went out. Something is on the roof.",
+     "es": "Mothwick... la linterna se apagó. Hay algo en el tejado.",
+     "de": "Mothwick... die Laterne ist aus. Etwas ist auf dem Dach.",
+     "fr": "Mothwick... la lanterne s'est éteinte. Il y a quelque chose sur le toit.",
+     "it": "Mothwick... la lanterna si è spenta. C'è qualcosa sul tetto.",
+     "pt": "Mothwick... a lanterna apagou. Tem algo no telhado."
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.3
+    },
+    {
+     "flash": true
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "moth",
+     "en": "Only the wind. Keep walking. And don't look up.",
+     "es": "Solo el viento. Sigue andando. Y no mires arriba.",
+     "de": "Nur der Wind. Geh weiter. Und schau nicht hoch.",
+     "fr": "Juste le vent. Continue. Et ne lève pas les yeux.",
+     "it": "Solo il vento. Continua. E non guardare in alto.",
+     "pt": "Só o vento. Continue andando. E não olhe para cima."
+    },
+    {
+     "eyes": "close"
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "swamp",
+   "seed": 2,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1500,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1520,
+     "state": "hidden",
+     "face": -1,
+     "scale": 1.0
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1300,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The snow melted. The newspapers moved on. But the reports never fully stopped.",
+     "es": "La nieve se derritió. Los periódicos siguieron. Pero los relatos nunca pararon.",
+     "de": "Der Schnee schmolz. Die Zeitungen schrieben über anderes. Doch die Berichte hörten nie ganz auf.",
+     "fr": "La neige fondit. Les journaux passèrent à autre chose. Mais les récits ne cessèrent jamais.",
+     "it": "La neve si sciolse. I giornali cambiarono notizia. Ma i racconti non finirono mai.",
+     "pt": "A neve derreteu. Os jornais mudaram de assunto. Mas os relatos nunca pararam."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Even today, people in the Pine Barrens say they hear a scream at night.",
+     "es": "Aún hoy, en los Pine Barrens dicen oír un grito de noche.",
+     "de": "Noch heute sagen Leute in den Pine Barrens, sie hören nachts einen Schrei.",
+     "fr": "Aujourd'hui encore, dans les Pine Barrens, on dit entendre un cri la nuit.",
+     "it": "Ancora oggi, nei Pine Barrens, si dice di sentire un urlo di notte.",
+     "pt": "Até hoje, nos Pine Barrens, dizem ouvir um grito à noite."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... there are hoof prints here. In the mud. Fresh ones.",
+     "es": "Mothwick... hay huellas de pezuña aquí. En el barro. Recientes.",
+     "de": "Mothwick... hier sind Hufspuren. Im Schlamm. Ganz frisch.",
+     "fr": "Mothwick... il y a des traces de sabots ici. Dans la boue. Toutes fraîches.",
+     "it": "Mothwick... ci sono impronte di zoccoli qui. Nel fango. Fresche.",
+     "pt": "Mothwick... tem pegadas de casco aqui. Na lama. Recentes."
+    },
+    {
+     "sfx": "step",
+     "wait": 0.4
+    },
+    {
+     "say": "moth",
+     "en": "They don't lead away, Odo... they stop right behind us.",
+     "es": "No se alejan, Odo... se detienen justo detrás de nosotros.",
+     "de": "Sie führen nicht weg, Odo... sie enden direkt hinter uns.",
+     "fr": "Elles ne partent pas, Odo... elles s'arrêtent juste derrière nous.",
+     "it": "Non portano via, Odo... si fermano proprio dietro di noi.",
+     "pt": "Elas não vão embora, Odo... param bem atrás de nós."
+    },
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "lunge": "h1",
+     "to": 1150
+    },
+    {
+     "light": "out",
+     "and": true
+    },
+    {
+     "card": "WHAT LIVES IN THE PINES?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}

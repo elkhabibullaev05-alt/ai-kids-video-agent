@@ -1,0 +1,157 @@
+{
+ "id": "ep007_short1",
+ "format": "short",
+ "title": "Would YOU walk these woods at night? 🦇 #shorts",
+ "hook": "DON'T LOOK UP",
+ "description": "New Jersey, January 1909: hoof prints across the rooftops, a scream over the pines, police firing at something with wings. Schools closed. Nobody caught it. Full story on the channel. #shorts #jerseydevil #truestory #legend #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Jersey Devil",
+  "Leeds Devil",
+  "Pine Barrens",
+  "New Jersey",
+  "1909",
+  "American legend"
+ ],
+ "thumbnail": {
+  "bg": "swamp",
+  "seed": 4,
+  "creature": "gloamhound",
+  "text": "DON'T LOOK UP"
+ },
+ "shots": [
+  {
+   "bg": "swamp",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.4,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 700
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1150,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    },
+    "c1": {
+     "type": "crow",
+     "x": 900,
+     "y": 420,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 760,
+     "speed": "creep"
+    },
+    {
+     "say": "narr",
+     "en": "New Jersey, 1909. Hoof prints across the rooftops.",
+     "es": "Nueva Jersey, 1909. Huellas de pezuña sobre los tejados.",
+     "de": "New Jersey, 1909. Hufspuren über die Dächer.",
+     "fr": "New Jersey, 1909. Des traces de sabots sur les toits.",
+     "it": "New Jersey, 1909. Impronte di zoccoli sui tetti.",
+     "pt": "Nova Jersey, 1909. Pegadas de casco nos telhados.",
+     "and": true
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Police fired at something with wings. Schools closed.",
+     "es": "La policía disparó a algo con alas. Cerraron escuelas.",
+     "de": "Polizisten schossen auf etwas mit Flügeln. Schulen schlossen.",
+     "fr": "La police tira sur une chose ailée. Les écoles fermèrent.",
+     "it": "La polizia sparò a qualcosa con le ali. Le scuole chiusero.",
+     "pt": "A polícia atirou em algo com asas. Escolas fecharam."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.3
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "Would you walk the pines tonight?",
+     "es": "¿Caminarías por los pinos esta noche?",
+     "de": "Würdest du heute Nacht durch die Kiefern gehen?",
+     "fr": "Marcherais-tu dans les pins ce soir ?",
+     "it": "Cammineresti tra i pini stanotte?",
+     "pt": "Você andaria pelos pinheiros esta noite?"
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "h1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "growl": "h1"
+    },
+    {
+     "hide": "h1",
+     "dur": 0.3
+    },
+    {
+     "light": "on",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "calm",
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 700,
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Something screamed over the pines...",
+     "es": "Algo gritó sobre los pinos...",
+     "de": "Etwas schrie über den Kiefern...",
+     "fr": "Quelque chose hurla au-dessus des pins...",
+     "it": "Qualcosa urlò sopra i pini...",
+     "pt": "Algo gritou sobre os pinheiros..."
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}
