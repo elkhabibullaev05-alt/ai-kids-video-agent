@@ -331,6 +331,10 @@ script = {
                   "items": [{"prop": "moneybag", "x": 1700, "y": 860, "s": 1.3, "text": "$"}, {"prop": "baseball", "x": 1720, "y": 420, "s": 0.8}], "guy_x": 1330},
     "scenes": [s for s in S if s],
 }
+# rek-ball pacing: every scene gets a different background tint from the one before -> a clear visual cut
+_CYC = ["paper", "blue", "paper", "teal", "paper", "purple"]
+for _i, _s in enumerate(script["scenes"]):
+    _s["bg"] = _CYC[_i % len(_CYC)]
 for s in script["scenes"]:
     for it in list(s["items"]):
         g = it.get("guy")

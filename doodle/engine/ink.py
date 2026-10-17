@@ -710,6 +710,48 @@ def _scoreboard(p, t, color, text):
             p.text(line, 0, -330 + k * 90 + (45 if len(parts) == 1 else 0), min(70, int(900 / max(1, len(line)))), "yellow")
 
 
+def _school(p, t, color, text):
+    p.rect(-260, -300, 520, 300, color or "tan")
+    p.shape([(-290, -300), (0, -430), (290, -300)], "red")
+    p.rect(-14, -500, 6, 80, "dark", 3)
+    p.shape([(-8, -500), (60, -485), (-8, -470)], "blue")
+    for k in (-190, -100, 100, 190):
+        p.rect(k - 32, -250, 64, 64, "sky", 4)
+    p.rect(-45, -130, 90, 130, "brown", 4)
+    p.circle(0, -360, 26, "white", 4)
+    if text:
+        p.text(text, 0, -175, min(40, int(560 / max(1, len(text)))), "dark")
+
+
+def _backpack(p, t, color, text):
+    p.arc(0, -230, 50, math.pi, 2 * math.pi, 10)
+    p.rect(-100, -240, 200, 240, color or "blue")
+    p.rect(-70, -110, 140, 90, "white", 4)
+    p.line([(-100, -170), (100, -170)], 4)
+    if text:
+        p.text(text, 0, -65, min(34, int(240 / max(1, len(text)))), "dark")
+
+
+def _barrier(p, t, color, text):
+    for k in (-200, 200):
+        p.line([(k, 0), (k, -200)], 10)
+    p.rect(-240, -200, 480, 70, color or "red")
+    for k in range(-200, 220, 80):
+        p.shape([(k - 20, -200), (k + 20, -200), (k - 20, -130), (k - 60, -130)], "white")
+    if text:
+        p.text(text, 0, -240, 34, "dark")
+
+
+def _chalkboard(p, t, color, text):
+    p.rect(-320, -520, 640, 380, "brown")
+    p.rect(-295, -495, 590, 330, color or "dark", 3)
+    p.line([(-200, 0), (-160, -140)], 8); p.line([(200, 0), (160, -140)], 8)
+    if text:
+        parts = text.split("|")
+        for k, line in enumerate(parts):
+            p.text(line, 0, -400 + k * 85 + (60 if len(parts) == 1 else 0), min(64, int(1000 / max(1, len(line)))), "white")
+
+
 PROPS = {
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
@@ -721,4 +763,5 @@ PROPS = {
     "phone": _phone, "laptop": _laptop, "envelope": _envelope, "robot": _robot, "lock": _lock, "eye": _eye,
     "megaphone": _megaphone, "clipboard": _clipboard,
     "baseball": _baseball, "bat": _bat, "scoreboard": _scoreboard,
+    "school": _school, "backpack": _backpack, "barrier": _barrier, "chalkboard": _chalkboard,
 }
