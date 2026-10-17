@@ -44,6 +44,10 @@ Fix any reported problems before the full render. Use generous command timeouts 
 ## 5. Check the results
 For each MP4: `ffprobe` the duration; extract 3 frames (`ffmpeg -ss T -i file -frames:v 1 x.png`) and look at them: characters visible, subtitles readable, nothing cut off. Re-render if something is clearly broken.
 
+**Rek-ball gate (owner's rule — never skip):** before uploading, score every MP4:
+`python3 <repo>/tools/rek_ball.py <file>.mp4 "<YouTube title>"` → JSON with `ball` (0–100), `qism` (parts) and `muammo` (problems, Uzbek).
+A video with **ball < 85 is NOT uploaded**. Fix what `muammo` names (stronger first 3 s, faster changes, no still stretch, louder audio, better title) by editing that script and re-rendering, then score again — at most 2 fix rounds per video per run. If it still scores < 85, do not upload it: record it in `story/log.json → rejected` as `{"date","title","ball","muammo"}` and make a new video instead in the next run (the buffer check counts only uploaded videos). Report each video's score in the final message.
+
 ## 6. Save progress
 Append to `story/log.json` → `episodes`:
 ```json
