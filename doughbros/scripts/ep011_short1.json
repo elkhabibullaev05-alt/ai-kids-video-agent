@@ -60,8 +60,8 @@
      "and": true
     },
     {
-     "shake": 0.4,
-     "power": 14,
+     "shake": 0.5,
+     "power": 26,
      "and": true
     },
     {
@@ -72,14 +72,63 @@
      "fr": "Non, merci. S'il te plaît, laisse-nous tranquilles.",
      "it": "No, grazie. Per favore, lasciaci in pace.",
      "pt": "Não, obrigada. Por favor, deixa a gente em paz."
+    }
+   ],
+   "tail": 0.1
+  },
+  {
+   "cut": true,
+   "bg": "kitchen",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 900
+   },
+   "moods": {
+    "pim": "scared"
+   },
+   "beats": [
+    {
+     "act": "pim",
+     "do": "shake"
     },
+    {
+     "say": "pim",
+     "en": "That's ONE please...",
+     "es": "Eso es UN por favor...",
+     "de": "Das ist EIN Bitte...",
+     "fr": "Ça fait UN s'il te plaît...",
+     "it": "Questo è UN per favore...",
+     "pt": "Esse é UM por favor...",
+     "and": true
+    }
+   ],
+   "tail": 0.1
+  },
+  {
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "lolly": 640,
+    "pim": 330
+   },
+   "moods": {
+    "lolly": "happy",
+    "pim": "scared"
+   },
+   "villain": {
+    "type": "jelly",
+    "x": 1250,
+    "state": "awake",
+    "scale": 1.0
+   },
+   "beats": [
     {
      "villain": "lunge",
      "to": 1100
     },
     {
-     "act": "pim",
-     "do": "shake",
+     "shake": 0.4,
+     "power": 22,
      "and": true
     },
     {
@@ -99,6 +148,25 @@
      "fr": "Hi hi ! Redis-le !",
      "it": "Ih ih! Dillo ANCORA!",
      "pt": "Hi hi! Fala DE NOVO!"
+    }
+   ],
+   "tail": 0.1,
+   "cut": true
+  },
+  {
+   "cut": true,
+   "bg": "kitchen",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 900
+   },
+   "moods": {
+    "pim": "scared"
+   },
+   "beats": [
+    {
+     "act": "pim",
+     "do": "jump"
     },
     {
      "say": "pim",
@@ -107,12 +175,35 @@
      "de": "Oh n-nein. Nicht Nummer DREI!",
      "fr": "Oh n-non. Pas le numéro TROIS !",
      "it": "Oh n-no. Non il numero TRE!",
-     "pt": "Ai n-não. O número TRÊS não!"
+     "pt": "Ai n-não. O número TRÊS não!",
+     "and": true
     },
     {
-     "mood": "lolly",
-     "is": "angry"
-    },
+     "shake": 0.4,
+     "power": 20,
+     "and": true
+    }
+   ],
+   "tail": 0.1
+  },
+  {
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "lolly": 640,
+    "pim": 330
+   },
+   "moods": {
+    "lolly": "angry",
+    "pim": "scared"
+   },
+   "villain": {
+    "type": "jelly",
+    "x": 1100,
+    "state": "awake",
+    "scale": 1.0
+   },
+   "beats": [
     {
      "sfx": "sting",
      "wait": 0.1
@@ -124,20 +215,17 @@
      "de": "BIIIITTE!",
      "fr": "S'IL TE PLAÎÎÎT !",
      "it": "PER FAVOOORE!",
-     "pt": "POR FAVOOOR!"
+     "pt": "POR FAVOOOR!",
+     "and": true
     },
     {
      "shake": 0.9,
-     "power": 24,
+     "power": 30,
      "and": true
     },
     {
      "villain": "rage",
-     "level": 1.0
-    },
-    {
-     "act": "pim",
-     "do": "faint",
+     "level": 1.0,
      "and": true
     },
     {
@@ -147,7 +235,57 @@
      "sfx": "whoosh",
      "wait": 0.2,
      "and": true
+    }
+   ],
+   "tail": 0.1,
+   "cut": true
+  },
+  {
+   "cut": true,
+   "bg": "kitchen",
+   "music": "heartbeat",
+   "heroes": {
+    "pim": 900
+   },
+   "moods": {
+    "pim": "happy"
+   },
+   "beats": [
+    {
+     "act": "pim",
+     "do": "faint"
     },
+    {
+     "say": "pim",
+     "en": "You... you scared a JELLY!",
+     "es": "¡Tú... asustaste a una GELATINA!",
+     "de": "Du... du hast einen WACKELPUDDING verjagt!",
+     "fr": "Tu... tu as fait peur à une GELÉE !",
+     "it": "Tu... hai spaventato una GELATINA!",
+     "pt": "Você... você assustou uma GELATINA!",
+     "and": true
+    }
+   ],
+   "tail": 0.1
+  },
+  {
+   "bg": "fridge",
+   "music": "heartbeat",
+   "heroes": {
+    "lolly": 640,
+    "pim": 330
+   },
+   "moods": {
+    "lolly": "happy",
+    "pim": "scared"
+   },
+   "villain": {
+    "type": "jelly",
+    "x": 1450,
+    "state": "hidden",
+    "scale": 0.85
+   },
+   "beats": [
     {
      "mood": "lolly",
      "is": "happy"
@@ -162,19 +300,6 @@
      "pt": "Educação, querido. Sempre funciona."
     },
     {
-     "say": "pim",
-     "en": "You... you scared a JELLY!",
-     "es": "¡Tú... asustaste a una GELATINA!",
-     "de": "Du... du hast einen WACKELPUDDING verjagt!",
-     "fr": "Tu... tu as fait peur à une GELÉE !",
-     "it": "Tu... hai spaventato una GELATINA!",
-     "pt": "Você... você assustou uma GELATINA!"
-    },
-    {
-     "mood": "pim",
-     "is": "scared"
-    },
-    {
      "sfx": "creak",
      "wait": 0.1
     },
@@ -183,6 +308,11 @@
     },
     {
      "villain": "wake",
+     "and": true
+    },
+    {
+     "shake": 0.3,
+     "power": 18,
      "and": true
     },
     {
@@ -195,7 +325,8 @@
      "pt": "Hi hi... VOLTEI!"
     }
    ],
-   "tail": 0.1
+   "tail": 0.1,
+   "cut": true
   }
  ]
 }

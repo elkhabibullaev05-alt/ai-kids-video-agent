@@ -156,7 +156,8 @@ class Compiler:
         S = {"t0": t0, "bg": bg, "heroes": heroes, "villain": v, "music": sc.get("music", "drone")}
         self.scenes.append(S)
         # retention: the very first frame must already be moving (no fade-in on scene 0)
-        S["fin"] = 0.0 if i == 0 else 0.4
+        # "cut": true -> hard cut into this scene (no fade; Shorts retention)
+        S["fin"] = 0.0 if (i == 0 or sc.get("cut")) else 0.4
         self.t += S["fin"]  # fade in
         prev_start = end = self.t
         for j, b in enumerate(sc.get("beats", [])):
@@ -174,7 +175,8 @@ class Compiler:
         S["t1"] = self.t
         # Shorts loop: no fade-out to black after the last scene
         last = i == len(self.s.get("scenes", [])) - 1
-        S["fout"] = 0.0 if (last and self.s.get("format") == "short") else 0.35
+        nxt = None if last else self.s["scenes"][i + 1]
+        S["fout"] = 0.0 if ((last and self.s.get("format") == "short") or (nxt and nxt.get("cut"))) else 0.35
         self.t += S["fout"]  # fade out
 
     # ------------------------------------------------------------------
