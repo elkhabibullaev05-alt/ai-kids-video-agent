@@ -1,0 +1,301 @@
+{
+ "id": "ep008_short2",
+ "format": "short",
+ "title": "Would YOU open the church door? ⛈️ #shorts",
+ "hook": "WOULD YOU OPEN IT?",
+ "description": "Bungay, Suffolk, 1577: in a wild storm, people said a huge black dog ran through the church. The legend of Black Shuck lives on. Would you open the door? Full story on the channel. #shorts #blackshuck #truestory #legend #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Black Shuck",
+  "black dog legend",
+  "Bungay",
+  "Blythburgh",
+  "Suffolk",
+  "1577"
+ ],
+ "thumbnail": {
+  "bg": "chapel",
+  "seed": 5,
+  "creature": "gloamhound",
+  "text": "WOULD YOU?"
+ },
+ "shots": [
+  {
+   "bg": "chapel",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 640
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "wait": 0.5
+    },
+    {
+     "flash": true
+    },
+    {
+     "shake": 0.4,
+     "power": 16,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 700,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Knock. Knock.",
+     "es": "Toc. Toc.",
+     "de": "Klopf. Klopf.",
+     "fr": "Toc. Toc.",
+     "it": "Toc. Toc.",
+     "pt": "Toc. Toc.",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "wait": 0.3
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  },
+  {
+   "bg": "village",
+   "seed": 2,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "narr",
+     "en": "Something is at the church door.",
+     "es": "Hay algo en la puerta de la iglesia.",
+     "de": "Etwas ist an der Kirchentür.",
+     "fr": "Quelque chose est à la porte de l'église.",
+     "it": "C'è qualcosa alla porta della chiesa.",
+     "pt": "Tem algo na porta da igreja.",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "flash": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "chapel",
+   "seed": 8,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 520
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1250,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "say": "narr",
+     "en": "In 1577, people said a giant black dog came through it.",
+     "es": "En 1577 decían que un enorme perro negro entró por ella.",
+     "de": "1577 sagte man, ein riesiger schwarzer Hund kam hindurch.",
+     "fr": "En 1577, on disait qu'un chien noir géant l'avait franchie.",
+     "it": "Nel 1577 si disse che un enorme cane nero entrò da lì.",
+     "pt": "Em 1577 diziam que um cão preto gigante entrou por ela.",
+     "and": true
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "lunge": "h1",
+     "to": 950
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  },
+  {
+   "bg": "forest",
+   "seed": 7,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 4,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 680
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1100,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "eyes": "open"
+    },
+    {
+     "say": "narr",
+     "en": "Would you open it?",
+     "es": "¿La abrirías?",
+     "de": "Würdest du sie öffnen?",
+     "fr": "L'ouvrirais-tu ?",
+     "it": "La apriresti?",
+     "pt": "Você abriria?",
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "h1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "growl": "h1"
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "bg": "chapel",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 760
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "move": "odo",
+     "to": 640,
+     "speed": "walk"
+    },
+    {
+     "say": "narr",
+     "en": "Listen...",
+     "es": "Escucha...",
+     "de": "Hör zu...",
+     "fr": "Écoute...",
+     "it": "Ascolta...",
+     "pt": "Escute...",
+     "and": true
+    }
+   ],
+   "tail": 0.3,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  }
+ ]
+}

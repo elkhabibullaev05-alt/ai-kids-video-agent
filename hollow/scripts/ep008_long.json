@@ -1,0 +1,1025 @@
+{
+ "id": "ep008_long",
+ "format": "long",
+ "title": "What Burst Through the Church Door in 1577?",
+ "hook": "DON'T OPEN THE DOOR",
+ "hook_dur": 4.5,
+ "description": "Based on a real 1577 record and a famous English legend. On Sunday 4 August 1577, a violent storm of rain, lightning and thunder hit Bungay in Suffolk, England. In a pamphlet printed that year, Abraham Fleming wrote that while people prayed in St Mary's Church, a black dog appeared among them with flashes of fire and ran down the church. The same day, the story says, it burst into Holy Trinity Church at Blythburgh, where the spire fell through the roof. The north door there still has dark scorch marks that locals call 'the Devil's fingerprints'. Historians point to a fierce lightning storm and to Fleming's habit of turning news into sermons; sceptics say the marks were made by candles. The legend of Black Shuck has never left East Anglia.\n\nSources:\nhttps://en.wikipedia.org/wiki/Black_Shuck\nhttps://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/handle/20.500.12024/A00943/A00943.html?sequence=5\nhttps://www.suffolklive.com/news/history/black-shuck-blythburgh-church-suffolk-5767807\n\n#truestory #blackshuck #suffolk #legend #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Black Shuck",
+  "black dog legend",
+  "Bungay",
+  "Blythburgh",
+  "Suffolk",
+  "1577",
+  "English folklore",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 8",
+  "devil's fingerprints",
+  "hellhound",
+  "A Straunge and Terrible Wunder"
+ ],
+ "thumbnail": {
+  "bg": "chapel",
+  "seed": 3,
+  "creature": "gloamhound",
+  "text": "DON'T OPEN IT"
+ },
+ "shots": [
+  {
+   "bg": "chapel",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 4,
+   "lantern": 1.0,
+   "ambient": 0.38,
+   "fade": false,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.22
+    ],
+    "to": [
+     1060,
+     610,
+     1.08
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1500,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 620,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Thunder shook the church... and then the doors flew open.",
+     "es": "Un trueno sacudió la iglesia... y las puertas se abrieron de golpe.",
+     "de": "Donner erschütterte die Kirche... und dann flogen die Türen auf.",
+     "fr": "Le tonnerre secoua l'église... puis les portes s'ouvrirent d'un coup.",
+     "it": "Il tuono scosse la chiesa... e poi le porte si spalancarono.",
+     "pt": "O trovão sacudiu a igreja... e então as portas se escancararam.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "sfx": "creak",
+     "wait": 0.2
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "This is a real English legend, first printed in 1577.",
+     "es": "Esta es una leyenda inglesa real, impresa por primera vez en 1577.",
+     "de": "Dies ist eine echte englische Legende, zuerst gedruckt im Jahr 1577.",
+     "fr": "Ceci est une vraie légende anglaise, imprimée pour la première fois en 1577.",
+     "it": "Questa è una vera leggenda inglese, stampata per la prima volta nel 1577.",
+     "pt": "Esta é uma lenda inglesa real, impressa pela primeira vez em 1577."
+    },
+    {
+     "hide": "h1",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... something black just ran past the door.",
+     "es": "Mothwick... algo negro acaba de pasar junto a la puerta.",
+     "de": "Mothwick... gerade ist etwas Schwarzes an der Tür vorbeigerannt.",
+     "fr": "Mothwick... quelque chose de noir vient de passer devant la porte.",
+     "it": "Mothwick... qualcosa di nero è appena passato davanti alla porta.",
+     "pt": "Mothwick... algo preto acabou de passar pela porta."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Then whatever you hear tonight... don't open the door.",
+     "es": "Entonces, oigas lo que oigas esta noche... no abras la puerta.",
+     "de": "Dann, was du heute Nacht auch hörst... öffne nicht die Tür.",
+     "fr": "Alors, quoi que tu entendes ce soir... n'ouvre pas la porte.",
+     "it": "Allora, qualunque cosa senti stanotte... non aprire la porta.",
+     "pt": "Então, ouça o que ouvir esta noite... não abra a porta."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "forest",
+   "seed": 7,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1040,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 330,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "In East Anglia, in eastern England, people tell of a huge black dog.",
+     "es": "En East Anglia, al este de Inglaterra, hablan de un enorme perro negro.",
+     "de": "In East Anglia, im Osten Englands, erzählt man von einem riesigen schwarzen Hund.",
+     "fr": "En East Anglia, à l'est de l'Angleterre, on parle d'un énorme chien noir.",
+     "it": "Nell'East Anglia, nell'est dell'Inghilterra, si parla di un enorme cane nero.",
+     "pt": "Em East Anglia, no leste da Inglaterra, falam de um enorme cão preto."
+    },
+    {
+     "sfx": "howl",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "show": "h1",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "They call him Black Shuck. Some say the name meant demon.",
+     "es": "Lo llaman Black Shuck. Algunos dicen que el nombre significaba demonio.",
+     "de": "Man nennt ihn Black Shuck. Manche sagen, der Name bedeutete Dämon.",
+     "fr": "On l'appelle Black Shuck. Certains disent que ce nom voulait dire démon.",
+     "it": "Lo chiamano Black Shuck. Alcuni dicono che il nome significasse demonio.",
+     "pt": "Chamam-no de Black Shuck. Dizem que o nome significava demônio."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The stories say he walks the coast roads and the churchyards at night.",
+     "es": "Las historias dicen que recorre los caminos de la costa y los cementerios de noche.",
+     "de": "Es heißt, er streift nachts über Küstenwege und Friedhöfe.",
+     "fr": "On dit qu'il rôde la nuit sur les routes côtières et dans les cimetières.",
+     "it": "Si dice che di notte vaghi per le strade della costa e i cimiteri.",
+     "pt": "Dizem que ele anda à noite pelas estradas da costa e pelos cemitérios."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "A dog as big as a calf... with eyes like fire?",
+     "es": "¿Un perro grande como un ternero... con ojos de fuego?",
+     "de": "Ein Hund so groß wie ein Kalb... mit Augen wie Feuer?",
+     "fr": "Un chien grand comme un veau... aux yeux de feu ?",
+     "it": "Un cane grande come un vitello... con gli occhi di fuoco?",
+     "pt": "Um cão do tamanho de um bezerro... com olhos de fogo?"
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "That's the legend. But one night, people wrote it down.",
+     "es": "Esa es la leyenda. Pero una noche, alguien lo escribió.",
+     "de": "Das ist die Legende. Aber eines Nachts schrieb man es auf.",
+     "fr": "Ça, c'est la légende. Mais une nuit, on l'a écrit.",
+     "it": "Questa è la leggenda. Ma una notte, qualcuno lo scrisse.",
+     "pt": "Essa é a lenda. Mas uma noite, alguém escreveu tudo."
+    },
+    {
+     "hide": "h1",
+     "dur": 0.8,
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "choir",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 620,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     600,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 560
+    },
+    "moth": {
+     "x": 720,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "man": {
+     "type": "figure",
+     "x": 1420,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden"
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Sunday, the 4th of August, 1577. The town of Bungay, in Suffolk.",
+     "es": "Domingo, 4 de agosto de 1577. El pueblo de Bungay, en Suffolk.",
+     "de": "Sonntag, der 4. August 1577. Die Stadt Bungay in Suffolk.",
+     "fr": "Dimanche 4 août 1577. La ville de Bungay, dans le Suffolk.",
+     "it": "Domenica 4 agosto 1577. La cittadina di Bungay, nel Suffolk.",
+     "pt": "Domingo, 4 de agosto de 1577. A cidade de Bungay, em Suffolk."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "show": "man",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "People gathered in St Mary's Church for the morning prayers.",
+     "es": "La gente se reunió en la iglesia de Santa María para rezar.",
+     "de": "Die Leute versammelten sich zum Gebet in der Kirche St. Mary.",
+     "fr": "Les gens s'étaient réunis pour prier dans l'église Sainte-Marie.",
+     "it": "La gente si riunì nella chiesa di Santa Maria per pregare.",
+     "pt": "As pessoas se reuniram na igreja de Santa Maria para rezar."
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "say": "narr",
+     "en": "Then a storm broke. Rain, lightning, thunder, like few had ever seen.",
+     "es": "Entonces estalló una tormenta. Lluvia, rayos, truenos, como pocos habían visto.",
+     "de": "Dann brach ein Sturm los. Regen, Blitz, Donner, wie kaum je gesehen.",
+     "fr": "Puis l'orage éclata. Pluie, éclairs, tonnerre, comme rarement vu.",
+     "it": "Poi scoppiò una tempesta. Pioggia, fulmini, tuoni, come pochi ne avevano visti.",
+     "pt": "Então caiu uma tempestade. Chuva, raios, trovões, como poucos já viram."
+    },
+    {
+     "shake": 0.8,
+     "power": 14,
+     "and": true
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "narr",
+     "en": "The church went so dark, the record says, people could barely see.",
+     "es": "La iglesia se oscureció tanto, dice el relato, que apenas se veía.",
+     "de": "Die Kirche wurde so dunkel, heißt es, dass man kaum etwas sah.",
+     "fr": "L'église devint si sombre, dit le récit, qu'on n'y voyait presque rien.",
+     "it": "La chiesa divenne così buia, dice il racconto, che quasi non si vedeva.",
+     "pt": "A igreja ficou tão escura, diz o relato, que mal se enxergava."
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "hide": "man",
+     "dur": 0.8
+    },
+    {
+     "say": "odo",
+     "en": "In the dark... I hear claws on the stone floor.",
+     "es": "En la oscuridad... oigo garras en el suelo de piedra.",
+     "de": "Im Dunkeln... höre ich Krallen auf dem Steinboden.",
+     "fr": "Dans le noir... j'entends des griffes sur les dalles.",
+     "it": "Nel buio... sento artigli sul pavimento di pietra.",
+     "pt": "No escuro... ouço garras no chão de pedra."
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "light": "on"
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "chapel",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.34,
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": -150
+    },
+    "moth": {
+     "x": -60,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1500,
+     "state": "hidden",
+     "face": -1,
+     "scale": 1.0
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 720,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "A writer named Abraham Fleming printed what people told of that day.",
+     "es": "Un escritor, Abraham Fleming, publicó lo que la gente contó de aquel día.",
+     "de": "Ein Schreiber namens Abraham Fleming druckte, was man von jenem Tag erzählte.",
+     "fr": "Un auteur, Abraham Fleming, imprima ce qu'on racontait de ce jour-là.",
+     "it": "Uno scrittore, Abraham Fleming, stampò ciò che si raccontava di quel giorno.",
+     "pt": "Um escritor, Abraham Fleming, publicou o que contavam daquele dia.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "show": "h1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "In the flashes of fire, a black dog appeared among the people.",
+     "es": "Entre destellos de fuego, un perro negro apareció entre la gente.",
+     "de": "Im Feuerschein erschien ein schwarzer Hund mitten unter den Leuten.",
+     "fr": "Dans des éclairs de feu, un chien noir apparut parmi les gens.",
+     "it": "Tra lampi di fuoco, un cane nero apparve in mezzo alla gente.",
+     "pt": "Entre clarões de fogo, um cão preto apareceu no meio do povo."
+    },
+    {
+     "growl": "h1"
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "It ran down the church with great swiftness, he wrote.",
+     "es": "Corrió por la iglesia a gran velocidad, escribió él.",
+     "de": "Es rannte mit großer Schnelligkeit durch die Kirche, schrieb er.",
+     "fr": "Il traversa l'église à toute vitesse, écrivit-il.",
+     "it": "Corse lungo la chiesa a grande velocità, scrisse.",
+     "pt": "Correu pela igreja com grande rapidez, escreveu ele."
+    },
+    {
+     "lunge": "h1",
+     "to": 1250
+    },
+    {
+     "say": "narr",
+     "en": "Fleming says people were hurt that day. He blamed the devil himself.",
+     "es": "Fleming dice que hubo heridos ese día. Culpó al mismo diablo.",
+     "de": "Fleming sagt, an jenem Tag wurden Menschen verletzt. Er gab dem Teufel die Schuld.",
+     "fr": "Fleming dit que des gens furent blessés. Il accusa le diable en personne.",
+     "it": "Fleming dice che quel giorno ci furono feriti. Diede la colpa al diavolo.",
+     "pt": "Fleming diz que houve feridos naquele dia. Culpou o próprio diabo."
+    },
+    {
+     "hide": "h1",
+     "dur": 0.2
+    },
+    {
+     "light": "flare",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "And then... where did it go?",
+     "es": "Y luego... ¿adónde fue?",
+     "de": "Und dann... wohin ist er verschwunden?",
+     "fr": "Et ensuite... où est-il allé ?",
+     "it": "E poi... dove è andato?",
+     "pt": "E depois... para onde ele foi?"
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "move": "odo",
+     "to": "off_right",
+     "speed": "run"
+    },
+    {
+     "move": "moth",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "chapel",
+   "seed": 8,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.38,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1500,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1200,
+     "y": 300,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The story says that the same morning, it reached Blythburgh, miles away.",
+     "es": "La historia dice que esa misma mañana llegó a Blythburgh, a millas de allí.",
+     "de": "Es heißt, am selben Morgen erreichte er Blythburgh, meilenweit entfernt.",
+     "fr": "On dit que le même matin, il atteignit Blythburgh, à des lieues de là.",
+     "it": "Si dice che la stessa mattina arrivò a Blythburgh, a miglia di distanza.",
+     "pt": "Dizem que na mesma manhã ele chegou a Blythburgh, a quilômetros dali."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "It burst into Holy Trinity Church with a clap of thunder.",
+     "es": "Irrumpió en la iglesia de la Santísima Trinidad con un trueno.",
+     "de": "Mit einem Donnerschlag brach er in die Kirche Holy Trinity ein.",
+     "fr": "Il fit irruption dans l'église de la Trinité dans un coup de tonnerre.",
+     "it": "Irruppe nella chiesa della Santissima Trinità con un tuono.",
+     "pt": "Ele invadiu a igreja da Santíssima Trindade com um trovão."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "shake": 1.0,
+     "power": 18
+    },
+    {
+     "say": "narr",
+     "en": "The church spire came crashing down through the roof.",
+     "es": "La aguja de la iglesia se desplomó atravesando el tejado.",
+     "de": "Die Turmspitze krachte durch das Dach der Kirche.",
+     "fr": "La flèche de l'église s'effondra à travers le toit.",
+     "it": "La guglia della chiesa crollò attraverso il tetto.",
+     "pt": "A torre da igreja desabou atravessando o telhado."
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "hide"
+    },
+    {
+     "show": "h1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "And as it left by the north door, it left marks... burned into the wood.",
+     "es": "Y al salir por la puerta norte, dejó marcas... quemadas en la madera.",
+     "de": "Und als er durch die Nordtür ging, hinterließ er Spuren... ins Holz gebrannt.",
+     "fr": "Et en sortant par la porte nord, il laissa des marques... brûlées dans le bois.",
+     "it": "E uscendo dalla porta nord, lasciò dei segni... bruciati nel legno.",
+     "pt": "E ao sair pela porta norte, deixou marcas... queimadas na madeira."
+    },
+    {
+     "hide": "h1",
+     "dur": 0.6
+    },
+    {
+     "act": "odo",
+     "do": "unhide"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... the marks are still here. Look at the door.",
+     "es": "Mothwick... las marcas siguen aquí. Mira la puerta.",
+     "de": "Mothwick... die Spuren sind noch da. Sieh dir die Tür an.",
+     "fr": "Mothwick... les marques sont encore là. Regarde la porte.",
+     "it": "Mothwick... i segni ci sono ancora. Guarda la porta.",
+     "pt": "Mothwick... as marcas ainda estão aqui. Olhe a porta."
+    },
+    {
+     "say": "moth",
+     "en": "People call them the Devil's fingerprints. You can see them today.",
+     "es": "Las llaman las huellas del diablo. Aún hoy se pueden ver.",
+     "de": "Man nennt sie die Fingerabdrücke des Teufels. Man sieht sie noch heute.",
+     "fr": "On les appelle les empreintes du diable. On les voit encore aujourd'hui.",
+     "it": "Le chiamano le impronte del diavolo. Si vedono ancora oggi.",
+     "pt": "Chamam de impressões digitais do diabo. Dá para vê-las até hoje."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "village",
+   "seed": 2,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1200,
+     "y": 600,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Historians say a fierce lightning storm really did strike that day.",
+     "es": "Los historiadores dicen que ese día sí cayó una feroz tormenta eléctrica.",
+     "de": "Historiker sagen, an jenem Tag tobte wirklich ein heftiges Gewitter.",
+     "fr": "Les historiens disent qu'un violent orage a vraiment frappé ce jour-là.",
+     "it": "Gli storici dicono che quel giorno colpì davvero un violento temporale.",
+     "pt": "Historiadores dizem que uma forte tempestade de raios caiu mesmo naquele dia."
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Lightning can start fires and bring down a spire.",
+     "es": "Un rayo puede provocar incendios y derribar una torre.",
+     "de": "Ein Blitz kann Feuer legen und eine Turmspitze stürzen.",
+     "fr": "La foudre peut allumer des feux et abattre une flèche.",
+     "it": "Un fulmine può appiccare fuochi e abbattere una guglia.",
+     "pt": "Um raio pode causar incêndios e derrubar uma torre."
+    },
+    {
+     "act": "odo",
+     "do": "calm"
+    },
+    {
+     "say": "narr",
+     "en": "Sceptics say the marks on the door were made by candles.",
+     "es": "Los escépticos dicen que las marcas las hicieron velas.",
+     "de": "Skeptiker sagen, die Spuren an der Tür stammen von Kerzen.",
+     "fr": "Les sceptiques disent que les marques viennent de bougies.",
+     "it": "Gli scettici dicono che i segni sulla porta li fecero le candele.",
+     "pt": "Os céticos dizem que as marcas na porta foram feitas por velas."
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But to this day, Bungay's town sign shows a black dog on a bolt of lightning.",
+     "es": "Pero aún hoy, el escudo de Bungay muestra un perro negro sobre un rayo.",
+     "de": "Doch bis heute zeigt Bungays Stadtzeichen einen schwarzen Hund auf einem Blitz.",
+     "fr": "Mais aujourd'hui encore, l'emblème de Bungay montre un chien noir sur un éclair.",
+     "it": "Ma ancora oggi lo stemma di Bungay mostra un cane nero su un fulmine.",
+     "pt": "Mas até hoje o brasão de Bungay mostra um cão preto sobre um raio."
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "g1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... the lantern went out. Something is breathing behind me.",
+     "es": "Mothwick... la linterna se apagó. Algo respira detrás de mí.",
+     "de": "Mothwick... die Laterne ist aus. Hinter mir atmet etwas.",
+     "fr": "Mothwick... la lanterne s'est éteinte. Quelque chose respire derrière moi.",
+     "it": "Mothwick... la lanterna si è spenta. Qualcosa respira dietro di me.",
+     "pt": "Mothwick... a lanterna apagou. Tem algo respirando atrás de mim."
+    },
+    {
+     "sfx": "growl",
+     "wait": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "moth",
+     "en": "Only the wind. Keep walking. And don't turn around.",
+     "es": "Solo el viento. Sigue andando. Y no te des la vuelta.",
+     "de": "Nur der Wind. Geh weiter. Und dreh dich nicht um.",
+     "fr": "Juste le vent. Continue. Et ne te retourne pas.",
+     "it": "Solo il vento. Continua. E non voltarti.",
+     "pt": "Só o vento. Continue andando. E não se vire."
+    },
+    {
+     "eyes": "close"
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 2,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1500,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1520,
+     "state": "hidden",
+     "face": -1,
+     "scale": 1.05
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1300,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The storm passed. But the black dog never left the stories.",
+     "es": "La tormenta pasó. Pero el perro negro nunca dejó las historias.",
+     "de": "Der Sturm zog vorbei. Doch der schwarze Hund verließ die Geschichten nie.",
+     "fr": "L'orage passa. Mais le chien noir ne quitta jamais les récits.",
+     "it": "La tempesta passò. Ma il cane nero non lasciò mai i racconti.",
+     "pt": "A tempestade passou. Mas o cão preto nunca saiu das histórias."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "People on the coast roads still say they hear paws behind them at night.",
+     "es": "En los caminos de la costa aún dicen oír patas detrás de noche.",
+     "de": "An den Küstenwegen hört man nachts noch Pfoten hinter sich, sagen die Leute.",
+     "fr": "Sur les routes côtières, on dit encore entendre des pattes derrière soi la nuit.",
+     "it": "Sulle strade della costa dicono ancora di sentire zampe dietro di sé di notte.",
+     "pt": "Nas estradas da costa ainda dizem ouvir patas atrás de si à noite."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "sfx": "step",
+     "wait": 0.3
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... there are paw prints in the mud. Big ones. Still warm.",
+     "es": "Mothwick... hay huellas de patas en el barro. Grandes. Aún tibias.",
+     "de": "Mothwick... da sind Pfotenspuren im Schlamm. Riesige. Noch warm.",
+     "fr": "Mothwick... il y a des traces de pattes dans la boue. Énormes. Encore tièdes.",
+     "it": "Mothwick... ci sono impronte di zampe nel fango. Grandi. Ancora calde.",
+     "pt": "Mothwick... tem pegadas de patas na lama. Enormes. Ainda quentes."
+    },
+    {
+     "sfx": "step",
+     "wait": 0.4
+    },
+    {
+     "say": "moth",
+     "en": "They don't lead away, Odo... they circle us.",
+     "es": "No se alejan, Odo... nos rodean.",
+     "de": "Sie führen nicht weg, Odo... sie kreisen um uns.",
+     "fr": "Elles ne s'éloignent pas, Odo... elles tournent autour de nous.",
+     "it": "Non si allontanano, Odo... ci girano intorno.",
+     "pt": "Elas não vão embora, Odo... elas nos cercam."
+    },
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "lunge": "h1",
+     "to": 1150
+    },
+    {
+     "light": "out",
+     "and": true
+    },
+    {
+     "card": "WHAT WALKS THE COAST ROAD?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}

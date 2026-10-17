@@ -244,7 +244,7 @@ class Compiler:
                 self.snd(A.whisper(2.0), t, 0.9)
             return t + 1.0
         if "flash" in b:
-            self.flashes.append((t, t + 0.35))
+            self.flashes.append((t, t + float(b.get("dur", 0.35))))   # "dur": longer lightning glow (beat still takes 0.35 s)
             self.snd(A.hit(), t, 1.0)
             return t + 0.35
         if "sfx" in b:

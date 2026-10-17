@@ -1,0 +1,297 @@
+{
+ "id": "ep008_short1",
+ "format": "short",
+ "title": "Who burned these marks on the door? 🔥 #shorts",
+ "hook": "DON'T OPEN THE DOOR",
+ "description": "Suffolk, England, 4 August 1577: a storm, a black dog in the church, and burn marks on the north door that you can still see today. A real English legend. Full story on the channel. #shorts #blackshuck #truestory #legend #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Black Shuck",
+  "black dog legend",
+  "Bungay",
+  "Blythburgh",
+  "Suffolk",
+  "1577"
+ ],
+ "thumbnail": {
+  "bg": "chapel",
+  "seed": 3,
+  "creature": "gloamhound",
+  "text": "DON'T OPEN IT"
+ },
+ "shots": [
+  {
+   "bg": "chapel",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 700
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "wait": 0.5
+    },
+    {
+     "flash": true
+    },
+    {
+     "shake": 0.4,
+     "power": 16,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "1577. A storm.",
+     "es": "1577. Una tormenta.",
+     "de": "1577. Ein Sturm.",
+     "fr": "1577. Un orage.",
+     "it": "1577. Una tempesta.",
+     "pt": "1577. Uma tempestade.",
+     "and": true
+    },
+    {
+     "sfx": "thump"
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  },
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "narr",
+     "en": "The church doors burst open.",
+     "es": "Las puertas de la iglesia se abren de golpe.",
+     "de": "Die Kirchentüren fliegen auf.",
+     "fr": "Les portes de l'église s'ouvrent d'un coup.",
+     "it": "Le porte della chiesa si spalancano.",
+     "pt": "As portas da igreja se escancaram.",
+     "and": true
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "flash": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "chapel",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 520
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1250,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "say": "narr",
+     "en": "A black dog ran through, the old record says.",
+     "es": "Un perro negro la atravesó, dice el viejo relato.",
+     "de": "Ein schwarzer Hund rannte hindurch, sagt der alte Bericht.",
+     "fr": "Un chien noir la traversa, dit le vieux récit.",
+     "it": "Un cane nero la attraversò, dice l'antico racconto.",
+     "pt": "Um cão preto passou correndo, diz o velho relato.",
+     "and": true
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "lunge": "h1",
+     "to": 950
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.05
+  },
+  {
+   "bg": "chapel",
+   "seed": 8,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 760
+    }
+   },
+   "creatures": {
+    "h1": {
+     "type": "gloamhound",
+     "x": 1100,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "It left burn marks on the door. They are still there.",
+     "es": "Dejó marcas quemadas en la puerta. Siguen ahí.",
+     "de": "Es hinterließ Brandspuren an der Tür. Sie sind noch da.",
+     "fr": "Il laissa des brûlures sur la porte. Elles y sont encore.",
+     "it": "Lasciò bruciature sulla porta. Ci sono ancora.",
+     "pt": "Deixou marcas de queimado na porta. Ainda estão lá.",
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 640,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "h1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "growl": "h1"
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  },
+  {
+   "bg": "chapel",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 820
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "move": "odo",
+     "to": 700,
+     "speed": "walk"
+    },
+    {
+     "say": "narr",
+     "en": "So if you hear thunder tonight...",
+     "es": "Así que si oyes truenos esta noche...",
+     "de": "Wenn du heute Nacht Donner hörst...",
+     "fr": "Alors si tu entends le tonnerre ce soir...",
+     "it": "Quindi se senti tuonare stanotte...",
+     "pt": "Então, se ouvir trovões esta noite...",
+     "and": true
+    }
+   ],
+   "tail": 0.2,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  }
+ ]
+}
