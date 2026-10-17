@@ -345,7 +345,7 @@ short_scenes = [
         {"sfx": "thump", "wait": 0.2},
         S("bup", "OW! Right in the face!", "¡AY! ¡Justo en la cara!", "AUA! Mitten ins Gesicht!", "AÏE ! En pleine figure !", "AHI! Dritto in faccia!", "AI! Bem na cara!"),
     ], villain=T(), cut=False),
-    sh("kitchen", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "normal"}, [
+    sh("fridge", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "normal"}, [
         {"act": "bup", "do": "jump"},
         S("bup", "Wait... it's eleven fifty-nine AGAIN?", "Espera... ¿otra vez las once y cincuenta y nueve?", "Moment... schon WIEDER dreiundzwanzig neunundfünfzig?",
           "Attends... encore vingt-trois heures cinquante-neuf ?", "Aspetta... di nuovo le undici e cinquantanove?", "Espera... onze e cinquenta e nove DE NOVO?", **A),
@@ -360,7 +360,7 @@ short_scenes = [
         {"act": "bup", "do": "spin", "and": True},
         S("bup", "I DID step left!", "¡SÍ me moví a la izquierda!", "Ich BIN nach links!", "J'AI fait un pas à gauche !", "Mi SONO spostato a sinistra!", "Eu PASSEI pra esquerda!"),
     ], villain=T(x=1400)),
-    sh("kitchen", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "happy"}, [
+    sh("fridge", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "happy"}, [
         S("crispy", "My left. Forty-one.", "Mi izquierda. Cuarenta y una.", "Mein links. Einundvierzig.", "Ma gauche. Quarante et une.", "La mia sinistra. Quarantuno.", "Minha esquerda. Quarenta e uma."),
         {"act": "bup", "do": "shake", "and": True},
     ]),
@@ -374,7 +374,7 @@ short_scenes = [
         {"act": "bup", "do": "faint", "and": True},
         S("crispy", "Too early.", "Demasiado pronto.", "Zu früh.", "Trop tôt.", "Troppo presto.", "Cedo demais."),
     ], villain=T(x=1400)),
-    sh("kitchen", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "normal"}, [
+    sh("fridge", {"bup": 450, "crispy": 800}, {"bup": "angry", "crispy": "normal"}, [
         S("bup", "Okay, how many times did YOU get hit?", "Vale, ¿cuántas veces te dieron A TI?", "Okay, wie oft wurdest DU getroffen?",
           "Ok, combien de fois TOI tu as été touché ?", "Ok, quante volte sei stato colpito TU?", "Tá, quantas vezes VOCÊ foi atingido?"),
         S("crispy", "Zero.", "Cero.", "Null.", "Zéro.", "Zero.", "Zero."),
