@@ -380,7 +380,7 @@ def render(path, check=False, preview=0, limit=None):
     surf = cairo.ImageSurface(cairo.FORMAT_ARGB32, ink.W, ink.H)
     ctx = cairo.Context(surf)
     if preview:
-        for s in scenes[::preview]:
+        for s in scenes[int(os.environ.get('PREVIEW_START', 0))::preview]:
             lt = s["dur"] * 0.8
             cap = s["caps"][-1][2] if s["caps"] else None
             draw_frame(ctx, s, lt, s["t0"] + lt, 1, cap, total)

@@ -540,7 +540,8 @@ def _podium(p, t, color, text):
 def _speech(p, t, color, text):
     """Speech bubble; text is what it says."""
     p.shape([(-180, -160), (180, -160), (180, -40), (-40, -40), (-90, 10), (-80, -40), (-180, -40)], color or "white")
-    p.text(text or "...", 0, -100, 42)
+    s = text or "..."
+    p.text(s, 0, -100, min(42, int(600 / max(1, len(s)))))
 
 
 def _bomb(p, t, color, text):
@@ -679,9 +680,34 @@ def _clipboard(p, t, color, text):
     p.rect(-110, -330, 220, 300, "white", 4)
     p.rect(-50, -380, 100, 40, "grey", 4)
     for k in range(5):
-        p.line([(-80, -280 + k * 50), (80, -280 + k * 50)], 4)
+        p.line([(-80, -235 + k * 45), (80, -235 + k * 45)], 4)
     if text:
-        p.text(text, 0, -20 + 50, 30, "dark")
+        p.text(text, 0, -300, min(44, int(320 / max(1, len(text)))), "dark")
+
+
+def _baseball(p, t, color, text):
+    p.circle(0, -90, 90, color or "white", 5)
+    p.arc(-120, -90, 70, -0.9, 0.9, 4, color="red")
+    p.arc(120, -90, 70, math.pi - 0.9, math.pi + 0.9, 4, color="red")
+    if text:
+        p.text(text, 0, -210, 34, "dark")
+
+
+def _bat(p, t, color, text):
+    p.shape([(-12, 0), (12, 0), (16, -120), (34, -400), (26, -430), (-26, -430), (-34, -400), (-16, -120)], color or "tan")
+    p.ellipse(0, 4, 24, 10, "brown", 4)
+    if text:
+        p.text(text, 0, -470, 34, "dark")
+
+
+def _scoreboard(p, t, color, text):
+    p.rect(-14, -120, 28, 120, "grey", 4)
+    p.rect(-260, -420, 520, 300, color or "dark")
+    p.rect(-235, -395, 470, 250, "navy", 3)
+    if text:
+        parts = text.split("|")
+        for k, line in enumerate(parts):
+            p.text(line, 0, -330 + k * 90 + (45 if len(parts) == 1 else 0), min(70, int(900 / max(1, len(line)))), "yellow")
 
 
 PROPS = {
@@ -694,4 +720,5 @@ PROPS = {
     "sportscar": _sportscar, "rocket": _rocket, "stopwatch": _stopwatch, "tank": _tank, "fan": _fan, "trophy": _trophy,
     "phone": _phone, "laptop": _laptop, "envelope": _envelope, "robot": _robot, "lock": _lock, "eye": _eye,
     "megaphone": _megaphone, "clipboard": _clipboard,
+    "baseball": _baseball, "bat": _bat, "scoreboard": _scoreboard,
 }
