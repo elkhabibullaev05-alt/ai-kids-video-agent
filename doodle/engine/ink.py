@@ -616,6 +616,74 @@ def _trophy(p, t, color, text):
         p.text(text, 0, -200, 34, "dark")
 
 
+def _phone(p, t, color, text):
+    p.rect(-90, -330, 180, 330, "dark")
+    p.rect(-75, -305, 150, 260, color or "white", 4)
+    p.circle(0, -22, 10, "grey", 3)
+    if text:
+        p.text(text, 0, -180, min(34, int(240 / max(1, len(text)))), "dark")
+
+
+def _laptop(p, t, color, text):
+    p.rect(-200, -300, 400, 250, "dark")
+    p.rect(-180, -282, 360, 214, color or "white", 4)
+    p.shape([(-240, -50), (240, -50), (270, 0), (-270, 0)], "grey")
+    if text:
+        p.text(text, 0, -180, 36, "dark")
+
+
+def _envelope(p, t, color, text):
+    p.rect(-150, -200, 300, 200, color or "white")
+    p.line([(-150, -200), (0, -90), (150, -200)], 5)
+    if text:
+        p.text(text, 0, -40, 30, "dark")
+
+
+def _robot(p, t, color, text):
+    p.line([(0, -330), (0, -380)], 5)
+    p.circle(0, -390, 14, "red", 4)
+    p.rect(-110, -330, 220, 170, color or "teal")
+    p.circle(-45, -260, 22, "white", 4); p.circle(45, -260, 22, "white", 4)
+    p.dot(-45, -260, 8); p.dot(45, -260, 8)
+    p.line([(-40, -200), (40, -200)], 6)
+    p.rect(-80, -150, 160, 150, color or "teal")
+    if text:
+        p.text(text, 0, -75, 30, "white", outline="dark")
+
+
+def _lock(p, t, color, text):
+    p.arc(0, -160, 70, math.pi, 2 * math.pi, 14)
+    p.rect(-110, -160, 220, 160, color or "gold")
+    p.circle(0, -95, 16, "dark", 3)
+    if text:
+        p.text(text, 0, -35, 30, "dark")
+
+
+def _eye(p, t, color, text):
+    p.shape([(-170, -120), (-90, -200), (0, -225), (90, -200), (170, -120), (90, -40), (0, -15), (-90, -40)], "white")
+    p.circle(0, -120, 62, color or "blue", 4)
+    p.circle(0, -120, 26, "black", 3)
+    if text:
+        p.text(text, 0, 30, 34, "dark")
+
+
+def _megaphone(p, t, color, text):
+    p.shape([(-150, -170), (-60, -170), (130, -260), (130, -20), (-60, -110), (-150, -110)], color or "red")
+    p.rect(-110, -110, 40, 90, "dark")
+    if text:
+        p.text(text, 0, -300, 34, "dark")
+
+
+def _clipboard(p, t, color, text):
+    p.rect(-140, -360, 280, 360, color or "tan")
+    p.rect(-110, -330, 220, 300, "white", 4)
+    p.rect(-50, -380, 100, 40, "grey", 4)
+    for k in range(5):
+        p.line([(-80, -280 + k * 50), (80, -280 + k * 50)], 4)
+    if text:
+        p.text(text, 0, -20 + 50, 30, "dark")
+
+
 PROPS = {
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
@@ -624,4 +692,6 @@ PROPS = {
     "scale": _scale, "arrowup": _arrowup, "arrowdown": _arrowdown, "pricetag": _pricetag, "egg": _egg,
     "podium": _podium, "speech": _speech, "bomb": _bomb, "capitol": _houseofgov,
     "sportscar": _sportscar, "rocket": _rocket, "stopwatch": _stopwatch, "tank": _tank, "fan": _fan, "trophy": _trophy,
+    "phone": _phone, "laptop": _laptop, "envelope": _envelope, "robot": _robot, "lock": _lock, "eye": _eye,
+    "megaphone": _megaphone, "clipboard": _clipboard,
 }

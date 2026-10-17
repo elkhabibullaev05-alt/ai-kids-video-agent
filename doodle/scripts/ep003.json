@@ -1,0 +1,3230 @@
+{
+ "id": "ep003",
+ "title": "ChatGPT Has Ads Now. How Do They Know What You Want?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "ChatGPT has shown ads to Free and Go users in the US since February 9, 2026. On October 15, 404 Media bought two ad campaigns inside ChatGPT to see how the targeting works. Here's what it found, explained with stick figures: context hints, custom audiences built from emails, phone numbers and Android ad IDs, the 25,000-match minimum, what OpenAI says about privacy, what critics say, what the ad-personalization switch does and doesn't do, and what you can do about it.\n\nWe don't pick sides. We just count the facts.\n\nSources:\n404 Media, How ChatGPT Targets Ads To You Based On Your Prompts, Phone Number, and Email: https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/\nGizmodo, Here's How ChatGPT Is Targeting You With Ads: https://gizmodo.com/heres-how-chatgpt-is-targeting-you-with-ads-2000826457\nYahoo Tech, ChatGPT Can Target Ads With Your Prompts, Email, and Phone: https://tech.yahoo.com/ai/chatgpt/articles/chatgpt-target-ads-prompts-email-170013093.html\nMobileSyrup, ChatGPT lets advertisers target you based on your personal info: https://mobilesyrup.com/2026/10/16/chatgpt-openai-targeted-ads-personal-data\nThe Neuron, Oct 16: https://www.theneurondaily.com/p/october-16-friday-1362\nTechCrunch, OpenAI launches visual ads: https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/\nMacRumors, ChatGPT Now Has Ads for Free and Go Tier Users: https://www.macrumors.com/2026/02/09/chatgpt-now-has-ads/\nOpenAI, Introducing ChatGPT Go: https://openai.com/blog/introducing-chatgpt-go\nSuperpower Daily (ChatGPT Ad Library figures): https://superpowerdaily.com/posts/404-media-finds-chatgpt-ad-targeting-uses-prompts-and-uploaded-contact-details\n\n#chatgpt #openai #privacy #ads #explained #news #stickfigure",
+ "tags": [
+  "chatgpt ads",
+  "chatgpt",
+  "openai",
+  "ad targeting",
+  "privacy",
+  "custom audiences",
+  "404 media",
+  "ai news",
+  "news explained",
+  "stick figure animation",
+  "chatgpt privacy",
+  "online ads"
+ ],
+ "thumbnail": {
+  "bg": "yellow",
+  "text": "ADS|IN YOUR|CHAT?!",
+  "size": 200,
+  "color": "black",
+  "guy": {
+   "pose": "panic",
+   "face": "shock",
+   "look": 1,
+   "extras": [
+    "hair"
+   ]
+  },
+  "items": [
+   {
+    "prop": "phone",
+    "x": 1700,
+    "y": 820,
+    "s": 1.5,
+    "text": "AD"
+   }
+  ],
+  "guy_x": 1330
+ },
+ "scenes": [
+  {
+   "say": "Meet Dave. Dave's front door squeaks. So Dave does what a billion people do now. He asks the chatbot.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "SQUEEEAK",
+     "x": 1450,
+     "y": 330,
+     "size": 80,
+     "color": "orange",
+     "at": 0.2,
+     "anim": "shake"
+    },
+    {
+     "guy": {
+      "pose": "type",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.1
+    },
+    {
+     "prop": "laptop",
+     "x": 820,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.4
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     560,
+     1.12
+    ],
+    "to": [
+     960,
+     540,
+     1.0
+    ]
+   }
+  },
+  {
+   "say": "The chatbot tells him to oil the hinge. Helpful. And right underneath, a little box appears.",
+   "items": [
+    {
+     "box": [
+      592,
+      160,
+      736,
+      598
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      592,
+      160,
+      736,
+      69
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 960,
+     "y": 194,
+     "size": 46,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      753,
+      263,
+      540,
+      103
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "my door squeaks",
+     "x": 1040,
+     "y": 315,
+     "size": 41,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      626,
+      401,
+      540,
+      126
+     ],
+     "color": "paper",
+     "at": 0.15
+    },
+    {
+     "text": "Try oiling the hinge.",
+     "x": 880,
+     "y": 464,
+     "size": 39,
+     "color": "dark",
+     "at": 0.15
+    },
+    {
+     "box": [
+      626,
+      562,
+      667,
+      149
+     ],
+     "color": "yellow",
+     "at": 0.55
+    },
+    {
+     "text": "Sponsored",
+     "x": 718,
+     "y": 591,
+     "size": 29,
+     "color": "dark",
+     "at": 0.55
+    },
+    {
+     "text": "SQUEAK-B-GONE  $9.99",
+     "x": 960,
+     "y": 654,
+     "size": 41,
+     "color": "black",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "An ad. For hinge oil. Dave looks at the door. The door looks at Dave. Somebody, somewhere, knew.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "house",
+     "x": 1400,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.2
+    },
+    {
+     "prop": "eye",
+     "x": 960,
+     "y": 420,
+     "s": 1.2,
+     "at": 0.55,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "This week, a news site paid for ads inside ChatGPT, just to see how the targeting really works. What they found has people talking.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 700,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "AD"
+    },
+    {
+     "text": "ADS IN THE CHAT",
+     "x": 1300,
+     "y": 300,
+     "size": 100,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "prop": "megaphone",
+     "x": 1350,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "So today's question: how does ChatGPT decide which ads to show you? What does the advertiser get? And can you switch it off?",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 960,
+     "y": 800,
+     "s": 1.4,
+     "at": 0,
+     "text": "WHO PICKS THE AD?"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 330,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "?",
+     "x": 1650,
+     "y": 330,
+     "size": 200,
+     "color": "red",
+     "at": 0.7
+    }
+   ],
+   "chapter": "Today's question"
+  },
+  {
+   "say": "We'll stick to what was reported, what OpenAI says, and what its critics say. You decide what to make of it.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 560,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "scale",
+     "x": 1300,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "First, a quick rewind. For years, ChatGPT had no ads at all. You asked, it answered, nobody tried to sell you a lamp.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 520,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "BEFORE"
+    },
+    {
+     "box": [
+      962,
+      220,
+      576,
+      468
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      962,
+      220,
+      576,
+      54
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 1250,
+     "y": 247,
+     "size": 36,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      1088,
+      301,
+      423,
+      81
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "hi",
+     "x": 1313,
+     "y": 341,
+     "size": 32,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      989,
+      409,
+      423,
+      99
+     ],
+     "color": "paper",
+     "at": 0.15
+    },
+    {
+     "text": "Hello!",
+     "x": 1187,
+     "y": 458,
+     "size": 30,
+     "color": "dark",
+     "at": 0.15
+    }
+   ],
+   "chapter": "Part 1: How the ads got here"
+  },
+  {
+   "say": "Then, in January twenty twenty six, OpenAI launched a cheaper plan called ChatGPT Go. In the US it costs eight dollars a month.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 520,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "JAN 2026"
+    },
+    {
+     "count": [
+      0,
+      8
+     ],
+     "fmt": "${:.0f}/month",
+     "x": 1250,
+     "y": 420,
+     "size": 130,
+     "color": "green",
+     "dur": 1.5,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "In the same announcement, OpenAI said it planned to begin testing ads in the free tier and in Go, in the US, soon.",
+   "items": [
+    {
+     "prop": "podium",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ]
+     },
+     "x": 700,
+     "y": 700,
+     "s": 0.8,
+     "at": 0.1
+    },
+    {
+     "prop": "speech",
+     "x": 1350,
+     "y": 460,
+     "s": 1.4,
+     "at": 0.45,
+     "text": "ads: soon"
+    },
+    {
+     "text": "OpenAI",
+     "x": 700,
+     "y": 356,
+     "size": 44,
+     "color": "dark",
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "say": "Its reasoning, in its own words: ads support its commitment to making AI accessible to everyone.",
+   "items": [
+    {
+     "text": "\u201cAds support our commitment to",
+     "x": 960,
+     "y": 360,
+     "size": 64,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "making AI accessible to everyone.\u201d",
+     "x": 960,
+     "y": 450,
+     "size": 64,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "\u2014 OpenAI, Jan 2026",
+     "x": 1300,
+     "y": 560,
+     "size": 44,
+     "color": "grey",
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 300,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Running a chatbot for this many people isn't cheap. OpenAI said its free plans need significant infrastructure and ongoing investment.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 600,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "SERVERS"
+    },
+    {
+     "prop": "building",
+     "x": 950,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "prop": "moneybag",
+     "x": 1450,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.45,
+     "text": "$$$"
+    }
+   ]
+  },
+  {
+   "say": "On February ninth, the ads arrived. Free users and Go users in the United States started seeing them.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 520,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "FEB 9"
+    },
+    {
+     "ring": [
+      520,
+      740,
+      130
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "phone",
+     "x": 1150,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.55,
+     "text": "AD"
+    }
+   ]
+  },
+  {
+   "say": "If you pay for Plus, Pro, or a business, enterprise or education plan, you don't get ads. Paying more buys you a quiet chat.",
+   "items": [
+    {
+     "text": "Plus",
+     "x": 450,
+     "y": 380,
+     "size": 80,
+     "color": "green",
+     "at": 0
+    },
+    {
+     "text": "Pro",
+     "x": 800,
+     "y": 380,
+     "size": 80,
+     "color": "green",
+     "at": 0.1
+    },
+    {
+     "text": "Business",
+     "x": 1180,
+     "y": 380,
+     "size": 80,
+     "color": "green",
+     "at": 0.2
+    },
+    {
+     "text": "Enterprise / Edu",
+     "x": 1550,
+     "y": 380,
+     "size": 70,
+     "color": "green",
+     "at": 0.3
+    },
+    {
+     "text": "NO ADS",
+     "x": 960,
+     "y": 600,
+     "size": 120,
+     "color": "dark",
+     "at": 0.55
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "say": "In August, ads expanded to India. And in October, OpenAI announced picture ads that appear next to images you ask it to make.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 450,
+     "y": 860,
+     "s": 0.9,
+     "at": 0,
+     "text": "AUG"
+    },
+    {
+     "prop": "globe",
+     "x": 800,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.15
+    },
+    {
+     "prop": "calendar",
+     "x": 1200,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.45,
+     "text": "OCT"
+    },
+    {
+     "box": [
+      1400,
+      330,
+      300,
+      240
+     ],
+     "color": "yellow",
+     "at": 0.6
+    },
+    {
+     "text": "picture ad",
+     "x": 1550,
+     "y": 450,
+     "size": 50,
+     "color": "dark",
+     "at": 0.65
+    }
+   ]
+  },
+  {
+   "say": "Why does that matter? TechCrunch reports ChatGPT has about one point two billion weekly users. That's a lot of eyeballs.",
+   "items": [
+    {
+     "count": [
+      0,
+      1.2
+     ],
+     "fmt": "{:.1f} billion",
+     "x": 960,
+     "y": 330,
+     "size": 150,
+     "color": "red",
+     "dur": 2.0
+    },
+    {
+     "prop": "eye",
+     "x": 450,
+     "y": 760,
+     "s": 0.55,
+     "at": 0.4
+    },
+    {
+     "prop": "eye",
+     "x": 790,
+     "y": 760,
+     "s": 0.55,
+     "at": 0.48000000000000004
+    },
+    {
+     "prop": "eye",
+     "x": 1130,
+     "y": 760,
+     "s": 0.55,
+     "at": 0.56
+    },
+    {
+     "prop": "eye",
+     "x": 1470,
+     "y": 760,
+     "s": 0.55,
+     "at": 0.64
+    }
+   ]
+  },
+  {
+   "say": "For an advertiser, that's like finding a shop where everybody walks in and tells the shopkeeper exactly what they need.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 600,
+     "y": 900,
+     "s": 1.1,
+     "at": 0,
+     "text": "SHOP"
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1000,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "tie"
+      ]
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.45
+    },
+    {
+     "text": "advertiser",
+     "x": 1350,
+     "y": 556,
+     "size": 44,
+     "color": "dark",
+     "at": 0.45
+    }
+   ]
+  },
+  {
+   "say": "Now, the news. On October fifteenth, the tech news site 404 Media published an investigation by reporter Joseph Cox.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 520,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT 15"
+    },
+    {
+     "prop": "laptop",
+     "x": 1250,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "404 Media"
+    }
+   ],
+   "chapter": "Part 2: The experiment"
+  },
+  {
+   "say": "Instead of just reading OpenAI's rules, 404 Media did something simple. It became an advertiser and bought two ad campaigns inside ChatGPT.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "wallet",
+     "x": 760,
+     "y": 760,
+     "s": 0.7,
+     "at": 0.3
+    },
+    {
+     "count": [
+      0,
+      2
+     ],
+     "fmt": "{:.0f} campaigns",
+     "x": 1350,
+     "y": 420,
+     "size": 120,
+     "color": "blue",
+     "dur": 1.2,
+     "at": 0.45
+    },
+    {
+     "text": "reporter",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "say": "According to MobileSyrup, the test ads had a cheeky message: that ChatGPT isn't private, because humans are hired to read chats.",
+   "items": [
+    {
+     "box": [
+      560,
+      300,
+      800,
+      220
+     ],
+     "color": "yellow"
+    },
+    {
+     "text": "Sponsored",
+     "x": 680,
+     "y": 335,
+     "size": 34,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "ChatGPT isn't private...",
+     "x": 960,
+     "y": 430,
+     "size": 60,
+     "color": "black",
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Earlier, 404 Media had reported that prompts may be reviewed by humans. So yes, it was an ad about ads, on the platform selling the ads.",
+   "items": [
+    {
+     "arrow": [
+      [
+       600,
+       400
+      ],
+      [
+       1300,
+       400
+      ]
+     ],
+     "color": "red"
+    },
+    {
+     "arrow": [
+      [
+       1300,
+       600
+      ],
+      [
+       600,
+       600
+      ]
+     ],
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "text": "AD",
+     "x": 450,
+     "y": 500,
+     "size": 110,
+     "color": "dark",
+     "at": 0.1
+    },
+    {
+     "text": "AD",
+     "x": 1450,
+     "y": 500,
+     "size": 110,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "inception?",
+     "x": 960,
+     "y": 780,
+     "size": 70,
+     "color": "purple",
+     "at": 0.7
+    }
+   ]
+  },
+  {
+   "say": "Once inside, they looked at every option an advertiser gets. And they found two main ways to aim an ad at someone.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "text": "1",
+     "x": 1250,
+     "y": 400,
+     "size": 150,
+     "color": "teal",
+     "at": 0.4
+    },
+    {
+     "text": "2",
+     "x": 1550,
+     "y": 400,
+     "size": 150,
+     "color": "orange",
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Way number one is called context hints. The advertiser describes the topics where their product might fit.",
+   "items": [
+    {
+     "text": "1. CONTEXT HINTS",
+     "x": 960,
+     "y": 220,
+     "size": 100,
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "topics"
+    },
+    {
+     "text": "door, hinge, squeak",
+     "x": 1300,
+     "y": 600,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "chapter": "Part 3: Two ways to aim an ad"
+  },
+  {
+   "say": "So the hinge oil company might write: squeaky doors, home repair, hinges. Then, if your chat is about that, their ad may show up.",
+   "items": [
+    {
+     "box": [
+      896,
+      230,
+      608,
+      494
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      896,
+      230,
+      608,
+      57
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 1200,
+     "y": 258,
+     "size": 38,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      1029,
+      315,
+      446,
+      85
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "squeaky door help",
+     "x": 1266,
+     "y": 358,
+     "size": 34,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      924,
+      562,
+      551,
+      123
+     ],
+     "color": "yellow",
+     "at": 0.5
+    },
+    {
+     "text": "Sponsored",
+     "x": 1000,
+     "y": 586,
+     "size": 24,
+     "color": "dark",
+     "at": 0.5
+    },
+    {
+     "text": "SQUEAK-B-GONE",
+     "x": 1200,
+     "y": 638,
+     "size": 34,
+     "color": "black",
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "tie"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "oil company",
+     "x": 450,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "say": "OpenAI says these hints are not exact triggers. They guide the matching, but don't guarantee an ad appears in any one chat.",
+   "items": [
+    {
+     "text": "NOT exact triggers",
+     "x": 960,
+     "y": 300,
+     "size": 100,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "prop": "robot",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "maybe?",
+     "x": 1300,
+     "y": 650,
+     "size": 90,
+     "color": "purple",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "One newsletter, The Neuron, compared it to keyword ads on search engines, but looser. Think fishing net, not harpoon.",
+   "items": [
+    {
+     "text": "search ads",
+     "x": 600,
+     "y": 350,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       800,
+       350
+      ],
+      [
+       1100,
+       350
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "but looser",
+     "x": 1350,
+     "y": 350,
+     "size": 80,
+     "color": "teal",
+     "at": 0.35
+    },
+    {
+     "prop": "eye",
+     "x": 960,
+     "y": 800,
+     "s": 0.6,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "This part ties ads to what you're talking about right now. Ask about running shoes, and you may get a shoe ad.",
+   "items": [
+    {
+     "box": [
+      946,
+      220,
+      608,
+      494
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      946,
+      220,
+      608,
+      57
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 1250,
+     "y": 248,
+     "size": 38,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      1079,
+      305,
+      446,
+      85
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "best running shoes?",
+     "x": 1316,
+     "y": 348,
+     "size": 34,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      974,
+      419,
+      446,
+      104
+     ],
+     "color": "paper",
+     "at": 0.15
+    },
+    {
+     "text": "Here are a few...",
+     "x": 1184,
+     "y": 471,
+     "size": 32,
+     "color": "dark",
+     "at": 0.15
+    },
+    {
+     "box": [
+      974,
+      552,
+      551,
+      123
+     ],
+     "color": "yellow",
+     "at": 0.4
+    },
+    {
+     "text": "Sponsored",
+     "x": 1050,
+     "y": 576,
+     "size": 24,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "ZOOM SHOES 20% OFF",
+     "x": 1250,
+     "y": 628,
+     "size": 34,
+     "color": "black",
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "run",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ]
+  },
+  {
+   "say": "Way number two is the one that made headlines. It's called custom audiences.",
+   "items": [
+    {
+     "text": "2. CUSTOM AUDIENCES",
+     "x": 960,
+     "y": 300,
+     "size": 100,
+     "color": "orange",
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "LIST",
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "The advertiser uploads a list of people. Customers, newsletter readers, anyone they have contact details for.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "names"
+    },
+    {
+     "arrow": [
+      [
+       780,
+       600
+      ],
+      [
+       1150,
+       600
+      ]
+     ],
+     "at": 0.35
+    },
+    {
+     "prop": "robot",
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "The list can include email addresses, phone numbers, scrambled versions of both, or the advertising ID that comes with every Android phone.",
+   "items": [
+    {
+     "prop": "envelope",
+     "x": 450,
+     "y": 700,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 900,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.25,
+     "text": "555-..."
+    },
+    {
+     "text": "#a9f3...",
+     "x": 1300,
+     "y": 560,
+     "size": 70,
+     "color": "grey",
+     "at": 0.45
+    },
+    {
+     "prop": "phone",
+     "x": 1650,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.65,
+     "text": "AD ID"
+    }
+   ]
+  },
+  {
+   "say": "Those scrambled versions are called hashes. A hash turns your email into a jumble of letters that's hard to turn back.",
+   "items": [
+    {
+     "text": "dave@mail.com",
+     "x": 600,
+     "y": 400,
+     "size": 70,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       880,
+       400
+      ],
+      [
+       1100,
+       400
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "7f3a9c...",
+     "x": 1350,
+     "y": 400,
+     "size": 70,
+     "color": "grey",
+     "at": 0.4
+    },
+    {
+     "prop": "lock",
+     "x": 960,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "ChatGPT then checks which of those people have a ChatGPT account. The ones that match become eligible to see that advertiser's ads.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "robot",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "text": "match",
+     "x": 1400,
+     "y": 450,
+     "size": 80,
+     "color": "green",
+     "at": 0.45
+    },
+    {
+     "text": "match",
+     "x": 1500,
+     "y": 600,
+     "size": 80,
+     "color": "green",
+     "at": 0.55
+    },
+    {
+     "text": "no",
+     "x": 1350,
+     "y": 750,
+     "size": 70,
+     "color": "grey",
+     "at": 0.65
+    }
+   ]
+  },
+  {
+   "say": "So in theory, a shop that has your email from a past purchase could follow you into your chatbot.",
+   "items": [
+    {
+     "prop": "cart",
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "envelope",
+     "x": 900,
+     "y": 650,
+     "s": 0.6,
+     "at": 0.25,
+     "move": [
+      1350,
+      650
+     ]
+    },
+    {
+     "prop": "laptop",
+     "x": 1450,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1750,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Here's the number OpenAI points to: twenty five thousand. A list needs at least that many matched users to be used for targeting.",
+   "items": [
+    {
+     "count": [
+      0,
+      25000
+     ],
+     "fmt": "{:,.0f}",
+     "x": 960,
+     "y": 380,
+     "size": 180,
+     "color": "red",
+     "dur": 2.0
+    },
+    {
+     "text": "minimum matched users",
+     "x": 960,
+     "y": 560,
+     "size": 60,
+     "color": "dark",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "The idea: you can't type in one person's email and stalk them with ads. You have to bring a crowd.",
+   "items": [
+    {
+     "prop": "envelope",
+     "x": 500,
+     "y": 800,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "cross": [
+      500,
+      700,
+      120
+     ],
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1000,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.45
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1120,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.49
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1240,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.53
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1360,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.5700000000000001
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1480,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.61
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.65
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1720,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.69
+    }
+   ]
+  },
+  {
+   "say": "Smaller lists can still be used the other way round: to exclude people. For example, don't show this ad to people who already bought it.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "small list"
+    },
+    {
+     "text": "EXCLUDE",
+     "x": 1300,
+     "y": 380,
+     "size": 110,
+     "color": "grey",
+     "at": 0.35
+    },
+    {
+     "cross": [
+      1300,
+      650,
+      110
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Is this new? Not really. The Neuron notes that targeting by customer lists is standard across advertising. What's new is where it's happening.",
+   "items": [
+    {
+     "text": "standard practice",
+     "x": 960,
+     "y": 300,
+     "size": 90,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "prop": "tv",
+     "x": 700,
+     "y": 830,
+     "s": 0.9,
+     "at": 0,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 1250,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.2,
+     "text": "AD"
+    },
+    {
+     "prop": "laptop",
+     "x": 1600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35,
+     "text": "AD"
+    }
+   ]
+  },
+  {
+   "say": "Because people don't talk to a chatbot like a search box. They tell it about their jobs, their money worries, their squeaky doors.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 600,
+     "y": 400,
+     "s": 1.1,
+     "at": 0,
+     "text": "my job..."
+    },
+    {
+     "prop": "speech",
+     "x": 1000,
+     "y": 300,
+     "s": 1.1,
+     "at": 0.25,
+     "text": "my rent..."
+    },
+    {
+     "prop": "speech",
+     "x": 1400,
+     "y": 420,
+     "s": 1.1,
+     "at": 0.5,
+     "text": "my door..."
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "say": "So what does OpenAI say? Quite a lot, actually. Let's go through its side properly.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1300,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.4,
+     "text": "RULES"
+    },
+    {
+     "text": "OpenAI",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "chapter": "Part 4: What OpenAI says"
+  },
+  {
+   "say": "First, OpenAI says the advertiser is not told who matched. The shop never learns that Dave, specifically, uses ChatGPT.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "robot",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       1080,
+       600
+      ],
+      [
+       1350,
+       600
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "???",
+     "x": 1500,
+     "y": 600,
+     "size": 100,
+     "color": "grey",
+     "at": 0.45
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1750,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Second, OpenAI says uploaded files are usually deleted within twenty four hours of being processed.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      24
+     ],
+     "fmt": "{:.0f} hours",
+     "x": 1300,
+     "y": 420,
+     "size": 130,
+     "color": "blue",
+     "dur": 1.5,
+     "at": 0.3
+    },
+    {
+     "prop": "stopwatch",
+     "x": 1300,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Third, it told 404 Media that being on an advertiser's list does not, by itself, cause an ad to be shown.",
+   "items": [
+    {
+     "text": "\u201cbeing on an advertiser's list does not,",
+     "x": 960,
+     "y": 360,
+     "size": 58,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "by itself, cause an ad to be shown\u201d",
+     "x": 960,
+     "y": 440,
+     "size": 58,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "\u2014 OpenAI",
+     "x": 1350,
+     "y": 540,
+     "size": 44,
+     "color": "grey",
+     "at": 0.45
+    },
+    {
+     "prop": "clipboard",
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Back in February, OpenAI set out more rules. Ads only go to logged in adults. It says it doesn't plan to show ads to minors.",
+   "items": [
+    {
+     "text": "18+",
+     "x": 600,
+     "y": 450,
+     "size": 180,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "prop": "lock",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "adults only",
+     "x": 1300,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Ads are not shown on sensitive topics, like health, mental health or politics. Ask about your rash, and there should be no rash cream ad.",
+   "items": [
+    {
+     "text": "health",
+     "x": 450,
+     "y": 400,
+     "size": 70,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "mental health",
+     "x": 960,
+     "y": 400,
+     "size": 70,
+     "color": "dark",
+     "at": 0.15
+    },
+    {
+     "text": "politics",
+     "x": 1450,
+     "y": 400,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "text": "NO ADS",
+     "x": 960,
+     "y": 620,
+     "size": 130,
+     "color": "green",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "OpenAI says ads do not influence ChatGPT's answers. Ads are labelled sponsored, and kept separate from the answer itself.",
+   "items": [
+    {
+     "box": [
+      608,
+      200,
+      704,
+      572
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      608,
+      200,
+      704,
+      66
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 960,
+     "y": 233,
+     "size": 44,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      762,
+      299,
+      517,
+      99
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "best lawn mower?",
+     "x": 1037,
+     "y": 348,
+     "size": 39,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      641,
+      431,
+      517,
+      121
+     ],
+     "color": "paper",
+     "at": 0.15
+    },
+    {
+     "text": "It depends on your lawn...",
+     "x": 883,
+     "y": 491,
+     "size": 37,
+     "color": "dark",
+     "at": 0.15
+    },
+    {
+     "box": [
+      641,
+      585,
+      638,
+      143
+     ],
+     "color": "yellow",
+     "at": 0.5
+    },
+    {
+     "text": "Sponsored",
+     "x": 729,
+     "y": 612,
+     "size": 28,
+     "color": "dark",
+     "at": 0.5
+    },
+    {
+     "text": "labelled, separate",
+     "x": 960,
+     "y": 673,
+     "size": 39,
+     "color": "black",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "And advertisers, it says, get only totals: how many people saw the ad and how many clicked. Not your chats. Not your personal information.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 700,
+     "y": 900,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "text": "views: 10,000",
+     "x": 1300,
+     "y": 420,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "text": "clicks: 120",
+     "x": 1300,
+     "y": 520,
+     "size": 70,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "(example numbers)",
+     "x": 1300,
+     "y": 610,
+     "size": 44,
+     "color": "grey",
+     "at": 0.5
+    },
+    {
+     "cross": [
+      1550,
+      780,
+      80
+     ],
+     "at": 0.7
+    },
+    {
+     "prop": "speech",
+     "x": 1550,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.6,
+     "text": "chats"
+    }
+   ]
+  },
+  {
+   "say": "You can also dismiss an ad, give feedback, see why you got it, delete your ad data, and turn personalization off.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "ad controls"
+    },
+    {
+     "text": "hide",
+     "x": 500,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "why?",
+     "x": 800,
+     "y": 280,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "text": "delete",
+     "x": 1150,
+     "y": 280,
+     "size": 70,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "off",
+     "x": 1450,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "From OpenAI's point of view, ads are how the free plans stay free, for people who can't or won't pay for a subscription.",
+   "items": [
+    {
+     "prop": "moneybag",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "ADS"
+    },
+    {
+     "arrow": [
+      [
+       760,
+       700
+      ],
+      [
+       1150,
+       700
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "FREE",
+     "x": 1400,
+     "y": 500,
+     "size": 130,
+     "color": "green",
+     "at": 0.45
+    }
+   ]
+  },
+  {
+   "say": "Now the other side. Critics say the problem isn't one big scandal. It's a lot of small steps.",
+   "items": [
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "concerns"
+    },
+    {
+     "text": "privacy critic",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "chapter": "Part 5: What critics say"
+  },
+  {
+   "say": "Zach Edwards of DecryptAds, quoted by 404 Media, called OpenAI's approach \u201cboiling the frog\u201d.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "\u201cboiling the frog\u201d",
+     "x": 1300,
+     "y": 420,
+     "size": 90,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "prop": "fire",
+     "x": 1300,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.5
+    },
+    {
+     "text": "Zach Edwards, DecryptAds",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ]
+  },
+  {
+   "say": "Meaning: you change things slowly, so people don't notice how much is changing. First no ads. Then text ads. Then picture ads. Then lists.",
+   "items": [
+    {
+     "text": "no ads",
+     "x": 400,
+     "y": 600,
+     "size": 60,
+     "color": "grey",
+     "at": 0
+    },
+    {
+     "text": "text ads",
+     "x": 750,
+     "y": 500,
+     "size": 60,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "picture ads",
+     "x": 1150,
+     "y": 400,
+     "size": 60,
+     "color": "orange",
+     "at": 0.4
+    },
+    {
+     "text": "lists",
+     "x": 1550,
+     "y": 300,
+     "size": 70,
+     "color": "red",
+     "at": 0.6
+    },
+    {
+     "arrow": [
+      [
+       400,
+       700
+      ],
+      [
+       1600,
+       360
+      ]
+     ],
+     "color": "red",
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "say": "Second concern: 404 Media said it's unclear whether OpenAI scrambles the raw emails and phone numbers that advertisers upload.",
+   "items": [
+    {
+     "text": "dave@mail.com",
+     "x": 700,
+     "y": 420,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "hashed?",
+     "x": 1350,
+     "y": 420,
+     "size": 90,
+     "color": "red",
+     "at": 0.35
+    },
+    {
+     "text": "?",
+     "x": 1350,
+     "y": 650,
+     "size": 160,
+     "color": "red",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "OpenAI hadn't said. It does say it deletes the files, usually within a day. 404 Media said the unclear part could leave data exposed.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "24 h"
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "Third, and this one surprised a lot of people: the off switch doesn't switch everything off.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "OFF"
+    },
+    {
+     "text": "OFF?",
+     "x": 960,
+     "y": 250,
+     "size": 120,
+     "color": "red",
+     "at": 0.4,
+     "anim": "shake"
+    }
+   ]
+  },
+  {
+   "say": "Turning off ad personalization stops ChatGPT using your past chats, activity and preferences to pick ads.",
+   "items": [
+    {
+     "text": "past chats",
+     "x": 500,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "activity",
+     "x": 960,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0.15
+    },
+    {
+     "text": "preferences",
+     "x": 1420,
+     "y": 380,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "cross": [
+      500,
+      380,
+      90
+     ],
+     "at": 0.5
+    },
+    {
+     "cross": [
+      960,
+      380,
+      90
+     ],
+     "at": 0.55
+    },
+    {
+     "cross": [
+      1420,
+      380,
+      90
+     ],
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "But OpenAI's own setting says, quote, ads may still be based on your current chat. So you still see ads. Just less personal ones.",
+   "items": [
+    {
+     "text": "\u201cAds may still be based on",
+     "x": 960,
+     "y": 350,
+     "size": 66,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "your current chat.\u201d",
+     "x": 960,
+     "y": 440,
+     "size": 66,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "\u2014 OpenAI's settings page",
+     "x": 1300,
+     "y": 540,
+     "size": 44,
+     "color": "grey",
+     "at": 0.45
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "And Gizmodo noted the opt-out doesn't appear to stop targeting by that unique phone identifier. Gizmodo asked OpenAI for details and hadn't heard back by publication.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "AD ID"
+    },
+    {
+     "prop": "envelope",
+     "x": 1250,
+     "y": 700,
+     "s": 0.8,
+     "at": 0.35,
+     "text": "to OpenAI"
+    },
+    {
+     "text": "...",
+     "x": 1600,
+     "y": 500,
+     "size": 140,
+     "color": "grey",
+     "at": 0.6,
+     "anim": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "Meanwhile, the ads are piling up. One outside project, the ChatGPT Ad Library, says it has collected over forty three thousand different ads.",
+   "items": [
+    {
+     "count": [
+      0,
+      43410
+     ],
+     "fmt": "{:,.0f} ads",
+     "x": 960,
+     "y": 340,
+     "size": 150,
+     "color": "orange",
+     "dur": 2.0
+    },
+    {
+     "text": "one project's own sample",
+     "x": 960,
+     "y": 500,
+     "size": 50,
+     "color": "grey",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Seen in over four hundred and fifteen thousand places. That's its own sample, not an official OpenAI figure, but it gives you a sense of scale.",
+   "items": [
+    {
+     "count": [
+      0,
+      415289
+     ],
+     "fmt": "{:,.0f} placements",
+     "x": 960,
+     "y": 340,
+     "size": 120,
+     "color": "red",
+     "dur": 2.0
+    },
+    {
+     "prop": "phone",
+     "x": 450,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 700,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.46,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 950,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.52,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 1200,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.5800000000000001,
+     "text": "AD"
+    },
+    {
+     "prop": "phone",
+     "x": 1450,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.64,
+     "text": "AD"
+    }
+   ]
+  },
+  {
+   "say": "So what can a normal person actually do? Linda has a list.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1150,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.3,
+     "text": "LINDA'S LIST"
+    }
+   ],
+   "chapter": "Part 6: What you can actually do"
+  },
+  {
+   "say": "Option one: pay. Plus, Pro and the business plans have no ads. The catch, of course, is that you're paying.",
+   "items": [
+    {
+     "text": "1. PAY",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "green",
+     "at": 0
+    },
+    {
+     "prop": "wallet",
+     "x": 700,
+     "y": 800,
+     "s": 0.9,
+     "at": 0.3
+    },
+    {
+     "text": "no ads",
+     "x": 1300,
+     "y": 600,
+     "size": 80,
+     "color": "dark",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Option two: go into the ad settings and switch personalization off. It won't remove ads, but it narrows what's used to pick them.",
+   "items": [
+    {
+     "text": "2. SETTINGS",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.3,
+     "text": "ads: OFF"
+    }
+   ]
+  },
+  {
+   "say": "Option three: when an ad looks oddly specific, tap the button that shows why you got it. You can also dismiss it or delete your ad data.",
+   "items": [
+    {
+     "text": "3. ASK WHY",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "orange",
+     "at": 0
+    },
+    {
+     "box": [
+      672,
+      360,
+      576,
+      468
+     ],
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      672,
+      360,
+      576,
+      54
+     ],
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "ChatBot",
+     "x": 960,
+     "y": 387,
+     "size": 36,
+     "color": "white",
+     "at": 0
+    },
+    {
+     "box": [
+      798,
+      441,
+      423,
+      81
+     ],
+     "color": "sky",
+     "at": 0
+    },
+    {
+     "text": "door squeaks",
+     "x": 1023,
+     "y": 481,
+     "size": 32,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "box": [
+      699,
+      675,
+      522,
+      117
+     ],
+     "color": "yellow",
+     "at": 0.4
+    },
+    {
+     "text": "Sponsored",
+     "x": 771,
+     "y": 697,
+     "size": 23,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "why this ad?",
+     "x": 960,
+     "y": 747,
+     "size": 32,
+     "color": "black",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Option four, the cheapest: think of the chat like a search box. What you type can shape the ads you see.",
+   "items": [
+    {
+     "text": "4. THINK FIRST",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "purple",
+     "at": 0
+    },
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "eye",
+     "x": 1350,
+     "y": 700,
+     "s": 0.8,
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "That doesn't mean panic. It means the same habits you already use everywhere else online.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "calm down, Dave",
+     "x": 960,
+     "y": 300,
+     "size": 70,
+     "color": "dark",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "Dave, meanwhile, has decided to only ask the chatbot about things he'd be happy to see ads for. So far: pizza.",
+   "items": [
+    {
+     "guy": {
+      "pose": "type",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "laptop",
+     "x": 950,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "text": "PIZZA",
+     "x": 1450,
+     "y": 400,
+     "size": 120,
+     "color": "orange",
+     "at": 0.5
+    }
+   ]
+  },
+  {
+   "say": "What's next? Picture ads were due to start appearing later this month, in the US only for now.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT"
+    },
+    {
+     "box": [
+      1150,
+      330,
+      400,
+      300
+     ],
+     "color": "yellow",
+     "at": 0.35
+    },
+    {
+     "text": "picture ad",
+     "x": 1350,
+     "y": 480,
+     "size": 60,
+     "color": "dark",
+     "at": 0.4
+    }
+   ],
+   "chapter": "Part 7: What happens next"
+  },
+  {
+   "say": "TechCrunch reports OpenAI also added tools that help advertisers measure whether their ads led to clicks and sales.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "text": "did it work?",
+     "x": 960,
+     "y": 260,
+     "size": 90,
+     "color": "dark",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "And if ads roll out globally, advertisers could eventually reach all those one point two billion weekly users.",
+   "items": [
+    {
+     "prop": "globe",
+     "x": 960,
+     "y": 850,
+     "s": 1.4,
+     "at": 0,
+     "anim": "spin"
+    },
+    {
+     "text": "1.2 billion",
+     "x": 960,
+     "y": 220,
+     "size": 110,
+     "color": "red",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Supporters say that keeps the free version free. Critics worry that many users don't realise they can be targeted with data an advertiser uploaded.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.5
+    },
+    {
+     "text": "supporters",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "critics",
+     "x": 1350,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "Both can be true at once. Free things have to be paid for somehow. And people like to know how.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "text": "free",
+     "x": 700,
+     "y": 420,
+     "size": 80,
+     "color": "green",
+     "at": 0.3
+    },
+    {
+     "text": "clear",
+     "x": 1220,
+     "y": 420,
+     "size": 80,
+     "color": "blue",
+     "at": 0.45
+    }
+   ]
+  },
+  {
+   "say": "Which side has it right depends on who you ask. We don't pick sides. We just count the facts.",
+   "items": [
+    {
+     "text": "we just count the facts",
+     "x": 960,
+     "y": 400,
+     "size": 100,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "say": "Quick recap. ChatGPT has shown ads to free and Go users in the US since February.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "FEB 9"
+    },
+    {
+     "prop": "phone",
+     "x": 1300,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.3,
+     "text": "AD"
+    }
+   ],
+   "chapter": "Recap"
+  },
+  {
+   "say": "Advertisers can aim by topic, or by uploading lists of emails, phone numbers and phone IDs, with a minimum of twenty five thousand matches.",
+   "items": [
+    {
+     "text": "topics",
+     "x": 600,
+     "y": 380,
+     "size": 90,
+     "color": "teal",
+     "at": 0
+    },
+    {
+     "text": "lists",
+     "x": 1300,
+     "y": 380,
+     "size": 90,
+     "color": "orange",
+     "at": 0.3
+    },
+    {
+     "text": "25,000+",
+     "x": 960,
+     "y": 600,
+     "size": 130,
+     "color": "red",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "OpenAI says advertisers can't see who matched or what you chat about. And turning personalization off still leaves ads based on your current chat.",
+   "items": [
+    {
+     "prop": "lock",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "OFF"
+    },
+    {
+     "text": "still ads",
+     "x": 1300,
+     "y": 300,
+     "size": 80,
+     "color": "dark",
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "As for Dave, he fixed the door with some cooking oil he already had. The ad never stood a chance.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 1350,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "silence.",
+     "x": 1350,
+     "y": 300,
+     "size": 90,
+     "color": "dark",
+     "at": 0.55
+    }
+   ]
+  },
+  {
+   "say": "Then he asked the chatbot for a pizza recipe. He's now been shown three pizza ovens.",
+   "items": [
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      3
+     ],
+     "fmt": "{:.0f} ovens",
+     "x": 1350,
+     "y": 420,
+     "size": 130,
+     "color": "orange",
+     "dur": 1.5,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Would you pay to get rid of the ads, or is free with ads a fair deal? Tell us in the comments, and subscribe for the next one.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 960,
+     "y": 460,
+     "s": 1.8,
+     "at": 0,
+     "text": "pay or ads?"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "prop": "phone",
+     "x": 1500,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.6,
+     "text": "AD"
+    }
+   ]
+  }
+ ]
+}
