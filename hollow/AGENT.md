@@ -60,6 +60,15 @@ Views come almost only from Shorts; long episodes got 0–6 views. Best Shorts o
 - Long title: a plain question about the real mystery ("Where Did the 3 Lighthouse Keepers Go?") — keep that style, and put the strongest fact in the first 10 s of the long video.
 - End every Short with a 1-line spoken + on-screen "Follow for the full story" / subscribe prompt in the last 2 s.
 
+## 19-okt reja (owner-approved) — OVERRIDES the rules above where they conflict
+Long episodes got 0–6 views; every view comes from Shorts. Until the owner says otherwise:
+- **No long video.** Do not write, render or upload `epNNN_long.json`. Each episode = **3 Shorts only** (short1 the rule/strangest fact, short2 "Would YOU…?", short3 scariest moment). Keep researching the true story as before; the facts go into the Shorts and their descriptions (2 sources under "Sources:").
+- Buffer check: a day is "covered" when it has 3 Shorts scheduled. Slots: the existing Shorts slots of that day; the old long slot stays empty.
+- **Slow down while the upload limit blocks:** if `pending_uploads` across all episodes holds **6 or more** videos, do not make a new episode — only try to upload pending ones, then stop with one Uzbek line.
+- Shorts length **20–35 s** (`--check`; cut lines if longer). Frame 1 = the strangest fact as big on-screen text, 3–6 words with a number ("115 PEOPLE VANISHED"); no fade-in, no logo, no title card.
+- **Loop:** the last line points back to the first ("…and nobody knows where the 115 went."), so the Short flows into its own start.
+- Never reuse a Short title from any earlier episode in log.json.
+
 ## Never
 - Upload only to Hollowmere Tales (channel id above). Never type passwords, never change account settings, never touch the old private videos on the channel.
 - No gore, blood, injuries, death on screen, real brands/characters/games/memes. Original stories only.
