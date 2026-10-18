@@ -1,0 +1,1308 @@
+{
+ "id": "ep009_long",
+ "format": "long",
+ "title": "Where Did Hamelin's 130 Children Go?",
+ "hook": "DON'T FOLLOW THE MUSIC",
+ "hook_dur": 4.5,
+ "description": "Based on real records and a famous German legend. A note written into a manuscript at Lüneburg around 1440-50 says: 'In the year of 1284, on the day of Saints John and Paul, on June 26, by a piper clothed in many kinds of colours, 130 children born in Hamelin were seduced, and lost at the place of execution near the Koppen.' The oldest known record was a stained-glass window placed in Hamelin's church around 1300; it was destroyed in 1660. The rats were only added to the story around 1559. On Hamelin's Bungelosenstrasse, the street where the children were last seen, music and dancing are still not allowed. Historians suggest the young people may have left to settle new lands in the east, joined a pilgrimage, or were caught in a dancing mania — but no one knows.\n\nSources:\nhttps://en.wikipedia.org/wiki/Pied_Piper_of_Hamelin\nhttps://www.mentalfloss.com/history/enduring-legacy-pied-piper-hamelin\nhttps://museumhameln.de/?p=1080\n\n#truestory #piedpiper #hamelin #legend #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Pied Piper",
+  "Hamelin",
+  "Hameln",
+  "1284",
+  "Germany",
+  "German legend",
+  "lost children",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 9",
+  "Bungelosenstrasse",
+  "Pied Piper of Hamelin",
+  "true story behind the legend"
+ ],
+ "thumbnail": {
+  "bg": "village",
+  "seed": 4,
+  "creature": "figure",
+  "text": "DON'T FOLLOW"
+ },
+ "shots": [
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 3,
+   "lantern": 1.0,
+   "ambient": 0.38,
+   "fade": false,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 620,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.22
+    ],
+    "to": [
+     1060,
+     610,
+     1.08
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 1500,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "k1": {
+     "type": "ghost",
+     "x": 1250,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "k2": {
+     "type": "ghost",
+     "x": 1340,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    }
+   },
+   "beats": [
+    {
+     "wait": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 0.8
+    },
+    {
+     "move": "odo",
+     "to": 620,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "move": "moth",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "A strange tune drifted down the street... and the children followed it.",
+     "es": "Una extraña melodía bajó por la calle... y los niños la siguieron.",
+     "de": "Eine seltsame Melodie zog durch die Gasse... und die Kinder folgten ihr.",
+     "fr": "Un air étrange descendit la rue... et les enfants le suivirent.",
+     "it": "Una strana melodia scese per la strada... e i bambini la seguirono.",
+     "pt": "Uma melodia estranha desceu a rua... e as crianças a seguiram.",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "show": "p",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "show": "k1",
+     "dur": 0.5,
+     "and": true
+    },
+    {
+     "show": "k2",
+     "dur": 0.5,
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "This is a true record from Hamelin, Germany, written down long ago.",
+     "es": "Este es un registro real de Hamelín, Alemania, escrito hace siglos.",
+     "de": "Dies ist eine echte Aufzeichnung aus Hameln, vor langer Zeit niedergeschrieben.",
+     "fr": "Ceci est un vrai récit de Hamelin, en Allemagne, écrit il y a longtemps.",
+     "it": "Questo è un vero documento di Hamelin, in Germania, scritto molto tempo fa.",
+     "pt": "Este é um registro real de Hamelin, na Alemanha, escrito há muito tempo."
+    },
+    {
+     "move": "k1",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "move": "k2",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "hide": "p",
+     "dur": 0.8
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... every bed in the village is empty.",
+     "es": "Mothwick... todas las camas del pueblo están vacías.",
+     "de": "Mothwick... jedes Bett im Dorf ist leer.",
+     "fr": "Mothwick... tous les lits du village sont vides.",
+     "it": "Mothwick... tutti i letti del villaggio sono vuoti.",
+     "pt": "Mothwick... todas as camas da vila estão vazias."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Then whatever you hear tonight... don't follow the music.",
+     "es": "Entonces, oigas lo que oigas esta noche... no sigas la música.",
+     "de": "Dann, was du heute Nacht auch hörst... folge nicht der Musik.",
+     "fr": "Alors, quoi que tu entendes ce soir... ne suis pas la musique.",
+     "it": "Allora, qualunque cosa senti stanotte... non seguire la musica.",
+     "pt": "Então, ouça o que ouvir esta noite... não siga a música."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "village",
+   "seed": 2,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.42,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1040,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "man": {
+     "type": "figure",
+     "x": 1420,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden"
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 330,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Hamelin is a small town on the River Weser, in northern Germany.",
+     "es": "Hamelín es un pequeño pueblo junto al río Weser, en el norte de Alemania.",
+     "de": "Hameln ist eine kleine Stadt an der Weser, im Norden Deutschlands.",
+     "fr": "Hamelin est une petite ville sur la Weser, dans le nord de l'Allemagne.",
+     "it": "Hamelin è una cittadina sul fiume Weser, nel nord della Germania.",
+     "pt": "Hamelin é uma pequena cidade no rio Weser, no norte da Alemanha."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "show": "man",
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "The year is 1284. The 26th of June, the day of Saints John and Paul.",
+     "es": "Es el año 1284. El 26 de junio, día de San Juan y San Pablo.",
+     "de": "Es ist das Jahr 1284. Der 26. Juni, der Tag von Johannes und Paul.",
+     "fr": "Nous sommes en 1284. Le 26 juin, jour des saints Jean et Paul.",
+     "it": "È l'anno 1284. Il 26 giugno, giorno dei santi Giovanni e Paolo.",
+     "pt": "É o ano de 1284. 26 de junho, dia de São João e São Paulo."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "On that day, the old records say, Hamelin lost its children.",
+     "es": "Ese día, dicen los viejos registros, Hamelín perdió a sus niños.",
+     "de": "An jenem Tag, sagen die alten Aufzeichnungen, verlor Hameln seine Kinder.",
+     "fr": "Ce jour-là, disent les vieux récits, Hamelin perdit ses enfants.",
+     "it": "Quel giorno, dicono i vecchi documenti, Hamelin perse i suoi bambini.",
+     "pt": "Naquele dia, dizem os velhos registros, Hamelin perdeu suas crianças."
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "hide": "man",
+     "dur": 0.6
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "Lost them? How do you lose a whole town of children?",
+     "es": "¿Perderlos? ¿Cómo se pierden los niños de todo un pueblo?",
+     "de": "Verloren? Wie verliert man die Kinder einer ganzen Stadt?",
+     "fr": "Perdus ? Comment perd-on les enfants de toute une ville ?",
+     "it": "Persi? Come si perdono i bambini di un'intera città?",
+     "pt": "Perdeu? Como se perdem as crianças de uma cidade inteira?"
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Nobody knows. But someone wrote down exactly how many.",
+     "es": "Nadie lo sabe. Pero alguien anotó exactamente cuántos.",
+     "de": "Niemand weiß es. Aber jemand schrieb genau auf, wie viele.",
+     "fr": "Personne ne sait. Mais quelqu'un a noté combien exactement.",
+     "it": "Nessuno lo sa. Ma qualcuno scrisse esattamente quanti.",
+     "pt": "Ninguém sabe. Mas alguém anotou exatamente quantas."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 7,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.38,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     600,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": -150
+    },
+    "moth": {
+     "x": -60,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 1500,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "k1": {
+     "type": "ghost",
+     "x": 1180,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "k2": {
+     "type": "ghost",
+     "x": 1270,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "k3": {
+     "type": "ghost",
+     "x": 1360,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 720,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Around 1450, a note was written into a book at Lüneburg.",
+     "es": "Hacia 1450, alguien escribió una nota en un libro en Luneburgo.",
+     "de": "Um 1450 schrieb jemand in Lüneburg eine Notiz in ein Buch.",
+     "fr": "Vers 1450, une note fut écrite dans un livre à Lunebourg.",
+     "it": "Verso il 1450, una nota fu scritta in un libro a Luneburgo.",
+     "pt": "Por volta de 1450, uma nota foi escrita num livro em Luneburgo.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "show": "p",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "It tells of a piper, clothed in many kinds of colours.",
+     "es": "Habla de un flautista, vestido de muchos colores.",
+     "de": "Sie erzählt von einem Pfeifer, gekleidet in vielerlei Farben.",
+     "fr": "Elle parle d'un joueur de flûte, vêtu de mille couleurs.",
+     "it": "Parla di un pifferaio, vestito di molti colori.",
+     "pt": "Ela fala de um flautista, vestido de muitas cores."
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "show": "k1",
+     "dur": 0.4
+    },
+    {
+     "show": "k2",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "show": "k3",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "One hundred and thirty children born in Hamelin followed him.",
+     "es": "Ciento treinta niños nacidos en Hamelín lo siguieron.",
+     "de": "Hundertdreißig Kinder, in Hameln geboren, folgten ihm.",
+     "fr": "Cent trente enfants nés à Hamelin le suivirent.",
+     "it": "Centotrenta bambini nati a Hamelin lo seguirono.",
+     "pt": "Cento e trinta crianças nascidas em Hamelin o seguiram."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "move": "p",
+     "to": "off_right",
+     "speed": "walk"
+    },
+    {
+     "move": "k1",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "move": "k2",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "move": "k3",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "They were lost, it says, near a hill called the Koppen.",
+     "es": "Se perdieron, dice, cerca de una colina llamada Koppen.",
+     "de": "Sie gingen verloren, heißt es, nahe einem Hügel namens Koppen.",
+     "fr": "Ils furent perdus, dit-on, près d'une colline appelée le Koppen.",
+     "it": "Furono persi, dice, vicino a una collina chiamata Koppen.",
+     "pt": "Foram perdidas, diz, perto de uma colina chamada Koppen."
+    },
+    {
+     "shake": 0.6,
+     "power": 12,
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "odo",
+     "en": "And then? Did anyone ever see them again?",
+     "es": "¿Y luego? ¿Alguien volvió a verlos?",
+     "de": "Und dann? Hat sie je jemand wiedergesehen?",
+     "fr": "Et après ? Quelqu'un les a-t-il revus ?",
+     "it": "E poi? Qualcuno li ha mai rivisti?",
+     "pt": "E depois? Alguém voltou a vê-las?"
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "say": "moth",
+     "en": "Never. Not one of them.",
+     "es": "Nunca. Ni uno solo.",
+     "de": "Nie. Kein einziges.",
+     "fr": "Jamais. Pas un seul.",
+     "it": "Mai. Nemmeno uno.",
+     "pt": "Nunca. Nenhuma delas."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Later versions say a few children stayed behind, too slow to keep up.",
+     "es": "Versiones posteriores dicen que unos pocos niños se quedaron atrás, demasiado lentos.",
+     "de": "Spätere Fassungen sagen, einige Kinder blieben zurück, zu langsam.",
+     "fr": "Des versions plus tardives disent que quelques enfants, trop lents, restèrent.",
+     "it": "Versioni successive dicono che pochi bambini rimasero indietro, troppo lenti.",
+     "pt": "Versões posteriores dizem que algumas crianças ficaram para trás, lentas demais.",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "So someone was left to tell what they saw...",
+     "es": "Así que alguien quedó para contar lo que vio...",
+     "de": "Also blieb jemand zurück, um zu erzählen, was er sah...",
+     "fr": "Alors quelqu'un est resté pour raconter ce qu'il a vu...",
+     "it": "Quindi qualcuno rimase a raccontare ciò che vide...",
+     "pt": "Então alguém ficou para contar o que viu..."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "chapel",
+   "seed": 5,
+   "music": "choir",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1200,
+     "y": 560,
+     "r": 600
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 1480,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.95
+    },
+    "g1": {
+     "type": "ghost",
+     "x": 1300,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Even older proof once hung in Hamelin's church.",
+     "es": "Una prueba aún más antigua colgaba en la iglesia de Hamelín.",
+     "de": "Ein noch älterer Beweis hing einst in Hamelns Kirche.",
+     "fr": "Une preuve plus ancienne était dans l'église de Hamelin.",
+     "it": "Una prova ancora più antica era nella chiesa di Hamelin.",
+     "pt": "Uma prova ainda mais antiga ficava na igreja de Hamelin."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "narr",
+     "en": "Around 1300, a stained-glass window showed the piper and the children.",
+     "es": "Hacia 1300, una vidriera mostraba al flautista y a los niños.",
+     "de": "Um 1300 zeigte ein Kirchenfenster den Pfeifer und die Kinder.",
+     "fr": "Vers 1300, un vitrail montrait le joueur de flûte et les enfants.",
+     "it": "Verso il 1300, una vetrata mostrava il pifferaio e i bambini.",
+     "pt": "Por volta de 1300, um vitral mostrava o flautista e as crianças."
+    },
+    {
+     "show": "p",
+     "dur": 0.6,
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "wait": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "People who saw it were alive soon after that summer day.",
+     "es": "Quienes la vieron vivieron poco después de aquel día de verano.",
+     "de": "Wer es sah, lebte kurz nach jenem Sommertag.",
+     "fr": "Ceux qui le voyaient vivaient peu après ce jour d'été.",
+     "it": "Chi la vide visse poco dopo quel giorno d'estate.",
+     "pt": "Quem o viu viveu pouco depois daquele dia de verão."
+    },
+    {
+     "hide": "p",
+     "dur": 0.5
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "In 1660, the window was destroyed. Only drawings of it remain.",
+     "es": "En 1660, la vidriera fue destruida. Solo quedan dibujos.",
+     "de": "1660 wurde das Fenster zerstört. Nur Zeichnungen sind geblieben.",
+     "fr": "En 1660, le vitrail fut détruit. Seuls des dessins subsistent.",
+     "it": "Nel 1660 la vetrata fu distrutta. Ne restano solo disegni.",
+     "pt": "Em 1660, o vitral foi destruído. Restam só desenhos."
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But around 1602, a new house in Hamelin was built with the old date on its wall.",
+     "es": "Pero hacia 1602, una casa nueva en Hamelín llevó la vieja fecha en su muro.",
+     "de": "Doch um 1602 bekam ein neues Haus in Hameln das alte Datum an die Wand.",
+     "fr": "Mais vers 1602, une maison neuve de Hamelin porta la vieille date sur son mur.",
+     "it": "Ma verso il 1602, una casa nuova di Hamelin portò la vecchia data sul muro.",
+     "pt": "Mas por volta de 1602, uma casa nova em Hamelin trouxe a velha data na parede."
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "1284. People still call it the Pied Piper's House.",
+     "es": "1284. La gente aún la llama la Casa del Flautista.",
+     "de": "1284. Man nennt es bis heute das Rattenfängerhaus.",
+     "fr": "1284. On l'appelle encore la Maison du joueur de flûte.",
+     "it": "1284. La chiamano ancora la Casa del Pifferaio.",
+     "pt": "1284. Ainda a chamam de Casa do Flautista."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "show": "g1",
+     "dur": 0.4
+    },
+    {
+     "act": "odo",
+     "do": "hide"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... who is that standing by the window?",
+     "es": "Mothwick... ¿quién está junto a la ventana?",
+     "de": "Mothwick... wer steht da am Fenster?",
+     "fr": "Mothwick... qui est là, près du vitrail ?",
+     "it": "Mothwick... chi c'è vicino alla finestra?",
+     "pt": "Mothwick... quem está ali perto da janela?"
+    },
+    {
+     "growl": "g1",
+     "and": true
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2
+    },
+    {
+     "light": "on",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "unhide"
+    },
+    {
+     "say": "moth",
+     "en": "No one. Just the moonlight. Let's keep moving.",
+     "es": "Nadie. Solo la luz de la luna. Sigamos.",
+     "de": "Niemand. Nur das Mondlicht. Gehen wir weiter.",
+     "fr": "Personne. Juste la lune. Continuons.",
+     "it": "Nessuno. Solo la luna. Andiamo avanti.",
+     "pt": "Ninguém. Só o luar. Vamos continuar."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "village",
+   "seed": 8,
+   "music": "drone",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.38,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 620,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 1500,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1200,
+     "y": 300,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "You may know the version with the rats. That part came much later.",
+     "es": "Quizá conozcas la versión de las ratas. Esa parte llegó mucho después.",
+     "de": "Du kennst vielleicht die Version mit den Ratten. Die kam viel später.",
+     "fr": "Tu connais peut-être la version des rats. Elle est venue bien plus tard.",
+     "it": "Forse conosci la versione dei topi. Quella parte arrivò molto dopo.",
+     "pt": "Talvez conheça a versão dos ratos. Essa parte veio bem depois."
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The rats first appear in a telling from around 1559.",
+     "es": "Las ratas aparecen por primera vez en un relato de hacia 1559.",
+     "de": "Die Ratten tauchen erst in einer Fassung um 1559 auf.",
+     "fr": "Les rats apparaissent pour la première fois vers 1559.",
+     "it": "I topi compaiono per la prima volta in un racconto del 1559 circa.",
+     "pt": "Os ratos aparecem pela primeira vez num relato de cerca de 1559."
+    },
+    {
+     "hide": "c1",
+     "dur": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But one rule in Hamelin is much older, and still kept.",
+     "es": "Pero una regla de Hamelín es mucho más antigua, y se sigue cumpliendo.",
+     "de": "Doch eine Regel in Hameln ist viel älter und gilt noch.",
+     "fr": "Mais une règle de Hamelin est bien plus ancienne, et toujours suivie.",
+     "it": "Ma una regola di Hamelin è molto più antica, e vale ancora.",
+     "pt": "Mas uma regra de Hamelin é bem mais antiga, e ainda vale."
+    },
+    {
+     "shake": 0.6,
+     "power": 12,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 720,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 860,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "On the street where the children were last seen, no music may play.",
+     "es": "En la calle donde vieron a los niños por última vez, no suena música.",
+     "de": "In der Gasse, wo man die Kinder zuletzt sah, darf keine Musik spielen.",
+     "fr": "Dans la rue où l'on vit les enfants pour la dernière fois, pas de musique.",
+     "it": "Nella via dove i bambini furono visti l'ultima volta, niente musica.",
+     "pt": "Na rua onde as crianças foram vistas pela última vez, não se toca música."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Its name is Bungelosenstrasse. No drums. No dancing. Even today.",
+     "es": "Se llama Bungelosenstrasse. Sin tambores. Sin baile. Aún hoy.",
+     "de": "Sie heißt Bungelosenstraße. Keine Trommeln. Kein Tanz. Bis heute.",
+     "fr": "Elle s'appelle Bungelosenstrasse. Ni tambour. Ni danse. Encore aujourd'hui.",
+     "it": "Si chiama Bungelosenstrasse. Niente tamburi. Niente balli. Ancora oggi.",
+     "pt": "Chama-se Bungelosenstrasse. Sem tambores. Sem dança. Até hoje."
+    },
+    {
+     "show": "p",
+     "dur": 0.3
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "Then why do I hear a pipe playing right now?",
+     "es": "Entonces, ¿por qué oigo una flauta ahora mismo?",
+     "de": "Warum höre ich dann gerade eine Flöte spielen?",
+     "fr": "Alors pourquoi j'entends une flûte en ce moment ?",
+     "it": "Allora perché sento un flauto proprio adesso?",
+     "pt": "Então por que estou ouvindo uma flauta agora?"
+    },
+    {
+     "hide": "p",
+     "dur": 0.3
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 3,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "k1": {
+     "type": "ghost",
+     "x": 1200,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "k2": {
+     "type": "ghost",
+     "x": 1300,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "g1": {
+     "type": "ghost",
+     "x": 1450,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "So what really happened? Historians have argued for centuries.",
+     "es": "¿Qué pasó de verdad? Los historiadores discuten desde hace siglos.",
+     "de": "Was geschah wirklich? Historiker streiten seit Jahrhunderten.",
+     "fr": "Que s'est-il vraiment passé ? Les historiens en débattent depuis des siècles.",
+     "it": "Cosa accadde davvero? Gli storici ne discutono da secoli.",
+     "pt": "O que aconteceu de verdade? Historiadores discutem há séculos."
+    },
+    {
+     "flash": true,
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "show": "k1",
+     "dur": 0.5
+    },
+    {
+     "show": "k2",
+     "dur": 0.5,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Some think young people left to settle new lands far to the east.",
+     "es": "Algunos creen que los jóvenes se fueron a poblar tierras lejanas al este.",
+     "de": "Manche glauben, junge Leute zogen fort, um Land im Osten zu besiedeln.",
+     "fr": "Certains pensent que des jeunes partirent s'installer loin à l'est.",
+     "it": "Alcuni pensano che i giovani partirono per abitare terre lontane a est.",
+     "pt": "Alguns acham que os jovens partiram para povoar terras distantes no leste."
+    },
+    {
+     "move": "k1",
+     "to": "off_right",
+     "speed": "walk"
+    },
+    {
+     "move": "k2",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Others think of a pilgrimage, or a strange dancing sickness.",
+     "es": "Otros piensan en una peregrinación, o en una extraña fiebre del baile.",
+     "de": "Andere denken an eine Pilgerfahrt oder eine seltsame Tanzwut.",
+     "fr": "D'autres pensent à un pèlerinage, ou à une étrange folie de la danse.",
+     "it": "Altri pensano a un pellegrinaggio, o a una strana mania del ballo.",
+     "pt": "Outros pensam numa peregrinação, ou numa estranha febre da dança."
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "calm"
+    },
+    {
+     "say": "narr",
+     "en": "In 1237, children really did dance all the way from Erfurt to Arnstadt.",
+     "es": "En 1237, unos niños sí fueron bailando de Erfurt a Arnstadt.",
+     "de": "1237 tanzten Kinder tatsächlich den ganzen Weg von Erfurt nach Arnstadt.",
+     "fr": "En 1237, des enfants ont vraiment dansé d'Erfurt jusqu'à Arnstadt.",
+     "it": "Nel 1237 dei bambini ballarono davvero da Erfurt fino ad Arnstadt.",
+     "pt": "Em 1237, crianças foram mesmo dançando de Erfurt até Arnstadt."
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But for Hamelin, no record says where the children went.",
+     "es": "Pero de Hamelín, ningún registro dice adónde fueron los niños.",
+     "de": "Doch für Hameln sagt kein Dokument, wohin die Kinder gingen.",
+     "fr": "Mais pour Hamelin, aucun récit ne dit où allèrent les enfants.",
+     "it": "Ma per Hamelin, nessun documento dice dove andarono i bambini.",
+     "pt": "Mas sobre Hamelin, nenhum registro diz para onde as crianças foram."
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "g1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... the lantern's out. Someone is humming that tune.",
+     "es": "Mothwick... la linterna se apagó. Alguien tararea esa melodía.",
+     "de": "Mothwick... die Laterne ist aus. Jemand summt diese Melodie.",
+     "fr": "Mothwick... la lanterne est éteinte. Quelqu'un fredonne cet air.",
+     "it": "Mothwick... la lanterna è spenta. Qualcuno canticchia quella melodia.",
+     "pt": "Mothwick... a lanterna apagou. Alguém está cantarolando essa melodia."
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "moth",
+     "en": "Cover your ears, Odo. Whatever you do... don't follow it.",
+     "es": "Tápate los oídos, Odo. Pase lo que pase... no la sigas.",
+     "de": "Halt dir die Ohren zu, Odo. Was auch passiert... folge ihr nicht.",
+     "fr": "Bouche-toi les oreilles, Odo. Quoi qu'il arrive... ne la suis pas.",
+     "it": "Tappati le orecchie, Odo. Qualunque cosa accada... non seguirla.",
+     "pt": "Tape os ouvidos, Odo. Aconteça o que acontecer... não a siga."
+    },
+    {
+     "eyes": "close"
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 2,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1500,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 1520,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.05
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1300,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Over seven hundred years later, Hamelin still tells the story every summer.",
+     "es": "Más de setecientos años después, Hamelín aún cuenta la historia cada verano.",
+     "de": "Über siebenhundert Jahre später erzählt Hameln die Geschichte jeden Sommer.",
+     "fr": "Plus de sept cents ans après, Hamelin raconte encore l'histoire chaque été.",
+     "it": "Oltre settecento anni dopo, Hamelin racconta ancora la storia ogni estate.",
+     "pt": "Mais de setecentos anos depois, Hamelin ainda conta a história todo verão."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But the piper's name, his face, his tune... were never written down.",
+     "es": "Pero el nombre del flautista, su cara, su melodía... nunca se escribieron.",
+     "de": "Doch Name, Gesicht und Melodie des Pfeifers... wurden nie aufgeschrieben.",
+     "fr": "Mais le nom du joueur, son visage, son air... ne furent jamais écrits.",
+     "it": "Ma il nome del pifferaio, il suo volto, la sua melodia... non furono mai scritti.",
+     "pt": "Mas o nome do flautista, seu rosto, sua melodia... nunca foram escritos."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "flutter",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... can you hear it? A pipe... up on the hill.",
+     "es": "Mothwick... ¿lo oyes? Una flauta... arriba en la colina.",
+     "de": "Mothwick... hörst du das? Eine Flöte... oben auf dem Hügel.",
+     "fr": "Mothwick... tu entends ? Une flûte... là-haut sur la colline.",
+     "it": "Mothwick... lo senti? Un flauto... su sulla collina.",
+     "pt": "Mothwick... está ouvindo? Uma flauta... lá em cima na colina."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "sfx": "step",
+     "wait": 0.3
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... there are small footprints in the mud. Lots of them.",
+     "es": "Mothwick... hay huellas pequeñas en el barro. Muchísimas.",
+     "de": "Mothwick... da sind kleine Fußspuren im Schlamm. Ganz viele.",
+     "fr": "Mothwick... il y a de petites traces de pas dans la boue. Des dizaines.",
+     "it": "Mothwick... ci sono piccole impronte nel fango. Tantissime.",
+     "pt": "Mothwick... tem pegadas pequenas na lama. Muitas."
+    },
+    {
+     "sfx": "step",
+     "wait": 0.4
+    },
+    {
+     "say": "moth",
+     "en": "They all walk up the hill, Odo... and none come back.",
+     "es": "Todas suben la colina, Odo... y ninguna vuelve.",
+     "de": "Sie führen alle den Hügel hinauf, Odo... und keine zurück.",
+     "fr": "Elles montent toutes la colline, Odo... et aucune ne revient.",
+     "it": "Salgono tutte sulla collina, Odo... e nessuna torna indietro.",
+     "pt": "Todas sobem a colina, Odo... e nenhuma volta."
+    },
+    {
+     "show": "p",
+     "dur": 0.3
+    },
+    {
+     "growl": "p",
+     "and": true
+    },
+    {
+     "lunge": "p",
+     "to": 1150
+    },
+    {
+     "light": "out",
+     "and": true
+    },
+    {
+     "card": "WHO WAS THE PIPER?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}

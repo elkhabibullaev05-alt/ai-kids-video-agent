@@ -1,0 +1,294 @@
+{
+ "id": "ep009_short1",
+ "format": "short",
+ "title": "Why Did 130 Children Follow This Tune? #shorts",
+ "hook": "DON'T FOLLOW THE MUSIC",
+ "description": "Hamelin, Germany, 26 June 1284: an old record says a piper dressed in many colours led 130 children away. They were never seen again — and on the street where they were last seen, music is still not allowed. Full true story on the channel. #shorts #piedpiper #hamelin #truestory #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "Pied Piper",
+  "Hamelin",
+  "Hameln",
+  "1284",
+  "Germany",
+  "German legend",
+  "lost children"
+ ],
+ "thumbnail": {
+  "bg": "village",
+  "seed": 4,
+  "creature": "figure",
+  "text": "DON'T FOLLOW"
+ },
+ "shots": [
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 700
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "wait": 0.4
+    },
+    {
+     "flash": true
+    },
+    {
+     "shake": 0.4,
+     "power": 14,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "1284. A tune in the street.",
+     "es": "1284. Una melodía en la calle.",
+     "de": "1284. Eine Melodie in der Gasse.",
+     "fr": "1284. Un air dans la rue.",
+     "it": "1284. Una melodia per strada.",
+     "pt": "1284. Uma melodia na rua.",
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "forest",
+   "seed": 7,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.48,
+   "focus": [
+    "odo",
+    "p"
+   ],
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 420
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 900,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.85
+    },
+    "k1": {
+     "type": "ghost",
+     "x": 640,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "k2": {
+     "type": "ghost",
+     "x": 740,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    }
+   },
+   "beats": [
+    {
+     "show": "p",
+     "dur": 0.3
+    },
+    {
+     "show": "k1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "show": "k2",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "A piper in bright colours. 130 children followed him.",
+     "es": "Un flautista de colores. Lo siguieron 130 niños.",
+     "de": "Ein bunter Pfeifer. 130 Kinder folgten ihm.",
+     "fr": "Un joueur de flûte bariolé. 130 enfants le suivirent.",
+     "it": "Un pifferaio colorato. Lo seguirono 130 bambini.",
+     "pt": "Um flautista colorido. 130 crianças o seguiram.",
+     "and": true
+    },
+    {
+     "move": "k1",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "move": "k2",
+     "to": "off_right",
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "flash": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 900,
+     "y": 300,
+     "r": 900
+    }
+   ]
+  },
+  {
+   "bg": "village",
+   "seed": 8,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {
+    "p": {
+     "type": "figure",
+     "x": 950,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    }
+   },
+   "beats": [
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "They were never seen again. Today, that street bans all music.",
+     "es": "Nunca más se les vio. Hoy, esa calle prohíbe la música.",
+     "de": "Man sah sie nie wieder. Heute ist Musik in dieser Gasse verboten.",
+     "fr": "On ne les revit jamais. Aujourd'hui, la musique y est interdite.",
+     "it": "Non furono mai più visti. Oggi in quella via la musica è vietata.",
+     "pt": "Nunca mais foram vistas. Hoje, a música é proibida nessa rua.",
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "p",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "lunge": "p",
+     "to": 820,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "x": 740
+   }
+  },
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 820
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "move": "odo",
+     "to": 700,
+     "speed": "walk"
+    },
+    {
+     "say": "narr",
+     "en": "So if you hear a pipe tonight...",
+     "es": "Así que si oyes una flauta esta noche...",
+     "de": "Wenn du heute Nacht eine Flöte hörst...",
+     "fr": "Alors si tu entends une flûte ce soir...",
+     "it": "Quindi se senti un flauto stanotte...",
+     "pt": "Então, se ouvir uma flauta esta noite...",
+     "and": true
+    }
+   ],
+   "tail": 0.2,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  }
+ ]
+}
