@@ -100,6 +100,7 @@ class Compiler:
         self.subs = []       # (t0, t1, {lang: text})
         self.cards = []      # (t0, t1, en, es)
         self.shakes = []     # (t0, dur, power)
+        self.flashes = []    # (t0, strength) lightning flashes
 
     def err(self, m):
         self.errors.append(m)
@@ -303,6 +304,15 @@ class Compiler:
         if "wait" in b:
             return float(b["wait"])
 
+        if "flash" in b:
+            # lightning: white double-flicker + thunder rumble + camera shake
+            self.flashes.append((t, float(b.get("flash") or 1.0)))
+            if b.get("thunder", True):
+                self.snd(A.SFX["thump"](), t + 0.15, 1.0)
+                self.snd(A.SFX["roar"](), t + 0.25, 0.35)
+                self.shakes.append((t + 0.15, 0.6, 22))
+            return float(b.get("wait", 0))
+
         if "shake" in b:
             self.shakes.append((t, float(b["shake"]), float(b.get("power", 18))))
             return 0
@@ -459,6 +469,11 @@ def overlays(t, W, H):
             o.append(f'<rect width="{W}" height="{H}" fill="#000" opacity="{ease((t-S["t1"])/fo_):.2f}"/>')
     if C.scenes[-1].get("fout", 0.35) and t >= C.scenes[-1]["t1"] + 0.35:
         o.append(f'<rect width="{W}" height="{H}" fill="#000"/>')
+    for t0, k in getattr(C, "flashes", []):
+        dt = t - t0
+        if 0 <= dt < 0.6:
+            a = 0.65 if dt < 0.08 else (0.12 if dt < 0.14 else (0.55 if dt < 0.22 else 0.55 * (1 - (dt - 0.22) / 0.38)))
+            o.append(f'<rect width="{W}" height="{H}" fill="#eef4ff" opacity="{max(0.0, a * k):.2f}"/>')
     for t0, t1, en, es in C.cards:
         if t0 - 0.3 <= t < t1:
             a = ease((t - t0 + 0.3) / 0.4)
