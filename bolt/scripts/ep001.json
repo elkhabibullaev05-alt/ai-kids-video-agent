@@ -1,0 +1,544 @@
+{
+ "title": "Who Stole the Golden Wheel? | Inspector Bolt's First Case | Cartoon Cars Story",
+ "chars": {
+  "bolt": {
+   "name": "Inspector Bolt",
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.08,
+    0.22,
+    0.62
+   ],
+   "kind": "car",
+   "size": 1.0,
+   "hat": true,
+   "home": [
+    6.0,
+    9.0
+   ]
+  },
+  "bertha": {
+   "name": "Big Bertha",
+   "voice": "af_bella",
+   "speed": 1.05,
+   "pitch": -1,
+   "color": [
+    0.98,
+    0.78,
+    0.05
+   ],
+   "kind": "bus",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -9.0,
+    18.0
+   ]
+  },
+  "turbo": {
+   "name": "Turbo",
+   "voice": "am_puck",
+   "speed": 1.2,
+   "pitch": 1,
+   "color": [
+    0.92,
+    0.1,
+    0.08
+   ],
+   "kind": "car",
+   "size": 0.95,
+   "hat": false,
+   "home": [
+    3.0,
+    12.0
+   ]
+  },
+  "grumpy": {
+   "name": "Grumpy",
+   "voice": "am_onyx",
+   "speed": 0.9,
+   "pitch": -2,
+   "color": [
+    0.5,
+    0.52,
+    0.55
+   ],
+   "kind": "truck",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -1.0,
+    15.5
+   ]
+  },
+  "pip": {
+   "name": "Pip",
+   "voice": "af_sky",
+   "speed": 1.05,
+   "pitch": 4,
+   "color": [
+    0.98,
+    0.45,
+    0.7
+   ],
+   "kind": "small",
+   "size": 0.65,
+   "hat": false,
+   "home": [
+    -15.5,
+    8.0
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "am_fenrir",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Every year, the town of Wheelburg races for one prize.",
+   "cam": "podium",
+   "do": [
+    [
+     "wheel",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The Golden Wheel. But tonight...",
+   "cam": "podium"
+  },
+  {
+   "sfx": "alarm",
+   "cam": "podium",
+   "do": [
+    [
+     "wheel",
+     "vanish"
+    ]
+   ],
+   "hold": 1.2,
+   "text": "THE GOLDEN WHEEL IS GONE!"
+  },
+  {
+   "who": "bertha",
+   "say": "It's GONE! Somebody stole the Golden Wheel!",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "shake"
+    ],
+    [
+     "turbo",
+     "jump"
+    ],
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Don't look at me! I was busy being awesome.",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "narr",
+   "say": "Then, out of the fog, came the best detective in town.",
+   "cam": "close:bolt",
+   "do": [
+    [
+     "bolt",
+     "enter"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Inspector Bolt. Nobody leaves this square.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Every one of you will take the Truth Press.",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "clap"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "The Truth Press? Oh, great. My favourite.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "bolt",
+   "say": "Tell the truth, and you'll be fine. Tell a lie... and your eyes will tell me.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Big Bertha. You first.",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Me? I'm way too big to hide a wheel! Look at me!",
+   "cam": "press"
+  },
+  {
+   "who": "narr",
+   "say": "The press came closer...",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:bertha"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Her eyes stayed small. She's telling the truth.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bertha",
+   "say": "Then why did you squash my roof?!",
+   "cam": "press",
+   "do": [
+    [
+     "bertha",
+     "flat_roof"
+    ],
+    [
+     "turbo",
+     "laugh"
+    ],
+    [
+     "grumpy",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Procedure. Next! Turbo.",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "to_home"
+    ],
+    [
+     "turbo",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Steal it? I'm the fastest car in town. If I stole it, I'd be in another country by now!",
+   "cam": "press"
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "eyes_big"
+    ]
+   ],
+   "hold": 1.0,
+   "text": "SUSPICIOUS..."
+  },
+  {
+   "who": "bolt",
+   "say": "Your eyes are getting bigger, Turbo. What are you hiding?",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "The press squeezed... and something fell out of Turbo's trunk!",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:turbo"
+    ],
+    [
+     "banana",
+     "drop:turbo"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "It's a banana! It's my lunch! I hid it because Grumpy always steals my lunch!",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "grumpy",
+   "say": "...That is also true.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "bolt",
+   "say": "A banana is not a wheel. Next! Grumpy.",
+   "cam": "wide",
+   "do": [
+    [
+     "turbo",
+     "to_home"
+    ],
+    [
+     "grumpy",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "I don't even like gold. Gold is shiny. I hate shiny things.",
+   "cam": "press"
+  },
+  {
+   "who": "bolt",
+   "say": "Eyes small. True again. Hmm.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "But then, Inspector Bolt noticed something on the ground.",
+   "cam": "overhead",
+   "do": [
+    [
+     "press",
+     "sink"
+    ],
+    [
+     "fx",
+     "tracks:grumpy-pip"
+    ]
+   ],
+   "text": "CLUE!"
+  },
+  {
+   "who": "bolt",
+   "say": "Tiny wheel tracks. Too small for a bus. Too small for a truck. Too small for a sports car.",
+   "cam": "overhead"
+  },
+  {
+   "who": "bolt",
+   "say": "So who has wheels... this small?",
+   "cam": "close:bolt",
+   "do": [
+    [
+     "grumpy",
+     "to_home"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Everyone slowly turned around.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "look:pip"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "And there, in the corner, sat little Pip.",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "I... I didn't steal it. I just... borrowed it.",
+   "cam": "close:pip"
+  },
+  {
+   "who": "narr",
+   "say": "Pip rolled forward, and the Golden Wheel was shining right under her.",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pipwheel",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Pip! Why would you do that?",
+   "cam": "wide"
+  },
+  {
+   "who": "pip",
+   "say": "Because everyone always says I'm too small. Too small to race. Too small to win.",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "I just wanted to feel big. For one day.",
+   "cam": "close:pip"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone waited for the Truth Press. But Inspector Bolt did something else.",
+   "cam": "wide",
+   "do": [
+    [
+     "bolt",
+     "to:pip"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Pip. Big is not a size. Big is what you do.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "You told the truth. That was the biggest thing anyone did tonight.",
+   "cam": "close:pip",
+   "do": [
+    [
+     "bolt",
+     "hat_give:pip"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Give the wheel back. And next race... you drive with us.",
+   "cam": "close:pip"
+  },
+  {
+   "who": "pip",
+   "say": "Really? I can race?!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ],
+    [
+     "pipwheel",
+     "vanish"
+    ],
+    [
+     "wheel",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Hmph. Fine. I'll even let you go first.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "turbo",
+   "say": "Just don't touch my banana.",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "narr",
+   "say": "And everyone laughed. Even Grumpy.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "sfx": "alarm",
+   "cam": "podium",
+   "do": [
+    [
+     "wheel",
+     "vanish"
+    ]
+   ],
+   "hold": 1.6,
+   "text": "WAIT... WHO TOOK IT THIS TIME?"
+  },
+  {
+   "who": "bolt",
+   "say": "Oh no. Not again.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "Who do you think took it this time? Tell us in the comments! Inspector Bolt will be back.",
+   "cam": "wide",
+   "text": "WHO DID IT? COMMENT BELOW!"
+  }
+ ],
+ "set": {
+  "press": true,
+  "podium": true,
+  "time": "sunset"
+ },
+ "props": [
+  {
+   "id": "wheel",
+   "type": "wheel",
+   "color": "gold",
+   "on": "podium"
+  },
+  {
+   "id": "banana",
+   "type": "banana",
+   "color": "yellow",
+   "visible": false
+  },
+  {
+   "id": "pipwheel",
+   "type": "wheel",
+   "color": "gold",
+   "on": "pip",
+   "visible": false,
+   "scale": 0.55
+  }
+ ],
+ "description": "Someone stole the Golden Wheel! Inspector Bolt uses the Truth Press to find out who did it. A funny mystery for kids with talking cartoon cars."
+}

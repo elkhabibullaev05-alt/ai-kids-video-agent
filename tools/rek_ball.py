@@ -226,6 +226,8 @@ def ball(m, title, kind):
 
 
 def baho(path, title, kind=None):
+    if not Path(str(path)).is_file():
+        raise FileNotFoundError(f"video topilmadi: {path}")
     m = olch(path)
     if kind is None:
         kind = "short" if (m["h"] > m["w"] and m["dur"] <= 180) else "long"
