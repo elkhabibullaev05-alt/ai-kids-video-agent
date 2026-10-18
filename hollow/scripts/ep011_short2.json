@@ -1,0 +1,279 @@
+{
+ "id": "ep011_short2",
+ "format": "short",
+ "title": "Would YOU Board This Ghost Ship? #shorts",
+ "hook": "WOULD YOU GO ABOARD?",
+ "description": "February 1921, Cape Hatteras: rescuers climbed aboard the Carroll A. Deering. Lifeboats gone, logbook gone, the crew gone, food left in the galley. Would YOU go aboard? Comment YES or NO. Full true story on the channel. #shorts #ghostship #capehatteras #truestory #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "ghost ship",
+  "Carroll A. Deering",
+  "Cape Hatteras",
+  "Outer Banks",
+  "North Carolina",
+  "Diamond Shoals",
+  "Graveyard of the Atlantic",
+  "1921"
+ ],
+ "thumbnail": {
+  "bg": "sea",
+  "seed": 5,
+  "creature": "ghost",
+  "text": "WOULD YOU?"
+ },
+ "shots": [
+  {
+   "bg": "sea",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.5,
+   "focus": [
+    "odo",
+    "g1"
+   ],
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 900,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.75
+    }
+   },
+   "beats": [
+    {
+     "show": "g1",
+     "dur": 0.05
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "shake": 0.4,
+     "power": 14,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The ship is empty. The lifeboats are gone.",
+     "es": "El barco está vacío. Los botes no están.",
+     "de": "Das Schiff ist leer. Die Rettungsboote sind weg.",
+     "fr": "Le bateau est vide. Les canots ont disparu.",
+     "it": "La nave è vuota. Le scialuppe sono sparite.",
+     "pt": "O navio está vazio. Os botes sumiram.",
+     "and": true
+    },
+    {
+     "hide": "g1",
+     "dur": 0.3
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "fire",
+     "x": 900,
+     "y": 900,
+     "r": 560
+    }
+   ]
+  },
+  {
+   "bg": "sea",
+   "seed": 1,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 420
+    }
+   },
+   "creatures": {},
+   "beats": [
+    {
+     "sfx": "creak"
+    },
+    {
+     "say": "narr",
+     "en": "But food is still waiting in the galley.",
+     "es": "Pero aún hay comida esperando en la cocina.",
+     "de": "Doch in der Kombüse wartet noch Essen.",
+     "fr": "Mais des vivres attendent encore en cuisine.",
+     "it": "Ma in cambusa il cibo aspetta ancora.",
+     "pt": "Mas ainda há comida esperando na cozinha.",
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 620,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "flash": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "And the ship's wheel is smashed to pieces.",
+     "es": "Y el timón está hecho pedazos.",
+     "de": "Und das Steuerrad ist zertrümmert.",
+     "fr": "Et la barre est en morceaux.",
+     "it": "E la ruota del timone è in pezzi.",
+     "pt": "E o leme está em pedaços.",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 12,
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "sea",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 950,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.85
+    }
+   },
+   "beats": [
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "Would YOU climb aboard alone? Comment YES or NO.",
+     "es": "¿Subirías TÚ solo a bordo? Comenta SÍ o NO.",
+     "de": "Würdest DU allein an Bord gehen? Schreib JA oder NEIN.",
+     "fr": "Monterais-TU seul à bord ? Écris OUI ou NON.",
+     "it": "Saliresti TU a bordo da solo? Scrivi SÌ o NO.",
+     "pt": "VOCÊ subiria a bordo sozinho? Comente SIM ou NÃO.",
+     "and": true
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "g1",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "lunge": "g1",
+     "to": 760,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "x": 740
+   }
+  },
+  {
+   "bg": "sea",
+   "seed": 5,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.5,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 640
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "ghost",
+     "x": 900,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.75
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "walk"
+    },
+    {
+     "show": "g1",
+     "dur": 0.05
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.4,
+   "lights": [
+    {
+     "kind": "fire",
+     "x": 900,
+     "y": 900,
+     "r": 560
+    }
+   ]
+  }
+ ]
+}

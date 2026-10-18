@@ -1,0 +1,1279 @@
+{
+ "id": "ep011_long",
+ "format": "long",
+ "title": "Why Was This Ship Found With No Crew?",
+ "hook": "NO ONE WAS ABOARD",
+ "hook_dur": 4.5,
+ "description": "A true story from the Outer Banks of North Carolina, 1921. The Carroll A. Deering was a huge five-masted schooner, built in 1919 in Bath, Maine. Coming home from Brazil in January 1921, she passed the Cape Lookout lightship, and a red-haired man with a foreign accent shouted that the ship had lost her anchors. Two days later, at dawn on 31 January 1921, a Coast Guard surfman saw her stuck on Diamond Shoals off Cape Hatteras — every sail set, and no one on deck. When rescuers finally climbed aboard on 4 February, the crew, both lifeboats, the logbook, the navigation instruments and the sailors' belongings were gone, and food had been left in the galley. A note in a bottle blaming pirates was later shown to be a fake. Pirates, mutiny, rum-runners and storms have all been suggested. No one knows what happened to the crew.\n\nSources:\nhttps://www.nps.gov/caha/learn/historyculture/theghostship.htm\nhttps://www.dncr.nc.gov/blog/2016/01/31/carroll-deering-ghost-ship\nhttps://en.wikipedia.org/wiki/Carroll_A._Deering\n\n#truestory #ghostship #outerbanks #capehatteras #1921 #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "ghost ship",
+  "Carroll A. Deering",
+  "Cape Hatteras",
+  "Outer Banks",
+  "North Carolina",
+  "Diamond Shoals",
+  "Graveyard of the Atlantic",
+  "1921",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 11",
+  "Cape Lookout lightship",
+  "schooner",
+  "ghost ship mystery",
+  "true story history"
+ ],
+ "thumbnail": {
+  "bg": "sea",
+  "seed": 3,
+  "creature": "ghost",
+  "text": "NO ONE ABOARD"
+ },
+ "shots": [
+  {
+   "bg": "sea",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "lantern": 1.0,
+   "ambient": 0.38,
+   "fade": false,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.22
+    ],
+    "to": [
+     1080,
+     610,
+     1.08
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "sh": {
+     "type": "ship",
+     "x": 1450,
+     "y": 670,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.7
+    },
+    "g1": {
+     "type": "ghost",
+     "x": 1300,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.7
+    }
+   },
+   "beats": [
+    {
+     "show": "sh",
+     "dur": 0.05
+    },
+    {
+     "flash": true,
+     "dur": 0.8,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 620,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "move": "moth",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Every sail was up. Dinner was on the stove. So where was the crew?",
+     "es": "Todas las velas izadas. La cena en el fogón. ¿Y dónde estaba la tripulación?",
+     "de": "Alle Segel gesetzt. Das Essen auf dem Herd. Wo war die Mannschaft?",
+     "fr": "Toutes voiles dehors. Le dîner sur le feu. Mais où était l'équipage ?",
+     "it": "Tutte le vele issate. La cena sul fuoco. Dov'era l'equipaggio?",
+     "pt": "Todas as velas içadas. O jantar no fogão. Onde estava a tripulação?",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "sfx": "creak"
+    },
+    {
+     "say": "narr",
+     "en": "This is a true story from North Carolina, in the winter of 1921.",
+     "es": "Esta es una historia real de Carolina del Norte, del invierno de 1921.",
+     "de": "Dies ist eine wahre Geschichte aus North Carolina, Winter 1921.",
+     "fr": "Ceci est une histoire vraie de Caroline du Nord, hiver 1921.",
+     "it": "Questa è una storia vera della Carolina del Nord, inverno 1921.",
+     "pt": "Esta é uma história real da Carolina do Norte, inverno de 1921."
+    },
+    {
+     "show": "g1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... somebody waved from that ship. I saw a hand!",
+     "es": "Mothwick... alguien saludó desde ese barco. ¡Vi una mano!",
+     "de": "Mothwick... jemand hat von dem Schiff gewinkt. Ich sah eine Hand!",
+     "fr": "Mothwick... quelqu'un a fait signe du bateau. J'ai vu une main !",
+     "it": "Mothwick... qualcuno ha salutato da quella nave. Ho visto una mano!",
+     "pt": "Mothwick... alguém acenou daquele navio. Eu vi uma mão!"
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Then don't wave back, Odo. That ship has been empty for days.",
+     "es": "Entonces no devuelvas el saludo, Odo. Ese barco lleva días vacío.",
+     "de": "Dann wink nicht zurück, Odo. Das Schiff ist seit Tagen leer.",
+     "fr": "Alors ne réponds pas, Odo. Ce bateau est vide depuis des jours.",
+     "it": "Allora non rispondere, Odo. Quella nave è vuota da giorni.",
+     "pt": "Então não acene de volta, Odo. Esse navio está vazio há dias."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "sea",
+   "seed": 1,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.42,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1040,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "sh": {
+     "type": "ship",
+     "x": 1400,
+     "y": 680,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.55
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 330,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Her name was the Carroll A. Deering. Five masts, built in Maine in 1919.",
+     "es": "Se llamaba Carroll A. Deering. Cinco mástiles, construido en Maine en 1919.",
+     "de": "Sie hieß Carroll A. Deering. Fünf Masten, 1919 in Maine gebaut.",
+     "fr": "Il s'appelait le Carroll A. Deering. Cinq mâts, construit dans le Maine en 1919.",
+     "it": "Si chiamava Carroll A. Deering. Cinque alberi, costruita nel Maine nel 1919.",
+     "pt": "Chamava-se Carroll A. Deering. Cinco mastros, construído no Maine em 1919."
+    },
+    {
+     "show": "sh",
+     "dur": 0.6,
+     "and": true
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "move": "sh",
+     "to": 1250,
+     "speed": "walk"
+    },
+    {
+     "say": "narr",
+     "en": "One of the last great wooden sailing ships of America.",
+     "es": "Uno de los últimos grandes veleros de madera de América.",
+     "de": "Eines der letzten großen hölzernen Segelschiffe Amerikas.",
+     "fr": "L'un des derniers grands voiliers en bois d'Amérique.",
+     "it": "Uno degli ultimi grandi velieri di legno d'America.",
+     "pt": "Um dos últimos grandes veleiros de madeira da América.",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "In 1920 she carried coal from Virginia all the way to Rio de Janeiro.",
+     "es": "En 1920 llevó carbón desde Virginia hasta Río de Janeiro.",
+     "de": "1920 brachte sie Kohle von Virginia bis nach Rio de Janeiro.",
+     "fr": "En 1920, il porta du charbon de Virginie jusqu'à Rio de Janeiro.",
+     "it": "Nel 1920 portò carbone dalla Virginia fino a Rio de Janeiro.",
+     "pt": "Em 1920 levou carvão da Virgínia até o Rio de Janeiro.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Her captain fell ill, so a new captain took her: Willis Wormell.",
+     "es": "Su capitán enfermó, así que la tomó otro: Willis Wormell.",
+     "de": "Ihr Kapitän wurde krank, ein neuer übernahm: Willis Wormell.",
+     "fr": "Son capitaine tomba malade ; un autre le remplaça : Willis Wormell.",
+     "it": "Il capitano si ammalò, e ne prese il posto un altro: Willis Wormell.",
+     "pt": "O capitão adoeceu, e outro assumiu: Willis Wormell.",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "So they made it to Brazil? Then what went wrong?",
+     "es": "¿Entonces llegaron a Brasil? ¿Y qué salió mal?",
+     "de": "Sie kamen also bis Brasilien? Was ging dann schief?",
+     "fr": "Ils sont arrivés au Brésil ? Alors, qu'est-ce qui a mal tourné ?",
+     "it": "Quindi arrivarono in Brasile? Cosa andò storto?",
+     "pt": "Então chegaram ao Brasil? O que deu errado?"
+    },
+    {
+     "move": "sh",
+     "to": 1450,
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Nothing, yet. The trouble began on the way home.",
+     "es": "Nada, todavía. El problema empezó en el viaje de vuelta.",
+     "de": "Noch nichts. Der Ärger begann auf dem Heimweg.",
+     "fr": "Rien, encore. Les ennuis ont commencé au retour.",
+     "it": "Niente, ancora. I guai iniziarono sulla via del ritorno.",
+     "pt": "Nada, ainda. O problema começou na volta."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "lighthouse",
+   "seed": 2,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 600,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     600,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": -150
+    },
+    "moth": {
+     "x": -60,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "jac": {
+     "type": "figure",
+     "x": 1200,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.95
+    },
+    "red": {
+     "type": "figure",
+     "x": 1480,
+     "seed": 1,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "sh": {
+     "type": "ship",
+     "x": 1500,
+     "y": 690,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.45
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 720,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Late in January 1921, she sailed past the Cape Lookout lightship.",
+     "es": "A finales de enero de 1921, pasó junto al buque faro de Cape Lookout.",
+     "de": "Ende Januar 1921 segelte sie am Feuerschiff von Cape Lookout vorbei.",
+     "fr": "Fin janvier 1921, il passa près du bateau-phare de Cape Lookout.",
+     "it": "A fine gennaio 1921 passò accanto alla nave faro di Cape Lookout.",
+     "pt": "No fim de janeiro de 1921, passou pelo navio-farol de Cape Lookout.",
+     "and": true
+    },
+    {
+     "show": "sh",
+     "dur": 0.4
+    },
+    {
+     "show": "jac",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "A man on deck shouted through a megaphone. He had red hair.",
+     "es": "Un hombre en cubierta gritó por un megáfono. Tenía el pelo rojo.",
+     "de": "Ein Mann an Deck rief durch ein Sprachrohr. Er hatte rote Haare.",
+     "fr": "Un homme sur le pont cria dans un porte-voix. Il était roux.",
+     "it": "Un uomo sul ponte gridò con un megafono. Aveva i capelli rossi.",
+     "pt": "Um homem no convés gritou por um megafone. Tinha cabelo ruivo.",
+     "and": true
+    },
+    {
+     "show": "red",
+     "dur": 0.3
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "move": "red",
+     "to": 1400,
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "red",
+     "en": "We lost our anchors in a storm! Tell our owners!",
+     "es": "¡Perdimos las anclas en una tormenta! ¡Avisen a los dueños!",
+     "de": "Wir haben im Sturm die Anker verloren! Sagt es den Eignern!",
+     "fr": "On a perdu nos ancres dans la tempête ! Prévenez les armateurs !",
+     "it": "Abbiamo perso le ancore in una tempesta! Avvisate gli armatori!",
+     "pt": "Perdemos as âncoras numa tempestade! Avisem os donos!"
+    },
+    {
+     "shake": 0.6,
+     "power": 12,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The keeper said the man did not look or act like an officer.",
+     "es": "El guardián dijo que aquel hombre no parecía ni actuaba como un oficial.",
+     "de": "Der Wärter sagte, der Mann sah nicht aus wie ein Offizier.",
+     "fr": "Le gardien dit que l'homme n'avait rien d'un officier.",
+     "it": "Il guardiano disse che quell'uomo non sembrava affatto un ufficiale.",
+     "pt": "O guarda disse que o homem não parecia nem agia como oficial."
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "And the captain was nowhere to be seen.",
+     "es": "Y al capitán no se le veía por ninguna parte.",
+     "de": "Und vom Kapitän keine Spur.",
+     "fr": "Et le capitaine était introuvable.",
+     "it": "E del capitano nessuna traccia.",
+     "pt": "E do capitão, nem sinal."
+    },
+    {
+     "hide": "red",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "say": "odo",
+     "en": "Why didn't the keeper call for help on the radio?",
+     "es": "¿Por qué el guardián no pidió ayuda por radio?",
+     "de": "Warum hat der Wärter nicht per Funk Hilfe gerufen?",
+     "fr": "Pourquoi le gardien n'a pas appelé à l'aide par radio ?",
+     "it": "Perché il guardiano non chiamò aiuto via radio?",
+     "pt": "Por que o guarda não pediu ajuda pelo rádio?"
+    },
+    {
+     "hide": "jac",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "His radio was broken. Nobody heard the message.",
+     "es": "Su radio estaba rota. Nadie oyó el mensaje.",
+     "de": "Sein Funkgerät war kaputt. Niemand hörte die Nachricht.",
+     "fr": "Sa radio était cassée. Personne n'a reçu le message.",
+     "it": "La sua radio era rotta. Nessuno sentì il messaggio.",
+     "pt": "O rádio dele estava quebrado. Ninguém ouviu a mensagem."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    },
+    {
+     "hide": "sh",
+     "dur": 0.4,
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "sea",
+   "seed": 4,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.44,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "sh": {
+     "type": "ship",
+     "x": 1420,
+     "y": 680,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.7
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1300,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Two days later, at dawn on the 31st of January, a surfman looked out.",
+     "es": "Dos días después, al amanecer del 31 de enero, un vigía miró al mar.",
+     "de": "Zwei Tage später, im Morgengrauen des 31. Januar, blickte ein Wachmann hinaus.",
+     "fr": "Deux jours plus tard, à l'aube du 31 janvier, un sauveteur regarda la mer.",
+     "it": "Due giorni dopo, all'alba del 31 gennaio, una vedetta guardò il mare.",
+     "pt": "Dois dias depois, ao amanhecer de 31 de janeiro, um vigia olhou o mar."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "show": "sh",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The Deering was stuck fast on Diamond Shoals, off Cape Hatteras.",
+     "es": "El Deering estaba encallado en los bajíos de Diamond Shoals, frente a Cabo Hatteras.",
+     "de": "Die Deering saß fest auf den Diamond Shoals vor Cape Hatteras.",
+     "fr": "Le Deering était échoué sur les hauts-fonds de Diamond Shoals, au large du cap Hatteras.",
+     "it": "La Deering era incagliata sulle secche di Diamond Shoals, al largo di Capo Hatteras.",
+     "pt": "O Deering estava encalhado nos baixios de Diamond Shoals, perto do Cabo Hatteras.",
+     "and": true
+    },
+    {
+     "shake": 0.7,
+     "power": 14,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Sailors call these waters the Graveyard of the Atlantic.",
+     "es": "Los marinos llaman a estas aguas el Cementerio del Atlántico.",
+     "de": "Seeleute nennen diese Gewässer den Friedhof des Atlantiks.",
+     "fr": "Les marins appellent ces eaux le Cimetière de l'Atlantique.",
+     "it": "I marinai chiamano queste acque il Cimitero dell'Atlantico.",
+     "pt": "Os marinheiros chamam estas águas de Cemitério do Atlântico.",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Her sails were all set. Waves broke over her deck. No one was in sight.",
+     "es": "Velas izadas. Olas sobre la cubierta. Nadie a la vista.",
+     "de": "Alle Segel gesetzt. Wellen über Deck. Niemand zu sehen.",
+     "fr": "Toutes voiles dehors. Des vagues sur le pont. Personne en vue.",
+     "it": "Vele tutte issate. Onde sul ponte. Nessuno in vista.",
+     "pt": "Velas içadas. Ondas no convés. Ninguém à vista."
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The sea was so rough that no boat could reach her for four days.",
+     "es": "El mar estaba tan bravo que ningún bote llegó en cuatro días.",
+     "de": "Die See war so rau, dass vier Tage kein Boot hinkam.",
+     "fr": "La mer était si forte qu'aucun bateau ne l'atteignit pendant quatre jours.",
+     "it": "Il mare era così mosso che nessuna barca la raggiunse per quattro giorni.",
+     "pt": "O mar estava tão bravo que nenhum barco chegou lá por quatro dias."
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "Four days? Someone could still be hiding on board!",
+     "es": "¿Cuatro días? ¡Alguien podría seguir escondido a bordo!",
+     "de": "Vier Tage? Da könnte sich noch jemand an Bord verstecken!",
+     "fr": "Quatre jours ? Quelqu'un pourrait encore se cacher à bord !",
+     "it": "Quattro giorni? Qualcuno potrebbe ancora nascondersi a bordo!",
+     "pt": "Quatro dias? Alguém ainda podia estar escondido a bordo!"
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "say": "moth",
+     "en": "That's what the rescuers hoped too, Odo.",
+     "es": "Eso esperaban también los rescatadores, Odo.",
+     "de": "Das hofften die Retter auch, Odo.",
+     "fr": "C'est ce qu'espéraient aussi les sauveteurs, Odo.",
+     "it": "È quello che speravano anche i soccorritori, Odo.",
+     "pt": "Era o que os resgatadores esperavam também, Odo."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "sea",
+   "seed": 5,
+   "music": "choir",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "fire",
+     "x": 1250,
+     "y": 900,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "cap": {
+     "type": "figure",
+     "x": 1450,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "g1": {
+     "type": "ghost",
+     "x": 1300,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.8
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "On the 4th of February, a salvage captain finally climbed aboard.",
+     "es": "El 4 de febrero, un capitán de rescate subió por fin a bordo.",
+     "de": "Am 4. Februar kletterte endlich ein Bergungskapitän an Bord.",
+     "fr": "Le 4 février, un capitaine de sauvetage monta enfin à bord.",
+     "it": "Il 4 febbraio, un capitano di recupero salì finalmente a bordo.",
+     "pt": "Em 4 de fevereiro, um capitão de resgate enfim subiu a bordo."
+    },
+    {
+     "show": "cap",
+     "dur": 0.6,
+     "and": true
+    },
+    {
+     "sfx": "step",
+     "wait": 0.3
+    },
+    {
+     "move": "cap",
+     "to": 1350,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Both lifeboats were gone. So was the logbook.",
+     "es": "Los dos botes salvavidas no estaban. Ni el cuaderno de bitácora.",
+     "de": "Beide Rettungsboote waren weg. Auch das Logbuch.",
+     "fr": "Les deux canots avaient disparu. Le journal de bord aussi.",
+     "it": "Entrambe le scialuppe erano sparite. Anche il giornale di bordo.",
+     "pt": "Os dois botes salva-vidas tinham sumido. O diário de bordo também.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "The navigation tools, the sailors' clothes and bags: all gone.",
+     "es": "Los instrumentos, la ropa y las bolsas de los marinos: todo había desaparecido.",
+     "de": "Navigationsgeräte, Kleidung, Seesäcke der Matrosen: alles weg.",
+     "fr": "Instruments de navigation, vêtements, sacs des marins : tout avait disparu.",
+     "it": "Strumenti di navigazione, vestiti e sacche dei marinai: tutto sparito.",
+     "pt": "Instrumentos, roupas e sacolas dos marinheiros: tudo sumido.",
+     "and": true
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "shake": 0.4,
+     "power": 8
+    },
+    {
+     "say": "narr",
+     "en": "The wheel was smashed. The rudder had come loose.",
+     "es": "El timón estaba destrozado. La pala del timón, suelta.",
+     "de": "Das Steuerrad war zertrümmert. Das Ruder hatte sich gelöst.",
+     "fr": "La barre était brisée. Le gouvernail s'était détaché.",
+     "it": "La ruota del timone era distrutta. Il timone si era staccato.",
+     "pt": "O leme estava destruído. A porta do leme, solta.",
+     "and": true
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "narr",
+     "en": "But in the galley, food had been left out, as if for the next meal.",
+     "es": "Pero en la cocina había comida preparada, como para la próxima comida.",
+     "de": "Doch in der Kombüse lag Essen bereit, wie für die nächste Mahlzeit.",
+     "fr": "Mais dans la cuisine, des vivres attendaient, comme pour le prochain repas.",
+     "it": "Ma in cambusa c'era cibo pronto, come per il pasto seguente.",
+     "pt": "Mas na cozinha havia comida separada, como para a próxima refeição."
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "hide": "cap",
+     "dur": 0.5
+    },
+    {
+     "light": "dim",
+     "and": true
+    },
+    {
+     "show": "g1",
+     "dur": 0.4
+    },
+    {
+     "act": "odo",
+     "do": "hide"
+    },
+    {
+     "say": "odo",
+     "en": "Then who is sitting at that table in the dark?",
+     "es": "¿Entonces quién está sentado a esa mesa en la oscuridad?",
+     "de": "Wer sitzt dann im Dunkeln an diesem Tisch?",
+     "fr": "Alors qui est assis à cette table dans le noir ?",
+     "it": "Allora chi è seduto a quel tavolo nel buio?",
+     "pt": "Então quem está sentado naquela mesa no escuro?"
+    },
+    {
+     "growl": "g1",
+     "and": true
+    },
+    {
+     "lunge": "g1",
+     "to": 1100
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2
+    },
+    {
+     "light": "on",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "unhide"
+    },
+    {
+     "say": "moth",
+     "en": "No one, Odo. Just the wind... and an empty chair.",
+     "es": "Nadie, Odo. Solo el viento... y una silla vacía.",
+     "de": "Niemand, Odo. Nur der Wind... und ein leerer Stuhl.",
+     "fr": "Personne, Odo. Juste le vent... et une chaise vide.",
+     "it": "Nessuno, Odo. Solo il vento... e una sedia vuota.",
+     "pt": "Ninguém, Odo. Só o vento... e uma cadeira vazia."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "lighthouse",
+   "seed": 3,
+   "music": "drone",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "fis": {
+     "type": "figure",
+     "x": 1400,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.95
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    },
+    "sh": {
+     "type": "ship",
+     "x": 1500,
+     "y": 690,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.45
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "In April, a local man said he found a bottle on the beach.",
+     "es": "En abril, un hombre del lugar dijo haber hallado una botella en la playa.",
+     "de": "Im April sagte ein Mann, er habe am Strand eine Flasche gefunden.",
+     "fr": "En avril, un homme du coin dit avoir trouvé une bouteille sur la plage.",
+     "it": "Ad aprile, un uomo del posto disse di aver trovato una bottiglia sulla spiaggia.",
+     "pt": "Em abril, um morador disse ter achado uma garrafa na praia."
+    },
+    {
+     "show": "fis",
+     "dur": 0.5,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Inside, a note: the Deering had been captured by pirates.",
+     "es": "Dentro, una nota: piratas habían capturado el Deering.",
+     "de": "Darin ein Zettel: Piraten hätten die Deering gekapert.",
+     "fr": "Dedans, un mot : des pirates avaient capturé le Deering.",
+     "it": "Dentro, un biglietto: dei pirati avevano catturato la Deering.",
+     "pt": "Dentro, um bilhete: piratas tinham capturado o Deering.",
+     "and": true
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "show": "c1",
+     "dur": 0.2
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Months later, the note was shown to be a fake.",
+     "es": "Meses después, se demostró que la nota era falsa.",
+     "de": "Monate später stellte sich der Zettel als Fälschung heraus.",
+     "fr": "Des mois plus tard, le mot se révéla être un faux.",
+     "it": "Mesi dopo, si scoprì che il biglietto era falso.",
+     "pt": "Meses depois, provaram que o bilhete era falso."
+    },
+    {
+     "hide": "fis",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "U.S. government agents came to investigate. They found no answer.",
+     "es": "Agentes del gobierno de EE. UU. investigaron. No hallaron respuesta.",
+     "de": "US-Regierungsagenten ermittelten. Sie fanden keine Antwort.",
+     "fr": "Des agents du gouvernement américain enquêtèrent. Sans réponse.",
+     "it": "Agenti del governo USA indagarono. Non trovarono risposte.",
+     "pt": "Agentes do governo dos EUA investigaram. Não acharam resposta.",
+     "and": true
+    },
+    {
+     "show": "sh",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Pirates? Mutiny? Rum smugglers? A storm? Every idea has holes.",
+     "es": "¿Piratas? ¿Motín? ¿Contrabandistas de ron? ¿Una tormenta? Ninguna idea encaja.",
+     "de": "Piraten? Meuterei? Rumschmuggler? Ein Sturm? Jede Idee hat Lücken.",
+     "fr": "Des pirates ? Une mutinerie ? Des contrebandiers ? Une tempête ? Rien ne colle.",
+     "it": "Pirati? Ammutinamento? Contrabbandieri di rum? Una tempesta? Ogni idea ha buchi.",
+     "pt": "Piratas? Motim? Contrabandistas de rum? Uma tempestade? Nada fecha."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "calm"
+    },
+    {
+     "say": "narr",
+     "en": "In March 1921, the wreck was blown apart with dynamite.",
+     "es": "En marzo de 1921, volaron el casco con dinamita.",
+     "de": "Im März 1921 wurde das Wrack mit Dynamit gesprengt.",
+     "fr": "En mars 1921, l'épave fut détruite à la dynamite.",
+     "it": "Nel marzo 1921 il relitto fu fatto saltare con la dinamite.",
+     "pt": "Em março de 1921, o casco foi explodido com dinamite."
+    },
+    {
+     "flash": true,
+     "dur": 1.2
+    },
+    {
+     "hide": "sh",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "shake": 0.8,
+     "power": 18,
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "So nothing is left? No ship, no crew, no answer?",
+     "es": "¿Entonces no queda nada? ¿Ni barco, ni tripulación, ni respuesta?",
+     "de": "Also ist nichts mehr übrig? Kein Schiff, keine Mannschaft, keine Antwort?",
+     "fr": "Il ne reste rien ? Ni bateau, ni équipage, ni réponse ?",
+     "it": "Quindi non resta niente? Né nave, né equipaggio, né risposta?",
+     "pt": "Então não sobrou nada? Nem navio, nem tripulação, nem resposta?"
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "moth",
+     "en": "One thing is left, Odo. Her bell. It sits in a museum on Hatteras.",
+     "es": "Queda una cosa, Odo. Su campana. Está en un museo de Hatteras.",
+     "de": "Eines blieb, Odo. Ihre Glocke. Sie steht in einem Museum auf Hatteras.",
+     "fr": "Il reste une chose, Odo. Sa cloche. Elle est dans un musée à Hatteras.",
+     "it": "Resta una cosa, Odo. La sua campana. È in un museo a Hatteras.",
+     "pt": "Restou uma coisa, Odo. O sino dele. Está num museu em Hatteras."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "sea",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "sh": {
+     "type": "ship",
+     "x": 1450,
+     "y": 670,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.7
+    },
+    "red": {
+     "type": "figure",
+     "x": 1450,
+     "seed": 1,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.05
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The crew of the Carroll A. Deering was never found.",
+     "es": "La tripulación del Carroll A. Deering nunca apareció.",
+     "de": "Die Mannschaft der Carroll A. Deering wurde nie gefunden.",
+     "fr": "L'équipage du Carroll A. Deering ne fut jamais retrouvé.",
+     "it": "L'equipaggio della Carroll A. Deering non fu mai ritrovato.",
+     "pt": "A tripulação do Carroll A. Deering nunca foi encontrada."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Not one of them. And no one knows who the red-haired man was.",
+     "es": "Ni uno solo. Y nadie sabe quién era el hombre pelirrojo.",
+     "de": "Kein Einziger. Und niemand weiß, wer der rothaarige Mann war.",
+     "fr": "Pas un seul. Et personne ne sait qui était l'homme roux.",
+     "it": "Nemmeno uno. E nessuno sa chi fosse l'uomo dai capelli rossi.",
+     "pt": "Nem um só. E ninguém sabe quem era o homem ruivo."
+    },
+    {
+     "show": "sh",
+     "dur": 0.3
+    },
+    {
+     "sfx": "bell",
+     "wait": 0.3
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... do you hear a bell? Out there, on the water...",
+     "es": "Mothwick... ¿oyes una campana? Ahí fuera, en el agua...",
+     "de": "Mothwick... hörst du eine Glocke? Da draußen, auf dem Wasser...",
+     "fr": "Mothwick... tu entends une cloche ? Là-bas, sur l'eau...",
+     "it": "Mothwick... senti una campana? Là fuori, sull'acqua...",
+     "pt": "Mothwick... está ouvindo um sino? Lá fora, na água..."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "wait": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "moth",
+     "en": "That bell is in a museum, Odo... so who is ringing it?",
+     "es": "Esa campana está en un museo, Odo... ¿entonces quién la toca?",
+     "de": "Die Glocke steht im Museum, Odo... wer läutet sie dann?",
+     "fr": "Cette cloche est dans un musée, Odo... alors qui la sonne ?",
+     "it": "Quella campana è in un museo, Odo... allora chi la suona?",
+     "pt": "Esse sino está num museu, Odo... então quem está tocando?"
+    },
+    {
+     "sfx": "step",
+     "wait": 0.4
+    },
+    {
+     "show": "red",
+     "dur": 0.3
+    },
+    {
+     "say": "red",
+     "en": "We lost our anchors! Tell our owners!",
+     "es": "¡Perdimos las anclas! ¡Avisen a los dueños!",
+     "de": "Wir haben die Anker verloren! Sagt es den Eignern!",
+     "fr": "On a perdu nos ancres ! Prévenez les armateurs !",
+     "it": "Abbiamo perso le ancore! Avvisate gli armatori!",
+     "pt": "Perdemos as âncoras! Avisem os donos!",
+     "and": true
+    },
+    {
+     "growl": "red"
+    },
+    {
+     "lunge": "red",
+     "to": 1150
+    },
+    {
+     "light": "out",
+     "and": true
+    },
+    {
+     "card": "WHO WAS ON DECK?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}
