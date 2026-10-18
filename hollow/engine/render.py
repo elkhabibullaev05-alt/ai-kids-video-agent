@@ -678,6 +678,8 @@ def thumbnail(script, path):
         b, e = fn(1400, 700, t, 4.0, -1, 0)
     elif cr == "wickeater":
         b, e = fn(1400, 960, t, 3.4, -1, 1.0)
+    elif cr == "figure":   # a solid historical figure; "cseed" picks hat / green child (10-12)
+        b, e = fn(1300, 1000, t, 1.9, -1, 0.0, th.get("cseed", 0))
     else:
         b, e = fn(1300, 1000, t, 1.9, -1, 1.0, 1.0)
     body.append(b); em.append(e)

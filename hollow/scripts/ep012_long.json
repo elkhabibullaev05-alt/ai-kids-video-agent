@@ -1,0 +1,1325 @@
+{
+ "id": "ep012_long",
+ "format": "long",
+ "title": "Where Did the Green Children Come From?",
+ "hook": "THEY CAME FROM BELOW",
+ "hook_dur": 4.5,
+ "description": "A medieval mystery from England, written down by two chroniclers in the 1100s. At harvest time, in the Suffolk village of Woolpit, reapers found two children - a brother and a sister - beside one of the old wolf pits that gave the village its name. Their skin was green. Their clothes were strange, and no one could understand a word they said. They were taken to the house of Sir Richard de Calne, where they refused all food for days - until they saw raw broad beans. Slowly they learned to eat bread, and the green faded from their skin. The boy grew weak and did not live long, but the girl learned English and said they came from a land of twilight, where the sun never shone: St Martin's Land. They had been herding their father's animals, heard a sound like ringing bells, and came out by the pit. William of Newburgh and Ralph of Coggeshall both recorded the story. Were they lost Flemish children, sick from hunger? Or did they come from somewhere else? No one knows.\n\nSources:\nhttps://en.wikipedia.org/wiki/Green_children_of_Woolpit\nhttps://woolpitparishcouncil.gov.uk/information-2/a-short-history\nhttps://www.historic-uk.com/CultureUK/The-Green-Children-of-Woolpit/\n\n#truestory #woolpit #greenchildren #folklore #medieval #horror #animation #hollowmere",
+ "tags": [
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "green children of Woolpit",
+  "Woolpit",
+  "Suffolk",
+  "English folklore",
+  "medieval mystery",
+  "St Martin's Land",
+  "12th century",
+  "horror animation",
+  "scary stories",
+  "hollowmere",
+  "episode 12",
+  "William of Newburgh",
+  "Ralph of Coggeshall",
+  "wolf pit",
+  "true story history"
+ ],
+ "thumbnail": {
+  "bg": "village",
+  "seed": 2,
+  "creature": "figure",
+  "cseed": 11,
+  "text": "GREEN CHILDREN"
+ },
+ "shots": [
+  {
+   "bg": "forest",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 2,
+   "lantern": 1.0,
+   "ambient": 0.4,
+   "fade": false,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     920,
+     600,
+     1.22
+    ],
+    "to": [
+     1080,
+     620,
+     1.08
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 380
+    },
+    "moth": {
+     "x": 520,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "boy": {
+     "type": "figure",
+     "x": 1330,
+     "seed": 10,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.62
+    },
+    "girl": {
+     "type": "figure",
+     "x": 1470,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    }
+   },
+   "beats": [
+    {
+     "show": "boy",
+     "dur": 0.05
+    },
+    {
+     "show": "girl",
+     "dur": 0.05,
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 0.8,
+     "and": true
+    },
+    {
+     "move": "odo",
+     "to": 620,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "move": "moth",
+     "to": 760,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Two children climbed out of a pit. And their skin was green.",
+     "es": "Dos niños salieron de un foso. Y su piel era verde.",
+     "de": "Zwei Kinder kletterten aus einer Grube. Und ihre Haut war grün.",
+     "fr": "Deux enfants sortirent d'une fosse. Et leur peau était verte.",
+     "it": "Due bambini uscirono da una fossa. E la loro pelle era verde.",
+     "pt": "Duas crianças saíram de um poço. E a pele delas era verde.",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "sfx": "whisper"
+    },
+    {
+     "say": "narr",
+     "en": "This is a legend written down in England more than 800 years ago.",
+     "es": "Es una leyenda escrita en Inglaterra hace más de 800 años.",
+     "de": "Dies ist eine Legende, vor über 800 Jahren in England aufgeschrieben.",
+     "fr": "C'est une légende écrite en Angleterre il y a plus de 800 ans.",
+     "it": "È una leggenda scritta in Inghilterra più di 800 anni fa.",
+     "pt": "É uma lenda escrita na Inglaterra há mais de 800 anos."
+    },
+    {
+     "move": "boy",
+     "to": 1250,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... those children are looking at us. Their faces are green!",
+     "es": "Mothwick... esos niños nos miran. ¡Sus caras son verdes!",
+     "de": "Mothwick... die Kinder sehen uns an. Ihre Gesichter sind grün!",
+     "fr": "Mothwick... ces enfants nous regardent. Leurs visages sont verts !",
+     "it": "Mothwick... quei bambini ci guardano. Hanno la faccia verde!",
+     "pt": "Mothwick... aquelas crianças estão nos olhando. Os rostos são verdes!"
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "hide": "boy",
+     "dur": 0.3
+    },
+    {
+     "hide": "girl",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Then listen for the bells, Odo. That's how they came.",
+     "es": "Entonces escucha las campanas, Odo. Así llegaron ellos.",
+     "de": "Dann hör auf die Glocken, Odo. So sind sie gekommen.",
+     "fr": "Alors écoute les cloches, Odo. C'est ainsi qu'ils sont venus.",
+     "it": "Allora ascolta le campane, Odo. È così che sono arrivati.",
+     "pt": "Então escute os sinos, Odo. Foi assim que eles vieram."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.2
+  },
+  {
+   "bg": "village",
+   "seed": 2,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.44,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     880,
+     600,
+     1.12
+    ],
+    "to": [
+     1040,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 330,
+     "state": "hidden",
+     "fly": 1
+    },
+    "h1": {
+     "type": "gloamhound",
+     "x": 1500,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The village is called Woolpit, in Suffolk, in the east of England.",
+     "es": "El pueblo se llama Woolpit, en Suffolk, al este de Inglaterra.",
+     "de": "Das Dorf heißt Woolpit, in Suffolk, im Osten Englands.",
+     "fr": "Le village s'appelle Woolpit, dans le Suffolk, à l'est de l'Angleterre.",
+     "it": "Il villaggio si chiama Woolpit, nel Suffolk, nell'est dell'Inghilterra.",
+     "pt": "A vila se chama Woolpit, em Suffolk, no leste da Inglaterra."
+    },
+    {
+     "show": "c1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Its name comes from the old wolf pits: deep holes dug to trap wolves.",
+     "es": "Su nombre viene de los fosos para lobos: hoyos hondos para atraparlos.",
+     "de": "Der Name kommt von alten Wolfsgruben: tiefe Löcher, um Wölfe zu fangen.",
+     "fr": "Son nom vient des fosses à loups : des trous profonds pour piéger les loups.",
+     "it": "Il nome viene dalle fosse per lupi: buche profonde per catturarli.",
+     "pt": "O nome vem dos fossos de lobos: buracos fundos para prender lobos.",
+     "and": true
+    },
+    {
+     "show": "h1",
+     "dur": 0.3
+    },
+    {
+     "growl": "h1",
+     "and": true
+    },
+    {
+     "hide": "h1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Two monks wrote the story down: William of Newburgh and Ralph of Coggeshall.",
+     "es": "Dos monjes la escribieron: Guillermo de Newburgh y Ralph de Coggeshall.",
+     "de": "Zwei Mönche schrieben sie auf: William of Newburgh und Ralph of Coggeshall.",
+     "fr": "Deux moines l'ont écrite : Guillaume de Newburgh et Raoul de Coggeshall.",
+     "it": "Due monaci la scrissero: Guglielmo di Newburgh e Ralph di Coggeshall.",
+     "pt": "Dois monges a escreveram: William de Newburgh e Ralph de Coggeshall.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "William says it happened when King Stephen ruled, between 1135 and 1154.",
+     "es": "Guillermo dice que pasó bajo el rey Esteban, entre 1135 y 1154.",
+     "de": "William sagt, es geschah unter König Stephan, zwischen 1135 und 1154.",
+     "fr": "Guillaume dit que c'était sous le roi Étienne, entre 1135 et 1154.",
+     "it": "Guglielmo dice che accadde sotto re Stefano, tra il 1135 e il 1154.",
+     "pt": "William diz que foi no reinado de Estêvão, entre 1135 e 1154.",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "Wolf pits? I'm not walking anywhere near a wolf pit.",
+     "es": "¿Fosos de lobos? No pienso acercarme a un foso de lobos.",
+     "de": "Wolfsgruben? Ich gehe nicht in die Nähe einer Wolfsgrube.",
+     "fr": "Des fosses à loups ? Je n'approche pas d'une fosse à loups.",
+     "it": "Fosse per lupi? Non mi avvicino a una fossa per lupi.",
+     "pt": "Fossos de lobos? Eu não chego perto de um fosso de lobos."
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Too late, Odo. You're standing on the edge of one.",
+     "es": "Demasiado tarde, Odo. Estás al borde de uno.",
+     "de": "Zu spät, Odo. Du stehst am Rand von einer.",
+     "fr": "Trop tard, Odo. Tu es au bord de l'une d'elles.",
+     "it": "Troppo tardi, Odo. Sei sul bordo di una.",
+     "pt": "Tarde demais, Odo. Você está na beira de um."
+    },
+    {
+     "act": "odo",
+     "do": "jump"
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "clearing",
+   "seed": 3,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.46,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.1
+    ],
+    "to": [
+     1080,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": -150
+    },
+    "moth": {
+     "x": -60,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "reap": {
+     "type": "figure",
+     "x": 1150,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.95
+    },
+    "boy": {
+     "type": "figure",
+     "x": 1380,
+     "seed": 10,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.62
+    },
+    "girl": {
+     "type": "figure",
+     "x": 1520,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "creep"
+    },
+    {
+     "move": "moth",
+     "to": 720,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "One summer, at harvest time, the reapers were working in the fields.",
+     "es": "Un verano, en tiempo de cosecha, los segadores trabajaban en el campo.",
+     "de": "In einem Sommer, zur Erntezeit, arbeiteten die Schnitter auf den Feldern.",
+     "fr": "Un été, à la moisson, les moissonneurs travaillaient aux champs.",
+     "it": "Un'estate, al tempo del raccolto, i mietitori lavoravano nei campi.",
+     "pt": "Num verão, na colheita, os ceifeiros trabalhavam nos campos.",
+     "and": true
+    },
+    {
+     "show": "reap",
+     "dur": 0.4
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "show": "boy",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "show": "girl",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Beside one of the wolf pits stood two children. A boy and his sister.",
+     "es": "Junto a un foso de lobos había dos niños. Un niño y su hermana.",
+     "de": "Neben einer Wolfsgrube standen zwei Kinder. Ein Junge und seine Schwester.",
+     "fr": "Près d'une fosse à loups se tenaient deux enfants. Un garçon et sa sœur.",
+     "it": "Accanto a una fossa per lupi c'erano due bambini. Un bambino e sua sorella.",
+     "pt": "Ao lado de um fosso de lobos havia duas crianças. Um menino e a irmã.",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Their skin was green all over. Ralph wrote: green like leeks.",
+     "es": "Su piel era toda verde. Ralph escribió: verde como el puerro.",
+     "de": "Ihre Haut war ganz grün. Ralph schrieb: grün wie Lauch.",
+     "fr": "Leur peau était toute verte. Raoul écrivit : vert comme le poireau.",
+     "it": "La loro pelle era tutta verde. Ralph scrisse: verde come il porro.",
+     "pt": "A pele era toda verde. Ralph escreveu: verde como alho-poró."
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "move": "reap",
+     "to": 1050,
+     "speed": "walk",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Their clothes were made of cloth no one had ever seen.",
+     "es": "Su ropa era de una tela que nadie había visto nunca.",
+     "de": "Ihre Kleidung war aus einem Stoff, den niemand je gesehen hatte.",
+     "fr": "Leurs habits étaient d'une étoffe que personne n'avait jamais vue.",
+     "it": "I loro vestiti erano di una stoffa mai vista.",
+     "pt": "As roupas eram de um pano que ninguém jamais tinha visto."
+    },
+    {
+     "light": "flare"
+    },
+    {
+     "say": "narr",
+     "en": "And when they spoke, not one person in Woolpit understood a word.",
+     "es": "Y cuando hablaban, nadie en Woolpit entendía ni una palabra.",
+     "de": "Und wenn sie sprachen, verstand in Woolpit niemand ein Wort.",
+     "fr": "Et quand ils parlaient, personne à Woolpit ne comprenait un mot.",
+     "it": "E quando parlavano, nessuno a Woolpit capiva una parola.",
+     "pt": "E quando falavam, ninguém em Woolpit entendia uma palavra.",
+     "and": true
+    },
+    {
+     "sfx": "whisper",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "Where did they come from? There's nothing out here but fields!",
+     "es": "¿De dónde salieron? ¡Aquí solo hay campos!",
+     "de": "Woher kamen sie? Hier gibt es nur Felder!",
+     "fr": "D'où venaient-ils ? Il n'y a que des champs ici !",
+     "it": "Da dove venivano? Qui ci sono solo campi!",
+     "pt": "De onde vieram? Aqui só tem campos!"
+    },
+    {
+     "hide": "reap",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Not fields, Odo. The pit. They came up out of the ground.",
+     "es": "No los campos, Odo. El foso. Salieron de debajo de la tierra.",
+     "de": "Nicht die Felder, Odo. Die Grube. Sie kamen aus der Erde.",
+     "fr": "Pas les champs, Odo. La fosse. Ils sont sortis de sous la terre.",
+     "it": "Non i campi, Odo. La fossa. Sono usciti da sottoterra.",
+     "pt": "Não os campos, Odo. O fosso. Eles saíram de debaixo da terra."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    },
+    {
+     "hide": "boy",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "hide": "girl",
+     "dur": 0.4,
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "manor",
+   "seed": 2,
+   "music": "drone",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.42,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 1250,
+     "y": 600,
+     "r": 520
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1100,
+     610,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 650
+    }
+   },
+   "creatures": {
+    "kn": {
+     "type": "figure",
+     "x": 1180,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    },
+    "boy": {
+     "type": "figure",
+     "x": 1400,
+     "seed": 10,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.62
+    },
+    "girl": {
+     "type": "figure",
+     "x": 1530,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "The children were taken to the house of a knight, Sir Richard de Calne.",
+     "es": "Llevaron a los niños a casa de un caballero, Sir Richard de Calne.",
+     "de": "Die Kinder kamen ins Haus eines Ritters, Sir Richard de Calne.",
+     "fr": "On conduisit les enfants chez un chevalier, Sir Richard de Calne.",
+     "it": "I bambini furono portati a casa di un cavaliere, Sir Richard de Calne.",
+     "pt": "As crianças foram levadas à casa de um cavaleiro, Sir Richard de Calne."
+    },
+    {
+     "show": "kn",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "sfx": "creak",
+     "and": true
+    },
+    {
+     "show": "boy",
+     "dur": 0.3
+    },
+    {
+     "show": "girl",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "He offered them bread and meat. They would not eat. They only cried.",
+     "es": "Les ofreció pan y carne. No comían. Solo lloraban.",
+     "de": "Er bot ihnen Brot und Fleisch an. Sie aßen nicht. Sie weinten nur.",
+     "fr": "Il leur offrit pain et viande. Ils refusaient. Ils pleuraient.",
+     "it": "Offrì loro pane e carne. Non mangiavano. Piangevano soltanto.",
+     "pt": "Ofereceu pão e carne. Elas não comiam. Só choravam.",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "Days went by. Then a servant carried in fresh bean plants from the field.",
+     "es": "Pasaron días. Luego un criado trajo plantas de habas del campo.",
+     "de": "Tage vergingen. Dann trug ein Diener frische Bohnenpflanzen herein.",
+     "fr": "Des jours passèrent. Puis un serviteur apporta des plants de fèves.",
+     "it": "Passarono giorni. Poi un servo portò piante di fave dai campi.",
+     "pt": "Dias passaram. Então um criado trouxe pés de fava do campo.",
+     "and": true
+    },
+    {
+     "sfx": "step",
+     "and": true
+    },
+    {
+     "move": "boy",
+     "to": 1300,
+     "speed": "run"
+    },
+    {
+     "move": "girl",
+     "to": 1420,
+     "speed": "run",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "The children grabbed them, but they opened the stalks, not the pods.",
+     "es": "Los niños las agarraron, pero abrían los tallos, no las vainas.",
+     "de": "Die Kinder griffen danach, doch sie öffneten die Stängel, nicht die Schoten.",
+     "fr": "Les enfants s'en saisirent, mais ouvraient les tiges, pas les cosses.",
+     "it": "I bambini le afferrarono, ma aprivano gli steli, non i baccelli.",
+     "pt": "As crianças pegaram, mas abriam os talos, não as vagens.",
+     "and": true
+    },
+    {
+     "shake": 0.4,
+     "power": 8,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Someone showed them the beans inside. They ate them raw, and nothing else.",
+     "es": "Alguien les mostró las habas. Las comieron crudas, y nada más.",
+     "de": "Jemand zeigte ihnen die Bohnen. Sie aßen sie roh, und sonst nichts.",
+     "fr": "Quelqu'un leur montra les fèves. Ils les mangèrent crues, et rien d'autre.",
+     "it": "Qualcuno mostrò loro le fave. Le mangiarono crude, e nient'altro.",
+     "pt": "Alguém mostrou as favas. Comeram cruas, e mais nada."
+    },
+    {
+     "sfx": "snap",
+     "and": true
+    },
+    {
+     "act": "odo",
+     "do": "shake"
+    },
+    {
+     "say": "odo",
+     "en": "Only raw beans? For how long?",
+     "es": "¿Solo habas crudas? ¿Durante cuánto tiempo?",
+     "de": "Nur rohe Bohnen? Wie lange?",
+     "fr": "Seulement des fèves crues ? Pendant combien de temps ?",
+     "it": "Solo fave crude? Per quanto tempo?",
+     "pt": "Só favas cruas? Por quanto tempo?"
+    },
+    {
+     "hide": "kn",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "For months, Odo. Then, slowly, they learned to eat bread.",
+     "es": "Durante meses, Odo. Luego, poco a poco, aprendieron a comer pan.",
+     "de": "Monatelang, Odo. Dann lernten sie langsam, Brot zu essen.",
+     "fr": "Pendant des mois, Odo. Puis, peu à peu, ils apprirent à manger du pain.",
+     "it": "Per mesi, Odo. Poi, piano piano, impararono a mangiare il pane.",
+     "pt": "Por meses, Odo. Depois, aos poucos, aprenderam a comer pão."
+    },
+    {
+     "sfx": "sting",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "manor",
+   "seed": 4,
+   "music": "lullaby",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.4,
+   "lights": [
+    {
+     "kind": "fire",
+     "x": 1250,
+     "y": 900,
+     "r": 560
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     880,
+     620,
+     1.2
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "boy": {
+     "type": "figure",
+     "x": 1330,
+     "seed": 10,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.62
+    },
+    "girl": {
+     "type": "figure",
+     "x": 1480,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    },
+    "g1": {
+     "type": "ghost",
+     "x": 1330,
+     "state": "hidden",
+     "face": -1,
+     "scale": 0.6
+    }
+   },
+   "beats": [
+    {
+     "show": "boy",
+     "dur": 0.3
+    },
+    {
+     "show": "girl",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "As they ate bread, the green slowly faded from their skin.",
+     "es": "Al comer pan, el verde se fue borrando de su piel.",
+     "de": "Mit dem Brot verblasste das Grün langsam auf ihrer Haut.",
+     "fr": "En mangeant du pain, le vert quitta peu à peu leur peau.",
+     "it": "Mangiando pane, il verde svanì piano dalla loro pelle.",
+     "pt": "Comendo pão, o verde foi sumindo da pele deles.",
+     "and": true
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But the boy grew weaker and weaker. He did not live long.",
+     "es": "Pero el niño se debilitó cada vez más. No vivió mucho.",
+     "de": "Doch der Junge wurde immer schwächer. Er lebte nicht lange.",
+     "fr": "Mais le garçon s'affaiblit de plus en plus. Il ne vécut pas longtemps.",
+     "it": "Ma il bambino si indebolì sempre di più. Non visse a lungo.",
+     "pt": "Mas o menino foi ficando mais fraco. Não viveu muito."
+    },
+    {
+     "hide": "boy",
+     "dur": 1.2,
+     "and": true
+    },
+    {
+     "light": "dim",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "His sister lived. She learned English, and people asked her everything.",
+     "es": "Su hermana vivió. Aprendió inglés y todos le preguntaban.",
+     "de": "Seine Schwester lebte. Sie lernte Englisch, und alle fragten sie aus.",
+     "fr": "Sa sœur survécut. Elle apprit l'anglais, et on la questionna sans fin.",
+     "it": "Sua sorella visse. Imparò l'inglese, e tutti la interrogavano.",
+     "pt": "A irmã sobreviveu. Aprendeu inglês, e todos lhe perguntavam tudo."
+    },
+    {
+     "light": "on",
+     "and": true
+    },
+    {
+     "move": "girl",
+     "to": 1380,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "She said they came from a land where the sun never shone.",
+     "es": "Dijo que venían de una tierra donde nunca brillaba el sol.",
+     "de": "Sie sagte, sie kämen aus einem Land, wo nie die Sonne schien.",
+     "fr": "Elle dit qu'ils venaient d'un pays où le soleil ne brillait jamais.",
+     "it": "Disse che venivano da una terra dove il sole non splendeva mai.",
+     "pt": "Disse que vinham de uma terra onde o sol nunca brilhava.",
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "Only a dim light, like twilight. And everything there was green.",
+     "es": "Solo una luz tenue, como el crepúsculo. Y allí todo era verde.",
+     "de": "Nur ein trübes Licht, wie Dämmerung. Und alles dort war grün.",
+     "fr": "Juste une faible lueur, comme le crépuscule. Et tout y était vert.",
+     "it": "Solo una luce fioca, come il crepuscolo. E là tutto era verde.",
+     "pt": "Só uma luz fraca, como o crepúsculo. E lá tudo era verde."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "She called it St Martin's Land.",
+     "es": "Lo llamó la Tierra de San Martín.",
+     "de": "Sie nannte es Sankt-Martins-Land.",
+     "fr": "Elle l'appelait la Terre de Saint-Martin.",
+     "it": "La chiamava Terra di San Martino.",
+     "pt": "Ela chamava de Terra de São Martinho."
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "act": "odo",
+     "do": "hide"
+    },
+    {
+     "show": "g1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... who is standing there, next to her?",
+     "es": "Mothwick... ¿quién está ahí, a su lado?",
+     "de": "Mothwick... wer steht da, neben ihr?",
+     "fr": "Mothwick... qui est là, à côté d'elle ?",
+     "it": "Mothwick... chi c'è lì, accanto a lei?",
+     "pt": "Mothwick... quem está ali, ao lado dela?"
+    },
+    {
+     "growl": "g1",
+     "and": true
+    },
+    {
+     "lunge": "g1",
+     "to": 1100
+    },
+    {
+     "hide": "g1",
+     "dur": 0.2
+    },
+    {
+     "act": "odo",
+     "do": "unhide",
+     "and": true
+    },
+    {
+     "say": "moth",
+     "en": "Nobody, Odo. Just a shadow from the fire.",
+     "es": "Nadie, Odo. Solo una sombra del fuego.",
+     "de": "Niemand, Odo. Nur ein Schatten vom Feuer.",
+     "fr": "Personne, Odo. Juste une ombre du feu.",
+     "it": "Nessuno, Odo. Solo un'ombra del fuoco.",
+     "pt": "Ninguém, Odo. Só uma sombra do fogo."
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 2,
+   "music": "choir",
+   "wind": true,
+   "eyes": 3,
+   "ambient": 0.38,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.12
+    ],
+    "to": [
+     1060,
+     620,
+     1.22
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "girl": {
+     "type": "figure",
+     "x": 1400,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    },
+    "c1": {
+     "type": "crow",
+     "x": 1250,
+     "y": 320,
+     "state": "hidden",
+     "fly": 1
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "How did they get to Woolpit? She said they were watching their father's animals.",
+     "es": "¿Cómo llegaron? Dijo que cuidaban los animales de su padre.",
+     "de": "Wie kamen sie her? Sie sagte, sie hüteten die Tiere ihres Vaters.",
+     "fr": "Comment sont-ils arrivés ? Elle dit qu'ils gardaient les bêtes de leur père.",
+     "it": "Come arrivarono? Disse che badavano agli animali del padre.",
+     "pt": "Como chegaram? Ela disse que cuidavam dos animais do pai."
+    },
+    {
+     "show": "girl",
+     "dur": 0.4,
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "wait": 0.3
+    },
+    {
+     "say": "narr",
+     "en": "Then they heard a great sound, like the ringing of church bells.",
+     "es": "Entonces oyeron un gran sonido, como campanas de iglesia.",
+     "de": "Dann hörten sie einen lauten Klang, wie Kirchenglocken.",
+     "fr": "Puis ils entendirent un grand bruit, comme des cloches d'église.",
+     "it": "Poi sentirono un grande suono, come campane di chiesa.",
+     "pt": "Então ouviram um som forte, como sinos de igreja.",
+     "and": true
+    },
+    {
+     "shake": 0.5,
+     "power": 10,
+     "and": true
+    },
+    {
+     "sfx": "bell"
+    },
+    {
+     "say": "narr",
+     "en": "Ralph wrote that they followed the sound into a cave, and walked a long way.",
+     "es": "Ralph escribió que siguieron el sonido a una cueva y caminaron mucho.",
+     "de": "Ralph schrieb, sie folgten dem Klang in eine Höhle, einen langen Weg.",
+     "fr": "Raoul écrivit qu'ils suivirent le son dans une grotte, très longtemps.",
+     "it": "Ralph scrisse che seguirono il suono in una grotta, camminando a lungo.",
+     "pt": "Ralph escreveu que seguiram o som numa caverna e andaram muito.",
+     "and": true
+    },
+    {
+     "move": "girl",
+     "to": 1300,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "say": "narr",
+     "en": "When they came out, the sun blinded them. They were by the wolf pit.",
+     "es": "Al salir, el sol los cegó. Estaban junto al foso de lobos.",
+     "de": "Als sie herauskamen, blendete sie die Sonne. Sie waren an der Wolfsgrube.",
+     "fr": "En sortant, le soleil les aveugla. Ils étaient près de la fosse à loups.",
+     "it": "Usciti, il sole li accecò. Erano accanto alla fossa per lupi.",
+     "pt": "Ao sair, o sol os cegou. Estavam junto ao fosso de lobos.",
+     "and": true
+    },
+    {
+     "light": "flare",
+     "and": true
+    },
+    {
+     "hide": "girl",
+     "dur": 0.5
+    },
+    {
+     "show": "c1",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "sfx": "caw",
+     "and": true
+    },
+    {
+     "hide": "c1",
+     "dur": 0.4
+    },
+    {
+     "say": "narr",
+     "en": "Some historians think they were lost Flemish children, sick from hunger.",
+     "es": "Algunos historiadores creen que eran niños flamencos perdidos, enfermos de hambre.",
+     "de": "Manche Historiker glauben, es waren verirrte flämische Kinder, krank vor Hunger.",
+     "fr": "Certains historiens pensent à des enfants flamands perdus, malades de faim.",
+     "it": "Alcuni storici pensano a bambini fiamminghi perduti, malati di fame.",
+     "pt": "Alguns historiadores acham que eram crianças flamengas perdidas, doentes de fome.",
+     "and": true
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "But no one has ever found St Martin's Land on any map.",
+     "es": "Pero nadie ha encontrado jamás la Tierra de San Martín en un mapa.",
+     "de": "Doch niemand hat Sankt-Martins-Land je auf einer Karte gefunden.",
+     "fr": "Mais personne n'a jamais trouvé la Terre de Saint-Martin sur une carte.",
+     "it": "Ma nessuno ha mai trovato la Terra di San Martino su una mappa.",
+     "pt": "Mas ninguém jamais achou a Terra de São Martinho num mapa."
+    },
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "odo",
+     "en": "And the girl? Did she ever go back home?",
+     "es": "¿Y la niña? ¿Volvió alguna vez a casa?",
+     "de": "Und das Mädchen? Ging sie je nach Hause zurück?",
+     "fr": "Et la fille ? Est-elle rentrée chez elle ?",
+     "it": "E la bambina? Tornò mai a casa?",
+     "pt": "E a menina? Ela voltou para casa algum dia?"
+    },
+    {
+     "light": "dim"
+    },
+    {
+     "say": "moth",
+     "en": "Never. They say she grew up, married, and stayed. But she never forgot the bells.",
+     "es": "Nunca. Dicen que creció, se casó y se quedó. Pero no olvidó las campanas.",
+     "de": "Nie. Sie wuchs auf, heiratete und blieb. Doch die Glocken vergaß sie nie.",
+     "fr": "Jamais. On dit qu'elle grandit, se maria et resta. Sans oublier les cloches.",
+     "it": "Mai. Dicono che crebbe, si sposò e rimase. Ma non dimenticò le campane.",
+     "pt": "Nunca. Dizem que cresceu, casou e ficou. Mas nunca esqueceu os sinos."
+    },
+    {
+     "sfx": "bell",
+     "and": true
+    }
+   ],
+   "tail": 0.3
+  },
+  {
+   "bg": "forest",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.36,
+   "lights": [
+    {
+     "kind": "moon",
+     "x": 1450,
+     "y": 220,
+     "r": 900
+    }
+   ],
+   "cam": {
+    "from": [
+     900,
+     600,
+     1.12
+    ],
+    "to": [
+     1120,
+     640,
+     1.25
+    ]
+   },
+   "chars": {
+    "odo": {
+     "x": 520
+    },
+    "moth": {
+     "x": 680,
+     "y": 640
+    }
+   },
+   "creatures": {
+    "g1": {
+     "type": "figure",
+     "x": 1420,
+     "seed": 11,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.66
+    },
+    "g2": {
+     "type": "figure",
+     "x": 1300,
+     "seed": 10,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.62
+    }
+   },
+   "beats": [
+    {
+     "say": "narr",
+     "en": "Today the green children are painted on the Woolpit village sign.",
+     "es": "Hoy los niños verdes están pintados en el letrero de Woolpit.",
+     "de": "Heute sind die grünen Kinder auf dem Ortsschild von Woolpit gemalt.",
+     "fr": "Aujourd'hui, les enfants verts sont peints sur le panneau de Woolpit.",
+     "it": "Oggi i bambini verdi sono dipinti sull'insegna di Woolpit.",
+     "pt": "Hoje as crianças verdes estão pintadas na placa de Woolpit."
+    },
+    {
+     "sfx": "whoosh",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "And no one knows where they really came from.",
+     "es": "Y nadie sabe de dónde vinieron realmente.",
+     "de": "Und niemand weiß, woher sie wirklich kamen.",
+     "fr": "Et personne ne sait d'où ils venaient vraiment.",
+     "it": "E nessuno sa da dove venissero davvero.",
+     "pt": "E ninguém sabe de onde vieram de verdade."
+    },
+    {
+     "sfx": "bell",
+     "wait": 0.3
+    },
+    {
+     "say": "odo",
+     "en": "Mothwick... do you hear that? Bells. Under the ground.",
+     "es": "Mothwick... ¿oyes eso? Campanas. Bajo tierra.",
+     "de": "Mothwick... hörst du das? Glocken. Unter der Erde.",
+     "fr": "Mothwick... tu entends ? Des cloches. Sous la terre.",
+     "it": "Mothwick... senti? Campane. Sottoterra.",
+     "pt": "Mothwick... está ouvindo? Sinos. Debaixo da terra."
+    },
+    {
+     "eyes": "open",
+     "and": true
+    },
+    {
+     "sfx": "bell",
+     "wait": 0.3
+    },
+    {
+     "flash": true,
+     "dur": 1.0
+    },
+    {
+     "eyes": "close"
+    },
+    {
+     "act": "odo",
+     "do": "turn"
+    },
+    {
+     "say": "moth",
+     "en": "Don't follow them, Odo. The last children who did never went home.",
+     "es": "No las sigas, Odo. Los últimos niños que lo hicieron nunca volvieron.",
+     "de": "Folge ihnen nicht, Odo. Die letzten Kinder, die es taten, kamen nie heim.",
+     "fr": "Ne les suis pas, Odo. Les derniers enfants qui l'ont fait ne sont jamais rentrés.",
+     "it": "Non seguirle, Odo. Gli ultimi bambini che lo fecero non tornarono mai.",
+     "pt": "Não siga, Odo. As últimas crianças que seguiram nunca voltaram."
+    },
+    {
+     "sfx": "step",
+     "wait": 0.4
+    },
+    {
+     "show": "g2",
+     "dur": 0.3
+    },
+    {
+     "show": "g1",
+     "dur": 0.3,
+     "and": true
+    },
+    {
+     "move": "g1",
+     "to": 1250,
+     "speed": "creep",
+     "and": true
+    },
+    {
+     "growl": "g2"
+    },
+    {
+     "lunge": "g2",
+     "to": 1100
+    },
+    {
+     "light": "out",
+     "and": true
+    },
+    {
+     "card": "WHAT RINGS BELOW?",
+     "dur": 2.4
+    }
+   ],
+   "tail": 0.1
+  }
+ ]
+}

@@ -597,11 +597,12 @@ def figure(x, y, t, s=1.0, face=-1, ghost=0.0, seed=0):
     sway = math.sin(t * 1.3 + seed) * 2
     X = lambda v: x + v * face * s + sway
     Y = lambda v: y + v * s
-    col = "#cfd8e0" if ghost else "#17110e"
+    green = seed >= 10   # seed 10-12: green-skinned child (Woolpit), same hat styles
+    col = "#cfd8e0" if ghost else ("#1d3418" if green else "#17110e")
     op = 0.55 if ghost else 1.0
     coat = [(-34, -230), (34, -232), (46, -120), (56, 0), (16, 0), (8, -60), (-8, -60), (-16, 0), (-56, 0), (-46, -120)]
     g = [f'<path d="{smooth([(X(a),Y(b)) for a,b in coat])}" fill="{col}" stroke="{INK}" stroke-width="{f(4*s)}" opacity="{op}"/>']
-    g.append(f'<circle cx="{f(X(0))}" cy="{f(Y(-262))}" r="{f(30*s)}" fill="{BONE if not ghost else "#e8f0f8"}" stroke="{INK}" stroke-width="{f(4*s)}" opacity="{op}"/>')
+    g.append(f'<circle cx="{f(X(0))}" cy="{f(Y(-262))}" r="{f(30*s)}" fill="{("#8fc46a" if green else BONE) if not ghost else "#e8f0f8"}" stroke="{INK}" stroke-width="{f(4*s)}" opacity="{op}"/>')
     g.append(f'<circle cx="{f(X(8))}" cy="{f(Y(-266))}" r="{f(4*s)}" fill="{INK}"/><circle cx="{f(X(-10))}" cy="{f(Y(-266))}" r="{f(4*s)}" fill="{INK}"/>')
     if hat == 0:   # tricorn / wide hat
         g.append(f'<path d="M{f(X(-52))},{f(Y(-282))} Q{f(X(0))},{f(Y(-300))} {f(X(52))},{f(Y(-282))} L{f(X(28))},{f(Y(-322))} L{f(X(-28))},{f(Y(-322))} Z" fill="{INK}" opacity="{op}"/>')
