@@ -53,6 +53,13 @@ Commit the build script + 4 JSON scripts + log.json (NOT `out/`) and `git push` 
 ## 7. Deliver
 SendUserFile (status "proactive"): the long MP4, its thumbnail, and the 3 Shorts. Then a short Uzbek message: EP number + title, one-line story, scheduled Bishkek times, problems.
 
+## Retention notes 2026-10-18 (owner-approved, from the hub's view counts)
+Views come almost only from Shorts; long episodes got 0–6 views. Best Shorts open on a hard fact with a number: "115 people vanished. They left one word." **288**, "The lighthouse went dark. Three men were gone." **230**, "Would YOU board the empty ship?" **196**. Vague mood lines got 3–6 ("Food on board. Sails up. Nobody there.", "Three letters carved on a tree... C R O").
+- Every Short's first line and title = the single strangest documented fact, with a number or a count (people, days, years), in ≤ 9 words. The Narrator says it in the first 2 s; no slow fade-in.
+- Keep one "Would YOU…?" Short per episode (short2) — it works here too.
+- Long title: a plain question about the real mystery ("Where Did the 3 Lighthouse Keepers Go?") — keep that style, and put the strongest fact in the first 10 s of the long video.
+- End every Short with a 1-line spoken + on-screen "Follow for the full story" / subscribe prompt in the last 2 s.
+
 ## Never
 - Upload only to Hollowmere Tales (channel id above). Never type passwords, never change account settings, never touch the old private videos on the channel.
 - No gore, blood, injuries, death on screen, real brands/characters/games/memes. Original stories only.
