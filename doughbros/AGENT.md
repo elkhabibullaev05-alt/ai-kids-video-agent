@@ -76,6 +76,14 @@ Views come almost only from Shorts. Last 12 uploads: "Would YOU open this closet
 - Long title as a question the viewer can answer in their head (like EP 9 "Can You Solve 3 Scarecrow Riddles?", the best long at 24 views), not "Dough Bros vs <VILLAIN>".
 - End every Short with a 1-line spoken + on-screen "Follow for part 2" / subscribe prompt in the last 2 s.
 
+## 19-okt reja (owner-approved) — OVERRIDES the rules above where they conflict
+Long episodes are watched only 0:36–0:56 (20–31%) and get 0–1 views; the "Would YOU…?" Shorts work (closet 580).
+- **Stop the long episode.** Do not render or upload the 3–5 min long video. Each episode = **3 Shorts** (short2 "Would YOU…?" stays the main one). Keep writing the episode story as before so the Shorts have a plot, but only the Shorts are rendered and uploaded.
+- Buffer check: a day is "covered" when its 3 Shorts are scheduled (09:00, 12:00, 18:00 NY); the 15:00 long slot stays empty. The freed upload limit goes to Shorts and `pending_uploads`.
+- Shorts length **20–35 s**. Frame 1 = the scare/punch or the object of the question, with big on-screen text of 3–6 words ("WOULD YOU OPEN THIS?"); no logo, no intro, no set-up shot.
+- **Loop:** the last line leads back into the first beat, so the Short replays smoothly.
+- Never reuse a Short title from the last 30 days (log.json).
+
 ## Never
 - Never upload anywhere except scheduling the day's 4 videos on the Dough Bros channel (@DoughBrosTV) as described in UPLOAD.md. Never type passwords or change account settings.
 - Never use real brands, existing characters, songs, games or memes.
