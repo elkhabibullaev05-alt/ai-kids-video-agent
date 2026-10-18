@@ -1,0 +1,2796 @@
+{
+ "id": "ep006",
+ "title": "Is the AI Stock Boom Running Out of Money?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "In the week of October 12-16, 2026, tech stocks had their worst week since June: the Nasdaq fell about 4.5%, chip stocks lost 11.4%, South Korea's Kospi dropped 7.7% in one day and memory chipmakers lost up to 24%. Why? Hotter-than-expected inflation (3.7%), higher interest rates and growing worries about the debt behind the AI building boom. Who it hits, what the worried and the calm camps say, and what to watch next. Explained with stick figures, facts only. Not financial advice.\n\nDave and Linda are made-up characters. Real people are shown as generic labelled stick figures; quotes are attributed as reported.\n\nSources:\nAP via Hartford Courant, US markets weighed down by extended sell-off in the tech sector (Oct 16, 2026): https://www.courant.com/2026/10/16/stock-market\nAP via Yahoo Finance, Deepening tech sell-off drags stocks lower as major markets slide (Oct 15, 2026): https://finance.yahoo.com/markets/stocks/articles/deepening-tech-sell-off-drags-041902749.html\nYahoo Finance live blog, Oct 15, 2026 (CoreWeave, Apple, yields, quotes): https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-rise-nasdaq-trims-losses-as-treasury-yields-sink-153611834.html\nInvesting.com / Reuters, Nasdaq notches worst week since late June with a 4.5% slide: https://www.investing.com/news/stock-market-news/nasdaq-futures-edge-lower-as-ai-spending-fed-rate-concerns-weigh-4952930\nThe Telegraph, Global AI stocks sell-off spreads to Wall Street (Oct 15, 2026): https://www.telegraph.co.uk/business/2026/10/15/asian-markets-plunge-amid-tech-sell-off\nCNBC, AI stocks tumble in global tech rout on AI funding worries (Oct 15, 2026): https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html\nWSJ, Warsh Avoids Signal on October Rate Move: https://www.wsj.com/economy/central-banking/warsh-avoids-signal-on-october-rate-move-a176b0d5\n\n#ai #stocks #nvidia #stockmarket #explained #stickfigure #news",
+ "tags": [
+  "ai stocks",
+  "ai bubble",
+  "tech stocks sell off",
+  "nasdaq worst week",
+  "chip stocks",
+  "nvidia stock",
+  "coreweave",
+  "kospi crash",
+  "stock market news",
+  "news explained",
+  "stick figure animation"
+ ],
+ "thumbnail": {
+  "bg": "yellow",
+  "text": "AI BUBBLE|POPPING?",
+  "size": 180,
+  "color": "black",
+  "guy": {
+   "pose": "panic",
+   "face": "scream",
+   "look": -1,
+   "extras": [
+    "hair"
+   ]
+  },
+  "items": [
+   {
+    "prop": "balloon",
+    "x": 1690,
+    "y": 980,
+    "s": 1.0,
+    "text": "AI",
+    "color": "red"
+   }
+  ],
+  "guy_x": 1300
+ },
+ "scenes": [
+  {
+   "say": "This is a balloon.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 960,
+     "y": 980,
+     "s": 1.5,
+     "at": 0,
+     "text": "AI",
+     "color": "red",
+     "anim": "bob"
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     560,
+     1.4
+    ],
+    "to": [
+     960,
+     540,
+     1.05
+    ]
+   },
+   "bg": "paper"
+  },
+  {
+   "say": "It is very big. It is very shiny.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 960,
+     "y": 1000,
+     "s": 1.8,
+     "at": 0,
+     "text": "AI",
+     "color": "red",
+     "anim": "pulse"
+    },
+    {
+     "text": "$$$",
+     "x": 1500,
+     "y": 300,
+     "size": 140,
+     "color": "money",
+     "at": 0.4
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "And this week, a lot of people started staring at it, wondering where they left the pin.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 700,
+     "y": 1000,
+     "s": 1.4,
+     "at": 0,
+     "text": "AI",
+     "color": "red"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "?",
+     "x": 1500,
+     "y": 380,
+     "size": 160,
+     "color": "red",
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Meet Dave. Dave doesn't own a data center. Dave owns a retirement account and a phone with an app on it.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 1250,
+     "y": 860,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "401(k)"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "On Friday evening, Dave opened the app.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 960,
+     "y": 900,
+     "s": 1.6,
+     "at": 0,
+     "text": "LOADING..."
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The Nasdaq, home of most big tech stocks, finished the week down about four and a half percent.",
+   "items": [
+    {
+     "count": [
+      0,
+      -4.5
+     ],
+     "fmt": "{:.1f}%",
+     "x": 960,
+     "y": 420,
+     "size": 260,
+     "color": "red",
+     "at": 0,
+     "dur": 1.6
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1550,
+     "y": 800,
+     "s": 1.2,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Its worst week since June.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 700,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "text": "JUNE"
+    },
+    {
+     "stamp": "WORST WEEK",
+     "x": 1250,
+     "y": 450,
+     "size": 80,
+     "w": 420,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Dave made a noise only dogs could hear.",
+   "items": [
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "prop": "phone",
+     "x": 1450,
+     "y": 820,
+     "s": 0.8,
+     "at": 0.1,
+     "text": "-4.5%"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "Today's question: is the A.I. stock boom running out of money? And does any of this matter if you've never bought a single chip?",
+   "items": [
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 420,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "RUNNING OUT",
+     "x": 1180,
+     "y": 330,
+     "size": 120,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "text": "OF MONEY?",
+     "x": 1180,
+     "y": 470,
+     "size": 120,
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "prop": "chip",
+     "x": 1180,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.55,
+     "text": "AI"
+    }
+   ],
+   "chapter": "Today's question",
+   "bg": "paper"
+  },
+  {
+   "say": "We'll go through what fell, how far, the two big reasons why, who it hits, and what both the worried and the calm people say.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 760,
+     "y": 900,
+     "s": 1.1,
+     "at": 0,
+     "text": "FACTS"
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Quick note: we're stick figures, not financial advisers. Nothing here tells you to buy or sell anything.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "stamp": "NOT ADVICE",
+     "x": 1450,
+     "y": 380,
+     "size": 70,
+     "w": 380,
+     "at": 0.35
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Let's start with the scoreboard for the week of October twelfth to sixteenth.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "OCT 12-16"
+    }
+   ],
+   "chapter": "Part 1: What fell",
+   "bg": "purple"
+  },
+  {
+   "say": "The S&P 500, the big index of five hundred large American companies, fell about two percent for the week.",
+   "items": [
+    {
+     "count": [
+      0,
+      -2.0
+     ],
+     "fmt": "{:.1f}%",
+     "x": 700,
+     "y": 420,
+     "size": 200,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "building",
+     "x": 1400,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4,
+     "text": "S&P 500"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "It closed Friday at 7,659. And here's the twist: just one week earlier, it had set an all-time high.",
+   "items": [
+    {
+     "count": [
+      7000,
+      7659
+     ],
+     "fmt": "{:,.0f}",
+     "x": 700,
+     "y": 400,
+     "size": 170,
+     "color": "navy",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "stamp": "RECORD",
+     "x": 1400,
+     "y": 400,
+     "size": 80,
+     "w": 300,
+     "at": 0.45
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "So the whole of last week's gains? Gone. Like a sandcastle meeting a Tuesday.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "+  -",
+     "color": "red"
+    },
+    {
+     "cross": [
+      960,
+      560,
+      230
+     ],
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The Nasdaq composite closed at 26,140, down about four and a half percent on the week.",
+   "items": [
+    {
+     "count": [
+      27000,
+      26140
+     ],
+     "fmt": "{:,.0f}",
+     "x": 960,
+     "y": 400,
+     "size": 190,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1550,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "The Dow, which has fewer tech stocks, mostly shrugged. On Friday it slipped just a third of a percent.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "-0.3%",
+     "x": 1450,
+     "y": 420,
+     "size": 120,
+     "color": "orange",
+     "at": 0.4
+    },
+    {
+     "text": "the Dow",
+     "x": 960,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "But the real crater was in chips. The Philadelphia Semiconductor Index fell eleven point four percent in one week.",
+   "items": [
+    {
+     "prop": "chip",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "SOX"
+    },
+    {
+     "count": [
+      0,
+      -11.4
+     ],
+     "fmt": "{:.1f}%",
+     "x": 1300,
+     "y": 420,
+     "size": 220,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "That's its worst week since April 2025.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 960,
+     "y": 860,
+     "s": 1.2,
+     "at": 0,
+     "text": "APR 2025"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1450,
+     "y": 820,
+     "s": 0.9,
+     "at": 0.4,
+     "color": "red"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And by Thursday, chip stocks had fallen for eight days in a row, a losing streak Yahoo Finance said was the longest since October 2008.",
+   "items": [
+    {
+     "prop": "arrowdown",
+     "x": 300,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.0,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 490,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.07,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 680,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.14,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 870,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.21000000000000002,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1060,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.28,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1250,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.35000000000000003,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1440,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.42000000000000004,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1630,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.49000000000000005,
+     "color": "red"
+    },
+    {
+     "text": "8 DAYS",
+     "x": 960,
+     "y": 280,
+     "size": 130,
+     "color": "red",
+     "at": 0.6
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "October 2008 is when Lehman Brothers had just collapsed. Not a month anyone wants to be compared to.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT 2008"
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "On Friday alone, all but seven of the seventy five tech stocks in the S&P 500 closed lower, according to the Associated Press.",
+   "items": [
+    {
+     "prop": "arrowdown",
+     "x": 200,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.0,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 310,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.02,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 420,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.04,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 530,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.06,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 640,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.08,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 750,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.1,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 860,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.12,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 970,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.14,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1080,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.16,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1190,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.18,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1300,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.2,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1410,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.22,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1520,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.24,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1630,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.26,
+     "color": "red"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1740,
+     "y": 700,
+     "s": 0.35,
+     "at": 0.28,
+     "color": "red"
+    },
+    {
+     "count": [
+      0,
+      68
+     ],
+     "fmt": "{:.0f} of 75",
+     "x": 960,
+     "y": 300,
+     "size": 130,
+     "color": "red",
+     "at": 0.4,
+     "dur": 1.8
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So where did it start? Not in America. It started in memory chips.",
+   "items": [
+    {
+     "prop": "chip",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "MEMORY"
+    }
+   ],
+   "chapter": "Part 2: The memory-chip crash",
+   "bg": "paper"
+  },
+  {
+   "say": "Memory chips are what let your phone, laptop, and every A.I. server remember things. Very boring. Very profitable.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 500,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "laptop",
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.2
+    },
+    {
+     "prop": "robot",
+     "x": 1450,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Three companies make most of them: Micron in the US, and Samsung and S.K. Hynix in South Korea.",
+   "items": [
+    {
+     "prop": "chip",
+     "x": 450,
+     "y": 900,
+     "s": 0.7,
+     "at": 0,
+     "text": "MICRON"
+    },
+    {
+     "prop": "chip",
+     "x": 960,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.25,
+     "text": "SAMSUNG"
+    },
+    {
+     "prop": "chip",
+     "x": 1470,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.5,
+     "text": "HYNIX"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Early in the week, investors got nervous after reports that a Chinese company, ChangXin Memory Technologies, had made big advances.",
+   "items": [
+    {
+     "prop": "globe",
+     "x": 600,
+     "y": 880,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "chip",
+     "x": 1250,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "CXMT",
+     "color": "red"
+    },
+    {
+     "text": "NEW RIVAL?",
+     "x": 1250,
+     "y": 300,
+     "size": 90,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "There were also worries that so many new factories are being built, the world could have too many memory chips by around 2029.",
+   "items": [
+    {
+     "prop": "chip",
+     "x": 350,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.0
+    },
+    {
+     "prop": "chip",
+     "x": 600,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.08
+    },
+    {
+     "prop": "chip",
+     "x": 850,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.16
+    },
+    {
+     "prop": "chip",
+     "x": 1100,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.24
+    },
+    {
+     "prop": "chip",
+     "x": 1350,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.32
+    },
+    {
+     "prop": "chip",
+     "x": 1600,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4
+    },
+    {
+     "prop": "calendar",
+     "x": 960,
+     "y": 380,
+     "s": 0.8,
+     "at": 0.6,
+     "text": "2029?"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then, on Thursday, South Korea's main stock index, the Kospi, dropped seven point seven percent in a single day.",
+   "items": [
+    {
+     "count": [
+      0,
+      -7.7
+     ],
+     "fmt": "{:.1f}%",
+     "x": 960,
+     "y": 420,
+     "size": 260,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "globe",
+     "x": 1550,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "For a whole country's stock market, that's not a bad day. That's a fire drill with real fire.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 1.4,
+     "at": 0,
+     "anim": "pulse"
+    },
+    {
+     "guy": {
+      "pose": "run",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Samsung fell nine and a half percent that day. S.K. Hynix fell eleven point four.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       9.5,
+       11.4
+      ],
+      "labels": [
+       "Samsung",
+       "SK Hynix"
+      ],
+      "colors": [
+       "orange",
+       "red"
+      ],
+      "fmt": "-{}%",
+      "w": 700,
+      "h": 420
+     },
+     "x": 960,
+     "y": 820
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Over the whole week, according to Investing.com, citing Reuters, it was Micron down fourteen point six percent, Samsung down seventeen point eight, and S.K. Hynix down twenty four point three.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       14.6,
+       17.8,
+       24.3
+      ],
+      "labels": [
+       "Micron",
+       "Samsung",
+       "SK Hynix"
+      ],
+      "colors": [
+       "orange",
+       "red",
+       "red"
+      ],
+      "fmt": "-{}%",
+      "w": 820,
+      "h": 440
+     },
+     "x": 960,
+     "y": 830
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In June the Kospi had crossed nine thousand points. On Thursday it closed around fifty five hundred.",
+   "items": [
+    {
+     "count": [
+      9000,
+      5549
+     ],
+     "fmt": "{:,.0f}",
+     "x": 960,
+     "y": 420,
+     "size": 200,
+     "color": "red",
+     "at": 0,
+     "dur": 2.2
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1550,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "Japan's Nikkei fell four point eight percent the same day. SoftBank, a big investor in OpenAI, fell nine point four.",
+   "items": [
+    {
+     "text": "NIKKEI -4.8%",
+     "x": 650,
+     "y": 400,
+     "size": 100,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "text": "SOFTBANK -9.4%",
+     "x": 1300,
+     "y": 600,
+     "size": 100,
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then the wave crossed the Pacific, and Nvidia, the world's most valuable company, lost more than two hundred fourteen billion dollars of value in one day.",
+   "items": [
+    {
+     "prop": "ship",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       800,
+       600
+      ],
+      [
+       1250,
+       600
+      ]
+     ],
+     "at": 0.2
+    },
+    {
+     "count": [
+      0,
+      214
+     ],
+     "fmt": "${:.0f}B",
+     "x": 1450,
+     "y": 400,
+     "size": 160,
+     "color": "red",
+     "at": 0.4,
+     "dur": 1.8
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So why now? Reason number one is boring, but it's the big one. Inflation.",
+   "items": [
+    {
+     "text": "REASON #1",
+     "x": 960,
+     "y": 300,
+     "size": 130,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "thermo",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.3,
+     "text": "3.7%",
+     "color": "red"
+    }
+   ],
+   "chapter": "Part 3: Reason one, inflation",
+   "bg": "paper"
+  },
+  {
+   "say": "On Wednesday, the government said consumer prices were up three point seven percent from a year earlier. In August it was three point four.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       3.4,
+       3.7
+      ],
+      "labels": [
+       "Aug",
+       "Sep"
+      ],
+      "colors": [
+       "grey",
+       "red"
+      ],
+      "fmt": "{}%",
+      "w": 640,
+      "h": 420
+     },
+     "x": 960,
+     "y": 820
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Economists had expected less. Wholesale prices, what businesses pay, rose at the fastest pace since 2022.",
+   "items": [
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "pricetag",
+     "x": 1300,
+     "y": 880,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "2022",
+     "color": "red"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Here's why inflation hurts tech stocks. When prices run hot, the Federal Reserve tends to keep interest rates high, or raise them.",
+   "items": [
+    {
+     "prop": "thermo",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "HOT",
+     "color": "red"
+    },
+    {
+     "prop": "building",
+     "x": 1300,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.35,
+     "text": "THE FED"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "Last month the Fed already raised rates by a quarter point, to between three point seven five and four percent. Its first increase in three years.",
+   "items": [
+    {
+     "count": [
+      3.5,
+      3.75
+     ],
+     "fmt": "{:.2f}%",
+     "x": 700,
+     "y": 420,
+     "size": 170,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "to 4.00%",
+     "x": 1350,
+     "y": 420,
+     "size": 100,
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "prop": "arrowup",
+     "x": 1350,
+     "y": 800,
+     "s": 0.9,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And the ten-year U.S. government bond is paying about five point one percent. That's high for borrowing anything.",
+   "items": [
+    {
+     "count": [
+      4.0,
+      5.1
+     ],
+     "fmt": "{:.1f}%",
+     "x": 960,
+     "y": 420,
+     "size": 240,
+     "color": "navy",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "10-YEAR YIELD",
+     "x": 960,
+     "y": 620,
+     "size": 70,
+     "color": "dark",
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "The Fed chair spoke at a meeting of finance leaders in Bangkok this week. He gave no fresh signal about the next move.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "podium",
+     "x": 800,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1350,
+     "y": 450,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "..."
+    },
+    {
+     "text": "the Fed chair",
+     "x": 800,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "One market strategist, Michael O'Rourke of Jones Trading, put it simply.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "strategist",
+     "x": 960,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Quote: hot inflation data suggests interest rates will remain higher for longer, and investors are repositioning defensively.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 960,
+     "y": 500,
+     "s": 1.6,
+     "at": 0,
+     "text": "HIGHER|FOR LONGER"
+    },
+    {
+     "text": "\u2014 Michael O'Rourke, Jones Trading",
+     "x": 960,
+     "y": 880,
+     "size": 50,
+     "color": "dark",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Reason number two is the one people are really whispering about: debt.",
+   "items": [
+    {
+     "text": "REASON #2",
+     "x": 960,
+     "y": 300,
+     "size": 130,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "moneybag",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.3,
+     "text": "IOU",
+     "color": "red"
+    }
+   ],
+   "chapter": "Part 4: Reason two, debt",
+   "bg": "blue"
+  },
+  {
+   "say": "Building A.I. is wildly expensive. Data centers, power, cooling, and many thousands of chips.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 500,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "DATA"
+    },
+    {
+     "prop": "fan",
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.2
+    },
+    {
+     "prop": "chip",
+     "x": 1450,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "A lot of that has been paid for with borrowed money. The Associated Press reports companies have leaned on debt markets to fund the spree.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "dark"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "moneybag",
+     "x": 1000,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "LOAN"
+    },
+    {
+     "prop": "building",
+     "x": 1500,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.5,
+     "text": "BANK"
+    },
+    {
+     "text": "AI company",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Borrowing is easy when money is cheap. With bond yields at their highest in years, it isn't cheap anymore.",
+   "items": [
+    {
+     "prop": "pricetag",
+     "x": 700,
+     "y": 880,
+     "s": 1.1,
+     "at": 0,
+     "text": "LOAN: $"
+    },
+    {
+     "prop": "pricetag",
+     "x": 1250,
+     "y": 880,
+     "s": 1.4,
+     "at": 0.4,
+     "text": "LOAN: $$$",
+     "color": "red"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The poster child this week was CoreWeave, a so-called neocloud. It rents out A.I. computing power to other companies.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "COREWEAVE"
+    },
+    {
+     "text": "NEOCLOUD",
+     "x": 960,
+     "y": 260,
+     "size": 90,
+     "color": "teal",
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Think of it as a landlord for A.I. chips. Very popular landlord. Very large mortgage.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "CHIPS"
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "dark"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "MORTGAGE",
+     "x": 1300,
+     "y": 280,
+     "size": 80,
+     "color": "red",
+     "at": 0.55
+    },
+    {
+     "text": "landlord",
+     "x": 1300,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "On Wednesday, CoreWeave's stock fell fifteen percent, its worst day since February.",
+   "items": [
+    {
+     "count": [
+      0,
+      -15
+     ],
+     "fmt": "{:.0f}%",
+     "x": 960,
+     "y": 420,
+     "size": 260,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1550,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "By Thursday, the price of insurance against CoreWeave defaulting hit a record. Bloomberg data implied roughly sixty percent odds of a default within five years.",
+   "items": [
+    {
+     "prop": "lock",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "INSURANCE"
+    },
+    {
+     "count": [
+      0,
+      60
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1300,
+     "y": 420,
+     "size": 230,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "text": "odds, 5 years",
+     "x": 1300,
+     "y": 600,
+     "size": 60,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Some of its bonds traded at about eighty one cents on the dollar, with a yield over fifteen percent.",
+   "items": [
+    {
+     "prop": "dollar",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "$1"
+    },
+    {
+     "text": "= 81\u00a2",
+     "x": 1300,
+     "y": 450,
+     "size": 160,
+     "color": "red",
+     "at": 0.35
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "CoreWeave pushed back. In a statement it said the market sometimes misunderstands new kinds of companies and acts irrationally, and that it's confident in its business model.",
+   "items": [
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "dark"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1450,
+     "y": 420,
+     "s": 0.9,
+     "at": 0.4,
+     "text": "CONFIDENT"
+    },
+    {
+     "text": "CoreWeave",
+     "x": 960,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And Nvidia's chief executive, Jensen Huang, whose company backs CoreWeave, said, quote, I'm optimistic. Their cost of capital is actually decreasing.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "dark"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1350,
+     "y": 420,
+     "s": 1.0,
+     "at": 0.35,
+     "text": "OPTIMISTIC"
+    },
+    {
+     "text": "Nvidia CEO",
+     "x": 800,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "The stock bounced back on Thursday. Then on Friday it fell almost twelve percent again. A yo-yo with a balance sheet.",
+   "items": [
+    {
+     "prop": "arrowup",
+     "x": 600,
+     "y": 820,
+     "s": 0.9,
+     "at": 0,
+     "color": "green"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1000,
+     "y": 820,
+     "s": 0.9,
+     "at": 0.35,
+     "color": "red"
+    },
+    {
+     "text": "-11.9%",
+     "x": 1450,
+     "y": 420,
+     "size": 130,
+     "color": "red",
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "A Baird strategist, Ted Mortonson, said the sell-off is increasingly about who needs financing, and what that financing costs.",
+   "items": [
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35,
+     "text": "WHO NEEDS|MONEY?"
+    },
+    {
+     "text": "Baird strategist",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "Even good news didn't help. Taiwan's TSMC reported a record profit, its sixth record quarter in a row. Its stock fell anyway.",
+   "items": [
+    {
+     "prop": "trophy",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "RECORD"
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1250,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.4,
+     "color": "red"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "That's like winning the race and being booed for not winning it faster.",
+   "items": [
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "trophy",
+     "x": 1000,
+     "y": 880,
+     "s": 0.6,
+     "at": 0.1
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So who does this actually hit? Start with Dave.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "chapter": "Part 5: Who it hits",
+   "bg": "paper"
+  },
+  {
+   "say": "Most retirement funds track big indexes. A few tech giants now make up a huge share of those indexes. So when they drop, Dave drops too.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 600,
+     "y": 880,
+     "s": 1.0,
+     "at": 0,
+     "text": "401(k)"
+    },
+    {
+     "arrow": [
+      [
+       800,
+       600
+      ],
+      [
+       1200,
+       600
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Linda, meanwhile, owns a fund full of toothpaste and medicine companies. Her week was fine.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "cart",
+     "x": 1300,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.35,
+     "text": "STAPLES"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Because money doesn't vanish. It moves. Healthcare stocks opened at a record on Thursday, and consumer staples flew.",
+   "items": [
+    {
+     "arrow": [
+      [
+       500,
+       600
+      ],
+      [
+       1400,
+       600
+      ]
+     ],
+     "color": "green"
+    },
+    {
+     "prop": "chip",
+     "x": 450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0
+    },
+    {
+     "prop": "cart",
+     "x": 1450,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.4,
+     "text": "HEALTH"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "A retail fund gained more than three percent that day. Some investors left chips and went shopping. Literally.",
+   "items": [
+    {
+     "prop": "cart",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "+3%",
+     "color": "green"
+    },
+    {
+     "guy": {
+      "pose": "run",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then there's Apple. Apple hasn't spent billions building its own A.I. data centers. And this week its value crossed five trillion dollars, for the second time.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "APPLE"
+    },
+    {
+     "count": [
+      0,
+      5
+     ],
+     "fmt": "${:.0f} TRILLION",
+     "x": 1300,
+     "y": 420,
+     "size": 110,
+     "color": "green",
+     "at": 0.35,
+     "dur": 1.8
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Sometimes the best investment strategy is not being invited to the party.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "grey"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "balloon",
+     "x": 1450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.3,
+     "text": "AI"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Bonds won too. Investors piled into U.S. government debt, and Treasury yields dropped from their highs. Homebuilder stocks rallied.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "HOMES"
+    },
+    {
+     "prop": "arrowup",
+     "x": 1450,
+     "y": 820,
+     "s": 0.9,
+     "at": 0.4,
+     "color": "green"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "And in South Korea, Samsung and S.K. Hynix are such a big slice of the market that their bad week becomes the whole country's bad week.",
+   "items": [
+    {
+     "prop": "globe",
+     "x": 600,
+     "y": 860,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "blue"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "chip",
+     "x": 1550,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4,
+     "text": "SAMSUNG"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Now, is this the bubble popping? Depending on who you ask, you get two very different answers.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 960,
+     "y": 1000,
+     "s": 1.3,
+     "at": 0,
+     "text": "AI"
+    },
+    {
+     "text": "POP?",
+     "x": 1500,
+     "y": 300,
+     "size": 140,
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "chapter": "Part 6: Bubble or bump?",
+   "bg": "blue"
+  },
+  {
+   "say": "The worried camp says: chips are being built faster than anyone can use them, debts are piling up, and money is getting expensive.",
+   "items": [
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "chip",
+     "x": 1150,
+     "y": 900,
+     "s": 0.5,
+     "at": 0
+    },
+    {
+     "prop": "chip",
+     "x": 1350,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.2
+    },
+    {
+     "prop": "moneybag",
+     "x": 1600,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.4,
+     "text": "DEBT"
+    },
+    {
+     "text": "worried camp",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Investing.com, citing Reuters, reported fears that twenty twenty six could mark the peak for earnings growth.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "PEAK?"
+    },
+    {
+     "ring": [
+      960,
+      520,
+      160
+     ],
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And a few companies carry the load. Nvidia, Micron, and Google are expected to make up about a third of this year's earnings growth.",
+   "items": [
+    {
+     "prop": "chip",
+     "x": 500,
+     "y": 900,
+     "s": 0.6,
+     "at": 0,
+     "text": "NVDA"
+    },
+    {
+     "prop": "chip",
+     "x": 900,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.2,
+     "text": "MU"
+    },
+    {
+     "prop": "chip",
+     "x": 1300,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.35,
+     "text": "GOOG"
+    },
+    {
+     "count": [
+      0,
+      33
+     ],
+     "fmt": "~{:.0f}%",
+     "x": 1650,
+     "y": 420,
+     "size": 130,
+     "color": "red",
+     "at": 0.5,
+     "dur": 1.8
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The calm camp says: demand for A.I. chips is real. TSMC just had a record quarter. Companies keep reporting big orders.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "green"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "trophy",
+     "x": 650,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "RECORD"
+    },
+    {
+     "text": "calm camp",
+     "x": 1300,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "They also point out the S&P 500 was at an all-time high just a week ago. A two percent drop from a record is still, well, near a record.",
+   "items": [
+    {
+     "count": [
+      0,
+      2
+     ],
+     "fmt": "-{:.0f}%",
+     "x": 700,
+     "y": 420,
+     "size": 200,
+     "color": "orange",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "stamp": "NEAR RECORD",
+     "x": 1350,
+     "y": 450,
+     "size": 70,
+     "w": 420,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And markets bounce. On Thursday, the Dow jumped nearly six hundred points. One week rarely tells you the ending.",
+   "items": [
+    {
+     "count": [
+      0,
+      600
+     ],
+     "fmt": "+{:.0f}",
+     "x": 960,
+     "y": 420,
+     "size": 220,
+     "color": "green",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "arrowup",
+     "x": 1550,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.4,
+     "color": "green"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "We don't pick a team. We just count the facts.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "So what's next? Three things to watch.",
+   "items": [
+    {
+     "prop": "eye",
+     "x": 960,
+     "y": 800,
+     "s": 1.2,
+     "at": 0
+    }
+   ],
+   "chapter": "Part 7: What's next",
+   "bg": "teal"
+  },
+  {
+   "say": "One: earnings season. It only began in earnest this week, and the A.P. says expectations for profits are high. A.I. giants report in the coming weeks.",
+   "items": [
+    {
+     "text": "1",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "calendar",
+     "x": 960,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "EARNINGS"
+    },
+    {
+     "prop": "chip",
+     "x": 1450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Two: the Fed. Hot prices push toward another rate hike. A falling stock market pushes the other way. The Fed has to pick.",
+   "items": [
+    {
+     "text": "2",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "scale",
+     "x": 1050,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.3
+    },
+    {
+     "text": "HIKE?",
+     "x": 1400,
+     "y": 300,
+     "size": 90,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Three: the debt. Watch whether companies like CoreWeave can keep borrowing at a price that makes sense.",
+   "items": [
+    {
+     "text": "3",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "moneybag",
+     "x": 1050,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "IOU"
+    },
+    {
+     "text": "?",
+     "x": 1450,
+     "y": 380,
+     "size": 160,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Yahoo Finance put it neatly: watch whether the company's debt starts recovering alongside its shares. That's the real sign the fear is easing.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "STOCK"
+    },
+    {
+     "prop": "chart",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "DEBT"
+    },
+    {
+     "arrow": [
+      [
+       900,
+       450
+      ],
+      [
+       1100,
+       450
+      ]
+     ],
+     "at": 0.5
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "And Dave? Dave's plan is to close the app and not open it until Christmas.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 1250,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "CLOSED"
+    },
+    {
+     "prop": "calendar",
+     "x": 1600,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.5,
+     "text": "DEC 25"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Recap. Tech stocks had their worst week since June. Chip stocks lost eleven percent. Memory chipmakers lost far more.",
+   "items": [
+    {
+     "text": "-4.5%",
+     "x": 500,
+     "y": 420,
+     "size": 140,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "text": "-11.4%",
+     "x": 1000,
+     "y": 420,
+     "size": 140,
+     "color": "red",
+     "at": 0.25
+    },
+    {
+     "text": "-24%",
+     "x": 1500,
+     "y": 420,
+     "size": 140,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "chapter": "Recap",
+   "bg": "teal"
+  },
+  {
+   "say": "The reasons: inflation hotter than expected, which means expensive money, and a mountain of debt behind the A.I. building boom.",
+   "items": [
+    {
+     "prop": "thermo",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "3.7%",
+     "color": "red"
+    },
+    {
+     "prop": "moneybag",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35,
+     "text": "DEBT"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The worried say bubble. The calm say bump. The next few weeks of earnings and one Fed decision will say a lot more than any of us.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 600,
+     "y": 1000,
+     "s": 0.9,
+     "at": 0,
+     "text": "BUBBLE?"
+    },
+    {
+     "text": "vs",
+     "x": 960,
+     "y": 500,
+     "size": 110,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "prop": "chart",
+     "x": 1350,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4,
+     "text": "BUMP?"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Meanwhile, somewhere in Silicon Valley, a very large balloon is being very carefully patched.",
+   "items": [
+    {
+     "prop": "balloon",
+     "x": 960,
+     "y": 1000,
+     "s": 1.6,
+     "at": 0,
+     "text": "AI",
+     "color": "red",
+     "anim": "bob"
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "dark"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "PATCH",
+     "x": 960,
+     "y": 260,
+     "size": 80,
+     "color": "dark",
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Your turn: do you think A.I. stocks are a bubble, or just having a bad week? Tell us in the comments.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "balloon",
+     "x": 1250,
+     "y": 950,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "?"
+    }
+   ],
+   "bg": "blue"
+  },
+  {
+   "say": "And if calm stick figures explaining the news is your kind of thing, subscribe. We'll keep counting the facts.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 1150,
+     "y": 800,
+     "s": 1.3,
+     "at": 0,
+     "text": "SUBSCRIBE"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 420,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "hold": 1.2,
+   "bg": "paper"
+  }
+ ]
+}

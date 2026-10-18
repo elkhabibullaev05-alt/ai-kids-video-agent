@@ -124,6 +124,11 @@ class Pen:
         c.fill()
 
     def text(self, s, x, y, size=60, color=None, align="center", font="Kalam", bold=True, outline=None, alpha=1.0):
+        if "|" in s:  # multi-line text: "LINE ONE|LINE TWO"
+            parts = s.split("|")
+            for k, part in enumerate(parts):
+                self.text(part, x, y + (k - (len(parts) - 1) / 2) * size * 1.1, size, color, align, font, bold, outline, alpha)
+            return
         c = self.c
         c.select_font_face(font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_BOLD if bold else cairo.FONT_WEIGHT_NORMAL)
         c.set_font_size(size)
@@ -752,7 +757,27 @@ def _chalkboard(p, t, color, text):
             p.text(line, 0, -400 + k * 85 + (60 if len(parts) == 1 else 0), min(64, int(1000 / max(1, len(line)))), "white")
 
 
+def _chip(p, t, color, text):
+    for k in range(-3, 4):
+        x = k * 42
+        p.line([(x, -300), (x, -340)], 8); p.line([(x, 0), (x, 40)], 8)
+        p.line([(-160, -150 + k * 42), (-200, -150 + k * 42)], 8); p.line([(160, -150 + k * 42), (200, -150 + k * 42)], 8)
+    p.rect(-160, -300, 320, 300, color or "dark")
+    p.rect(-90, -220, 180, 140, "grey", 4)
+    if text:
+        p.text(text, 0, -150, 40, "white", outline="dark")
+
+
+def _balloon(p, t, color, text):
+    p.line([(0, -260), (10, -150), (-10, -60), (0, 0)], 4)
+    p.circle(0, -420, 160, color or "red", 6)
+    p.shape([(-18, -262), (18, -262), (0, -240)], color or "red")
+    if text:
+        p.text(text, 0, -420, 44, "white", outline="dark")
+
+
 PROPS = {
+    "chip": _chip, "balloon": _balloon,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
     "globe": _globe, "house": _house, "coffee": _coffee, "bread": _bread, "fire": _fire, "sun": _sun, "cloud": _cloud,
