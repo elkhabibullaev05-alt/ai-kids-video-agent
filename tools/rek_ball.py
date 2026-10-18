@@ -99,7 +99,14 @@ def olch(path):
     step = 0.25 if dur <= 180 else 1.0
     fr = _frames(path, step, dur)
     diff = [_absdiff(fr[i], fr[i + 1]) for i in range(len(fr) - 1)]
-    cuts = sum(1 for x in diff if x > 28)
+    # "Yangi kadr" hodisasi: keskin kesim (>28) yoki fonga nisbatan keskin sakrash (matn/grafika almashishi).
+    med = sorted(diff)[len(diff) // 2] if diff else 0.0
+    thr = max(6.0, 4 * med)
+    cuts, last = 0, -9.0
+    for i, x in enumerate(diff):
+        t = (i + 1) * step
+        if (x > 28 or x > thr) and t - last >= 0.5:
+            cuts, last = cuts + 1, t
     seen = min(dur, 120.0) if dur > 150 else dur
     still = best = 0.0
     for x in diff:
@@ -215,13 +222,45 @@ def baho(path, title, kind=None):
             "at": dt.datetime.now().isoformat(timespec="minutes")}
 
 
+
+def kuchaytir(path, kind="short"):
+    """Montajni jonlantiradi: 1,5 s lik tez kirish (zoom), har 1 s da yaqinlashish/uzoqlashish (punch-in),
+    ovozni YouTube darajasiga (-14 LUFS) keltirib, chegaradan oshishini (clipping) yo'qotadi.
+    Matn kesilib qolmasligi uchun kichraytirilganda orqada xira (blur) fon qoladi. Yangi fayl yo'lini qaytaradi."""
+    path = Path(path)
+    dur, w, h, has_a = _info(path)
+    if not w or not h:
+        raise RuntimeError("video o'lchami aniqlanmadi")
+    if dur > 1200:  # 20 daqiqadan uzun videoni qayta montaj qilish kompyuterni soatlab band qiladi
+        raise RuntimeError("video juda uzun, avtomatik montaj qilinmaydi")
+    W, H = w - w % 2, h - h % 2
+    A, B, C = 0.82, 1.08, 0.92
+    S = (f"if(lt(t,1.5),1.32-(1.32-{A})*t/1.5,if(eq(mod(floor((t-1.5)/1.0),3),0),{A}+0.04*mod(t-1.5,1.0),"
+         f"if(eq(mod(floor((t-1.5)/1.0),3),1),{B}+0.04*mod(t-1.5,1.0),{C}+0.04*mod(t-1.5,1.0))))")
+    vf = (f"[0:v]fps=30,scale={W}:{H},setsar=1,eq=contrast=1.12:brightness=0.03:saturation=1.35,split[a][b];"
+          f"[a]scale=iw/8:-2,boxblur=8:2,scale={W}:{H},eq=brightness=-0.05[bg];"
+          f"[b]scale=w='trunc({W}*({S})/2)*2':h='trunc({H}*({S})/2)*2':eval=frame[fg];"
+          f"[bg][fg]overlay=x='(W-w)/2':y='(H-h)/2',format=yuv420p[v]")
+    out = path.with_name(path.stem + "_d.mp4")
+    args = ["-y", "-i", str(path), "-filter_complex"]
+    if has_a:
+        args += [vf + ";[0:a]loudnorm=I=-14:TP=-2:LRA=11,alimiter=limit=0.7,aresample=48000,volume=-1dB[a]",
+                 "-map", "[v]", "-map", "[a]", "-c:a", "aac", "-b:a", "160k"]
+    else:
+        args += [vf, "-map", "[v]"]
+    args += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-movflags", "+faststart", str(out)]
+    r = _run(args)
+    if r.returncode != 0 or not out.exists() or out.stat().st_size < 10000:
+        raise RuntimeError("montaj xatosi: " + (r.stderr or "")[-300:])
+    return out
+
 def _today():
     return dt.date.today().isoformat()
 
 
 def limit(st, log=print):
     """Bugun KUNLIK_RAD ta video rad etilgan bo'lsa True (yangi video yasalmaydi)."""
-    n = (st.d.get("rad_kun") or {}).get(_today(), 0)
+    n = (st.d.get("rad_kun2") or {}).get(_today(), 0)
     if n >= KUNLIK_RAD:
         if st.d.get("rad_limit_note") != _today():
             st.d["rad_limit_note"] = _today()
@@ -241,9 +280,22 @@ def filtr(st, pending, agent, log=print, kind=None):
     for ep in pending:
         f = Path(ep["file"])
         r = ep.get("rek")
-        if not r or r.get("file") != f.name:
+        yangi = not r or r.get("file") != f.name
+        if yangi:
             try:
                 r = baho(f, ep.get("title", ""), kind)
+                if r["ball"] < CHEGARA and r["kind"] != "ambient" and not f.stem.endswith("_d"):
+                    # Avval montajni jonlantirib ko'ramiz; o'tsa — o'sha yuklanadi
+                    log(f"Rek-ball: {r['ball']}/100 — montaj jonlantirilmoqda: {ep.get('title', '')}")
+                    nf = kuchaytir(f, r["kind"])
+                    r2 = baho(nf, ep.get("title", ""), kind)
+                    r2["oldin"] = r["ball"]
+                    try:
+                        f.unlink()
+                    except OSError:
+                        pass
+                    f, r = nf, r2
+                    ep["file"] = str(nf)
             except Exception as e:  # baholab bo'lmasa (ffmpeg yo'q va h.k.) — xavfsiz tomonga: yuklanmaydi
                 log(f"Rek-ball: {f.name} baholanmadi: {str(e)[:200]}")
                 continue
@@ -251,7 +303,9 @@ def filtr(st, pending, agent, log=print, kind=None):
             ep["rek"] = r
             st.save()
         if r["ball"] >= CHEGARA:
-            log(f"Rek-ball: {r['ball']}/100 ✅ — {ep.get('title', '')}")
+            if yangi:
+                log(f"Rek-ball: {r['ball']}/100 ✅" + (f" (montajdan oldin {r['oldin']})" if r.get("oldin") else "")
+                    + f" — {ep.get('title', '')}")
             ok.append(ep)
             continue
         rad = f.parent / "rad_etilgan"
@@ -267,7 +321,7 @@ def filtr(st, pending, agent, log=print, kind=None):
             st.d["episodes"].remove(ep)
         st.d.setdefault("rad", []).append({k: ep.get(k) for k in ("n", "title", "file", "made", "rek")})
         st.d["rad"] = st.d["rad"][-60:]
-        rk = st.d.setdefault("rad_kun", {})
+        rk = st.d.setdefault("rad_kun2", {})
         rk[_today()] = rk.get(_today(), 0) + 1
         for d in list(rk):
             if d < (dt.date.today() - dt.timedelta(days=7)).isoformat():
@@ -279,10 +333,15 @@ def filtr(st, pending, agent, log=print, kind=None):
 
 
 if __name__ == "__main__":
-    # python3 rek_ball.py VIDEO.mp4 "YouTube title" [short|long|ambient]
+    # python3 rek_ball.py VIDEO.mp4 "YouTube title" [short|long|ambient] [--kuchaytir]
     if len(sys.argv) < 2:
         sys.exit('usage: rek_ball.py VIDEO.mp4 "title" [short|long|ambient]')
-    r = baho(Path(sys.argv[1]), sys.argv[2] if len(sys.argv) > 2 else Path(sys.argv[1]).stem,
-             sys.argv[3] if len(sys.argv) > 3 else None)
+    # --kuchaytir: avval montajni jonlantirib, yangi faylni (<nom>_d.mp4) baholaydi
+    a = [x for x in sys.argv[1:] if x != "--kuchaytir"]
+    src = Path(a[0])
+    if "--kuchaytir" in sys.argv:
+        src = kuchaytir(src)
+        print(f"montaj: {src}", file=sys.stderr)
+    r = baho(src, a[1] if len(a) > 1 else src.stem, a[2] if len(a) > 2 else None)
     print(json.dumps(r, ensure_ascii=False))
     print(("OK" if r["ball"] >= CHEGARA else "RAD") + f" {r['ball']}/100", file=sys.stderr)

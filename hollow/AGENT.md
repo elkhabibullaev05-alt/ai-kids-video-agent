@@ -39,7 +39,7 @@ Run the full render in the background (`setsid nohup … &`) and poll the log; i
 
 **Rek-ball gate (owner's rule — never skip):** before uploading, score every MP4:
 `python3 <repo>/tools/rek_ball.py <file>.mp4 "<YouTube title>"` → JSON with `ball` (0–100), `qism` (parts) and `muammo` (problems, Uzbek).
-A video with **ball < 85 is NOT uploaded**. Fix what `muammo` names (stronger first 3 s, faster changes, no still stretch, louder audio, better title) by editing that script and re-rendering, then score again — at most 2 fix rounds per video per run. If it still scores < 85, do not upload it: record it in `story/log.json → rejected` as `{"date","title","ball","muammo"}` and make a new video instead in the next run (the buffer check counts only uploaded videos). Report each video's score in the final message.
+A video with **ball < 85 is NOT uploaded**. First try the automatic edit: `python3 <repo>/tools/rek_ball.py <file>.mp4 "<title>" --kuchaytir` (punch-in zoom rhythm + loudness fix, writes `<file>_d.mp4`; upload that file if it scores ≥ 85 and its frames look right). Otherwise fix what `muammo` names (stronger first 3 s, faster changes, no still stretch, louder audio, better title) by editing that script and re-rendering, then score again — at most 2 fix rounds per video per run. If it still scores < 85, do not upload it: record it in `story/log.json → rejected` as `{"date","title","ball","muammo"}` and make a new video instead in the next run (the buffer check counts only uploaded videos). Report each video's score in the final message.
 
 ## 6. Upload (UPLOAD.md) and log
 Schedule the 4 videos on Hollowmere Tales via the Claude app's built-in browser (see `UPLOAD.md`). Then append to `story/log.json` → `episodes`:
