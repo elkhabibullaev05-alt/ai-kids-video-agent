@@ -68,6 +68,14 @@ Then a short Uzbek message:
 - Reminders: audience = "Not made for kids", upload .srt files in YouTube Studio → Subtitles.
 - Any problems (failed push, re-renders).
 
+## Retention notes 2026-10-18 (owner-approved, from the hub's view counts)
+Views come almost only from Shorts. Last 12 uploads: "Would YOU open this closet? 👇" got **580** views; character-gag Shorts got 0–3; long episodes got 0–24.
+- **short2 (question/dare) is the main Short now.** Build it around ONE object the viewer can picture (a closet, a freezer door, a jar) and a direct "Would YOU…?" question in the title and the first 2 s. Title pattern that worked: `Would YOU <verb> this <object>? 👇 #shorts`; vary verb and object every day, never repeat one from the last 14 days.
+- short1 (character moment): open on the scare or the punch itself in frame 1, not on the set-up; title must say what happens, not who it is ("The closet BREATHED at Pim 😱", not "Pim says he's NOT scared").
+- short3 (teaser): use the scariest single beat and end on an open question, not "TO BE CONTINUED".
+- Long title as a question the viewer can answer in their head (like EP 9 "Can You Solve 3 Scarecrow Riddles?", the best long at 24 views), not "Dough Bros vs <VILLAIN>".
+- End every Short with a 1-line spoken + on-screen "Follow for part 2" / subscribe prompt in the last 2 s.
+
 ## Never
 - Never upload anywhere except scheduling the day's 4 videos on the Dough Bros channel (@DoughBrosTV) as described in UPLOAD.md. Never type passwords or change account settings.
 - Never use real brands, existing characters, songs, games or memes.
