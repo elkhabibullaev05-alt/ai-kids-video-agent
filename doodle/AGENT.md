@@ -29,6 +29,16 @@ setsid nohup python3 engine/render.py scripts/epNNN.json > /tmp/render_NNN.log 2
 ```
 Then extract 3 frames with ffmpeg and look at them; check the duration with ffprobe.
 
+**Shorts from every episode (owner's rule — the channel gets no discovery without Shorts):** after the long video renders, cut **2 Shorts** from it:
+```bash
+python3 <repo>/tools/make_short.py out/epNNN.mp4 out/epNNN_s1.mp4 --start <s> --dur <30-45> --top "<hook, 4-9 words>" --bottom "Full video on the channel"
+```
+- Short 1 = the cold open (the first 30–45 s, it already has the hook). Short 2 = the single most surprising number/reveal of the episode (find its start time from the script's scene timings or by looking at frames).
+- `--top` is a new hook line, not the long title (a question or bold claim: "ChatGPT now shows you ADS?"). Short title ≤ 60 chars + " #shorts"; description: one sentence + "Full video: <long video URL>" (fill in after the long is scheduled).
+- Each Short goes through the Rek-ball gate below like any video.
+- Slots (UTC): Shorts at **12:00–13:45** and **18:00–19:45**, minutes :15 or :45, on the same day as their long video (or the next day if that time has passed), at least 30 min in the future. YouTube treats a vertical video ≤ 3 min as a Short automatically — upload it with the same UPLOAD.md flow.
+- Log them in the episode's `uploads` with `"kind": "short"` (the buffer check counts only long videos). The 4-day news limit applies to Shorts too.
+
 **Rek-ball gate (owner's rule — never skip):** before uploading, score every MP4:
 `python3 <repo>/tools/rek_ball.py <file>.mp4 "<YouTube title>"` → JSON with `ball` (0–100), `qism` (parts) and `muammo` (problems, Uzbek).
 A video with **ball < 85 is NOT uploaded**. First try the automatic edit: `python3 <repo>/tools/rek_ball.py <file>.mp4 "<title>" --kuchaytir` (punch-in zoom rhythm + loudness fix, writes `<file>_d.mp4`; upload that file if it scores ≥ 85 and its frames look right). Otherwise fix what `muammo` names (stronger first 3 s, faster changes, no still stretch, louder audio, better title) by editing that script and re-rendering, then score again — at most 2 fix rounds per video per run. If it still scores < 85, do not upload it: record it in `story/log.json → rejected` as `{"date","title","ball","muammo"}` and make a new video instead in the next run (the buffer check counts only uploaded videos). Report each video's score in the final message.
@@ -39,10 +49,10 @@ Schedule the video on the channel. Release slots (UTC): one between **14:00–17
 Commit `scripts/_build_epNNN.py`, `scripts/epNNN.json`, `story/log.json` (NOT `out/`), remove the lock, push (on rejection `git pull --rebase` and push again).
 
 ## 5. Deliver
-SendUserFile (status "proactive"): the MP4 and its thumbnail. Then a short Uzbek message: episode, title, one-line summary, scheduled Bishkek time, problems.
+SendUserFile (status "proactive"): the MP4, its thumbnail and the 2 Shorts. Then a short Uzbek message: episode, title, one-line summary, scheduled Bishkek time, problems.
 
 ## 6. Agentlar markazi
-Update the owner's hub (https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r) with ArtifactData: get `agents/doodle`, then `update` it (pin `if_version`) — append one activity line `[YYYY-MM-DD HH:MM] ...` (Bishkek time) per thing done, keep the last 12; refresh `videos` (newest first: at, id, kind "long", s "scheduled"/"out", t, v null), `next` (future publish times), `numbers`, `status`/`status_text`, `last_seen`. If the doc is missing, create it with the same fields.
+Update the owner's hub (https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r) with ArtifactData: get `agents/doodle`, then `update` it (pin `if_version`) — append one activity line `[YYYY-MM-DD HH:MM] ...` (Bishkek time) per thing done, keep the last 12; refresh `videos` (newest first: at, id, kind "long"/"short", s "scheduled"/"out", t, v null), `next` (future publish times), `numbers`, `status`/`status_text`, `last_seen`. If the doc is missing, create it with the same fields.
 
 ## Never
 Never type passwords, never add accounts, never change account/channel settings. Upload only to The Doodle Desk. No invented facts or quotes, no likeness of real people, no partisan side-taking (STYLE.md).
