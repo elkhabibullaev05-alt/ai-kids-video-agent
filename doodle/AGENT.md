@@ -54,5 +54,13 @@ SendUserFile (status "proactive"): the MP4, its thumbnail and the 2 Shorts. Then
 ## 6. Agentlar markazi
 Update the owner's hub (https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r) with ArtifactData: get `agents/doodle`, then `update` it (pin `if_version`) — append one activity line `[YYYY-MM-DD HH:MM] ...` (Bishkek time) per thing done, keep the last 12; refresh `videos` (newest first: at, id, kind "long"/"short", s "scheduled"/"out", t, v null), `next` (future publish times), `numbers`, `status`/`status_text`, `last_seen`. If the doc is missing, create it with the same fields.
 
+## 19-okt reja (owner-approved) — OVERRIDES the rules above where they conflict
+4 long videos got 2 views in total: a new channel gets no traffic for long videos, only Shorts can bring viewers.
+- **1 long video per day, not 2.** Buffer check: a day is covered when it has 1 long video scheduled. Use only the 20:00–23:45 UTC release slot.
+- Cut the 2 Shorts from every long video as above, but make each **about 30 s** (`--dur 28-32`): Short 1 = the funniest moment (not always the cold open), Short 2 = the most surprising number. `--bottom "Full video on the channel"` stays.
+- Frame 1 of each Short = the punchline or the number as big `--top` text (3–6 words), no logo or intro.
+- Thumbnail of the long video: a big hand-drawn stick-figure face (shocked or smug) filling ~half the frame + exactly 3 huge words (e.g. "WHY $110 OIL?").
+- Titles stay as they are (question form works). Never reuse a title from log.json.
+
 ## Never
 Never type passwords, never add accounts, never change account/channel settings. Upload only to The Doodle Desk. No invented facts or quotes, no likeness of real people, no partisan side-taking (STYLE.md).
