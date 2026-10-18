@@ -776,8 +776,35 @@ def _balloon(p, t, color, text):
         p.text(text, 0, -420, 44, "white", outline="dark")
 
 
+def _tanker(p, t, color, text):
+    roll = math.sin(t * 1.4) * 3
+    c = p.c
+    c.save()
+    c.rotate(math.radians(roll * 0.3))
+    p.shape([(-300, -90), (280, -90), (320, -60), (250, 0), (-250, 0)], color or "dark")
+    p.rect(-260, -120, 420, 30, "red", 4)
+    for k in range(4):
+        p.circle(-200 + k * 100, -120, 22, "grey", 4)
+    p.rect(180, -230, 80, 140, "white")
+    p.rect(195, -210, 50, 30, "sky", 3)
+    p.rect(205, -270, 20, 40, "dark", 3)
+    if text:
+        p.text(text, -20, -45, 40, "white", outline="dark")
+    c.restore()
+
+
+def _pipeline(p, t, color, text):
+    p.rect(-420, -110, 840, 70, color or "grey")
+    for k in range(-3, 4):
+        p.rect(k * 120 - 14, -122, 28, 94, "dark", 4)
+    for k in range(-2, 3):
+        p.line([(k * 160, -40), (k * 160, 0)], 8)
+    if text:
+        p.text(text, 0, -170, 44, "dark")
+
+
 PROPS = {
-    "chip": _chip, "balloon": _balloon,
+    "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
     "globe": _globe, "house": _house, "coffee": _coffee, "bread": _bread, "fire": _fire, "sun": _sun, "cloud": _cloud,
