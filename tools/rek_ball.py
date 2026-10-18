@@ -166,6 +166,18 @@ def ball(m, title, kind):
             q.append(f"ovozda {m['silent_s']} s jimlik")
         if m["dur"] < 1800:
             q.append("uyqu videosi uchun juda qisqa")
+    elif kind == "ambient_short":  # tinch Shorts (yomg'ir): qisqa, toza halqa, bir tekis ovoz, kuchli nom
+        tp = _title_pts(title)
+        s = {
+            "uzunlik": 25 if 15 <= m["dur"] <= 45 else 18 if m["dur"] <= 60 else 8,
+            "loop": 25 if (m["loop"] or 0) >= 0.85 else 15 if (m["loop"] or 0) >= 0.75 else 5,
+            "ovoz": (15 if -30 <= m["db"] <= -12 else 6) + (10 if m["silent_s"] < 2 else 0),
+            "nom": 25 if tp >= 9 else 18 if tp >= 7 else 10,
+        }
+        if (m["loop"] or 0) < 0.85:
+            q.append("oxiri boshiga silliq ulanmaydi")
+        if m["silent_s"] >= 2:
+            q.append(f"ovozda {m['silent_s']} s jimlik")
     elif kind == "short":
         s = {
             "hook": _pick(m["hook_motion"], [(10, 15), (6, 10), (3, 5)]) + (5 if m["silent_start"] < 0.3 else 0)
@@ -284,7 +296,7 @@ def filtr(st, pending, agent, log=print, kind=None):
         if yangi:
             try:
                 r = baho(f, ep.get("title", ""), kind)
-                if r["ball"] < CHEGARA and r["kind"] != "ambient" and not f.stem.endswith("_d"):
+                if r["ball"] < CHEGARA and not r["kind"].startswith("ambient") and not f.stem.endswith("_d"):
                     # Avval montajni jonlantirib ko'ramiz; o'tsa — o'sha yuklanadi
                     log(f"Rek-ball: {r['ball']}/100 — montaj jonlantirilmoqda: {ep.get('title', '')}")
                     nf = kuchaytir(f, r["kind"])
