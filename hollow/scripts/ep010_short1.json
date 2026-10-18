@@ -1,0 +1,316 @@
+{
+ "id": "ep010_short1",
+ "format": "short",
+ "title": "Why Couldn't Strasbourg Stop Dancing? #shorts",
+ "hook": "DON'T START DANCING",
+ "description": "Strasbourg, July 1518: one woman began to dance in the street — with no music — and could not stop. Within weeks, chroniclers counted 50 to 400 dancers. The city's cure? Hire musicians. Full true story on the channel. #shorts #dancingplague #strasbourg #1518 #truestory #hollowmere",
+ "tags": [
+  "shorts",
+  "true story",
+  "unsolved mystery",
+  "real horror story",
+  "dancing plague",
+  "dancing plague of 1518",
+  "Strasbourg",
+  "1518",
+  "Alsace",
+  "France",
+  "dancing mania",
+  "St Vitus dance"
+ ],
+ "thumbnail": {
+  "bg": "village",
+  "seed": 6,
+  "creature": "figure",
+  "text": "DON'T DANCE"
+ },
+ "shots": [
+  {
+   "bg": "village",
+   "seed": 6,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": [
+    "odo",
+    "w"
+   ],
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {
+    "w": {
+     "type": "figure",
+     "x": 960,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "show": "w",
+     "dur": 0.05
+    },
+    {
+     "flash": true,
+     "and": true
+    },
+    {
+     "shake": 0.4,
+     "power": 14,
+     "and": true
+    },
+    {
+     "move": "w",
+     "to": 820,
+     "speed": "run",
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "1518. One woman starts dancing. No music.",
+     "es": "1518. Una mujer empieza a bailar. Sin música.",
+     "de": "1518. Eine Frau beginnt zu tanzen. Ohne Musik.",
+     "fr": "1518. Une femme se met à danser. Sans musique.",
+     "it": "1518. Una donna inizia a ballare. Senza musica.",
+     "pt": "1518. Uma mulher começa a dançar. Sem música.",
+     "and": true
+    },
+    {
+     "move": "w",
+     "to": 960,
+     "speed": "run"
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "village",
+   "seed": 8,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 2,
+   "ambient": 0.48,
+   "focus": [
+    "odo",
+    "m1"
+   ],
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 420
+    }
+   },
+   "creatures": {
+    "m1": {
+     "type": "figure",
+     "x": 760,
+     "seed": 0,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.85
+    },
+    "m2": {
+     "type": "figure",
+     "x": 1000,
+     "seed": 1,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.85
+    }
+   },
+   "beats": [
+    {
+     "show": "m1",
+     "dur": 0.2
+    },
+    {
+     "show": "m2",
+     "dur": 0.2,
+     "and": true
+    },
+    {
+     "say": "narr",
+     "en": "She can't stop. Then the watchers join in. Hundreds.",
+     "es": "No puede parar. Luego se unen los mirones. Cientos.",
+     "de": "Sie kann nicht aufhören. Dann tanzen die Zuschauer mit. Hunderte.",
+     "fr": "Elle ne peut s'arrêter. Puis les badauds suivent. Des centaines.",
+     "it": "Non riesce a fermarsi. Poi si uniscono gli altri. Centinaia.",
+     "pt": "Ela não consegue parar. Depois os curiosos entram. Centenas.",
+     "and": true
+    },
+    {
+     "move": "m1",
+     "to": 640,
+     "speed": "run",
+     "and": true
+    },
+    {
+     "move": "m2",
+     "to": 900,
+     "speed": "run",
+     "and": true
+    },
+    {
+     "flash": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  },
+  {
+   "bg": "village",
+   "seed": 4,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.48,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 560
+    }
+   },
+   "creatures": {
+    "w": {
+     "type": "figure",
+     "x": 950,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 1.0
+    }
+   },
+   "beats": [
+    {
+     "act": "odo",
+     "do": "scared"
+    },
+    {
+     "say": "narr",
+     "en": "The city's cure? Hire musicians. It only spread.",
+     "es": "¿La cura de la ciudad? Contratar músicos. Solo empeoró.",
+     "de": "Die Heilung der Stadt? Musiker anheuern. Es breitete sich aus.",
+     "fr": "Le remède de la ville ? Des musiciens. Ça s'est propagé.",
+     "it": "La cura? Assumere musicisti. Si diffuse ancora.",
+     "pt": "A cura da cidade? Contratar músicos. Só piorou.",
+     "and": true
+    },
+    {
+     "sfx": "thump",
+     "and": true
+    },
+    {
+     "light": "out"
+    },
+    {
+     "show": "w",
+     "dur": 0.1,
+     "and": true
+    },
+    {
+     "lunge": "w",
+     "to": 820,
+     "and": true
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.05,
+   "lights": [
+    {
+     "kind": "fire",
+     "x": 900,
+     "y": 900,
+     "r": 600
+    }
+   ],
+   "cam": {
+    "x": 740
+   }
+  },
+  {
+   "bg": "village",
+   "seed": 6,
+   "music": "heartbeat",
+   "wind": true,
+   "eyes": 0,
+   "ambient": 0.55,
+   "focus": "odo",
+   "fade": false,
+   "chars": {
+    "odo": {
+     "x": 640
+    }
+   },
+   "creatures": {
+    "w": {
+     "type": "figure",
+     "x": 820,
+     "seed": 2,
+     "face": -1,
+     "state": "hidden",
+     "scale": 0.9
+    }
+   },
+   "beats": [
+    {
+     "move": "odo",
+     "to": 560,
+     "speed": "walk"
+    },
+    {
+     "say": "narr",
+     "en": "So if your feet start tapping tonight...",
+     "es": "Así que si tus pies empiezan a moverse esta noche...",
+     "de": "Wenn deine Füße heute Nacht zu tippen beginnen...",
+     "fr": "Alors si tes pieds se mettent à taper ce soir...",
+     "it": "Quindi se stanotte i tuoi piedi iniziano a battere...",
+     "pt": "Então, se seus pés começarem a bater esta noite...",
+     "and": true
+    },
+    {
+     "show": "w",
+     "dur": 0.05
+    },
+    {
+     "flash": true,
+     "and": true
+    }
+   ],
+   "tail": 0.0,
+   "lights": [
+    {
+     "kind": "window",
+     "x": 900,
+     "y": 640,
+     "r": 520
+    }
+   ]
+  }
+ ]
+}
