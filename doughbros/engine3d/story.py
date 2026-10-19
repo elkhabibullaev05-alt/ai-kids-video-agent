@@ -133,7 +133,8 @@ def face(c, t, d, ang):
 
 def look_at(c, t, target):
     v = (POS[target] if target in POS else Vector(target)) - POS[c]
-    face(c, t, 0.6, math.atan2(v.x, -v.y) if v.length > 0.1 else 0)
+    ang = math.atan2(v.x, -v.y) if v.length > 0.1 else 0
+    face(c, t, 0.6, max(-1.1, min(1.1, ang)))  # never turn the face away from the audience
 
 
 def bounce(c, t, n=1, h=0.8):
