@@ -1,0 +1,903 @@
+{
+ "title": "Max Bakes a Surprise Cake... What Could Go Wrong? 🎂🐱",
+ "description": "Max the curious cat wants to bake a birthday cake for Grandma, but flour flies, Dog brings a ball instead of an egg, and Max gets dizzy! Then Mouse has a clever idea: one job for every friend.\nMax the Curious Cat #1\n#kids #cartoon #cat",
+ "set": {
+  "place": "house",
+  "time": "day"
+ },
+ "chars": {
+  "max": {
+   "name": "Max",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    0.98,
+    0.48,
+    0.1
+   ],
+   "kind": "cat",
+   "size": 1.0,
+   "home": [
+    -2,
+    6
+   ]
+  },
+  "mouse": {
+   "name": "Mouse",
+   "voice": "af_sky",
+   "speed": 1.1,
+   "pitch": 4,
+   "color": [
+    0.7,
+    0.7,
+    0.75
+   ],
+   "kind": "mouse",
+   "size": 1.0,
+   "home": [
+    1.5,
+    5
+   ]
+  },
+  "dog": {
+   "name": "Dog",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.75,
+    0.55,
+    0.3
+   ],
+   "kind": "dog",
+   "size": 1.0,
+   "home": [
+    5,
+    8
+   ]
+  },
+  "grandma": {
+   "name": "Grandma",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.6,
+    0.35,
+    0.7
+   ],
+   "kind": "grandma",
+   "size": 1.0,
+   "home": [
+    -6,
+    9
+   ]
+  },
+  "bird": {
+   "name": "Bird",
+   "voice": "af_bella",
+   "speed": 1.15,
+   "pitch": 5,
+   "color": [
+    0.25,
+    0.6,
+    1.0
+   ],
+   "kind": "bird",
+   "size": 1.0,
+   "home": [
+    2,
+    10
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bf_isabella",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "props": [
+  {
+   "id": "flour",
+   "type": "box",
+   "color": "white",
+   "on": null,
+   "at": [
+    -1,
+    6,
+    0.5
+   ],
+   "visible": false,
+   "scale": 0.9
+  },
+  {
+   "id": "ball",
+   "type": "ball",
+   "color": "red",
+   "on": null,
+   "at": [
+    4,
+    7,
+    0.9
+   ],
+   "visible": false,
+   "scale": 0.6
+  },
+  {
+   "id": "cake",
+   "type": "cake",
+   "color": "pink",
+   "on": null,
+   "at": [
+    0,
+    9,
+    0.5
+   ],
+   "visible": false,
+   "scale": 1.2
+  },
+  {
+   "id": "gift",
+   "type": "gift",
+   "color": "purple",
+   "on": null,
+   "at": [
+    -4,
+    9,
+    0.5
+   ],
+   "visible": false,
+   "scale": 0.9
+  }
+ ],
+ "beats": [
+  {
+   "cam": "wide",
+   "hold": 1.4,
+   "text": "MAX BAKES A CAKE!",
+   "do": [
+    [
+     "max",
+     "jump"
+    ],
+    [
+     "dog",
+     "spin"
+    ],
+    [
+     "bird",
+     "jump"
+    ],
+    [
+     "mouse",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Whoa! Grandma's birthday is today, and I have the best idea ever!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Max the curious cat wanted to bake a surprise cake for Grandma.",
+   "cam": "wide",
+   "do": [
+    [
+     "max",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "A cake? I love cake! Can I eat it now?",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "No, Dog! First we bake it. Then we give it to Grandma.",
+   "cam": "two:max,dog",
+   "do": [
+    [
+     "max",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "Tweet tweet! I can help! I am a very good helper!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "Do you know how to bake a cake, Max?",
+   "cam": "close:mouse",
+   "do": [
+    [
+     "all",
+     "look:mouse"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Easy! Flour, milk, eggs, and a lot of love. Let's go!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Max put a big box of flour on the rug.",
+   "cam": "prop:flour",
+   "do": [
+    [
+     "flour",
+     "show"
+    ],
+    [
+     "flour",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Step one. The flour goes in the bowl. Very slowly...",
+   "cam": "close:max"
+  },
+  {
+   "who": "bird",
+   "say": "I will help! Flap, flap, flap!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "jump"
+    ],
+    [
+     "flour",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "cam": "wide",
+   "hold": 1.2,
+   "text": "WHOOSH!",
+   "sfx": "suspicious",
+   "do": [
+    [
+     "flour",
+     "spin"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Bird flapped so hard that the flour flew everywhere!",
+   "cam": "wide",
+   "do": [
+    [
+     "max",
+     "squash"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Achoo! Now I am a white cat!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "Ha ha ha! Max looks like a little snowman!",
+   "cam": "two:dog,max",
+   "do": [
+    [
+     "dog",
+     "laugh"
+    ],
+    [
+     "bird",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "Oops. Sorry, Max. Maybe I flapped a little too much.",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "That's okay, Bird. Let's try again!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Next, Max needed eggs. Dog ran to get them.",
+   "cam": "wide",
+   "do": [
+    [
+     "dog",
+     "to:max"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "I found a round, white egg! Here you go!",
+   "cam": "close:dog",
+   "do": [
+    [
+     "ball",
+     "show"
+    ],
+    [
+     "ball",
+     "give:max"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Dog... this is not an egg. This is your ball!",
+   "cam": "prop:ball",
+   "do": [
+    [
+     "ball",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "Oh! It looked so round and tasty.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "You can't bake a ball, Dog. It will taste like rubber!",
+   "cam": "close:mouse",
+   "do": [
+    [
+     "mouse",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "cam": "wide",
+   "hold": 1.2,
+   "text": "FAIL NUMBER TWO!",
+   "sfx": "suspicious",
+   "do": [
+    [
+     "ball",
+     "bounce"
+    ],
+    [
+     "dog",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Max did not give up. He tried to mix everything by himself.",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "spin"
+    ],
+    [
+     "ball",
+     "hide"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Mix, mix, mix! Faster, faster, faster!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "spin"
+    ],
+    [
+     "max",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Max spun so fast that he got very, very dizzy.",
+   "cam": "wide",
+   "do": [
+    [
+     "max",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Ooooh. Why is the room going round and round?",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "squash"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "Max is spinning like a top! Tweet!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "Can I spin too? Wheee!",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Dog spun, and bumped into Max. Bump! They both fell on the soft rug.",
+   "cam": "wide",
+   "do": [
+    [
+     "dog",
+     "to:max"
+    ],
+    [
+     "max",
+     "squash"
+    ],
+    [
+     "dog",
+     "squash"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "Two dizzy friends! This is the funniest kitchen in town!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Oh no. No cake, no eggs, and flour on my nose. I can't do it.",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Max sat down on the rug. He felt sad.",
+   "cam": "wide",
+   "do": [
+    [
+     "max",
+     "sad"
+    ],
+    [
+     "all",
+     "look:max"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "Max, wait! I have an idea. A tiny idea, but a good one.",
+   "cam": "close:mouse",
+   "do": [
+    [
+     "mouse",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "You tried to do everything alone. What if everybody gets one job?",
+   "cam": "two:mouse,max",
+   "do": [
+    [
+     "mouse",
+     "to:max"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "One job for everybody? Like a team?",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "Yes! Bird brings the eggs. Dog holds the bowl. I read the recipe.",
+   "cam": "close:mouse"
+  },
+  {
+   "who": "mouse",
+   "say": "And you, Max, do the mixing. Slowly this time!",
+   "cam": "two:mouse,max",
+   "do": [
+    [
+     "max",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "I will fly to the hen house and bring the eggs. Carefully!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "I will hold the bowl. And I will not eat anything. Probably.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "cam": "wide",
+   "hold": 1.2,
+   "text": "TEAM CAKE!",
+   "do": [
+    [
+     "all",
+     "jump"
+    ],
+    [
+     "flour",
+     "hide"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "So the friends worked together, one job each.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "One cup of flour. Two eggs. One cup of milk. Mix slowly!",
+   "cam": "close:mouse"
+  },
+  {
+   "who": "bird",
+   "say": "Here are the eggs! Not one is broken. I flew so carefully!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "I am holding the bowl. My tail is wagging, but my paws are still!",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Slow mix. Slow mix. Look, it's working!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "Now it goes into the oven. We wait. Patience is part of baking!",
+   "cam": "two:mouse,max",
+   "do": [
+    [
+     "mouse",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The cake went into the oven. Soon the house smelled sweet and warm.",
+   "cam": "prop:cake",
+   "do": [
+    [
+     "cake",
+     "show"
+    ],
+    [
+     "cake",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "It smells sooo good. But I am a good dog. I am waiting.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Just then, the door opened. Grandma was home!",
+   "cam": "wide",
+   "do": [
+    [
+     "grandma",
+     "enter"
+    ]
+   ]
+  },
+  {
+   "who": "grandma",
+   "say": "My goodness! What is this lovely smell?",
+   "cam": "close:grandma",
+   "do": [
+    [
+     "all",
+     "look:grandma"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Surprise! Happy birthday, Grandma! We made you a cake!",
+   "cam": "two:max,grandma",
+   "do": [
+    [
+     "all",
+     "jump"
+    ],
+    [
+     "cake",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "grandma",
+   "say": "Oh, my dears! This is the best birthday cake in the whole world!",
+   "cam": "close:grandma",
+   "do": [
+    [
+     "grandma",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "grandma",
+   "say": "And I have a surprise too. A present for my best helpers!",
+   "cam": "close:grandma",
+   "do": [
+    [
+     "gift",
+     "show"
+    ],
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bird",
+   "say": "A present for us? Tweet tweet hooray!",
+   "cam": "close:bird",
+   "do": [
+    [
+     "bird",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Inside the box were four little chef hats. One for every helper!",
+   "cam": "prop:gift",
+   "do": [
+    [
+     "gift",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Chef hats! Now we are a real baking team!",
+   "cam": "two:max,grandma",
+   "do": [
+    [
+     "max",
+     "jump"
+    ],
+    [
+     "grandma",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "I learned something today. Big jobs are easy when friends help!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "mouse",
+   "say": "And when you go slowly, and nobody flaps too hard!",
+   "cam": "close:mouse",
+   "do": [
+    [
+     "all",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "dog",
+   "say": "Can we eat the cake now? Please, please, please?",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "grandma",
+   "say": "Yes, Dog. Now everybody can have a piece!",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "laugh"
+    ],
+    [
+     "all",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "max",
+   "say": "Tomorrow I want to bake a cake as tall as the house! Should I try? Tell me in the comments!",
+   "cam": "close:max",
+   "do": [
+    [
+     "max",
+     "jump"
+    ]
+   ]
+  }
+ ]
+}
