@@ -22,3 +22,6 @@ Time limit: at most ~15 minutes per run for translations. Whatever is not finish
 In the episode's `uploads[]` entry add `"translations": ["es", ...]` (languages actually published) and `"subs": ["en", "es", ...]`.
 
 Dubbed audio tracks are NOT made by us: YouTube's own automatic dubbing (Studio setting, owner decides) creates them.
+
+## Old videos (owner's request, 2026-10-19)
+The channel's already published videos get translations too: after the current run's own videos (and any `translations_pending`) are done, add title + description translations (no subtitles needed) to up to **5 older videos per run**, most-viewed first (Studio Content list sorted by views). Keep the list of finished ones in the agent's `story/log.json → "translated_old": ["<video_id>", ...]` so none is done twice. Stay inside the ~15-minute translation budget.
