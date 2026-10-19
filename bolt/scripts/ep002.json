@@ -1,0 +1,931 @@
+{
+ "title": "Who Ate the Birthday Cake? 🎂🔍 Cartoon Cars Mystery",
+ "description": "It's Big Bertha's birthday, but the strawberry cake disappears the moment everyone closes their eyes! Inspector Bolt puts every car on the Truth Press, follows the pink frosting tracks and learns that sorry is a small word that fixes big things. Inspector Bolt #2\n\n#kids #cartoon #cars",
+ "set": {
+  "press": true,
+  "podium": true,
+  "time": "day"
+ },
+ "chars": {
+  "bolt": {
+   "name": "Inspector Bolt",
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.08,
+    0.22,
+    0.62
+   ],
+   "kind": "car",
+   "size": 1.0,
+   "hat": true,
+   "home": [
+    6.0,
+    9.0
+   ]
+  },
+  "bertha": {
+   "name": "Big Bertha",
+   "voice": "af_bella",
+   "speed": 1.05,
+   "pitch": -1,
+   "color": [
+    0.98,
+    0.78,
+    0.05
+   ],
+   "kind": "bus",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -9.0,
+    18.0
+   ]
+  },
+  "turbo": {
+   "name": "Turbo",
+   "voice": "am_puck",
+   "speed": 1.2,
+   "pitch": 1,
+   "color": [
+    0.92,
+    0.1,
+    0.08
+   ],
+   "kind": "car",
+   "size": 0.95,
+   "hat": false,
+   "home": [
+    3.0,
+    12.0
+   ]
+  },
+  "grumpy": {
+   "name": "Grumpy",
+   "voice": "am_onyx",
+   "speed": 0.9,
+   "pitch": -2,
+   "color": [
+    0.5,
+    0.52,
+    0.55
+   ],
+   "kind": "truck",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -1.0,
+    15.5
+   ]
+  },
+  "pip": {
+   "name": "Pip",
+   "voice": "af_sky",
+   "speed": 1.05,
+   "pitch": 4,
+   "color": [
+    0.98,
+    0.45,
+    0.7
+   ],
+   "kind": "small",
+   "size": 0.65,
+   "hat": false,
+   "home": [
+    -15.5,
+    8.0
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "am_fenrir",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dash": {
+   "name": "Dash",
+   "voice": "am_michael",
+   "speed": 1.1,
+   "pitch": 0,
+   "color": [
+    0.1,
+    0.72,
+    0.58
+   ],
+   "kind": "car",
+   "size": 1.05,
+   "hat": false,
+   "home": [
+    11.0,
+    18.0
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "cake",
+   "type": "cake",
+   "color": [
+    0.98,
+    0.55,
+    0.72
+   ],
+   "on": "podium"
+  },
+  {
+   "id": "banana",
+   "type": "banana",
+   "color": "yellow",
+   "visible": false
+  },
+  {
+   "id": "gift",
+   "type": "gift",
+   "color": "blue",
+   "at": [
+    -4.0,
+    6.0,
+    0.0
+   ],
+   "visible": false,
+   "scale": 0.8
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Honk honk! Everyone in Wheelburg raced to the square. Today was a very special day!",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "enter"
+    ],
+    [
+     "turbo",
+     "enter:left"
+    ],
+    [
+     "grumpy",
+     "enter"
+    ],
+    [
+     "pip",
+     "enter:left"
+    ],
+    [
+     "dash",
+     "enter"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "It's my birthday! My big, beautiful birthday!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Happy birthday, Bertha! I drove here super fast. Like, super super fast.",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Happy birthday! I made you a card. It's very small, like me.",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Happy birthday. Can we eat now?",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "narr",
+   "say": "Then Dash, the delivery van, rolled up with the most important thing of all.",
+   "cam": "two:dash,bertha",
+   "do": [
+    [
+     "dash",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "One giant strawberry birthday cake! Delivered on time, as always!",
+   "cam": "close:dash"
+  },
+  {
+   "who": "narr",
+   "say": "The cake sat on the podium. Pink frosting. Seven candles. It was perfect.",
+   "cam": "podium",
+   "do": [
+    [
+     "cake",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Ooh! It's the most beautiful cake I have ever seen!",
+   "cam": "podium"
+  },
+  {
+   "who": "pip",
+   "say": "Can I blow out one candle? Just one tiny one?",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Everyone close your eyes! Let's count to three and make a wish!",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "One... two... three!",
+   "cam": "wide"
+  },
+  {
+   "sfx": "alarm",
+   "cam": "podium",
+   "hold": 1.3,
+   "text": "THE CAKE IS GONE!",
+   "do": [
+    [
+     "cake",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "My cake! My birthday cake is GONE!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Gone? Where did it go? Cakes can't drive!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Great. No cake. Best birthday ever.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "pip",
+   "say": "Somebody took it while our eyes were closed!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, with a squeak of brakes, the best detective in town arrived.",
+   "cam": "wide",
+   "do": [
+    [
+     "bolt",
+     "enter"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Inspector Bolt. I heard the word cake. And the word gone.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Nobody leaves this square. Everyone will take the Truth Press.",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "clap"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "The Truth Press? Um. I have more deliveries today.",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Then this will be quick. Procedure.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bertha",
+   "say": "I'll go first! It's my birthday, so I'll be brave.",
+   "cam": "two:bertha,bolt",
+   "do": [
+    [
+     "bertha",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Big Bertha. Did you take your own birthday cake?",
+   "cam": "press"
+  },
+  {
+   "who": "bertha",
+   "say": "No! I would never! I was going to share it with everybody!",
+   "cam": "press"
+  },
+  {
+   "who": "narr",
+   "say": "The Truth Press came closer and closer...",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:bertha"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Her eyes stayed small. She's telling the truth.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bertha",
+   "say": "Then why is my roof flat again?! On my birthday!",
+   "cam": "press",
+   "do": [
+    [
+     "bertha",
+     "flat_roof"
+    ],
+    [
+     "turbo",
+     "laugh"
+    ],
+    [
+     "pip",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Procedure. Happy birthday. Next! Turbo.",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "to_home"
+    ],
+    [
+     "turbo",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Me? I don't even like strawberry. I like going fast!",
+   "cam": "press"
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "close:turbo",
+   "hold": 1.0,
+   "text": "SUSPICIOUS...",
+   "do": [
+    [
+     "turbo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Turbo, your eyes are getting very big. What are you hiding?",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "turbo",
+   "say": "Nothing! Nothing at all! Just air. And speed.",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The press squeezed, and something fell out of Turbo's trunk!",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:turbo"
+    ],
+    [
+     "banana",
+     "drop:turbo"
+    ]
+   ]
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "prop:banana",
+   "hold": 1.0,
+   "text": "A BANANA?!"
+  },
+  {
+   "who": "turbo",
+   "say": "Okay, okay! It's a birthday banana! It was my present for Bertha!",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "bertha",
+   "say": "Aww, Turbo! A banana! That's so sweet!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "He forgot to buy a present. That's his lunch.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "turbo",
+   "say": "...It's a lunch AND a present. Two in one.",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "bolt",
+   "say": "A banana is not a cake. Next! Grumpy.",
+   "cam": "wide",
+   "do": [
+    [
+     "turbo",
+     "to_home"
+    ],
+    [
+     "grumpy",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "I don't like cake. Too many sparkly candles. I hate shiny things.",
+   "cam": "press"
+  },
+  {
+   "who": "bolt",
+   "say": "Eyes small. True again. Hmm.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "grumpy",
+   "say": "Told you. Can I go back to being grumpy now?",
+   "cam": "press",
+   "do": [
+    [
+     "grumpy",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "You may. Next! Little Pip.",
+   "cam": "two:pip,bolt",
+   "do": [
+    [
+     "grumpy",
+     "to_home"
+    ],
+    [
+     "pip",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Me? I'm so small. The cake is three times bigger than me!",
+   "cam": "press"
+  },
+  {
+   "who": "narr",
+   "say": "The Truth Press squeezed... but it couldn't even reach Pip!",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:pip"
+    ]
+   ]
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "press",
+   "hold": 1.1,
+   "text": "TOO SMALL TO SQUEEZE!"
+  },
+  {
+   "who": "pip",
+   "say": "Hee hee! That tickles! I'm telling the truth!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Eyes small. Everyone is telling the truth. So who took the cake?",
+   "cam": "close:bolt",
+   "do": [
+    [
+     "pip",
+     "to_home"
+    ],
+    [
+     "press",
+     "sink"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then Inspector Bolt noticed something pink on the ground.",
+   "cam": "overhead",
+   "do": [
+    [
+     "fx",
+     "tracks:podium-dash"
+    ]
+   ],
+   "text": "CLUE!"
+  },
+  {
+   "who": "bolt",
+   "say": "Pink frosting tracks. Fresh. Still sticky. And they lead...",
+   "cam": "overhead"
+  },
+  {
+   "who": "bolt",
+   "say": "...all the way to the back of the square.",
+   "cam": "overhead"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone followed the pink tracks with their eyes.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "look:dash"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "And at the end of the tracks stood Dash, the delivery van.",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "Me? Ha ha. No. I deliver cakes. I don't take cakes.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "bolt",
+   "say": "Then you won't mind the Truth Press, Dash.",
+   "cam": "two:dash,bolt",
+   "do": [
+    [
+     "bolt",
+     "turn:dash"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "I... I really have to go. Bye!",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Wait! Dash, please don't drive away!",
+   "cam": "close:bertha"
+  },
+  {
+   "who": "narr",
+   "say": "Dash stopped. His doors creaked. And out slid... the birthday cake!",
+   "cam": "close:dash",
+   "do": [
+    [
+     "cake",
+     "drop:dash"
+    ]
+   ]
+  },
+  {
+   "sfx": "alarm",
+   "cam": "close:dash",
+   "hold": 1.3,
+   "text": "THE CAKE THIEF IS... DASH?!"
+  },
+  {
+   "who": "turbo",
+   "say": "Whoa! The cake was inside Dash the whole time!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "But Dash, you brought the cake! Why would you take it back?",
+   "cam": "close:pip"
+  },
+  {
+   "who": "dash",
+   "say": "When everyone closed their eyes, I backed up to take a photo.",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "And I bumped the podium. The cake fell right into my van. Squish.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "dash",
+   "say": "The frosting was all smushed. The candles were bent. It was ruined.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "dash",
+   "say": "I was going to fix it in secret. But I didn't know how.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "bolt",
+   "say": "Dash, why didn't you just tell Bertha what happened?",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "dash",
+   "say": "Because I was scared. Saying sorry is really, really hard.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone waited for the Truth Press. But Inspector Bolt rolled over slowly.",
+   "cam": "wide",
+   "do": [
+    [
+     "bolt",
+     "to:dash"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Dash. Hiding a mistake makes it bigger. Saying sorry makes it smaller.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Sorry is a small word. But it fixes big things.",
+   "cam": "close:bolt",
+   "text": "SORRY FIXES BIG THINGS"
+  },
+  {
+   "who": "dash",
+   "say": "Bertha... I'm sorry. I bumped your cake, and then I hid it.",
+   "cam": "close:dash"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone looked at Bertha. What would she say?",
+   "cam": "close:bertha"
+  },
+  {
+   "who": "bertha",
+   "say": "Oh, Dash. Thank you for telling me. I'm not angry at all.",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "A smushed cake is still a cake! And it still tastes like birthday!",
+   "cam": "two:bertha,dash",
+   "do": [
+    [
+     "cake",
+     "home"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Bent candles. Not shiny anymore. Finally, a cake I like.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "turbo",
+   "say": "And I'll add my banana on top! Banana strawberry birthday cake!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Can I blow out a candle now? Please, please, please?",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Yes! Everyone together! One, two, three!",
+   "cam": "podium"
+  },
+  {
+   "who": "narr",
+   "say": "And everyone blew out the candles. Even Grumpy smiled. A little.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "Thank you, everyone. Next time, I'll say sorry right away.",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Case closed. And happy birthday, Big Bertha.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "But as the party went on, something strange happened.",
+   "cam": "wide"
+  },
+  {
+   "sfx": "alarm",
+   "cam": "prop:gift",
+   "hold": 1.2,
+   "text": "THE GIFT IS MOVING!",
+   "do": [
+    [
+     "gift",
+     "show"
+    ],
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Wait. Who gave me that box? Why is it jumping?",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Hmm. A new mystery. Procedure.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think is inside the box? Tell us in the comments! Inspector Bolt will be back.",
+   "cam": "wide",
+   "do": [
+    [
+     "gift",
+     "bounce"
+    ]
+   ],
+   "text": "WHAT'S IN THE BOX? COMMENT!"
+  }
+ ]
+}
