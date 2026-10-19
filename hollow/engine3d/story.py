@@ -68,7 +68,7 @@ P = {}
 def make_prop(p):
     col = p.get("color", "gold"); col = PCOL.get(col, col) if isinstance(col, str) else tuple(col)
     shiny = col == PCOL["gold"]
-    m = mat("p_" + p["id"], col, 0.18 if shiny else 0.45, 1.0 if shiny else 0.0, 0.4 if shiny else 0)
+    m = mat("p_" + p["id"], col, 0.18 if shiny else 0.45, 1.0 if shiny else 0.0, p.get("glow", 0.4 if shiny else 0))  # "glow": emission strength
     t = p.get("type", "box"); s = p.get("scale", 1.0)
     root = bpy.data.objects.new("prop_" + p["id"], None); sc.collection.objects.link(root)
     if t == "wheel":

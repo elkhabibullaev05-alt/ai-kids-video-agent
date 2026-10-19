@@ -561,10 +561,55 @@
         }
       ],
       "upload_note": "2026-10-18 15:42-17:10Z run: long 234.9 s score 96 (only note: <4 min), Short 20.5 s score 91 (loop weak, 3.2 s still). Engine: figure seed 10-12 = green-skinned child; thumbnail 'figure' + 'cseed'. Not uploaded: YouTube daily upload limit still active at 16:05Z and 17:05Z. Files hollow_ep012_long.mp4, _long_thumb.png, _short1.mp4 are on branch uploads-hollow next to EP8-EP11 (don't force-push). Short goes to 21 Oct because 20 Oct already has 4 Shorts. 20 Oct last free long slot: 23:15Z (pack 3). Pending total now 10 uploads (~ one day's limit): EP8 long, EP9 long+short, EP10 long+short, EP11 long+2 shorts, EP12 long+short - upload earliest publish times first. | 2026-10-18 19:40-21:35Z run: daily upload limit had lifted; pending videos uploaded and scheduled at their planned times (Studio had opened in another Google account -> switched to the Hollowmere Tales channel)."
+    },
+    {
+      "episode": 13,
+      "pack": 3,
+      "day": "2026-10-20",
+      "date": "2026-10-20",
+      "format": "3D (engine3d, graveyard)",
+      "theme": "Recorded legend: The Legend of Sleepy Hollow (Washington Irving, 1820; Old Dutch Church c.1685, bell dated 1685; record of an anonymous Hessian soldier killed by a cannonball at the Battle of White Plains 1776, burial never recorded; Ichabod Crane, the church bridge rule, hat + shattered pumpkin; Irving buried in Sleepy Hollow Cemetery 1859; North Tarrytown renamed Sleepy Hollow Dec 1996)",
+      "rule": "The Horseman cannot cross the bridge by the old church - reach it and never look back",
+      "title": "What Rides Through Sleepy Hollow at Night?",
+      "creature": "horseman (new 3D kind: headless rider on a black horse, glowing pumpkin)",
+      "bg": [
+        "graveyard"
+      ],
+      "summary": "Odo and Mothwick walk the real Old Dutch Burying Ground while the Narrator tells Irving's 1820 legend and the 1776 record behind it. Ichabod Crane is chased to the church bridge, the rider throws his glowing head, and Ichabod is never seen again.",
+      "cliffhanger": "The hoofbeats stop - and something round and glowing rolls out of the dark right behind Odo and Mothwick. It is not a pumpkin.",
+      "shorts": [
+        "Why Can't He Cross This Bridge? #shorts"
+      ],
+      "rek_ball": {
+        "long": 100,
+        "short1": 96
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Old_Dutch_Church_of_Sleepy_Hollow",
+        "https://www.sleepyhollowny.gov/289/History-of-the-Village",
+        "https://visitsleepyhollow.com/see/old-dutch-church",
+        "https://www.latimes.com/archives/la-xpm-1996-12-15-mn-9248-story.html"
+      ],
+      "uploads": [],
+      "pending_uploads": [
+        {
+          "video": "long",
+          "title": "What Rides Through Sleepy Hollow at Night?",
+          "publish_at": "2026-10-20T23:15:00Z",
+          "file": "uploads-hollow/hollow_ep013_long.mp4",
+          "thumb": "uploads-hollow/hollow_ep013_long_thumb.png",
+          "script": "hollow/scripts3d/ep013.json"
+        },
+        {
+          "video": "short1",
+          "title": "Why Can't He Cross This Bridge? #shorts",
+          "publish_at": "2026-10-21T16:45:00Z",
+          "file": "uploads-hollow/hollow_ep013_short1.mp4",
+          "cut": "long 110.25 s + 19.6 s, make_short top '1 RULE: REACH THE BRIDGE', then rek_ball --kuchaytir"
+        }
+      ],
+      "pending_reason": "2026-10-19 18:20 UTC: YouTube daily upload limit ('Загрузка недоступна... через 24 часа') on the first file; dialog closed, nothing created. Files + 8-language SRTs are on branch uploads-hollow.",
+      "translations_pending_files": "titles/descriptions es pt fr de ja ko ar + SRT en/es/pt/fr/de/ja/ko/ar for long and short1 are on branch uploads-hollow (hollow_ep013_*_subs_<lang>.srt); title/description texts are in this run's out3d/ep013_meta (not in git) - redo after upload"
     }
-  ],
-  "lock": {
-    "until": "2026-10-19T19:41:57Z",
-    "by": "session_01QNBJ65au33VqiajEp7aU8i"
-  }
+  ]
 }

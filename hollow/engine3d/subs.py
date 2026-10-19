@@ -22,11 +22,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 out = []
 for b in TL["beats"]:
     s, e = b["start"], b["start"] + b["dur"] + 0.25
+    if s < 0.3:
+        s = 0.0  # hook text + subtitle visible on frame 1
     if b.get("say"):
         who = b["who"]; ch = TL["chars"][who]
         txt = b["say"] if who == "narr" or "color" not in ch else "{\\c" + bgr(ch["color"]) + "}" + ch["name"] + ":{\\c&H00FFFFFF&} " + b["say"]
         out.append(f"Dialogue: 0,{ts(s)},{ts(e)},Sub,,0,0,0,,{txt}")
     if b.get("text"):
         t = re.sub(r"[^\x00-⿿]", "", b["text"]).strip()
-        out.append(f"Dialogue: 1,{ts(s)},{ts(s + max(1.8, b['dur'] + 0.6))},Big,,0,0,0,,{{\\fad(150,250)}}{t}")
+        out.append(f"Dialogue: 1,{ts(s)},{ts(s + max(1.8, b['dur'] + 0.6))},Big,,0,0,0,,{{\\fad(0,250)}}{t}")
 open(os.path.join(D, "subs.ass"), "w").write(hdr + "\n".join(out) + "\n")

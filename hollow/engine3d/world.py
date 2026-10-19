@@ -154,6 +154,18 @@ def _shape(key, kind, s, ch):
             an = i / 8 * 6.28
             bpy.ops.mesh.primitive_cylinder_add(radius=0.12 * s, depth=6 * s, location=(math.cos(an) * 2.6 * s, math.sin(an) * 2.6 * s, 4.5 * s), rotation=(math.sin(an) * 0.5, -math.cos(an) * 0.5, 0)); parent(add(_o(), mat("spider", (0.05, 0.05, 0.06), 0.6)), o)
         return o, 4 * s, 4 * s, 9 * s, -1.9 * s, 7.4 * s
+    if kind == "horseman":  # headless rider on a black horse (Sleepy Hollow)
+        hide = mat(f"horse_{key}", (0.02, 0.02, 0.025), 0.6); cloak = mat(f"rc_{key}", (0.04, 0.03, 0.05), 0.9)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1.0 * s, location=(0, 0, 1.75 * s)); o = add(_o(), hide); o.scale = (0.6, 1.5, 0.62)
+        for sx in (-1, 1):
+            for fy_ in (-0.95, 0.95):
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.13 * s, depth=1.5 * s, location=(sx * 0.33 * s, fy_ * s, 0.75 * s)); parent(add(_o(), hide), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.28 * s, depth=1.3 * s, location=(0, -1.45 * s, 2.35 * s), rotation=(math.radians(-35), 0, 0)); parent(add(_o(), hide), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.45 * s, location=(0, -1.95 * s, 2.75 * s)); hd = add(_o(), hide); hd.scale = (0.7, 1.25, 0.7); parent(hd, o)
+        bpy.ops.mesh.primitive_cone_add(radius1=0.6 * s, radius2=0.32 * s, depth=1.9 * s, location=(0, 0.25 * s, 3.25 * s)); parent(add(_o(), cloak), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0.25 * s, 4.15 * s)); sh = add(_o(), cloak); sh.scale = (1.3, 0.8, 0.35); parent(sh, o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.05 * s, depth=0.4 * s, location=(0, 0.25 * s, 4.35 * s)); parent(add(_o(), mat("neckstub", (0.1, 0.02, 0.02), 0.8)), o)
+        return o, 1.6 * s, 3.5 * s, 4.4 * s, -2.42 * s, 2.85 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -168,7 +180,7 @@ def make_char(key, ch):
     o, Wd, L, H, fy, fz = _shape(key, kind, s, ch)
     o.parent = body
     eyes = []
-    glow_eyes = kind in ("gloamhound", "crow", "wickeater", "hollowmother")
+    glow_eyes = kind in ("horseman", "gloamhound", "crow", "wickeater", "hollowmother")
     n_eyes = {"hollowmother": 6}.get(kind, 2)
     sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18}.get(kind, 0.22) * s
     for i in range(n_eyes):
@@ -187,6 +199,8 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
+    if kind == "horseman":
+        mo.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]
     root.location = (hx, hy, 0)

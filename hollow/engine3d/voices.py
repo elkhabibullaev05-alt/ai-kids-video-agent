@@ -19,7 +19,7 @@ def pitch(x, semis):
     return np.interp(idx, np.arange(len(x)), x).astype(np.float32)
 
 
-t = 0.6  # small lead-in
+t = float(sc.get("lead_in", 0.6))  # small lead-in (set "lead_in": 0 in the script to start the voice at frame 1)
 timeline = []
 for i, b in enumerate(sc["beats"]):
     e = dict(b, i=i, start=round(t, 3))

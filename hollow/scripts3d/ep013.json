@@ -1,0 +1,564 @@
+{
+ "title": "What Rides Through Sleepy Hollow at Night?",
+ "description": "This place is real. A legend first written down in 1820, a real record from 1776, and a rider with no head.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "graveyard",
+  "fog": 0.03,
+  "eyes": 10,
+  "moonlight": 2.0
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "rider": {
+   "name": "The Headless Horseman",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.02,
+    0.02,
+    0.03
+   ],
+   "kind": "horseman",
+   "size": 1.0,
+   "home": [
+    6,
+    13
+   ]
+  },
+  "ichabod": {
+   "name": "Ichabod Crane",
+   "voice": "bm_lewis",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.35,
+    0.28,
+    0.18
+   ],
+   "kind": "human",
+   "size": 1.05,
+   "home": [
+    -4,
+    11
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "pumpkin",
+   "type": "ball",
+   "color": "orange",
+   "on": "rider",
+   "visible": false,
+   "scale": 0.5,
+   "glow": 6
+  },
+  {
+   "id": "thrown",
+   "type": "ball",
+   "color": "orange",
+   "at": [
+    -1.2,
+    6.2,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.5,
+   "glow": 6
+  },
+  {
+   "id": "hat",
+   "type": "box",
+   "color": [
+    0.05,
+    0.04,
+    0.04
+   ],
+   "at": [
+    -1.8,
+    6.4,
+    0.15
+   ],
+   "visible": false,
+   "scale": 0.45
+  },
+  {
+   "id": "smashed",
+   "type": "ball",
+   "color": "orange",
+   "at": [
+    -0.4,
+    6.0,
+    0.15
+   ],
+   "visible": false,
+   "scale": 0.45
+  },
+  {
+   "id": "head",
+   "type": "ball",
+   "color": "orange",
+   "at": [
+    -4.8,
+    3.4,
+    0.45
+   ],
+   "visible": false,
+   "scale": 0.5,
+   "glow": 6
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "What gallops through this graveyard every night... with no head at all?",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "shake"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "HE HAS NO HEAD"
+  },
+  {
+   "who": "narr",
+   "say": "This place is real. Sleepy Hollow, New York. Its stone church was built around 1685.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "A REAL PLACE"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... did you hear hooves?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:rider"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "Hooves. And no breathing.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The legend was first written down in 1820, by a writer named Washington Irving.",
+   "cam": "overhead",
+   "text": "WRITTEN DOWN IN 1820"
+  },
+  {
+   "who": "narr",
+   "say": "As a boy, Irving explored these hills and listened to the old ghost stories.",
+   "cam": "wide",
+   "do": [
+    [
+     "moth",
+     "to:-5,9"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "And the scariest story was about a rider. A soldier from a war long ago.",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "The tale says a cannonball took his head in battle. So every night, he rides out to find it.",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Here is the strange part. There is a real record from the Battle of White Plains, in 1776.",
+   "cam": "overhead",
+   "text": "1776"
+  },
+  {
+   "who": "narr",
+   "say": "A soldier lost his head to a cannonball there. Nobody ever wrote down where he was buried.",
+   "cam": "wide",
+   "sfx": "suspicious"
+  },
+  {
+   "who": "moth",
+   "say": "So he could be under any of these stones.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "Please don't say that.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Irving's story follows a schoolteacher named Ichabod Crane. Tall, skinny, and scared of everything.",
+   "cam": "close:ichabod",
+   "do": [
+    [
+     "ichabod",
+     "enter:left"
+    ]
+   ]
+  },
+  {
+   "who": "ichabod",
+   "say": "Ghosts? Nonsense! I am a learned man. I fear nothing.",
+   "cam": "close:ichabod",
+   "do": [
+    [
+     "ichabod",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "One autumn night, Ichabod rode home alone from a party, right past this churchyard.",
+   "cam": "wide",
+   "do": [
+    [
+     "ichabod",
+     "to:0,12"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, in the dark, he saw a huge shape standing very still beside the road.",
+   "cam": "two:ichabod,rider",
+   "do": [
+    [
+     "rider",
+     "turn:ichabod"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SOMETHING IS WAITING"
+  },
+  {
+   "who": "ichabod",
+   "say": "Who... who is there?",
+   "cam": "close:ichabod",
+   "do": [
+    [
+     "ichabod",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "It did not answer. It just began to follow him. Clip. Clop. Faster and faster.",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "to:4,11"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the moonlight showed him the truth. The rider had no head.",
+   "cam": "close:rider",
+   "do": [
+    [
+     "ichabod",
+     "eyes_big"
+    ]
+   ],
+   "text": "NO HEAD"
+  },
+  {
+   "who": "narr",
+   "say": "And on its shoulders sat something round... and glowing.",
+   "cam": "prop:pumpkin",
+   "do": [
+    [
+     "pumpkin",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "The legend has one rule. He cannot cross the bridge by the old church.",
+   "cam": "wide",
+   "do": [
+    [
+     "ichabod",
+     "to:-1,7.5"
+    ]
+   ],
+   "text": "THE ONE RULE"
+  },
+  {
+   "who": "ichabod",
+   "say": "The bridge! I just need to reach the bridge!",
+   "cam": "close:ichabod",
+   "do": [
+    [
+     "ichabod",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Ichabod crossed it. He looked back. The rider rose up...",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "and threw his glowing head right at him!",
+   "cam": "two:ichabod,rider",
+   "do": [
+    [
+     "pumpkin",
+     "vanish"
+    ],
+    [
+     "thrown",
+     "show"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "narr",
+   "say": "So reach the bridge. But never, ever look back.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "NEVER LOOK BACK"
+  },
+  {
+   "who": "narr",
+   "say": "The next morning, the villagers searched the road by the bridge.",
+   "cam": "wide",
+   "do": [
+    [
+     "ichabod",
+     "exit"
+    ],
+    [
+     "thrown",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "They found his horse. They found his hat. And beside it, a smashed pumpkin.",
+   "cam": "prop:hat",
+   "do": [
+    [
+     "hat",
+     "show"
+    ],
+    [
+     "smashed",
+     "show"
+    ]
+   ],
+   "text": "A SMASHED PUMPKIN"
+  },
+  {
+   "who": "narr",
+   "say": "Ichabod Crane was never seen in Sleepy Hollow again.",
+   "cam": "prop:smashed",
+   "sfx": "suspicious",
+   "text": "NEVER SEEN AGAIN"
+  },
+  {
+   "who": "moth",
+   "say": "A pumpkin. Odo... was it really just a pumpkin?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "I am not staying to find out.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Washington Irving is buried here too, in Sleepy Hollow Cemetery, since 1859.",
+   "cam": "overhead"
+  },
+  {
+   "who": "narr",
+   "say": "And in 1996, the town next to the church changed its name to Sleepy Hollow. On purpose.",
+   "cam": "wide",
+   "text": "RENAMED IN 1996"
+  },
+  {
+   "who": "narr",
+   "say": "Some say the Headless Horseman still rides here on autumn nights, looking for what he lost.",
+   "cam": "close:rider",
+   "do": [
+    [
+     "rider",
+     "to:2,12"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... the hoofbeats stopped.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:rider"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "That means he found something.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, right behind them, something round rolled out of the dark.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "head",
+     "show"
+    ],
+    [
+     "all",
+     "look:odo"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "It was glowing. And it was not a pumpkin. The next tale begins right there.",
+   "cam": "prop:head",
+   "do": [
+    [
+     "head",
+     "bounce"
+    ]
+   ],
+   "text": "WHO IS BEHIND YOU?"
+  }
+ ]
+}
