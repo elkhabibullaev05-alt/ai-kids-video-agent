@@ -1,0 +1,858 @@
+{
+ "id": "20261020-1-sand-castle-sea",
+ "plot": "At the beach in the morning Max wants to build the tallest sand castle, but a wave melts it, Dog digs a hole instead of a hill and Bird sits on the tower; Mouse explains wet sand sticks and to build away from the waves, Dog's hole becomes a moat and the castle survives with a gold star on top.",
+ "script": {
+  "title": "Can Max Build a Castle the Sea Can't Eat?",
+  "set": {
+   "place": "beach",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "castle",
+    "type": "box",
+    "color": "yellow",
+    "at": [
+     0,
+     7,
+     0
+    ],
+    "visible": false,
+    "scale": 1.3
+   },
+   {
+    "id": "bucket",
+    "type": "cone",
+    "color": "blue",
+    "at": [
+     -4,
+     4,
+     0.2
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "on": "mouse",
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "text": "THE SEA ATE MY CASTLE!",
+    "cam": "wide",
+    "hold": 1.5,
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "castle",
+      "vanish"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Hey! Where did my castle go? It was right here!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is a sunny morning at the beach. Max has one big dream today.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I want to build the tallest sand castle in the whole world!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The tallest in the world? That is very, very tall, Max.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I will start right now. Bucket, go!",
+    "cam": "prop:bucket",
+    "do": [
+     [
+      "bucket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max fills the bucket. Pat, pat, pat. Flip!",
+    "cam": "prop:bucket",
+    "do": [
+     [
+      "bucket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look! One tower already. This is easy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "castle",
+      "show"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But then, a big blue wave comes rolling up the sand.",
+    "cam": "wide",
+    "do": [
+     [
+      "castle",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish! The tower melts away like ice cream.",
+    "cam": "prop:castle",
+    "do": [
+     [
+      "castle",
+      "vanish"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no! My tower turned into a puddle!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The sea is hungry today. Maybe we can try again.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "text": "TRY NUMBER TWO",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Did somebody say digging? I am the best digger ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, can you help me make a big hill of sand?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Yes! Dig, dig, dig, dig, dig!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sand flies everywhere!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! The sand is flying on my nose!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Look, Max! I made a hole, not a hill!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A hole is the opposite of a castle, Dog.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oops. Can I keep the hole? It looks so cozy.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Dog is already sleeping in it. That was fast.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "TRY NUMBER THREE",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This time my tower will touch the sky!",
+    "cam": "close:max",
+    "do": [
+     [
+      "castle",
+      "show"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max builds up, up, up. The tower is taller than Max!",
+    "cam": "prop:castle",
+    "do": [
+     [
+      "castle",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ooh, a tall tower! What a perfect place to sit!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, Bird, wait! It is not ready for sitting!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird lands on top. The tower wobbles. Wiggle, wiggle.",
+    "cam": "prop:castle",
+    "do": [
+     [
+      "castle",
+      "spin"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plop! Bird sits down in a soft pile of sand.",
+    "cam": "wide",
+    "do": [
+     [
+      "castle",
+      "vanish"
+     ],
+     [
+      "bird",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Three castles, and zero castles left. I give up.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "MAX IS SAD",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, do not give up yet. I have been watching the sand.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Dry sand falls down like sugar. Wet sand sticks together.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And the waves only come this far. So we build up here.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wet sand, far from the waves. Mouse, you are smart!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I can help! I will dig the moat around it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! A moat is a little river. That is a good hole, Dog!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And I will bring shells for the windows. I am fast!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The castle grows. One tower, two towers, three towers!",
+    "cam": "prop:castle",
+    "do": [
+     [
+      "castle",
+      "show"
+     ],
+     [
+      "castle",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the big blue wave comes back.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. Here it comes. Hold on, castle!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the wave stops far away. It only fills Dog's moat.",
+    "cam": "prop:castle",
+    "do": [
+     [
+      "castle",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My hole has water in it now! Best hole ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It worked! The castle is still standing!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Now it needs one more thing on the very top.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "star",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse gives Max a shiny gold star.",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "give:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A star for the top! Now it is the tallest castle on our beach!",
+    "cam": "close:max",
+    "do": [
+     [
+      "star",
+      "spin"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When things fall down, try a new way, and ask your friends.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I want to build a boat. Do you think it will float?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SEE YOU TOMORROW!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Build a Castle the Sea Can't Eat? 🏰🌊",
+  "description": "Max wants to build the tallest sand castle on the beach, but the waves, Dog and Bird keep knocking it down! Can clever Mouse help him find a new way? #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "sand castle",
+   "beach story",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "funny cat",
+   "bedtime story",
+   "learning for kids"
+  ],
+  "thumb_text": "SEA ATE IT!",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max hacer un castillo que el mar no se coma? 🏰🌊",
+    "description": "Max quiere construir el castillo de arena más alto de la playa, ¡pero las olas, Perro y Pájaro lo derriban una y otra vez! ¿Podrá el listo Ratón ayudarle a encontrar otra forma? #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Max consegue fazer um castelo que o mar não come? 🏰🌊",
+    "description": "Max quer construir o castelo de areia mais alto da praia, mas as ondas, o Cachorro e o Passarinho sempre o derrubam! Será que o esperto Ratinho vai ajudá-lo a achar um jeito novo? #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس بناء قلعة لا يأكلها البحر؟ 🏰🌊",
+    "description": "يريد ماكس أن يبني أطول قلعة رمل على الشاطئ، لكن الأمواج والكلب والعصفور يهدمونها كل مرة! هل يساعده الفأر الذكي في إيجاد طريقة جديدة؟ #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Max peut-il bâtir un château que la mer ne mange pas ? 🏰🌊",
+    "description": "Max veut construire le plus haut château de sable de la plage, mais les vagues, Chien et Oiseau le font toujours tomber ! Le malin Souris va-t-il l'aider à trouver une nouvelle idée ? #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "マックスは海に食べられない砂のお城を作れるかな？🏰🌊",
+    "description": "マックスはビーチでいちばん高い砂のお城を作りたい！でも波やイヌやトリがこわしてしまいます。かしこいネズミは新しい方法を見つけてくれるかな？ #maxthecuriouscat #こどもアニメ #えほん"
+   },
+   "ko": {
+    "title": "맥스는 바다가 못 먹는 모래성을 만들 수 있을까? 🏰🌊",
+    "description": "맥스는 해변에서 가장 높은 모래성을 짓고 싶어요. 그런데 파도와 강아지, 새가 자꾸 무너뜨려요! 똑똑한 생쥐가 새로운 방법을 찾아 줄까요? #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Baut Max eine Burg, die das Meer nicht frisst? 🏰🌊",
+    "description": "Max will die höchste Sandburg am Strand bauen, aber die Wellen, Hund und Vogel machen sie immer wieder kaputt! Findet die schlaue Maus einen neuen Weg? #maxthecuriouscat #kindercartoon #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 28,
+   "top": "DOG, THAT'S A HOLE! 😂",
+   "title": "Dog Was Supposed to Help… 😂🐶 #shorts",
+   "description": "Max asks Dog for a sand hill and gets something very different. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "funny dog",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perro tenía que ayudar… 😂🐶 #shorts",
+     "description": "Max le pide a Perro una montaña de arena y recibe algo muy distinto. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro ia ajudar… 😂🐶 #shorts",
+     "description": "Max pede ao Cachorro um morro de areia e ganha algo bem diferente. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كان على الكلب أن يساعد… 😂🐶 #shorts",
+     "description": "يطلب ماكس من الكلب تلة رمل فيحصل على شيء مختلف تمامًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien devait aider… 😂🐶 #shorts",
+     "description": "Max demande à Chien une colline de sable et obtient tout autre chose. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌはおてつだいのはずが…😂🐶 #shorts",
+     "description": "マックスがイヌに砂の山をたのむと、ぜんぜんちがうものができました。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 도와준다더니… 😂🐶 #shorts",
+     "description": "맥스가 강아지에게 모래 언덕을 부탁했는데 전혀 다른 게 나왔어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund sollte doch helfen… 😂🐶 #shorts",
+     "description": "Max bittet Hund um einen Sandhügel und bekommt etwas ganz anderes. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 23,
+   "dur": 26,
+   "top": "BIRD, DON'T SIT THERE! 😱",
+   "title": "Bird Found the Perfect Seat… 🐦😱 #shorts",
+   "description": "The tallest sand tower meets a very chatty bird. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "funny bird",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pájaro encontró el asiento perfecto… 🐦😱 #shorts",
+     "description": "La torre de arena más alta conoce a un pájaro muy parlanchín. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho achou o lugar perfeito… 🐦😱 #shorts",
+     "description": "A torre de areia mais alta encontra um passarinho muito falante. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور وجد المقعد المثالي… 🐦😱 #shorts",
+     "description": "أطول برج من الرمل يلتقي بعصفور كثير الكلام. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau a trouvé le siège parfait… 🐦😱 #shorts",
+     "description": "La plus haute tour de sable rencontre un oiseau très bavard. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがさいこうの席を見つけた…🐦😱 #shorts",
+     "description": "いちばん高い砂のとうに、おしゃべりなトリがやってきます。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 완벽한 자리를 찾았어요… 🐦😱 #shorts",
+     "description": "가장 높은 모래 탑에 수다쟁이 새가 찾아와요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel fand den perfekten Platz… 🐦😱 #shorts",
+     "description": "Der höchste Sandturm trifft einen sehr gesprächigen Vogel. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

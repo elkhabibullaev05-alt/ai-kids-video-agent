@@ -1,0 +1,801 @@
+{
+ "id": "20261020-2-hopping-gift-box",
+ "plot": "At sunset in Grandma's living room a wrapped gift hops and squeaks by itself; Dog's sneeze, Bird's love of the lamp and Max's jump all scare it away, until Grandma says to sit and speak kindly, and out comes Mouse, who got stuck inside while hiding a little cake for Grandma.",
+ "script": {
+  "title": "Who Is Hiding in the Hopping Gift Box?",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "red",
+    "at": [
+     1,
+     5,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "pink",
+    "on": "mouse",
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "text": "THE BOX IS MOVING!",
+    "cam": "prop:gift",
+    "hold": 1.5,
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Did you see that? The present just jumped by itself!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is late afternoon in Grandma's cozy living room. The sun is going down.",
+    "cam": "wide",
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A jumping box? Maybe it is full of bouncy balls!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Who put it here? It has a big yellow bow.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:gift"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts his ear next to the box. Scratch, scratch. Squeak!",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It squeaked! Dog, this box can talk!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hello, box! Do you like belly rubs?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS IN THE BOX?",
+    "cam": "overhead",
+    "hold": 1.3,
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "I have a plan. We wait very quietly, and then we peek!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Shh. I am so quiet. Ah... ah... achoo!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The box hops away behind the sofa.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ],
+     [
+      "gift",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You scared it away!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My nose did it, not me. My nose is very naughty.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello, hello! What are we looking at? Is it a snack?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, a present is hopping around the house all by itself.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Leave it to me! I will fly up and look down inside.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies up high, and sees the lamp.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wow, look at this lamp! It is so warm and pretty.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird! The box, not the lamp!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the box has hopped away again. Now it is by the rug.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is the trickiest present ever. I have one more idea.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:gift"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I will jump on it, gently, like a feather. Ready, set...",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Boing! The box hops away, and Max lands right on Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oof! Hello, Max. You are a very fluffy pillow.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT IS GOING ON?",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My, my. Why is everyone rolling around on my rug?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! There is a present that hops and squeaks!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hops and squeaks? Hmm. Let us not chase it, dears.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When something is shy, you sit down and speak kindly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sit down and speak kindly. Okay, I can do that.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone sits on the rug. Nobody runs. Nobody jumps.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, little box. We are your friends. You can come out.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The box wiggles. The bow wiggles. The lid lifts up slowly.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "SURPRISE!",
+    "cam": "prop:gift",
+    "hold": 1.2,
+    "do": [
+     [
+      "gift",
+      "vanish"
+     ],
+     [
+      "mouse",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Surprise! Oh, hello, everybody. You found me.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! It was you all the time?",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I was making a gift for Grandma, and the lid closed on me.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Every time I tried to push out, the box hopped instead!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So the box was not full of bouncy balls? Oh well.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It was full of Mouse! That is even better.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "A gift for me? What is it, little one?",
+    "cam": "two:grandma,mouse",
+    "do": [
+     [
+      "grandma",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It is a cake I made, with one tiny candle.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse gives the little cake to Grandma.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "give:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Thank you, Mouse. This is the sweetest surprise I ever had.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And we learned something. Chasing makes shy things run.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That is right, Max. Kind words open more boxes than jumping.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun goes down, and everyone shares a tiny bite of cake.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I want to find out where the moon goes in the morning!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SEE YOU TOMORROW!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Is Hiding in the Hopping Gift Box? 🎁🐱",
+  "description": "A present in Grandma's living room hops and squeaks all by itself! Max, Dog and Bird try to catch it, but Grandma knows a gentler way to find out who is inside. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "gift box surprise",
+   "cat cartoon",
+   "grandma story",
+   "stories for kids",
+   "3d animation for kids",
+   "kindness for kids",
+   "funny cat",
+   "bedtime story"
+  ],
+  "thumb_text": "WHO'S INSIDE?",
+  "thumb_beat": 5,
+  "localizations": {
+   "es": {
+    "title": "¿Quién se esconde en la caja de regalo saltarina? 🎁🐱",
+    "description": "¡Un regalo en la sala de la abuela salta y chilla solito! Max, Perro y Pájaro intentan atraparlo, pero la abuela conoce una forma más suave de descubrir quién está dentro. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Quem está escondido na caixa de presente que pula? 🎁🐱",
+    "description": "Um presente na sala da vovó pula e faz barulhinho sozinho! Max, o Cachorro e o Passarinho tentam pegá-lo, mas a vovó conhece um jeito mais gentil de descobrir quem está dentro. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "من يختبئ في صندوق الهدية القافز؟ 🎁🐱",
+    "description": "هدية في غرفة الجدة تقفز وتصدر صوتًا وحدها! يحاول ماكس والكلب والعصفور الإمساك بها، لكن الجدة تعرف طريقة ألطف لمعرفة من في الداخل. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Qui se cache dans le cadeau qui saute ? 🎁🐱",
+    "description": "Un cadeau dans le salon de Mamie saute et couine tout seul ! Max, Chien et Oiseau essaient de l'attraper, mais Mamie connaît une façon plus douce de savoir qui est dedans. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "ぴょんぴょんはねるプレゼントの中にいるのはだれ？🎁🐱",
+    "description": "おばあちゃんのリビングで、プレゼントがひとりでにはねて、チューと鳴きます！マックスとイヌとトリがつかまえようとしますが、おばあちゃんはもっとやさしい方法を知っています。 #maxthecuriouscat #こどもアニメ #えほん"
+   },
+   "ko": {
+    "title": "통통 뛰는 선물 상자 속에 누가 숨었을까? 🎁🐱",
+    "description": "할머니 거실의 선물이 혼자서 통통 뛰고 찍찍 소리를 내요! 맥스와 강아지, 새가 잡으려 하지만, 할머니는 안에 누가 있는지 알아내는 더 다정한 방법을 알고 있어요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Wer versteckt sich im hüpfenden Geschenk? 🎁🐱",
+    "description": "Ein Geschenk in Omas Wohnzimmer hüpft und quiekt ganz von allein! Max, Hund und Vogel wollen es fangen, aber Oma kennt einen sanfteren Weg, um herauszufinden, wer drin ist. #maxthecuriouscat #kindercartoon #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 27,
+   "top": "THIS BOX CAN TALK?! 🎁",
+   "title": "This Present Just Squeaked! 🎁😮 #shorts",
+   "description": "A gift box hops and squeaks all by itself in Grandma's house. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "gift box",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Este regalo acaba de chillar! 🎁😮 #shorts",
+     "description": "Una caja de regalo salta y chilla sola en la casa de la abuela. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Esse presente fez barulhinho! 🎁😮 #shorts",
+     "description": "Uma caixa de presente pula e faz barulhinho sozinha na casa da vovó. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هذه الهدية أصدرت صوتًا! 🎁😮 #shorts",
+     "description": "صندوق هدية يقفز ويصدر صوتًا وحده في بيت الجدة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ce cadeau vient de couiner ! 🎁😮 #shorts",
+     "description": "Une boîte cadeau saute et couine toute seule chez Mamie. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "プレゼントがチューって鳴いた！🎁😮 #shorts",
+     "description": "おばあちゃんの家で、プレゼントの箱がひとりではねて鳴きます。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "선물 상자가 찍찍 소리를 냈어요! 🎁😮 #shorts",
+     "description": "할머니 집에서 선물 상자가 혼자 뛰고 소리를 내요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Dieses Geschenk hat gequiekt! 🎁😮 #shorts",
+     "description": "Eine Geschenkbox hüpft und quiekt ganz allein in Omas Haus. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
