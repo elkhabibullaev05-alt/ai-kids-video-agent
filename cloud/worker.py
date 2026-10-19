@@ -119,10 +119,24 @@ def yt():
     global _yt
     if _yt is None:
         import youtube_up
-        _yt = youtube_up.client(TOKEN)
-        cid = youtube_up.my_channel_id(_yt)
-        if cid != CFG["id"]:  # safety: this token must belong to THIS channel only
-            raise SystemExit(f"token.json is for channel {cid}, expected {CFG['id']} ({CFG['name']}) — stop.")
+        # safety: upload only with a token that belongs to THIS channel. If the owner picked the channels in a
+        # different order while signing in, the right token sits in another channel's folder — use that one.
+        seen = []
+        for tok in [TOKEN] + sorted(glob.glob(os.path.join(os.path.dirname(HOME), "*", "token.json"))):
+            if tok in seen or not os.path.exists(tok):
+                continue
+            seen.append(tok)
+            try:
+                c = youtube_up.client(tok)
+                if youtube_up.my_channel_id(c) == CFG["id"]:
+                    _yt = c
+                    if tok != TOKEN:
+                        log("using token from", tok)
+                    break
+            except Exception as e:
+                log("token check failed:", tok, str(e)[:120])
+        if _yt is None:
+            raise SystemExit(f"no token for {CFG['name']} ({CFG['id']}) — stop.")
     return _yt
 
 
