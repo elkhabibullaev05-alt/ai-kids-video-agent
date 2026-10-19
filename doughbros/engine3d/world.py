@@ -33,6 +33,10 @@ bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 24, 10), rotation=(math.ra
 for ix in range(-16, 17):
     for iz in range(0, 9):
         bpy.ops.mesh.primitive_cube_add(size=1, location=(ix * 2.2, 23.9, 1.2 + iz * 2.2)); tt = add(bpy.context.object, tile, False); tt.scale = (2.05, 0.1, 2.05)
+# side walls so sideways camera angles never see the void
+for sx in (-1, 1):
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(sx * 30, 4, 10), rotation=(math.radians(90), 0, math.radians(90))); sw = add(bpy.context.object, mat("sidewall", (0.55, 0.58, 0.62), 0.6), False); sw.scale = (44, 20, 1)
+bpy.ops.mesh.primitive_plane_add(size=1, location=(0, -28, 10), rotation=(math.radians(90), 0, 0)); fw = add(bpy.context.object, mat("frontwall", (0.35, 0.3, 0.28), 0.8), False); fw.scale = (80, 20, 1)
 # window with moon
 bpy.ops.mesh.primitive_plane_add(size=1, location=(-6, 23.7, 12), rotation=(math.radians(90), 0, 0)); win = add(bpy.context.object, mat("night", (0.05, 0.08, 0.22), 0.3, 0, 1.2), False); win.scale = (10, 7, 1)
 bpy.ops.mesh.primitive_uv_sphere_add(radius=1.3, location=(-3.5, 23.5, 13.5)); add(bpy.context.object, mat("moon", (1, 0.97, 0.85), 0.3, 0, 12))

@@ -134,7 +134,7 @@ def face(c, t, d, ang):
 def look_at(c, t, target):
     v = (POS[target] if target in POS else Vector(target)) - POS[c]
     ang = math.atan2(v.x, -v.y) if v.length > 0.1 else 0
-    face(c, t, 0.6, max(-1.1, min(1.1, ang)))  # never turn the face away from the audience
+    face(c, t, 0.6, max(-0.6, min(0.6, ang)))  # never turn the face away from the audience
 
 
 def bounce(c, t, n=1, h=0.8):
@@ -335,7 +335,10 @@ def shot(name, t, t_end):
         dist = max(6, (pa - pb).length * 1.0 + 3.5); loc, tgt, lens = mid + Vector((0, -dist, 2.4)), mid + Vector((0, 0, 1.3)), 30
     else:  # close:<char>
         c = name.split(":")[1]; p = at(c, tm); L = C[c]["L"]
-        loc, tgt, lens = p + Vector((0.8, -L / 2 - 4.0 - C[c]["H"] * 1.2, 1.2 + C[c]["H"] * 0.5)), p + Vector((0, -L / 2, C[c]["H"] * 0.55)), 35
+        rz = C[c]["root"].rotation_euler.z  # film the face: the camera follows where the character looks
+        fwd, side = Vector((math.sin(rz), -math.cos(rz), 0)), Vector((math.cos(rz), math.sin(rz), 0))
+        d_ = L / 2 + 4.0 + C[c]["H"] * 1.2
+        loc, tgt, lens = p + fwd * d_ + side * 0.8 + Vector((0, 0, 1.2 + C[c]["H"] * 0.5)), p + fwd * (L / 2) + Vector((0, 0, C[c]["H"] * 0.55)), 35
     q = (tgt - loc).to_track_quat("-Z", "Y").to_euler()
     for path, val in (("location", loc), ("rotation_euler", q)):
         setattr(cam, path, val); cam.keyframe_insert(path, frame=max(1, F(t)))
