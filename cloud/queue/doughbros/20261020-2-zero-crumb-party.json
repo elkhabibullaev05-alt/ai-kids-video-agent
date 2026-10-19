@@ -1,0 +1,691 @@
+{
+ "id": "20261020-2-zero-crumb-party",
+ "plot": "At breakfast Bup and Zeek try to throw Lolly a secret birthday party on the table guarded by crumb-hating Toastmaw; the Anti-Crumb Bubble pops and Pim sneezes crumbs everywhere, but Crispy finds out Toastmaw has never had a party, Lolly reveals she already invited him, and a mystery gift with Mr. Pot's three eyes starts humming.",
+ "script": {
+  "title": "1 Cake, 5 Friends, 0 Crumbs Allowed",
+  "set": {
+   "place": "table",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "toastmaw": {
+    "name": "Toastmaw",
+    "voice": "am_eric",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.7,
+     0.7,
+     0.72
+    ],
+    "kind": "toaster",
+    "size": 1.25,
+    "home": [
+     2,
+     14
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "red",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": [
+     0.05,
+     0.05,
+     0.06
+    ],
+    "at": [
+     -4,
+     11,
+     0.5
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "text": "NO CRUMBS. EVER.",
+    "sfx": "suspicious",
+    "cam": "close:toastmaw",
+    "hold": 1.5,
+    "do": [
+     [
+      "toastmaw",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "One crumb on my table... and somebody becomes TOAST.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Six in the morning. The humans are still asleep. And today is Lolly's birthday.",
+    "cam": "wide"
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. Operation Sparkle. Lolly wakes up in two hours.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Problem. A cake is basically a crumb factory. And Toastmaw guards this table now.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "pim",
+    "say": "The toaster who shoots burning toast? Can we party somewhere safer? Like the moon?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He moved here after the oven. He says this is the last clean place in Table Land.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "bup",
+    "say": "Then we bake a cake with zero crumbs. Zeek, talk to me.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "zeek",
+    "say": "Behold. The Anti-Crumb Bubble. A cake inside a soap bubble. Nothing can escape.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And what happens when the bubble pops?",
+    "cam": "two:pim,zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Statistically? It will never pop.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "POP.",
+    "sfx": "alarm",
+    "cam": "prop:cake",
+    "hold": 1.0,
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "What was that? Do I smell... CRUMBS?",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hide! Everybody behind the cutting board!",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-12,11"
+     ],
+     [
+      "pim",
+      "to:-8,10"
+     ],
+     [
+      "zeek",
+      "to:-14,9"
+     ],
+     [
+      "crispy",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plan one failed in four seconds. A new record, even for Zeek.",
+    "cam": "overhead"
+   },
+   {
+    "who": "zeek",
+    "say": "Plan two. We clean up every crumb with this straw. Pim, you suck.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "pim",
+    "say": "Excuse me? What did you just call me?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Through the straw! You suck through the straw!",
+    "cam": "two:zeek,pim"
+   },
+   {
+    "who": "narr",
+    "say": "Pim sucked. Pim coughed. Then Pim sneezed the crumbs across the entire table.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "THAT'S IT! All of you... are TOAST!",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "jump"
+     ],
+     [
+      "toastmaw",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Run! Zigzag! He can only shoot in straight lines!",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "spin"
+     ],
+     [
+      "pim",
+      "to:-2,6"
+     ],
+     [
+      "zeek",
+      "to:6,7"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Toastmaw. Stop. Look at what's on the table.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:toastmaw"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "I see a mess. A loud, sticky, sparkly mess.",
+    "cam": "close:toastmaw"
+   },
+   {
+    "who": "crispy",
+    "say": "It's a birthday. For Lolly. Have you ever had one?",
+    "cam": "two:crispy,toastmaw"
+   },
+   {
+    "who": "toastmaw",
+    "say": "Toasters don't get birthdays. We get crumbs. Then somebody shakes us upside down.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait. Is he... sad? Is the scary toaster actually sad?",
+    "cam": "close:pim"
+   },
+   {
+    "who": "bup",
+    "say": "New plan. We don't hide the party from him. We invite him.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That is the worst plan I have ever heard. I love it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to_home"
+     ],
+     [
+      "pim",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "text": "PLAN THREE",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.2
+   },
+   {
+    "who": "lolly",
+    "say": "Good morning, everyone! Why is the table covered in glitter?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "SURPRISE! Happy birthday, Lolly!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh, you sweethearts! And Toastmaw came too? I invited him myself yesterday.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You invited the crumb monster... to a cake party?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Of course. Everyone deserves a party. Even grumpy kitchen machines.",
+    "cam": "two:lolly,toastmaw"
+   },
+   {
+    "who": "toastmaw",
+    "say": "Nobody ever invited me anywhere. I brought warm bread. For the cake.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "So we did three crazy plans for nothing?",
+    "cam": "two:pim,zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Not for nothing. For science. And for a very sticky floor.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "lolly",
+    "say": "Speaking of sticky. Who made this mess on my birthday table?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It was Zeek! No, it was me! No, it was the bubble!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Clean. It. Up. NOW!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "all",
+      "look:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "Ha! Finally. Somebody who understands me.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bup spotted a present nobody had brought. A black box with a red ribbon.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "There's no name on it. Just three little eyes drawn on top.",
+    "cam": "two:bup,crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "Don't open it. I know that ribbon.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S HUMMING...",
+    "sfx": "suspicious",
+    "cam": "prop:gift",
+    "hold": 1.6,
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 2.0
+   }
+  ]
+ },
+ "long": {
+  "title": "1 Cake, 5 Friends, 0 Crumbs Allowed 🎂",
+  "description": "It's Lolly's birthday, the humans are asleep, and the party table belongs to Toastmaw, a toaster who fires burning toast at every crumb. Zeek's zero-crumb cake lasts four seconds. Which plan would YOU try? 👇 #animation #doughbros #funnycartoon",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "funny animation",
+   "birthday party",
+   "toaster",
+   "horror comedy",
+   "cartoon",
+   "surprise party"
+  ],
+  "thumb_text": "NO CRUMBS!",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "1 pastel, 5 amigos, 0 migas permitidas 🎂",
+    "description": "Es el cumpleaños de Lolly, los humanos duermen y la mesa de la fiesta es de Toastmaw, una tostadora que dispara pan ardiente a cada miga. El pastel sin migas de Zeek dura cuatro segundos. ¿Qué plan probarías TÚ? 👇 #animación #doughbros #caricaturagraciosa"
+   },
+   "pt": {
+    "title": "1 bolo, 5 amigos, 0 migalhas permitidas 🎂",
+    "description": "É aniversário da Lolly, os humanos estão dormindo e a mesa da festa pertence ao Toastmaw, uma torradeira que dispara torrada quente em cada migalha. O bolo sem migalhas do Zeek dura quatro segundos. Que plano VOCÊ tentaria? 👇 #animação #doughbros #desenhoengraçado"
+   },
+   "ar": {
+    "title": "كعكة واحدة، 5 أصدقاء، وممنوع الفتات 🎂",
+    "description": "إنه عيد ميلاد لولي، والبشر نائمون، وطاولة الحفلة ملك لتوستماو، محمصة تطلق خبزًا محترقًا على كل فتاتة. كعكة زيك الخالية من الفتات تصمد أربع ثوانٍ فقط. أي خطة كنت ستجرب أنت؟ 👇 #رسوم_متحركة #doughbros #كرتون_مضحك"
+   },
+   "fr": {
+    "title": "1 gâteau, 5 amis, 0 miette autorisée 🎂",
+    "description": "C'est l'anniversaire de Lolly, les humains dorment et la table de la fête appartient à Toastmaw, un grille-pain qui tire du pain brûlant sur chaque miette. Le gâteau zéro miette de Zeek tient quatre secondes. Quel plan essaierais-TU ? 👇 #animation #doughbros #dessinanimédrôle"
+   },
+   "ja": {
+    "title": "ケーキ1個、友だち5人、パンくず0禁止 🎂",
+    "description": "今日はロリーの誕生日。人間はまだ寝ている。でもパーティーのテーブルは、パンくずに焼けたトーストを撃ち込むトースター「トーストモー」の縄張り。ジークのパンくずゼロケーキはたった4秒。きみならどの作戦？👇 #アニメ #doughbros #おもしろアニメ"
+   },
+   "ko": {
+    "title": "케이크 1개, 친구 5명, 부스러기 0개 금지 🎂",
+    "description": "오늘은 롤리의 생일, 인간들은 자고 있고, 파티 테이블의 주인은 부스러기마다 뜨거운 토스트를 쏘는 토스터 토스트모다. 지크의 부스러기 없는 케이크는 4초 만에 끝난다. 너라면 어떤 작전을 쓸래? 👇 #애니메이션 #doughbros #웃긴만화"
+   },
+   "de": {
+    "title": "1 Kuchen, 5 Freunde, 0 Krümel erlaubt 🎂",
+    "description": "Lolly hat Geburtstag, die Menschen schlafen noch, und der Partytisch gehört Toastmaw – einem Toaster, der auf jeden Krümel brennenden Toast schießt. Zeeks krümelfreier Kuchen hält vier Sekunden. Welchen Plan würdest DU probieren? 👇 #animation #doughbros #lustigercartoon"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 7,
+   "dur": 26,
+   "top": "ZERO CRUMBS?!",
+   "title": "Zeek's Zero-Crumb Cake Lasted 4 Seconds 😂 #shorts",
+   "description": "Statistically, it would never pop. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "funny",
+    "invention fail"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El pastel sin migas de Zeek duró 4 segundos 😂 #shorts",
+     "description": "Estadísticamente, nunca iba a explotar. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O bolo sem migalhas do Zeek durou 4 segundos 😂 #shorts",
+     "description": "Estatisticamente, nunca ia estourar. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كعكة زيك بلا فتات صمدت 4 ثوانٍ 😂 #shorts",
+     "description": "إحصائيًا، لم يكن من المفترض أن تنفجر أبدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le gâteau zéro miette de Zeek a tenu 4 secondes 😂 #shorts",
+     "description": "Statistiquement, elle ne devait jamais éclater. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ジークのパンくずゼロケーキ、4秒で終了 😂 #shorts",
+     "description": "統計的には、絶対に割れないはずだった。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "지크의 부스러기 제로 케이크, 4초 만에 끝 😂 #shorts",
+     "description": "통계적으로는 절대 안 터질 거였다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zeeks krümelfreier Kuchen hielt 4 Sekunden 😂 #shorts",
+     "description": "Statistisch gesehen platzt sie nie. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

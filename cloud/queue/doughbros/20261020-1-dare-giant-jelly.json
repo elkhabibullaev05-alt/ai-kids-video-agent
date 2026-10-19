@@ -1,0 +1,716 @@
+{
+ "id": "20261020-1-dare-giant-jelly",
+ "plot": "At sunset in the night garden Pim is dared to reach into the giant sleeping jelly Wobblor for the Golden Crumb key; Wobblor swallows him, but Pim's panicky shaking tickles the jelly until it spits out Pim and the key, which carries Mr. Pot's three-eyed stamp.",
+ "script": {
+  "title": "I Dared Pim to Touch the Giant Jelly",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "wobblor": {
+    "name": "Wobblor",
+    "voice": "am_adam",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.2,
+     0.8,
+     0.3
+    ],
+    "kind": "jelly",
+    "size": 1.6,
+    "home": [
+     2,
+     14
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "on": "wobblor",
+    "visible": false,
+    "scale": 1.2
+   }
+  ],
+  "beats": [
+   {
+    "text": "IT'S BREATHING...",
+    "sfx": "suspicious",
+    "cam": "close:wobblor",
+    "hold": 1.6,
+    "do": [
+     [
+      "wobblor",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunset in the garden. Behind the old gate, something huge is snoring.",
+    "cam": "wide"
+   },
+   {
+    "who": "wobblor",
+    "say": "Mmm... zzz... so... comfy...",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "That is NOT a pillow. That is a mountain of green jelly!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "all",
+      "look:wobblor"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I warned you. Wobblor grew in the rain. Now he is the size of a shed.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "zeek",
+    "say": "And our Golden Crumb key rolled right inside him. I saw it glow.",
+    "cam": "two:zeek,crispy"
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. The sun goes down in ten minutes. After that, the gate locks.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "So somebody has to reach in and grab it. Somebody small and wiggly.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why is everybody looking at me? Stop looking at me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, I dare you. Touch the jelly. Just one finger.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "pim",
+    "say": "A dare? You can't dare a bean! Beans have rules!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Beans who say no to a dare get called Chicken Bean. Forever.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "pim",
+    "say": "Fine! Fine. One finger. Then I faint. That's the deal.",
+    "cam": "two:pim,lolly"
+   },
+   {
+    "text": "THE DARE",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 1.2
+   },
+   {
+    "who": "narr",
+    "say": "Pim tiptoes across the wet grass. The jelly wobbles with every snore.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pim",
+      "to:wobblor"
+     ]
+    ]
+   },
+   {
+    "who": "wobblor",
+    "say": "Who's there? Something... small... and crunchy?",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-n-nobody! Just the wind! Very bean-shaped wind!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations say jelly can feel heat. Crispy, stay far back.",
+    "cam": "two:zeek,crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "I always stay far back. That is my whole thing.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "Okay. Finger in. It's cold. It's sticky. It's grabbing me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "wobblor",
+    "say": "Gotcha! Stay inside me, little bean. It's so comfy in here.",
+    "cam": "wide",
+    "do": [
+     [
+      "wobblor",
+      "laugh"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Plan B! Everybody pull Pim's leg! On three!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "to:pim"
+     ],
+     [
+      "zeek",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "One, two... THREE!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "text": "PULL!",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "It's not working! He's like a giant gummy elevator going down!",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "pim",
+    "say": "Help! I can see the key! It's next to a sock and a rubber spoon!",
+    "cam": "close:pim"
+   },
+   {
+    "who": "wobblor",
+    "say": "All lost things come to me. And nobody ever leaves.",
+    "cam": "close:wobblor"
+   },
+   {
+    "who": "crispy",
+    "say": "Wait. Pim is shaking. Look at the jelly's face.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "narr",
+    "say": "Every time Pim trembled, the whole jelly trembled too.",
+    "cam": "wide",
+    "do": [
+     [
+      "wobblor",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "wobblor",
+    "say": "Hee... hee hee... stop wiggling! That tickles!",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "He's ticklish! Pim, do what you do best. Panic!",
+    "cam": "two:bup,pim"
+   },
+   {
+    "who": "pim",
+    "say": "Panic? I'm a professional! Aaaah! Spiders! Thunder! Homework!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "wobblor",
+    "say": "Ha ha ha! No! Too much! I can't hold it in!",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "laugh"
+     ],
+     [
+      "wobblor",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "BLORP!",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "key",
+      "drop:wobblor"
+     ],
+     [
+      "pim",
+      "to_home"
+     ],
+     [
+      "bup",
+      "to_home"
+     ],
+     [
+      "zeek",
+      "to_home"
+     ],
+     [
+      "lolly",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He spat everything out! The sock, the spoon, and our Pim!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "And the key! Shiny, sticky, and still a little bit warm.",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I did it. I touched the jelly. Now I would like to faint.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You're not Chicken Bean. You're Champion Bean.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "wobblor",
+    "say": "Come back tomorrow... and wiggle again? Please?",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Maybe. If you stop swallowing our stuff.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "crispy",
+    "say": "Hurry. The sun is almost gone. The gate closes at dark.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But when Zeek wiped the key clean, something was stamped on it.",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Three little eyes. That is Mr. Pot's mark.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He touched this key before us. He knows exactly what it opens.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "bup",
+    "say": "Then he's already on the other side of that gate.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 2.0
+   }
+  ]
+ },
+ "long": {
+  "title": "I Dared Pim to Touch the Giant Jelly 😱",
+  "description": "The Golden Crumb key rolled inside Wobblor, a jelly the size of a shed, and the sun is going down. Somebody has to reach in... so the team dares the most scared bean in Table Land. Would YOU take the dare? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "giant jelly",
+   "spooky cartoon",
+   "dare",
+   "cartoon"
+  ],
+  "thumb_text": "IT GRABBED HIM!",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "Reté a Pim a tocar la gelatina gigante 😱",
+    "description": "La llave de la Miga Dorada rodó dentro de Wobblor, una gelatina del tamaño de un cobertizo, y el sol se está poniendo. Alguien tiene que meter la mano... así que el equipo reta al frijol más miedoso de Table Land. ¿Aceptarías TÚ el reto? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Desafiei o Pim a tocar na gelatina gigante 😱",
+    "description": "A chave da Migalha Dourada rolou para dentro do Wobblor, uma gelatina do tamanho de um galpão, e o sol está se pondo. Alguém precisa enfiar a mão... então a equipe desafia o feijão mais medroso de Table Land. VOCÊ aceitaria o desafio? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "تحدّيت بيم أن يلمس الجيلي العملاق 😱",
+    "description": "مفتاح الفتاتة الذهبية تدحرج داخل ووبلور، جيلي بحجم كوخ، والشمس على وشك الغروب. يجب أن يمدّ أحدهم يده... فيتحدّى الفريق أكثر حبة فاصوليا خوفًا في أرض الطاولة. هل كنت ستقبل التحدي أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "J'ai défié Pim de toucher la gelée géante 😱",
+    "description": "La clé de la Miette d'Or a roulé dans Wobblor, une gelée grande comme une cabane, et le soleil se couche. Quelqu'un doit plonger la main... alors l'équipe défie le haricot le plus peureux de Table Land. Et TOI, tu relèverais le défi ? 👇 #animation #doughbros #comédiehorrifique"
+   },
+   "ja": {
+    "title": "ピムに巨大ゼリーを触らせてみた 😱",
+    "description": "黄金のパンくずの鍵が、小屋ほどもある巨大ゼリー「ウォブラー」の中に転がり込んだ。もうすぐ日が沈む。誰かが手を入れなきゃ…そこでチームはテーブルランドいちの怖がり豆に挑戦させる。きみならやる？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "핌에게 거대 젤리를 만지라고 도전시켰다 😱",
+    "description": "황금 빵부스러기 열쇠가 헛간만 한 젤리 워블러 속으로 굴러 들어갔고, 해가 지고 있다. 누군가는 손을 넣어야 한다... 그래서 팀은 테이블랜드에서 가장 겁 많은 콩에게 도전을 건다. 너라면 할 수 있어? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Ich habe Pim gewettet: Fass das Riesen-Gelee an 😱",
+    "description": "Der Schlüssel der Goldenen Krume ist in Wobblor gerollt, ein Gelee so groß wie ein Schuppen – und die Sonne geht unter. Einer muss hineingreifen... also fordert das Team die ängstlichste Bohne von Table Land heraus. Würdest DU dich trauen? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 30,
+   "top": "I DARE YOU, PIM",
+   "title": "Pim Got Dared to Touch a Giant Jelly 😱 #shorts",
+   "description": "One finger. That's the deal. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "dare"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Retaron a Pim a tocar una gelatina gigante 😱 #shorts",
+     "description": "Un dedo. Ese es el trato. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Pim foi desafiado a tocar numa gelatina gigante 😱 #shorts",
+     "description": "Um dedo. Esse é o trato. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "تحدّوا بيم أن يلمس جيلي عملاقًا 😱 #shorts",
+     "description": "إصبع واحد. هذا هو الاتفاق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pim doit toucher une gelée géante 😱 #shorts",
+     "description": "Un seul doigt. C'est le marché. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピム、巨大ゼリーに触る罰ゲーム 😱 #shorts",
+     "description": "指一本だけ。それが約束。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "거대 젤리를 만져야 하는 핌 😱 #shorts",
+     "description": "손가락 하나. 그게 약속이야. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pim muss ein Riesen-Gelee anfassen 😱 #shorts",
+     "description": "Ein Finger. So lautet der Deal. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 27,
+   "dur": 28,
+   "top": "WAIT... IT'S TICKLISH?!",
+   "title": "Would YOU Tickle This Jelly? 🟢 #shorts",
+   "description": "Pim's worst habit just became a superpower. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "funny",
+    "jelly"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Le harías cosquillas a una gelatina que se comió a tu amigo? 🟢 #shorts",
+     "description": "El peor hábito de Pim se volvió un superpoder. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você faria cócegas numa gelatina que engoliu seu amigo? 🟢 #shorts",
+     "description": "O pior hábito do Pim virou um superpoder. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستدغدغ جيلي ابتلع صديقك؟ 🟢 #shorts",
+     "description": "أسوأ عادة لدى بيم أصبحت قوة خارقة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu chatouillerais une gelée qui a avalé ton ami ? 🟢 #shorts",
+     "description": "Le pire défaut de Pim devient un super-pouvoir. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "友だちを飲み込んだゼリー、くすぐれる？🟢 #shorts",
+     "description": "ピムの最悪のクセがスーパーパワーに。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "친구를 삼킨 젤리, 간지럽힐 수 있어? 🟢 #shorts",
+     "description": "핌의 최악의 버릇이 초능력이 됐다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU ein Gelee kitzeln, das deinen Freund verschluckt hat? 🟢 #shorts",
+     "description": "Pims schlimmste Angewohnheit wird zur Superkraft. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
