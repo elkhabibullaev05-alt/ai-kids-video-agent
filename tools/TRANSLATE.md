@@ -1,11 +1,11 @@
 # Translations for every video (owner's rule, 2026-10-19)
 
 Goal: a viewer in Japan sees the title and description in Japanese, a viewer in the US sees the English original, and so on. YouTube shows the version matching the viewer's language automatically.
-Languages: **es, pt, hi, ar, id, fr, ja, ko, de** (Spanish, Portuguese, Hindi, Arabic, Indonesian, French, Japanese, Korean, German).
+Languages: **es, pt, ar, fr, ja, ko, de** (Spanish, Portuguese, Arabic, French, Japanese, Korean, German). Hindi and Indonesian were removed by the owner on 2026-10-19 — do not add them.
 
 ## What to make (you translate it yourself — natural, short, same meaning and hook; keep emojis, #hashtags, @handles and URLs unchanged)
 - Every video (long and Short): translated **title** (≤ 100 chars, no `<` `>`) and **description**.
-- Long videos and voiced Shorts: an English subtitle file `subs_en.srt` (from the script/timeline timings) and the same file translated into the 9 languages (`subs_<lang>.srt`, identical timings). Write them while the render runs, so translation never delays the upload.
+- Long videos and voiced Shorts: an English subtitle file `subs_en.srt` (from the script/timeline timings) and the same file translated into the 7 languages (`subs_<lang>.srt`, identical timings). Write them while the render runs, so translation never delays the upload.
 - Save them next to the video: `translations.json` = `{"<lang>": {"title": "...", "description": "..."}}` (keep it out of git like the other outputs).
 
 ## Adding them in YouTube Studio (after the video is scheduled)
