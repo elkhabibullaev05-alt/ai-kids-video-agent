@@ -1,0 +1,566 @@
+{
+ "id": "20261019-1-paulding-light",
+ "plot": "Odo and Mothwick wait on Robbins Pond Road for the real Paulding Light (Michigan, since 1966); legends say a brakeman's lantern, Michigan Tech's 2010 telescope shows headlights on US-45 — then a light leaves the road and drifts toward Odo.",
+ "script": {
+  "title": "Since 1966, This Light Comes Back Every Night",
+  "set": {
+   "place": "clearing",
+   "fog": 0.05,
+   "eyes": 3,
+   "moonlight": 0.9
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "brake": {
+    "name": "The Brakeman",
+    "voice": "bm_lewis",
+    "speed": 0.9,
+    "pitch": -1,
+    "color": [
+     0.14,
+     0.18,
+     0.32
+    ],
+    "kind": "human",
+    "size": 1.0,
+    "home": [
+     9,
+     13
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "light",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     3,
+     22,
+     2.5
+    ],
+    "visible": false,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "A true story. Since nineteen sixty-six, in a valley near Paulding, Michigan, a light has come back almost every night.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "overhead",
+    "hold": 2.6,
+    "text": "THE LIGHT IN THE VALLEY"
+   },
+   {
+    "who": "odo",
+    "say": "Mothwick... why did we stop at the end of a dirt road?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:moth"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "This is Robbins Pond Road. People drive here after dark. They park. They wait.",
+    "cam": "close:moth"
+   },
+   {
+    "who": "odo",
+    "say": "Wait for what?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "For the light. Look down the valley, along the power lines.",
+    "cam": "wide",
+    "do": [
+     [
+      "light",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen sixty-six, teenagers reported it to the sheriff. A glowing ball, far down the valley.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It brightens. It fades. Some nights it seems to change colour. Then it simply goes out.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "It went out. Is it gone?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "No. It always comes back. That's the part people never forget.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "light",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Locals call it the Paulding Light, or the Dog Meadow Light. And they say someone carries it.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "The most famous story says it is a lantern, held by a railroad brakeman.",
+    "cam": "wide",
+    "do": [
+     [
+      "brake",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "brake",
+    "say": "Stop the train! There are cars stopped on the track!",
+    "cam": "close:brake",
+    "do": [
+     [
+      "brake",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The legend says he died trying to warn a train, swinging his lantern in the dark.",
+    "cam": "two:brake,odo"
+   },
+   {
+    "who": "narr",
+    "say": "And they say he never stopped swinging it.",
+    "cam": "close:brake"
+   },
+   {
+    "who": "odo",
+    "say": "He's still waiting for the train...",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "Others tell it differently. The ghost of a mail carrier who never finished his route.",
+    "cam": "close:moth"
+   },
+   {
+    "who": "narr",
+    "say": "Another tells of a grandparent searching for a lost grandchild, relighting a lantern again and again.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "That, they say, is why the light comes and goes.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Then I understand him. I carry a lantern too.",
+    "cam": "two:odo,brake",
+    "do": [
+     [
+      "odo",
+      "turn:brake"
+     ]
+    ]
+   },
+   {
+    "who": "brake",
+    "say": "Keep it lit, little one. Whatever you see tonight.",
+    "cam": "close:brake"
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "brake",
+      "exit"
+     ],
+     [
+      "light",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "For decades, the light kept coming. Nobody could explain it.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "In two thousand ten, students from Michigan Tech carried a telescope to the viewing spot.",
+    "cam": "overhead"
+   },
+   {
+    "who": "moth",
+    "say": "Watch closely, Odo. Science is about to spoil a perfectly good ghost story.",
+    "cam": "two:odo,moth"
+   },
+   {
+    "who": "narr",
+    "say": "Through the lens, the floating glow had a shape. Two lights. Side by side. Moving.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Two lights... like eyes?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Like headlights. Cars on Highway forty-five, about five miles to the north.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "Then they drove a car along that highway. The Paulding Light appeared, right on cue.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "High beams made it brighter. Police flashers made it shimmer in colours.",
+    "cam": "wide"
+   },
+   {
+    "who": "moth",
+    "say": "Investigators said the same in nineteen ninety. Headlights and taillights.",
+    "cam": "close:moth"
+   },
+   {
+    "who": "odo",
+    "say": "So there's no brakeman. No lantern. Just cars.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "That is what the telescope says.",
+    "cam": "two:odo,moth"
+   },
+   {
+    "who": "narr",
+    "say": "And yet people still come. The Forest Service even put up a sign about the light.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "Because when that light rises over the silent valley, nobody is thinking about cars.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "show"
+     ]
+    ]
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "light",
+      "to:odo"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Mothwick... the light is coming toward us.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "Headlights don't leave the road, Odo.",
+    "cam": "close:moth"
+   },
+   {
+    "who": "odo",
+    "say": "Then what is that?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 2.8,
+    "text": "SOME LIGHTS COME BACK",
+    "do": [
+     [
+      "light",
+      "vanish"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Since 1966, This Light Comes Back Every Night 🏮",
+  "description": "A true story from Michigan's Upper Peninsula: since 1966 a glowing light has risen over a valley near Paulding almost every night. Legend says it is a dead brakeman's lantern — in 2010 a telescope found another answer. Would you wait on Robbins Pond Road after dark?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#truestory #unsolvedmystery #pauldinglight",
+  "tags": [
+   "paulding light",
+   "true story",
+   "unsolved mystery",
+   "real horror story",
+   "michigan",
+   "upper peninsula",
+   "watersmeet",
+   "ghost light",
+   "dog meadow light",
+   "urban legend",
+   "hollowmere tales",
+   "animated horror story"
+  ],
+  "thumb_text": "IT COMES BACK",
+  "thumb_beat": 36,
+  "localizations": {
+   "es": {
+    "title": "Desde 1966, esta luz vuelve cada noche 🏮",
+    "description": "Una historia real del norte de Michigan: desde 1966, una luz brillante aparece casi cada noche sobre un valle cerca de Paulding. La leyenda dice que es el farol de un guardafrenos muerto; en 2010 un telescopio encontró otra respuesta. ¿Esperarías en Robbins Pond Road de noche?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#historiareal #misterio #pauldinglight"
+   },
+   "pt": {
+    "title": "Desde 1966, esta luz volta todas as noites 🏮",
+    "description": "Uma história real do norte de Michigan: desde 1966, uma luz brilhante surge quase todas as noites sobre um vale perto de Paulding. A lenda diz que é a lanterna de um guarda-freios morto; em 2010 um telescópio encontrou outra resposta. Você esperaria na Robbins Pond Road à noite?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#historiareal #misterio #pauldinglight"
+   },
+   "ar": {
+    "title": "منذ 1966 يعود هذا الضوء كل ليلة 🏮",
+    "description": "قصة حقيقية من شمال ميشيغان: منذ عام 1966 يظهر ضوء متوهج فوق وادٍ قرب بولدينغ كل ليلة تقريبًا. تقول الأسطورة إنه فانوس عامل سكة حديد مات هناك، لكن تلسكوبًا عام 2010 وجد جوابًا آخر. هل كنت ستنتظر هناك بعد حلول الظلام؟\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#قصة_حقيقية #لغز #pauldinglight"
+   },
+   "fr": {
+    "title": "Depuis 1966, cette lumière revient chaque nuit 🏮",
+    "description": "Une histoire vraie du nord du Michigan : depuis 1966, une lumière apparaît presque chaque nuit au-dessus d'une vallée près de Paulding. La légende parle de la lanterne d'un serre-frein mort ; en 2010, un télescope a trouvé une autre réponse. Attendriez-vous sur Robbins Pond Road la nuit ?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#histoirevraie #mystere #pauldinglight"
+   },
+   "ja": {
+    "title": "1966年から毎晩戻ってくる光 🏮",
+    "description": "ミシガン州アッパー半島の実話。1966年から、ポールディング近くの谷にはほぼ毎晩、謎の光が現れます。伝説では亡くなった制動手のランタン。しかし2010年、望遠鏡が別の答えを見つけました。あなたは夜のロビンズ・ポンド・ロードで待てますか?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#実話 #未解決ミステリー #pauldinglight"
+   },
+   "ko": {
+    "title": "1966년부터 매일 밤 돌아오는 빛 🏮",
+    "description": "미시간 북부의 실화: 1966년부터 폴딩 근처 계곡 위로 거의 매일 밤 빛이 떠오릅니다. 전설은 죽은 철도 제동수의 랜턴이라고 하지만, 2010년 망원경은 다른 답을 찾았습니다. 당신은 밤에 로빈스 폰드 로드에서 기다릴 수 있나요?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#실화 #미스터리 #pauldinglight"
+   },
+   "de": {
+    "title": "Seit 1966 kehrt dieses Licht jede Nacht zurück 🏮",
+    "description": "Eine wahre Geschichte aus Michigans Upper Peninsula: Seit 1966 erscheint fast jede Nacht ein Licht über einem Tal bei Paulding. Die Legende sagt, es sei die Laterne eines toten Bremsers – 2010 fand ein Teleskop eine andere Antwort. Würdest du nachts an der Robbins Pond Road warten?\n\nSources: en.wikipedia.org/wiki/Paulding_Light · mtu.edu/news/stories/2010/october/story32436.html\n\n#wahregeschichte #mysterium #pauldinglight"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 2,
+   "dur": 30,
+   "top": "IT COMES BACK EVERY NIGHT",
+   "title": "This light returns every night 🏮 #shorts",
+   "description": "A real light in a Michigan valley that nobody could explain. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "unsolved mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Una luz que vuelve cada noche desde 1966 🏮 #shorts",
+     "description": "Una luz real en un valle de Michigan que nadie podía explicar. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma luz que volta toda noite desde 1966 🏮 #shorts",
+     "description": "Uma luz real num vale de Michigan que ninguém conseguia explicar. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ضوء يعود كل ليلة منذ 1966 🏮 #shorts",
+     "description": "ضوء حقيقي في وادٍ بميشيغان لم يستطع أحد تفسيره. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une lumière qui revient chaque nuit depuis 1966 🏮 #shorts",
+     "description": "Une vraie lumière dans une vallée du Michigan que personne n'expliquait. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "1966年から毎晩現れる光 🏮 #shorts",
+     "description": "誰にも説明できなかったミシガンの谷の本当の光。フルストーリー: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1966년부터 매일 밤 나타나는 빛 🏮 #shorts",
+     "description": "아무도 설명하지 못한 미시간 계곡의 진짜 빛. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Licht, das seit 1966 jede Nacht kommt 🏮 #shorts",
+     "description": "Ein echtes Licht in einem Tal in Michigan, das niemand erklären konnte. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 11,
+   "dur": 28,
+   "top": "THE BRAKEMAN'S LANTERN",
+   "title": "He never stopped swinging it 🚂 #shorts",
+   "description": "The legend behind Michigan's Paulding Light. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "unsolved mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nunca dejó de mover su farol 🚂 #shorts",
+     "description": "La leyenda detrás de la luz de Paulding en Michigan. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele nunca parou de balançar a lanterna 🚂 #shorts",
+     "description": "A lenda por trás da luz de Paulding, em Michigan. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يتوقف أبدًا عن هزّ فانوسه 🚂 #shorts",
+     "description": "الأسطورة وراء ضوء بولدينغ في ميشيغان. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il n'a jamais cessé d'agiter sa lanterne 🚂 #shorts",
+     "description": "La légende derrière la lumière de Paulding, au Michigan. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "彼は今もランタンを振り続ける 🚂 #shorts",
+     "description": "ミシガンのポールディング・ライトの伝説。フルストーリー: {LONG_URL}"
+    },
+    "ko": {
+     "title": "그는 랜턴 흔들기를 멈추지 않았다 🚂 #shorts",
+     "description": "미시간 폴딩 라이트 뒤의 전설. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er hörte nie auf, seine Laterne zu schwingen 🚂 #shorts",
+     "description": "Die Legende hinter dem Paulding Light in Michigan. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

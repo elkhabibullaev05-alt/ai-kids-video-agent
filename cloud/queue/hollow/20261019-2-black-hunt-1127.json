@@ -1,0 +1,491 @@
+{
+ "id": "20261019-2-black-hunt-1127",
+ "plot": "At Peterborough Abbey in 1127 a Murk Crow and a night watchman tell Odo what the Peterborough Chronicle recorded after greedy Abbot Henry of Poitou arrived: black huntsmen on black horses and goats, wide-eyed hounds, horns every night until Easter — and the hunt circles Odo's lantern.",
+ "script": {
+  "title": "Never Look Up When the Black Hunt Rides By",
+  "set": {
+   "place": "chapel",
+   "fog": 0.035,
+   "eyes": 6,
+   "moonlight": 0.7
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "hound": {
+    "name": "Hunt Hound",
+    "voice": "am_onyx",
+    "speed": 0.8,
+    "pitch": -5,
+    "color": [
+     0,
+     0,
+     0
+    ],
+    "kind": "gloamhound",
+    "size": 1.0,
+    "home": [
+     6,
+     16
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "crow": {
+    "name": "Murk Crow",
+    "voice": "am_michael",
+    "speed": 1.05,
+    "pitch": 3,
+    "color": [
+     0.02,
+     0.02,
+     0.03
+    ],
+    "kind": "crow",
+    "size": 1.0,
+    "home": [
+     4,
+     9
+    ]
+   },
+   "monk": {
+    "name": "The Night Watchman",
+    "voice": "bm_fable",
+    "speed": 0.9,
+    "pitch": -1,
+    "color": [
+     0.24,
+     0.18,
+     0.12
+    ],
+    "kind": "human",
+    "size": 1.0,
+    "home": [
+     -9,
+     12
+    ]
+   }
+  },
+  "props": [],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "This is a true record. In the year eleven twenty-seven, English monks wrote down what rode past their abbey at night.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "overhead",
+    "hold": 2.6,
+    "text": "THE BLACK HUNT OF 1127"
+   },
+   {
+    "who": "narr",
+    "say": "The place was Peterborough. The book is the Peterborough Chronicle, kept by the monks of its abbey.",
+    "cam": "wide"
+   },
+   {
+    "who": "crow",
+    "say": "Peterborough. Peterborough. Who walks to the abbey so late?",
+    "cam": "close:crow",
+    "do": [
+     [
+      "crow",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Just me. And my lantern. Who are you?",
+    "cam": "two:odo,crow",
+    "do": [
+     [
+      "odo",
+      "turn:crow"
+     ]
+    ]
+   },
+   {
+    "who": "crow",
+    "say": "I repeat what people whisper. And the monks whispered a great deal that winter.",
+    "cam": "close:crow"
+   },
+   {
+    "who": "narr",
+    "say": "That winter, the abbey was given a new abbot. His name was Henry of Poitou.",
+    "cam": "wide",
+    "do": [
+     [
+      "monk",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The chronicle says he stripped the abbey of its wealth and sent it overseas.",
+    "cam": "close:monk"
+   },
+   {
+    "who": "monk",
+    "say": "Our chronicle says he lived like a drone in a beehive. Taking. Never giving.",
+    "cam": "close:monk",
+    "do": [
+     [
+      "monk",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "And then what happened?",
+    "cam": "two:odo,monk",
+    "do": [
+     [
+      "odo",
+      "turn:monk"
+     ]
+    ]
+   },
+   {
+    "who": "monk",
+    "say": "He came to us in early February. And soon after, the hunting began.",
+    "cam": "close:monk"
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "overhead",
+    "hold": 1.6,
+    "do": [
+     [
+      "hound",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The chronicle says many men both saw and heard huntsmen, hunting in the dark.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "The huntsmen were black, and big, and loathsome. They rode on black horses, and on black goats.",
+    "cam": "close:hound"
+   },
+   {
+    "who": "narr",
+    "say": "And their hounds were all black, with wide, staring eyes.",
+    "cam": "close:hound",
+    "do": [
+     [
+      "hound",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Goats? They were riding goats?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crow",
+    "say": "Black goats. Black goats. That's what they wrote.",
+    "cam": "close:crow",
+    "do": [
+     [
+      "crow",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They were seen in the abbey's own deer park, and in all the woods from Peterborough to Stamford.",
+    "cam": "overhead"
+   },
+   {
+    "who": "monk",
+    "say": "Our watchmen kept guard through the night. They reckoned twenty, perhaps thirty horn-blowers.",
+    "cam": "two:monk,odo"
+   },
+   {
+    "who": "odo",
+    "say": "Thirty riders... and nobody stopped them?",
+    "cam": "close:odo"
+   },
+   {
+    "who": "monk",
+    "say": "Nobody could. We monks heard the horns at night, all through Lent, right up to Easter.",
+    "cam": "close:monk"
+   },
+   {
+    "who": "crow",
+    "say": "Shh. Shh. Do you hear it, lantern boy?",
+    "cam": "close:crow"
+   },
+   {
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 1.4,
+    "do": [
+     [
+      "hound",
+      "to:odo"
+     ]
+    ]
+   },
+   {
+    "who": "odo",
+    "say": "Something is running between the trees!",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across Europe, people told of a Wild Hunt: ghostly riders and hounds racing through winter nights.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hound",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To meet it, the old tales said, was a warning. Something in the world had gone wrong.",
+    "cam": "wide"
+   },
+   {
+    "who": "odo",
+    "say": "So the monks believed the hunt came because of the abbot?",
+    "cam": "two:odo,monk"
+   },
+   {
+    "who": "monk",
+    "say": "We wrote what we saw and heard. You may judge the rest.",
+    "cam": "close:monk"
+   },
+   {
+    "who": "crow",
+    "say": "Wrong. Wrong. And the abbot? Ask what became of him.",
+    "cam": "close:crow"
+   },
+   {
+    "who": "narr",
+    "say": "The chronicler ends with a bitter line. Of his going, he wrote, we cannot yet say.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "Years later, Henry was removed from Peterborough. The riders were never explained.",
+    "cam": "overhead"
+   },
+   {
+    "who": "odo",
+    "say": "Then they could still be out there.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "monk",
+    "say": "Keep your lantern high, child. Hunters do not like to be seen.",
+    "cam": "close:monk",
+    "do": [
+     [
+      "monk",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "hound",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crow",
+    "say": "They see you, lantern boy. They see you.",
+    "cam": "close:crow"
+   },
+   {
+    "who": "odo",
+    "say": "Don't look up. Don't look up...",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nearly nine hundred years later, the monks' words survive, in the pages of their chronicle.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "Read them on a cold February night, and see if you can stop listening for horns.",
+    "cam": "close:odo"
+   },
+   {
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 2.8,
+    "text": "DON'T LOOK UP",
+    "do": [
+     [
+      "hound",
+      "exit"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Never Look Up When the Black Hunt Rides By 🐺",
+  "description": "A true record from 1127: after a greedy new abbot reached Peterborough, the monks' own chronicle tells of black huntsmen on black horses and goats, wide-eyed hounds, and horns blowing every night until Easter. Was it a warning — or something else? Tell us what you think.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#truestory #wildhunt #folklore",
+  "tags": [
+   "wild hunt",
+   "peterborough chronicle",
+   "true story",
+   "medieval mystery",
+   "real horror story",
+   "peterborough",
+   "england",
+   "folklore",
+   "1127",
+   "henry of poitou",
+   "hollowmere tales",
+   "animated horror story"
+  ],
+  "thumb_text": "DON'T LOOK UP",
+  "thumb_beat": 23,
+  "localizations": {
+   "es": {
+    "title": "Nunca mires arriba cuando pasa la Cacería Negra 🐺",
+    "description": "Un registro real de 1127: tras la llegada de un abad codicioso a Peterborough, la crónica de los monjes habla de cazadores negros sobre caballos y cabras negras, perros de ojos enormes y cuernos cada noche hasta Pascua. ¿Fue una advertencia? Cuéntanos qué piensas.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#historiareal #caceriasalvaje #folclore"
+   },
+   "pt": {
+    "title": "Nunca olhe para cima quando a Caçada Negra passar 🐺",
+    "description": "Um registro real de 1127: depois que um abade ganancioso chegou a Peterborough, a crônica dos monges fala de caçadores negros em cavalos e bodes negros, cães de olhos arregalados e trompas toda noite até a Páscoa. Foi um aviso? Diga o que você acha.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#historiareal #cacadaselvagem #folclore"
+   },
+   "ar": {
+    "title": "لا تنظر للأعلى حين يمرّ الصيد الأسود 🐺",
+    "description": "سجل حقيقي من عام 1127: بعد وصول رئيس دير جشع إلى بيتربره، تروي حوليات الرهبان صيادين سودًا على خيول وماعز سوداء، وكلابًا واسعة العيون، وأبواقًا كل ليلة حتى عيد الفصح. هل كان تحذيرًا؟ أخبرنا برأيك.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#قصة_حقيقية #الصيد_البري #فولكلور"
+   },
+   "fr": {
+    "title": "Ne levez jamais les yeux quand passe la Chasse Noire 🐺",
+    "description": "Un récit réel de 1127 : après l'arrivée d'un abbé avide à Peterborough, la chronique des moines décrit des chasseurs noirs sur des chevaux et des boucs noirs, des chiens aux yeux écarquillés et des cors chaque nuit jusqu'à Pâques. Un avertissement ? Dites-nous ce que vous en pensez.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#histoirevraie #chassesauvage #folklore"
+   },
+   "ja": {
+    "title": "黒い狩りが通る時、決して見上げるな 🐺",
+    "description": "1127年の実際の記録。強欲な新修道院長がピーターバラに来た後、修道士の年代記は、黒い馬と黒いヤギに乗った黒い狩人、目を見開いた猟犬、そして復活祭まで毎晩響く角笛を記しました。それは警告だったのか?あなたの考えを教えてください。\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#実話 #ワイルドハント #民間伝承"
+   },
+   "ko": {
+    "title": "검은 사냥이 지나갈 때 절대 올려다보지 마라 🐺",
+    "description": "1127년의 실제 기록: 탐욕스러운 새 수도원장이 피터버러에 온 뒤, 수도사들의 연대기는 검은 말과 검은 염소를 탄 검은 사냥꾼들, 눈을 부릅뜬 사냥개, 부활절까지 매일 밤 울린 뿔피리를 기록했습니다. 경고였을까요? 생각을 알려 주세요.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#실화 #와일드헌트 #민담"
+   },
+   "de": {
+    "title": "Schau nie auf, wenn die Schwarze Jagd vorbeizieht 🐺",
+    "description": "Ein echter Bericht von 1127: Nachdem ein gieriger neuer Abt nach Peterborough kam, beschreibt die Chronik der Mönche schwarze Jäger auf schwarzen Pferden und Ziegen, Hunde mit weit aufgerissenen Augen und Hörner jede Nacht bis Ostern. Eine Warnung? Sag uns, was du denkst.\n\nSources: en.wikipedia.org/wiki/Henry_of_Poitou · strangehistory.net/2018/01/28/wild-hunt-1127/\n\n#wahregeschichte #wildejagd #folklore"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 12,
+   "dur": 32,
+   "top": "BLACK RIDERS ON BLACK GOATS",
+   "title": "Monks wrote this down in 1127 😨 #shorts",
+   "description": "A real medieval chronicle describes a night hunt nobody could stop. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "unsolved mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Unos monjes escribieron esto en 1127 😨 #shorts",
+     "description": "Una crónica medieval real describe una cacería nocturna que nadie pudo detener. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Monges escreveram isto em 1127 😨 #shorts",
+     "description": "Uma crônica medieval real descreve uma caçada noturna que ninguém conseguiu deter. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كتب الرهبان هذا عام 1127 😨 #shorts",
+     "description": "حولية حقيقية من العصور الوسطى تصف صيدًا ليليًا لم يستطع أحد إيقافه. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Des moines ont écrit ceci en 1127 😨 #shorts",
+     "description": "Une vraie chronique médiévale décrit une chasse nocturne que personne n'a pu arrêter. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "1127年、修道士たちが書き残したこと 😨 #shorts",
+     "description": "誰にも止められなかった夜の狩りを記した、実在の中世の年代記。フルストーリー: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1127년 수도사들이 기록한 것 😨 #shorts",
+     "description": "아무도 막지 못한 밤의 사냥을 기록한 실제 중세 연대기. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das schrieben Mönche im Jahr 1127 auf 😨 #shorts",
+     "description": "Eine echte mittelalterliche Chronik beschreibt eine nächtliche Jagd, die niemand aufhalten konnte. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
