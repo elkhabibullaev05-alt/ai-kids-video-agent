@@ -78,3 +78,15 @@ Long episodes got 0–6 views; every view comes from Shorts. Until the owner say
 
 ## Translations (owner's rule, 2026-10-19 — never skip)
 Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.
+
+## Studio advice 2026-10-20 (Ask Studio, from this channel's own analytics)
+
+- Shorts: only 4–13.5% stay; 86–96% swipe away.
+  - Start at 0 s in media res with a stake, e.g. "115 settlers vanished without a trace—leaving only one word carved into wood".
+  - No fades, silences or title cards. Length 20–30 s.
+- Long videos: retention fell from 91.7% to 16.7% within 4.5 s on EP 3, because it opened with dates and records.
+  - Open with the eerie climax in the first 5 s; give context after.
+  - Add sound or visual shifts every 20–30 s. Keep long videos 3–5 min for now.
+- Titles: no "EP N", no channel name, under 50 characters, e.g. "115 Settlers Vanished. They Left One Word."
+- Thumbnails: CTR is 0.92%; target over 4%. One hero subject with 2–3 bold teasing words ("NO BODIES FOUND").
+- Schedule: don't flood. 1–2 long videos a week and 1 Short a day, spaced out.
