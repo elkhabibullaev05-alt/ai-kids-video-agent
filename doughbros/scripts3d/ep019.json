@@ -1,0 +1,829 @@
+{
+ "title": "What Was SLEEPING Behind the Gate?! 🟢 | EP 19",
+ "description": "Behind the garden gate sleeps a giant jelly, and Pim just dropped the Golden Crumb key into his belly. Can the Dough Bros get it back without waking him?",
+ "set": {
+  "place": "garden",
+  "time": "night"
+ },
+ "chars": {
+  "bup": {
+   "name": "Bup",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.82,
+    0.6,
+    0.32
+   ],
+   "kind": "loaf",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ],
+   "eye_sizes": [
+    1.15,
+    0.8
+   ],
+   "stitch": true,
+   "brows": 10
+  },
+  "pim": {
+   "name": "Pim",
+   "voice": "am_puck",
+   "speed": 1.15,
+   "pitch": 2,
+   "color": [
+    0.75,
+    0.08,
+    0.08
+   ],
+   "kind": "bean",
+   "size": 0.9,
+   "home": [
+    -2.5,
+    4
+   ]
+  },
+  "zeek": {
+   "name": "Zeek",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.4,
+    0.9
+   ],
+   "kind": "triangle",
+   "size": 0.9,
+   "home": [
+    1.5,
+    5
+   ]
+  },
+  "lolly": {
+   "name": "Lolly",
+   "voice": "af_nicole",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    1.0,
+    0.45,
+    0.7
+   ],
+   "kind": "star",
+   "size": 0.85,
+   "home": [
+    5,
+    4
+   ]
+  },
+  "crispy": {
+   "name": "Crispy",
+   "voice": "am_onyx",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.06,
+    0.05,
+    0.05
+   ],
+   "kind": "rock",
+   "size": 0.9,
+   "home": [
+    9,
+    8
+   ]
+  },
+  "pot": {
+   "name": "Mr. Pot",
+   "voice": "am_fenrir",
+   "speed": 0.85,
+   "pitch": -4,
+   "color": [
+    0.15,
+    0.15,
+    0.17
+   ],
+   "kind": "pot",
+   "size": 1.1,
+   "home": [
+    10,
+    16
+   ],
+   "brows": 18
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "wobblor": {
+   "name": "Wobblor",
+   "voice": "am_eric",
+   "speed": 0.85,
+   "pitch": -2,
+   "color": [
+    0.2,
+    0.8,
+    0.3
+   ],
+   "kind": "jelly",
+   "size": 1.6,
+   "home": [
+    -3,
+    14
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "crumb",
+   "type": "key",
+   "color": "gold",
+   "on": "pim",
+   "visible": true,
+   "scale": 0.8
+  }
+ ],
+ "beats": [
+  {
+   "who": "pim",
+   "say": "It BREATHED! The gate BREATHED at me!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "wobblor",
+     "shake"
+    ]
+   ],
+   "text": "WHAT'S BEHIND THE GATE?!",
+   "sfx": "suspicious"
+  },
+  {
+   "who": "wobblor",
+   "say": "Mmm... fresh dough... come closer...",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "I told you. Don't wake him.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:wobblor"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Okay team, nobody move. Nobody breathe. Nobody... sneeze.",
+   "cam": "two:bup,pim",
+   "do": [
+    [
+     "bup",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Zzz... squish... zzz...",
+   "cam": "wide",
+   "do": [
+    [
+     "wobblor",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Behind the garden gate sleeps a giant. And Pim is holding the key.",
+   "cam": "overhead",
+   "text": "A SLEEPING GIANT"
+  },
+  {
+   "who": "zeek",
+   "say": "My calculations say that is a jelly. A VERY large jelly.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "to:wobblor"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "He looks so soft. Like a big green pillow!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "That pillow is Wobblor. Whatever goes in... stays in.",
+   "cam": "close:crispy"
+  },
+  {
+   "who": "pim",
+   "say": "S-s-stays? Like... forever?",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Fascinating. He has eaten a spoon, two buttons and a very surprised snail.",
+   "cam": "two:zeek,wobblor",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "A snail? Oh, the poor little thing!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Okay, cool, cool, cool. I'll just hold the key REALLY tight.",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Whoops.",
+   "cam": "prop:crumb",
+   "do": [
+    [
+     "crumb",
+     "drop:pim"
+    ]
+   ]
+  },
+  {
+   "text": "THE KEY FELL IN!",
+   "cam": "prop:crumb",
+   "hold": 1.3,
+   "sfx": "alarm",
+   "do": [
+    [
+     "crumb",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Pim! The Golden Crumb!",
+   "cam": "two:bup,pim",
+   "do": [
+    [
+     "bup",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "It rolled! It rolled right into his BELLY!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "crumb",
+     "to:wobblor"
+    ],
+    [
+     "pim",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Hee hee... it tickles... zzz...",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Here's the plan. Lolly sings him deeper to sleep. I reach in and grab it.",
+   "cam": "wide",
+   "do": [
+    [
+     "bup",
+     "to:wobblor"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Wait! Take my Jelly-Gloves 3000. Totally safe. Probably.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "La la loo... sleep tight, big wobbly friend...",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "spin"
+    ],
+    [
+     "wobblor",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Mmm... pretty song... zzz...",
+   "cam": "close:wobblor"
+  },
+  {
+   "who": "bup",
+   "say": "Almost... almost... got it!",
+   "cam": "two:bup,wobblor",
+   "do": [
+    [
+     "bup",
+     "squash"
+    ]
+   ]
+  },
+  {
+   "text": "ZEEK'S GLOVES MELTED!",
+   "cam": "close:zeek",
+   "hold": 1.2,
+   "sfx": "suspicious",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Oh no. The gloves are made of sugar. My bad.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Ah... ahh... AHHH-CHOO!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "all",
+     "look:pim"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "WHO... woke... ME?",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "wobblor",
+   "say": "Little doughs! Stay inside me... it's comfy!",
+   "cam": "wide",
+   "do": [
+    [
+     "wobblor",
+     "to:bup"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Run! Everyone run!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "flat_roof"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Too late. Wobblor slurps Bup right up.",
+   "cam": "overhead",
+   "do": [
+    [
+     "bup",
+     "squash"
+    ]
+   ],
+   "text": "BUP GOT SWALLOWED!"
+  },
+  {
+   "who": "bup",
+   "say": "Guys? It's dark in here. And sticky. And it smells like grapes.",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Let. Him. GO!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "flat_roof"
+    ],
+    [
+     "lolly",
+     "to:wobblor"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Hee hee! Angry cookies are the squishiest!",
+   "cam": "two:lolly,wobblor",
+   "do": [
+    [
+     "wobblor",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "N-n-nope! I can't watch!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Pim fainted. Again. Statistically, that is his fourth time this week.",
+   "cam": "two:zeek,pim"
+  },
+  {
+   "who": "lolly",
+   "say": "Zeek! Do something smart! NOW!",
+   "cam": "two:lolly,zeek",
+   "do": [
+    [
+     "lolly",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Plan B! The Wobble-Shaker 3000! It shakes him until he coughs!",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "spin"
+    ],
+    [
+     "wobblor",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Hee hee hee! Again! Shake me AGAIN!",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Plan B has made him happier. That was not the goal.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Guys, hurry! He's starting to sing to me in here!",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Stay... stay... stay inside me forever...",
+   "cam": "wide",
+   "do": [
+    [
+     "wobblor",
+     "to:lolly"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "crispy",
+   "say": "Jelly hates one thing. Heat. And my ember is warm again.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "to:wobblor"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Crispy, wait! You'll get stuck in there too!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "I've been stuck in worse places. Like Mr. Pot.",
+   "cam": "close:crispy"
+  },
+  {
+   "who": "crispy",
+   "say": "Wobblor. Do you remember me?",
+   "cam": "two:crispy,wobblor",
+   "do": [
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Warm... too warm... it's melting my tummy!",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Hee... hee... BLEHHH!",
+   "cam": "wide",
+   "do": [
+    [
+     "bup",
+     "jump"
+    ],
+    [
+     "crumb",
+     "to:bup"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "bup",
+   "say": "I'm out! And I've got the key!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Yay! Sorry for yelling, Mister Wobblor.",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Did we win? Is it over? Can we go home now?",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "You don't understand. I wasn't guarding the gate from you...",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "I was guarding it from HIM.",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Him? Who is him? I dislike unclear pronouns.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "all",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Please say a bunny. Please say a tiny, friendly bunny.",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "wobblor",
+   "say": "Not a bunny. Something HOT... and very, very hungry.",
+   "cam": "close:wobblor",
+   "do": [
+    [
+     "wobblor",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "pot",
+   "say": "Thank you, little doughs. The jelly is out of my way...",
+   "cam": "wide",
+   "do": [
+    [
+     "pot",
+     "enter"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "pot",
+   "say": "And now the key is MINE. Time to FRY!",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "eyes_big"
+    ],
+    [
+     "pot",
+     "to:bup"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "Mr. Pot. Everyone... behind me.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Can I faint again? Is fainting allowed right now?!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ]
+   ],
+   "text": "TO BE CONTINUED..."
+  }
+ ]
+}
