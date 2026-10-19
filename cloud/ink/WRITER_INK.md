@@ -31,6 +31,23 @@ The PC agent (`ufctube`) downloads it within 3 hours. From each script it render
 - **End.** Ask a comment question ("Which one surprised you?"). No long outro.
 - **Short (`short.scenes`).** Write 5–7 scenes, 110–140 words (45–60 s; this length gets the most engagement). The first scene has a `hook`. The **last sentence must flow straight back into the first sentence**, so the Short loops. Use the **same `img`** in the first and last scene.
 
+## 2b. Sound like a live person (owner's rule, 2026-10-19)
+
+- **First 3 seconds decide everything.**
+  - `hook` ≤ 7 words.
+  - First sentence ≤ 14 words, talking to "you" or making an almost-unbelievable claim.
+  - No greeting, no channel name.
+  - The renderer starts the voice at 0.0 s and slams the first picture in.
+- **Conversational.** Write like a friend telling a story: contractions, short sentences (6–20 words), questions, "okay, so", "here's the thing", "think about that". Never write encyclopedia prose.
+- **The picture changes every 2–3 s.** Keep `say` short (1–2 sentences) and use 10+ different images.
+- **Ending.** The agent adds the subscribe scene (the button gets clicked on screen) to long videos, and a "full story on my channel" banner to the end of Shorts. The Short's description links to the long video automatically. Your last long scene should ask a comment question.
+
+## 2c. Viewer score — must pass 85/100
+
+- Run `python3 cloud/ink/check.py cloud/ink/animals/NNN-slug.json`. It must print `O'TDI`, with long and short both ≥ 85.
+- Then review once more by hand with `cloud/ink/tomoshabin-bahosi/SKILL.md`, as a bored phone viewer. Rewrite every line where you would swipe.
+- The PC agent re-scores after rendering. It refuses to upload anything under 85.
+
 ## 3. Length
 
 - The long video needs **1,250–1,600 words** in `scenes`. That is about 8–11 minutes; 8+ minutes allows mid-roll ads.
@@ -66,6 +83,8 @@ The PC agent (`ufctube`) downloads it within 3 hours. From each script it render
 Optional `label` (2–5 words) is handwritten under the picture in the long video.
 
 ## 7. Checklist before pushing
+
+- `python3 cloud/ink/check.py <file>` prints O'TDI.
 
 - The file parses: `python3 -c "import json;json.load(open(F))"`.
 - Word counts are in range. The `id` matches the filename.
