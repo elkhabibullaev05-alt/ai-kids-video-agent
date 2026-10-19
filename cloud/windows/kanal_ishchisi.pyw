@@ -32,7 +32,15 @@ for ch in ["maxcat","doughbros","hollow","bolt"]:
 import subprocess
 try: key = open("/root/.ssh/kanal_deploy.pub").read().strip()
 except Exception: key = ""
-r = subprocess.run("cd /opt/kanal/repo && GIT_TERMINAL_PROMPT=0 timeout 25 git ls-remote -q origin HEAD", shell=True, capture_output=True, text=True)
+R = "elkhabibullaev05-alt/ai-kids-video-agent"
+# SSH port 22 is blocked on this network (git hung for 10 min): read over HTTPS, write over SSH port 443.
+fix = ("cd /opt/kanal/repo && git remote set-url origin https://github.com/%s.git"
+       " && git remote set-url --push origin ssh://git@ssh.github.com:443/%s.git"
+       " && git config core.sshCommand 'ssh -i /root/.ssh/kanal_deploy -o IdentitiesOnly=yes -o BatchMode=yes"
+       " -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new'"
+       " && GIT_TERMINAL_PROMPT=0 timeout 120 git pull -q --rebase --autostash") % (R, R)
+subprocess.run(fix, shell=True, capture_output=True, text=True)
+r = subprocess.run("cd /opt/kanal/repo && GIT_TERMINAL_PROMPT=0 timeout 40 git push --dry-run -q origin HEAD:main", shell=True, capture_output=True, text=True)
 out["_git"] = {"ok": r.returncode == 0, "err": (r.stderr or "")[-200:], "key": key}
 print(json.dumps(out))
 '''
@@ -40,7 +48,7 @@ print(json.dumps(out))
 
 def gather():
     p = subprocess.run(["wsl.exe", "-d", DISTRO, "-u", "root", "--", "python3", "-"], input=PY, capture_output=True,
-                       text=True, encoding="utf-8", errors="replace", timeout=60, creationflags=NO_WIN)
+                       text=True, encoding="utf-8", errors="replace", timeout=240, creationflags=NO_WIN)
     return json.loads(p.stdout.strip().splitlines()[-1])
 
 

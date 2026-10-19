@@ -23,8 +23,10 @@ if [ ! -f $KEY ]; then
   mkdir -p /root/.ssh && ssh-keygen -q -t ed25519 -N "" -C "kanal-$CH@$(hostname)" -f $KEY
 fi
 ssh-keyscan -q github.com >> /root/.ssh/known_hosts 2>/dev/null || true
-git -C $DIR remote set-url origin git@github.com:$REPO.git
-git -C $DIR config core.sshCommand "ssh -i $KEY -o IdentitiesOnly=yes"
+# read over HTTPS (public repo), write over SSH on port 443 (port 22 is blocked on many networks)
+git -C $DIR remote set-url origin https://github.com/$REPO.git
+git -C $DIR remote set-url --push origin ssh://git@ssh.github.com:443/$REPO.git
+git -C $DIR config core.sshCommand "ssh -i $KEY -o IdentitiesOnly=yes -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new"
 
 bash $DIR/bolt/setup.sh            # Blender 4.2.3 + Kokoro voices
 mkdir -p /root/kanal/$CH
