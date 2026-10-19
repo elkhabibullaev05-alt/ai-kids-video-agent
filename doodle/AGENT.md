@@ -64,3 +64,6 @@ Update the owner's hub (https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r) with 
 
 ## Never
 Never type passwords, never add accounts, never change account/channel settings. Upload only to The Doodle Desk. No invented facts or quotes, no likeness of real people, no partisan side-taking (STYLE.md).
+
+## Translations (owner's rule, 2026-10-19 — never skip)
+Every uploaded video gets its title and description in **es, pt, hi, ar, id, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.

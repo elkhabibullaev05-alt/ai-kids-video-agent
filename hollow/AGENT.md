@@ -72,3 +72,6 @@ Long episodes got 0–6 views; every view comes from Shorts. Until the owner say
 ## Never
 - Upload only to Hollowmere Tales (channel id above). Never type passwords, never change account settings, never touch the old private videos on the channel.
 - No gore, blood, injuries, death on screen, real brands/characters/games/memes. Original stories only.
+
+## Translations (owner's rule, 2026-10-19 — never skip)
+Every uploaded video gets its title and description in **es, pt, hi, ar, id, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.
