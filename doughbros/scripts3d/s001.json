@@ -1,0 +1,224 @@
+{
+ "title": "Mr. Pot Woke Up Hungry \ud83d\ude31 #shorts",
+ "set": {
+  "place": "kitchen",
+  "time": "night"
+ },
+ "chars": {
+  "bup": {
+   "name": "Bup",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.82,
+    0.6,
+    0.32
+   ],
+   "kind": "loaf",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ],
+   "eye_sizes": [
+    1.15,
+    0.8
+   ],
+   "stitch": true,
+   "brows": 10
+  },
+  "pim": {
+   "name": "Pim",
+   "voice": "am_puck",
+   "speed": 1.15,
+   "pitch": 2,
+   "color": [
+    0.75,
+    0.08,
+    0.08
+   ],
+   "kind": "bean",
+   "size": 0.9,
+   "home": [
+    -2.5,
+    4
+   ]
+  },
+  "zeek": {
+   "name": "Zeek",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.4,
+    0.9
+   ],
+   "kind": "triangle",
+   "size": 0.9,
+   "home": [
+    1.5,
+    5
+   ]
+  },
+  "lolly": {
+   "name": "Lolly",
+   "voice": "af_nicole",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    1.0,
+    0.45,
+    0.7
+   ],
+   "kind": "star",
+   "size": 0.85,
+   "home": [
+    5,
+    4
+   ]
+  },
+  "crispy": {
+   "name": "Crispy",
+   "voice": "am_onyx",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.06,
+    0.05,
+    0.05
+   ],
+   "kind": "rock",
+   "size": 0.9,
+   "home": [
+    9,
+    8
+   ]
+  },
+  "pot": {
+   "name": "Mr. Pot",
+   "voice": "am_fenrir",
+   "speed": 0.85,
+   "pitch": -4,
+   "color": [
+    0.15,
+    0.15,
+    0.17
+   ],
+   "kind": "pot",
+   "size": 1.1,
+   "home": [
+    2,
+    13
+   ],
+   "brows": 18
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "props": [],
+ "beats": [
+  {
+   "text": "DON'T WAKE THE POT!",
+   "sfx": "suspicious",
+   "cam": "close:pot",
+   "hold": 1.4,
+   "do": [
+    [
+     "pot",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Fresh... dough...",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "N-n-nope! Let's go home!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "all",
+     "look:pot"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Okay team, here's the plan. We run!",
+   "cam": "two:bup,pim",
+   "do": [
+    [
+     "bup",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "My calculations say... he is faster than us.",
+   "cam": "close:zeek"
+  },
+  {
+   "who": "lolly",
+   "say": "Then we hide. Nicely.",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Time to FRY!",
+   "cam": "wide",
+   "do": [
+    [
+     "pot",
+     "to:bup"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "Not tonight, Pot.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Would YOU stay in the kitchen tonight?",
+   "cam": "wide",
+   "text": "WOULD YOU STAY? \ud83d\udc47"
+  }
+ ]
+}

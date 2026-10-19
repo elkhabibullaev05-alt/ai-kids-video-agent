@@ -1,5 +1,8 @@
 # Daily Dough Bros run — instructions for Claude
 
+> **3D since 2026-10-19 (owner's rule — overrides the renderer, formats and daily counts below):** every video is now a 3D animation made with `engine3d/` (same engine as Inspector Bolt). Read `../tools/ANIM3D.md` first: write `scripts3d/epNNN.json` in the Bolt script format using `scripts3d/cast.json`, render with Blender, **3 long (3:00–3:40) + 4 Shorts per UTC day**, one long per run. The story bible, tone, titles, audience setting, upload flow, slots, rek-ball gate and translations stay as written below. The old 2D `engine/` is no longer used.
+
+
 Goal every day: **1 long episode (3–5 min) + 3 Shorts**, rendered as finished MP4s with thumbnails, subtitles and upload text, delivered to the user. Work fully unattended: never wait for answers; decide and note decisions in the final message.
 
 The user speaks **Uzbek** — the final message to the user must be in Uzbek. Video content is in English.
