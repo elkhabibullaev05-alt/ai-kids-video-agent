@@ -28,5 +28,6 @@ python3 ../tools/make_short.py out3d/epNNN.mp4 out3d/epNNN_s1.mp4 --start S --du
 Script format = `bolt/story/SCRIPT_FORMAT.md` (same beats, cameras and actions; there is no Truth Press outside Bolt, so don't use `press`/`to_press`). Use `set` = `{"place": ..., ...}` from the table. Every channel keeps its own story bible, tone, titles, Made-for-kids setting, upload flow and release slots — only the renderer changed.
 Then: rek-ball gate (≥ 85), upload (channel's UPLOAD.md), translations (`tools/TRANSLATE.md`), log, hub update.
 
-## Ready stories (2026-10-19)
-Before writing a new script, look in `cloud/queue/<channel>/` (bolt, doughbros, hollow, maxcat). If a job file is there, use the oldest one: its `script` is the episode script, `long` has the title/description/tags/thumb text and the 7-language `localizations`, `shorts` has the Short cut points (`beat` index) and texts. Then `git mv` it to `cloud/done/<channel>/` in your final commit. Still check it differs from the last 10 episodes; if not, write a new one.
+
+## PC worker (2026-10-19)
+Stories in `cloud/queue/<channel>/` belong to the owner's PC worker (`cloud/worker.py`). Claude production runs must NOT take them.

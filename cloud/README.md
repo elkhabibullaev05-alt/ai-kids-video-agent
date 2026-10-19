@@ -1,6 +1,6 @@
 # Bulut serverlar — har bir kanal o'z serverida (Claude'siz render va yuklash)
 
-> **2026-10-19: paused.** The owner chose the Inspector Bolt way (Claude scheduled tasks render and upload through the built-in browser), so no server or PC worker is needed. The writer/review tasks are disabled; the stories already in `cloud/queue/` are used by the production runs (see `tools/ANIM3D.md`).
+> **2026-10-19: live on the owner's PC (WSL).** Max runs here now; Dough Bros, Hollowmere and Bolt switch over as soon as their status turns non-error (their Claude tasks are turned off then). Status app: desktop "Kanal ishchisi".
 
 **Kim nima qiladi:**
 - **Claude:** har kuni hikoyalarni yozadi (`cloud/WRITER.md`) va kechqurun natijani tekshiradi (`cloud/REVIEW.md`). Videolar bir xil bo'lmasligini ham Claude nazorat qiladi.
