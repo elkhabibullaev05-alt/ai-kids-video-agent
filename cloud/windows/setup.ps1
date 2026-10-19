@@ -10,7 +10,9 @@ function Say($m, $c = "Cyan") { Write-Host "`n>> $m" -ForegroundColor $c }
 function HasDistro { ((wsl.exe -l -q 2>$null) -replace "`0", "") | Where-Object { $_.Trim() -eq $D } }
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-  Say "PowerShell'ni o'ng tugma -> 'Run as administrator' bilan oching va buyruqni qayta yozing." Yellow; return
+  Say "Administrator oynasi ochilmoqda — chiqqan savolga 'Да / Yes' ni bosing..." Yellow
+  Start-Process powershell -Verb RunAs -ArgumentList '-NoExit','-ExecutionPolicy','Bypass','-Command',"irm https://raw.githubusercontent.com/$R/main/cloud/windows/setup.ps1 | iex"
+  return
 }
 
 # 1. WSL + Ubuntu
