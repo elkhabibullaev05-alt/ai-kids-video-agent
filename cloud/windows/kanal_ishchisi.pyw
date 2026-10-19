@@ -29,6 +29,11 @@ for ch in ["maxcat","doughbros","hollow","bolt"]:
     d["done"] = len(glob.glob(f"/opt/kanal/repo/cloud/done/{ch}/*.json"))
     d["token"] = os.path.exists(f"/root/kanal/{ch}/token.json")
     out[ch] = d
+import subprocess
+try: key = open("/root/.ssh/kanal_deploy.pub").read().strip()
+except Exception: key = ""
+r = subprocess.run("cd /opt/kanal/repo && GIT_TERMINAL_PROMPT=0 timeout 25 git ls-remote -q origin HEAD", shell=True, capture_output=True, text=True)
+out["_git"] = {"ok": r.returncode == 0, "err": (r.stderr or "")[-200:], "key": key}
 print(json.dumps(out))
 '''
 
@@ -93,7 +98,9 @@ class App(tk.Tk):
         if err:
             self.info.config(text=f"Ubuntu (WSL) javob bermadi: {err[:120]}")
         else:
-            self.info.config(text="Oxirgi yangilanish: " + dt.datetime.now().strftime("%H:%M:%S") + "   (har 60 soniyada o'zi yangilanadi)")
+            g = data.get("_git", {})
+            gs = "GitHub: ulandi ✓" if g.get("ok") else "GitHub: ULANMAGAN — kalit: " + g.get("key", "")
+            self.info.config(text="Oxirgi yangilanish: " + dt.datetime.now().strftime("%H:%M:%S") + "\n" + gs, wraplength=840, justify="left")
             for key, name in CH:
                 d = data.get(key, {})
                 s = d.get("status") or {}
