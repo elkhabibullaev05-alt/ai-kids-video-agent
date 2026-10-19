@@ -205,7 +205,7 @@ def ball(m, title, kind):
                     + (5 if not m["dark_start"] else 0) + (5 if m["db3"] >= -22 else 0),
             "temp": _pick(m["cuts_10s"], [(1, 12), (0.4, 8), (0.15, 4)]) + _pick(m["motion"], [(6, 8), (3, 5), (1.5, 2)])
                     + (5 if m["static_s"] < 10 else 3 if m["static_s"] < 20 else 0),
-            "uzunlik": 10 if m["dur"] >= 240 else 6 if m["dur"] >= 90 else 3,
+            "uzunlik": 10 if m["dur"] >= 180 else 6 if m["dur"] >= 90 else 3,
             "jimlik": 10 if m["silent_s"] < 3 else 5 if m["silent_s"] < 10 else 0,
             "texnik": (5 if m["w"] >= 1920 and m["w"] > m["h"] else 2) + db_pts + clip_pts,
             "nom": _title_pts(title),
@@ -214,8 +214,8 @@ def ball(m, title, kind):
             q.append(f"boshlanishi sust (harakat {m['hook_motion']})")
         if m["static_s"] >= 10:
             q.append(f"{m['static_s']} s qotib qolgan joy")
-        if m["dur"] < 240:
-            q.append("uzun video uchun qisqa (4 daqiqadan kam)")
+        if m["dur"] < 180:
+            q.append("uzun video uchun qisqa (3 daqiqadan kam)")
     if m["db"] < -23:
         q.append(f"ovoz past ({m['db']} dB)")
     if m["db_max"] >= -0.5:
