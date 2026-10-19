@@ -1,0 +1,2726 @@
+{
+ "id": "ep008",
+ "title": "Why Does Ukraine's Space Internet Have a Speed Limit?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "This week Ukraine said its Starlink and Starshield satellite terminals started dropping out when moving faster than about 160 km/h (100 mph), which hit the interceptor drones it uses against fast Russian attack drones. Who ordered it? SpaceX's founder says Starshield limits are decided by the U.S. military and ultimately the president; Reuters and the Telegraph reported the order came from the White House; the President and the Secretary of State deny it. Plus: why Europe's Eutelsat jumped 23%, and what to watch next. Explained with stick figures, facts only.\n\nDave and Linda are made-up characters. Real people are shown as generic labelled stick figures; quotes are attributed as reported.\n\nSources:\nAxios, Zelensky says Musk-owned satellite system still restricted in Ukraine (Oct 17, 2026): https://www.axios.com/2026/10/17/zelensky-starlink-elon-musk-trump\nAxios, Trump: White House didn't impede satellite system in Ukraine (Oct 16, 2026): https://www.axios.com/2026/10/16/trump-starlink-musk-ukraine-zelensky\nReuters, Order to limit Starshield for Ukraine came from inside White House, sources say (Oct 15, 2026): https://www.reuters.com/world/europe/order-limit-starshield-ukraine-came-inside-white-house-sources-say-2026-10-15\nReuters via Euronext, Eutelsat shares jump as Ukraine flags curbs on Starlink military-grade service (Oct 14, 2026): https://live.euronext.com/en/financial-news/eutelsat-shares-jump-ukraine-flags-curbs-starlink-military-grade-service\nCNBC, Trump denies Musk claim he ordered Starlink restrictions in Ukraine (Oct 16, 2026): https://www.cnbc.com/2026/10/16/trump-denies-musk-claim-he-ordered-starlink-restrictions-in-ukraine.html\nMediaite (citing The Telegraph), Musk pitched cuts to Ukraine's Starshield to Trump (Oct 16, 2026): https://www.mediaite.com/media/news/musk-pitched-cuts-to-ukraines-starshield-direct-to-trump-who-then-agreed-report/\nRBC-Ukraine, Zelenskyy calls Starlink restrictions a planned operation (Oct 17, 2026): https://newsukraine.rbc.ua/news/zelenskyy-calls-starlink-restrictions-in-1792243118.html\nBabel, Rubio says White House did not order restrictions (Oct 18, 2026): https://babel.ua/en/news/131058-the-us-secretary-of-state-says-white-house-did-not-order-restrictions-on-starlink-operations-in-ukraine-and-ukraine-never-had-access-to-starshield\nDW, Why Starlink matters in Ukrainian warfare (Oct 18, 2026): https://www.dw.com/en/why-starlink-is-so-important-for-ukraine/a-79689729\nRBC-Ukraine (citing the Financial Times), US fears Starlink restrictions in Europe (Oct 18, 2026): https://newsukraine.rbc.ua/news/us-fears-starlink-restrictions-in-europe-1792352863.html\n\n#starlink #ukraine #spacex #starshield #explained #stickfigure #news",
+ "tags": [
+  "starlink",
+  "starshield",
+  "starlink ukraine",
+  "starlink speed limit",
+  "spacex",
+  "ukraine drones",
+  "eutelsat",
+  "oneweb",
+  "satellite internet",
+  "news explained",
+  "stick figure animation",
+  "the doodle desk"
+ ],
+ "thumbnail": {
+  "bg": "yellow",
+  "text": "SPACE|SPEED|LIMIT?",
+  "size": 190,
+  "color": "black",
+  "guy": {
+   "pose": "stand",
+   "face": "shock",
+   "look": -1,
+   "extras": [
+    "hair"
+   ]
+  },
+  "guy_x": 1450,
+  "guy_y": 2050,
+  "guy_s": 5.0,
+  "items": [
+   {
+    "prop": "satellite",
+    "x": 1460,
+    "y": 330,
+    "s": 0.85
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "say": "Dave bought a satellite dish for his car roof. Internet from space, anywhere. Dave is thrilled.",
+   "items": [
+    {
+     "prop": "car",
+     "x": 900,
+     "y": 900,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "prop": "dish",
+     "x": 900,
+     "y": 735,
+     "s": 0.6,
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "prop": "satellite",
+     "x": 400,
+     "y": 420,
+     "s": 0.7,
+     "at": 0.55,
+     "anim": "bob"
+    }
+   ],
+   "cam": {
+    "from": [
+     960,
+     600,
+     1.25
+    ],
+    "to": [
+     960,
+     540,
+     1.0
+    ]
+   },
+   "bg": "paper"
+  },
+  {
+   "say": "Dave hits the highway. Sixty miles an hour. Video call: perfect. Eighty: perfect. Ninety-nine: perfect.",
+   "items": [
+    {
+     "prop": "car",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      1100,
+      900
+     ]
+    },
+    {
+     "count": [
+      60,
+      99
+     ],
+     "fmt": "{:.0f} mph",
+     "x": 1400,
+     "y": 360,
+     "size": 150,
+     "color": "dark",
+     "at": 0,
+     "dur": 2.6
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "One hundred and one miles an hour. The call freezes. Dave's face is stuck, mid-sneeze, forever.",
+   "items": [
+    {
+     "text": "101 mph",
+     "x": 1400,
+     "y": 300,
+     "size": 150,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "prop": "laptop",
+     "x": 900,
+     "y": 860,
+     "s": 1.1,
+     "at": 0.25,
+     "text": "RECONNECTING..."
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5,
+     "anim": "shake"
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "A speed limit. On internet from space. That sounds made up. This week, Ukraine says it happened to its drones.",
+   "items": [
+    {
+     "prop": "sign",
+     "x": 600,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "100"
+    },
+    {
+     "prop": "satellite",
+     "x": 1100,
+     "y": 420,
+     "s": 0.7,
+     "at": 0.25
+    },
+    {
+     "prop": "drone",
+     "x": 1500,
+     "y": 700,
+     "s": 1.0,
+     "at": 0.5,
+     "anim": "bob"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So today's question: who put a speed limit on space internet, and why does it matter so much? Facts only, stick figures included.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 980,
+     "y": 800,
+     "s": 1.4,
+     "at": 0,
+     "text": "WHO SET THE LIMIT?"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 330,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "chapter": "Today's question",
+   "bg": "paper"
+  },
+  {
+   "say": "Tuesday night, October thirteenth into the fourteenth. Ukrainian officials say satellite terminals moving fast suddenly started losing their connection.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "text": "OCT 14"
+    },
+    {
+     "prop": "dish",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "cross": [
+      1300,
+      700,
+      110
+     ],
+     "at": 0.6
+    }
+   ],
+   "chapter": "Part 1: What happened",
+   "bg": "purple"
+  },
+  {
+   "say": "The cut-off point, they say, was about one hundred and sixty kilometers an hour. That's roughly one hundred miles an hour.",
+   "items": [
+    {
+     "count": [
+      0,
+      160
+     ],
+     "fmt": "{:.0f} km/h",
+     "x": 700,
+     "y": 420,
+     "size": 170,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "sign",
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.45,
+     "text": "100"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Before that, Ukrainian officials say, the same systems worked on drones flying at up to four hundred kilometers an hour.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       400,
+       160
+      ],
+      "labels": [
+       "before",
+       "after"
+      ],
+      "colors": [
+       "green",
+       "red"
+      ],
+      "fmt": "{} km/h",
+      "w": 760,
+      "h": 440
+     },
+     "x": 900,
+     "y": 830
+    },
+    {
+     "prop": "drone",
+     "x": 1600,
+     "y": 520,
+     "s": 0.8,
+     "at": 0.5,
+     "anim": "bob"
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Serhiy Beskrestnov, a defence technology adviser in Ukraine, said the limit arrived with no warning.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "envelope",
+     "x": 1300,
+     "y": 820,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "NO WARNING"
+    },
+    {
+     "cross": [
+      1300,
+      700,
+      120
+     ],
+     "at": 0.6
+    },
+    {
+     "text": "Ukrainian tech adviser",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Parked terminals kept working. Slow ones kept working. Only the fast-moving ones dropped out.",
+   "items": [
+    {
+     "prop": "dish",
+     "x": 450,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "text": "OK",
+     "x": 450,
+     "y": 560,
+     "size": 90,
+     "color": "green",
+     "at": 0.1
+    },
+    {
+     "prop": "car",
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.25
+    },
+    {
+     "text": "OK",
+     "x": 960,
+     "y": 560,
+     "size": 90,
+     "color": "green",
+     "at": 0.35
+    },
+    {
+     "prop": "drone",
+     "x": 1500,
+     "y": 700,
+     "s": 0.9,
+     "at": 0.5
+    },
+    {
+     "text": "DROP",
+     "x": 1500,
+     "y": 420,
+     "size": 90,
+     "color": "red",
+     "at": 0.65
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And in this war, the fast-moving things are often drones.",
+   "items": [
+    {
+     "prop": "drone",
+     "x": 400,
+     "y": 500,
+     "s": 0.6,
+     "at": 0.0,
+     "anim": "bob"
+    },
+    {
+     "prop": "drone",
+     "x": 780,
+     "y": 660,
+     "s": 0.6,
+     "at": 0.1,
+     "anim": "bob"
+    },
+    {
+     "prop": "drone",
+     "x": 1160,
+     "y": 500,
+     "s": 0.6,
+     "at": 0.2,
+     "anim": "bob"
+    },
+    {
+     "prop": "drone",
+     "x": 1540,
+     "y": 660,
+     "s": 0.6,
+     "at": 0.30000000000000004,
+     "anim": "bob"
+    }
+   ],
+   "ground": false,
+   "bg": "paper"
+  },
+  {
+   "say": "First, a quick vocabulary lesson, because two very similar names are doing a lot of work here.",
+   "items": [
+    {
+     "prop": "chalkboard",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "WORDS"
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 2: Two names",
+   "bg": "purple"
+  },
+  {
+   "say": "Starlink is the commercial service from SpaceX. You buy a dish, point it at the sky, and get internet from satellites.",
+   "items": [
+    {
+     "text": "STARLINK",
+     "x": 960,
+     "y": 260,
+     "size": 120,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "prop": "dish",
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "prop": "satellite",
+     "x": 1300,
+     "y": 560,
+     "s": 0.8,
+     "at": 0.4,
+     "anim": "bob"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Around ten thousand Starlink satellites are now in orbit, according to Reuters. That's a lot of very small, very fast neighbours.",
+   "items": [
+    {
+     "count": [
+      0,
+      10000
+     ],
+     "fmt": "~{:,.0f}",
+     "x": 960,
+     "y": 360,
+     "size": 200,
+     "color": "navy",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "satellite",
+     "x": 300,
+     "y": 720,
+     "s": 0.35,
+     "at": 0.3
+    },
+    {
+     "prop": "satellite",
+     "x": 630,
+     "y": 720,
+     "s": 0.35,
+     "at": 0.37
+    },
+    {
+     "prop": "satellite",
+     "x": 960,
+     "y": 720,
+     "s": 0.35,
+     "at": 0.44
+    },
+    {
+     "prop": "satellite",
+     "x": 1290,
+     "y": 720,
+     "s": 0.35,
+     "at": 0.51
+    },
+    {
+     "prop": "satellite",
+     "x": 1620,
+     "y": 720,
+     "s": 0.35,
+     "at": 0.5800000000000001
+    }
+   ],
+   "ground": false,
+   "bg": "sky"
+  },
+  {
+   "say": "In Ukraine, there are around fifty thousand Starlink terminals, according to Germany's DW. Soldiers on the front line use them, and so do civilians.",
+   "items": [
+    {
+     "count": [
+      0,
+      50000
+     ],
+     "fmt": "~{:,.0f}",
+     "x": 960,
+     "y": 380,
+     "size": 200,
+     "color": "blue",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hardhat"
+      ],
+      "shirt": "green"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    },
+    {
+     "prop": "house",
+     "x": 1450,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Starshield is the military version. Same idea, extra security, built for governments.",
+   "items": [
+    {
+     "text": "STARSHIELD",
+     "x": 960,
+     "y": 260,
+     "size": 120,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "prop": "satellite",
+     "x": 960,
+     "y": 720,
+     "s": 1.0,
+     "at": 0.25,
+     "color": "dark"
+    },
+    {
+     "prop": "lock",
+     "x": 1450,
+     "y": 880,
+     "s": 0.7,
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And here's the important part. SpaceX's founder wrote on X that Starshield is owned and controlled by the U.S. government.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "dark"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 1300,
+     "y": 880,
+     "s": 1.1,
+     "at": 0.35,
+     "text": "POST"
+    },
+    {
+     "text": "SpaceX's founder",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "His words: any limits on speed or usage are decided by the U.S. military, and ultimately the president.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 960,
+     "y": 600,
+     "s": 1.7,
+     "at": 0,
+     "text": "\"ultimately POTUS\""
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "dark"
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "So, two products. One belongs to a company. One, he says, is steered by the government. Hold that thought. It matters later.",
+   "items": [
+    {
+     "text": "COMPANY",
+     "x": 600,
+     "y": 400,
+     "size": 100,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "text": "GOVERNMENT",
+     "x": 1350,
+     "y": 400,
+     "size": 100,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "arrow": [
+      [
+       800,
+       560
+      ],
+      [
+       1150,
+       560
+      ]
+     ],
+     "color": "grey",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Why would a speed limit matter so much? Because of what Ukraine's drones are chasing.",
+   "items": [
+    {
+     "prop": "stopwatch",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 3: Why speed matters",
+   "bg": "sky"
+  },
+  {
+   "say": "Russia sends attack drones toward Ukrainian cities. Some newer ones, called Shaheds, are jet-powered, and they are fast.",
+   "items": [
+    {
+     "prop": "drone",
+     "x": 1400,
+     "y": 450,
+     "s": 0.9,
+     "at": 0,
+     "color": "red",
+     "move": [
+      700,
+      500
+     ]
+    },
+    {
+     "text": "JET-POWERED",
+     "x": 960,
+     "y": 250,
+     "size": 90,
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "ground": false,
+   "bg": "sky"
+  },
+  {
+   "say": "Ukraine fights back with interceptor drones, small hunters steered by an operator on the ground, often through Starlink.",
+   "items": [
+    {
+     "guy": {
+      "pose": "type",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hardhat"
+      ],
+      "shirt": "green"
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "dish",
+     "x": 800,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2
+    },
+    {
+     "arrow": [
+      [
+       900,
+       640
+      ],
+      [
+       1300,
+       460
+      ]
+     ],
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "prop": "drone",
+     "x": 1450,
+     "y": 450,
+     "s": 0.8,
+     "at": 0.5,
+     "anim": "bob"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "To catch something fast, you have to go fast. And Ukraine's president said that at about one hundred and sixty one kilometers an hour, the link simply dropped.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "161 km/h",
+     "x": 1350,
+     "y": 360,
+     "size": 140,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "prop": "drone",
+     "x": 1350,
+     "y": 760,
+     "s": 0.7,
+     "at": 0.5
+    },
+    {
+     "text": "Ukraine's president",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "When the link drops, the operator loses control. The hunter keeps flying, but nobody is driving it anymore.",
+   "items": [
+    {
+     "prop": "drone",
+     "x": 1300,
+     "y": 500,
+     "s": 0.9,
+     "at": 0,
+     "anim": "spin"
+    },
+    {
+     "prop": "laptop",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "NO SIGNAL"
+    }
+   ],
+   "ground": false,
+   "bg": "purple"
+  },
+  {
+   "say": "Axios reported that the restrictions hampered Ukraine's ability to intercept Russian attack drones for about twenty four hours.",
+   "items": [
+    {
+     "count": [
+      0,
+      24
+     ],
+     "fmt": "{:.0f} hours",
+     "x": 960,
+     "y": 400,
+     "size": 200,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "calendar",
+     "x": 1550,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.4,
+     "text": "24H"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Several deadly Russian strikes hit Ukraine on Tuesday, after the network slowed down.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 960,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "text": "TUESDAY",
+     "color": "grey"
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Ukraine says the limits also affected supply drones that carry food and water to positions vehicles can't reach.",
+   "items": [
+    {
+     "prop": "drone",
+     "x": 900,
+     "y": 480,
+     "s": 0.9,
+     "at": 0.0,
+     "text": "FOOD + WATER",
+     "anim": "bob"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "hardhat"
+      ],
+      "shirt": "green"
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Now, SpaceX told Ukraine this was a technical problem, according to a Ukrainian official. Ukraine decided to test that, in a very practical way.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "TEST"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    }
+   ],
+   "chapter": "Part 4: The road test",
+   "bg": "teal"
+  },
+  {
+   "say": "Ukraine's president said they sent a couple of Starlink-equipped vehicles into countries of the European Union.",
+   "items": [
+    {
+     "prop": "car",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "dish",
+     "x": 600,
+     "y": 770,
+     "s": 0.4,
+     "at": 0.1
+    },
+    {
+     "prop": "car",
+     "x": 1200,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.2
+    },
+    {
+     "prop": "dish",
+     "x": 1200,
+     "y": 770,
+     "s": 0.4,
+     "at": 0.3
+    },
+    {
+     "text": "EU",
+     "x": 1600,
+     "y": 400,
+     "size": 160,
+     "color": "blue",
+     "at": 0.45
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "They drove at one hundred and eighty kilometers an hour. Starlink kept working.",
+   "items": [
+    {
+     "prop": "car",
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      1500,
+      900
+     ]
+    },
+    {
+     "count": [
+      0,
+      180
+     ],
+     "fmt": "{:.0f} km/h",
+     "x": 960,
+     "y": 330,
+     "size": 170,
+     "color": "green",
+     "at": 0,
+     "dur": 2.0
+    },
+    {
+     "text": "ONLINE",
+     "x": 960,
+     "y": 520,
+     "size": 90,
+     "color": "green",
+     "at": 0.6
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "So, his conclusion: the restrictions apply on Ukrainian territory. In his words, it is a planned operation.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1300,
+     "y": 560,
+     "s": 1.6,
+     "at": 0.3,
+     "text": "\"planned operation\""
+    },
+    {
+     "text": "Ukraine's president",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Somewhere, a very fast test driver is still explaining to his insurance company that it was for national security.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35,
+     "text": "CLAIM"
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "By Wednesday, Axios reported, service was partially restored. A day later, defence ministry sources told the Ukrainian outlet Babel it was working again.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT 14-15"
+    },
+    {
+     "prop": "dish",
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "BACK?",
+     "x": 1250,
+     "y": 520,
+     "size": 100,
+     "color": "green",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "But on Friday and Saturday, Ukraine's president said the restrictions were still in place. So, depending on who you ask, it's fixed, or it isn't.",
+   "items": [
+    {
+     "text": "FIXED",
+     "x": 600,
+     "y": 400,
+     "size": 120,
+     "color": "green",
+     "at": 0
+    },
+    {
+     "text": "NOT FIXED",
+     "x": 1350,
+     "y": 400,
+     "size": 120,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And now the real mystery. Who actually flipped the switch?",
+   "items": [
+    {
+     "prop": "lock",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "?"
+    }
+   ],
+   "chapter": "Part 5: Who flipped the switch?",
+   "cam": {
+    "from": [
+     960,
+     640,
+     1.3
+    ],
+    "to": [
+     960,
+     540,
+     1.0
+    ]
+   },
+   "bg": "paper"
+  },
+  {
+   "say": "A Ukrainian official gave Axios a summary that sounds like a very bad customer service call.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "HOLD..."
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "Ukrainian official",
+     "x": 1300,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Quote: SpaceX tells us it is a technical problem. But our contacts in the company say it is coming from the White House.",
+   "items": [
+    {
+     "text": "SpaceX: \"technical\"",
+     "x": 960,
+     "y": 360,
+     "size": 90,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       700,
+       560
+      ],
+      [
+       1220,
+       560
+      ]
+     ],
+     "color": "dark",
+     "at": 0.5
+    },
+    {
+     "text": "WHITE HOUSE",
+     "x": 1350,
+     "y": 700,
+     "size": 80,
+     "color": "dark",
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "When we ask the White House, they say it is Elon. End quote.",
+   "items": [
+    {
+     "text": "WHITE HOUSE: \"Elon\"",
+     "x": 960,
+     "y": 400,
+     "size": 90,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "prop": "capitol",
+     "x": 600,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2
+    },
+    {
+     "arrow": [
+      [
+       900,
+       600
+      ],
+      [
+       1400,
+       600
+      ]
+     ],
+     "at": 0.45
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "SpaceX's founder, as we heard, said limits on Starshield are decided by the military and ultimately the president. So everyone is pointing.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "dark"
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 1470,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "SpaceX",
+     "x": 450,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "White House",
+     "x": 960,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "Ukraine",
+     "x": 1470,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "It's a perfect triangle of pointing. Geometry teachers everywhere are quietly delighted.",
+   "items": [
+    {
+     "arrow": [
+      [
+       600,
+       450
+      ],
+      [
+       900,
+       300
+      ]
+     ],
+     "color": "red"
+    },
+    {
+     "arrow": [
+      [
+       1050,
+       300
+      ],
+      [
+       1350,
+       450
+      ]
+     ],
+     "color": "red",
+     "at": 0.2
+    },
+    {
+     "arrow": [
+      [
+       1300,
+       600
+      ],
+      [
+       650,
+       600
+      ]
+     ],
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ]
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.6
+    },
+    {
+     "text": "geometry teacher",
+     "x": 1600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.6
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Then on Thursday, Reuters reported that the order to limit Starshield for Ukraine came from inside the White House.",
+   "items": [
+    {
+     "prop": "envelope",
+     "x": 700,
+     "y": 860,
+     "s": 1.1,
+     "at": 0,
+     "text": "ORDER"
+    },
+    {
+     "prop": "capitol",
+     "x": 1350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Reuters cited two U.S. officials and one Western official. They said Pentagon leaders got a message that the service for Ukraine needed to be slowed.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 0.75,
+     "at": 0.0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ]
+     },
+     "x": 750,
+     "y": 900,
+     "s": 0.75,
+     "at": 0.1
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ]
+     },
+     "x": 1050,
+     "y": 900,
+     "s": 0.75,
+     "at": 0.2
+    },
+    {
+     "prop": "envelope",
+     "x": 1500,
+     "y": 820,
+     "s": 0.9,
+     "at": 0.45,
+     "text": "SLOW IT"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "On Friday, Britain's Telegraph went further. Citing four sources, it reported that SpaceX's founder suggested the speed limits, and the president agreed.",
+   "items": [
+    {
+     "count": [
+      0,
+      4
+     ],
+     "fmt": "{:.0f} sources",
+     "x": 600,
+     "y": 420,
+     "size": 130,
+     "color": "dark",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "dark"
+     },
+     "x": 1100,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.45
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The other side says the opposite. On Friday, the president told reporters: I just checked this morning, it wasn't us.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1350,
+     "y": 560,
+     "s": 1.6,
+     "at": 0.3,
+     "text": "\"it wasn't us\""
+    },
+    {
+     "text": "the U.S. president",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "He also said: it wasn't me, and I don't think it was Elon. And from what I understand, it's the same as it's always been.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 960,
+     "y": 520,
+     "s": 1.8,
+     "at": 0,
+     "text": "\"it wasn't me\""
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "This weekend, Secretary of State Marco Rubio said nobody ordered the slowdown. It wasn't deliberate, he said. It sort of happened.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1300,
+     "y": 560,
+     "s": 1.6,
+     "at": 0.35,
+     "text": "\"sort of happened\""
+    },
+    {
+     "text": "Secretary of State",
+     "x": 650,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "He added that, as he understood it, the speed was restored and back to where it was before.",
+   "items": [
+    {
+     "prop": "dish",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "RESTORED?",
+     "x": 960,
+     "y": 480,
+     "size": 110,
+     "color": "green",
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "He also said Ukraine doesn't currently have access to Starshield, and that Kyiv has asked for it for long-range strikes. That, he said, is still being discussed.",
+   "items": [
+    {
+     "prop": "lock",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "STARSHIELD"
+    },
+    {
+     "text": "UNDER DISCUSSION",
+     "x": 1300,
+     "y": 420,
+     "size": 80,
+     "color": "orange",
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "So: anonymous sources on one side, named officials denying it on the other. We can't tell you who's right. We just count the claims.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "text": "SOURCES",
+     "x": 600,
+     "y": 380,
+     "size": 80,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "DENIALS",
+     "x": 1320,
+     "y": 380,
+     "size": 80,
+     "color": "dark",
+     "at": 0.35
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Why would anyone want to slow Ukraine down? There's no confirmed answer. But here's the background reporters keep pointing to.",
+   "items": [
+    {
+     "prop": "globe",
+     "x": 960,
+     "y": 880,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 6: The background",
+   "bg": "sky"
+  },
+  {
+   "say": "Ukraine has been striking Russian oil refineries. And days earlier, Axios reported, the U.S. agreed to lift sanctions on Russian oil sales.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "barrel",
+     "x": 1300,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "RUSSIAN OIL"
+    },
+    {
+     "cross": [
+      1300,
+      760,
+      120
+     ],
+     "color": "green",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Ukraine's president criticised that decision. Washington and Kyiv have been at odds since.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "TENSION",
+     "x": 960,
+     "y": 300,
+     "size": 100,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Critics see the slowdown as payback. The White House says it had nothing to do with it. Both claims are out there. Neither has been proven.",
+   "items": [
+    {
+     "text": "PAYBACK?",
+     "x": 600,
+     "y": 420,
+     "size": 110,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "text": "NOTHING TO DO WITH IT",
+     "x": 1300,
+     "y": 420,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Meanwhile, money noticed. On Wednesday, shares in Eutelsat, a European satellite company, jumped twenty three percent.",
+   "items": [
+    {
+     "count": [
+      0,
+      23
+     ],
+     "fmt": "+{:.0f}%",
+     "x": 960,
+     "y": 380,
+     "size": 230,
+     "color": "green",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "chart",
+     "x": 1550,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.4,
+     "text": "EUTELSAT"
+    }
+   ],
+   "chapter": "Part 7: Europe's backup plan",
+   "bg": "purple"
+  },
+  {
+   "say": "Reuters said it was the stock's biggest one-day gain in sixteen months. Investors bet that Europe might want its own space internet.",
+   "items": [
+    {
+     "prop": "arrowup",
+     "x": 700,
+     "y": 860,
+     "s": 1.2,
+     "at": 0,
+     "color": "green"
+    },
+    {
+     "text": "16 MONTHS",
+     "x": 1350,
+     "y": 420,
+     "size": 100,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Eutelsat runs OneWeb, the only other company with this kind of low-orbit internet service. Its network has more than six hundred satellites.",
+   "items": [
+    {
+     "text": "ONEWEB",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "purple",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      600
+     ],
+     "fmt": "{:.0f}+",
+     "x": 960,
+     "y": 480,
+     "size": 170,
+     "color": "purple",
+     "at": 0.2,
+     "dur": 1.8
+    }
+   ],
+   "ground": false,
+   "bg": "sky"
+  },
+  {
+   "say": "Starlink has around ten thousand. That's like a corner shop competing with a supermarket that's also on the moon.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       600,
+       10000
+      ],
+      "labels": [
+       "OneWeb",
+       "Starlink"
+      ],
+      "colors": [
+       "purple",
+       "blue"
+      ],
+      "fmt": "{:,}",
+      "w": 760,
+      "h": 440
+     },
+     "x": 900,
+     "y": 830
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And you can't just switch. A satellite consultant told Reuters that moving over would need large numbers of new terminals on the ground.",
+   "items": [
+    {
+     "prop": "dish",
+     "x": 500,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       700,
+       700
+      ],
+      [
+       1200,
+       700
+      ]
+     ],
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "prop": "dish",
+     "x": 1400,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.4,
+     "color": "purple"
+    },
+    {
+     "text": "NEW KIT",
+     "x": 960,
+     "y": 380,
+     "size": 90,
+     "color": "orange",
+     "at": 0.6
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Europe is also arguing about the radio waves themselves. The European Commission proposed reserving part of the spectrum for European companies.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "EU"
+    },
+    {
+     "text": "RADIO WAVES",
+     "x": 1350,
+     "y": 400,
+     "size": 90,
+     "color": "blue",
+     "at": 0.3
+    },
+    {
+     "ring": [
+      1350,
+      400,
+      220
+     ],
+     "color": "blue",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "According to the Financial Times, the U.S. ambassador to the EU called that protectionism. SpaceX warned it could hurt connectivity in Ukraine.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1350,
+     "y": 560,
+     "s": 1.5,
+     "at": 0.35,
+     "text": "\"protectionism\""
+    },
+    {
+     "text": "U.S. ambassador to the EU",
+     "x": 650,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "The Commission says companies from outside the EU could still operate. It just wants more European providers in the market.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "building",
+     "x": 1350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35,
+     "text": "MORE CHOICE"
+    },
+    {
+     "text": "the Commission",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And Ukraine's president says Ukraine is developing its own satellite system, while Europe works on an alternative.",
+   "items": [
+    {
+     "prop": "rocket",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "text": "UA",
+     "anim": "bob"
+    },
+    {
+     "prop": "rocket",
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "EU",
+     "anim": "bob"
+    }
+   ],
+   "ground": true,
+   "bg": "sky"
+  },
+  {
+   "say": "So why should Dave, sitting at home with his car parked, care about any of this?",
+   "items": [
+    {
+     "prop": "house",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "car",
+     "x": 1450,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.4
+    }
+   ],
+   "chapter": "Part 8: Why it matters",
+   "bg": "paper"
+  },
+  {
+   "say": "Because this is a story about one company's network becoming the backbone of a whole country at war.",
+   "items": [
+    {
+     "prop": "satellite",
+     "x": 960,
+     "y": 400,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       960,
+       480
+      ],
+      [
+       400,
+       820
+      ]
+     ],
+     "color": "grey",
+     "at": 0.2
+    },
+    {
+     "arrow": [
+      [
+       960,
+       480
+      ],
+      [
+       770,
+       820
+      ]
+     ],
+     "color": "grey",
+     "at": 0.30000000000000004
+    },
+    {
+     "arrow": [
+      [
+       960,
+       480
+      ],
+      [
+       1140,
+       820
+      ]
+     ],
+     "color": "grey",
+     "at": 0.4
+    },
+    {
+     "arrow": [
+      [
+       960,
+       480
+      ],
+      [
+       1510,
+       820
+      ]
+     ],
+     "color": "grey",
+     "at": 0.5
+    }
+   ],
+   "ground": false,
+   "bg": "teal"
+  },
+  {
+   "say": "When a single switch can change how a military fights, the question of who holds that switch becomes very, very important.",
+   "items": [
+    {
+     "prop": "lock",
+     "x": 960,
+     "y": 880,
+     "s": 1.3,
+     "at": 0,
+     "text": "SWITCH"
+    },
+    {
+     "ring": [
+      960,
+      720,
+      230
+     ],
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Governments everywhere are watching. If your phones, your banks or your army run on someone else's network, you start asking for a backup.",
+   "items": [
+    {
+     "prop": "phone",
+     "x": 500,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "building",
+     "x": 960,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2,
+     "text": "BANK"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "hardhat"
+      ],
+      "shirt": "green"
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Linda's version: never keep your only spare key in somebody else's pocket.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "lock",
+     "x": 1300,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "KEY"
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "What happens next? Three things to watch.",
+   "items": [
+    {
+     "text": "WHAT'S NEXT",
+     "x": 960,
+     "y": 400,
+     "size": 140,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "chapter": "What's next",
+   "bg": "sky"
+  },
+  {
+   "say": "One: whether Ukraine's drones really get their full speed back. Kyiv and Washington are giving different answers.",
+   "items": [
+    {
+     "text": "1",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "prop": "drone",
+     "x": 1100,
+     "y": 600,
+     "s": 1.0,
+     "at": 0,
+     "anim": "bob"
+    },
+    {
+     "prop": "stopwatch",
+     "x": 1600,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Two: whether Ukraine gets the access to Starshield it is asking for. Rubio says that's under discussion.",
+   "items": [
+    {
+     "text": "2",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "prop": "lock",
+     "x": 1100,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2,
+     "text": "STARSHIELD"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Three: whether Europe really builds its own space internet, and how long that takes. Satellites don't grow overnight.",
+   "items": [
+    {
+     "text": "3",
+     "x": 400,
+     "y": 400,
+     "size": 200,
+     "color": "blue",
+     "at": 0
+    },
+    {
+     "prop": "rocket",
+     "x": 1100,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2,
+     "anim": "bob"
+    },
+    {
+     "prop": "calendar",
+     "x": 1600,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.45,
+     "text": "2030?"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Recap. This week, Ukraine says satellite terminals on fast-moving drones started dropping out above about one hundred and sixty kilometers an hour.",
+   "items": [
+    {
+     "text": "160 km/h",
+     "x": 700,
+     "y": 420,
+     "size": 160,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "prop": "drone",
+     "x": 1450,
+     "y": 650,
+     "s": 0.9,
+     "at": 0,
+     "anim": "bob"
+    }
+   ],
+   "chapter": "Recap",
+   "bg": "purple"
+  },
+  {
+   "say": "Reuters and the Telegraph reported the order came from the White House. The president and his Secretary of State deny it. SpaceX's founder says it's the government's call.",
+   "items": [
+    {
+     "prop": "capitol",
+     "x": 600,
+     "y": 900,
+     "s": 0.7,
+     "at": 0
+    },
+    {
+     "text": "REPORTED",
+     "x": 600,
+     "y": 380,
+     "size": 80,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "text": "DENIED",
+     "x": 1350,
+     "y": 380,
+     "size": 100,
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And Europe's satellite company had its best day in sixteen months, because suddenly everyone wants a backup.",
+   "items": [
+    {
+     "text": "+23%",
+     "x": 600,
+     "y": 420,
+     "size": 160,
+     "color": "green",
+     "at": 0
+    },
+    {
+     "prop": "satellite",
+     "x": 1350,
+     "y": 600,
+     "s": 0.9,
+     "at": 0.3,
+     "color": "purple",
+     "anim": "bob"
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Meanwhile, Dave has a new rule. On the highway, he drives at ninety nine miles an hour. Not a single mile more. For the internet.",
+   "items": [
+    {
+     "prop": "car",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      1100,
+      900
+     ]
+    },
+    {
+     "prop": "dish",
+     "x": 600,
+     "y": 770,
+     "s": 0.45,
+     "at": 0,
+     "move": [
+      1100,
+      770
+     ]
+    },
+    {
+     "prop": "sign",
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "99"
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Linda would like everyone to know that Dave's actual speed limit is sixty five. She's checked.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "sign",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "65"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Your turn: should any single company control internet a whole country depends on? Tell us in the comments.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "satellite",
+     "x": 1250,
+     "y": 600,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "?",
+     "anim": "bob"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And if calm stick figures explaining the news is your kind of thing, subscribe. We'll keep counting the facts, at a sensible speed.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 1150,
+     "y": 800,
+     "s": 1.3,
+     "at": 0,
+     "text": "SUBSCRIBE"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 420,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "hold": 1.2,
+   "bg": "purple"
+  }
+ ]
+}

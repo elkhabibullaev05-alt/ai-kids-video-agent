@@ -351,7 +351,7 @@ def thumbnail(script, out_png):
         fake = {"sc": {"items": []}, "dur": 1}
         draw_item(p, dict(it, **{"in": "none"}), 5, 1, 2.0)
     gd = th.get("guy", {"pose": "panic", "face": "scream"})
-    ink.guy(p, th.get("guy_x", 1450), 1060, 1.9, gd.get("pose", "panic"), gd.get("face", "scream"), gd.get("look", -1), 0.5,
+    ink.guy(p, th.get("guy_x", 1450), th.get("guy_y", 1060), th.get("guy_s", 1.9), gd.get("pose", "panic"), gd.get("face", "scream"), gd.get("look", -1), 0.5,
             gd.get("extras", ()), gd.get("shirt"))
     lines = th.get("text", "WAIT, WHAT?").split("|")
     for i, ln in enumerate(lines):

@@ -802,8 +802,49 @@ def _pipeline(p, t, color, text):
     if text:
         p.text(text, 0, -170, 44, "dark")
 
+def _satellite(p, t, color, text):
+    p.rect(-55, -235, 110, 110, color or "grey")
+    for sx in (-1, 1):
+        p.rect(sx * 215 - 95, -210, 190, 60, "navy", 4)
+        p.line([(sx * 55, -180), (sx * 120, -180)], 5)
+    p.line([(0, -235), (0, -290)], 5)
+    p.circle(0, -298, 12 + 3 * math.sin(t * 6), "red", 3)
+    if text:
+        p.text(text, 0, -100, 36, "dark")
+
+
+def _drone(p, t, color, text):
+    p.rect(-70, -150, 140, 50, color or "dark")
+    for sx in (-1, 1):
+        p.line([(sx * 70, -130), (sx * 150, -160)], 6)
+        w = 60 * abs(math.sin(t * 25 + sx))
+        p.line([(sx * 150 - w, -170), (sx * 150 + w, -170)], 5)
+    p.line([(-40, -100), (-55, -70)], 5)
+    p.line([(40, -100), (55, -70)], 5)
+    if text:
+        p.text(text, 0, -40, 36, "dark")
+
+
+def _sign(p, t, color, text):
+    p.line([(0, 0), (0, -200)], 9)
+    p.rect(-110, -460, 220, 270, color or "white")
+    p.text("SPEED", 0, -415, 34, "dark")
+    p.text("LIMIT", 0, -375, 34, "dark")
+    p.text(text or "100", 0, -280, min(110, int(330 / max(1, len(text or "100")))), "dark")
+
+
+def _dish(p, t, color, text):
+    p.line([(0, 0), (0, -120)], 8)
+    p.line([(-40, 0), (40, 0)], 8)
+    p.shape([(-90, -150), (90, -150), (60, -100), (-60, -100)], color or "white")
+    p.line([(0, -150), (0, -200)], 4)
+    p.dot(0, -205, 8)
+    if text:
+        p.text(text, 0, -240, 36, "dark")
+
 
 PROPS = {
+    "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
     "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
