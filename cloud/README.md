@@ -1,5 +1,7 @@
 # Bulut serverlar — har bir kanal o'z serverida (Claude'siz render va yuklash)
 
+> **2026-10-19: paused.** The owner chose the Inspector Bolt way (Claude scheduled tasks render and upload through the built-in browser), so no server or PC worker is needed. The writer/review tasks are disabled; the stories already in `cloud/queue/` are used by the production runs (see `tools/ANIM3D.md`).
+
 **Kim nima qiladi:**
 - **Claude:** har kuni hikoyalarni yozadi (`cloud/WRITER.md`) va kechqurun natijani tekshiradi (`cloud/REVIEW.md`). Videolar bir xil bo'lmasligini ham Claude nazorat qiladi.
 - **Server:** qolgan hamma ishni o'zi qiladi. Ovoz, 3D render, musiqa, montaj, rek-ball (≥ 85), Shorts, 7 tilda sarlavha va jadval bo'yicha YouTube'ga yuklash.
