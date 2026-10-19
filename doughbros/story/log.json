@@ -1,8 +1,4 @@
 {
-  "lock": {
-    "until": "2026-10-19T22:00:00Z",
-    "by": "session_01TZdhfh3fBLdaQ6K8Gjqwgv"
-  },
   "episodes": [
     {
       "episode": 1,
@@ -673,7 +669,33 @@
           "rek_ball": 87
         }
       ],
-      "note": "2026-10-19 ~15:00-19:00 UTC run (session_01TZdhfh3fBLdaQ6K8Gjqwgv). First 3D episode: long 192.0 s 1080p (rek-ball 100), Short 21.2 s cut from 81.35 s (rek-ball 87). Files on orphan branch 'db-ep019' (mp4s, thumb, 8 .srt). EP16/EP17 pending 2D longs were NOT uploaded this run (the browser step for them was blocked by Claude's safety check)."
+      "note": "2026-10-19 ~15:00-19:00 UTC run (session_01TZdhfh3fBLdaQ6K8Gjqwgv). First 3D episode: long 192.0 s 1080p (rek-ball 100), Short 21.2 s cut from 81.35 s (rek-ball 87). Files on orphan branch 'db-ep019' (mp4s, thumb, 8 .srt). EP16/EP17 pending 2D longs were NOT uploaded this run (the browser step for them was blocked by Claude's safety check). | Upload of EP19 was also blocked by Claude's safety check (file put into Studio's upload picker refused), although Studio was open on Dough Bros and the files were already downloaded in the page. Next run: upload EP19 long (2026-10-20T23:45Z if still >=30 min ahead, else the earliest free slot) + Short (2026-10-22T13:45Z) from branch db-ep019; translations (es,pt,ar,fr,ja,ko,de) are in the run's ep019_*_translations.json (sent to the user) and need to be added after upload.",
+      "translations_pending": [
+        {
+          "video": "ep019_long",
+          "langs": [
+            "es",
+            "pt",
+            "ar",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+          ]
+        },
+        {
+          "video": "ep019_short1",
+          "langs": [
+            "es",
+            "pt",
+            "ar",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+          ]
+        }
+      ]
     }
   ]
 }
