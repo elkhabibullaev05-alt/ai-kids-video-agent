@@ -89,3 +89,11 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 - The file parses: `python3 -c "import json;json.load(open(F))"`.
 - Word counts are in range. The `id` matches the filename.
 - The commit contains only the new file. Push it to `main`.
+
+## Ask Studio advice (2026-10-20, from this channel's old Shorts)
+
+- 67% of viewers swiped away within 2 s. The first frame and the first sentence are everything.
+- First frame: high contrast; `hook` is **≤ 5 words** if you can (e.g. "NOT FRIENDS?", "WHO WINS?").
+- Titles: curiosity or tension, with the animal names in the first 40 characters.
+- Shorts: every Short ends with a CTA. The renderer keeps captions and banners out of the bottom 20% and the right edge, where YouTube's UI covers them.
+- Subscriber conversion was only 0.05%. Give viewers a reason to come back: a series feel ("Part of the Wild Sketchbook"), and a question that the next video answers.

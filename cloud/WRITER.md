@@ -40,3 +40,17 @@ Before writing, list the last 40 jobs of this channel (`cloud/done/CH/*.json` + 
 - Validate before committing: `python3 -c "import json,sys;[json.load(open(f)) for f in sys.argv[1:]]" cloud/queue/CH/*.json`, and every `beats[i].who` exists in `chars`.
 
 The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85, uploads to the next free slot in `channels.json`, and writes `cloud/results/CH/<id>.json`.
+
+## Ask Studio advice (2026-10-20) — read `cloud/growth/ask_studio_*.md` (newest) before writing
+
+**maxcat**
+- CTR is 0.93%, the main problem.
+- Titles:
+  - Stop using the "Max's X! 🐱 | Funny Cat Stories for Kids" template.
+  - Put the exciting part or a question in the first 4–5 words, e.g. "Can Max Stop the Giant Cake Explosion?".
+  - Move the keyword tail to the end.
+- Every episode starts in media res: a funny sound, a mishap or a surprise in the first 5 s, before any title card.
+- Themed 8–10 min compilations (4–5 stories on one theme) are the top performers. Keep making them.
+- Thumbnails: Max's big, expressive face with one clear emotion, a bright solid background, 2–3 focal points, no small text.
+
+**All channels:** the newest `ask_studio_<date>.md` has each channel's own numbers and plan. Apply it unless it breaks the rules above.
