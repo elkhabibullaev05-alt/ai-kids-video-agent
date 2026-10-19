@@ -70,13 +70,28 @@ def git(*a, check=True):
     return sh(["git", *a], check=check, timeout=600)
 
 
+class _GitLock:
+    """Several channel workers may share one repo (Windows PC mode): one git operation at a time."""
+    def __enter__(self):
+        import fcntl
+        self.f = open("/tmp/kanal-git.lock", "w"); fcntl.flock(self.f, fcntl.LOCK_EX)
+    def __exit__(self, *a):
+        self.f.close()
+
+
 def pull():
-    git("pull", "-q", "--rebase", "--autostash", check=False)
+    with _GitLock():
+        git("pull", "-q", "--rebase", "--autostash", check=False)
 
 
 def push(msg, paths):
     if QUICK:
         return
+    with _GitLock():
+        _push(msg, paths)
+
+
+def _push(msg, paths):
     for p in paths:
         git("add", "-A", "--", p, check=False)
     if not git("diff", "--cached", "--quiet", check=False).returncode:

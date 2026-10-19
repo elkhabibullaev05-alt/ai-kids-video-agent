@@ -16,7 +16,7 @@ class Quota(Exception):
 
 
 def client(token_path):
-    cr = Credentials.from_authorized_user_file(token_path, SCOPES)
+    cr = Credentials.from_authorized_user_file(token_path)  # keep the scopes the token was granted
     if not cr.valid:
         cr.refresh(Request())
     return build("youtube", "v3", credentials=cr, cache_discovery=False)

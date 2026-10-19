@@ -9,7 +9,7 @@ DIR=/opt/kanal/repo
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
 apt-get install -y -qq git curl ffmpeg python3 python3-pip xz-utils xvfb libegl1 libgl1 libxi6 libxxf86vm1 libxfixes3 \
-  libxrender1 libxkbcommon0 libsm6 libice6 fonts-dejavu-core cron util-linux >/dev/null
+  libxrender1 libxkbcommon0 libsm6 libice6 libgl1-mesa-dri libegl-mesa0 fonts-dejavu-core cron util-linux >/dev/null
 pip3 install -q --break-system-packages google-api-python-client google-auth kokoro-onnx soundfile numpy scipy pillow 2>/dev/null \
   || pip3 install -q google-api-python-client google-auth kokoro-onnx soundfile numpy scipy pillow
 
@@ -29,7 +29,8 @@ git -C $DIR config core.sshCommand "ssh -i $KEY -o IdentitiesOnly=yes"
 bash $DIR/bolt/setup.sh            # Blender 4.2.3 + Kokoro voices
 mkdir -p /root/kanal/$CH
 
-# every 20 minutes; flock = never two copies at once
+# every 20 minutes; flock = never two copies at once  (KANAL_NO_CRON=1: Windows/WSL, started by the Windows task instead)
+if [ "$CH" = all ] || [ -n "$KANAL_NO_CRON" ]; then mkdir -p /root/kanal/{bolt,doughbros,hollow,maxcat}; cat $KEY.pub; echo "setup ok"; exit 0; fi
 LINE="*/20 * * * * cd $DIR && flock -n /tmp/kanal-$CH.lock python3 cloud/worker.py $CH >> /root/kanal/$CH/worker.log 2>&1"
 ( crontab -l 2>/dev/null | grep -v "cloud/worker.py $CH" ; echo "$LINE" ) | crontab -
 systemctl enable --now cron >/dev/null 2>&1 || service cron start || true
