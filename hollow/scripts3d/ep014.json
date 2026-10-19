@@ -1,0 +1,691 @@
+{
+ "title": "Would You Follow the Light in the Bog?",
+ "description": "A light floats over the bog. It wants you to follow it. Don't.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "swamp",
+  "fog": 0.035,
+  "eyes": 6,
+  "moonlight": 1.8
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "trav": {
+   "name": "The Traveller",
+   "voice": "am_michael",
+   "speed": 1.05,
+   "pitch": 0,
+   "color": [
+    0.3,
+    0.22,
+    0.14
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -3,
+    10
+   ]
+  },
+  "blesson": {
+   "name": "Major Blesson",
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.12,
+    0.16,
+    0.3
+   ],
+   "kind": "human",
+   "size": 1.05,
+   "home": [
+    4,
+    9
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "w1",
+   "type": "ball",
+   "color": [
+    0.45,
+    0.85,
+    1.0
+   ],
+   "at": [
+    0,
+    13,
+    2.4
+   ],
+   "visible": true,
+   "scale": 0.3,
+   "glow": 2.5
+  },
+  {
+   "id": "w2",
+   "type": "ball",
+   "color": [
+    0.45,
+    0.85,
+    1.0
+   ],
+   "at": [
+    2,
+    13,
+    1.8
+   ],
+   "visible": false,
+   "scale": 0.3,
+   "glow": 2.5
+  },
+  {
+   "id": "w3",
+   "type": "ball",
+   "color": [
+    0.55,
+    1.0,
+    0.75
+   ],
+   "at": [
+    3,
+    15,
+    2.2
+   ],
+   "visible": false,
+   "scale": 0.3,
+   "glow": 2.5
+  },
+  {
+   "id": "w4",
+   "type": "ball",
+   "color": [
+    0.45,
+    0.85,
+    1.0
+   ],
+   "at": [
+    6,
+    14,
+    1.7
+   ],
+   "visible": false,
+   "scale": 0.3,
+   "glow": 2.5
+  },
+  {
+   "id": "w5",
+   "type": "ball",
+   "color": [
+    0.55,
+    1.0,
+    0.75
+   ],
+   "at": [
+    3,
+    12,
+    2.0
+   ],
+   "visible": false,
+   "scale": 0.3,
+   "glow": 2.5
+  },
+  {
+   "id": "coal",
+   "type": "ball",
+   "color": "orange",
+   "at": [
+    0,
+    9,
+    1.4
+   ],
+   "visible": false,
+   "scale": 0.35,
+   "glow": 8
+  },
+  {
+   "id": "turnip",
+   "type": "ball",
+   "color": [
+    0.85,
+    0.75,
+    0.55
+   ],
+   "at": [
+    0,
+    9,
+    1.2
+   ],
+   "visible": false,
+   "scale": 0.5,
+   "glow": 3
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "A light is floating over the bog. It wants you to follow it. Don't.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "w1",
+     "drift:-3,9,2.0"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "DON'T FOLLOW THE LIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "For hundreds of years, people in England and Ireland wrote down the same warning.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "A REAL WARNING"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... that light just moved closer.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ],
+    [
+     "w1",
+     "drift:-4.5,8,1.9"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "Lights don't move on their own, Odo. Do they?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "They called it the will-o'-the-wisp. A wisp was a bundle of sticks, burned as a torch.",
+   "cam": "overhead",
+   "text": "WILL-O'-THE-WISP"
+  },
+  {
+   "who": "narr",
+   "say": "Scholars gave it a Latin name, ignis fatuus. The foolish fire.",
+   "cam": "prop:w1",
+   "do": [
+    [
+     "w1",
+     "bounce"
+    ]
+   ],
+   "text": "THE FOOLISH FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "And every story says the same thing. The light leads travellers off the path.",
+   "cam": "close:trav",
+   "do": [
+    [
+     "trav",
+     "enter:left"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "trav",
+   "say": "A lantern! Someone's out there. Hello? Wait for me!",
+   "cam": "close:trav",
+   "do": [
+    [
+     "trav",
+     "turn:front"
+    ],
+    [
+     "w2",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But every time he stepped closer, the light floated farther away.",
+   "cam": "wide",
+   "do": [
+    [
+     "trav",
+     "to:0,11"
+    ],
+    [
+     "w2",
+     "drift:5,16,1.8"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Closer. Farther. Closer. Farther. Until the ground under his feet turned to water.",
+   "cam": "close:trav",
+   "do": [
+    [
+     "trav",
+     "to:3,13"
+    ],
+    [
+     "w2",
+     "drift:9,21,1.6"
+    ],
+    [
+     "trav",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE GROUND IS WATER"
+  },
+  {
+   "who": "moth",
+   "say": "That is why you never follow it.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In Shropshire, England, they told of a wicked blacksmith called Will.",
+   "cam": "overhead",
+   "do": [
+    [
+     "trav",
+     "exit"
+    ],
+    [
+     "w2",
+     "vanish"
+    ],
+    [
+     "w1",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The tale says even the Devil sent him away, and threw him one burning coal.",
+   "cam": "prop:coal",
+   "do": [
+    [
+     "coal",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "So Will wanders the marshes forever, using that coal to lure people into the mud.",
+   "cam": "prop:coal",
+   "do": [
+    [
+     "coal",
+     "bounce"
+    ]
+   ],
+   "text": "WILL WANDERS FOREVER"
+  },
+  {
+   "who": "narr",
+   "say": "In Ireland, the light had another name. Jack-o'-lantern.",
+   "cam": "wide",
+   "do": [
+    [
+     "coal",
+     "vanish"
+    ],
+    [
+     "w3",
+     "show"
+    ]
+   ],
+   "text": "JACK-O'-LANTERN"
+  },
+  {
+   "who": "narr",
+   "say": "Stingy Jack tricked the Devil twice. He carried his glowing ember inside a carved turnip.",
+   "cam": "prop:turnip",
+   "do": [
+    [
+     "turnip",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "A turnip? Not a pumpkin?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "The pumpkins came later. In America.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "turnip",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Here is the strange part. Real scientists tried to catch the light.",
+   "cam": "wide",
+   "do": [
+    [
+     "w3",
+     "drift:-2,14,2.4"
+    ]
+   ],
+   "text": "SCIENTISTS TRIED"
+  },
+  {
+   "who": "narr",
+   "say": "In 1776, Alessandro Volta said a spark might set the swamp gas on fire.",
+   "cam": "overhead",
+   "text": "1776"
+  },
+  {
+   "who": "narr",
+   "say": "Gas from rotting plants bubbles up out of the mud. Maybe it burns with a cold, blue flame.",
+   "cam": "prop:w3",
+   "do": [
+    [
+     "w3",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "And in 1832, a German officer, Major Louis Blesson, walked into a marsh at night.",
+   "cam": "close:blesson",
+   "do": [
+    [
+     "blesson",
+     "enter:right"
+    ]
+   ],
+   "text": "1832"
+  },
+  {
+   "who": "blesson",
+   "say": "There. A flame over the water. I shall get closer.",
+   "cam": "close:blesson",
+   "do": [
+    [
+     "blesson",
+     "turn:front"
+    ],
+    [
+     "w4",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "He wrote that as he came near, the flame moved away from him.",
+   "cam": "two:blesson,odo",
+   "do": [
+    [
+     "blesson",
+     "to:2,12"
+    ],
+    [
+     "w4",
+     "drift:4,19,1.7"
+    ]
+   ],
+   "text": "IT MOVED AWAY"
+  },
+  {
+   "who": "narr",
+   "say": "He blamed the air he pushed as he walked. But the light kept running, just like the stories said.",
+   "cam": "wide",
+   "do": [
+    [
+     "w4",
+     "drift:7,24,1.9"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Even in 1938, an Irish schoolboy wrote that his father once followed a rolling red ball of fire.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "blesson",
+     "exit"
+    ],
+    [
+     "w4",
+     "vanish"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "1938"
+  },
+  {
+   "who": "narr",
+   "say": "So the old rule is simple. If a light floats over the bog at night...",
+   "cam": "wide",
+   "do": [
+    [
+     "w5",
+     "show"
+    ],
+    [
+     "w5",
+     "drift:-1,10,2"
+    ]
+   ],
+   "text": "THE ONE RULE"
+  },
+  {
+   "who": "narr",
+   "say": "Do not follow it. Stay on the path. And never wave back.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "NEVER FOLLOW IT"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... I think I waved.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "w5",
+     "drift:-4,7.5,1.6"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "In 2025, scientists made tiny sparks jump between bubbles of swamp gas. Maybe that is the light.",
+   "cam": "overhead",
+   "do": [
+    [
+     "w5",
+     "vanish"
+    ]
+   ],
+   "text": "2025"
+  },
+  {
+   "who": "narr",
+   "say": "But no one has ever caught a will-o'-the-wisp out in the wild. Not one.",
+   "cam": "wide",
+   "text": "NEVER CAUGHT"
+  },
+  {
+   "who": "narr",
+   "say": "And when the old swamps were drained, people stopped seeing the lights.",
+   "cam": "two:odo,moth"
+  },
+  {
+   "who": "moth",
+   "say": "Then why are there five of them around us?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "w1",
+     "show"
+    ],
+    [
+     "w1",
+     "drift:-9,8,2"
+    ],
+    [
+     "w2",
+     "show"
+    ],
+    [
+     "w3",
+     "show"
+    ],
+    [
+     "w4",
+     "show"
+    ],
+    [
+     "w5",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "One by one, the lights drifted closer. And the path behind them was gone.",
+   "cam": "wide",
+   "do": [
+    [
+     "w2",
+     "drift:-2,8,1.8"
+    ],
+    [
+     "w3",
+     "drift:-8,10,2.2"
+    ],
+    [
+     "w4",
+     "drift:-5,11,2"
+    ],
+    [
+     "w5",
+     "drift:-3,7,1.5"
+    ],
+    [
+     "all",
+     "look:odo"
+    ]
+   ],
+   "text": "THE PATH IS GONE"
+  },
+  {
+   "who": "narr",
+   "say": "Who lit them? The next tale begins right there.",
+   "cam": "prop:w5",
+   "do": [
+    [
+     "w5",
+     "bounce"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "WHO LIT THEM? SUBSCRIBE!"
+  }
+ ]
+}

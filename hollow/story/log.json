@@ -595,7 +595,16 @@
           "video": "long",
           "title": "What Rides Through Sleepy Hollow at Night?",
           "publish_at": "2026-10-20T23:15:00Z",
-          "url": "https://youtu.be/pJreOUaGZU0"
+          "url": "https://youtu.be/pJreOUaGZU0",
+          "translations": [
+            "es",
+            "pt",
+            "ar",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+          ]
         },
         {
           "video": "short1",
@@ -607,10 +616,101 @@
       "translations_pending_files": "titles/descriptions es pt fr de ja ko ar + SRT en/es/pt/fr/de/ja/ko/ar for long and short1 are on branch uploads-hollow (hollow_ep013_*_subs_<lang>.srt); title/description texts are in this run's out3d/ep013_meta (not in git) - redo after upload",
       "pending_reason_old": "2026-10-19 18:20 UTC: YouTube daily upload limit ('Загрузка недоступна... через 24 часа') on the first file; dialog closed, nothing created. Files + 8-language SRTs are on branch uploads-hollow.",
       "uploaded_note": "2026-10-19 ~20:00 UTC: both uploaded+scheduled (limit had lifted). Translations (titles/descriptions + SRTs) still to add - texts in uploads-hollow translations.json/srt."
+    },
+    {
+      "episode": 14,
+      "pack": 1,
+      "day": "2026-10-21",
+      "date": "2026-10-21",
+      "format": "3D (engine3d, swamp)",
+      "theme": "Recorded folklore + documented history: the will-o'-the-wisp / jack-o'-lantern (ignis fatuus 'foolish fire'; Will the Smith, Shropshire; Stingy Jack + carved turnip, Ireland; Volta 1776 marsh-gas spark; Major Louis Blesson 1832 marsh experiments - flame retreated as he advanced; Irish Schools' Collection 1938, Co. Kildare red ball of fire; 2025 PNAS microlightning study begun at Stanford; sightings faded as swamps were drained)",
+      "rule": "If a light floats over the bog at night - never follow it, stay on the path, never wave back",
+      "title": "What Lights Lure People Into the Bog?",
+      "creature": "wisps (glowing drifting lights; new prop action 'drift:x,y,z')",
+      "bg": [
+        "swamp"
+      ],
+      "summary": "Odo and Mothwick meet a floating light in the bog while the Narrator tells the will-o'-the-wisp and jack-o'-lantern folklore and the real attempts to explain it, from Volta (1776) and Major Blesson (1832) to a 2025 study. Nobody has ever caught one in the wild.",
+      "cliffhanger": "Five lights drift in around Odo and Mothwick - and the path behind them is gone. Who lit them?",
+      "shorts": [
+        "The 1 Rule: Never Follow the Bog Light #shorts",
+        "Would YOU Follow the Light? #shorts"
+      ],
+      "rek_ball": {
+        "long": 95,
+        "short1": 93,
+        "short2": 93
+      },
+      "tomoshabin_bahosi": {
+        "long": 88,
+        "note": "length scored against the owner's 3-5 min target, not the skill's 8-12 min"
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Will-o%27-the-wisp",
+        "https://www.snexplores.org/article/swamp-gas-methane-will-o-wisp-chemistry"
+      ],
+      "uploads": [
+        {
+          "video": "long",
+          "title": "What Lights Lure People Into the Bog?",
+          "publish_at": "2026-10-21T15:15:00Z",
+          "url": "https://youtu.be/x0k4U8Nu9Ek"
+        },
+        {
+          "video": "short1",
+          "title": "The 1 Rule: Never Follow the Bog Light #shorts",
+          "publish_at": "2026-10-22T13:45:00Z",
+          "url": "https://youtube.com/shorts/PbNs9-ghPzY",
+          "cut": "long 132.6 s + 21.6 s, rek_ball --kuchaytir"
+        },
+        {
+          "video": "short2",
+          "title": "Would YOU Follow the Light? #shorts",
+          "publish_at": "2026-10-22T18:15:00Z",
+          "url": "https://youtube.com/shorts/Bg_oTEdzzUs",
+          "cut": "long 28.8 s + 22.8 s, rek_ball --kuchaytir"
+        }
+      ],
+      "notes": "Custom thumbnails do not stick (channel not phone-verified) - YouTube uses an auto frame. Shorts get YouTube's automatic title/description translations + autodub."
     }
   ],
-  "lock": {
-    "until": "2026-10-20T01:30:00Z",
-    "by": "session_017TCVtuXHZTFRKGoZDXXfLT"
-  }
+  "translations_pending": [
+    {
+      "video_id": "pJreOUaGZU0",
+      "subs": [
+        "en",
+        "es",
+        "pt",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "ar"
+      ],
+      "note": "SRT upload via Studio failed silently this run; files on uploads-hollow"
+    },
+    {
+      "video_id": "x0k4U8Nu9Ek",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "subs": [
+        "en",
+        "es",
+        "pt",
+        "fr",
+        "de",
+        "ja",
+        "ko",
+        "ar"
+      ],
+      "note": "files hollow_ep014_long_translations.json + srt on uploads-hollow"
+    }
+  ]
 }

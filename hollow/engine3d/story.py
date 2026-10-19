@@ -259,6 +259,9 @@ def do_prop(pid, act, t, d):
         K(r, t + 0.8, "scale", (s, s, s)); EVENTS.append((t + 0.8, "chime"))
     elif name == "home":
         p0 = prop_world(pid, t); K(r, t, "location", p0); K(r, t + 0.8, "location", pr["home"]); K(r, t + 0.8, "scale", (s, s, s))
+    elif name in ("drift", "to") and arg_ and arg_.count(",") == 2:  # glide to world x,y,z over the beat (floating lights)
+        p0 = prop_world(pid, t); end = Vector(tuple(float(v) for v in arg_.split(",")))
+        K(r, t, "location", p0); K(r, t + max(1.0, min(d, 4.0)), "location", end)
 
 
 TRK = mat("track", (0.12, 0.1, 0.08), 0.9)

@@ -66,7 +66,7 @@ if PLACE in ("village", "chapel"):
     for i in range(30):
         tree(rnd.uniform(-45, 45), rnd.uniform(32, 65), rnd.uniform(10, 18))
 if PLACE == "swamp":
-    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 16, 0.03)); wtr = add(bpy.context.object, mat("water", (0.02, 0.04, 0.05), 0.05, 0.3)); wtr.scale = (60, 22, 1)
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 16, 0.03)); wtr = add(bpy.context.object, mat("water", (0.02, 0.035, 0.04), 0.55, 0.0)); wtr.scale = (60, 22, 1)
 
 # red eyes in the dark
 eye_m = mat("redeye", (1, 0.05, 0.02), 0.3, 0, 30)
