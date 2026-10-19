@@ -1,0 +1,993 @@
+{
+ "id": "20261020-1-lantern-lights-out",
+ "plot": "On the night of the Lantern Parade the Lantern Star goes dark; Bolt tests Grumpy (hides a shiny Best Grump trophy), Pip and Bertha, then zig-zag skid marks reveal Turbo took the star because he is secretly scared of the dark; everyone shares their fear and drives the parade together, then a golden key falls from the sky.",
+ "script": {
+  "title": "The Lights Went OUT in Wheelburg! 🌙😱 Cartoon Cars Mystery",
+  "description": "On the night of the Lantern Parade the big star goes dark. Inspector Bolt follows zig-zag skid marks.",
+  "set": {
+   "place": "Wheelburg square, Lantern Parade night",
+   "press": true,
+   "podium": true,
+   "time": "night"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lantern",
+    "type": "star",
+    "color": "gold",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "at": [
+     0.0,
+     7.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Vroom! Zoom! It was the night of the Lantern Parade, and every car in Wheelburg rushed to the square!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Look! The Lantern Star! It's so bright, I'm not scared of the night at all!",
+    "cam": "prop:lantern",
+    "do": [
+     [
+      "lantern",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Tonight we drive all around town with our lights on. Beep beep, everybody!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll lead the parade, of course. Fastest lights in Wheelburg!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Lights. Lanterns. Sparkles. Everything is shiny tonight. Wonderful.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Then a little wind whistled across the square, and the lantern flickered...",
+    "cam": "podium",
+    "do": [
+     [
+      "lantern",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "THE LIGHTS WENT OUT!",
+    "cam": "podium",
+    "hold": 1.3,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lantern",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ahh! It's so dark! I can't see my own wheels!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Nobody panic! I'm panicking! But nobody else panic!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Who switched off the star? Now there's no parade!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "grumpy",
+    "say": "Finally. Some peace and quiet.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Then two calm headlights came slowly around the corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening. Inspector Bolt. Someone has switched off the Lantern Star, and I intend to find out who.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "Inspector, please hurry. The dark is really, really big.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Everyone will visit the Truth Press tonight. One car at a time.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "rise"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry, I can't. I have a very important race. With the moon.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The moon can wait. Grumpy, you go first tonight.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Me first? Fine. I didn't even want a parade.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, did you switch off the Lantern Star?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "No. And there is nothing shiny in my truck. Nothing at all.",
+    "cam": "press"
+   },
+   {
+    "text": "HIS EYES ARE GROWING!",
+    "cam": "close:grumpy",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The press pushed down, and out rolled something gold!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:grumpy"
+     ],
+     [
+      "trophy",
+      "drop:grumpy"
+     ]
+    ]
+   },
+   {
+    "text": "A SHINY TROPHY?!",
+    "cam": "prop:trophy",
+    "hold": 1.2
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! You always say you hate shiny things!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "grumpy",
+    "say": "It says Best Grump in Wheelburg. I won it three years in a row. I polish it every night.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "pip",
+    "say": "Aww! Grumpy has a secret happy thing!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tell anyone, and I will be even grumpier.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "A trophy cannot switch off a star, and your eyes are back to normal. Next, little Pip.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to_home"
+     ],
+     [
+      "trophy",
+      "vanish"
+     ],
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Me? But I'm the one who's scared of the dark!",
+    "cam": "press"
+   },
+   {
+    "who": "pip",
+    "say": "Why would I turn off the only light in town?",
+    "cam": "close:pip"
+   },
+   {
+    "who": "narr",
+    "say": "The press came down slowly. Very, very slowly.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hee! That feels like a great big hug!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tiny eyes, tiny car, true words. You're free, Pip.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Big Bertha, your turn.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "pip",
+      "to_home"
+     ],
+     [
+      "bertha",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh dear, oh dear! I'm so big, that press will never fit me!",
+    "cam": "press",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "But I'm brave! Squeeze away! I have nothing to hide!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "narr",
+    "say": "Squish! The Truth Press came down on the big yellow bus.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:bertha"
+     ],
+     [
+      "bertha",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Your eyes stayed small, Bertha. Honest as always.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bertha",
+    "say": "Honest and flat! Every single time! Why is it always my roof?!",
+    "cam": "press",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ],
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. Thank you, Bertha.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Three cars. Three true answers. But the square was still dark.",
+    "cam": "wide",
+    "do": [
+     [
+      "press",
+      "sink"
+     ],
+     [
+      "bertha",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inspector Bolt switched on his brightest headlights and looked down at the ground.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:podium-turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Skid marks. Long, wiggly skid marks, right next to the lantern.",
+    "cam": "overhead"
+   },
+   {
+    "who": "bolt",
+    "say": "And only one car in Wheelburg brakes in a zig-zag.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "One by one, every headlight turned to the same red car.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "What? Me? Ha ha. Lots of cars zig-zag. Probably.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody zig-zags. Except you.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. It's your turn at the Truth Press.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay, okay! I don't need the press. I'll tell you everything.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo opened his trunk, and there was the Lantern Star, glowing inside!",
+    "cam": "prop:lantern",
+    "do": [
+     [
+      "lantern",
+      "drop:turbo"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO TOOK THE STAR?!",
+    "cam": "close:turbo",
+    "hold": 1.3
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo! Why would you take the parade light?",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "turbo",
+    "say": "Because... I'm scared of the dark. Really, really scared.",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "turbo",
+    "say": "My garage is so dark at night. I wanted to keep the star right next to my bed.",
+    "cam": "two:turbo,pip"
+   },
+   {
+    "who": "turbo",
+    "say": "I'm the fastest car in town. Fast cars aren't supposed to be scared.",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "turbo",
+    "say": "Please don't tell anyone. Oh wait. Everyone is here.",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody laughed. Inspector Bolt rolled gently over to Turbo.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. Everybody is scared of something. Even detectives.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "It's okay to be scared. Say it out loud, and your friends will come closer.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "But taking the light made everybody else scared too. That part was not okay.",
+    "cam": "two:bolt,turbo"
+   },
+   {
+    "who": "turbo",
+    "say": "You're right. I'm sorry, everybody. I only thought about me.",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "pip",
+    "say": "I'm scared too! Let's be scared together. Then it's only half as scary!",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I'll park right next to your garage tonight! My headlights are huge!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You can borrow my trophy. It's shiny. Good night-light.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy! You really are the best grump ever!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I know. It says so on my trophy.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Turbo carried the Lantern Star back to the podium, very carefully.",
+    "cam": "podium",
+    "do": [
+     [
+      "lantern",
+      "home"
+     ]
+    ]
+   },
+   {
+    "text": "THE LIGHTS ARE BACK!",
+    "cam": "podium",
+    "hold": 1.2,
+    "do": [
+     [
+      "lantern",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Case closed. Now, I believe somebody promised us a parade.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "And the cars drove around Wheelburg side by side, with every light shining.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Look, Pip! When we drive together, the dark isn't scary at all!",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But just as the parade ended, something fell out of the sky. Clink!",
+    "cam": "wide",
+    "do": [
+     [
+      "key",
+      "show"
+     ],
+     [
+      "key",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "A KEY FROM THE SKY?!",
+    "cam": "prop:key",
+    "hold": 1.3,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bertha",
+    "say": "A golden key? Who dropped it? Where did it come from?",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. A key always opens something. Procedure.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Where could this little key lead? Inspector Bolt will find out next time!",
+    "cam": "wide",
+    "do": [
+     [
+      "key",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Lights Went OUT in Wheelburg! 🌙😱 Cartoon Cars Mystery",
+  "description": "On the night of the Lantern Parade, the big star in Wheelburg suddenly goes dark and little Pip is scared! Inspector Bolt sends Grumpy, Pip and Big Bertha to the Truth Press, finds a shiny secret and follows zig-zag skid marks to a big surprise. It's okay to be scared — say it out loud, and your friends will come closer. Inspector Bolt #3\n\n#kidscartoon #cartooncars #bedtimestory",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "afraid of the dark",
+   "bedtime story",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "WHO TOOK THE LIGHT?",
+  "thumb_beat": 49,
+  "localizations": {
+   "es": {
+    "title": "¡Se APAGARON las luces en Wheelburg! 🌙😱 Misterio de coches",
+    "description": "En la noche del Desfile de Linternas, la gran estrella de Wheelburg se apaga y la pequeña Pip tiene miedo. El Inspector Bolt lleva a todos a la Prensa de la Verdad y sigue unas huellas en zigzag hasta una gran sorpresa. Está bien tener miedo: dilo en voz alta y tus amigos se acercarán. Inspector Bolt #3\n\n#dibujosanimados #coches #cuentoinfantil"
+   },
+   "pt": {
+    "title": "As luzes APAGARAM em Wheelburg! 🌙😱 Mistério dos Carrinhos",
+    "description": "Na noite do Desfile das Lanternas, a grande estrela de Wheelburg se apaga e a pequena Pip fica com medo. O Inspetor Bolt leva todos à Prensa da Verdade e segue marcas em zigue-zague até uma grande surpresa. Tudo bem ter medo: fale em voz alta e seus amigos vão chegar mais perto. Inspetor Bolt #3\n\n#desenhoinfantil #carros #historiaparacriancas"
+   },
+   "ar": {
+    "title": "انطفأت الأضواء في ويلبرغ! 🌙😱 لغز السيارات الكرتونية",
+    "description": "في ليلة موكب الفوانيس تنطفئ النجمة الكبيرة في ويلبرغ وتخاف بيب الصغيرة. يأخذ المفتش بولت الجميع إلى مكبس الحقيقة ويتتبع آثار عجلات متعرجة حتى مفاجأة كبيرة. لا بأس أن تخاف: قلها بصوت عالٍ وسيقترب منك أصدقاؤك. المفتش بولت #3\n\n#كرتون_اطفال #سيارات #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Les lumières se sont ÉTEINTES à Wheelburg ! 🌙😱 Voitures",
+    "description": "La nuit du Défilé des Lanternes, la grande étoile de Wheelburg s'éteint et la petite Pip a peur. L'inspecteur Bolt envoie tout le monde à la Presse de Vérité et suit des traces en zigzag jusqu'à une grosse surprise. Ce n'est pas grave d'avoir peur : dis-le, et tes amis viendront plus près. Inspecteur Bolt #3\n\n#dessinanimé #voitures #histoirepourenfants"
+   },
+   "ja": {
+    "title": "ウィールバーグの明かりが消えた！🌙😱 くるまのなぞとき",
+    "description": "ランタンパレードの夜、町の大きな星が消えて、小さなピップはこわくなってしまいます。ボルト警部はみんなを「ほんとうプレス」にかけ、ジグザグのタイヤあとを追いかけて大きなおどろきへ。こわいのはへんじゃない。こえに出せば、ともだちがそばに来てくれるよ。ボルト警部 #3\n\n#こども向けアニメ #くるま #おやすみ前のおはなし"
+   },
+   "ko": {
+    "title": "휠버그의 불이 꺼졌어요! 🌙😱 자동차 미스터리",
+    "description": "랜턴 퍼레이드 밤, 휠버그의 큰 별이 꺼지고 작은 핍은 무서워해요. 볼트 경감은 모두를 진실 프레스에 세우고 지그재그 바퀴 자국을 따라가 깜짝 놀랄 범인을 찾아요. 무서워도 괜찮아요. 소리 내어 말하면 친구들이 가까이 와 줄 거예요. 볼트 경감 #3\n\n#어린이만화 #자동차 #잠자리동화"
+   },
+   "de": {
+    "title": "In Wheelburg ging das Licht AUS! 🌙😱 Auto-Krimi für Kinder",
+    "description": "In der Nacht der Laternenparade erlischt der große Stern von Wheelburg, und die kleine Pip hat Angst. Inspektor Bolt schickt alle in die Wahrheitspresse und folgt Zickzack-Bremsspuren bis zu einer großen Überraschung. Angst haben ist okay – sag es laut, dann kommen deine Freunde näher. Inspektor Bolt #3\n\n#kinderzeichentrick #autos #gutenachtgeschichte"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 28,
+   "top": "THE LIGHTS WENT OUT!",
+   "title": "Who Switched Off the Whole Town? 🌙😱 #shorts",
+   "description": "The Lantern Star goes dark in the middle of the parade! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién apagó todo el pueblo? 🌙😱 #shorts",
+     "description": "¡La Estrella Linterna se apaga en pleno desfile! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem apagou a cidade inteira? 🌙😱 #shorts",
+     "description": "A Estrela Lanterna se apaga no meio do desfile! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من أطفأ أضواء المدينة كلها؟ 🌙😱 #shorts",
+     "description": "نجمة الفانوس تنطفئ في منتصف الموكب! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a éteint toute la ville ? 🌙😱 #shorts",
+     "description": "L'Étoile Lanterne s'éteint en plein défilé ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "町じゅうの明かりを消したのはだれ？🌙😱 #shorts",
+     "description": "パレードのまっさいちゅうにランタンスターが消えちゃった！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 마을 불을 다 껐을까? 🌙😱 #shorts",
+     "description": "퍼레이드 한가운데서 랜턴 별이 꺼졌어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer hat die ganze Stadt ausgeknipst? 🌙😱 #shorts",
+     "description": "Mitten in der Parade geht der Laternenstern aus! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 16,
+   "dur": 32,
+   "top": "GRUMPY'S SHINY SECRET",
+   "title": "Grumpy Hates Shiny Things… Or Does He? 🏆😂 #shorts",
+   "description": "The Truth Press squeezes Grumpy and something gold rolls out! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "funny cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Gruñón odia lo brillante… ¿o no? 🏆😂 #shorts",
+     "description": "¡La Prensa de la Verdad aprieta a Gruñón y sale algo dorado! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Rabugento odeia brilho… ou não? 🏆😂 #shorts",
+     "description": "A Prensa da Verdade aperta o Rabugento e sai algo dourado! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "غرامبي يكره الأشياء اللامعة… حقًا؟ 🏆😂 #shorts",
+     "description": "مكبس الحقيقة يضغط على غرامبي فيخرج شيء ذهبي! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Grincheux déteste ce qui brille… vraiment ? 🏆😂 #shorts",
+     "description": "La Presse de Vérité serre Grincheux et quelque chose de doré roule dehors ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キラキラぎらいのグランピー…ほんとう？🏆😂 #shorts",
+     "description": "ほんとうプレスでグランピーをぎゅっ！金色の何かがころがり出た！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "반짝이를 싫어하는 그럼피… 정말? 🏆😂 #shorts",
+     "description": "진실 프레스가 그럼피를 꾹 누르자 금색 무언가가 굴러 나와요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grummel hasst Glitzer… oder doch nicht? 🏆😂 #shorts",
+     "description": "Die Wahrheitspresse drückt Grummel und etwas Goldenes rollt heraus! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 41,
+   "dur": 33,
+   "top": "FOLLOW THE SKID MARKS",
+   "title": "The Fastest Car Has a Secret… 🌟🔍 #shorts",
+   "description": "Zig-zag skid marks lead Inspector Bolt to a big surprise! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "detective for kids",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El coche más rápido tiene un secreto… 🌟🔍 #shorts",
+     "description": "¡Unas huellas en zigzag llevan al Inspector Bolt a una gran sorpresa! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O carro mais rápido tem um segredo… 🌟🔍 #shorts",
+     "description": "Marcas em zigue-zague levam o Inspetor Bolt a uma grande surpresa! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أسرع سيارة تخفي سرًا… 🌟🔍 #shorts",
+     "description": "آثار عجلات متعرجة تقود المفتش بولت إلى مفاجأة كبيرة! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La voiture la plus rapide a un secret… 🌟🔍 #shorts",
+     "description": "Des traces en zigzag mènent l'inspecteur Bolt à une grosse surprise ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "いちばん速い車のひみつ…🌟🔍 #shorts",
+     "description": "ジグザグのタイヤあとが、ボルト警部を大きなおどろきへ！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "가장 빠른 자동차의 비밀… 🌟🔍 #shorts",
+     "description": "지그재그 바퀴 자국이 볼트 경감을 깜짝 놀랄 곳으로! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das schnellste Auto hat ein Geheimnis… 🌟🔍 #shorts",
+     "description": "Zickzack-Bremsspuren führen Inspektor Bolt zu einer großen Überraschung! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

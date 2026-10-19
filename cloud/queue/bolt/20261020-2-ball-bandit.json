@@ -1,0 +1,1029 @@
+{
+ "id": "20261020-2-ball-bandit",
+ "plot": "On game morning the red ball keeps vanishing and reappearing; Bolt tests Sunny the ice cream truck, Pip (hiding Turbo's banana) and Bertha (giant honk), then a boing sound and round bounce marks lead to Grumpy, who wanted to play but didn't know how to ask; he asks 'Can I play?' and joins, then Bolt's hat goes missing.",
+ "script": {
+  "title": "Can You Catch the Ball Bandit? ⚽🔍 Cartoon Cars for Kids",
+  "description": "On game morning the red ball keeps vanishing and coming back. Inspector Bolt listens for the boing.",
+  "set": {
+   "place": "Wheelburg square, game morning",
+   "press": true,
+   "podium": true,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "sunny": {
+    "name": "Sunny",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 1,
+    "color": [
+     0.55,
+     0.85,
+     0.95
+    ],
+    "kind": "truck",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     12.0,
+     15.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "banana",
+    "type": "banana",
+    "color": "yellow",
+    "visible": false
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Boing! Boing! It was game morning in Wheelburg, and everybody zoomed in to play Bounce Ball!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter:left"
+     ],
+     [
+      "sunny",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "sunny",
+    "say": "Good morning, everybody! Ice cream for the winners, and ice cream for the losers!",
+    "cam": "close:sunny",
+    "do": [
+     [
+      "sunny",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Then I want four. One for each wheel!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'm going to bounce the ball higher than a bus!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Higher than me? Ha! Good luck, little one!",
+    "cam": "two:bertha,pip",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Only one truck stayed back in the shade. Grumpy.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Games are loud. And bouncy. I'll just watch from here.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "The shiny red ball sat on the podium, ready for the very first game.",
+    "cam": "podium",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ready, everyone? On your marks... get set...",
+    "cam": "wide"
+   },
+   {
+    "text": "THE BALL IS GONE!",
+    "cam": "podium",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "ball",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Where did it go? It was right there a second ago!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "sunny",
+    "say": "Maybe it bounced all the way to the moon!",
+    "cam": "close:sunny"
+   },
+   {
+    "who": "turbo",
+    "say": "Balls don't bounce to the moon. Believe me, I've tried.",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "narr",
+    "say": "Then, poof! The ball was back on the podium, just like before.",
+    "cam": "podium",
+    "do": [
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Phew! It's back! Okay, let's play!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "GONE AGAIN!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "ball",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay. Now this is getting really weird.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Weird. Very weird. I'm going to look... over there.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Honk honk! A blue car with a brown hat rolled into the square.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Inspector Bolt. I hear we have a ball that comes and goes.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "A ball cannot hide all by itself. Somebody is helping it.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "A ball bandit! In our town!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Everyone, to the Truth Press. Sunny, you brought the ice cream, so you go first.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "clap"
+     ],
+     [
+      "sunny",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "sunny",
+    "say": "Me? I've never been squeezed before! Is it cold, like ice cream?",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Sunny, did you take the red ball?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "sunny",
+    "say": "No! My freezer is full of ice cream. There's no room for a ball!",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The press squeezed the ice cream truck, very gently.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:sunny"
+     ],
+     [
+      "sunny",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "sunny",
+    "say": "Oof! Now I'm a flat ice cream truck! A pancake truck!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Eyes small. Sunny is honest. And a little bit flatter.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Next. Little Pip.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "sunny",
+      "to_home"
+     ],
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Me? I didn't take the ball. I promise, promise, promise.",
+    "cam": "press"
+   },
+   {
+    "text": "PIP'S EYES ARE HUGE!",
+    "cam": "close:pip",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, your eyes just got very big. Is something hiding in your trunk?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! And out popped... a banana!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:pip"
+     ],
+     [
+      "banana",
+      "drop:pip"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My banana! Pip, you had my banana?!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy kept looking at it, so I kept it safe for you! You're welcome!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I was only going to look at it. Mostly.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "turbo",
+    "say": "Pip! You're my hero! My tiny snack hero!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A banana is a snack, not a ball. Pip, you may go.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to_home"
+     ],
+     [
+      "banana",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Big Bertha. Your turn.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bertha",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Here I come! I didn't take it. I was busy warming up my honk!",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, did you take the red ball?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bertha",
+    "say": "No! I wanted to play more than anybody!",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The Truth Press squeezed, and Bertha let out the loudest honk in Wheelburg.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:bertha"
+     ],
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "HOOOONK!",
+    "cam": "close:bertha",
+    "hold": 1.0
+   },
+   {
+    "who": "turbo",
+    "say": "My ears! I mean... my mirrors!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Eyes small. Very honest. Very loud.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Three honest cars. But the red ball was still missing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "to_home"
+     ],
+     [
+      "press",
+      "sink"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let's all be quiet for a moment. And listen.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Everyone held very still. Then they heard it. Boing. Boing. Boing.",
+    "cam": "wide"
+   },
+   {
+    "who": "bolt",
+    "say": "That sound is coming from the shade. Right behind the tow truck.",
+    "cam": "two:bolt,grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "And on the ground were little round marks, bouncing all the way to Grumpy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:podium-grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy? Is the boing... you?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. I'm a truck. Trucks don't boing.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Boing! The red ball jumped right out of Grumpy's tow hook!",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "drop:grumpy"
+     ]
+    ]
+   },
+   {
+    "text": "THE BANDIT IS GRUMPY?!",
+    "cam": "close:grumpy",
+    "hold": 1.3
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! But you said games are too loud and too bouncy!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "sunny",
+    "say": "Why did you keep taking the ball and bringing it back?",
+    "cam": "close:sunny"
+   },
+   {
+    "who": "grumpy",
+    "say": "I wanted to try bouncing it. Just once. In the shade, where nobody could see.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Every time I tried, I got nervous and put it back. Then I tried again.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "turbo",
+    "say": "But why didn't you just play with us?",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody asked me. And I didn't know how to ask.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "grumpy",
+    "say": "I always say I hate games. I thought you would all laugh at me.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "The square went quiet. Then Inspector Bolt drove over to Grumpy.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy. There are three little words that open every game in town.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Can I play? Say them, and see what happens.",
+    "cam": "two:bolt,grumpy"
+   },
+   {
+    "who": "grumpy",
+    "say": "Um. Can... can I play?",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "pip",
+    "say": "YES!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Yes, yes, YES! You can be on my team!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "sunny",
+    "say": "And the very first ice cream is yours!",
+    "cam": "close:sunny",
+    "do": [
+     [
+      "sunny",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And next time, ask before you borrow the ball. Then nobody has to worry.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "Deal. Sorry, everybody.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And so the big game began, with everyone playing together.",
+    "cam": "podium",
+    "do": [
+     [
+      "ball",
+      "home"
+     ],
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "LET'S PLAY!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy, catch!",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "ball",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I caught it! I caught it! ...I mean. That was okay.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Look, everyone! Grumpy is smiling!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "grumpy",
+    "say": "No, I'm not. ...Only a little.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Case closed. Want to play? Just ask. Those are the best words in Wheelburg.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "But in all that bouncing, nobody noticed one very important thing.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "hat_give:sunny"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE IS BOLT'S HAT?!",
+    "cam": "close:bolt",
+    "hold": 1.3,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "My hat! Where is my detective hat?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Look closely. Can you spot who has Inspector Bolt's hat?",
+    "cam": "wide"
+   }
+  ]
+ },
+ "long": {
+  "title": "Can You Catch the Ball Bandit? ⚽🔍 Cartoon Cars for Kids",
+  "description": "It's game morning in Wheelburg, but the red ball keeps vanishing… and coming back… and vanishing again! Inspector Bolt puts Sunny the ice cream truck, little Pip and Big Bertha on the Truth Press, then listens for a tiny boing. Want to play? Just ask! Inspector Bolt #4\n\n#kidscartoon #cartooncars #playtogether",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "playing together",
+   "friendship",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "BALL BANDIT?!",
+  "thumb_beat": 53,
+  "localizations": {
+   "es": {
+    "title": "¿Puedes atrapar al ladrón de la pelota? ⚽🔍 Coches",
+    "description": "Es mañana de juegos en Wheelburg, pero la pelota roja desaparece… vuelve… ¡y desaparece otra vez! El Inspector Bolt lleva a Sunny, a Pip y a Bertha a la Prensa de la Verdad y escucha un pequeño boing. ¿Quieres jugar? ¡Solo pregunta! Inspector Bolt #4\n\n#dibujosanimados #coches #jugarjuntos"
+   },
+   "pt": {
+    "title": "Você consegue pegar o ladrão da bola? ⚽🔍 Carrinhos",
+    "description": "É manhã de jogos em Wheelburg, mas a bola vermelha some… volta… e some de novo! O Inspetor Bolt leva Sunny, Pip e Bertha à Prensa da Verdade e escuta um pequeno boing. Quer brincar? É só pedir! Inspetor Bolt #4\n\n#desenhoinfantil #carros #brincarjuntos"
+   },
+   "ar": {
+    "title": "هل تستطيع الإمساك بلص الكرة؟ ⚽🔍 سيارات كرتون",
+    "description": "إنه صباح الألعاب في ويلبرغ، لكن الكرة الحمراء تختفي… ثم تعود… ثم تختفي من جديد! يضع المفتش بولت صني وبيب وبيرثا في مكبس الحقيقة، ثم يستمع إلى صوت قفزة صغير. تريد أن تلعب؟ فقط اسأل! المفتش بولت #4\n\n#كرتون_اطفال #سيارات #نلعب_معا"
+   },
+   "fr": {
+    "title": "Peux-tu attraper le voleur de ballon ? ⚽🔍 Voitures",
+    "description": "C'est le matin des jeux à Wheelburg, mais le ballon rouge disparaît… revient… et disparaît encore ! L'inspecteur Bolt envoie Sunny, Pip et Bertha à la Presse de Vérité, puis écoute un petit boing. Tu veux jouer ? Demande, tout simplement ! Inspecteur Bolt #4\n\n#dessinanimé #voitures #jouerensemble"
+   },
+   "ja": {
+    "title": "ボールどろぼうをつかまえられる？⚽🔍 くるまアニメ",
+    "description": "ウィールバーグのあそびの朝。赤いボールが消えて…もどって…また消えた！ボルト警部はサニー、ピップ、バーサを「ほんとうプレス」にかけ、小さな「ボイン」という音に耳をすませます。いっしょにあそびたい？「入れて」って言えばいいんだよ！ボルト警部 #4\n\n#こども向けアニメ #くるま #いっしょにあそぼう"
+   },
+   "ko": {
+    "title": "공 도둑을 잡을 수 있나요? ⚽🔍 자동차 만화",
+    "description": "휠버그의 놀이 아침, 빨간 공이 사라졌다가… 돌아왔다가… 또 사라져요! 볼트 경감은 써니, 핍, 버사를 진실 프레스에 세우고 작은 통통 소리에 귀를 기울여요. 같이 놀고 싶나요? 그냥 물어보세요! 볼트 경감 #4\n\n#어린이만화 #자동차 #함께놀아요"
+   },
+   "de": {
+    "title": "Kannst du den Balldieb fangen? ⚽🔍 Autos für Kinder",
+    "description": "Spielmorgen in Wheelburg, doch der rote Ball verschwindet… kommt zurück… und verschwindet wieder! Inspektor Bolt schickt Sunny, Pip und Bertha in die Wahrheitspresse und lauscht auf ein leises Boing. Du willst mitspielen? Frag einfach! Inspektor Bolt #4\n\n#kinderzeichentrick #autos #zusammenspielen"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 7,
+   "dur": 30,
+   "top": "THE BALL KEEPS VANISHING!",
+   "title": "This Ball Keeps Disappearing! ⚽😲 #shorts",
+   "description": "Now you see it, now you don't! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Esta pelota no deja de desaparecer! ⚽😲 #shorts",
+     "description": "¡Ahora la ves, ahora no! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Essa bola não para de sumir! ⚽😲 #shorts",
+     "description": "Agora você vê, agora não vê! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هذه الكرة تختفي مرة بعد مرة! ⚽😲 #shorts",
+     "description": "تراها الآن… والآن لا تراها! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ce ballon n'arrête pas de disparaître ! ⚽😲 #shorts",
+     "description": "Tu le vois, tu ne le vois plus ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボールが何度も消えちゃう！⚽😲 #shorts",
+     "description": "あれ？あった！あれ？ない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "공이 자꾸 사라져요! ⚽😲 #shorts",
+     "description": "보였다가, 안 보였다가! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Dieser Ball verschwindet immer wieder! ⚽😲 #shorts",
+     "description": "Jetzt siehst du ihn, jetzt nicht mehr! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 48,
+   "dur": 30,
+   "top": "LISTEN... BOING!",
+   "title": "Who Is Making That Boing? 👂⚽ #shorts",
+   "description": "Inspector Bolt follows a tiny sound to the ball bandit! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "detective for kids",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién hace ese boing? 👂⚽ #shorts",
+     "description": "¡El Inspector Bolt sigue un sonidito hasta el ladrón de la pelota! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem está fazendo esse boing? 👂⚽ #shorts",
+     "description": "O Inspetor Bolt segue um somzinho até o ladrão da bola! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من يصدر صوت القفز هذا؟ 👂⚽ #shorts",
+     "description": "المفتش بولت يتبع صوتًا صغيرًا حتى لص الكرة! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui fait ce boing ? 👂⚽ #shorts",
+     "description": "L'inspecteur Bolt suit un petit bruit jusqu'au voleur de ballon ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "「ボイン」って音はだれ？👂⚽ #shorts",
+     "description": "ボルト警部が小さな音をたどって、ボールどろぼうを見つける！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "통통 소리는 누구일까? 👂⚽ #shorts",
+     "description": "볼트 경감이 작은 소리를 따라 공 도둑을 찾아요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer macht da Boing? 👂⚽ #shorts",
+     "description": "Inspektor Bolt folgt einem leisen Geräusch bis zum Balldieb! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
