@@ -1,0 +1,754 @@
+{
+ "title": "Don't Open the Door to Nowhere",
+ "description": "Don't open that door. Behind it there is no room. Only a drop into the dark.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.06,
+  "eyes": 3,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -5,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -2.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "sarah": {
+   "name": "Sarah",
+   "voice": "af_nicole",
+   "speed": 0.85,
+   "pitch": -2,
+   "color": [
+    0.06,
+    0.05,
+    0.07
+   ],
+   "kind": "lady",
+   "ghost": true,
+   "up": true,
+   "size": 0.95,
+   "home": [
+    5,
+    12
+   ]
+  },
+  "builder": {
+   "name": "Carpenter",
+   "voice": "am_michael",
+   "speed": 1.05,
+   "pitch": -1,
+   "color": [
+    0.35,
+    0.25,
+    0.15
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -10,
+    11
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "st0",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    13.0,
+    -0.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st1",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    14.0,
+    -0.04999999999999993
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st2",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    15.0,
+    0.5000000000000001
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st3",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    16.0,
+    1.0500000000000003
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st4",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    17.0,
+    1.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st5",
+   "type": "box",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "at": [
+    7.5,
+    18.0,
+    2.15
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "ceiling",
+   "type": "box",
+   "color": [
+    0.12,
+    0.08,
+    0.05
+   ],
+   "at": [
+    7.5,
+    17,
+    3.6
+   ],
+   "scale": 2.2
+  },
+  {
+   "id": "door0",
+   "type": "box",
+   "color": [
+    0.4,
+    0.22,
+    0.1
+   ],
+   "at": [
+    -9.5,
+    9,
+    -0.05
+   ],
+   "scale": 0.8,
+   "glow": 0.25
+  },
+  {
+   "id": "door1",
+   "type": "box",
+   "color": [
+    0.4,
+    0.22,
+    0.1
+   ],
+   "at": [
+    -9.5,
+    9,
+    0.8899999999999999
+   ],
+   "scale": 0.8,
+   "glow": 0.25
+  },
+  {
+   "id": "door2",
+   "type": "box",
+   "color": [
+    0.4,
+    0.22,
+    0.1
+   ],
+   "at": [
+    -9.5,
+    9,
+    1.8299999999999998
+   ],
+   "scale": 0.8,
+   "glow": 0.25
+  },
+  {
+   "id": "clock",
+   "type": "star",
+   "color": "gold",
+   "at": [
+    0,
+    9,
+    2.0
+   ],
+   "visible": false,
+   "scale": 0.9
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Don't open that door. Behind it there is no room. Only a drop into the dark.",
+   "cam": "wide",
+   "do": [
+    [
+     "door0",
+     "spin"
+    ],
+    [
+     "door1",
+     "spin"
+    ],
+    [
+     "door2",
+     "spin"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "DON'T OPEN THE DOOR"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, stop! Your foot is over the edge!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "odo",
+   "say": "There's nothing there. The floor just ends!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "THE FLOOR ENDS"
+  },
+  {
+   "who": "narr",
+   "say": "Behind them on the Brown Lady's stairs, a door had opened. They stepped through. And fell.",
+   "cam": "overhead",
+   "do": [
+    [
+     "sarah",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THEY FELL THROUGH"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from real records. A house in San Jose, California.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "turn:sarah"
+    ]
+   ],
+   "text": "SAN JOSE, CALIFORNIA"
+  },
+  {
+   "who": "narr",
+   "say": "A house where the building never stopped. Day and night. For thirty-eight years.",
+   "cam": "close:builder",
+   "do": [
+    [
+     "builder",
+     "enter:left"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "38 YEARS OF BUILDING"
+  },
+  {
+   "who": "narr",
+   "say": "It belonged to Sarah Winchester. Her baby daughter died in 1866.",
+   "cam": "close:sarah",
+   "do": [
+    [
+     "sarah",
+     "sad"
+    ]
+   ],
+   "text": "SARAH WINCHESTER"
+  },
+  {
+   "who": "narr",
+   "say": "Fifteen years later, her husband died too. He ran the family's famous rifle company.",
+   "cam": "two:sarah,odo",
+   "do": [
+    [
+     "sarah",
+     "turn:front"
+    ]
+   ],
+   "text": "1881: ALONE"
+  },
+  {
+   "who": "narr",
+   "say": "She was left with a huge fortune. And she moved all the way west.",
+   "cam": "wide",
+   "do": [
+    [
+     "sarah",
+     "to:3,10"
+    ]
+   ],
+   "text": "ALL THE WAY WEST"
+  },
+  {
+   "who": "moth",
+   "say": "Why would anyone move so far away?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "turn:sarah"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In 1884 she bought a small farmhouse with eight rooms. Then she started building.",
+   "cam": "prop:door1",
+   "do": [
+    [
+     "builder",
+     "jump"
+    ]
+   ],
+   "text": "1884: EIGHT ROOMS"
+  },
+  {
+   "who": "builder",
+   "say": "More rooms. Always more rooms. We never get a day off!",
+   "cam": "close:builder",
+   "do": [
+    [
+     "builder",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "No architect. No final plan. Rooms were built, torn down, and built again.",
+   "cam": "two:builder,odo",
+   "do": [
+    [
+     "builder",
+     "to:-6,10"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO PLAN"
+  },
+  {
+   "who": "narr",
+   "say": "By the end, the house had about one hundred sixty rooms. And ten thousand windows.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "spin"
+    ]
+   ],
+   "text": "160 ROOMS"
+  },
+  {
+   "who": "narr",
+   "say": "Some stairs climb up and stop at the ceiling. They lead nowhere at all.",
+   "cam": "wide",
+   "do": [
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "STAIRS TO THE CEILING"
+  },
+  {
+   "who": "narr",
+   "say": "One door on the second floor opens onto thin air. A drop straight down to the garden.",
+   "cam": "prop:door1",
+   "do": [
+    [
+     "door0",
+     "spin"
+    ],
+    [
+     "door1",
+     "spin"
+    ],
+    [
+     "door2",
+     "spin"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A DOOR TO NOWHERE"
+  },
+  {
+   "who": "odo",
+   "say": "Who builds a door that opens onto nothing?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Other doors open onto solid walls. And windows look into other rooms.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "DOORS INTO WALLS"
+  },
+  {
+   "who": "narr",
+   "say": "And the number thirteen is everywhere. Thirteen bathrooms. Windows with thirteen panes.",
+   "cam": "prop:clock",
+   "do": [
+    [
+     "clock",
+     "show"
+    ],
+    [
+     "clock",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "13. EVERYWHERE."
+  },
+  {
+   "who": "moth",
+   "say": "Thirteen? Odo, don't count the steps. Please.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Why did she build like this? The records don't say. But a legend does.",
+   "cam": "close:sarah",
+   "do": [
+    [
+     "sarah",
+     "rise"
+    ],
+    [
+     "clock",
+     "vanish"
+    ]
+   ],
+   "text": "THE LEGEND"
+  },
+  {
+   "who": "narr",
+   "say": "The legend says a spirit medium told her: keep building, and never stop.",
+   "cam": "two:sarah,moth",
+   "do": [
+    [
+     "sarah",
+     "to:1,9"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEVER STOP BUILDING"
+  },
+  {
+   "who": "sarah",
+   "say": "If the hammers stop... they will find me.",
+   "cam": "close:sarah",
+   "do": [
+    [
+     "sarah",
+     "turn:front"
+    ]
+   ],
+   "text": "THEY WILL FIND ME"
+  },
+  {
+   "who": "narr",
+   "say": "Some say the twisting halls were made to confuse the spirits. So they could never find her.",
+   "cam": "overhead",
+   "do": [
+    [
+     "odo",
+     "to:-2,9"
+    ],
+    [
+     "moth",
+     "spin"
+    ]
+   ],
+   "text": "A MAZE FOR GHOSTS?"
+  },
+  {
+   "who": "narr",
+   "say": "But many historians say she simply loved building. Nobody knows for sure.",
+   "cam": "wide",
+   "do": [
+    [
+     "sarah",
+     "dive"
+    ]
+   ],
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "Then came April 1906. The great earthquake shook the whole house.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "shake"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "APRIL 1906"
+  },
+  {
+   "who": "narr",
+   "say": "Her seven-storey tower fell. Sarah was trapped in her bedroom for hours.",
+   "cam": "close:builder",
+   "do": [
+    [
+     "builder",
+     "shake"
+    ]
+   ],
+   "text": "TRAPPED FOR HOURS"
+  },
+  {
+   "who": "narr",
+   "say": "Afterwards, she had thirty rooms at the front boarded up. Closed forever.",
+   "cam": "prop:door1",
+   "do": [
+    [
+     "door0",
+     "bounce"
+    ],
+    [
+     "door1",
+     "bounce"
+    ],
+    [
+     "door2",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "30 ROOMS SEALED"
+  },
+  {
+   "who": "odo",
+   "say": "What did she lock inside those rooms?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In September 1922, Sarah died. And for the first time in thirty-eight years, the hammers stopped.",
+   "cam": "two:builder,odo",
+   "do": [
+    [
+     "builder",
+     "exit"
+    ]
+   ],
+   "text": "THE HAMMERS STOPPED"
+  },
+  {
+   "who": "narr",
+   "say": "Today, visitors walk its halls. Some say they still hear footsteps where nobody is.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "FOOTSTEPS"
+  },
+  {
+   "who": "narr",
+   "say": "Then, in the silent house, Odo heard it. A hammer. Knock. Knock. Knock.",
+   "cam": "overhead",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "KNOCK. KNOCK. KNOCK."
+  },
+  {
+   "who": "moth",
+   "say": "Odo... it's coming from the room that was sealed.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:sarah"
+    ]
+   ]
+  },
+  {
+   "who": "sarah",
+   "say": "You opened my door. Now you must help me build.",
+   "cam": "close:sarah",
+   "do": [
+    [
+     "sarah",
+     "rise"
+    ],
+    [
+     "sarah",
+     "to:4,8"
+    ]
+   ],
+   "text": "HELP ME BUILD"
+  },
+  {
+   "who": "narr",
+   "say": "Who is still building in the sealed rooms? Subscribe. Don't miss the next door.",
+   "cam": "wide",
+   "do": [
+    [
+     "door0",
+     "spin"
+    ],
+    [
+     "door1",
+     "spin"
+    ],
+    [
+     "door2",
+     "spin"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHO IS STILL BUILDING?"
+  }
+ ]
+}
