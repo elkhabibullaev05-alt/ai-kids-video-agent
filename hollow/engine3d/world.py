@@ -1,7 +1,7 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
 SET.place: forest | clearing | graveyard | swamp | village | chapel
-Character kinds: odo | moth | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | human
+Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | human
 """
 TOD = "night"
 PLACE = SET.get("place", "forest")
@@ -166,6 +166,14 @@ def _shape(key, kind, s, ch):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0.25 * s, 4.15 * s)); sh = add(_o(), cloak); sh.scale = (1.3, 0.8, 0.35); parent(sh, o)
         bpy.ops.mesh.primitive_cylinder_add(radius=0.05 * s, depth=0.4 * s, location=(0, 0.25 * s, 4.35 * s)); parent(add(_o(), mat("neckstub", (0.1, 0.02, 0.02), 0.8)), o)
         return o, 1.6 * s, 3.5 * s, 4.4 * s, -2.42 * s, 2.85 * s
+    if kind == "lochbeast":  # Loch Ness shape: dark humps in the water + long neck and small head (front = -y)
+        skin = mat(f"lb_{key}", col, 0.35, 0.0)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1.0 * s, location=(0, 0.6 * s, 0.1 * s)); o = add(_o(), skin); o.scale = (0.9, 1.5, 0.75)
+        for hy in (2.9, 4.8):
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.75 * s, location=(0, hy * s, 0.0)); hm = add(_o(), skin); hm.scale = (0.8, 1.3, 0.8); parent(hm, o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.28 * s, depth=3.6 * s, location=(0, -0.55 * s, 2.2 * s), rotation=(math.radians(-18), 0, 0)); parent(add(_o(), skin), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.45 * s, location=(0, -1.25 * s, 3.95 * s)); hd = add(_o(), skin); hd.scale = (0.9, 1.5, 0.8); parent(hd, o)
+        return o, 2.0 * s, 6.0 * s, 4.4 * s, -1.85 * s, 4.05 * s
     if kind == "soldier":  # Roman legionary: tunic, plumed helmet, round shield; "ghost": pale glowing + sunk to the knees
         gh = ch.get("ghost", False); sink = 0.75 * s if gh else 0.0
         gm = (lambda n, c_, r_=0.6, m_=0.0: mat(f"{n}_{key}", (0.45, 0.8, 0.75), 0.5, 0, 0.55)) if gh else (lambda n, c_, r_=0.6, m_=0.0: mat(f"{n}_{key}", c_, r_, m_))
@@ -190,7 +198,7 @@ def make_char(key, ch):
     o, Wd, L, H, fy, fz = _shape(key, kind, s, ch)
     o.parent = body
     eyes = []
-    glow_eyes = kind in ("horseman", "gloamhound", "crow", "wickeater", "hollowmother")
+    glow_eyes = kind in ("lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
     n_eyes = {"hollowmother": 6}.get(kind, 2)
     sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18}.get(kind, 0.22) * s
     for i in range(n_eyes):

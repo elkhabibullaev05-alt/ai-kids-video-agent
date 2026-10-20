@@ -1,0 +1,657 @@
+{
+ "title": "1,400 Years of Sightings. What's in Loch Ness?",
+ "description": "Something huge is moving under this water. And people have seen it for fourteen hundred years.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "swamp",
+  "fog": 0.05,
+  "eyes": 3,
+  "moonlight": 2.6
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    5
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    4.5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "beast": {
+   "name": "The shape",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.05,
+    0.11,
+    0.08
+   ],
+   "kind": "lochbeast",
+   "size": 1.25,
+   "home": [
+    4,
+    14
+   ]
+  },
+  "columba": {
+   "name": "Columba",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.32,
+    0.24,
+    0.16
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -11,
+    9
+   ]
+  },
+  "swimmer": {
+   "name": "Swimmer",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.7,
+    0.6,
+    0.45
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    1,
+    10
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "photo",
+   "type": "box",
+   "color": "white",
+   "at": [
+    0,
+    9,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.9
+  },
+  {
+   "id": "sub",
+   "type": "banana",
+   "color": [
+    0.12,
+    0.12,
+    0.12
+   ],
+   "at": [
+    0,
+    9,
+    1.4
+   ],
+   "visible": false,
+   "scale": 1.2
+  },
+  {
+   "id": "eel",
+   "type": "banana",
+   "color": [
+    0.2,
+    0.3,
+    0.12
+   ],
+   "at": [
+    0,
+    9,
+    1.4
+   ],
+   "visible": false,
+   "scale": 1.5
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Something huge is moving under this water. And people have seen it for fourteen hundred years.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "rise"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "DON'T LOOK IN THE WATER"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick, back away from the edge. Slowly.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:beast"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "Last night the ghost legion marched past them, and melted into the fog over a lake.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "beast",
+     "dive"
+    ],
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ],
+   "text": "WHERE ARE WE?"
+  },
+  {
+   "who": "moth",
+   "say": "Odo... this isn't our swamp. This is Loch Ness.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "LOCH NESS, SCOTLAND"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from real records. Loch Ness is about twenty-three miles long.",
+   "cam": "overhead",
+   "text": "23 MILES LONG"
+  },
+  {
+   "who": "narr",
+   "say": "In places it is deeper than two hundred meters. Dark as tea. You cannot see the bottom.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "to:-4,7"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "DARK AS TEA"
+  },
+  {
+   "who": "narr",
+   "say": "It holds more fresh water than all the lakes of England and Wales put together.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "So something big could hide down there.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The first story is very old. It was written down by a monk named Adomnan.",
+   "cam": "close:columba",
+   "do": [
+    [
+     "columba",
+     "enter:left"
+    ]
+   ],
+   "text": "THE FIRST RECORD"
+  },
+  {
+   "who": "narr",
+   "say": "He wrote that in the year 565, a holy man called Columba came to the River Ness.",
+   "cam": "two:columba,swimmer",
+   "do": [
+    [
+     "swimmer",
+     "enter:right"
+    ]
+   ],
+   "text": "AD 565"
+  },
+  {
+   "who": "narr",
+   "say": "A man was swimming across. Then the water began to boil behind him.",
+   "cam": "close:swimmer",
+   "do": [
+    [
+     "swimmer",
+     "shake"
+    ],
+    [
+     "beast",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE WATER BOILED"
+  },
+  {
+   "who": "narr",
+   "say": "A water beast rushed at him with a great roar, its mouth wide open.",
+   "cam": "two:swimmer,beast",
+   "do": [
+    [
+     "beast",
+     "to:3,11"
+    ],
+    [
+     "swimmer",
+     "eyes_big"
+    ]
+   ],
+   "text": "A WATER BEAST"
+  },
+  {
+   "who": "columba",
+   "say": "Go no further! Go back at once!",
+   "cam": "close:columba",
+   "do": [
+    [
+     "columba",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The record says the beast turned and fled, as if pulled back by ropes.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "dive"
+    ],
+    [
+     "swimmer",
+     "exit"
+    ]
+   ],
+   "text": "IT FLED"
+  },
+  {
+   "who": "moth",
+   "say": "Was that real, or a story?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "columba",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Nobody knows. It was written about a hundred years after it happened.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "sad"
+    ]
+   ],
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "April 1933. A couple driving beside Loch Ness saw the water explode.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "rise"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE WATER EXPLODED"
+  },
+  {
+   "who": "narr",
+   "say": "Something huge rolled up out of the loch. Like a whale. In a lake.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "to:2,10"
+    ]
+   ],
+   "text": "LIKE A WHALE"
+  },
+  {
+   "who": "moth",
+   "say": "Odo... it's looking right at us.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:beast"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then it sank in a boiling mass of foam. And the water went still. Too still.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "dive"
+    ]
+   ],
+   "text": "TOO STILL"
+  },
+  {
+   "who": "narr",
+   "say": "The local newspaper printed their story. It called the thing a monster.",
+   "cam": "overhead",
+   "text": "1933: A MONSTER"
+  },
+  {
+   "who": "narr",
+   "say": "A new road had just opened along the shore. Now thousands could watch the water.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "That summer, another couple said a long-necked creature crossed the road in front of their car.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "IT CROSSED THE ROAD"
+  },
+  {
+   "who": "odo",
+   "say": "On land? It came out of the water?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In 1934, a newspaper printed a photo. A long neck. A small head. Rising from the loch.",
+   "cam": "prop:photo",
+   "do": [
+    [
+     "photo",
+     "show"
+    ],
+    [
+     "photo",
+     "spin"
+    ]
+   ],
+   "text": "THE FAMOUS PHOTO"
+  },
+  {
+   "who": "narr",
+   "say": "For sixty years, it was the most famous picture of the monster.",
+   "cam": "prop:photo",
+   "do": [
+    [
+     "photo",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, in 1994, the truth came out. It was a toy submarine with a model head.",
+   "cam": "prop:sub",
+   "do": [
+    [
+     "photo",
+     "vanish"
+    ],
+    [
+     "sub",
+     "show"
+    ]
+   ],
+   "text": "IT WAS A TOY"
+  },
+  {
+   "who": "moth",
+   "say": "A toy? About as tall as a ruler?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "sub",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But the photo was fake. The sightings did not stop.",
+   "cam": "wide",
+   "do": [
+    [
+     "sub",
+     "vanish"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE SIGHTINGS DIDN'T STOP"
+  },
+  {
+   "who": "narr",
+   "say": "In 1987, a line of boats swept the whole loch with sonar.",
+   "cam": "overhead",
+   "text": "1987: SONAR"
+  },
+  {
+   "who": "narr",
+   "say": "They found some strange moving shapes deep down that no one could explain.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHAPES IN THE DEEP"
+  },
+  {
+   "who": "narr",
+   "say": "In 2018, scientists tested the water itself, for traces of everything living in it.",
+   "cam": "prop:eel",
+   "do": [
+    [
+     "beast",
+     "dive"
+    ],
+    [
+     "eel",
+     "show"
+    ]
+   ],
+   "text": "2018: DNA TEST"
+  },
+  {
+   "who": "narr",
+   "say": "No reptile DNA at all. But a surprising amount of eel DNA.",
+   "cam": "prop:eel",
+   "do": [
+    [
+     "eel",
+     "spin"
+    ]
+   ],
+   "text": "EELS. LOTS OF EELS."
+  },
+  {
+   "who": "odo",
+   "say": "How big can an eel get?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "eel",
+     "vanish"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Nobody knows what people really saw. More than a thousand sightings are on record.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ],
+   "text": "1,000+ SIGHTINGS"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, your lantern. Look at the reflection.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "In the black water, under their own reflection, two green eyes opened.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "rise"
+    ]
+   ],
+   "text": "TWO EYES OPENED"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... that's not one shape. There are two.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "beast",
+     "to:-1,9"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "What is waiting at the bottom of Loch Ness? The next tale begins right here.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "look:beast"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHAT'S DOWN THERE? SUBSCRIBE!"
+  }
+ ]
+}

@@ -196,6 +196,15 @@ def do_char(c, act, t, d):
         EVENTS.append((t, "engine"))
     elif name == "exit":
         move(c, t, 1.4, (40, POS[c].y, 0)); EVENTS.append((t, "engine"))
+    elif name in ("rise", "dive"):  # comes up out of the water / sinks under it (lochbeast)
+        r = C[c]["root"]; up = POS[c].copy(); down = up + Vector((0, 0, -6))
+        if name == "rise":
+            if not C[c].get("risen"):
+                r.location = down; r.keyframe_insert("location", frame=1); C[c]["risen"] = True
+            K(r, t, "location", down); K(r, t + 1.5, "location", up)
+        else:
+            K(r, t, "location", up); K(r, t + 1.5, "location", down)
+        EVENTS.append((t, "whoosh"))
     elif name == "to_press":
         drums_up(t); move(c, t, 1.2, (0, 0, 0)); EVENTS.append((t, "engine"))
     elif name == "to_home":
