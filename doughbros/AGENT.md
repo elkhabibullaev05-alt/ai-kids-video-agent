@@ -94,3 +94,7 @@ Long episodes are watched only 0:36–0:56 (20–31%) and get 0–1 views; the "
 
 ## Translations (owner's rule, 2026-10-19 — never skip)
 Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.
+
+## Safety notes 2026-10-20
+- Title template: the last 10 titles all end in `?!` + one emoji. Vary the form — at most 1 in 3 titles may end in `?!`; also use statements, "How…", character names, no emoji on some. Vary the first spoken line of each script (no repeated opening phrase across the last 5 episodes).
+- Audience: the owner's 2026-10-19 safety routine lists Dough Bros as a kids channel, but this file and `cloud/channels.json` say "Not made for kids" (13+). Do NOT change the flag on your own — the owner decides. Until then keep content clearly 13+ in tone and never target kids in titles/tags (no "for kids", nursery words).

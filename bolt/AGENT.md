@@ -70,3 +70,7 @@ Never type passwords, never add accounts, never change account/channel settings.
 
 ## Translations (owner's rule, 2026-10-19 — never skip)
 Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.
+
+## Safety notes 2026-10-20
+- Title template: titles repeat "Who … ? 🔍 Cartoon Cars Mystery". Keep the series tag only in some titles; vary the hook (place, suspect, clue). Vary the opening line of each script.
+- Made for kids = Yes must stay on every upload (UPLOAD.md uses VIDEO_MADE_FOR_KIDS_MFK; channels.json kids=true). Music/SFX: only self-generated audio from engine/soundtrack.py.

@@ -67,3 +67,7 @@ Never type passwords, never add accounts, never change account/channel settings.
 
 ## Translations (owner's rule, 2026-10-19 — never skip)
 Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko, de** (a viewer in Japan sees Japanese, in the US the English original), and long/voiced videos get English + translated subtitles. Follow `../tools/TRANSLATE.md` right after the uploads are scheduled; first finish any `translations_pending` from earlier runs. Report the languages added in the final message.
+
+## Safety notes 2026-10-20
+- News/politics/elections topics: stay neutral, give both sides, no predictions of results, no medical/financial advice. List the 3–5 sources in every description ("Sources: …").
+- Visuals: only self-drawn doodles — no news footage, photos, TV clips or company logos (copyright/trademark claims). Music only self-made or royalty-free with licence noted.

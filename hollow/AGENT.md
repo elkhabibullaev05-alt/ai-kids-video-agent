@@ -90,3 +90,7 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 - Titles: no "EP N", no channel name, under 50 characters, e.g. "115 Settlers Vanished. They Left One Word."
 - Thumbnails: CTR is 0.92%; target over 4%. One hero subject with 2–3 bold teasing words ("NO BODIES FOUND").
 - Schedule: don't flood. 1–2 long videos a week and 1 Short a day, spaced out.
+
+## Safety notes 2026-10-20
+- Title template: the last 10 titles all follow "What/Why/Where … ?". Vary the form (statements, place/name first, year first) — at most half the titles in a day may be a Wh-question. Vary the first spoken line of each script.
+- Real-history episodes: name the historical sources in the description ("Sources: …") so they read as researched storytelling, not mass-produced content.
