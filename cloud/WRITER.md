@@ -55,3 +55,12 @@ The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85
 - Thumbnails: Max's big, expressive face with one clear emotion, a bright solid background, 2–3 focal points, no small text.
 
 **All channels:** the newest `ask_studio_<date>.md` has each channel's own numbers and plan. Apply it unless it breaks the rules above.
+
+## Rek-ball rejections to avoid (2026-10-20)
+
+- `doughbros/20261020-2-zero-crumb-party` was rejected with long rek-ball 83:
+  - "boshlanishi sust" — weak motion in the first seconds;
+  - "uzun video uchun qisqa" — under 3 minutes.
+- So, for every long episode:
+  - beat 1 starts in motion at 0 s (running, falling, chasing), with dialogue at 0 s;
+  - write enough beats for **3:10 or more**.

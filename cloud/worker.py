@@ -395,7 +395,12 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except SystemExit:
+    except SystemExit as e:
+        if e.code not in (None, 0):  # e.g. "no token for …" — make it visible in status.json (2026-10-20)
+            try:
+                status("error", error=str(e.code)[-500:]); push("error", [RES])
+            except Exception:
+                pass
         raise
     except Exception as e:
         log(traceback.format_exc())
