@@ -123,3 +123,9 @@ Not asked: Studio shows no Ask Studio button on this Made-for-Kids channel. The 
 - The question was sent, but Ask Studio stayed in "generating" for 3+ minutes without answering.
 - This happened after about 7 questions in an hour, while the PC was rendering, so it is probably throttling.
 - Retry at the next run (5-day task).
+
+### Retry 2026-10-20 ~07:15 UTC (PC idle)
+
+- **funny:** the rephrased question twice, plus the built-in "Kanal samaradorligini sarhisob qil" (summarize channel performance) chip. Each stayed in "generating" for 3+ minutes with no answer.
+- **bolt:** the built-in chip also hung.
+- Ask Studio seems to stall for these accounts today. Retry on the next 5-day run.
