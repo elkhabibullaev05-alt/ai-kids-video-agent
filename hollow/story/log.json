@@ -672,49 +672,56 @@
         }
       ],
       "notes": "Custom thumbnails do not stick (channel not phone-verified) - YouTube uses an auto frame. Shorts get YouTube's automatic title/description translations + autodub."
-    }
-  ],
-  "translations_pending": [
-    {
-      "video_id": "pJreOUaGZU0",
-      "subs": [
-        "en",
-        "es",
-        "pt",
-        "fr",
-        "de",
-        "ja",
-        "ko",
-        "ar"
-      ],
-      "note": "SRT upload via Studio failed silently this run; files on uploads-hollow"
     },
     {
-      "video_id": "x0k4U8Nu9Ek",
-      "langs": [
-        "es",
-        "pt",
-        "ar",
-        "fr",
-        "ja",
-        "ko",
-        "de"
+      "episode": 15,
+      "pack": 2,
+      "day": "2026-10-21",
+      "date": "2026-10-21",
+      "format": "3D (engine3d, village)",
+      "theme": "Documented history + recorded ghost account: the lost Ninth Legion (Legio IX Hispana, about 5,000 men, based at York; night attack AD 82; last record in Britain a York inscription of AD 108; Sixth Legion at York by 122; missing from a list of legions c. 165; Nijmegen roof tile found 1959; theories north Britain / Rhine / East); Silchester wingless bronze eagle (1866) inspired Rosemary Sutcliff's The Eagle of the Ninth (1954); Treasurer's House, York, 1953 - Harry Martindale (18) saw Roman soldiers visible from the knees up walking on the buried Roman road",
+      "rule": "If you hear a trumpet under the floor at night - get off the ladder and leave the cellar",
+      "title": "Where Did Rome's 5,000 Soldiers Go?",
+      "creature": "ghost legionaries (new character kind 'soldier' with 'ghost': true - glowing, sunk to the knees)",
+      "bg": [
+        "village"
       ],
-      "subs": [
-        "en",
-        "es",
-        "pt",
-        "fr",
-        "de",
-        "ja",
-        "ko",
-        "ar"
+      "summary": "The Narrator tells how Rome's Ninth Legion, about 5,000 soldiers based at York, disappears from the records after AD 108, and the theories about where it went. Then the recorded 1953 account of an 18-year-old plumber who saw Roman soldiers, visible only from the knees up, march out of a cellar wall in York.",
+      "cliffhanger": "The ghost legion turns out of the fog and marches straight toward Odo and Mothwick. Who is leading it?",
+      "shorts": [
+        "He Saw Roman Ghosts in a Cellar #shorts"
       ],
-      "note": "files hollow_ep014_long_translations.json + srt on uploads-hollow"
+      "rek_ball": {
+        "long": 100,
+        "short1": 93
+      },
+      "sources": [
+        "https://www.historyhit.com/was-the-ninth-legion-destroyed-in-britain/",
+        "https://en.wikipedia.org/wiki/Treasurer%27s_House,_York",
+        "https://en.wikipedia.org/wiki/Silchester_eagle"
+      ],
+      "uploads": [],
+      "pending_uploads": [
+        {
+          "video": "long",
+          "title": "Where Did Rome's 5,000 Soldiers Go?",
+          "publish_at": "2026-10-21T19:45:00Z",
+          "file": "hollow_ep015_long.mp4",
+          "thumb": "hollow_ep015_long_thumb.jpg",
+          "text": "hollow/out3d/ep015_up/long.txt (not in git; description = see notes)"
+        },
+        {
+          "video": "short1",
+          "title": "He Saw Roman Ghosts in a Cellar #shorts",
+          "publish_at": "2026-10-22T16:45:00Z",
+          "file": "hollow_ep015_short1.mp4",
+          "cut": "long 129.45 s + 23.5 s, rek_ball --kuchaytir"
+        }
+      ],
+      "pending_reason": "2026-10-20 run: the Studio upload step was blocked by the session's permission guard (auto-mode classifier refused the scripted public upload). Files are on branch uploads-hollow; the next run (or the owner) schedules them.",
+      "notes": "Long description: hook line + Ninth Legion summary + 1953 York cellar account + Sources (3 URLs above) + #truestory #hollowmeretales #unsolvedmystery #ninthlegion #ghoststory. Tags: true story, unsolved mystery, real horror story, Ninth Legion, lost legion, Roman Britain, York, Treasurer's House ghost, Roman ghosts, Hollowmere Tales."
     }
   ],
-  "lock": {
-    "until": "2026-10-20T08:30:00Z",
-    "by": "session_01EaxnoQ33y58dbvSvtfERRV"
-  }
+  "translations_pending": [],
+  "translations_note": "2026-10-20: pJreOUaGZU0 and x0k4U8Nu9Ek checked in Studio - YouTube auto-translations already publish title/description, subtitles and audio in es/pt/ar/fr/ja/ko/de (and more); nothing left to add."
 }
