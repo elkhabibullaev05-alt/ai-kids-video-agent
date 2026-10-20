@@ -1,0 +1,971 @@
+{
+ "id": "20261021-1-floor-is-lava-speed-pass",
+ "plot": "Rex buys a Speed Pass to win the floor-is-lava obby but keeps sliding into the lava; the team, led by tiny Chip, uses Rex's speed to cross the last gap together.",
+ "script": {
+  "title": "Can a Speed Pass Beat the Floor Is LAVA? 🌋",
+  "set": {
+   "place": "obby",
+   "time": "day"
+  },
+  "lead_in": 0,
+  "chars": {
+   "blox": {
+    "name": "Blox",
+    "voice": "am_puck",
+    "speed": 1.08,
+    "pitch": 1,
+    "kind": "blocky",
+    "size": 0.8,
+    "home": [
+     -3,
+     6
+    ],
+    "color": [
+     0.15,
+     0.45,
+     1.0
+    ],
+    "pants": [
+     0.12,
+     0.14,
+     0.25
+    ],
+    "hair": "cap",
+    "hair_color": [
+     0.9,
+     0.15,
+     0.15
+    ]
+   },
+   "pixel": {
+    "name": "Pixel",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 3,
+    "kind": "blocky",
+    "size": 0.75,
+    "home": [
+     2,
+     5.5
+    ],
+    "color": [
+     1.0,
+     0.4,
+     0.7
+    ],
+    "pants": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "skin": [
+     0.78,
+     0.55,
+     0.38
+    ],
+    "hair": "bun",
+    "hair_color": [
+     0.12,
+     0.08,
+     0.06
+    ]
+   },
+   "rex": {
+    "name": "Rich Rex",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "kind": "blocky",
+    "size": 0.85,
+    "home": [
+     6,
+     8
+    ],
+    "color": [
+     0.95,
+     0.75,
+     0.1
+    ],
+    "pants": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "hair": "crown"
+   },
+   "gizmo": {
+    "name": "Gizmo",
+    "voice": "am_echo",
+    "speed": 1.0,
+    "pitch": -2,
+    "kind": "robot",
+    "size": 0.8,
+    "home": [
+     -7,
+     9
+    ],
+    "color": [
+     0.55,
+     0.6,
+     0.68
+    ],
+    "pants": [
+     0.3,
+     0.32,
+     0.36
+    ]
+   },
+   "zed": {
+    "name": "Zed",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "kind": "zombie",
+    "size": 0.8,
+    "home": [
+     9,
+     10
+    ],
+    "color": [
+     0.3,
+     0.55,
+     0.7
+    ],
+    "pants": [
+     0.25,
+     0.2,
+     0.45
+    ]
+   },
+   "chip": {
+    "name": "Chip",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "kind": "pet",
+    "size": 0.7,
+    "home": [
+     0,
+     4
+    ],
+    "color": [
+     0.95,
+     0.6,
+     0.25
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_adam",
+    "speed": 1.05,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     0,
+     15,
+     3.5
+    ],
+    "visible": false,
+    "scale": 1.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "blox",
+    "say": "Run, run, run! The lava is rising and the checkpoint is way up there!",
+    "cam": "wide",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ],
+     [
+      "pixel",
+      "jump"
+     ],
+     [
+      "chip",
+      "spin"
+     ]
+    ],
+    "text": "FLOOR IS LAVA!"
+   },
+   {
+    "who": "pixel",
+    "say": "Blox, stop! That red block is a kill brick. Touch it and you respawn at the start!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Kill brick? Pfft. I'm a pro. I've watched, like, three videos about this.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Today's quest: reach the golden checkpoint at the top of Sky Obby before the lava does.",
+    "cam": "overhead",
+    "do": [
+     [
+      "star",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Ha! Good luck, noobs. I just bought a Speed Pass. Ten times faster!",
+    "cam": "two:rex,gizmo",
+    "do": [
+     [
+      "rex",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Calculating. Speed Pass makes you fast. It does not make you good at jumping.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "turn:rex"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Details! See you at the top. Bye-bye!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rex zoomed off so fast he forgot one tiny thing.",
+    "cam": "wide",
+    "do": [
+     [
+      "rex",
+      "to:12,13"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Wait. Which way is the top?",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ],
+     [
+      "rex",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Excuse me. Can I join your team? I am slow, but I never give up.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "to:6,8"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Whoa, a zombie! Are you going to eat our brains?",
+    "cam": "two:blox,zed",
+    "do": [
+     [
+      "blox",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "No. I only eat snacks. Brains are crunchy. Yuck.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "chip",
+    "say": "Woof! Woof!",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Chip likes him. Okay, Zed, you're in. Team Blocky goes together!",
+    "cam": "two:pixel,chip",
+    "do": [
+     [
+      "pixel",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Jump number one: the wobbly platforms.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "text": "JUMP 1"
+   },
+   {
+    "who": "blox",
+    "say": "Easy! Watch this. One, two, three, super jump!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Blox landed right on the red kill brick.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Oof! Respawn. Okay, that was a warm-up jump.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "to_home"
+     ],
+     [
+      "blox",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "My data says ninety-nine percent of pros say warm-up jump.",
+    "cam": "two:gizmo,blox",
+    "do": [
+     [
+      "gizmo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Look at the pattern. The blocks blink before they fall. Jump on the green ones only.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "turn:blox"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Meanwhile, at the top, Rex had a problem.",
+    "cam": "wide",
+    "do": [
+     [
+      "rex",
+      "spin"
+     ]
+    ],
+    "text": "MEANWHILE..."
+   },
+   {
+    "who": "rex",
+    "say": "My Speed Pass is too fast! I keep sliding off the edge! Somebody stop me!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash. Rex slid into the lava, and popped back at the start.",
+    "cam": "two:rex,zed",
+    "do": [
+     [
+      "rex",
+      "to_home"
+     ],
+     [
+      "rex",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "I paid a lot of coins for that pass!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Slow is okay. Slow does not slide. Come with us.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "turn:rex"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Jump number three: the spinning bars. Duck, jump, duck, jump.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "text": "JUMP 3"
+   },
+   {
+    "who": "blox",
+    "say": "Duck! Jump! Duck! Wait, which one was it? Jump? Duck?",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "shake"
+     ],
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bar spun around and gently bonked Blox right back to the start.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "flat_roof"
+     ],
+     [
+      "blox",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Respawn number two. I'm counting them now. That's science.",
+    "cam": "two:blox,gizmo",
+    "do": [
+     [
+      "blox",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Science says: watch first, then jump. I watched. You did not.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "turn:blox"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "I will go first. If I fall, I just get up. Zombies are good at that.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And slowly, very slowly, Zed walked right under the spinning bar. He was too short to get hit!",
+    "cam": "wide",
+    "do": [
+     [
+      "zed",
+      "happy"
+     ],
+     [
+      "all",
+      "look:zed"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Zed! You did it! Everybody, copy Zed. Walk slow and stay low!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "I am not walking slow. I'm a speed pass person. Fine. Just this once.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Jump number four: the lava climbs higher.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pixel"
+     ]
+    ],
+    "text": "JUMP 4"
+   },
+   {
+    "who": "gizmo",
+    "say": "Warning. Lava rising. We have thirty seconds. Or three. Maths is hard.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "New plan! Gizmo counts, Zed goes slow and steady, and everybody follows Chip!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Why Chip?",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "turn:chip"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Because Chip is tiny and smart. He only steps where it's safe.",
+    "cam": "two:pixel,chip",
+    "do": [
+     [
+      "chip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One by one, they hopped from green block to green block.",
+    "cam": "overhead",
+    "do": [
+     [
+      "chip",
+      "to:-4,11"
+     ],
+     [
+      "blox",
+      "to:-6,12"
+     ],
+     [
+      "pixel",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Jump. Wait. Jump. Wait. Okay, now everybody jump!",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, the biggest gap of all. Too far for anyone to jump.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "text": "TOO FAR?"
+   },
+   {
+    "who": "rex",
+    "say": "Wait! My Speed Pass! If I run and you hold on, we can all fly across!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Rex, that is actually a great idea!",
+    "cam": "two:blox,rex",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "I know! I'm rich AND smart. Okay, mostly rich.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rex ran, everyone held hands, and the whole team zoomed over the gap together.",
+    "cam": "wide",
+    "do": [
+     [
+      "blox",
+      "to:-3,13"
+     ],
+     [
+      "pixel",
+      "to:0,13.5"
+     ],
+     [
+      "rex",
+      "to:3,13"
+     ],
+     [
+      "zed",
+      "to:6,12.5"
+     ],
+     [
+      "gizmo",
+      "to:-6,12.5"
+     ],
+     [
+      "chip",
+      "to:0,11.5"
+     ],
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "We made it! The golden checkpoint!",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "My first checkpoint. Best day of my whole undead life.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Final result: speed plus teamwork equals one hundred percent win.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Next time I'm buying a pass for the whole team. A team pass!",
+    "cam": "two:rex,pixel",
+    "do": [
+     [
+      "rex",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Or, next time we just stick together from the start.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But far below, something big was watching from the lava.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHO IS THAT?"
+   },
+   {
+    "who": "narr",
+    "say": "Next time on Blocky Quest: the Lava King wakes up.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can a Speed Pass Beat the Floor Is LAVA? 🌋",
+  "thumb_text": "TOO FAST?!",
+  "thumb_beat": 21,
+  "description": "Rich Rex bought a Speed Pass to race to the top of Sky Obby, but the lava is rising and Rex can't stop sliding! Can Blox, Pixel, a robot, a friendly zombie and a tiny pet dog reach the golden checkpoint together?\n#obby #floorislava #animation",
+  "tags": [
+   "obby",
+   "floor is lava",
+   "blocky animation",
+   "kids cartoon",
+   "speed pass",
+   "parkour",
+   "game cartoon",
+   "blocky quest"
+  ],
+  "localizations": {
+   "es": {
+    "title": "¿Puede un Pase de Velocidad vencer al suelo de LAVA? 🌋",
+    "description": "Rex compró un Pase de Velocidad para llegar primero a la cima, ¡pero la lava sube y Rex no puede dejar de resbalar! ¿Llegará el equipo junto al punto de control dorado?\n#obby #animacion #dibujosanimados"
+   },
+   "pt": {
+    "title": "Um Passe de Velocidade vence o chão de LAVA? 🌋",
+    "description": "Rex comprou um Passe de Velocidade para chegar primeiro ao topo, mas a lava está subindo e Rex não para de escorregar! A equipe vai chegar junta ao checkpoint dourado?\n#obby #animacao #desenhoanimado"
+   },
+   "ar": {
+    "title": "هل تهزم بطاقة السرعة أرضية الحمم؟ 🌋",
+    "description": "اشترى ريكس بطاقة سرعة ليصل أولاً إلى القمة، لكن الحمم ترتفع وريكس لا يتوقف عن الانزلاق! هل يصل الفريق معاً إلى نقطة التفتيش الذهبية؟\n#رسوم_متحركة #أطفال"
+   },
+   "fr": {
+    "title": "Un Pass Vitesse peut-il battre le sol de LAVE ? 🌋",
+    "description": "Rex a acheté un Pass Vitesse pour arriver le premier en haut, mais la lave monte et Rex n'arrête pas de glisser ! L'équipe atteindra-t-elle ensemble le checkpoint doré ?\n#obby #animation #dessinanime"
+   },
+   "ja": {
+    "title": "スピードパスで溶岩の床に勝てる？🌋",
+    "description": "レックスはスピードパスを買って頂上へ急ぐけど、溶岩が上がってきて滑ってばかり！みんなで金のチェックポイントにたどり着けるかな？\n#アニメ #キッズ"
+   },
+   "ko": {
+    "title": "스피드 패스로 용암 바닥을 이길 수 있을까? 🌋",
+    "description": "렉스는 스피드 패스를 사서 정상으로 달려가지만, 용암이 차오르고 계속 미끄러져요! 팀은 함께 황금 체크포인트에 도착할 수 있을까요?\n#애니메이션 #키즈"
+   },
+   "de": {
+    "title": "Schlägt ein Speed-Pass den LAVA-Boden? 🌋",
+    "description": "Rex hat einen Speed-Pass gekauft, um als Erster oben zu sein, aber die Lava steigt und Rex rutscht ständig ab! Schafft es das Team gemeinsam zum goldenen Checkpoint?\n#obby #animation #zeichentrick"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 4,
+   "dur": 28,
+   "top": "HE BOUGHT A SPEED PASS",
+   "title": "He Bought a Speed Pass… Big Mistake 🌋 #shorts",
+   "description": "Rex is fast. Too fast. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "obby",
+    "animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Compró un Pase de Velocidad… gran error 🌋 #shorts",
+     "description": "Rex es rápido. Demasiado rápido. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele comprou um Passe de Velocidade… grande erro 🌋 #shorts",
+     "description": "Rex é rápido. Rápido demais. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "اشترى بطاقة سرعة… خطأ كبير 🌋 #shorts",
+     "description": "ريكس سريع. سريع جداً. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il a acheté un Pass Vitesse… grosse erreur 🌋 #shorts",
+     "description": "Rex est rapide. Trop rapide. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "スピードパスを買ったけど…大失敗 🌋 #shorts",
+     "description": "レックスは速い。速すぎる。本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "스피드 패스를 샀는데… 대실수 🌋 #shorts",
+     "description": "렉스는 빨라요. 너무 빨라요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er kaufte einen Speed-Pass… großer Fehler 🌋 #shorts",
+     "description": "Rex ist schnell. Zu schnell. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 9,
+   "dur": 26,
+   "top": "A ZOMBIE WANTS TO JOIN?",
+   "title": "The Zombie Just Wanted to Join the Team 🧟 #shorts",
+   "description": "Zed is slow, but he never gives up. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "obby",
+    "animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El zombi solo quería unirse al equipo 🧟 #shorts",
+     "description": "Zed es lento, pero nunca se rinde. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O zumbi só queria entrar no time 🧟 #shorts",
+     "description": "Zed é lento, mas nunca desiste. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الزومبي أراد فقط الانضمام إلى الفريق 🧟 #shorts",
+     "description": "زِد بطيء، لكنه لا يستسلم أبداً. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le zombie voulait juste rejoindre l'équipe 🧟 #shorts",
+     "description": "Zed est lent, mais il n'abandonne jamais. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ゾンビはただ仲間に入りたかった 🧟 #shorts",
+     "description": "ゼッドは遅いけど、絶対にあきらめない。本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "좀비는 그냥 팀에 들어오고 싶었어요 🧟 #shorts",
+     "description": "제드는 느리지만 절대 포기하지 않아요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Zombie wollte nur ins Team 🧟 #shorts",
+     "description": "Zed ist langsam, aber er gibt nie auf. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

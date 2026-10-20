@@ -1,0 +1,870 @@
+{
+ "id": "20261022-1-tycoon-mega-dropper",
+ "plot": "Rex buys every tycoon upgrade and tries to buy Blox and Pixel's tycoon too; Zed presses the Mega Dropper, gold cubes pile up, and only joining both conveyors (and sharing 50-50) saves the day.",
+ "script": {
+  "title": "Rich Rex Bought EVERYTHING… Then This Happened 💰",
+  "set": {
+   "place": "tycoon",
+   "time": "day"
+  },
+  "lead_in": 0,
+  "chars": {
+   "blox": {
+    "name": "Blox",
+    "voice": "am_puck",
+    "speed": 1.08,
+    "pitch": 1,
+    "kind": "blocky",
+    "size": 0.8,
+    "home": [
+     -3,
+     6
+    ],
+    "color": [
+     0.15,
+     0.45,
+     1.0
+    ],
+    "pants": [
+     0.12,
+     0.14,
+     0.25
+    ],
+    "hair": "cap",
+    "hair_color": [
+     0.9,
+     0.15,
+     0.15
+    ]
+   },
+   "pixel": {
+    "name": "Pixel",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 3,
+    "kind": "blocky",
+    "size": 0.75,
+    "home": [
+     2,
+     5.5
+    ],
+    "color": [
+     1.0,
+     0.4,
+     0.7
+    ],
+    "pants": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "skin": [
+     0.78,
+     0.55,
+     0.38
+    ],
+    "hair": "bun",
+    "hair_color": [
+     0.12,
+     0.08,
+     0.06
+    ]
+   },
+   "rex": {
+    "name": "Rich Rex",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "kind": "blocky",
+    "size": 0.85,
+    "home": [
+     6,
+     8
+    ],
+    "color": [
+     0.95,
+     0.75,
+     0.1
+    ],
+    "pants": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "hair": "crown"
+   },
+   "gizmo": {
+    "name": "Gizmo",
+    "voice": "am_echo",
+    "speed": 1.0,
+    "pitch": -2,
+    "kind": "robot",
+    "size": 0.8,
+    "home": [
+     -7,
+     9
+    ],
+    "color": [
+     0.55,
+     0.6,
+     0.68
+    ],
+    "pants": [
+     0.3,
+     0.32,
+     0.36
+    ]
+   },
+   "zed": {
+    "name": "Zed",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "kind": "zombie",
+    "size": 0.8,
+    "home": [
+     9,
+     10
+    ],
+    "color": [
+     0.3,
+     0.55,
+     0.7
+    ],
+    "pants": [
+     0.25,
+     0.2,
+     0.45
+    ]
+   },
+   "chip": {
+    "name": "Chip",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "kind": "pet",
+    "size": 0.7,
+    "home": [
+     0,
+     4
+    ],
+    "color": [
+     0.95,
+     0.6,
+     0.25
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_adam",
+    "speed": 1.05,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "coin",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     0,
+     11,
+     0.4
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "rex",
+    "say": "Out of the way! Cubes coming through! My dropper is going crazy!",
+    "cam": "wide",
+    "do": [
+     [
+      "rex",
+      "jump"
+     ],
+     [
+      "chip",
+      "spin"
+     ],
+     [
+      "gizmo",
+      "shake"
+     ]
+    ],
+    "text": "TYCOON CHAOS!"
+   },
+   {
+    "who": "pixel",
+    "say": "Rex, your conveyor is going backwards! The cubes are flying everywhere!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Welcome to Tycoon Town, where every block you buy makes more money. In theory.",
+    "cam": "overhead",
+    "do": [
+     [
+      "coin",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "I bought every upgrade at once. Max droppers. Max speed. Max gold. Max everything!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Scanning. Your tycoon makes a thousand coins a second, and loses a thousand and one.",
+    "cam": "two:gizmo,rex",
+    "do": [
+     [
+      "gizmo",
+      "turn:rex"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "So I'm rich minus one? That's still rich, right?",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Our tycoon is tiny, but look! One dropper, one belt, one coin at a time.",
+    "cam": "two:blox,pixel",
+    "do": [
+     [
+      "blox",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Slow, but it works. Every coin goes into the bank.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "coin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rex's money board went crazy. Up, down, up, down.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Why is my number going down? I'm buying things! Buying things is winning!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Every upgrade costs money to run. You bought a hundred. They all want coins.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "chip",
+    "say": "Woof?",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Chip says: maybe buy fewer things and fix the ones you have.",
+    "cam": "two:pixel,chip",
+    "do": [
+     [
+      "pixel",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Your dog doesn't know business. My dog would know business. If I had a dog.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Rex had an idea. A very Rex idea.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "spin"
+     ]
+    ],
+    "text": "UH OH..."
+   },
+   {
+    "who": "rex",
+    "say": "I'll just buy your tycoon too! Then I'll have two tycoons, and twice the money!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Our tycoon is not for sale!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "chip",
+    "say": "Grrr. Woof!",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, Zed shuffled in, looking for a snack.",
+    "cam": "wide",
+    "do": [
+     [
+      "zed",
+      "enter:right"
+     ]
+    ],
+    "text": "ZED ARRIVES"
+   },
+   {
+    "who": "zed",
+    "say": "Hello. I smelled something shiny. Is it a snack?",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "turn:rex"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Warning. Zed is walking toward the big red button.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Not the red button! That's the Mega Dropper! Don't touch it!",
+    "cam": "two:rex,zed",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Oops. I touched it.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Mega Dropper switched on. Gold cubes rained over the whole town.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "coin",
+      "bounce"
+     ]
+    ],
+    "text": "MEGA DROPPER!"
+   },
+   {
+    "who": "blox",
+    "say": "Everybody take cover! It's raining gold cubes!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Wait. Too many cubes, and no conveyor to carry them. They're piling up!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Pile height: one Blox. Two Blox. Three Blox. This is a lot of Blox.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "My gold! I can't sell it if I can't reach it!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rex had the most money in town, and nothing worked.",
+    "cam": "two:rex,zed",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "I know! Our tiny conveyor works. If we join our belts, the cubes can roll to our bank.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "You'd help me? After I tried to buy your tycoon?",
+    "cam": "two:rex,pixel",
+    "do": [
+     [
+      "rex",
+      "turn:pixel"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Sure! But we share the money. Fifty-fifty.",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Fifty-fifty? That's half! I hate half! Okay, deal.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ],
+     [
+      "rex",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So the team got to work. Pixel built, Blox pushed, Gizmo counted, Zed carried.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pixel",
+      "to:-6,12"
+     ],
+     [
+      "blox",
+      "to:0,12"
+     ],
+     [
+      "zed",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Pixel, the cubes are stuck! The pile is too heavy for the belt!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Then we need one more pusher. Someone strong. Someone who never gets tired.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "all",
+      "look:zed"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Me? I am very strong. I am also very slow. But slow pushing is still pushing.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zed leaned on the giant pile, and with one long zombie push, the cubes started rolling.",
+    "cam": "wide",
+    "do": [
+     [
+      "zed",
+      "to:2,13"
+     ],
+     [
+      "coin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Go, Zed, go! Best zombie in the whole town!",
+    "cam": "two:rex,zed",
+    "do": [
+     [
+      "rex",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Nobody ever cheered for me before. This is nice.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Belt connected. Cubes moving. Money going up. Up. Up!",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Chip found the very last gold cube, hidden under Rex's crown.",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Hey! That's where I keep my emergency gold!",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "By sunset, the shared tycoon was the biggest in all of Tycoon Town.",
+    "cam": "wide",
+    "do": [
+     [
+      "coin",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "text": "NUMBER ONE!"
+   },
+   {
+    "who": "zed",
+    "say": "I pressed one button and now we are rich. I'm good at business.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "You're good at accidents. But this time it was a lucky one.",
+    "cam": "two:pixel,zed",
+    "do": [
+     [
+      "pixel",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Okay, okay. Two tycoons that help each other beat one big messy tycoon.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Rex! Did you just learn something?",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "No! Maybe. Don't tell anyone.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But in the lobby, a fifth portal had just started to glow.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:blox"
+     ]
+    ],
+    "text": "A FIFTH PORTAL?"
+   },
+   {
+    "who": "narr",
+    "say": "Next time on Blocky Quest: the secret portal nobody has ever opened.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Rich Rex Bought EVERYTHING… Then This Happened 💰",
+  "thumb_text": "TOO MUCH GOLD!",
+  "thumb_beat": 21,
+  "description": "Rich Rex bought every upgrade in Tycoon Town and now wants Blox and Pixel's tiny tycoon too. Then a friendly zombie presses the big red button… and it starts raining gold cubes!\n#tycoon #animation #kidscartoon",
+  "tags": [
+   "tycoon",
+   "blocky animation",
+   "kids cartoon",
+   "mega dropper",
+   "rich",
+   "game cartoon",
+   "blocky quest",
+   "teamwork"
+  ],
+  "localizations": {
+   "es": {
+    "title": "Rex compró TODO… y entonces pasó esto 💰",
+    "description": "Rex compró todas las mejoras de Tycoon Town y ahora quiere el pequeño tycoon de Blox y Pixel. ¡Entonces un zombi amistoso pulsa el gran botón rojo y empiezan a llover cubos de oro!\n#tycoon #animacion #dibujosanimados"
+   },
+   "pt": {
+    "title": "Rex comprou TUDO… e então aconteceu isso 💰",
+    "description": "Rex comprou todas as melhorias de Tycoon Town e agora quer o pequeno tycoon de Blox e Pixel. Então um zumbi amigável aperta o grande botão vermelho e começa a chover cubos de ouro!\n#tycoon #animacao #desenhoanimado"
+   },
+   "ar": {
+    "title": "ريكس اشترى كل شيء… ثم حدث هذا 💰",
+    "description": "اشترى ريكس كل الترقيات في مدينة التايكون ويريد الآن مصنع بلوكس وبيكسل الصغير. ثم يضغط زومبي لطيف على الزر الأحمر الكبير… فتمطر مكعبات ذهبية!\n#رسوم_متحركة #أطفال"
+   },
+   "fr": {
+    "title": "Rex a TOUT acheté… et voilà ce qui est arrivé 💰",
+    "description": "Rex a acheté toutes les améliorations de Tycoon Town et veut maintenant le petit tycoon de Blox et Pixel. Puis un gentil zombie appuie sur le gros bouton rouge… et il pleut des cubes d'or !\n#tycoon #animation #dessinanime"
+   },
+   "ja": {
+    "title": "レックスが全部買った…そしたらこうなった 💰",
+    "description": "レックスはタイクーンタウンのアップグレードを全部買って、ブロックスとピクセルの小さなタイクーンまで欲しがる。そこへ優しいゾンビが大きな赤いボタンを押して…金のキューブが降ってきた！\n#アニメ #キッズ"
+   },
+   "ko": {
+    "title": "렉스가 전부 샀더니… 이런 일이 💰",
+    "description": "렉스는 타이쿤 타운의 모든 업그레이드를 사고 블록스와 픽셀의 작은 타이쿤까지 원해요. 그때 친절한 좀비가 큰 빨간 버튼을 누르고… 황금 큐브가 쏟아져요!\n#애니메이션 #키즈"
+   },
+   "de": {
+    "title": "Rex kaufte ALLES… und dann passierte das 💰",
+    "description": "Rex hat jedes Upgrade in Tycoon Town gekauft und will jetzt auch das kleine Tycoon von Blox und Pixel. Dann drückt ein freundlicher Zombie den großen roten Knopf… und es regnet Goldwürfel!\n#tycoon #animation #zeichentrick"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 27,
+   "top": "DON'T PRESS THE RED BUTTON",
+   "title": "Don't Press the Red Button! 🔴😱 #shorts",
+   "description": "Zed only wanted a snack. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "tycoon",
+    "animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡No pulses el botón rojo! 🔴😱 #shorts",
+     "description": "Zed solo quería un bocadillo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Não aperte o botão vermelho! 🔴😱 #shorts",
+     "description": "Zed só queria um lanche. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لا تضغط الزر الأحمر! 🔴😱 #shorts",
+     "description": "زِد أراد فقط وجبة خفيفة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "N'appuie pas sur le bouton rouge ! 🔴😱 #shorts",
+     "description": "Zed voulait juste un goûter. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "赤いボタンを押さないで！🔴😱 #shorts",
+     "description": "ゼッドはおやつが欲しかっただけ。本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "빨간 버튼 누르지 마! 🔴😱 #shorts",
+     "description": "제드는 간식이 먹고 싶었을 뿐이에요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Drück nicht den roten Knopf! 🔴😱 #shorts",
+     "description": "Zed wollte nur einen Snack. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

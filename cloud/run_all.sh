@@ -8,7 +8,7 @@
 cd /opt/kanal/repo || exit 1
 PAR=${KANAL_PAR:-2}
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
-CHS="maxcat doughbros hollow bolt"
+CHS="maxcat doughbros hollow bolt roblox"
 running=0
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch

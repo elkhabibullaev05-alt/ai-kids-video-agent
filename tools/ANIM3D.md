@@ -8,6 +8,7 @@ Each channel has its own `engine3d/` (Blender 4.2 EEVEE, same engine as `bolt/en
 | Dough Bros | `doughbros/engine3d` | kitchen, freezer, pantry, table, garden | loaf, bean, triangle, star, rock, pot, toaster, kettle, jelly, ghost |
 | Hollowmere | `hollow/engine3d` | forest, clearing, graveyard, swamp, village, chapel (+ `fog`, `eyes`, `moonlight`) | odo, moth, gloamhound, rootwraith, shepherd, crow, wickeater, hollowmother, human |
 | Max | `maxcat/engine3d` | garden, park, house, beach, snow (+ `time` day/sunset) | cat, mouse, dog, bird, grandma |
+| Blocky Quest (Roblox channel) | `roblox/engine3d` | obby, lava, tower, tycoon, city, lobby (+ `time` day/night) | blocky, zombie, robot, boss, pet |
 
 Ready casts (copy into every script's `chars`): `<channel>/scripts3d/cast.json`.
 

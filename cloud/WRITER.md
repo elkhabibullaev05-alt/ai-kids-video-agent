@@ -3,7 +3,7 @@
 Owner's rule (2026-10-19): every channel renders and uploads **on its own cloud server without Claude** (`cloud/worker.py`).
 Claude only **writes the stories** into the queue and **reviews** the results (`cloud/REVIEW.md`). The owner speaks Uzbek: the final message is in Uzbek. Videos are English.
 
-## One run = one channel (`CH` = bolt | doughbros | hollow | maxcat)
+## One run = one channel (`CH` = bolt | doughbros | hollow | maxcat | roblox)
 1. `git pull`. Read `cloud/channels.json → CH` (`per_day`, `seconds`, `kids`), the channel's story bible (`<dir>/story/bible.md`, or the top of `<dir>/AGENT.md`), `bolt/story/SCRIPT_FORMAT.md`, `tools/ANIM3D.md`, and the cast `<dir>/scripts3d/cast.json` (Bolt: `bolt/scripts/ep001.json` chars).
 2. Server state: `cloud/results/CH/status.json`. If it is missing or older than 24 h, the server is not running — write at most what is needed to fill the queue to **2 jobs** and say so in the final message.
 3. Fill the queue: jobs waiting in `cloud/queue/CH/` must be ≥ `per_day.long × 2`. Write the missing ones (at most `per_day.long × 2` per run).
@@ -37,7 +37,7 @@ Before writing, list the last 40 jobs of this channel (`cloud/done/CH/*.json` + 
 - `thumb_beat` = a beat whose `cam` frames the main character's face (a character close-up or two-shot, facing camera), never a `prop:` / wide cam and never a beat where something `vanish`es — the big text covers the lower half, so the face must sit in the upper half (2026-10-20 maxcat thumb on a `prop:castle` beat showed Dog's head cut off and Max hidden).
 - Shorts per job: spread `per_day.short` over the day's `per_day.long` jobs (bolt 3+2, the others 2+1+1). `beat` = index of the beat the Short starts at; pick a hook moment, 20–35 s, no spoiler in the first Short.
 - **Translations**: write the 7 `localizations` yourself (es, pt, ar, fr, ja, ko, de — not hi, not id), natural, same emoji, keep `{LONG_URL}` untouched. The worker uploads them; YouTube shows each viewer their language, and auto-dubbing (already on for the channels) does the audio.
-- `kids` channels (bolt, maxcat): gentle, no scary/violent content, no asking for comments. Not-for-kids channels may ask a question in the description.
+- `kids` channels (bolt, maxcat, roblox): gentle, no scary/violent content, no asking for comments. Not-for-kids channels may ask a question in the description.
 - Validate before committing: `python3 -c "import json,sys;[json.load(open(f)) for f in sys.argv[1:]]" cloud/queue/CH/*.json`, and every `beats[i].who` exists in `chars`.
 
 The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85, uploads to the next free slot in `channels.json`, and writes `cloud/results/CH/<id>.json`.
@@ -64,3 +64,11 @@ The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85
 - So, for every long episode:
   - beat 1 starts in motion at 0 s (running, falling, chasing), with dialogue at 0 s;
   - write enough beats for **3:10 or more**.
+
+## roblox (Blocky Quest 3D, added 2026-10-20)
+- Bible: `roblox/story/bible.md`; cast `roblox/scripts3d/cast.json`; places obby | lava | tower | tycoon | city | lobby, time day | night.
+- Our own blocky designs only: never "Roblox" in titles or thumb_text, no logo, no official avatars/items/maps, never claim real gameplay.
+- Made for Kids: gentle peril only (lava = a funny respawn), no comment requests.
+- Put `"lead_in": 0` in `script`; beat 1 is in motion with a `text` card.
+- 3:10–3:40: about 560 spoken words (measured 2026-10-20: 572 words = 3:23).
+- Shorts slots are 2 per day: give each job 1–2 Shorts.
