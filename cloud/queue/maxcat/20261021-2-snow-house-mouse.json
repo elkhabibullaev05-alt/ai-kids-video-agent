@@ -1,0 +1,860 @@
+{
+ "id": "20261021-2-snow-house-mouse",
+ "plot": "On a snowy winter morning tiny Mouse is freezing, so Max tries to build her a snow house; fluffy snow blows away, Bird lands on the roof and it slides off, and the next house is too tiny, until Dog sits hard on a snow pile and Max discovers that packed snow makes strong bricks, so they build a cozy snow house where Mouse is warm and Dog's head fits too.",
+ "script": {
+  "title": "Max Builds a House Out of Snow",
+  "set": {
+   "place": "snow",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "b1",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -1.3,
+     8.5,
+     0
+    ],
+    "visible": false,
+    "scale": 1.0
+   },
+   {
+    "id": "b2",
+    "type": "box",
+    "color": "white",
+    "at": [
+     0,
+     8.5,
+     0
+    ],
+    "visible": false,
+    "scale": 1.3
+   },
+   {
+    "id": "b3",
+    "type": "box",
+    "color": "white",
+    "at": [
+     1.3,
+     8.5,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "roof",
+    "type": "box",
+    "color": "white",
+    "at": [
+     0,
+     8.5,
+     1.3
+    ],
+    "visible": false,
+    "scale": 1.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "mouse",
+    "say": "Ah... ah... achoo! Brrr! Max, my whiskers are frozen like tiny icicles!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no! Mouse, you are shaking like a jelly on a plate!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "TOO COLD FOR MOUSE!",
+    "cam": "wide",
+    "hold": 1.4,
+    "do": [
+     [
+      "mouse",
+      "squash"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a bright winter morning. Snow covers everything, like a big white blanket.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "mouse",
+    "say": "Your fur is so thick, Max. I am so small, the wind goes right through me.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I will build you a house. A snow house! Snow can keep the wind out.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A house made of snow? Won't it be cold inside?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma says snow houses are cozy inside. Let us try!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max scoops up soft, fluffy snow and makes a little wall.",
+    "cam": "prop:b1",
+    "do": [
+     [
+      "b1",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One wall! Easy peasy, snowy squeezy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a puff of wind blows, and the fluffy wall falls into powder.",
+    "cam": "prop:b1",
+    "do": [
+     [
+      "b1",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! My wall turned into sugar!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Maybe it needs more snow? A much bigger pile?",
+    "cam": "close:mouse",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Good morning, snowy friends! What are we making? A nest? I love nests!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A snow house for Mouse. Can you help us carry some snow?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Carry snow? I have wings, not buckets. But I can land on top and test it!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max builds a big, round pile of snow. It looks like a house! Almost.",
+    "cam": "prop:b2",
+    "do": [
+     [
+      "b2",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird lands on the very top. Plop! The whole thing slides down, with Bird inside.",
+    "cam": "prop:b2",
+    "do": [
+     [
+      "bird",
+      "to:0,8"
+     ],
+     [
+      "b2",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I am fine! I am a snowbird now! Ha ha!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Oh dear. My house has no roof. And no walls. And no house.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "TRY NUMBER THREE!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. This time I make it small. Small houses are strong houses.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max makes a tiny snow house. It is so tiny that Mouse cannot fit inside.",
+    "cam": "prop:b3",
+    "do": [
+     [
+      "b3",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, only my nose fits in here. The rest of me is still cold!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Too fluffy, too wobbly, and now too tiny. Snow houses are hard!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Snow! Snow! I love snow! Wheee!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs, slides, and sits down hard on a big pile of snow. Bump!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oops. I made the snow all flat.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait, Dog! Don't move! Look at the snow under you.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max taps the snow where Dog sat. Tap, tap. It is hard, like a brick!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When you squash snow, it gets strong! Soft snow falls down, but packed snow stays up.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "So we need lots of squashing. Who is the best squasher?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me! I am the best sitter in the whole wide world!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "SQUASH! SQUASH! SQUASH!",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sits on the snow. Max pats it into blocks. Bird carries tiny bits of snow in her beak.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It is a very little bit of snow, but it is my best bit!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Block by block, the walls grow. One block. Two blocks. Three blocks.",
+    "cam": "prop:b2",
+    "do": [
+     [
+      "b1",
+      "show"
+     ],
+     [
+      "b2",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the round top goes on, very gently, so it does not fall.",
+    "cam": "prop:roof",
+    "do": [
+     [
+      "roof",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse, it is ready. Come and try your new house!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse runs inside. The wind cannot reach her. The air is still and quiet.",
+    "cam": "prop:roof",
+    "do": [
+     [
+      "mouse",
+      "to:0,7"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! It is warm in here! Well, not hot. But so cozy!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The snow keeps the wind out, just like a thick blanket.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I come in too? I helped. I sat a lot.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog pushes his head inside. Only his head fits. His tail stays outside, wagging.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:1.5,7"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "This is perfect. My head is cozy, and my tail is cool.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I will sit on the roof. Gently this time. Very, very gently.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And this time, the roof does not fall. Not even a little bit.",
+    "cam": "prop:roof",
+    "do": []
+   },
+   {
+    "who": "grandma",
+    "say": "My goodness! A snow house! Who built this beautiful thing?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We all did, Grandma. Even Dog's bottom helped!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Packing the snow tight was very clever. And building for a friend is even better.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Thank you, Max. This is the best house I ever had.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When something does not work, try a new way. Even a Dog-sitting way!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone snuggles around the snow house, and the morning sun sparkles on the walls.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time, we'll build a snow slide all the way down the hill!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SNOW HOUSE DONE!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Builds a House Out of SNOW! ❄️🐭",
+  "description": "Tiny Mouse is freezing, so Max decides to build her a warm snow house! The snow blows away, Bird crashes through the roof, and then Dog sits down and shows everyone the secret. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "snow house",
+   "winter story for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "friendship story",
+   "funny cat",
+   "igloo for kids"
+  ],
+  "thumb_text": "TOO COLD!",
+  "thumb_beat": 1,
+  "localizations": {
+   "es": {
+    "title": "¡Max construye una casa de NIEVE! ❄️🐭",
+    "description": "¡Ratón tiene mucho frío, así que Max decide construirle una casa de nieve! La nieve se vuela, Pájaro rompe el techo y luego Perro se sienta y muestra el secreto a todos. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Max constrói uma casa de NEVE! ❄️🐭",
+    "description": "O Ratinho está congelando, então Max decide construir uma casa de neve quentinha! A neve voa, o Passarinho derruba o telhado e depois o Cachorro senta e mostra o segredo. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "ماكس يبني بيتًا من الثلج! ❄️🐭",
+    "description": "الفأر الصغير يرتجف من البرد، فيقرر ماكس أن يبني له بيتًا دافئًا من الثلج! الريح تطيّر الثلج، والعصفور يسقط السقف، ثم يجلس الكلب ويكشف السر للجميع. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Max construit une maison en NEIGE ! ❄️🐭",
+    "description": "Petite Souris a très froid, alors Max décide de lui construire une maison de neige ! La neige s'envole, Oiseau fait tomber le toit, puis Chien s'assoit et montre le secret à tout le monde. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "マックスが雪のおうちをつくる！❄️🐭",
+    "description": "ちいさなネズミがこごえそう。マックスは雪のおうちをつくることに！雪は風でとび、トリは屋根をこわし、そしてイヌがすわってひみつを教えてくれます。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "맥스가 눈으로 집을 지어요! ❄️🐭",
+    "description": "작은 생쥐가 너무 추워해서 맥스는 따뜻한 눈집을 지어 주기로 해요! 눈은 바람에 날아가고, 새는 지붕을 무너뜨리고, 강아지가 앉으면서 비밀을 알려 줘요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Max baut ein Haus aus SCHNEE! ❄️🐭",
+    "description": "Die kleine Maus friert, also baut Max ihr ein warmes Schneehaus! Der Schnee fliegt weg, Vogel bringt das Dach zum Einsturz, und dann setzt sich Hund hin und zeigt allen das Geheimnis. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 26,
+   "top": "BIRD TESTS THE ROOF",
+   "title": "Bird Landed on the Snow Roof... PLOP! ❄️😂 #shorts",
+   "description": "Bird wanted to test the snow house roof. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "Pájaro aterrizó en el techo de nieve... ¡PLOF! ❄️😂 #shorts",
+     "description": "Pájaro quería probar el techo de la casa de nieve. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho pousou no telhado de neve... PLOFT! ❄️😂 #shorts",
+     "description": "O Passarinho queria testar o telhado da casa de neve. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور هبط على سقف الثلج... بلوب! ❄️😂 #shorts",
+     "description": "أراد العصفور أن يختبر سقف بيت الثلج. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau atterrit sur le toit de neige... PLOF ! ❄️😂 #shorts",
+     "description": "Oiseau voulait tester le toit de la maison de neige. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリが雪の屋根にとまったら…ドサッ！❄️😂 #shorts",
+     "description": "トリは雪のおうちの屋根をためしたかったのです。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 눈 지붕에 앉았더니... 털썩! ❄️😂 #shorts",
+     "description": "새는 눈집 지붕을 시험해 보고 싶었어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel landet auf dem Schneedach... PLUMPS! ❄️😂 #shorts",
+     "description": "Vogel wollte das Dach vom Schneehaus testen. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}

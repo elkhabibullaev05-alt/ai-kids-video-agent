@@ -1,0 +1,762 @@
+{
+ "id": "20261022-2-kite-tree-climb",
+ "plot": "At sunset in the park Max's yellow star kite gets stuck high in a tree; Dog's jumps land him in a bush, his barking does nothing and Bird cannot pull it free, so Max, who is scared of high places, climbs with Dog waiting below, frees the kite, freezes at the top, and Bird teaches him to climb down one paw at a time before they fly the kite together.",
+ "script": {
+  "title": "Can Max Climb the Tallest Tree in the Park?",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "kite",
+    "type": "star",
+    "color": "yellow",
+    "at": [
+     -4,
+     15,
+     6
+    ],
+    "visible": true,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Fly, kite, fly! Higher! Higher! Oh no, not that way!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK IN A TREE!",
+    "cam": "prop:kite",
+    "hold": 1.4,
+    "do": [
+     [
+      "kite",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is evening in the park. The sun is low and golden, and the wind is playful.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Max, your star kite is sitting in that tree. Is it taking a nap?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Kites don't take naps, Dog! It is stuck. And it is my favorite kite.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry. I am a very good jumper. Watch this!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog jumps. Boing! Dog jumps higher. Boing! Dog jumps so high, he lands in a bush.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I am okay! The bush is soft. And a little bit pokey.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, Dog. But your jumps are too short, and that tree is too tall.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then I will bark at it. Trees are scared of barking, I think.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "WOOF! WOOF! WOOF!",
+    "cam": "close:dog",
+    "hold": 1.1,
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The leaves shiver. But the kite does not move. Not one bit.",
+    "cam": "prop:kite",
+    "do": [
+     [
+      "kite",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Who is barking at my tree? I live in that tree!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, Bird! My kite is stuck in your branches. Can you push it down?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I can try! But your kite is a lot bigger than me.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird pulls the kite's tail with her beak. She pulls and pulls, and goes round in a circle.",
+    "cam": "prop:kite",
+    "do": [
+     [
+      "bird",
+      "to:-4,13"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It is caught on a branch, tight like a sock on a foot.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then there is only one way. Somebody must climb up there.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Dogs can't climb. My paws are for running, and digging, and hugging.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And I am too small. But you, Max, you are a cat! Cats are great climbers!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks up at the tree. It is so tall. His tail puffs up like a brush.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I... I don't like high places. My tummy goes all wobbly.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IS MAX SCARED?",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "Max, I will stay right under the tree. If you feel wobbly, I am right here.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And I will fly next to you, and tell you where to put your paws.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. One paw. Then another paw. I can do this.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max starts to climb. Up the trunk. Onto the first branch. Onto the second branch.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,13"
+     ],
+     [
+      "dog",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You are doing it! You are a super climber cat!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max reaches the top. He holds the kite string in his teeth, and pulls it free!",
+    "cam": "prop:kite",
+    "do": [
+     [
+      "kite",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I got it! I got my kite!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max looks down. The ground is very, very far away.",
+    "cam": "overhead",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. Going up was easy. But how do I go down?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "NOW MAX IS STUCK!",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "Jump, Max! I will catch you! I am very soft!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No jumping! Climbing down is like climbing up, just backwards.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Back paw first. Find the branch. Then the other paw. Slowly, slowly.",
+    "cam": "close:bird",
+    "do": []
+   },
+   {
+    "who": "narr",
+    "say": "Max does just what Bird says. Back paw. Branch. Other paw. Branch.",
+    "cam": "two:max,bird",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Back paw. Branch. Other paw. Branch. I am doing it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then, with one little hop, Max is back on the soft grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,6"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You did it! Hug time! Big, big hug time!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, Dog. Knowing you were down there made me brave.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And thank you for not jumping on top of me!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I was scared. But I did it, one paw at a time, with my friends.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The wind blows again, soft and warm. Max lifts the kite. And up it goes!",
+    "cam": "prop:kite",
+    "do": [
+     [
+      "kite",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Let me hold the string! I promise I won't bark at it.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog holds the string in his mouth, and runs and runs, with his ears flying.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,10"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I will fly next to the kite, so it is never lonely!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The star kite dances in the orange sky, far away from every tree.",
+    "cam": "prop:kite",
+    "do": [
+     [
+      "kite",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Big things feel smaller when you take one tiny step at a time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun goes down, and three happy friends walk home through the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time, let's find out which bird in the park sings the very first song in the morning!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "ONE PAW AT A TIME!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Climb the Tallest Tree in the Park? 🪁🌳",
+  "description": "Max's star kite is stuck at the top of a giant tree! Dog jumps, Dog barks, Bird pulls, and then Max must be brave and climb, one paw at a time. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "kite story",
+   "brave cat",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "courage for kids",
+   "funny dog",
+   "park adventure"
+  ],
+  "thumb_text": "TOO HIGH!",
+  "thumb_beat": 31,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max trepar el árbol más alto del parque? 🪁🌳",
+    "description": "¡La cometa de estrella de Max está atascada en lo alto de un árbol gigante! Perro salta, Perro ladra, Pájaro tira, y Max tiene que ser valiente y trepar, una patita a la vez. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Max consegue subir na árvore mais alta do parque? 🪁🌳",
+    "description": "A pipa de estrela do Max ficou presa no alto de uma árvore gigante! O Cachorro pula, late, o Passarinho puxa, e o Max precisa ter coragem e subir, uma patinha de cada vez. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس تسلق أطول شجرة في الحديقة؟ 🪁🌳",
+    "description": "طائرة ماكس الورقية على شكل نجمة عالقة في أعلى شجرة ضخمة! الكلب يقفز وينبح، والعصفور يسحب، ثم يجب على ماكس أن يكون شجاعًا ويتسلق خطوة بخطوة. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Max peut-il grimper au plus grand arbre du parc ? 🪁🌳",
+    "description": "Le cerf-volant étoile de Max est coincé en haut d'un arbre géant ! Chien saute, Chien aboie, Oiseau tire, puis Max doit être courageux et grimper, une patte à la fois. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "マックスは公園でいちばん高い木にのぼれるかな？🪁🌳",
+    "description": "マックスの星のたこが大きな木のてっぺんにひっかかった！イヌはジャンプしてほえて、トリはひっぱって、さいごはマックスが勇気を出して一歩ずつのぼります。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "맥스는 공원에서 제일 높은 나무에 오를 수 있을까? 🪁🌳",
+    "description": "맥스의 별 연이 커다란 나무 꼭대기에 걸렸어요! 강아지는 뛰고 짖고, 새는 당기고, 결국 맥스가 용기를 내서 한 발씩 올라가요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Schafft Max den höchsten Baum im Park? 🪁🌳",
+    "description": "Max' Sternendrachen hängt ganz oben in einem riesigen Baum! Hund springt, Hund bellt, Vogel zieht, und dann muss Max mutig sein und klettern, Pfote für Pfote. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 28,
+   "top": "DOG TRIES TO HELP",
+   "title": "Dog Tried to Jump Into a Tree! 😂🐶 #shorts",
+   "description": "Dog jumps, bounces and barks to save Max's kite. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "¡Perro intentó saltar hasta un árbol! 😂🐶 #shorts",
+     "description": "Perro salta, rebota y ladra para salvar la cometa de Max. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro tentou pular até a árvore! 😂🐶 #shorts",
+     "description": "O Cachorro pula, quica e late para salvar a pipa do Max. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب حاول القفز إلى الشجرة! 😂🐶 #shorts",
+     "description": "الكلب يقفز وينبح لينقذ طائرة ماكس الورقية. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien essaie de sauter dans un arbre ! 😂🐶 #shorts",
+     "description": "Chien saute, rebondit et aboie pour sauver le cerf-volant de Max. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが木までジャンプしようとした！😂🐶 #shorts",
+     "description": "イヌはマックスのたこを助けようと、ジャンプしてほえます。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 나무까지 점프하려고 했어요! 😂🐶 #shorts",
+     "description": "강아지는 맥스의 연을 구하려고 뛰고 짖어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund will auf einen Baum springen! 😂🐶 #shorts",
+     "description": "Hund springt, hüpft und bellt, um Max' Drachen zu retten. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}

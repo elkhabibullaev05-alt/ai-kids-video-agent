@@ -1,0 +1,907 @@
+{
+ "id": "20261022-1-giant-carrot",
+ "plot": "On a sunny morning Max and Grandma try to pull a giant carrot out of the garden; Dog joins the tug, Bird's flapping tickles Dog so everyone tumbles, and the carrot only pops out when tiny Mouse adds her pull at the end of the line, and Grandma bakes a carrot cake where the smallest helper gets the first crumb.",
+ "script": {
+  "title": "5 Friends vs 1 Giant Carrot",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "leaves",
+    "type": "cone",
+    "color": "green",
+    "at": [
+     -2.5,
+     8.5,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "carrot",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -2.5,
+     8.5,
+     0
+    ],
+    "visible": false,
+    "scale": 2.4
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "orange",
+    "at": [
+     1,
+     7,
+     0
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Heave... ho... heave... whoa!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "IT WON'T COME OUT!",
+    "cam": "prop:leaves",
+    "hold": 1.4,
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a sunny morning in Grandma's vegetable garden. And something very big is growing.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "grandma",
+    "say": "Max, dear, are you all right? You flew like a pancake!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, your carrot is stuck! I pulled and pulled, and I fell on my bottom.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That carrot? I planted it in the spring. It grew and grew all summer long.",
+    "cam": "close:grandma",
+    "do": []
+   },
+   {
+    "who": "grandma",
+    "say": "Look at those leaves. They are almost as tall as you!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then it must be the biggest carrot in the whole world. Let's pull together!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma holds the leaves. Max holds Grandma. One, two, three, pull!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-3.5,7"
+     ],
+     [
+      "max",
+      "to:-5,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The leaves wiggle. The ground wiggles. But the carrot does not come out.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My, my. It is holding on very tight. We need more help.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Dog! Can you come and pull with us?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Pull? Like tug of war? I am the tug of war champion!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog holds Max. Max holds Grandma. Grandma holds the leaves. Pull!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-6.5,5"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grrr! Come out, carrot! I am very, very strong!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They pull so hard that Dog's ears flap like flags. But the carrot stays in the ground.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That carrot is stronger than me. I think I need a snack.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you can't stop now. Snacks come after the pulling!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "text": "STILL STUCK!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "Hello! What is this? A long line of friends? Is it a dance?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird lands on top of the carrot leaves, and looks down at everybody.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "bird",
+      "to:-2.5,9.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It is a carrot pull! Bird, will you help us?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I am small, but my wings are mighty! Flap, flap, flap!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird holds Dog's tail. Everyone pulls. Bird flaps so hard that feathers fly.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:-8,4"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ha ha ha! Bird, your flapping is tickling my tail!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog giggles and lets go. And everybody tumbles into one big, silly pile.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. Grandma, maybe this carrot wants to stay in the ground forever.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Don't give up yet, Max. Is there anyone we have not asked?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone thinks. Then a tiny voice comes from behind a flower.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Excuse me. Can I help too? I am very small, but I am good at holding.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You? But you are tinier than one carrot leaf!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Tiny paws can hold on very tight. Just watch me!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Every helper counts, Dog. Come on, Mouse. Hold on to Bird!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-9,3.5"
+     ]
+    ]
+   },
+   {
+    "text": "ONE MORE TIME!",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse holds Bird. Bird holds Dog. Dog holds Max. Max holds Grandma. Grandma holds the leaves.",
+    "cam": "overhead",
+    "do": []
+   },
+   {
+    "who": "grandma",
+    "say": "Ready, everyone? One... two... three... pull!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They pull, and pull, and pull. And then...",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "POP!",
+    "cam": "prop:carrot",
+    "hold": 1.2,
+    "do": [
+     [
+      "leaves",
+      "vanish"
+     ],
+     [
+      "carrot",
+      "show"
+     ],
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Out comes the carrot! It is huge, and orange, and even bigger than Max!",
+    "cam": "prop:carrot",
+    "do": [
+     [
+      "carrot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wow! It is as big as a tree! Well, a small tree. A baby tree.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I eat it? Can I eat it right now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "We did it! And I helped, even though I am tiny!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Yes, Mouse. Your little pull was the one that made it pop.",
+    "cam": "two:grandma,mouse",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So it was not the strongest friend. It was all the friends, together.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And a mouse! Don't forget the mouse!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now, what shall we do with such a big carrot?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Soup? Salad? A carrot boat? A carrot hat?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I think I will bake a big carrot cake. Enough for everyone.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Later that day, Grandma brings out a warm orange cake, with one little candle on top.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It smells like sunshine and carrots!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I am not even sad about the snack anymore. This is the best snack!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Can I have the first crumb? Just a tiny one?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The smallest helper gets the first piece. That is the rule today.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everybody shares the carrot cake, under the big blue sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow we plant a pumpkin seed. I hope it grows as big as a house!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "PULL TOGETHER!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "5 Friends vs 1 GIANT Carrot! 🥕😂",
+  "description": "Grandma's carrot grew so big that nobody can pull it out! Max, Grandma, Dog and Bird pull together, but it takes one more tiny helper to make it pop. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "giant carrot",
+   "teamwork for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "garden story",
+   "funny cat",
+   "grandma story"
+  ],
+  "thumb_text": "SO BIG!",
+  "thumb_beat": 39,
+  "localizations": {
+   "es": {
+    "title": "¡5 amigos contra 1 zanahoria GIGANTE! 🥕😂",
+    "description": "¡La zanahoria de la abuela creció tanto que nadie puede sacarla! Max, la abuela, Perro y Pájaro tiran juntos, pero hace falta una ayudante más, muy pequeñita. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "5 amigos contra 1 cenoura GIGANTE! 🥕😂",
+    "description": "A cenoura da vovó cresceu tanto que ninguém consegue arrancá-la! Max, a vovó, o Cachorro e o Passarinho puxam juntos, mas falta uma ajudante bem pequenininha. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "5 أصدقاء ضد جزرة عملاقة! 🥕😂",
+    "description": "جزرة الجدة كبرت كثيرًا ولا أحد يستطيع اقتلاعها! ماكس والجدة والكلب والعصفور يسحبون معًا، لكنهم يحتاجون إلى مساعد صغير جدًا. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "5 amis contre 1 carotte GÉANTE ! 🥕😂",
+    "description": "La carotte de Mamie est devenue si grosse que personne n'arrive à la sortir ! Max, Mamie, Chien et Oiseau tirent ensemble, mais il faut encore une toute petite aide. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "5人のなかまと巨大ニンジン！🥕😂",
+    "description": "おばあちゃんのニンジンが大きくなりすぎて、だれもぬけません！マックス、おばあちゃん、イヌ、トリがいっしょにひっぱるけれど、あとひとり、ちいさなお手伝いが必要です。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "친구 5명 대 거대한 당근 1개! 🥕😂",
+    "description": "할머니의 당근이 너무 커서 아무도 뽑지 못해요! 맥스, 할머니, 강아지, 새가 함께 당기지만, 아주 작은 친구 한 명이 더 필요해요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "5 Freunde gegen 1 RIESEN-Karotte! 🥕😂",
+    "description": "Omas Karotte ist so groß, dass niemand sie herausziehen kann! Max, Oma, Hund und Vogel ziehen zusammen, aber es braucht noch eine ganz kleine Helferin. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "IT WON'T COME OUT!",
+   "title": "This Carrot Is Stuck SO Tight! 🥕😮 #shorts",
+   "description": "Max pulls and pulls, but Grandma's carrot will not move. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "¡Esta zanahoria está MUY atascada! 🥕😮 #shorts",
+     "description": "Max tira y tira, pero la zanahoria de la abuela no se mueve. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Essa cenoura está MUITO presa! 🥕😮 #shorts",
+     "description": "Max puxa e puxa, mas a cenoura da vovó não sai. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هذه الجزرة عالقة جدًا! 🥕😮 #shorts",
+     "description": "ماكس يسحب ويسحب، لكن جزرة الجدة لا تتحرك. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Cette carotte est TRÈS coincée ! 🥕😮 #shorts",
+     "description": "Max tire et tire, mais la carotte de Mamie ne bouge pas. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "このニンジン、ぜんぜんぬけない！🥕😮 #shorts",
+     "description": "マックスがひっぱってもひっぱっても、おばあちゃんのニンジンは動きません。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "이 당근은 너무 꽉 박혀 있어요! 🥕😮 #shorts",
+     "description": "맥스가 당기고 또 당겨도 할머니의 당근은 꿈쩍도 안 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Diese Karotte steckt SO fest! 🥕😮 #shorts",
+     "description": "Max zieht und zieht, aber Omas Karotte bewegt sich nicht. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  },
+  {
+   "beat": 19,
+   "dur": 28,
+   "top": "BIRD JOINS THE PULL",
+   "title": "Bird Tickled Dog... and Everyone Fell Down! 😂🐦 #shorts",
+   "description": "A long line of friends, one flappy Bird and one ticklish tail. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "Pájaro le hizo cosquillas a Perro... ¡y todos se cayeron! 😂🐦 #shorts",
+     "description": "Una fila de amigos, un Pájaro aleteando y una cola con cosquillas. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho fez cócegas no Cachorro... e todos caíram! 😂🐦 #shorts",
+     "description": "Uma fila de amigos, um Passarinho batendo asas e um rabo com cócegas. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور دغدغ الكلب... فوقع الجميع! 😂🐦 #shorts",
+     "description": "صف طويل من الأصدقاء، وعصفور يرفرف، وذيل يضحك من الدغدغة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau chatouille Chien... et tout le monde tombe ! 😂🐦 #shorts",
+     "description": "Une longue file d'amis, un Oiseau qui bat des ailes et une queue chatouilleuse. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがイヌをくすぐったら…みんなころんだ！😂🐦 #shorts",
+     "description": "ならんだなかまと、パタパタのトリと、くすぐったいしっぽ。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 강아지를 간지럽혔더니... 모두 넘어졌어요! 😂🐦 #shorts",
+     "description": "길게 늘어선 친구들, 파닥파닥 새, 그리고 간지러운 꼬리. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel kitzelt Hund... und alle fallen um! 😂🐦 #shorts",
+     "description": "Eine lange Reihe Freunde, ein flatternder Vogel und ein kitzliger Schwanz. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,870 @@
+{
+ "id": "20261021-3-dog-took-bed",
+ "plot": "On a sunny afternoon Dog keeps sleeping in Max's red bed; Max's ball trick and Bird's pretend doorbell only end in a squashed bed sandwich, until Mouse asks Dog why, Dog says the bed smells like his best friend, so Grandma's blue cushion and Max's old blanket become Dog's own bed, and in the end Max loves Dog's new bed so much they swap for a nap.",
+ "script": {
+  "title": "Uh-Oh! Dog Took Max's Comfy Bed",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bed",
+    "type": "box",
+    "color": "red",
+    "at": [
+     -1,
+     7.5,
+     0
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "bed2",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     2.8,
+     7.5,
+     0
+    ],
+    "visible": false,
+    "scale": 1.2
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     7,
+     11,
+     0.9
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Nap time! My soft red bed, here I come! One, two, three, jump!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SQUASH!",
+    "cam": "prop:bed",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "Oof! Hello, Max. Sorry, this bed is taken. By me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is a sunny afternoon in the living room. And Dog is in Max's bed. Again.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-1,7.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, that is my bed. Your sleeping spot is the big rug by the door.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "The rug is flat. Your bed is round and soft, like a cloud with sides.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But I need my nap! A cat with no nap is a very grumpy cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "GET THE BED BACK!",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Okay, plan one. Dog loves balls. I will push his ball far away.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes the blue ball across the room. It rolls, and rolls, and rolls.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "ball",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A ball! A ball! I love balls!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs and grabs the ball.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he runs right back, and jumps into the red bed again.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-1,7.5"
+     ],
+     [
+      "ball",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I brought the ball to bed. Now we can both sleep. Me and the ball.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That was not the plan!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts the ball under his chin, closes his eyes, and starts to snore.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Knock, knock! Bird is here! Why does Max look so grumpy?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog took my bed. Can you help me trick him out of it?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Easy! I will sound just like the doorbell. Dog always runs to the door!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ding dong! Ding dong! Ding dong!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Visitors! Visitors! I must say hello to the visitors!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:7,11"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs to the door. Max hops into his bed. At last!",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "max",
+      "to:-1,7.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ahh. My cloud. My soft, round cloud.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But nobody is at the door. So Dog comes back, and climbs in, right on top of Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-0.5,7.8"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You are sitting on my tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It is a bed for two now. A bed sandwich!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "BED SANDWICH!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is not working. I am squished, Dog is squished, and nobody is sleeping.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hello! I heard grumbling. Is this a bed problem?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse, Dog will not leave my bed. I tried a ball, and I tried a doorbell.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hmm. Dog, why do you love Max's bed so much?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Because it smells like Max. Max is my best friend. It makes me feel safe.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max is very quiet. He did not know that.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh. So you did not want my bed. You wanted to be close to me.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then let us make Dog his very own bed, right next to yours!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Did someone say a new bed? I have a big blue cushion that nobody uses.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma brings the big blue cushion and puts it next to Max's red bed.",
+    "cam": "prop:bed2",
+    "do": [
+     [
+      "bed2",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And I will put my old blanket on it. The one that smells like me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "For me? My very own bed? That smells like Max?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sniffs the blue cushion. He turns around three times. Then he flops down.",
+    "cam": "prop:bed2",
+    "do": [
+     [
+      "dog",
+      "to:2.8,7.5"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It is perfect. It is like a hug that stays still.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And my bed is mine again. Thank you, Mouse. Thank you, Grandma.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,7.5"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When a friend does something odd, ask them why. There is often a sweet reason.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ding dong! Oh, sorry. I still feel like a doorbell.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max curls up in the red bed. Dog curls up in the blue bed. Side by side.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ],
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But then Max peeks at the blue bed. It looks very soft. Very, very soft.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog? Can I try your bed? Just for one minute?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "UH-OH!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "Ha ha! Okay, Max. We can swap. But only for one nap!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max naps in the blue bed, Dog naps in the red bed, and everybody is happy.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:2.8,7.5"
+     ],
+     [
+      "dog",
+      "to:-1,7.5"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Beds are always better when your best friend is right next door.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Sleep well, my darlings. I will make my tea very, very quietly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "After my nap, I want to find out why Dog turns around three times before he lies down!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "NAP TIME!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Uh-Oh! Dog Took Max's Comfy Bed 🛏️🐶",
+  "description": "Dog keeps sleeping in Max's soft red bed! A ball trick and a pretend doorbell only make a silly bed sandwich, until Mouse asks Dog one kind question. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "cat and dog",
+   "sharing story for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "friendship story",
+   "funny dog",
+   "nap time"
+  ],
+  "thumb_text": "MY BED!",
+  "thumb_beat": 24,
+  "localizations": {
+   "es": {
+    "title": "¡Oh, no! Perro se quedó con la cama de Max 🛏️🐶",
+    "description": "¡Perro siempre duerme en la suave cama roja de Max! Un truco con la pelota y un timbre de mentira solo crean un sándwich de cama, hasta que Ratón le hace a Perro una pregunta amable. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Ops! O Cachorro pegou a cama do Max 🛏️🐶",
+    "description": "O Cachorro vive dormindo na caminha vermelha do Max! Um truque com a bola e uma campainha de mentira só viram um sanduíche de cama, até o Ratinho fazer uma pergunta gentil. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "أوه لا! الكلب أخذ سرير ماكس المريح 🛏️🐶",
+    "description": "الكلب ينام دائمًا في سرير ماكس الأحمر الناعم! حيلة الكرة وجرس الباب المزيف يصنعان شطيرة سرير مضحكة، حتى يسأل الفأر الكلب سؤالًا لطيفًا. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Oh oh ! Chien a pris le lit douillet de Max 🛏️🐶",
+    "description": "Chien dort toujours dans le doux lit rouge de Max ! Un tour avec la balle et une fausse sonnette finissent en sandwich de lit, jusqu'à ce que Souris pose une question gentille. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "あれれ！イヌがマックスのベッドをとっちゃった 🛏️🐶",
+    "description": "イヌはいつもマックスのふかふかの赤いベッドで寝ちゃう！ボール作戦もチャイム作戦もベッドサンドになるだけ。そこでネズミがやさしい質問をします。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "어머나! 강아지가 맥스의 푹신한 침대를 차지했어요 🛏️🐶",
+    "description": "강아지가 자꾸 맥스의 빨간 침대에서 자요! 공 작전과 가짜 초인종 작전은 침대 샌드위치만 만들고, 생쥐가 다정한 질문을 하나 해요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Oh oh! Hund hat Max' gemütliches Bett 🛏️🐶",
+    "description": "Hund schläft immer in Max' weichem roten Bett! Ein Balltrick und eine falsche Türklingel ergeben nur ein Bett-Sandwich, bis Maus Hund eine liebe Frage stellt. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 16,
+   "dur": 30,
+   "top": "DING DONG?!",
+   "title": "Bird Pretended to Be a Doorbell! 🔔😂 #shorts",
+   "description": "Bird has a sneaky plan to get Dog out of Max's bed. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "¡Pájaro fingió ser un timbre! 🔔😂 #shorts",
+     "description": "Pájaro tiene un plan para sacar a Perro de la cama de Max. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho fingiu ser a campainha! 🔔😂 #shorts",
+     "description": "O Passarinho tem um plano para tirar o Cachorro da cama do Max. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور تظاهر بأنه جرس الباب! 🔔😂 #shorts",
+     "description": "لدى العصفور خطة ذكية لإخراج الكلب من سرير ماكس. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau fait semblant d'être la sonnette ! 🔔😂 #shorts",
+     "description": "Oiseau a un plan malin pour sortir Chien du lit de Max. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがチャイムのまねをしたら！🔔😂 #shorts",
+     "description": "トリはイヌをマックスのベッドからどかす作戦を思いつきます。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 초인종 흉내를 냈어요! 🔔😂 #shorts",
+     "description": "새는 강아지를 맥스의 침대에서 꺼낼 작전이 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel spielt Türklingel! 🔔😂 #shorts",
+     "description": "Vogel hat einen schlauen Plan, um Hund aus Max' Bett zu holen. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}

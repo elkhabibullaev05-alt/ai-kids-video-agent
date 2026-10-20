@@ -1,0 +1,839 @@
+{
+ "id": "20261021-1-moon-morning",
+ "plot": "At sunset in the garden Max wants to catch the moon and ask where it goes every morning; Dog thinks the moon is a giant ball to fetch, Max climbs on Dog who sits down, and Bird flies in dizzy circles, until Grandma explains that our world turns, not the moon, and shows them the moon that was rising over the tree the whole time.",
+ "script": {
+  "title": "Where Does the Moon Go in the Morning?",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "moon",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     3,
+     17,
+     8
+    ],
+    "visible": false,
+    "scale": 2.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "bird",
+    "say": "Max! Max! Catch me! I flew too high, and now everything is spinning!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Whoa! Bird, you are going round and round like a spinning top!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "CATCH THE MOON?!",
+    "cam": "wide",
+    "hold": 1.4,
+    "do": [
+     [
+      "bird",
+      "squash"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is sunset in the garden. The sky is pink and orange, and the flowers are closing.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Bird, why were you flying so high up there?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You asked me to look for the moon! You said it hides every single morning.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! Every night the moon is up there, and every morning, poof, it is gone.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tonight I will catch the moon, and I will ask it where it goes.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "But I flew up, up, up, and I could not find it anywhere.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the sky. There is the sun, going down slowly. But no moon yet.",
+    "cam": "overhead",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Did somebody say ball? I heard a ball. I always hear balls.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not a ball, Dog. The moon. The big round light in the night sky.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Big and round? That is a ball, Max. The biggest ball in the whole world!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "When it comes up, I will jump really high and fetch it for you.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay! Plan number one. Dog fetches the moon.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They wait. And wait. Dog wags his tail so fast that he falls over.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Is it here yet? My tail is tired of waiting.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not yet. Bird, can you fly up again? But just a little bit this time.",
+    "cam": "two:max,bird",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Just a little bit. I can do a little bit!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies to the top of a tall tree and looks all around the garden.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bird",
+      "to:-5,14"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I see the house. I see the flowers. I see a worm. No moon!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE IS THE MOON?",
+    "cam": "overhead",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Hmm. Maybe the moon is shy, like a kitten hiding under the bed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Plan number two. I climb on Dog, and I look higher than everybody.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Climb on me? Okay. But no tickling, please.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs onto Dog's back. Dog giggles. Dog wiggles. Then Dog sits down.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You sat down! Now I am lower than before!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sorry. Sitting is my favorite thing, after balls.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Your plans are very funny, Max. But the moon is still not here.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then plan number three! We all shout very loud. Moon, come out!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max shouts. Dog barks. Bird sings. The flowers shake. But the sky stays quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Goodness me! Why is my garden so noisy at sunset?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, we want to catch the moon. Where does it go in the morning?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Max. The moon does not run away. And it does not hide in a box.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Our big world is round like a ball, and it turns very, very slowly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When our side turns away, the moon goes out of sight for a while.",
+    "cam": "close:grandma",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "So the moon stays where it is, and we are the ones who move?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's right. And here is a secret. Sometimes the moon stays in the morning sky too.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "In the morning? With the sun? Two big balls at the same time?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look up, my dears. Look just over the tall tree.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "THERE IT IS!",
+    "cam": "prop:moon",
+    "hold": 1.5,
+    "do": [
+     [
+      "moon",
+      "show"
+     ],
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "There it is. A soft, round moon, high above the garden, glowing like a lamp.",
+    "cam": "prop:moon",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "It was coming up the whole time, while we were busy shouting!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I flew right past it! I was looking the wrong way.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It is much too high to fetch. I will just say hello. Hello, big ball!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Moon, I wanted to catch you. But I think you look perfect right up there.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Some things are best for looking at, not for catching.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max does not catch the moon. He watches it with his friends, until the first stars come out.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Today I learned that waiting quietly shows you more than shouting.",
+    "cam": "close:max",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "And flying in circles makes you dizzy. I learned that too!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now, who would like some warm milk before bed?",
+    "cam": "close:grandma",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Me! Me! Is the milk shaped like a ball?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs, and the moon shines down on the sleepy garden.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And early tomorrow morning, I will look up and find the moon in the blue sky!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "GOODNIGHT, MOON!",
+    "cam": "prop:moon",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Where Does the Moon Go in the Morning? 🌙🐱",
+  "description": "Max wants to catch the moon and ask where it goes every morning! Dog thinks it is a giant ball, Bird flies in dizzy circles, and Grandma shares a sweet secret about the sky. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "moon story for kids",
+   "cat cartoon",
+   "bedtime story",
+   "stories for kids",
+   "3d animation for kids",
+   "learning for kids",
+   "funny cat",
+   "grandma story"
+  ],
+  "thumb_text": "CATCH THE MOON?",
+  "thumb_beat": 36,
+  "localizations": {
+   "es": {
+    "title": "¿A dónde va la luna por la mañana? 🌙🐱",
+    "description": "¡Max quiere atrapar la luna y preguntarle a dónde va cada mañana! Perro cree que es una pelota gigante, Pájaro vuela en círculos mareados y la abuela comparte un dulce secreto sobre el cielo. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Para onde vai a lua de manhã? 🌙🐱",
+    "description": "Max quer pegar a lua e perguntar para onde ela vai toda manhã! O Cachorro acha que é uma bola gigante, o Passarinho voa em círculos tontos e a vovó conta um segredo doce sobre o céu. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "إلى أين يذهب القمر في الصباح؟ 🌙🐱",
+    "description": "ماكس يريد أن يمسك القمر ويسأله إلى أين يذهب كل صباح! الكلب يظن أنه كرة عملاقة، والعصفور يطير في دوائر حتى يدوخ، والجدة تشارك سرًا لطيفًا عن السماء. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Où va la lune le matin ? 🌙🐱",
+    "description": "Max veut attraper la lune et lui demander où elle va chaque matin ! Chien croit que c'est un ballon géant, Oiseau vole en cercles jusqu'à avoir le tournis, et Mamie partage un joli secret sur le ciel. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "朝になると月はどこへ行くの？🌙🐱",
+    "description": "マックスは月をつかまえて、毎朝どこへ行くのか聞きたい！イヌは月を大きなボールだと思い、トリはくるくる回って目が回り、おばあちゃんは空のすてきなひみつを教えてくれます。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "아침이 되면 달은 어디로 갈까? 🌙🐱",
+    "description": "맥스는 달을 잡아서 매일 아침 어디로 가는지 물어보고 싶어요! 강아지는 달이 커다란 공인 줄 알고, 새는 빙글빙글 돌다 어지러워지고, 할머니는 하늘에 대한 다정한 비밀을 알려 줘요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Wohin geht der Mond am Morgen? 🌙🐱",
+    "description": "Max will den Mond fangen und fragen, wohin er jeden Morgen geht! Hund hält ihn für einen riesigen Ball, Vogel fliegt Kreise, bis ihm schwindelig wird, und Oma verrät ein schönes Geheimnis über den Himmel. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 10,
+   "dur": 30,
+   "top": "IS THE MOON A BALL?",
+   "title": "Dog Thinks the Moon Is a Giant Ball! 🌙🐶 #shorts",
+   "description": "Dog wants to fetch the biggest ball in the world. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "¡Perro cree que la luna es una pelota gigante! 🌙🐶 #shorts",
+     "description": "Perro quiere traer la pelota más grande del mundo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro acha que a lua é uma bola gigante! 🌙🐶 #shorts",
+     "description": "O Cachorro quer buscar a maior bola do mundo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يظن أن القمر كرة عملاقة! 🌙🐶 #shorts",
+     "description": "الكلب يريد أن يجلب أكبر كرة في العالم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien croit que la lune est un ballon géant ! 🌙🐶 #shorts",
+     "description": "Chien veut rapporter le plus gros ballon du monde. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌは月を大きなボールだと思ってる！🌙🐶 #shorts",
+     "description": "イヌは世界一大きなボールを取ってきたい。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지는 달이 커다란 공인 줄 알아요! 🌙🐶 #shorts",
+     "description": "강아지는 세상에서 제일 큰 공을 가져오고 싶어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund hält den Mond für einen Riesenball! 🌙🐶 #shorts",
+     "description": "Hund will den größten Ball der Welt holen. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  },
+  {
+   "beat": 23,
+   "dur": 25,
+   "top": "MAX CLIMBS ON DOG...",
+   "title": "Max Climbed on Dog... Then Dog Sat Down! 😂🐱 #shorts",
+   "description": "Max wanted to see higher, but Dog had other plans. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "Max se subió a Perro... ¡y Perro se sentó! 😂🐱 #shorts",
+     "description": "Max quería ver más alto, pero Perro tenía otros planes. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max subiu no Cachorro... e ele sentou! 😂🐱 #shorts",
+     "description": "Max queria ver mais alto, mas o Cachorro tinha outros planos. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس صعد على الكلب... ثم جلس الكلب! 😂🐱 #shorts",
+     "description": "أراد ماكس أن يرى من مكان أعلى، لكن الكلب كان له رأي آخر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max grimpe sur Chien... et Chien s'assoit ! 😂🐱 #shorts",
+     "description": "Max voulait voir plus haut, mais Chien avait d'autres idées. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスがイヌに乗ったら…イヌがすわっちゃった！😂🐱 #shorts",
+     "description": "マックスは高いところから見たかったのに、イヌは別のことを考えていました。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 강아지 위에 올라갔더니... 강아지가 앉아 버렸어요! 😂🐱 #shorts",
+     "description": "맥스는 더 높이 보고 싶었지만 강아지는 생각이 달랐어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max klettert auf Hund... und Hund setzt sich hin! 😂🐱 #shorts",
+     "description": "Max wollte höher sehen, aber Hund hatte andere Pläne. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}

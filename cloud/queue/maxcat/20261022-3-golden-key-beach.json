@@ -1,0 +1,819 @@
+{
+ "id": "20261022-3-golden-key-beach",
+ "plot": "At sunset on the beach Grandma loses the golden key to her house; Dog digs ten empty holes, Bird proudly brings back a banana and a red ball, and Max walks in circles until he is dizzy, until Grandma remembers the key always smells of cookies, so Max asks Dog to use his nose instead of his paws, and Dog sniffs the key out under Grandma's towel.",
+ "script": {
+  "title": "Who Found Grandma's Golden Key?",
+  "set": {
+   "place": "beach",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "at": [
+     4,
+     10,
+     0.3
+    ],
+    "visible": false,
+    "scale": 1.3
+   },
+   {
+    "id": "banana",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     2.5,
+     8.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.2
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     3.5,
+     7.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "grandma",
+    "say": "Oh dear! Oh dear, oh dear! My golden key is gone!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE IS THE KEY?",
+    "cam": "wide",
+    "hold": 1.4,
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is the end of a lovely day at the beach. The sun is sinking into the sea.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Grandma, what key? The key to your house?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Yes. It is little and gold, with a round top. Without it, we can't get inside.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Grandma. We will find it before the sun goes down!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Finding things in sand? That is my favorite job! Dig, dig, dig!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog digs one hole. Then two holes. Then ten holes. Sand flies everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You are making a beach full of holes!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Holes are great. But there is no key in any of them.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Thank you for trying, dear. But please, no more holes. I might fall in one!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I will help! I am the best at finding shiny things. Be right back!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies away, and quickly comes back with something yellow.",
+    "cam": "prop:banana",
+    "do": [
+     [
+      "banana",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look! It is yellow. That is almost gold. Is this the key?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That is a banana, dear. A very nice banana. But it can't open a door.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "THAT'S A BANANA!",
+    "cam": "prop:banana",
+    "hold": 1.2,
+    "do": [
+     [
+      "banana",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wait, wait! I will find a better one!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "This time, Bird comes back with a round, red ball.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "banana",
+      "give:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My ball! My lost ball from last summer! Bird, you are the best finder ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "ball",
+      "give:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It is a great find. But it is still not Grandma's key.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. I will be a detective. I will walk in a big circle and look very carefully.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks in a circle. Then a smaller circle. Then a tiny circle, and he gets dizzy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Whoa. The beach is spinning. Or maybe it's me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, you look like a sleepy spinning top!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "STILL NO KEY!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Grandma, let's think. Where was the key this morning?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It was in my pocket. And before that, it was hanging by my cookie jar.",
+    "cam": "close:grandma",
+    "do": []
+   },
+   {
+    "who": "grandma",
+    "say": "That key always smells a little bit like cookies.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cookies! Grandma, that's it! Dog can smell cookies from very far away!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That's true. I can smell a cookie from the other side of town.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then stop using your paws, Dog, and use your nose! Find the cookie smell!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts his nose down on the sand. Sniff. Sniff, sniff. Sniff, sniff, sniff.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Seaweed. Shells. Sunscreen. Fish. Oh! Cookies! I smell cookies!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog follows his nose across the sand, past all his holes, right to Grandma's beach towel.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:4.5,9"
+     ]
+    ]
+   },
+   {
+    "text": "SNIFF, SNIFF... FOUND IT!",
+    "cam": "prop:key",
+    "hold": 1.4,
+    "do": [
+     [
+      "key",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "There, under the corner of the towel, is a little golden key with a round top.",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My key! It must have slipped out when I shook the sand off my towel.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I found it! Me! With my nose! Not with my paws!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Dog found it with his nose? I did not know noses could find things!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, your nose is a super nose.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog carries the key to Grandma, very gently, in his mouth.",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "give:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Thank you, Dog. And thank you, Max, for thinking about what Dog is best at.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everybody is good at something. Bird finds shiny things, and Dog finds smells.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And I found a banana and a ball! That is two things!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You did, dear. And we will share the banana on the way home.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog fills all his holes back in, so nobody trips. Max helps him pat the sand flat.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "max",
+      "to:5,10"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Goodbye, holes. You were very nice holes.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't be sad, Dog. Your nose was the real hero today.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then they walk home together, as the last light turns the sea pink and gold.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, can we put your key on a string, so it never runs away again?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "What a good idea, Max. A string with a little bell on it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then let's make Grandma's key the jingliest key in the whole town!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SUPER NOSE DOG!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Found Grandma's Golden Key? 🔑🏖️",
+  "description": "Grandma lost her golden house key on the beach at sunset! Dog digs ten holes, Bird brings back a banana, and Max gets dizzy, until one cookie clue changes everything. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "lost key",
+   "beach story for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "funny dog",
+   "grandma story",
+   "mystery for kids"
+  ],
+  "thumb_text": "COOKIE CLUE!",
+  "thumb_beat": 28,
+  "localizations": {
+   "es": {
+    "title": "¿Quién encontró la llave dorada de la abuela? 🔑🏖️",
+    "description": "¡La abuela perdió su llave dorada en la playa al atardecer! Perro cava diez hoyos, Pájaro trae un plátano y Max se marea, hasta que una pista de galletas lo cambia todo. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Quem achou a chave dourada da vovó? 🔑🏖️",
+    "description": "A vovó perdeu a chave dourada da casa na praia ao pôr do sol! O Cachorro cava dez buracos, o Passarinho traz uma banana e o Max fica tonto, até que uma pista de biscoito muda tudo. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "من وجد مفتاح الجدة الذهبي؟ 🔑🏖️",
+    "description": "الجدة أضاعت مفتاح بيتها الذهبي على الشاطئ وقت الغروب! الكلب يحفر عشر حفر، والعصفور يحضر موزة، وماكس يدوخ، حتى يغير دليل الكعك كل شيء. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Qui a trouvé la clé dorée de Mamie ? 🔑🏖️",
+    "description": "Mamie a perdu sa clé dorée sur la plage au coucher du soleil ! Chien creuse dix trous, Oiseau rapporte une banane et Max a le tournis, jusqu'à ce qu'un indice de biscuits change tout. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "おばあちゃんの金のカギ、見つけたのはだれ？🔑🏖️",
+    "description": "夕方の海で、おばあちゃんがおうちの金のカギをなくしちゃった！イヌは穴を十こほって、トリはバナナを持ってきて、マックスは目が回る。でもクッキーのヒントですべてが変わります。#maxthecuriouscat #こどもアニメ #おはなし"
+   },
+   "ko": {
+    "title": "할머니의 황금 열쇠를 누가 찾았을까? 🔑🏖️",
+    "description": "해 질 녘 바닷가에서 할머니가 황금 집 열쇠를 잃어버렸어요! 강아지는 구멍을 열 개 파고, 새는 바나나를 가져오고, 맥스는 어지러워요. 그런데 쿠키 단서 하나가 모든 걸 바꿔요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Wer hat Omas goldenen Schlüssel gefunden? 🔑🏖️",
+    "description": "Oma hat bei Sonnenuntergang am Strand ihren goldenen Hausschlüssel verloren! Hund gräbt zehn Löcher, Vogel bringt eine Banane und Max wird schwindelig, bis ein Keks-Hinweis alles ändert. #maxthecuriouscat #kinderzeichentrick #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 11,
+   "dur": 27,
+   "top": "IS THIS THE KEY?",
+   "title": "Bird Found the Key... It's a Banana! 🍌😂 #shorts",
+   "description": "Bird is the best at finding shiny things. Almost. Full episode: {LONG_URL}",
+   "localizations": {
+    "es": {
+     "title": "Pájaro encontró la llave... ¡es un plátano! 🍌😂 #shorts",
+     "description": "Pájaro es el mejor encontrando cosas brillantes. Casi. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho achou a chave... é uma banana! 🍌😂 #shorts",
+     "description": "O Passarinho é o melhor em achar coisas brilhantes. Quase. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور وجد المفتاح... إنه موزة! 🍌😂 #shorts",
+     "description": "العصفور هو الأفضل في إيجاد الأشياء اللامعة. تقريبًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau a trouvé la clé... c'est une banane ! 🍌😂 #shorts",
+     "description": "Oiseau est le meilleur pour trouver les choses brillantes. Presque. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがカギを見つけた…と思ったらバナナ！🍌😂 #shorts",
+     "description": "トリはキラキラさがしの名人。たぶん。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 열쇠를 찾았대요... 그런데 바나나예요! 🍌😂 #shorts",
+     "description": "새는 반짝이는 걸 제일 잘 찾아요. 거의요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel hat den Schlüssel... es ist eine Banane! 🍌😂 #shorts",
+     "description": "Vogel findet glänzende Dinge am besten. Fast. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ]
+  }
+ ]
+}
