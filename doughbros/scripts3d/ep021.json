@@ -1,0 +1,775 @@
+{
+ "title": "Zeek's Trap Caught the Wrong 3 Dough Bros",
+ "description": "Mr. Pot has Crispy, midnight is coming, and the only way to the oven is past Old Hissy, the kettle who hates noise. Zeek's honey trap catches the wrong three heroes. Can the loudest bean in Table Land save them?",
+ "set": {
+  "place": "pantry",
+  "time": "night"
+ },
+ "chars": {
+  "bup": {
+   "name": "Bup",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.82,
+    0.6,
+    0.32
+   ],
+   "kind": "loaf",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ],
+   "eye_sizes": [
+    1.15,
+    0.8
+   ],
+   "stitch": true,
+   "brows": 10
+  },
+  "pim": {
+   "name": "Pim",
+   "voice": "am_puck",
+   "speed": 1.15,
+   "pitch": 2,
+   "color": [
+    0.75,
+    0.08,
+    0.08
+   ],
+   "kind": "bean",
+   "size": 0.9,
+   "home": [
+    -2.5,
+    4
+   ]
+  },
+  "zeek": {
+   "name": "Zeek",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.4,
+    0.9
+   ],
+   "kind": "triangle",
+   "size": 0.9,
+   "home": [
+    1.5,
+    5
+   ]
+  },
+  "lolly": {
+   "name": "Lolly",
+   "voice": "af_nicole",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    1.0,
+    0.45,
+    0.7
+   ],
+   "kind": "star",
+   "size": 0.85,
+   "home": [
+    5,
+    4
+   ]
+  },
+  "crispy": {
+   "name": "Crispy",
+   "voice": "am_onyx",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.06,
+    0.05,
+    0.05
+   ],
+   "kind": "rock",
+   "size": 0.9,
+   "home": [
+    9,
+    8
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hissy": {
+   "name": "Old Hissy",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -2,
+   "color": [
+    0.8,
+    0.3,
+    0.2
+   ],
+   "kind": "kettle",
+   "size": 1.35,
+   "home": [
+    3,
+    14
+   ],
+   "brows": 16
+  }
+ },
+ "props": [
+  {
+   "id": "crumb",
+   "type": "key",
+   "color": "gold",
+   "on": "bup",
+   "visible": true,
+   "scale": 0.8
+  },
+  {
+   "id": "trap",
+   "type": "box",
+   "color": [
+    0.95,
+    0.65,
+    0.1
+   ],
+   "on": "podium",
+   "visible": false,
+   "scale": 1.6
+  }
+ ],
+ "beats": [
+  {
+   "who": "pim",
+   "say": "The kettle SCREAMED! Why did the kettle scream?!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "hissy",
+     "shake"
+    ]
+   ],
+   "text": "THE KETTLE IS AWAKE!",
+   "sfx": "alarm"
+  },
+  {
+   "who": "hissy",
+   "say": "Ssssilence! Who dares to tiptoe into MY pantry?",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:hissy"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Everyone freeze. Don't move. Don't even breathe.",
+   "cam": "two:bup,hissy",
+   "do": [
+    [
+     "bup",
+     "turn:hissy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Midnight is coming. Mr. Pot has Crispy. And the Golden Crumb led the Dough Bros into the pantry.",
+   "cam": "overhead",
+   "do": [
+    [
+     "crumb",
+     "spin"
+    ]
+   ],
+   "text": "MIDNIGHT IS COMING"
+  },
+  {
+   "who": "lolly",
+   "say": "The key is pulling us behind that kettle. There's a little door back there!",
+   "cam": "prop:crumb",
+   "do": [
+    [
+     "crumb",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "A secret tunnel. My calculations say it goes straight to Mr. Pot's oven.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "Mr. Pot told me. Nobody passes. Nobody makes a SOUND. I hate noise!",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "jump"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "pim",
+   "say": "He hates noise? I'm made of noise! I'm basically one big scream!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Okay team, here's the plan. We get past him quietly. Very quietly.",
+   "cam": "wide",
+   "do": [
+    [
+     "bup",
+     "to:-2,8"
+    ],
+    [
+     "lolly",
+     "to:5,7"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Better plan! Behold, the Sticky-Trap 3000! Pure honey. It catches anything!",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "spin"
+    ],
+    [
+     "trap",
+     "show"
+    ]
+   ],
+   "text": "THE STICKY-TRAP 3000"
+  },
+  {
+   "who": "lolly",
+   "say": "Zeek, sweetie, are you sure it catches kettles?",
+   "cam": "two:lolly,zeek",
+   "do": [
+    [
+     "lolly",
+     "turn:zeek"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Absolutely. Eighty percent. Okay, it caught a raisin once.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Zeek hides the trap on the cutting board. Now they need bait.",
+   "cam": "prop:trap",
+   "do": [
+    [
+     "trap",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Old Hissy! Over here! Come and get us!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "to:-9,12"
+    ],
+    [
+     "bup",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "NOISE! I'll boil you all into soup!",
+   "cam": "wide",
+   "do": [
+    [
+     "hissy",
+     "to:-6,12"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "bup",
+   "say": "Wait, why are my feet sticky? Why are my feet SO sticky?!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "squash"
+    ],
+    [
+     "bup",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "text": "THE TRAP CAUGHT BUP!",
+   "cam": "prop:trap",
+   "hold": 1.2,
+   "sfx": "alarm",
+   "do": [
+    [
+     "bup",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "I'll save you, Bup! Hold on! Oh no. Oh no, no, no. I'm stuck too!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "to:-9,11"
+    ],
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Don't worry! I know how to switch it off. Step one, I walk over here...",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "to:-11,11"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "...and step two, I am now also stuck. Wonderful.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "flat_roof"
+    ]
+   ]
+  },
+  {
+   "text": "3 HEROES. 1 TRAP.",
+   "cam": "wide",
+   "hold": 1.3,
+   "sfx": "suspicious",
+   "do": [
+    [
+     "hissy",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "Ha! Three sticky buns! Mr. Pot will be SO pleased with me.",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "And now... a little steam. Just to keep you warm.",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "lolly",
+   "say": "Don't you dare! Those are my brothers!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "flat_roof"
+    ],
+    [
+     "lolly",
+     "to:-3,9"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "A tiny cookie? Go home, cookie. Ssssilence!",
+   "cam": "two:lolly,hissy",
+   "do": [
+    [
+     "hissy",
+     "turn:lolly"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Wait. He hates noise. And the steam makes the honey melt. Bup, look! It's melting!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "eyes_big"
+    ]
+   ],
+   "text": "THE HONEY IS MELTING!"
+  },
+  {
+   "who": "bup",
+   "say": "Pim, that's genius! The louder we are, the hotter he gets!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "New plan. Everybody... make... NOISE!",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "pim",
+   "say": "AAAAAAH! AAAAAAH! I've been practicing this my whole life!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "La la la! Loud equations! Two plus two is FOUR!",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "And I'll sing the loudest song in Table Land! LA LA LAAAA!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "Ssstop! Sssstop it! I'm boiling! I'm BOILING OVER!",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "shake"
+    ],
+    [
+     "hissy",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "text": "HE'S BOILING OVER!",
+   "cam": "close:hissy",
+   "hold": 1.2,
+   "sfx": "alarm",
+   "do": [
+    [
+     "hissy",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Steam pours over the trap. The honey melts... and the sticky heroes slide free.",
+   "cam": "prop:trap",
+   "do": [
+    [
+     "trap",
+     "vanish"
+    ],
+    [
+     "bup",
+     "to_home"
+    ],
+    [
+     "pim",
+     "to_home"
+    ],
+    [
+     "zeek",
+     "to_home"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "My water... it's all gone. I'm... so... empty.",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Fascinating. He boiled himself dry. My trap worked. Technically.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Sorry, Mister Hissy. We'll be quiet now. Very quiet.",
+   "cam": "two:lolly,hissy",
+   "do": [
+    [
+     "lolly",
+     "turn:hissy"
+    ]
+   ]
+  },
+  {
+   "who": "hissy",
+   "say": "Go... before Mr. Pot hears you. The tunnel... is behind me.",
+   "cam": "close:hissy",
+   "do": [
+    [
+     "hissy",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Bup holds up the Golden Crumb. The little door clicks open.",
+   "cam": "prop:crumb",
+   "do": [
+    [
+     "crumb",
+     "spin"
+    ],
+    [
+     "bup",
+     "to:2,12"
+    ]
+   ],
+   "text": "THE DOOR OPENS..."
+  },
+  {
+   "who": "bup",
+   "say": "Crispy, hold on. We're coming.",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "It's dark. It's so dark. Why is the tunnel warm? Tunnels should NOT be warm!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Because we are right under the oven. Eleven fifty-five. Five minutes left.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ],
+   "text": "5 MINUTES LEFT"
+  },
+  {
+   "who": "narr",
+   "say": "Then, from deep in the tunnel, a voice calls out.",
+   "cam": "overhead",
+   "do": [
+    [
+     "all",
+     "look:bup"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "crispy",
+   "say": "Friends... is that you? Don't come any closer.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "enter"
+    ],
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Crispy! You're okay! We came to take you home!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "jump"
+    ],
+    [
+     "lolly",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "No. Listen. It's a trap. Mr. Pot is not alone anymore.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "text": "WHO ELSE IS HERE?",
+   "cam": "close:crispy",
+   "hold": 1.3,
+   "sfx": "suspicious",
+   "do": [
+    [
+     "crispy",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Not alone? What does not alone mean? I don't like not alone!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Behind them, in the dark, something goes click, click, click. And it smells like burning toast.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "text": "TO BE CONTINUED..."
+  }
+ ]
+}
