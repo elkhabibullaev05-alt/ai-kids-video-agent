@@ -1,0 +1,814 @@
+{
+ "title": "She Walked Down the Stairs. The Camera Saw.",
+ "description": "Someone is walking down these stairs. And she has been dead for three hundred years.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.05,
+  "eyes": 3,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "lady": {
+   "name": "The Brown Lady",
+   "voice": "bf_emma",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.42,
+    0.27,
+    0.14
+   ],
+   "kind": "lady",
+   "ghost": true,
+   "up": true,
+   "size": 1.1,
+   "home": [
+    3,
+    12
+   ]
+  },
+  "shira": {
+   "name": "Shira",
+   "voice": "bm_lewis",
+   "speed": 1.05,
+   "pitch": 0,
+   "color": [
+    0.25,
+    0.25,
+    0.3
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -9,
+    10
+   ]
+  },
+  "marryat": {
+   "name": "Captain Marryat",
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.1,
+    0.15,
+    0.35
+   ],
+   "kind": "human",
+   "size": 1.05,
+   "home": [
+    9,
+    9
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "st06",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    6.4,
+    13.0,
+    -0.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st07",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    7.6,
+    13.0,
+    -0.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st16",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    6.4,
+    14.2,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st17",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    7.6,
+    14.2,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st26",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    6.4,
+    15.4,
+    0.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st27",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    7.6,
+    15.4,
+    0.6
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st36",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    6.4,
+    16.6,
+    1.1999999999999997
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st37",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    7.6,
+    16.6,
+    1.1999999999999997
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st46",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    6.4,
+    17.8,
+    1.7999999999999998
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "st47",
+   "type": "box",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "at": [
+    7.6,
+    17.8,
+    1.7999999999999998
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "portrait",
+   "type": "box",
+   "color": [
+    0.45,
+    0.3,
+    0.15
+   ],
+   "at": [
+    0,
+    9,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.9
+  },
+  {
+   "id": "camera",
+   "type": "box",
+   "color": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "at": [
+    -6,
+    8,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.6
+  },
+  {
+   "id": "photo",
+   "type": "box",
+   "color": "white",
+   "at": [
+    0,
+    9,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.9
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Someone is walking down these stairs. And she has been dead for three hundred years.",
+   "cam": "wide",
+   "do": [
+    [
+     "lady",
+     "to:1,9"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "DON'T LOOK AT THE STAIRS"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! Blow out the lantern. She can see the light!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "The shapes in Loch Ness pulled them under. They woke up here, in a dark old house.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "lady",
+     "dive"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "WHERE ARE WE?"
+  },
+  {
+   "who": "odo",
+   "say": "This isn't the loch. These are stairs. Old, creaking stairs.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "RAYNHAM HALL, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from real records. Raynham Hall stands in Norfolk, England.",
+   "cam": "overhead",
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "For two hundred years, people say a lady in brown walks its halls.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE BROWN LADY"
+  },
+  {
+   "who": "narr",
+   "say": "The legend says she is Lady Dorothy Walpole. She lived here three hundred years ago.",
+   "cam": "two:lady,odo",
+   "do": [
+    [
+     "odo",
+     "turn:lady"
+    ]
+   ],
+   "text": "LADY DOROTHY, 1726"
+  },
+  {
+   "who": "narr",
+   "say": "The story says her husband had a terrible temper, and kept her shut inside her rooms.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "sad"
+    ]
+   ],
+   "text": "LOCKED IN HER ROOMS"
+  },
+  {
+   "who": "narr",
+   "say": "She died in this house in 1726, of smallpox. But the legend says she never left.",
+   "cam": "wide",
+   "do": [
+    [
+     "lady",
+     "dive"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "SHE NEVER LEFT"
+  },
+  {
+   "who": "moth",
+   "say": "Never left? Then where is she now?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Christmas, 1835. The house was full of guests. Two men were walking up to bed.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "to:-4,8"
+    ]
+   ],
+   "text": "CHRISTMAS 1835"
+  },
+  {
+   "who": "narr",
+   "say": "On the landing stood a lady in a rich brown dress. Watching them.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WATCHING THEM"
+  },
+  {
+   "who": "narr",
+   "say": "The next night, one of the men saw her again. Some servants were so scared they left for good.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "lady",
+     "dive"
+    ]
+   ],
+   "text": "THE SERVANTS FLED"
+  },
+  {
+   "who": "narr",
+   "say": "Would YOU spend one night in the haunted room? In 1836, one famous writer said yes.",
+   "cam": "close:marryat",
+   "do": [
+    [
+     "marryat",
+     "enter:right"
+    ]
+   ],
+   "text": "WOULD YOU STAY?"
+  },
+  {
+   "who": "marryat",
+   "say": "Ghosts? Nonsense. I shall sleep in that room and prove it.",
+   "cam": "close:marryat",
+   "do": [
+    [
+     "marryat",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "His name was Captain Frederick Marryat, a sea captain and a writer of adventure books.",
+   "cam": "two:marryat,odo",
+   "do": [
+    [
+     "marryat",
+     "turn:odo"
+    ]
+   ],
+   "text": "CAPTAIN MARRYAT"
+  },
+  {
+   "who": "narr",
+   "say": "His daughter wrote what happened. In a dark corridor, a lady came toward him, carrying a lamp.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "lady",
+     "to:5,9"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHE CAME CLOSER"
+  },
+  {
+   "who": "narr",
+   "say": "He fired his pistol. Bang! The bullet went straight through her, into the door behind.",
+   "cam": "two:marryat,lady",
+   "do": [
+    [
+     "marryat",
+     "shake"
+    ],
+    [
+     "lady",
+     "dive"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "STRAIGHT THROUGH HER"
+  },
+  {
+   "who": "moth",
+   "say": "Straight through? Would you stay one more night, Odo?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "marryat",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "Not even one more minute.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "1926. Two boys on the staircase saw her too. Later they saw an old painting.",
+   "cam": "prop:portrait",
+   "do": [
+    [
+     "portrait",
+     "show"
+    ],
+    [
+     "portrait",
+     "spin"
+    ]
+   ],
+   "text": "1926: TWO BOYS"
+  },
+  {
+   "who": "narr",
+   "say": "It was Lady Dorothy's portrait. They said that was the face they had seen.",
+   "cam": "prop:portrait",
+   "do": [
+    [
+     "portrait",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THAT WAS HER"
+  },
+  {
+   "who": "narr",
+   "say": "September 1936. Two photographers came to take pictures of the great staircase.",
+   "cam": "close:shira",
+   "do": [
+    [
+     "portrait",
+     "vanish"
+    ],
+    [
+     "shira",
+     "enter:left"
+    ]
+   ],
+   "text": "SEPTEMBER 1936"
+  },
+  {
+   "who": "narr",
+   "say": "One aimed the camera up the stairs. The other was standing right beside him.",
+   "cam": "two:shira,odo",
+   "do": [
+    [
+     "camera",
+     "show"
+    ]
+   ],
+   "text": "AIM AT THE STAIRS"
+  },
+  {
+   "who": "shira",
+   "say": "Quick! There's something coming down the stairs!",
+   "cam": "close:shira",
+   "do": [
+    [
+     "shira",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "A pale shape in a veil. Gliding down. Step by step.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "lady",
+     "to:2,9"
+    ]
+   ],
+   "text": "A SHAPE IN A VEIL"
+  },
+  {
+   "who": "narr",
+   "say": "Flash! The picture was taken. But the photographer looking through the camera saw nothing at all.",
+   "cam": "wide",
+   "do": [
+    [
+     "camera",
+     "spin"
+    ],
+    [
+     "lady",
+     "dive"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "FLASH!"
+  },
+  {
+   "who": "narr",
+   "say": "Then they printed the photo. And there she was. A ghostly lady on the stairs.",
+   "cam": "prop:photo",
+   "do": [
+    [
+     "camera",
+     "vanish"
+    ],
+    [
+     "photo",
+     "show"
+    ],
+    [
+     "photo",
+     "bounce"
+    ]
+   ],
+   "text": "SHE WAS IN THE PHOTO"
+  },
+  {
+   "who": "moth",
+   "say": "The camera saw her. The man didn't. Odo, what is she?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "That December, a famous magazine printed it. It became the most famous ghost photo in the world.",
+   "cam": "prop:photo",
+   "do": [
+    [
+     "photo",
+     "spin"
+    ]
+   ],
+   "text": "WORLD FAMOUS"
+  },
+  {
+   "who": "narr",
+   "say": "A ghost hunter questioned both men. He said he could not shake their story.",
+   "cam": "close:shira",
+   "do": [
+    [
+     "shira",
+     "turn:front"
+    ]
+   ],
+   "text": "THEY STUCK TO IT"
+  },
+  {
+   "who": "narr",
+   "say": "Others say it was a trick of the camera. Two pictures on top of each other.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "photo",
+     "vanish"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "A TRICK?"
+  },
+  {
+   "who": "narr",
+   "say": "Or a smudge on the lens. Or a person walking down the stairs. Nobody has ever proved it.",
+   "cam": "wide",
+   "do": [
+    [
+     "shira",
+     "exit"
+    ]
+   ],
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "Then the lantern began to flicker. And a cold wind came down the staircase.",
+   "cam": "overhead",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "THE LANTERN FLICKERED"
+  },
+  {
+   "who": "lady",
+   "say": "You... should not be on my stairs.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "lady",
+     "to:-1,8"
+    ]
+   ],
+   "text": "SHE SPOKE"
+  },
+  {
+   "who": "moth",
+   "say": "Odo... she isn't looking at us. She's looking behind us.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:lady"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "What is standing behind Odo and Mothwick? Subscribe. The next tale begins on these stairs.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHAT'S BEHIND THEM? SUBSCRIBE!"
+  }
+ ]
+}

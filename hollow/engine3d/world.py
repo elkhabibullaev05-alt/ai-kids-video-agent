@@ -1,7 +1,7 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
 SET.place: forest | clearing | graveyard | swamp | village | chapel
-Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | human
+Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | human
 """
 TOD = "night"
 PLACE = SET.get("place", "forest")
@@ -184,6 +184,13 @@ def _shape(key, kind, s, ch):
         bpy.ops.mesh.primitive_cylinder_add(radius=0.75 * s, depth=0.12 * s, location=(-0.75 * s, -0.25 * s, 1.6 * s - sink), rotation=(0, math.radians(90), math.radians(15))); parent(add(_o(), gm("shield", (0.5, 0.1, 0.08), 0.7)), o)
         bpy.ops.mesh.primitive_cylinder_add(radius=0.035 * s, depth=3.2 * s, location=(0.7 * s, -0.1 * s, 1.9 * s - sink)); parent(add(_o(), gm("spear", (0.25, 0.2, 0.15), 0.8)), o)
         return o, 1.4 * s, 1.2 * s, 3.9 * s - sink, -0.4 * s, 3.0 * s - sink
+    if kind == "lady":  # Brown Lady of Raynham: long gown (cone), veil, faint glow; "ghost": pale glowing
+        gh = ch.get("ghost", True); em = 0.6 if gh else 0.0
+        gown = mat(f"gown_{key}", col, 0.8, 0, em)
+        bpy.ops.mesh.primitive_cone_add(radius1=0.95 * s, radius2=0.35 * s, depth=2.9 * s, location=(0, 0, 1.45 * s)); o = add(_o(), gown)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.38 * s, location=(0, 0, 3.15 * s)); parent(add(_o(), mat(f"lface_{key}", (0.85, 0.82, 0.75), 0.6, 0, em * 1.5)), o)
+        bpy.ops.mesh.primitive_cone_add(radius1=0.62 * s, radius2=0.2 * s, depth=1.6 * s, location=(0, 0.12 * s, 2.95 * s)); parent(add(_o(), mat(f"veil_{key}", (col[0] * 0.8, col[1] * 0.8, col[2] * 0.8), 0.9, 0, em)), o)
+        return o, 1.6 * s, 1.6 * s, 3.6 * s, -0.36 * s, 3.2 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)

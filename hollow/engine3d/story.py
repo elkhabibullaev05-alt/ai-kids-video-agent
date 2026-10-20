@@ -199,7 +199,7 @@ def do_char(c, act, t, d):
     elif name in ("rise", "dive"):  # comes up out of the water / sinks under it (lochbeast)
         r = C[c]["root"]; up = POS[c].copy(); down = up + Vector((0, 0, -6))
         if name == "rise":
-            if not C[c].get("risen"):
+            if not C[c].get("risen") and not TL["chars"].get(c, {}).get("up"):  # "up": true = visible from frame 1
                 r.location = down; r.keyframe_insert("location", frame=1); C[c]["risen"] = True
             K(r, t, "location", down); K(r, t + 1.5, "location", up)
         else:
