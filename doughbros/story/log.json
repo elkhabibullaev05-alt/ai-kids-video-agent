@@ -754,10 +754,71 @@
         }
       ],
       "note": "2026-10-19 22:55 - 2026-10-20 03:40 UTC run (session_01JPPGxu2eZ6QnHfN75juPya). Long 187.0 s 1080p (first 0.6 s lead-in trimmed so dialogue starts at 0 s; first title card has no fade-in), rek-ball 100. Shorts cut from the long + rek_ball --kuchaytir (77->96, 70->96). Render ~3.5 h on 2 cores (one restart after a blocked Crispy close-up and one silent Blender exit at frame 2142). Files on orphan branch 'db-ep020'. No custom thumbnail (needs phone verification). 21 Oct can take only one more long (22:45 UTC) because its 4 Shorts occupy 13:15-19:45."
+    },
+    {
+      "episode": 21,
+      "date": "2026-10-21",
+      "theme": "The trap",
+      "title": "Zeek's Trap Caught the Wrong 3 Dough Bros",
+      "villain": "kettle",
+      "bg": [
+        "pantry"
+      ],
+      "format": "3D (engine3d) pack: 1 long + 1 Short (21 Oct's 2nd long; its Short goes to 22 Oct because 21 Oct already has 4 Shorts)",
+      "script": "scripts3d/ep021.json",
+      "summary": "Racing to save Crispy before midnight, the Dough Bros follow the Golden Crumb into the pantry, where Old Hissy the kettle guards a secret tunnel to Mr. Pot's oven; Zeek's honey Sticky-Trap 3000 catches Bup, Pim and Zeek instead. Pim realises Hissy hates noise and his steam melts honey, so everyone screams and sings until Hissy boils himself dry, the heroes slide free and the key opens the tunnel.",
+      "cliffhanger": "In the warm tunnel under the oven (11:55, five minutes left) Crispy warns 'It's a trap. Mr. Pot is not alone anymore' - and behind them something goes click, click, click and smells like burning toast.",
+      "shorts": [
+        "1 Honey Trap Caught 3 Dough Bros 😱 #shorts"
+      ],
+      "pending_uploads": [
+        {
+          "file": "ep021_long.mp4",
+          "title": "Zeek's Trap Caught the Wrong 3 Dough Bros",
+          "publish_at": "2026-10-21T22:45:00Z",
+          "rek_ball": 100,
+          "thumb": "ep021_long_thumb.jpg",
+          "upload_txt": "ep021_long_upload.txt"
+        },
+        {
+          "file": "ep021_short1.mp4",
+          "title": "1 Honey Trap Caught 3 Dough Bros 😱 #shorts",
+          "publish_at": "2026-10-22T18:15:00Z",
+          "rek_ball": 96,
+          "upload_txt": "ep021_short1_upload.txt",
+          "note": "replace {LONG_URL} with the long's URL"
+        }
+      ],
+      "translations_pending": [
+        {
+          "video": "ep021_long",
+          "langs": [
+            "en",
+            "es",
+            "pt",
+            "ar",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+          ],
+          "what": "title+description (ep021_long_translations.json) + subtitles"
+        },
+        {
+          "video": "ep021_short1",
+          "langs": [
+            "es",
+            "pt",
+            "ar",
+            "fr",
+            "ja",
+            "ko",
+            "de"
+          ],
+          "what": "title+description (ep021_short1_translations.json)"
+        }
+      ],
+      "note": "2026-10-20 06:58-10:55 UTC run (session_018vJx7Hjws1q5iNNXKphxHd). Long 196.5 s 1080p (LEAD=0: first line at 0 s), rek-ball 100; Short 23.2 s cut at 65.6 s + --kuchaytir (77->96). Render ~3.3 h, one silent Blender exit at frame 1554 (resumed). Long re-encoded to 85 MB to fit GitHub's 100 MB limit. Files on orphan branch 'db-ep021' (mp4s, thumb, 8 .srt, translations, upload.txt). Upload blocked: Studio said 'Загрузка недоступна... через 24 часа' (daily upload limit) on the long; no phone verification done; nothing scheduled. Setting the custom thumbnail was also refused by Claude's safety check. A half-finished upload draft 'Zeek's Trap Caught the Wrong 3 Dough Bros' may exist in Studio - check Content → drafts before re-uploading."
     }
-  ],
-  "lock": {
-    "until": "2026-10-20T12:30:00Z",
-    "by": "session_018vJx7Hjws1q5iNNXKphxHd"
-  }
+  ]
 }
