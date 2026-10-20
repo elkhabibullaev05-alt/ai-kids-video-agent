@@ -1,0 +1,757 @@
+{
+ "title": "Crispy's Dark Secret... Was He EVIL?! 🔥 | EP 20",
+ "description": "Mr. Pot followed the Dough Bros home, and he knows Crispy's darkest secret. Will Crispy trade the Golden Crumb to become golden again?",
+ "set": {
+  "place": "kitchen",
+  "time": "night"
+ },
+ "chars": {
+  "bup": {
+   "name": "Bup",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.82,
+    0.6,
+    0.32
+   ],
+   "kind": "loaf",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ],
+   "eye_sizes": [
+    1.15,
+    0.8
+   ],
+   "stitch": true,
+   "brows": 10
+  },
+  "pim": {
+   "name": "Pim",
+   "voice": "am_puck",
+   "speed": 1.15,
+   "pitch": 2,
+   "color": [
+    0.75,
+    0.08,
+    0.08
+   ],
+   "kind": "bean",
+   "size": 0.9,
+   "home": [
+    -2.5,
+    4
+   ]
+  },
+  "zeek": {
+   "name": "Zeek",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.4,
+    0.9
+   ],
+   "kind": "triangle",
+   "size": 0.9,
+   "home": [
+    1.5,
+    5
+   ]
+  },
+  "lolly": {
+   "name": "Lolly",
+   "voice": "af_nicole",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    1.0,
+    0.45,
+    0.7
+   ],
+   "kind": "star",
+   "size": 0.85,
+   "home": [
+    5,
+    4
+   ]
+  },
+  "crispy": {
+   "name": "Crispy",
+   "voice": "am_onyx",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.06,
+    0.05,
+    0.05
+   ],
+   "kind": "rock",
+   "size": 0.9,
+   "home": [
+    9,
+    8
+   ]
+  },
+  "pot": {
+   "name": "Mr. Pot",
+   "voice": "am_fenrir",
+   "speed": 0.85,
+   "pitch": -4,
+   "color": [
+    0.15,
+    0.15,
+    0.17
+   ],
+   "kind": "pot",
+   "size": 1.1,
+   "home": [
+    2,
+    13
+   ],
+   "brows": 18
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "props": [
+  {
+   "id": "crumb",
+   "type": "key",
+   "color": "gold",
+   "on": "bup",
+   "visible": true,
+   "scale": 0.8
+  }
+ ],
+ "beats": [
+  {
+   "who": "pim",
+   "say": "He followed us HOME?! He followed us all the way HOME!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ],
+    [
+     "pot",
+     "enter"
+    ]
+   ],
+   "text": "HE FOLLOWED US HOME!",
+   "sfx": "alarm"
+  },
+  {
+   "who": "pot",
+   "say": "Fresh... dough... You can't run from me. Not in MY kitchen.",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:pot"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "Everyone. Behind me. Now.",
+   "cam": "two:crispy,pot",
+   "do": [
+    [
+     "crispy",
+     "turn:pot"
+    ],
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Oh, Crispy. My little burnt helper. Did you tell them our secret?",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Helper? Crispy, what is he talking about?",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "turn:crispy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Every hero has a secret. Tonight, Crispy's secret comes out.",
+   "cam": "overhead",
+   "text": "CRISPY'S SECRET"
+  },
+  {
+   "who": "crispy",
+   "say": "Long ago, I was a golden roll. I lit Mr. Pot's fire every night.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "turn:front"
+    ],
+    [
+     "crispy",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "You WORKED for him?! For the pot that wants to FRY us?!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "He was my best little spark. Until the night you five were baked.",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "He told me to fry you. Fresh from the oven. I said no.",
+   "cam": "two:crispy,bup",
+   "do": [
+    [
+     "crispy",
+     "turn:bup"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "So he burned me black. And I've been hiding in the shadows ever since.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "turn:front"
+    ],
+    [
+     "crispy",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "text": "HE SAVED THEM ALL!",
+   "cam": "close:crispy",
+   "hold": 1.2,
+   "sfx": "suspicious",
+   "do": [
+    [
+     "crispy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Crispy... you saved us. Before we even knew your name.",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Fascinating. That explains the smoke, the mystery, and the dramatic voice.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Enough talk. Give me the Golden Crumb, and I'll make you golden again, Crispy.",
+   "cam": "wide",
+   "do": [
+    [
+     "pot",
+     "to:crispy"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Golden. Shiny. Warm. Just like before.",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Crispy? You're not... thinking about it. Are you?",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "Golden again...",
+   "cam": "two:crispy,pot",
+   "do": [
+    [
+     "crispy",
+     "turn:pot"
+    ]
+   ]
+  },
+  {
+   "text": "WILL HE BETRAY THEM?",
+   "cam": "two:crispy,pot",
+   "hold": 1.3,
+   "sfx": "alarm",
+   "do": [
+    [
+     "crispy",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "He's thinking about it! He's totally thinking about it!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Crispy. Look at me. You are NOT his helper anymore.",
+   "cam": "two:lolly,crispy",
+   "do": [
+    [
+     "lolly",
+     "turn:crispy"
+    ],
+    [
+     "lolly",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "No time for feelings! Behold, the Lid-Locker 3000! It seals any pot shut!",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Zeek, does it work?",
+   "cam": "two:bup,zeek"
+  },
+  {
+   "who": "zeek",
+   "say": "Yes. Ninety percent. Fine, twelve percent.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "A lid? For ME? Hah! I EAT lids for breakfast!",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "jump"
+    ],
+    [
+     "zeek",
+     "squash"
+    ]
+   ]
+  },
+  {
+   "text": "THE LID-LOCKER FAILED!",
+   "cam": "close:zeek",
+   "hold": 1.2,
+   "sfx": "alarm",
+   "do": [
+    [
+     "zeek",
+     "flat_roof"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "He ate it. He actually ate it. Twelve percent was generous.",
+   "cam": "close:zeek",
+   "do": [
+    [
+     "zeek",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Okay, I'm fainting. I'm fainting now. Goodbye, everyone.",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Not now, Pim! Here's the plan. Lolly, left. Zeek, right. I keep the key.",
+   "cam": "wide",
+   "do": [
+    [
+     "bup",
+     "to:-2,8"
+    ],
+    [
+     "lolly",
+     "to:6,9"
+    ],
+    [
+     "zeek",
+     "to:-8,10"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Run, little doughs! Run all you like! My kitchen, my rules!",
+   "cam": "wide",
+   "do": [
+    [
+     "pot",
+     "to:bup"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "bup",
+   "say": "He's too fast! Lolly, now!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "Hey, pot face! You leave my family ALONE!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "flat_roof"
+    ],
+    [
+     "lolly",
+     "to:5,7"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Hah! An angry cookie! You'll make a lovely crunchy snack!",
+   "cam": "two:lolly,pot",
+   "do": [
+    [
+     "pot",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Mr. Pot opens his lid wide. The Golden Crumb starts to slip from Bup's hands.",
+   "cam": "prop:crumb",
+   "do": [
+    [
+     "crumb",
+     "bounce"
+    ]
+   ],
+   "text": "THE KEY IS SLIPPING!"
+  },
+  {
+   "who": "bup",
+   "say": "No, no, no! The key!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "eyes_big"
+    ],
+    [
+     "crumb",
+     "drop:bup"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "MINE! Finally, MINE!",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "to:bup"
+    ],
+    [
+     "pot",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "crispy",
+   "say": "No. Not this time.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "turn:front"
+    ],
+    [
+     "crispy",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "Bup. Catch.",
+   "cam": "two:crispy,bup",
+   "do": [
+    [
+     "crumb",
+     "give:bup"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "Got it! Crispy, you chose US!",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "crispy",
+   "say": "I always did. Now run.",
+   "cam": "close:crispy",
+   "do": [
+    [
+     "crispy",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "You little traitor! If I can't have the key... I'll take YOU!",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "to:crispy"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "text": "MR. POT GRABBED CRISPY!",
+   "cam": "two:pot,crispy",
+   "hold": 1.3,
+   "sfx": "alarm",
+   "do": [
+    [
+     "crispy",
+     "squash"
+    ],
+    [
+     "pot",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "lolly",
+   "say": "CRISPY! Let him go! LET HIM GO!",
+   "cam": "close:lolly",
+   "do": [
+    [
+     "lolly",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "pim",
+   "say": "Wait, what happened? I was fainting! Why is everyone screaming?!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "zeek",
+   "say": "Pim, Mr. Pot has Crispy inside his lid. This is statistically very bad.",
+   "cam": "two:zeek,pim",
+   "do": [
+    [
+     "zeek",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "pot",
+   "say": "Listen, little doughs. Bring the Golden Crumb to my fire by midnight.",
+   "cam": "close:pot",
+   "do": [
+    [
+     "pot",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "pot",
+   "say": "Or your burnt friend becomes my fire... FOREVER!",
+   "cam": "wide",
+   "do": [
+    [
+     "pot",
+     "exit"
+    ],
+    [
+     "crispy",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "bup",
+   "say": "We're coming, Crispy. I promise. We're coming.",
+   "cam": "close:bup",
+   "do": [
+    [
+     "bup",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But the Golden Crumb begins to glow... and it's pointing at the pantry door.",
+   "cam": "prop:crumb",
+   "do": [
+    [
+     "crumb",
+     "spin"
+    ]
+   ],
+   "text": "IT'S GLOWING..."
+  },
+  {
+   "who": "pim",
+   "say": "Why is it glowing?! Keys don't glow! Keys should NOT glow!",
+   "cam": "close:pim",
+   "do": [
+    [
+     "pim",
+     "shake"
+    ]
+   ],
+   "text": "TO BE CONTINUED..."
+  }
+ ]
+}

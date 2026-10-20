@@ -28,5 +28,6 @@ for b in TL["beats"]:
         out.append(f"Dialogue: 0,{ts(s)},{ts(e)},Sub,,0,0,0,,{txt}")
     if b.get("text"):
         t = re.sub(r"[^\x00-⿿]", "", b["text"]).strip()
-        out.append(f"Dialogue: 1,{ts(s)},{ts(s + max(1.8, b['dur'] + 0.6))},Big,,0,0,0,,{{\\fad(150,250)}}{t}")
+        fad = "{\\fad(0,250)}" if s < 1.0 else "{\\fad(150,250)}"  # frame 1 = hook text already on screen
+        out.append(f"Dialogue: 1,{ts(s)},{ts(s + max(1.8, b['dur'] + 0.6))},Big,,0,0,0,,{fad}{t}")
 open(os.path.join(D, "subs.ass"), "w").write(hdr + "\n".join(out) + "\n")
