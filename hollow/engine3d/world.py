@@ -1,7 +1,7 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
 SET.place: forest | clearing | graveyard | swamp | village | chapel
-Character kinds: odo | moth | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | human
+Character kinds: odo | moth | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | human
 """
 TOD = "night"
 PLACE = SET.get("place", "forest")
@@ -166,6 +166,16 @@ def _shape(key, kind, s, ch):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0.25 * s, 4.15 * s)); sh = add(_o(), cloak); sh.scale = (1.3, 0.8, 0.35); parent(sh, o)
         bpy.ops.mesh.primitive_cylinder_add(radius=0.05 * s, depth=0.4 * s, location=(0, 0.25 * s, 4.35 * s)); parent(add(_o(), mat("neckstub", (0.1, 0.02, 0.02), 0.8)), o)
         return o, 1.6 * s, 3.5 * s, 4.4 * s, -2.42 * s, 2.85 * s
+    if kind == "soldier":  # Roman legionary: tunic, plumed helmet, round shield; "ghost": pale glowing + sunk to the knees
+        gh = ch.get("ghost", False); sink = 0.75 * s if gh else 0.0
+        gm = (lambda n, c_, r_=0.6, m_=0.0: mat(f"{n}_{key}", (0.45, 0.8, 0.75), 0.5, 0, 0.55)) if gh else (lambda n, c_, r_=0.6, m_=0.0: mat(f"{n}_{key}", c_, r_, m_))
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s - sink)); o = add(_o(), gm("tunic", col, 0.9))
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.42 * s, location=(0, 0, 3.0 * s - sink)); parent(add(_o(), gm("skin", (0.85, 0.72, 0.62))), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.47 * s, location=(0, 0.05 * s, 3.15 * s - sink)); hm = add(_o(), gm("helm", (0.55, 0.5, 0.42), 0.3, 1.0)); hm.scale = (1, 1, 0.75); parent(hm, o)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0.1 * s, 3.65 * s - sink)); cr = add(_o(), gm("crest", (0.75, 0.06, 0.05), 0.8), False); cr.scale = (0.12 * s, 0.8 * s, 0.35 * s); parent(cr, o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.75 * s, depth=0.12 * s, location=(-0.75 * s, -0.25 * s, 1.6 * s - sink), rotation=(0, math.radians(90), math.radians(15))); parent(add(_o(), gm("shield", (0.5, 0.1, 0.08), 0.7)), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.035 * s, depth=3.2 * s, location=(0.7 * s, -0.1 * s, 1.9 * s - sink)); parent(add(_o(), gm("spear", (0.25, 0.2, 0.15), 0.8)), o)
+        return o, 1.4 * s, 1.2 * s, 3.9 * s - sink, -0.4 * s, 3.0 * s - sink
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)

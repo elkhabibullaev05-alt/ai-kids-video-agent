@@ -1,0 +1,782 @@
+{
+ "title": "Where Did Rome's 5,000 Soldiers Go?",
+ "description": "Five thousand Roman soldiers marched north. Then they vanished from history.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.04,
+  "eyes": 5,
+  "moonlight": 2.6
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "harry": {
+   "name": "Harry",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.15,
+    0.22,
+    0.35
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    3,
+    7
+   ]
+  },
+  "l1": {
+   "name": "Legionary",
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.55,
+    0.06,
+    0.05
+   ],
+   "kind": "soldier",
+   "size": 1.0,
+   "home": [
+    1,
+    10
+   ]
+  },
+  "l2": {
+   "name": "Legionary",
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.55,
+    0.06,
+    0.05
+   ],
+   "kind": "soldier",
+   "size": 1.0,
+   "home": [
+    3.5,
+    10
+   ]
+  },
+  "l3": {
+   "name": "Legionary",
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.55,
+    0.06,
+    0.05
+   ],
+   "kind": "soldier",
+   "size": 1.0,
+   "home": [
+    1,
+    13
+   ]
+  },
+  "l4": {
+   "name": "Legionary",
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.55,
+    0.06,
+    0.05
+   ],
+   "kind": "soldier",
+   "size": 1.0,
+   "home": [
+    3.5,
+    13
+   ]
+  },
+  "g1": {
+   "name": "Ghost soldier",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.5,
+    0.8,
+    0.8
+   ],
+   "kind": "soldier",
+   "ghost": true,
+   "size": 1.0,
+   "home": [
+    2,
+    9
+   ]
+  },
+  "g2": {
+   "name": "Ghost soldier",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.5,
+    0.8,
+    0.8
+   ],
+   "kind": "soldier",
+   "ghost": true,
+   "size": 1.0,
+   "home": [
+    4.5,
+    9
+   ]
+  },
+  "g3": {
+   "name": "Ghost soldier",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.5,
+    0.8,
+    0.8
+   ],
+   "kind": "soldier",
+   "ghost": true,
+   "size": 1.0,
+   "home": [
+    2,
+    12
+   ]
+  },
+  "g4": {
+   "name": "Ghost soldier",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.5,
+    0.8,
+    0.8
+   ],
+   "kind": "soldier",
+   "ghost": true,
+   "size": 1.0,
+   "home": [
+    4.5,
+    12
+   ]
+  },
+  "g5": {
+   "name": "Ghost soldier",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.5,
+    0.8,
+    0.8
+   ],
+   "kind": "soldier",
+   "ghost": true,
+   "size": 1.0,
+   "home": [
+    2,
+    15
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "tile",
+   "type": "box",
+   "color": [
+    0.6,
+    0.3,
+    0.18
+   ],
+   "at": [
+    0,
+    9,
+    1.4
+   ],
+   "visible": false,
+   "scale": 0.7
+  },
+  {
+   "id": "eagle",
+   "type": "star",
+   "color": "gold",
+   "at": [
+    0,
+    9,
+    1.6
+   ],
+   "visible": false,
+   "scale": 0.8
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Five thousand Roman soldiers marched north. Then they vanished from history.",
+   "cam": "wide",
+   "do": [
+    [
+     "l1",
+     "to:0,7.5"
+    ],
+    [
+     "l2",
+     "to:2.5,7.5"
+    ],
+    [
+     "l3",
+     "to:0,10.5"
+    ],
+    [
+     "l4",
+     "to:2.5,10.5"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "5,000 SOLDIERS VANISHED"
+  },
+  {
+   "who": "narr",
+   "say": "And in 1953, a boy in York saw soldiers walk out of a wall.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "OUT OF THE WALL"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... do you hear marching?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:l1"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "Soldiers don't march at midnight, Odo. Not anymore.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. They were the Ninth Legion of Rome.",
+   "cam": "two:l1,l2",
+   "do": [
+    [
+     "l1",
+     "jump"
+    ],
+    [
+     "l2",
+     "jump"
+    ]
+   ],
+   "text": "THE NINTH LEGION"
+  },
+  {
+   "who": "narr",
+   "say": "Almost two thousand years ago, their great fortress stood where York is today.",
+   "cam": "overhead",
+   "text": "YORK, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "In the year 82, enemies from the north attacked their camp at night.",
+   "cam": "close:l1",
+   "do": [
+    [
+     "l1",
+     "shake"
+    ],
+    [
+     "l3",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "AD 82"
+  },
+  {
+   "who": "narr",
+   "say": "The legion held on. And it kept marching.",
+   "cam": "wide",
+   "do": [
+    [
+     "l1",
+     "to:1,16"
+    ],
+    [
+     "l2",
+     "to:3.5,16"
+    ],
+    [
+     "l3",
+     "to:1,19"
+    ],
+    [
+     "l4",
+     "to:3.5,19"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The last words they left in Britain were carved in stone, at York, in the year 108.",
+   "cam": "close:l2",
+   "do": [
+    [
+     "l2",
+     "turn:front"
+    ]
+   ],
+   "text": "THE LAST STONE: 108"
+  },
+  {
+   "who": "narr",
+   "say": "After that, silence. No battle. No goodbye. Nothing.",
+   "cam": "wide",
+   "do": [
+    [
+     "l1",
+     "exit"
+    ],
+    [
+     "l2",
+     "exit"
+    ],
+    [
+     "l3",
+     "exit"
+    ],
+    [
+     "l4",
+     "exit"
+    ]
+   ],
+   "text": "THEN... NOTHING"
+  },
+  {
+   "who": "odo",
+   "say": "Where did they go?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "By the year 122, a different legion was living in their fortress.",
+   "cam": "overhead",
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "And on a list of Rome's legions made around 165, the Ninth was simply gone.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "ERASED FROM THE LIST"
+  },
+  {
+   "who": "narr",
+   "say": "Some said they were wiped out in the misty hills of the north.",
+   "cam": "wide",
+   "text": "LOST IN THE MIST?"
+  },
+  {
+   "who": "odo",
+   "say": "Five thousand soldiers can't just disappear.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But in 1959, diggers in the Netherlands found a roof tile stamped with the Ninth's name.",
+   "cam": "prop:tile",
+   "do": [
+    [
+     "tile",
+     "show"
+    ]
+   ],
+   "text": "1959"
+  },
+  {
+   "who": "moth",
+   "say": "So some of them crossed the sea?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "tile",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Maybe. Others think the legion was sent far to the east, and never came back.",
+   "cam": "prop:tile",
+   "do": [
+    [
+     "tile",
+     "vanish"
+    ]
+   ],
+   "text": "SENT EAST?"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody knows how the Ninth ended. Not one record tells us.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "sad"
+    ]
+   ],
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "moth",
+   "say": "Then their story isn't finished.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In 1866, a priest digging in an old Roman town found a bronze eagle. Its wings were gone.",
+   "cam": "prop:eagle",
+   "do": [
+    [
+     "eagle",
+     "show"
+    ],
+    [
+     "eagle",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE WINGLESS EAGLE"
+  },
+  {
+   "who": "narr",
+   "say": "A writer, Rosemary Sutcliff, imagined it was the lost eagle of the Ninth. She wrote a famous book.",
+   "cam": "prop:eagle",
+   "do": [
+    [
+     "eagle",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But the ghost story is even stranger. And it is written down too.",
+   "cam": "wide",
+   "do": [
+    [
+     "eagle",
+     "vanish"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "1953. An eighteen-year-old plumber, Harry Martindale, was alone in a cellar in York.",
+   "cam": "close:harry",
+   "do": [
+    [
+     "harry",
+     "enter:left"
+    ],
+    [
+     "harry",
+     "turn:front"
+    ]
+   ],
+   "text": "ALONE IN THE CELLAR"
+  },
+  {
+   "who": "narr",
+   "say": "Then he heard a trumpet. Far away. Getting louder.",
+   "cam": "close:harry",
+   "do": [
+    [
+     "harry",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A TRUMPET... LOUDER"
+  },
+  {
+   "who": "narr",
+   "say": "A soldier in a plumed helmet walked straight out of the wall.",
+   "cam": "two:harry,g1",
+   "do": [
+    [
+     "g1",
+     "enter:right"
+    ],
+    [
+     "harry",
+     "shake"
+    ]
+   ],
+   "text": "OUT OF THE WALL"
+  },
+  {
+   "who": "narr",
+   "say": "Then more. Pairs of Roman soldiers. But he could only see them from the knees up.",
+   "cam": "wide",
+   "do": [
+    [
+     "g2",
+     "enter:right"
+    ],
+    [
+     "g3",
+     "enter:right"
+    ],
+    [
+     "g4",
+     "enter:right"
+    ],
+    [
+     "g5",
+     "enter:right"
+    ],
+    [
+     "harry",
+     "turn:g1"
+    ]
+   ],
+   "text": "NO LEGS"
+  },
+  {
+   "who": "harry",
+   "say": "They were walking on a road I couldn't see!",
+   "cam": "close:harry",
+   "do": [
+    [
+     "harry",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "Deep under the cellar floor ran an old Roman road. The ghosts were marching on it.",
+   "cam": "two:harry,g1",
+   "do": [
+    [
+     "g1",
+     "to:-14,9"
+    ],
+    [
+     "g2",
+     "to:-11.5,9"
+    ],
+    [
+     "g3",
+     "to:-14,12"
+    ],
+    [
+     "g4",
+     "to:-11.5,12"
+    ],
+    [
+     "g5",
+     "to:-14,15"
+    ]
+   ],
+   "text": "THE BURIED ROAD"
+  },
+  {
+   "who": "narr",
+   "say": "Harry fell off his ladder. He told the story for the rest of his life.",
+   "cam": "close:harry",
+   "do": [
+    [
+     "harry",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Later, experts said the clothes he described matched Roman soldiers from a later time.",
+   "cam": "overhead",
+   "text": "THE CLOTHES MATCHED"
+  },
+  {
+   "who": "narr",
+   "say": "Were they the lost Ninth? Or later soldiers? No one can say.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ],
+   "text": "WHO WERE THEY?"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... the ground is shaking.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "moth",
+   "say": "That's not the ground. That's feet. Lots of feet.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Out of the fog, the legion turned. And marched straight toward them.",
+   "cam": "wide",
+   "do": [
+    [
+     "g1",
+     "to:-6,10"
+    ],
+    [
+     "g2",
+     "to:-3.5,10"
+    ],
+    [
+     "g3",
+     "to:-6,13"
+    ],
+    [
+     "g4",
+     "to:-3.5,13"
+    ],
+    [
+     "g5",
+     "to:-5,16"
+    ],
+    [
+     "all",
+     "look:odo"
+    ]
+   ],
+   "text": "THEY'RE COMING"
+  },
+  {
+   "who": "narr",
+   "say": "Who is leading the lost legion? The next tale begins right here.",
+   "cam": "close:g1",
+   "do": [
+    [
+     "g1",
+     "turn:odo"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "WHO LEADS THEM? SUBSCRIBE!"
+  }
+ ]
+}
