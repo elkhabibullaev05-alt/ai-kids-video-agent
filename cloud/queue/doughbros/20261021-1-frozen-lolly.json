@@ -1,0 +1,760 @@
+{
+ "id": "20261021-1-frozen-lolly",
+ "plot": "At midnight in the freezer the lonely ghost Frostbite freezes Lolly mid-sentence; Zeek's heater and Bup's rubbing plan fail, Zeek realizes only an inner warmth will thaw her, Pim's panicky joke makes Frostbite laugh and Lolly melts, she offers him weekly tea instead, and Frostbite warns that the toaster has joined Mr. Pot.",
+ "script": {
+  "title": "Lolly Got Frozen Mid-Sentence",
+  "set": {
+   "place": "freezer",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "frostbite": {
+    "name": "Frostbite",
+    "voice": "bf_emma",
+    "speed": 0.85,
+    "pitch": -1,
+    "color": [
+     0.7,
+     0.9,
+     1.0
+    ],
+    "kind": "ghost",
+    "size": 1.3,
+    "home": [
+     2,
+     14
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "heater",
+    "type": "box",
+    "color": "red",
+    "on": null,
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Just grabbing frozen berries for my icing. In and out. What could possibly go—",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "FROZEN SOLID!",
+    "sfx": "alarm",
+    "cam": "close:frostbite",
+    "hold": 0.9,
+    "do": [
+     [
+      "frostbite",
+      "spin"
+     ],
+     [
+      "lolly",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Lolly? LOLLY! She stopped in the middle of a word! Her mouth is still open!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Shhh... she stays now... forever... and ever... cold...",
+    "cam": "close:frostbite",
+    "do": [
+     [
+      "frostbite",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Frostbite! Let her go right now, you walking ice cube!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight, inside the freezer. At sunrise the humans open the door, and anything still in here gets packed away for winter.",
+    "cam": "wide"
+   },
+   {
+    "who": "zeek",
+    "say": "Fascinating. A full-body frost shell. Two centimeters thick. Possibly three.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Stop measuring her and UN-freeze her! Her icing is turning into a popsicle!",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Behold. The Heat-o-Matic Nine Thousand. It turns one battery into a tiny pocket sun.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "",
+    "sfx": "suspicious",
+    "cam": "prop:heater",
+    "hold": 0.7,
+    "do": [
+     [
+      "heater",
+      "show"
+     ],
+     [
+      "heater",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Tiny suns... have a way of exploding.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "zeek",
+    "say": "Nonsense. Pressing the button in three... two...",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "heater",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "POP!",
+    "sfx": "alarm",
+    "cam": "prop:heater",
+    "hold": 0.8,
+    "do": [
+     [
+      "heater",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It made one warm bubble. ONE! And now the whole freezer smells like burnt socks.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Warm things... always fail... in my house. Hee... hee...",
+    "cam": "close:frostbite",
+    "do": [
+     [
+      "frostbite",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Plan B. Friction makes heat. Everybody grab a point of the star and rub!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four friends. One frozen star cookie. Zero dignity.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "to:lolly"
+     ],
+     [
+      "pim",
+      "to:lolly"
+     ],
+     [
+      "zeek",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "My hands are sticking to her! Now I'M freezing! Tell my mom I was brave!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You were not brave. You were screaming the whole time.",
+    "cam": "two:crispy,pim"
+   },
+   {
+    "who": "zeek",
+    "say": "Wait. Why only Lolly? Frostbite had all five of us right here. He picked her.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:frostbite"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Maybe pink is his favorite color?",
+    "cam": "two:bup,zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "That is not a joke, Bup. That is a clue.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Frostbite. Of all of us. Why her?",
+    "cam": "two:zeek,frostbite",
+    "do": [
+     [
+      "zeek",
+      "to:frostbite"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Every night... she opens my door... and says... goodnight, Frosty.",
+    "cam": "close:frostbite",
+    "do": [
+     [
+      "frostbite",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Nobody else talks to me. If she stays... I always have a goodnight.",
+    "cam": "close:frostbite"
+   },
+   {
+    "who": "pim",
+    "say": "Oh no. That is the saddest thing a ghost has ever said out loud.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Lonely things hold on too tight. I know.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations were wrong. Outside heat won't melt this. She needs warmth from the inside.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Like soup? I can make soup. Mostly I can make a mess that looks like soup.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "zeek",
+    "say": "Like laughter. A real laugh is warm. Pim, you are the funniest when you panic.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I am NOT funny when I panic! ...Wait. Am I?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "MAKE A GHOST LAUGH",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.1,
+    "do": [
+     [
+      "pim",
+      "to:frostbite"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Knock knock! No wait, ghosts walk through doors. Okay. Why did the ice cube cross the road?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "...I do not know. Why did the ice cube cross the road?",
+    "cam": "close:frostbite"
+   },
+   {
+    "who": "pim",
+    "say": "Because it was too COOL to stay! Get it? Cool? Please laugh, I can't feel my toes!",
+    "cam": "two:pim,frostbite",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Hoo... hoo hoo... HA HA HA HA!",
+    "cam": "close:frostbite",
+    "do": [
+     [
+      "frostbite",
+      "laugh"
+     ],
+     [
+      "frostbite",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S MELTING!",
+    "sfx": "alarm",
+    "cam": "two:lolly,frostbite",
+    "hold": 0.9,
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "—WRONG! Who froze me?! I was in the middle of a SENTENCE!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Frosty. You do not freeze your friends. You ASK them to stay for tea.",
+    "cam": "two:lolly,frostbite",
+    "do": [
+     [
+      "lolly",
+      "to:frostbite"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Friends? You would drink tea... with me?",
+    "cam": "close:frostbite",
+    "do": [
+     [
+      "frostbite",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Iced tea, obviously. Every Tuesday. Goodnight included.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Great. Everybody out before sunrise. Move, move, move!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "frostbite",
+    "say": "Wait... one warning. The big black pot came here last night. He asked me to keep you cold.",
+    "cam": "two:frostbite,crispy",
+    "do": [
+     [
+      "frostbite",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Mr. Pot. He is collecting helpers. One appliance at a time.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "frostbite",
+    "say": "I said no. But the toaster... the toaster said yes.",
+    "cam": "close:frostbite"
+   },
+   {
+    "who": "pim",
+    "say": "The TOASTER said yes?! Nope. Goodbye. I'm fainting.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "Lolly Got FROZEN Mid-Sentence?! 🥶",
+  "description": "Lolly went into the freezer for berries and the ghost Frostbite froze her in the middle of a word. Zeek has until sunrise to thaw her out... and his invention smells like burnt socks. What would YOU have tried? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "freezer ghost",
+   "spooky cartoon",
+   "frozen",
+   "cartoon"
+  ],
+  "thumb_text": "SHE'S FROZEN!",
+  "thumb_beat": 37,
+  "localizations": {
+   "es": {
+    "title": "¡¿Lolly se CONGELÓ a mitad de frase?! 🥶",
+    "description": "Lolly entró al congelador por unas bayas y el fantasma Frostbite la dejó helada a media palabra. Zeek tiene hasta el amanecer para descongelarla... y su invento huele a calcetines quemados. ¿Qué habrías hecho TÚ? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "A Lolly CONGELOU no meio da frase?! 🥶",
+    "description": "A Lolly entrou no freezer para pegar frutinhas e o fantasma Frostbite a congelou no meio de uma palavra. O Zeek tem até o amanhecer para descongelá-la... e a invenção dele cheira a meia queimada. O que VOCÊ faria? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "لولي تجمّدت في منتصف الجملة؟! 🥶",
+    "description": "دخلت لولي الفريزر لتأخذ بعض التوت، فجمّدها الشبح فروستبايت في منتصف كلمة. أمام زيك حتى الفجر ليذيبها... واختراعه رائحته مثل جوارب محترقة. ماذا كنت ستفعل أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Lolly a été GELÉE en pleine phrase ?! 🥶",
+    "description": "Lolly est entrée dans le congélateur pour des baies et le fantôme Frostbite l'a gelée en plein milieu d'un mot. Zeek a jusqu'à l'aube pour la décongeler... et son invention sent la chaussette brûlée. Qu'aurais-TU fait ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "ロリーが話の途中で凍った!? 🥶",
+    "description": "ベリーを取りに冷凍庫へ入ったロリーが、幽霊フロストバイトに言葉の途中で凍らされた。夜明けまでに溶かせるのか…ジークの発明は焦げた靴下のにおい。キミならどうする？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "롤리가 말하다가 꽁꽁 얼었다?! 🥶",
+    "description": "베리를 가지러 냉동실에 들어간 롤리가 유령 프로스트바이트에게 말하던 중 얼어버렸다. 지크는 새벽까지 롤리를 녹여야 하는데... 발명품에서 탄 양말 냄새가 난다. 너라면 어떻게 할래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Lolly ist mitten im Satz EINGEFROREN?! 🥶",
+    "description": "Lolly wollte nur Beeren aus dem Gefrierschrank holen – da friert der Geist Frostbite sie mitten im Wort ein. Zeek hat bis Sonnenaufgang Zeit, sie aufzutauen... und seine Erfindung riecht nach verbrannten Socken. Was hättest DU getan? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 28,
+   "top": "SHE FROZE MID-WORD",
+   "title": "Lolly Froze in the Middle of a Word 🥶 #shorts",
+   "description": "One more word and... ice. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "ghost"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Lolly se congeló a media palabra 🥶 #shorts",
+     "description": "Una palabra más y... hielo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Lolly congelou no meio da palavra 🥶 #shorts",
+     "description": "Só mais uma palavra e... gelo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لولي تجمّدت في منتصف الكلمة 🥶 #shorts",
+     "description": "كلمة واحدة أخرى و... جليد. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Lolly gelée en plein mot 🥶 #shorts",
+     "description": "Un mot de plus et... de la glace. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ロリー、言葉の途中で凍る 🥶 #shorts",
+     "description": "あと一言で…氷。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "말하다 얼어버린 롤리 🥶 #shorts",
+     "description": "한 마디만 더 했으면... 얼음. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Lolly friert mitten im Wort ein 🥶 #shorts",
+     "description": "Ein Wort mehr und... Eis. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 31,
+   "dur": 26,
+   "top": "MAKE A GHOST LAUGH",
+   "title": "Could YOU Make a Ghost Laugh? 👻 #shorts",
+   "description": "Pim has one joke and zero toes left. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "joke"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Harías reír a un fantasma? 👻 #shorts",
+     "description": "Pim tiene un chiste y cero dedos de los pies. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você faria um fantasma rir? 👻 #shorts",
+     "description": "O Pim tem uma piada e zero dedos sentindo frio. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تستطيع إضحاك شبح؟ 👻 #shorts",
+     "description": "بيم لديه نكتة واحدة ولا يشعر بأصابع قدميه. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu ferais rire un fantôme ? 👻 #shorts",
+     "description": "Pim a une blague et ne sent plus ses orteils. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミは幽霊を笑わせられる？👻 #shorts",
+     "description": "ピムのギャグはひとつだけ。足の指はもう限界。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "유령을 웃길 수 있어? 👻 #shorts",
+     "description": "핌에게 남은 건 농담 하나와 얼어붙은 발가락. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU einen Geist zum Lachen bringen? 👻 #shorts",
+     "description": "Pim hat einen Witz und keine Zehen mehr. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

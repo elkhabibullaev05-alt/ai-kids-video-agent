@@ -1,0 +1,727 @@
+{
+ "id": "20261022-1-kettle-rocket-moon",
+ "plot": "On a rainy morning in the garden Zeek ties grumpy Old Hissy to a rocket to reach the moon with Pim as pilot; the test launch flops because Hissy holds back, Crispy learns the kettle secretly dreams of travelling, Hissy becomes the pilot and loops into the birdbath begging for more, and the rocket's photo shows something on the roof waving back.",
+ "script": {
+  "title": "Can Zeek's Kettle Rocket Reach the Moon",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "hissy": {
+    "name": "Old Hissy",
+    "voice": "bm_daniel",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.8,
+     0.3,
+     0.2
+    ],
+    "kind": "kettle",
+    "size": 1.35,
+    "home": [
+     3,
+     14
+    ],
+    "brows": 16
+   }
+  },
+  "props": [
+   {
+    "id": "rocket",
+    "type": "cone",
+    "color": [
+     0.9,
+     0.9,
+     0.95
+    ],
+    "on": null,
+    "visible": true,
+    "scale": 1.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "hissy",
+    "say": "SSSSTOP poking my spout! I am BOILING!",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "shake"
+     ],
+     [
+      "hissy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Perfect! Keep boiling! Hotter! That steam is rocket fuel!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "LIFT-OFF?!",
+    "sfx": "alarm",
+    "cam": "prop:rocket",
+    "hold": 0.9,
+    "do": [
+     [
+      "rocket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Morning in the garden, after the rain. The pale moon still hangs over the fence, and Zeek wants to touch it.",
+    "cam": "wide"
+   },
+   {
+    "who": "bup",
+    "say": "Zeek. Explain to me, slowly, why there is a kettle tied to a rocket.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Simple science. Hissy makes steam. Steam pushes. The rocket goes up. I land on the moon by lunch.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And who exactly is sitting inside the rocket?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "You, Pim. You are the lightest. Also the most aerodynamic bean I have ever met.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm a BEAN! Beans don't fly! Beans stay in the dirt, safely, forever and ever!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I packed you a snack, sweetie. Moon cheese. That's a joke. It's regular cheese.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "Nobody asked ME. Nobody EVER asks the kettle.",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then I will ask. Old Hissy. Nobody has asked you in years. What do you want?",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:hissy"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "What I want is SILENCE! And for that triangle to stop tickling my handle!",
+    "cam": "two:crispy,hissy",
+    "do": [
+     [
+      "hissy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy, please. You are ruining my countdown.",
+    "cam": "two:zeek,crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "You are ruining a kettle. Look at him. He is shaking.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "narr",
+    "say": "Test launch number one. Everybody stands back. Pim stands very, very far back.",
+    "cam": "wide",
+    "do": [
+     [
+      "rocket",
+      "spin"
+     ],
+     [
+      "pim",
+      "to:-12,6"
+     ]
+    ]
+   },
+   {
+    "text": "PFFFT...",
+    "sfx": "alarm",
+    "cam": "prop:rocket",
+    "hold": 0.8,
+    "do": [
+     [
+      "rocket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It went up four centimeters and fell over. That's not space, Zeek. That's a hop.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations say Hissy is holding back. He is boiling at half power. On purpose.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Why are you holding back, old one?",
+    "cam": "two:crispy,hissy"
+   },
+   {
+    "who": "hissy",
+    "say": "Because... if the rocket flies... it flies away. Without me.",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "Forty years I whistle on a stove. Every whistle says the same thing. Take me somewhere. Nobody listens.",
+    "cam": "close:hissy"
+   },
+   {
+    "who": "pim",
+    "say": "Wait. The grumpy screaming kettle... just wants to travel?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Everyone who screams is trying to say something.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "zeek",
+    "say": "Then the math changes. Zero point six kilos of bean... or one point four kilos of kettle.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek. Speak normal. Use small words, like a cookie would.",
+    "cam": "two:lolly,zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Hissy rides the rocket! He is the fuel AND the pilot!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "Me? The PILOT? ...Do I get a hat?",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I'll ice one for you. Pink, with little stars. Very official.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And I stay on the ground? Best plan ever! Zeek, you are a genius!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "COUNTDOWN!",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 0.8,
+    "do": [
+     [
+      "all",
+      "look:hissy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Three... two... one... GO, HISSY, GO!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "WHEEEEEEE! SSSSSSS!",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "shake"
+     ],
+     [
+      "hissy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "BLAST OFF!",
+    "sfx": "alarm",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "rocket",
+      "spin"
+     ],
+     [
+      "hissy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Old Hissy soars over the fence, over the tomatoes, around the apple tree... and straight down into the birdbath.",
+    "cam": "wide",
+    "do": [
+     [
+      "hissy",
+      "to:-10,16"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Is he okay? Is he broken? Is he wet? He's definitely wet.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hissy",
+    "say": "AGAIN! I want to go AGAIN! Higher! Tomorrow, the moon!",
+    "cam": "close:hissy",
+    "do": [
+     [
+      "hissy",
+      "happy"
+     ],
+     [
+      "hissy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "A kettle with a dream. Dangerous. Tomorrow he will want to visit the sun.",
+    "cam": "two:crispy,hissy"
+   },
+   {
+    "who": "zeek",
+    "say": "The rocket camera took one photo from the very top. Let me see...",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Bup. Come here. Look at the roof of the house.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ],
+     [
+      "bup",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That's just the chimney. Chimneys are normal.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "zeek",
+    "say": "Chimneys do not wave, Bup. And they do not have three glowing eyes either.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "pim",
+    "say": "Something on the roof is WAVING at us? Nope. Fainting. Goodbye, everyone.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Zeek's Kettle Rocket Reach the Moon? 🚀",
+  "description": "Zeek tied grumpy Old Hissy to a rocket and wants to land on the moon by lunch. The problem: the kettle won't let his steam out... and the pilot is Pim. Would YOU climb in? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "rocket",
+   "kettle",
+   "moon",
+   "cartoon"
+  ],
+  "thumb_text": "TO THE MOON?!",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "¿Llegará el cohete-tetera de Zeek a la Luna? 🚀",
+    "description": "Zeek ató la vieja tetera gruñona a un cohete y quiere llegar a la Luna antes del almuerzo. El problema: Old Hissy no quiere soltar su vapor... y Pim es el piloto. ¿Te subirías TÚ? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "O foguete-chaleira do Zeek chega à Lua? 🚀",
+    "description": "O Zeek amarrou a velha chaleira rabugenta num foguete e quer chegar à Lua até o almoço. O problema: o Old Hissy não quer soltar o vapor... e o piloto é o Pim. VOCÊ embarcaria? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "هل يصل صاروخ الغلاية إلى القمر؟ 🚀",
+    "description": "ربط زيك الغلاية العجوز الغاضبة بصاروخ ويريد الوصول إلى القمر قبل الغداء. المشكلة: أولد هيسي يرفض إطلاق بخاره... والطيار هو بيم. هل كنت ستركب أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "La fusée-bouilloire de Zeek ira-t-elle sur la Lune ? 🚀",
+    "description": "Zeek a attaché la vieille bouilloire grincheuse à une fusée et veut atteindre la Lune avant midi. Le souci : Old Hissy refuse de lâcher sa vapeur... et le pilote, c'est Pim. Tu monterais, TOI ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "ジークのやかんロケットは月に届く？🚀",
+    "description": "ジークが気難しい古やかんをロケットにくくりつけ、お昼までに月へ行くと言い出した。問題はオールド・ヒッシーが蒸気を出したがらないこと…そしてパイロットはピム。キミなら乗る？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "지크의 주전자 로켓은 달에 갈 수 있을까? 🚀",
+    "description": "지크가 심술궂은 낡은 주전자를 로켓에 묶고 점심 전에 달에 가겠다고 한다. 문제는 올드 히시가 증기를 내뿜지 않으려 한다는 것... 그리고 조종사는 핌. 너라면 탈래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Schafft es Zeeks Kessel-Rakete zum Mond? 🚀",
+    "description": "Zeek hat den grummeligen alten Kessel an eine Rakete gebunden und will bis zum Mittagessen auf dem Mond sein. Das Problem: Old Hissy will keinen Dampf hergeben... und der Pilot ist Pim. Würdest DU einsteigen? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 4,
+   "dur": 30,
+   "top": "WHO RIDES THE ROCKET?",
+   "title": "Zeek Picked Pim as His Rocket Pilot 🚀 #shorts",
+   "description": "One bean. One rocket. One very angry kettle. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "rocket"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Zeek eligió a Pim como piloto de cohete 🚀 #shorts",
+     "description": "Un frijol. Un cohete. Una tetera muy enojada. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Zeek escolheu o Pim como piloto 🚀 #shorts",
+     "description": "Um feijão. Um foguete. Uma chaleira muito brava. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "زيك اختار بيم طيّارًا للصاروخ 🚀 #shorts",
+     "description": "حبة فاصوليا. صاروخ. وغلاية غاضبة جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Zeek choisit Pim comme pilote de fusée 🚀 #shorts",
+     "description": "Un haricot. Une fusée. Une bouilloire très fâchée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ジーク、ピムをロケットの操縦士に指名 🚀 #shorts",
+     "description": "豆ひとつ、ロケットひとつ、激怒したやかんひとつ。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "지크가 핌을 로켓 조종사로 뽑았다 🚀 #shorts",
+     "description": "콩 하나. 로켓 하나. 아주 화난 주전자 하나. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zeek macht Pim zum Raketenpiloten 🚀 #shorts",
+     "description": "Eine Bohne. Eine Rakete. Ein sehr wütender Kessel. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 30,
+   "dur": 24,
+   "top": "3... 2... 1...",
+   "title": "Would YOU Ride a Kettle Rocket? 🚀 #shorts",
+   "description": "Three... two... one... Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "blast off"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Te subirías a un cohete-tetera? 🚀 #shorts",
+     "description": "Tres... dos... uno... Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você andaria num foguete-chaleira? 🚀 #shorts",
+     "description": "Três... dois... um... Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تركب صاروخًا يعمل بالغلاية؟ 🚀 #shorts",
+     "description": "ثلاثة... اثنان... واحد... الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu monterais dans une fusée-bouilloire ? 🚀 #shorts",
+     "description": "Trois... deux... un... Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "やかんロケットに乗ってみたい？🚀 #shorts",
+     "description": "3…2…1…本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "주전자 로켓 타볼래? 🚀 #shorts",
+     "description": "셋... 둘... 하나... 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU in eine Kessel-Rakete steigen? 🚀 #shorts",
+     "description": "Drei... zwei... eins... Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

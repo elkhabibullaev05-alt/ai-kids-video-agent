@@ -1,0 +1,679 @@
+{
+ "id": "20261021-3-sixty-seconds-toaster",
+ "plot": "In the pantry in the late afternoon Toastmaw locks Bup and Lolly in and counts down 60 seconds before firing 40 slices; Bup's distraction fails, Zeek reveals old toasters fire straight up, Lolly's terrifying 'please' makes Toastmaw aim at the shelf, the toast becomes a staircase to the window, and from the top they see an army of appliances marching on the garden.",
+ "script": {
+  "title": "60 Seconds Before the Toaster Fires",
+  "set": {
+   "place": "pantry",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "toastmaw": {
+    "name": "Toastmaw",
+    "voice": "am_eric",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.7,
+     0.7,
+     0.72
+    ],
+    "kind": "toaster",
+    "size": 1.25,
+    "home": [
+     2,
+     14
+    ]
+   }
+  },
+  "props": [],
+  "beats": [
+   {
+    "who": "toastmaw",
+    "say": "SIXTY SECONDS! Then this whole pantry becomes TOAST!",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "jump"
+     ],
+     [
+      "toastmaw",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lolly, the door! Pull! Pull harder!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "to:-9,8"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "It's locked from the outside! Who locks a pantry from the OUTSIDE?!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "to:-7,8"
+     ]
+    ]
+   },
+   {
+    "text": "60 SECONDS",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 0.9,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Late afternoon. Bup and Lolly came in for one jar of honey. Now they are locked in with a very angry toaster.",
+    "cam": "wide"
+   },
+   {
+    "who": "toastmaw",
+    "say": "Mr. Pot gave me a timer. When it rings, I fire every slice I have. Forty slices. Extra crispy.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Forty?! You can't even FIT forty slices in there!",
+    "cam": "two:bup,toastmaw",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "I am much bigger on the inside. Fifty seconds!",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Okay, Bup. You always have a plan. What's the plan?",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "bup",
+    "say": "The plan is... I distract him. You find a light switch. Go!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hey, toaster! Your crumb tray is dirty! Disgusting! Ewww!",
+    "cam": "two:bup,toastmaw",
+    "do": [
+     [
+      "bup",
+      "to:toastmaw"
+     ],
+     [
+      "bup",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "My crumb tray is SPOTLESS! I clean it every single Sunday!",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "eyes_big"
+     ],
+     [
+      "toastmaw",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Switch, switch... jars, jars, flour, one very old potato... no switch!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-12,11"
+     ]
+    ]
+   },
+   {
+    "text": "30 SECONDS",
+    "sfx": "suspicious",
+    "cam": "close:toastmaw",
+    "hold": 0.9,
+    "do": [
+     [
+      "toastmaw",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bup? Lolly? We can hear ticking! Is that a bomb? Is it a clock? Is it my heart?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pim, please. It's a kitchen timer. Very old toaster model. Those always fire their toast straight up.",
+    "cam": "two:zeek,pim"
+   },
+   {
+    "who": "pim",
+    "say": "Straight up? Like popcorn? I hate popcorn. It jumps at you without asking!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Straight... up...",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lolly, why are you smiling? Why is she smiling? That's the scary smile.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Look up, Bup. The tiny window. Above the top shelf.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It's way too high. We'd need a ladder. A tall one. With handrails.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "lolly",
+    "say": "Or forty slices of toast. Stacked.",
+    "cam": "close:lolly"
+   },
+   {
+    "text": "10 SECONDS",
+    "sfx": "alarm",
+    "cam": "close:toastmaw",
+    "hold": 0.8,
+    "do": [
+     [
+      "toastmaw",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mister Toastmaw, could you please, pretty please, aim at the shelf?",
+    "cam": "two:lolly,toastmaw",
+    "do": [
+     [
+      "lolly",
+      "to:toastmaw"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "Why would I do anything for a polite little cookie?",
+    "cam": "close:toastmaw"
+   },
+   {
+    "who": "lolly",
+    "say": "BECAUSE I SAID PLEASE AND I DO NOT SAY IT TWICE!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "Yes ma'am! Aiming at the shelf, ma'am! Right away, ma'am!",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "FIRE!",
+    "sfx": "alarm",
+    "cam": "overhead",
+    "hold": 1.0,
+    "do": [
+     [
+      "toastmaw",
+      "jump"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Forty golden slices fly up, land on the shelves, and click together into a perfect crunchy staircase.",
+    "cam": "wide"
+   },
+   {
+    "who": "bup",
+    "say": "It's warm. My feet are warm. This is the nicest escape of my whole life.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Toast stairs. Bold. I approve.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "bup",
+    "say": "Crispy?! How long have you been in here?!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I am always in here. The old potato and I are friends.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "lolly",
+    "say": "Climb, boys. Quickly. Sweetly. NOW.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "to:-12,13"
+     ]
+    ]
+   },
+   {
+    "who": "toastmaw",
+    "say": "Wait. I'm empty. If Mr. Pot finds out I wasted every slice...",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then tell him a star cookie said please. He'll understand. Probably.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "toastmaw",
+    "say": "Nobody... has ever said please to me before.",
+    "cam": "close:toastmaw",
+    "do": [
+     [
+      "toastmaw",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then get used to it, mister. Next time you want a friend, try please before fire.",
+    "cam": "two:lolly,toastmaw",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the top of the toast staircase, the tiny window creaks open onto the garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-11,13"
+     ],
+     [
+      "crispy",
+      "to:-13,13"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We made it! Home in two minutes. Honey in one hand, victory in the other.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup. We forgot the honey. And look down at the garden.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Why is the garden... moving? Gardens are not supposed to move. That's the one rule of gardens.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "crispy",
+    "say": "Kettles. Blenders. A waffle iron. All of them marching toward the stove.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "Did anyone else just hear a waffle iron LAUGH?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "60 Seconds Before the Toaster Fires 🔥",
+  "description": "Bup and Lolly came in for one jar of honey, and now Toastmaw has locked them in the pantry with a timer: when it rings, 40 slices fly. Bup's plan fails... but Lolly is wearing the scary smile. How would YOU have escaped? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "toaster",
+   "spooky cartoon",
+   "escape",
+   "cartoon"
+  ],
+  "thumb_text": "60 SECONDS!",
+  "thumb_beat": 6,
+  "localizations": {
+   "es": {
+    "title": "60 segundos antes de que la tostadora dispare 🔥",
+    "description": "Bup y Lolly entraron a la despensa por un tarro de miel y Toastmaw los encerró con un temporizador: cuando suene, disparará 40 tostadas. El plan de Bup falla... pero Lolly tiene la sonrisa que da miedo. ¿Cómo habrías escapado TÚ? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "60 segundos antes da torradeira disparar 🔥",
+    "description": "Bup e Lolly entraram na despensa por um pote de mel e o Toastmaw os trancou com um timer: quando tocar, ele dispara 40 torradas. O plano do Bup falha... mas a Lolly está com aquele sorriso assustador. Como VOCÊ fugiria? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "60 ثانية قبل أن تطلق المحمصة النار 🔥",
+    "description": "دخل باب ولولي المخزن من أجل برطمان عسل، فحبسهما توستماو بمؤقّت: عندما يرن سيطلق 40 شريحة خبز محمّص. خطة باب تفشل... لكن لولي تبتسم تلك الابتسامة المخيفة. كيف كنت ستهرب أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "60 secondes avant que le grille-pain tire 🔥",
+    "description": "Bup et Lolly sont venus chercher un pot de miel et Toastmaw les a enfermés avec un minuteur : quand il sonne, il tire 40 tartines. Le plan de Bup rate... mais Lolly a le sourire qui fait peur. Comment TU te serais échappé ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "トースターが発射するまであと60秒 🔥",
+    "description": "ハチミツを取りに来たバップとロリーを、トーストモウが食料庫に閉じ込めた。タイマーが鳴ればトースト40枚が一斉発射！バップの作戦は失敗…でもロリーが「あの怖い笑顔」に。キミならどう逃げる？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "토스터가 발사하기까지 60초 🔥",
+    "description": "꿀 한 병을 가지러 간 법과 롤리를 토스트모가 식료품 창고에 가둬버렸다. 타이머가 울리면 토스트 40장이 발사된다! 법의 계획은 실패... 하지만 롤리가 그 무서운 미소를 짓는다. 너라면 어떻게 탈출할래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "60 Sekunden, bis der Toaster feuert 🔥",
+    "description": "Bup und Lolly wollten nur ein Glas Honig holen – jetzt sperrt Toastmaw sie mit einem Timer in der Speisekammer ein: Wenn er klingelt, feuert er 40 Toastscheiben. Bups Plan scheitert... aber Lolly lächelt dieses gruselige Lächeln. Wie wärst DU entkommen? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "60 SECONDS LEFT",
+   "title": "60 Seconds. 40 Toasts. 1 Locked Door 🔥 #shorts",
+   "description": "The toaster is counting down. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "countdown"
+   ],
+   "localizations": {
+    "es": {
+     "title": "60 segundos. 40 tostadas. 1 puerta cerrada 🔥 #shorts",
+     "description": "La tostadora cuenta hacia atrás. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "60 segundos. 40 torradas. 1 porta trancada 🔥 #shorts",
+     "description": "A torradeira está em contagem regressiva. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "60 ثانية. 40 شريحة. باب مقفل 🔥 #shorts",
+     "description": "المحمصة تعدّ تنازليًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "60 secondes. 40 tartines. 1 porte fermée 🔥 #shorts",
+     "description": "Le grille-pain compte à rebours. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "60秒・トースト40枚・閉ざされた扉 🔥 #shorts",
+     "description": "トースターのカウントダウン開始。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "60초. 토스트 40장. 잠긴 문 🔥 #shorts",
+     "description": "토스터가 카운트다운 중. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "60 Sekunden. 40 Toasts. 1 verschlossene Tür 🔥 #shorts",
+     "description": "Der Toaster zählt runter. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

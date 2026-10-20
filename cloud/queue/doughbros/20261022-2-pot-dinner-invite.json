@@ -1,0 +1,684 @@
+{
+ "id": "20261022-2-pot-dinner-invite",
+ "plot": "At 9 p.m. on the dinner table Pim proudly accepts a fancy dinner invitation from Mr. Pot; Lolly insists on good manners until Crispy, hiding under the table, shows them the menu says Fried Dough Bros, Lolly's tablecloth trick sends Mr. Pot spinning across the table, they politely thank him and escape, and the sixth name card is for The Thing on the Roof.",
+ "script": {
+  "title": "Never Say Yes to Mr. Pot's Dinner",
+  "set": {
+   "place": "table",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     13
+    ],
+    "brows": 18
+   }
+  },
+  "props": [
+   {
+    "id": "letter",
+    "type": "gift",
+    "color": [
+     0.95,
+     0.9,
+     0.75
+    ],
+    "on": "pim",
+    "visible": false,
+    "scale": 0.7
+   },
+   {
+    "id": "menu",
+    "type": "box",
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "on": null,
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "A letter! A fancy letter! With a wax seal! Somebody finally likes me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "spin"
+     ],
+     [
+      "letter",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Gimme! Ooh, gold ink. You are invited to dinner. Tonight. Dress nice.",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "lolly",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Who signed it? Please say the tooth fairy. Please say anybody nice.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Uh... it says... Love, Mister Pot.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "DINNER WITH MR. POT?!",
+    "sfx": "alarm",
+    "cam": "close:pot",
+    "hold": 1.0,
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nine o'clock, on the big dinner table. Candles. Napkins. And one very, very polite cauldron.",
+    "cam": "wide",
+    "do": [
+     [
+      "letter",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Welcome, welcome, my little guests. Sit. Please. Make yourselves... comfortable.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Statistically, a villain who says please is ninety-nine percent more dangerous.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "lolly",
+    "say": "Manners are manners, Zeek. If he is polite, we are polite. Pim, napkin on your lap.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "pim",
+    "say": "I don't HAVE a lap! I'm a bean! I'm all lap! Or no lap! I don't know!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Ha ha. Funny bean. Funny beans are always... the juiciest.",
+    "cam": "two:pot,pim",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Did he just say juiciest? Lolly. Lolly! He said juiciest!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He meant juicy jokes, sweetie. Sit up straight and smile.",
+    "cam": "two:lolly,pim"
+   },
+   {
+    "who": "narr",
+    "say": "First course. A big bowl of hot oil... with no soup in it.",
+    "cam": "overhead"
+   },
+   {
+    "who": "bup",
+    "say": "Excuse me, sir. I see bowls, I see forks, I see oil. Where exactly is the food?",
+    "cam": "close:bup"
+   },
+   {
+    "who": "pot",
+    "say": "The food... is coming. The food... is already here.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Psst. Under the table. Read the little menu card.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "Crispy?! Why are you hiding under the table?",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "pim",
+      "to:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I do not sit at his table. Not ever again. Read it.",
+    "cam": "close:crispy"
+   },
+   {
+    "text": "TONIGHT'S MENU",
+    "sfx": "suspicious",
+    "cam": "prop:menu",
+    "hold": 1.0,
+    "do": [
+     [
+      "menu",
+      "show"
+     ],
+     [
+      "menu",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Main dish. Fried Dough Bros. Serves one pot. ...WE are the dinner!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Stay calm. Nobody leaves a dinner party rudely. We leave politely.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "pim",
+    "say": "How do you leave POLITELY from being FRIED?! Is there a fork rule for this? A napkin rule?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Second course! Time to FRY!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "jump"
+     ],
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mister Pot, before we fry, may I show you a little party trick?",
+    "cam": "two:lolly,pot",
+    "do": [
+     [
+      "lolly",
+      "to:pot"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "A trick? ...I love tricks. Nobody ever shows me tricks. The toaster only shows me toast.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "lolly",
+    "say": "I pull the tablecloth really fast, and everything on the table stays perfectly still. Ready?",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "zeek",
+    "say": "She has never done this before. The odds are terrible. Like, three percent.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Three... two... TABLECLOTH!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOSH!",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "pot",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The candles stay. The plates stay. Mister Pot does not stay. He spins across the table like a giant top.",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "to:8,12"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Wheee- WHY am I spinning?! Somebody stop the table!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It worked! Everybody, down the table leg! Go, go, go!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait! Lolly! We didn't say thank you for dinner!",
+    "cam": "close:pim"
+   },
+   {
+    "who": "lolly",
+    "say": "Oh, you're right. Thank you for having us, Mister Pot! The oil was lovely!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Come back... I made dessert... it's crème brûlée... with YOU on top...",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Never eat his dessert. Never. I ate it once. Look at me now.",
+    "cam": "two:crispy,pim"
+   },
+   {
+    "who": "narr",
+    "say": "Safe on the floor, Pim looks back up at the table. Six chairs. Six little name cards.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Five of them are ours. Bup, Zeek, Lolly, Crispy, and me.",
+    "cam": "close:pim"
+   },
+   {
+    "who": "zeek",
+    "say": "Then who is the sixth seat for? Mister Pot does not have any friends.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It just says... The Thing on the Roof.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "The thing on the roof is coming to DINNER?!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "Never Say Yes to Mr. Pot's Dinner Invite 💀",
+  "description": "Pim got a fancy letter with a wax seal: a dinner invitation from Mr. Pot himself. Candles, napkins, a bowl of hot oil... and a very suspicious menu. Would YOU have gone? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "dinner party",
+   "spooky cartoon",
+   "mr pot",
+   "cartoon"
+  ],
+  "thumb_text": "WE'RE DINNER?!",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "Nunca aceptes la cena del Sr. Pot 💀",
+    "description": "Pim recibió una carta elegante con sello de cera: una invitación a cenar de Mr. Pot. Velas, servilletas, un tazón de aceite caliente... y un menú muy sospechoso. ¿TÚ habrías ido? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Nunca aceite o jantar do Sr. Pot 💀",
+    "description": "O Pim recebeu uma carta chique com selo de cera: um convite para jantar do Mr. Pot. Velas, guardanapos, uma tigela de óleo quente... e um cardápio muito suspeito. VOCÊ teria ido? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "لا تقبل أبدًا عشاء السيد بوت 💀",
+    "description": "تلقّى بيم رسالة أنيقة بختم شمعي: دعوة للعشاء من السيد بوت. شموع، مناديل، وعاء زيت ساخن... وقائمة طعام مريبة جدًا. هل كنت ستذهب أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "N'accepte jamais le dîner de M. Pot 💀",
+    "description": "Pim a reçu une lettre chic avec un sceau de cire : une invitation à dîner de Mr. Pot. Bougies, serviettes, un bol d'huile bouillante... et un menu très suspect. TU y serais allé ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "ポット氏のディナーには絶対行くな 💀",
+    "description": "ピムに届いた封蝋つきの豪華な手紙。差出人はミスター・ポット、ディナーへの招待状だった。ろうそく、ナプキン、熱い油のボウル…そしてとても怪しいメニュー。キミなら行く？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "미스터 팟의 저녁 초대는 절대 받지 마 💀",
+    "description": "핌에게 밀랍 봉인이 찍힌 고급 편지가 왔다. 미스터 팟의 저녁 식사 초대장! 촛불, 냅킨, 뜨거운 기름 한 그릇... 그리고 아주 수상한 메뉴판. 너라면 갈래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Sag NIE ja zu Mr. Pots Abendessen 💀",
+    "description": "Pim bekommt einen feinen Brief mit Wachssiegel: eine Einladung zum Abendessen von Mr. Pot. Kerzen, Servietten, eine Schüssel heißes Öl... und eine sehr verdächtige Speisekarte. Wärst DU hingegangen? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 6,
+   "dur": 30,
+   "top": "SO POLITE... TOO POLITE",
+   "title": "Mr. Pot Called Pim \"the Juiciest\" 😱 #shorts",
+   "description": "A very polite dinner. Too polite. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "dinner"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Mr. Pot dijo que Pim es «el más jugoso» 😱 #shorts",
+     "description": "Una cena muy educada. Demasiado educada. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Mr. Pot disse que o Pim é «o mais suculento» 😱 #shorts",
+     "description": "Um jantar muito educado. Educado demais. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "السيد بوت قال إن بيم «الأكثر عصارة» 😱 #shorts",
+     "description": "عشاء مهذب جدًا. مهذب أكثر من اللازم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Mr. Pot trouve Pim « le plus juteux » 😱 #shorts",
+     "description": "Un dîner très poli. Trop poli. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ポット氏「ピムが一番ジューシー」😱 #shorts",
+     "description": "とても礼儀正しいディナー。正しすぎる。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "미스터 팟: \"핌이 제일 육즙이 많지\" 😱 #shorts",
+     "description": "아주 예의 바른 저녁 식사. 너무 예의 바른. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Mr. Pot findet Pim „am saftigsten“ 😱 #shorts",
+     "description": "Ein sehr höfliches Abendessen. Zu höflich. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

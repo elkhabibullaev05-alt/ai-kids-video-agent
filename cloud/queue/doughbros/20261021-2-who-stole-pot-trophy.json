@@ -1,0 +1,686 @@
+{
+ "id": "20261021-2-who-stole-pot-trophy",
+ "plot": "At 2 a.m. on the stove Mr. Pot accuses the Dough Bros of stealing his golden trophy and threatens to fry one loaf per minute; Crispy drags scared Pim through a glitter trail while Zeek's tinfoil fake fails, Crispy hears a rattle and realizes Pot hid it in his own belly, Pim knocks it out, and the engraving reveals it is a reward from the Appliance Club for catching all five bros.",
+ "script": {
+  "title": "Who Stole Mr. Pot's Golden Trophy",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     13
+    ],
+    "brows": 18
+   }
+  },
+  "props": [
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "on": "pot",
+    "visible": false,
+    "scale": 1.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "pot",
+    "say": "WHERE IS IT?! Who touched my golden trophy?!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ],
+     [
+      "pot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Not me! I touch nothing! I don't even touch my own feet!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "STOLEN!",
+    "sfx": "alarm",
+    "cam": "wide",
+    "hold": 0.9,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two in the morning, on the stove. Mr. Pot's prize trophy is gone, and he has already decided who took it.",
+    "cam": "wide"
+   },
+   {
+    "who": "pot",
+    "say": "Dough Bros. Bring it back by sunrise... or I start frying. One loaf per minute.",
+    "cam": "two:pot,bup",
+    "do": [
+     [
+      "pot",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Why does it always start with the loaf?!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Because you're the biggest, sweetie. Very fry-able. It's a compliment.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I will find it. Pim comes with me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Me? Why me? I'm the worst detective in Table Land. I scream at clues.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Screaming is loud. Loud things get noticed. Tonight, we want to be noticed.",
+    "cam": "two:crispy,pim"
+   },
+   {
+    "who": "zeek",
+    "say": "And I'll stay here and build a fake trophy. Just in case the real one is gone forever.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Suspect number one. The fridge. Cold, quiet, and full of shiny things.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:-12,10"
+     ],
+     [
+      "pim",
+      "to:-11,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Shiny spoon. Shiny foil. Shiny... eyeball? THAT'S AN OLIVE. I'm fine. I'm totally fine.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Not here. Too clean, too cold. A thief in a hurry always leaves a trail behind.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "A trail! There! Golden glitter on the floor, going all the way back to the stove!",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Back toward Mr. Pot himself. Interesting.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pot"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Meanwhile, at the stove, Zeek's fake trophy is ready for inspection.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to_home"
+     ],
+     [
+      "pim",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ninety percent tinfoil, ten percent glue. Nobody could ever tell the difference.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:pot"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "It is made of SANDWICH WRAP. Two minutes left, little triangle.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Eighty-five percent tinfoil. I may have rounded up.",
+    "cam": "two:zeek,pot",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "TICK... TOCK...",
+    "sfx": "suspicious",
+    "cam": "close:pot",
+    "hold": 1.0,
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Crispy, the glitter stops right at his feet. Did a mouse steal it? Did a spoon?",
+    "cam": "two:pim,crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "Listen carefully. Every time he laughs... something inside him rattles.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pot",
+    "say": "Ha ha ha! One more minute, Dough Bros! Ha ha HA!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ],
+     [
+      "pot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Rattle, rattle. It came from INSIDE him!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He hid it in his own belly to keep it safe. And then he forgot.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "So he wants to fry us... for something he lost inside himself?!",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Thirty seconds! Somebody do something! I'm too young to be croutons!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Pim. Go knock on him. Three times. Loud.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "Knock on the GIANT FRYING POT? With my FACE?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "With your courage. You have more than you think.",
+    "cam": "two:crispy,pim"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody in Table Land has ever knocked on Mr. Pot. Until tonight.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:pot"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Mister Pot! Knock! Knock! KNOCK!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CLANG!",
+    "sfx": "alarm",
+    "cam": "prop:trophy",
+    "hold": 1.0,
+    "do": [
+     [
+      "trophy",
+      "drop:pot"
+     ],
+     [
+      "trophy",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "My trophy! It was... in my tummy? Oh. Oh, that is very embarrassing.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Say sorry to the bean. Right now. NOW!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "...Sorry, little bean.",
+    "cam": "two:pot,pim",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "He said sorry! To ME! I'm a hero! I'm going to faint now.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ],
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pick him up. Everybody run while the big guy is polishing!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Shiny... so shiny... hm? What is this writing on the bottom?",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy, I scanned the trophy when it fell out. There's an engraving. A new one.",
+    "cam": "two:zeek,crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "Read it. Slowly. Every word.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "zeek",
+    "say": "Prize for the first appliance who catches all five Dough Bros. Signed, the Appliance Club.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It was never a trophy. It is a reward. And every appliance in this kitchen wants it.",
+    "cam": "close:crispy"
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Stole Mr. Pot's Golden Trophy? 🏆",
+  "description": "Mr. Pot's prize trophy is gone and he blames the Dough Bros: bring it back by sunrise, or the frying starts. Pim, the worst detective in Table Land, follows the glitter trail with Crispy. Did YOU guess the thief? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "mystery",
+   "spooky cartoon",
+   "mr pot",
+   "cartoon"
+  ],
+  "thumb_text": "WHO STOLE IT?",
+  "thumb_beat": 29,
+  "localizations": {
+   "es": {
+    "title": "¿Quién robó el trofeo dorado del Sr. Pot? 🏆",
+    "description": "El trofeo de Mr. Pot desapareció y él culpa a los Dough Bros: o lo devuelven antes del amanecer o empieza a freír. Pim, el peor detective de Table Land, sigue el rastro con Crispy. ¿Adivinaste TÚ al ladrón? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Quem roubou o troféu dourado do Sr. Pot? 🏆",
+    "description": "O troféu do Mr. Pot sumiu e ele culpa os Dough Bros: ou devolvem antes do amanhecer, ou ele começa a fritar. O Pim, o pior detetive de Table Land, segue a pista com o Crispy. VOCÊ adivinhou quem foi? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "من سرق كأس السيد بوت الذهبي؟ 🏆",
+    "description": "اختفى كأس السيد بوت وهو يتهم دوه بروز: إما أن يعيدوه قبل الفجر أو يبدأ القلي. بيم، أسوأ محقق في أرض الطاولة، يتبع الأثر مع كريسبي. هل عرفت أنت السارق؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Qui a volé le trophée doré de M. Pot ? 🏆",
+    "description": "Le trophée de Mr. Pot a disparu et il accuse les Dough Bros : rendez-le avant l'aube, ou il commence la friture. Pim, le pire détective de Table Land, suit la piste avec Crispy. Tu avais deviné le voleur ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "ポット氏の金のトロフィーを盗んだのは誰？🏆",
+    "description": "ミスター・ポットのトロフィーが消えた！夜明けまでに返さなければ揚げられる。テーブルランド一ダメな探偵ピムがクリスピーと手がかりを追う。犯人、わかった？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "미스터 팟의 황금 트로피를 훔친 건 누구? 🏆",
+    "description": "미스터 팟의 트로피가 사라졌고, 그는 도우 브로스를 의심한다. 해 뜨기 전에 돌려주지 않으면 튀겨버리겠다고! 테이블랜드 최악의 탐정 핌이 크리스피와 단서를 쫓는다. 범인 맞혔어? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Wer hat Mr. Pots goldene Trophäe geklaut? 🏆",
+    "description": "Mr. Pots Trophäe ist weg und er beschuldigt die Dough Bros: Zurück bis Sonnenaufgang, sonst wird frittiert. Pim, der schlechteste Detektiv in Table Land, folgt mit Crispy der Spur. Hast DU den Dieb erraten? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 21,
+   "dur": 30,
+   "top": "IT'S RATTLING...",
+   "title": "Something Rattles INSIDE Mr. Pot 😱 #shorts",
+   "description": "Every time he laughs... something rattles. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Algo hace ruido DENTRO del Sr. Pot 😱 #shorts",
+     "description": "Cada vez que se ríe... algo suena. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Algo chacoalha DENTRO do Sr. Pot 😱 #shorts",
+     "description": "Toda vez que ele ri... algo chacoalha. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شيء يخشخش داخل السيد بوت 😱 #shorts",
+     "description": "كلما ضحك... شيء ما يخشخش. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelque chose cliquette DANS M. Pot 😱 #shorts",
+     "description": "Chaque fois qu'il rit... ça cliquette. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ポット氏の中で何かが鳴ってる 😱 #shorts",
+     "description": "笑うたびに…カラカラ。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "미스터 팟 안에서 덜그럭 소리가 😱 #shorts",
+     "description": "웃을 때마다... 뭔가 덜그럭거린다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "In Mr. Pot klappert etwas 😱 #shorts",
+     "description": "Jedes Mal, wenn er lacht... klappert es. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

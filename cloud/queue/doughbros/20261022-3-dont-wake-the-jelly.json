@@ -1,0 +1,673 @@
+{
+ "id": "20261022-3-dont-wake-the-jelly",
+ "plot": "At dawn in the kitchen Zeek's Snooze Beam meant for the sleeping jelly Wobblor hits Bup, who sleepwalks toward the sink while the others must stay silent; Zeek's Wake-Up Ray bounces off the jelly and puts everyone else to sleep, so the newly awake Bup carries his snoring friends to safety alone, and then they realize the first beam flew out the window and put the sun to sleep.",
+ "script": {
+  "title": "Don't Wake the Jelly",
+  "set": {
+   "place": "kitchen",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "wobblor": {
+    "name": "Wobblor",
+    "voice": "am_adam",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.2,
+     0.8,
+     0.3
+    ],
+    "kind": "jelly",
+    "size": 1.6,
+    "home": [
+     2,
+     14
+    ]
+   }
+  },
+  "props": [],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "Snooze Beam, test one! Nobody move! Especially nobody step in front of the—",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "ZAP!",
+    "sfx": "alarm",
+    "cam": "two:zeek,bup",
+    "hold": 0.8,
+    "do": [
+     [
+      "bup",
+      "spin"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Zzz... five more minutes... the pancakes are talking...",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "You zapped BUP! Our leader is SNORING! Who leads us now? Not me! Never me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dawn in the kitchen. Zeek built the Snooze Beam for Wobblor, the giant jelly napping in the sink. Instead, it hit Bup.",
+    "cam": "wide"
+   },
+   {
+    "who": "wobblor",
+    "say": "Mmm... snore... wobbly dreams...",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And Bup is walking. Straight toward the sink. With both eyes closed.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "bup",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Sleepwalking. A known side effect. It's on page forty of my notes.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "lolly",
+    "say": "You WROTE that down and you still zapped him?",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Page forty is a very long page. It also has a drawing of a duck on it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "DON'T WAKE IT",
+    "sfx": "suspicious",
+    "cam": "close:wobblor",
+    "hold": 1.0,
+    "do": [
+     [
+      "wobblor",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "One loud sound, and the jelly wakes up hungry. Whisper. Everyone.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "I can't whisper! My whisper is just a scream wearing a little hat!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Team... the plan... is pancakes... with sprinkles...",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He's sleep-planning. Bup, sweetie, turn left. Left. LEFT.",
+    "cam": "close:lolly"
+   },
+   {
+    "who": "bup",
+    "say": "Left is for quitters... zzz...",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-8,11"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I'll reverse the beam. A Wake-Up Ray. Give me thirty seconds to rewire it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs the dish rack in his sleep, one perfect step at a time.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "How is he better at climbing when he's ASLEEP?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "No fear when you are dreaming. Only pancakes. I remember that feeling, long ago.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "wobblor",
+    "say": "Mmm... something smells like... warm bread...",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The jelly is sniffing him! He thinks Bup is breakfast! Zeek, hurry up!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Done! Wake-Up Ray, full power! Aiming at Bup and...",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "BOING!",
+    "sfx": "alarm",
+    "cam": "close:wobblor",
+    "hold": 0.8,
+    "do": [
+     [
+      "wobblor",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ray hits the jelly, bounces off like a rubber ball, and zaps everybody else.",
+    "cam": "wide"
+   },
+   {
+    "who": "pim",
+    "say": "Oh no... I feel... so... cozy...",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Nighty... night... I'll be fierce... later...",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Darkness... takes... me...",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Wrong... polarity... zzz...",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Huh?! Where am I? Why am I on a dish rack? Why is everybody asleep?!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "BUP IS ALONE",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "wobblor",
+    "say": "Mmm... toasty bread... come closer... closer...",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nope. Not today, jelly. My friends carried me a hundred times. Today the loaf carries the team.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One by one, Bup tiptoes his sleeping friends off the counter. A bean. A star. A rock. A very heavy triangle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Zeek, what do you EAT? Bricks? Textbooks?",
+    "cam": "two:bup,zeek"
+   },
+   {
+    "who": "zeek",
+    "say": "Zzz... calculations... carry the two... no, carry the bean... the bean is heavy...",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "wobblor",
+    "say": "Hm? Was someone here? ...No. Just a dream.",
+    "cam": "close:wobblor",
+    "do": [
+     [
+      "wobblor",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody safe. Nobody swallowed. I am the best leader in all of Table Land.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bup! I'm awake! What happened? Did I faint? I definitely fainted.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You took a nap. A very brave nap. I carried you the whole way, and you snored like a trumpet.",
+    "cam": "two:bup,pim"
+   },
+   {
+    "who": "zeek",
+    "say": "Bup. The first beam. The Snooze Beam. Where did it go after it hit you?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Out the window, I think. Toward the sky. Why? Is that bad? Your face says that is bad.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "zeek",
+    "say": "Because the sun should be up by now. And outside it is still... dark.",
+    "cam": "close:zeek"
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek. Did you put the SUN to sleep?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "TO BE CONTINUED...",
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5
+   }
+  ]
+ },
+ "long": {
+  "title": "Don't Wake the Jelly! (Bup Is Sleepwalking) 😱",
+  "description": "Zeek's Snooze Beam was meant for Wobblor, the giant jelly napping in the sink... but it hit Bup. Now the leader is sleepwalking straight toward the jelly, and nobody is allowed to make a sound. Would YOU have woken him up? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "funny animation",
+   "sleepwalking",
+   "giant jelly",
+   "spooky cartoon",
+   "cartoon"
+  ],
+  "thumb_text": "DON'T WAKE IT!",
+  "thumb_beat": 29,
+  "localizations": {
+   "es": {
+    "title": "¡No despiertes a la gelatina! Bup es sonámbulo 😱",
+    "description": "El Rayo Dormilón de Zeek era para Wobblor, la gelatina gigante del fregadero... pero le dio a Bup. Ahora el líder camina dormido directo hacia la gelatina, y nadie puede hacer ruido. ¿Lo habrías despertado TÚ? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Não acorde a gelatina! O Bup é sonâmbulo 😱",
+    "description": "O Raio Soneca do Zeek era para o Wobblor, a gelatina gigante da pia... mas acertou o Bup. Agora o líder anda dormindo direto para a gelatina, e ninguém pode fazer barulho. VOCÊ o acordaria? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "لا توقظ الجيلي! باب يمشي وهو نائم 😱",
+    "description": "شعاع النوم الذي صنعه زيك كان لووبلور، الجيلي العملاق في الحوض... لكنه أصاب باب. الآن القائد يمشي نائمًا نحو الجيلي، ولا أحد يستطيع إصدار صوت. هل كنت ستوقظه أنت؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Ne réveille pas la gelée ! Bup est somnambule 😱",
+    "description": "Le Rayon Dodo de Zeek visait Wobblor, la gelée géante de l'évier... mais il a touché Bup. Maintenant le chef marche en dormant droit vers la gelée, et personne ne doit faire de bruit. TU l'aurais réveillé ? 👇 #animation #doughbros #comédiehorreur"
+   },
+   "ja": {
+    "title": "ゼリーを起こすな！バップが夢遊病 😱",
+    "description": "ジークのおやすみビームは流しで眠る巨大ゼリー、ウォブラー用だった…なのにバップに命中。眠ったままのリーダーがゼリーへ一直線、しかも誰も音を立てられない。キミなら起こす？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "젤리를 깨우지 마! 법이 몽유병에 걸렸다 😱",
+    "description": "지크의 잠 광선은 싱크대에서 자는 거대 젤리 워블러를 위한 거였는데... 법이 맞아버렸다. 이제 리더가 잠든 채로 젤리를 향해 걸어가고, 아무도 소리를 내면 안 된다. 너라면 깨울래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Weck das Gelee nicht! Bup schlafwandelt 😱",
+    "description": "Zeeks Schlummerstrahl war für Wobblor gedacht, das Riesen-Gelee in der Spüle... aber er trifft Bup. Jetzt schlafwandelt der Anführer direkt aufs Gelee zu, und niemand darf ein Geräusch machen. Hättest DU ihn geweckt? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 10,
+   "dur": 28,
+   "top": "WHISPER... OR ELSE",
+   "title": "Pim Cannot Whisper 😂 #shorts",
+   "description": "One loud sound and the jelly wakes up hungry. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pim no sabe susurrar 😂 #shorts",
+     "description": "Un ruido y la gelatina despierta con hambre. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Pim não sabe sussurrar 😂 #shorts",
+     "description": "Um barulho e a gelatina acorda com fome. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيم لا يعرف كيف يهمس 😂 #shorts",
+     "description": "صوت واحد ويستيقظ الجيلي جائعًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pim ne sait pas chuchoter 😂 #shorts",
+     "description": "Un seul bruit et la gelée se réveille affamée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピム、ささやき声が出せない 😂 #shorts",
+     "description": "音ひとつでゼリーが腹ペコで目を覚ます。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "속삭일 줄 모르는 핌 😂 #shorts",
+     "description": "소리 한 번이면 젤리가 배고픈 채로 깨어난다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pim kann nicht flüstern 😂 #shorts",
+     "description": "Ein Geräusch, und das Gelee wacht hungrig auf. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
