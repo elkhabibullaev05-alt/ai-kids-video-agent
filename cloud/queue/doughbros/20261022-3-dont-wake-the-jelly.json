@@ -137,6 +137,10 @@
      [
       "zeek",
       "spin"
+     ],
+     [
+      "all",
+      "shake"
      ]
     ]
    },
@@ -293,7 +297,7 @@
    },
    {
     "who": "zeek",
-    "say": "I'll reverse the beam. A Wake-Up Ray. Give me thirty seconds to rewire it.",
+    "say": "I'll reverse the beam. A Wake-Up Ray. Give me thirty seconds to rewire it. Maybe forty. Nobody sneeze.",
     "cam": "close:zeek",
     "do": [
      [
@@ -301,6 +305,22 @@
       "happy"
      ]
     ]
+   },
+   {
+    "who": "pim",
+    "say": "Why did you say sneeze? Now I need to sneeze! My nose heard you!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Hold it in, bean. Think about dry things. Sand. Crackers. Me.",
+    "cam": "two:crispy,pim"
    },
    {
     "who": "narr",
@@ -593,7 +613,7 @@
    "cartoon"
   ],
   "thumb_text": "DON'T WAKE IT!",
-  "thumb_beat": 29,
+  "thumb_beat": 31,
   "localizations": {
    "es": {
     "title": "¡No despiertes a la gelatina! Bup es sonámbulo 😱",
