@@ -843,8 +843,18 @@ def _dish(p, t, color, text):
         p.text(text, 0, -240, 36, "dark")
 
 
+def _flag(p, t, color, text):
+    p.line([(0, 0), (0, -420)], 9)
+    wv = 8 * __import__("math").sin(t * 3)
+    p.shape([(0, -420), (300, -420 + wv), (300, -220 + wv), (0, -220)], color or "green")
+    p.shape([(150, -400), (280, -320), (150, -240), (20, -320)], "yellow")
+    p.circle(150, -320, 52, "blue")
+    if text:
+        p.text(text, 150, -460, 40, "dark")
+
+
 PROPS = {
-    "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
+    "flag": _flag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
     "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
