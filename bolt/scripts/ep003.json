@@ -1,0 +1,977 @@
+{
+ "title": "Who Sent the Secret Gift? 🎁🔍 Cartoon Cars Mystery",
+ "description": "A mystery gift has been jumping on the podium all night, and nobody knows who sent it! Inspector Bolt puts every car on the Truth Press, follows the big tire tracks and finds out that giving feels even better than getting. Inspector Bolt #3\n\n#kids #cartoon #cars",
+ "set": {
+  "press": true,
+  "podium": true,
+  "time": "day"
+ },
+ "chars": {
+  "bolt": {
+   "name": "Inspector Bolt",
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.08,
+    0.22,
+    0.62
+   ],
+   "kind": "car",
+   "size": 1.0,
+   "hat": true,
+   "home": [
+    6.0,
+    9.0
+   ]
+  },
+  "bertha": {
+   "name": "Big Bertha",
+   "voice": "af_bella",
+   "speed": 1.05,
+   "pitch": -1,
+   "color": [
+    0.98,
+    0.78,
+    0.05
+   ],
+   "kind": "bus",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -9.0,
+    18.0
+   ]
+  },
+  "turbo": {
+   "name": "Turbo",
+   "voice": "am_puck",
+   "speed": 1.2,
+   "pitch": 1,
+   "color": [
+    0.92,
+    0.1,
+    0.08
+   ],
+   "kind": "car",
+   "size": 0.95,
+   "hat": false,
+   "home": [
+    3.0,
+    12.0
+   ]
+  },
+  "grumpy": {
+   "name": "Grumpy",
+   "voice": "am_onyx",
+   "speed": 0.9,
+   "pitch": -2,
+   "color": [
+    0.5,
+    0.52,
+    0.55
+   ],
+   "kind": "truck",
+   "size": 1.0,
+   "hat": false,
+   "home": [
+    -1.0,
+    15.5
+   ]
+  },
+  "pip": {
+   "name": "Pip",
+   "voice": "af_sky",
+   "speed": 1.05,
+   "pitch": 4,
+   "color": [
+    0.98,
+    0.45,
+    0.7
+   ],
+   "kind": "small",
+   "size": 0.65,
+   "hat": false,
+   "home": [
+    -15.5,
+    8.0
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "am_fenrir",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dash": {
+   "name": "Dash",
+   "voice": "am_michael",
+   "speed": 1.1,
+   "pitch": 0,
+   "color": [
+    0.1,
+    0.72,
+    0.58
+   ],
+   "kind": "car",
+   "size": 1.05,
+   "hat": false,
+   "home": [
+    11.0,
+    18.0
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "gift",
+   "type": "gift",
+   "color": "gold",
+   "on": "podium",
+   "scale": 0.9
+  },
+  {
+   "id": "ball",
+   "type": "ball",
+   "color": "red",
+   "on": "podium",
+   "visible": false,
+   "scale": 0.7
+  },
+  {
+   "id": "banana",
+   "type": "banana",
+   "color": "yellow",
+   "visible": false
+  },
+  {
+   "id": "key",
+   "type": "key",
+   "color": "gold",
+   "on": "podium",
+   "visible": false,
+   "scale": 1.3
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Vroom vroom! The morning after the party, everyone raced back to the square. Something was jumping!",
+   "cam": "wide",
+   "do": [
+    [
+     "bertha",
+     "enter"
+    ],
+    [
+     "turbo",
+     "enter:left"
+    ],
+    [
+     "grumpy",
+     "enter"
+    ],
+    [
+     "pip",
+     "enter:left"
+    ],
+    [
+     "dash",
+     "enter"
+    ],
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "sfx": "alarm",
+   "cam": "prop:gift",
+   "hold": 1.2,
+   "text": "THE GIFT IS STILL JUMPING!",
+   "do": [
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "It jumped all night long! Boing, boing, boing! I didn't sleep one bit!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "A jumping box! Cool! Is it a rocket? I love rockets!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Maybe it's a tiny bunny! Can I hold it? Please?",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "It's just a box. A loud, shiny box. I hate shiny things.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "dash",
+   "say": "Don't look at me. I didn't deliver that one. It wasn't on my list.",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, with a squeak of brakes, the best detective in town arrived.",
+   "cam": "wide",
+   "do": [
+    [
+     "bolt",
+     "enter"
+    ],
+    [
+     "gift",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Inspector Bolt. I heard a boing. Many boings.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Big Bertha. It is your gift. You should open it.",
+   "cam": "two:bolt,bertha",
+   "do": []
+  },
+  {
+   "who": "bertha",
+   "say": "Okay! Everybody, count with me! One, two, three!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "sfx": "alarm",
+   "cam": "podium",
+   "hold": 1.2,
+   "text": "WHAT'S INSIDE?!",
+   "do": [
+    [
+     "gift",
+     "vanish"
+    ],
+    [
+     "ball",
+     "show"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "It's a ball! A shiny red bouncy ball!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The ball bounced so high, it almost touched the clouds.",
+   "cam": "prop:ball",
+   "do": [
+    [
+     "ball",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Whoa! That ball is faster than me! Almost. Not really. Okay, a little.",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Look, there's a little note! It says... For Bertha. From a secret friend.",
+   "cam": "podium",
+   "text": "FROM A SECRET FRIEND?"
+  },
+  {
+   "who": "bertha",
+   "say": "A secret friend? But who? I want to say thank you!",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "A gift with no name. A giver with no face. This is a mystery.",
+   "cam": "close:bolt",
+   "text": "WHO SENT THE GIFT?"
+  },
+  {
+   "who": "bolt",
+   "say": "Nobody is in trouble. But everyone will take the Truth Press.",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "rise"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "The Truth Press again? My roof still remembers last time!",
+   "cam": "close:dash",
+   "do": [
+    [
+     "dash",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Procedure.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "turbo",
+   "say": "Me first! Me first! I'm always first! It's kind of my thing.",
+   "cam": "two:turbo,bolt",
+   "do": [
+    [
+     "turbo",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Turbo. Did you send the secret gift to Big Bertha?",
+   "cam": "press"
+  },
+  {
+   "who": "turbo",
+   "say": "Yes! Totally! It was me! I'm the secret friend! Ta-da!",
+   "cam": "press",
+   "do": [
+    [
+     "turbo",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "close:turbo",
+   "hold": 1.0,
+   "text": "SUSPICIOUS...",
+   "do": [
+    [
+     "turbo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Turbo, your eyes are getting very, very big.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "turbo",
+   "say": "They're just... excited eyes! Happy birthday eyes!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The Truth Press squeezed, and something fell out of Turbo's trunk!",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:turbo"
+    ],
+    [
+     "banana",
+     "drop:turbo"
+    ]
+   ]
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "prop:banana",
+   "hold": 1.0,
+   "text": "THE BANANA AGAIN?!"
+  },
+  {
+   "who": "turbo",
+   "say": "Okay, okay! It wasn't me. I just wanted a thank you too.",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Turbo! You can't take a thank you that isn't yours!",
+   "cam": "close:pip"
+  },
+  {
+   "who": "turbo",
+   "say": "Sorry. I'll keep my banana. And my real eyes.",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "laugh"
+    ],
+    [
+     "pip",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "A banana is not a secret friend. Next! Dash.",
+   "cam": "wide",
+   "do": [
+    [
+     "turbo",
+     "to_home"
+    ],
+    [
+     "dash",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "I deliver gifts every day. But I didn't send this one. Promise.",
+   "cam": "press"
+  },
+  {
+   "who": "narr",
+   "say": "The Truth Press came closer and closer...",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:dash"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "His eyes stayed small. Dash is telling the truth.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "dash",
+   "say": "Then why is my roof flat? I have deliveries today!",
+   "cam": "press",
+   "do": [
+    [
+     "dash",
+     "flat_roof"
+    ],
+    [
+     "turbo",
+     "laugh"
+    ],
+    [
+     "bertha",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Procedure. Thank you, Dash. Next! Little Pip.",
+   "cam": "two:pip,bolt",
+   "do": [
+    [
+     "dash",
+     "to_home"
+    ],
+    [
+     "pip",
+     "to_press"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "I wish I sent it! But I only had one sticker, and I gave it to Bertha's card.",
+   "cam": "press"
+  },
+  {
+   "who": "narr",
+   "say": "The Truth Press squeezed... but once again, it couldn't reach Pip!",
+   "cam": "press",
+   "do": [
+    [
+     "press",
+     "squeeze:pip"
+    ]
+   ]
+  },
+  {
+   "sfx": "suspicious",
+   "cam": "close:pip",
+   "hold": 1.1,
+   "text": "STILL TOO SMALL!"
+  },
+  {
+   "who": "pip",
+   "say": "Hee hee! It tickles every time! I'm telling the truth!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Turbo, Dash and Pip did not send it. So who is the secret friend?",
+   "cam": "close:bolt",
+   "do": [
+    [
+     "pip",
+     "to_home"
+    ],
+    [
+     "press",
+     "sink"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Not me. Can't be me. I hate shiny things. And presents. And mornings.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "narr",
+   "say": "Then Inspector Bolt noticed something on the ground near the podium.",
+   "cam": "overhead",
+   "do": [
+    [
+     "fx",
+     "tracks:podium-grumpy"
+    ]
+   ],
+   "text": "CLUE!"
+  },
+  {
+   "who": "bolt",
+   "say": "Tire tracks. Very big tire tracks. With little zig-zags.",
+   "cam": "overhead"
+  },
+  {
+   "who": "bolt",
+   "say": "These were made last night. By someone big and heavy.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "pip",
+   "say": "Who has wheels that big? Not me! My wheels are tiny!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Not me! My wheels are skinny and super fast!",
+   "cam": "close:turbo"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone followed the big tracks with their eyes. All the way to...",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "look:grumpy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "...Grumpy, the tow truck.",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "grumpy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "What? Lots of cars have big wheels. Probably.",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "grumpy",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Grumpy. Would you take the Truth Press, please?",
+   "cam": "two:grumpy,bolt",
+   "do": [
+    [
+     "bolt",
+     "turn:grumpy"
+    ],
+    [
+     "grumpy",
+     "to_press"
+    ],
+    [
+     "press",
+     "rise"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Fine. Ask your question. I'm not worried.",
+   "cam": "press"
+  },
+  {
+   "who": "bolt",
+   "say": "Grumpy. Did you buy a gift for Big Bertha?",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "bolt",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "No. I did not buy a gift.",
+   "cam": "press"
+  },
+  {
+   "who": "bolt",
+   "say": "His eyes are small. True. But one more question.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "Grumpy. Did you MAKE a gift for Big Bertha?",
+   "cam": "close:bolt"
+  },
+  {
+   "sfx": "alarm",
+   "cam": "close:grumpy",
+   "hold": 1.3,
+   "text": "THE SECRET FRIEND IS... GRUMPY?!",
+   "do": [
+    [
+     "grumpy",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Grumpy?! But Grumpy is... grumpy!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "He hates shiny things! And that gift was wrapped in shiny gold paper!",
+   "cam": "close:dash"
+  },
+  {
+   "who": "grumpy",
+   "say": "Okay. Yes. It was me. I made it in my garage. With a spring.",
+   "cam": "press",
+   "do": [
+    [
+     "grumpy",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Grumpy? You made a present? For me? But why?",
+   "cam": "close:bertha"
+  },
+  {
+   "who": "grumpy",
+   "say": "Every morning, you say good morning to me. Even when I don't say it back.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "grumpy",
+   "say": "Nobody else does that. So I wanted to say thank you. Secretly.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "pip",
+   "say": "Why secretly? It's a wonderful present!",
+   "cam": "close:pip"
+  },
+  {
+   "who": "grumpy",
+   "say": "Because I'm Grumpy. Grumpy trucks don't do nice things. It's bad for my name.",
+   "cam": "close:grumpy"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone was quiet. Then Inspector Bolt rolled over slowly.",
+   "cam": "wide",
+   "do": [
+    [
+     "bolt",
+     "to:grumpy"
+    ],
+    [
+     "press",
+     "sink"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Grumpy. Being kind does not make you less you. It makes you more you.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "bolt",
+   "say": "And remember. Giving feels even better than getting.",
+   "cam": "close:bolt",
+   "text": "GIVING FEELS BETTER!"
+  },
+  {
+   "who": "grumpy",
+   "say": "Hmm. It does feel good. In my engine. Right here.",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "grumpy",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "Thank you, Grumpy! It's the best present ever! Good morning, friend!",
+   "cam": "two:bertha,grumpy",
+   "do": [
+    [
+     "bertha",
+     "to:grumpy"
+    ],
+    [
+     "bertha",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "...Good morning, Bertha.",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "grumpy",
+     "happy"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "And for the very first time, Grumpy said good morning back.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "laugh"
+    ]
+   ]
+  },
+  {
+   "who": "turbo",
+   "say": "Can we play with the ball now? I'll go first! Obviously!",
+   "cam": "close:turbo",
+   "do": [
+    [
+     "turbo",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "dash",
+   "say": "Let's all play together! I'll deliver the ball to everyone!",
+   "cam": "close:dash",
+   "do": [
+    [
+     "ball",
+     "give:pip"
+    ]
+   ]
+  },
+  {
+   "who": "pip",
+   "say": "Catch, Grumpy! Your turn!",
+   "cam": "close:pip",
+   "do": [
+    [
+     "ball",
+     "give:grumpy"
+    ],
+    [
+     "pip",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "grumpy",
+   "say": "Not bad. For a shiny thing.",
+   "cam": "close:grumpy",
+   "do": [
+    [
+     "ball",
+     "bounce"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Case closed. Even the grumpiest heart can give.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "But as everyone played, something new was waiting on the podium.",
+   "cam": "wide"
+  },
+  {
+   "sfx": "alarm",
+   "cam": "prop:key",
+   "hold": 1.2,
+   "text": "A GOLDEN KEY?!",
+   "do": [
+    [
+     "key",
+     "show"
+    ],
+    [
+     "key",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "bertha",
+   "say": "A key? Where did that come from? What does it open?",
+   "cam": "close:bertha",
+   "do": [
+    [
+     "bertha",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "bolt",
+   "say": "Hmm. Another mystery. Procedure.",
+   "cam": "close:bolt"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think the golden key opens? Tell us in the comments! Inspector Bolt will be back.",
+   "cam": "wide",
+   "do": [
+    [
+     "key",
+     "spin"
+    ]
+   ],
+   "text": "WHAT DOES IT OPEN? COMMENT!"
+  }
+ ]
+}
