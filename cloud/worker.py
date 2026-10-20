@@ -169,7 +169,8 @@ def sync_from_youtube(st):
 
 
 def free_slot(st, kind, after=None):
-    after = max(after or NOW, NOW + dt.timedelta(minutes=45))
+    now = dt.datetime.now(dt.timezone.utc)  # NOW is the process start; a render takes hours, so it is stale here
+    after = max(after or now, now + dt.timedelta(minutes=45))
     used = {x["t"] for x in st["taken"]}
     day = after.date()
     for _ in range(30):
