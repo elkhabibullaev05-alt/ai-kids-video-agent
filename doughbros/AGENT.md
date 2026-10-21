@@ -98,3 +98,4 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Safety notes 2026-10-20
 - Title template: the last 10 titles all end in `?!` + one emoji. Vary the form — at most 1 in 3 titles may end in `?!`; also use statements, "How…", character names, no emoji on some. Vary the first spoken line of each script (no repeated opening phrase across the last 5 episodes).
 - Audience: the owner's 2026-10-19 safety routine lists Dough Bros as a kids channel, but this file and `cloud/channels.json` say "Not made for kids" (13+). Do NOT change the flag on your own — the owner decides. Until then keep content clearly 13+ in tone and never target kids in titles/tags (no "for kids", nursery words).
+- (2026-10-21) Each Short gets its own title and first line — never a rephrase of its long episode's title (duplicate metadata reads as repetitive content). Before uploading, compare the day's titles: no two may share the same hook word or end the same way.
