@@ -70,7 +70,7 @@ def L(who, say, cam, do=None, **kw):
 
 beats = [
     # 0 s: motion + big text hook + voice mid-tension at frame 1 (car speeding, red eyes in the dark)
-    L(N, "Four people saw red eyes by the road. Then it chased their car.", "prop:careye",
+    L(N, "Four people saw red eyes by the road. Then it chased their car.", "wide",
       car(5, 11) + [["mm", "to:1,18,1"]], text="DON'T STOP THE CAR"),
     L("odo", "Mothwick! Mothwick, where are you? The ship is gone!", "close:odo", [["odo", "shake"]], sfx="alarm",
       text="WHERE IS MOTHWICK?"),
@@ -146,7 +146,7 @@ beats = [
 ]
 
 sc = {
-    "title": "Four Saw Red Eyes. Then It Chased Them.",
+    "title": "Don't Stop the Car. It Has Red Eyes.",
     "description": "Four people saw red eyes by the road. Then it chased their car.",
     "lead_in": 0.05,
     "set": {"place": "forest", "fog": 0.07, "eyes": 2, "moonlight": 2.2},
