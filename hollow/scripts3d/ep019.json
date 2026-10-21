@@ -1,0 +1,989 @@
+{
+ "title": "Who Wrote on the Walls at Borley?",
+ "description": "Words are appearing on the wall. And nobody is holding the pencil.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "chapel",
+  "fog": 0.06,
+  "eyes": 3,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -5,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -2.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "nun": {
+   "name": "The Nun",
+   "voice": "bf_emma",
+   "speed": 0.82,
+   "pitch": -2,
+   "color": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "kind": "lady",
+   "ghost": true,
+   "up": true,
+   "size": 0.95,
+   "home": [
+    6,
+    13
+   ]
+  },
+  "price": {
+   "name": "Harry Price",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.22,
+    0.2,
+    0.18
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -10,
+    11
+   ]
+  },
+  "marianne": {
+   "name": "Marianne",
+   "voice": "af_sarah",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.45,
+    0.12,
+    0.15
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    2.5,
+    10
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "w00",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -2.4,
+    15,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w01",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -2.4,
+    15,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w02",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -2.4,
+    15,
+    2.4
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w10",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -1.2,
+    15,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w11",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -1.2,
+    15,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w12",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    -1.2,
+    15,
+    2.4
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w20",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    0.0,
+    15,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w21",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    0.0,
+    15,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w22",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    0.0,
+    15,
+    2.4
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w30",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    1.1999999999999997,
+    15,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w31",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    1.1999999999999997,
+    15,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w32",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    1.1999999999999997,
+    15,
+    2.4
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w40",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    2.4,
+    15,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w41",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    2.4,
+    15,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w42",
+   "type": "box",
+   "color": [
+    0.45,
+    0.36,
+    0.3
+   ],
+   "at": [
+    2.4,
+    15,
+    2.4
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "l0",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    -2.0,
+    14.2,
+    2.3
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l1",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    -1.55,
+    14.2,
+    2.42
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l2",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    -1.1,
+    14.2,
+    2.3
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l3",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    -0.6499999999999999,
+    14.2,
+    2.42
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l4",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    -0.19999999999999996,
+    14.2,
+    2.3
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l5",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    0.25,
+    14.2,
+    2.42
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l6",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    0.7000000000000002,
+    14.2,
+    2.3
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "l7",
+   "type": "box",
+   "color": [
+    0.95,
+    0.92,
+    0.85
+   ],
+   "glow": 1.5,
+   "at": [
+    1.15,
+    14.2,
+    2.42
+   ],
+   "scale": 0.18
+  },
+  {
+   "id": "pencil",
+   "type": "cone",
+   "color": "gold",
+   "at": [
+    1.8,
+    14.0,
+    2.0
+   ],
+   "scale": 0.6
+  },
+  {
+   "id": "bell",
+   "type": "cone",
+   "color": "gold",
+   "at": [
+    -6,
+    12,
+    4.5
+   ],
+   "visible": false,
+   "scale": 0.8
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Words are appearing on the wall. And nobody is holding the pencil.",
+   "cam": "wide",
+   "do": [
+    [
+     "pencil",
+     "spin"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHO WROTE ON THE WALL?"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, look! The letters are still moving!",
+   "cam": "prop:pencil",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "pencil",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "odo",
+   "say": "It's a name. Marianne. Who is Marianne?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "MARIANNE..."
+  },
+  {
+   "who": "narr",
+   "say": "Sarah's sealed door had slammed behind them. Now they stood in a different house.",
+   "cam": "overhead",
+   "do": [
+    [
+     "nun",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A DIFFERENT HOUSE"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from real records. Borley Rectory, in a village in Essex, England.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "turn:nun"
+    ]
+   ],
+   "text": "BORLEY, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "One ghost hunter called it the most haunted house in England.",
+   "cam": "close:nun",
+   "do": [
+    [
+     "nun",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "MOST HAUNTED HOUSE"
+  },
+  {
+   "who": "narr",
+   "say": "A vicar, Henry Bull, built it in 1862, right beside the old village church.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "BUILT IN 1862"
+  },
+  {
+   "who": "narr",
+   "say": "He had fourteen children. So he added a whole new wing.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "text": "14 CHILDREN"
+  },
+  {
+   "who": "narr",
+   "say": "And in that house, people told a story. A story about a nun.",
+   "cam": "close:nun",
+   "do": [
+    [
+     "nun",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE NUN"
+  },
+  {
+   "who": "narr",
+   "say": "The legend said she was locked away near here, long ago. And she never left.",
+   "cam": "two:nun,moth",
+   "do": [
+    [
+     "nun",
+     "to:4,11"
+    ]
+   ],
+   "text": "SHE NEVER LEFT"
+  },
+  {
+   "who": "moth",
+   "say": "Locked away? Odo, I really don't like this story.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Historians say the legend was probably made up. But then came one summer evening.",
+   "cam": "wide",
+   "do": [
+    [
+     "nun",
+     "dive"
+    ]
+   ],
+   "text": "LEGEND... OR NOT?"
+  },
+  {
+   "who": "narr",
+   "say": "July the twenty-eighth, 1900. Four of the Bull sisters walked in the garden at dusk.",
+   "cam": "overhead",
+   "do": [
+    [
+     "odo",
+     "to:-3,8"
+    ]
+   ],
+   "text": "28 JULY 1900"
+  },
+  {
+   "who": "narr",
+   "say": "About forty yards away, they saw a dark figure. A nun, gliding over the grass.",
+   "cam": "close:nun",
+   "do": [
+    [
+     "nun",
+     "rise"
+    ],
+    [
+     "nun",
+     "to:2,12"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A NUN IN THE GARDEN"
+  },
+  {
+   "who": "odo",
+   "say": "Did they run away?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "One sister walked toward her. And the nun was gone.",
+   "cam": "wide",
+   "do": [
+    [
+     "nun",
+     "dive"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "GONE"
+  },
+  {
+   "who": "narr",
+   "say": "From then on, that path had a name. The Nun's Walk.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ],
+   "text": "THE NUN'S WALK"
+  },
+  {
+   "who": "narr",
+   "say": "In 1928, a new vicar, Guy Smith, moved in with his wife.",
+   "cam": "wide",
+   "do": [
+    [
+     "nun",
+     "rise"
+    ],
+    [
+     "bell",
+     "show"
+    ]
+   ],
+   "text": "1928"
+  },
+  {
+   "who": "narr",
+   "say": "They heard footsteps in empty rooms. Bells rang by themselves.",
+   "cam": "prop:bell",
+   "do": [
+    [
+     "bell",
+     "bounce"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "BELLS RANG BY THEMSELVES"
+  },
+  {
+   "who": "narr",
+   "say": "In 1929, a London newspaper printed the story. And a ghost hunter came. Harry Price.",
+   "cam": "close:price",
+   "do": [
+    [
+     "price",
+     "enter:left"
+    ]
+   ],
+   "text": "THE GHOST HUNTER"
+  },
+  {
+   "who": "price",
+   "say": "Ring again, bells. I am writing everything down.",
+   "cam": "two:price,odo",
+   "do": [
+    [
+     "price",
+     "turn:front"
+    ],
+    [
+     "bell",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The Smiths moved out that same summer.",
+   "cam": "wide",
+   "do": [
+    [
+     "price",
+     "to:-7,10"
+    ],
+    [
+     "bell",
+     "vanish"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THEY LEFT"
+  },
+  {
+   "who": "narr",
+   "say": "In 1930, a vicar named Lionel Foyster moved in. With his young wife, Marianne.",
+   "cam": "close:marianne",
+   "do": [
+    [
+     "marianne",
+     "turn:front"
+    ]
+   ],
+   "text": "MARIANNE"
+  },
+  {
+   "who": "narr",
+   "say": "Now it got worse. Stones and bottles flew. Bells rang. Doors locked by themselves.",
+   "cam": "wide",
+   "do": [
+    [
+     "all",
+     "shake"
+    ],
+    [
+     "pencil",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "STONES FLEW"
+  },
+  {
+   "who": "narr",
+   "say": "Then pencil writing appeared on the walls. Messages. Asking Marianne for help.",
+   "cam": "prop:pencil",
+   "do": [
+    [
+     "pencil",
+     "bounce"
+    ],
+    [
+     "marianne",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "MARIANNE, PLEASE HELP"
+  },
+  {
+   "who": "marianne",
+   "say": "Who keeps writing my name on the wall?",
+   "cam": "close:marianne",
+   "do": [
+    [
+     "marianne",
+     "shake"
+    ]
+   ],
+   "text": "WHO WROTE IT?"
+  },
+  {
+   "who": "odo",
+   "say": "Moth... our wall said Marianne too.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Later, investigators said many events were tricks, wind, or visitors.",
+   "cam": "two:price,marianne",
+   "do": [
+    [
+     "price",
+     "jump"
+    ]
+   ],
+   "text": "TRICKS?"
+  },
+  {
+   "who": "narr",
+   "say": "Marianne herself said some noises were her own pranks. But not everything was explained.",
+   "cam": "close:marianne",
+   "do": [
+    [
+     "marianne",
+     "turn:odo"
+    ]
+   ],
+   "text": "NOT EVERYTHING"
+  },
+  {
+   "who": "narr",
+   "say": "Then, on February the twenty-seventh, 1939, an oil lamp fell over. The rectory burned.",
+   "cam": "overhead",
+   "do": [
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "1939: FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "Five years later, the ruins were pulled down. Today, nothing of the house remains.",
+   "cam": "wide",
+   "do": [
+    [
+     "marianne",
+     "exit"
+    ],
+    [
+     "price",
+     "exit"
+    ]
+   ],
+   "text": "NOTHING REMAINS"
+  },
+  {
+   "who": "narr",
+   "say": "Was it a haunting, or the most famous trick in England? Nobody knows for sure.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "Then, in the dark, the pencil moved again. All by itself.",
+   "cam": "prop:pencil",
+   "do": [
+    [
+     "pencil",
+     "spin"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE PENCIL MOVED"
+  },
+  {
+   "who": "moth",
+   "say": "It's writing a new name, Odo. It's writing... yours.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:nun"
+    ]
+   ]
+  },
+  {
+   "who": "nun",
+   "say": "Odo. Please. Help me get out.",
+   "cam": "close:nun",
+   "do": [
+    [
+     "nun",
+     "rise"
+    ],
+    [
+     "nun",
+     "to:3,8"
+    ]
+   ],
+   "text": "HELP ME GET OUT"
+  },
+  {
+   "who": "narr",
+   "say": "Who is writing on the wall? Subscribe. Don't miss what she writes next.",
+   "cam": "wide",
+   "do": [
+    [
+     "pencil",
+     "spin"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHO IS WRITING?"
+  }
+ ]
+}
