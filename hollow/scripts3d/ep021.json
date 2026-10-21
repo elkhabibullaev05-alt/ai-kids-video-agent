@@ -1,0 +1,2254 @@
+{
+ "title": "Never Take the Ghost Ship's Letters",
+ "description": "Thirteen men saw a ship glowing red. Then it was gone.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "swamp",
+  "fog": 0.06,
+  "eyes": 3,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    5
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    4.5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "capt": {
+   "name": "Captain Van der Decken",
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.45,
+    0.8,
+    0.75
+   ],
+   "kind": "human",
+   "size": 1.1,
+   "home": [
+    4,
+    12
+   ]
+  },
+  "lady": {
+   "name": "The Lady in Black",
+   "voice": "bf_emma",
+   "speed": 0.82,
+   "pitch": -2,
+   "color": [
+    0.08,
+    0.08,
+    0.11
+   ],
+   "kind": "lady",
+   "ghost": true,
+   "up": true,
+   "size": 1.0,
+   "home": [
+    -9,
+    9
+   ]
+  },
+  "prince": {
+   "name": "Prince George",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -11,
+    7
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "hull0",
+   "type": "box",
+   "color": [
+    0.16,
+    0.05,
+    0.04
+   ],
+   "glow": 0.6,
+   "at": [
+    2.6,
+    18.0,
+    0.0
+   ],
+   "scale": 0.95
+  },
+  {
+   "id": "hull1",
+   "type": "box",
+   "color": [
+    0.16,
+    0.05,
+    0.04
+   ],
+   "glow": 0.6,
+   "at": [
+    3.8,
+    18.0,
+    0.0
+   ],
+   "scale": 0.95
+  },
+  {
+   "id": "hull2",
+   "type": "box",
+   "color": [
+    0.16,
+    0.05,
+    0.04
+   ],
+   "glow": 0.6,
+   "at": [
+    5.0,
+    18.0,
+    0.0
+   ],
+   "scale": 0.95
+  },
+  {
+   "id": "hull3",
+   "type": "box",
+   "color": [
+    0.16,
+    0.05,
+    0.04
+   ],
+   "glow": 0.6,
+   "at": [
+    6.199999999999999,
+    18.0,
+    0.0
+   ],
+   "scale": 0.95
+  },
+  {
+   "id": "hull4",
+   "type": "box",
+   "color": [
+    0.16,
+    0.05,
+    0.04
+   ],
+   "glow": 0.6,
+   "at": [
+    7.4,
+    18.0,
+    0.0
+   ],
+   "scale": 0.95
+  },
+  {
+   "id": "mast00",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    3.4,
+    18.0,
+    1.2
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast01",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    3.4,
+    18.0,
+    1.65
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast02",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    3.4,
+    18.0,
+    2.1
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "sail0a",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.25,
+    0.2
+   ],
+   "glow": 2.6,
+   "at": [
+    3.4,
+    18.0,
+    1.3
+   ],
+   "scale": 0.9
+  },
+  {
+   "id": "sail0b",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.3,
+    0.25
+   ],
+   "glow": 2.6,
+   "at": [
+    3.4,
+    18.0,
+    2.3
+   ],
+   "scale": 0.7
+  },
+  {
+   "id": "sail0c",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.35,
+    0.3
+   ],
+   "glow": 2.6,
+   "at": [
+    3.4,
+    18.0,
+    3.1
+   ],
+   "scale": 0.45
+  },
+  {
+   "id": "mast10",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    5.0,
+    18.0,
+    1.2
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast11",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    5.0,
+    18.0,
+    1.65
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast12",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    5.0,
+    18.0,
+    2.1
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "sail1a",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.25,
+    0.2
+   ],
+   "glow": 2.6,
+   "at": [
+    5.0,
+    18.0,
+    1.3
+   ],
+   "scale": 0.9
+  },
+  {
+   "id": "sail1b",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.3,
+    0.25
+   ],
+   "glow": 2.6,
+   "at": [
+    5.0,
+    18.0,
+    2.3
+   ],
+   "scale": 0.7
+  },
+  {
+   "id": "sail1c",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.35,
+    0.3
+   ],
+   "glow": 2.6,
+   "at": [
+    5.0,
+    18.0,
+    3.1
+   ],
+   "scale": 0.45
+  },
+  {
+   "id": "mast20",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    6.6,
+    18.0,
+    1.2
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast21",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    6.6,
+    18.0,
+    1.65
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "mast22",
+   "type": "box",
+   "color": [
+    0.2,
+    0.08,
+    0.05
+   ],
+   "glow": 0.4,
+   "at": [
+    6.6,
+    18.0,
+    2.1
+   ],
+   "scale": 0.35
+  },
+  {
+   "id": "sail2a",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.25,
+    0.2
+   ],
+   "glow": 2.6,
+   "at": [
+    6.6,
+    18.0,
+    1.3
+   ],
+   "scale": 0.9
+  },
+  {
+   "id": "sail2b",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.3,
+    0.25
+   ],
+   "glow": 2.6,
+   "at": [
+    6.6,
+    18.0,
+    2.3
+   ],
+   "scale": 0.7
+  },
+  {
+   "id": "sail2c",
+   "type": "cone",
+   "color": [
+    1.0,
+    0.35,
+    0.3
+   ],
+   "glow": 2.6,
+   "at": [
+    6.6,
+    18.0,
+    3.1
+   ],
+   "scale": 0.45
+  },
+  {
+   "id": "shipeye",
+   "type": "ball",
+   "color": "white",
+   "at": [
+    5.0,
+    12.0,
+    2.6
+   ],
+   "scale": 0.1,
+   "visible": false
+  },
+  {
+   "id": "let0",
+   "type": "box",
+   "color": "white",
+   "glow": 0.8,
+   "at": [
+    1.8,
+    9.5,
+    1.4
+   ],
+   "scale": 0.22,
+   "visible": false
+  },
+  {
+   "id": "let1",
+   "type": "box",
+   "color": "white",
+   "glow": 0.8,
+   "at": [
+    2.4,
+    9.5,
+    1.7
+   ],
+   "scale": 0.22,
+   "visible": false
+  },
+  {
+   "id": "let2",
+   "type": "box",
+   "color": "white",
+   "glow": 0.8,
+   "at": [
+    3.0,
+    9.5,
+    2.0
+   ],
+   "scale": 0.22,
+   "visible": false
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Thirteen men saw a ship glowing red. Then it was gone.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:1.10,15.50,0.00"
+    ],
+    [
+     "hull1",
+     "to:2.30,15.50,0.00"
+    ],
+    [
+     "hull2",
+     "to:3.50,15.50,0.00"
+    ],
+    [
+     "hull3",
+     "to:4.70,15.50,0.00"
+    ],
+    [
+     "hull4",
+     "to:5.90,15.50,0.00"
+    ],
+    [
+     "mast00",
+     "to:1.90,15.50,1.20"
+    ],
+    [
+     "mast01",
+     "to:1.90,15.50,1.65"
+    ],
+    [
+     "mast02",
+     "to:1.90,15.50,2.10"
+    ],
+    [
+     "sail0a",
+     "to:1.90,15.50,1.30"
+    ],
+    [
+     "sail0b",
+     "to:1.90,15.50,2.30"
+    ],
+    [
+     "sail0c",
+     "to:1.90,15.50,3.10"
+    ],
+    [
+     "mast10",
+     "to:3.50,15.50,1.20"
+    ],
+    [
+     "mast11",
+     "to:3.50,15.50,1.65"
+    ],
+    [
+     "mast12",
+     "to:3.50,15.50,2.10"
+    ],
+    [
+     "sail1a",
+     "to:3.50,15.50,1.30"
+    ],
+    [
+     "sail1b",
+     "to:3.50,15.50,2.30"
+    ],
+    [
+     "sail1c",
+     "to:3.50,15.50,3.10"
+    ],
+    [
+     "mast20",
+     "to:5.10,15.50,1.20"
+    ],
+    [
+     "mast21",
+     "to:5.10,15.50,1.65"
+    ],
+    [
+     "mast22",
+     "to:5.10,15.50,2.10"
+    ],
+    [
+     "sail2a",
+     "to:5.10,15.50,1.30"
+    ],
+    [
+     "sail2b",
+     "to:5.10,15.50,2.30"
+    ],
+    [
+     "sail2c",
+     "to:5.10,15.50,3.10"
+    ],
+    [
+     "shipeye",
+     "to:3.50,9.50,2.60"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "13 MEN SAW HER"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! The footprints stop right here, at the water!",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE FOOTPRINTS STOP"
+  },
+  {
+   "who": "lady",
+   "say": "Across the water... a ship is waiting.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "odo",
+     "turn:lady"
+    ]
+   ],
+   "text": "A SHIP IS WAITING"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true legend of the sea. Sailors call her the Flying Dutchman.",
+   "cam": "wide",
+   "do": [
+    [
+     "lady",
+     "dive"
+    ],
+    [
+     "capt",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE FLYING DUTCHMAN"
+  },
+  {
+   "who": "narr",
+   "say": "A ghost ship that can never reach a harbour. Never. Not in a hundred years.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:3.60,19.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:4.80,19.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:6.00,19.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:7.20,19.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:8.40,19.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:4.40,19.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:4.40,19.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:4.40,19.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:4.40,19.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:4.40,19.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:4.40,19.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:6.00,19.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:6.00,19.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:6.00,19.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:6.00,19.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:6.00,19.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:6.00,19.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:7.60,19.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:7.60,19.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:7.60,19.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:7.60,19.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:7.60,19.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:7.60,19.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:6.00,13.00,2.60"
+    ]
+   ],
+   "text": "SHE NEVER REACHES PORT"
+  },
+  {
+   "who": "odo",
+   "say": "A ship that sails forever? With nobody to bring it home?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The story was first written down in 1790, by a traveller named John MacDonald.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "WRITTEN IN 1790"
+  },
+  {
+   "who": "narr",
+   "say": "In a terrible storm, he wrote, the sailors said they saw the Flying Dutchman.",
+   "cam": "overhead",
+   "do": [
+    [
+     "hull0",
+     "to:1.60,17.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:2.80,17.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:4.00,17.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:5.20,17.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:6.40,17.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:2.40,17.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:2.40,17.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:2.40,17.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:2.40,17.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:2.40,17.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:2.40,17.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:4.00,17.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:4.00,17.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:4.00,17.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:4.00,17.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:4.00,17.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:4.00,17.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:5.60,17.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:5.60,17.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:5.60,17.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:5.60,17.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:5.60,17.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:5.60,17.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:4.00,11.00,2.60"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IN A TERRIBLE STORM"
+  },
+  {
+   "who": "narr",
+   "say": "The common story said a Dutch ship came to the Cape of Good Hope in a storm.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "bounce"
+    ],
+    [
+     "hull1",
+     "bounce"
+    ],
+    [
+     "hull2",
+     "bounce"
+    ],
+    [
+     "hull3",
+     "bounce"
+    ],
+    [
+     "hull4",
+     "bounce"
+    ],
+    [
+     "mast00",
+     "bounce"
+    ],
+    [
+     "mast01",
+     "bounce"
+    ],
+    [
+     "mast02",
+     "bounce"
+    ],
+    [
+     "sail0a",
+     "bounce"
+    ],
+    [
+     "sail0b",
+     "bounce"
+    ],
+    [
+     "sail0c",
+     "bounce"
+    ],
+    [
+     "mast10",
+     "bounce"
+    ],
+    [
+     "mast11",
+     "bounce"
+    ],
+    [
+     "mast12",
+     "bounce"
+    ],
+    [
+     "sail1a",
+     "bounce"
+    ],
+    [
+     "sail1b",
+     "bounce"
+    ],
+    [
+     "sail1c",
+     "bounce"
+    ],
+    [
+     "mast20",
+     "bounce"
+    ],
+    [
+     "mast21",
+     "bounce"
+    ],
+    [
+     "mast22",
+     "bounce"
+    ],
+    [
+     "sail2a",
+     "bounce"
+    ],
+    [
+     "sail2b",
+     "bounce"
+    ],
+    [
+     "sail2c",
+     "bounce"
+    ]
+   ],
+   "text": "CAPE OF GOOD HOPE"
+  },
+  {
+   "who": "narr",
+   "say": "She could not get into the harbour. And she was lost.",
+   "cam": "wide",
+   "do": [
+    [
+     "hull0",
+     "to:4.60,21.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:5.80,21.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:7.00,21.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:8.20,21.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:9.40,21.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:5.40,21.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:5.40,21.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:5.40,21.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:5.40,21.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:5.40,21.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:5.40,21.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:7.00,21.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:7.00,21.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:7.00,21.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:7.00,21.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:7.00,21.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:7.00,21.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:8.60,21.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:8.60,21.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:8.60,21.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:8.60,21.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:8.60,21.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:8.60,21.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:7.00,15.00,2.60"
+    ],
+    [
+     "odo",
+     "sad"
+    ]
+   ],
+   "text": "SHE WAS LOST"
+  },
+  {
+   "who": "narr",
+   "say": "Ever since, in very bad weather, people say her shape comes back.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:2.10,17.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:3.30,17.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:4.50,17.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:5.70,17.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:6.90,17.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:2.90,17.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:2.90,17.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:2.90,17.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:2.90,17.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:2.90,17.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:2.90,17.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:4.50,17.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:4.50,17.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:4.50,17.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:4.50,17.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:4.50,17.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:4.50,17.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:6.10,17.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:6.10,17.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:6.10,17.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:6.10,17.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:6.10,17.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:6.10,17.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:4.50,11.00,2.60"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHE COMES BACK"
+  },
+  {
+   "who": "moth",
+   "say": "Bad weather? Odo, the wind is getting stronger. Right now!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In 1821, a magazine gave the captain a name. Hendrick Van der Decken.",
+   "cam": "close:capt",
+   "do": [
+    [
+     "capt",
+     "turn:front"
+    ]
+   ],
+   "text": "VAN DER DECKEN"
+  },
+  {
+   "who": "capt",
+   "say": "I will sail around this Cape, even if it takes me until the end of time!",
+   "cam": "close:capt",
+   "do": [
+    [
+     "capt",
+     "jump"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "UNTIL THE END OF TIME"
+  },
+  {
+   "who": "narr",
+   "say": "That was his promise, the story says. And so the sea kept him. Forever.",
+   "cam": "overhead",
+   "do": [
+    [
+     "hull0",
+     "to:0.60,16.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:1.80,16.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:3.00,16.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:4.20,16.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:5.40,16.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:1.40,16.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:1.40,16.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:1.40,16.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:1.40,16.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:1.40,16.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:1.40,16.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:3.00,16.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:3.00,16.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:3.00,16.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:3.00,16.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:3.00,16.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:3.00,16.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:4.60,16.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:4.60,16.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:4.60,16.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:4.60,16.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:4.60,16.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:4.60,16.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:3.00,10.00,2.60"
+    ],
+    [
+     "capt",
+     "to:3,11"
+    ]
+   ],
+   "text": "FOREVER"
+  },
+  {
+   "who": "narr",
+   "say": "And the strangest part. The ghost ship tries to hand you letters.",
+   "cam": "prop:let0",
+   "do": [
+    [
+     "let0",
+     "show"
+    ],
+    [
+     "let1",
+     "show"
+    ],
+    [
+     "let2",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "IT HANDS YOU LETTERS"
+  },
+  {
+   "who": "narr",
+   "say": "Letters for people who have been gone for a very, very long time.",
+   "cam": "close:capt",
+   "do": [
+    [
+     "capt",
+     "turn:odo"
+    ],
+    [
+     "let0",
+     "bounce"
+    ]
+   ],
+   "text": "FOR PEOPLE LONG GONE"
+  },
+  {
+   "who": "capt",
+   "say": "Take them, little one. Take them home for me.",
+   "cam": "two:capt,odo",
+   "do": [
+    [
+     "let0",
+     "give:odo"
+    ],
+    [
+     "capt",
+     "to:odo"
+    ]
+   ],
+   "text": "TAKE THEM HOME"
+  },
+  {
+   "who": "narr",
+   "say": "Sailors said: never take them. Taking them brings bad luck to your ship.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "let0",
+     "vanish"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NEVER TAKE THEM"
+  },
+  {
+   "who": "moth",
+   "say": "Drop it, Odo! Drop it! Don't touch the letters!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "let1",
+     "vanish"
+    ],
+    [
+     "let2",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Another tale says a Captain Falkenberg sails the North Sea, playing dice with the devil.",
+   "cam": "wide",
+   "do": [
+    [
+     "capt",
+     "spin"
+    ]
+   ],
+   "text": "DICE WITH THE DEVIL"
+  },
+  {
+   "who": "narr",
+   "say": "But one night is written in a real journal. July eleventh, 1881.",
+   "cam": "close:prince",
+   "do": [
+    [
+     "prince",
+     "enter:left"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "JULY 11, 1881"
+  },
+  {
+   "who": "narr",
+   "say": "Two young princes were sailing between Melbourne and Sydney. One later became King.",
+   "cam": "two:prince,odo",
+   "do": [
+    [
+     "prince",
+     "turn:front"
+    ]
+   ],
+   "text": "A FUTURE KING"
+  },
+  {
+   "who": "prince",
+   "say": "Four in the morning. A strange red light, on our left side!",
+   "cam": "close:prince",
+   "do": [
+    [
+     "prince",
+     "eyes_big"
+    ]
+   ],
+   "text": "4 A.M."
+  },
+  {
+   "who": "narr",
+   "say": "A ship all aglow. Masts, spars and sails of a brig, two hundred yards away.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:-0.40,14.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:0.80,14.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:2.00,14.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:3.20,14.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:4.40,14.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:0.40,14.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:0.40,14.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:0.40,14.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:0.40,14.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:0.40,14.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:0.40,14.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:2.00,14.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:2.00,14.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:2.00,14.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:2.00,14.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:2.00,14.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:2.00,14.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:3.60,14.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:3.60,14.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:3.60,14.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:3.60,14.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:3.60,14.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:3.60,14.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:2.00,8.00,2.60"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "200 YARDS AWAY"
+  },
+  {
+   "who": "narr",
+   "say": "An officer ran forward to look. And there was nothing. No ship at all.",
+   "cam": "wide",
+   "do": [
+    [
+     "hull0",
+     "vanish"
+    ],
+    [
+     "hull1",
+     "vanish"
+    ],
+    [
+     "hull2",
+     "vanish"
+    ],
+    [
+     "hull3",
+     "vanish"
+    ],
+    [
+     "hull4",
+     "vanish"
+    ],
+    [
+     "mast00",
+     "vanish"
+    ],
+    [
+     "mast01",
+     "vanish"
+    ],
+    [
+     "mast02",
+     "vanish"
+    ],
+    [
+     "sail0a",
+     "vanish"
+    ],
+    [
+     "sail0b",
+     "vanish"
+    ],
+    [
+     "sail0c",
+     "vanish"
+    ],
+    [
+     "mast10",
+     "vanish"
+    ],
+    [
+     "mast11",
+     "vanish"
+    ],
+    [
+     "mast12",
+     "vanish"
+    ],
+    [
+     "sail1a",
+     "vanish"
+    ],
+    [
+     "sail1b",
+     "vanish"
+    ],
+    [
+     "sail1c",
+     "vanish"
+    ],
+    [
+     "mast20",
+     "vanish"
+    ],
+    [
+     "mast21",
+     "vanish"
+    ],
+    [
+     "mast22",
+     "vanish"
+    ],
+    [
+     "sail2a",
+     "vanish"
+    ],
+    [
+     "sail2b",
+     "vanish"
+    ],
+    [
+     "sail2c",
+     "vanish"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "text": "NOTHING THERE"
+  },
+  {
+   "who": "narr",
+   "say": "The night was clear. The sea was calm. Thirteen people saw her.",
+   "cam": "two:prince,odo",
+   "do": [
+    [
+     "prince",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "13 PEOPLE SAW HER"
+  },
+  {
+   "who": "prince",
+   "say": "Two other ships signalled us. They saw the red light too.",
+   "cam": "close:prince",
+   "do": [
+    [
+     "prince",
+     "shake"
+    ]
+   ],
+   "text": "THEY SAW IT TOO"
+  },
+  {
+   "who": "narr",
+   "say": "Scientists say a mirage can lift a far-away ship above the sea, glowing.",
+   "cam": "overhead",
+   "do": [
+    [
+     "hull0",
+     "show"
+    ],
+    [
+     "hull1",
+     "show"
+    ],
+    [
+     "hull2",
+     "show"
+    ],
+    [
+     "hull3",
+     "show"
+    ],
+    [
+     "hull4",
+     "show"
+    ],
+    [
+     "mast00",
+     "show"
+    ],
+    [
+     "mast01",
+     "show"
+    ],
+    [
+     "mast02",
+     "show"
+    ],
+    [
+     "sail0a",
+     "show"
+    ],
+    [
+     "sail0b",
+     "show"
+    ],
+    [
+     "sail0c",
+     "show"
+    ],
+    [
+     "mast10",
+     "show"
+    ],
+    [
+     "mast11",
+     "show"
+    ],
+    [
+     "mast12",
+     "show"
+    ],
+    [
+     "sail1a",
+     "show"
+    ],
+    [
+     "sail1b",
+     "show"
+    ],
+    [
+     "sail1c",
+     "show"
+    ],
+    [
+     "mast20",
+     "show"
+    ],
+    [
+     "mast21",
+     "show"
+    ],
+    [
+     "mast22",
+     "show"
+    ],
+    [
+     "sail2a",
+     "show"
+    ],
+    [
+     "sail2b",
+     "show"
+    ],
+    [
+     "sail2c",
+     "show"
+    ],
+    [
+     "prince",
+     "exit"
+    ]
+   ],
+   "text": "A MIRAGE?"
+  },
+  {
+   "who": "narr",
+   "say": "But nobody can explain the ship those thirteen sailors saw.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:2.60,18.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:3.80,18.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:5.00,18.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:6.20,18.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:7.40,18.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:3.40,18.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:3.40,18.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:3.40,18.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:3.40,18.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:3.40,18.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:3.40,18.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:5.00,18.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:5.00,18.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:5.00,18.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:5.00,18.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:5.00,18.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:5.00,18.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:6.60,18.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:6.60,18.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:6.60,18.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:6.60,18.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:6.60,18.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:6.60,18.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:5.00,12.00,2.60"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NO EXPLANATION"
+  },
+  {
+   "who": "narr",
+   "say": "In 1843, Richard Wagner even wrote an opera about her.",
+   "cam": "wide",
+   "do": [
+    [
+     "capt",
+     "laugh"
+    ]
+   ],
+   "text": "AN OPERA, 1843"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU take a letter from a ship that isn't there?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ],
+    [
+     "let0",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WOULD YOU TAKE IT?"
+  },
+  {
+   "who": "moth",
+   "say": "No. Never. I would run all the way back to Hollowmere.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the red ship turned. And came straight toward the shore.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:-2.40,10.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:-1.20,10.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:0.00,10.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:1.20,10.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:2.40,10.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:-1.60,10.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:-1.60,10.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:-1.60,10.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:-1.60,10.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:-1.60,10.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:-1.60,10.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:0.00,10.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:0.00,10.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:0.00,10.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:0.00,10.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:0.00,10.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:0.00,10.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:1.60,10.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:1.60,10.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:1.60,10.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:1.60,10.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:1.60,10.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:1.60,10.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:0.00,4.00,2.60"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT'S COMING"
+  },
+  {
+   "who": "capt",
+   "say": "One of you will sail with me tonight.",
+   "cam": "close:capt",
+   "do": [
+    [
+     "capt",
+     "to:-2,8"
+    ]
+   ],
+   "text": "SAIL WITH ME"
+  },
+  {
+   "who": "odo",
+   "say": "Moth... where did you go? Moth? MOTH!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "moth",
+     "exit"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "WHERE IS MOTH?"
+  },
+  {
+   "who": "narr",
+   "say": "Who is on board that ship now? Subscribe. Don't miss the next tale.",
+   "cam": "prop:shipeye",
+   "do": [
+    [
+     "hull0",
+     "to:1.60,17.00,0.00"
+    ],
+    [
+     "hull1",
+     "to:2.80,17.00,0.00"
+    ],
+    [
+     "hull2",
+     "to:4.00,17.00,0.00"
+    ],
+    [
+     "hull3",
+     "to:5.20,17.00,0.00"
+    ],
+    [
+     "hull4",
+     "to:6.40,17.00,0.00"
+    ],
+    [
+     "mast00",
+     "to:2.40,17.00,1.20"
+    ],
+    [
+     "mast01",
+     "to:2.40,17.00,1.65"
+    ],
+    [
+     "mast02",
+     "to:2.40,17.00,2.10"
+    ],
+    [
+     "sail0a",
+     "to:2.40,17.00,1.30"
+    ],
+    [
+     "sail0b",
+     "to:2.40,17.00,2.30"
+    ],
+    [
+     "sail0c",
+     "to:2.40,17.00,3.10"
+    ],
+    [
+     "mast10",
+     "to:4.00,17.00,1.20"
+    ],
+    [
+     "mast11",
+     "to:4.00,17.00,1.65"
+    ],
+    [
+     "mast12",
+     "to:4.00,17.00,2.10"
+    ],
+    [
+     "sail1a",
+     "to:4.00,17.00,1.30"
+    ],
+    [
+     "sail1b",
+     "to:4.00,17.00,2.30"
+    ],
+    [
+     "sail1c",
+     "to:4.00,17.00,3.10"
+    ],
+    [
+     "mast20",
+     "to:5.60,17.00,1.20"
+    ],
+    [
+     "mast21",
+     "to:5.60,17.00,1.65"
+    ],
+    [
+     "mast22",
+     "to:5.60,17.00,2.10"
+    ],
+    [
+     "sail2a",
+     "to:5.60,17.00,1.30"
+    ],
+    [
+     "sail2b",
+     "to:5.60,17.00,2.30"
+    ],
+    [
+     "sail2c",
+     "to:5.60,17.00,3.10"
+    ],
+    [
+     "shipeye",
+     "to:4.00,11.00,2.60"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHO IS ON BOARD?"
+  }
+ ]
+}
