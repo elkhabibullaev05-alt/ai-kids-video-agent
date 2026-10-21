@@ -1,0 +1,817 @@
+{
+ "id": "20261022-3-minute-that-wont-end",
+ "plot": "At 5:59 a.m. in the kitchen the same minute keeps repeating and a flour sack buries the bros every loop; only Crispy remembers, he and Bup test hiding and catching, then notice the clock jumps back whenever sleepwalking Pim whispers 'one more minute', so Pim, held by his friends, wishes for a brave good morning, time moves on, and the oven clock starts a 13-minute countdown no one wished for.",
+ "script": {
+  "title": "How We Escaped the Minute That Wouldn't End",
+  "set": {
+   "place": "kitchen",
+   "time": "dawn"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "clock",
+    "type": "wheel",
+    "color": [
+     0.95,
+     0.93,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     -14,
+     18,
+     6
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "flour",
+    "type": "box",
+    "color": [
+     0.97,
+     0.96,
+     0.92
+    ],
+    "on": null,
+    "at": [
+     -2,
+     9,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "RUN! The flour sack is falling! Everybody off the counter, right now!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "to:-2,8"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Ahh! Not again! Wait... why did I just say again?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "5:59 A.M.",
+    "cam": "prop:clock",
+    "hold": 1.3,
+    "do": [
+     [
+      "flour",
+      "show"
+     ],
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "all",
+      "squash"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Poof. A white cloud swallows the kitchen. Then the clock ticks back to five fifty-nine, and everything starts over.",
+    "cam": "wide",
+    "do": [
+     [
+      "clock",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "RUN! The flour sack is fall... hold on. I have said this exact sentence before.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Eleven times, loaf. You have shouted it eleven times.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Eleven?! Then why does nobody else remember it?",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I was burnt so long ago that time slides off me like grease. I remember every single loop.",
+    "cam": "close:crispy",
+    "do": []
+   },
+   {
+    "who": "lolly",
+    "say": "Good morning, everyone! Did anyone else dream about being covered in flour?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Five friends sharing one flour dream is statistically impossible. Unless... the dream is real.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It is real. The same minute keeps happening. And it happens again in thirty seconds.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "text": "LOOP 12",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "Loop twelve. New idea. Everybody hides under the cutting board!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-10,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Under the board? But it's d-d-dark under the board!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, sweetheart, it's either dark or floury. Pick one.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They hide. The sack misses the counter... and lands right on the cutting board. Flat. Floury. Again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Hiding never works. The minute always finds you.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we stop the sack itself. Zeek, can you catch it?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "With a spaghetti net and a spoon spring! My calculations need twenty seconds.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "text": "LOOP 13",
+    "cam": "prop:clock",
+    "hold": 1.1,
+    "do": [
+     [
+      "clock",
+      "spin"
+     ],
+     [
+      "flour",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "zeek",
+    "say": "The net is ready! Nineteen seconds left. Wait, why is the clock already—",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Loop fourteen. Fifteen. Twenty. By loop thirty, there is not one clean crumb left on the counter.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ],
+     [
+      "flour",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, this is not a flour problem. Something is pushing that clock backwards.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Finally. Now stop watching the sack. Watch the clock.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "text": "TICK... TOCK...",
+    "cam": "prop:clock",
+    "hold": 1.4,
+    "do": [
+     [
+      "clock",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "The minute hand jumps back right when... somebody yawns.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Listen.",
+    "cam": "close:crispy",
+    "do": []
+   },
+   {
+    "who": "pim",
+    "say": "Mmm... one more minute... please, clock... just one more minute...",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim is asleep standing up! He's been whispering to the clock this whole time!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ],
+     [
+      "lolly",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fascinating! A sleepy wish so strong that it rewinds a whole kitchen!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm n-n-not asleep! I'm resting my eyes very loudly!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, every time you wish for one more minute, thirty pounds of flour lands on us.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "But mornings are scary. In the morning the stove wakes up and starts hissing.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then don't wish for more night, little bean. Wish for a good morning.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And we'll stand right next to you when the stove wakes up. All of us. Promise.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody, hold hands. Or crusts. Or corners. Whatever we've got.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "text": "5:59...",
+    "cam": "prop:clock",
+    "hold": 1.2,
+    "do": [
+     [
+      "flour",
+      "show"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pim",
+    "say": "Clock! I wish for a good morning! A brave one! With my friends!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sack falls... and misses everyone by one crumb. The clock clicks forward. Six o'clock.",
+    "cam": "wide",
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "clock",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "6:00 A.M.",
+    "cam": "prop:clock",
+    "hold": 1.1,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "We're out! Real time! Glorious, normal, boring time!",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "all",
+      "happy"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Good job, Pim. Next time you're scared, just ask us for a hug.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ],
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Quiet. Count the ticks.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across the kitchen, the oven clock blinks on by itself. It is not counting forward. It is counting down.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Thirteen minutes. And this time, nobody here made a wish.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "NOT OVER YET...",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   }
+  ]
+ },
+ "long": {
+  "title": "How We Escaped the Minute That Wouldn't End ⏰",
+  "description": "It's 5:59 a.m. and a flour sack lands on the Dough Bros. Then the clock ticks back and it happens again. And again. Only Crispy remembers every loop. How many loops would YOU survive? 👇 #animation #doughbros #timeloop",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "time loop",
+   "funny animation",
+   "spooky cartoon",
+   "crispy",
+   "cartoon"
+  ],
+  "thumb_text": "STUCK AT 5:59",
+  "thumb_beat": 6,
+  "localizations": {
+   "es": {
+    "title": "Cómo escapamos del minuto que nunca terminaba ⏰",
+    "description": "Son las 5:59 y un saco de harina cae sobre los Dough Bros. Luego el reloj retrocede y pasa otra vez. Y otra. Solo Crispy recuerda cada bucle. ¿Cuántos bucles sobrevivirías TÚ? 👇 #animación #doughbros #buclestemporales"
+   },
+   "pt": {
+    "title": "Como escapamos do minuto que nunca acabava ⏰",
+    "description": "São 5:59 e um saco de farinha cai nos Dough Bros. Aí o relógio volta e tudo acontece de novo. E de novo. Só o Crispy lembra de cada loop. Quantos loops VOCÊ aguentaria? 👇 #animação #doughbros #looptemporal"
+   },
+   "ar": {
+    "title": "كيف هربنا من الدقيقة التي لا تنتهي ⏰",
+    "description": "الساعة 5:59 صباحًا، وكيس طحين يسقط على الدو بروز. ثم تعود الساعة إلى الوراء ويتكرر كل شيء. مرة بعد مرة. كريسبي وحده يتذكر كل حلقة. كم حلقة كنت ستنجو منها أنت؟ 👇 #رسوم_متحركة #doughbros #حلقة_زمنية"
+   },
+   "fr": {
+    "title": "Comment on a fui la minute qui ne finissait jamais ⏰",
+    "description": "Il est 5 h 59 et un sac de farine tombe sur les Dough Bros. Puis l'horloge recule et tout recommence. Encore et encore. Seul Crispy se souvient de chaque boucle. Combien de boucles TU survivrais ? 👇 #animation #doughbros #boucletemporelle"
+   },
+   "ja": {
+    "title": "終わらない1分から脱出した方法 ⏰",
+    "description": "午前5時59分、小麦粉の袋がドウ・ブロスの上に落ちてくる。すると時計が巻き戻り、また同じことが。何度も何度も。全部のループを覚えているのはクリスピーだけ。キミなら何回耐えられる？👇 #アニメ #doughbros #タイムループ"
+   },
+   "ko": {
+    "title": "끝나지 않는 1분에서 탈출한 방법 ⏰",
+    "description": "새벽 5시 59분, 밀가루 포대가 도우 브로스 위로 떨어진다. 그런데 시계가 되감기더니 또 똑같은 일이. 계속, 계속. 모든 루프를 기억하는 건 크리스피뿐. 너라면 몇 번이나 버틸 수 있어? 👇 #애니메이션 #doughbros #타임루프"
+   },
+   "de": {
+    "title": "Wie wir der Minute entkamen, die nie endete ⏰",
+    "description": "Es ist 5:59 Uhr und ein Mehlsack landet auf den Dough Bros. Dann springt die Uhr zurück und alles passiert noch mal. Und noch mal. Nur Crispy erinnert sich an jede Schleife. Wie viele Schleifen würdest DU überstehen? 👇 #animation #doughbros #zeitschleife"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 4,
+   "dur": 30,
+   "top": "HE'S SAID IT BEFORE",
+   "title": "Bup Has Shouted This 11 Times 😳 #shorts",
+   "description": "Bup just noticed. Crispy noticed ten loops ago. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "time loop"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Bup ya gritó esto 11 veces 😳 #shorts",
+     "description": "Bup acaba de darse cuenta. Crispy lo notó hace diez bucles. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bup já gritou isso 11 vezes 😳 #shorts",
+     "description": "O Bup acabou de perceber. O Crispy percebeu dez loops atrás. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "باب صرخ بهذا 11 مرة 😳 #shorts",
+     "description": "باب لاحظ للتو. كريسبي لاحظ قبل عشر حلقات. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bup a déjà crié ça 11 fois 😳 #shorts",
+     "description": "Bup vient de s'en rendre compte. Crispy l'a vu il y a dix boucles. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バップ、このセリフもう11回目 😳 #shorts",
+     "description": "バップは今気づいた。クリスピーは10ループ前から気づいてた。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "법은 이 말을 벌써 11번 외쳤다 😳 #shorts",
+     "description": "법은 이제야 알아챘다. 크리스피는 열 번 전에 알았다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bup hat das schon 11-mal gerufen 😳 #shorts",
+     "description": "Bup merkt es gerade erst. Crispy hat es vor zehn Schleifen gemerkt. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,887 @@
+{
+ "id": "20261023-1-friendly-candle-lying",
+ "plot": "During a midnight blackout in the pantry a sweet talking candle, Candlewick, offers to guide the bros to the light switch; Lolly adores him while Zeek notices his wax drips upward, the path ends in a cookie jar with their name tags because they are Halloween treats, and Lolly and Zeek stack everyone into a giant mirror shadow that scares Candlewick into his own jar, whose lid reads 'Treats for the Thing on the Roof' as a hundred flames wake in the garden.",
+ "script": {
+  "title": "The Friendly Candle Was Lying the Whole Time",
+  "set": {
+   "place": "pantry",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "candle": {
+    "name": "Candlewick",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     1.0,
+     0.62,
+     0.18
+    ],
+    "kind": "ghost",
+    "size": 1.15,
+    "home": [
+     3,
+     14
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "jar",
+    "type": "box",
+    "color": [
+     0.82,
+     0.9,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     -8,
+     16,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "Lights out! LIGHTS OUT! Who switched off the pantry?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "spin"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nobody move! I can't even see my own crust!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "bup",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "text": "BLACKOUT",
+    "cam": "wide",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "candle",
+    "say": "Shhh, little ones. No need to tremble. I'm Candlewick, and I'm here to help.",
+    "cam": "close:candle",
+    "do": [
+     [
+      "candle",
+      "jump"
+     ],
+     [
+      "candle",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh, what a sweet glow! And such lovely manners!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "The light switch is behind the cookie jar. Follow my flame. Single file, nice and close.",
+    "cam": "two:candle,lolly",
+    "do": [
+     [
+      "candle",
+      "to:-8,15"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hold on. Since when do candles talk? Or walk? Or know where switches are?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek, don't be rude. He is literally the only light in here.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And so, one by one, the Dough Bros follow the little flame deeper into the dark shelves.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:candle"
+     ],
+     [
+      "lolly",
+      "to:candle"
+     ],
+     [
+      "bup",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Careful. Fire that smiles is still fire.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "Hee hee. Your rock friend is so gloomy. Lolly, dear, you walk right beside me.",
+    "cam": "close:candle",
+    "do": [
+     [
+      "candle",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He picked me! Did everyone hear that? He picked me first!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pim, look at his wax. It's dripping UP. Wax does not drip up. Not ever.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-m-maybe he's just a very optimistic candle?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WAX DRIPS UP...",
+    "cam": "close:candle",
+    "hold": 1.3,
+    "do": [
+     [
+      "candle",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "And the shelf map says the switch is by the door. Nowhere near the cookie jar.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then where exactly is he taking us?",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "Almost there! Just step inside this cozy jar. It's warm. It's safe. It smells like vanilla.",
+    "cam": "close:candle",
+    "do": [
+     [
+      "jar",
+      "show"
+     ],
+     [
+      "candle",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Inside a jar? Candlewick, why are there little name tags in here? Bup. Pim. Lolly...",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "Because you are the TREATS, sweetie! Halloween party, top shelf, midnight! Hee hee hee!",
+    "cam": "close:candle",
+    "do": [
+     [
+      "candle",
+      "laugh"
+     ],
+     [
+      "candle",
+      "shake"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S A TRAP!",
+    "cam": "prop:jar",
+    "hold": 1.3,
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pim",
+    "say": "I knew it! I knew a candle was too polite! Okay. Fainting now.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Back to the door! Everyone, run!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "Run where? I am the only light. Without me, you are lost in the dark forever.",
+    "cam": "wide",
+    "do": [
+     [
+      "candle",
+      "to:2,9"
+     ],
+     [
+      "candle",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He's right. I can't see the door. Every shelf looks exactly the same.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He called me sweetie. He made me a NAME TAG. Zeek. Do you still have your pocket mirror?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Always. Why?",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Candles make shadows. Big ones. Let's show him the biggest shadow he has ever seen.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Light, mirror, angle... Lolly, that's brilliant! Everybody, climb onto my shoulders!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs on Zeek. Lolly climbs on Bup. And Crispy drags sleeping Pim all the way to the top.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to:zeek"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He's heavier when he's asleep.",
+    "cam": "close:crispy",
+    "do": []
+   },
+   {
+    "text": "SHADOW TIME",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Zeek tilts the mirror. On the wall behind Candlewick rises a giant shadow with five heads and one bandage.",
+    "cam": "wide",
+    "do": [
+     [
+      "candle",
+      "eyes_big"
+     ],
+     [
+      "candle",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "WHOOO dares to light up MY pantry?!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "A m-m-monster?! Nobody told me this pantry had a monster!",
+    "cam": "close:candle",
+    "do": [
+     [
+      "candle",
+      "shake"
+     ],
+     [
+      "candle",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Huh? What's happening? Why am I so tall? AAAAAH!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "candle",
+    "say": "It SCREAMED! I'm hiding! I'm hiding in the jar!",
+    "cam": "two:candle,pim",
+    "do": [
+     [
+      "candle",
+      "to:jar"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Candlewick dives head first into his own cookie jar. Bup slams the lid. Click.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ],
+     [
+      "candle",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nice shadow, team. And nice scream, Pim.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "That was a real scream. I would like that on the record.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek, I'm sorry I called you rude. You were right about the drips.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Apology accepted. Science always notices the drips.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Before you celebrate. Read the lid.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the jar lid, in curly icing letters: Treats for the Thing on the Roof.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Guys... look out the window. The garden.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Out in the dark garden, one by one, a hundred tiny candle flames are waking up.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THEY'RE AWAKE...",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "The Friendly Candle Was Lying the Whole Time 🕯️",
+  "description": "The pantry goes dark and a sweet little candle named Candlewick offers to lead the Dough Bros to the light switch. Lolly loves him. Zeek has questions. Would YOU have followed the flame? 👇 #animation #doughbros #halloween",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "halloween",
+   "funny animation",
+   "spooky cartoon",
+   "candle",
+   "cartoon"
+  ],
+  "thumb_text": "DON'T FOLLOW HIM",
+  "thumb_beat": 18,
+  "localizations": {
+   "es": {
+    "title": "La vela amable mentía todo el tiempo 🕯️",
+    "description": "La despensa se queda a oscuras y una velita dulce llamada Candlewick se ofrece a guiar a los Dough Bros hasta el interruptor. Lolly lo adora. Zeek tiene preguntas. ¿TÚ habrías seguido la llama? 👇 #animación #doughbros #halloween"
+   },
+   "pt": {
+    "title": "A vela simpática mentiu o tempo todo 🕯️",
+    "description": "A despensa fica no escuro e uma velinha fofa chamada Candlewick se oferece para levar os Dough Bros até o interruptor. A Lolly adora ele. O Zeek tem perguntas. VOCÊ teria seguido a chama? 👇 #animação #doughbros #halloween"
+   },
+   "ar": {
+    "title": "الشمعة اللطيفة كانت تكذب طوال الوقت 🕯️",
+    "description": "ينطفئ الضوء في المخزن، وتعرض شمعة صغيرة لطيفة اسمها كاندلويك أن تقود الدو بروز إلى مفتاح الضوء. لولي تحبها. زيك لديه أسئلة. هل كنت ستتبع الشعلة؟ 👇 #رسوم_متحركة #doughbros #هالوين"
+   },
+   "fr": {
+    "title": "La gentille bougie mentait depuis le début 🕯️",
+    "description": "Le garde-manger plonge dans le noir et une adorable petite bougie, Candlewick, propose de guider les Dough Bros jusqu'à l'interrupteur. Lolly l'adore. Zeek a des questions. TU aurais suivi la flamme ? 👇 #animation #doughbros #halloween"
+   },
+   "ja": {
+    "title": "優しいロウソクはずっとウソをついていた 🕯️",
+    "description": "食料庫が真っ暗に。かわいいロウソクのキャンドルウィックが、スイッチまで案内すると言い出した。ロリーはメロメロ。ジークは疑問だらけ。キミならその炎についていく？👇 #アニメ #doughbros #ハロウィン"
+   },
+   "ko": {
+    "title": "친절한 촛불은 처음부터 거짓말이었다 🕯️",
+    "description": "식료품 창고가 깜깜해지자 캔들윅이라는 귀여운 촛불이 스위치까지 안내해 주겠다고 한다. 롤리는 홀딱 반했고, 지크는 의심투성이. 너라면 그 불꽃을 따라갔을까? 👇 #애니메이션 #doughbros #할로윈"
+   },
+   "de": {
+    "title": "Die nette Kerze hat die ganze Zeit gelogen 🕯️",
+    "description": "In der Speisekammer geht das Licht aus, und eine süße kleine Kerze namens Candlewick will die Dough Bros zum Lichtschalter führen. Lolly ist begeistert. Zeek hat Fragen. Wärst DU der Flamme gefolgt? 👇 #animation #doughbros #halloween"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 10,
+   "dur": 28,
+   "top": "WAX DOESN'T DO THAT",
+   "title": "Zeek Noticed the Wax Was Wrong 🧐 #shorts",
+   "description": "Everyone loved the glow. Zeek looked at the drips. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "zeek"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Zeek vio algo raro en la cera 🧐 #shorts",
+     "description": "Todos amaban el brillo. Zeek miró las gotas. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Zeek viu algo errado na cera 🧐 #shorts",
+     "description": "Todo mundo amou o brilho. O Zeek olhou as gotas. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "زيك لاحظ شيئًا غريبًا في الشمع 🧐 #shorts",
+     "description": "الجميع أحب التوهج. زيك نظر إلى القطرات. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Zeek a remarqué un truc bizarre avec la cire 🧐 #shorts",
+     "description": "Tout le monde adorait la lueur. Zeek, lui, a regardé les gouttes. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ジーク、ロウの異変に気づく 🧐 #shorts",
+     "description": "みんなは光に夢中。ジークはしずくを見ていた。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "지크가 촛농에서 이상한 점을 발견했다 🧐 #shorts",
+     "description": "모두 불빛에 반했다. 지크는 촛농을 봤다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zeek fällt etwas Seltsames am Wachs auf 🧐 #shorts",
+     "description": "Alle liebten das Leuchten. Zeek sah sich die Tropfen an. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 25,
+   "dur": 32,
+   "top": "LOLLY HAS AN IDEA",
+   "title": "Trust the Flame or Trust Lolly? 👇 #shorts",
+   "description": "No light, no door, one very angry cookie. Which would you pick? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "lolly"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perdidos en la oscuridad: ¿la llama o Lolly? 👇 #shorts",
+     "description": "Sin luz, sin puerta, una galleta muy enfadada. ¿Qué elegirías? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Perdidos no escuro: a chama ou a Lolly? 👇 #shorts",
+     "description": "Sem luz, sem porta, um biscoito muito bravo. O que você escolheria? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "تائهون في الظلام: الشعلة أم لولي؟ 👇 #shorts",
+     "description": "لا ضوء، لا باب، وكعكة غاضبة جدًا. ماذا ستختار؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Perdus dans le noir : la flamme ou Lolly ? 👇 #shorts",
+     "description": "Pas de lumière, pas de porte, un biscuit très en colère. Tu choisis qui ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "暗闇で迷子：炎を信じる？ロリーを信じる？👇 #shorts",
+     "description": "明かりなし、ドアなし、めちゃくちゃ怒ったクッキーがひとつ。キミならどっち？本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "어둠 속에서 길을 잃었다: 불꽃이냐 롤리냐? 👇 #shorts",
+     "description": "불도 없고 문도 없고, 아주 화난 쿠키 하나. 너라면 누굴 고를래? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Verloren im Dunkeln: der Flamme oder Lolly vertrauen? 👇 #shorts",
+     "description": "Kein Licht, keine Tür, ein sehr wütender Keks. Wen würdest du wählen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
