@@ -1,0 +1,792 @@
+{
+ "id": "20261023-2-tiny-footprints",
+ "plot": "At sunset in the snowy garden Max finds a hundred tiny footprints; Dog guesses a tiny snow giant and Bird sees them circle the tree, but Max reads the clues himself (three toes, hop-gaps = a baby bird), finds lost chick Pip, then follows the prints backwards to Grandma's bird house where Pip's mama is waiting.",
+ "script": {
+  "title": "Max Follows 100 Tiny Footprints",
+  "set": {
+   "place": "snow",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_nicole",
+    "speed": 1.15,
+    "pitch": 6,
+    "color": [
+     1.0,
+     0.85,
+     0.2
+    ],
+    "kind": "bird",
+    "size": 0.55,
+    "home": [
+     8,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "birdhouse",
+    "type": "box",
+    "color": "red",
+    "at": [
+     -8,
+     13,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Whoa, whoa, WHOA! Slippery snow! Wait a minute... what are these?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "to:0,7"
+     ],
+     [
+      "fx",
+      "tracks:max-dog"
+     ]
+    ]
+   },
+   {
+    "text": "TINY FOOTPRINTS!",
+    "cam": "overhead",
+    "hold": 1.4,
+    "do": [],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "The sun is going down. The snowy garden is pink and orange.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "narr",
+    "say": "And all over the white snow, there are tiny, tiny footprints.",
+    "cam": "overhead",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "One, two, three... ten... fifty... There must be a hundred tiny footprints here!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Footprints? Let me see! Sniff, sniff. Hmm. They smell like... snow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everything here smells like snow, Dog. But who made them?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I know! A snow giant! A very, very tiny snow giant!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A tiny giant? Dog, giants are big. That is why they are called giants.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oh. Right. Then a tiny snow... not-giant?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello, hello! What are we looking at? Treasure?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Footprints, Bird. Can you fly up high and see where they go?",
+    "cam": "two:max,bird",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Easy peasy, lemon squeezy! Up, up, up I go!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "to:2,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies high above the garden and looks down.",
+    "cam": "overhead",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Max! The footprints go round and round the big tree. Then they go into the bushes!",
+    "cam": "close:bird",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Round and round? The tiny not-giant is dizzy! Like me after I chase my tail!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max! Dog! It will be dark soon. What are you doing out there?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, we found a mystery! A hundred tiny footprints!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You are a clever cat, Max. Look very closely, and the snow will tell you.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max bends down close. He looks at one footprint. Then the next one.",
+    "cam": "close:max",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Hmm. Each print has three thin toes, like a little fork. Not a cat. Not a dog.",
+    "cam": "two:max,dog",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Not a dog? Good. My feet are big and round, and I am right here.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And look. No prints in between. Hop... space... hop... space. Whoever made these, they hop!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Three toes and hopping? That sounds like me! But I was in my nest all afternoon.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then it is a bird. But why would a bird hop and not fly?",
+    "cam": "two:max,bird",
+    "do": []
+   },
+   {
+    "who": "narr",
+    "say": "Max thinks and thinks. His tail curls up like a big question mark.",
+    "cam": "close:max",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "I know! A baby bird! Baby birds cannot fly yet, so they have to hop everywhere!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A baby bird? All alone in the cold snow? We have to find it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they follow the tiny footprints. Round the big tree. Past the old stump. Into the bushes.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,10"
+     ],
+     [
+      "dog",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Peep... peep... is somebody there? Hello?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "text": "A BABY BIRD!",
+    "cam": "two:max,pip",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, little one. Don't be scared. I am Max. What is your name?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I am Pip. I hopped and hopped to see the snow. Now I cannot find my home.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh, poor little Pip! Where is your home? In a tree? Under a roof?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I don't know. Everything is white now. Everything looks the same.",
+    "cam": "close:pip",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Pip! I can dig in the snow and find it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait, Dog. No digging. I have a better idea. The footprints!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The footprints? But they only brought us here, to Pip.",
+    "cam": "two:bird,max",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Yes! But footprints go two ways. If we follow them back to where they start, we find where Pip came from!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, what a clever cat! Walk them backwards, Max. I will come with you.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everybody follows the tiny footprints back. Out of the bushes. Round the big tree. Round and round.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,10"
+     ],
+     [
+      "dog",
+      "to:-1,11"
+     ],
+     [
+      "pip",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Round and round again! Max, now I am the dizzy one!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then the footprints stop. Right next to Grandma's little red bird house on the old stump.",
+    "cam": "prop:birdhouse",
+    "do": [
+     [
+      "birdhouse",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My bird house! I put it there last spring. So that is where you live, little Pip!",
+    "cam": "two:grandma,pip",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Home! My home! Mama is inside. I can hear her singing for me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird gently helps Pip hop up, up, up, and into the warm little bird house.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-8,12"
+     ],
+     [
+      "bird",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "There you go, Pip. Warm and safe. Next time, see the snow with a grown-up, okay?",
+    "cam": "close:bird",
+    "do": []
+   },
+   {
+    "who": "pip",
+    "say": "Okay! Thank you, Max! Thank you, Dog! Thank you, Bird! Peep peep!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, you solved the mystery all by yourself. You did not even need my nose!",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, Dog. Grandma was right. If you look closely, the snow tells you the whole story.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now it is getting dark. Who wants warm milk and cookies by the fire?",
+    "cam": "close:grandma",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Me! Me! I will make the biggest footprints all the way to the door!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they walk home through the pink evening snow. Big prints, round prints, and little hop prints from Bird.",
+    "cam": "wide",
+    "do": [
+     [
+      "fx",
+      "tracks:grandma-dog"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I will make a hundred footprints that spell my name. M... A... X!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, your name only has three letters!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I will make three hundred footprints! Big ones!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Follows 100 Tiny Footprints in the Snow! 👣❄️",
+  "description": "At sunset Max finds a hundred tiny footprints in the snow. Dog thinks a tiny snow giant made them, but Max looks closely and solves the mystery all by himself. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "footprints in the snow",
+   "snow story for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "baby bird",
+   "mystery for kids",
+   "winter cartoon"
+  ],
+  "thumb_text": "100 FOOTPRINTS!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¡Max sigue 100 huellitas en la nieve! 👣❄️",
+    "description": "Al atardecer, Max encuentra cien huellitas en la nieve. Perro cree que las hizo un gigante de nieve diminuto, pero Max mira de cerca y resuelve el misterio él solito. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Max segue 100 pegadinhas na neve! 👣❄️",
+    "description": "Ao pôr do sol, Max encontra cem pegadinhas na neve. O Cachorro acha que foi um gigante de neve bem pequenininho, mas Max olha de perto e resolve o mistério sozinho. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "ماكس يتتبع ١٠٠ أثر صغير في الثلج! 👣❄️",
+    "description": "عند الغروب يجد ماكس مئة أثر قدم صغير في الثلج. يظن الكلب أن عملاق ثلج صغيرًا جدًا صنعها، لكن ماكس ينظر عن قرب ويحل اللغز بنفسه. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Max suit 100 petites empreintes dans la neige ! 👣❄️",
+    "description": "Au coucher du soleil, Max trouve cent petites empreintes dans la neige. Chien pense qu'un minuscule géant des neiges les a faites, mais Max regarde de près et résout le mystère tout seul. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "マックス、雪の上の小さな足あと100こを追いかける！👣❄️",
+    "description": "夕方、マックスは雪の上に小さな足あとを100こ見つけます。イヌは「ちっちゃな雪の巨人だ！」と言うけれど、マックスはよーく見て、ひとりでなぞをときます。#maxthecuriouscat #子供向けアニメ #おはなし"
+   },
+   "ko": {
+    "title": "맥스가 눈 위의 작은 발자국 100개를 따라가요! 👣❄️",
+    "description": "해 질 녘, 맥스가 눈 위에서 작은 발자국 백 개를 발견해요. 강아지는 아주 작은 눈 거인이 만들었다고 하지만, 맥스는 자세히 보고 혼자서 수수께끼를 풀어요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Max folgt 100 winzigen Spuren im Schnee! 👣❄️",
+    "description": "Bei Sonnenuntergang findet Max hundert winzige Fußspuren im Schnee. Hund glaubt, ein winziger Schneeriese war es, aber Max schaut genau hin und löst das Rätsel ganz allein. #maxthecuriouscat #kinderzeichentrick #geschichtenfuerkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 28,
+   "top": "WHO MADE THESE?",
+   "title": "Dog Says a Tiny GIANT Made These! 👣😂 #shorts",
+   "description": "A hundred tiny footprints in the snow, and Dog has a very big guess. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Perro dice que las hizo un GIGANTE diminuto! 👣😂 #shorts",
+     "description": "Cien huellitas en la nieve, y Perro tiene una idea muy grande. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro diz que foi um GIGANTE pequenininho! 👣😂 #shorts",
+     "description": "Cem pegadinhas na neve, e o Cachorro tem um palpite bem grande. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يقول إن عملاقًا صغيرًا صنعها! 👣😂 #shorts",
+     "description": "مئة أثر صغير في الثلج، وللكلب تخمين كبير جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien dit qu'un minuscule GÉANT les a faites ! 👣😂 #shorts",
+     "description": "Cent petites empreintes dans la neige, et Chien a une très grande idée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌ「ちっちゃな巨人の足あとだ！」👣😂 #shorts",
+     "description": "雪の上に小さな足あとが100こ。イヌの考えはとっても大きい！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지 말로는 아주 작은 거인이래요! 👣😂 #shorts",
+     "description": "눈 위의 작은 발자국 백 개, 그리고 강아지의 아주 큰 추측! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund sagt: ein winziger RIESE war das! 👣😂 #shorts",
+     "description": "Hundert winzige Spuren im Schnee, und Hund hat eine sehr große Idee. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

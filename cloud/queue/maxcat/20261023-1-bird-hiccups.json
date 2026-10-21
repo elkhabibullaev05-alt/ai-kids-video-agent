@@ -1,0 +1,831 @@
+{
+ "id": "20261023-1-bird-hiccups",
+ "plot": "On the morning of Bird's big Morning Song in the park she gets the hiccups; Max's count-to-ten, Mouse's BOO and Dog's silly ball face all fail, until Dog, who gets nervous hiccups himself, teaches the slow 'smell the flower, blow the dandelion' breath, Bird sings beautifully, and Max ends up with the hiccups.",
+ "script": {
+  "title": "Bird Can't Stop Hiccuping!",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "on": "dog",
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "bird",
+    "say": "HIC! Oh no! HIC! Good morning, everybody! HIC! Oh dear, not again!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "text": "BIRD HAS THE HICCUPS!",
+    "cam": "two:max,bird",
+    "hold": 1.4,
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a bright, sunny morning in the park. And today is a very big day for Bird.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Bird, today is your Morning Song! The whole park is waiting to hear you sing.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I know, Max! I practiced all week long. Listen to this. La la la... HIC!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every hiccup pops Bird right up into the air, like a little blue popcorn.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Wow! That hiccup was bigger than me!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Is it a new dance? Can I do it too? Hic! Hic!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It is not a dance, Dog. HIC! I cannot sing a song with hiccups in the middle!",
+    "cam": "two:bird,dog",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Bird. I know a trick. Take a big breath and hold it while I count to ten.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird takes a huge breath. Her cheeks puff up like two round balloons.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One... two... three... four... five... six... seven...",
+    "cam": "close:max",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "HIC!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop! Bird flies up, spins around three times, and lands upside down in the soft grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Seven is not ten, Max. HIC! Your trick did not work.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "My turn! My grandpa says a big surprise scares hiccups away. Close your eyes, Bird.",
+    "cam": "two:mouse,bird",
+    "do": [
+     [
+      "mouse",
+      "to:bird"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse tiptoes quietly behind Bird, up on her tiny pink toes.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "to:2.5,8.5"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "BOO!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh, hello, Mouse! What a nice surprise to see you. HIC!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:mouse"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "You were not even a little bit scared?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You are much too sweet to be scary, Mouse. HIC!",
+    "cam": "two:bird,mouse",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My turn! Silly faces always work. Look at me, Bird. Look at my super silly face!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts the red ball on his nose and crosses his eyes.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ha ha ha! Dog, that is the silliest face in the whole wide world!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It is very funny. HIC! But my hiccups think so too. HIC! HIC!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball rolls off Dog's nose. Boing, boing, boing.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "drop:dog"
+     ],
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Three tricks and three more hiccups. What else can we try?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Maybe I should not sing today. HIC! Everybody will laugh at my hiccup song.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird sits down on a rock. Her feathers droop. Even her hiccups sound a little sad.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Bird? Can I ask you something? Do your wings feel all wobbly inside?",
+    "cam": "two:dog,bird",
+    "do": [
+     [
+      "dog",
+      "to:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Yes! Wobbly and jumpy, like a hundred butterflies. HIC! How did you know that?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Because I get them too. When the mailman comes, my tummy gets nervous, and then... hic!",
+    "cam": "close:dog",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Dog! You get nervous hiccups too? I never knew that about you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Yep. And I know the trick. It is a doggy trick. Smell the flower, then blow the dandelion.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Smell the flower? Blow the dandelion? Dog, what does that mean?",
+    "cam": "close:mouse",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Watch me. First, a slow sniff in through your nose, like smelling a big pink flower.",
+    "cam": "two:dog,bird",
+    "do": []
+   },
+   {
+    "who": "narr",
+    "say": "Dog sniffs in slowly. Very, very slowly. His nose wiggles. His tail stays still.",
+    "cam": "close:dog",
+    "do": []
+   },
+   {
+    "who": "dog",
+    "say": "Then a slow blow out, like blowing a fluffy dandelion. Whoooo. All the seeds fly away.",
+    "cam": "two:dog,bird",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Smell the flower... HIC... blow the dandelion. Whoooo. Like this?",
+    "cam": "close:bird",
+    "do": []
+   },
+   {
+    "who": "max",
+    "say": "Slower, Bird. We will all do it with you. Everybody, together now!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max, Dog, Mouse and Bird all sniff in slowly, and all blow out slowly. Once. Twice. Three times.",
+    "cam": "wide",
+    "do": []
+   },
+   {
+    "who": "narr",
+    "say": "The park is very quiet. Everybody waits.",
+    "cam": "close:bird",
+    "do": []
+   },
+   {
+    "who": "bird",
+    "say": "Wait. Listen. Do you hear that? Nothing! No hiccups at all!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Not one single hic! Dog, you are a genius!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I am? Wow. Do geniuses get an extra cookie after lunch?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you were the smartest friend today. You knew the hiccups came from feeling nervous.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Now my wings feel calm and happy. I am ready. Is the whole park still listening?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies up high onto the tallest branch. Everybody in the park looks up.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:2,13"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "La la la, good morning, sun! Good morning, trees! Good morning to my friends below!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is the most beautiful Morning Song the park has ever heard.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bravo, Bird! Bravo! That was the best song in the whole... HIC!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "UH-OH... MAX!",
+    "cam": "two:max,dog",
+    "hold": 1.3,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Oh no! Now I have the hiccups! HIC! Somebody help me! What do I do?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Easy, Max. Smell the flower. Blow the dandelion. Nice and slow.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And so Max learns the doggy trick too. When your tummy feels wobbly, slow breaths help you feel calm.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I will sing my own Morning Song. HIC! Maybe after lunch. HIC!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Bird Can't Stop Hiccuping! HIC! 🐦😂",
+  "description": "Today is Bird's big Morning Song, but she has the HICCUPS! Max counts to ten, Mouse shouts BOO and Dog makes his silliest face, until Dog shares a secret calm-down trick. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "hiccups",
+   "calm breathing for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "funny bird",
+   "park story",
+   "funny dog"
+  ],
+  "thumb_text": "HIC! HIC!",
+  "thumb_beat": 52,
+  "localizations": {
+   "es": {
+    "title": "¡Pájaro no puede parar de hipar! ¡HIP! 🐦😂",
+    "description": "Hoy es la gran Canción de la Mañana de Pájaro, ¡pero tiene HIPO! Max cuenta hasta diez, Ratón grita BU y Perro pone su cara más tonta, hasta que Perro comparte un truco secreto para calmarse. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "O Passarinho não para de soluçar! HIC! 🐦😂",
+    "description": "Hoje é a grande Canção da Manhã do Passarinho, mas ele está com SOLUÇO! Max conta até dez, o Ratinho grita BU e o Cachorro faz a cara mais boba, até que o Cachorro conta um truque secreto para se acalmar. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "العصفور لا يستطيع إيقاف الحازوقة! هِك! 🐦😂",
+    "description": "اليوم هو يوم أغنية الصباح الكبيرة للعصفور، لكنها مصابة بالحازوقة! ماكس يعدّ إلى عشرة، والفأر يصرخ بُووو، والكلب يصنع أطرف وجه، حتى يشارك الكلب حيلة سرية للهدوء. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Oiseau n'arrête pas d'avoir le hoquet ! HIC ! 🐦😂",
+    "description": "Aujourd'hui, c'est la grande Chanson du Matin d'Oiseau, mais elle a le HOQUET ! Max compte jusqu'à dix, Souris crie BOU et Chien fait sa grimace la plus drôle, jusqu'à ce que Chien partage un truc secret pour se calmer. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "トリのしゃっくりが止まらない！ヒック！🐦😂",
+    "description": "今日はトリの大事な「朝のうた」の日。なのに、しゃっくりが止まらない！マックスは10まで数え、ネズミは「わっ！」とおどかし、イヌはおもしろい顔をするけれど…さいごにイヌがひみつの落ちつく方法を教えてくれます。#maxthecuriouscat #子供向けアニメ #おはなし"
+   },
+   "ko": {
+    "title": "새가 딸꾹질을 멈출 수 없어요! 딸꾹! 🐦😂",
+    "description": "오늘은 새의 큰 아침 노래 날인데, 딸꾹질이 멈추지 않아요! 맥스는 열까지 세고, 생쥐는 '왁!' 하고 놀라게 하고, 강아지는 제일 웃긴 얼굴을 해요. 그러다 강아지가 마음을 차분하게 하는 비밀 방법을 알려줘요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Vogel hat Schluckauf und kann nicht aufhören! HICKS! 🐦😂",
+    "description": "Heute ist Vogels großes Morgenlied, aber sie hat SCHLUCKAUF! Max zählt bis zehn, Maus ruft BUH und Hund macht sein albernstes Gesicht, bis Hund einen geheimen Beruhigungstrick verrät. #maxthecuriouscat #kinderzeichentrick #geschichtenfuerkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 26,
+   "top": "HOLD YOUR BREATH!",
+   "title": "Bird Held Her Breath... Then HIC! 😂🐦 #shorts",
+   "description": "Max's count-to-ten trick almost works. Almost. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pájaro aguantó la respiración... ¡y HIP! 😂🐦 #shorts",
+     "description": "El truco de Max de contar hasta diez casi funciona. Casi. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho prendeu a respiração... e HIC! 😂🐦 #shorts",
+     "description": "O truque do Max de contar até dez quase funciona. Quase. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور حبس أنفاسه... ثم هِك! 😂🐦 #shorts",
+     "description": "حيلة ماكس بالعدّ إلى عشرة كادت تنجح. تقريبًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau a retenu son souffle... puis HIC ! 😂🐦 #shorts",
+     "description": "L'astuce de Max pour compter jusqu'à dix marche presque. Presque. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリが息を止めた…そしてヒック！😂🐦 #shorts",
+     "description": "マックスの「10まで数える」作戦、もう少しだったのに。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 숨을 참았는데... 딸꾹! 😂🐦 #shorts",
+     "description": "맥스의 열까지 세기 작전, 거의 성공할 뻔했어요. 거의요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel hielt die Luft an... dann HICKS! 😂🐦 #shorts",
+     "description": "Max' Bis-zehn-zählen-Trick klappt fast. Fast. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 15,
+   "dur": 30,
+   "top": "CAN MOUSE SCARE HER?",
+   "title": "Mouse Said BOO... Bird Said Hello! 🐭😂 #shorts",
+   "description": "Mouse tries to scare the hiccups away, then Dog tries his silliest face. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ratón dijo BU... ¡y Pájaro dijo hola! 🐭😂 #shorts",
+     "description": "Ratón intenta asustar al hipo y luego Perro prueba su cara más tonta. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Ratinho disse BU... e o Passarinho disse oi! 🐭😂 #shorts",
+     "description": "O Ratinho tenta assustar o soluço e depois o Cachorro faz a cara mais boba. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الفأر قال بُووو... والعصفور قال مرحبًا! 🐭😂 #shorts",
+     "description": "الفأر يحاول إخافة الحازوقة، ثم يجرب الكلب أطرف وجه عنده. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Souris a dit BOU... Oiseau a dit bonjour ! 🐭😂 #shorts",
+     "description": "Souris essaie de faire peur au hoquet, puis Chien tente sa grimace la plus drôle. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ネズミが「わっ！」…トリは「こんにちは！」🐭😂 #shorts",
+     "description": "ネズミがしゃっくりをおどかして、イヌはおもしろい顔に挑戦！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "생쥐가 '왁!'... 새는 '안녕!' 🐭😂 #shorts",
+     "description": "생쥐가 딸꾹질을 놀라게 하려 하고, 강아지는 제일 웃긴 얼굴을 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Maus rief BUH... Vogel sagte Hallo! 🐭😂 #shorts",
+     "description": "Maus will den Schluckauf erschrecken, dann probiert Hund sein albernstes Gesicht. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
