@@ -1,0 +1,1012 @@
+{
+ "title": "Four Saw Red Eyes. Then It Chased Them.",
+ "description": "Four people saw red eyes by the road. Then it chased their car.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "forest",
+  "fog": 0.07,
+  "eyes": 2,
+  "moonlight": 2.2
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -8,
+    5
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -5.5,
+    4.5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "mm": {
+   "name": "The Winged Figure",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.42,
+    0.42,
+    0.46
+   ],
+   "kind": "winged",
+   "up": true,
+   "size": 1.0,
+   "home": [
+    6,
+    20
+   ]
+  },
+  "roger": {
+   "name": "Roger Scarberry",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.25,
+    0.45
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -11,
+    7
+   ]
+  },
+  "linda": {
+   "name": "Linda Scarberry",
+   "voice": "af_bella",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.55,
+    0.15,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -9,
+    8
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "car0",
+   "type": "box",
+   "color": [
+    0.4,
+    0.06,
+    0.05
+   ],
+   "glow": 0.25,
+   "at": [
+    -4.2,
+    11.0,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "car1",
+   "type": "box",
+   "color": [
+    0.4,
+    0.06,
+    0.05
+   ],
+   "glow": 0.25,
+   "at": [
+    -3.0,
+    11.0,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "car2",
+   "type": "box",
+   "color": [
+    0.4,
+    0.06,
+    0.05
+   ],
+   "glow": 0.25,
+   "at": [
+    -1.8,
+    11.0,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "cab",
+   "type": "box",
+   "color": [
+    0.25,
+    0.25,
+    0.3
+   ],
+   "glow": 0.15,
+   "at": [
+    -3.2,
+    11.0,
+    1.0
+   ],
+   "scale": 0.85
+  },
+  {
+   "id": "head0",
+   "type": "ball",
+   "color": [
+    1.0,
+    0.95,
+    0.7
+   ],
+   "glow": 18,
+   "at": [
+    -1.15,
+    10.6,
+    0.6
+   ],
+   "scale": 0.2
+  },
+  {
+   "id": "tail0",
+   "type": "ball",
+   "color": [
+    1.0,
+    0.05,
+    0.03
+   ],
+   "glow": 10,
+   "at": [
+    -4.85,
+    10.6,
+    0.6
+   ],
+   "scale": 0.14
+  },
+  {
+   "id": "head1",
+   "type": "ball",
+   "color": [
+    1.0,
+    0.95,
+    0.7
+   ],
+   "glow": 18,
+   "at": [
+    -1.15,
+    11.4,
+    0.6
+   ],
+   "scale": 0.2
+  },
+  {
+   "id": "tail1",
+   "type": "ball",
+   "color": [
+    1.0,
+    0.05,
+    0.03
+   ],
+   "glow": 10,
+   "at": [
+    -4.85,
+    11.4,
+    0.6
+   ],
+   "scale": 0.14
+  },
+  {
+   "id": "careye",
+   "type": "ball",
+   "color": "white",
+   "at": [
+    -3.0,
+    6.0,
+    1.6
+   ],
+   "scale": 0.1,
+   "visible": false
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Four people saw red eyes by the road. Then it chased their car.",
+   "cam": "prop:careye",
+   "do": [
+    [
+     "car0",
+     "to:3.80,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:5.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:6.20,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:4.80,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:6.85,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:3.15,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:6.85,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:3.15,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:5.00,6.00,1.60"
+    ],
+    [
+     "mm",
+     "to:1,18,1"
+    ]
+   ],
+   "text": "DON'T STOP THE CAR"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick! Mothwick, where are you? The ship is gone!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHERE IS MOTHWICK?"
+  },
+  {
+   "who": "moth",
+   "say": "Up here, Odo! The wind dropped me in these trees!",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "rise"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "text": "SHE'S BACK"
+  },
+  {
+   "who": "moth",
+   "say": "But Odo... something up here is bigger than me. Much bigger.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "car0",
+     "to:-15.20,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:-14.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:-12.80,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:-14.20,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:-12.15,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:-15.85,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:-12.15,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:-15.85,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:-14.00,6.00,1.60"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from real police reports and newspapers.",
+   "cam": "wide",
+   "do": [
+    [
+     "mm",
+     "to:6,15,4"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Point Pleasant, West Virginia. November, 1966.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mm",
+     "spin"
+    ]
+   ],
+   "text": "NOVEMBER 1966"
+  },
+  {
+   "who": "narr",
+   "say": "First, a group of men digging graves near Clendenin looked up.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:mm"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Something shaped like a man glided over the trees. With wings.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "to:2,14,5"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A MAN WITH WINGS"
+  },
+  {
+   "who": "odo",
+   "say": "A man can't fly. Can he, Mothwick?",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "Not without wings. And this one had very big wings.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Three days later, near midnight, two young couples went driving.",
+   "cam": "prop:careye",
+   "do": [
+    [
+     "car0",
+     "to:-11.20,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:-10.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:-8.80,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:-10.20,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:-8.15,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:-11.85,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:-8.15,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:-11.85,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:-10.00,6.00,1.60"
+    ],
+    [
+     "roger",
+     "enter:left"
+    ],
+    [
+     "linda",
+     "enter:left"
+    ]
+   ],
+   "text": "NEAR MIDNIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "Roger and Linda Scarberry. Steve and Mary Mallette.",
+   "cam": "two:roger,linda",
+   "do": [
+    [
+     "roger",
+     "turn:front"
+    ]
+   ],
+   "text": "FOUR WITNESSES"
+  },
+  {
+   "who": "narr",
+   "say": "They passed the TNT area. An old war factory, seven miles out of town.",
+   "cam": "overhead",
+   "do": [
+    [
+     "car0",
+     "to:-5.20,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:-4.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:-2.80,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:-4.20,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:-2.15,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:-5.85,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:-2.15,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:-5.85,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:-4.00,6.00,1.60"
+    ],
+    [
+     "roger",
+     "exit"
+    ],
+    [
+     "linda",
+     "exit"
+    ]
+   ],
+   "text": "THE TNT AREA"
+  },
+  {
+   "who": "narr",
+   "say": "There, by the side of the road, something stood up.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "to:-1,12,0"
+    ],
+    [
+     "mm",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMETHING STOOD UP"
+  },
+  {
+   "who": "linda",
+   "say": "It was like a man. Seven feet tall. With wings. And the eyes!",
+   "cam": "close:linda",
+   "do": [
+    [
+     "linda",
+     "enter:left"
+    ],
+    [
+     "linda",
+     "shake"
+    ]
+   ],
+   "text": "7 FEET TALL"
+  },
+  {
+   "who": "narr",
+   "say": "They told police its eyes glowed red.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ITS EYES GLOWED RED"
+  },
+  {
+   "who": "narr",
+   "say": "Linda said she could not see its face. Only those eyes.",
+   "cam": "close:linda",
+   "do": [
+    [
+     "linda",
+     "eyes_big"
+    ]
+   ],
+   "text": "ONLY THE EYES"
+  },
+  {
+   "who": "narr",
+   "say": "They raced away. And it flew after the car, screeching.",
+   "cam": "prop:careye",
+   "do": [
+    [
+     "car0",
+     "to:7.80,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:9.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:10.20,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:8.80,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:10.85,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:7.15,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:10.85,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:7.15,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:9.00,6.00,1.60"
+    ],
+    [
+     "mm",
+     "to:5,12,4"
+    ],
+    [
+     "linda",
+     "exit"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT FLEW AFTER THEM"
+  },
+  {
+   "who": "narr",
+   "say": "Its cry, they said, sounded like a record spinning much too fast.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A SCREECH"
+  },
+  {
+   "who": "roger",
+   "say": "If I had seen it by myself, I wouldn't have said anything. But there were four of us.",
+   "cam": "close:roger",
+   "do": [
+    [
+     "roger",
+     "enter:left"
+    ],
+    [
+     "roger",
+     "shake"
+    ]
+   ],
+   "text": "FOUR OF US SAW IT"
+  },
+  {
+   "who": "odo",
+   "say": "Four people. All the same story.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ],
+    [
+     "roger",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The next day, the town newspaper printed it.",
+   "cam": "wide",
+   "do": [
+    [
+     "car0",
+     "to:16.80,11.00,0.00"
+    ],
+    [
+     "car1",
+     "to:18.00,11.00,0.00"
+    ],
+    [
+     "car2",
+     "to:19.20,11.00,0.00"
+    ],
+    [
+     "cab",
+     "to:17.80,11.00,1.00"
+    ],
+    [
+     "head0",
+     "to:19.85,10.60,0.60"
+    ],
+    [
+     "tail0",
+     "to:16.15,10.60,0.60"
+    ],
+    [
+     "head1",
+     "to:19.85,11.40,0.60"
+    ],
+    [
+     "tail1",
+     "to:16.15,11.40,0.60"
+    ],
+    [
+     "careye",
+     "to:18.00,6.00,1.60"
+    ]
+   ],
+   "text": "NOVEMBER 16, 1966"
+  },
+  {
+   "who": "narr",
+   "say": "Couples see man-sized bird. Creature. Something!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "MAN-SIZED BIRD?"
+  },
+  {
+   "who": "narr",
+   "say": "Another newspaper gave it a name. Mothman.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "rise"
+    ]
+   ],
+   "text": "MOTHMAN"
+  },
+  {
+   "who": "moth",
+   "say": "Mothman? Odo, I am a moth. I promise it's not me!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Over the years, people reported about a hundred sightings.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mm",
+     "to:-4,15,5"
+    ],
+    [
+     "mm",
+     "spin"
+    ]
+   ],
+   "text": "ABOUT 100 SIGHTINGS"
+  },
+  {
+   "who": "narr",
+   "say": "On roads. Over fields. Even near the old factory, again and again.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "to:3,13,3"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "AGAIN AND AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "People said it rose straight up from the ground. It chased cars. It even followed airplanes.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mm",
+     "to:-3,14,7"
+    ]
+   ],
+   "text": "IT ROSE FROM THE GROUND"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, your lantern. It's looking at your lantern.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick, hide your light. Right now.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Some scientists say it was an owl. A very big owl.",
+   "cam": "wide",
+   "do": [
+    [
+     "mm",
+     "to:7,16,2"
+    ]
+   ],
+   "text": "AN OWL?"
+  },
+  {
+   "who": "narr",
+   "say": "That year, a snowy owl was found nearby. Its wings were nearly five feet wide.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "5-FOOT WINGS"
+  },
+  {
+   "who": "narr",
+   "say": "But an owl is not seven feet tall. And it does not chase a car.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOT AN OWL?"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody has ever proved what the four friends saw that night.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mm",
+     "spin"
+    ]
+   ],
+   "text": "NEVER PROVED"
+  },
+  {
+   "who": "narr",
+   "say": "Today, Point Pleasant has a silver statue of it. And a festival every year.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "laugh"
+    ]
+   ],
+   "text": "A STATUE AND A FESTIVAL"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU stop the car on that road at midnight?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WOULD YOU STOP?"
+  },
+  {
+   "who": "moth",
+   "say": "Never. I'd fly home so fast my wings would smoke.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, behind them, two red lights opened in the dark.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "to:-1,9,0"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "BEHIND YOU"
+  },
+  {
+   "who": "mm",
+   "say": "Little moth. Come to the light.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "turn:moth"
+    ]
+   ],
+   "text": "COME TO THE LIGHT"
+  },
+  {
+   "who": "moth",
+   "say": "Odo... I can't stop my wings. I can't stop!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "to:-1,8,4"
+    ]
+   ]
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick! Don't look at its eyes!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "DON'T LOOK"
+  },
+  {
+   "who": "narr",
+   "say": "Where is it taking her? Subscribe, so you don't miss the next tale.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "mm",
+     "to:2,16,6"
+    ],
+    [
+     "moth",
+     "to:2,15,6"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHERE IS IT GOING?"
+  }
+ ]
+}
