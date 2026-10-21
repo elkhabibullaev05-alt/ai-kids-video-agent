@@ -56,6 +56,19 @@ The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85
 
 **All channels:** the newest `ask_studio_<date>.md` has each channel's own numbers and plan. Apply it unless it breaks the rules above.
 
+## Retention rules — watch to the end (owner, 2026-10-21)
+
+Every long job must follow this shape; check it beat by beat before committing.
+- **0–5 s, hook:** beat 1 shows the problem in motion and states the big question out loud ("Who took the light?", "Can Pim get out before the toaster fires?"). No greeting, no intro, no "Hi friends", no title card before it.
+- **The question stays open until the last 20 s.** Never answer it early. Every wrong guess or failed plan makes it bigger, never smaller.
+- **Something new every 15–20 s:** a new clue, a failed plan, a surprise, a sound gag, a new character or place. No beat over 2 lines of talking without a `do` action. Max 12 words per line.
+- **Two re-hooks:** at ~35 % and ~65 % of the episode a character says what is at stake now ("Only one minute left!", "If we lose this, Wheelburg stays dark forever!").
+- **Twist at ~70 %:** the answer is not what the viewer guessed (the suspect is innocent, the helper was the cause, the "monster" was scared). It must be fair: plant its clue in the first third.
+- **Payoff in the last 20 s, then end within 10 s:** big funny/happy moment, one-line lesson for kids channels, then a 1-line teaser for another adventure. No long goodbyes (viewers leave there).
+- **Title = the question, thumbnail = the emotion:** the title asks the episode's big question in the first 4–5 words; `thumb_text` is the shock/question, not the answer; the thumb beat is a face reacting.
+- **Shorts:** start at the hook or the twist mid-action (no setup), end on an unanswered moment that makes them open the full episode — never the solution.
+- Kids channels still: gentle stakes (lost, stuck, a race against time, a funny chase), never fear or violence; no "comment/like/subscribe" lines.
+
 ## Rek-ball rejections to avoid (2026-10-20)
 
 - `doughbros/20261020-2-zero-crumb-party` was rejected with long rek-ball 83:

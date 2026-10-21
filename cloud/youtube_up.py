@@ -63,6 +63,11 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
                 body.pop("localizations"); parts = "snippet,status"  # bad translation text → upload without it
                 continue
             raise
+        except (TimeoutError, ConnectionError) as e:  # 2026-10-21: "The write operation timed out" (net blip) — retry once
+            if attempt == 1:
+                raise
+            print("upload network error, retry in 60 s:", e, flush=True)
+            time.sleep(60)
     if thumb:
         try:
             yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(thumb)).execute()
