@@ -319,52 +319,73 @@
           "visibility": "scheduled"
         }
       ]
-    }
-  ],
-  "pending_uploads": [],
-  "translations_pending": [
-    {
-      "video_id": "h_kN8hiy1Is",
-      "langs": [
-        "es",
-        "pt",
-        "ar",
-        "fr",
-        "ja",
-        "ko",
-        "de"
-      ],
-      "what": "title+description only (tr_ep009.json key 'long' on uploads-doodle branch); rows had no Add button while YouTube auto-dub was 'Bajarilmoqda'; auto-dub makes captions"
     },
     {
-      "video_id": "cdU4vN8b4U8",
-      "langs": [
-        "es",
-        "pt",
-        "ar",
-        "fr",
-        "ja",
-        "ko",
-        "de"
+      "episode": 10,
+      "date": "2026-10-21",
+      "topic": "Alberta Oct 19 referendum on starting a separation process (~75% remain)",
+      "title": "Alberta Voted on a Vote About Leaving Canada. Why?",
+      "minutes": 11.1,
+      "sources": [
+        "https://www.pbs.org/newshour/world/alberta-voters-reject-independence-from-canada-in-victory-for-carney",
+        "https://www.aljazeera.com/news/2026/10/20/alberta-voters-reject-separation-from-canada-early-results-show",
+        "https://www.axios.com/2026/10/20/alberta-canada-referendum-results-remain",
+        "https://www.cp24.com/news/canada/2026/10/20/albertans-reject-separation-in-historic-vote-ctv-news-projects-live-updates/",
+        "https://globalnews.ca/news/12109093/alberta-referendum-separation-other-results/",
+        "https://en.wikipedia.org/wiki/2026_Alberta_independence_referendum"
       ],
-      "what": "title+description only (tr_ep009.json key 's1' on uploads-doodle branch)"
-    },
-    {
-      "video_id": "4EIsvmiN-Nc",
-      "langs": [
-        "es",
-        "pt",
-        "ar",
-        "fr",
-        "ja",
-        "ko",
-        "de"
-      ],
-      "what": "title+description only (tr_ep009.json key 's2' on uploads-doodle branch)"
+      "rek_ball": {
+        "long": 92,
+        "s1": 93,
+        "s2": 97
+      },
+      "uploads": []
     }
   ],
-  "lock": {
-    "until": "2026-10-21T06:30:00Z",
-    "by": "session_01DiWxzwJyEcEoj1E5eJ2Ynb"
-  }
+  "pending_uploads": [
+    {
+      "episode": 10,
+      "script": "scripts/ep010.json",
+      "created": "2026-10-21T03:00Z",
+      "reason": "computer not connected to the bridge during the 2026-10-21 02:25Z run",
+      "hosted": "uploads-doodle branch: doodle_ep010.mp4, doodle_ep010_thumb.png, doodle_ep010_s1.mp4 (=_d, ball 93), doodle_ep010_s2.mp4 (=_d, ball 97), tr_ep010.json, doodle_ep010_subs_en.srt",
+      "planned": [
+        {
+          "kind": "long",
+          "title": "Alberta Voted on a Vote About Leaving Canada. Why?",
+          "publish_at": "2026-10-22T22:15:00Z"
+        },
+        {
+          "kind": "short",
+          "file": "s1",
+          "title": "Alberta Held a Vote About a Vote? #shorts",
+          "start": 0,
+          "dur": 29.5,
+          "top": "A VOTE ABOUT A VOTE?",
+          "publish_at": "2026-10-22T12:15:00Z"
+        },
+        {
+          "kind": "short",
+          "file": "s2",
+          "title": "From 2% to a Referendum on Leaving Canada? #shorts",
+          "start": 289.0,
+          "dur": 28.0,
+          "top": "From 2% to a referendum?",
+          "publish_at": "2026-10-22T18:15:00Z"
+        }
+      ],
+      "note": "shorts made with make_short.py then rek_ball --kuchaytir; pick new slots if these have passed"
+    }
+  ],
+  "translations_pending": [],
+  "translations_resolved": [
+    {
+      "video_ids": [
+        "h_kN8hiy1Is",
+        "cdU4vN8b4U8",
+        "4EIsvmiN-Nc"
+      ],
+      "note": "2026-10-21: Studio shows 20 languages with title+description 'Chop etilgan' via YouTube auto-dub; nothing left to add"
+    }
+  ]
 }

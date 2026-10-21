@@ -853,8 +853,24 @@ def _flag(p, t, color, text):
         p.text(text, 150, -460, 40, "dark")
 
 
+def _canflag(p, t, color, text):
+    """Simple red-white-red flag with a doodled red leaf (Canada)."""
+    import math
+    p.line([(0, 0), (0, -420)], 9)
+    wv = 8 * math.sin(t * 3)
+    p.shape([(0, -420), (320, -420 + wv), (320, -220 + wv), (0, -220)], "white")
+    p.shape([(0, -420), (80, -420 + wv * 0.25), (80, -220 + wv * 0.25), (0, -220)], "red")
+    p.shape([(240, -420 + wv * 0.75), (320, -420 + wv), (320, -220 + wv), (240, -220 + wv * 0.75)], "red")
+    cx, cy = 160, -318 + wv * 0.5
+    leaf = [(0, -70), (14, -40), (38, -50), (30, -12), (58, -22), (50, 4), (66, 14), (22, 22), (26, 44), (6, 30),
+            (6, 62), (-6, 62), (-6, 30), (-26, 44), (-22, 22), (-66, 14), (-50, 4), (-58, -22), (-30, -12), (-38, -50), (-14, -40)]
+    p.shape([(cx + a, cy + b) for a, b in leaf], "red")
+    if text:
+        p.text(text, 160, -460, 40, "dark")
+
+
 PROPS = {
-    "flag": _flag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
+    "flag": _flag, "canflag": _canflag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
     "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,
     "wallet": _wallet, "cart": _cart, "plane": _plane, "building": _building, "chart": _chart, "thermo": _thermo,
