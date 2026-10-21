@@ -5,7 +5,7 @@ from tkinter import ttk
 
 DISTRO = "Ubuntu-24.04"
 NO_WIN = 0x08000000  # CREATE_NO_WINDOW
-CH = [("maxcat", "Max the Curious Cat"), ("doughbros", "Dough Bros"), ("hollow", "Hollowmere Tales"), ("bolt", "Inspector Bolt")]
+CH = [("maxcat", "Max the Curious Cat"), ("doughbros", "Dough Bros"), ("hollow", "Hollowmere Tales"), ("bolt", "Inspector Bolt"), ("roblox", "Roblox Top 10 Daily")]
 STAGE = {"sync": "YouTube tekshirilmoqda", "voices": "ovoz yozilmoqda", "render": "3D render", "assemble": "montaj",
          "check": "rek-ball tekshiruvi", "upload": "yuklanmoqda", "ok": "tayyor", "idle": "2 kunlik video bor — dam olmoqda",
          "queue_empty": "hikoya kutmoqda", "quota_wait": "YouTube limiti — keyinroq", "error": "XATO", "rejected": "rad etildi"}
@@ -13,7 +13,7 @@ STAGE = {"sync": "YouTube tekshirilmoqda", "voices": "ovoz yozilmoqda", "render"
 PY = r'''
 import json, os, glob, time
 out = {}
-for ch in ["maxcat","doughbros","hollow","bolt"]:
+for ch in ["maxcat","doughbros","hollow","bolt","roblox"]:
     d = {}
     try: d["status"] = json.load(open(f"/opt/kanal/repo/cloud/results/{ch}/status.json"))
     except Exception: d["status"] = None
