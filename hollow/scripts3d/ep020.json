@@ -1,0 +1,984 @@
+{
+ "title": "5 Footprints in the Snow. Nobody There.",
+ "description": "Five footprints in the snow. They came from nowhere. And they went nowhere.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "chapel",
+  "fog": 0.07,
+  "eyes": 2,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -5,
+    6
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -2.5,
+    5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "lady": {
+   "name": "The Lady in Black",
+   "voice": "bf_emma",
+   "speed": 0.82,
+   "pitch": -2,
+   "color": [
+    0.08,
+    0.08,
+    0.11
+   ],
+   "kind": "lady",
+   "ghost": true,
+   "up": true,
+   "size": 1.0,
+   "home": [
+    6,
+    13
+   ]
+  },
+  "guard": {
+   "name": "The Guard",
+   "voice": "am_adam",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.12,
+    0.16,
+    0.35
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -10,
+    11
+   ]
+  },
+  "snow": {
+   "name": "Edward Rowe Snow",
+   "voice": "bm_lewis",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.3,
+    0.26,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    2.5,
+    10
+   ]
+  }
+ },
+ "props": [
+  {
+   "id": "w00",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -3.0,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w01",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -3.0,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w10",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -1.8,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w11",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -1.8,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w20",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -0.6000000000000001,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w21",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    -0.6000000000000001,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w30",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    0.5999999999999996,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w31",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    0.5999999999999996,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w40",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    1.7999999999999998,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w41",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    1.7999999999999998,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w50",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    3.0,
+    16,
+    0.0
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "w51",
+   "type": "box",
+   "color": [
+    0.36,
+    0.36,
+    0.38
+   ],
+   "at": [
+    3.0,
+    16,
+    1.2
+   ],
+   "scale": 1.0
+  },
+  {
+   "id": "f0",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    -1.6,
+    8.0,
+    0.03
+   ],
+   "scale": 0.3
+  },
+  {
+   "id": "f1",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    -0.8500000000000001,
+    8.35,
+    0.03
+   ],
+   "scale": 0.3,
+   "visible": false
+  },
+  {
+   "id": "f2",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    -0.10000000000000009,
+    8.0,
+    0.03
+   ],
+   "scale": 0.3,
+   "visible": false
+  },
+  {
+   "id": "f3",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    0.6499999999999999,
+    8.35,
+    0.03
+   ],
+   "scale": 0.3,
+   "visible": false
+  },
+  {
+   "id": "f4",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    1.4,
+    8.0,
+    0.03
+   ],
+   "scale": 0.3,
+   "visible": false
+  },
+  {
+   "id": "f5",
+   "type": "box",
+   "color": [
+    0.92,
+    0.95,
+    1.0
+   ],
+   "glow": 1.6,
+   "at": [
+    2.15,
+    8.35,
+    0.03
+   ],
+   "scale": 0.3,
+   "visible": false
+  },
+  {
+   "id": "boat",
+   "type": "box",
+   "color": [
+    0.35,
+    0.22,
+    0.12
+   ],
+   "at": [
+    5.5,
+    9.5,
+    0.2
+   ],
+   "scale": 0.7
+  },
+  {
+   "id": "lamp",
+   "type": "ball",
+   "color": "gold",
+   "glow": 2.0,
+   "at": [
+    -7.5,
+    10,
+    1.6
+   ],
+   "scale": 0.3
+  },
+  {
+   "id": "stone",
+   "type": "ball",
+   "color": [
+    0.4,
+    0.4,
+    0.42
+   ],
+   "at": [
+    0.5,
+    7.5,
+    0.3
+   ],
+   "scale": 0.3
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Five footprints in the snow. They came from nowhere. And they went nowhere.",
+   "cam": "wide",
+   "do": [
+    [
+     "f0",
+     "bounce"
+    ],
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "DON'T FOLLOW THE FOOTPRINTS"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, stop! Something is still walking. Right next to us!",
+   "cam": "prop:f2",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "f3",
+     "show"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "odo",
+   "say": "That voice from Borley... it pulled us through the wall. Where are we?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHERE ARE WE?"
+  },
+  {
+   "who": "narr",
+   "say": "A cold stone fort, on an island. And somewhere inside, a lady in black.",
+   "cam": "overhead",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE LADY IN BLACK"
+  },
+  {
+   "who": "narr",
+   "say": "This is a real place, and a legend first printed in 1944. Fort Warren, in Boston Harbor.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "turn:lady"
+    ]
+   ],
+   "text": "FORT WARREN, BOSTON"
+  },
+  {
+   "who": "narr",
+   "say": "Soldiers built it from granite, from 1833 until 1861.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "BUILT 1833-1861"
+  },
+  {
+   "who": "narr",
+   "say": "Then war came. And the fort became a prison for captured Southern soldiers.",
+   "cam": "close:guard",
+   "do": [
+    [
+     "guard",
+     "enter:left"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A PRISON ON AN ISLAND"
+  },
+  {
+   "who": "guard",
+   "say": "Lanterns out! Nobody leaves this island tonight.",
+   "cam": "two:guard,odo",
+   "do": [
+    [
+     "guard",
+     "turn:front"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The legend says one prisoner had just married. His wife's name was Melanie Lanier.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "turn:front"
+    ]
+   ],
+   "text": "MELANIE LANIER"
+  },
+  {
+   "who": "narr",
+   "say": "In early 1862, she came north to a little town called Hull, across the water.",
+   "cam": "wide",
+   "do": [
+    [
+     "lady",
+     "to:4,11"
+    ]
+   ],
+   "text": "1862"
+  },
+  {
+   "who": "narr",
+   "say": "One foggy night, dressed as a man, she rowed about a mile to the island. Alone.",
+   "cam": "prop:boat",
+   "do": [
+    [
+     "boat",
+     "bounce"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHE ROWED ALONE"
+  },
+  {
+   "who": "moth",
+   "say": "Alone? In the dark? On the sea? Odo, I'd never do that.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Under the wall, she whistled a song. And from inside, someone whistled back.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMEONE WHISTLED BACK"
+  },
+  {
+   "who": "odo",
+   "say": "Moth... I can hear whistling. Right now.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ],
+    [
+     "all",
+     "look:lady"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The legend says she was pulled over the wall. They began to dig a way out.",
+   "cam": "overhead",
+   "do": [
+    [
+     "lady",
+     "to:2,12"
+    ]
+   ],
+   "text": "DIGGING OUT"
+  },
+  {
+   "who": "narr",
+   "say": "But the guards found them. There was a struggle. A shot went wrong.",
+   "cam": "two:guard,lady",
+   "do": [
+    [
+     "guard",
+     "jump"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "CAUGHT"
+  },
+  {
+   "who": "narr",
+   "say": "And her husband was lost. She was taken prisoner herself.",
+   "cam": "wide",
+   "do": [
+    [
+     "lady",
+     "sad"
+    ],
+    [
+     "lamp",
+     "vanish"
+    ]
+   ],
+   "text": "SHE WAS TAKEN"
+  },
+  {
+   "who": "narr",
+   "say": "She asked for a dress. The only one they found was old black robes.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "BLACK ROBES"
+  },
+  {
+   "who": "narr",
+   "say": "And the legend says she never left the island again.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "sad"
+    ],
+    [
+     "moth",
+     "sad"
+    ]
+   ],
+   "text": "SHE NEVER LEFT"
+  },
+  {
+   "who": "narr",
+   "say": "Soon, soldiers saw a woman in black on the walls at night.",
+   "cam": "close:guard",
+   "do": [
+    [
+     "guard",
+     "turn:lady"
+    ],
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A WOMAN IN BLACK"
+  },
+  {
+   "who": "guard",
+   "say": "Who goes there? Answer me! Answer me!",
+   "cam": "two:guard,lady",
+   "do": [
+    [
+     "guard",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Stories say some guards fired at her. One ran from his post, and was punished for it.",
+   "cam": "wide",
+   "do": [
+    [
+     "guard",
+     "exit"
+    ],
+    [
+     "lady",
+     "dive"
+    ]
+   ],
+   "text": "HE RAN"
+  },
+  {
+   "who": "narr",
+   "say": "People heard a voice in a dark hall they called the Corridor of Dungeons.",
+   "cam": "overhead",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "CORRIDOR OF DUNGEONS"
+  },
+  {
+   "who": "narr",
+   "say": "Soldiers playing cards watched a stone roll across the floor. Nobody touched it.",
+   "cam": "prop:stone",
+   "do": [
+    [
+     "stone",
+     "spin"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NOBODY TOUCHED IT"
+  },
+  {
+   "who": "narr",
+   "say": "And one winter, they found footprints in the snow outside the fort.",
+   "cam": "prop:f2",
+   "do": [
+    [
+     "f1",
+     "show"
+    ],
+    [
+     "f2",
+     "show"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "FOOTPRINTS"
+  },
+  {
+   "who": "narr",
+   "say": "Five small steps. Coming from nowhere. Going nowhere.",
+   "cam": "overhead",
+   "do": [
+    [
+     "f4",
+     "show"
+    ],
+    [
+     "f0",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "FROM NOWHERE"
+  },
+  {
+   "who": "moth",
+   "say": "Odo... there's a sixth footprint now. Right behind you.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "f5",
+     "show"
+    ]
+   ],
+   "text": "RIGHT BEHIND YOU"
+  },
+  {
+   "who": "odo",
+   "say": "Who is walking next to us?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "all",
+     "look:lady"
+    ]
+   ],
+   "text": "WHO IS WALKING?"
+  },
+  {
+   "who": "snow",
+   "say": "I'm Edward Rowe Snow. I wrote this story down in 1944.",
+   "cam": "close:snow",
+   "do": [
+    [
+     "snow",
+     "enter:left"
+    ]
+   ],
+   "text": "WRITTEN IN 1944"
+  },
+  {
+   "who": "narr",
+   "say": "But historians found no record of any woman held or punished at Fort Warren.",
+   "cam": "two:snow,odo",
+   "do": [
+    [
+     "snow",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO RECORD"
+  },
+  {
+   "who": "narr",
+   "say": "Melanie Lanier may never have existed at all. And still, people say they see her.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ]
+   ],
+   "text": "NEVER EXISTED?"
+  },
+  {
+   "who": "narr",
+   "say": "Today, visitors take a ferry to the island. Rangers tell her story at the Dark Arch.",
+   "cam": "wide",
+   "do": [
+    [
+     "snow",
+     "exit"
+    ]
+   ],
+   "text": "THE DARK ARCH"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU walk the Corridor of Dungeons alone, at night?",
+   "cam": "overhead",
+   "do": [
+    [
+     "lady",
+     "to:3,9"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WOULD YOU GO IN?"
+  },
+  {
+   "who": "moth",
+   "say": "Not me. Not ever. Not even for a hundred cookies.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the whistling started again. Very close. The same old song.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "rise"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE WHISTLING"
+  },
+  {
+   "who": "lady",
+   "say": "You are not him. But you can still help me leave.",
+   "cam": "close:lady",
+   "do": [
+    [
+     "lady",
+     "to:2,8"
+    ]
+   ],
+   "text": "HELP ME LEAVE"
+  },
+  {
+   "who": "odo",
+   "say": "Moth... the footprints. They're walking toward the sea.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "f5",
+     "bounce"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Where is she taking them? Subscribe. Don't miss what waits across the water.",
+   "cam": "wide",
+   "do": [
+    [
+     "f0",
+     "bounce"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "WHERE IS SHE GOING?"
+  }
+ ]
+}
