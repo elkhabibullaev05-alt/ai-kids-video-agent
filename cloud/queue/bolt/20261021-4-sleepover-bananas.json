@@ -1,0 +1,936 @@
+{
+ "id": "20261021-4-sleepover-bananas",
+ "plot": "At the night-time Wheelburg Sleepover Turbo's three bananas vanish and he loudly blames Grumpy without checking; Bolt tests Grumpy and Pip (both honest), tiny tracks in the dew seem to lead to Bertha but turn out to be Bertha's toddler cousin Tot, who thought the bananas were yellow telephones; Turbo apologises to Grumpy (lesson: don't blame before you know), Bertha shares a snack, then something rings in the night.",
+ "script": {
+  "title": "3 Bananas Vanished at the Sleepover! 🍌🌙 Who Did It?",
+  "description": "At the Wheelburg Sleepover, Turbo's three bananas disappear in the night, and Turbo blames Grumpy before checking! Inspector Bolt puts Grumpy and Pip in the Truth Press, then follows tiny tracks in the morning dew to a very surprising little guest. Don't blame before you know. Inspector Bolt #8",
+  "set": {
+   "place": "Wheelburg square, sleepover night and morning",
+   "press": true,
+   "podium": true,
+   "time": "night"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "tot": {
+    "name": "Tot",
+    "voice": "af_sarah",
+    "speed": 1.1,
+    "pitch": 5,
+    "color": [
+     0.45,
+     0.85,
+     0.95
+    ],
+    "kind": "small",
+    "size": 0.5,
+    "hat": false,
+    "home": [
+     -12.5,
+     20.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "ban1",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     4.5,
+     9.5,
+     0.4
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "ban2",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     3.0,
+     9.0,
+     0.4
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "ban3",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     1.5,
+     9.5,
+     0.4
+    ],
+    "visible": true,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Zoom! Honk! Beep! It's the Wheelburg Sleepover, and everyone rushed in with their pillows!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sleepover snacks! I brought three bananas. One, two, three. Nobody touch them!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "ban2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Three bananas for one car? That's a lot of banana!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fast cars need fast snacks. One for tonight, two for breakfast.",
+    "cam": "two:turbo,pip"
+   },
+   {
+    "who": "bertha",
+    "say": "And I brought a very special guest. My little cousin, Tot! Say hello, Tot!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "tot",
+    "say": "Hi-hi! I'm Tot! I'm this many!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tiny cars are noisy. I'm going to sleep now. Goodnight.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The moon rose over Wheelburg. One by one, every car closed its eyes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Snore... honk-snore... whistle-snore. Everyone was fast asleep. Or were they?",
+    "cam": "wide"
+   },
+   {
+    "text": "A BANANA IS GONE!",
+    "cam": "prop:ban1",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "ban1",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When the sun came up, Turbo woke with a very hungry engine.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Breakfast time! Banana number one... wait. Where is banana number one?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THEY'RE ALL GONE!",
+    "cam": "prop:ban2",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "ban2",
+      "vanish"
+     ],
+     [
+      "ban3",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My bananas! All three! Somebody ate my breakfast!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "turbo",
+    "say": "It was YOU, Grumpy! You always stare at my bananas!",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Huh? What? I was sleeping. I'm still sleeping. Go away.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "turbo",
+    "say": "See? He didn't even say no! Grumpy is the banana thief!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "narr",
+    "say": "Beep beep! Just then, Inspector Bolt rolled in for the sleepover breakfast.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning. Turbo, I could hear you from across town. What is all this shouting?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy took my bananas! I just know it! Arrest him, Inspector!",
+    "cam": "two:bolt,turbo"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, did you see Grumpy take them?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "Well... no. I was asleep. But he looks like a banana thief!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "bolt",
+    "say": "Looking like something is not a clue. First we check. Then we know.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "Thank you. I look like a tow truck. Not a banana thief.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, would you take the Truth Press, so everyone can be sure?",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "rise"
+     ],
+     [
+      "grumpy",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Fine. Squeeze me. There's nothing in here but sleepy.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, did you eat Turbo's bananas?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "No. I don't even like bananas. I like looking at them. That's different.",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! Grumpy's eyes stayed small. He was telling the truth.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:grumpy"
+     ],
+     [
+      "grumpy",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Small eyes? But... but I was so sure!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Being sure is not the same as knowing, Turbo.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "grumpy",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Can I go next? Then everyone knows I'm honest too!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Very kind, Pip. Did you eat the bananas?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "No! I only had strawberry jelly. And a tiny bit of toast.",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The press gave Pip a gentle squeeze. Her eyes stayed tiny.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "See? Tiny eyes! I'm honest, and I'm full of jelly!",
+    "cam": "press",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Honest. Thank you, Pip.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "pip",
+      "to_home"
+     ],
+     [
+      "press",
+      "sink"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inspector Bolt looked very carefully at the ground next to Turbo's bed.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "And there, in the shiny morning dew, were tiny little tyre tracks.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:turbo-tot"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tiny tracks. They go from Turbo's bed, all the way over... there.",
+    "cam": "close:bolt"
+   },
+   {
+    "text": "THE TRACKS GO TO BERTHA?!",
+    "cam": "two:bertha,tot",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bertha",
+    "say": "To me? Oh my! I didn't move all night. I snore far too loudly to sneak!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's true. Her snoring kept me awake half the night.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "And these tracks are much too small for a big bus. Someone smaller made them.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Then, from behind Big Bertha, came a tiny little voice.",
+    "cam": "two:bertha,tot"
+   },
+   {
+    "who": "tot",
+    "say": "Ring ring! Hello? Is this the moon? Ring ring!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "to:-6,13"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S TOT!",
+    "cam": "close:tot",
+    "hold": 1.2
+   },
+   {
+    "who": "narr",
+    "say": "Little Tot rolled out, holding a banana like a telephone.",
+    "cam": "close:tot",
+    "do": [
+     [
+      "ban1",
+      "drop:tot"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My banana! Tot, you took my bananas?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "look:tot"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "They're not bananas! They're telephones! Yellow telephones! Ring ring!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, Tot. At home she has a toy phone, yellow and curvy, just like a banana.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "tot",
+    "say": "I called the moon all night! Then I got hungry. So I ate two telephones.",
+    "cam": "close:tot"
+   },
+   {
+    "who": "pip",
+    "say": "She ate the telephones! That's the funniest thing I've ever heard!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh no. Grumpy. I said it was you, and it wasn't. I'm really sorry.",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You shouted at me before you checked. That made me feel bad.",
+    "cam": "two:turbo,grumpy"
+   },
+   {
+    "who": "turbo",
+    "say": "You're right. Next time I'll check first, before I blame anybody.",
+    "cam": "two:turbo,grumpy"
+   },
+   {
+    "who": "grumpy",
+    "say": "Okay. Apology accepted. Now please be quiet. I'm still sleepy.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. Don't blame before you know. Check first, then speak.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "tot",
+    "say": "Sorry, Turbo! I didn't know they were your telephones.",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That's okay, Tot. You're little. Keep that one. It's a very good telephone.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "ban1",
+      "give:tot"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Yay! Ring ring! Hello, Turbo? You're my friend!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hello, Tot! Yes, I'm your friend!",
+    "cam": "two:turbo,tot",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Turbo's tummy-engine was still empty. Grrrumble.",
+    "cam": "wide"
+   },
+   {
+    "who": "bertha",
+    "say": "Don't worry, Turbo! I always carry extra snacks for the children!",
+    "cam": "close:bertha"
+   },
+   {
+    "text": "BREAKFAST IS SAVED!",
+    "cam": "prop:ban3",
+    "hold": 1.0,
+    "do": [
+     [
+      "ban3",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And out came a big yellow banana, just for Turbo.",
+    "cam": "wide",
+    "do": [
+     [
+      "ban3",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bertha, you're the best bus in the whole wide world!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Can everybody stop being happy so loudly? Some of us are sleeping.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Mystery solved. Remember, Wheelburg. Check first, then speak.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Everyone shared a big, happy sleepover breakfast together.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But that night, when everyone was fast asleep again...",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "RING RING?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Inspector Bolt, wake up! Tot is asleep, but something is still ringing!",
+    "cam": "close:pip"
+   },
+   {
+    "who": "narr",
+    "say": "Who is calling in the middle of the night? Find out next time in Wheelburg!",
+    "cam": "wide"
+   }
+  ]
+ },
+ "long": {
+  "title": "3 Bananas Vanished at the Sleepover! 🍌🌙 Who Did It?",
+  "description": "At the Wheelburg Sleepover, Turbo's three bananas disappear in the night, and Turbo blames Grumpy before checking! Inspector Bolt puts Grumpy and Pip in the Truth Press, then follows tiny tracks in the morning dew to a very surprising little guest. Don't blame before you know. Inspector Bolt #8\n\n#kidscartoon #cartooncars #bedtimestory",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "don't blame",
+   "sleepover",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "BANANA THIEF?!",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "¡3 plátanos desaparecieron en la pijamada! 🍌🌙",
+    "description": "En la pijamada de Wheelburg, los tres plátanos de Turbo desaparecen por la noche, ¡y Turbo culpa a Grumpy sin comprobar! El Inspector Bolt pone a Grumpy y a Pip en la Prensa de la Verdad y sigue unas huellas diminutas en el rocío hasta una invitada muy sorprendente. No culpes antes de saber. Inspector Bolt #8\n\n#dibujosanimados #coches #cuentoparadormir"
+   },
+   "pt": {
+    "title": "3 bananas sumiram na festa do pijama! 🍌🌙",
+    "description": "Na festa do pijama de Wheelburg, as três bananas do Turbo somem à noite, e Turbo culpa o Grumpy sem verificar! O Inspetor Bolt coloca Grumpy e Pip na Prensa da Verdade e segue marquinhas no orvalho até uma convidada muito surpreendente. Não culpe antes de saber. Inspetor Bolt #8\n\n#desenhoinfantil #carros #historiaparadormir"
+   },
+   "ar": {
+    "title": "٣ موزات اختفت في ليلة المبيت! 🍌🌙 من فعلها؟",
+    "description": "في ليلة المبيت في ويلبرغ، تختفي موزات توربو الثلاث في الليل، ويتهم توربو غرامبي قبل أن يتأكد! يضع المفتش بولت غرامبي وبيب في مكبس الحقيقة، ثم يتبع آثارًا صغيرة في ندى الصباح حتى ضيفة صغيرة مفاجئة جدًا. لا تتهم قبل أن تعرف. المفتش بولت #8\n\n#كرتون_اطفال #سيارات #قصة_قبل_النوم"
+   },
+   "fr": {
+    "title": "3 bananes disparues à la soirée pyjama ! 🍌🌙",
+    "description": "À la soirée pyjama de Wheelburg, les trois bananes de Turbo disparaissent dans la nuit, et Turbo accuse Grumpy sans vérifier ! L'inspecteur Bolt envoie Grumpy et Pip dans la Presse de Vérité, puis suit de toutes petites traces dans la rosée jusqu'à une invitée très surprenante. On n'accuse pas avant de savoir. Inspecteur Bolt #8\n\n#dessinanimé #voitures #histoiredusoir"
+   },
+   "ja": {
+    "title": "おとまり会でバナナが3本消えた！🍌🌙 だれのしわざ？",
+    "description": "ウィールバーグのおとまり会で、ターボのバナナ3本が夜のうちに消えた！ターボはたしかめもせずにグランピーをうたがいます。ボルト警部はグランピーとピップを「ほんとうプレス」にかけ、朝つゆの小さなタイヤのあとをたどって、びっくりなお客さんを見つけます。たしかめる前に人のせいにしないでね。ボルト警部 #8\n\n#こども向けアニメ #くるま #おやすみまえのおはなし"
+   },
+   "ko": {
+    "title": "파자마 파티에서 바나나 3개가 사라졌어요! 🍌🌙",
+    "description": "휠버그 파자마 파티에서 터보의 바나나 세 개가 밤사이 사라지고, 터보는 확인도 안 하고 그럼피를 탓해요! 볼트 경감은 그럼피와 핍을 진실 프레스에 세우고, 아침 이슬 위 작은 바퀴 자국을 따라 아주 뜻밖의 꼬마 손님을 찾아내요. 알기 전에 탓하지 마세요. 볼트 경감 #8\n\n#어린이만화 #자동차 #잠자리동화"
+   },
+   "de": {
+    "title": "3 Bananen bei der Übernachtung verschwunden! 🍌🌙",
+    "description": "Bei der Wheelburger Übernachtungsparty verschwinden in der Nacht Turbos drei Bananen – und Turbo beschuldigt Grumpy, ohne nachzusehen! Inspektor Bolt schickt Grumpy und Pip in die Wahrheitspresse und folgt winzigen Spuren im Morgentau zu einem sehr überraschenden kleinen Gast. Erst prüfen, dann beschuldigen. Inspektor Bolt #8\n\n#kinderzeichentrick #autos #gutenachtgeschichte"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 7,
+   "dur": 30,
+   "top": "WHO ATE THEM?!",
+   "title": "Bananas Disappear in the Night! 🍌🌙 #shorts",
+   "description": "Snore… snore… and the bananas are gone! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Los plátanos desaparecen de noche! 🍌🌙 #shorts",
+     "description": "Ronquido… ronquido… ¡y los plátanos ya no están! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "As bananas somem durante a noite! 🍌🌙 #shorts",
+     "description": "Ronco… ronco… e as bananas sumiram! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الموز يختفي في الليل! 🍌🌙 #shorts",
+     "description": "شخير… شخير… والموز اختفى! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les bananes disparaissent dans la nuit ! 🍌🌙 #shorts",
+     "description": "Ronfle… ronfle… et les bananes ont disparu ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "夜のあいだにバナナが消えた！🍌🌙 #shorts",
+     "description": "グーグー…グーグー…バナナがない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "밤사이 바나나가 사라져요! 🍌🌙 #shorts",
+     "description": "쿨쿨… 쿨쿨… 바나나가 없어졌어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bananen verschwinden in der Nacht! 🍌🌙 #shorts",
+     "description": "Schnarch… schnarch… und die Bananen sind weg! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 38,
+   "dur": 32,
+   "top": "RING RING?!",
+   "title": "The Tiny Tracks Lead to… WHO?! 🍌📞 #shorts",
+   "description": "Hello? Is this the moon? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "funny cars",
+    "detective for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Las huellitas llevan a… ¡¿QUIÉN?! 🍌📞 #shorts",
+     "description": "¿Hola? ¿Es la luna? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "As marquinhas levam até… QUEM?! 🍌📞 #shorts",
+     "description": "Alô? É a lua? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الآثار الصغيرة تقود إلى… مَن؟! 🍌📞 #shorts",
+     "description": "ألو؟ هل هذا القمر؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les petites traces mènent à… QUI ?! 🍌📞 #shorts",
+     "description": "Allô ? C'est la lune ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "小さなタイヤのあとの先には…だれ？！🍌📞 #shorts",
+     "description": "もしもし？お月さまですか？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "작은 바퀴 자국을 따라가면… 누구?! 🍌📞 #shorts",
+     "description": "여보세요? 달님이에요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die winzigen Spuren führen zu… WEM?! 🍌📞 #shorts",
+     "description": "Hallo? Ist da der Mond? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

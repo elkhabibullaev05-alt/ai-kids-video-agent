@@ -1,0 +1,967 @@
+{
+ "id": "20261021-2-golden-key-noon",
+ "plot": "On Wheelburg's birthday Mo the mail van delivers the golden key for the old Time Box; it vanishes before noon, Bolt tests Mo, Turbo and Grumpy (all honest), then Pip insists the rule means Bolt too, and the press pops the key out from under Bolt's own hat; Bolt says sorry (lesson: admitting a mistake is brave), Pip opens the box (a kind letter and a star), then the star starts blinking.",
+ "script": {
+  "title": "Where Did the Golden Key Go? 🔑🕵️ Cartoon Cars for Kids",
+  "description": "It's Wheelburg's birthday, and the golden key for the old Time Box disappears right before noon! Inspector Bolt squeezes Mo the mail van, Turbo and Grumpy in the Truth Press, until little Pip asks the bravest question of all. Saying \"I made a mistake\" is brave. Inspector Bolt #6",
+  "set": {
+   "place": "Wheelburg square, town birthday at noon",
+   "press": true,
+   "podium": true,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "mo": {
+    "name": "Mo",
+    "voice": "bm_lewis",
+    "speed": 1.05,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.6,
+     0.35
+    ],
+    "kind": "truck",
+    "size": 0.9,
+    "hat": false,
+    "home": [
+     12.0,
+     16.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "tbox",
+    "type": "box",
+    "color": "purple",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "on": "mo",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "on": "podium",
+    "visible": false,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Toot toot! Happy birthday, Wheelburg! Every car zoomed in for the big noon party!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "mo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "mo",
+    "say": "Special delivery! One golden key, for the Wheelburg Time Box!",
+    "cam": "close:mo",
+    "do": [
+     [
+      "mo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A Time Box? What's a Time Box?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Long ago, the town locked special things inside it. We open it on Wheelburg's birthday!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "narr",
+    "say": "The old Time Box sat on the podium, locked tight, waiting for twelve o'clock.",
+    "cam": "podium",
+    "do": [
+     [
+      "tbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I bet it's full of trophies. Probably with my face on them.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I bet it's full of dust. Old things are always dusty.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Beep beep! Inspector Bolt arrived to keep the key safe until noon.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, Mo. I will guard it myself. A detective never loses a clue.",
+    "cam": "two:bolt,mo",
+    "do": [
+     [
+      "key",
+      "give:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "mo",
+    "say": "Great! Then I'll go deliver the rest of my letters. Back in a jiffy!",
+    "cam": "close:mo"
+   },
+   {
+    "who": "bolt",
+    "say": "Enjoy the party, everyone. The key is in very safe wheels.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "key",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Music played. Balloons popped. Everyone danced. Even Grumpy tapped one tyre.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy is dancing! Bertha, look, look!",
+    "cam": "two:pip,bertha",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I am not dancing. My tyre is itchy.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the town clock went ding, ding, ding. It was almost noon!",
+    "cam": "overhead"
+   },
+   {
+    "who": "bertha",
+    "say": "Inspector! It's time! Bring the golden key!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Of course. The key is right... here. Right... hmm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE KEY IS GONE!",
+    "cam": "close:bolt",
+    "hold": 1.2,
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "Gone? But you said a detective never loses a clue!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And a detective never does. Somebody must have taken it from me.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "A key thief? At a birthday party? That's so rude!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "bolt",
+    "say": "There is only one way to know. Everyone takes the Truth Press.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "rise"
+     ],
+     [
+      "press",
+      "clap"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Mo, you brought the key. You know how special it is. You go first.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "mo",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "mo",
+    "say": "Me? I just deliver things. I never keep them! Except one stamp. A very nice stamp.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Mo, did you take the golden key?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "mo",
+    "say": "No, Inspector. The key was for you, so I gave it to you.",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! Mo's eyes stayed small, but his letters went flying everywhere.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:mo"
+     ],
+     [
+      "mo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mo",
+    "say": "Oops! Now I have to deliver them all over again!",
+    "cam": "press",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Honest. And a little messy. Next, Turbo.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "mo",
+      "to_home"
+     ],
+     [
+      "turbo",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me again? I'm always a suspect. It's because I'm so good-looking.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, did you take the key?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "No! I was busy dancing. Did you see my spin? Watch!",
+    "cam": "press",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The press squeezed, and Turbo stopped spinning very fast.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:turbo"
+     ],
+     [
+      "turbo",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Dizzy... so dizzy... but honest!",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Small eyes. Thank you, Turbo. Grumpy, your turn.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ],
+     [
+      "grumpy",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I don't like keys. They're shiny. Everybody knows I hate shiny things.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, did you take the golden key?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "No. If I saw a shiny key, I'd drive the other way.",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! Grumpy's eyes stayed small and grumpy, just like always.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Three honest cars. And still no key. Most puzzling.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "grumpy",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tick, tock. Tick, tock. Noon was coming closer and closer.",
+    "cam": "overhead"
+   },
+   {
+    "who": "bertha",
+    "say": "Oh no. If we don't open the box today, we have to wait a whole year!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait. Inspector Bolt. You said everyone takes the Truth Press.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Yes, Pip. That is the rule. Everyone.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "Then what about you? You haven't been squeezed yet!",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "BOLT IN THE PRESS?!",
+    "cam": "close:bolt",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Me? But I am the detective. I... hmm. A rule is a rule. You are right, Pip.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "And for the very first time, Inspector Bolt drove into his own Truth Press.",
+    "cam": "press",
+    "do": [
+     [
+      "bolt",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I can't watch! Okay, I'm watching!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "pip",
+    "say": "Inspector Bolt, did you take the golden key?",
+    "cam": "close:pip"
+   },
+   {
+    "who": "bolt",
+    "say": "Of course not. I would never... Oh. Hmm.",
+    "cam": "press",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "His eyes! His eyes are getting bigger!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! And out from under Bolt's hat popped... the golden key!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:bolt"
+     ],
+     [
+      "key",
+      "drop:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "THE KEY WAS IN HIS HAT!",
+    "cam": "prop:key",
+    "hold": 1.3
+   },
+   {
+    "who": "bolt",
+    "say": "Oh my. I put it under my hat to keep it safe. Then I danced, and forgot.",
+    "cam": "press"
+   },
+   {
+    "who": "grumpy",
+    "say": "The detective lost the clue. Under his own hat.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Everyone, I am sorry. I blamed my friends, but the mistake was mine.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mo",
+    "say": "That's okay, Inspector! Everybody forgets things. I forget my letters every day!",
+    "cam": "close:mo"
+   },
+   {
+    "who": "pip",
+    "say": "And you went into the press anyway. That was really brave.",
+    "cam": "close:pip"
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, Pip. You followed the rule better than I did.",
+    "cam": "two:bolt,pip"
+   },
+   {
+    "who": "bolt",
+    "say": "Saying \"I made a mistake\" is not small. It is one of the bravest things a car can do.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bertha",
+    "say": "Look at the clock! It's noon! It's time!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "press",
+      "sink"
+     ],
+     [
+      "bolt",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, I think you should open the Time Box today.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "key",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Me? Really? Okay! One, two, three... click!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE BOX IS OPEN!",
+    "cam": "podium",
+    "hold": 1.0,
+    "do": [
+     [
+      "tbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the Time Box was a letter from long ago, and a little golden star.",
+    "cam": "podium",
+    "do": [
+     [
+      "star",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Read it, Pip! What does the letter say?",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "pip",
+    "say": "It says: Dear Wheelburg. Be kind, be brave, and always help each other.",
+    "cam": "close:pip"
+   },
+   {
+    "who": "grumpy",
+    "say": "That's... actually nice. Not dusty at all.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No trophies with my face. But I like it anyway!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "HAPPY BIRTHDAY, WHEELBURG!",
+    "cam": "wide",
+    "hold": 1.1,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And from now on, I keep my clues in my glove box. Not under my hat.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Everyone danced until the sun went down. But wait...",
+    "cam": "wide"
+   },
+   {
+    "text": "THE STAR IS BLINKING?!",
+    "cam": "prop:star",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Inspector! The little star from the box just blinked at me!",
+    "cam": "close:pip"
+   },
+   {
+    "who": "narr",
+    "say": "Why is the star blinking? What is it trying to say? We'll find out soon!",
+    "cam": "wide"
+   }
+  ]
+ },
+ "long": {
+  "title": "Where Did the Golden Key Go? 🔑🕵️ Cartoon Cars for Kids",
+  "description": "It's Wheelburg's birthday, and the golden key for the old Time Box disappears right before noon! Inspector Bolt squeezes Mo the mail van, Turbo and Grumpy in the Truth Press, until little Pip asks the bravest question of all. Saying \"I made a mistake\" is brave. Inspector Bolt #6\n\n#kidscartoon #cartooncars #honesty",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "honesty",
+   "saying sorry",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "WHERE'S THE KEY?",
+  "thumb_beat": 46,
+  "localizations": {
+   "es": {
+    "title": "¿Dónde está la llave dorada? 🔑🕵️ Coches para niños",
+    "description": "¡Es el cumpleaños de Wheelburg y la llave dorada de la vieja Caja del Tiempo desaparece justo antes del mediodía! El Inspector Bolt aprieta a Mo el camión del correo, a Turbo y a Grumpy en la Prensa de la Verdad, hasta que la pequeña Pip hace la pregunta más valiente. Decir \"me equivoqué\" es de valientes. Inspector Bolt #6\n\n#dibujosanimados #coches #honestidad"
+   },
+   "pt": {
+    "title": "Cadê a chave dourada? 🔑🕵️ Carrinhos para crianças",
+    "description": "É aniversário de Wheelburg, e a chave dourada da velha Caixa do Tempo some logo antes do meio-dia! O Inspetor Bolt aperta Mo, o carteiro, Turbo e Grumpy na Prensa da Verdade, até que a pequena Pip faz a pergunta mais corajosa de todas. Dizer \"eu errei\" é coragem. Inspetor Bolt #6\n\n#desenhoinfantil #carros #honestidade"
+   },
+   "ar": {
+    "title": "أين ذهب المفتاح الذهبي؟ 🔑🕵️ سيارات للأطفال",
+    "description": "إنه عيد ميلاد ويلبرغ، والمفتاح الذهبي لصندوق الزمن القديم يختفي قبل الظهر مباشرة! يضع المفتش بولت مو ساعي البريد وتوربو وغرامبي في مكبس الحقيقة، حتى تسأل بيب الصغيرة أشجع سؤال على الإطلاق. أن تقول \"أخطأت\" شجاعة. المفتش بولت #6\n\n#كرتون_اطفال #سيارات #الصدق"
+   },
+   "fr": {
+    "title": "Où est passée la clé dorée ? 🔑🕵️ Voitures pour enfants",
+    "description": "C'est l'anniversaire de Wheelburg, et la clé dorée de la vieille Boîte du Temps disparaît juste avant midi ! L'inspecteur Bolt fait passer Mo le facteur, Turbo et Grumpy dans la Presse de Vérité, jusqu'à ce que la petite Pip pose la question la plus courageuse. Dire « je me suis trompé », c'est courageux. Inspecteur Bolt #6\n\n#dessinanimé #voitures #honnêteté"
+   },
+   "ja": {
+    "title": "金のカギはどこへ行った？🔑🕵️ こども向けくるまアニメ",
+    "description": "ウィールバーグのたんじょう日。古い「タイムボックス」をあける金のカギが、お昼の直前に消えてしまった！ボルト警部は郵便車のモー、ターボ、グランピーを「ほんとうプレス」にかけますが、小さなピップがいちばん勇気のある質問をします。「まちがえた」と言えるのは勇気だよ。ボルト警部 #6\n\n#こども向けアニメ #くるま #しょうじき"
+   },
+   "ko": {
+    "title": "황금 열쇠는 어디로 갔을까? 🔑🕵️ 어린이 자동차 만화",
+    "description": "휠버그의 생일날, 오래된 타임박스를 여는 황금 열쇠가 정오 직전에 사라져요! 볼트 경감은 우편차 모, 터보, 그럼피를 진실 프레스에 세우는데, 꼬마 핍이 가장 용감한 질문을 해요. \"내가 실수했어\"라고 말하는 건 용기예요. 볼트 경감 #6\n\n#어린이만화 #자동차 #정직"
+   },
+   "de": {
+    "title": "Wo ist der goldene Schlüssel? 🔑🕵️ Autos für Kinder",
+    "description": "Wheelburg hat Geburtstag, und kurz vor Mittag verschwindet der goldene Schlüssel für die alte Zeitkiste! Inspektor Bolt schickt Mo den Postwagen, Turbo und Grumpy in die Wahrheitspresse, bis die kleine Pip die mutigste Frage von allen stellt. „Ich habe einen Fehler gemacht“ zu sagen, ist mutig. Inspektor Bolt #6\n\n#kinderzeichentrick #autos #ehrlichkeit"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 30,
+   "top": "THE KEY VANISHED!",
+   "title": "The Golden Key Vanished at Noon! 🔑⏰ #shorts",
+   "description": "Ding, ding, ding… and the key is gone! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La llave dorada desapareció al mediodía! 🔑⏰ #shorts",
+     "description": "Din, din, din… ¡y la llave ya no está! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A chave dourada sumiu ao meio-dia! 🔑⏰ #shorts",
+     "description": "Dim, dim, dim… e a chave sumiu! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المفتاح الذهبي اختفى عند الظهر! 🔑⏰ #shorts",
+     "description": "دينغ، دينغ، دينغ… والمفتاح اختفى! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La clé dorée a disparu à midi ! 🔑⏰ #shorts",
+     "description": "Ding, ding, ding… et la clé a disparu ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "お昼に金のカギが消えた！🔑⏰ #shorts",
+     "description": "カーン、カーン、カーン…カギがない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "정오에 황금 열쇠가 사라졌어요! 🔑⏰ #shorts",
+     "description": "땡, 땡, 땡… 열쇠가 없어졌어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der goldene Schlüssel ist um 12 weg! 🔑⏰ #shorts",
+     "description": "Ding, ding, ding… und der Schlüssel ist weg! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 42,
+   "dur": 32,
+   "top": "EVEN THE DETECTIVE?!",
+   "title": "Pip Puts the Detective in the Press! 😲🔑 #shorts",
+   "description": "A rule is a rule… for everyone! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "detective for kids",
+    "honesty"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pip mete al detective en la prensa! 😲🔑 #shorts",
+     "description": "Una regla es una regla… ¡para todos! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Pip coloca o detetive na prensa! 😲🔑 #shorts",
+     "description": "Regra é regra… para todos! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيب تضع المحقق في المكبس! 😲🔑 #shorts",
+     "description": "القاعدة قاعدة… للجميع! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pip met le détective dans la presse ! 😲🔑 #shorts",
+     "description": "Une règle, c'est une règle… pour tout le monde ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピップが警部をプレスに！😲🔑 #shorts",
+     "description": "ルールはルール…みんなにね！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍이 탐정을 프레스에 세워요! 😲🔑 #shorts",
+     "description": "규칙은 규칙… 모두에게요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pip schickt den Detektiv in die Presse! 😲🔑 #shorts",
+     "description": "Regel ist Regel… für alle! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,976 @@
+{
+ "id": "20261021-1-vanishing-cones",
+ "plot": "On Road Painting Day at sunset Grumpy's three orange cones vanish one by one; Bolt tests Turbo (turns red) and Pip (tickled), then a cone wobbling on Bertha's roof gives her away: she used the cones to guard a baby-bird nest on her bus route; lesson: kind plans are better when shared; Grumpy brings new cones, then a nameless box appears on the podium.",
+ "script": {
+  "title": "The Cones Are Disappearing! 🚧😲 Wheelburg Mystery",
+  "description": "It's Road Painting Day in Wheelburg, and Grumpy's orange cones vanish one by one while the paint is still wet! Inspector Bolt tests Turbo and Pip on the Truth Press, until something orange wobbles on a big yellow roof. Kind plans are better when you share them. Inspector Bolt #5",
+  "set": {
+   "place": "Wheelburg square, Road Painting Day sunset",
+   "press": true,
+   "podium": true,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cone1",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -7.0,
+     6.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "cone2",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -3.0,
+     5.5,
+     0.5
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "cone3",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     1.0,
+     5.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "coneb",
+    "type": "cone",
+    "color": "orange",
+    "on": "bertha",
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "blue",
+    "on": "podium",
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Vroom! Swish! Brushes up! It's Road Painting Day, and everybody raced into the square at sunset!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll paint the fastest stripes in history. Watch the master at work!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And I'll paint tiny stripes, for tiny cars like me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm in charge of the orange cones. Cones keep the painters safe.",
+    "cam": "two:grumpy,bertha"
+   },
+   {
+    "who": "bertha",
+    "say": "Good job, Grumpy! Three cones, all in a neat little row!",
+    "cam": "two:grumpy,bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Three bright orange cones stood guard in front of the wet white paint.",
+    "cam": "prop:cone2",
+    "do": [
+     [
+      "cone2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody touches my cones. They are the only orange things I like.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "The sky turned pink and gold. Everybody started painting, swish, swish, swish.",
+    "cam": "wide"
+   },
+   {
+    "text": "A CONE IS GONE!",
+    "cam": "prop:cone1",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "cone1",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "One of my cones! It was right there a second ago!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe it went for a little walk. Oh wait. Cones don't have wheels.",
+    "cam": "close:turbo"
+   },
+   {
+    "text": "ANOTHER ONE!",
+    "cam": "prop:cone3",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "cone3",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Without cones, somebody might drive right through the wet paint!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Beep beep! Inspector Bolt came rolling in with the evening breeze.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening, everyone. I am told the cones are running away.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "grumpy",
+    "say": "Two cones gone, Inspector. Only one left. Please find them.",
+    "cam": "two:bolt,grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Don't worry, Grumpy. Missing things always leave something behind.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "First, procedure. Turbo, you are the fastest car here. Into the Truth Press, please.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "rise"
+     ],
+     [
+      "turbo",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fast, yes. Cone thief, no! Cones are slow. I don't even like slow things.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, did you take Grumpy's cones?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "No way! Squeeze me if you want. My eyes will stay super tiny.",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The press squeezed. Turbo's eyes stayed small, but his face went very red.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:turbo"
+     ],
+     [
+      "turbo",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Well... I was already red. So that doesn't count.",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Honest. Thank you, Turbo. Back to your stripes.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But while everyone was watching the press, something else happened.",
+    "cam": "wide"
+   },
+   {
+    "text": "THE LAST CONE IS GONE!",
+    "cam": "prop:cone2",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "cone2",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "All three! My whole job, gone. This is the worst Painting Day ever.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. The thief strikes when we look away. Clever. But not clever enough.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, you go next. Into the press, little one.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Okay! I'm brave! I'm brave! Is it going to tickle?",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, did you take the cones?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "No! Cones are taller than me! I couldn't even carry one!",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The press gave Pip the softest squeeze in all of Wheelburg.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hee hee! It did tickle! Eyes small, see?",
+    "cam": "press",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Small eyes. A cone is far too heavy for Pip. Honest.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "pip",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now Inspector Bolt looked at the whole square, from high above.",
+    "cam": "overhead",
+    "do": [
+     [
+      "press",
+      "sink"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Three tall cones, taken very quickly. The thief must be big and strong.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "Big and strong... Grumpy is big and strong!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "No, Turbo. Grumpy is the one who lost them.",
+    "cam": "two:bolt,grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Then Big Bertha drove past, very slowly. And something orange wobbled on her roof.",
+    "cam": "wide",
+    "do": [
+     [
+      "coneb",
+      "show"
+     ],
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT'S ON BERTHA'S ROOF?!",
+    "cam": "close:bertha",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Bertha! There's a cone on your roof! Like a big orange party hat!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A cone? On my roof? Goodness, how did that get up there?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, your eyes just grew very big. And you didn't even need the press.",
+    "cam": "two:bolt,bertha"
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, buses are so bad at secrets. Okay. It was me. I took the cones.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE CONE TAKER IS BERTHA?!",
+    "cam": "close:bertha",
+    "hold": 1.3
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha? But you're my friend. Why did you take my cones?",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bertha",
+    "say": "On my bus route, by the bakery, there's a little bird nest right on the road.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "bertha",
+    "say": "Three baby birds are sleeping in it. Cars kept almost driving over them!",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "pip",
+    "say": "Baby birds? In the middle of the road? Oh no!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "So I put your cones around the nest. Now every car drives around them.",
+    "cam": "two:bertha,grumpy"
+   },
+   {
+    "who": "bertha",
+    "say": "I wanted to hurry back before anyone noticed. But this one got stuck on my roof.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "coneb",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So the cone thief was really... a cone hero?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha. If you had told me, I would have helped. I know everything about cones.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bertha",
+    "say": "You would? I thought you'd be grumpy about it.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm always grumpy. But never about baby birds.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Here is what I learned today. Kind plans are even better when you share them.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Tell your friends, and they can help you. Then nobody has to worry.",
+    "cam": "two:bolt,bertha"
+   },
+   {
+    "who": "bertha",
+    "say": "Next time I'll tell you first, Grumpy. I promise. And I'm sorry I worried you.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "grumpy",
+    "say": "Sorry accepted. Now. Let's do this properly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Grumpy hurried off to the cone shop and brought back three brand new cones.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "NEW CONES!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One, two, three! Bright new cones, right back where they belong.",
+    "cam": "prop:cone1",
+    "do": [
+     [
+      "cone1",
+      "show"
+     ],
+     [
+      "cone2",
+      "show"
+     ],
+     [
+      "cone3",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And the baby birds keep their cones too! Everybody wins!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I'll drive extra slowly past the bakery. Shhh. Baby birds sleeping.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha. You can keep the cone on your roof. It suits you.",
+    "cam": "two:grumpy,bertha",
+    "do": [
+     [
+      "coneb",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Really? My very own orange hat! Thank you, Grumpy!",
+    "cam": "two:grumpy,bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Puzzle solved. Share your kind plans, Wheelburg. Help grows bigger when you share it.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "The sun went down. But then...",
+    "cam": "wide"
+   },
+   {
+    "text": "WHO LEFT THIS BOX?!",
+    "cam": "podium",
+    "hold": 1.3,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A box on the podium? With no name on it? Hmm. Most curious.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "What could be inside the mystery box? Inspector Bolt will find out, very soon!",
+    "cam": "podium",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Cones Are Disappearing! 🚧😲 Wheelburg Mystery",
+  "description": "It's Road Painting Day in Wheelburg, and Grumpy's orange cones vanish one by one while the paint is still wet! Inspector Bolt tests Turbo and Pip on the Truth Press, until something orange wobbles on a big yellow roof. Kind plans are better when you share them. Inspector Bolt #5\n\n#kidscartoon #cartooncars #kindness",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "kindness",
+   "sharing",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "CONE THIEF?!",
+  "thumb_beat": 26,
+  "localizations": {
+   "es": {
+    "title": "¡Los conos están desapareciendo! 🚧😲 Misterio",
+    "description": "Es el Día de Pintar Calles en Wheelburg, ¡y los conos naranjas de Grumpy desaparecen uno a uno con la pintura aún fresca! El Inspector Bolt pone a Turbo y a Pip en la Prensa de la Verdad, hasta que algo naranja se tambalea sobre un gran techo amarillo. Los planes amables son mejores cuando se comparten. Inspector Bolt #5\n\n#dibujosanimados #coches #amabilidad"
+   },
+   "pt": {
+    "title": "Os cones estão sumindo! 🚧😲 Mistério de Carros",
+    "description": "É o Dia de Pintar a Rua em Wheelburg, e os cones laranja do Grumpy somem um por um com a tinta ainda molhada! O Inspetor Bolt leva Turbo e Pip à Prensa da Verdade, até que algo laranja balança em um grande teto amarelo. Planos gentis são melhores quando compartilhados. Inspetor Bolt #5\n\n#desenhoinfantil #carros #gentileza"
+   },
+   "ar": {
+    "title": "الأقماع تختفي! 🚧😲 لغز في ويلبرغ",
+    "description": "إنه يوم طلاء الطريق في ويلبرغ، وأقماع غرامبي البرتقالية تختفي واحدًا تلو الآخر والطلاء ما زال مبتلًا! يضع المفتش بولت توربو وبيب في مكبس الحقيقة، حتى يتمايل شيء برتقالي فوق سقف أصفر كبير. الخطط اللطيفة أجمل عندما نشاركها. المفتش بولت #5\n\n#كرتون_اطفال #سيارات #اللطف"
+   },
+   "fr": {
+    "title": "Les cônes disparaissent ! 🚧😲 Mystère à Wheelburg",
+    "description": "C'est le Jour de la Peinture à Wheelburg, et les cônes orange de Grumpy disparaissent un par un pendant que la peinture sèche ! L'inspecteur Bolt envoie Turbo et Pip à la Presse de Vérité, jusqu'à ce que quelque chose d'orange tremble sur un grand toit jaune. Les gentils projets sont meilleurs quand on les partage. Inspecteur Bolt #5\n\n#dessinanimé #voitures #gentillesse"
+   },
+   "ja": {
+    "title": "コーンが次々に消えていく！🚧😲 ウィールバーグのなぞ",
+    "description": "ウィールバーグの「道路ペンキの日」。ペンキがまだ乾かないうちに、グランピーのオレンジのコーンが一つずつ消えていく！ボルト警部はターボとピップを「ほんとうプレス」にかけますが、そのとき大きな黄色い屋根の上で何かオレンジ色のものがゆらり…。やさしい計画は、みんなに話すともっとよくなるよ。ボルト警部 #5\n\n#こども向けアニメ #くるま #やさしさ"
+   },
+   "ko": {
+    "title": "고깔이 사라지고 있어요! 🚧😲 휠버그 미스터리",
+    "description": "휠버그의 도로 칠하는 날, 페인트가 마르기도 전에 그럼피의 주황 고깔이 하나씩 사라져요! 볼트 경감은 터보와 핍을 진실 프레스에 세우는데, 그때 커다란 노란 지붕 위에서 주황색 무언가가 흔들려요. 친절한 계획은 함께 나눌 때 더 좋아요. 볼트 경감 #5\n\n#어린이만화 #자동차 #친절"
+   },
+   "de": {
+    "title": "Die Hütchen verschwinden! 🚧😲 Rätsel in Wheelburg",
+    "description": "Straßenmaltag in Wheelburg – und Grumpys orange Hütchen verschwinden eins nach dem anderen, während die Farbe noch nass ist! Inspektor Bolt schickt Turbo und Pip in die Wahrheitspresse, bis etwas Oranges auf einem großen gelben Dach wackelt. Nette Pläne sind noch besser, wenn man sie teilt. Inspektor Bolt #5\n\n#kinderzeichentrick #autos #freundlichkeit"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 30,
+   "top": "THE CONES ARE VANISHING!",
+   "title": "Where Are the Cones Going? 🚧😲 #shorts",
+   "description": "One cone… two cones… gone! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Adónde se van los conos? 🚧😲 #shorts",
+     "description": "Un cono… dos conos… ¡desaparecidos! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Para onde vão os cones? 🚧😲 #shorts",
+     "description": "Um cone… dois cones… sumiram! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "إلى أين تذهب الأقماع؟ 🚧😲 #shorts",
+     "description": "قمع واحد… قمعان… اختفت! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Où vont les cônes ? 🚧😲 #shorts",
+     "description": "Un cône… deux cônes… disparus ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "コーンはどこへ行くの？🚧😲 #shorts",
+     "description": "コーンが一つ…二つ…消えた！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "고깔은 어디로 가는 걸까? 🚧😲 #shorts",
+     "description": "고깔 하나… 둘… 사라졌어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wo gehen die Hütchen hin? 🚧😲 #shorts",
+     "description": "Ein Hütchen… zwei Hütchen… weg! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 17,
+   "dur": 30,
+   "top": "TURBO IN THE PRESS!",
+   "title": "Turbo Got Squeezed… and Turned RED! 😂🚗 #shorts",
+   "description": "The Truth Press never lies! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "funny cars",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo fue apretado… y se puso ROJO! 😂🚗 #shorts",
+     "description": "¡La Prensa de la Verdad nunca miente! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Turbo foi apertado… e ficou VERMELHO! 😂🚗 #shorts",
+     "description": "A Prensa da Verdade nunca mente! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو انعصر… واحمرّ وجهه! 😂🚗 #shorts",
+     "description": "مكبس الحقيقة لا يكذب أبدًا! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo pressé… et tout ROUGE ! 😂🚗 #shorts",
+     "description": "La Presse de Vérité ne ment jamais ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボがぎゅっ…真っ赤になった！😂🚗 #shorts",
+     "description": "ほんとうプレスはうそをつかない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보가 꾹 눌리고… 빨개졌어요! 😂🚗 #shorts",
+     "description": "진실 프레스는 절대 거짓말하지 않아요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo gequetscht… und knallROT! 😂🚗 #shorts",
+     "description": "Die Wahrheitspresse lügt nie! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 39,
+   "dur": 32,
+   "top": "WHAT'S ON HER ROOF?!",
+   "title": "Why Is There a Cone on Bertha's Roof? 🚌🚧 #shorts",
+   "description": "The cone taker has a very kind secret. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "detective for kids",
+    "kindness"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué hay un cono en el techo de Bertha? 🚌🚧 #shorts",
+     "description": "Quien se llevó los conos tiene un secreto muy amable. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que tem um cone no teto da Bertha? 🚌🚧 #shorts",
+     "description": "Quem pegou os cones tem um segredo muito gentil. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا يوجد قمع على سقف بيرثا؟ 🚌🚧 #shorts",
+     "description": "من أخذ الأقماع لديه سرّ لطيف جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi un cône sur le toit de Bertha ? 🚌🚧 #shorts",
+     "description": "Celui qui a pris les cônes cache un secret très gentil. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサの屋根にコーンがあるのはなぜ？🚌🚧 #shorts",
+     "description": "コーンを持っていったのには、やさしいひみつがあった。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사 지붕 위에 왜 고깔이 있을까? 🚌🚧 #shorts",
+     "description": "고깔을 가져간 데에는 아주 친절한 비밀이 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum steht ein Hütchen auf Berthas Dach? 🚌🚧 #shorts",
+     "description": "Wer die Hütchen nahm, hat ein sehr liebes Geheimnis. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

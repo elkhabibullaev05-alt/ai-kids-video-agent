@@ -1,0 +1,954 @@
+{
+ "id": "20261021-3-sneeze-trophy",
+ "plot": "On race morning the Golden Race Trophy vanishes; Bolt uses Grumpy's shiny-thing sneeze as a detector while Turbo and Bertha (flat roof) prove honest at the press, then the sneeze points to little Pip, who only wanted to know how holding a trophy feels because Turbo teased her for always coming last; Turbo apologises, Pip runs her best race ever (lesson: trying your best is the real prize), then wobbly wide tracks cross the finish line.",
+ "script": {
+  "title": "Who Took the Race Trophy? 🏆🤧 Follow the Sneeze!",
+  "description": "It's race morning, and the Golden Race Trophy vanishes from the podium! Grumpy sneezes near shiny things, so Inspector Bolt turns his nose into a detector while Turbo and Bertha take the Truth Press. Trying your best is the real prize. Inspector Bolt #7",
+  "set": {
+   "place": "Wheelburg race starting line, race morning",
+   "press": true,
+   "podium": true,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.1
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Vroom, vroom, VROOM! Race morning! Engines roared as everyone zoomed to the starting line!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Make way! The champion has arrived! That's me, in case you were wondering.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "This year I'm racing too! I practised every single day!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "You? Pip, you're tiny. You always finish last. Like, really, really last.",
+    "cam": "two:turbo,pip"
+   },
+   {
+    "who": "pip",
+    "say": "Last is still finishing! And this year I'll be faster. You'll see.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo, be nice. Everyone can race. That's the rule of the Big Race.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "narr",
+    "say": "On the podium shone the prize. The Golden Race Trophy, sparkling in the sun.",
+    "cam": "podium",
+    "do": [
+     [
+      "trophy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Ah... ah... AH-CHOO! Too shiny. Shiny things make me sneeze.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bless you, Grumpy! Maybe park a little farther away from it.",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm only here to tow anyone who breaks down. Not to look at that thing.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Everybody lined up and revved their engines. Three, two...",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE TROPHY IS GONE!",
+    "cam": "podium",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "trophy",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My trophy! I mean... the trophy! Somebody stole the prize!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "No trophy means no race! Oh, this is terrible!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Can't we still race without a trophy?",
+    "cam": "close:pip"
+   },
+   {
+    "who": "turbo",
+    "say": "Race for nothing? Nobody races for nothing, Pip!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "narr",
+    "say": "Honk honk! Inspector Bolt rolled up to the starting line.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning. I hear a very shiny trophy has gone missing.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, you sneeze near shiny things. When did you last sneeze?",
+    "cam": "two:bolt,grumpy"
+   },
+   {
+    "who": "grumpy",
+    "say": "Right before it vanished. Since then, nothing. My nose is very quiet.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "bolt",
+    "say": "Interesting. Then wherever the trophy is hiding, Grumpy's nose will find it.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "A sneezing tow truck detector? That's the weirdest plan ever!",
+    "cam": "close:turbo"
+   },
+   {
+    "who": "bolt",
+    "say": "Weird plans are often the best ones. But first, the Truth Press.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "press",
+      "rise"
+     ],
+     [
+      "press",
+      "clap"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, you wanted that trophy most of all. Please go first.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fine! But only because I have nothing to hide. Squeeze away!",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, did you take the Golden Race Trophy?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "No! I want to win it, not take it! Winning is my favourite thing!",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "Squeeze! Turbo's eyes stayed small. He was telling the truth.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Honest. Grumpy, please drive past Turbo. Any sneeze?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "grumpy",
+      "to:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Sniff, sniff. Nothing. He just smells like a show-off.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hey! Show-off is a very nice smell!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Big Bertha, you're next.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bertha",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Me? I carry children, not trophies! There isn't room for both!",
+    "cam": "press"
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, did you take the trophy?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "bertha",
+    "say": "No, no, no. I'm the one who said everybody can race!",
+    "cam": "press"
+   },
+   {
+    "who": "narr",
+    "say": "The press squeezed so hard that Bertha's roof went flat as a pancake.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:bertha"
+     ],
+     [
+      "bertha",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh! My roof! Well, at least I'm honest. Flat, but honest!",
+    "cam": "press",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Small eyes. Grumpy, any sneeze near Bertha?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "grumpy",
+      "to:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Sniff. Nothing. Just crayons and lunchboxes.",
+    "cam": "two:grumpy,bertha"
+   },
+   {
+    "who": "bertha",
+    "say": "That's because the kids leave them everywhere!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to_home"
+     ],
+     [
+      "press",
+      "sink"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two honest cars. No trophy. And the race was about to start.",
+    "cam": "overhead"
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, please drive slowly around the whole starting line. Let your nose lead the way.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "So Grumpy rolled past every car. Sniff... sniff... sniff...",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:-11,11"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Ah... ah... AH-CHOOOOO!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE SNEEZE IS NEXT TO PIP!",
+    "cam": "two:grumpy,pip",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "Pip? Tiny Pip? No way!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Maybe Grumpy just has a cold?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, your eyes are very big. And that was not a cold sneeze.",
+    "cam": "two:bolt,pip"
+   },
+   {
+    "who": "narr",
+    "say": "Then, plonk! The Golden Race Trophy rolled out from behind Pip.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "trophy",
+      "drop:pip"
+     ]
+    ]
+   },
+   {
+    "text": "PIP HAD THE TROPHY?!",
+    "cam": "prop:trophy",
+    "hold": 1.3
+   },
+   {
+    "who": "pip",
+    "say": "I'm sorry! I'm so sorry! I wasn't going to keep it. I promise.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Pip, sweetie, why did you take it?",
+    "cam": "close:bertha"
+   },
+   {
+    "who": "pip",
+    "say": "I always come last. I just wanted to know how it feels to hold a trophy.",
+    "cam": "close:pip"
+   },
+   {
+    "who": "pip",
+    "say": "Only for one minute. Then I got scared to put it back.",
+    "cam": "close:pip"
+   },
+   {
+    "who": "turbo",
+    "say": "Because I said you always finish last. Oh. That wasn't nice of me.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, taking the trophy was not okay. It belongs to the race.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "I know. I'll put it back right now.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "trophy",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you. Now tell me. Do you practise every day?",
+    "cam": "two:bolt,pip"
+   },
+   {
+    "who": "pip",
+    "say": "Every single day. Even in the rain.",
+    "cam": "close:pip"
+   },
+   {
+    "who": "bolt",
+    "say": "Then you already have something no trophy can give. You never give up.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "turbo",
+    "say": "Pip, I'm sorry I teased you. Racing with you is fun. Even if you're slow.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Thanks, Turbo! And maybe today I won't be quite so slow!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Winning is nice. But trying your very best is the real prize.",
+    "cam": "close:bolt"
+   },
+   {
+    "text": "READY... SET... GO!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the Big Race began! Turbo zoomed ahead, and Pip pushed with all her might.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Go, Pip, go! You can do it!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Go, tiny car. Go. I'm not cheering. I'm just saying go.",
+    "cam": "close:grumpy"
+   },
+   {
+    "who": "narr",
+    "say": "Pip didn't win. But she finished faster than ever before. Her best time ever!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I did it! My fastest race ever! That feels even better than a trophy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip, you were amazing! Here. You can hold it for one happy minute.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "trophy",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Ah... ah... AH-CHOO! Too much shiny. Too much happy.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Another case cracked. Do your best, Wheelburg. That is how every car shines.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Everybody cheered. But wait... who left these wobbly tracks across the finish line?",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:podium-bertha"
+     ]
+    ]
+   },
+   {
+    "text": "WHOSE TRACKS ARE THESE?!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. Very wide tracks. And very wobbly. Most mysterious.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "narr",
+    "say": "Who made the wobbly tracks? Inspector Bolt will find out. Stay tuned!",
+    "cam": "wide"
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Took the Race Trophy? 🏆🤧 Follow the Sneeze!",
+  "description": "It's race morning, and the Golden Race Trophy vanishes from the podium! Grumpy sneezes near shiny things, so Inspector Bolt turns his nose into a detector while Turbo and Bertha take the Truth Press. Trying your best is the real prize. Inspector Bolt #7\n\n#kidscartoon #cartooncars #nevergiveup",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery for kids",
+   "inspector bolt",
+   "detective cartoon",
+   "never give up",
+   "race",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "FOLLOW THE SNEEZE!",
+  "thumb_beat": 7,
+  "localizations": {
+   "es": {
+    "title": "¿Quién se llevó el trofeo? 🏆🤧 ¡Sigue el estornudo!",
+    "description": "¡Es la mañana de la carrera y el Trofeo Dorado desaparece del podio! Grumpy estornuda cerca de las cosas brillantes, así que el Inspector Bolt convierte su nariz en un detector mientras Turbo y Bertha pasan por la Prensa de la Verdad. Dar lo mejor de ti es el verdadero premio. Inspector Bolt #7\n\n#dibujosanimados #coches #nuncaterindas"
+   },
+   "pt": {
+    "title": "Quem pegou o troféu? 🏆🤧 Siga o espirro!",
+    "description": "É manhã de corrida, e o Troféu Dourado some do pódio! Grumpy espirra perto de coisas brilhantes, então o Inspetor Bolt transforma o nariz dele num detector enquanto Turbo e Bertha passam pela Prensa da Verdade. Dar o seu melhor é o verdadeiro prêmio. Inspetor Bolt #7\n\n#desenhoinfantil #carros #nuncadesista"
+   },
+   "ar": {
+    "title": "من أخذ كأس السباق؟ 🏆🤧 اتبع العطسة!",
+    "description": "إنه صباح السباق، والكأس الذهبية تختفي من المنصة! غرامبي يعطس قرب الأشياء اللامعة، فيحوّل المفتش بولت أنفه إلى جهاز كشف بينما يدخل توربو وبيرثا مكبس الحقيقة. أن تبذل أفضل ما لديك هو الجائزة الحقيقية. المفتش بولت #7\n\n#كرتون_اطفال #سيارات #لا_تستسلم"
+   },
+   "fr": {
+    "title": "Qui a pris le trophée ? 🏆🤧 Suis l'éternuement !",
+    "description": "C'est le matin de la course, et le Trophée d'Or disparaît du podium ! Grumpy éternue près des choses brillantes, alors l'inspecteur Bolt transforme son nez en détecteur pendant que Turbo et Bertha passent dans la Presse de Vérité. Faire de son mieux, c'est le vrai prix. Inspecteur Bolt #7\n\n#dessinanimé #voitures #jamaisabandonner"
+   },
+   "ja": {
+    "title": "トロフィーをとったのはだれ？🏆🤧 くしゃみを追え！",
+    "description": "レースの朝、表彰台から金のトロフィーが消えた！グランピーはピカピカのものの近くでくしゃみが出るので、ボルト警部は彼の鼻を探知機にします。ターボとバーサは「ほんとうプレス」へ。いちばんがんばることが、ほんとうのごほうびだよ。ボルト警部 #7\n\n#こども向けアニメ #くるま #あきらめない"
+   },
+   "ko": {
+    "title": "누가 경주 트로피를 가져갔을까? 🏆🤧 재채기를 따라가!",
+    "description": "경주 날 아침, 시상대에서 황금 트로피가 사라져요! 그럼피는 반짝이는 것 근처에서 재채기를 해서, 볼트 경감은 그의 코를 탐지기로 써요. 터보와 버사는 진실 프레스에 서요. 최선을 다하는 것이 진짜 상이에요. 볼트 경감 #7\n\n#어린이만화 #자동차 #포기하지마"
+   },
+   "de": {
+    "title": "Wer hat den Pokal genommen? 🏆🤧 Folge dem Niesen!",
+    "description": "Rennmorgen – und der Goldene Pokal verschwindet vom Podest! Grumpy muss bei glänzenden Sachen niesen, also macht Inspektor Bolt seine Nase zum Detektor, während Turbo und Bertha in die Wahrheitspresse müssen. Sein Bestes geben ist der echte Preis. Inspektor Bolt #7\n\n#kinderzeichentrick #autos #niemalsaufgeben"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 6,
+   "dur": 30,
+   "top": "WHERE DID IT GO?!",
+   "title": "The Race Trophy Vanished at the Start! 🏆😱 #shorts",
+   "description": "Three, two… and the prize is gone! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El trofeo desapareció en la salida! 🏆😱 #shorts",
+     "description": "Tres, dos… ¡y el premio ya no está! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O troféu sumiu na largada! 🏆😱 #shorts",
+     "description": "Três, dois… e o prêmio sumiu! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكأس اختفت عند خط البداية! 🏆😱 #shorts",
+     "description": "ثلاثة، اثنان… والجائزة اختفت! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le trophée a disparu au départ ! 🏆😱 #shorts",
+     "description": "Trois, deux… et le prix a disparu ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "スタートでトロフィーが消えた！🏆😱 #shorts",
+     "description": "3、2…ごほうびがない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "출발선에서 트로피가 사라졌어요! 🏆😱 #shorts",
+     "description": "셋, 둘… 상품이 없어졌어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Pokal ist am Start verschwunden! 🏆😱 #shorts",
+     "description": "Drei, zwei… und der Preis ist weg! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 31,
+   "dur": 28,
+   "top": "FLAT AS A PANCAKE!",
+   "title": "Bertha's Roof Went FLAT! 🚌😂 #shorts",
+   "description": "Flat, but honest! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "funny cars",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El techo de Bertha quedó PLANO! 🚌😂 #shorts",
+     "description": "¡Plana, pero honesta! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O teto da Bertha ficou ACHATADO! 🚌😂 #shorts",
+     "description": "Achatada, mas honesta! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "سقف بيرثا أصبح مسطّحًا! 🚌😂 #shorts",
+     "description": "مسطّحة… لكنها صادقة! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le toit de Bertha est tout PLAT ! 🚌😂 #shorts",
+     "description": "Plate, mais honnête ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサの屋根がぺったんこ！🚌😂 #shorts",
+     "description": "ぺったんこ、でもしょうじき！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사 지붕이 납작해졌어요! 🚌😂 #shorts",
+     "description": "납작해도 정직해요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Berthas Dach ist PLATT! 🚌😂 #shorts",
+     "description": "Platt, aber ehrlich! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 41,
+   "dur": 32,
+   "top": "FOLLOW THE SNEEZE!",
+   "title": "A Sneezing Truck Finds the Trophy! 🤧🏆 #shorts",
+   "description": "Grumpy's nose knows! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "detective for kids",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Un camión estornudador encuentra el trofeo! 🤧🏆 #shorts",
+     "description": "¡La nariz de Grumpy lo sabe! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um guincho espirrando acha o troféu! 🤧🏆 #shorts",
+     "description": "O nariz do Grumpy sabe tudo! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شاحنة تعطس تجد الكأس! 🤧🏆 #shorts",
+     "description": "أنف غرامبي يعرف! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une dépanneuse qui éternue trouve le trophée ! 🤧🏆 #shorts",
+     "description": "Le nez de Grumpy sait tout ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "くしゃみトラックがトロフィーを発見！🤧🏆 #shorts",
+     "description": "グランピーの鼻はお見通し！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "재채기 트럭이 트로피를 찾아요! 🤧🏆 #shorts",
+     "description": "그럼피의 코는 알고 있어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein niesender Abschlepper findet den Pokal! 🤧🏆 #shorts",
+     "description": "Grumpys Nase weiß Bescheid! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
