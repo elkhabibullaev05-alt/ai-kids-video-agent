@@ -94,3 +94,4 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Safety notes 2026-10-20
 - Title template: the last 10 titles all follow "What/Why/Where … ?". Vary the form (statements, place/name first, year first) — at most half the titles in a day may be a Wh-question. Vary the first spoken line of each script.
 - Real-history episodes: name the historical sources in the description ("Sources: …") so they read as researched storytelling, not mass-produced content.
+- (2026-10-22) The Wh-question template was replaced by a new one: 4 of the last 5 titles are imperatives ("Don't Open…", "Don't Follow…", "Never Take…", "Don't Stop…"). At most 1 title per day may start with "Don't"/"Never"; mix in place/name-first statements, year-first titles and plain questions. No two titles in a day may share their first word.
