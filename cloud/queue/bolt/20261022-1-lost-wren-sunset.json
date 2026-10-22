@@ -1,0 +1,1281 @@
+{
+ "id": "20261022-1-lost-wren-sunset",
+ "plot": "At sunset after market day a tiny lost car, Wren, arrives with three clues (red door, choo-choo, bread smell); Turbo's fire-station guess and Bertha's toy-shop trip (spotted by Pip from the raised Truth Press) both fail, while a far-off 'toot-toot-TOOT' everyone calls a goose keeps coming closer; Grumpy makes everyone go quiet and Wren recognises her mum's honk; all honk together, Mum arrives (they just moved to Bakery Lane); lesson: when you're lost, stay put and listen; then a golden wheel appears on the podium.",
+ "script": {
+  "title": "Can We Get Wren Home Before Dark? 🌅🚗 Lost Little Car",
+  "description": "A tiny car named Wren rolls into Wheelburg, lost, with only three clues: a red door, a choo-choo and the smell of warm bread. Inspector Bolt and friends race the sunset to get her home, but the answer is a sound everyone ignored. When you're lost, stay put and listen! Inspector Bolt #9",
+  "set": {
+   "place": "Wheelburg square, end of market day sunset",
+   "press": true,
+   "podium": true,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "wren": {
+    "name": "Wren",
+    "voice": "bf_emma",
+    "speed": 1.05,
+    "pitch": 3,
+    "color": [
+     0.55,
+     0.35,
+     0.9
+    ],
+    "kind": "small",
+    "size": 0.55,
+    "hat": false,
+    "home": [
+     -6.0,
+     8.0
+    ]
+   },
+   "mum": {
+    "name": "Wren's Mum",
+    "voice": "af_nicole",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.62,
+     0.3
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     18.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "blue",
+    "on": "wren",
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "wheel",
+    "type": "wheel",
+    "color": "gold",
+    "on": "podium",
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "wren",
+    "say": "Help! Help! I'm lost! Can anybody find my home?",
+    "cam": "wide",
+    "do": [
+     [
+      "wren",
+      "enter:left"
+     ],
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "text": "A LOST LITTLE CAR!",
+    "cam": "close:wren",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "wren",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the end of market day. The sun was sinking low.",
+    "cam": "overhead"
+   },
+   {
+    "who": "turbo",
+    "say": "Whoa! A tiny car I've never seen before! Who are you?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "I'm Wren. I followed a butterfly, and now everything looks different.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Don't worry, Wren! I'm small too. Small cars are brave!",
+    "cam": "two:pip,wren",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, sweetie! Where do you live? We'll drive you right there!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "I don't know my street name. I only remember three things.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She was holding a little gift, wrapped in blue paper.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "It's for my mum. She must be so worried about me.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far, far away, something went toot-toot-TOOT.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Ha! Did you hear that? A silly honking goose!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Geese go honk. Not toot. But fine. Nobody listens to me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Beep beep! Inspector Bolt rolled in, his brown hat tipped low.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I heard a call for help. Procedure says: I come.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "This is Wren! She's lost, and she can't find her home!",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we will find it together. Before the sun goes down.",
+    "cam": "close:bolt"
+   },
+   {
+    "text": "HOME BEFORE DARK!",
+    "cam": "overhead",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:wren"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wren, tell me your three clues. Nice and slowly, please.",
+    "cam": "two:bolt,wren",
+    "do": [
+     [
+      "bolt",
+      "to:wren"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Clue one. My house has a big red door.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Clue two. Every morning, I hear a choo-choo.",
+    "cam": "two:bolt,wren"
+   },
+   {
+    "who": "wren",
+    "say": "Clue three. My street smells like warm bread.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Red door! I know it! The fire station! Follow me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, wait. First we think. Then we drive.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No time to think! Back in a flash! Zoom!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Turbo zoomed away, quicker than a hiccup.",
+    "cam": "wide"
+   },
+   {
+    "who": "grumpy",
+    "say": "Little one. Are you cold? Come stand by me. Engines are warm.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "wren",
+      "to:-3,13"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "You're a tow truck. Are you a grumpy tow truck?",
+    "cam": "two:grumpy,wren",
+    "do": [
+     [
+      "wren",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Very grumpy. But I always find lost cars. That's my job.",
+    "cam": "two:grumpy,wren",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zooom! Turbo was back already, a little out of breath.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "The fire station has a red door. But nobody lives there!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Just three fire trucks. They said hello. And they were very shiny.",
+    "cam": "two:turbo,grumpy"
+   },
+   {
+    "who": "grumpy",
+    "say": "Shiny. Ugh. I'm glad I didn't go.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "That's not my house. My mum isn't a fire truck.",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WRONG DOOR!",
+    "cam": "close:turbo",
+    "hold": 1.0,
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh dear! Look at the sky! The sun is going down!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "If we don't hurry, Wren's mum will worry all night long.",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "I have an idea! I need to be up high. Really high!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "High? Hmm. The Truth Press goes up. Procedure... allows it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "press",
+      "rise"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "For the first time ever, the Truth Press was a lookout tower.",
+    "cam": "press",
+    "do": [
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wheee! I'm so tall! I can see the whole town!",
+    "cam": "press",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, what do you see? Any red doors?",
+    "cam": "close:bolt"
+   },
+   {
+    "who": "pip",
+    "say": "A red door! Next to the train tracks! By the round tower!",
+    "cam": "press",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Train tracks? Choo-choo! That could be my house!",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Leave it to Big Bertha! I know every road in town!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Big Bertha rumbled off toward the train tracks.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "exit"
+     ],
+     [
+      "press",
+      "sink"
+     ],
+     [
+      "pip",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Mister Bolt, what if I never find my house?",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every lost car gets found. Detectives never stop looking.",
+    "cam": "two:bolt,wren",
+    "do": [
+     [
+      "bolt",
+      "turn:wren"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And tow trucks never stop either. Even grumpy ones.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:wren"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, again: toot-toot-TOOT. A little closer this time.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "There it is again. That is not a goose.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It's a goose with a cold! Ha ha ha!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rumble, rumble! Bertha came back, huffing and puffing.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "That red door was the toy shop! It's full of rocking horses!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I tried to squeeze under the train bridge. Squish!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bertha! Your roof is flat! You look like a sandwich!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WRONG AGAIN!",
+    "cam": "close:wren",
+    "hold": 1.0,
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Only a tiny bit of sun is left. Think, everyone, think!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bread smell! Let's sniff every street in town! Sniff, sniff!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "No, let's honk at every door! HONK! HONK!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No, let's draw a giant map! With crayons!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Everyone is shouting! I'm getting all mixed up!",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Shh. Everybody. Quiet. Just listen.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And for the very first time ever, Wheelburg was completely quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Toot-toot-TOOT! Very close now.",
+    "cam": "overhead"
+   },
+   {
+    "who": "wren",
+    "say": "That's not a goose! That's my mum's honk!",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S NOT A GOOSE!",
+    "cam": "close:wren",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:wren"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Told you. Geese go honk. Mums go toot-toot-TOOT.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Of course! Your mum isn't at home. She's out looking for you!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wren, answer her. Your loudest honk, please!",
+    "cam": "two:bolt,wren",
+    "do": [
+     [
+      "bolt",
+      "turn:wren"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Toot-toot-toot! Oh no, it's too small! She'll never hear it!",
+    "cam": "close:wren",
+    "do": [
+     [
+      "wren",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then we all help! Everyone, together! One, two, three!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "TOOT-TOOT-TOOT!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "TOOT-TOOT-TOOOOOT!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And around the corner rolled a big green truck.",
+    "cam": "wide",
+    "do": [
+     [
+      "mum",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "mum",
+    "say": "Wren! My little Wren! I've been tooting all over town!",
+    "cam": "close:mum",
+    "do": [
+     [
+      "mum",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Mum! I followed a butterfly, and then I got lost!",
+    "cam": "two:mum,wren",
+    "do": [
+     [
+      "wren",
+      "to:mum"
+     ]
+    ]
+   },
+   {
+    "who": "mum",
+    "say": "You stayed in one place and found helpers. That was smart.",
+    "cam": "two:mum,wren",
+    "do": [
+     [
+      "gift",
+      "give:mum"
+     ]
+    ]
+   },
+   {
+    "who": "mum",
+    "say": "We just moved here. Our new house is on Bakery Lane!",
+    "cam": "close:mum",
+    "do": [
+     [
+      "mum",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bakery Lane? Bread smell! I was so close to sniffing it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. When you're lost, stay put and listen.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "wren",
+    "say": "Thank you, Grumpy. You're the best listener in Wheelburg!",
+    "cam": "two:grumpy,wren",
+    "do": [
+     [
+      "wren",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Don't tell anyone. I'm still grumpy.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Wren and her mum tooted all the way home.",
+    "cam": "wide",
+    "do": [
+     [
+      "mum",
+      "exit"
+     ],
+     [
+      "wren",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "A GOLDEN WHEEL?!",
+    "cam": "podium",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "wheel",
+      "show"
+     ],
+     [
+      "wheel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Who left the golden wheel? Find out next time in Wheelburg!",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can We Get Wren Home Before Dark? 🌅🚗 Lost Little Car",
+  "description": "A tiny car named Wren rolls into Wheelburg, lost, with only three clues: a red door, a choo-choo and the smell of warm bread. Inspector Bolt and friends race the sunset to get her home, but the answer is a sound everyone ignored. When you're lost, stay put and listen! Inspector Bolt #9\n\n#kidscartoon #cartooncars #storiesforkids",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "lost car",
+   "inspector bolt",
+   "stories for kids",
+   "listening",
+   "sunset",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "LOST BEFORE DARK?!",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "¿Llevamos a Wren a casa antes de la noche? 🌅🚗",
+    "description": "Una cochecita llamada Wren llega perdida a Wheelburg con solo tres pistas: una puerta roja, un chu-chu y olor a pan caliente. El Inspector Bolt y sus amigos corren contra el atardecer para llevarla a casa, pero la respuesta es un sonido que todos ignoraron. Si te pierdes, quédate quieto y escucha. Inspector Bolt #9\n\n#dibujosanimados #coches #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Vamos levar a Wren para casa antes de escurecer? 🌅🚗",
+    "description": "Uma carrinha chamada Wren chega perdida a Wheelburg com só três pistas: uma porta vermelha, um piuí do trem e cheiro de pão quentinho. O Inspetor Bolt e os amigos correm contra o pôr do sol para levá-la para casa, mas a resposta é um som que todos ignoraram. Se você se perder, fique parado e escute! Inspetor Bolt #9\n\n#desenhoinfantil #carros #historiasinfantis"
+   },
+   "ar": {
+    "title": "هل نوصل رين إلى بيتها قبل الظلام؟ 🌅🚗",
+    "description": "سيارة صغيرة اسمها رين تصل إلى ويلبرغ وهي تائهة، ومعها ثلاثة أدلة فقط: باب أحمر، وصوت قطار، ورائحة خبز دافئ. يسابق المفتش بولت وأصدقاؤه غروب الشمس لإيصالها إلى بيتها، لكن الجواب كان صوتًا لم ينتبه إليه أحد. إذا تهت، ابقَ مكانك واستمع! المفتش بولت #9\n\n#كرتون_اطفال #سيارات #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Wren rentrera-t-elle avant la nuit ? 🌅🚗",
+    "description": "Une petite voiture nommée Wren arrive perdue à Wheelburg avec seulement trois indices : une porte rouge, un tchou-tchou et une odeur de pain chaud. L'inspecteur Bolt et ses amis font la course contre le coucher du soleil pour la ramener chez elle, mais la réponse est un bruit que tout le monde a ignoré. Quand on est perdu, on reste sur place et on écoute ! Inspecteur Bolt #9\n\n#dessinanimé #voitures #histoirespourenfants"
+   },
+   "ja": {
+    "title": "暗くなる前にレンをおうちへ帰せる？🌅🚗",
+    "description": "まいごの小さな車レンがウィールバーグにやってきた。手がかりは、赤いドア、シュッシュッポッポの音、あったかいパンのにおいの3つだけ。ボルト警部となかまたちは夕日と競争しておうちをさがしますが、答えはみんなが聞きのがしていた音でした。まいごになったら、その場で止まって耳をすまそう！ボルト警部 #9\n\n#こども向けアニメ #くるま #こどものおはなし"
+   },
+   "ko": {
+    "title": "어두워지기 전에 렌을 집에 데려다줄 수 있을까? 🌅🚗",
+    "description": "길 잃은 꼬마 자동차 렌이 휠버그에 왔어요. 단서는 빨간 문, 칙칙폭폭 소리, 따뜻한 빵 냄새 세 가지뿐! 볼트 경감과 친구들은 해가 지기 전에 렌의 집을 찾으려 달리지만, 정답은 모두가 흘려들은 소리였어요. 길을 잃으면 그 자리에 멈추고 귀를 기울여요! 볼트 경감 #9\n\n#어린이만화 #자동차 #어린이동화"
+   },
+   "de": {
+    "title": "Bringen wir Wren vor der Dunkelheit heim? 🌅🚗",
+    "description": "Das kleine Auto Wren kommt verirrt nach Wheelburg und hat nur drei Hinweise: eine rote Tür, ein Tschu-tschu und den Duft von warmem Brot. Inspektor Bolt und seine Freunde fahren mit der Abendsonne um die Wette, doch die Antwort ist ein Geräusch, das alle überhört haben. Wenn du dich verirrst: bleib stehen und hör gut zu! Inspektor Bolt #9\n\n#kinderserie #autos #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "A LOST LITTLE CAR!",
+   "title": "A Tiny Car Is LOST in Wheelburg! 🚗🌅 #shorts",
+   "description": "She only has three clues and the sun is going down! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "lost car"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Una cochecita perdida en Wheelburg! 🚗🌅 #shorts",
+     "description": "¡Solo tiene tres pistas y el sol se está poniendo! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma carrinha perdida em Wheelburg! 🚗🌅 #shorts",
+     "description": "Ela só tem três pistas e o sol está se pondo! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "سيارة صغيرة تائهة في ويلبرغ! 🚗🌅 #shorts",
+     "description": "معها ثلاثة أدلة فقط والشمس تغرب! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une petite voiture perdue à Wheelburg ! 🚗🌅 #shorts",
+     "description": "Elle n'a que trois indices et le soleil se couche ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "小さな車がまいごに！🚗🌅 #shorts",
+     "description": "手がかりは3つだけ、もうすぐ日がしずむ！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "꼬마 자동차가 길을 잃었어요! 🚗🌅 #shorts",
+     "description": "단서는 세 개뿐인데 해가 지고 있어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein kleines Auto hat sich verirrt! 🚗🌅 #shorts",
+     "description": "Nur drei Hinweise, und die Sonne geht unter! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 37,
+   "dur": 30,
+   "top": "UP, UP, UP!",
+   "title": "The Truth Press Becomes a Lookout! 👀🚗 #shorts",
+   "description": "Pip goes up high to spot a red door. Is it Wren's house? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "inspector bolt"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La Prensa de la Verdad se vuelve una torre! 👀🚗 #shorts",
+     "description": "Pip sube muy alto para buscar una puerta roja. ¿Será la casa de Wren? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Prensa da Verdade vira uma torre! 👀🚗 #shorts",
+     "description": "Pip sobe bem alto para achar uma porta vermelha. Será a casa da Wren? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مكبس الحقيقة يصبح برج مراقبة! 👀🚗 #shorts",
+     "description": "بيب تصعد عاليًا لتبحث عن باب أحمر. هل هو بيت رين؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La Presse de Vérité devient une tour de guet ! 👀🚗 #shorts",
+     "description": "Pip monte tout en haut pour repérer une porte rouge. Est-ce la maison de Wren ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ほんとうプレスが見張り台に！👀🚗 #shorts",
+     "description": "ピップが高いところから赤いドアをさがすよ。レンのおうちかな？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "진실 프레스가 전망대가 됐어요! 👀🚗 #shorts",
+     "description": "핍이 높이 올라가 빨간 문을 찾아요. 렌의 집일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Wahrheitspresse wird zum Aussichtsturm! 👀🚗 #shorts",
+     "description": "Pip fährt ganz nach oben und sucht eine rote Tür. Ist das Wrens Haus? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 57,
+   "dur": 22,
+   "top": "THINK, EVERYONE!",
+   "title": "Only a Tiny Bit of Sun Left! 🌅😮 #shorts",
+   "description": "Everyone shouts a plan at once… then Grumpy says: listen. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "stories for kids"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Solo queda un poquito de sol! 🌅😮 #shorts",
+     "description": "Todos gritan un plan a la vez… y Grumpy dice: escuchen. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Só resta um pouquinho de sol! 🌅😮 #shorts",
+     "description": "Todo mundo grita um plano ao mesmo tempo… e o Grumpy diz: escutem. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يبقَ إلا القليل من الشمس! 🌅😮 #shorts",
+     "description": "الجميع يصرخون بخططهم معًا… ثم يقول غرامبي: استمعوا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il ne reste qu'un tout petit bout de soleil ! 🌅😮 #shorts",
+     "description": "Tout le monde crie un plan en même temps… puis Grumpy dit : écoutez. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "お日さまがあとちょっとしかない！🌅😮 #shorts",
+     "description": "みんながいっせいに作戦をさけぶ…するとグランピーが「聞いて」。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "해가 조금밖에 안 남았어요! 🌅😮 #shorts",
+     "description": "모두 한꺼번에 작전을 외치는데… 그럼피가 말해요. 들어 봐. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Nur noch ein kleines Stück Sonne! 🌅😮 #shorts",
+     "description": "Alle rufen gleichzeitig einen Plan… dann sagt Grumpy: Hört zu. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
