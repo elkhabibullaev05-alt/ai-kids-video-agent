@@ -370,10 +370,9 @@
     {
       "episode": 11,
       "date": "2026-10-22",
-      "topic": "SpaceX and Tesla boards form special committees of independent directors to explore a merger (Musk on SpaceX Q3 call Oct 20, 2026; ~$3.5T combined; SpaceX Q3 rev $14.6B, AI $7.56B; Tesla Q3 net $787M -43%; Tesla vote needs >50% of all shares)",
+      "topic": "Possible Tesla-SpaceX merger: both boards form special committees; SpaceX Q3 (AI biggest business); Tesla Q3",
       "title": "Why Would Tesla and SpaceX Become One Company?",
       "minutes": 11.4,
-      "rek_ball": 87,
       "sources": [
         "https://techcrunch.com/2026/10/20/spacex-and-tesla-boards-form-special-committees-to-review-merger/",
         "https://www.axios.com/2026/10/20/spacex-tesla-merger-talks",
@@ -383,45 +382,38 @@
         "https://electrek.co/2026/10/21/tesla-tsla-q3-2026-financial-results/",
         "https://www.investing.com/news/transcripts/earnings-call-transcript-tesla-beats-q3-2026-estimates-as-stock-slips-after-hours-93CH-4964365"
       ],
-      "uploads": []
-    }
-  ],
-  "pending_uploads": [
-    {
-      "episode": 11,
-      "script": "scripts/ep011.json",
-      "title": "Why Would Tesla and SpaceX Become One Company?",
       "rek_ball": 87,
-      "news_date": "2026-10-20",
-      "upload_by": "2026-10-24",
-      "planned_publish_at": "2026-10-23T21:45:00Z",
-      "reason": "computer offline 2026-10-22 ~03:00Z (remote bridge disconnected)",
-      "shorts": [
+      "uploads": [
         {
-          "start": 0,
-          "dur": 31,
-          "top": "He Taped a Rocket to a Car?",
-          "title": "Tesla + SpaceX = One $3.5 Trillion Company? #shorts",
-          "planned_publish_at": "2026-10-23T12:45:00Z",
-          "rek_ball": 96,
-          "kuchaytir": true
+          "title": "Why Would Tesla and SpaceX Become One Company?",
+          "publish_at": "2026-10-23T21:45:00Z",
+          "video_id": "ELmpTRJaGhk",
+          "visibility": "scheduled",
+          "category": "News & Politics"
         },
         {
-          "start": 170.3,
-          "dur": 32.5,
-          "top": "SpaceX's #1 Business Isn't Rockets",
+          "kind": "short",
+          "title": "Tesla + SpaceX = One $3.5 Trillion Company? #shorts",
+          "publish_at": "2026-10-23T12:45:00Z",
+          "video_id": "FlJumI4vgx4",
+          "visibility": "scheduled",
+          "rek_ball": 96
+        },
+        {
+          "kind": "short",
           "title": "SpaceX's Biggest Business Isn't Rockets Anymore #shorts",
-          "planned_publish_at": "2026-10-23T18:45:00Z",
-          "rek_ball": 97,
-          "kuchaytir": true
+          "publish_at": "2026-10-23T18:45:00Z",
+          "video_id": "9o-Uh1_ny-Q",
+          "visibility": "scheduled",
+          "rek_ball": 97
         }
-      ],
-      "note": "re-render from script if out/ is gone; make Shorts with tools/make_short.py then rek_ball --kuchaytir"
+      ]
     }
   ],
+  "pending_uploads": [],
   "translations_pending": [
     {
-      "video_id": "7QbhnFsgfWk",
+      "video_id": "ELmpTRJaGhk",
       "langs": [
         "es",
         "pt",
@@ -431,7 +423,33 @@
         "ko",
         "de"
       ],
-      "note": "auto-dub was still processing 2026-10-21 08:45Z; verify title+description rows are 'Chop etilgan', else paste from uploads-doodle:tr_ep010.json"
+      "what": "check Studio Tillar page: YouTube auto-translated ep009 title/description into 20 languages (seen 2026-10-22), so expect the same here; if missing, use tr_ep011.json (key long) on uploads-doodle branch"
+    },
+    {
+      "video_id": "FlJumI4vgx4",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "check Studio Tillar page: YouTube auto-translated ep009 title/description into 20 languages (seen 2026-10-22), so expect the same here; if missing, use tr_ep011.json (key s1) on uploads-doodle branch"
+    },
+    {
+      "video_id": "9o-Uh1_ny-Q",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "check Studio Tillar page: YouTube auto-translated ep009 title/description into 20 languages (seen 2026-10-22), so expect the same here; if missing, use tr_ep011.json (key s2) on uploads-doodle branch"
     }
   ],
   "translations_resolved": [
@@ -443,9 +461,5 @@
       ],
       "note": "2026-10-21: Studio shows 20 languages with title+description 'Chop etilgan' via YouTube auto-dub; nothing left to add"
     }
-  ],
-  "lock": {
-    "until": "2026-10-22T12:26:14Z",
-    "by": "session_01XZtHYtRmTqf97Egt4W5cXY"
-  }
+  ]
 }
