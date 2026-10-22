@@ -1,0 +1,1041 @@
+{
+ "id": "20261024-1-stay-awake-surprise",
+ "plot": "At sunset in Grandma's living room Max must stay awake until the clock rings eight times for Grandma's surprise, but Bird's jumping, Mouse's tickle and Dog's game of fetch all end in naps, until Bird works out that Dog's kind refills of warm milk were making Max sleepy; cold water and fresh air keep him awake and the surprise is a cake for Max's one-year Home Day.",
+ "script": {
+  "title": "Will Max Fall Asleep Before the Surprise?",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     4,
+     9,
+     0.9
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "pink",
+    "at": [
+     -1,
+     9,
+     0.5
+    ],
+    "visible": false,
+    "scale": 1.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Yawwwn! Whoa... my eyes are closing all by themselves!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, wake up! Can you stay awake for the big surprise?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "STAY AWAKE, MAX!",
+    "cam": "close:max",
+    "hold": 1.3,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is sunset in Grandma's cozy living room.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When the big clock rings eight times, my surprise is ready!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Until then, nobody peeks in the kitchen. Here, Max. Warm milk.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Warm milk with honey. Max drinks it all. Slurp, slurp!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "grandma",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mmm, yummy! Eight rings? No problem at all. I am wide awake!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I will be your wake-up buddy. Nobody naps on my watch!",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "See? Eyes open. Ears up. Tail up. A super awake cat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Good! Now we just wait. And wait. And wait...",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big clock rings once. DING! Seven more to go.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yawwwn... why is this room so soft and warm?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No sleeping! Quick, jump up and down with me!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Jump! Jump! Jump! Jump!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps so much, he gets dizzy and flops on the rug.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This rug is so fluffy. Just one tiny nap...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! I brought you more warm milk! Milk makes you strong!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, Dog. Slurp, slurp... Yawwwn.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Drink it all up! Strong cats never get sleepy!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "DING, DING! The clock rings two more times. Five to go!",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! If you fall asleep now, you miss the whole surprise!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Leave it to me! Nobody sleeps through the Mouse tickle!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse tickles Max's nose with her tiny tail. Tickle, tickle.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ha... ha... HA-CHOO!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big sneeze blows Mouse right onto the sofa. Boing!",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "to:-8,13"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Oops! Well, at least that sneeze woke you up!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thanks, Mouse! Now I will hold my eyes open with my paws!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But holding eyes open is hard. Soon his paws get sleepy too.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Even your paws are snoring!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It did! I am awake. I am awake. I am... zzz.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I know! Fetch keeps everybody awake! Go get the ball, Max!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog throws the red ball across the rug. Max runs after it...",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,9"
+     ],
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...and curls up around it like a soft round pillow.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, that is not fetch. That is a nap with a ball!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "He's snoring on the ball! Dog, what do we do now?",
+    "cam": "two:bird,dog",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Easy. My loudest bark. Ready? One, two... WOOF!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max wakes up so fast, he bounces right up in the air!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Who? What? Was that eight rings? Did I miss it?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Not yet! But you snored right through three rings!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "DING! That makes six rings now. Only two to go!",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Only two rings left! If Max sleeps now, it's all for nothing!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry! One more cup of warm milk will save him!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wait! Dog... how many cups of milk did Max drink?",
+    "cam": "two:bird,dog",
+    "do": [
+     [
+      "bird",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One from Grandma. One from me. And this one makes three!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Three cups of WARM milk! That is why Max is so sleepy!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT WAS THE MILK!",
+    "cam": "two:bird,dog",
+    "hold": 1.3,
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bird",
+    "say": "My mama gives me warm milk at bedtime. It makes you sleepy!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oh no. I was helping Max sleep, not helping him wake!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's okay, Dog. You were being kind. But what now?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Cold water, a big stretch, and fresh air by the window!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And no more warm milk! Dog, put that cup down, please.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay, okay. I will drink it myself. Slurp... Yawwwn.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sips cold water. Brrr! His whiskers stand straight up.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He stretches tall, tall, tall by the open window.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,13"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Whoa! The cool air tickles my ears. My eyes are open!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look at him! Bright eyes! Wiggly tail! A wide-awake cat!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Shh! Listen, everybody! Here comes the very last ring!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big clock rings one last time. DING!",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Surprise! One whole year ago today, Max came home to us!",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "HAPPY HOME DAY, MAX!",
+    "cam": "prop:cake",
+    "hold": 1.3,
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A cake just for me? I stayed awake! I did it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hooray for Max! And no more warm milk tonight!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When friends help, they ask first what you really need.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, let's find out what Dog dreams about! Yawwwn... zzz.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Will Max Fall Asleep Before the Surprise? 😴🎂",
+  "description": "Grandma's surprise comes when the clock rings eight times, but Max can't keep his eyes open! Bird's jumps, Mouse's tickle and Dog's fetch all end in naps, until Bird finds the sleepy secret. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "stay awake",
+   "sleepy cat",
+   "bedtime story for kids",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "funny cat",
+   "surprise cake"
+  ],
+  "thumb_text": "DON'T SLEEP!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¿Se dormirá Max antes de la sorpresa? 😴🎂",
+    "description": "La sorpresa de la abuela llega cuando el reloj suene ocho veces, ¡pero Max no puede mantener los ojos abiertos! Los saltos de Pájaro, las cosquillas de Ratón y el juego de Perro terminan en siestas, hasta que Pájaro descubre el secreto. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Max vai dormir antes da surpresa? 😴🎂",
+    "description": "A surpresa da vovó chega quando o relógio tocar oito vezes, mas Max não consegue ficar de olhos abertos! Os pulos do Passarinho, as cócegas do Ratinho e a brincadeira do Cachorro terminam em sonecas, até o Passarinho descobrir o segredo. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "هل سينام ماكس قبل المفاجأة؟ 😴🎂",
+    "description": "مفاجأة الجدة تأتي عندما تدق الساعة ثماني مرات، لكن ماكس لا يستطيع إبقاء عينيه مفتوحتين! قفزات العصفور ودغدغة الفأر ولعبة الكلب كلها تنتهي بقيلولة، حتى يكتشف العصفور السر. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Max va-t-il s'endormir avant la surprise ? 😴🎂",
+    "description": "La surprise de Mamie arrive quand l'horloge sonnera huit fois, mais Max n'arrive pas à garder les yeux ouverts ! Les sauts d'Oiseau, les chatouilles de Souris et le jeu de Chien finissent en sieste, jusqu'à ce qu'Oiseau trouve le secret. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "マックス、サプライズの前にねちゃう？😴🎂",
+    "description": "時計が8回なったら、おばあちゃんのサプライズ！でもマックスはねむくて目があけていられない！トリのジャンプも、ネズミのこちょこちょも、イヌのボールあそびも、ぜんぶおひるねに…さいごにトリがねむけのひみつを見つけます。#maxthecuriouscat #子供向けアニメ #おはなし"
+   },
+   "ko": {
+    "title": "맥스는 깜짝 선물 전에 잠들까요? 😴🎂",
+    "description": "시계가 여덟 번 울리면 할머니의 깜짝 선물이 와요. 그런데 맥스는 자꾸 눈이 감겨요! 새의 점프도, 생쥐의 간지럼도, 강아지의 공놀이도 모두 낮잠으로 끝나요. 그러다 새가 졸음의 비밀을 알아내요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Schläft Max vor der Überraschung ein? 😴🎂",
+    "description": "Omas Überraschung kommt, wenn die Uhr achtmal schlägt, aber Max kann die Augen nicht offen halten! Vogels Hüpfer, Maus' Kitzeln und Hunds Ballspiel enden alle im Nickerchen, bis Vogel das Schlaf-Geheimnis findet. #maxthecuriouscat #kinderzeichentrick #geschichtenfuerkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 11,
+   "dur": 30,
+   "top": "DON'T FALL ASLEEP! 😴",
+   "title": "Max Can't Keep His Eyes Open! 😴🐱 #shorts",
+   "description": "Five more rings until the surprise... can Max make it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max no puede mantener los ojos abiertos! 😴🐱 #shorts",
+     "description": "Faltan cinco campanadas para la sorpresa... ¿lo logrará Max? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max não consegue ficar de olhos abertos! 😴🐱 #shorts",
+     "description": "Faltam cinco badaladas para a surpresa... Max vai conseguir? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس لا يستطيع إبقاء عينيه مفتوحتين! 😴🐱 #shorts",
+     "description": "بقيت خمس دقات حتى المفاجأة... هل سينجح ماكس؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max n'arrive pas à garder les yeux ouverts ! 😴🐱 #shorts",
+     "description": "Encore cinq coups avant la surprise... Max va-t-il tenir ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、目があけていられない！😴🐱 #shorts",
+     "description": "サプライズまであと5回…マックスはおきていられる？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 눈을 뜨고 있을 수가 없어요! 😴🐱 #shorts",
+     "description": "깜짝 선물까지 종소리 다섯 번… 맥스는 버틸 수 있을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max kann die Augen nicht offen halten! 😴🐱 #shorts",
+     "description": "Noch fünf Schläge bis zur Überraschung... schafft Max es? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 31,
+   "dur": 30,
+   "top": "FETCH... OR NAP? 😂",
+   "title": "Dog Said Fetch... Max Took a Nap! 😂🐶 #shorts",
+   "description": "Only two rings left, and Max is hugging the ball like a pillow. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perro dijo ¡a buscar!... ¡y Max se durmió! 😂🐶 #shorts",
+     "description": "Solo quedan dos campanadas y Max abraza la pelota como una almohada. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro disse 'pega'... e o Max dormiu! 😂🐶 #shorts",
+     "description": "Só faltam duas badaladas e o Max está abraçado na bola como um travesseiro. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب قال أحضر الكرة... وماكس نام! 😂🐶 #shorts",
+     "description": "بقيت دقتان فقط، وماكس يعانق الكرة مثل وسادة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien a dit « va chercher »... Max a fait la sieste ! 😂🐶 #shorts",
+     "description": "Plus que deux coups, et Max serre la balle comme un oreiller. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが「とってこい！」…マックスはおひるね！😂🐶 #shorts",
+     "description": "のこりはあと2回。なのにマックスはボールをまくらにしてぐっすり。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 '물어 와!' 했는데... 맥스는 낮잠! 😂🐶 #shorts",
+     "description": "종소리는 두 번 남았는데, 맥스는 공을 베개처럼 안고 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund sagte 'Hol den Ball'... Max machte ein Nickerchen! 😂🐶 #shorts",
+     "description": "Nur noch zwei Schläge, und Max kuschelt mit dem Ball wie mit einem Kissen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

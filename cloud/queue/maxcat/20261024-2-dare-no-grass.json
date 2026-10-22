@@ -1,0 +1,1052 @@
+{
+ "id": "20261024-2-dare-no-grass",
+ "plot": "On a bright morning in the park Dog dares Max to reach Grandma's picnic before her second bell without touching the grass; riding the ball, being carried by Bird and one giant leap all fail, until Max notices a path of blue boxes and finds out Dog, the one who gave the dare, secretly carried them there all morning so his friend could win.",
+ "script": {
+  "title": "Dog's Dare: Cross the Park Without Touching Grass",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -5,
+     6.5,
+     0.9
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "basket",
+    "type": "gift",
+    "color": "yellow",
+    "at": [
+     10,
+     14,
+     0.5
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "box0",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -6,
+     6.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "box1",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -3,
+     8,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "box2",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     2,
+     10,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "box3",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     6,
+     12,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Max! I dare you! Cross the park without touching the grass!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No grass at all? Not one paw? Okay... dare accepted!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DON'T TOUCH THE GRASS!",
+    "cam": "two:max,dog",
+    "hold": 1.3,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a bright morning. Grandma's picnic is far across the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:9,15"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Lunch starts when I ring my bell twice. Don't be late!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hear that, Max? Get there before the bell. Grass is a no-no!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'll be the judge! One paw on grass, and you start over!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog trots away with a blue box in his mouth. Hmm.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Where is Dog going with a box? Never mind. Time to win!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Plan one! I will ride Dog's red ball, like a circus cat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs on the ball. It rolls... and rolls... and ROLLS!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,7"
+     ],
+     [
+      "ball",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Whoa, whoa, WHOA! Stop, ball! Please stop!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look! The fastest circus cat in the whole park!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plop! Max tumbles off, right onto the soft green grass.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grass! That counts! Back to the bench, Max!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The grass is everywhere! How do I get over all of it?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Silly ball. Okay, Mouse. Plan number two!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "to:-8,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, Dog trots past again. Thump! Something lands in the grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-1,9"
+     ],
+     [
+      "box1",
+      "drop:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Plan two is me! I can carry you, Max. I'm super strong!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-6,8"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Really, Bird? You are smaller than my tail.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hold my feet! One, two, three... FLAP!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flaps and flaps. Max goes up one tiny inch.",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Puff... puff... Max, how many fish did you eat for breakfast?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Only five. Okay, six. Maybe I eat less fish tomorrow.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's paws touch the grass again. Mouse shakes her head.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hurry, Max! When the bell rings twice, lunch starts without you!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Plan two and a half! I will tiptoe on the flowers!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "No, Max! Flowers are for smelling, not for stepping on!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You're right. Sorry, flowers. I will find another way.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, Dog gives a happy little wag. Thump!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind the trees, Dog is busy again. Thump! Thump!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:3,11"
+     ],
+     [
+      "box2",
+      "drop:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Plan three. One super long jump, all the way. Watch this!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs. Max leaps. Max flies through the air...",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...and lands in the middle of the park. On the grass.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "dog",
+      "to:6,12"
+     ],
+     [
+      "box3",
+      "drop:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "What a great jump! A great jump right onto grass.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ooh, so close! Only... the whole park to go.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Three plans, and still grass on my paws. This dare is impossible!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Maybe this dare is too hard, even for a clever cat.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't give up, Max! Look around you! Look really close!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DING!",
+    "cam": "close:grandma",
+    "hold": 1.0,
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grandma",
+    "say": "That is bell number one! One more, and lunch begins!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma lifts her bell up high. Max has to hurry!",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One ring left, Max! You have to get there right now!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks down. Right next to his paw is a blue box.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "box0",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A box? And there's another one! And another one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "box1",
+      "bounce"
+     ],
+     [
+      "box2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "A BOX PATH!",
+    "cam": "overhead",
+    "hold": 1.3,
+    "do": [
+     [
+      "box3",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "Boxes all the way to the picnic! But who put them here?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Not me! My feet are too tiny to carry boxes.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Not me! I'm the judge. Judges don't carry boxes.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me! I carried them all morning. I wanted you to win!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But Dog, it was your dare! Didn't you want me to lose?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No way! Dares are only fun when friends can win!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Every time you fell, I put down one more box.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog... you were helping me the whole time?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hops onto the first box. Then the next. Hop, hop!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Box... box... box! Not one paw on the grass!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Go, Max, go! Hop like a frog!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From the last box, Max takes one giant leap...",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...and lands on the picnic blanket just as the bell rings! DING!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:8,13"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "HE MADE IT!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Not one paw on the grass! Max wins the dare!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And I win too, because now we share the picnic!",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The best dares are the ones where friends help each other.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, I dare Dog to catch a bubble without popping it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Dog's Dare: Cross the Park Without Touching Grass! 🐾😂",
+  "description": "Dog dares Max to reach Grandma's picnic without one paw on the grass! A runaway ball, a tiny Bird lift and a giant leap all end on the grass, until Max finds a mystery path and the dare-giver's secret. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "dare for kids",
+   "floor is lava game",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "funny dog",
+   "park story",
+   "friendship story"
+  ],
+  "thumb_text": "NO GRASS?!",
+  "thumb_beat": 43,
+  "localizations": {
+   "es": {
+    "title": "El reto de Perro: ¡cruzar el parque sin tocar el césped! 🐾😂",
+    "description": "¡Perro reta a Max a llegar al pícnic de la abuela sin poner una pata en el césped! Una pelota rodante, un vuelo con Pájaro y un salto gigante terminan en el césped, hasta que Max encuentra un camino misterioso y el secreto de Perro. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "O desafio do Cachorro: atravessar o parque sem pisar na grama! 🐾😂",
+    "description": "O Cachorro desafia o Max a chegar ao piquenique da vovó sem pôr uma pata na grama! Uma bola que rola, um voo com o Passarinho e um pulo gigante terminam na grama, até Max achar um caminho misterioso e o segredo do Cachorro. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "تحدي الكلب: اعبر الحديقة دون أن تلمس العشب! 🐾😂",
+    "description": "الكلب يتحدى ماكس أن يصل إلى نزهة الجدة دون أن يلمس العشب بأي قدم! الكرة المتدحرجة وطيران العصفور والقفزة العملاقة كلها تنتهي على العشب، حتى يجد ماكس طريقًا غامضًا وسرّ الكلب. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Le défi de Chien : traverser le parc sans toucher l'herbe ! 🐾😂",
+    "description": "Chien défie Max d'atteindre le pique-nique de Mamie sans poser une patte sur l'herbe ! Une balle qui roule, un vol avec Oiseau et un saut géant finissent tous dans l'herbe, jusqu'à ce que Max trouve un chemin mystérieux et le secret de Chien. #maxthecuriouscat #dessinanime #histoirespourenfants"
+   },
+   "ja": {
+    "title": "イヌのちょうせん：しばふにさわらず公園をわたれ！🐾😂",
+    "description": "イヌがマックスにちょうせん！しばふに足をつけずに、おばあちゃんのピクニックまで行けるかな？ころがるボールも、トリのおてつだいも、大ジャンプもしっぱい…でもマックスがふしぎな道と、イヌのひみつを見つけます。#maxthecuriouscat #子供向けアニメ #おはなし"
+   },
+   "ko": {
+    "title": "강아지의 도전: 잔디를 밟지 않고 공원을 건너라! 🐾😂",
+    "description": "강아지가 맥스에게 도전해요. 잔디에 발 하나도 대지 않고 할머니의 소풍 자리까지 갈 수 있을까요? 굴러가는 공, 새의 비행, 거대한 점프 모두 잔디 위로 끝나요. 그러다 맥스가 신기한 길과 강아지의 비밀을 찾아내요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Hunds Mutprobe: Durch den Park, ohne das Gras zu berühren! 🐾😂",
+    "description": "Hund fordert Max heraus, Omas Picknick zu erreichen, ohne eine Pfote aufs Gras zu setzen! Ein rollender Ball, ein Flug mit Vogel und ein Riesensprung enden alle im Gras, bis Max einen geheimnisvollen Weg und Hunds Geheimnis findet. #maxthecuriouscat #kinderzeichentrick #geschichtenfuerkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 30,
+   "top": "RIDING THE BALL?! 😱",
+   "title": "Max Tried to Ride a Ball Like a Circus Cat! 😱🐱 #shorts",
+   "description": "The rule: don't touch the grass. The ball had other plans. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max intentó montar una pelota como un gato de circo! 😱🐱 #shorts",
+     "description": "La regla: no tocar el césped. La pelota tenía otros planes. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max tentou andar numa bola como um gato de circo! 😱🐱 #shorts",
+     "description": "A regra: não pisar na grama. A bola tinha outros planos. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس حاول ركوب الكرة مثل قط السيرك! 😱🐱 #shorts",
+     "description": "القاعدة: لا تلمس العشب. لكن الكرة كان لها رأي آخر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max a voulu monter sur une balle comme un chat de cirque ! 😱🐱 #shorts",
+     "description": "La règle : ne pas toucher l'herbe. La balle avait d'autres projets. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、サーカスのネコみたいにボールのり！😱🐱 #shorts",
+     "description": "ルールは「しばふにさわらない」。でもボールはいうことをきかなくて…本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 서커스 고양이처럼 공을 타 봤어요! 😱🐱 #shorts",
+     "description": "규칙: 잔디를 밟지 마세요. 그런데 공은 생각이 달랐어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max wollte wie eine Zirkuskatze auf einem Ball reiten! 😱🐱 #shorts",
+     "description": "Die Regel: Gras nicht berühren. Der Ball hatte andere Pläne. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
