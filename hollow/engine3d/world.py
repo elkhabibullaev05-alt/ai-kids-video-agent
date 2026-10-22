@@ -164,7 +164,14 @@ def _shape(key, kind, s, ch):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.45 * s, location=(0, -1.95 * s, 2.75 * s)); hd = add(_o(), hide); hd.scale = (0.7, 1.25, 0.7); parent(hd, o)
         bpy.ops.mesh.primitive_cone_add(radius1=0.6 * s, radius2=0.32 * s, depth=1.9 * s, location=(0, 0.25 * s, 3.25 * s)); parent(add(_o(), cloak), o)
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0.25 * s, 4.15 * s)); sh = add(_o(), cloak); sh.scale = (1.3, 0.8, 0.35); parent(sh, o)
-        bpy.ops.mesh.primitive_cylinder_add(radius=0.05 * s, depth=0.4 * s, location=(0, 0.25 * s, 4.35 * s)); parent(add(_o(), mat("neckstub", (0.1, 0.02, 0.02), 0.8)), o)
+        if ch.get("rider"):  # Wild Hunt rider: hooded black head + curved hunting horn (no neck stump)
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0.2 * s, 4.75 * s)); hh = add(_o(), cloak); hh.scale = (1, 1, 1.2); parent(hh, o)
+            bpy.ops.mesh.primitive_cone_add(radius1=0.32 * s, radius2=0.12 * s, depth=0.6 * s, location=(0, 0.35 * s, 5.4 * s), rotation=(math.radians(20), 0, 0)); parent(add(_o(), cloak), o)
+            bpy.ops.mesh.primitive_cone_add(radius1=0.18 * s, radius2=0.04 * s, depth=1.1 * s, location=(0.55 * s, -0.25 * s, 4.7 * s), rotation=(math.radians(-60), math.radians(30), 0)); parent(add(_o(), mat("horn", (0.75, 0.62, 0.35), 0.4, 0.3)), o)
+            for sx in (-0.13, 0.13):  # faint ember eyes under the hood
+                bpy.ops.mesh.primitive_uv_sphere_add(radius=0.06 * s, location=(sx * s, -0.27 * s, 4.75 * s)); parent(add(_o(), mat("ridereye", (1, 0.35, 0.05), 0.3, 0, 10)), o)
+        else:
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.05 * s, depth=0.4 * s, location=(0, 0.25 * s, 4.35 * s)); parent(add(_o(), mat("neckstub", (0.1, 0.02, 0.02), 0.8)), o)
         return o, 1.6 * s, 3.5 * s, 4.4 * s, -2.42 * s, 2.85 * s
     if kind == "lochbeast":  # Loch Ness shape: dark humps in the water + long neck and small head (front = -y)
         skin = mat(f"lb_{key}", col, 0.35, 0.0)

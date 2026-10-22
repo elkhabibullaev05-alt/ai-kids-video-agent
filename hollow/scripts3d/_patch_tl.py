@@ -4,6 +4,7 @@ sc, tlp = json.load(open(sys.argv[1])), sys.argv[2]
 tl = json.load(open(tlp))
 assert len(sc["beats"]) == len(tl["beats"])
 for k in ("set", "chars", "props", "title", "description"):
+    if k not in sc: continue
     tl[k] = sc[k]
 for b, tb in zip(sc["beats"], tl["beats"]):
     assert b.get("say") == tb.get("say")

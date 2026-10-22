@@ -78,7 +78,16 @@ for t, kind in EV:
     elif kind == "engine": put(sfx, t, A.engine(1.4, 120)[::-1], 0.6)
     elif kind == "rumble": put(sfx, t, rumble())
     elif kind == "whoosh": put(sfx, t, A.lp_fast(rng.normal(0, 1, int(0.5 * SR)), 1500) * np.sin(np.linspace(0, np.pi, int(0.5 * SR))) * 0.4)
+def horn():  # distant hunting horn: two rising brass notes with vibrato
+    out = []
+    for f0, d in ((147, 0.7), (220, 1.3)):
+        tt = np.arange(int(d * SR)) / SR; f = f0 * (1 + 0.006 * np.sin(2 * np.pi * 5.5 * tt))
+        ph = 2 * np.pi * np.cumsum(f) / SR
+        env = np.minimum(1, tt / 0.08) * np.minimum(1, (d - tt) / 0.25)
+        out.append(sum(np.sin(k * ph) / k ** 1.3 for k in range(1, 7)) * env * 0.22)
+    return np.concatenate(out)
 for b in TL["beats"]:
+    if b.get("sfx") == "horn": put(sfx, b["start"], horn(), 1.1)
     if b.get("sfx") == "alarm": put(sfx, b["start"], siren(b["dur"] + 0.6))
     if b.get("sfx") == "suspicious": put(sfx, b["start"], dun(), 1.2)
 
