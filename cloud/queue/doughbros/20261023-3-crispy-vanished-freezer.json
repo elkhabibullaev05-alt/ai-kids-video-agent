@@ -1,0 +1,952 @@
+{
+ "id": "20261023-3-crispy-vanished-freezer",
+ "plot": "One early morning Crispy's corner is empty and his soot prints stop inside the freezer; Bup and Zeek lead a search through ice trays and a pea avalanche while Zeek's Ember-o-Meter keeps beeping at a small black ice cube he calls broken, until tired Pim sits on the cube and finds it warm: it is Crispy, who froze his embers to hide from the glowing garden flames that hunt anything bright, the bros disguise themselves as snowballs until Pim's sneeze ruins it, and something warm starts knocking on the freezer roof.",
+ "script": {
+  "title": "Where Did Crispy Go? The Freezer Knows",
+  "set": {
+   "place": "freezer",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "meter",
+    "type": "box",
+    "color": [
+     0.9,
+     0.15,
+     0.1
+    ],
+    "on": "zeek",
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "peas",
+    "type": "box",
+    "color": [
+     0.3,
+     0.75,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     -9,
+     15,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Crispy's corner is EMPTY! Everybody, into the freezer, now!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "to:-3,8"
+     ],
+     [
+      "crispy",
+      "sleep"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Soot footprints. They go into the freezer... and then they just stop.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,10"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So where did Crispy go? Rocks don't just vanish!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY IS GONE",
+    "cam": "wide",
+    "hold": 1.3,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-m-maybe he moved out? Maybe he found a warmer family?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy never leaves without a goodbye. Well. He barely says hello.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fear not! My brand new Ember-o-Meter finds anything warm. Behold!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "meter",
+      "show"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "BEEP BEEP BEEP",
+    "cam": "prop:meter",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "meter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "It's beeping at... an ice cube. A small, black ice cube.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "That ice cube is giving me a look. I hate it.",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Nonsense. Ice cubes don't look. My meter just needs new batteries.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "meter",
+      "spin"
+     ],
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team, here's the plan. Split up. Search every single shelf!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly checks the ice tray. Zeek checks fish sticks. Pim hides.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:-8,12"
+     ],
+     [
+      "zeek",
+      "to:5,14"
+     ],
+     [
+      "pim",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Frostbite, did you take him? Oh, wait. He's at my tea party.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then who took him? Crispy! Give us a sign! A spark! Anything!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "bup",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "text": "CRACK!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "peas",
+      "show"
+     ],
+     [
+      "peas",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A frozen bag of peas bursts. Ten thousand peas roll everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "peas",
+      "spin"
+     ],
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "They're everywhere! They're freezing! One is inside my bandage!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Stay calm! Peas are harmless! Mostly! Slip-resistant feet, everyone!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If Crispy's gone, who warns us when the Thing comes down?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ember-o-Meter, again! Find the warmest thing in this whole freezer!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "meter",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "BEEP BEEP BEEP",
+    "cam": "prop:meter",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "meter",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The same ice cube?! Again?! This machine is officially broken.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's still looking at me. I think it just blinked.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Maybe the Thing on the Roof took him. It watched us.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ],
+     [
+      "lolly",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we go up there. To the roof. Tonight.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-n-nope! Not the roof! Anything but the roof! I'll take the peas!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Through the freezer window, the hundred garden flames have crept closer.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The flames are moving toward the house. We need Crispy right NOW!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hold the door, Pim! Don't let any light out of here!",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "to:pim"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Holding it! Holding it! Why is the door handle so cold?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Every shelf. Every drawer. Every pea. He's simply not here.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I need to sit down. My legs are two frozen beans.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim plops down right on top of the small black ice cube.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Huh. Why is this ice cube... warm?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Because it's me. Get off.",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT WAS CRISPY!",
+    "cam": "two:pim,crispy",
+    "hold": 1.3,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The ice cube TALKS! I'm fainting! I'm fainting right now!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy! We searched the whole freezer! You were right there!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:crispy"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I was hiding. From you. From everything.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "So my Ember-o-Meter was right. Twice. I'm keeping it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ],
+     [
+      "meter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "But why the freezer, Crispy? You hate the cold.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "to:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Those flames in the garden are eyes. They hunt anything that glows.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "My embers glow. So I froze them. Now nothing can see me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That's actually smart. Okay team, new plan. Everybody gets frosty!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Dough Bros roll in frost. Now they are five lumpy snowballs.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "spin"
+     ],
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait, did I faint? Why am I a snowball? Ah... ah... ACHOO!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim's sneeze blasts the frost off everyone. Crispy's embers glow bright again.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "crispy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim! You un-snowballed the one rock that needed to hide!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "...Thanks, Pim. Really.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "BEEP BEEP BEEP",
+    "cam": "prop:meter",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "meter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Wait. Something warm is right above us. On the freezer roof.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ],
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Knock. Knock. Knock.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHO'S KNOCKING?",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Where Did Crispy Go? The Freezer Knows… 🧊",
+  "description": "Crispy's corner is empty and his footprints stop inside the freezer. The Dough Bros search every shelf while Zeek's new gadget keeps beeping at one weird ice cube. Where would YOU hide in a freezer? 👇 #animation #doughbros #halloween",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "mystery",
+   "freezer",
+   "funny animation",
+   "spooky cartoon",
+   "halloween"
+  ],
+  "thumb_text": "WHERE IS HE?!",
+  "thumb_beat": 22,
+  "localizations": {
+   "es": {
+    "title": "¿Dónde se metió Crispy? El congelador lo sabe… 🧊",
+    "description": "El rincón de Crispy está vacío y sus huellas terminan dentro del congelador. Los Dough Bros revisan cada estante mientras el nuevo invento de Zeek no deja de pitar ante un cubito de hielo muy raro. ¿Dónde te esconderías TÚ en un congelador? 👇 #animación #doughbros #halloween"
+   },
+   "pt": {
+    "title": "Cadê o Crispy? O freezer sabe… 🧊",
+    "description": "O canto do Crispy está vazio e as pegadas dele terminam dentro do freezer. Os Dough Bros vasculham cada prateleira enquanto o novo aparelho do Zeek não para de apitar para um cubo de gelo esquisito. Onde VOCÊ se esconderia num freezer? 👇 #animação #doughbros #halloween"
+   },
+   "ar": {
+    "title": "أين ذهب كريسبي؟ الفريزر يعرف… 🧊",
+    "description": "زاوية كريسبي فارغة وآثار أقدامه تنتهي داخل الفريزر. يفتش الدو بروز كل رف بينما لا يتوقف جهاز زيك الجديد عن الصفير عند مكعب ثلج غريب. أين كنت ستختبئ في الفريزر؟ 👇 #رسوم_متحركة #doughbros #هالوين"
+   },
+   "fr": {
+    "title": "Où est passé Crispy ? Le congélateur le sait… 🧊",
+    "description": "Le coin de Crispy est vide et ses traces s'arrêtent dans le congélateur. Les Dough Bros fouillent chaque étagère pendant que le nouveau gadget de Zeek bipe sans arrêt devant un glaçon bizarre. Où TE cacherais-tu dans un congélateur ? 👇 #animation #doughbros #halloween"
+   },
+   "ja": {
+    "title": "クリスピーはどこへ？冷凍庫だけが知っている… 🧊",
+    "description": "クリスピーの隅っこが空っぽ。足あとは冷凍庫の中で途切れていた。ドウ・ブロスが棚をくまなく探す間、ジークの新発明はずっと変な氷に反応してピーピー鳴る。キミなら冷凍庫のどこに隠れる？👇 #アニメ #doughbros #ハロウィン"
+   },
+   "ko": {
+    "title": "크리스피는 어디로? 냉동실은 알고 있다… 🧊",
+    "description": "크리스피의 구석이 텅 비었고, 발자국은 냉동실 안에서 끊겼다. 도우 브로스가 선반을 샅샅이 뒤지는 동안 지크의 새 발명품은 이상한 얼음 하나를 보고 계속 삐삐 울린다. 너라면 냉동실 어디에 숨을래? 👇 #애니메이션 #doughbros #할로윈"
+   },
+   "de": {
+    "title": "Wo ist Crispy hin? Der Gefrierschrank weiß es… 🧊",
+    "description": "Crispys Ecke ist leer, und seine Spuren enden im Gefrierschrank. Die Dough Bros durchsuchen jedes Fach, während Zeeks neues Gerät immer wieder bei einem seltsamen Eiswürfel piept. Wo würdest DU dich im Gefrierschrank verstecken? 👇 #animation #doughbros #halloween"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 6,
+   "dur": 28,
+   "top": "IT KEEPS BEEPING HERE",
+   "title": "Why Is This Ice Cube Staring at Pim? 🧊 #shorts",
+   "description": "Crispy is missing, and Zeek's gadget only beeps at one tiny ice cube. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "pim",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué este cubito mira fijo a Pim? 🧊 #shorts",
+     "description": "Crispy ha desaparecido y el invento de Zeek solo pita ante un cubito de hielo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que esse cubo de gelo encara o Pim? 🧊 #shorts",
+     "description": "O Crispy sumiu, e o aparelho do Zeek só apita para um cubinho de gelo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا يحدّق مكعب الثلج هذا في بيم؟ 🧊 #shorts",
+     "description": "كريسبي مفقود، وجهاز زيك لا يصفر إلا عند مكعب ثلج صغير واحد. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi ce glaçon fixe-t-il Pim ? 🧊 #shorts",
+     "description": "Crispy a disparu, et le gadget de Zeek ne bipe que devant un petit glaçon. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "この氷、なんでピムをじっと見てるの？🧊 #shorts",
+     "description": "クリスピーが行方不明。ジークの発明は小さな氷にだけ反応する。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "이 얼음은 왜 핌을 쳐다볼까? 🧊 #shorts",
+     "description": "크리스피가 사라졌고, 지크의 발명품은 작은 얼음 하나에만 울린다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum starrt dieser Eiswürfel Pim an? 🧊 #shorts",
+     "description": "Crispy ist verschwunden, und Zeeks Gerät piept nur bei einem kleinen Eiswürfel. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

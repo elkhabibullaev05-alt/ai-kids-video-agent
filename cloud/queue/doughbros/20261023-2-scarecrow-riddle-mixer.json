@@ -1,0 +1,1017 @@
+{
+ "id": "20261023-2-scarecrow-riddle-mixer",
+ "plot": "On Halloween night in the garden a towel scarecrow grabs Pim and demands three riddles or Pim becomes pumpkin stuffing; Lolly and Zeek crack two while Bup's shark answer nearly seals the lid, Crispy notices the scarecrow buzzes and that the third riddle describes a mixer, Lolly unmasks Whisker the hand mixer working the empty scarecrow like a puppet, Crispy pulls his plug, and the cord turns out to run up the drainpipe to the roof.",
+ "script": {
+  "title": "Answer 3 Riddles or Pim Becomes Pumpkin Stuffing",
+  "set": {
+   "place": "garden",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "stuffing": {
+    "name": "Sir Stuffing",
+    "voice": "am_eric",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.86,
+     0.78,
+     0.55
+    ],
+    "kind": "ghost",
+    "size": 1.45,
+    "home": [
+     2,
+     14
+    ]
+   },
+   "whisker": {
+    "name": "Whisker",
+    "voice": "am_eric",
+    "speed": 1.2,
+    "pitch": 3,
+    "color": [
+     0.95,
+     0.55,
+     0.75
+    ],
+    "kind": "toaster",
+    "size": 0.65,
+    "home": [
+     -4,
+     13
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     1.0,
+     0.5,
+     0.08
+    ],
+    "on": null,
+    "at": [
+     2,
+     12.6,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.3
+   },
+   {
+    "id": "plug",
+    "type": "box",
+    "color": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     12,
+     16,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "HELP! The scarecrow grabbed my bandage! He's dragging me in!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:2,11"
+     ],
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Ssshhh... Three riddles. Get one wrong, and he becomes my stuffing.",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "laugh"
+     ],
+     [
+      "basket",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Three riddles? Can we really win Pim back with riddles?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "to:4,8"
+     ]
+    ]
+   },
+   {
+    "text": "THREE RIDDLES",
+    "cam": "wide",
+    "hold": 1.3,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team, nobody panic. Lolly, you love riddles. You're up.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I do love riddles! I'm the riddle queen of Table Land!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Then queen faster, please! It smells like old pumpkin in here!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Listen. Every time he talks... something buzzes.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "text": "bzzzzzz...",
+    "cam": "close:stuffing",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "stuffing",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Straw doesn't buzz. Towels don't buzz. Fascinating. Deeply suspicious.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Riddle one! What gets wetter, the more that it dries?",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A sponge? A puddle? M-m-my tears? I'm crying a lot right now!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "A towel! The answer is a towel. Like you, Mister Stuffing!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Correct... Lucky little star.",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pumpkin seeds spray out of his head like a sprinkler.",
+    "cam": "wide",
+    "do": [
+     [
+      "stuffing",
+      "shake"
+     ],
+     [
+      "basket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "One down! See? Easy. We'll be home by snack time.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ],
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Riddle two! What has many teeth, but never bites?",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Easy. A shark... with really, really good manners!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "WRONG!",
+    "cam": "prop:basket",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Guys! The lid is closing! I can see the stuffing! It's itchy!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "One more wrong answer and Pim stays in there forever!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Sorry! Sharks were the only thing with teeth I could think of!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A comb! Many teeth, zero bites. It's a comb. Obviously.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Hmm. Correct. But nobody, nobody has ever solved my third riddle.",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "bzzzzzz...",
+    "cam": "close:stuffing",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "stuffing",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "There it is again. That buzz comes from inside his head.",
+    "cam": "two:crispy,zeek",
+    "do": [
+     [
+      "crispy",
+      "to:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "And it gets louder right before he speaks. Like an engine.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Riddle three! I whip. I whirl. I spin all day.",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "spin"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "I sleep in a drawer. Now tell me... who am I?",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "A spinning top? A tornado? A very, very dizzy spoon?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "stuffing",
+    "say": "Last chance, star! Wrong answer and the pumpkin closes FOREVER!",
+    "cam": "close:stuffing",
+    "do": [
+     [
+      "stuffing",
+      "laugh"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Lolly, no pressure, but please be right! Please, please, please!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Wait. Buzzing. Spinning. Seeds flying everywhere. Lolly... it's not a riddle.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He's describing himself. Whoever is hiding inside that pumpkin head.",
+    "cam": "two:crispy,lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then the answer is... a MIXER! The mixer inside your head!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "all",
+      "look:stuffing"
+     ]
+    ]
+   },
+   {
+    "text": "THE MIXER?!",
+    "cam": "close:stuffing",
+    "hold": 1.3,
+    "sfx": "alarm",
+    "do": [
+     [
+      "stuffing",
+      "shake"
+     ],
+     [
+      "stuffing",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "whisker",
+    "say": "Hee hee hee! You found me! Let's MIX it up!",
+    "cam": "close:whisker",
+    "do": [
+     [
+      "whisker",
+      "enter"
+     ],
+     [
+      "whisker",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Out pops Whisker, the hand mixer. The scarecrow flops down, completely empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "stuffing",
+      "squash"
+     ],
+     [
+      "stuffing",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The scarecrow was never alive. It was a puppet on beaters!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "whisker",
+    "say": "I spin him, he talks, you scream! Best game ever! Hee hee!",
+    "cam": "close:whisker",
+    "do": [
+     [
+      "whisker",
+      "spin"
+     ],
+     [
+      "whisker",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You used my favorite game... to trick me?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "NOBODY CHEATS AT RIDDLES IN MY GARDEN!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "to:whisker"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "whisker",
+    "say": "Eep! The cookie is scary! Spin faster, spin faster!",
+    "cam": "close:whisker",
+    "do": [
+     [
+      "whisker",
+      "spin"
+     ],
+     [
+      "whisker",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Careful, Lolly! Angry Lolly breaks things. Mostly us!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "whisker",
+    "say": "Catch me if you can! I'm the fastest thing in this garden!",
+    "cam": "wide",
+    "do": [
+     [
+      "whisker",
+      "to:4,10"
+     ],
+     [
+      "lolly",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Mixers need power. I'll follow the cord.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:12,15"
+     ],
+     [
+      "plug",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls along the white cord, past the pumpkins, to the plug.",
+    "cam": "prop:plug",
+    "do": [
+     [
+      "plug",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Game over.",
+    "cam": "two:crispy,whisker",
+    "do": [
+     [
+      "plug",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "whisker",
+    "say": "Hee... hee... heeeee...",
+    "cam": "close:whisker",
+    "do": [
+     [
+      "whisker",
+      "sleep"
+     ],
+     [
+      "whisker",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The pumpkin lid pops open. Pim tumbles out, covered in towel fluff.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "pim",
+      "to_home"
+     ],
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I was going to say mixer. I had fluff in my mouth.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Sure you were, Pim. Nice work, riddle queen.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Wait. This cord was never plugged into the wall.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It runs up the drainpipe... all the way to the roof.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHO'S PLUGGED IN UP THERE?",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Answer 3 Riddles or Pim Becomes Pumpkin Stuffing 🎃",
+  "description": "On Halloween night a towel scarecrow snatches Pim and gives the Dough Bros three riddles to win him back. Lolly is the riddle queen... but why does the scarecrow keep buzzing? Could YOU solve riddle three? 👇 #animation #doughbros #halloween",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "halloween",
+   "scarecrow",
+   "riddles",
+   "funny animation",
+   "spooky cartoon"
+  ],
+  "thumb_text": "WRONG ANSWER?!",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "3 acertijos o Pim acaba de relleno de calabaza 🎃",
+    "description": "En la noche de Halloween un espantapájaros de toalla atrapa a Pim y les da a los Dough Bros tres acertijos para recuperarlo. Lolly es la reina de los acertijos... pero ¿por qué el espantapájaros no deja de zumbar? ¿TÚ resolverías el tercero? 👇 #animación #doughbros #halloween"
+   },
+   "pt": {
+    "title": "3 charadas ou o Pim vira recheio de abóbora 🎃",
+    "description": "Na noite de Halloween, um espantalho de toalha agarra o Pim e dá aos Dough Bros três charadas para tê-lo de volta. A Lolly é a rainha das charadas... mas por que o espantalho não para de zumbir? VOCÊ resolveria a terceira? 👇 #animação #doughbros #halloween"
+   },
+   "ar": {
+    "title": "٣ ألغاز وإلا صار بيم حشوة يقطين 🎃",
+    "description": "في ليلة الهالوين يخطف فزّاعة من المناشف بيم، ويعطي الدو بروز ثلاثة ألغاز لاستعادته. لولي ملكة الألغاز... لكن لماذا يطنّ الفزّاعة طوال الوقت؟ هل ستحل اللغز الثالث؟ 👇 #رسوم_متحركة #doughbros #هالوين"
+   },
+   "fr": {
+    "title": "3 énigmes ou Pim finit en farce de citrouille 🎃",
+    "description": "Le soir d'Halloween, un épouvantail en serviette attrape Pim et donne trois énigmes aux Dough Bros pour le récupérer. Lolly est la reine des énigmes... mais pourquoi l'épouvantail bourdonne-t-il sans arrêt ? TU trouverais la troisième ? 👇 #animation #doughbros #halloween"
+   },
+   "ja": {
+    "title": "なぞなぞ3問！外したらピムはカボチャの詰め物 🎃",
+    "description": "ハロウィンの夜、タオルのかかしがピムをさらい、取り返したければなぞなぞを3問解けと言う。なぞなぞ女王のロリーが挑むけど…なぜかかしはずっとブーンと鳴っているの？キミは3問目、解ける？👇 #アニメ #doughbros #ハロウィン"
+   },
+   "ko": {
+    "title": "수수께끼 3개! 틀리면 핌은 호박 속 신세 🎃",
+    "description": "핼러윈 밤, 수건 허수아비가 핌을 붙잡고 수수께끼 세 개를 맞히면 돌려주겠다고 한다. 수수께끼 여왕 롤리가 나서지만… 왜 허수아비에게서 윙윙 소리가 날까? 너라면 세 번째 문제를 풀 수 있을까? 👇 #애니메이션 #doughbros #할로윈"
+   },
+   "de": {
+    "title": "3 Rätsel – oder Pim wird Kürbisfüllung 🎃",
+    "description": "In der Halloweennacht schnappt sich eine Handtuch-Vogelscheuche Pim und stellt den Dough Bros drei Rätsel. Lolly ist die Rätselkönigin... aber warum summt die Vogelscheuche ständig? Könntest DU Rätsel drei lösen? 👇 #animation #doughbros #halloween"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 27,
+   "dur": 26,
+   "top": "CAN YOU SOLVE IT?",
+   "title": "Can You Solve the Scarecrow's Last Riddle? 🎃 #shorts",
+   "description": "I whip, I whirl, I spin all day. Wrong answer and Pim stays in the pumpkin. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "riddle",
+    "halloween"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Resuelves el último acertijo del espantapájaros? 🎃 #shorts",
+     "description": "Bato, giro, doy vueltas todo el día. Si fallas, Pim se queda en la calabaza. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você resolve a última charada do espantalho? 🎃 #shorts",
+     "description": "Bato, giro, rodo o dia todo. Errou, e o Pim fica na abóbora. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تحل آخر لغز للفزّاعة؟ 🎃 #shorts",
+     "description": "أخفق، أدور، ألف طوال اليوم. إجابة خاطئة ويبقى بيم في اليقطينة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu résous la dernière énigme de l'épouvantail ? 🎃 #shorts",
+     "description": "Je fouette, je tourbillonne, je tourne toute la journée. Mauvaise réponse, et Pim reste dans la citrouille. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "かかしの最後のなぞなぞ、解ける？🎃 #shorts",
+     "description": "混ぜて、回して、一日中ぐるぐる。外したらピムはカボチャの中。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "허수아비의 마지막 수수께끼, 풀 수 있어? 🎃 #shorts",
+     "description": "휘젓고, 돌고, 하루 종일 빙글빙글. 틀리면 핌은 호박 속에 갇힌다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Löst du das letzte Rätsel der Vogelscheuche? 🎃 #shorts",
+     "description": "Ich schlage, ich wirble, ich drehe mich den ganzen Tag. Falsche Antwort, und Pim bleibt im Kürbis. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
