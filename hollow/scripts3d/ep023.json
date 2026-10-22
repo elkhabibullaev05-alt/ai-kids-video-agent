@@ -1,0 +1,827 @@
+{
+ "title": "1127: Who Rode Across the Night Sky?",
+ "description": "Monks wrote that black riders hunted through the sky for nine weeks.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "forest",
+  "fog": 0.08,
+  "eyes": 2,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    5
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -3.5,
+    4.5
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "mm": {
+   "name": "The Winged Figure",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.42,
+    0.42,
+    0.46
+   ],
+   "kind": "winged",
+   "up": true,
+   "size": 0.8,
+   "home": [
+    1,
+    15
+   ]
+  },
+  "h1": {
+   "name": "Black Hunter",
+   "voice": "bm_george",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.03,
+    0.03,
+    0.04
+   ],
+   "kind": "horseman",
+   "rider": true,
+   "size": 0.9,
+   "home": [
+    7,
+    11
+   ]
+  },
+  "h2": {
+   "name": "Black Hunter",
+   "voice": "bm_george",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.03,
+    0.03,
+    0.04
+   ],
+   "kind": "horseman",
+   "rider": true,
+   "size": 0.85,
+   "home": [
+    11,
+    13
+   ]
+  },
+  "h3": {
+   "name": "Black Hunter",
+   "voice": "bm_george",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.03,
+    0.03,
+    0.04
+   ],
+   "kind": "horseman",
+   "rider": true,
+   "size": 0.8,
+   "home": [
+    15,
+    15
+   ]
+  },
+  "d1": {
+   "name": "Gloamhound",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "kind": "gloamhound",
+   "size": 0.8,
+   "home": [
+    -11,
+    10
+   ]
+  },
+  "d2": {
+   "name": "Gloamhound",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "kind": "gloamhound",
+   "size": 0.75,
+   "home": [
+    -14,
+    12
+   ]
+  },
+  "monk": {
+   "name": "A Monk of Peterborough",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.3,
+    0.2,
+    0.12
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    -10,
+    8
+   ]
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    18
+   ]
+  }
+ },
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Horns blew across the night sky. Then black riders came out of the clouds.",
+   "cam": "wide",
+   "do": [
+    [
+     "h1",
+     "to:3,11,1.2"
+    ],
+    [
+     "h2",
+     "to:0,13,1.8"
+    ],
+    [
+     "h3",
+     "to:-3,15,2.4"
+    ],
+    [
+     "moth",
+     "to:-1,10,3"
+    ],
+    [
+     "mm",
+     "to:2,15,2.2"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THEY RIDE THE SKY"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! Its red eyes won't let me go! Help me!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "HELP ME!"
+  },
+  {
+   "who": "odo",
+   "say": "Hold on, Mothwick! Something is coming through the trees!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "d1",
+     "to:-4,9,0"
+    ],
+    [
+     "d2",
+     "to:-7,11,0"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "narr",
+   "say": "Black hounds burst from the woods, and the riders turned toward the red eyes.",
+   "cam": "wide",
+   "do": [
+    [
+     "d1",
+     "to:1,11,0"
+    ],
+    [
+     "d2",
+     "to:-1,12,0"
+    ],
+    [
+     "h1",
+     "to:16,13,2"
+    ],
+    [
+     "h2",
+     "to:15,15,2.5"
+    ],
+    [
+     "h3",
+     "to:14,17,3"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "BLACK HOUNDS"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. A monk wrote it down nearly nine hundred years ago.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mm",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Peterborough, England. The year 1127.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "ENGLAND, 1127"
+  },
+  {
+   "who": "narr",
+   "say": "A new abbot named Henry had just arrived at the great abbey.",
+   "cam": "close:monk",
+   "do": [
+    [
+     "monk",
+     "enter:left"
+    ]
+   ],
+   "text": "A NEW ABBOT"
+  },
+  {
+   "who": "narr",
+   "say": "Right after he came, many men saw something strange in the deer park.",
+   "cam": "two:monk,odo",
+   "do": [
+    [
+     "monk",
+     "turn:h1"
+    ]
+   ],
+   "sfx": "suspicious"
+  },
+  {
+   "who": "narr",
+   "say": "A hunt. But the hunters were black, and huge, and hideous.",
+   "cam": "close:h1",
+   "do": [
+    [
+     "h1",
+     "to:-2,11,1"
+    ],
+    [
+     "h2",
+     "to:-5,13,1.5"
+    ],
+    [
+     "h3",
+     "to:-8,15,2"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "BLACK HUNTERS"
+  },
+  {
+   "who": "narr",
+   "say": "They rode black horses. And black goats.",
+   "cam": "wide",
+   "do": [
+    [
+     "h1",
+     "shake"
+    ],
+    [
+     "h2",
+     "shake"
+    ]
+   ],
+   "text": "BLACK HORSES"
+  },
+  {
+   "who": "narr",
+   "say": "Their hounds were all jet black, with wide, staring eyes.",
+   "cam": "close:d1",
+   "do": [
+    [
+     "d1",
+     "eyes_big"
+    ],
+    [
+     "monk",
+     "exit"
+    ]
+   ],
+   "text": "STARING EYES"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... I can hear hooves. Lots of hooves.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "moth",
+   "say": "Black goats? Odo, who rides a goat across the sky?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "spin"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "They rode through the woods, from the town all the way to Stamford.",
+   "cam": "overhead",
+   "do": [
+    [
+     "h1",
+     "to:16,13,2"
+    ],
+    [
+     "h2",
+     "to:15,15,2.5"
+    ],
+    [
+     "h3",
+     "to:14,17,3"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "ALL THE WAY TO STAMFORD"
+  },
+  {
+   "who": "narr",
+   "say": "And at night, the monks heard the horns blowing.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:h2"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THE MONKS HEARD HORNS"
+  },
+  {
+   "who": "monk",
+   "say": "Truthful men kept watch. They counted twenty or thirty horn-blowers.",
+   "cam": "close:monk",
+   "do": [
+    [
+     "monk",
+     "enter:left"
+    ],
+    [
+     "monk",
+     "shake"
+    ]
+   ],
+   "text": "20 OR 30 RIDERS"
+  },
+  {
+   "who": "narr",
+   "say": "It happened again and again. All through spring, right up to Easter.",
+   "cam": "wide",
+   "do": [
+    [
+     "h1",
+     "to:-2,11,1"
+    ],
+    [
+     "h2",
+     "to:-5,13,1.5"
+    ],
+    [
+     "h3",
+     "to:-8,15,2"
+    ],
+    [
+     "monk",
+     "exit"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "UNTIL EASTER"
+  },
+  {
+   "who": "narr",
+   "say": "The chronicle says it went on for about nine weeks.",
+   "cam": "close:h3",
+   "do": [
+    [
+     "h3",
+     "turn:odo"
+    ]
+   ],
+   "text": "9 WEEKS"
+  },
+  {
+   "who": "moth",
+   "say": "Nine weeks of that? Odo, I would never sleep again.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "sad"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "All over Europe, people told of this ride. They called it the Wild Hunt.",
+   "cam": "overhead",
+   "do": [
+    [
+     "h1",
+     "spin"
+    ],
+    [
+     "d1",
+     "to:-3,10,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THE WILD HUNT"
+  },
+  {
+   "who": "narr",
+   "say": "In Germany and Scandinavia, some said Odin led it, through the storms of midwinter.",
+   "cam": "close:h1",
+   "do": [
+    [
+     "h1",
+     "turn:front"
+    ]
+   ],
+   "text": "MIDWINTER STORMS"
+  },
+  {
+   "who": "narr",
+   "say": "Old tales say anyone it caught could be carried off, and dropped miles from home.",
+   "cam": "wide",
+   "do": [
+    [
+     "h1",
+     "to:3,11,1.2"
+    ],
+    [
+     "h2",
+     "to:0,13,1.8"
+    ],
+    [
+     "h3",
+     "to:-3,15,2.4"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "CARRIED AWAY"
+  },
+  {
+   "who": "odo",
+   "say": "Then how do you stay safe from it?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "HOW DO YOU HIDE?"
+  },
+  {
+   "who": "narr",
+   "say": "One old tale says: stand right in the middle of the road.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "to:-4,6,1"
+    ]
+   ],
+   "text": "STAY ON THE ROAD"
+  },
+  {
+   "who": "narr",
+   "say": "Another says: lie flat on the ground. Let it pass over you.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "LIE FLAT"
+  },
+  {
+   "who": "narr",
+   "say": "In one story, a girl hid her head under her apron, so she wouldn't see it.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "DON'T SEE IT"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick, get down! Lie flat! Don't look up!",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "to:-4,5,0.3"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "text": "DON'T LOOK UP"
+  },
+  {
+   "who": "narr",
+   "say": "The riders thundered over them, so low the branches bent.",
+   "cam": "wide",
+   "do": [
+    [
+     "h1",
+     "to:9,7,1.5"
+    ],
+    [
+     "h2",
+     "to:7,9,2"
+    ],
+    [
+     "h3",
+     "to:5,11,2.5"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THEY PASSED OVER"
+  },
+  {
+   "who": "narr",
+   "say": "And the hounds went after the winged thing with red eyes. It fled into the clouds.",
+   "cam": "close:mm",
+   "do": [
+    [
+     "d1",
+     "to:3,13,0"
+    ],
+    [
+     "d2",
+     "to:1,14,0"
+    ],
+    [
+     "mm",
+     "to:14,22,9"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT FLED"
+  },
+  {
+   "who": "moth",
+   "say": "It let go! Odo, I'm free! I can move my wings again!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "to:-3.5,4.5,0"
+    ],
+    [
+     "moth",
+     "spin"
+    ]
+   ],
+   "text": "FREE!"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody knows what the people of Peterborough really saw.",
+   "cam": "overhead",
+   "do": [
+    [
+     "h1",
+     "to:16,13,2"
+    ],
+    [
+     "h2",
+     "to:15,15,2.5"
+    ],
+    [
+     "h3",
+     "to:14,17,3"
+    ]
+   ],
+   "text": "NEVER EXPLAINED"
+  },
+  {
+   "who": "narr",
+   "say": "Some historians think the monks wrote it to show how unwelcome the new abbot was.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "A WARNING?"
+  },
+  {
+   "who": "narr",
+   "say": "But the chronicle says it plainly. Many men saw it. And many heard it.",
+   "cam": "close:h2",
+   "do": [
+    [
+     "h2",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "MANY MEN SAW IT"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU look up when the horns blow over your house tonight?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WOULD YOU LOOK UP?"
+  },
+  {
+   "who": "moth",
+   "say": "Not even once. I'd keep my face in the mud until Easter.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the last rider stopped. And slowly turned back.",
+   "cam": "wide",
+   "do": [
+    [
+     "shepherd",
+     "to:5,13,0"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE LAST RIDER"
+  },
+  {
+   "who": "narr",
+   "say": "Under its hood was a pale, cracked mask.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A PALE MASK"
+  },
+  {
+   "who": "shepherd",
+   "say": "Lantern-bearer. Next time, the hunt rides for your light.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "to:1,10,0"
+    ]
+   ],
+   "text": "IT WANTS THE LANTERN"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick... it knows me. Run!",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Will the hunt take Odo's lantern? Subscribe, so you don't miss the next tale.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "d1",
+     "to:0,8,0"
+    ],
+    [
+     "d2",
+     "to:-2,9,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHO DOES IT HUNT?"
+  }
+ ]
+}
