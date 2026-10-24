@@ -869,7 +869,27 @@ def _canflag(p, t, color, text):
         p.text(text, 160, -460, 40, "dark")
 
 
+def _booth(p, t, color, text):
+    """Lemonade-style stand: counter, two posts, striped awning, sign text (| for 2 lines)."""
+    p.rect(-230, -230, 460, 230, color or "tan")
+    p.line([(-210, -230), (-210, -470)], 9); p.line([(210, -230), (210, -470)], 9)
+    for k in range(6):
+        p.shape([(-250 + k * 84, -540), (-166 + k * 84, -540), (-166 + k * 84, -470), (-250 + k * 84, -470)], "red" if k % 2 == 0 else "white", 4)
+    if text:
+        parts = text.split("|")
+        for k, line in enumerate(parts):
+            p.text(line, 0, -165 + k * 70 - (35 if len(parts) > 1 else 0), min(60, int(800 / max(1, len(line)))), "dark")
+
+
+def _magnifier(p, t, color, text):
+    p.line([(60, -60), (170, 50)], 22, color="brown")
+    p.circle(0, -120, 105, color or "sky", 9, alpha=0.5)
+    if text:
+        p.text(text, 0, -110, min(56, int(300 / max(1, len(text)))), "dark")
+
+
 PROPS = {
+    "booth": _booth, "magnifier": _magnifier,
     "flag": _flag, "canflag": _canflag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
     "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
     "gaspump": _gaspump, "car": _car, "truck": _truck, "ship": _ship, "barrel": _barrel, "dollar": _dollar,

@@ -1,0 +1,3024 @@
+{
+ "id": "ep013",
+ "title": "Why Did a Pollster Fake Its Own Polls?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "On October 20, 2026, Wedgewood Polls admitted that almost all of its election surveys were fabricated, calling it an \"experimental project\" to expose the low barrier to entry in political polling. Its numbers had been cited by the New York Times (about 15 polls, now removed), Decision Desk HQ (17 removed), Newsweek, Politico and poll aggregators. We go through what happened, where the fake numbers went, how the election-data site FiftyPlusOne caught it, who says they were hurt (Michigan Senate candidate Mallory McMorrow), the earlier Median Strategies case, why fake polls are so easy to make, what officials in both parties said, and five rules for reading polls before the Nov 3 midterms.\n\nKevin, Dave and Linda are made-up characters. Real people are shown as generic labelled stick figures; quotes are attributed as reported. We don't take sides: we just count the facts.\n\nSources:\nTIME, How a Fake Pollster May Have Hurt Real Candidates (Oct 23, 2026): https://time.com/article/2026/10/23/what-fake-wedgewood-polls-scandal-reveals-about-election-polling/\nFox News, Wedgewood Polling admits fabricating data as Democrats erupt: https://www.foxnews.com/politics/democrats-furious-pollster-boosting-far-left-candidates-admits-fabricating-surveys-absolute-scumbags\nFiftyPlusOne, FiftyPlusOne just caught a pollster faking data: https://blog.fiftyplusone.news/p/fiftyplusone-just-caught-a-pollster\nHungarian Conservative, Wedgewood Admits Fabricating Polls (Oct 21, 2026): https://www.hungarianconservative.com/articles/current/wedgewood-polling-fake-social-experiment-midterm/\nThe National Desk, Polling firm closes after releasing fake election surveys for 'social experiment': https://okcfox.com/news/nation-world/polling-firm-closes-after-releasing-fake-election-surveys-for-social-experiment-los-angeles-mayoral-race-wisconsin-democratic-gubernatorial-primary-karen-bass-francesca-hong\n\n#polls #midterms #election2026 #explained #stickfigure #news",
+ "tags": [
+  "fake polls",
+  "wedgewood polls",
+  "polling scandal",
+  "midterms 2026",
+  "election polls",
+  "how polls work",
+  "fiftyplusone",
+  "median strategies",
+  "mallory mcmorrow",
+  "news explained",
+  "stick figure animation",
+  "the doodle desk"
+ ],
+ "thumbnail": {
+  "bg": "yellow",
+  "text": "THE POLLS|LIED?",
+  "size": 210,
+  "color": "black",
+  "guy": {
+   "pose": "stand",
+   "face": "shock",
+   "look": -1,
+   "extras": [
+    "hair"
+   ]
+  },
+  "guy_x": 1450,
+  "guy_y": 2050,
+  "guy_s": 5.0,
+  "items": []
+ },
+ "scenes": [
+  {
+   "say": "Meet Kevin. Dave's nephew. Twelve years old. Kevin has opened a lemonade stand, and he has a sign.",
+   "items": [
+    {
+     "prop": "booth",
+     "x": 1150,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "KEVIN'S|LEMONADE"
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    }
+   ],
+   "cam": {
+    "from": [
+     1000,
+     600,
+     1.3
+    ],
+    "to": [
+     960,
+     540,
+     1.0
+    ]
+   },
+   "bg": "paper"
+  },
+  {
+   "say": "The sign says: voted best lemonade in town. Ninety-seven percent approval.",
+   "items": [
+    {
+     "prop": "booth",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "KEVIN'S|LEMONADE"
+    },
+    {
+     "count": [
+      0,
+      97
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1350,
+     "y": 380,
+     "size": 230,
+     "color": "green",
+     "at": 0.25,
+     "dur": 1.8
+    },
+    {
+     "text": "BEST IN TOWN",
+     "x": 1350,
+     "y": 560,
+     "size": 80,
+     "color": "dark",
+     "at": 0.55
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Dave is impressed. Dave buys three cups. Then Dave asks a dangerous question: who voted?",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "x3",
+     "x": 800,
+     "y": 520,
+     "size": 110,
+     "color": "green",
+     "at": 0.25
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.55
+    },
+    {
+     "text": "WHO VOTED?",
+     "x": 1400,
+     "y": 330,
+     "size": 100,
+     "color": "red",
+     "at": 0.7
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Kevin says: I did. Ninety-seven times. The other three times I was thirsty.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1300,
+     "y": 520,
+     "s": 1.4,
+     "at": 0.3,
+     "text": "me. 97 times."
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Dave laughs. Kevin is twelve. Then Dave opens the news and learns that a grown-up polling company did basically the same thing.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 1000,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Except its numbers ended up in the New York Times.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 960,
+     "y": 800,
+     "s": 1.3,
+     "at": 0,
+     "text": "NEWS"
+    },
+    {
+     "stamp": "FAKE",
+     "x": 960,
+     "y": 420,
+     "size": 110,
+     "w": 360,
+     "at": 0.4
+    }
+   ],
+   "anim": "shake",
+   "bg": "purple"
+  },
+  {
+   "say": "Today: how did a fake pollster fool the political world before the midterms, who did it hurt, and how do you tell a real poll from a Kevin?",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 980,
+     "y": 800,
+     "s": 1.4,
+     "at": 0,
+     "text": "FAKE POLLS?"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 330,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "prop": "calendar",
+     "x": 1650,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.6,
+     "text": "NOV 3"
+    }
+   ],
+   "chapter": "Today's question",
+   "bg": "paper"
+  },
+  {
+   "say": "The company was called Wedgewood Polls. Since the spring, it had been publishing surveys about the big races in this year's midterm elections.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 650,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "WEDGEWOOD"
+    },
+    {
+     "prop": "clipboard",
+     "x": 1150,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "POLL"
+    },
+    {
+     "prop": "clipboard",
+     "x": 1450,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.45,
+     "text": "POLL"
+    },
+    {
+     "prop": "clipboard",
+     "x": 1750,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.6,
+     "text": "POLL"
+    }
+   ],
+   "chapter": "Part 1: What happened",
+   "bg": "sky"
+  },
+  {
+   "say": "Senate races. Governor races. Swing states and safe states. It looked busy and serious.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "purple"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "chart",
+     "x": 1300,
+     "y": 880,
+     "s": 1.1,
+     "at": 0.35
+    },
+    {
+     "text": "SERIOUS.",
+     "x": 1300,
+     "y": 330,
+     "size": 100,
+     "color": "dark",
+     "at": 0.6
+    },
+    {
+     "text": "Wedgewood",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then, on Tuesday, October twentieth, it posted a statement. Almost all of its election surveys, it said, were fabricated.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 550,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT 20"
+    },
+    {
+     "prop": "laptop",
+     "x": 1250,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.3,
+     "text": "STATEMENT"
+    },
+    {
+     "stamp": "FABRICATED",
+     "x": 1250,
+     "y": 420,
+     "size": 80,
+     "w": 520,
+     "at": 0.6
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Fabricated means made up. Not a bad sample. Not a wrong guess. Invented. Like Kevin, but with a logo.",
+   "items": [
+    {
+     "text": "FABRICATED = MADE UP",
+     "x": 960,
+     "y": 330,
+     "size": 100,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    },
+    {
+     "prop": "booth",
+     "x": 1350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.55,
+     "text": "KEVIN'S"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Wedgewood called it an experimental project to show, quote, the vulnerabilities, lack of oversight, and overall low barrier to entry in the polling industry.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "purple"
+     },
+     "x": 560,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1300,
+     "y": 480,
+     "s": 1.5,
+     "at": 0.35,
+     "text": "\"experiment\""
+    },
+    {
+     "text": "Wedgewood",
+     "x": 560,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "It said the project was never intended to sway an election. It called it a wake-up call.",
+   "items": [
+    {
+     "prop": "speech",
+     "x": 650,
+     "y": 500,
+     "s": 1.3,
+     "at": 0,
+     "text": "no swaying!"
+    },
+    {
+     "prop": "phone",
+     "x": 1300,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "ALARM",
+     "anim": "shake"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "It described itself as a fictional entity run by a small group of industry veterans. A pretend company, run by real people.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "FICTIONAL"
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Their conclusion, as reported by several outlets: getting taken seriously was far too easy.",
+   "items": [
+    {
+     "text": "\"far too easy\"",
+     "x": 960,
+     "y": 380,
+     "size": 150,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The firm's account on X has since disappeared. TIME magazine tried emailing it. The email bounced.",
+   "items": [
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 900,
+     "s": 1.1,
+     "at": 0,
+     "text": "ACCOUNT GONE"
+    },
+    {
+     "prop": "envelope",
+     "x": 1350,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.35,
+     "move": [
+      1600,
+      600
+     ]
+    },
+    {
+     "cross": [
+      1350,
+      700,
+      90
+     ],
+     "at": 0.7
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "These polls didn't stay in a corner of the internet. They travelled.",
+   "items": [
+    {
+     "prop": "globe",
+     "x": 960,
+     "y": 820,
+     "s": 1.2,
+     "at": 0,
+     "anim": "spin"
+    },
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 600,
+     "s": 0.6,
+     "at": 0,
+     "text": "POLL",
+     "move": [
+      350,
+      450
+     ]
+    },
+    {
+     "prop": "clipboard",
+     "x": 1300,
+     "y": 600,
+     "s": 0.6,
+     "at": 0.3,
+     "text": "POLL",
+     "move": [
+      1600,
+      450
+     ]
+    }
+   ],
+   "chapter": "Part 2: Where they went",
+   "bg": "paper"
+  },
+  {
+   "say": "According to TIME, the New York Times cited about fifteen Wedgewood polls between June and October. It has since removed them.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 650,
+     "y": 800,
+     "s": 0.9,
+     "at": 0,
+     "text": "NYT"
+    },
+    {
+     "count": [
+      0,
+      15
+     ],
+     "fmt": "{:.0f} polls",
+     "x": 1300,
+     "y": 380,
+     "size": 150,
+     "color": "red",
+     "at": 0.35,
+     "dur": 1.8
+    },
+    {
+     "cross": [
+      1300,
+      380,
+      160
+     ],
+     "at": 0.75
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Decision Desk HQ, which runs election forecasts, removed seventeen. Newsweek, Politico and MS NOW had also reported Wedgewood numbers.",
+   "items": [
+    {
+     "count": [
+      0,
+      17
+     ],
+     "fmt": "{:.0f}",
+     "x": 600,
+     "y": 380,
+     "size": 200,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "prop": "tv",
+     "x": 1150,
+     "y": 800,
+     "s": 0.6,
+     "at": 0.3,
+     "text": "NEWSWEEK"
+    },
+    {
+     "prop": "tv",
+     "x": 1450,
+     "y": 800,
+     "s": 0.6,
+     "at": 0.45,
+     "text": "POLITICO"
+    },
+    {
+     "prop": "tv",
+     "x": 1750,
+     "y": 800,
+     "s": 0.6,
+     "at": 0.6,
+     "text": "MS NOW"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Poll averages and forecast sites had pulled them in too, including FiftyPlusOne, the Silver Bulletin, VoteHub and 270toWin.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 600,
+     "y": 880,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "chart",
+     "x": 1000,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.2
+    },
+    {
+     "prop": "chart",
+     "x": 1400,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.4
+    },
+    {
+     "prop": "chart",
+     "x": 1750,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.6
+    },
+    {
+     "text": "AVERAGES",
+     "x": 1150,
+     "y": 330,
+     "size": 100,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "So what did the fake polls say? Many showed Democrats doing surprisingly well in Republican-held states, according to Fox News and others.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 960,
+     "y": 900,
+     "s": 1.1,
+     "at": 0,
+     "text": "SURPRISE!"
+    },
+    {
+     "text": "?",
+     "x": 1500,
+     "y": 400,
+     "size": 200,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In Mississippi, Wedgewood had Republican Senator Cindy Hyde-Smith up only fifty-two to forty-eight. Trump carried the state comfortably in twenty twenty-four.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       52,
+       48
+      ],
+      "labels": [
+       "Republican",
+       "Democrat"
+      ],
+      "colors": [
+       "red",
+       "blue"
+      ],
+      "fmt": "{}%",
+      "w": 640,
+      "h": 440
+     },
+     "x": 800,
+     "y": 860
+    },
+    {
+     "text": "MISSISSIPPI",
+     "x": 800,
+     "y": 300,
+     "size": 80,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "stamp": "FAKE",
+     "x": 1550,
+     "y": 500,
+     "size": 90,
+     "w": 300,
+     "at": 0.6
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "The Democrat's campaign promoted that poll, and Newsweek wrote about it. Remember: invented numbers.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "megaphone",
+     "x": 1050,
+     "y": 700,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "tv",
+     "x": 1550,
+     "y": 800,
+     "s": 0.8,
+     "at": 0.55,
+     "text": "NEWS"
+    },
+    {
+     "text": "a campaign",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In Michigan's Senate race this month: Democrat Abdul El-Sayed ahead of Republican Mike Rogers, fifty-three to forty-seven. Also fictional.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       53,
+       47
+      ],
+      "labels": [
+       "Democrat",
+       "Republican"
+      ],
+      "colors": [
+       "blue",
+       "red"
+      ],
+      "fmt": "{}%",
+      "w": 640,
+      "h": 440
+     },
+     "x": 800,
+     "y": 860
+    },
+    {
+     "text": "MICHIGAN",
+     "x": 800,
+     "y": 300,
+     "size": 80,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "stamp": "FAKE",
+     "x": 1550,
+     "y": 500,
+     "size": 90,
+     "w": 300,
+     "at": 0.6
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "In Texas, a July Wedgewood poll had Democrat James Talarico leading Ken Paxton among Hispanic voters, sixty-four to thirty.",
+   "items": [
+    {
+     "count": [
+      0,
+      64
+     ],
+     "fmt": "{:.0f}%",
+     "x": 650,
+     "y": 380,
+     "size": 200,
+     "color": "blue",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "count": [
+      0,
+      30
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1250,
+     "y": 380,
+     "size": 200,
+     "color": "red",
+     "at": 0.35,
+     "dur": 1.8
+    },
+    {
+     "text": "TEXAS",
+     "x": 960,
+     "y": 600,
+     "size": 90,
+     "color": "dark",
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Other invented surveys made Democrats look competitive in Kansas and Ohio. The only real survey, according to reports, was in Nebraska.",
+   "items": [
+    {
+     "text": "KANSAS",
+     "x": 550,
+     "y": 380,
+     "size": 90,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "OHIO",
+     "x": 1000,
+     "y": 380,
+     "size": 90,
+     "color": "dark",
+     "at": 0.25
+    },
+    {
+     "cross": [
+      770,
+      380,
+      260
+     ],
+     "at": 0.45
+    },
+    {
+     "text": "NEBRASKA = REAL",
+     "x": 1450,
+     "y": 640,
+     "size": 70,
+     "color": "green",
+     "at": 0.65
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "And the firm asked the public for money. A GoFundMe for its Nebraska polling raised five hundred dollars toward a five-thousand-dollar goal.",
+   "items": [
+    {
+     "prop": "moneybag",
+     "x": 650,
+     "y": 880,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      500
+     ],
+     "fmt": "${:,.0f}",
+     "x": 1250,
+     "y": 360,
+     "size": 170,
+     "color": "money",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "text": "of $5,000",
+     "x": 1250,
+     "y": 520,
+     "size": 80,
+     "color": "dark",
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Dave once donated to Kevin's lemonade expansion fund. Dave would now like a word with Kevin.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35
+    },
+    {
+     "prop": "wallet",
+     "x": 1700,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.55
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So who caught them? An election data site called FiftyPlusOne, run by analyst G. Elliott Morris.",
+   "items": [
+    {
+     "prop": "magnifier",
+     "x": 960,
+     "y": 700,
+     "s": 1.4,
+     "at": 0,
+     "text": "?"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "FiftyPlusOne",
+     "x": 1550,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "chapter": "Part 3: How it was caught",
+   "bg": "paper"
+  },
+  {
+   "say": "At first, FiftyPlusOne says, nothing looked unusual. It asked Wedgewood who ran it, and got two names and a methods statement.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "teal"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1150,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "2 NAMES"
+    },
+    {
+     "prop": "clipboard",
+     "x": 1500,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.5,
+     "text": "METHODS"
+    },
+    {
+     "text": "FiftyPlusOne",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Pollsters leaving big firms and starting their own, sometimes paying for surveys themselves, is normal. So it was let in.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "text": "BIG FIRM"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "walk": true,
+      "shirt": "purple"
+     },
+     "x": 1050,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.25,
+     "move": [
+      1450,
+      900
+     ]
+    },
+    {
+     "prop": "house",
+     "x": 1650,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "On October fifteenth, Wedgewood handed over the raw data from a survey, which one report says was the Mississippi Senate poll.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 550,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "OCT 15"
+    },
+    {
+     "prop": "laptop",
+     "x": 1200,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.35,
+     "text": "RAW DATA"
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Raw data is the list behind the headline: every person who supposedly answered, one row each.",
+   "items": [
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "1 row = 1 person"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "According to one account of the investigation, the respondent ID codes were checked against real records from Pollfish, the survey platform. They didn't fit.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "IDs"
+    },
+    {
+     "arrow": [
+      [
+       800,
+       650
+      ],
+      [
+       1150,
+       650
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "clipboard",
+     "x": 1350,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.4,
+     "text": "PLATFORM"
+    },
+    {
+     "cross": [
+      980,
+      500,
+      80
+     ],
+     "at": 0.7
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "In other words, the people in the spreadsheet looked like people who had never existed.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1320,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "NOBODY",
+     "x": 960,
+     "y": 300,
+     "size": 130,
+     "color": "red",
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "On October twentieth, FiftyPlusOne asked Wedgewood to comment before publishing. Wedgewood didn't answer the question. It posted its confession instead.",
+   "items": [
+    {
+     "prop": "envelope",
+     "x": 600,
+     "y": 820,
+     "s": 1.0,
+     "at": 0,
+     "text": "COMMENT?"
+    },
+    {
+     "arrow": [
+      [
+       800,
+       640
+      ],
+      [
+       1150,
+       640
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "laptop",
+     "x": 1400,
+     "y": 900,
+     "s": 1.1,
+     "at": 0.5,
+     "text": "CONFESSION"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "And it accused the aggregators of not vetting it. FiftyPlusOne calls that claim false.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "purple"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    },
+    {
+     "text": "FALSE",
+     "x": 1350,
+     "y": 300,
+     "size": 110,
+     "color": "red",
+     "at": 0.6
+    },
+    {
+     "text": "Wedgewood",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "FiftyPlusOne",
+     "x": 1350,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.35
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Morris wrote that the social experiment story was a cover for fraud. Former Obama staffer Tommy Vietor called it lying and fraud.",
+   "items": [
+    {
+     "text": "\"cover for fraud\"",
+     "x": 960,
+     "y": 360,
+     "size": 120,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "teal"
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Now, did any of this matter? One candidate says it mattered a lot.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "text": "DID IT MATTER?",
+     "x": 960,
+     "y": 300,
+     "size": 110,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 4: Who got hurt",
+   "bg": "paper"
+  },
+  {
+   "say": "Michigan state senator Mallory McMorrow was running in the Democratic primary for the U.S. Senate.",
+   "items": [
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "capitol",
+     "x": 1400,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35
+    },
+    {
+     "text": "a Senate candidate",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "On June twenty-ninth, a Wedgewood poll gave her nine percent among registered voters.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 550,
+     "y": 860,
+     "s": 0.9,
+     "at": 0,
+     "text": "JUN 29"
+    },
+    {
+     "count": [
+      0,
+      9
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1250,
+     "y": 380,
+     "size": 240,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "To be fair to the numbers: real polls from other firms also had her in single digits around then, with lots of voters undecided.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       9,
+       9,
+       8
+      ],
+      "labels": [
+       "Wedgewood",
+       "Susquehanna",
+       "Quantus"
+      ],
+      "colors": [
+       "red",
+       "grey",
+       "grey"
+      ],
+      "fmt": "{}%",
+      "w": 820,
+      "h": 420
+     },
+     "x": 900,
+     "y": 860
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.6
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Still, McMorrow says that after the Wedgewood numbers spread, donations dried up and reporters kept asking when she'd quit.",
+   "items": [
+    {
+     "prop": "moneybag",
+     "x": 600,
+     "y": 880,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "arrowdown",
+     "x": 900,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.25
+    },
+    {
+     "prop": "megaphone",
+     "x": 1400,
+     "y": 700,
+     "s": 1.0,
+     "at": 0.45,
+     "text": "QUIT?"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "She suspended her campaign on July fifth, about a month before the primary.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "JUL 5"
+    },
+    {
+     "stamp": "SUSPENDED",
+     "x": 1250,
+     "y": 450,
+     "size": 80,
+     "w": 480,
+     "at": 0.4
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "A strategist who ran a group backing her says donors pointed to that poll to pull money, while the campaign was outspent by eighty million dollars.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "green"
+     },
+     "x": 560,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      80
+     ],
+     "fmt": "${:.0f}M",
+     "x": 1250,
+     "y": 380,
+     "size": 190,
+     "color": "red",
+     "at": 0.35,
+     "dur": 1.8
+    },
+    {
+     "text": "a strategist",
+     "x": 560,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "McMorrow wrote that the whole thing was treated like a game, and called for a big shake-up of campaign money rules.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "GAME?"
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And Wedgewood wasn't the first this year. In August, a firm called Median Strategies admitted its polls were fake too, calling them a social experiment.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "text": "WEDGEWOOD"
+    },
+    {
+     "prop": "building",
+     "x": 1300,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35,
+     "text": "MEDIAN"
+    },
+    {
+     "text": "x2",
+     "x": 1700,
+     "y": 400,
+     "size": 150,
+     "color": "red",
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Median claimed one candidate led Wisconsin's Democratic governor primary by twenty points. Her rival actually won, by a razor-thin margin.",
+   "items": [
+    {
+     "count": [
+      0,
+      20
+     ],
+     "fmt": "+{:.0f}",
+     "x": 700,
+     "y": 380,
+     "size": 220,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "REAL: razor-thin",
+     "x": 1350,
+     "y": 420,
+     "size": 80,
+     "color": "dark",
+     "at": 0.45
+    },
+    {
+     "cross": [
+      700,
+      380,
+      150
+     ],
+     "at": 0.7
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "It also claimed Los Angeles mayor Karen Bass led by twelve points, from five hundred sixty residents. In the real primary she led by five.",
+   "items": [
+    {
+     "count": [
+      0,
+      12
+     ],
+     "fmt": "+{:.0f}",
+     "x": 650,
+     "y": 360,
+     "size": 200,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "count": [
+      0,
+      5
+     ],
+     "fmt": "+{:.0f}",
+     "x": 1300,
+     "y": 360,
+     "size": 200,
+     "color": "green",
+     "at": 0.4,
+     "dur": 1.8
+    },
+    {
+     "text": "FAKE",
+     "x": 650,
+     "y": 520,
+     "size": 70,
+     "color": "red",
+     "at": 0.2
+    },
+    {
+     "text": "REAL",
+     "x": 1300,
+     "y": 520,
+     "size": 70,
+     "color": "green",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "So how is it this easy? First, quick lesson: how a real poll works.",
+   "items": [
+    {
+     "prop": "chalkboard",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "HOW POLLS|WORK"
+    }
+   ],
+   "chapter": "Part 5: Why it's so easy",
+   "bg": "sky"
+  },
+  {
+   "say": "You can't ask every voter. So you ask a sample, maybe several hundred to a thousand people, chosen to look like the whole state.",
+   "items": [
+    {
+     "prop": "cart",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": []
+     },
+     "x": 1000,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.2
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1150,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then you add a margin of error, the wiggle room. Median's fake LA poll even came with one: four point one percent. Very official.",
+   "items": [
+    {
+     "text": "+/- 4.1%",
+     "x": 960,
+     "y": 380,
+     "size": 190,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "stamp": "VERY OFFICIAL",
+     "x": 1450,
+     "y": 640,
+     "size": 60,
+     "w": 440,
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Here's the problem. A finished poll is just a few numbers and a nice chart. Anyone with a laptop can make a nice chart.",
+   "items": [
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "%%%"
+    },
+    {
+     "prop": "chart",
+     "x": 1300,
+     "y": 880,
+     "s": 1.1,
+     "at": 0.35
+    },
+    {
+     "guy": {
+      "pose": "type",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Aggregators can check methods and track records, but a brand new firm has no record yet. They mostly have to trust what they're told.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "teal"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "building",
+     "x": 1300,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.35,
+     "text": "NEW FIRM"
+    },
+    {
+     "text": "TRUST?",
+     "x": 1300,
+     "y": 320,
+     "size": 100,
+     "color": "red",
+     "at": 0.6
+    },
+    {
+     "text": "an aggregator",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "And polls aren't just scores. Researchers say they change behaviour. A twenty twenty-three study found polls demobilize the minority and mobilize the majority.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "brown"
+     },
+     "x": 560,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1150,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.35
+    },
+    {
+     "prop": "arrowup",
+     "x": 1500,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.5
+    },
+    {
+     "text": "researchers",
+     "x": 560,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Translation: if you think your side is losing, you might stay home. If you think it's winning, you show up.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": []
+     },
+     "x": 900,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2
+    },
+    {
+     "prop": "ballot",
+     "x": 1350,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.45
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "A nineteen ninety-six experiment found people shown a made-up poll before a primary were more likely to back the candidate it favoured.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 560,
+     "y": 860,
+     "s": 0.9,
+     "at": 0,
+     "text": "1996"
+    },
+    {
+     "prop": "clipboard",
+     "x": 1050,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "FAKE POLL"
+    },
+    {
+     "arrow": [
+      [
+       1250,
+       640
+      ],
+      [
+       1500,
+       640
+      ]
+     ],
+     "at": 0.5
+    },
+    {
+     "prop": "ballot",
+     "x": 1650,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Donors read polls too. Reporters build stories on them. One bad number can decide who gets money, airtime, and the dreaded question: are you dropping out?",
+   "items": [
+    {
+     "prop": "moneybag",
+     "x": 500,
+     "y": 880,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "tv",
+     "x": 960,
+     "y": 800,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "AIRTIME"
+    },
+    {
+     "prop": "megaphone",
+     "x": 1450,
+     "y": 700,
+     "s": 1.0,
+     "at": 0.55,
+     "text": "DROPPING OUT?"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So what are officials saying? This one, at least, upset people in both parties, though not always about the same thing.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "red"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "Democrats",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "Republicans",
+     "x": 1350,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 6: What they say",
+   "bg": "paper"
+  },
+  {
+   "say": "Notice the pattern: many fake polls flattered Democrats in red states, but the most damaging one, by her account, hurt a Democrat.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "anim": "bob"
+    },
+    {
+     "text": "HELPED?",
+     "x": 600,
+     "y": 330,
+     "size": 90,
+     "color": "blue",
+     "at": 0.3
+    },
+    {
+     "text": "HURT?",
+     "x": 1350,
+     "y": 330,
+     "size": 90,
+     "color": "blue",
+     "at": 0.5
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "The chair of the Federal Communications Commission, Republican Brendan Carr, pointed to a significant surge in fake polls, without naming cases.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "\"significant surge\"",
+     "x": 1300,
+     "y": 400,
+     "size": 90,
+     "color": "red",
+     "at": 0.35
+    },
+    {
+     "text": "FCC chair (R)",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "He blamed news outlets for airing them without regard, he said, to basic journalistic ethics.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 960,
+     "y": 800,
+     "s": 1.2,
+     "at": 0,
+     "text": "NEWS"
+    },
+    {
+     "cross": [
+      960,
+      650,
+      140
+     ],
+     "at": 0.5
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Democratic commissioner Anna Gomez answered: pollsters who intentionally mislead the public should answer for it.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "speech",
+     "x": 1300,
+     "y": 500,
+     "s": 1.4,
+     "at": 0.35,
+     "text": "answer for it"
+    },
+    {
+     "text": "FCC commissioner (D)",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "But she added that broadcasters reporting polls in good faith shouldn't be punished when a poll turns out wrong.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 700,
+     "y": 800,
+     "s": 1.0,
+     "at": 0,
+     "text": "GOOD FAITH"
+    },
+    {
+     "prop": "scale",
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Democratic strategist Mike Nellis told Fox News the people responsible should be prosecuted, and asked whether donors would get their money back.",
+   "items": [
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "moneybag",
+     "x": 1300,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "REFUND?",
+     "x": 1300,
+     "y": 560,
+     "size": 90,
+     "color": "green",
+     "at": 0.5
+    },
+    {
+     "text": "a strategist",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Decision Desk HQ, for its part, said removing its seventeen fake polls didn't change its Senate and House forecasts at all.",
+   "items": [
+    {
+     "prop": "chart",
+     "x": 700,
+     "y": 880,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "stamp": "NO CHANGE",
+     "x": 1300,
+     "y": 450,
+     "size": 90,
+     "w": 440,
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Michael Traugott, a former president of the polling researchers' association, called two cases in such a short time very troubling.",
+   "items": [
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ],
+      "shirt": "brown"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "x2 = troubling",
+     "x": 1300,
+     "y": 400,
+     "size": 100,
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "text": "polling researcher",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "So one side stresses the media. Another stresses the fraudsters. Everyone stresses the polls. We just count the facts.",
+   "items": [
+    {
+     "text": "MEDIA",
+     "x": 500,
+     "y": 380,
+     "size": 90,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "FRAUDSTERS",
+     "x": 960,
+     "y": 380,
+     "size": 90,
+     "color": "dark",
+     "at": 0.25
+    },
+    {
+     "text": "POLLS",
+     "x": 1420,
+     "y": 380,
+     "size": 90,
+     "color": "dark",
+     "at": 0.5
+    },
+    {
+     "prop": "clipboard",
+     "x": 960,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.7,
+     "text": "FACTS"
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "The midterms are on November third. You'll see a lot of polls before then. So here's Linda's practical guide to not getting Kevined.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 550,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "NOV 3"
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    }
+   ],
+   "chapter": "Part 7: Don't get Kevined",
+   "bg": "paper"
+  },
+  {
+   "say": "Rule one: never trust one poll. Look at the average of many. One wild poll is usually just a wild poll.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 860,
+     "s": 0.8,
+     "at": 0,
+     "text": "1"
+    },
+    {
+     "cross": [
+      600,
+      700,
+      110
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "chart",
+     "x": 1250,
+     "y": 880,
+     "s": 1.2,
+     "at": 0.5,
+     "text": "AVG"
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Rule two: who did the poll? Have you heard of them? Do they have a track record from past elections?",
+   "items": [
+    {
+     "prop": "magnifier",
+     "x": 700,
+     "y": 700,
+     "s": 1.2,
+     "at": 0,
+     "text": "WHO?"
+    },
+    {
+     "prop": "calendar",
+     "x": 1350,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.4,
+     "text": "PAST"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Rule three: does it say how many people, how they were reached, and the margin of error? No details, no trust.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 860,
+     "s": 0.9,
+     "at": 0,
+     "text": "HOW MANY?"
+    },
+    {
+     "prop": "phone",
+     "x": 1100,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.3
+    },
+    {
+     "text": "+/- ?",
+     "x": 1550,
+     "y": 420,
+     "size": 120,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Rule four: if a poll is exactly what your side was hoping for, be extra suspicious. That goes for every side.",
+   "items": [
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "TOO GOOD?",
+     "x": 1300,
+     "y": 380,
+     "size": 110,
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Rule five: remember that even honest polls can miss. Polls struggle to measure turnout and enthusiasm, and in tight races they can pick the wrong winner.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "ballot",
+     "x": 1300,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.35
+    },
+    {
+     "text": "?",
+     "x": 1600,
+     "y": 420,
+     "size": 180,
+     "color": "red",
+     "at": 0.55
+    },
+    {
+     "text": "Pew Research",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Polls are a weather forecast, not the weather. The only poll that counts is the one on election day.",
+   "items": [
+    {
+     "prop": "cloud",
+     "x": 700,
+     "y": 450,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "sun",
+     "x": 1000,
+     "y": 400,
+     "s": 0.8,
+     "at": 0.2
+    },
+    {
+     "arrow": [
+      [
+       1150,
+       600
+      ],
+      [
+       1350,
+       600
+      ]
+     ],
+     "at": 0.4
+    },
+    {
+     "prop": "ballot",
+     "x": 1550,
+     "y": 880,
+     "s": 1.2,
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Recap. A firm called Wedgewood Polls admitted on October twentieth that almost all its election surveys were made up.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 700,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "text": "WEDGEWOOD"
+    },
+    {
+     "stamp": "MADE UP",
+     "x": 1300,
+     "y": 450,
+     "size": 90,
+     "w": 420,
+     "at": 0.35
+    }
+   ],
+   "chapter": "Recap",
+   "bg": "teal"
+  },
+  {
+   "say": "Its numbers reached the New York Times and forecast sites, which have pulled them, and one Senate candidate says they helped end her campaign.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 650,
+     "y": 800,
+     "s": 0.8,
+     "at": 0,
+     "text": "NYT"
+    },
+    {
+     "prop": "chart",
+     "x": 1100,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "blue"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Both parties' officials are angry, just at different people. And everyone is checking their polls a lot more carefully.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "magnifier",
+     "x": 960,
+     "y": 600,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Back at the stand, Kevin has updated his sign. It now says: ninety-seven percent approval. Source: Kevin. Sample size: Kevin.",
+   "items": [
+    {
+     "prop": "booth",
+     "x": 1000,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "SOURCE: KEVIN|SAMPLE: 1"
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Dave says that's the most honest poll he's seen all week. He buys another lemonade.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "dollar",
+     "x": 1250,
+     "y": 760,
+     "s": 0.9,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Your turn. Do you still trust election polls? More, less, or never did? Tell us in the comments. We read them all. All ninety-seven.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 980,
+     "y": 800,
+     "s": 1.3,
+     "at": 0,
+     "text": "COMMENTS"
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 330,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "?",
+     "x": 1650,
+     "y": 400,
+     "size": 200,
+     "color": "red",
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "If this helped, subscribe for calm, stick-figure news, twice a week or more. See you at the next one.",
+   "items": [
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "tv",
+     "x": 1550,
+     "y": 800,
+     "s": 0.7,
+     "at": 0.4,
+     "text": "SUBSCRIBE"
+    }
+   ],
+   "bg": "yellow"
+  }
+ ]
+}
