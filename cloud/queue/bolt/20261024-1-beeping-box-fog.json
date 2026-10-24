@@ -1,0 +1,1362 @@
+{
+ "id": "20261024-1-beeping-box-fog",
+ "plot": "On a foggy Saturday morning a beeping box with only a 'B' on its label falls onto the podium; Bolt forbids opening it until the owner is found, Pip reads 'OPEN AT ZERO' from the raised Truth Press, Grumpy's towing and Turbo's shake only make the countdown faster, and secretive Bertha seems to be the owner, until Bolt reads the smudge as 'BOLT': it is his own birthday cake from Bertha, which he forgot; lesson: good surprises are worth waiting for; then a second box starts beeping.",
+ "script": {
+  "title": "What's BEEPING in the Mystery Box? 📦⏰ Cartoon Cars",
+  "description": "A beeping box falls out of the fog with only one letter on its label: B. Inspector Bolt says nobody opens it until they find the owner, but the countdown keeps getting faster. Good surprises are worth waiting for! Inspector Bolt #10",
+  "set": {
+   "place": "Wheelburg square, foggy Saturday morning",
+   "press": true,
+   "podium": true,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "box",
+    "type": "box",
+    "color": "blue",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "red",
+    "on": "podium",
+    "visible": false,
+    "scale": 1.2
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "green",
+    "on": "podium",
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Whoa! A box just fell out of the fog! And it's BEEPING!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT IS BEEPING?!",
+    "cam": "prop:box",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Beep, beep, beep! What is inside that box?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a foggy Saturday morning in Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Boxes don't beep. Boxes sit quietly. This box is rude.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ooh! Maybe it's a present! I love presents!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nobody touch that box, please. Procedure.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A box we don't own stays closed. First, we find its owner.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Aww! But I really, really want to peek inside!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled closer. There was a paper label on top.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The fog made the ink run. I can only read one letter.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY ONE LETTER: B",
+    "cam": "prop:box",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh! Bolt, sweetie, what day is it today?",
+    "cam": "two:bertha,bolt",
+    "do": [
+     [
+      "bertha",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Saturday. A normal day. Nothing special at all.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hee hee! Nothing special. Right. Of course.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "B is for Best! So the box is mine, obviously!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo, your name starts with T.",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "T is for Totally the best! Still counts!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "B is for Bother. And that box is a big bother.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Maybe it's a baby dragon! A tiny, friendly one!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Or a basket of blueberry buns! Mmm!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone guessed something different. Nobody guessed right.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the beeping got faster. Beep-beep-beep-beep!",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Look! There's tiny writing on the side! But I can't reach it!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The Truth Press can lift you up, Pip. Hop on.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "pip",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Going up, up, up! Wheee!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "rise"
+     ],
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It says... OPEN AT ZERO!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "OPEN AT ZERO!",
+    "cam": "prop:box",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Zero? Zero what? Zero minutes? Zero cookies?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's a countdown. When the beeps stop, the box opens itself.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Then we must find the owner fast, or they miss the surprise!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip slid back down. The box kept beeping.",
+    "cam": "wide",
+    "do": [
+     [
+      "press",
+      "sink"
+     ],
+     [
+      "pip",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. We ask every car whose name starts with B.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bertha starts with B! Bertha, is this box yours?",
+    "cam": "two:turbo,bertha",
+    "do": [
+     [
+      "turbo",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Mine? Oh, no, no, no. It is not for me.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "She's wiggling. Bertha always wiggles when she keeps a secret.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I am NOT wiggling! I am... dancing! La la la!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughed. Then Bertha zoomed away into the fog.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "bertha",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Where is she going? The box is still beeping!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll sing it a lullaby. Sleepy boxes beep slower!",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip sang her softest song. The box beeped right along.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It's beeping to the music! That's not slower at all!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Fine. I'll tow it to the Lost and Found myself.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy lifted his hook. The box beeped right in his ear.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Aaah! Too loud! Too beepy! I give up!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My turn! I'll give it one shake and guess what's inside!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, no! Shaking is not procedure!",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Too late. Turbo gave the box one tiny wiggle.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "BEEP BEEP BEEP BEEP!",
+    "cam": "prop:box",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Uh-oh! It got faster! I made it faster!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Listen. Something inside goes squish. Soft and squishy.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Soft and squishy. Interesting. Very interesting indeed.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Squishy? Maybe it's a beeping pillow! For racing naps!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Unlikely, Turbo. Racing naps are not a thing.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Squishy things are the worst. Like puddles. And hugs.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, Bertha came puffing back out of the fog.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Is it still closed? Oh, thank goodness! Nobody opened it?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha. You know something about this box. Please tell us.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I can't! It's a secret! A really good secret!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Only ten beeps left! We have to find the owner now!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "10 BEEPS LEFT!",
+    "cam": "prop:box",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let's think. A B name. A secret. Something soft and sweet.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And Bertha asked you what day it is. Twice.",
+    "cam": "two:grumpy,bolt",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "She did. And I said nothing special. Hmm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Nine beeps! Eight beeps! Somebody think faster!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt looked at the smudgy label one more time.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ],
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wait. After the B, there's an O. And an L.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "B... O... L... T? BOLT! The box is for YOU!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S FOR BOLT?!",
+    "cam": "two:bolt,pip",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "For me? But who would send a box to me?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I would! Because today is your birthday, silly! You forgot!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "My birthday? I solve every mystery... except my own calendar.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I ordered your cake. It fell off my roof in the fog.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I drove back to the bakery to fetch the candles.",
+    "cam": "two:bertha,bolt",
+    "do": [
+     [
+      "bertha",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "So you weren't hiding a secret. You were hiding HIS cake.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And I shook your birthday cake. Sorry, Bolt!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Apology accepted, Turbo. It's still beeping, so it's still fine.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, thank you. Nobody remembers my birthday. Not even me.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "That's what friends are for, Inspector!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone counted the last beeps together. Three... two... one...",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "ZERO!",
+    "cam": "prop:box",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "box",
+      "vanish"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop! The box opened, and out came a giant birthday cake!",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Happy birthday, Inspector Bolt!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, friends. This is the best surprise ever.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. Good surprises are worth waiting for.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I waited. I'm still grumpy. But I want cake.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Wheelburg shared the cake right there in the fog.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "ANOTHER BEEP?!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A second box was beeping. But who is this one for?",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "What's BEEPING in the Mystery Box? 📦⏰ Cartoon Cars",
+  "description": "A beeping box falls out of the fog with only one letter on its label: B. Inspector Bolt says nobody opens it until they find the owner, but the countdown keeps getting faster! Good surprises are worth waiting for. Inspector Bolt #10\n\n#kidscartoon #cartooncars #storiesforkids",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "mystery box",
+   "inspector bolt",
+   "stories for kids",
+   "patience",
+   "surprise",
+   "cars for kids",
+   "3d cartoon",
+   "preschool"
+  ],
+  "thumb_text": "WHAT'S INSIDE?!",
+  "thumb_beat": 49,
+  "localizations": {
+   "es": {
+    "title": "¿Qué está PITANDO en la caja misteriosa? 📦⏰",
+    "description": "Una caja que pita cae de la niebla con una sola letra en la etiqueta: B. El Inspector Bolt dice que nadie la abre hasta encontrar a su dueño, ¡pero la cuenta atrás va cada vez más rápido! Las buenas sorpresas valen la espera. Inspector Bolt #10\n\n#dibujosanimados #coches #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "O que está APITANDO na caixa misteriosa? 📦⏰",
+    "description": "Uma caixa que apita cai da neblina com só uma letra na etiqueta: B. O Inspetor Bolt diz que ninguém abre até achar o dono, mas a contagem regressiva fica cada vez mais rápida! Boas surpresas valem a espera. Inspetor Bolt #10\n\n#desenhoinfantil #carros #historiasinfantis"
+   },
+   "ar": {
+    "title": "ما الذي يصفّر داخل الصندوق الغامض؟ 📦⏰",
+    "description": "يسقط صندوق يصفّر من الضباب، وعلى ملصقه حرف واحد فقط: B. يقول المفتش بولت إن أحدًا لن يفتحه حتى يجدوا صاحبه، لكن العدّ التنازلي يزداد سرعة! المفاجآت الجميلة تستحق الانتظار. المفتش بولت #10\n\n#كرتون_أطفال #سيارات #قصص_أطفال"
+   },
+   "fr": {
+    "title": "Qu'est-ce qui BIPE dans la boîte mystère ? 📦⏰",
+    "description": "Une boîte qui bipe tombe du brouillard avec une seule lettre sur l'étiquette : B. L'inspecteur Bolt dit que personne ne l'ouvre avant d'avoir trouvé son propriétaire, mais le compte à rebours accélère ! Les belles surprises valent la peine d'attendre. Inspecteur Bolt #10\n\n#dessinanimé #voitures #histoirespourenfants"
+   },
+   "ja": {
+    "title": "ナゾの箱がピーピー鳴ってる!? 📦⏰",
+    "description": "霧の中から落ちてきた、ピーピー鳴る箱。ラベルに読めるのは「B」の一文字だけ。ボルト警部は「持ち主が見つかるまで開けない」と言うけれど、カウントダウンはどんどん速くなる!すてきなサプライズは待つ価値がある。ボルト警部 #10\n\n#子ども向けアニメ #くるま #おはなし"
+   },
+   "ko": {
+    "title": "미스터리 상자에서 삐삐 소리가?! 📦⏰",
+    "description": "안개 속에서 삐삐 울리는 상자가 떨어졌어요. 라벨에는 글자 하나, B만 보여요. 볼트 경감은 주인을 찾기 전엔 아무도 열면 안 된다고 하지만, 카운트다운은 점점 빨라져요! 좋은 깜짝 선물은 기다릴 가치가 있어요. 볼트 경감 #10\n\n#어린이만화 #자동차 #동화"
+   },
+   "de": {
+    "title": "Was PIEPT in der Geheimkiste? 📦⏰",
+    "description": "Eine piepende Kiste fällt aus dem Nebel, auf dem Etikett steht nur ein Buchstabe: B. Inspektor Bolt sagt, niemand öffnet sie, bevor der Besitzer gefunden ist – aber der Countdown wird immer schneller! Gute Überraschungen sind das Warten wert. Inspektor Bolt #10\n\n#kinderserie #autos #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "IT'S BEEPING!",
+   "title": "A Box Fell Out of the Fog… and It BEEPS! 📦😲 #shorts",
+   "description": "Nobody knows who it belongs to, and nobody is allowed to open it! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery box"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Una caja cayó de la niebla… ¡y PITA! 📦😲 #shorts",
+     "description": "¡Nadie sabe de quién es y nadie puede abrirla! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma caixa caiu da neblina… e APITA! 📦😲 #shorts",
+     "description": "Ninguém sabe de quem é, e ninguém pode abrir! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "صندوق سقط من الضباب… وهو يصفّر! 📦😲 #shorts",
+     "description": "لا أحد يعرف لمن هو، ولا يُسمح لأحد بفتحه! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une boîte tombe du brouillard… et elle BIPE ! 📦😲 #shorts",
+     "description": "Personne ne sait à qui elle est, et personne n'a le droit de l'ouvrir ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "霧から落ちてきた箱がピーピー鳴る!📦😲 #shorts",
+     "description": "だれの箱かわからないし、開けちゃダメ!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "안개에서 떨어진 상자가 삐삐 울려요! 📦😲 #shorts",
+     "description": "누구 건지 아무도 몰라요. 열어도 안 돼요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Kiste fällt aus dem Nebel… und PIEPT! 📦😲 #shorts",
+     "description": "Keiner weiß, wem sie gehört, und keiner darf sie öffnen! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 45,
+   "dur": 26,
+   "top": "DON'T SHAKE IT!",
+   "title": "Turbo Shook the Beeping Box! 😱📦 #shorts",
+   "description": "One tiny wiggle and the beeping got FASTER. What's inside? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "funny cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo sacudió la caja que pita! 😱📦 #shorts",
+     "description": "Un pequeño meneo y el pitido fue MÁS RÁPIDO. ¿Qué hay dentro? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Turbo sacudiu a caixa que apita! 😱📦 #shorts",
+     "description": "Uma sacudidinha e o apito ficou MAIS RÁPIDO. O que tem dentro? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو هزّ الصندوق الذي يصفّر! 😱📦 #shorts",
+     "description": "هزة صغيرة واحدة فصار الصفير أسرع! ماذا في الداخل؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo a secoué la boîte qui bipe ! 😱📦 #shorts",
+     "description": "Une toute petite secousse et le bip va PLUS VITE. Qu'y a-t-il dedans ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボが鳴る箱をふっちゃった!😱📦 #shorts",
+     "description": "ちょっとゆらしただけで、ピーピーが速くなった!中身はなに?本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보가 삐삐 상자를 흔들었어요! 😱📦 #shorts",
+     "description": "살짝 흔들었더니 소리가 더 빨라졌어요. 안에 뭐가 있을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo hat die piepende Kiste geschüttelt! 😱📦 #shorts",
+     "description": "Ein kleines Wackeln und das Piepen wird SCHNELLER. Was ist drin? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 59,
+   "dur": 28,
+   "top": "10 BEEPS LEFT!",
+   "title": "Only 10 Beeps Left! Who Is the Box For? ⏰📦 #shorts",
+   "description": "The countdown is almost over and the label shows just one letter! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "countdown"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Solo quedan 10 pitidos! ¿Para quién es la caja? ⏰📦 #shorts",
+     "description": "¡La cuenta atrás casi termina y la etiqueta solo tiene una letra! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Só faltam 10 apitos! Para quem é a caixa? ⏰📦 #shorts",
+     "description": "A contagem está quase acabando e a etiqueta só mostra uma letra! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بقيت 10 صفّارات فقط! لمن هذا الصندوق؟ ⏰📦 #shorts",
+     "description": "العدّ التنازلي يوشك أن ينتهي والملصق عليه حرف واحد فقط! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Plus que 10 bips ! Pour qui est la boîte ? ⏰📦 #shorts",
+     "description": "Le compte à rebours est presque fini et l'étiquette n'a qu'une lettre ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "あと10回でゼロ!箱はだれのもの?⏰📦 #shorts",
+     "description": "カウントダウンはもうすぐ終わり。ラベルには一文字だけ!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "삐삐 10번 남았어요! 상자는 누구 거죠? ⏰📦 #shorts",
+     "description": "카운트다운이 거의 끝났는데 라벨엔 글자 하나뿐! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Nur noch 10 Piepser! Für wen ist die Kiste? ⏰📦 #shorts",
+     "description": "Der Countdown ist fast vorbei und auf dem Etikett steht nur ein Buchstabe! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

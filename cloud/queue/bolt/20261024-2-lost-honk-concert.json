@@ -1,0 +1,1323 @@
+{
+ "id": "20261024-2-lost-honk-concert",
+ "plot": "On the night of the Wheelburg Honk Concert, Turbo's horn only goes a deep 'bwomp' ten minutes before his solo; Maestro's Truth Press squeeze, Bertha's honk lessons and Pip's blowing all fail, a mysterious 'ta-da-daaa' sounds in the dark, and Bertha's joke finally makes silent Grumpy laugh out Turbo's honk: their horns swapped in the car-wash bubbles; after swapping back Turbo shares the solo with Grumpy (lesson: sharing the spotlight makes the music bigger); then something in the sky honks back.",
+ "script": {
+  "title": "Turbo Lost His Honk! 📯😱 Night Concert Mystery",
+  "set": {
+   "place": "Wheelburg square, Honk Concert night",
+   "press": true,
+   "podium": true,
+   "time": "night"
+  },
+  "description": "On the night of the Honk Concert, Turbo's horn only goes bwomp. Inspector Bolt and friends have ten minutes to find his real honk before the stars go to sleep. Sharing the spotlight makes the music bigger! Inspector Bolt #11",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "maestro": {
+    "name": "Maestro Melody",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 1,
+    "color": [
+     0.2,
+     0.68,
+     0.72
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     10.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "HONK! Bwomp?! Why does my horn sound like a sleepy cow?",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO LOST HIS HONK!",
+    "cam": "close:turbo",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tonight was the Wheelburg Honk Concert, under the stars.",
+    "cam": "overhead",
+    "do": [
+     [
+      "maestro",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "Turbo! You play the big honk solo in ten minutes!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I can't play a solo that goes bwomp!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Maybe your horn caught a cold, Turbo?",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Warm-up time, everyone! Mee-mee-mee! Honk-honk-honk!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone honked to warm up. Everyone except Grumpy.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. I'm not honking tonight. Not one single honk.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Not even one, Grumpy? It's a honk concert, honey!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I said not one. My horn is on holiday.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A horn on holiday? Where does a horn even go?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Somewhere quiet. Not like here.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a blue car with a brown hat rolled in.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening. I heard a very unusual bwomp.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Inspector! Somebody broke my honk! Listen. Bwooomp.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "That is not a Turbo sound. That is a mystery.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE DID THE HONK GO?",
+    "cam": "close:turbo",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. We go back through Turbo's whole day.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Easy! Morning, I raced. Lunch, I raced. Then... car wash!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Who else went to the car wash today?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Me! And Grumpy! We were all in the bubbles together!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo didn't hear that. He was too busy bwomping.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe a sneaky car stole my honk while I napped!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nobody can steal a honk, Turbo. But a honk can get lost.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "No time for car washes! Let's try the Truth Press!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "A little squeeze might squish the honk back out!",
+    "cam": "two:maestro,turbo",
+    "do": [
+     [
+      "turbo",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Very gently, please. The press is for truth, not horns.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The press came down. Squeeze! Turbo tried his honk.",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bwomp. Bwomp-bwomp. Now I'm a flat, sleepy cow!",
+    "cam": "press",
+    "do": [
+     [
+      "turbo",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ha! Sorry, Turbo. That one was very, very funny.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy almost laughed too. He shut his mouth tight. Mmmph!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "Five minutes! No solo means no concert tonight!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "5 MINUTES LEFT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:maestro"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Then Wheelburg's stars won't hear a single honk!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ],
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Don't worry, sugar! I'll teach you my honk. Big and round!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Fill your tires, open wide, and go... HOOOONK!",
+    "cam": "two:bertha,turbo",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fill tires, open wide... BWOMMMP.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bwomp was so deep, the podium wobbled.",
+    "cam": "podium",
+    "do": [
+     [
+      "star",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Well! That's a new sound for the music book.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Moo.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "My turn! I'll blow on your horn, like on a hot soup.",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "to:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Phoooo! Phoooo! Now try!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bwomp. Still a cow. A cooler cow, but a cow.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "Then sing it instead! La-la-HONK! Like that!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "La-la-bwomp. Nope. Even my singing is a cow.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from the dark, came a tiny sound. Ta-da-daaa!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "TA-DA-DAAA?!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That's MY honk! Somebody is playing my honk!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "That was me. I mean, my trumpet. I think.",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You think? You don't have a trumpet, Maestro.",
+    "cam": "two:bolt,maestro",
+    "do": [
+     [
+      "bolt",
+      "turn:maestro"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "Oh dear. Then I don't know who it was!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Everybody, quiet please. Not a peep. Let's listen.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wheelburg went very still. Only the crickets sang.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I hear something breathing. Very carefully. Over there.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Don't look at me. I'm just being grumpy. Quietly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, would you honk once for us? Just one tiny honk?",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. Absolutely not. My horn is on holiday, remember?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "Two minutes! If we don't start, the stars will go to sleep!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "2 MINUTES LEFT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:maestro"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Please, everyone! I need my honk for the solo!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt smiled. He had a very clever idea.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, I believe you know the funniest joke in Wheelburg.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ooh, I do! Why did the car get a puppy?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Because it wanted a little... BARK-ing space!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy tried not to laugh. He tried very hard.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Ha... ha... HA... TA-DA-DAAA!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY HAS IT?!",
+    "cam": "two:grumpy,turbo",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy! You took my honk?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I didn't take it! It came out of the bubbles on me!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Of course. The car wash. Your horns got mixed up.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo got Grumpy's deep bwomp. Grumpy got Turbo's ta-da.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "So that's why Grumpy didn't honk all night!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I liked it. For once, I sounded fun. Like a party.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy looked at the ground. Turbo looked at Grumpy.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "turbo",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "One minute! Quick, back to the car wash! Swap them!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash! Bubbles! Scrub! And out they came again.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "grumpy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Testing... TA-DA-DAAA! I'm back! I'm totally back!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bwomp. Yes. That's me again. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Aww. Grumpy looks sad without his party honk.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy, wait. Let's play the solo together. You and me.",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Together? A ta-da and a bwomp?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "The fanciest ta-da needs the biggest bwomp under it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "maestro",
+    "say": "And a one, and a two, and a HONK!",
+    "cam": "close:maestro",
+    "do": [
+     [
+      "maestro",
+      "jump"
+     ],
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TA-DA-BWOMP!",
+    "cam": "two:turbo,grumpy",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ],
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ta-da-bwomp! Ta-da-bwomp! It was the best song Wheelburg ever heard.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. Sharing the spotlight makes the music bigger.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm still grumpy. But I'm a musical grumpy now.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And they honked under the stars until bedtime.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE MOON HONKED?!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "star",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from high in the sky, something honked back. Who was it?",
+    "cam": "prop:star",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Turbo Lost His Honk! 📯😱 Night Concert Mystery",
+  "description": "On the night of the Honk Concert, Turbo's horn only goes BWOMP! Inspector Bolt and friends have ten minutes to find his real honk before the stars go to sleep. Sharing the spotlight makes the music bigger. Inspector Bolt #11\n\n#kidscartoon #cartooncars #storiesforkids",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "honk",
+   "inspector bolt",
+   "stories for kids",
+   "sharing",
+   "music",
+   "cars for kids",
+   "3d cartoon",
+   "night"
+  ],
+  "thumb_text": "NO HONK?!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¡Turbo perdió su bocina! 📯😱 Misterio en el concierto",
+    "description": "¡En la noche del Concierto de Bocinas, la bocina de Turbo solo hace BUOMP! El Inspector Bolt y sus amigos tienen diez minutos para encontrar su bocina antes de que las estrellas se duerman. Compartir el protagonismo hace la música más grande. Inspector Bolt #11\n\n#dibujosanimados #coches #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Turbo perdeu a buzina! 📯😱 Mistério no concerto",
+    "description": "Na noite do Concerto de Buzinas, a buzina do Turbo só faz BUOMP! O Inspetor Bolt e os amigos têm dez minutos para achar a buzina dele antes que as estrelas durmam. Dividir o palco deixa a música maior. Inspetor Bolt #11\n\n#desenhoinfantil #carros #historiasinfantis"
+   },
+   "ar": {
+    "title": "توربو فقد صوت بوقه! 📯😱 لغز حفلة الليل",
+    "description": "في ليلة حفلة الأبواق، بوق توربو لا يقول إلا بوووم! أمام المفتش بولت وأصدقائه عشر دقائق ليجدوا بوقه الحقيقي قبل أن تنام النجوم. مشاركة الأضواء تجعل الموسيقى أكبر. المفتش بولت #11\n\n#كرتون_أطفال #سيارات #قصص_أطفال"
+   },
+   "fr": {
+    "title": "Turbo a perdu son klaxon ! 📯😱 Mystère au concert",
+    "description": "Le soir du Concert des Klaxons, le klaxon de Turbo ne fait plus que BWOMP ! L'inspecteur Bolt et ses amis ont dix minutes pour retrouver son vrai klaxon avant que les étoiles s'endorment. Partager la vedette rend la musique plus belle. Inspecteur Bolt #11\n\n#dessinanimé #voitures #histoirespourenfants"
+   },
+   "ja": {
+    "title": "ターボのクラクションが消えた!📯😱 夜のコンサートのナゾ",
+    "description": "クラクション・コンサートの夜、ターボのクラクションが「ブォン」としか鳴らない!星が眠る前に、ボルト警部となかまたちは10分で本物の音を見つけられるかな?主役をわけあうと音楽はもっと大きくなる。ボルト警部 #11\n\n#子ども向けアニメ #くるま #おはなし"
+   },
+   "ko": {
+    "title": "터보가 경적 소리를 잃어버렸어요! 📯😱 밤 콘서트 미스터리",
+    "description": "경적 콘서트가 열리는 밤, 터보의 경적이 '부옴'소리만 나요! 볼트 경감과 친구들은 별들이 잠들기 전 10분 안에 진짜 경적 소리를 찾아야 해요. 주인공 자리를 나누면 음악이 더 커져요. 볼트 경감 #11\n\n#어린이만화 #자동차 #동화"
+   },
+   "de": {
+    "title": "Turbo hat seine Hupe verloren! 📯😱 Konzert-Rätsel",
+    "description": "Am Abend des Hupkonzerts macht Turbos Hupe nur noch BWOMP! Inspektor Bolt und seine Freunde haben zehn Minuten, um seine echte Hupe zu finden, bevor die Sterne einschlafen. Wer das Rampenlicht teilt, macht die Musik größer. Inspektor Bolt #11\n\n#kinderserie #autos #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHERE'S HIS HONK?!",
+   "title": "Turbo's Horn Sounds Like a Sleepy Cow! 🐮📯 #shorts",
+   "description": "The big solo is in ten minutes and his honk only goes bwomp! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "funny cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La bocina de Turbo suena como una vaca dormida! 🐮📯 #shorts",
+     "description": "¡El gran solo es en diez minutos y su bocina solo hace buomp! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A buzina do Turbo parece uma vaca sonolenta! 🐮📯 #shorts",
+     "description": "O grande solo é daqui a dez minutos e a buzina só faz buomp! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بوق توربو يبدو مثل بقرة نعسانة! 🐮📯 #shorts",
+     "description": "العزف المنفرد بعد عشر دقائق وبوقه لا يقول إلا بوووم! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le klaxon de Turbo fait comme une vache endormie ! 🐮📯 #shorts",
+     "description": "Le grand solo est dans dix minutes et son klaxon ne fait que bwomp ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボのクラクションがねむい牛みたい!🐮📯 #shorts",
+     "description": "ソロまであと10分なのに「ブォン」としか鳴らない!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보 경적이 졸린 소 같아요! 🐮📯 #shorts",
+     "description": "솔로 공연이 10분 남았는데 '부옴'소리만 나요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbos Hupe klingt wie eine müde Kuh! 🐮📯 #shorts",
+     "description": "Das große Solo ist in zehn Minuten und seine Hupe macht nur bwomp! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 46,
+   "dur": 28,
+   "top": "WHO HAS MY HONK?",
+   "title": "Who Is Playing Turbo's Honk in the Dark? 🌙📯 #shorts",
+   "description": "A tiny ta-da-daaa comes from the dark, and only two minutes are left! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién toca la bocina de Turbo en la oscuridad? 🌙📯 #shorts",
+     "description": "¡Un pequeño ta-ta-chán sale de la oscuridad y solo quedan dos minutos! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem está tocando a buzina do Turbo no escuro? 🌙📯 #shorts",
+     "description": "Um tan-tan-tããã baixinho vem do escuro, e só faltam dois minutos! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من يعزف بوق توربو في الظلام؟ 🌙📯 #shorts",
+     "description": "صوت تا-دا-دا صغير يأتي من الظلام، وبقيت دقيقتان فقط! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui joue le klaxon de Turbo dans le noir ? 🌙📯 #shorts",
+     "description": "Un petit ta-da-daaa sort du noir, et il ne reste que deux minutes ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "暗やみでターボの音を鳴らすのはだれ?🌙📯 #shorts",
+     "description": "暗やみから小さな「タ・ダ・ダーン」。のこりはあと2分!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "어둠 속에서 터보 경적을 울리는 건 누구? 🌙📯 #shorts",
+     "description": "어둠 속에서 작은 '따-다-다~'가 들려요. 2분밖에 안 남았어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer spielt im Dunkeln Turbos Hupe? 🌙📯 #shorts",
+     "description": "Ein leises Ta-da-daaa kommt aus dem Dunkeln, und es bleiben nur zwei Minuten! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
