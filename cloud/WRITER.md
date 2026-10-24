@@ -77,6 +77,7 @@ Every long job must follow this shape; check it beat by beat before committing.
 - So, for every long episode:
   - beat 1 starts in motion at 0 s (running, falling, chasing), with dialogue at 0 s;
   - write enough beats for **3:10 or more**.
+- 2026-10-24 measured (spoken words → rendered length): maxcat speaks fast — 590–650 words = 3:11–3:15, and `kite-tree-climb` (602 words) came out under 3:00 and was rejected; hollow 406–408 words = ~3:00 (`black-hunt-1127` rejected). So write at least **maxcat ≥ 660 words**, **hollow ≥ 470 words**, doughbros 470–500 (renders 3:17–3:27, fine). Beat 1 and beat 2 both need a `do` action (hollow `black-hunt-1127` had only 1 of the first 3 beats moving → "boshlanishi sust").
 
 ## roblox (Blocky Quest 3D, added 2026-10-20)
 - Bible: `roblox/story/bible.md`; cast `roblox/scripts3d/cast.json`; places obby | lava | tower | tycoon | city | lobby, time day | night.
