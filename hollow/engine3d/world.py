@@ -216,6 +216,17 @@ def _shape(key, kind, s, ch):
             for fx in (-0.08, 0.0, 0.08):  # long fingers
                 bpy.ops.mesh.primitive_cylinder_add(radius=0.02 * s, depth=0.45 * s, location=(sx * 0.86 * s + fx * s, -0.1 * s, 0.3 * s)); parent(add(_o(), skin), o)
         return o, 1.9 * s, 1.0 * s, 4.1 * s, -0.8 * s, 3.15 * s
+    if kind == "jack":  # Spring-heeled Jack (1838 accounts): tall thin figure, black cloak, big metal helmet, tight white oilskin suit, claws, red fire eyes (front = -y)
+        suit = mat(f"oil_{key}", (0.86, 0.88, 0.9), 0.15, 0.0); cloak = mat(f"jc_{key}", (0.03, 0.02, 0.04), 0.9)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.38 * s, depth=3.0 * s, location=(0, 0, 1.5 * s)); o = add(_o(), suit)
+        bpy.ops.mesh.primitive_cone_add(radius1=1.05 * s, radius2=0.42 * s, depth=3.1 * s, location=(0, 0.3 * s, 1.75 * s)); cl = add(_o(), cloak); cl.scale = (1, 0.7, 1); parent(cl, o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.42 * s, location=(0, 0, 3.55 * s)); parent(add(_o(), mat("jskin", (0.75, 0.68, 0.62), 0.6)), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.56 * s, location=(0, 0.08 * s, 3.8 * s)); hm = add(_o(), mat("jhelm", (0.55, 0.55, 0.6), 0.25, 1.0)); hm.scale = (1, 1, 0.8); parent(hm, o)
+        for sx in (-1, 1):
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.08 * s, depth=1.6 * s, location=(sx * 0.55 * s, -0.15 * s, 2.0 * s), rotation=(0, sx * math.radians(-20), 0)); parent(add(_o(), suit), o)
+            for fx in (-0.07, 0.0, 0.07):  # claws
+                bpy.ops.mesh.primitive_cone_add(radius1=0.03 * s, depth=0.35 * s, location=(sx * 0.82 * s + fx * s, -0.2 * s, 1.1 * s), rotation=(math.pi, 0, 0)); parent(add(_o(), mat("claw", (0.7, 0.7, 0.75), 0.2, 1.0)), o)
+        return o, 1.6 * s, 1.2 * s, 4.3 * s, -0.42 * s, 3.55 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -230,7 +241,7 @@ def make_char(key, ch):
     o, Wd, L, H, fy, fz = _shape(key, kind, s, ch)
     o.parent = body
     eyes = []
-    glow_eyes = kind in ("demon", "winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
+    glow_eyes = kind in ("jack", "demon", "winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
     n_eyes = {"hollowmother": 6}.get(kind, 2)
     sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18, "winged": 0.36, "demon": 0.5}.get(kind, 0.22) * s
     for i in range(n_eyes):

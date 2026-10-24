@@ -1,0 +1,846 @@
+{
+ "title": "Spring-heeled Jack: Don't Open the Door",
+ "description": "In 1838, London was terrified of a leaping figure with fiery eyes who knocked on doors at night.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.04,
+  "eyes": 2,
+  "moonlight": 7
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "jack": {
+   "name": "Spring-heeled Jack",
+   "voice": "bm_lewis",
+   "speed": 0.85,
+   "pitch": -3,
+   "color": [
+    0.05,
+    0.03,
+    0.06
+   ],
+   "kind": "jack",
+   "size": 0.95,
+   "home": [
+    3,
+    14
+   ]
+  },
+  "jane": {
+   "name": "Jane Alsop",
+   "voice": "bf_emma",
+   "speed": 1.0,
+   "pitch": 1,
+   "color": [
+    0.45,
+    0.32,
+    0.5
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -7,
+    11
+   ]
+  },
+  "sister": {
+   "name": "Jane's sister",
+   "voice": "bf_alice",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.3,
+    0.42,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -9.5,
+    11.5
+   ]
+  },
+  "lucy": {
+   "name": "Lucy, 18",
+   "voice": "af_nicole",
+   "speed": 1.0,
+   "pitch": 1,
+   "color": [
+    0.55,
+    0.15,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -8,
+    9
+   ]
+  },
+  "mayor": {
+   "name": "The Lord Mayor",
+   "voice": "bm_fable",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.55,
+    0.08,
+    0.08
+   ],
+   "kind": "human",
+   "size": 1.0,
+   "home": [
+    -8,
+    13
+   ]
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w00",
+   "at": [
+    -2.2,
+    16.0,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w01",
+   "at": [
+    -0.8000000000000003,
+    16.05,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w02",
+   "at": [
+    0.5999999999999996,
+    16.0,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w03",
+   "at": [
+    1.9999999999999991,
+    16.05,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w04",
+   "at": [
+    3.3999999999999995,
+    16.0,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "box",
+   "color": [
+    0.3,
+    0.26,
+    0.24
+   ],
+   "visible": true,
+   "id": "w05",
+   "at": [
+    4.8,
+    16.05,
+    0.0
+   ],
+   "scale": 1.2
+  },
+  {
+   "type": "ball",
+   "color": [
+    0.35,
+    0.6,
+    1.0
+   ],
+   "glow": 18,
+   "visible": false,
+   "scale": 0.45,
+   "id": "fl1",
+   "at": [
+    -4.2,
+    9.4,
+    3.3
+   ]
+  },
+  {
+   "type": "ball",
+   "color": [
+    0.35,
+    0.6,
+    1.0
+   ],
+   "glow": 18,
+   "visible": false,
+   "scale": 0.45,
+   "id": "fl2",
+   "at": [
+    -5.6,
+    8.6,
+    3.2
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "cand",
+   "color": [
+    1.0,
+    0.8,
+    0.4
+   ],
+   "glow": 10,
+   "visible": false,
+   "scale": 0.22,
+   "at": [
+    -6.2,
+    10.6,
+    2.4
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Someone is knocking. He says he is a policeman. Do not open the door.",
+   "cam": "wide",
+   "do": [
+    [
+     "jack",
+     "to:2.5,15.6,1.45"
+    ],
+    [
+     "odo",
+     "to:-6,9,0"
+    ],
+    [
+     "moth",
+     "to:-4,9.5,2"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DON'T OPEN THE DOOR"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! Something jumped right over that wall. That wall is taller than a house!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "IT JUMPED THE WALL"
+  },
+  {
+   "who": "odo",
+   "say": "Shh. Look at its eyes, Mothwick. They are burning red.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "RED EYES"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true legend, from the records of old London. They called him Spring-heeled Jack.",
+   "cam": "overhead",
+   "do": [
+    [
+     "jack",
+     "jump"
+    ]
+   ],
+   "text": "SPRING-HEELED JACK"
+  },
+  {
+   "who": "narr",
+   "say": "London, eighteen thirty-seven. The streets were dark, lit only by gas lamps.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "LONDON, 1837"
+  },
+  {
+   "who": "narr",
+   "say": "People said a figure sprang out of the dark, in front of a carriage.",
+   "cam": "wide",
+   "do": [
+    [
+     "jack",
+     "to:0,12,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "OUT OF THE DARK"
+  },
+  {
+   "who": "narr",
+   "say": "Then it leapt over a nine-foot wall. And it was laughing.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "to:2.5,15.6,1.45"
+    ],
+    [
+     "jack",
+     "jump"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A 9-FOOT WALL"
+  },
+  {
+   "who": "moth",
+   "say": "Nobody can jump that high. Nobody with normal feet.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "So the newspapers gave him a name. Jack, with springs in his heels.",
+   "cam": "two:odo,jack",
+   "do": [
+    [
+     "jack",
+     "bounce"
+    ]
+   ],
+   "text": "SPRINGS IN HIS HEELS"
+  },
+  {
+   "who": "narr",
+   "say": "January eighteen thirty-eight. The Lord Mayor of London stood up with a letter.",
+   "cam": "close:mayor",
+   "do": [
+    [
+     "mayor",
+     "enter:left"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "JANUARY 1838"
+  },
+  {
+   "who": "mayor",
+   "say": "A man is frightening people at night, dressed as a ghost, a bear, and a devil!",
+   "cam": "close:mayor",
+   "do": [
+    [
+     "mayor",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "The letter said he did it for a bet. But nobody could catch him.",
+   "cam": "overhead",
+   "do": [
+    [
+     "mayor",
+     "exit"
+    ],
+    [
+     "jack",
+     "jump"
+    ]
+   ],
+   "text": "NOBODY CAUGHT HIM"
+  },
+  {
+   "who": "narr",
+   "say": "February the nineteenth. A girl named Jane Alsop heard a knock at her door.",
+   "cam": "close:jane",
+   "do": [
+    [
+     "jane",
+     "enter:left"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A KNOCK AT THE DOOR"
+  },
+  {
+   "who": "jack",
+   "say": "I am a policeman. Bring me a light. We have caught Spring-heeled Jack in the lane!",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "to:-4,10,0"
+    ],
+    [
+     "jack",
+     "turn:front"
+    ]
+   ],
+   "text": "\"BRING A LIGHT\""
+  },
+  {
+   "who": "narr",
+   "say": "So Jane brought a candle. And she opened the door.",
+   "cam": "two:jane,jack",
+   "do": [
+    [
+     "cand",
+     "show"
+    ],
+    [
+     "jane",
+     "to:-6.6,11"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHE OPENED IT"
+  },
+  {
+   "who": "narr",
+   "say": "The man threw off his cloak. He wore a big helmet and tight white clothes.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "shake"
+    ]
+   ],
+   "text": "A BIG HELMET"
+  },
+  {
+   "who": "narr",
+   "say": "Jane said his eyes were like red balls of fire.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "BALLS OF FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "And from his mouth came blue and white flames.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "fl1",
+     "show"
+    ],
+    [
+     "fl1",
+     "drift:-6.2,10.6,3"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "BLUE FLAMES"
+  },
+  {
+   "who": "jane",
+   "say": "Help me! His hands are like cold metal claws!",
+   "cam": "close:jane",
+   "do": [
+    [
+     "jane",
+     "shake"
+    ],
+    [
+     "fl1",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "sister",
+   "say": "Jane! Get inside! Shut the door!",
+   "cam": "two:jane,sister",
+   "do": [
+    [
+     "sister",
+     "enter:left"
+    ],
+    [
+     "sister",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Her sister pulled her inside. And the creature ran into the night.",
+   "cam": "wide",
+   "do": [
+    [
+     "cand",
+     "vanish"
+    ],
+    [
+     "jack",
+     "to:2.5,15.6,1.45"
+    ],
+    [
+     "jane",
+     "exit"
+    ],
+    [
+     "sister",
+     "exit"
+    ]
+   ],
+   "text": "IT RAN"
+  },
+  {
+   "who": "odo",
+   "say": "That is the rule, Mothwick. If a stranger at night asks you for a light, keep the door shut.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "KEEP IT SHUT"
+  },
+  {
+   "who": "narr",
+   "say": "Nine days later, in a dark lane called Green Dragon Alley, eighteen-year-old Lucy was walking home.",
+   "cam": "close:lucy",
+   "do": [
+    [
+     "lucy",
+     "enter:left"
+    ]
+   ],
+   "text": "GREEN DRAGON ALLEY"
+  },
+  {
+   "who": "narr",
+   "say": "A tall, thin figure in a cloak stepped out. A flash of blue flame lit her face.",
+   "cam": "wide",
+   "do": [
+    [
+     "jack",
+     "to:-4.5,10,0"
+    ],
+    [
+     "fl2",
+     "show"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A FLASH OF BLUE"
+  },
+  {
+   "who": "lucy",
+   "say": "I can't see! Who are you? Why won't you answer?",
+   "cam": "close:lucy",
+   "do": [
+    [
+     "lucy",
+     "shake"
+    ],
+    [
+     "fl2",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "He did not say a single word. He simply turned, and walked away.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "turn:front"
+    ],
+    [
+     "jack",
+     "to:2.5,15.6,1.45"
+    ],
+    [
+     "lucy",
+     "exit"
+    ]
+   ],
+   "text": "NOT ONE WORD"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, it's looking at us now. Why is it looking at us?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "moth",
+     "to:-5,7,1.5"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "IT'S LOOKING AT US"
+  },
+  {
+   "who": "narr",
+   "say": "One man bragged that he was Jack. But he could not breathe fire, so he was let go.",
+   "cam": "overhead",
+   "do": [
+    [
+     "jack",
+     "bounce"
+    ]
+   ],
+   "text": "HE COULDN'T BREATHE FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "Forty years later, soldiers on guard saw a figure bound away in giant leaps.",
+   "cam": "wide",
+   "do": [
+    [
+     "jack",
+     "to:-2,13,0"
+    ],
+    [
+     "jack",
+     "jump"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "40 YEARS LATER"
+  },
+  {
+   "who": "narr",
+   "say": "The last report came in nineteen-oh-four, in Liverpool. Then he was gone.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "to:2.5,15.6,1.45"
+    ]
+   ],
+   "text": "1904: THE LAST"
+  },
+  {
+   "who": "narr",
+   "say": "Was he a prankster in a costume? Was it panic in the dark? No one ever found out.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEVER CAUGHT"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU open the door, if someone knocked and asked for a light?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WOULD YOU OPEN IT?"
+  },
+  {
+   "who": "moth",
+   "say": "Never. I would hide under the bed with my lantern off.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then Jack crouched on the wall, and pointed down the dark street.",
+   "cam": "close:jack",
+   "do": [
+    [
+     "jack",
+     "turn:front"
+    ],
+    [
+     "jack",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HE POINTED"
+  },
+  {
+   "who": "narr",
+   "say": "The gas lamps went out, one by one. Something pale was walking toward them.",
+   "cam": "wide",
+   "do": [
+    [
+     "shepherd",
+     "to:8,17,0"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE LAMPS WENT OUT"
+  },
+  {
+   "who": "shepherd",
+   "say": "Run all you like, lantern-bearer. Every wall in this town is mine.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "turn:front"
+    ]
+   ],
+   "text": "IT FOUND US"
+  },
+  {
+   "who": "narr",
+   "say": "Who will open the next door? Subscribe, so you don't miss the next tale.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHO KNOCKS NEXT?"
+  }
+ ]
+}
