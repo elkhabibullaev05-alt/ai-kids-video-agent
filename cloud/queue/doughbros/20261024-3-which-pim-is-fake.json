@@ -1,0 +1,950 @@
+{
+ "id": "20261024-3-which-pim-is-fake",
+ "plot": "At dawn in the pantry a second Pim appears and both swear they are real; the handshake test makes the real, extra-scared Pim look guilty and the spider test makes both faint, until Crispy points out every sneeze happened next to the calm 'Pim One', Lolly flips him over and he is Shaker, a pepper-shaker spy for the appliances in a bean costume, who escapes and drops a three-eyed note naming Pim as the next target.",
+ "script": {
+  "title": "Which Pim Is the Fake One",
+  "set": {
+   "place": "pantry",
+   "time": "dawn"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "fake": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.08,
+    "pitch": 1,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tag1",
+    "type": "star",
+    "color": "gold",
+    "on": "fake",
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "tag2",
+    "type": "star",
+    "color": "blue",
+    "on": "pim",
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "spider",
+    "type": "ball",
+    "color": [
+     0.12,
+     0.05,
+     0.08
+    ],
+    "on": null,
+    "at": [
+     1,
+     4,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "note",
+    "type": "box",
+    "color": [
+     0.95,
+     0.92,
+     0.8
+    ],
+    "on": null,
+    "at": [
+     5,
+     9,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "AAAH! There are two of me! Which one of us is fake?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "Him! He's the fake! I'm the real Pim! Look at my bandage!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "shake"
+     ],
+     [
+      "fake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TWO PIMS?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "zeek",
+    "say": "Identical bandage. Identical shaking. Ah... ah... ACHOO!",
+    "cam": "two:zeek,fake",
+    "do": [
+     [
+      "zeek",
+      "to:0,9"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bless you! Okay. Nobody move. One of you is a stranger.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,7"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A stranger with my face! Do I really look this shaky?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Simple. Zeek, label them. Pim One and Pim Two.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek slaps a sticker on each bean. One. Two. They both scream.",
+    "cam": "wide",
+    "do": [
+     [
+      "tag1",
+      "show"
+     ],
+     [
+      "tag2",
+      "show"
+     ],
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "fake",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "I'm Pim One! One is the best number! The realest number!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-no! I'm the real one! I've been scared since breakfast!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Test one. Our secret handshake. Both of you, show me.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim One does it perfectly. Pim Two slaps his own face.",
+    "cam": "wide",
+    "do": [
+     [
+      "fake",
+      "spin"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I forgot! I'm too scared to remember where my hands are!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Suspicious, Pim Two. Very, very suspicious.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim One, come here, sweetie. A welcome hug. Ah... ACHOO!",
+    "cam": "two:lolly,fake",
+    "do": [
+     [
+      "lolly",
+      "to:-1,9"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Sneeze number two. My nose would like to file a complaint.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "It's just pantry dust! Very dusty pantry! Nothing to see!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Careful. Pick the wrong bean, and our Pim stays here forever.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "enter"
+     ],
+     [
+      "crispy",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "Then pick me! Pim Two can't even say Bup's name right!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I can! It's... Bop. Bep. B-B-Bup! See? Bup!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS LYING?",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ],
+     [
+      "fake",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "They're both shaking! This whole test is useless!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Test two. Pim fears everything. So I present: a spider!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,6"
+     ],
+     [
+      "spider",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's a raisin with eight licorice legs. Both Pims faint.",
+    "cam": "wide",
+    "do": [
+     [
+      "spider",
+      "bounce"
+     ],
+     [
+      "pim",
+      "sleep"
+     ],
+     [
+      "fake",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Great. Two fainted Pims. Worst morning of my whole life.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Well, they faint the same way. Face first. Very dramatic.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "Okay, I'm up! Totally normal Pim here. Let's go home, friends!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "jump"
+     ],
+     [
+      "fake",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "No! He woke up too fast! The real me stays fainted longer!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He has a point. That's the most Pim sentence ever spoken.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Or it's exactly what a clever fake would say! I can't tell!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunlight creeps under the door. It only opens once each morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We take one Pim home. Choose wrong, and we lose ours forever!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I've been watching. Every sneeze happened next to the same bean.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pim One! Both sneezes! Nobody ever sneezes near the real Pim!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim One. Sweetie. Why do you smell like PEPPER?",
+    "cam": "two:lolly,fake",
+    "do": [
+     [
+      "lolly",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "fake",
+    "say": "Pepper? Me? I'm a bean! Beans smell like... bean stuff!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "shake"
+     ],
+     [
+      "fake",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wrong answer.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "SHAKE! SHAKE! SHAKE!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "fake",
+      "spin"
+     ],
+     [
+      "fake",
+      "shake"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Lolly flips him upside down. Black pepper pours out of his head.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "He's a pepper shaker in a bean costume! That's MY bandage!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I knew it. Real Pim never lies. He's too scared to.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "ACHOOOOO!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "fake",
+    "say": "Fine! I'm Shaker! Spy for the appliances! You all sneeze funny!",
+    "cam": "close:fake",
+    "do": [
+     [
+      "fake",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Shaker hops up the shelves like a tiny salty rocket.",
+    "cam": "wide",
+    "do": [
+     [
+      "fake",
+      "to:9,16"
+     ],
+     [
+      "tag1",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim Two. You were the real Pim the whole time.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "to:-4,5"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I told you! Nobody is better at being scared than me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then here's your prize. A real hug. Zero sneezing.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:0,5"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Lesson learned. Never trust a bean who isn't scared.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "And next time, Pim gets a name tag. Permanent marker.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He dropped something. A note with three eyes stamped on it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "note",
+      "show"
+     ],
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "NEXT TARGET: PIM",
+    "cam": "prop:note",
+    "hold": 1.5,
+    "do": [
+     [
+      "note",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pim",
+    "say": "Next target? Target for WHAT?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Which Pim Is the Fake One? 🫣",
+  "description": "At dawn in the pantry there are suddenly two Pims, and both swear they're the real one. The handshake test, the spider test and a lot of sneezing only make it harder. Can YOU spot the fake before the bros do? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "impostor",
+   "spot the fake",
+   "funny animation",
+   "spooky cartoon",
+   "mystery"
+  ],
+  "thumb_text": "TWO PIMS?!",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "¿Cuál de los dos Pim es el falso? 🫣",
+    "description": "Al amanecer en la despensa de repente hay dos Pim, y los dos juran ser el verdadero. La prueba del saludo secreto, la de la araña y muchos estornudos solo lo complican. ¿Puedes TÚ descubrir al falso antes que los bros? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Qual Pim é o falso? 🫣",
+    "description": "Ao amanhecer na despensa, de repente existem dois Pims, e os dois juram ser o verdadeiro. O teste do aperto de mão, o da aranha e muitos espirros só complicam tudo. VOCÊ consegue achar o falso antes dos bros? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "أيّ بيم هو المزيّف؟ 🫣",
+    "description": "عند الفجر في المخزن يظهر فجأة اثنان من بيم، وكلاهما يقسم أنه الحقيقي. اختبار المصافحة السرية واختبار العنكبوت وكثير من العطس يزيد الأمر صعوبة. هل تستطيع كشف المزيّف قبل الأصدقاء؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Lequel des deux Pim est le faux ? 🫣",
+    "description": "À l'aube, dans le garde-manger, il y a soudain deux Pim, et chacun jure être le vrai. Le test de la poignée de main secrète, celui de l'araignée et beaucoup d'éternuements compliquent tout. Peux-TU repérer le faux avant les bros ? 👇 #animation #doughbros #comédiehorrifique"
+   },
+   "ja": {
+    "title": "ニセモノのピムはどっち？🫣",
+    "description": "夜明けのパントリーに、なぜかピムが2人。どちらも自分が本物だと言い張る。秘密の握手テスト、クモのテスト、そしてくしゃみの連続で、ますますわからなくなる。キミはブロスより先にニセモノを見抜ける？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "가짜 핌은 누구일까? 🫣",
+    "description": "새벽의 식료품 창고에 갑자기 핌이 둘이 되었고, 둘 다 자기가 진짜라고 우긴다. 비밀 악수 테스트, 거미 테스트, 그리고 계속되는 재채기 때문에 더 헷갈린다. 너는 브로스보다 먼저 가짜를 찾을 수 있을까? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Welcher Pim ist der falsche? 🫣",
+    "description": "Im Morgengrauen gibt es in der Speisekammer plötzlich zwei Pims, und beide schwören, der echte zu sein. Der Handschlag-Test, der Spinnen-Test und jede Menge Niesen machen es nur schwerer. Erkennst DU den Falschen vor den Bros? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHICH ONE IS FAKE?",
+   "title": "Two Pims Woke Up… One Is Fake 🫣 #shorts",
+   "description": "Two identical Pims, one secret handshake, and somebody keeps making everyone sneeze. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "pim",
+    "spot the fake"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Despertaron dos Pim… uno es falso 🫣 #shorts",
+     "description": "Dos Pim idénticos, un saludo secreto y alguien que hace estornudar a todos. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Acordaram dois Pims… um é falso 🫣 #shorts",
+     "description": "Dois Pims idênticos, um aperto de mão secreto e alguém que faz todo mundo espirrar. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "استيقظ اثنان من بيم… أحدهما مزيّف 🫣 #shorts",
+     "description": "بيم متطابقان، ومصافحة سرية، وشخص ما يجعل الجميع يعطسون. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Deux Pim se sont réveillés… l'un est faux 🫣 #shorts",
+     "description": "Deux Pim identiques, une poignée de main secrète, et quelqu'un fait éternuer tout le monde. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピムが2人…ひとりはニセモノ 🫣 #shorts",
+     "description": "そっくりなピムが2人、秘密の握手、そしてなぜかみんながくしゃみ。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "핌이 둘이 됐다… 하나는 가짜 🫣 #shorts",
+     "description": "똑같은 핌 둘, 비밀 악수, 그리고 누군가 때문에 모두가 재채기를 한다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zwei Pims sind aufgewacht… einer ist falsch 🫣 #shorts",
+     "description": "Zwei identische Pims, ein geheimer Handschlag, und jemand bringt alle zum Niesen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1075 @@
+{
+ "id": "20261024-1-bup-stuck-in-vacuum",
+ "plot": "One afternoon in the kitchen the greedy vacuum Gulpzilla slurps up Bup; Lolly gets stuck to the hose and Pim's feed-him-a-watermelon plan fails because the bag stays flat, until Pim sees the loaf-shaped bump and realizes Bup is the cork jamming the hose, so the vacuum is starving because of Bup, Pim tickles him free, Gulpzilla is finally full, and he burps up a three-eyed 'Club Member #2' badge.",
+ "script": {
+  "title": "How Do We Get Bup Out of the Vacuum",
+  "set": {
+   "place": "kitchen",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "gulp": {
+    "name": "Gulpzilla",
+    "voice": "am_eric",
+    "speed": 0.95,
+    "pitch": -2,
+    "color": [
+     0.45,
+     0.3,
+     0.6
+    ],
+    "kind": "kettle",
+    "size": 1.5,
+    "home": [
+     2,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bag",
+    "type": "box",
+    "color": [
+     0.55,
+     0.5,
+     0.45
+    ],
+    "on": null,
+    "at": [
+     5,
+     15,
+     0.6
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "melon",
+    "type": "ball",
+    "color": [
+     0.2,
+     0.65,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     4,
+     10,
+     0.8
+    ],
+    "visible": false,
+    "scale": 1.5
+   },
+   {
+    "id": "badge",
+    "type": "star",
+    "color": "gold",
+    "on": null,
+    "at": [
+     -5,
+     8,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "The vacuum ate Bup! How do we get him out?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-1,8"
+     ],
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "bup",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "GULPZILLA",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "gulp",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "gulp",
+    "say": "MINE! All mine! Slurrrp! Still... so... hungry!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ],
+     [
+      "gulp",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, breathe. Bup is in there. We are getting him back.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:2,7"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hello? It's very dark in here. And it smells like socks!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He's okay! But listen. His voice comes from the hose.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:4,9"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mister Gulpzilla, please. Give our friend back. Pretty please?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "gulp",
+    "say": "No! Hungry! Always... empty... inside!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ],
+     [
+      "bag",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He slurps a spoon, three crumbs, and one of Lolly's icing drips.",
+    "cam": "wide",
+    "do": [
+     [
+      "gulp",
+      "spin"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My. Icing. Drip.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Oh no. She's using the quiet voice. Everybody hide.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-6,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Look at his dust bag. It's flat. Totally empty.",
+    "cam": "two:crispy,zeek",
+    "do": [
+     [
+      "crispy",
+      "enter"
+     ],
+     [
+      "crispy",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Impossible. He eats everything, but nothing ever lands in the bag.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:gulp"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Maybe he's on a diet. A very rude diet.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "EMPTY?!",
+    "cam": "prop:bag",
+    "hold": 1.2,
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "Then where did Bup go? Where does everything go?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Guys? Stuff keeps flying at my face. A button just hit me!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Plan one. We go in after him. I go first.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "In? Into the dust monster? I'll guard the snacks out here.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly marches up to the hose. The hose breathes in.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:1,11"
+     ],
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SLUUURP!",
+    "cam": "two:lolly,gulp",
+    "hold": 1.2,
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "gulp",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "lolly",
+    "say": "I'm stuck to the hose! If I go in, nobody saves Bup!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Pulling! Pulling! Why are you so sticky?!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "to:0,10"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "It's icing, Pim! Icing is extremely sticky! Pull harder!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop! They both fly backwards into the sugar bowl.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-7,7"
+     ],
+     [
+      "lolly",
+      "to:-4,7"
+     ],
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Plan one is cancelled. Forever. I have sugar in my points.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "His hose is swelling! If it bursts, Bup flies out the window!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Did somebody say window? I do not want to visit the window!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Plan two! We feed him something huge, so he gets full!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, that's actually smart. What's the biggest thing in here?",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "turn:pim"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls in a whole watermelon. Nobody knows where he got it.",
+    "cam": "wide",
+    "do": [
+     [
+      "melon",
+      "show"
+     ],
+     [
+      "crispy",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Don't ask.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A melon heavier than all of us. Okay. I won't ask.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "gulp",
+    "say": "MELON! MINE! Slurrrrrp!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "laugh"
+     ],
+     [
+      "melon",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "text": "STILL EMPTY",
+    "cam": "prop:bag",
+    "hold": 1.2,
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "gulp",
+    "say": "Still... hungry! Why am I... always... hungry?!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Ow! A watermelon just squeezed past me! I'm a sandwich now!",
+    "cam": "overhead",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The hose is shaking! One more bite and it explodes!",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ],
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait. That bump in the hose. It's shaped like a loaf.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ],
+     [
+      "pim",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup isn't in the bag. He's stuck in the hose!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He's a cork! A loaf-shaped cork! Nothing can get past him!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So that's why the vacuum is starving. Poor, hungry thing.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:gulp"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm the cork? I'm the problem? Okay. That's embarrassing.",
+    "cam": "wide",
+    "do": [
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "gulp",
+    "say": "Tummy... so... empty... Help... me?",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Oh. He isn't mean. He's just really, really hungry.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, you're the smallest. Tickle the bump. Bup is super ticklish.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Me? Tickle a vacuum? Okay. For Bup. Tickle, tickle, tickle!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:1,11"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Ha! Hahaha! Stop! I'm slipping! I'm SLIPPING!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "spin"
+     ],
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOOSH!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "bup",
+      "enter"
+     ],
+     [
+      "gulp",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Bup shoots out. The melon, spoon and buttons rush into the bag.",
+    "cam": "wide",
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ],
+     [
+      "melon",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "gulp",
+    "say": "FULL! Finally... full! Thank you... little bean!",
+    "cam": "close:gulp",
+    "do": [
+     [
+      "gulp",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Rule one, team. Never stand in front of a hungry hose.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Rule two. Nobody touches my icing. Ever.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Rule three. Pim is never the tickler again.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Gulpzilla burps. A shiny badge with three eyes lands at Bup's feet.",
+    "cam": "wide",
+    "do": [
+     [
+      "badge",
+      "show"
+     ],
+     [
+      "gulp",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CLUB MEMBER #2",
+    "cam": "prop:badge",
+    "hold": 1.2,
+    "do": [
+     [
+      "badge",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "Member number two? Then who on earth is number one?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ],
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "How Do We Get Bup Out of the Vacuum? 🌀",
+  "description": "Gulpzilla the greedy vacuum just slurped up Bup, and his dust bag is somehow still empty. Lolly gets stuck, a watermelon disappears, and the hose starts to swell. Would YOU climb into the vacuum to save a friend? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "vacuum monster",
+   "funny animation",
+   "spooky cartoon",
+   "mystery",
+   "halloween"
+  ],
+  "thumb_text": "BUP GOT EATEN?!",
+  "thumb_beat": 18,
+  "localizations": {
+   "es": {
+    "title": "¿Cómo sacamos a Bup de la aspiradora? 🌀",
+    "description": "Gulpzilla, la aspiradora glotona, se tragó a Bup, y aun así su bolsa sigue vacía. Lolly se queda pegada, una sandía desaparece y la manguera empieza a hincharse. ¿TE meterías en la aspiradora para salvar a un amigo? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Como tiramos o Bup do aspirador? 🌀",
+    "description": "O Gulpzilla, o aspirador guloso, sugou o Bup, e mesmo assim o saco dele continua vazio. A Lolly fica grudada, uma melancia some e a mangueira começa a inchar. VOCÊ entraria no aspirador para salvar um amigo? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "كيف نُخرج بَب من المكنسة الكهربائية؟ 🌀",
+    "description": "غولبزيلا، المكنسة الجشعة، ابتلعت بَب، ومع ذلك كيس الغبار ما زال فارغًا. لولي تلتصق بالخرطوم، وبطيخة تختفي، والخرطوم يبدأ بالانتفاخ. هل كنت ستدخل المكنسة لتنقذ صديقك؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Comment sortir Bup de l'aspirateur ? 🌀",
+    "description": "Gulpzilla, l'aspirateur glouton, vient d'aspirer Bup, et pourtant son sac reste vide. Lolly reste collée, une pastèque disparaît et le tuyau commence à gonfler. TU entrerais dans l'aspirateur pour sauver un ami ? 👇 #animation #doughbros #comédiehorrifique"
+   },
+   "ja": {
+    "title": "掃除機からバップを助け出すには？🌀",
+    "description": "食いしん坊の掃除機ガルプジラがバップを吸い込んだ。なのにゴミ袋はなぜか空っぽ。ロリーはくっつき、スイカは消え、ホースはどんどん膨らんでいく。キミなら友だちを助けに掃除機の中へ入る？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "청소기에서 법을 어떻게 꺼내지? 🌀",
+    "description": "욕심쟁이 청소기 걸프질라가 법을 빨아들였는데, 먼지 봉투는 여전히 텅 비어 있다. 롤리는 호스에 붙어 버리고, 수박은 사라지고, 호스는 점점 부풀어 오른다. 너라면 친구를 구하러 청소기 속에 들어갈래? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Wie holen wir Bup aus dem Staubsauger? 🌀",
+    "description": "Gulpzilla, der gierige Staubsauger, hat Bup eingesaugt – und trotzdem bleibt sein Beutel leer. Lolly bleibt kleben, eine Wassermelone verschwindet und der Schlauch fängt an zu schwellen. Würdest DU in den Staubsauger klettern, um einen Freund zu retten? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "THE VACUUM ATE BUP",
+   "title": "The Vacuum Just Swallowed Bup 😱 #shorts",
+   "description": "Bup is inside a hungry vacuum, and his voice is coming from the wrong place. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "vacuum",
+    "horror comedy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La aspiradora se tragó a Bup 😱 #shorts",
+     "description": "Bup está dentro de una aspiradora hambrienta y su voz sale del lugar equivocado. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O aspirador engoliu o Bup 😱 #shorts",
+     "description": "O Bup está dentro de um aspirador faminto, e a voz dele vem do lugar errado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المكنسة ابتلعت بَب 😱 #shorts",
+     "description": "بَب داخل مكنسة جائعة، وصوته يأتي من المكان الخطأ. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "L'aspirateur a avalé Bup 😱 #shorts",
+     "description": "Bup est dans un aspirateur affamé, et sa voix vient du mauvais endroit. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "掃除機がバップを吸い込んだ 😱 #shorts",
+     "description": "腹ペコ掃除機の中にバップが！でも声が聞こえるのは変な場所から。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "청소기가 법을 삼켜 버렸다 😱 #shorts",
+     "description": "배고픈 청소기 속에 법이 갇혔는데, 목소리가 엉뚱한 곳에서 들린다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Staubsauger hat Bup verschluckt 😱 #shorts",
+     "description": "Bup steckt in einem hungrigen Staubsauger, und seine Stimme kommt von der falschen Stelle. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 26,
+   "dur": 26,
+   "top": "ONE MORE BITE...",
+   "title": "We Fed a Vacuum a WHOLE Watermelon 🍉 #shorts",
+   "description": "The hose is swelling, and Gulpzilla is still hungry. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "watermelon",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Le dimos una sandía ENTERA a una aspiradora 🍉 #shorts",
+     "description": "La manguera se hincha y Gulpzilla sigue con hambre. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Demos uma melancia INTEIRA a um aspirador 🍉 #shorts",
+     "description": "A mangueira está inchando, e o Gulpzilla continua com fome. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أطعمنا مكنسة بطيخة كاملة 🍉 #shorts",
+     "description": "الخرطوم ينتفخ، وغولبزيلا ما زال جائعًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "On a donné une pastèque ENTIÈRE à un aspirateur 🍉 #shorts",
+     "description": "Le tuyau gonfle, et Gulpzilla a toujours faim. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "掃除機にスイカを丸ごと食べさせた 🍉 #shorts",
+     "description": "ホースは膨らむのに、ガルプジラはまだ腹ペコ。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "청소기에게 수박을 통째로 먹였다 🍉 #shorts",
+     "description": "호스는 부풀어 오르는데 걸프질라는 아직도 배고프다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wir fütterten einen Staubsauger mit einer GANZEN Melone 🍉 #shorts",
+     "description": "Der Schlauch schwillt an, und Gulpzilla hat immer noch Hunger. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

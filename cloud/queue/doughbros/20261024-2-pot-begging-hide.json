@@ -1,0 +1,974 @@
+{
+ "id": "20261024-2-pot-begging-hide",
+ "plot": "At sunset on the dinner table Mr. Pot bursts in begging the bros to hide him from a giant clinking shadow; Crispy suspects a trap and the napkin fort and pushing plan fail, but the tiny milk footprints were the clue: the hunter is Squeaky, a thimble-sized milk pan whose shadow the low sun made huge and who wants Mr. Pot as his daddy, Mr. Pot faints from the hug, Crispy agrees to babysit for one night, and Squeaky says Grandpa from the roof is coming down tonight.",
+ "script": {
+  "title": "Why Is Mr. Pot Begging Us to Hide Him",
+  "set": {
+   "place": "table",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     13
+    ],
+    "brows": 18
+   },
+   "squeaky": {
+    "name": "Squeaky",
+    "voice": "af_sky",
+    "speed": 1.15,
+    "pitch": 4,
+    "color": [
+     0.8,
+     0.82,
+     0.86
+    ],
+    "kind": "pot",
+    "size": 0.45,
+    "home": [
+     12,
+     16
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "drops",
+    "type": "ball",
+    "color": [
+     0.97,
+     0.97,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     8,
+     13,
+     0.15
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "napkin",
+    "type": "box",
+    "color": [
+     0.95,
+     0.93,
+     0.88
+    ],
+    "on": null,
+    "at": [
+     0,
+     10,
+     1.0
+    ],
+    "visible": false,
+    "scale": 1.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "pot",
+    "say": "Hide me! Please! Something is hunting me! What is it?!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "to:0,10"
+     ],
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mister Pot? Running away? From what? You're the scary one!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "crispy",
+      "turn:pot"
+     ]
+    ]
+   },
+   {
+    "text": "MR. POT... SCARED?",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "pot",
+      "spin"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "crispy",
+    "say": "It's a trick. He burnt me once. He'll burn you too.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:5,8"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy's right. Last week he invited us to be dinner.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "No trick! Look at the window! It's coming closer!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ],
+     [
+      "pot",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A giant pan-shaped shadow grows on the wall in the sunset.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "clink... clink... clink...",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "drops",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pim",
+    "say": "That's the biggest shadow I have ever seen. Good night.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "These footprints are milk. Tiny drops of milk. Most peculiar.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:6,12"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Please, little loaf! I'll never chase you again. Just hide me!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, he's twice our size. Where do we even hide a pot?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "We don't. We let the shadow have him.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy! Even villains get a polite rescue. Napkin fort. Now!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Napkins fly everywhere. Mister Pot becomes a very lumpy tablecloth ghost.",
+    "cam": "wide",
+    "do": [
+     [
+      "napkin",
+      "show"
+     ],
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Can it see me? Be honest. Is my handle sticking out?",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Your whole handle. And all three eyes. And you're humming.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Stop laughing! Hide my handle! Hide all my eyes!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "clink... clink...",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "drops",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "It's on the table! If it finds him, it finds us!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then we move him. Bup, behind the salt shaker. Push.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "to:-3,9"
+     ],
+     [
+      "bup",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup pushes Mister Pot. Mister Pot does not move. At all.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "pot",
+      "shake"
+     ],
+     [
+      "napkin",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "What do you eat?! You weigh more than the fridge!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Soup! Only soup! I am mostly soup!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Scientifically, that explains the sloshing.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Did somebody say shadow? Oh, it's even bigger. Good night again.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He's trembling. Mister Pot never trembles. Not even near the sink.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pot"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "What did you do to it, Pot? What did you burn?",
+    "cam": "two:crispy,pot",
+    "do": [
+     [
+      "crispy",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Nothing! I swear! It keeps calling me! Over and over!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "...DAAA... DAAA...",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "drops",
+      "spin"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "It's a word! A tiny word, echoing inside the teacups!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Hear that? It knows my name. It always knows my name!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "It's right behind the sugar bowl! It's now or never!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "all",
+      "look:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy and me in front. Everybody else, protect Mister Pot!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:3,12"
+     ],
+     [
+      "crispy",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Protect me? Nobody has ever protected me. Ever.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S HERE!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "squeaky",
+      "enter"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "squeaky",
+    "say": "DADDY! I found you! Hide and seek is over! I win!",
+    "cam": "close:squeaky",
+    "do": [
+     [
+      "squeaky",
+      "jump"
+     ],
+     [
+      "squeaky",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The giant shadow? Just a tiny milk pan.",
+    "cam": "wide",
+    "do": [
+     [
+      "squeaky",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The low sun stretched its shadow! Of course! Basic light science!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That's the monster? It's the size of a thimble!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "It's not tiny! It's terrible! It wants hugs! All day long!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "squeaky",
+    "say": "Daddy, you have three eyes. I have three dents. We match!",
+    "cam": "two:squeaky,pot",
+    "do": [
+     [
+      "squeaky",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "We do NOT match! Stop matching me!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Pot. You were scared of a baby.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "I'm not his daddy! I found him in the sink once!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then be his friend. Look at that little face. Adorable.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "to:5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Squeaky hugs Mister Pot. Mister Pot's lid pops off. He faints.",
+    "cam": "wide",
+    "do": [
+     [
+      "squeaky",
+      "to:1,10"
+     ],
+     [
+      "pot",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait, who fainted? Not me? Finally, it's not me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So. Do we really help a villain babysit tonight?",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Just tonight. Then he owes us. Forever.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And Squeaky gets a bedtime story. Mister Pot reads it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "squeaky",
+    "say": "Thank you! Grandpa said Daddy would be at this table!",
+    "cam": "close:squeaky",
+    "do": [
+     [
+      "squeaky",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Grandpa? Who exactly is Grandpa, small pan?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "squeaky",
+    "say": "Grandpa lives on the roof. He's coming down tonight!",
+    "cam": "close:squeaky",
+    "do": [
+     [
+      "squeaky",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDPA IS COMING DOWN?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ],
+     [
+      "all",
+      "look:squeaky"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Mr. Pot Begging Us to Hide Him? 😨",
+  "description": "At sunset Mr. Pot bursts onto the dinner table, shaking and begging the Dough Bros to hide him from a giant clinking shadow. Crispy is sure it's a trap. What could scare the scariest pot in Table Land? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "mr pot",
+   "funny animation",
+   "spooky cartoon",
+   "shadow",
+   "halloween"
+  ],
+  "thumb_text": "POT IS SCARED?!",
+  "thumb_beat": 5,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué Mr. Pot nos ruega que lo escondamos? 😨",
+    "description": "Al atardecer, Mr. Pot irrumpe en la mesa temblando y suplica a los Dough Bros que lo escondan de una sombra gigante que tintinea. Crispy está seguro de que es una trampa. ¿Qué podría asustar a la olla más temible de Table Land? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Por que o Mr. Pot implora para o escondermos? 😨",
+    "description": "No pôr do sol, o Mr. Pot invade a mesa do jantar tremendo e implora aos Dough Bros que o escondam de uma sombra gigante que tilinta. O Crispy tem certeza de que é uma armadilha. O que poderia assustar a panela mais assustadora de Table Land? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "لماذا يتوسل السيد بوت أن نخبئه؟ 😨",
+    "description": "عند الغروب يقتحم السيد بوت طاولة العشاء وهو يرتجف ويتوسل إلى الدو بروز أن يخبئوه من ظل عملاق يرنّ. كريسبي متأكد أنها خدعة. ما الذي قد يخيف أخطر قدر في أرض الطاولة؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Pourquoi Mr. Pot nous supplie-t-il de le cacher ? 😨",
+    "description": "Au coucher du soleil, Mr. Pot débarque sur la table en tremblant et supplie les Dough Bros de le cacher d'une ombre géante qui tinte. Crispy est sûr que c'est un piège. Qu'est-ce qui pourrait effrayer la marmite la plus terrifiante de Table Land ? 👇 #animation #doughbros #comédiehorrifique"
+   },
+   "ja": {
+    "title": "ミスター・ポットが「隠して」と頼むのはなぜ？😨",
+    "description": "夕暮れ、ミスター・ポットが震えながら食卓に飛び込み、カチャカチャ鳴る巨大な影から隠してくれとドウ・ブロスに頼み込む。クリスピーは罠だと確信している。テーブルランドで一番こわい鍋をおびえさせるものとは？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "미스터 팟은 왜 숨겨 달라고 애원할까? 😨",
+    "description": "해 질 녘, 미스터 팟이 덜덜 떨며 식탁으로 뛰어들어 달그락거리는 거대한 그림자로부터 숨겨 달라고 도우 브로스에게 애원한다. 크리스피는 함정이 분명하다고 생각한다. 테이블 랜드에서 가장 무서운 냄비를 겁먹게 한 건 뭘까? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Warum fleht Mr. Pot uns an, ihn zu verstecken? 😨",
+    "description": "Bei Sonnenuntergang stürmt Mr. Pot zitternd auf den Esstisch und fleht die Dough Bros an, ihn vor einem riesigen klirrenden Schatten zu verstecken. Crispy ist sicher, dass es eine Falle ist. Was könnte den gruseligsten Topf von Table Land erschrecken? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 30,
+   "top": "WHAT IS HUNTING HIM?",
+   "title": "Mr. Pot Is Scared of… WHAT? 😨 #shorts",
+   "description": "A giant shadow is coming for Mr. Pot, and only the Dough Bros can hide him. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "mr pot",
+    "shadow"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Mr. Pot tiene miedo de… QUÉ? 😨 #shorts",
+     "description": "Una sombra gigante va tras Mr. Pot, y solo los Dough Bros pueden esconderlo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Mr. Pot tem medo de… O QUÊ? 😨 #shorts",
+     "description": "Uma sombra gigante está atrás do Mr. Pot, e só os Dough Bros podem escondê-lo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "السيد بوت خائف من… ماذا؟ 😨 #shorts",
+     "description": "ظل عملاق يطارد السيد بوت، ولا أحد يستطيع إخفاءه إلا الدو بروز. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Mr. Pot a peur de… QUOI ? 😨 #shorts",
+     "description": "Une ombre géante poursuit Mr. Pot, et seuls les Dough Bros peuvent le cacher. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ミスター・ポットがこわがるのは…なに？😨 #shorts",
+     "description": "巨大な影がミスター・ポットに迫る。かくまえるのはドウ・ブロスだけ。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "미스터 팟이 무서워하는 건… 뭐지? 😨 #shorts",
+     "description": "거대한 그림자가 미스터 팟을 쫓고, 그를 숨겨 줄 수 있는 건 도우 브로스뿐이다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Mr. Pot hat Angst vor… WAS? 😨 #shorts",
+     "description": "Ein riesiger Schatten ist hinter Mr. Pot her, und nur die Dough Bros können ihn verstecken. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
