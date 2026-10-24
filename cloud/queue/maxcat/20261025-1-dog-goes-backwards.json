@@ -1,0 +1,1080 @@
+{
+ "id": "20261025-1-dog-goes-backwards",
+ "plot": "On a sunny garden morning Dog suddenly walks, talks and plays backwards; Max checks if Dog is sick, then thinks Dog is upset with him, then tries copying the game and lands in the flowers, while the backwards habit spreads to Bird and Mouse; just before Dog backs into Grandma's tray Max learns the news came from fast-talking Bird and, putting it together with the sweet smell, works out himself that Grandma had said upside-down CAKE day, not upside-down day.",
+ "script": {
+  "title": "Why Is Dog Doing Everything Backwards?",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     7.5,
+     10.5,
+     0.9
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "yellow",
+    "at": [
+     -2.2,
+     7.4,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Bye, Max! Bye-bye! Good night!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-0.5,7"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Good night? It's morning! Why is Dog doing everything backwards?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "DOG GOES BACKWARDS?!",
+    "cam": "two:max,dog",
+    "hold": 1.3,
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a sunny morning in Grandma's garden. And Dog walks backwards.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Morning good, Max! Day lovely a it's!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Morning good? Day lovely? Dog, your words are all mixed up!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Big news! Grandma says today is upside-down! Pass it on!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bird zooms away before Max can ask her one thing.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:7,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From Grandma's open window comes a sweet smell, and a happy hum.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird always talks too fast. Never mind. Dog, are you okay?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay I am! Fine very! Yesterday you see!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog throws his red ball. Then Dog runs the other way!",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "dog",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A dog who runs away from his ball? Something is very wrong.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "What's wrong, Max? Your tail is all puffy and big.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog is doing everything backwards! I think Dog is sick.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Sick? Then let's check! Is his nose cold and wet?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tiptoes up. Dog gives him a big lick, on the tail.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:5,9.5"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cold nose. Waggy tail. Big lick. Dog is not sick at all!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then why is he doing everything backwards? Think, Max, think!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Guess two. Maybe Dog is upset with me. Maybe it's my fault.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Yesterday Max took the best sunny spot. Dog got none.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, I'm sorry about the sun spot! Please walk the right way!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sorry? For what? Fun much so is this!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog walks backwards in a big, happy circle. Round and round.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "He's not upset. He's having the best day ever!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not sick. Not upset. Then what is it? I have to know!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE BACKWARDS MYSTERY",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Then it happens again. Bird flies past, tail first. Backwards!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:-3,10"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Bye, Max! I just came to say hello!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no! Now Bird is backwards too! It's spreading!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "If this keeps going, the whole garden will go backwards!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Even Grandma! She'll wear her hat on her feet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse gasps. Then her little feet take one step... backwards.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "to:0,6"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Oops! My feet did it by themselves! It's so catchy!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not you too, Mouse! Okay. Stay calm. I need a clever guess.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Guess three! It's a game! Dog is playing Copy Me Backwards!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max walks backwards too. Step, step, step... into the flowers. Plop!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,7"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look! Max is a flower now! A very orange flower!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ow. Petals in my ears. Dog, is this a game or not?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Game? No game! Special day very a it's!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A special day? What special day? Dog, please, tell me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Dog only wags, and walks backwards behind the bushes.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, look! The kitchen door is opening! Grandma's coming out!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma steps out with a big tray. It's covered with a cloth.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. Dog walks backwards, so Dog can't see where he goes!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "If Dog bumps Grandma, her tray goes SPLAT! We must stop it!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And there's Dog, backing out of the bushes, right toward Grandma.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "to:1,8.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Wait! Please stop for one second!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Stop? I can't! Today is upside-down! Bird said so!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "BIRD SAID SO?!",
+    "cam": "two:max,mouse",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "Bird! Is that true? Did you tell Dog to walk backwards?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I told everyone! Grandma said it! I heard her from the window!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-1,9"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "So it's not Dog at all. The backwards news came from Bird!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird hears things very fast. And Bird says things very fast.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max lifts his nose. That sweet smell is coming from Grandma's tray.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fast words, plus a sweet smell... I know! Dog, turn around!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog turns around, just one paw away from Grandma's tray. Phew!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "turn:grandma"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My goodness! Why is everyone walking backwards today?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Because you said so! You said today is upside-down day!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, I think you said something sweeter. Upside-down cake day!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Yes, Max! I said upside-down CAKE day! Not upside-down day!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "UPSIDE-DOWN CAKE!",
+    "cam": "prop:cake",
+    "hold": 1.3,
+    "do": [
+     [
+      "cake",
+      "show"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grandma",
+    "say": "Fruit goes on the bottom, then you flip it over. Ta-da!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oops! Cake day, not upside-down day! My ears were too fast!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So I walked backwards all morning for a cake? Worth it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Next time you hear big news, come and ask me first.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everyone eats upside-down cake. The right way up!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, let's find out why Bird sleeps standing on one foot!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Dog Doing Everything BACKWARDS? 🐶🔄😂",
+  "description": "Dog says \"bye\" when he arrives, runs away from his own ball and walks backwards all over the garden! Is he sick? Is he upset? Max follows the clues to a very sweet mix-up. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "funny dog",
+   "backwards day",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "mystery for kids",
+   "garden story",
+   "upside down cake"
+  ],
+  "thumb_text": "BACKWARDS DOG?!",
+  "thumb_beat": 25,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué Perro hace TODO al revés? 🐶🔄😂",
+    "description": "¡Perro dice \"adiós\" cuando llega, huye de su propia pelota y camina al revés por todo el jardín! ¿Está enfermo? ¿Está enojado? Max sigue las pistas hasta una confusión muy dulce. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Por que o Cachorro faz TUDO ao contrário? 🐶🔄😂",
+    "description": "O Cachorro diz \"tchau\" quando chega, foge da própria bola e anda de costas pelo jardim todo! Ele está doente? Está chateado? Max segue as pistas até uma confusão muito doce. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "لماذا يفعل الكلب كل شيء بالمقلوب؟ 🐶🔄😂",
+    "description": "الكلب يقول \"وداعًا\" عندما يصل، ويهرب من كرته، ويمشي إلى الخلف في كل الحديقة! هل هو مريض؟ هل هو غاضب؟ ماكس يتبع الأدلة حتى يكتشف خلطًا لذيذًا جدًا. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Pourquoi Chien fait TOUT à l'envers ? 🐶🔄😂",
+    "description": "Chien dit « au revoir » en arrivant, fuit sa propre balle et marche à reculons dans tout le jardin ! Est-il malade ? Est-il fâché ? Max suit les indices jusqu'à un malentendu très gourmand. #maxthecuriouscat #dessinanimé #histoirespourenfants"
+   },
+   "ja": {
+    "title": "なんでイヌは全部さかさま？🐶🔄😂",
+    "description": "イヌは来たのに「バイバイ」、自分のボールから逃げて、庭じゅうをうしろ向きに歩く！病気？怒ってる？マックスがヒントをたどると、とってもあまい勘違いが見つかるよ。#maxthecuriouscat #子供向けアニメ #こどものおはなし"
+   },
+   "ko": {
+    "title": "강아지는 왜 모든 걸 거꾸로 할까? 🐶🔄😂",
+    "description": "강아지가 오자마자 \"안녕, 잘 가!\"라고 하고, 자기 공에서 도망치고, 정원을 뒤로 걸어 다녀요! 아픈 걸까? 화난 걸까? 맥스가 단서를 따라가자 아주 달콤한 오해가 밝혀져요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Warum macht Hund ALLES rückwärts? 🐶🔄😂",
+    "description": "Hund sagt „Tschüss“, wenn er kommt, rennt vor seinem eigenen Ball weg und läuft rückwärts durch den ganzen Garten! Ist er krank? Ist er sauer? Max folgt den Hinweisen zu einem sehr süßen Missverständnis. #maxthecuriouscat #kindercartoon #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "DOG WENT BACKWARDS?! 🔄",
+   "title": "Dog Says BYE When He Arrives?! 🐶🔄 #shorts",
+   "description": "Dog is doing everything backwards, and nobody knows why. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Perro dice ADIÓS cuando llega?! 🐶🔄 #shorts",
+     "description": "Perro hace todo al revés y nadie sabe por qué. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro diz TCHAU quando chega?! 🐶🔄 #shorts",
+     "description": "O Cachorro faz tudo ao contrário e ninguém sabe por quê. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يقول وداعًا عندما يصل؟! 🐶🔄 #shorts",
+     "description": "الكلب يفعل كل شيء بالمقلوب ولا أحد يعرف السبب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien dit AU REVOIR en arrivant ?! 🐶🔄 #shorts",
+     "description": "Chien fait tout à l'envers et personne ne sait pourquoi. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが来たのに「バイバイ」？！🐶🔄 #shorts",
+     "description": "イヌが全部さかさま。だれも理由がわからない！フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 오자마자 \"잘 가\"?! 🐶🔄 #shorts",
+     "description": "강아지가 모든 걸 거꾸로 해요. 아무도 이유를 몰라요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund sagt TSCHÜSS, wenn er kommt?! 🐶🔄 #shorts",
+     "description": "Hund macht alles rückwärts, und keiner weiß warum. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 26,
+   "dur": 28,
+   "top": "IT'S SPREADING! 😱",
+   "title": "The Backwards Thing Is SPREADING! 😱🐦 #shorts",
+   "description": "First Dog, then Bird, now Mouse's feet go backwards too! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Lo de ir al revés se está CONTAGIANDO! 😱🐦 #shorts",
+     "description": "Primero Perro, luego Pájaro, ¡y ahora las patitas de Ratón también van al revés! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Andar ao contrário está se ESPALHANDO! 😱🐦 #shorts",
+     "description": "Primeiro o Cachorro, depois o Passarinho, e agora os pezinhos da Ratinha também! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المشي بالمقلوب ينتشر! 😱🐦 #shorts",
+     "description": "أولًا الكلب، ثم العصفور، والآن أقدام الفأرة تمشي إلى الخلف أيضًا! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le truc à l'envers SE PROPAGE ! 😱🐦 #shorts",
+     "description": "D'abord Chien, puis Oiseau, et maintenant les pattes de Souris reculent aussi ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "さかさまがうつっちゃう！😱🐦 #shorts",
+     "description": "イヌの次はトリ、こんどはネズミの足までうしろ向き！フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "거꾸로 병이 퍼지고 있어요! 😱🐦 #shorts",
+     "description": "처음엔 강아지, 다음엔 새, 이제 생쥐 발까지 뒤로 가요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das Rückwärts-Ding STECKT AN! 😱🐦 #shorts",
+     "description": "Erst Hund, dann Vogel, und jetzt laufen sogar Mäuschens Füße rückwärts! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
