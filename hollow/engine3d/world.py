@@ -206,6 +206,16 @@ def _shape(key, kind, s, ch):
             bpy.ops.mesh.primitive_uv_sphere_add(radius=1.0 * s, location=(sx * 1.9 * s, 0.25 * s, 3.0 * s), rotation=(0, sx * math.radians(-18), 0)); wg = add(_o(), skin); wg.scale = (1.9, 0.07, 1.25); parent(wg, o)
             bpy.ops.mesh.primitive_cone_add(radius1=0.12 * s, depth=1.0 * s, location=(sx * 3.6 * s, 0.25 * s, 3.9 * s), rotation=(0, sx * math.radians(-60), 0)); parent(add(_o(), skin), o)
         return o, 7.0 * s, 1.6 * s, 4.1 * s, -0.62 * s, 3.55 * s
+    if kind == "demon":  # Dover Demon (1977 sketches): thin hairless peach body, long thin limbs, huge watermelon head, glowing eyes, no nose/mouth (front = -y)
+        skin = mat(f"dd_{key}", col, 0.55, 0, 0.12)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.42 * s, location=(0, 0, 1.75 * s)); o = add(_o(), skin); o.scale = (0.75, 0.6, 1.35)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.95 * s, location=(0, 0, 3.05 * s)); hd = add(_o(), skin); hd.scale = (0.85, 0.85, 1.12); parent(hd, o)
+        for sx in (-1, 1):
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.07 * s, depth=1.6 * s, location=(sx * 0.2 * s, 0, 0.8 * s)); parent(add(_o(), skin), o)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.06 * s, depth=1.9 * s, location=(sx * 0.62 * s, -0.1 * s, 1.35 * s), rotation=(0, sx * math.radians(-14), 0)); parent(add(_o(), skin), o)
+            for fx in (-0.08, 0.0, 0.08):  # long fingers
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.02 * s, depth=0.45 * s, location=(sx * 0.86 * s + fx * s, -0.1 * s, 0.3 * s)); parent(add(_o(), skin), o)
+        return o, 1.9 * s, 1.0 * s, 4.1 * s, -0.8 * s, 3.15 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -220,17 +230,17 @@ def make_char(key, ch):
     o, Wd, L, H, fy, fz = _shape(key, kind, s, ch)
     o.parent = body
     eyes = []
-    glow_eyes = kind in ("winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
+    glow_eyes = kind in ("demon", "winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
     n_eyes = {"hollowmother": 6}.get(kind, 2)
-    sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18, "winged": 0.36}.get(kind, 0.22) * s
+    sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18, "winged": 0.36, "demon": 0.5}.get(kind, 0.22) * s
     for i in range(n_eyes):
         sx = (i - (n_eyes - 1) / 2) * sep * (1.0 if n_eyes == 2 else 0.9)
         ez = fz + (0.25 * s if (n_eyes > 2 and i % 2) else 0)
-        r_ = (0.11 if kind in ("odo", "moth", "crow") else 0.26 if kind == "winged" else 0.14) * s
+        r_ = (0.11 if kind in ("odo", "moth", "crow") else 0.26 if kind == "winged" else 0.3 if kind == "demon" else 0.14) * s
         if kind == "shepherd":  # empty black eye holes in the mask
             bpy.ops.mesh.primitive_uv_sphere_add(radius=0.1 * s, location=(sx, fy - 0.42 * s, ez)); e = add(_o(), black); e.scale = (1, 0.4, 0.6)
         elif glow_eyes:
-            bpy.ops.mesh.primitive_uv_sphere_add(radius=r_ * 0.6, location=(sx, fy - 0.02, ez)); e = add(_o(), mat("redeye2", (1, 0.08, 0.03), 0.3, 0, 12))
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=r_ * 0.6, location=(sx, fy - 0.02, ez)); e = add(_o(), mat("ddeye", (1, 0.5, 0.05), 0.3, 0, 14)) if kind == "demon" else add(_o(), mat("redeye2", (1, 0.08, 0.03), 0.3, 0, 12))
         else:
             bpy.ops.mesh.primitive_uv_sphere_add(radius=r_, location=(sx, fy - 0.03, ez)); e = add(_o(), black); e.scale = (1, 0.6, 1.3)
         e.parent = body; eyes.append(e)
@@ -239,7 +249,7 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged"):
+    if kind in ("horseman", "winged", "demon"):
         mo.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]

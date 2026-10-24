@@ -1,0 +1,894 @@
+{
+ "title": "Dover, 1977: What Was on the Stone Wall?",
+ "description": "In April 1977, four teenagers in Dover, Massachusetts saw a creature with a huge head and glowing eyes.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "forest",
+  "fog": 0.06,
+  "eyes": 2,
+  "moonlight": 2.4
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "demon": {
+   "name": "The Dover Demon",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.86,
+    0.66,
+    0.52
+   ],
+   "kind": "demon",
+   "size": 0.8,
+   "home": [
+    3,
+    13
+   ]
+  },
+  "bill": {
+   "name": "Bill, 17",
+   "voice": "am_eric",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.15,
+    0.3,
+    0.55
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -9,
+    9
+   ]
+  },
+  "john": {
+   "name": "John, 15",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 2,
+   "color": [
+    0.5,
+    0.35,
+    0.12
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -12,
+    13
+   ]
+  },
+  "abby": {
+   "name": "Abby, 15",
+   "voice": "af_nicole",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.55,
+    0.12,
+    0.35
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -14,
+    8
+   ]
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w0",
+   "at": [
+    -1.5,
+    13.6,
+    0.0
+   ],
+   "scale": 0.85
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w1",
+   "at": [
+    -0.44999999999999996,
+    13.75,
+    0.0
+   ],
+   "scale": 0.77
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w2",
+   "at": [
+    0.6000000000000001,
+    13.6,
+    0.0
+   ],
+   "scale": 0.69
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w3",
+   "at": [
+    1.6500000000000004,
+    13.75,
+    0.0
+   ],
+   "scale": 0.85
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w4",
+   "at": [
+    2.7,
+    13.6,
+    0.0
+   ],
+   "scale": 0.77
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w5",
+   "at": [
+    3.75,
+    13.75,
+    0.0
+   ],
+   "scale": 0.69
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w6",
+   "at": [
+    4.800000000000001,
+    13.6,
+    0.0
+   ],
+   "scale": 0.85
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "w7",
+   "at": [
+    5.8500000000000005,
+    13.75,
+    0.0
+   ],
+   "scale": 0.77
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "wt1",
+   "at": [
+    0.6,
+    13.65,
+    0.95
+   ],
+   "scale": 0.6
+  },
+  {
+   "type": "box",
+   "color": [
+    0.36,
+    0.35,
+    0.33
+   ],
+   "visible": true,
+   "id": "wt2",
+   "at": [
+    4.8,
+    13.7,
+    0.9
+   ],
+   "scale": 0.55
+  },
+  {
+   "type": "ball",
+   "color": [
+    1.0,
+    0.97,
+    0.85
+   ],
+   "glow": 14,
+   "visible": false,
+   "scale": 0.4,
+   "id": "hl1",
+   "at": [
+    -9,
+    6,
+    1.2
+   ]
+  },
+  {
+   "type": "ball",
+   "color": [
+    1.0,
+    0.97,
+    0.85
+   ],
+   "glow": 14,
+   "visible": false,
+   "scale": 0.4,
+   "id": "hl2",
+   "at": [
+    -7.6,
+    6,
+    1.2
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Two orange eyes were watching them from the stone wall. And they did not blink.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "to:-6,9,0"
+    ],
+    [
+     "moth",
+     "to:-4,9.5,2"
+    ],
+    [
+     "demon",
+     "to:2.5,13.6,1.15"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHAT'S ON THE WALL?"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, we ran from the Shepherd... straight into THAT?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "text": "WHAT IS THAT?"
+  },
+  {
+   "who": "odo",
+   "say": "Don't move, Mothwick. It has no mouth. But it is looking right at us.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "IT HAS NO MOUTH"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. Four teenagers saw this creature, in two nights.",
+   "cam": "overhead",
+   "do": [
+    [
+     "demon",
+     "eyes_big"
+    ]
+   ],
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Dover, Massachusetts. April 1977. A quiet town of old stone walls.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "DOVER, 1977"
+  },
+  {
+   "who": "narr",
+   "say": "The night of April twenty-first. Half past ten. Bill was seventeen.",
+   "cam": "close:bill",
+   "do": [
+    [
+     "bill",
+     "enter:left"
+    ],
+    [
+     "hl1",
+     "show"
+    ],
+    [
+     "hl2",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "10:30 PM"
+  },
+  {
+   "who": "narr",
+   "say": "He was driving down Farm Street with two friends, when his headlights hit the wall.",
+   "cam": "wide",
+   "do": [
+    [
+     "hl1",
+     "drift:-4,10,1.2"
+    ],
+    [
+     "hl2",
+     "drift:-2.6,10,1.2"
+    ],
+    [
+     "bill",
+     "to:-5,10"
+    ]
+   ],
+   "text": "FARM STREET"
+  },
+  {
+   "who": "bill",
+   "say": "There's something on the wall! Is that a cat? A dog?",
+   "cam": "close:bill",
+   "do": [
+    [
+     "bill",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm"
+  },
+  {
+   "who": "narr",
+   "say": "It was not a cat. And it was not a dog.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "turn:front"
+    ],
+    [
+     "demon",
+     "eyes_big"
+    ]
+   ],
+   "text": "NOT A CAT"
+  },
+  {
+   "who": "narr",
+   "say": "It was about four feet tall, with a huge head shaped like a watermelon.",
+   "cam": "two:odo,demon",
+   "do": [
+    [
+     "demon",
+     "bounce"
+    ]
+   ],
+   "text": "A WATERMELON HEAD"
+  },
+  {
+   "who": "narr",
+   "say": "Its eyes glowed orange, like two marbles. Bill saw no nose and no mouth.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ORANGE EYES"
+  },
+  {
+   "who": "narr",
+   "say": "Its arms and legs were long and thin. Its fingers wrapped around the stones.",
+   "cam": "overhead",
+   "do": [
+    [
+     "demon",
+     "shake"
+    ]
+   ],
+   "text": "LONG FINGERS"
+  },
+  {
+   "who": "bill",
+   "say": "Did you see it? Tell me you saw that thing!",
+   "cam": "close:bill",
+   "do": [
+    [
+     "bill",
+     "shake"
+    ],
+    [
+     "hl1",
+     "vanish"
+    ],
+    [
+     "hl2",
+     "vanish"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "His friends had missed it. So when Bill got home, he drew what he saw.",
+   "cam": "two:bill,odo",
+   "do": [
+    [
+     "bill",
+     "sad"
+    ]
+   ],
+   "text": "HE DREW IT"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, it's climbing down. Why is it climbing down?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "demon",
+     "to:3,11,0"
+    ],
+    [
+     "moth",
+     "to:-5,7,1.5"
+    ],
+    [
+     "bill",
+     "exit"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT'S CLIMBING DOWN"
+  },
+  {
+   "who": "narr",
+   "say": "Two hours later, about one mile away, a boy named John was walking home.",
+   "cam": "close:john",
+   "do": [
+    [
+     "john",
+     "enter:left"
+    ]
+   ],
+   "text": "MIDNIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "He was fifteen. On the dark road ahead, a small shape was walking toward him.",
+   "cam": "wide",
+   "do": [
+    [
+     "demon",
+     "to:-6,15,0"
+    ],
+    [
+     "john",
+     "to:-10,13"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A SMALL SHAPE"
+  },
+  {
+   "who": "john",
+   "say": "Hello? Who's there? Is that you, Mike?",
+   "cam": "close:john",
+   "do": [
+    [
+     "john",
+     "turn:front"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "It was not Mike. It ran off the road, and stopped beside a tree.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "to:-3,19,0"
+    ],
+    [
+     "demon",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT WAS NOT MIKE"
+  },
+  {
+   "who": "narr",
+   "say": "John said it held the tree with long fingers. Its big head was turned toward him.",
+   "cam": "overhead",
+   "do": [
+    [
+     "john",
+     "eyes_big"
+    ]
+   ],
+   "text": "IT HELD THE TREE"
+  },
+  {
+   "who": "john",
+   "say": "I'm not staying here. I'm going home. Right now!",
+   "cam": "close:john",
+   "do": [
+    [
+     "john",
+     "exit"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "John drew a picture too. And it looked just like Bill's.",
+   "cam": "overhead",
+   "do": [
+    [
+     "demon",
+     "to:3,13.6,1.15"
+    ]
+   ],
+   "text": "THE SAME DRAWING"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick, the rule is simple. If it has no mouth, don't wait to hear it speak.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "DON'T WAIT"
+  },
+  {
+   "who": "narr",
+   "say": "The next night, fifteen-year-old Abby was riding home with a friend.",
+   "cam": "close:abby",
+   "do": [
+    [
+     "abby",
+     "enter:left"
+    ],
+    [
+     "hl1",
+     "show"
+    ],
+    [
+     "hl2",
+     "show"
+    ]
+   ],
+   "text": "THE NEXT NIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "On Springdale Avenue, she saw something crouching by the road.",
+   "cam": "wide",
+   "do": [
+    [
+     "hl1",
+     "drift:-3,11,1.2"
+    ],
+    [
+     "hl2",
+     "drift:-1.6,11,1.2"
+    ],
+    [
+     "demon",
+     "to:1,12,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "BY THE ROAD"
+  },
+  {
+   "who": "abby",
+   "say": "Stop... no, don't stop! Keep driving! Its eyes are glowing!",
+   "cam": "close:abby",
+   "do": [
+    [
+     "abby",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "But Abby said its eyes glowed green. Not orange. Green.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "GREEN EYES?"
+  },
+  {
+   "who": "moth",
+   "say": "Orange eyes, green eyes... Odo, are there TWO of them?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "abby",
+     "exit"
+    ],
+    [
+     "hl1",
+     "vanish"
+    ],
+    [
+     "hl2",
+     "vanish"
+    ]
+   ],
+   "text": "ARE THERE TWO?"
+  },
+  {
+   "who": "narr",
+   "say": "An investigator named Loren Coleman talked to every witness. He called it the Dover Demon.",
+   "cam": "overhead",
+   "do": [
+    [
+     "demon",
+     "turn:front"
+    ]
+   ],
+   "text": "THE DOVER DEMON"
+  },
+  {
+   "who": "narr",
+   "say": "Some people said it was a young animal, lost in the dark. Others said a joke.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "AN ANIMAL? A JOKE?"
+  },
+  {
+   "who": "narr",
+   "say": "But the teenagers never changed their story. And no one ever proved what it was.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NEVER EXPLAINED"
+  },
+  {
+   "who": "narr",
+   "say": "After those two nights, it was never seen again.",
+   "cam": "wide",
+   "do": [
+    [
+     "demon",
+     "to:3,13.6,1.15"
+    ]
+   ],
+   "text": "NEVER SEEN AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU drive down Farm Street at night, and look at the wall?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WOULD YOU LOOK?"
+  },
+  {
+   "who": "moth",
+   "say": "Not me. I would close my eyes and fly very, very fast.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the creature lifted one long finger. And it pointed behind them.",
+   "cam": "close:demon",
+   "do": [
+    [
+     "demon",
+     "turn:front"
+    ],
+    [
+     "demon",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT POINTED"
+  },
+  {
+   "who": "narr",
+   "say": "Odo's lantern flickered. Something tall was coming up the road.",
+   "cam": "wide",
+   "do": [
+    [
+     "shepherd",
+     "to:8,17,0"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SOMETHING TALL"
+  },
+  {
+   "who": "shepherd",
+   "say": "Lantern-bearer. Even the little ones warn you now.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "turn:front"
+    ]
+   ],
+   "text": "IT FOUND US"
+  },
+  {
+   "who": "narr",
+   "say": "Was the Dover Demon a warning? Subscribe, so you don't miss the next tale.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHAT WAS IT?"
+  }
+ ]
+}
