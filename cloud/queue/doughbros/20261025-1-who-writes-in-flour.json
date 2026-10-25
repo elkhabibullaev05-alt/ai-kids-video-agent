@@ -1,0 +1,1063 @@
+{
+ "id": "20261025-1-who-writes-in-flour",
+ "plot": "At midnight in the kitchen the five bros' names write themselves in spilled flour and a circle closes around Pim's name; Zeek's Ghost-o-Graph sees nothing and the night watch falls asleep, until Bup's big eye sees the letters walking: an ant colony led by Queen Marcha wrote a protective warning that the tall thing from the roof comes down tonight for the most scared one, the bros thank the ants with the sugar bowl, and a clunk sounds in the oven hood early.",
+ "script": {
+  "title": "Who Is Writing Our Names in the Flour",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "marcha": {
+    "name": "Queen Marcha",
+    "voice": "bf_emma",
+    "speed": 1.05,
+    "pitch": 1,
+    "color": [
+     0.09,
+     0.06,
+     0.05
+    ],
+    "kind": "bean",
+    "size": 0.45,
+    "home": [
+     -11,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "flour",
+    "type": "box",
+    "color": [
+     0.97,
+     0.96,
+     0.92
+    ],
+    "on": null,
+    "at": [
+     -1,
+     11,
+     0.15
+    ],
+    "visible": true,
+    "scale": 2.0
+   },
+   {
+    "id": "sugar",
+    "type": "box",
+    "color": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "on": null,
+    "at": [
+     8,
+     12,
+     0.4
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.2
+    ],
+    "on": "zeek",
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "ants",
+    "type": "ball",
+    "color": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "on": null,
+    "at": [
+     -1,
+     11.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "AAAH! Bup! The flour just wrote my name! All by itself!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Flour can't write, Pim. Flour can't even spell.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-3,8"
+     ],
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "text": "P... I... M...",
+    "cam": "prop:flour",
+    "hold": 1.3,
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "In the spilled flour, five names appear. One letter at a time.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bup, Pim, Lolly, Zeek, Crispy. Fascinating. Also deeply rude.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,9"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Who's writing in my clean kitchen at midnight? Show yourself, sweetie!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody answers. The sugar bowl clinks. One cube is missing.",
+    "cam": "prop:sugar",
+    "do": [
+     [
+      "sugar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The s-s-sugar is gone too! The ghost has a sweet tooth!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Zeek, you have a gadget for this. You always have a gadget.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Behold! The Ghost-o-Graph. It photographs anything invisible.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "camera",
+      "show"
+     ],
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flash! The photo shows flour, five scared faces, and nothing else.",
+    "cam": "wide",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Conclusion: the ghost is camera shy. Or my lens is buttered.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Buttered? Zeek! That was my good birthday butter!",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:3,8"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Wait. Did that P just... wiggle? My big eye saw it wiggle.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ],
+     [
+      "bup",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Letters don't wiggle, Bup. You need a nap, honey.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "TONIGHT",
+    "cam": "prop:flour",
+    "hold": 1.3,
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pim",
+    "say": "Tonight?! Tonight WHAT? I hate sentences with no ending!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Flour does not write itself. Something in here is hungry... and patient.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "enter"
+     ],
+     [
+      "crispy",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy! Don't sneak up on a cookie with icing nerves!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, a circle draws itself around one name. Pim.",
+    "cam": "prop:flour",
+    "do": [
+     [
+      "flour",
+      "spin"
+     ],
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It picked Pim. If we can't stop it, we lose him tonight!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-3,6"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why always me?! I'm mostly water and fear!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Nobody touches our bean. Pim, into the measuring cup. Now.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:-1,6"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim hides in a measuring cup. His shaking makes it ring.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-8,8"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plan B. We stay awake and guard the flour. All night.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Soon Zeek is snoring. Lolly is snoring. Bup's small eye closes too.",
+    "cam": "overhead",
+    "do": [
+     [
+      "zeek",
+      "sleep"
+     ],
+     [
+      "lolly",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Stay open, big eye. You're the only good eye I've got.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "A SECOND CIRCLE",
+    "cam": "prop:flour",
+    "hold": 1.2,
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "bup",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "crispy",
+    "say": "Two circles around Pim. Whatever it is... it's almost finished.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then I'll sweep the whole flour away! Every last speck!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "lolly",
+      "to:1,10"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly raises the broom. Bup leans in, close to the flour.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lolly, STOP! The letters are walking! Tiny legs! Hundreds of them!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "ants",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "ANTS!",
+    "cam": "prop:ants",
+    "hold": 1.2,
+    "do": [
+     [
+      "ants",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pim",
+    "say": "An ant army wants ME? I'm a terrible snack!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "A snack? Ew. Beans give us tummy aches.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "enter"
+     ],
+     [
+      "marcha",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "I'm Queen Marcha. We weren't hunting Pim. We were warning him.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "turn:pim"
+     ],
+     [
+      "marcha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Warning? You circled his name twice! That's threatening handwriting!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "Circles mean protect. Something is coming for Pim tonight. Read the rest.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ants march again. New words crawl across the flour.",
+    "cam": "wide",
+    "do": [
+     [
+      "ants",
+      "spin"
+     ],
+     [
+      "all",
+      "look:marcha"
+     ]
+    ]
+   },
+   {
+    "text": "IT COMES DOWN TONIGHT",
+    "cam": "prop:flour",
+    "hold": 1.5,
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "crispy",
+    "say": "Down from where? Only one thing lives above this kitchen.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "The tall one on the roof. It hunts the scared ones.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Why the scared ones? What did scared ones ever do?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "Fear smells sweet to it. Like warm syrup on a pancake.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Then I'm basically a cupcake! I'm the sweetest coward in Table Land!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Queen Marcha, why help us? Ants and dough aren't exactly friends.",
+    "cam": "two:bup,marcha",
+    "do": [
+     [
+      "bup",
+      "turn:marcha"
+     ]
+    ]
+   },
+   {
+    "who": "marcha",
+    "say": "You drop the best crumbs in Table Land. We protect our bakery.",
+    "cam": "close:marcha",
+    "do": [
+     [
+      "marcha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly gives the ants the sugar bowl. They cheer in tiny voices.",
+    "cam": "wide",
+    "do": [
+     [
+      "sugar",
+      "give:marcha"
+     ],
+     [
+      "ants",
+      "bounce"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Thank you, ants! I'll drop extra crumbs forever! On purpose!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,7"
+     ],
+     [
+      "pim",
+      "happy"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "And I'll upgrade the Ghost-o-Graph. Ant mode. Tiny flash.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ],
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "CLUNK.",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "crispy",
+    "say": "That came from the oven hood. It's early.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Early?! Nobody told me EARLY was an option!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Is Writing Our Names in the Flour? 😨",
+  "description": "At midnight in the kitchen, the names of all five Dough Bros appear in spilled flour, one letter at a time… then something draws a circle around Pim. Zeek's Ghost-o-Graph sees nothing. Who do YOU think is writing? 👇 #animation #doughbros #horrorcomedy",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "horror comedy",
+   "mystery",
+   "spooky cartoon",
+   "funny animation",
+   "midnight kitchen",
+   "creepy message"
+  ],
+  "thumb_text": "WHO WROTE THIS?",
+  "thumb_beat": 16,
+  "localizations": {
+   "es": {
+    "title": "¿Quién escribe nuestros nombres en la harina? 😨",
+    "description": "A medianoche, en la cocina, los nombres de los cinco Dough Bros aparecen solos en la harina derramada, letra por letra… y luego alguien dibuja un círculo alrededor de Pim. El Fantasmógrafo de Zeek no ve nada. ¿Quién crees TÚ que está escribiendo? 👇 #animación #doughbros #comediadeterror"
+   },
+   "pt": {
+    "title": "Quem está escrevendo nossos nomes na farinha? 😨",
+    "description": "À meia-noite, na cozinha, os nomes dos cinco Dough Bros aparecem sozinhos na farinha derramada, letra por letra… e depois alguém desenha um círculo em volta do Pim. A Fantasmógrafo do Zeek não vê nada. Quem VOCÊ acha que está escrevendo? 👇 #animação #doughbros #comédiadeterror"
+   },
+   "ar": {
+    "title": "من يكتب أسماءنا في الدقيق؟ 😨",
+    "description": "في منتصف الليل في المطبخ، تظهر أسماء الأصدقاء الخمسة وحدها في الدقيق المسكوب، حرفًا بعد حرف… ثم يرسم أحدهم دائرة حول اسم بيم. كاميرا الأشباح التي صنعها زيك لا ترى شيئًا. برأيك، من الذي يكتب؟ 👇 #رسوم_متحركة #doughbros #كوميديا_رعب"
+   },
+   "fr": {
+    "title": "Qui écrit nos noms dans la farine ? 😨",
+    "description": "À minuit, dans la cuisine, les noms des cinq Dough Bros apparaissent tout seuls dans la farine renversée, lettre après lettre… puis quelqu'un entoure le nom de Pim. Le Fantômographe de Zeek ne voit rien. Qui, selon TOI, est en train d'écrire ? 👇 #animation #doughbros #comédiehorrifique"
+   },
+   "ja": {
+    "title": "小麦粉にボクらの名前を書いているのは誰？😨",
+    "description": "真夜中のキッチン。こぼれた小麦粉に、ドウ・ブロス5人の名前がひとりでに一文字ずつ現れる…そしてピムの名前だけに丸がつく。ジークのゴーストカメラには何も写らない。書いているのは誰だと思う？👇 #アニメ #doughbros #ホラーコメディ"
+   },
+   "ko": {
+    "title": "밀가루에 우리 이름을 쓰는 건 누구야? 😨",
+    "description": "한밤중의 부엌, 쏟아진 밀가루 위에 도우 브로스 다섯 명의 이름이 한 글자씩 저절로 나타난다… 그리고 누군가 핌의 이름에만 동그라미를 친다. 지크의 유령 카메라에는 아무것도 찍히지 않는다. 누가 쓰고 있는 것 같아? 👇 #애니메이션 #doughbros #호러코미디"
+   },
+   "de": {
+    "title": "Wer schreibt unsere Namen ins Mehl? 😨",
+    "description": "Um Mitternacht in der Küche erscheinen die Namen aller fünf Dough Bros wie von selbst im verschütteten Mehl, Buchstabe für Buchstabe… dann zieht jemand einen Kreis um Pims Namen. Zeeks Geisterkamera sieht nichts. Wer schreibt da, was meinst DU? 👇 #animation #doughbros #horrorkomödie"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "THE FLOUR WROTE HIS NAME",
+   "title": "The Flour Wrote Pim's Name… By Itself 😨 #shorts",
+   "description": "Five names appear in the flour at midnight, and nobody is writing them. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "spooky",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La harina escribió el nombre de Pim… sola 😨 #shorts",
+     "description": "Cinco nombres aparecen en la harina a medianoche, y nadie los está escribiendo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A farinha escreveu o nome do Pim… sozinha 😨 #shorts",
+     "description": "Cinco nomes aparecem na farinha à meia-noite, e ninguém está escrevendo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الدقيق كتب اسم بيم… وحده 😨 #shorts",
+     "description": "خمسة أسماء تظهر في الدقيق عند منتصف الليل، ولا أحد يكتبها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La farine a écrit le nom de Pim… toute seule 😨 #shorts",
+     "description": "Cinq noms apparaissent dans la farine à minuit, et personne ne les écrit. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "小麦粉がひとりでにピムの名前を書いた 😨 #shorts",
+     "description": "真夜中、小麦粉に5人の名前が現れる。でも書いている者はいない。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "밀가루가 혼자서 핌의 이름을 썼다 😨 #shorts",
+     "description": "한밤중 밀가루에 다섯 개의 이름이 나타나지만, 쓰는 사람은 아무도 없다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das Mehl schrieb Pims Namen… ganz allein 😨 #shorts",
+     "description": "Um Mitternacht erscheinen fünf Namen im Mehl, und niemand schreibt sie. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 29,
+   "dur": 20,
+   "top": "DON'T SWEEP IT!",
+   "title": "The Letters in the Flour Are… WALKING 😱 #shorts",
+   "description": "Lolly is about to sweep the creepy names away when Bup's big eye sees the letters move. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "animation",
+    "creepy",
+    "twist"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Las letras de la harina están… CAMINANDO 😱 #shorts",
+     "description": "Lolly va a barrer los nombres misteriosos cuando el gran ojo de Bup ve que las letras se mueven. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "As letras na farinha estão… ANDANDO 😱 #shorts",
+     "description": "Lolly vai varrer os nomes misteriosos quando o olho grande do Bup vê as letras se mexendo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحروف في الدقيق… تمشي 😱 #shorts",
+     "description": "لولي على وشك كنس الأسماء الغامضة، لكن عين باب الكبيرة ترى الحروف تتحرك. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les lettres dans la farine… MARCHENT 😱 #shorts",
+     "description": "Lolly va balayer les noms mystérieux quand le gros œil de Bup voit les lettres bouger. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "小麦粉の文字が…歩いてる 😱 #shorts",
+     "description": "ロリーが謎の名前をはき消そうとしたその時、バップの大きな目が動く文字を見つける。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "밀가루 글자가… 걸어 다닌다 😱 #shorts",
+     "description": "롤리가 수상한 이름들을 쓸어 버리려는 순간, 법의 큰 눈이 움직이는 글자를 본다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Buchstaben im Mehl… LAUFEN 😱 #shorts",
+     "description": "Lolly will die rätselhaften Namen wegfegen, da sieht Bups großes Auge, wie sich die Buchstaben bewegen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
