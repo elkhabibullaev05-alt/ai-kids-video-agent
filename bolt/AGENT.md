@@ -74,3 +74,6 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Safety notes 2026-10-20
 - Title template: titles repeat "Who … ? 🔍 Cartoon Cars Mystery". Keep the series tag only in some titles; vary the hook (place, suspect, clue). Vary the opening line of each script.
 - Made for kids = Yes must stay on every upload (UPLOAD.md uses VIDEO_MADE_FOR_KIDS_MFK; channels.json kids=true). Music/SFX: only self-generated audio from engine/soundtrack.py.
+
+## Safety notes 2026-10-25
+- Repetitive-content risk: all logged titles end with the same "🔍 Cartoon Cars Mystery" tail. Use that tail on at most 1 title in 3; vary the form (statement, character-name first, number, "What happened to…?") and vary the first spoken line of each script. Made for kids = Yes stays.
