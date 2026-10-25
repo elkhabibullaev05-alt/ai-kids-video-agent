@@ -1,0 +1,1264 @@
+{
+ "id": "20261025-2-no-cars-sign",
+ "plot": "At sunset, just before Wheelburg's first Car Dance Party, a sign on the podium says NO CARS ALLOWED; Bolt sees its right edge is jagged, the Truth Press shows Mayor Moxie honestly painted a long happy sign, Grumpy finds the missing half behind the press, and the full sign reads 'No cars on the new grass. Dance on the road!'; the twist is that Turbo's careless party spin in the very first second broke it; he says sorry, the party starts as the sun touches the hill; lesson: find the whole story before you worry; then a new sign says 'Bolt, look up!'.",
+ "script": {
+  "title": "NO CARS ALLOWED in Wheelburg?! 🚫🚗 Sunset Party Mystery",
+  "set": {
+   "place": "Wheelburg square, Car Dance Party at sunset",
+   "press": true,
+   "podium": true,
+   "time": "sunset"
+  },
+  "description": "A sign says NO CARS just before Wheelburg's first dance party! Inspector Bolt must find out who put it there before the sun touches the hill. Find the whole story before you worry. Inspector Bolt #13",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "moxie": {
+    "name": "Mayor Moxie",
+    "voice": "af_sarah",
+    "speed": 1.05,
+    "pitch": 0,
+    "color": [
+     0.55,
+     0.25,
+     0.8
+    ],
+    "kind": "car",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     12.0,
+     15.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "sign",
+    "type": "box",
+    "color": [
+     0.96,
+     0.96,
+     0.92
+    ],
+    "on": "podium",
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "half",
+    "type": "box",
+    "color": [
+     0.96,
+     0.96,
+     0.92
+    ],
+    "at": [
+     -11.0,
+     11.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Watch my party spin, everybody! Whoa! Oops, bumped something. Never mind!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo, look! Why does the big sign say NO CARS?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NO CARS ALLOWED?!",
+    "cam": "prop:sign",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the Car Dance Party at sunset. Wheelburg's very first party.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No cars? But everybody here is a car!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No cars. No dancing. No noise. Finally, a good sign.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! I planned this party for a whole month!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So where do we go? Do we fly? I can't fly. Yet.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a blue car with a brown hat rolled into the square.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening. Why does nobody look ready to dance?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Inspector! Someone put up a sign. No cars allowed!",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A sign with no name and no reason. That is a mystery.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "WHO PUT UP THE SIGN?",
+    "cam": "close:bertha",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. First, we read the sign very carefully.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled up close to the sign and squinted.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Big red letters. N. O. C. A. R. S. Hmm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And look. The right side is rough and jagged.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Jagged like a cookie when somebody takes a bite?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Exactly like that, Pip. And signs do not usually get bitten.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A sign-munching goat! It's hiding in town! I just know it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Goats don't come to car parties, Turbo. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun was sinking low over Wheelburg.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The party had to start when it touched the hill.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "If we miss the sunset, no party until next summer!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we must be quick. Who paints the signs in Wheelburg?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The Mayor! She paints every single sign in town!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And right then, a purple car came honking around the corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "moxie",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Hello, hello! Is the party ready? I simply love a party!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Mayor Moxie! Did you put up the NO CARS sign?",
+    "cam": "two:bertha,moxie",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "I put up a sign, yes. A happy sign! Not that sign!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hmm. That sounds like a big fib to me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "We do not guess, Turbo. Mayor, the Truth Press, if you please.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "moxie",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mayor Moxie rolled under the Truth Press. Squeeze!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:moxie"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "I painted a sign this afternoon. And it was a HAPPY sign!",
+    "cam": "press",
+    "do": [
+     [
+      "moxie",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Oof! My roof! Now I'm a very flat mayor!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone watched her eyes. They stayed small. She was telling the truth!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "all",
+      "look:moxie"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S TELLING THE TRUTH?!",
+    "cam": "close:moxie",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "moxie",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "She painted a happy sign... but now it's a sad sign?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A happy sign turned sad. And the sun keeps sinking.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Maybe signs get grumpy too. I understand them.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Mayor, what exactly did your happy sign say?",
+    "cam": "two:bolt,moxie",
+    "do": [
+     [
+      "bolt",
+      "turn:moxie"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Oh dear, it was a long one! I can't remember every word!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Something about cars. Something about grass. And dancing!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grass? But there's no grass in the square.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:moxie"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Not yet! I planted new grass seeds this morning. Surprise!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone looked down at the brown patch of dirt by the podium.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So her sign was long. This sign is short. And jagged.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Somewhere in Wheelburg, the rest of that sign is hiding.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "FIND THE MISSING HALF!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "I'll check the fountain! Mayors are great at fountains!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Quick, everybody! The sun is already touching the trees!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody searched. Under benches. Behind lamps. Around the fountain.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll search the fastest! Zoom! Nothing! Zoom! Nothing again!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Not under the bench! Not behind the flower pot!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'll look behind the Truth Press. Nobody ever looks there.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-11,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy swung his tow hook down. Clink! He hooked something flat.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE OTHER HALF!",
+    "cam": "prop:half",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "half",
+      "show"
+     ],
+     [
+      "half",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Another sign. It says... ON THE NEW GRASS.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Put them together, Grumpy! Put the two halves together!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy towed it back. Click! The two pieces fit like a puzzle.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "half",
+      "vanish"
+     ],
+     [
+      "sign",
+      "bounce"
+     ],
+     [
+      "grumpy",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now the whole sign could be read.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "No cars on the new grass. Dance on the road!",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DANCE ON THE ROAD!",
+    "cam": "close:bertha",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "It was a happy sign all along! A party sign!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Nobody may squash my baby grass. But everybody may dance!",
+    "cam": "two:moxie,bertha",
+    "do": [
+     [
+      "moxie",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But wait. Who broke the happy sign in half?",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A sign breaks with a bump. A big, fast, spinning bump.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A spinning bump? Who spins around here? Oh. Oh no.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My party spin! I bumped something and I said never mind!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO DID IT?!",
+    "cam": "close:turbo",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm sorry, Mayor. Sorry, Bertha. I should have looked back.",
+    "cam": "two:turbo,moxie",
+    "do": [
+     [
+      "turbo",
+      "turn:moxie"
+     ]
+    ]
+   },
+   {
+    "who": "moxie",
+    "say": "Thank you for saying so, Turbo. That was brave and honest.",
+    "cam": "close:moxie",
+    "do": [
+     [
+      "moxie",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "So there's no NO CARS rule? Hmph. I liked that sign.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And just then, the sun touched the top of the hill.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "PARTY TIME!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every car danced on the road, far away from the new grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Best first party ever! My wheels can't stop bouncing!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No dancing for me. Okay. One wiggle. Just one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And no more party spins. Just party wiggles, very carefully!",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. Find the whole story before you start to worry.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "BOLT, LOOK UP!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a brand new sign popped up. It said: Bolt, look up!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What was waiting up there?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "NO CARS ALLOWED in Wheelburg?! 🚫🚗 Sunset Party Mystery",
+  "description": "A big sign says NO CARS ALLOWED, right before Wheelburg's very first dance party! Who put it there, and why? Inspector Bolt must solve it before the sun touches the hill. Find the whole story before you worry. Inspector Bolt #13\n\n#kidscartoon #cartooncars #storiesforkids",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "inspector bolt",
+   "dance party",
+   "sunset",
+   "stories for kids",
+   "honesty",
+   "cars for kids",
+   "3d cartoon",
+   "mystery for kids"
+  ],
+  "thumb_text": "NO CARS?!",
+  "thumb_beat": 1,
+  "localizations": {
+   "es": {
+    "title": "¿PROHIBIDO COCHES en Wheelburg?! 🚫🚗 Misterio de la fiesta",
+    "description": "¡Un gran cartel dice PROHIBIDO COCHES justo antes de la primera fiesta de baile de Wheelburg! ¿Quién lo puso y por qué? El Inspector Bolt debe resolverlo antes de que el sol toque la colina. Conoce toda la historia antes de preocuparte. Inspector Bolt #13\n\n#dibujosanimados #coches #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "PROIBIDO CARROS em Wheelburg?! 🚫🚗 Mistério da festa",
+    "description": "Uma placa diz PROIBIDO CARROS bem antes da primeira festa de dança de Wheelburg! Quem colocou e por quê? O Inspetor Bolt precisa resolver antes do sol tocar o morro. Descubra a história toda antes de se preocupar. Inspetor Bolt #13\n\n#desenhoinfantil #carros #historiasinfantis"
+   },
+   "ar": {
+    "title": "ممنوع السيارات في ويلبرغ؟! 🚫🚗 لغز حفلة الغروب",
+    "description": "لافتة كبيرة تقول ممنوع السيارات قبل أول حفلة رقص في ويلبرغ! من وضعها ولماذا؟ على المفتش بولت حل اللغز قبل أن تلمس الشمس التلة. اعرف القصة كاملة قبل أن تقلق. المفتش بولت #13\n\n#كرتون_أطفال #سيارات #قصص_أطفال"
+   },
+   "fr": {
+    "title": "VOITURES INTERDITES à Wheelburg ?! 🚫🚗 Mystère de la fête",
+    "description": "Un grand panneau dit VOITURES INTERDITES juste avant la toute première fête dansante de Wheelburg ! Qui l'a mis, et pourquoi ? L'Inspecteur Bolt doit trouver avant que le soleil touche la colline. Connais toute l'histoire avant de t'inquiéter. Inspecteur Bolt #13\n\n#dessinanimé #voitures #histoirespourenfants"
+   },
+   "ja": {
+    "title": "ウィールバーグは車きんし?!🚫🚗 夕やけパーティーのナゾ",
+    "description": "はじめてのダンスパーティーの直前に「車きんし」のかんばんが!だれが、なぜ?夕日が丘にとどく前に、ボルト警部がナゾをとくよ。しんぱいする前に、お話をぜんぶ知ろう。ボルト警部 #13\n\n#子ども向けアニメ #くるま #おはなし"
+   },
+   "ko": {
+    "title": "윌버그에 자동차 금지?! 🚫🚗 노을 파티 미스터리",
+    "description": "윌버그의 첫 댄스 파티 직전에 '자동차 금지' 표지판이 나타났어요! 누가, 왜 세웠을까요? 해가 언덕에 닿기 전에 볼트 형사가 풀어야 해요. 걱정하기 전에 이야기 전체를 알아봐요. 볼트 형사 #13\n\n#어린이만화 #자동차 #동화"
+   },
+   "de": {
+    "title": "AUTOS VERBOTEN in Wheelburg?! 🚫🚗 Rätsel der Sonnenuntergangsparty",
+    "description": "Ein Schild sagt AUTOS VERBOTEN, kurz vor Wheelburgs allererster Tanzparty! Wer hat es aufgestellt und warum? Inspektor Bolt muss es lösen, bevor die Sonne den Hügel berührt. Erst die ganze Geschichte kennen, dann sorgen. Inspektor Bolt #13\n\n#kinderzeichentrick #autos #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 28,
+   "top": "NO CARS?!",
+   "title": "A Town of Cars Gets a NO CARS Sign! 🚫🚗 #shorts",
+   "description": "The dance party starts at sunset, but the sign says NO CARS! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "funny cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Un pueblo de coches recibe un cartel de PROHIBIDO COCHES! 🚫🚗 #shorts",
+     "description": "La fiesta empieza al atardecer, ¡pero el cartel dice PROHIBIDO COCHES! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma cidade de carros ganha uma placa PROIBIDO CARROS! 🚫🚗 #shorts",
+     "description": "A festa começa no pôr do sol, mas a placa diz PROIBIDO CARROS! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مدينة سيارات تحصل على لافتة ممنوع السيارات! 🚫🚗 #shorts",
+     "description": "الحفلة تبدأ عند الغروب، لكن اللافتة تقول ممنوع السيارات! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une ville de voitures reçoit un panneau VOITURES INTERDITES ! 🚫🚗 #shorts",
+     "description": "La fête commence au coucher du soleil, mais le panneau dit VOITURES INTERDITES ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "車の町に「車きんし」のかんばん!🚫🚗 #shorts",
+     "description": "夕やけにパーティーがはじまるのに、かんばんは「車きんし」!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "자동차 마을에 '자동차 금지' 표지판이?! 🚫🚗 #shorts",
+     "description": "파티는 노을 때 시작인데 표지판에는 자동차 금지래요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Autostadt bekommt ein AUTOS-VERBOTEN-Schild! 🚫🚗 #shorts",
+     "description": "Die Party beginnt bei Sonnenuntergang, aber das Schild sagt AUTOS VERBOTEN! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 28,
+   "dur": 30,
+   "top": "IS SHE TELLING THE TRUTH?",
+   "title": "The Mayor Goes Under the Truth Press! 😲🚗 #shorts",
+   "description": "Did the Mayor really put up the NO CARS sign? The sun is sinking! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La alcaldesa pasa por la Prensa de la Verdad! 😲🚗 #shorts",
+     "description": "¿De verdad la alcaldesa puso el cartel? ¡El sol se está poniendo! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A prefeita vai para a Prensa da Verdade! 😲🚗 #shorts",
+     "description": "Foi mesmo a prefeita que colocou a placa? O sol está se pondo! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العمدة تحت مكبس الحقيقة! 😲🚗 #shorts",
+     "description": "هل وضعت العمدة لافتة ممنوع السيارات حقًا؟ الشمس تغرب! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La maire passe sous la Presse de Vérité ! 😲🚗 #shorts",
+     "description": "Est-ce vraiment la maire qui a mis le panneau ? Le soleil se couche ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "町長さんがしんじつプレスに!😲🚗 #shorts",
+     "description": "「車きんし」のかんばんは町長さんが立てたの?夕日がしずんでいく!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "시장님이 진실 프레스 아래로! 😲🚗 #shorts",
+     "description": "정말 시장님이 표지판을 세웠을까요? 해가 지고 있어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Bürgermeisterin unter der Wahrheitspresse! 😲🚗 #shorts",
+     "description": "Hat die Bürgermeisterin wirklich das Schild aufgestellt? Die Sonne sinkt! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

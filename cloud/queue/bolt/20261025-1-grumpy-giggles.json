@@ -1,0 +1,1344 @@
+{
+ "id": "20261025-1-grumpy-giggles",
+ "plot": "On Statue Day morning grumpy tow truck Grumpy can't stop giggling and must lift the Golden Wheel statue by noon; Doctor Dottie finds his engine fine, the Truth Press shows he is honestly grumpy inside, and the giggles make the statue roll away, until Pip notices he only giggles when he moves and Bertha's talk of her ticklish pom-pom leads Dottie to find it stuck in his tow hook since he pulled Bertha from the mud; Pip pops it out, the statue goes up at noon; lesson: when a friend acts strange, ask how to help; then Bolt's hat starts to giggle.",
+ "script": {
+  "title": "Why Is Grumpy Giggling?! 🤭🚚 Wheelburg Mystery",
+  "set": {
+   "place": "Wheelburg square, Statue Day morning",
+   "press": true,
+   "podium": true,
+   "time": "day"
+  },
+  "description": "Grumpy never giggles... until today! Inspector Bolt and Doctor Dottie must find out why before the Golden Wheel goes up at noon. When a friend acts strange, ask how to help. Inspector Bolt #12",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "dottie": {
+    "name": "Doctor Dottie",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 1,
+    "color": [
+     0.95,
+     0.95,
+     0.97
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     11.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "wheel",
+    "type": "wheel",
+    "color": "gold",
+    "on": "podium",
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "pompom",
+    "type": "ball",
+    "color": [
+     0.98,
+     0.5,
+     0.78
+    ],
+    "visible": false,
+    "scale": 0.55
+   }
+  ],
+  "beats": [
+   {
+    "who": "grumpy",
+    "say": "Hee-hee! Ha-ha! Hoo! Somebody please stop my giggles!",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Why is Grumpy giggling? Grumpy never giggles!",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ],
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY IS GIGGLING?!",
+    "cam": "close:grumpy",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Statue Day morning in Wheelburg. And Grumpy was giggling.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I am not giggling. Hee-hee! Okay, I am. Hmph!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh my! Grumpy, you sound like a happy kettle!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Is he happy? He doesn't look happy. He looks worried.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "At noon I must lift the Golden Wheel statue. Hee!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Golden Wheel had to be up on the podium by noon.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I can't help today. I lost my pom-pom!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Your pink fluffy pom-pom that hangs on your mirror?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Yes! It fell off when Grumpy pulled me out of the mud.",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Mud. Pulling. Then giggles. What a terrible morning. Hee-hee!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Forget the pom-pom! Grumpy has turned NICE! Call a doctor!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they called the best repair van in town.",
+    "cam": "wide",
+    "do": [
+     [
+      "dottie",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Doctor Dottie is here! Who has a funny noise?",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Me. My noise goes hee-hee. Fix it, please.",
+    "cam": "two:dottie,grumpy",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Open your hood, please. And say vroom.",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Vroom. Hee-hee-hee! Vroom!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Engine, perfect. Wheels, perfect. Lights, perfect. Giggles? A mystery!",
+    "cam": "two:dottie,grumpy",
+    "do": [
+     [
+      "dottie",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE DO THE GIGGLES COME FROM?",
+    "cam": "close:grumpy",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a blue car with a brown hat rolled into the square.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning. I heard a very rare sound. A grumpy giggle.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Inspector! Grumpy has turned nice! It's an emergency!",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Being nice is never an emergency, Turbo. But this is odd.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. First, we find out if the giggles are real.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy rolled under the Truth Press.",
+    "cam": "press",
+    "do": [
+     [
+      "grumpy",
+      "to_press"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, tell the truth. Are you happy inside today?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. I'm grumpy inside. Very grumpy. Hee-hee-hee!",
+    "cam": "press",
+    "do": [
+     [
+      "press",
+      "squeeze:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The press squeezed. His eyes stayed small. It was the truth!",
+    "cam": "press",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy inside, but giggly outside? That's the weirdest thing ever!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Poor sweetie! Giggles that aren't even happy giggles!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Then it's not a feeling. Something is making him giggle!",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe a giggle bug flew into his engine!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "No bugs, Turbo. I checked. Not even a tiny one.",
+    "cam": "two:dottie,turbo",
+    "do": [
+     [
+      "dottie",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And noon is coming. We have one hour to lift that statue.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "ONE HOUR LEFT!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "wheel",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Let me try now. Giggles or no giggles. Hee!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy backed up to the Golden Wheel and lowered his hook.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hee-hee-HOO-HA-HA! I can't hold it! Hee!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Golden Wheel wobbled, bounced, and started to roll!",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "bounce"
+     ],
+     [
+      "wheel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "CATCH THAT WHEEL!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I got it! I got it! I... don't got it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed around the square three times before he caught it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Caught it! And I only bumped into Bertha twice.",
+    "cam": "two:turbo,bertha",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Three times, Turbo! Now my roof is flat as a pancake!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "flat_roof"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait! Grumpy didn't giggle once while Turbo was zooming!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Excellent noticing, Pip. While we chased, Grumpy stood still.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy. Please turn to your left. Very slowly.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hee-hee-hee! Hoo!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Now stop. Do not move one single wheel.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm stopped. No giggles. Hmph. That's much better.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "So he only giggles when he moves! But why?",
+    "cam": "two:dottie,bolt",
+    "do": [
+     [
+      "dottie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone thought very hard. Thinking makes cars very quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "When did the giggles start, Grumpy? Think back!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "After the mud. Before breakfast. Hee. Right in between.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe moving is just super funny! Watch! Ha. Nope. Not funny.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My pom-pom always tickles me when I drive over bumps.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tickles. Bertha, say that once more, please.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My fluffy pom-pom tickles! That's why I hang it up high!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bong! went the town clock. Only ten minutes until noon!",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "TEN MINUTES LEFT!",
+    "cam": "podium",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, where does it feel giggly? Your hood? Your wheels?",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My tow hook. It has felt fluffy since the mud.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Hold very still! Let me look inside that hook!",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Doctor Dottie peeked inside. Then she gasped.",
+    "cam": "two:dottie,grumpy",
+    "do": [
+     [
+      "dottie",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Something pink is stuck in there! Soft and fluffy and pink!",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY IS TICKLISH?!",
+    "cam": "close:grumpy",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My pom-pom! It got stuck in your hook in the mud!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So Grumpy isn't nice. He's TICKLISH! That's even better!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tell no one. Hee. Wait. Everyone heard. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, your little wheels fit where no one else can reach.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll pull it out! Hold on, Grumpy! One, two, three!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hee-hee-HAA! Hurry, Pip! Hurry! Hee-hee!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip tugged. Grumpy giggled. And then... pop!",
+    "cam": "two:pip,grumpy",
+    "do": [
+     [
+      "pompom",
+      "drop:grumpy"
+     ]
+    ]
+   },
+   {
+    "text": "POP!",
+    "cam": "prop:pompom",
+    "hold": 0.9,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pompom",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My pom-pom! Thank you, Pip! Thank you, Doctor Dottie!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "pompom",
+      "give:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No more giggles. Now hand me that wheel.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One strong pull, and the Golden Wheel was up. Right at noon!",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ],
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "A perfect lift! I'll write that in my doctor book!",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And my pom-pom goes back on my mirror, high and safe!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ],
+     [
+      "pompom",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy, can I tickle you, just one time?",
+    "cam": "two:pip,grumpy",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. Maybe on my birthday. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Too shiny. I still don't like shiny things.",
+    "cam": "two:grumpy,bolt",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Today's lesson. When a friend acts strange, ask how to help.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And never tickle a tow truck. Unless he says yes!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "BOLT'S HAT IS GIGGLING?!",
+    "cam": "close:bolt",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt's hat began to giggle. Who was hiding under it?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Grumpy Giggling?! 🤭🚚 Wheelburg Mystery",
+  "description": "Grumpy the tow truck NEVER giggles... so why can't he stop today? Inspector Bolt and Doctor Dottie must solve the giggle mystery before the Golden Wheel goes up at noon. When a friend acts strange, ask how to help. Inspector Bolt #12\n\n#kidscartoon #cartooncars #storiesforkids",
+  "tags": [
+   "kids cartoon",
+   "cartoon cars",
+   "inspector bolt",
+   "giggles",
+   "funny cars",
+   "stories for kids",
+   "tow truck",
+   "helping friends",
+   "3d cartoon",
+   "mystery for kids"
+  ],
+  "thumb_text": "GRUMPY GIGGLES?!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué se ríe Grumpy?! 🤭🚚 Misterio en Wheelburg",
+    "description": "Grumpy la grúa NUNCA se ríe... ¿por qué no puede parar hoy? El Inspector Bolt y la Doctora Dottie deben resolver el misterio antes de que la Rueda Dorada suba al mediodía. Cuando un amigo actúa raro, pregúntale cómo ayudar. Inspector Bolt #12\n\n#dibujosanimados #coches #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "Por que o Grumpy está rindo?! 🤭🚚 Mistério em Wheelburg",
+    "description": "O guincho Grumpy NUNCA ri... então por que ele não consegue parar hoje? O Inspetor Bolt e a Doutora Dottie precisam resolver o mistério antes da Roda Dourada subir ao meio-dia. Quando um amigo age estranho, pergunte como ajudar. Inspetor Bolt #12\n\n#desenhoinfantil #carros #historiasinfantis"
+   },
+   "ar": {
+    "title": "لماذا يضحك غرامبي؟! 🤭🚚 لغز ويلبرغ",
+    "description": "شاحنة السحب غرامبي لا تضحك أبدًا... فلماذا لا تستطيع التوقف اليوم؟ على المفتش بولت والدكتورة دوتي حل اللغز قبل رفع العجلة الذهبية عند الظهر. عندما يتصرف صديق بغرابة، اسأله كيف تساعده. المفتش بولت #12\n\n#كرتون_أطفال #سيارات #قصص_أطفال"
+   },
+   "fr": {
+    "title": "Pourquoi Grumpy rigole-t-il ?! 🤭🚚 Mystère à Wheelburg",
+    "description": "Grumpy la dépanneuse ne rit JAMAIS... alors pourquoi ne peut-il pas s'arrêter aujourd'hui ? L'Inspecteur Bolt et la Docteure Dottie doivent résoudre le mystère avant que la Roue d'Or monte à midi. Quand un ami agit bizarrement, demande-lui comment aider. Inspecteur Bolt #12\n\n#dessinanimé #voitures #histoirespourenfants"
+   },
+   "ja": {
+    "title": "グランピーがわらってる?!🤭🚚 ウィールバーグのナゾ",
+    "description": "レッカー車のグランピーはぜったいにわらわない…なのに今日はとまらない!お昼に金の車輪をのせる前に、ボルト警部とドッティ先生がナゾをとくよ。友だちのようすがへんなときは、どう手伝えるか聞いてみよう。ボルト警部 #12\n\n#子ども向けアニメ #くるま #おはなし"
+   },
+   "ko": {
+    "title": "그럼피가 왜 킥킥 웃을까?! 🤭🚚 윌버그 미스터리",
+    "description": "견인차 그럼피는 절대 웃지 않아요... 그런데 오늘은 왜 웃음을 멈출 수 없을까요? 정오에 황금 바퀴를 올리기 전에 볼트 형사와 도티 박사가 미스터리를 풀어야 해요. 친구가 이상하면 어떻게 도울지 물어봐요. 볼트 형사 #12\n\n#어린이만화 #자동차 #동화"
+   },
+   "de": {
+    "title": "Warum kichert Grumpy?! 🤭🚚 Wheelburg-Rätsel",
+    "description": "Abschleppwagen Grumpy kichert NIE... warum kann er heute nicht aufhören? Inspektor Bolt und Doktor Dottie müssen das Rätsel lösen, bevor das Goldene Rad mittags aufgestellt wird. Wenn ein Freund komisch ist, frag, wie du helfen kannst. Inspektor Bolt #12\n\n#kinderzeichentrick #autos #kindergeschichten"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHY IS HE GIGGLING?!",
+   "title": "The Grumpiest Truck Can't Stop Giggling! 🤭🚚 #shorts",
+   "description": "Grumpy never giggles, but today he can't stop! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "funny cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La grúa más gruñona no para de reír! 🤭🚚 #shorts",
+     "description": "Grumpy nunca se ríe, ¡pero hoy no puede parar! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O guincho mais rabugento não para de rir! 🤭🚚 #shorts",
+     "description": "Grumpy nunca ri, mas hoje não consegue parar! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أكثر شاحنة عابسة لا تتوقف عن الضحك! 🤭🚚 #shorts",
+     "description": "غرامبي لا يضحك أبدًا، لكنه اليوم لا يستطيع التوقف! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La dépanneuse la plus grognon n'arrête pas de rire ! 🤭🚚 #shorts",
+     "description": "Grumpy ne rit jamais, mais aujourd'hui il ne peut pas s'arrêter ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "いちばんムスッとした車がわらいどまらない!🤭🚚 #shorts",
+     "description": "グランピーはわらわないのに、今日はとまらない!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "제일 뚱한 트럭이 웃음을 못 멈춰요! 🤭🚚 #shorts",
+     "description": "그럼피는 절대 안 웃는데 오늘은 멈출 수가 없어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der grummeligste Laster kann nicht aufhören zu kichern! 🤭🚚 #shorts",
+     "description": "Grumpy kichert nie, aber heute kann er nicht aufhören! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 39,
+   "dur": 28,
+   "top": "CATCH THAT WHEEL!",
+   "title": "The Golden Wheel Is Rolling Away! 🏃‍♂️🛞 #shorts",
+   "description": "Grumpy giggles so hard the Golden Wheel rolls off! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "funny chase"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La Rueda Dorada se escapa rodando! 🏃‍♂️🛞 #shorts",
+     "description": "¡Grumpy se ríe tanto que la Rueda Dorada sale rodando! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Roda Dourada está fugindo! 🏃‍♂️🛞 #shorts",
+     "description": "Grumpy ri tanto que a Roda Dourada sai rolando! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العجلة الذهبية تتدحرج بعيدًا! 🏃‍♂️🛞 #shorts",
+     "description": "غرامبي يضحك كثيرًا حتى تتدحرج العجلة الذهبية! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La Roue d'Or s'enfuit en roulant ! 🏃‍♂️🛞 #shorts",
+     "description": "Grumpy rit tellement que la Roue d'Or s'échappe ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "金の車輪がころがっていく!🏃‍♂️🛞 #shorts",
+     "description": "グランピーがわらいすぎて金の車輪がころがっちゃった!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "황금 바퀴가 굴러가요! 🏃‍♂️🛞 #shorts",
+     "description": "그럼피가 너무 웃어서 황금 바퀴가 굴러가 버렸어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das Goldene Rad rollt davon! 🏃‍♂️🛞 #shorts",
+     "description": "Grumpy kichert so sehr, dass das Goldene Rad davonrollt! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 46,
+   "dur": 30,
+   "top": "WHEN DOES HE GIGGLE?",
+   "title": "He Only Giggles When He Moves?! 🔍🤭 #shorts",
+   "description": "Inspector Bolt spots a strange giggle clue, and only ten minutes are left! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Solo se ríe cuando se mueve?! 🔍🤭 #shorts",
+     "description": "¡El Inspector Bolt encuentra una pista extraña y solo quedan diez minutos! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele só ri quando se mexe?! 🔍🤭 #shorts",
+     "description": "O Inspetor Bolt encontra uma pista estranha e só faltam dez minutos! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "يضحك فقط عندما يتحرك؟! 🔍🤭 #shorts",
+     "description": "المفتش بولت يجد دليلًا غريبًا، وبقيت عشر دقائق فقط! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il rit seulement quand il bouge ?! 🔍🤭 #shorts",
+     "description": "L'Inspecteur Bolt trouve un indice étrange, et il ne reste que dix minutes ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "うごくときだけわらうの?!🔍🤭 #shorts",
+     "description": "ボルト警部がふしぎな手がかりを発見!のこりは10分だけ!本編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "움직일 때만 웃는다고?! 🔍🤭 #shorts",
+     "description": "볼트 형사가 이상한 단서를 찾았어요, 남은 시간은 10분! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er kichert nur, wenn er fährt?! 🔍🤭 #shorts",
+     "description": "Inspektor Bolt findet einen seltsamen Hinweis, und nur noch zehn Minuten! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
