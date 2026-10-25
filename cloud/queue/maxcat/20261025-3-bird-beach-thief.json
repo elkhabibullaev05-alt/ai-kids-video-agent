@@ -1,0 +1,1113 @@
+{
+ "id": "20261025-3-bird-beach-thief",
+ "plot": "On a sunny beach morning Bird keeps swooping off with Max's ball, star and snack box, so Max calls her a thief; his one big jump to catch her ends face-first in the sand, so he follows her up the sand hill, finds his things lined up safe and dry, and from the top sees the sea has crept up over his towel: Bird was rescuing his things from the rising tide all along, and Max says sorry for not asking first.",
+ "script": {
+  "title": "Is Bird a Beach Thief?",
+  "set": {
+   "place": "beach",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -0.5,
+     6.5,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     0.8,
+     6.0,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -3.0,
+     6.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "ball2",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -9.0,
+     13.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "star2",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     -8.0,
+     13.8,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "box2",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -10.0,
+     13.2,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "banana",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     -7.0,
+     13.6,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Hey! Bird! Come back here with my red ball!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:-6,12"
+     ],
+     [
+      "ball",
+      "vanish"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Bird swoops down and flies off with Max's ball!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why is Bird taking my things? Is Bird a beach thief?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "BEACH THIEF?!",
+    "cam": "close:max",
+    "hold": 1.3,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a bright, sunny morning at the beach. Swish, swish.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Woof! Max, why are you yelling at the sky?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird grabbed my red ball and just flew away with it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe Bird wants to play fetch. I love fetch!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird never plays fetch, Dog. Bird only plays chatter-chatter.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A tiny wave rolls up the sand and tickles Max's toes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Eek! Cold, cold, cold! Silly wave. Go back home!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Max! The sea is creeping up! Creep, creep, creep!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:1,9"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Never mind the sea, Bird. Where is my red ball?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No time to talk! Busy, busy, busy! Bye!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "star",
+      "vanish"
+     ],
+     [
+      "bird",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swoop! Now Bird grabs Max's gold star and zooms off again!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My shiny star too! Bird is taking everything I love!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, what happened? You look like a sad wet sock.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird took my ball. Then Bird took my star. One, two!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Bird is very chatty, but she is never naughty. Strange.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe Bird is building a nest. A big shiny nest!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A nest made of my toys? Then I will catch her!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Snack box, you stay right here. Nobody takes my lunch.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "max",
+      "to:-3,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hides behind his blue snack box. He waits, and waits.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-3.5,5.5"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, my paws are all wet now. Is the beach shrinking?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh, Dog! I'm catching a thief. Beaches don't shrink.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "If Bird takes the snack box, we will have no lunch!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then this is my last chance. I must catch her now!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CATCH THAT BIRD!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "bird",
+      "to:-2.5,6.5"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Here comes Bird! She grabs the snack box with her feet!",
+    "cam": "wide",
+    "do": [
+     [
+      "box",
+      "vanish"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Gotcha now, Bird! One, two, three... JUMP!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "to:-2,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps high... and lands face first in the sand. Flump!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "bird",
+      "to:-9,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Pfft! Sand in my nose. Sand in my whiskers. Sand everywhere!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ha! You look like a sugar donut, Max!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Look! Bird is flying to the top of the big sand hill.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No more jumping. I will follow her and find her secret.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'm coming too! My legs are short, but my eyes are sharp.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max, Mouse and Dog climb up, up, up the sand hill.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-7,12"
+     ],
+     [
+      "mouse",
+      "to:-8,11"
+     ],
+     [
+      "dog",
+      "to:-6,12.5"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Puff, puff. This hill is taller than my dinner bowl!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the top, they find... the red ball and the gold star!",
+    "cam": "prop:ball2",
+    "do": [
+     [
+      "ball2",
+      "show"
+     ],
+     [
+      "star2",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My ball! My star! And they're lined up in a neat row?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And my snack box is here too, tucked in gently.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "box2",
+      "show"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A thief doesn't line things up so nicely. What is going on?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And everything is dry. Warm and dry, like a cozy bed.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh no, you found my spot! Wait here! One more thing!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:1,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird zips back down the hill, fast as a sneeze.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One more thing? But there's nothing left down there!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "There is! My banana lunch is still on my towel!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Why does Bird want a banana? Bird doesn't even like bananas!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If Bird isn't a thief, then what is she doing?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I have to see. Let me look down from the top.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks down at the spot where his towel was...",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...and his towel is gone. Now there is only blue sea!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE SEA CAME UP!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "The sea came up the beach! Bird told us! Creep, creep!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "That's why Dog's paws were wet! The beach got smaller!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I said the beach was shrinking! Woof! I was right!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird wasn't stealing. She was saving my things from the waves!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Up flies Bird, holding one yellow banana in her feet.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:-6,12"
+     ],
+     [
+      "banana",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Got it! Phew! The banana almost went swimming!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, I'm sorry. I called you a thief. You're a hero!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I tried to tell you, Max! But you were too busy chasing.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time I'll stop and ask before I chase.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And next time, we listen when Bird says creep, creep!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they have a picnic on the dry, warm sand hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I go down and play with the waves now? Please?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash! Dog runs into the waves. The waves splash right back!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:3,7"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Woof! The sea plays fetch with me! Best friend ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "See? The sea is not a thief either. It just moves!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Before you say someone is bad, ask them why.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, let's find out where the sea goes at night!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Bird Is Stealing EVERYTHING at the Beach?! 🐦🏖️😱",
+  "description": "Bird grabs Max's ball, then his star, then his lunch! Is Bird a beach thief? Max climbs the big sand hill to find her secret... and the answer is a big surprise. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "beach story",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "mystery for kids",
+   "tide for kids",
+   "funny bird",
+   "learning for kids"
+  ],
+  "thumb_text": "BIRD STOLE IT?!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Pájaro roba TODO en la playa?! 🐦🏖️😱",
+    "description": "¡Pájaro se lleva la pelota de Max, luego su estrella, luego su almuerzo! ¿Es Pájaro una ladrona? Max sube la gran duna para descubrir su secreto... y la respuesta es una gran sorpresa. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "O Pássaro está roubando TUDO na praia?! 🐦🏖️😱",
+    "description": "O Pássaro leva a bola do Max, depois a estrela, depois o lanche! O Pássaro é um ladrão? Max sobe a grande duna para descobrir o segredo... e a resposta é uma grande surpresa. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "هل يسرق العصفور كل شيء على الشاطئ؟! 🐦🏖️😱",
+    "description": "العصفور يأخذ كرة ماكس، ثم نجمته، ثم غداءه! هل العصفور لص؟ ماكس يتسلق التلة الرملية الكبيرة ليكتشف السر... والجواب مفاجأة كبيرة. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Oiseau vole TOUT à la plage ?! 🐦🏖️😱",
+    "description": "Oiseau prend la balle de Max, puis son étoile, puis son déjeuner ! Oiseau est-elle une voleuse ? Max grimpe la grande dune pour découvrir son secret... et la réponse est une belle surprise. #maxthecuriouscat #dessinanimé #histoirespourenfants"
+   },
+   "ja": {
+    "title": "トリがビーチで全部ぬすんでる？！🐦🏖️😱",
+    "description": "トリがマックスのボールを、つぎに星を、そしてお弁当まで持っていっちゃった！トリはどろぼう？マックスは大きな砂山にのぼって秘密をさがすよ…答えはびっくり！#maxthecuriouscat #子供向けアニメ #こどものおはなし"
+   },
+   "ko": {
+    "title": "새가 해변에서 다 훔쳐 가요?! 🐦🏖️😱",
+    "description": "새가 맥스의 공을, 그다음엔 별을, 그리고 점심까지 가져가요! 새는 도둑일까요? 맥스는 큰 모래 언덕에 올라가 비밀을 찾아요... 정답은 깜짝 놀랄 거예요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Klaut Vogel am Strand ALLES?! 🐦🏖️😱",
+    "description": "Vogel schnappt sich Max' Ball, dann seinen Stern, dann sein Mittagessen! Ist Vogel eine Diebin? Max klettert auf die große Sanddüne, um ihr Geheimnis zu finden... und die Antwort ist eine große Überraschung. #maxthecuriouscat #kindercartoon #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "BIRD TOOK MY BALL?! 🐦",
+   "title": "Bird Just Stole Max's Ball! 🐦😱 #shorts",
+   "description": "Bird swoops down and takes everything. Why? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny bird"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pájaro se llevó la pelota de Max! 🐦😱 #shorts",
+     "description": "Pájaro baja en picada y se lleva todo. ¿Por qué? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Pássaro pegou a bola do Max! 🐦😱 #shorts",
+     "description": "O Pássaro mergulha e leva tudo. Por quê? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور أخذ كرة ماكس! 🐦😱 #shorts",
+     "description": "العصفور ينقضّ ويأخذ كل شيء. لماذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau a pris la balle de Max ! 🐦😱 #shorts",
+     "description": "Oiseau plonge et emporte tout. Pourquoi ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがマックスのボールをとった！🐦😱 #shorts",
+     "description": "トリがさっと飛んできて全部もっていく。どうして？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 맥스의 공을 가져갔어요! 🐦😱 #shorts",
+     "description": "새가 휙 내려와서 전부 가져가요. 왜일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel hat Max' Ball geschnappt! 🐦😱 #shorts",
+     "description": "Vogel stürzt herab und nimmt alles mit. Warum? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

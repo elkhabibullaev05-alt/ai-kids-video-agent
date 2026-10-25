@@ -1,0 +1,1114 @@
+{
+ "id": "20261026-1-sofa-eats-toys",
+ "plot": "On a quiet afternoon in Grandma's living room Max's toys keep vanishing under the sofa, so he fears a toy-eating sofa monster; his banana trap vanishes too, Mouse peeks under and finds all the toys but no monster, and Max, remembering the swish sound each time, tests it himself and discovers the monster is Dog's happy wagging tail, which Grandma turns into the best broom in the house.",
+ "script": {
+  "title": "What Lives Under the Sofa?",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     0.5,
+     7.5,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     -0.8,
+     7.8,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "key",
+    "type": "key",
+    "color": "blue",
+    "at": [
+     -0.2,
+     7.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "green",
+    "at": [
+     1.2,
+     7.2,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "banana",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     1.2,
+     7.2,
+     1.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "My ball! It just went ZOOM under the sofa!",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "vanish"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Gulp! Max's red ball is gone. Something under the sofa took it!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "What lives under the sofa? And why is it eating my toys?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SOFA MONSTER?!",
+    "cam": "close:max",
+    "hold": 1.3,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It is a quiet afternoon in Grandma's cozy living room.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hi, Max! Hi, hi, hi! I'm so happy to see you!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish, swish goes Dog's happy tail. And Max's gold star... is gone!",
+    "cam": "wide",
+    "do": [
+     [
+      "star",
+      "vanish"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! The sofa just ate my gold star too! Did you see?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I only saw you, Max! You are my favorite thing to see!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max peeks under the sofa. It is dark, dusty and very quiet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is serious, Dog. There's a toy-eating monster in our house.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A monster? Is it a friendly monster? Does it like treats?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hello? Why is everybody shouting about monsters?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! You live near the sofa. Did you take my toys?",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Me? My arms are tiny. I can't even lift a grape!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hmm. That's true. A ball is way too big for you.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Something big must be under there. Something very, very hungry.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My blue toy key is the last toy I have left!",
+    "cam": "prop:key",
+    "do": [
+     [
+      "max",
+      "to:-1,6.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If the monster gets it, I'll have no toys at all!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Max! I'll guard your key. Good boy on duty!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:0,7.5"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I have a better plan. A monster trap!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts a green box by the sofa. A banana on top!",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "show"
+     ],
+     [
+      "banana",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Monsters love bananas. When it comes out... we catch it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ooh, a banana! Yum! I love bananas so much!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "to:0.5,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish, swish! And the box and the banana... are gone!",
+    "cam": "wide",
+    "do": [
+     [
+      "box",
+      "vanish"
+     ],
+     [
+      "banana",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "text": "THE TRAP IS GONE!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "It ate the trap?! This monster is huge! Bigger than Grandma's chair!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe the monster just really, really loves bananas. Like me!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "We must find it before it eats your blue key too!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. No more traps. I'll look under the sofa myself.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'll come too! I'm brave! Mostly brave. A little brave.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'm small. I can go in first and peek. Wait here!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tiny Mouse tiptoes into the dark space under the sofa.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mouse",
+      "to:0.5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max holds his breath. Dog holds his tail. Very still.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! I found your red ball! And your gold star!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And the green box, and the banana! But no monster!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No teeth marks? No monster footprints? Nothing at all?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Only dust bunnies. And Dog's old sock from last winter.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My sock! I looked for that sock for a hundred days!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A sock, a ball, a star... but no monster. That's strange.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse rolls the toys back out, one by one. Roll, roll, roll.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "star",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the toys aren't eaten. Something pushed them under there.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But who pushes toys and leaves no footprints? Think, Max, think.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "If we don't find out, it will keep happening every day!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. Every time a toy vanished, I heard the same sound.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Swish, swish. Like a broom. Where does a swish come from?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Brooms don't walk by themselves, Max. Something swished them.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe from a wind? Or a very fast ghost broom?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Let's test it. Dog, stand by the sofa, next to my key.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:0.5,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Who wants a big crunchy treat? You do!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me! Me! Treat! I love treats! Best day ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish, swish goes Dog's happy tail... and the blue key slides away!",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "vanish"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S DOG'S TAIL!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "The sofa monster is your tail, Dog! Your happy, swishy tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My tail? My own tail did it? Bad tail! No... happy tail!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Every time you're happy, your tail sweeps toys under the sofa!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "But I'm happy all the time! Because Max is always here!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Aww, Dog. That's the nicest monster I ever met.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "to:1,7"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My, my! What is all this swishing in my living room?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, Dog's tail swept my toys away. It's a tail broom!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "A tail broom? Then let's put it to work, dear Dog.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma drops some cookie crumbs. Dog wags. Swish! The floor is clean!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Best broom in the house! And it comes with cuddles!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog swishes the whole rug clean. Swish here, swish there, swish everywhere!",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "to:-1,8"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm a broom! I'm a happy broom! Woof, woof!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Now we keep the toys far from the sofa, okay?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When something scary happens, look closely. It might be wagging!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, let's find out who hums at the window every night!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "What Lives Under the Sofa? 🛋️😱 Max's Toys Keep Vanishing",
+  "description": "Max's ball zooms under the sofa, then his star, then even his monster trap! Is there a toy-eating monster in the house? Max listens closely and finds the funniest answer. #maxthecuriouscat #kidscartoon #storiesforkids",
+  "tags": [
+   "max the curious cat",
+   "kids cartoon",
+   "funny dog",
+   "cat cartoon",
+   "stories for kids",
+   "3d animation for kids",
+   "mystery for kids",
+   "house story",
+   "sofa monster",
+   "learning for kids"
+  ],
+  "thumb_text": "SOFA MONSTER?!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Qué vive debajo del sofá? 🛋️😱 ¡Los juguetes de Max desaparecen!",
+    "description": "¡La pelota de Max se va ZUM debajo del sofá, luego su estrella, luego hasta su trampa! ¿Hay un monstruo come-juguetes en casa? Max escucha con atención y descubre la respuesta más divertida. #maxthecuriouscat #dibujosanimados #cuentosinfantiles"
+   },
+   "pt": {
+    "title": "O que mora debaixo do sofá? 🛋️😱 Os brinquedos do Max somem!",
+    "description": "A bola do Max vai ZUM para debaixo do sofá, depois a estrela, depois até a armadilha! Tem um monstro comedor de brinquedos em casa? Max presta atenção e descobre a resposta mais engraçada. #maxthecuriouscat #desenhoinfantil #historiasparacriancas"
+   },
+   "ar": {
+    "title": "ماذا يعيش تحت الأريكة؟ 🛋️😱 ألعاب ماكس تختفي!",
+    "description": "كرة ماكس تنطلق تحت الأريكة، ثم نجمته، ثم حتى الفخ! هل يوجد وحش يأكل الألعاب في البيت؟ ماكس ينتبه جيدًا ويكتشف أطرف جواب. #maxthecuriouscat #كرتون_اطفال #قصص_اطفال"
+   },
+   "fr": {
+    "title": "Qu'est-ce qui vit sous le canapé ? 🛋️😱 Les jouets de Max disparaissent !",
+    "description": "La balle de Max file sous le canapé, puis son étoile, puis même son piège ! Y a-t-il un monstre mangeur de jouets dans la maison ? Max écoute bien et découvre la réponse la plus drôle. #maxthecuriouscat #dessinanimé #histoirespourenfants"
+   },
+   "ja": {
+    "title": "ソファの下に何がいるの？🛋️😱 マックスのおもちゃが消えた！",
+    "description": "マックスのボールがソファの下へビューン、つぎに星、さらにワナまで消えちゃった！家におもちゃを食べるモンスターがいるの？マックスがよーく聞いて、いちばんおかしな答えを見つけるよ。#maxthecuriouscat #子供向けアニメ #こどものおはなし"
+   },
+   "ko": {
+    "title": "소파 밑에 뭐가 살까? 🛋️😱 맥스의 장난감이 사라져요!",
+    "description": "맥스의 공이 소파 밑으로 휙, 그다음엔 별, 그리고 덫까지 사라져요! 집에 장난감 먹는 괴물이 있는 걸까요? 맥스가 잘 듣고 가장 웃긴 정답을 찾아내요. #maxthecuriouscat #어린이만화 #동화"
+   },
+   "de": {
+    "title": "Was wohnt unter dem Sofa? 🛋️😱 Max' Spielzeug verschwindet!",
+    "description": "Max' Ball saust ZACK unters Sofa, dann sein Stern, dann sogar seine Falle! Gibt es ein Spielzeug-Monster im Haus? Max hört genau hin und findet die lustigste Antwort. #maxthecuriouscat #kindercartoon #geschichtenfürkinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "THE SOFA ATE IT?! 🛋️",
+   "title": "The Sofa Ate Max's Ball! 🛋️😱 #shorts",
+   "description": "Zoom! Max's toys vanish under the sofa. Who lives there? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El sofá se comió la pelota de Max! 🛋️😱 #shorts",
+     "description": "¡Zum! Los juguetes de Max desaparecen bajo el sofá. ¿Quién vive ahí? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O sofá comeu a bola do Max! 🛋️😱 #shorts",
+     "description": "Zum! Os brinquedos do Max somem debaixo do sofá. Quem mora lá? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الأريكة أكلت كرة ماكس! 🛋️😱 #shorts",
+     "description": "زوم! ألعاب ماكس تختفي تحت الأريكة. من يعيش هناك؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le canapé a mangé la balle de Max ! 🛋️😱 #shorts",
+     "description": "Zoum ! Les jouets de Max disparaissent sous le canapé. Qui vit là ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ソファがマックスのボールを食べた！🛋️😱 #shorts",
+     "description": "ビューン！マックスのおもちゃがソファの下に消える。そこにいるのはだれ？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "소파가 맥스의 공을 먹었어요! 🛋️😱 #shorts",
+     "description": "휙! 맥스의 장난감이 소파 밑으로 사라져요. 거기 누가 살까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das Sofa hat Max' Ball gefressen! 🛋️😱 #shorts",
+     "description": "Zack! Max' Spielzeug verschwindet unter dem Sofa. Wer wohnt da? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 20,
+   "dur": 28,
+   "top": "THE TRAP VANISHED?! 🍌",
+   "title": "Max's Monster Trap Just Vanished! 🍌😱 #shorts",
+   "description": "Max sets a banana trap... and the trap disappears too. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La trampa de Max desapareció! 🍌😱 #shorts",
+     "description": "Max pone una trampa con un plátano... y la trampa también desaparece. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A armadilha do Max sumiu! 🍌😱 #shorts",
+     "description": "Max monta uma armadilha com uma banana... e a armadilha some também. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "فخ ماكس اختفى! 🍌😱 #shorts",
+     "description": "ماكس يضع فخًا بموزة... والفخ يختفي أيضًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le piège de Max a disparu ! 🍌😱 #shorts",
+     "description": "Max pose un piège avec une banane... et le piège disparaît aussi. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスのワナが消えた！🍌😱 #shorts",
+     "description": "マックスがバナナでワナをしかけると…ワナまで消えちゃった。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스의 덫이 사라졌어요! 🍌😱 #shorts",
+     "description": "맥스가 바나나로 덫을 놓았는데... 덫까지 사라져요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max' Falle ist verschwunden! 🍌😱 #shorts",
+     "description": "Max stellt eine Bananenfalle auf... und auch die Falle verschwindet. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
