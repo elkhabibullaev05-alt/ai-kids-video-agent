@@ -127,7 +127,7 @@ def _shape(key, kind, s, ch):
         bpy.ops.object.light_add(type="POINT", location=(0, -0.3, 3.2 * s)); L = _o(); L.data.energy = 25; L.data.color = (0.9, 0.95, 1); parent(L, o)
         return o, 1.0 * s, 0.6 * s, 3.8 * s, -0.25 * s, 3.4 * s
     if kind == "gloamhound":
-        smoke = mat(f"sm_{key}", (0.01, 0.01, 0.015), 0.95)
+        smoke = mat(f"sm_{key}", col if sum(col) > 0.05 else (0.01, 0.01, 0.015), 0.95)  # a coloured beast if the script gives a colour
         bpy.ops.mesh.primitive_uv_sphere_add(radius=1.0 * s, location=(0, 0.6 * s, 1.3 * s)); o = add(_o(), smoke); o.scale = (0.8, 1.6, 0.75)
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.6 * s, location=(0, -1.0 * s, 1.7 * s)); hd = add(_o(), smoke); hd.scale = (0.9, 1.3, 0.9); parent(hd, o)
         for sx in (-1, 1):

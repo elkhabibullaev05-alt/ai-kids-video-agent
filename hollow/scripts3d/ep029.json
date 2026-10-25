@@ -1,0 +1,900 @@
+{
+ "title": "1764: What Hunted the Hills of France?",
+ "description": "From 1764 to 1767, a red beast haunted the hills of the Gevaudan in France. The King sent his soldiers. It came back.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "hill",
+  "fog": 0.04,
+  "eyes": 2,
+  "moonlight": 14
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "beast": {
+   "name": "The Beast",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.45,
+    0.2,
+    0.09
+   ],
+   "kind": "gloamhound",
+   "size": 1.5,
+   "home": [
+    1.5,
+    15
+   ]
+  },
+  "girl": {
+   "name": "A shepherd girl",
+   "voice": "af_heart",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.55,
+    0.3,
+    0.25
+   ],
+   "kind": "human",
+   "size": 0.7,
+   "home": [
+    2.5,
+    10
+   ]
+  },
+  "duhamel": {
+   "name": "Captain Duhamel",
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.15,
+    0.25,
+    0.55
+   ],
+   "kind": "soldier",
+   "size": 0.95,
+   "home": [
+    -11,
+    10.5
+   ]
+  },
+  "antoine": {
+   "name": "Francois Antoine",
+   "voice": "bm_fable",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.35,
+    0.28,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "chastel": {
+   "name": "Jean Chastel",
+   "voice": "am_adam",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.3,
+    0.32,
+    0.22
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "ball",
+   "id": "sh0",
+   "color": [
+    0.92,
+    0.9,
+    0.85
+   ],
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    -3.0,
+    12.0,
+    0.5
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "sh1",
+   "color": [
+    0.92,
+    0.9,
+    0.85
+   ],
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    -1.4,
+    13.2,
+    0.5
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "sh2",
+   "color": [
+    0.92,
+    0.9,
+    0.85
+   ],
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    0.20000000000000018,
+    12.0,
+    0.5
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "sh3",
+   "color": [
+    0.92,
+    0.9,
+    0.85
+   ],
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    1.8000000000000007,
+    13.2,
+    0.5
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "sh4",
+   "color": [
+    0.92,
+    0.9,
+    0.85
+   ],
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    3.4000000000000004,
+    12.0,
+    0.5
+   ]
+  },
+  {
+   "type": "box",
+   "id": "banner",
+   "color": [
+    0.15,
+    0.25,
+    0.7
+   ],
+   "glow": 1.5,
+   "visible": false,
+   "scale": 0.7,
+   "at": [
+    -12,
+    13,
+    2.2
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "flash",
+   "color": [
+    1.0,
+    0.85,
+    0.45
+   ],
+   "glow": 20,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -4,
+    13,
+    1.6
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.95,
+    0.9,
+    0.75
+   ],
+   "glow": 12,
+   "visible": false,
+   "scale": 1.4,
+   "at": [
+    14,
+    40,
+    16
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "The sheep were running. Something red was coming out of the trees.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:1.5,13,0"
+    ],
+    [
+     "sh0",
+     "drift:-14,24,0"
+    ],
+    [
+     "sh1",
+     "drift:-13,25,0"
+    ],
+    [
+     "sh2",
+     "drift:-12,26,0"
+    ],
+    [
+     "sh3",
+     "drift:-11,27,0"
+    ],
+    [
+     "sh4",
+     "drift:-10,28,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DON'T STAY ON THE HILL"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! It's as big as a calf! That's no wolf!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "text": "BIGGER THAN A WOLF"
+  },
+  {
+   "who": "odo",
+   "say": "Look at its back, Mothwick. A black stripe, all the way to the tail.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "turn:front"
+    ],
+    [
+     "beast",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A BLACK STRIPE"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from the records of France, in seventeen sixty-four.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:6,18,0"
+    ]
+   ],
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "The Gevaudan. Cold hills, dark woods, and children watching sheep alone.",
+   "cam": "wide",
+   "do": [
+    [
+     "girl",
+     "enter:left"
+    ],
+    [
+     "girl",
+     "turn:front"
+    ]
+   ],
+   "text": "FRANCE, 1764"
+  },
+  {
+   "who": "narr",
+   "say": "That summer, the shepherds began to whisper about a beast.",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "turn:odo"
+    ]
+   ],
+   "text": "THE BEAST"
+  },
+  {
+   "who": "girl",
+   "say": "It has red fur and a huge head. And it isn't afraid of people.",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOT AFRAID OF PEOPLE"
+  },
+  {
+   "who": "narr",
+   "say": "Wolves usually ran from people. This one came closer.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "to:2,13.5,0"
+    ],
+    [
+     "beast",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "IT CAME CLOSER"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, why is it looking at us like that?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Soon nobody wanted to go up the hills. Families locked their doors at sunset.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:12,22,0"
+    ],
+    [
+     "girl",
+     "exit"
+    ]
+   ],
+   "text": "DOORS LOCKED AT SUNSET"
+  },
+  {
+   "who": "narr",
+   "say": "The news reached Paris, and King Louis the Fifteenth himself.",
+   "cam": "wide",
+   "do": [
+    [
+     "banner",
+     "show"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THE KING HEARD"
+  },
+  {
+   "who": "narr",
+   "say": "First he sent Captain Duhamel, with dozens of soldiers on horseback.",
+   "cam": "wide",
+   "do": [
+    [
+     "duhamel",
+     "enter:left"
+    ],
+    [
+     "duhamel",
+     "turn:front"
+    ]
+   ],
+   "text": "SOLDIERS CAME"
+  },
+  {
+   "who": "duhamel",
+   "say": "Search every wood. The Beast will not escape the King's dragoons.",
+   "cam": "close:duhamel",
+   "do": [
+    [
+     "duhamel",
+     "jump"
+    ]
+   ],
+   "text": "SEARCH EVERY WOOD"
+  },
+  {
+   "who": "narr",
+   "say": "They searched for months. The Beast was always one hill away.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:14,26,0"
+    ],
+    [
+     "duhamel",
+     "to:-2,12,0"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ALWAYS ONE HILL AWAY"
+  },
+  {
+   "who": "narr",
+   "say": "Next came two famous wolf hunters. The father said he had killed twelve hundred wolves.",
+   "cam": "close:duhamel",
+   "do": [
+    [
+     "duhamel",
+     "exit"
+    ]
+   ],
+   "text": "1,200 WOLVES"
+  },
+  {
+   "who": "narr",
+   "say": "They caught ordinary wolves. But the Beast was still out there.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:5,17,0"
+    ],
+    [
+     "beast",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "STILL OUT THERE"
+  },
+  {
+   "who": "odo",
+   "say": "That's the rule, Mothwick. If the flock runs, don't stay to count them.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "IF THE FLOCK RUNS..."
+  },
+  {
+   "who": "moth",
+   "say": "Run first. Count later. I can do that.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "In June seventeen sixty-five, the King sent his own gun-bearer, Francois Antoine.",
+   "cam": "wide",
+   "do": [
+    [
+     "antoine",
+     "to:0,10.5,0"
+    ],
+    [
+     "antoine",
+     "turn:front"
+    ],
+    [
+     "banner",
+     "show"
+    ]
+   ],
+   "text": "THE KING'S GUN-BEARER"
+  },
+  {
+   "who": "narr",
+   "say": "In September, in the woods near Chazes, Antoine shot a huge wolf.",
+   "cam": "close:antoine",
+   "do": [
+    [
+     "flash",
+     "show"
+    ],
+    [
+     "beast",
+     "to:30,30,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A HUGE WOLF"
+  },
+  {
+   "who": "antoine",
+   "say": "It is done. Take it to Versailles. Tell the King the Beast is dead.",
+   "cam": "close:antoine",
+   "do": [
+    [
+     "flash",
+     "vanish"
+    ],
+    [
+     "antoine",
+     "jump"
+    ]
+   ],
+   "text": "THE BEAST IS DEAD?"
+  },
+  {
+   "who": "narr",
+   "say": "The wolf was carried to the palace. Antoine got a reward. Everyone was relieved.",
+   "cam": "wide",
+   "do": [
+    [
+     "antoine",
+     "exit"
+    ],
+    [
+     "banner",
+     "vanish"
+    ]
+   ],
+   "text": "THE KING CHEERED"
+  },
+  {
+   "who": "moth",
+   "say": "So it's over? We can go home?",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "moth",
+     "turn:odo"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then, in December, the shepherds saw it again. Red fur. The black stripe.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "to:2,13,0"
+    ],
+    [
+     "beast",
+     "turn:front"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT CAME BACK"
+  },
+  {
+   "who": "odo",
+   "say": "The King said it was dead. Nobody told the Beast.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY TOLD THE BEAST"
+  },
+  {
+   "who": "narr",
+   "say": "For eighteen more months, the hills of the Gevaudan were afraid again.",
+   "cam": "wide",
+   "do": [
+    [
+     "beast",
+     "to:-3,15,0"
+    ],
+    [
+     "sh0",
+     "drift:-14,24,0"
+    ],
+    [
+     "sh1",
+     "drift:-13,25,0"
+    ],
+    [
+     "sh2",
+     "drift:-12,26,0"
+    ],
+    [
+     "sh3",
+     "drift:-11,27,0"
+    ],
+    [
+     "sh4",
+     "drift:-10,28,0"
+    ]
+   ],
+   "text": "18 MORE MONTHS"
+  },
+  {
+   "who": "narr",
+   "say": "June the nineteenth, seventeen sixty-seven. A local hunter, Jean Chastel, waited on Mont Mouchet.",
+   "cam": "wide",
+   "do": [
+    [
+     "chastel",
+     "to:-1,10.5,0"
+    ],
+    [
+     "chastel",
+     "turn:beast"
+    ],
+    [
+     "moon",
+     "show"
+    ]
+   ],
+   "text": "MONT MOUCHET, 1767"
+  },
+  {
+   "who": "narr",
+   "say": "The Beast walked out of the trees, straight toward him.",
+   "cam": "close:beast",
+   "do": [
+    [
+     "beast",
+     "to:-3,12.5,0"
+    ],
+    [
+     "beast",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "STRAIGHT TOWARD HIM"
+  },
+  {
+   "who": "narr",
+   "say": "One shot. And after that night, the Beast was never seen again.",
+   "cam": "close:chastel",
+   "do": [
+    [
+     "flash",
+     "show"
+    ],
+    [
+     "beast",
+     "to:30,30,0"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "ONE SHOT"
+  },
+  {
+   "who": "chastel",
+   "say": "It is gone. The children can go up the hills again.",
+   "cam": "close:chastel",
+   "do": [
+    [
+     "flash",
+     "vanish"
+    ],
+    [
+     "chastel",
+     "turn:front"
+    ]
+   ],
+   "text": "IT IS GONE"
+  },
+  {
+   "who": "narr",
+   "say": "More than a hundred wolves were killed in those years. So which one was the Beast?",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "100 WOLVES. WHICH ONE?"
+  },
+  {
+   "who": "narr",
+   "say": "Some say a giant wolf. Some say a pack. Nobody knows for sure.",
+   "cam": "wide",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "So, would YOU watch the sheep alone on the Gevaudan hills tonight?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WOULD YOU GO UP THERE?"
+  },
+  {
+   "who": "moth",
+   "say": "Not for all the King's gold. I'd stay by the fire.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Then the sheep ran again. And a tall pale figure walked out of the trees.",
+   "cam": "wide",
+   "do": [
+    [
+     "shepherd",
+     "to:1.5,14,0"
+    ],
+    [
+     "all",
+     "shake"
+    ],
+    [
+     "sh0",
+     "drift:-14,24,0"
+    ],
+    [
+     "sh1",
+     "drift:-13,25,0"
+    ],
+    [
+     "sh2",
+     "drift:-12,26,0"
+    ],
+    [
+     "sh3",
+     "drift:-11,27,0"
+    ],
+    [
+     "sh4",
+     "drift:-10,28,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE SHEEP RAN AGAIN"
+  },
+  {
+   "who": "shepherd",
+   "say": "Every flock needs a shepherd, lantern-bearer. And this one is mine.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THIS FLOCK IS MINE"
+  },
+  {
+   "who": "narr",
+   "say": "What did the Shepherd send into the hills? Subscribe, so you don't miss the next true tale.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT DID IT SEND?"
+  }
+ ]
+}
