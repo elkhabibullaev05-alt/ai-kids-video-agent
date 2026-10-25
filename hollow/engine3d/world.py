@@ -1,6 +1,6 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
-SET.place: forest | clearing | graveyard | swamp | village | chapel
+SET.place: forest | hill | clearing | graveyard | swamp | village | chapel
 Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | human
 """
 TOD = "night"
@@ -31,9 +31,11 @@ def tree(x, y, h, lean=0.0):
                                         rotation=(math.sin(ang) * -0.9, math.cos(ang) * 0.9, 0)); add(bpy.context.object, bark)
 
 
-if PLACE in ("forest", "clearing", "swamp"):
+if PLACE in ("forest", "clearing", "swamp", "hill"):
     for i in range(70):
         x = rnd.uniform(-45, 45); y = rnd.uniform(6, 60)
+        if PLACE == "hill" and abs(x) < 16 and y < 30:  # open hilltop field
+            continue
         if PLACE == "clearing" and math.hypot(x, y - 12) < 9:
             continue
         if abs(x) < 4 and y < 14:
@@ -49,6 +51,11 @@ if PLACE == "clearing":
     for k in range(5):
         bpy.ops.mesh.primitive_cylinder_add(radius=0.12, depth=1.4, location=(0, 14, 0.12), rotation=(1.5708, 0, k * 0.63)); add(bpy.context.object, bark)
     bpy.ops.object.light_add(type="POINT", location=(0, 14, 1.4)); f = bpy.context.object; f.data.energy = 2500; f.data.color = (1, 0.5, 0.15)
+if PLACE == "hill":  # Flatwoods hilltop: a dark grassy mound behind the field, tall grass tufts
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=1, location=(4, 34, -6)); hm_ = add(bpy.context.object, mat("hillg", (0.045, 0.06, 0.035), 0.95)); hm_.scale = (30, 12, 10)
+    gr_ = mat("grass", (0.06, 0.08, 0.04), 0.9)
+    for i in range(60):
+        bpy.ops.mesh.primitive_cone_add(radius1=0.25, depth=rnd.uniform(0.5, 1.1), location=(rnd.uniform(-16, 16), rnd.uniform(4, 28), 0.3)); add(bpy.context.object, gr_, False)
 if PLACE == "graveyard":
     for i in range(26):
         x = rnd.uniform(-14, 14); y = rnd.uniform(6, 26)
@@ -227,6 +234,21 @@ def _shape(key, kind, s, ch):
             for fx in (-0.07, 0.0, 0.07):  # claws
                 bpy.ops.mesh.primitive_cone_add(radius1=0.03 * s, depth=0.35 * s, location=(sx * 0.82 * s + fx * s, -0.2 * s, 1.1 * s), rotation=(math.pi, 0, 0)); parent(add(_o(), mat("claw", (0.7, 0.7, 0.75), 0.2, 1.0)), o)
         return o, 1.6 * s, 1.2 * s, 4.3 * s, -0.42 * s, 3.55 * s
+    if kind == "flatwoods":  # Flatwoods figure (1952 accounts): ~12 ft, red glowing face, ace-of-spades hood behind the head, green pleated skirt, claw hands; floats (front = -y)
+        green = mat(f"fw_{key}", (0.05, 0.28, 0.08), 0.35, 0.4, 0.15); hood = mat(f"fwh_{key}", (0.02, 0.05, 0.03), 0.6, 0.3)
+        bpy.ops.mesh.primitive_cone_add(vertices=14, radius1=1.35 * s, radius2=0.5 * s, depth=3.6 * s, location=(0, 0, 2.2 * s)); o = add(_o(), green)
+        for zz in (1.0, 1.9, 2.8):  # folds
+            bpy.ops.mesh.primitive_torus_add(major_radius=(1.35 - (zz - 0.4) / 3.6 * 0.85) * s, minor_radius=0.05 * s, location=(0, 0, zz * s)); parent(add(_o(), hood), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.5 * s, depth=1.3 * s, location=(0, 0, 4.6 * s)); parent(add(_o(), green), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1.2 * s, location=(0, 0.4 * s, 5.95 * s)); sp_ = add(_o(), hood); sp_.scale = (1.0, 0.22, 1.05); parent(sp_, o)
+        bpy.ops.mesh.primitive_cone_add(radius1=0.55 * s, depth=1.1 * s, location=(0, 0.4 * s, 7.45 * s)); cn_ = add(_o(), hood); cn_.scale = (1, 0.3, 1); parent(cn_, o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.55 * s, location=(0, -0.05 * s, 5.75 * s)); fc_ = add(_o(), mat(f"fwf_{key}", (0.75, 0.06, 0.04), 0.4, 0, 1.2)); fc_.scale = (0.85, 0.6, 1.0); parent(fc_, o)
+        for sx in (-1, 1):
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.09 * s, depth=1.8 * s, location=(sx * 0.85 * s, -0.25 * s, 4.3 * s), rotation=(math.radians(-35), sx * math.radians(-35), 0)); parent(add(_o(), hood), o)
+            for fx in (-0.08, 0.0, 0.08):  # claws
+                bpy.ops.mesh.primitive_cone_add(radius1=0.04 * s, depth=0.45 * s, location=(sx * 1.35 * s + fx * s, -0.95 * s, 3.75 * s), rotation=(math.radians(-60), 0, 0)); parent(add(_o(), mat("claw", (0.7, 0.7, 0.75), 0.2, 1.0)), o)
+        o.location.z += 0.35 * s
+        return o, 2.7 * s, 1.4 * s, 8.0 * s, -0.4 * s, 6.1 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -241,17 +263,17 @@ def make_char(key, ch):
     o, Wd, L, H, fy, fz = _shape(key, kind, s, ch)
     o.parent = body
     eyes = []
-    glow_eyes = kind in ("jack", "demon", "winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
+    glow_eyes = kind in ("flatwoods", "jack", "demon", "winged", "lochbeast", "horseman", "gloamhound", "crow", "wickeater", "hollowmother")
     n_eyes = {"hollowmother": 6}.get(kind, 2)
-    sep = {"odo": 0.17, "moth": 0.1, "shepherd": 0.18, "winged": 0.36, "demon": 0.5}.get(kind, 0.22) * s
+    sep = {"flatwoods": 0.36, "odo": 0.17, "moth": 0.1, "shepherd": 0.18, "winged": 0.36, "demon": 0.5}.get(kind, 0.22) * s
     for i in range(n_eyes):
         sx = (i - (n_eyes - 1) / 2) * sep * (1.0 if n_eyes == 2 else 0.9)
         ez = fz + (0.25 * s if (n_eyes > 2 and i % 2) else 0)
-        r_ = (0.11 if kind in ("odo", "moth", "crow") else 0.26 if kind == "winged" else 0.3 if kind == "demon" else 0.14) * s
+        r_ = (0.11 if kind in ("odo", "moth", "crow") else 0.26 if kind in ("winged", "flatwoods") else 0.3 if kind == "demon" else 0.14) * s
         if kind == "shepherd":  # empty black eye holes in the mask
             bpy.ops.mesh.primitive_uv_sphere_add(radius=0.1 * s, location=(sx, fy - 0.42 * s, ez)); e = add(_o(), black); e.scale = (1, 0.4, 0.6)
         elif glow_eyes:
-            bpy.ops.mesh.primitive_uv_sphere_add(radius=r_ * 0.6, location=(sx, fy - 0.02, ez)); e = add(_o(), mat("ddeye", (1, 0.5, 0.05), 0.3, 0, 14)) if kind == "demon" else add(_o(), mat("redeye2", (1, 0.08, 0.03), 0.3, 0, 12))
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=r_ * 0.6, location=(sx, fy - 0.02, ez)); e = add(_o(), mat("ddeye", (1, 0.5, 0.05), 0.3, 0, 14)) if kind == "demon" else add(_o(), mat("fweye", (1, 0.95, 0.6), 0.3, 0, 20)) if kind == "flatwoods" else add(_o(), mat("redeye2", (1, 0.08, 0.03), 0.3, 0, 12))
         else:
             bpy.ops.mesh.primitive_uv_sphere_add(radius=r_, location=(sx, fy - 0.03, ez)); e = add(_o(), black); e.scale = (1, 0.6, 1.3)
         e.parent = body; eyes.append(e)
@@ -260,7 +282,7 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged", "demon"):
+    if kind in ("horseman", "winged", "demon", "flatwoods"):
         mo.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]
