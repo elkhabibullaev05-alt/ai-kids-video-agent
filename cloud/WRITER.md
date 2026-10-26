@@ -42,6 +42,15 @@ Before writing, list the last 40 jobs of this channel (`cloud/done/CH/*.json` + 
 
 The worker picks the oldest job, renders it (~2.5–3 h), checks rek-ball ≥ 85, uploads to the next free slot in `channels.json`, and writes `cloud/results/CH/<id>.json`.
 
+## Real-life stories (owner's rule, 2026-10-26) — applies to every channel
+The owner wants the cartoons to keep running exactly as now (same channels, same 3D engines, same cast, same daily output), but **every story must be a real-life, everyday situation** that viewers recognise from their own lives — not fantasy quests, magic or invented worlds.
+- Plot source: things that really happen at home, in the kitchen, at school, in the park, at the shop, on a trip, with pets, neighbours, grandparents, weather, chores, birthdays, a first day somewhere, losing and finding things, learning a skill, a small accident that gets fixed.
+- Use only the engine's existing `set.place` values, but treat them as ordinary real places (Max `house` = a normal family living room, `garden` = the backyard, `park`, `beach`, `snow` = a winter day outside; Dough Bros `kitchen`/`table`/`pantry`/`freezer` = a real family kitchen at night; Bolt's Wheelburg = an ordinary small town street, garage, car wash, school drop-off; Blocky Quest `city`/`lobby` first, game places only as a game the characters are playing).
+- Characters act like real people/animals would: no spells, portals, superpowers, monsters or talking objects that do magic. Humour comes from real situations (a cat vs. a robot vacuum, a dog stealing a sock, a cake that falls, getting lost in a supermarket, the first snow).
+- Every episode still follows the retention, hook, look-alike and rek-ball rules above; the title promises a real situation ("Max vs the Robot Vacuum", "Who Ate Grandma's Pie?").
+- Hollowmere already tells true documented stories and the animal ink channel already uses real facts: keep them as they are.
+- Kids flags unchanged (maxcat, bolt, roblox = Made for Kids).
+
 ## Ask Studio advice (2026-10-20) — read `cloud/growth/ask_studio_*.md` (newest) before writing
 
 **maxcat**
