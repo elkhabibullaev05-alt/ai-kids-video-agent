@@ -51,7 +51,8 @@ python -m pip install -q google-auth-oauthlib google-api-python-client 2>$null
 $need = [ordered]@{
   doughbros = "Dough Bros  (akkaunt: habibullaeveldorbek57)";
   hollow    = "Hollowmere Tales  (akkaunt: habibullaeveldorbek57)";
-  bolt      = "Inspector Bolt  (akkaunt: halilovelbek558)"
+  bolt      = "Inspector Bolt  (akkaunt: halilovelbek558)";
+  grind     = "Grind_video  (akkaunt: eldorbekkhabibullaev44)"
 }
 foreach ($ch in $need.Keys) {
   if (Test-Path "$T\token_$ch.json") { continue }
