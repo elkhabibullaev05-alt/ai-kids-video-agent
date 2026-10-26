@@ -1,0 +1,1096 @@
+{
+ "id": "20261026-2-robot-vacuum-crumbs",
+ "plot": "On a sunny morning Grandma's new robot vacuum keeps following Max around the living room; he is sure it wants his tail and hides on the sofa, Dog's ball block fails, then Max discovers the robot is only following the cupcake crumbs he keeps dropping, cleans his whiskers and makes friends with it, but when he pushes it home it stops just before tomorrow's visitor.",
+ "script": {
+  "title": "Max vs the Robot Vacuum",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "vac",
+    "type": "box",
+    "color": "green",
+    "at": [
+     3.0,
+     9.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "pink",
+    "at": [
+     -1.4,
+     5.4,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     0.0,
+     7.5,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Aaah! That green thing is chasing me! Run, run, run!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,7"
+     ],
+     [
+      "vac",
+      "to:max"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Beep, beep! A round green machine rolls right after Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "vac",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why is this thing following me everywhere I go?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS IT FOLLOWING ME?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a sunny morning in Grandma's living room. A brand new day.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, dear, meet my new robot vacuum. It cleans the floor.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It cleans? It looks like it wants to eat my tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max takes a big bite of his pink cupcake. Munch, munch, munch.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Silly cat. It only goes where it's needed. Be kind!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma goes to the kitchen. The robot turns around... toward Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "exit"
+     ],
+     [
+      "vac",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nope! Not today, robot! You can't catch this cat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:2,6"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs to the window. Beep, beep. The robot follows.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:5,12"
+     ],
+     [
+      "vac",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I go left, it goes left. I go right, it goes right!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,10"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hi, Max! Are you playing chase with the new robot? Fun!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not a game, Dog. That robot wants me. Only me!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe it wants a friend? Hello, robot! Do you like belly rubs?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot rolls right past Dog. It doesn't even say hello.",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "to:max"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Huh. It likes you more than me. That's a little rude.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Eek! What's that buzzing noise? Is it a giant bug?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! Grandma's new robot is hunting me. Help me hide!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hunting you? Robots don't hunt cats, Max. Do they?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This one does. Watch. I'll stand very, very still.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stands still like a statue. Beep... beep... beep. It comes closer.",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "to:max"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT FOUND ME AGAIN!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "If it catches me, Grandma's robot will vacuum my fluffy tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Okay, okay! Climb up high. Robots can't climb sofas!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps onto the big blue sofa. Up, up, and safe.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,14"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ha! I'm the king of the sofa! You can't reach me now!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot waits under the sofa. Beep. Beep. It won't go away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "vac",
+      "to:max"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I can't stay up here forever. I'll miss lunch!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I have a plan! I'll block the robot with my red ball!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog pushes his red ball in front of the robot. Bump!",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "dog",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot taps the ball, turns a little, and keeps going.",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "spin"
+     ],
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It went around my ball! That robot is smarter than me!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everybody is smarter than you, Dog. No offense.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "None taken! I'm a happy dog, not a smart dog.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "We have to stop it before Grandma comes back and sees this!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits on the sofa, very grumpy. He takes another bite. Munch.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why me? I didn't do anything. I'm a good cat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max looks down. Something is right next to his paws.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. What are these little pink dots on the sofa?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Those are crumbs, Max. Cupcake crumbs! Lots and lots of them.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-6,14.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Crumbs? There are crumbs on the sofa... and on the floor too!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks back at the floor. A long line of pink crumbs.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From the rug, to the window, to the sofa. Everywhere Max walked.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The robot isn't chasing me. It's chasing my crumbs!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT WANTS THE CRUMBS!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "mouse",
+    "say": "And who is dropping all the crumbs, Max? Hmm?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me. It's me. I'm the messy one. Oh, my whiskers.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Look! You have crumbs on your whiskers too! And on your nose!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max wipes his whiskers. Wipe, wipe. The cupcake is all gone.",
+    "cam": "close:max",
+    "do": [
+     [
+      "cake",
+      "vanish"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay, robot. Come and get the crumbs. I won't run anymore.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot hums happily. Beep, beep. The crumbs disappear one by one.",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max watches it clean his messy trail. It's actually a little cute.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, robot. Sorry I called you a tail-eater.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Beep! The robot does a little happy spin. All clean!",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My goodness. Why is everyone smiling at my vacuum?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, it wasn't hunting me. It was cleaning up after me!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Of course, dear. It goes where the crumbs are. Like I said!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can it clean my food bowl too? I'm very messy!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Maybe tomorrow, Dog. Tomorrow is a very big day.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time, I'll check my own whiskers before I run away.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max gives the robot a little push. Go home, buddy.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:2,9"
+     ],
+     [
+      "vac",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot rolls to its corner. Beep... beeep... and then, nothing.",
+    "cam": "prop:vac",
+    "do": [
+     [
+      "vac",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh no. It stopped. And our visitor comes tomorrow!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did I break Grandma's robot? Uh-oh. Tomorrow I fix it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max vs Grandma's New Robot Vacuum! 🤖🐱",
+  "description": "\"I didn't do anything... did I?\" 🐱\nGrandma's new robot vacuum follows Max everywhere, and he is sure it wants his fluffy tail. The real reason is right on his whiskers. Max the Curious Cat, Ep 13.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "robot vacuum",
+   "cat vs vacuum",
+   "kids cartoon",
+   "funny cat",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "kids series"
+  ],
+  "thumb_text": "IT'S CHASING ME!",
+  "localizations": {
+   "es": {
+    "title": "¡Max contra la nueva aspiradora robot de la abuela! 🤖🐱",
+    "description": "\"No hice nada... ¿o sí?\" 🐱\nLa nueva aspiradora robot de la abuela sigue a Max a todas partes, y él cree que quiere su cola peluda. La verdadera razón está en sus bigotes. Max the Curious Cat, Ep 13.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "Max contra o novo aspirador robô da vovó! 🤖🐱",
+    "description": "\"Eu não fiz nada... ou fiz?\" 🐱\nO novo aspirador robô da vovó segue o Max para todo lado, e ele tem certeza de que quer o seu rabo fofinho. O motivo de verdade está nos bigodes dele. Max the Curious Cat, Ep 13.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "ماكس ضد المكنسة الآلية الجديدة لجدتي! 🤖🐱",
+    "description": "\"لم أفعل شيئًا... أليس كذلك؟\" 🐱\nالمكنسة الآلية الجديدة لدى الجدة تتبع ماكس في كل مكان، وهو متأكد أنها تريد ذيله الناعم. السبب الحقيقي موجود على شواربه. ماكس القط الفضولي، الحلقة 13.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "Max contre le nouvel aspirateur robot de Mamie ! 🤖🐱",
+    "description": "« Je n'ai rien fait... si ? » 🐱\nLe nouvel aspirateur robot de Mamie suit Max partout, et il est sûr qu'il veut sa queue toute douce. La vraie raison est sur ses moustaches. Max the Curious Cat, Ép 13.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "マックス vs おばあちゃんの新しいロボット掃除機！🤖🐱",
+    "description": "「ぼく、なにもしてないよ…たぶん」🐱\nおばあちゃんの新しいロボット掃除機が、どこまでもマックスを追いかけてくる。しっぽをねらってるの？ 本当の理由はマックスのおひげにあった。マックス 第13話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "맥스 vs 할머니의 새 로봇청소기! 🤖🐱",
+    "description": "\"난 아무것도 안 했어... 그치?\" 🐱\n할머니의 새 로봇청소기가 맥스를 어디든 따라다녀요. 복슬복슬 꼬리를 노리는 걸까요? 진짜 이유는 맥스의 수염에 있었어요. 맥스 13화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "Max gegen Omas neuen Saugroboter! 🤖🐱",
+    "description": "„Ich hab doch nichts gemacht... oder?“ 🐱\nOmas neuer Saugroboter folgt Max überallhin, und Max ist sicher: Er will seinen flauschigen Schwanz. Der wahre Grund klebt an seinen Schnurrhaaren. Max the Curious Cat, Folge 13.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 45
+ },
+ "shorts": [
+  {
+   "dur": 28,
+   "top": "IT WON'T STOP! 🤖",
+   "title": "This Robot Won't Stop Chasing Max! 🤖😱 Ep 13 #shorts",
+   "description": "Beep, beep! Grandma's new robot follows Max everywhere. Why? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "robot vacuum",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Este robot no deja de perseguir a Max! 🤖😱 Ep 13 #shorts",
+     "description": "¡Bip, bip! El nuevo robot de la abuela sigue a Max a todas partes. ¿Por qué? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Esse robô não para de perseguir o Max! 🤖😱 Ep 13 #shorts",
+     "description": "Bip, bip! O robô novo da vovó segue o Max para todo lado. Por quê? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هذا الروبوت لا يتوقف عن مطاردة ماكس! 🤖😱 الحلقة 13 #shorts",
+     "description": "بيب، بيب! روبوت الجدة الجديد يتبع ماكس في كل مكان. لماذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ce robot n'arrête pas de suivre Max ! 🤖😱 Ép 13 #shorts",
+     "description": "Bip, bip ! Le nouveau robot de Mamie suit Max partout. Pourquoi ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ロボットがマックスを追いかけてくる！🤖😱 第13話 #shorts",
+     "description": "ピッ、ピッ！おばあちゃんの新しいロボットがマックスをどこまでも追いかける。なんで？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "로봇이 맥스를 계속 쫓아와요! 🤖😱 13화 #shorts",
+     "description": "삐삐! 할머니의 새 로봇이 맥스를 어디든 따라와요. 왜일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Dieser Roboter jagt Max überall hin! 🤖😱 Folge 13 #shorts",
+     "description": "Piep, piep! Omas neuer Roboter folgt Max überallhin. Warum? Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 2
+  },
+  {
+   "dur": 30,
+   "top": "SAVE MY TAIL! 😱",
+   "title": "Max Hides From a Robot on the Sofa! 🛋️🤖 Ep 13 #shorts",
+   "description": "Max climbs the sofa to escape the robot... but it just waits. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max se esconde de un robot en el sofá! 🛋️🤖 Ep 13 #shorts",
+     "description": "Max sube al sofá para escapar del robot... pero el robot espera. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max se esconde de um robô no sofá! 🛋️🤖 Ep 13 #shorts",
+     "description": "Max sobe no sofá para fugir do robô... mas ele só espera. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يختبئ من روبوت فوق الأريكة! 🛋️🤖 الحلقة 13 #shorts",
+     "description": "ماكس يقفز إلى الأريكة ليهرب من الروبوت... لكنه ينتظر فقط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max se cache d'un robot sur le canapé ! 🛋️🤖 Ép 13 #shorts",
+     "description": "Max grimpe sur le canapé pour fuir le robot... mais il attend. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、ソファでロボットからかくれる！🛋️🤖 第13話 #shorts",
+     "description": "ロボットからにげてソファにのぼったマックス…でもロボットはずっと待ってる。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 소파 위로 로봇을 피해요! 🛋️🤖 13화 #shorts",
+     "description": "맥스가 로봇을 피해 소파에 올라가지만... 로봇은 그냥 기다려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max versteckt sich auf dem Sofa vor einem Roboter! 🛋️🤖 Folge 13 #shorts",
+     "description": "Max klettert aufs Sofa, um dem Roboter zu entkommen... doch der wartet einfach. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 24
+  }
+ ]
+}

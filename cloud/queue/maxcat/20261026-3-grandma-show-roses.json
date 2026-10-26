@@ -1,0 +1,1034 @@
+{
+ "id": "20261026-3-grandma-show-roses",
+ "plot": "The morning after the robot stopped, Max picks Grandma's flower show roses to say sorry and she goes quiet; Bird reveals the robot only needed charging, Max's try to plant the roses back fails, Bird's idea of a water jar saves them, and Max learns Grandma was only worried about his pricked paw; the bouquet wins a gold cup, and then a car brings a visitor called Luna.",
+ "script": {
+  "title": "Grandma's Show Roses",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "flowers",
+    "type": "cone",
+    "color": "pink",
+    "at": [
+     -1.3,
+     5.4,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "jar",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     1.0,
+     8.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "cup",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     -1.0,
+     9.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Surprise, Grandma! I picked you the biggest flowers in the garden!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "flowers",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh! Max! Those are my flower show roses!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ],
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ouch! Prickly! Why does Grandma look so sad?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS GRANDMA SAD?",
+    "cam": "close:grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "A bright morning in the garden. The day after the robot stopped.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max felt so bad about the robot. So bad!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So he picked the biggest flowers he could find, to say sorry.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "flowers",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma looks at Max's paw for a long, quiet moment.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then she turns and goes inside. Without a word.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Tweet tweet! Big news! The robot works again! It was hungry!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hungry for power? What does that mean, Bird?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Grandma plugged it in the wall. Zzzzt! Now it's happy again!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So I didn't break it? Then I said sorry for nothing!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And you picked Grandma's flower show roses! For nothing! Oh, Max!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "bird",
+      "to:0,7"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't say it so loud! I was only trying to help!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the roses. Then at the empty garden bed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The flower show is this afternoon. And now there are no roses.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Grandma grew those roses all summer. Every single day!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Every day? Oh no. I made Grandma sad on her special day.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "NO ROSES FOR THE SHOW!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "I have to fix this before the show. I just have to!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "How do you un-pick a flower? Is that even a thing?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Easy. I put them back in the ground. Like new!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max digs a little hole. Dig, dig, dig. Roses go in.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "flowers",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "There! Stand up tall, roses. Stand up for Grandma!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The roses wobble. And wobble. And then... flop. They fall over.",
+    "cam": "wide",
+    "do": [
+     [
+      "flowers",
+      "spin"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Uh-oh. They look like they need a nap. A very long nap.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Flowers can't grow back once you pick them. Can they?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Nope. The roots stay in the ground. Like feet on a branch.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits down in the grass. His tail droops low.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma will never ask me to help her again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hey, don't be sad. Picked flowers can still stay pretty!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Stay pretty? How? They're already falling over.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Water! At the big park, people put flowers in jars of water.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The flowers drink and drink. They stay pretty for days and days!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A jar of water. Bird, that's actually a really good idea!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I have good ideas all the time. Nobody listens to me!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max finds Grandma's old blue jar by the garden door.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "show"
+     ],
+     [
+      "max",
+      "to:1,7.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash! Water in. Then, very gently, the roses go in too.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ],
+     [
+      "flowers",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Drink up, roses. Please be pretty for Grandma.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slurp, slurp. Slowly, the floppy roses stand up straight again.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ooh! They look like a fancy party in a jar!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But the show wants roses in the ground. Not in a jar.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wait! The show has a table for flower jars! Best Bouquet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Best Bouquet? Then we still have a chance!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Only if Grandma says yes. And only if we hurry!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "WILL GRANDMA SAY YES?",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Max carries the jar to the door. Slowly. Not one drop spills.",
+    "cam": "wide",
+    "do": [
+     [
+      "jar",
+      "to:max"
+     ],
+     [
+      "max",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma? I'm sorry I picked your roses without asking.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Max. Show me your paw, dear. The ouch paw.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My paw? It's fine. Just one tiny prickle. Why?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Rose thorns are sharp. I was worried you got hurt, little one.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SHE WAS WORRIED!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "You weren't sad about the roses? You were sad about me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Flowers grow again next summer. There is only one Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma checks the paw. A tiny scratch. A little kiss. All better.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And look! Bird helped me save them. They're in a jar now!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "A bouquet! Why, that's perfect for the Best Bouquet table!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Told you! Best idea of the day! Tweet tweet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, Bird. From now on, I listen to you first.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That afternoon, the little blue jar sits on the show table.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And next to it... a shiny gold cup! Best Bouquet!",
+    "cam": "prop:cup",
+    "do": [
+     [
+      "cup",
+      "show"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Our first prize ever! And we won it together.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "cup",
+      "to:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time, I'll ask first. And we pick together, Grandma.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And next time, you listen to the chatty bird first!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs in the warm, sunny garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, honk, honk! A little car stops at the garden gate.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's our visitor! Little Luna is here!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Luna? Who is Luna? And why is she coming to MY house?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Grandma Sad? Max Picked Her Show Roses 🌹🐱",
+  "description": "\"I only wanted to say sorry. Why did it make things worse?\" 🐱\nMax picks Grandma's flower show roses to say sorry, and Grandma goes very quiet. With Bird's help he tries to fix it before the show, and learns why Grandma was really sad. Max the Curious Cat, Ep 14.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "grandma",
+   "flowers",
+   "saying sorry",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "feelings for kids"
+  ],
+  "thumb_text": "GRANDMA IS SAD?",
+  "localizations": {
+   "es": {
+    "title": "¿Por qué está triste la abuela? Max cortó sus rosas 🌹🐱",
+    "description": "\"Solo quería pedir perdón. ¿Por qué salió peor?\" 🐱\nMax corta las rosas de concurso de la abuela para pedir perdón, y la abuela se queda muy callada. Con la ayuda de Bird intenta arreglarlo antes del concurso y descubre por qué la abuela estaba triste de verdad. Max the Curious Cat, Ep 14.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "Por que a vovó está triste? Max colheu as rosas dela 🌹🐱",
+    "description": "\"Eu só queria pedir desculpa. Por que ficou pior?\" 🐱\nMax colhe as rosas de concurso da vovó para pedir desculpa, e a vovó fica bem quietinha. Com a ajuda da Bird ele tenta consertar antes do concurso e descobre por que a vovó estava triste de verdade. Max the Curious Cat, Ep 14.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "لماذا الجدة حزينة؟ ماكس قطف ورودها 🌹🐱",
+    "description": "\"أردت فقط أن أعتذر. لماذا صار الأمر أسوأ؟\" 🐱\nماكس يقطف ورود الجدة المخصصة للمسابقة ليعتذر، فتصمت الجدة طويلًا. بمساعدة بيرد يحاول إصلاح الأمر قبل المسابقة، ويعرف لماذا كانت الجدة حزينة حقًا. ماكس القط الفضولي، الحلقة 14.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "Pourquoi Mamie est triste ? Max a cueilli ses roses 🌹🐱",
+    "description": "« Je voulais juste m'excuser. Pourquoi c'est pire ? » 🐱\nMax cueille les roses de concours de Mamie pour s'excuser, et Mamie devient toute silencieuse. Avec l'aide de Bird, il essaie de réparer avant le concours et découvre pourquoi Mamie était vraiment triste. Max the Curious Cat, Ép 14.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "おばあちゃんはなぜかなしいの？マックスがバラをつんだ 🌹🐱",
+    "description": "「ごめんねって言いたかっただけなのに。なんでもっとダメになるの？」🐱\nマックスはおわびに、おばあちゃんのコンテスト用のバラをつんでしまう。おばあちゃんはだまってしまった。バードと一緒にコンテストまでになんとかしようとして、おばあちゃんが本当にかなしかった理由を知る。マックス 第14話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "할머니는 왜 슬플까? 맥스가 장미를 꺾었어요 🌹🐱",
+    "description": "\"그냥 미안하다고 하고 싶었는데. 왜 더 나빠졌을까?\" 🐱\n맥스가 사과하려고 할머니의 대회용 장미를 꺾자, 할머니가 조용해져요. 버드의 도움으로 대회 전에 바로잡으려다가, 할머니가 진짜 슬펐던 이유를 알게 돼요. 맥스 14화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "Warum ist Oma traurig? Max hat ihre Rosen gepflückt 🌹🐱",
+    "description": "„Ich wollte mich doch nur entschuldigen. Warum ist es jetzt schlimmer?“ 🐱\nMax pflückt Omas Rosen für die Blumenschau, um sich zu entschuldigen, und Oma wird ganz still. Mit Birds Hilfe will er es vor der Schau wiedergutmachen und erfährt, warum Oma wirklich traurig war. Max the Curious Cat, Folge 14.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 53
+ },
+ "shorts": [
+  {
+   "dur": 30,
+   "top": "OOPS... HER ROSES! 🌹",
+   "title": "Max Picked Grandma's Show Roses! 🌹😳 Ep 14 #shorts",
+   "description": "Max wanted to say sorry... with Grandma's prize roses. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "grandma"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max cortó las rosas de concurso de la abuela! 🌹😳 Ep 14 #shorts",
+     "description": "Max quería pedir perdón... con las rosas de premio de la abuela. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max colheu as rosas de concurso da vovó! 🌹😳 Ep 14 #shorts",
+     "description": "Max queria pedir desculpa... com as rosas premiadas da vovó. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس قطف ورود الجدة للمسابقة! 🌹😳 الحلقة 14 #shorts",
+     "description": "ماكس أراد أن يعتذر... بورود الجدة المميزة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max a cueilli les roses de concours de Mamie ! 🌹😳 Ép 14 #shorts",
+     "description": "Max voulait s'excuser... avec les roses de concours de Mamie. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスがおばあちゃんのバラをつんじゃった！🌹😳 第14話 #shorts",
+     "description": "おわびのつもりが…おばあちゃんの大事なバラだった。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 할머니의 대회용 장미를 꺾었어요! 🌹😳 14화 #shorts",
+     "description": "맥스는 사과하고 싶었을 뿐인데... 할머니의 소중한 장미였어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max hat Omas Schau-Rosen gepflückt! 🌹😳 Folge 14 #shorts",
+     "description": "Max wollte sich entschuldigen... mit Omas Preisrosen. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 2
+  }
+ ]
+}

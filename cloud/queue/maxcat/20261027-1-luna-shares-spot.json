@@ -1,0 +1,1029 @@
+{
+ "id": "20261027-1-luna-shares-spot",
+ "plot": "At sunset little cousin Luna arrives to stay, grabs Max's ball and his window spot while everyone fusses over her; Max's big show-off jump lands him in the laundry basket, he sulks behind the sofa and finds Luna there, homesick, who copied and took his things because he is her brave hero; Max shares his spot and ball, and Grandma puts him in charge of Luna at the park tomorrow.",
+ "script": {
+  "title": "Max Has to Share",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "luna": {
+    "name": "Luna",
+    "voice": "af_nicole",
+    "speed": 1.1,
+    "pitch": 5,
+    "color": [
+     0.97,
+     0.96,
+     0.93
+    ],
+    "kind": "cat",
+    "size": 0.7,
+    "home": [
+     3.5,
+     4.5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     0.5,
+     7.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "purple",
+    "at": [
+     -4.0,
+     9.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "basket",
+    "type": "box",
+    "color": "orange",
+    "at": [
+     4.5,
+     11.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "luna",
+    "say": "Ooh! A red ball! Mine, mine, mine!",
+    "cam": "wide",
+    "do": [
+     [
+      "luna",
+      "enter:left"
+     ],
+     [
+      "ball",
+      "to:luna"
+     ],
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! That's MY ball! Who are you, tiny fluffball?",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why does this kitten want everything that's mine?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHE TOOK MY BALL!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's sunset in Grandma's living room. The visitor is finally here.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, dear, this is Luna. Your little cousin from the city.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "She's staying for a few days. Be a good big cousin.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Are you THE Max? The real, real Max? Wow!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "eyes_big"
+     ],
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes, I'm the real Max. And that is my real ball.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max swishes his tail. Luna swishes her tiny tail too. Swish.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "luna",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why are you doing that? Stop copying my tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Why are you doing that? Stop copying my tail!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Who's this? A baby cat? She's so tiny! So cute!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs right past Max. He doesn't even say hi.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:3,5"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hello, tiny one! Want to see me roll over? Look!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna giggles. Dog rolls again. And again. Everybody loves Luna.",
+    "cam": "two:dog,luna",
+    "do": [
+     [
+      "luna",
+      "laugh"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And I have a welcome gift for our little Luna!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A gift? Grandma didn't give me a gift today.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna opens the purple gift. It's a soft little bell. Jingle!",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "to:luna"
+     ],
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Luna curls up in Max's favorite spot. By the warm window.",
+    "cam": "overhead",
+    "do": [
+     [
+      "luna",
+      "to:5,13"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's my sunset spot! Nobody sits there but me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Share a little, Max. She's far from home tonight.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "First my ball. Then my spot. Next it'll be my Grandma!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "NOBODY SEES MAX!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "If this goes on, everyone will forget all about me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I need to show them who the best cat is. Watch this!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs the sofa for his biggest, highest jump ever.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everybody look! The amazing Max! Three, two, one... jump!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max flies through the air... and lands in the laundry basket. Thump!",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "max",
+      "to:4.5,11"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Socks on his head. A sock on his tail. Everyone laughs.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "The amazing Max! I want to jump in the basket too!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not funny! I'm not a clown. I'm the big cousin!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs out of the basket. He hides behind the sofa, alone.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-9,17"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nobody needs me now. They have a new, cute, tiny cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It gets dark outside. Then Max hears a small sound. Sniff. Sniff.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Who's there? Dog, is that you? Are you eating my snacks?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's Luna. She is behind the sofa too, hugging the red ball.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "to:-7.5,17.2"
+     ],
+     [
+      "luna",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "I miss my mom. I never slept away from home before.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh. You're not happy here? But everybody loves you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "It's dark and new. And bedtime is soon. I'm scared, Max.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bedtime is soon. And my little cousin is too scared to sleep.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. Why did you take my ball? You have a new bell.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Because your ball smells like you. Mom says you're the bravest cat.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "So I wanted to be just like you.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "That's why I copy your tail, your jump, everything you do.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "I'M HER HERO?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "You copied me because I'm your hero? Me, the basket cat?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "You're the best basket cat in the whole world.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max laughs a little. Then he sits down close to Luna.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "to:-8.5,16"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Want to know a secret? I get scared of the dark too.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "You do? But you're THE Max! The bravest cat!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Brave doesn't mean not scared. It means you hold a friend's paw.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max holds out his paw. Luna puts her tiny paw on top.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "luna",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Come on. I'll show you the best spot for watching the moon.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:5,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The two cats walk to the warm window. Max first. Luna after.",
+    "cam": "wide",
+    "do": [
+     [
+      "luna",
+      "to:5.8,12.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is my spot. But it's big enough for two cats.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "And this is your ball. You can have it back now.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "ball",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Keep it tonight. It smells like a brave cat, remember?",
+    "cam": "close:max",
+    "do": [
+     [
+      "ball",
+      "to:luna"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Aww. Can I squeeze in too? I'm only a little bit big.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,10"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, Dog. Window spot is cats only. You get the rug!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Two cats in one spot. Now that is a happy house.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna falls asleep, purring. Max stays awake to watch her.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sharing my spot didn't make me smaller.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It just made room for one more friend. A tiny one.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow we go to the park. Max, you'll look after Luna.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me? In charge of a kitten? At the big, busy park? Gulp.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Has to Share EVERYTHING?! New Kitten Luna 😾🐱",
+  "description": "\"First my ball, then my spot. Does anyone even see me?\" 🐱\nLittle cousin Luna comes to stay, and suddenly everyone loves her and she takes everything that is Max's. Then, behind the sofa, Max finds out why. Max the Curious Cat, Ep 15.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "new kitten",
+   "sharing for kids",
+   "jealous cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "feelings for kids"
+  ],
+  "thumb_text": "SHE TOOK IT ALL!",
+  "localizations": {
+   "es": {
+    "title": "¿Max tiene que compartirlo TODO? La gatita Luna 😾🐱",
+    "description": "\"Primero mi pelota, luego mi sitio. ¿Alguien me ve?\" 🐱\nLa primita Luna viene de visita, y de pronto todos la quieren y ella se queda con todo lo de Max. Entonces, detrás del sofá, Max descubre por qué. Max the Curious Cat, Ep 15.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "Max tem que dividir TUDO?! A gatinha Luna 😾🐱",
+    "description": "\"Primeiro minha bola, depois meu cantinho. Alguém me vê?\" 🐱\nA priminha Luna vem passar uns dias, e de repente todo mundo ama ela e ela pega tudo que é do Max. Então, atrás do sofá, Max descobre por quê. Max the Curious Cat, Ep 15.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "ماكس يجب أن يشارك كل شيء؟! القطة الصغيرة لونا 😾🐱",
+    "description": "\"أولًا كرتي، ثم مكاني. هل يراني أحد؟\" 🐱\nابنة العم الصغيرة لونا تأتي للزيارة، وفجأة يحبها الجميع وتأخذ كل أشياء ماكس. ثم خلف الأريكة يعرف ماكس السبب. ماكس القط الفضولي، الحلقة 15.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "Max doit TOUT partager ?! La petite chatte Luna 😾🐱",
+    "description": "« D'abord ma balle, puis ma place. Quelqu'un me voit ? » 🐱\nLa petite cousine Luna vient dormir quelques jours, et soudain tout le monde l'adore et elle prend tout ce qui est à Max. Puis, derrière le canapé, Max découvre pourquoi. Max the Curious Cat, Ép 15.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "マックス、ぜんぶシェアするの？！子ねこのルナ 😾🐱",
+    "description": "「ボールも、ぼくの場所も。だれもぼくを見てくれないの？」🐱\nいとこの子ねこルナがおとまりに来た。みんなルナにむちゅうで、マックスのものをぜんぶとっていく。でもソファのうしろで、マックスはそのわけを知る。マックス 第15話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "맥스가 전부 나눠야 해?! 새끼 고양이 루나 😾🐱",
+    "description": "\"공도, 내 자리도. 아무도 나를 안 봐.\" 🐱\n어린 사촌 루나가 놀러 오자 모두 루나만 좋아하고, 루나는 맥스의 물건을 다 가져가요. 그런데 소파 뒤에서 맥스는 그 이유를 알게 돼요. 맥스 15화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "Max muss ALLES teilen?! Das Kätzchen Luna 😾🐱",
+    "description": "„Erst mein Ball, dann mein Platz. Sieht mich überhaupt jemand?“ 🐱\nDie kleine Cousine Luna kommt zu Besuch, plötzlich lieben sie alle, und sie nimmt alles, was Max gehört. Hinter dem Sofa erfährt Max dann, warum. Max the Curious Cat, Folge 15.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 46
+ },
+ "shorts": [
+  {
+   "dur": 30,
+   "top": "NOBODY SEES ME! 😾",
+   "title": "Max Tries the BIGGEST Jump... Into Socks! 🧦😂 Ep 15 #shorts",
+   "description": "Max wants everyone to look at him again. It doesn't go as planned. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "funny cat",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max intenta el salto MÁS grande... ¡a los calcetines! 🧦😂 Ep 15 #shorts",
+     "description": "Max quiere que todos lo miren otra vez. No sale como esperaba. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max tenta o MAIOR pulo... nas meias! 🧦😂 Ep 15 #shorts",
+     "description": "Max quer que todos olhem para ele de novo. Não sai como planejado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يجرب أكبر قفزة... داخل الجوارب! 🧦😂 الحلقة 15 #shorts",
+     "description": "ماكس يريد أن ينظر إليه الجميع من جديد. لكن الأمور لا تسير كما خطط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max tente le PLUS grand saut... dans les chaussettes ! 🧦😂 Ép 15 #shorts",
+     "description": "Max veut que tout le monde le regarde encore. Rien ne se passe comme prévu. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスのいちばん大きなジャンプ…くつしたの中へ！🧦😂 第15話 #shorts",
+     "description": "みんなにまた見てほしいマックス。でも思ったようにはいかない。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스의 가장 큰 점프... 양말 속으로! 🧦😂 15화 #shorts",
+     "description": "맥스는 다시 모두가 자기를 봐 주길 원해요. 하지만 계획대로 안 돼요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max wagt den GRÖSSTEN Sprung... in die Socken! 🧦😂 Folge 15 #shorts",
+     "description": "Max will, dass alle wieder ihn ansehen. Es klappt nicht wie geplant. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 24
+  }
+ ]
+}

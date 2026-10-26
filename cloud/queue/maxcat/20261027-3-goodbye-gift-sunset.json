@@ -1,0 +1,1042 @@
+{
+ "id": "20261027-3-goodbye-gift-sunset",
+ "plot": "On Luna's last day Max races to wrap a goodbye gift before her mom comes at sunset, but Luna keeps running off and he thinks she doesn't want to play; his idea of giving Grandma's gold show cup fails, Bird helps him pick his favorite red ball instead, and when the car arrives Luna gives him the gold Best Big Cousin star she secretly made all day; as the car leaves Grandma sneezes in the cold wind.",
+ "script": {
+  "title": "1 Goodbye Gift",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "luna": {
+    "name": "Luna",
+    "voice": "af_nicole",
+    "speed": 1.1,
+    "pitch": 5,
+    "color": [
+     0.97,
+     0.96,
+     0.93
+    ],
+    "kind": "cat",
+    "size": 0.7,
+    "home": [
+     3.5,
+     4.5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "red",
+    "at": [
+     0.0,
+     7.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "cup",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     -4.0,
+     10.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     1.5,
+     5.5,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     5.0,
+     9.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Help! The sticky tape is stuck on my paws! Both paws!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "gift",
+      "bounce"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rip! Stick! The gift box rolls away. Max rolls after it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:2,8"
+     ],
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Luna goes home at sunset. What gift can I give her?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "GIFT BEFORE SUNSET!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's Luna's last day. The sun is already sinking over the garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "luna",
+      "enter"
+     ],
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Max! Here's your red ball back. I'm going home soon.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "ball",
+      "to:max"
+     ],
+     [
+      "luna",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait, Luna! Do you want to play one last game with me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Not now! I'm busy! Don't look, Max! Don't look!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "to:-5,9"
+     ],
+     [
+      "luna",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna runs behind Grandma. Bird flies after her, giggling. Hee hee hee!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Busy? On her last day? She doesn't want to play with me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Maybe a really big gift will make her want to play again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks around the garden. Then he sees something shiny.",
+    "cam": "prop:cup",
+    "do": [
+     [
+      "cup",
+      "spin"
+     ],
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The gold cup! The Best Bouquet cup! That's the shiniest thing ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the gold cup into the red box. Tape, tape, tape.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "cup",
+      "vanish"
+     ],
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tape on the box. Tape on his tail. Tape on his whiskers.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Is that Grandma's gold cup in there? Her first prize ever?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:1,8"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh... maybe? It's the best thing I could find.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You can't give away Grandma's cup! It belongs to Grandma!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And look at Luna's tiny bag. A cup that big won't fit!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max opens the box. The gold cup goes back to its place.",
+    "cam": "prop:cup",
+    "do": [
+     [
+      "cup",
+      "show"
+     ],
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "NO GIFT. NO TIME!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "The sun is going down. And I have nothing for Luna.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And she doesn't even want to play with me anymore.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max. Think about it. What did Luna love most this week?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My sunset spot? My ball? Grandma's cookies? Everything I have!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No, silly. She loved holding your tail. Being with you!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Being with me? That's not a gift. You can't wrap that.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then give her something that feels like you. Something with a story.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the red ball. The ball that smells like Max.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The brave cat ball. She took it on her very first day.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's my favorite ball in the whole world. My best ball.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "That's why it's the perfect gift. Giving is hard when it matters.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:1,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the red ball in the box. Gently. Carefully.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "ball",
+      "vanish"
+     ],
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And this time, he uses just one little piece of tape.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Done! And only one whisker is stuck. That's a new record!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Honk, honk! A little car stops at the garden gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Luna, sweetie! Your mom is here! Time to go home!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hurry, Bird! Before the car leaves! Where is Luna?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:-3,8"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna runs out from behind Grandma. Her paws are behind her back.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "to:-1,8.5"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Max! Close your eyes! And hold out your paw! Now!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max closes his eyes. Something small and light lands in his paw.",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "show"
+     ],
+     [
+      "star",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "A gold star! I made it all day, with Bird and Grandma!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "SHE MADE ME A GIFT!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "You were busy all day... making a gift for me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "It says Best Big Cousin. Grandma helped with the big words.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "That's why she couldn't play! Secret mission! Tweet tweet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And I thought you didn't want to play with me.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Silly Max. Secrets take a lot of work, you know!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "I always want to play with you. You're THE Max!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then this is for you. Open it. Only one piece of tape.",
+    "cam": "close:max",
+    "do": [
+     [
+      "gift",
+      "to:luna"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna pulls the tape. Rip! Inside is the red ball.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "luna",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "The brave cat ball? But it's your favorite one!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's why. Now when it's dark, you'll still have a brave cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna hugs the ball. Then she hugs Max. A big, tiny hug.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "happy"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look at you two. The best gifts are made with love.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A gift doesn't have to be shiny or big.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It just has to come from your heart. Like this star.",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna gets into the car with the red ball. Wave, wave, wave!",
+    "cam": "wide",
+    "do": [
+     [
+      "luna",
+      "exit"
+     ],
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Bye, Max! Bye, Bird! Bye, Grandma! See you soon!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The car drives away into the orange sunset. The garden feels quiet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I miss her already. But I have a gold star.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And she has your brave ball. You're both lucky cats.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:0,8"
+     ],
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A cold wind blows. Grandma waves one last time.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ah... ah... ah... ACHOO!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ],
+     [
+      "grandma",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma? That was a big sneeze. Are you okay?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "1 Goodbye Gift Before Sunset! Max's Secret for Luna 🎁🌅",
+  "description": "\"It's her last day... and she doesn't even want to play with me?\" 🐱\nLuna goes home at sunset, and Max must find the perfect goodbye gift, with too much tape and too little time. But Luna has a secret of her own. Max the Curious Cat, Ep 17.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "goodbye gift",
+   "giving for kids",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "kitten",
+   "feelings for kids"
+  ],
+  "thumb_text": "SHE MADE THIS?!",
+  "localizations": {
+   "es": {
+    "title": "¡1 regalo de despedida antes del atardecer! 🎁🌅",
+    "description": "\"Es su último día... ¿y ni siquiera quiere jugar conmigo?\" 🐱\nLuna se va a casa al atardecer, y Max debe encontrar el regalo de despedida perfecto, con demasiada cinta y muy poco tiempo. Pero Luna también tiene un secreto. Max the Curious Cat, Ep 17.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "1 presente de despedida antes do pôr do sol! 🎁🌅",
+    "description": "\"É o último dia dela... e ela nem quer brincar comigo?\" 🐱\nLuna vai para casa ao pôr do sol, e Max precisa achar o presente de despedida perfeito, com fita demais e tempo de menos. Mas a Luna também tem um segredo. Max the Curious Cat, Ep 17.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "هدية وداع واحدة قبل الغروب! 🎁🌅 سر ماكس للونا",
+    "description": "\"إنه يومها الأخير... ولا تريد حتى أن تلعب معي؟\" 🐱\nلونا تعود إلى البيت عند الغروب، وعلى ماكس أن يجد هدية الوداع المثالية، مع شريط لاصق كثير ووقت قليل. لكن للونا سرًا أيضًا. ماكس القط الفضولي، الحلقة 17.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "1 cadeau d'adieu avant le coucher du soleil ! 🎁🌅",
+    "description": "« C'est son dernier jour... et elle ne veut même pas jouer avec moi ? » 🐱\nLuna rentre chez elle au coucher du soleil, et Max doit trouver le cadeau d'adieu parfait, avec trop de scotch et trop peu de temps. Mais Luna a aussi un secret. Max the Curious Cat, Ép 17.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "夕日までにおわかれのプレゼントをひとつ！🎁🌅",
+    "description": "「さいごの日なのに…ぼくとあそびたくないの？」🐱\nルナは夕日のころにおうちへ帰る。マックスはテープだらけになりながら、時間までにさいこうのプレゼントをさがす。でもルナにもひみつがあった。マックス 第17話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "해 지기 전 작별 선물 하나! 🎁🌅 맥스의 비밀",
+    "description": "\"마지막 날인데... 나랑 놀기 싫은 걸까?\" 🐱\n루나는 해 질 녘에 집으로 돌아가요. 맥스는 테이프투성이가 되며 시간 안에 완벽한 작별 선물을 찾아야 해요. 그런데 루나에게도 비밀이 있어요. 맥스 17화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "1 Abschiedsgeschenk vor Sonnenuntergang! 🎁🌅",
+    "description": "„Ihr letzter Tag... und sie will nicht mal mit mir spielen?“ 🐱\nLuna fährt bei Sonnenuntergang nach Hause, und Max muss das perfekte Abschiedsgeschenk finden, mit zu viel Klebeband und zu wenig Zeit. Doch Luna hat auch ein Geheimnis. Max the Curious Cat, Folge 17.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 43
+ },
+ "shorts": [
+  {
+   "dur": 30,
+   "top": "NO GIFT, NO TIME! 🌅",
+   "title": "Max Has Nothing to Give Before Sunset! 🎁😢 Ep 17 #shorts",
+   "description": "The sun is going down and Max's gift idea just failed. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "goodbye gift"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max no tiene nada que regalar antes del atardecer! 🎁😢 Ep 17 #shorts",
+     "description": "El sol se pone y la idea de regalo de Max falló. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max não tem nada para dar antes do pôr do sol! 🎁😢 Ep 17 #shorts",
+     "description": "O sol está se pondo e a ideia de presente do Max deu errado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس لا يملك هدية قبل الغروب! 🎁😢 الحلقة 17 #shorts",
+     "description": "الشمس تغرب وفكرة هدية ماكس فشلت. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max n'a rien à offrir avant le coucher du soleil ! 🎁😢 Ép 17 #shorts",
+     "description": "Le soleil se couche et l'idée de cadeau de Max a raté. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "夕日なのにマックスのプレゼントがない！🎁😢 第17話 #shorts",
+     "description": "日がしずんでいくのに、プレゼント作戦は失敗。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "해가 지는데 맥스는 줄 선물이 없어요! 🎁😢 17화 #shorts",
+     "description": "해는 지는데 맥스의 선물 아이디어가 실패했어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max hat vor Sonnenuntergang kein Geschenk! 🎁😢 Folge 17 #shorts",
+     "description": "Die Sonne geht unter und Max' Geschenkidee ist gescheitert. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 21
+  }
+ ]
+}

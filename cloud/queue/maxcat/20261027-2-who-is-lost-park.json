@@ -1,0 +1,1098 @@
+{
+ "id": "20261027-2-who-is-lost-park",
+ "plot": "Max is in charge of little Luna at the park, chases a butterfly and suddenly cannot find her; his loud running search only makes him dizzy, Dog's nose follows a straight kitten trail to the gate, and there Luna is waiting at Grandma's orange meeting cone, because Max was the one who got lost; Luna has to go home tomorrow at sunset, and Max needs a goodbye gift.",
+ "script": {
+  "title": "Who Is Really Lost?",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "luna": {
+    "name": "Luna",
+    "voice": "af_nicole",
+    "speed": 1.1,
+    "pitch": 5,
+    "color": [
+     0.97,
+     0.96,
+     0.93
+    ],
+    "kind": "cat",
+    "size": 0.7,
+    "home": [
+     3.5,
+     4.5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cone",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -7.0,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     6.0,
+     10.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Luna? LUNA! Where are you? She was right here!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "to:3,8"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max is in charge of little Luna today. And Luna is gone.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Where is Luna? Grandma trusted me! Only me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE IS LUNA?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Let's go back a little. Ten minutes ago, at the park gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "luna",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Listen, you two. Do you see that big orange cone?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "If anyone gets lost, go to the cone and wait. Promise?",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "cone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "I promise! Orange cone! Wait there! I'm very good at waiting.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nobody will get lost, Grandma. I'm in charge today!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma sits down on a bench with her book.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-9,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Little Luna holds on to Max's tail. Tight, tight, tight.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "to:-1,6"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Stay close, Luna. The park is big. Very, very big.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "I'll stay so close. Like a sticker on your tail!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ooh! A yellow butterfly! Come back! I just want to say hi!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:6,14"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max chases the butterfly. Past the trees. Past the pond. Zig, zag.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:10,18"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And when he finally turns around... no Luna. No cone. No Grandma.",
+    "cam": "wide",
+    "do": [
+     [
+      "luna",
+      "exit"
+     ],
+     [
+      "grandma",
+      "exit"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Don't panic. A big cousin never panics. Ahhh! I'm panicking!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! Hi! I found my blue ball under a bush! Look!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "ball",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Not now! I lost Luna!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She's so small, and the park is so big. So big!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Lost? Little Luna? Oh no, oh no, oh no!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If Grandma finds out, she'll never put me in charge again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll find her myself. The fastest way. Loud and fast!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs left. Luna! Max runs right. Luna! Up the hill. LUNA!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,16"
+     ],
+     [
+      "max",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Around and around he goes, faster and faster. Then... bump. Dizzy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The trees are spinning. Why are there two Dogs?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "There's only one of me, Max. I checked twice.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sit down for a second. Breathe in. Breathe out. Good cat.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shouting didn't work. Running didn't work. What do I do now?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "NO LUNA ANYWHERE!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "When I lose my ball, I don't run. I sniff! Sniff, sniff!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your nose? Dog, you're a genius! Okay, sniff for Luna!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts his nose down. Sniff, sniff, sniff. Very slowly.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I smell... Max. And more Max. Max everywhere.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max went this way, then that way, then around the tree twice.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's just my butterfly trail! I zigged and zagged everywhere!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait. Here's a tiny smell. Soft and milky. That's a kitten smell!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitten smell doesn't zig. It doesn't zag. It goes straight.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:dog-grandma"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It goes straight back. Straight to the park gate!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The gate? Grandma is at the gate! Oh no, she'll know!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We have to find Luna before Grandma sees she's missing!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ],
+     [
+      "dog",
+      "to:-2.5,11.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max and Dog run along the straight little path. Faster, faster!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,11"
+     ],
+     [
+      "dog",
+      "to:-3,11.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And there, by the big orange cone, sits a tiny white kitten.",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "luna",
+      "enter"
+     ],
+     [
+      "luna",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Max! There you are! You got lost!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "MAX WAS LOST?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "Me? Lost? I wasn't lost. I was looking for you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "You ran after the butterfly. Then I couldn't see you anymore.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "So I did what Grandma said. Go to the orange cone.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "luna",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "And wait, and wait. I counted all the ducks. Eleven ducks!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So you weren't lost at all. I was the lost one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And you found your way back. That's what matters, Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma was by the cone the whole time, keeping Luna company.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! I'm sorry. I'm the worst in-charge cat ever.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Everyone gets lost sometimes, dear. Even grandmas. Even big cousins.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The smart part is having a plan. And Luna followed it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "I'm the in-charge cat now! Everybody hold my tail!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And my nose found you! Can my nose get a treat?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your nose gets the biggest treat in the park, Dog.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then something lands softly on Max's nose. A yellow butterfly.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You again? No, no. I'm not chasing you this time!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs. Even the butterfly does a little dance.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If you get lost, don't run around in circles.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Go to the meeting place. Stay there. And wait for your family.",
+    "cam": "two:max,luna",
+    "do": [
+     [
+      "max",
+      "turn:luna"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Just like me! The orange cone cat!",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They walk home slowly. Luna holds Max's tail all the way.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,6"
+     ],
+     [
+      "luna",
+      "to:0,5"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Luna's mom comes for her tomorrow, at sunset.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "luna",
+    "say": "Tomorrow? But I don't want to go yet.",
+    "cam": "close:luna",
+    "do": [
+     [
+      "luna",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I need a goodbye gift by sunset. But what?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Is REALLY Lost at the Park? 🌳🐾 Max and Luna",
+  "description": "\"Grandma trusted me. Only me. And now Luna is gone.\" 🐱\nMax is in charge of little Luna at the park, but one yellow butterfly later she is nowhere to be seen. With Dog's clever nose, Max learns who was really lost. Max the Curious Cat, Ep 16.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "lost in the park",
+   "safety for kids",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog",
+   "kitten"
+  ],
+  "thumb_text": "WHERE IS LUNA?",
+  "localizations": {
+   "es": {
+    "title": "¿Quién está REALMENTE perdido en el parque? 🌳🐾",
+    "description": "\"La abuela confió en mí. Solo en mí. Y ahora Luna no está.\" 🐱\nMax cuida a la pequeña Luna en el parque, pero tras una mariposa amarilla ella desaparece. Con la nariz lista de Dog, Max descubre quién estaba perdido de verdad. Max the Curious Cat, Ep 16.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "Quem está MESMO perdido no parque? 🌳🐾 Max e Luna",
+    "description": "\"A vovó confiou em mim. Só em mim. E agora a Luna sumiu.\" 🐱\nMax cuida da pequena Luna no parque, mas depois de uma borboleta amarela ela não está em lugar nenhum. Com o nariz esperto do Dog, Max descobre quem estava perdido de verdade. Max the Curious Cat, Ep 16.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "من الضائع حقًا في الحديقة؟ 🌳🐾 ماكس ولونا",
+    "description": "\"الجدة وثقت بي. بي وحدي. والآن لونا ليست هنا.\" 🐱\nماكس مسؤول عن لونا الصغيرة في الحديقة، لكن بعد فراشة صفراء واحدة لا يجدها في أي مكان. بأنف دوغ الذكي يعرف ماكس من كان الضائع حقًا. ماكس القط الفضولي، الحلقة 16.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "Qui est VRAIMENT perdu au parc ? 🌳🐾 Max et Luna",
+    "description": "« Mamie m'a fait confiance. À moi seul. Et Luna a disparu. » 🐱\nMax doit surveiller la petite Luna au parc, mais après un papillon jaune, elle n'est plus là. Grâce au nez malin de Dog, Max découvre qui était vraiment perdu. Max the Curious Cat, Ép 16.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "公園で本当にまいごなのはだれ？🌳🐾 マックスとルナ",
+    "description": "「おばあちゃんはぼくにまかせてくれたのに。ルナがいない！」🐱\n公園でルナのお世話をまかされたマックス。でも黄色いちょうちょを追いかけたら、ルナがいなくなった。ドッグのかしこい鼻で、本当のまいごがだれかわかる。マックス 第16話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "공원에서 진짜 길을 잃은 건 누구? 🌳🐾 맥스와 루나",
+    "description": "\"할머니가 나만 믿었는데. 루나가 없어졌어!\" 🐱\n공원에서 어린 루나를 맡은 맥스. 노란 나비를 쫓다 보니 루나가 보이지 않아요. 도그의 똑똑한 코 덕분에 맥스는 진짜 길을 잃은 게 누구인지 알게 돼요. 맥스 16화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "Wer hat sich WIRKLICH im Park verlaufen? 🌳🐾",
+    "description": "„Oma hat mir vertraut. Nur mir. Und jetzt ist Luna weg.“ 🐱\nMax passt im Park auf die kleine Luna auf, doch nach einem gelben Schmetterling ist sie verschwunden. Mit Dogs schlauer Nase merkt Max, wer sich wirklich verlaufen hat. Max the Curious Cat, Folge 16.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 45
+ },
+ "shorts": [
+  {
+   "dur": 26,
+   "top": "SHE WAS RIGHT HERE! 😱",
+   "title": "Max Lost Luna at the Park?! 😱🌳 Ep 16 #shorts",
+   "description": "Max was in charge. Now little Luna is gone. Where did she go? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "kitten"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Max perdió a Luna en el parque? 😱🌳 Ep 16 #shorts",
+     "description": "Max estaba a cargo. Ahora la pequeña Luna no está. ¿Adónde fue? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max perdeu a Luna no parque?! 😱🌳 Ep 16 #shorts",
+     "description": "Max estava no comando. Agora a pequena Luna sumiu. Para onde ela foi? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس أضاع لونا في الحديقة؟! 😱🌳 الحلقة 16 #shorts",
+     "description": "ماكس كان المسؤول. والآن لونا الصغيرة اختفت. إلى أين ذهبت؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max a perdu Luna au parc ?! 😱🌳 Ép 16 #shorts",
+     "description": "Max était responsable. Et la petite Luna a disparu. Où est-elle ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、公園でルナを見失った？！😱🌳 第16話 #shorts",
+     "description": "お世話係はマックス。なのにルナがいない。どこへ行ったの？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 공원에서 루나를 잃어버렸어?! 😱🌳 16화 #shorts",
+     "description": "맥스가 책임자였는데, 어린 루나가 사라졌어요. 어디로 갔을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max hat Luna im Park verloren?! 😱🌳 Folge 16 #shorts",
+     "description": "Max war verantwortlich. Jetzt ist die kleine Luna weg. Wo ist sie? Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 2
+  },
+  {
+   "dur": 30,
+   "top": "SNIFF, SNIFF... 🐶",
+   "title": "Dog's Nose Finds a Tiny Kitten Trail! 🐶👃 Ep 16 #shorts",
+   "description": "Max's shouting didn't work. Can Dog's nose find Luna? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "funny dog",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La nariz de Dog encuentra un rastro de gatita! 🐶👃 Ep 16 #shorts",
+     "description": "Los gritos de Max no sirvieron. ¿La nariz de Dog encontrará a Luna? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O nariz do Dog acha a trilha da gatinha! 🐶👃 Ep 16 #shorts",
+     "description": "Os gritos do Max não deram certo. O nariz do Dog vai achar a Luna? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أنف دوغ يجد أثر القطة الصغيرة! 🐶👃 الحلقة 16 #shorts",
+     "description": "صراخ ماكس لم ينفع. هل يجد أنف دوغ لونا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le nez de Dog trouve la piste d'un chaton ! 🐶👃 Ép 16 #shorts",
+     "description": "Crier n'a pas marché. Le nez de Dog va-t-il trouver Luna ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ドッグの鼻が子ねこのにおいを見つけた！🐶👃 第16話 #shorts",
+     "description": "マックスがさけんでもダメだった。ドッグの鼻でルナを見つけられる？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "도그의 코가 아기 고양이 냄새를 찾았어요! 🐶👃 16화 #shorts",
+     "description": "맥스가 소리쳐도 소용없었어요. 도그의 코가 루나를 찾을 수 있을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Dogs Nase findet eine Kätzchen-Spur! 🐶👃 Folge 16 #shorts",
+     "description": "Max' Rufen hat nicht geklappt. Findet Dogs Nase Luna? Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 29
+  }
+ ]
+}

@@ -1,0 +1,1090 @@
+{
+ "id": "20261028-1-grandma-cold-purr",
+ "plot": "The morning after Luna leaves Grandma has a cold and cannot sleep; Max, Dog and Mouse's breakfast-in-bed tray ends in a noisy crash, then even total silence does not help, until Dog says sick friends want someone close, and Max realises Grandma found the house too quiet and almost slept when he purred, so he curls up on her lap and purrs her to sleep; next day she is well and plans to bake an apple pie with Dog as taste tester.",
+ "script": {
+  "title": "Shhh! Grandma Is Sick",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "yellow",
+    "at": [
+     4.0,
+     7.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "white",
+    "at": [
+     1.0,
+     9.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "banana",
+    "type": "banana",
+    "color": "yellow",
+    "at": [
+     2.0,
+     9.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.7
+   },
+   {
+    "id": "tray",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     1.5,
+     8.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Max! Max! Morning! Catch my ball! Woof! Woof!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shhh! Dog! Stop! Grandma is sick on the sofa!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Can we be quiet for one whole day? Can we?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHHH! GRANDMA IS SICK!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's the morning after Luna went home. Grandma caught a cold.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Just a little cold, dears. Achoo! I only need some rest.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hops up next to Grandma. She pats his head. Pat, pat.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-5,10"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max purrs a tiny bit. Grandma's eyes start to close.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Mmm. The house is so quiet without Luna. Too quiet.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Grandma. We'll take care of you! Wait here!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "to:0,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Max hops off the sofa. Grandma's eyes open again.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "What's happening? Why is everyone whispering so loudly?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma has a cold. We have to help her get better fast.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "When people are sick, they eat breakfast in bed! On a tray!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Breakfast in bed! Yes! The best breakfast ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max finds a blue tray. Mouse brings a little white cake.",
+    "cam": "prop:tray",
+    "do": [
+     [
+      "tray",
+      "show"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And a banana! Bananas make everyone feel better!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "banana",
+      "show"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And my yellow ball! Balls make me feel better!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "ball",
+      "to:dog"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Very slowly now. Tiptoe, tiptoe. Don't drop anything.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max carries the tray. Mouse walks ahead. Dog follows with his ball.",
+    "cam": "wide",
+    "do": [
+     [
+      "tray",
+      "to:max"
+     ],
+     [
+      "mouse",
+      "to:-2,8.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tiptoe. Tiptoe. Then Dog's ball rolls under Max's paws.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wobble, wobble... CRASH! The tray, the cake, and the banana. Everywhere!",
+    "cam": "wide",
+    "do": [
+     [
+      "tray",
+      "bounce"
+     ],
+     [
+      "cake",
+      "bounce"
+     ],
+     [
+      "banana",
+      "spin"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "CRASH!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grandma",
+    "say": "Oh my! Achoo! What was that noise? Is everyone okay?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ],
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, Grandma! We were making you breakfast. A quiet breakfast.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's very sweet. Achoo! I'll try to sleep again now.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We made it worse. Now she's awake and coughing.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "If Grandma doesn't rest, she won't get better. Not today.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. New rule. No noise. Not one sound. Not even a sneeze.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts down his ball. Very, very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse cleans up every crumb. Max hides the tray. Not one sound.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cake",
+      "vanish"
+     ],
+     [
+      "banana",
+      "vanish"
+     ],
+     [
+      "tray",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The room is so quiet now, you can hear the clock tick.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then... grrrumble. A very loud tummy. Everyone looks at Dog.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "all",
+      "look:dog"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sorry! My tummy didn't hear the rule. It missed breakfast.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Shhh, tummy! Grandma is resting! Be a good tummy!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Grandma doesn't sleep. She turns left. She turns right.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's quiet now. Super quiet. Why can't she sleep?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Maybe she needs a nice song? I know a very short one.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No songs! No noise! You heard the rule!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max. Can I tell you something? It's my best thinking ever.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "When I'm sick, I don't want balls. Or bananas. Or trays.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I want someone close to me. That's all. Just close.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Close? But we want her to sleep. We need quiet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Quiet isn't the same as alone, Max. Grandma said it's too quiet.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Too quiet without Luna. And she almost slept when I purred!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHE NEEDS A PURR!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "It's not the noise. Grandma needs me close. And purring!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A purr? That's a sound! You said no sounds!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Purring is a different kind of sound. It's a cuddle sound.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tiptoes back to the sofa. He curls up on Grandma's lap.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Prrrr. Prrrr. Max purrs his softest, warmest purr.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma smiles. Her eyes close. In ten seconds, she is asleep.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It worked! Oops. I mean... it worked.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Shhh, Dog. Whisper your happy. Like this. Yay.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The quietest helper was the purring one. Who knew?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog lies down by the sofa. Mouse curls up near Grandma's feet.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-3,9"
+     ],
+     [
+      "mouse",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody makes a big noise. But nobody is far away, either.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "All afternoon, Grandma sleeps. And Max purrs and purrs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The next morning, the sun is bright. Grandma stretches.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good morning, my dears! I feel so much, much better today!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No more achoo? Not even a teeny tiny one?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Not one. Thanks to the best little nurse cat in town!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And the best thinking dog! I had the idea, remember?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You did, Dog. Your best thinking ever. I'm proud of you.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Taking care of someone doesn't have to be big.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sometimes it's just staying close. And a little purr.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now, tomorrow we bake my famous apple pie. Together!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I be the taste tester? Please, please, please?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. Who's going to stop Dog from eating the whole pie?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Shhh! Grandma Is Sick and Max Must Help 🤫🤧🐱",
+  "description": "\"I wanted to help Grandma... so why did I make it worse?\" 🐱\nGrandma has a cold and needs rest, but Max's breakfast-in-bed plan ends in a big CRASH. Then Dog has his best idea ever, and Max finds the quietest way to help. Max the Curious Cat, Ep 18.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "grandma is sick",
+   "caring for kids",
+   "kindness",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog"
+  ],
+  "thumb_text": "SHHH!",
+  "localizations": {
+   "es": {
+    "title": "¡Shhh! La abuela está enferma y Max debe ayudar 🤫🤧🐱",
+    "description": "\"Quería ayudar a la abuela... ¿por qué lo empeoré?\" 🐱\nLa abuela tiene un resfriado y necesita descansar, pero el plan de desayuno en la cama de Max termina con un gran ¡CRASH! Entonces Dog tiene su mejor idea, y Max encuentra la forma más tranquila de ayudar. Max the Curious Cat, Ep 18.\n#MaxTheCuriousCat #serie #Animacion3D"
+   },
+   "pt": {
+    "title": "Shhh! A vovó está doente e o Max precisa ajudar 🤫🤧🐱",
+    "description": "\"Eu queria ajudar a vovó... por que piorei tudo?\" 🐱\nA vovó está resfriada e precisa descansar, mas o plano do Max de café na cama termina num grande CRASH! Então o Dog tem a melhor ideia dele, e o Max encontra o jeito mais quietinho de ajudar. Max the Curious Cat, Ep 18.\n#MaxTheCuriousCat #serie #Animacao3D"
+   },
+   "ar": {
+    "title": "شششش! الجدة مريضة وماكس يجب أن يساعد 🤫🤧🐱",
+    "description": "\"أردت أن أساعد الجدة... فلماذا جعلت الأمر أسوأ؟\" 🐱\nالجدة مصابة بالزكام وتحتاج إلى الراحة، لكن خطة ماكس لفطور في السرير تنتهي بصوت ارتطام كبير! ثم تأتي لدوغ أفضل فكرة، ويجد ماكس أهدأ طريقة للمساعدة. ماكس القط الفضولي، الحلقة 18.\n#MaxTheCuriousCat #مسلسل #رسوم_ثلاثية_الأبعاد"
+   },
+   "fr": {
+    "title": "Chut ! Mamie est malade et Max doit aider 🤫🤧🐱",
+    "description": "« Je voulais aider Mamie... pourquoi c'est pire ? » 🐱\nMamie a un rhume et doit se reposer, mais le petit-déjeuner au lit de Max finit dans un grand CRASH ! Puis Dog a sa meilleure idée, et Max trouve la façon la plus douce d'aider. Max the Curious Cat, Ép 18.\n#MaxTheCuriousCat #serie #Animation3D"
+   },
+   "ja": {
+    "title": "シーッ！おばあちゃんがかぜ、マックスがお世話 🤫🤧🐱",
+    "description": "「おばあちゃんを助けたかったのに…なんでもっとダメにしちゃうの？」🐱\nかぜをひいたおばあちゃん。マックスのベッドで朝ごはん作戦は、ガシャーン！で大失敗。そのときドッグがさいこうのアイデアを思いつき、マックスはいちばんしずかな助け方を見つける。マックス 第18話。\n#MaxTheCuriousCat #シリーズ #3Dアニメ"
+   },
+   "ko": {
+    "title": "쉿! 할머니가 아파요, 맥스가 도와야 해요 🤫🤧🐱",
+    "description": "\"할머니를 돕고 싶었는데... 왜 더 나빠졌을까?\" 🐱\n감기에 걸린 할머니는 쉬어야 하는데, 맥스의 침대 아침 식사 작전은 와장창! 끝나 버려요. 그때 도그가 최고의 아이디어를 내고, 맥스는 가장 조용하게 돕는 방법을 찾아요. 맥스 18화.\n#MaxTheCuriousCat #시리즈 #3D애니메이션"
+   },
+   "de": {
+    "title": "Pssst! Oma ist krank und Max muss helfen 🤫🤧🐱",
+    "description": "„Ich wollte Oma helfen... warum ist es jetzt schlimmer?“ 🐱\nOma hat eine Erkältung und braucht Ruhe, doch Max' Frühstück-ans-Bett-Plan endet mit einem lauten KRACH! Dann hat Dog seine beste Idee, und Max findet die leiseste Art zu helfen. Max the Curious Cat, Folge 18.\n#MaxTheCuriousCat #Serie #3DAnimation"
+   }
+  },
+  "thumb_beat": 46
+ },
+ "shorts": [
+  {
+   "dur": 28,
+   "top": "WE MADE IT WORSE! 😬",
+   "title": "Max's Breakfast in Bed Goes CRASH! 🍰😬 Ep 18 #shorts",
+   "description": "Max wanted to help sick Grandma... very quietly. Then: CRASH! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El desayuno en la cama de Max hace CRASH! 🍰😬 Ep 18 #shorts",
+     "description": "Max quería ayudar a la abuela enferma... en silencio. Y entonces: ¡CRASH! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O café na cama do Max faz CRASH! 🍰😬 Ep 18 #shorts",
+     "description": "Max queria ajudar a vovó doente... bem quietinho. Aí: CRASH! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "فطور ماكس في السرير ينتهي بارتطام! 🍰😬 الحلقة 18 #shorts",
+     "description": "ماكس أراد أن يساعد الجدة المريضة... بهدوء شديد. ثم: ارتطام! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le petit-déj au lit de Max fait CRASH ! 🍰😬 Ép 18 #shorts",
+     "description": "Max voulait aider Mamie malade... tout doucement. Et puis : CRASH ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスのベッドで朝ごはん、ガシャーン！🍰😬 第18話 #shorts",
+     "description": "かぜのおばあちゃんを、しずかに助けたかったのに…ガシャーン！フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스의 침대 아침 식사가 와장창! 🍰😬 18화 #shorts",
+     "description": "맥스는 아픈 할머니를 조용히 돕고 싶었는데... 와장창! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max' Frühstück ans Bett macht KRACH! 🍰😬 Folge 18 #shorts",
+     "description": "Max wollte der kranken Oma helfen... ganz leise. Dann: KRACH! Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 26
+  }
+ ]
+}
