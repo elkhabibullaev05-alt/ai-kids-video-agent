@@ -1,0 +1,925 @@
+{
+ "title": "Ep 32 · 1931: What Was Talking Behind the Wall?",
+ "description": "What do you think happens in the next part? Tell me in the comments.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.04,
+  "eyes": 2,
+  "moonlight": 10
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  },
+  "jim": {
+   "name": "James Irving",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.35,
+    0.28,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    3.5,
+    9.5
+   ]
+  },
+  "maggie": {
+   "name": "Margaret Irving",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.3,
+    0.18,
+    0.25
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "voirrey": {
+   "name": "Voirrey",
+   "voice": "bf_isabella",
+   "speed": 1.0,
+   "pitch": 2,
+   "color": [
+    0.45,
+    0.2,
+    0.18
+   ],
+   "kind": "human",
+   "size": 0.65,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "price": {
+   "name": "Harry Price",
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": -2,
+   "color": [
+    0.15,
+    0.15,
+    0.18
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    34
+   ]
+  },
+  "mona": {
+   "name": "Mona the sheepdog",
+   "voice": "am_onyx",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.75,
+    0.7,
+    0.62
+   ],
+   "kind": "gloamhound",
+   "size": 0.5,
+   "home": [
+    -30,
+    36
+   ]
+  },
+  "gef": {
+   "name": "Gef",
+   "voice": "af_sky",
+   "speed": 1.1,
+   "pitch": 4
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "wall1",
+   "color": [
+    0.22,
+    0.15,
+    0.09
+   ],
+   "visible": true,
+   "scale": 3.4,
+   "at": [
+    -4.2,
+    13.5,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "wall2",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "visible": true,
+   "scale": 3.4,
+   "at": [
+    0.0,
+    13.5,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "wall3",
+   "color": [
+    0.22,
+    0.15,
+    0.09
+   ],
+   "visible": true,
+   "scale": 3.4,
+   "at": [
+    4.2,
+    13.5,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "eyes",
+   "color": [
+    1.0,
+    0.7,
+    0.0
+   ],
+   "glow": 5,
+   "visible": true,
+   "scale": 0.14,
+   "at": [
+    -0.35,
+    11.3,
+    1.6
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "eyes2",
+   "color": [
+    1.0,
+    0.7,
+    0.0
+   ],
+   "glow": 5,
+   "visible": true,
+   "scale": 0.14,
+   "at": [
+    0.35,
+    11.3,
+    1.6
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "saucer",
+   "color": [
+    0.85,
+    0.85,
+    0.8
+   ],
+   "visible": false,
+   "scale": 0.35,
+   "at": [
+    2.0,
+    11.0,
+    3.0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "clay",
+   "color": [
+    0.6,
+    0.45,
+    0.3
+   ],
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    1.0,
+    8.0,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.7,
+    0.3
+   ],
+   "glow": 10,
+   "visible": false,
+   "scale": 0.4,
+   "at": [
+    -3.0,
+    11.0,
+    2.5
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Something lived inside the walls of this farmhouse. And it could talk.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "bounce"
+    ],
+    [
+     "eyes2",
+     "bounce"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE WALL TALKED"
+  },
+  {
+   "who": "gef",
+   "say": "Who's there? I can see you! I see everything from in here!",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "shake"
+    ],
+    [
+     "eyes2",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHO'S THERE?"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! The wall has eyes! Yellow eyes!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THE WALL HAS EYES"
+  },
+  {
+   "who": "narr",
+   "say": "New episode every day. Subscribe so you don't miss what happens next.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ],
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "They had run from the Pale Shepherd all night, down the mountain, across the sea.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "to:-5,7,0"
+    ],
+    [
+     "moth",
+     "to:-3.5,7,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "RUNNING FROM THE SHEPHERD"
+  },
+  {
+   "who": "odo",
+   "say": "A farmhouse. A light in the window. Maybe we can hide here.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "lamp",
+     "show"
+    ],
+    [
+     "odo",
+     "turn:front"
+    ]
+   ],
+   "text": "A PLACE TO HIDE?"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from the records of the Isle of Man.",
+   "cam": "wide",
+   "do": [
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "A lonely farm called Cashen's Gap, near the village of Dalby.",
+   "cam": "wide",
+   "do": [
+    [
+     "jim",
+     "to:3.5,9.5,0"
+    ],
+    [
+     "jim",
+     "turn:front"
+    ]
+   ],
+   "text": "CASHEN'S GAP, 1931"
+  },
+  {
+   "who": "narr",
+   "say": "In nineteen thirty-one, the Irving family lived here. James, Margaret and their daughter Voirrey.",
+   "cam": "two:jim,maggie",
+   "do": [
+    [
+     "maggie",
+     "to:5.5,9.8,0"
+    ],
+    [
+     "voirrey",
+     "to:1.8,9.2,0"
+    ]
+   ],
+   "text": "THE IRVING FAMILY"
+  },
+  {
+   "who": "jim",
+   "say": "At night we hear scratching behind the wooden panels. Then rustling.",
+   "cam": "close:jim",
+   "do": [
+    [
+     "jim",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SCRATCHING"
+  },
+  {
+   "who": "maggie",
+   "say": "And then... a voice. Coming out of the wall.",
+   "cam": "close:maggie",
+   "do": [
+    [
+     "maggie",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A VOICE"
+  },
+  {
+   "who": "narr",
+   "say": "The voice said it was a mongoose. Its name was Gef.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "bounce"
+    ],
+    [
+     "eyes2",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "MY NAME IS GEF"
+  },
+  {
+   "who": "gef",
+   "say": "I am an extra, extra clever mongoose!",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "spin"
+    ],
+    [
+     "eyes2",
+     "spin"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "EXTRA EXTRA CLEVER"
+  },
+  {
+   "who": "narr",
+   "say": "Gef said he came from India, and was born in eighteen fifty-two.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "shake"
+    ],
+    [
+     "eyes2",
+     "shake"
+    ]
+   ],
+   "text": "BORN IN 1852?"
+  },
+  {
+   "who": "moth",
+   "say": "Eighteen fifty-two? Odo, that mongoose is older than my grandma's grandma!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "80 YEARS OLD?"
+  },
+  {
+   "who": "narr",
+   "say": "The family left food for him in a saucer, hanging from the ceiling.",
+   "cam": "prop:saucer",
+   "do": [
+    [
+     "saucer",
+     "show"
+    ],
+    [
+     "saucer",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "FOOD FOR THE WALL"
+  },
+  {
+   "who": "voirrey",
+   "say": "He talks to me most of all. He sleeps in my room, he says.",
+   "cam": "close:voirrey",
+   "do": [
+    [
+     "voirrey",
+     "turn:front"
+    ]
+   ],
+   "text": "HE TALKS TO HER"
+  },
+  {
+   "who": "narr",
+   "say": "Gef said he guarded the house, and warned them of visitors and strange dogs.",
+   "cam": "wide",
+   "do": [
+    [
+     "eyes",
+     "bounce"
+    ],
+    [
+     "eyes2",
+     "bounce"
+    ],
+    [
+     "jim",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HE GUARDS THE HOUSE"
+  },
+  {
+   "who": "narr",
+   "say": "Many people said they heard the voice. Almost nobody ever saw him.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "vanish"
+    ],
+    [
+     "eyes2",
+     "vanish"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NOBODY SAW HIM"
+  },
+  {
+   "who": "odo",
+   "say": "The rule, Mothwick: if the wall talks back, don't answer it.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "DON'T ANSWER THE WALL"
+  },
+  {
+   "who": "moth",
+   "say": "Don't answer. Got it. My mouth is already closed. Mostly.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Newspapers all over Britain printed the story of the talking mongoose.",
+   "cam": "wide",
+   "do": [
+    [
+     "jim",
+     "exit"
+    ],
+    [
+     "maggie",
+     "exit"
+    ],
+    [
+     "voirrey",
+     "exit"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "IT WAS IN THE PAPERS"
+  },
+  {
+   "who": "narr",
+   "say": "In July nineteen thirty-five, the famous ghost hunter Harry Price came to see for himself.",
+   "cam": "close:price",
+   "do": [
+    [
+     "price",
+     "to:2,9.5,0"
+    ],
+    [
+     "price",
+     "turn:front"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "1935: THE GHOST HUNTER"
+  },
+  {
+   "who": "price",
+   "say": "I listened for days. Gef did not say one single word.",
+   "cam": "close:price",
+   "do": [
+    [
+     "price",
+     "shake"
+    ]
+   ],
+   "text": "NOT ONE WORD"
+  },
+  {
+   "who": "narr",
+   "say": "Price found that the wooden panels could carry a voice through the whole house.",
+   "cam": "wide",
+   "do": [
+    [
+     "wall1",
+     "bounce"
+    ],
+    [
+     "wall2",
+     "bounce"
+    ],
+    [
+     "wall3",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THE WALLS CARRY SOUND"
+  },
+  {
+   "who": "narr",
+   "say": "Hair said to be Gef's was sent to a scientist. It was dog hair.",
+   "cam": "close:mona",
+   "do": [
+    [
+     "mona",
+     "to:-1,8.5,0"
+    ],
+    [
+     "mona",
+     "turn:front"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "IT WAS DOG HAIR"
+  },
+  {
+   "who": "price",
+   "say": "I believe it came from Mona, the family's sheepdog.",
+   "cam": "close:price",
+   "do": [
+    [
+     "price",
+     "turn:mona"
+    ],
+    [
+     "mona",
+     "jump"
+    ]
+   ],
+   "text": "THE SHEEPDOG?"
+  },
+  {
+   "who": "narr",
+   "say": "Paw prints pressed in clay matched no known animal. And they were not a mongoose.",
+   "cam": "prop:clay",
+   "do": [
+    [
+     "clay",
+     "show"
+    ],
+    [
+     "clay",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO KNOWN ANIMAL"
+  },
+  {
+   "who": "odo",
+   "say": "So was it a trick? A voice thrown through the wall?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ],
+    [
+     "price",
+     "exit"
+    ]
+   ],
+   "text": "A TRICK?"
+  },
+  {
+   "who": "narr",
+   "say": "Some said so. But Voirrey said, until the end of her life, that Gef was real.",
+   "cam": "close:voirrey",
+   "do": [
+    [
+     "voirrey",
+     "to:1.5,9,0"
+    ],
+    [
+     "voirrey",
+     "turn:front"
+    ],
+    [
+     "mona",
+     "exit"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "SHE NEVER CHANGED HER STORY"
+  },
+  {
+   "who": "narr",
+   "say": "In nineteen forty-five the family left the farm. Nobody has solved the mystery.",
+   "cam": "wide",
+   "do": [
+    [
+     "voirrey",
+     "exit"
+    ],
+    [
+     "lamp",
+     "vanish"
+    ],
+    [
+     "clay",
+     "vanish"
+    ],
+    [
+     "saucer",
+     "vanish"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NEVER SOLVED"
+  },
+  {
+   "who": "moth",
+   "say": "Okay. The family is gone. The house is empty. So why is the wall still scratching?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "STILL SCRATCHING"
+  },
+  {
+   "who": "narr",
+   "say": "Two yellow eyes opened in the dark wood again.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "show"
+    ],
+    [
+     "eyes2",
+     "show"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE EYES ARE BACK"
+  },
+  {
+   "who": "gef",
+   "say": "Psst. Lantern-bearer. Someone tall is standing outside. He asked me where you are.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "shake"
+    ],
+    [
+     "eyes2",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SOMEONE IS OUTSIDE"
+  },
+  {
+   "who": "odo",
+   "say": "Don't answer it, Mothwick. Whatever it says, don't answer.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "text": "DON'T ANSWER"
+  },
+  {
+   "who": "narr",
+   "say": "Then the voice changed. It was no longer small, and no longer squeaky.",
+   "cam": "prop:eyes",
+   "do": [
+    [
+     "eyes",
+     "bounce"
+    ],
+    [
+     "eyes2",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE VOICE CHANGED"
+  },
+  {
+   "who": "shepherd",
+   "say": "I told the little one to keep you talking, lantern-bearer. And you did.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "to:-2,10,0"
+    ],
+    [
+     "shepherd",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE WAS INSIDE"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens in the next part? Tell me in the comments.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
