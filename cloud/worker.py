@@ -201,6 +201,16 @@ def do_uploads(st):
         if it["kind"] == "short" and (res.get("long") or {}).get("publish_at"):
             after = dt.datetime.fromisoformat(res["long"]["publish_at"].replace("Z", "+00:00")) + dt.timedelta(minutes=20)
         when = free_slot(st, it["kind"], after)
+        if it.get("loop_seconds") and os.path.exists(it["file"]) and os.path.getsize(it["file"]) > 3e9:
+            # 2026-10-26: a 9 GB stream-copied 3 h loop timed out on the home connection → rebuild it at ~1.8 Mbit/s
+            src = it.get("src") or os.path.join(ROOT, "cloud", "ready", CH, os.path.basename(it["file"]).rsplit("_", 1)[0] + ".mp4")
+            if os.path.exists(src):
+                small = it["file"][:-4] + "_unit.mp4"
+                sh(["ffmpeg", "-y", "-v", "error", "-i", src, "-c:v", "libx264", "-preset", "medium", "-b:v", "1800k", "-maxrate", "1800k",
+                    "-bufsize", "4M", "-g", "96", "-c:a", "aac", "-b:a", "128k", small], timeout=600)
+                sh(["ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", small, "-t", str(it["loop_seconds"]), "-c", "copy",
+                    "-movflags", "+faststart", it["file"]], timeout=3600)
+                log("rebuilt smaller long:", it["file"], os.path.getsize(it["file"]) // 2**20, "MB")
         try:
             vid = youtube_up.upload(yt(), it["file"], it["title"], desc, it.get("tags", []), when, CFG["kids"],
                                     CFG.get("category", "1"), it.get("localizations"), it.get("thumb"),
@@ -208,6 +218,14 @@ def do_uploads(st):
         except youtube_up.Quota as e:
             log("quota used up, later:", e)
             return False
+        except Exception as e:  # network timeout etc.: let the other pending videos go first, retry this one next run
+            if not it["job"].startswith("ready-") or len(st["pending"]) < 2 or it.get("_rotated"):
+                raise
+            log("upload failed, trying the others first:", it["job"], str(e)[:120])
+            it["_rotated"] = True
+            st["pending"].append(st["pending"].pop(0)); save_state(st)
+            continue
+        it.pop("_rotated", None)
         log("uploaded", it["kind"], vid, when, it["title"])
         st["taken"].append({"t": when, "kind": it["kind"]})
         entry = {"video": vid, "publish_at": when, "title": it["title"], "ball": it.get("ball")}
