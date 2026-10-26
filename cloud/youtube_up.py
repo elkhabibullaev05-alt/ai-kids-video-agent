@@ -34,7 +34,7 @@ def _reason(e):
         return str(e)
 
 
-def upload(yt, path, title, description, tags, publish_at, kids, category="1", localizations=None, thumb=None):
+def upload(yt, path, title, description, tags, publish_at, kids, category="1", localizations=None, thumb=None, synthetic=False):
     """Upload as private + scheduled (publish_at = RFC3339 UTC). Returns the video id."""
     body = {
         "snippet": {"title": title[:100], "description": description[:4900], "tags": tags[:30], "categoryId": category,
@@ -42,6 +42,8 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
         "status": {"privacyStatus": "private", "publishAt": publish_at, "selfDeclaredMadeForKids": bool(kids),
                    "embeddable": True},
     }
+    if synthetic:  # realistic AI footage → YouTube "altered or synthetic content" disclosure (2026-10-26)
+        body["status"]["containsSyntheticMedia"] = True
     parts = "snippet,status"
     if localizations:
         body["localizations"] = localizations
@@ -59,6 +61,8 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
             r = _reason(e)
             if "quota" in r.lower() or "uploadLimitExceeded" in r:
                 raise Quota(r)
+            if e.resp.status == 400 and body["status"].pop("containsSyntheticMedia", None) and attempt == 0:
+                continue  # API without the disclosure field → upload anyway, owner ticks it in Studio
             if e.resp.status == 400 and "localizations" in body and attempt == 0:
                 body.pop("localizations"); parts = "snippet,status"  # bad translation text → upload without it
                 continue

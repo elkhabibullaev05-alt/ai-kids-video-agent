@@ -202,7 +202,8 @@ def do_uploads(st):
         when = free_slot(st, it["kind"], after)
         try:
             vid = youtube_up.upload(yt(), it["file"], it["title"], desc, it.get("tags", []), when, CFG["kids"],
-                                    CFG.get("category", "1"), it.get("localizations"), it.get("thumb"))
+                                    CFG.get("category", "1"), it.get("localizations"), it.get("thumb"),
+                                    synthetic=it.get("synthetic", False))
         except youtube_up.Quota as e:
             log("quota used up, later:", e)
             return False
@@ -333,6 +334,33 @@ def small_thumb(src, dst):
         pass
 
 
+def take_ready(st):
+    """Ready-made videos (AI clips assembled by Claude): cloud/ready/<CH>/<name>.json + the mp4 next to it.
+    {"file": "<name>.mp4", "kind": "short"|"long", "title", "description", "tags": [], "synthetic": true}
+    The json moves to cloud/ready/<CH>/done/ once it is in the upload list (2026-10-26)."""
+    rd = os.path.join(ROOT, "cloud", "ready", CH)
+    added = 0
+    for jf in sorted(glob.glob(os.path.join(rd, "*.json"))):
+        try:
+            it = json.load(open(jf))
+            name = os.path.splitext(os.path.basename(jf))[0]
+            it["file"] = os.path.join(rd, it["file"])
+            if not os.path.exists(it["file"]):
+                continue
+            keep = os.path.join(HOME, "ready"); os.makedirs(keep, exist_ok=True)
+            dst = os.path.join(keep, os.path.basename(it["file"])); shutil.copy(it["file"], dst); it["file"] = dst
+            it.update(job="ready-" + name, kind=it.get("kind", "short"))
+            st["pending"].append(it); added += 1
+            os.makedirs(os.path.join(rd, "done"), exist_ok=True)
+            os.replace(jf, os.path.join(rd, "done", os.path.basename(jf)))
+            log("ready video queued for upload:", name)
+        except Exception as e:
+            log("bad ready file", jf, e)
+    if added:
+        save_state(st); push(f"{added} ready video(s) queued", [rd])
+    return added
+
+
 def main():
     pull()
     st = load_state()
@@ -344,6 +372,8 @@ def main():
     status("sync")
     sync_from_youtube(st); save_state(st)
     if not do_uploads(st):
+        status("quota_wait"); push("quota wait", [RES]); return
+    if take_ready(st) and not do_uploads(st):
         status("quota_wait"); push("quota wait", [RES]); return
     if len(st["pending"]) > 2:
         return
