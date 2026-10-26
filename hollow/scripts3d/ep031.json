@@ -1,0 +1,863 @@
+{
+ "title": "Ep 31 · Who Walked Behind Him in the Fog?",
+ "description": "What do you think happens in the next part? Tell me in the comments.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "hill",
+  "fog": 0.04,
+  "eyes": 2,
+  "moonlight": 14
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  },
+  "collie": {
+   "name": "Norman Collie",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.55,
+    0.42,
+    0.28
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    1.5,
+    12.0
+   ]
+  },
+  "welsh": {
+   "name": "Hugh Welsh",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.2,
+    0.3,
+    0.4
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "brother": {
+   "name": "His brother",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.4,
+    0.22,
+    0.15
+   ],
+   "kind": "human",
+   "size": 0.75,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "frere": {
+   "name": "Richard Frere",
+   "voice": "am_eric",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.25,
+    0.25,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    34
+   ]
+  },
+  "grey": {
+   "name": "The Grey Man",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.42,
+    0.44,
+    0.46
+   ],
+   "kind": "greyman",
+   "size": 1.5,
+   "home": [
+    7.0,
+    24.0
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "cairn",
+   "color": [
+    0.4,
+    0.4,
+    0.42
+   ],
+   "visible": true,
+   "scale": 1.2,
+   "at": [
+    7.0,
+    15.0,
+    0.6
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "mark",
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "visible": false,
+   "scale": 0.1,
+   "at": [
+    3.0,
+    14.0,
+    1.5
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "glory",
+   "color": [
+    0.7,
+    0.75,
+    0.9
+   ],
+   "glow": 0.9,
+   "visible": false,
+   "scale": 4.0,
+   "at": [
+    -5.0,
+    24.0,
+    6.0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.95,
+    0.9,
+    0.75
+   ],
+   "glow": 12,
+   "visible": false,
+   "scale": 1.4,
+   "at": [
+    14,
+    40,
+    16
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Something was walking behind them in the fog. And every step it took was far too long.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "grey",
+     "to:6,21,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "DON'T LOOK BACK"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! Every time we take a step, something takes one after us!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SOMETHING IS FOLLOWING"
+  },
+  {
+   "who": "odo",
+   "say": "Keep walking, Mothwick. Whatever you do, don't turn around.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ],
+    [
+     "moth",
+     "to:-4.5,7.5,0"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "KEEP WALKING"
+  },
+  {
+   "who": "narr",
+   "say": "New episode every day. Subscribe so you don't miss what happens next.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ],
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "They had run from the Oak Island pit, up and up, into the mountains of Scotland.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "to:-6,8,0"
+    ],
+    [
+     "moth",
+     "to:-4,8,0"
+    ],
+    [
+     "grey",
+     "to:30,40,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "RUNNING FROM THE PIT"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story, from the records of a famous mountain climber.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "show"
+    ],
+    [
+     "collie",
+     "jump"
+    ]
+   ],
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Ben Macdui. The highest mountain in the Cairngorms, and the second highest in Britain.",
+   "cam": "prop:cairn",
+   "do": [
+    [
+     "cairn",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "BEN MACDUI, SCOTLAND"
+  },
+  {
+   "who": "narr",
+   "say": "The year is eighteen ninety-one. A professor named Norman Collie is climbing alone.",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "turn:front"
+    ]
+   ],
+   "text": "1891: ALONE"
+  },
+  {
+   "who": "collie",
+   "say": "Thick mist all around me. I can hardly see the stones at my feet.",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THICK MIST"
+  },
+  {
+   "who": "odo",
+   "say": "He's alone up there? In this fog? That's the worst idea I've ever heard.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:collie"
+    ]
+   ],
+   "text": "ALONE IN THE FOG"
+  },
+  {
+   "who": "narr",
+   "say": "Near the top, Collie turned and started back down the mountain.",
+   "cam": "wide",
+   "do": [
+    [
+     "collie",
+     "to:-1,10,0"
+    ],
+    [
+     "grey",
+     "to:8,26,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "GOING DOWN"
+  },
+  {
+   "who": "collie",
+   "say": "Then I began to hear something else. Not just my own footsteps.",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SOMETHING ELSE"
+  },
+  {
+   "who": "narr",
+   "say": "He later said: for every few steps he took, he heard a crunch.",
+   "cam": "close:grey",
+   "do": [
+    [
+     "grey",
+     "to:7,23,0"
+    ],
+    [
+     "grey",
+     "turn:front"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "CRUNCH"
+  },
+  {
+   "who": "narr",
+   "say": "Then another crunch, as if someone was walking after him.",
+   "cam": "wide",
+   "do": [
+    [
+     "grey",
+     "to:6,22,0"
+    ],
+    [
+     "collie",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SOMEONE BEHIND HIM"
+  },
+  {
+   "who": "collie",
+   "say": "But the steps were three or four times longer than my own!",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "STEPS 4 TIMES LONGER"
+  },
+  {
+   "who": "moth",
+   "say": "Four times longer? Odo, how big are the legs on that thing?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "text": "HOW BIG?"
+  },
+  {
+   "who": "narr",
+   "say": "Collie saw nothing in the mist. But he was seized with terror.",
+   "cam": "close:grey",
+   "do": [
+    [
+     "grey",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HE SAW NOTHING"
+  },
+  {
+   "who": "narr",
+   "say": "He ran, and he did not stop for four or five miles.",
+   "cam": "wide",
+   "do": [
+    [
+     "collie",
+     "exit"
+    ],
+    [
+     "grey",
+     "to:2,20,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "HE RAN 5 MILES"
+  },
+  {
+   "who": "odo",
+   "say": "The rule, Mothwick: if footsteps follow you in the fog, don't look back.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "DON'T LOOK BACK"
+  },
+  {
+   "who": "moth",
+   "say": "Don't stop. Don't look. Got it. My wings are already running.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Collie kept this secret for thirty-four years.",
+   "cam": "wide",
+   "do": [
+    [
+     "grey",
+     "to:30,40,0"
+    ],
+    [
+     "collie",
+     "to:1.5,12,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "34 YEARS OF SILENCE"
+  },
+  {
+   "who": "narr",
+   "say": "Then, in December nineteen twenty-five, he told the Cairngorm Club in Aberdeen.",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "turn:front"
+    ]
+   ],
+   "text": "1925: HE TOLD THEM"
+  },
+  {
+   "who": "collie",
+   "say": "There is something very queer about the top of Ben Macdui. I will not go back there alone.",
+   "cam": "close:collie",
+   "do": [
+    [
+     "collie",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "I WILL NOT GO BACK"
+  },
+  {
+   "who": "narr",
+   "say": "The newspapers printed his words. And other climbers began to speak.",
+   "cam": "wide",
+   "do": [
+    [
+     "collie",
+     "exit"
+    ],
+    [
+     "welsh",
+     "to:0,12,0"
+    ],
+    [
+     "brother",
+     "to:3.5,12.5,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "OTHERS SPOKE UP"
+  },
+  {
+   "who": "narr",
+   "say": "In nineteen oh four, Hugh Welsh and his brother camped near the top.",
+   "cam": "two:welsh,brother",
+   "do": [
+    [
+     "welsh",
+     "turn:front"
+    ],
+    [
+     "brother",
+     "turn:welsh"
+    ]
+   ],
+   "text": "1904: TWO BROTHERS"
+  },
+  {
+   "who": "welsh",
+   "say": "Listen! Slow, slurring footsteps. Like someone walking through wet gravel.",
+   "cam": "close:welsh",
+   "do": [
+    [
+     "welsh",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SLURRING FOOTSTEPS"
+  },
+  {
+   "who": "brother",
+   "say": "But nobody is out there. I can see the whole ridge!",
+   "cam": "close:brother",
+   "do": [
+    [
+     "brother",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY IS THERE"
+  },
+  {
+   "who": "narr",
+   "say": "In nineteen forty-eight, a climber named Richard Frere felt a Presence on the summit.",
+   "cam": "close:frere",
+   "do": [
+    [
+     "welsh",
+     "exit"
+    ],
+    [
+     "brother",
+     "exit"
+    ],
+    [
+     "frere",
+     "to:1,12,0"
+    ],
+    [
+     "frere",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "1948: A PRESENCE"
+  },
+  {
+   "who": "frere",
+   "say": "Something I could not see. And a high, singing note in the air.",
+   "cam": "close:frere",
+   "do": [
+    [
+     "frere",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A SINGING NOTE"
+  },
+  {
+   "who": "narr",
+   "say": "People started calling it Am Fear Liath Mor. The Big Grey Man.",
+   "cam": "close:grey",
+   "do": [
+    [
+     "grey",
+     "to:6,21,0"
+    ],
+    [
+     "grey",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE BIG GREY MAN"
+  },
+  {
+   "who": "moth",
+   "say": "Odo. The fog in front of us. It's moving.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "shake"
+    ],
+    [
+     "frere",
+     "exit"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "IT'S MOVING"
+  },
+  {
+   "who": "narr",
+   "say": "Through the mist rose a giant grey shape, as tall as a house.",
+   "cam": "wide",
+   "do": [
+    [
+     "glory",
+     "show"
+    ],
+    [
+     "all",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "AS TALL AS A HOUSE"
+  },
+  {
+   "who": "odo",
+   "say": "Wait, Mothwick. Lift your wing. Now drop it.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "turn:moth"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "LIFT YOUR WING"
+  },
+  {
+   "who": "narr",
+   "say": "The giant lifted its wing too. It was Mothwick's own shadow, thrown onto the cloud.",
+   "cam": "wide",
+   "do": [
+    [
+     "glory",
+     "bounce"
+    ],
+    [
+     "moth",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "IT WAS A SHADOW"
+  },
+  {
+   "who": "narr",
+   "say": "Scientists call it a Brocken spectre. Your shadow on the mist can look like a giant.",
+   "cam": "wide",
+   "do": [
+    [
+     "glory",
+     "bounce"
+    ]
+   ],
+   "text": "A BROCKEN SPECTRE"
+  },
+  {
+   "who": "narr",
+   "say": "Others blame tired minds, wind noise, or the lonely dark.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "happy"
+    ]
+   ],
+   "text": "SHADOWS AND WIND?"
+  },
+  {
+   "who": "moth",
+   "say": "So it was just me! Phew. I scared myself.",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "happy"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "JUST A SHADOW"
+  },
+  {
+   "who": "narr",
+   "say": "But a shadow makes no sound. And nobody has explained the footsteps.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "glory",
+     "vanish"
+    ],
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "BUT THE FOOTSTEPS..."
+  },
+  {
+   "who": "narr",
+   "say": "They stood perfectly still. And behind them, something took one long step.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THEY STOPPED. IT DIDN'T."
+  },
+  {
+   "who": "shepherd",
+   "say": "Such long steps, lantern-bearer. I have walked behind you all night.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "to:-2,11,0"
+    ],
+    [
+     "shepherd",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT WAS BEHIND THEM"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens in the next part? Tell me in the comments.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}

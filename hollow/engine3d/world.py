@@ -1,7 +1,7 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
 SET.place: forest | hill | clearing | graveyard | swamp | village | chapel
-Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | human
+Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | greyman | human
 """
 TOD = "night"
 PLACE = SET.get("place", "forest")
@@ -249,6 +249,16 @@ def _shape(key, kind, s, ch):
                 bpy.ops.mesh.primitive_cone_add(radius1=0.04 * s, depth=0.45 * s, location=(sx * 1.35 * s + fx * s, -0.95 * s, 3.75 * s), rotation=(math.radians(-60), 0, 0)); parent(add(_o(), mat("claw", (0.7, 0.7, 0.75), 0.2, 1.0)), o)
         o.location.z += 0.35 * s
         return o, 2.7 * s, 1.4 * s, 8.0 * s, -0.4 * s, 6.1 * s
+    if kind == "greyman":  # Grey Man of Ben Macdui (Am Fear Liath Mor): very tall grey hooded shape half lost in the mist, long arms, long legs, pale grey face (front = -y)
+        fur = mat(f"gm_{key}", col, 0.95, 0, 0.18)
+        bpy.ops.mesh.primitive_cone_add(vertices=12, radius1=1.1 * s, radius2=0.75 * s, depth=4.2 * s, location=(0, 0, 2.6 * s)); o = add(_o(), fur)
+        for sx in (-1, 1):
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.22 * s, depth=1.6 * s, location=(sx * 0.45 * s, 0, 0.6 * s)); parent(add(_o(), fur), o)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.16 * s, depth=3.4 * s, location=(sx * 1.05 * s, -0.15 * s, 3.0 * s), rotation=(0, sx * math.radians(-10), 0)); parent(add(_o(), fur), o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.95 * s, location=(0, 0.05 * s, 4.75 * s)); sh = add(_o(), fur); sh.scale = (1.35, 0.8, 0.45); parent(sh, o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.62 * s, location=(0, 0.05 * s, 5.45 * s)); hd = add(_o(), fur); hd.scale = (1, 1, 1.15); parent(hd, o)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.42 * s, location=(0, -0.3 * s, 5.35 * s)); fc = add(_o(), mat(f"gmf_{key}", (0.62, 0.64, 0.66), 0.7, 0, 0.25)); fc.scale = (0.9, 0.6, 1.1); parent(fc, o)
+        return o, 2.6 * s, 1.6 * s, 6.1 * s, -0.55 * s, 5.45 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -282,7 +292,7 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged", "demon", "flatwoods"):
+    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman"):
         mo.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]
