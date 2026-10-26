@@ -33,7 +33,7 @@ STATE_F = os.path.join(HOME, "state.json")
 TOKEN = os.path.join(HOME, "token.json")
 BL = os.environ.get("BLENDER", "/opt/bl/blender-4.2.3-linux-x64/blender")
 PY = sys.executable
-ENG = os.path.join(ROOT, CFG["engine"])
+ENG = os.path.join(ROOT, CFG["engine"]) if CFG.get("engine") != "none" else ""
 Q, DONE, REJ, RES = (os.path.join(ROOT, "cloud", d, CH) for d in ("queue", "done", "rejected", "results"))
 GATE = 85
 NOW = dt.datetime.now(dt.timezone.utc)
@@ -348,7 +348,14 @@ def take_ready(st):
             if not os.path.exists(it["file"]):
                 continue
             keep = os.path.join(HOME, "ready"); os.makedirs(keep, exist_ok=True)
-            dst = os.path.join(keep, os.path.basename(it["file"])); shutil.copy(it["file"], dst); it["file"] = dst
+            dst = os.path.join(keep, os.path.basename(it["file"]))
+            if it.get("loop_seconds"):  # e.g. a seamless 4 s rain unit → 3 h video, stream copy, takes seconds
+                dst = os.path.splitext(dst)[0] + f"_{int(it['loop_seconds'])}s.mp4"
+                sh(["ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", it["file"], "-t", str(it["loop_seconds"]),
+                    "-c", "copy", "-movflags", "+faststart", dst], timeout=3600)
+            else:
+                shutil.copy(it["file"], dst)
+            it["file"] = dst
             it.update(job="ready-" + name, kind=it.get("kind", "short"))
             st["pending"].append(it); added += 1
             os.makedirs(os.path.join(rd, "done"), exist_ok=True)
@@ -375,6 +382,8 @@ def main():
         status("quota_wait"); push("quota wait", [RES]); return
     if take_ready(st) and not do_uploads(st):
         status("quota_wait"); push("quota wait", [RES]); return
+    if CFG.get("ready_only"):
+        status("ok"); push("ready-only run", [RES]); return
     if len(st["pending"]) > 2:
         return
     need = CFG["per_day"]["long"] * 2  # keep two days of long videos scheduled
