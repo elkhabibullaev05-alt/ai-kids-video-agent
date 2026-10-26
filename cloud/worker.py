@@ -122,7 +122,8 @@ def yt():
         # safety: upload only with a token that belongs to THIS channel. If the owner picked the channels in a
         # different order while signing in, the right token sits in another channel's folder — use that one.
         seen = []
-        for tok in [TOKEN] + sorted(glob.glob(os.path.join(os.path.dirname(HOME), "*", "token.json"))):
+        for tok in [TOKEN] + sorted(glob.glob(os.path.join(os.path.dirname(HOME), "*", "token.json"))) + \
+                sorted(glob.glob("/mnt/c/Users/*/Documents/*/token.json")):  # the owner's local agents (sleeptube…), read only
             if tok in seen or not os.path.exists(tok):
                 continue
             seen.append(tok)
