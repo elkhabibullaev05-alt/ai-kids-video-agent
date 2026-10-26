@@ -60,6 +60,16 @@ The owner's reference reels (Pommi, 3D character series, 8K–63K likes each) wo
 - Shorts from the long episode keep the episode number in the title ("Ep 12"), so people binge the series.
 - Everything else above (real-life places, kids flags, retention, look-alike rules) still applies.
 
+## Bolt, Hollowmere, Dough Bros — Pommi-style serial (owner, 2026-10-26, from today)
+Keep each channel's genre and cast kinds (Bolt = gentle car detective mystery, Hollowmere = true-story gothic tale, Dough Bros = creepy-cute kitchen comedy), but tell them like the owner's reference series:
+- **One continuing serial per channel.** Title starts with the episode number ("Ep 14 · …"). Every episode opens on the consequence of the last cliffhanger and ends on a new one.
+- **Animal/creature world feel.** Where the cast has animals or creatures (Hollowmere crow, gloamhound, moth, Odo; Max cast for crossovers), let them talk and act together as a group, like Pommi among the hyenas. Use the most "forest / village / market" places each engine has: Hollowmere `forest`, `village`, `clearing`; Dough Bros `garden` and `pantry` (the pantry shelves as a busy market stall row), `table` as the village square; Bolt's town street as the market day in Wheelburg. (New places such as a real market need engine work — do not invent a `set.place` the engine doesn't have.)
+- **Long first, Shorts cut from it** (as now: `shorts[].beat` points into the long). Short 1 = the hook moment, Short 2 = the cliffhanger with "Full episode on the channel".
+- **Start and end lines in the long:**
+  - Dough Bros and Hollowmere (13+, not for kids): after the 3-s hook, one short line by the Narrator: "New episode every day — subscribe so you don't miss what happens next." At the very end, the Narrator asks: "What do you think happens in the next part? Tell me in the comments." Put the same question as the first line of the description.
+  - Inspector Bolt (Made for Kids): no subscribe or comment lines (kids rule above). End with the Narrator: "What do you think Bolt will find next time? We'll find out in the next episode!"
+- Everything else (retention, real-life feelings, look-alike rules, word counts, rek-ball) still applies.
+
 ## Ask Studio advice (2026-10-20) — read `cloud/growth/ask_studio_*.md` (newest) before writing
 
 **maxcat**
