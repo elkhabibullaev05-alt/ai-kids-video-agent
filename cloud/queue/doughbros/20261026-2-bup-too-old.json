@@ -1,0 +1,930 @@
+{
+ "id": "20261026-2-bup-too-old",
+ "plot": "On Wednesday evening in the pantry Bup packs a napkin suitcase because Mom's list says 'Thursday: throw out the old bread'; Lolly's fresh-bread makeover fails when Zeek's poke proves Bup is rock hard, Dad pats Bup like a goodbye, but on a wobbly tower at the fridge Lolly reads the back of the list — the old bread is the green rolls, and the stale loaf is kept for Mia's birthday French toast (the eggs and cinnamon were the clue) — and two nights later Dad carries in a scratching box with holes.",
+ "script": {
+  "title": "Is Bup Too Old to Stay in Our Kitchen",
+  "set": {
+   "place": "pantry",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "suitcase",
+    "type": "box",
+    "color": [
+     0.95,
+     0.93,
+     0.88
+    ],
+    "on": null,
+    "at": [
+     -9,
+     9,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "eggs",
+    "type": "box",
+    "color": [
+     0.85,
+     0.75,
+     0.55
+    ],
+    "on": null,
+    "at": [
+     3,
+     13,
+     0.5
+    ],
+    "visible": false,
+    "scale": 1.3
+   },
+   {
+    "id": "rolls",
+    "type": "ball",
+    "color": [
+     0.45,
+     0.6,
+     0.35
+    ],
+    "on": null,
+    "at": [
+     12,
+     15,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Is tomorrow really my last day in this kitchen?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-8,8"
+     ],
+     [
+      "suitcase",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup, stop! Put down that napkin suitcase right now!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-6,7"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THROWN OUT TOMORROW?",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Wednesday sunset. Mom's list says: Thursday, throw out the old bread.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm eleven days old. In bread years, that's a grandpa.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Eleven days? I'm a dry bean. I've been here two years!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Odd clue. Mom bought eggs, milk and cinnamon today. Lots of cinnamon.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,11"
+     ],
+     [
+      "eggs",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Who cares about eggs? We have one night to save Bup!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And what's that smell from the back shelf? Something smells green.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I got burnt in the toaster once. They threw me out too.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I rolled back in under the door. Took me all night.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I don't want to sneak back in. I want to belong here.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then you'll look fresh by morning. Makeover. Right now.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "lolly",
+      "to:-5,8"
+     ]
+    ]
+   },
+   {
+    "text": "OPERATION: FRESH BREAD",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly dusts Bup with flour. Pim polishes his crust with a napkin.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-7,6"
+     ],
+     [
+      "lolly",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Hold still! You're shedding! Why are you shedding?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Old bread sheds, Pim! It's what we do!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fresh bread is soft. One gentle poke will prove it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek pokes Bup. Bup does not squish. Zeek bends a corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ow! He's a brick! A kind, lovely, very hard brick!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A warm bath? Bread loves a warm bath, right?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Soggy is worse, Pim. Soggy bread goes out first.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If Mom touches a hard loaf tomorrow, it's straight into the bin!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE BIN",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "Maybe that's fine. I had a good run. I saw two Christmases.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Don't say that! You taught me to stop shaking. Mostly.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-6,6"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You're the reason this pantry is a team, Bup.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup looks at his friends. For a moment, nobody says anything.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "text": "CREAK... CREAK...",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "Footsteps! Somebody's coming downstairs! Everyone, lie still!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Play bread. Play bread. I am a normal bean.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad shuffles in for a glass of water. He sees Bup.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad gives Bup a little pat. Then he yawns and leaves.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "He patted me. Like a goodbye. It really is my last night.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then read the list once more. Every word. Up close.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The list hangs on the fridge with a lemon magnet. Very high.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Tower! Pim on Zeek, me on Pim, Bup right on top!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "pim",
+      "to:-1,10"
+     ],
+     [
+      "zeek",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why am I always the middle? The middle shakes the most!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WOBBLE... WOBBLE...",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "Thursday. Throw out the old bread. Same words. It's me.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait! There's writing on the back! It's showing through the paper!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Old bread means the green rolls in the back. Not the loaf.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "rolls",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Keep the loaf. Stale bread makes the best French toast. Mia's birthday!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "FRENCH TOAST?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "zeek",
+    "say": "The eggs! The milk! The cinnamon! It was a breakfast plan!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "eggs",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Dry bread soaks up the egg. Fresh bread just goes soggy.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "So the green smell was the real old bread! Phew!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ],
+     [
+      "rolls",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So being old is exactly why they need me?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Being you is why they need you. Now unpack that suitcase.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "suitcase",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "text": "BUP STAYS!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "happy"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mia's birthday breakfast. Made from me. Best job in the house.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two nights later, the front door opens very, very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "scratch... scratch...",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pim",
+    "say": "Dad just carried in a big box. With holes. And it's scratching.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT'S IN THE BOX?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "Is Bup Too Old to Stay in Our Kitchen? 😢",
+  "description": "\"I've been here longer than anyone. Does that make me the first to go?\" — Bup\nMom's list says the old bread goes in the bin tomorrow, and Bup is sure it means him. The Dough Bros have one evening to change his mind. Would you have read the back of the note? 👇\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "bup",
+   "french toast",
+   "stale bread",
+   "funny animation",
+   "friendship",
+   "kitchen"
+  ],
+  "thumb_text": "THROWN OUT?!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¿Bup es demasiado viejo para quedarse en la cocina? 😢",
+    "description": "\"Llevo aquí más que nadie. ¿Eso me hace el primero en irme?\" — Bup\nLa lista de mamá dice que el pan viejo va a la basura mañana, y Bup está seguro de que habla de él. Los Dough Bros tienen una tarde para hacerle cambiar de idea. ¿Tú habrías leído el reverso de la nota? 👇\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O Bup está velho demais para ficar na cozinha? 😢",
+    "description": "\"Estou aqui há mais tempo que todos. Isso me faz o primeiro a ir embora?\" — Bup\nA lista da mamãe diz que o pão velho vai pro lixo amanhã, e o Bup tem certeza de que é ele. Os Dough Bros têm uma noite para mudar a cabeça dele. Você teria lido o verso do bilhete? 👇\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "هل باب أكبر من أن يبقى في مطبخنا؟ 😢",
+    "description": "\"أنا هنا منذ أطول من الجميع. هل يجعلني ذلك أول من يرحل؟\" — باب\nقائمة الأم تقول إن الخبز القديم سيُرمى غدًا، وباب متأكد أنها تقصده. لدى الدو بروز مساء واحد ليغيّروا رأيه. هل كنت ستقرأ ظهر الورقة؟ 👇\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Bup est-il trop vieux pour rester dans la cuisine ? 😢",
+    "description": "« Je suis là depuis plus longtemps que tout le monde. Ça fait de moi le premier à partir ? » — Bup\nLa liste de maman dit que le vieux pain part à la poubelle demain, et Bup est sûr qu'il s'agit de lui. Les Dough Bros ont une soirée pour le faire changer d'avis. Vous auriez lu le dos du mot ? 👇\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "バップはもう古すぎてキッチンにいられない？😢",
+    "description": "「ぼくは誰よりも長くここにいる。だから最初に捨てられるの？」— バップ\nママのメモには「明日、古いパンを捨てる」。バップは自分のことだと思い込む。ドウ・ブロスに残された時間はひと晩だけ。きみならメモの裏まで読んだ？👇\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "밥은 너무 늙어서 부엌에 못 남는 걸까? 😢",
+    "description": "\"나는 누구보다 오래 여기 있었어. 그래서 제일 먼저 버려지는 걸까?\" — 밥\n엄마의 목록에는 내일 오래된 빵을 버린다고 적혀 있고, 밥은 그게 자기라고 확신한다. 도우 브로스에게 남은 시간은 하룻저녁뿐. 너라면 쪽지 뒷면까지 읽었을까? 👇\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Ist Bup zu alt, um in unserer Küche zu bleiben? 😢",
+    "description": "„Ich bin länger hier als alle anderen. Muss ich deshalb als Erster gehen?“ — Bup\nAuf Mamas Liste steht, dass das alte Brot morgen in den Müll kommt, und Bup ist sicher, dass er gemeint ist. Die Dough Bros haben einen Abend, um ihn umzustimmen. Hättest du die Rückseite gelesen? 👇\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 17,
+   "dur": 25,
+   "top": "IS BUP TOO OLD?",
+   "title": "Ep 2: The Fresh-Bread Test Goes Wrong 😂 #shorts",
+   "description": "One poke to prove Bup is still fresh. It does not go well. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "bup",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 2: La prueba del pan fresco sale mal 😂 #shorts",
+     "description": "Un toque para probar que Bup sigue fresco. No sale bien. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 2: O teste do pão fresco dá errado 😂 #shorts",
+     "description": "Uma cutucada para provar que o Bup ainda está fresco. Não dá certo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 2: اختبار الخبز الطازج يفشل 😂 #shorts",
+     "description": "نكزة واحدة لإثبات أن باب ما زال طازجًا. لم تنجح أبدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 2 : Le test du pain frais tourne mal 😂 #shorts",
+     "description": "Une pichenette pour prouver que Bup est encore frais. Ça se passe mal. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第2話：焼きたてテスト、大失敗 😂 #shorts",
+     "description": "バップがまだ新鮮か、ひと突きで確かめるはずが…。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "2화: 갓 구운 빵 테스트 대실패 😂 #shorts",
+     "description": "밥이 아직 신선한지 한 번 찔러 보기로 했는데… 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 2: Der Frischbrot-Test geht schief 😂 #shorts",
+     "description": "Ein Piks soll beweisen, dass Bup noch frisch ist. Klappt nicht. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

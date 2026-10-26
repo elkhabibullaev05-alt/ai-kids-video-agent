@@ -1,0 +1,945 @@
+{
+ "id": "20261027-1-pim-puppy-dare",
+ "plot": "At 4 a.m. on Mia's birthday the new puppy cries in its basket on the kitchen floor; Lolly's lullaby makes it howl and Crispy's warmth isn't enough, so Bup dares scared Pim to sleep in the basket, and Pim realizes the puppy misses its mother's heartbeat — like the quiet it got when the wind-up timer ticked beside it — so the bros wrap the ticking timer in a towel and the puppy sleeps, but at six the basket is empty and tiny paw prints lead to the table where Mom left the birthday cake.",
+ "script": {
+  "title": "Bup Dared Pim to Sleep in the Puppys Bed",
+  "set": {
+   "place": "kitchen",
+   "time": "dawn"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.35,
+     0.55,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     0,
+     12,
+     0.6
+    ],
+    "visible": true,
+    "scale": 2.2
+   },
+   {
+    "id": "timer",
+    "type": "ball",
+    "color": [
+     0.95,
+     0.95,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     9,
+     14,
+     0.4
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "Why won't the puppy stop crying? It's been crying for hours!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,8"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Cover your ears, Pim! And keep your voice down!",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "text": "AWOOOOO...",
+    "cam": "prop:basket",
+    "hold": 1.2,
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Four in the morning. The puppy's basket sits on the floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If Mia hears this, her birthday surprise is ruined. Totally ruined.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Basic checklist. Hungry? Its bowl is full. Cold? It has a blanket.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:basket"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek bumps the old kitchen timer. It rolls over, ticking.",
+    "cam": "wide",
+    "do": [
+     [
+      "timer",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "For three seconds, the puppy goes quiet.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "timer",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "See? It's calming down. It needs music. Let me sing.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,10"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Hush little puppy, don't you cry, Lolly will sing you a...",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "AWOOOOOOOO!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "crispy",
+    "say": "It's howling with you. It thinks you're a dog.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I am a professional cookie! I do not howl!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Technically, you howled first. Then it joined in.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Upstairs, a bed creaked! Somebody's waking up!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "CREAK...",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "If Mom comes down now, she finds the puppy and us!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The creak stops. Somebody just rolled over. Everybody breathes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'll try. Puppies like warm things. I'm the warmest thing here.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy sits by the basket. The crying gets softer. It doesn't stop.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Warm isn't enough. It wants something I don't have.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Maybe it's the dark. Let's open the fridge door a crack.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-8,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bad idea. Fridges beep when they're left open.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The fridge beeps. The puppy cries louder. Now with beeping.",
+    "cam": "wide",
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "lolly",
+      "to:4,8"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then somebody has to sleep right next to it. Inside the basket.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim. I dare you. Sleep in the puppy's basket tonight.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "text": "THE DARE",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pim",
+    "say": "Me? I'm scared of the dark! Of the fridge hum! Of spoons!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-6,6"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "That's exactly why, Pim. You know what scared feels like.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-4,7"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Okay. Okay. If I faint, put me back in my jar.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Deal. And I'll never call you a scaredy-bean again.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim climbs into the basket. A huge, wet puppy nose sniffs him.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Hi. I'm Pim. I'm also terrified. We can be terrified together.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Look. It's shaking too. Both of them are shaking.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The puppy presses its ear against Pim's chest. And gets quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "basket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's listening to my heartbeat. My silly, fast heartbeat.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's not scared of the dark. It misses its mom's heartbeat.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "When I left my bean jar, I missed the rattling. Every night.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh, Pim. You never told us that.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "But you can't stay in that basket forever, Pim.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I don't have to. Remember? It went quiet for the ticking!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "TICK... TICK... TICK...",
+    "cam": "prop:timer",
+    "hold": 1.2,
+    "do": [
+     [
+      "timer",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "Ticking sounds like a heartbeat! Wrap it in a dish towel!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "zeek",
+      "to:7,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Zeek roll the timer, wrapped in a towel, inside.",
+    "cam": "wide",
+    "do": [
+     [
+      "timer",
+      "to:pim"
+     ],
+     [
+      "bup",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The puppy curls around it. One tiny sigh. Then nothing. Asleep.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "basket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "...SHHH...",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, the scaredest bean in the kitchen, just saved the birthday.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Brave isn't not being scared. Brave is lying next to it anyway.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I was so brave. I need a very long nap.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim falls asleep beside the puppy. The sun starts to rise.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At six, Pim wakes up. The basket is empty.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "timer",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Where's the puppy? Guys! Tiny paw prints! Going to the table!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-2,13"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "The table? That's where Mom left Mia's birthday cake!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE CAKE!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "look:bup"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "Bup Dared Pim to Sleep in the Puppy's Bed 🐶",
+  "description": "\"I'm scared of everything. That's why I knew what it needed.\" — Pim\nThe new puppy won't stop crying in the kitchen at 4 a.m., and if Mia hears it, her birthday surprise is ruined. Lolly's lullaby backfires, so Bup dares the most scared bean of all. Did your puppy cry on its first night too? 👇\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "pim",
+   "puppy first night",
+   "crying puppy",
+   "ticking clock trick",
+   "funny animation",
+   "dare"
+  ],
+  "thumb_text": "SLEEP WITH IT?!",
+  "thumb_beat": 27,
+  "localizations": {
+   "es": {
+    "title": "Bup retó a Pim a dormir en la cama del cachorro 🐶",
+    "description": "\"Le tengo miedo a todo. Por eso supe lo que necesitaba.\" — Pim\nEl cachorro nuevo no deja de llorar en la cocina a las 4 a. m., y si Mia lo oye, su sorpresa de cumpleaños se arruina. La nana de Lolly sale fatal, así que Bup reta al frijol más miedoso de todos. ¿Tu cachorro también lloró la primera noche? 👇\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Bup desafiou Pim a dormir na caminha do filhote 🐶",
+    "description": "\"Eu tenho medo de tudo. Por isso eu sabia do que ele precisava.\" — Pim\nO filhote novo não para de chorar na cozinha às 4 da manhã, e se a Mia ouvir, a surpresa de aniversário acaba. A canção de ninar da Lolly dá errado, então o Bup desafia o feijão mais medroso de todos. Seu filhote também chorou na primeira noite? 👇\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "باب يتحدى بيم أن ينام في سرير الجرو 🐶",
+    "description": "\"أنا أخاف من كل شيء. لهذا عرفت ما يحتاجه.\" — بيم\nالجرو الجديد لا يتوقف عن البكاء في المطبخ في الرابعة فجرًا، وإن سمعته ميا فستفسد مفاجأة عيد ميلادها. تهويدة لولي تأتي بنتيجة عكسية، فيتحدى باب أكثر حبة فاصولياء خوفًا. هل بكى جروك في ليلته الأولى أيضًا؟ 👇\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Bup défie Pim de dormir dans le lit du chiot 🐶",
+    "description": "« J'ai peur de tout. C'est pour ça que j'ai su ce qu'il lui fallait. » — Pim\nLe nouveau chiot pleure sans arrêt dans la cuisine à 4 h du matin, et si Mia l'entend, la surprise d'anniversaire est fichue. La berceuse de Lolly tourne mal, alors Bup lance un défi au haricot le plus peureux de tous. Votre chiot a pleuré la première nuit aussi ? 👇\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "バップの挑戦：ピム、子犬のベッドで寝られる？🐶",
+    "description": "「ぼくは何でもこわい。だから、この子に必要なものがわかったんだ。」— ピム\n朝4時、新しい子犬がキッチンで泣きやまない。ミアに聞こえたら誕生日サプライズは台なし。ロリーの子守歌は逆効果。そこでバップは、いちばんこわがりの豆に挑戦状を出す。きみの子犬も最初の夜は泣いた？👇\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "밥의 도전: 핌, 강아지 침대에서 잘 수 있어? 🐶",
+    "description": "\"난 모든 게 무서워. 그래서 얘한테 뭐가 필요한지 알았어.\" — 핌\n새벽 4시, 새 강아지가 부엌에서 울음을 멈추지 않는다. 미아가 들으면 생일 깜짝 선물은 끝이다. 롤리의 자장가는 역효과, 그래서 밥은 가장 겁 많은 콩에게 도전장을 내민다. 너희 강아지도 첫날 밤에 울었어? 👇\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Bup fordert Pim heraus: im Welpenbett schlafen 🐶",
+    "description": "„Ich habe vor allem Angst. Deshalb wusste ich, was er braucht.“ — Pim\nDer neue Welpe hört um 4 Uhr morgens in der Küche nicht auf zu weinen, und wenn Mia ihn hört, ist die Geburtstagsüberraschung dahin. Lollys Schlaflied geht nach hinten los, also fordert Bup die ängstlichste Bohne von allen heraus. Hat dein Welpe in der ersten Nacht auch geweint? 👇\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 8,
+   "dur": 25,
+   "top": "LOLLY'S LULLABY…",
+   "title": "Ep 4: Lolly Sings, the Puppy HOWLS 🐶 #shorts",
+   "description": "A lullaby for the crying puppy. It does not go as planned. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lolly",
+    "puppy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 4: Lolly canta y el cachorro AÚLLA 🐶 #shorts",
+     "description": "Una nana para el cachorro que llora. No sale como esperaban. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 4: A Lolly canta e o filhote UIVA 🐶 #shorts",
+     "description": "Uma canção de ninar para o filhote chorão. Não sai como planejado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 4: لولي تغني والجرو يعوي 🐶 #shorts",
+     "description": "تهويدة للجرو الباكي، لكن الأمور لا تسير كما خُطط لها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 4 : Lolly chante, le chiot HURLE 🐶 #shorts",
+     "description": "Une berceuse pour le chiot qui pleure. Rien ne se passe comme prévu. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第4話：ロリーが歌うと子犬が遠吠え 🐶 #shorts",
+     "description": "泣く子犬に子守歌。でも、思ったようにはいかない。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "4화: 롤리가 노래하자 강아지가 울부짖다 🐶 #shorts",
+     "description": "우는 강아지에게 자장가를 불러 줬는데… 계획대로 안 된다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 4: Lolly singt, der Welpe HEULT 🐶 #shorts",
+     "description": "Ein Schlaflied für den weinenden Welpen. Läuft nicht nach Plan. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 24,
+   "dur": 30,
+   "top": "WOULD YOU DO IT?",
+   "title": "Ep 4: Scariest Dare for a Scared Bean 😨 #shorts",
+   "description": "Pim is scared of everything. Now he has to sleep in the puppy's basket. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "pim",
+    "dare"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 4: El reto más duro para un frijol miedoso 😨 #shorts",
+     "description": "Pim le tiene miedo a todo. Ahora debe dormir en la cesta del cachorro. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 4: O desafio mais difícil pro feijão medroso 😨 #shorts",
+     "description": "O Pim tem medo de tudo. Agora ele precisa dormir na caminha do filhote. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 4: أصعب تحدٍّ لحبة فاصولياء خائفة 😨 #shorts",
+     "description": "بيم يخاف من كل شيء، والآن عليه أن ينام في سلة الجرو. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 4 : Le pire défi pour un haricot peureux 😨 #shorts",
+     "description": "Pim a peur de tout. Il doit maintenant dormir dans le panier du chiot. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第4話：こわがりの豆に一番こわい挑戦 😨 #shorts",
+     "description": "何でもこわいピムが、子犬のかごで寝ることに。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "4화: 겁쟁이 콩에게 가장 무서운 도전 😨 #shorts",
+     "description": "모든 게 무서운 핌이 이제 강아지 바구니에서 자야 한다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 4: Die härteste Mutprobe für eine Angstbohne 😨 #shorts",
+     "description": "Pim hat vor allem Angst. Jetzt soll er im Welpenkorb schlafen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

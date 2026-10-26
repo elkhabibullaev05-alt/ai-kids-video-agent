@@ -1,0 +1,937 @@
+{
+ "id": "20261026-1-what-keeps-chirping",
+ "plot": "At 2 a.m. a chirp keeps the Dough Bros awake; Crispy climbs to the smoke alarm and finds it fine, the sound bounces off the tiles until Lolly notices two little notes and everyone's pointing leads to the fridge gap, where a hidden gift bag holds Mia's musical birthday card with a dead battery, Bup presses it shut, and Mom's to-do list underneath says 'Thursday: throw out the old bread' — and Bup is the old bread.",
+ "script": {
+  "title": "What Keeps Chirping in Our Kitchen at 2 AM",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": [
+     0.95,
+     0.75,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     -15,
+     14,
+     0.4
+    ],
+    "visible": false,
+    "scale": 1.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "What keeps chirping at two in the morning? Is something on fire?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,8"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, stop running in circles! Sniff. Nothing is burning.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "text": "CHIRP!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Two a.m. in a family kitchen. One tiny chirp. Then silence.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One high chirp, every forty seconds. That's a smoke alarm battery.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A dying smoke alarm? Then who warns us about fires?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Shh! Mia has school tomorrow. Nobody wakes this family up.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,7"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we find it and stop it ourselves. Quietly. Spread out.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "text": "CHIRP!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. Did you hear that? Two little notes at the very end.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ],
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Smoke alarms don't sing, Lolly. You're just sleepy.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The smoke alarm is on the ceiling. The bros are tiny.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'll climb the curtain. Nobody ever worries about a burnt rock.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-10,14"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I worry! If you fall, you'll crack in half!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy climbs the curtain, slowly, all the way to the ceiling.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The light up here is green. This alarm is perfectly fine.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "THEN WHAT IS IT?",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bup",
+    "say": "If it's not the alarm, something else in here is dying.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Something in our kitchen is dying? I need to lie down.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Logically, we test every machine with a battery. Follow me.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:12,14"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The fridge hums. The fridge always hums. That is not it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The oven clock blinks. The microwave is silent. The scale says zero.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:10,12"
+     ],
+     [
+      "lolly",
+      "to:13,11"
+     ]
+    ]
+   },
+   {
+    "text": "CHIRP!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "Now it's behind us! How does a sound move?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It bounces off the tiles. That's why nobody ever finds a chirp.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then we hunt it like owls. Ears only. Eyes closed.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "New plan. Stand still. Next chirp, everybody points at it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CHIRP!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Bup points left. Zeek points up. Pim points straight at Crispy.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "turn:crispy"
+     ],
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Why me? I don't chirp. I crackle. Quietly.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Sorry! I panic-point. It's a whole thing.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I pointed at the fridge. Every time. At the gap beside it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-12,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mom hides things there. Remember the Christmas cookie tin?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-11,11"
+     ],
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE FRIDGE GAP",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:lolly"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "Careful. If Mom finds crumbs there, she cleans the whole kitchen.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And if we leave it, it chirps until Mia wakes up!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Lolly squeeze into the dusty gap. Something shiny waits.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-14,13"
+     ],
+     [
+      "lolly",
+      "to:-13,12"
+     ],
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "CHIRP!",
+    "cam": "prop:gift",
+    "hold": 1.0,
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "It's a gift bag! The chirp is coming from inside it!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "A chirping present? Who wraps a chirp?",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Listen to the notes. Hap... py... It's trying to sing!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside is a musical birthday card. It sings when it opens.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Its battery is almost gone. Two notes, then it gives up.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-11,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Aww. That's me every time I try to sing.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, you sing beautifully. For a bean. In the shower.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Happy seventh birthday, Mia. Love, Mom and Dad.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mia's birthday is Saturday! That's why Mom keeps hiding bags!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The card is open a crack. Press it shut, it stops.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-10,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup sits on the card. Click. The kitchen goes perfectly quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "gift",
+      "home"
+     ]
+    ]
+   },
+   {
+    "text": "...SILENCE",
+    "cam": "overhead",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "We did it. Nobody woke up. And nothing is on fire.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "There's paper under the bag. Mom's to-do list for the week.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Saturday, bake the cake. Friday, wrap gifts. Thursday...",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-12,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Thursday. Throw out the old bread.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "The old bread? Guys... I'm the old bread.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THROWN OUT THURSDAY?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ],
+     [
+      "all",
+      "look:bup"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "What Keeps Chirping in Our Kitchen at 2 A.M.? 😳",
+  "description": "\"Every house has that one chirp at night. Ours was hiding a secret.\" — Lolly\nAt 2 a.m. a tiny chirp keeps the Dough Bros awake, and it isn't the smoke alarm. What they find beside the fridge changes Bup's whole week. Have you ever hunted a chirp at night? 👇\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "funny animation",
+   "smoke alarm chirp",
+   "kitchen at night",
+   "birthday surprise",
+   "bup",
+   "pim",
+   "lolly"
+  ],
+  "thumb_text": "WHAT IS CHIRPING?",
+  "thumb_beat": 5,
+  "localizations": {
+   "es": {
+    "title": "¿Qué sigue pitando en nuestra cocina a las 2 a. m.? 😳",
+    "description": "\"Cada casa tiene ese pitido de noche. El nuestro escondía un secreto.\" — Lolly\nA las 2 a. m. un pitido diminuto no deja dormir a los Dough Bros, y no es la alarma de humo. Lo que encuentran junto a la nevera cambia toda la semana de Bup. ¿Alguna vez buscaste un pitido de noche? 👇\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O que fica apitando na nossa cozinha às 2 da manhã? 😳",
+    "description": "\"Toda casa tem aquele apito à noite. O nosso escondia um segredo.\" — Lolly\nÀs 2 da manhã, um apitinho não deixa os Dough Bros dormirem, e não é o alarme de fumaça. O que eles acham ao lado da geladeira muda a semana inteira do Bup. Você já caçou um apito de madrugada? 👇\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "ما الذي يصفّر في مطبخنا الساعة الثانية فجرًا؟ 😳",
+    "description": "\"في كل بيت صفير صغير في الليل. صفيرنا كان يخفي سرًّا.\" — لولي\nفي الثانية فجرًا يمنع صفير صغير الدو بروز من النوم، وليس جهاز إنذار الدخان. وما يجدونه بجانب الثلاجة يغيّر أسبوع باب كله. هل بحثت يومًا عن صفير في الليل؟ 👇\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Qu'est-ce qui bipe dans notre cuisine à 2 h du matin ? 😳",
+    "description": "« Chaque maison a ce petit bip la nuit. Le nôtre cachait un secret. » — Lolly\nÀ 2 h du matin, un minuscule bip empêche les Dough Bros de dormir, et ce n'est pas le détecteur de fumée. Ce qu'ils trouvent à côté du frigo change toute la semaine de Bup. Vous avez déjà chassé un bip la nuit ? 👇\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "夜中の2時、キッチンで鳴り続けるピッ…の正体は？😳",
+    "description": "「どの家にも夜のピッ…がある。うちのは秘密を隠してた。」— ロリー\n夜中の2時、小さな電子音のせいでドウ・ブロスは眠れない。でも火災報知器じゃない。冷蔵庫の横で見つけたものが、バップの一週間を変えてしまう。夜中に音の正体を探したことある？👇\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "새벽 2시, 우리 부엌에서 계속 삑삑대는 건 뭘까? 😳",
+    "description": "\"집집마다 밤에 울리는 삑 소리가 있어. 우리 집 소리는 비밀을 숨기고 있었지.\" — 롤리\n새벽 2시, 작은 삑 소리 때문에 도우 브로스는 잠을 못 잔다. 그런데 화재경보기가 아니다. 냉장고 옆에서 찾은 것이 밥의 일주일을 완전히 바꿔 놓는다. 밤에 이런 소리 찾아본 적 있어? 👇\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Was piept nachts um 2 in unserer Küche? 😳",
+    "description": "„Jedes Haus hat nachts dieses eine Piepen. Unseres versteckte ein Geheimnis.“ — Lolly\nUm 2 Uhr nachts hält ein winziges Piepen die Dough Bros wach, und es ist nicht der Rauchmelder. Was sie neben dem Kühlschrank finden, verändert Bups ganze Woche. Hast du schon mal nachts ein Piepen gesucht? 👇\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHAT IS CHIRPING?",
+   "title": "Ep 1: The 2 A.M. Chirp Nobody Can Find 😳 #shorts",
+   "description": "A chirp at 2 a.m., and it isn't the smoke alarm. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "3d animation",
+    "smoke alarm chirp"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 1: El pitido de las 2 a. m. que nadie encuentra 😳 #shorts",
+     "description": "Un pitido a las 2 a. m., y no es la alarma de humo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 1: O apito das 2h que ninguém acha 😳 #shorts",
+     "description": "Um apito às 2 da manhã, e não é o alarme de fumaça. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 1: صفير الثانية فجرًا الذي لا يجده أحد 😳 #shorts",
+     "description": "صفير في الثانية فجرًا، وليس إنذار الدخان. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 1 : Le bip de 2 h que personne ne trouve 😳 #shorts",
+     "description": "Un bip à 2 h du matin, et ce n'est pas le détecteur de fumée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第1話：誰も見つけられない夜中2時の音 😳 #shorts",
+     "description": "夜中2時のピッ…。でも火災報知器じゃない。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "1화: 아무도 못 찾는 새벽 2시의 삑 소리 😳 #shorts",
+     "description": "새벽 2시의 삑 소리, 그런데 화재경보기가 아니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 1: Das Piepen um 2, das keiner findet 😳 #shorts",
+     "description": "Ein Piepen um 2 Uhr nachts, und es ist nicht der Rauchmelder. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 26,
+   "dur": 30,
+   "top": "WHO POINTED AT CRISPY?",
+   "title": "Ep 1: Pim Panic-Points at Crispy 😂 #shorts",
+   "description": "Everyone points at the chirp. Pim points at his friend. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "funny",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 1: Pim señala a Crispy por pánico 😂 #shorts",
+     "description": "Todos señalan el pitido. Pim señala a su amigo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 1: Pim aponta pro Crispy no pânico 😂 #shorts",
+     "description": "Todos apontam para o apito. O Pim aponta para o amigo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 1: بيم يشير إلى كريسبي من الذعر 😂 #shorts",
+     "description": "الجميع يشيرون إلى الصفير، وبيم يشير إلى صديقه. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 1 : Pim panique et montre Crispy 😂 #shorts",
+     "description": "Tout le monde montre le bip. Pim montre son ami. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第1話：パニックでクリスピーを指さすピム 😂 #shorts",
+     "description": "みんな音の方を指さす。ピムだけは友だちを指さした。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "1화: 겁먹고 크리스피를 가리킨 핌 😂 #shorts",
+     "description": "모두 소리 나는 곳을 가리키는데, 핌은 친구를 가리킨다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 1: Pim zeigt in Panik auf Crispy 😂 #shorts",
+     "description": "Alle zeigen auf das Piepen. Pim zeigt auf seinen Freund. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

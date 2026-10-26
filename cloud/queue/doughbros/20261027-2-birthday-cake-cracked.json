@@ -1,0 +1,883 @@
+{
+ "id": "20261027-2-birthday-cake-cracked",
+ "plot": "At 6 a.m. on Mia's birthday the bros find the cake's top layer sliding and cracked, the puppy is asleep under the table and Zeek blames Lolly's sprinkle spoon; lifting the layer back makes a leaning tower until Zeek's toothpicks hold it, and his measuring shows the crack is only on the still-warm side — warm layers slid by themselves (the warm-bottom clue) — so he apologises, angry Lolly ices over the crack and adds MIA 7 sprinkles, Mom and Dad each thank the other, Mia hugs her puppy, and she announces six friends are sleeping over tonight.",
+ "script": {
+  "title": "Mia's Birthday Cake Cracked Overnight",
+  "set": {
+   "place": "table",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": [
+     0.98,
+     0.85,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 2.4
+   },
+   {
+    "id": "spoon",
+    "type": "key",
+    "color": [
+     0.75,
+     0.77,
+     0.8
+    ],
+    "on": null,
+    "at": [
+     4,
+     12,
+     0.3
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "sprinkles",
+    "type": "star",
+    "color": [
+     1.0,
+     0.8,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     0,
+     11,
+     3.2
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Who cracked Mia's birthday cake? It's sliding! Somebody grab it!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,10"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Push on the other side! Hold it straight!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-2,11"
+     ],
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CRAAACK!",
+    "cam": "prop:cake",
+    "hold": 1.0,
+    "do": [
+     [
+      "cake",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Six in the morning. The top layer slid. A crack runs down.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The paw prints led here! The puppy wrecked the cake!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-5,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The puppy is asleep under the table. Snoring. Look.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then who leaned that big spoon against the cake last night?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:4,11"
+     ],
+     [
+      "spoon",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Me. It was my ladder. For the sprinkles. Our secret gift.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "So your spoon pushed it over. You and your sprinkles, Lolly.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I was only trying to help. I wanted it to be perfect.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "BLAMED",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:lolly"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "Stop. Blame later. Mom comes down at seven. We fix it now.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "And keep it quiet. Seven years old only happens once.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Odd. The bottom layer is still warm. Mom baked it late.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Warm things slide. Ask any butter.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Plan one. We lift the top layer back where it belongs.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five tiny bros lift one huge cake layer. Slowly. Very slowly.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "pim",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "My arms! Do I have arms? Whatever I have, it hurts!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Lift with your legs, Pim. Oh. Right. No legs either.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The layer goes back on. Then it leans. Then it leans more.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It's the leaning tower of cake! It's going again!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S LEANING!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "lolly",
+    "say": "If it falls now, Mia's birthday starts with a ruined cake!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hold it! Nobody move! Pim, don't sneeze!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why would you say that? Now I need to sneeze!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim does not sneeze. Pim turns a darker red. Everyone waits.",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Okay. It passed. Nobody say sneeze again.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Toothpicks. Bakers push toothpicks through layers to hold them.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek pushes four toothpicks down through the cake. The leaning stops.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It's standing! Zeek, that actually worked!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Wait. I'm measuring. The crack is on the warm side only.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Your spoon was on the cold side, Lolly. It didn't do this.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The warm layer just slid by itself. Nobody broke it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I blamed you for trying to help. I'm sorry, Lolly.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "text": "NOT HER FAULT",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "lolly",
+    "say": "Apology accepted. Now hand me the icing knife. I'm angry-decorating.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Yes, chef. Right away, chef. Please don't hurt me.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly spreads icing over the crack. Smooth. Fast. A little scary.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:0,11"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And now, the secret gift. Sprinkles. M. I. A. Seven.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ],
+     [
+      "sprinkles",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Golden sprinkles land on top. Just as the stairs creak.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "sprinkles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "CREAK... CREAK...",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bup",
+    "say": "Places! Everybody back! We are just normal kitchen food!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom walks in. She stares at the sprinkles. She calls upstairs.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom thinks Dad decorated it. Dad thinks Mom did. Both say thanks.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "That's how humans stay married. Nobody asks questions.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Should we tell them? No. Never. Absolutely not.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia runs in. The puppy wakes up under the table. Barking.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's hugging it! She's crying happy tears! Our cake made it!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The puppy has golden sprinkles on its nose. Nobody asks why.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "sprinkles",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Best birthday in this kitchen. And nobody saw us.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia says one more thing. Six friends are sleeping over. Tonight.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Six kids? At midnight? Hungry? In OUR kitchen?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SLEEPOVER NIGHT?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   }
+  ]
+ },
+ "long": {
+  "title": "Mia's Birthday Cake Cracked Overnight 😱",
+  "description": "\"I was only trying to help. Being blamed for it? That's the part that hurts.\" — Lolly\nAt 6 a.m. the Dough Bros find Mia's birthday cake cracked and sliding, and Lolly's secret sprinkle spoon looks guilty. They have until Mom comes down to save it. Who would you have blamed? 👇\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "lolly",
+   "birthday cake",
+   "cake fail",
+   "cake fix",
+   "funny animation",
+   "friendship"
+  ],
+  "thumb_text": "WHO CRACKED IT?",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "El pastel de cumpleaños de Mia se agrietó de noche 😱",
+    "description": "\"Solo quería ayudar. ¿Que me culpen por eso? Eso es lo que duele.\" — Lolly\nA las 6 a. m. los Dough Bros encuentran el pastel de Mia agrietado y resbalando, y la cuchara secreta de Lolly parece culpable. Tienen hasta que baje mamá para salvarlo. ¿A quién habrías culpado tú? 👇\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O bolo de aniversário da Mia rachou à noite 😱",
+    "description": "\"Eu só queria ajudar. Levar a culpa por isso? É isso que dói.\" — Lolly\nÀs 6 da manhã os Dough Bros encontram o bolo da Mia rachado e escorregando, e a colher secreta da Lolly parece culpada. Eles têm até a mamãe descer para salvá-lo. Quem você teria culpado? 👇\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "كعكة عيد ميلاد ميا تشققت في الليل 😱",
+    "description": "\"كنت أحاول المساعدة فقط. أن أُلام على ذلك؟ هذا ما يؤلم.\" — لولي\nفي السادسة صباحًا يجد الدو بروز كعكة ميا متشققة ومائلة، وملعقة لولي السرية تبدو مذنبة. أمامهم حتى تنزل الأم لإنقاذها. من كنت ستلوم أنت؟ 👇\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Le gâteau d'anniversaire de Mia s'est fendu cette nuit 😱",
+    "description": "« Je voulais juste aider. Être accusée pour ça ? C'est ça qui fait mal. » — Lolly\nÀ 6 h du matin, les Dough Bros trouvent le gâteau de Mia fendu et en train de glisser, et la cuillère secrète de Lolly a l'air coupable. Ils ont jusqu'à l'arrivée de maman pour le sauver. Qui auriez-vous accusé ? 👇\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアの誕生日ケーキが一晩でひび割れた 😱",
+    "description": "「手伝いたかっただけ。それで責められるのが、いちばんつらい。」— ロリー\n朝6時、ミアのケーキがひび割れてずれていた。あやしいのはロリーの秘密のスプーン。ママが起きてくるまでにケーキを救え。きみなら誰を疑った？👇\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아의 생일 케이크가 밤새 갈라졌다 😱",
+    "description": "\"난 그냥 돕고 싶었어. 그런데 그걸로 탓을 받는 게 제일 아파.\" — 롤리\n새벽 6시, 도우 브로스는 미아의 케이크가 갈라지고 미끄러지는 걸 발견한다. 롤리의 비밀 숟가락이 범인처럼 보인다. 엄마가 내려오기 전에 케이크를 살려야 한다. 너라면 누구를 탓했을까? 👇\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mias Geburtstagstorte ist über Nacht gerissen 😱",
+    "description": "„Ich wollte nur helfen. Dafür beschuldigt zu werden? Das tut weh.“ — Lolly\nUm 6 Uhr morgens finden die Dough Bros Mias Torte gerissen und verrutscht, und Lollys geheimer Streusel-Löffel sieht schuldig aus. Bis Mama runterkommt, müssen sie sie retten. Wen hättest du beschuldigt? 👇\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHO CRACKED IT?",
+   "title": "Ep 5: The Birthday Cake Is Sliding! 😱 #shorts",
+   "description": "Six a.m., a cracked birthday cake, and Lolly gets the blame. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "birthday cake",
+    "lolly"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 5: ¡El pastel de cumpleaños se resbala! 😱 #shorts",
+     "description": "Las 6 a. m., un pastel agrietado y Lolly se lleva la culpa. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 5: O bolo de aniversário está escorregando! 😱 #shorts",
+     "description": "6 da manhã, um bolo rachado e a Lolly leva a culpa. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 5: كعكة عيد الميلاد تنزلق! 😱 #shorts",
+     "description": "السادسة صباحًا، كعكة متشققة، ولولي تتحمل اللوم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 5 : Le gâteau d'anniversaire glisse ! 😱 #shorts",
+     "description": "6 h du matin, un gâteau fendu, et c'est Lolly qu'on accuse. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第5話：誕生日ケーキがずれていく！😱 #shorts",
+     "description": "朝6時、ひび割れたケーキ。責められたのはロリー。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "5화: 생일 케이크가 미끄러진다! 😱 #shorts",
+     "description": "새벽 6시, 갈라진 케이크, 그리고 탓을 받는 롤리. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 5: Die Geburtstagstorte rutscht! 😱 #shorts",
+     "description": "6 Uhr morgens, eine gerissene Torte, und Lolly bekommt die Schuld. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
