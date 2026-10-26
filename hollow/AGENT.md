@@ -1,5 +1,8 @@
 # Hollowmere Tales — daily run (instructions for Claude)
 
+> **Owner rule 2026-10-26 (overrides older lines below):** follow `cloud/WRITER.md` sections "Real-life stories", "Serial format like @d.pommikox.world" and "Bolt, Hollowmere, Dough Bros — Pommi-style serial": numbered continuing serial, forest/village/market-feel places, Shorts cut from the long, Narrator subscribe line after the hook and "What do you think happens in the next part? Tell me in the comments." at the end.
+
+
 > **3D since 2026-10-19 (owner's rule — overrides the renderer, formats and daily counts below):** every video is now a 3D animation made with `engine3d/` (same engine as Inspector Bolt). Read `../tools/ANIM3D.md` first: write `scripts3d/epNNN.json` in the Bolt script format using `scripts3d/cast.json`, render with Blender, **3 long (3:00–3:40) + 4 Shorts per UTC day**, one long per run. The story bible, tone, titles, audience setting, upload flow, slots, rek-ball gate and translations stay as written below. The old 2D `engine/` is no longer used.
 
 
