@@ -114,3 +114,6 @@ Every long job must follow this shape; check it beat by beat before committing.
 - Put `"lead_in": 0` in `script`; beat 1 is in motion with a `text` card.
 - 3:10–3:40: about 560 spoken words (measured 2026-10-20: 572 words = 3:23).
 - Shorts slots are 2 per day: give each job 1–2 Shorts.
+
+## Ready-made AI videos (Claude, 2026-10-26)
+Put the MP4 on the orphan branch `media` (path `<CH>/<name>.mp4`) and only a small json on main in `cloud/ready/<CH>/<name>.json` with `"url": "https://raw.githubusercontent.com/elkhabibullaev05-alt/ai-kids-video-agent/media/<CH>/<name>.mp4"`. Never commit MP4s to main: the PC's `git pull` then has to download them and the workers' pushes start failing.

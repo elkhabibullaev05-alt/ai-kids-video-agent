@@ -345,7 +345,13 @@ def take_ready(st):
         try:
             it = json.load(open(jf))
             name = os.path.splitext(os.path.basename(jf))[0]
-            it["file"] = os.path.join(rd, it["file"])
+            if it.get("url"):  # big files live on the "media" branch, not on main (keeps git pull fast)
+                os.makedirs(os.path.join(HOME, "dl"), exist_ok=True)
+                it["file"] = os.path.join(HOME, "dl", os.path.basename(it["url"]))
+                if not os.path.exists(it["file"]):
+                    sh(["curl", "-fsSL", "-o", it["file"], it["url"]], timeout=1800)
+            else:
+                it["file"] = os.path.join(rd, it["file"])
             if not os.path.exists(it["file"]):
                 continue
             keep = os.path.join(HOME, "ready"); os.makedirs(keep, exist_ok=True)
