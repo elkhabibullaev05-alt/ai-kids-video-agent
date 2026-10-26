@@ -358,7 +358,13 @@ def take_ready(st):
             dst = os.path.join(keep, os.path.basename(it["file"]))
             if it.get("loop_seconds"):  # e.g. a seamless 4 s rain unit → 3 h video, stream copy, takes seconds
                 dst = os.path.splitext(dst)[0] + f"_{int(it['loop_seconds'])}s.mp4"
-                sh(["ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", it["file"], "-t", str(it["loop_seconds"]),
+                unit = it["file"]
+                if it.get("unit_bitrate"):  # re-encode the short unit once at a lower bitrate → 3 h file stays ~2–3 GB
+                    small = os.path.splitext(dst)[0] + "_unit.mp4"
+                    sh(["ffmpeg", "-y", "-v", "error", "-i", unit, "-c:v", "libx264", "-preset", "medium", "-b:v", it["unit_bitrate"],
+                        "-maxrate", it["unit_bitrate"], "-bufsize", "4M", "-g", "96", "-c:a", "aac", "-b:a", "128k", small], timeout=600)
+                    unit = small
+                sh(["ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", unit, "-t", str(it["loop_seconds"]),
                     "-c", "copy", "-movflags", "+faststart", dst], timeout=3600)
             else:
                 shutil.copy(it["file"], dst)
