@@ -51,6 +51,15 @@ The owner wants the cartoons to keep running exactly as now (same channels, same
 - Hollowmere already tells true documented stories and the animal ink channel already uses real facts: keep them as they are.
 - Kids flags unchanged (maxcat, bolt, roblox = Made for Kids).
 
+## Serial format like @d.pommikox.world "Pommi" (owner's reference, 2026-10-26)
+The owner's reference reels (Pommi, 3D character series, 8K–63K likes each) work because every video is **the next episode of one continuing story**, told with real-life situations and feelings:
+- One lovable main character per channel (Max, the Dough Bros, Bolt, Odo…) with 2–3 recurring named side characters; viewers follow them from video to video.
+- Each video = one episode that continues yesterday's: open on the consequence of the last cliffhanger, end on a new cliffhanger ("…without knowing what it's for").
+- Real, relatable emotions as the hook: being blamed for trying to help, a plan falling apart, being left out, a small win. Show the feeling on the character's face in the first 3 s.
+- Description first line = one short emotional line in the character's voice ("I don't need credit for trying to help. But being blamed for it? That gets to me."), then 1–2 lines of plot, then hashtags incl. #series #3DAnimation and the character's name.
+- Shorts from the long episode keep the episode number in the title ("Ep 12"), so people binge the series.
+- Everything else above (real-life places, kids flags, retention, look-alike rules) still applies.
+
 ## Ask Studio advice (2026-10-20) — read `cloud/growth/ask_studio_*.md` (newest) before writing
 
 **maxcat**
