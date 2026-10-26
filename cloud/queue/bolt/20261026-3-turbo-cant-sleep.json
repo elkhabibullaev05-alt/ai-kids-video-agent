@@ -1,0 +1,1259 @@
+{
+ "id": "20261026-3-turbo-cant-sleep",
+ "plot": "On the stormy night before his first crossing-guard shift, Turbo can't sleep and zooms around the wet streets pretending to train; night-shift tow truck Grumpy takes him on a quiet ride, baker van Benny shows him how to drive smoothly on wet roads, and they practise puddles all night until the splash becomes a splish; an hour before sunrise Turbo admits he is scared, and Grumpy finally takes down the old paper always hanging in his cab: a note Mrs. Maple wrote him on his own scared first night, 'Slow is not scared. Slow is careful'; he gives it to Turbo, who crosses the biggest puddle with no splash at dawn; lesson: brave means you go anyway, slowly; then Pip drives past alone, sad that nobody remembered her birthday.",
+ "script": {
+  "title": "Turbo Can't Sleep!",
+  "set": {
+   "place": "Wheelburg main street and Grumpy's night-shift corner, stormy night until dawn",
+   "press": false,
+   "podium": false,
+   "time": "night"
+  },
+  "description": "The night before his first day as crossing guard, Turbo can't sleep. Inspector Bolt #15",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "benny": {
+    "name": "Benny",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.95,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 0.9,
+    "hat": false,
+    "home": [
+     12.0,
+     17.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "note",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -2.2,
+     13.0,
+     2.6
+    ],
+    "visible": true,
+    "scale": 0.25
+   },
+   {
+    "id": "bread",
+    "type": "cake",
+    "color": [
+     0.82,
+     0.55,
+     0.25
+    ],
+    "at": [
+     9.5,
+     14.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Slow, slow, slow! Why is slow so hard? Whoa, puddle!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "grumpy",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Turbo? It's midnight. Why are you zooming around in the rain?",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "MIDNIGHT. RAIN. NO SLEEP.",
+    "cam": "close:turbo",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm not zooming. I'm... training. Very normal training.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the night of the big storm.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "to:0,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rain tapped on every roof in Wheelburg. Tap, tap, tap.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tomorrow at seven, Turbo would start his first day as crossing guard.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. I drive the night shift. Every night.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And I know nervous when I see it.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me? Nervous? Ha! I'm Turbo! I'm never nervous!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His bumper was shaking. Just a little. Okay, a lot.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "What's that paper in your window, Grumpy?",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nothing. Old paper. None of your business.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ],
+     [
+      "note",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy's cab light was always on.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And that old paper always hung in the window.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fine. Watch this. I'll drive through that puddle super slow.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo tried. He really tried. But his wheels had other plans.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "text": "SPLASH!",
+    "cam": "wide",
+    "hold": 0.9,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm wet. I'm always wet at night. But now I'm wetter.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry! See? Slow is impossible for me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a sleepy voice came from the bus garage.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Mmm... five more minutes... the wheels on the bus...",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Shh! Bertha's sleep-singing again. Don't wake her up.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "She sings every night. Same song. Wrong words. Every time.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Come with me. I'll show you something. Quietly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy rolled slowly down the dark, wet street. Turbo followed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "text": "TWO O'CLOCK IN THE MORNING",
+    "cam": "wide",
+    "hold": 1.1,
+    "do": [
+     [
+      "benny",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the corner, a warm orange van was unloading something.",
+    "cam": "wide",
+    "do": [
+     [
+      "bread",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Evening, Grumpy! Or is it morning? Fresh bread for the café!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "You work at two in the morning? In the rain?",
+    "cam": "two:turbo,benny",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Every night. Bread doesn't wait for good weather.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "The town wakes up hungry. Somebody has to be ready.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Watch how Benny drives on wet roads.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:benny"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Benny turned the corner. Slow. Smooth. Not one splash.",
+    "cam": "wide",
+    "do": [
+     [
+      "benny",
+      "to:9,12"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "How do you do that? My tires go wheee every time.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Easy on the pedal. Eyes far ahead. And breathe out.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "If I rush, the bread falls. If you rush, the kids fall.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh. When you say it like that... it's not about me.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Here. Warm bread for the night crew. Good luck tomorrow, guard.",
+    "cam": "two:benny,turbo",
+    "do": [
+     [
+      "bread",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Benny honked softly and drove off into the rain.",
+    "cam": "wide",
+    "do": [
+     [
+      "benny",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY FIVE HOURS LEFT!",
+    "cam": "close:turbo",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Five hours, Grumpy! What if I splash a kid?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "What if I'm late on my very first day?",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "What if everybody laughs and says Turbo can only zoom?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Then you try again. Come on. Puddle practice.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they practised. Puddle after puddle. All night long.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-8,10"
+     ],
+     [
+      "grumpy",
+      "to:-4,14"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Easy on the pedal.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Easy on the pedal. Eyes far ahead. Breathe out.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash. Then a smaller splash. Then just a little splish.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Did you see that? Only a splish! I did a splish!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I saw. Hmph. Not bad, kid. Not bad at all.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lights came on in the house next door. Somebody woke up.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo? Grumpy? It's four in the morning. Is everything all right?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt! I'm practising being slow. It's the hardest thing ever.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then you are already braver than most. Carry on. Quietly, please.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt went back to bed. And Turbo got very quiet again.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "bolt",
+      "to_home"
+     ],
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy, can I tell you a secret? I'm scared. Really scared.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE SUN RISES IN ONE HOUR!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "In one hour I'm the guard. And I still feel wobbly inside.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy didn't say anything. He just rolled back to his cab.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "grumpy",
+      "to:-1,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And for the first time, he took down the old paper.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My first night shift, I was so scared, I towed nothing.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I hid behind the bakery. Shaking. Till the sun came up.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "You? Scared? But you're Grumpy! You aren't scared of anything!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Everybody is scared of something. Even tow trucks.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Then an old green crossing guard found me. And wrote this.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "An old green crossing guard? Wait. Mrs. Maple?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Read it.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "note",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "text": "SLOW IS NOT SCARED. SLOW IS CAREFUL.",
+    "cam": "close:turbo",
+    "hold": 1.6,
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Slow is not scared. Slow is careful.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I kept it twenty years. Now it's yours. Don't get it wet.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy, this is the nicest thing anyone ever gave me.",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Don't tell anyone. I have a reputation.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The rain stopped. The sky turned pink. And it was almost seven.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo rolled to the school crossing. Slowly. Carefully.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Right through the biggest puddle in Wheelburg.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "NO SPLASH!",
+    "cam": "close:turbo",
+    "hold": 1.0,
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No splash! Not even a splish! Grumpy, I did it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Never doubted you. Okay. I doubted you a little.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Mmm... is it morning? Why is everyone so happy?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Even brave cars get scared. Brave means you go anyway. Slowly.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a tiny pink car drove past. All alone.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Today is my birthday... and nobody said a single word.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh no. Pip's birthday! Grumpy... did we forget?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Turbo Can't Sleep Before His First Day! 🌙🌧️",
+  "description": "\"Everybody thinks I'm never scared. But tonight my bumper won't stop shaking.\" — Turbo\nIt's the stormy night before Turbo's first day as crossing guard, and he has never driven slowly in the rain. Can Grumpy help him get ready before seven? Inspector Bolt #15\n\n#series #3DAnimation #InspectorBolt #Turbo #kidscartoon",
+  "tags": [
+   "inspector bolt",
+   "turbo",
+   "grumpy",
+   "kids cartoon",
+   "cartoon cars",
+   "3d animation",
+   "series",
+   "first day nerves",
+   "bedtime",
+   "rain",
+   "stories for kids"
+  ],
+  "thumb_text": "TOO SCARED?",
+  "thumb_beat": 56,
+  "localizations": {
+   "es": {
+    "title": "¡Turbo no puede dormir antes de su primer día! 🌙🌧️",
+    "description": "\"Todos creen que nunca tengo miedo. Pero esta noche mi parachoques no deja de temblar.\" — Turbo\nEs la noche de tormenta antes del primer día de Turbo como guardia del cruce, y nunca ha conducido despacio bajo la lluvia. ¿Podrá Grumpy ayudarlo antes de las siete? Inspector Bolt #15\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Turbo não consegue dormir antes do primeiro dia! 🌙🌧️",
+    "description": "\"Todo mundo acha que eu nunca tenho medo. Mas hoje meu para-choque não para de tremer.\" — Turbo\nÉ a noite de tempestade antes do primeiro dia do Turbo como guarda da faixa, e ele nunca dirigiu devagar na chuva. O Grumpy consegue ajudá-lo antes das sete? Inspetor Bolt #15\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "توربو لا يستطيع النوم قبل يومه الأول! 🌙🌧️",
+    "description": "\"الجميع يظن أنني لا أخاف أبدًا. لكن الليلة مصدّي لا يتوقف عن الارتجاف.\" — توربو\nإنها ليلة العاصفة قبل أول يوم لتوربو كحارس للمعبر، ولم يقُد ببطء تحت المطر من قبل. هل يستطيع غرامبي مساعدته قبل السابعة؟ المفتش بولت #15\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Turbo n'arrive pas à dormir avant son 1er jour ! 🌙🌧️",
+    "description": "« Tout le monde croit que je n'ai jamais peur. Mais ce soir mon pare-chocs n'arrête pas de trembler. » — Turbo\nC'est la nuit d'orage avant le premier jour de Turbo comme gardien du passage, et il n'a jamais roulé lentement sous la pluie. Grumpy peut-il l'aider avant sept heures ? Inspecteur Bolt #15\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ターボ、はじめての日の前の夜にねむれない!🌙🌧️",
+    "description": "「みんなぼくはこわがらないって思ってる。でも今夜はバンパーのふるえがとまらないんだ。」— ターボ\n見守り係の初日の前の、あらしの夜。ターボは雨の中をゆっくり走ったことがない。7時までにグランピーは助けられる?ボルト警部 #15\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "첫날 전날 밤, 터보가 잠을 못 자요! 🌙🌧️",
+    "description": "\"다들 내가 절대 안 무서워하는 줄 알아. 근데 오늘 밤엔 범퍼가 계속 떨려.\" — 터보\n건널목 지킴이 첫날 전 폭풍우 치는 밤, 터보는 빗길을 천천히 달려 본 적이 없어요. 그럼피가 일곱 시 전에 도와줄 수 있을까요? 볼트 형사 #15\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Turbo kann vor seinem ersten Tag nicht schlafen! 🌙🌧️",
+    "description": "„Alle denken, ich habe nie Angst. Aber heute Nacht hört meine Stoßstange nicht auf zu zittern.“ — Turbo\nEs ist die stürmische Nacht vor Turbos erstem Tag als Schülerlotse, und er ist noch nie langsam im Regen gefahren. Kann Grumpy ihm bis sieben Uhr helfen? Inspektor Bolt #15\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHY IS HE AWAKE?!",
+   "title": "Turbo Is Zooming at Midnight! 🌙🌧️ Ep 15 #shorts",
+   "description": "It's midnight, it's raining, and Turbo won't go to sleep. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "turbo",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo corre a medianoche! 🌙🌧️ Ep 15 #shorts",
+     "description": "Es medianoche, llueve y Turbo no quiere dormir. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Turbo está correndo à meia-noite! 🌙🌧️ Ep 15 #shorts",
+     "description": "É meia-noite, está chovendo e o Turbo não vai dormir. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو يسرع في منتصف الليل! 🌙🌧️ حلقة 15 #shorts",
+     "description": "إنه منتصف الليل والمطر يهطل وتوربو لا يريد النوم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo fonce à minuit ! 🌙🌧️ Ép 15 #shorts",
+     "description": "Il est minuit, il pleut et Turbo ne veut pas dormir. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボが真夜中にビュンビュン!🌙🌧️ 第15話 #shorts",
+     "description": "真夜中、雨なのにターボはねようとしない。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보가 한밤중에 쌩쌩 달려요! 🌙🌧️ 15화 #shorts",
+     "description": "한밤중에 비까지 오는데 터보는 잠을 안 자요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo rast um Mitternacht herum! 🌙🌧️ Folge 15 #shorts",
+     "description": "Es ist Mitternacht, es regnet, und Turbo will nicht schlafen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 59,
+   "dur": 24,
+   "top": "WHAT DOES THE PAPER SAY?",
+   "title": "Grumpy's Secret Paper 📜🚚 Ep 15 #shorts",
+   "description": "For twenty years it hung in Grumpy's window. Tonight he takes it down. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "grumpy",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El papel secreto de Grumpy 📜🚚 Ep 15 #shorts",
+     "description": "Veinte años colgado en la ventana de Grumpy. Esta noche lo quita. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O papel secreto do Grumpy 📜🚚 Ep 15 #shorts",
+     "description": "Vinte anos pendurado na janela do Grumpy. Hoje ele o tira. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ورقة غرامبي السرية 📜🚚 حلقة 15 #shorts",
+     "description": "عشرون عامًا وهي معلقة في نافذة غرامبي. الليلة ينزعها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le papier secret de Grumpy 📜🚚 Ép 15 #shorts",
+     "description": "Vingt ans accroché à la vitre de Grumpy. Ce soir, il le décroche. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピーのひみつの紙 📜🚚 第15話 #shorts",
+     "description": "20年間グランピーのまどにあった紙。今夜それをはずす。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "그럼피의 비밀 쪽지 📜🚚 15화 #shorts",
+     "description": "20년 동안 그럼피 창문에 붙어 있던 종이. 오늘 밤 그걸 떼요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grumpys geheimer Zettel 📜🚚 Folge 15 #shorts",
+     "description": "Zwanzig Jahre hing er in Grumpys Fenster. Heute Nacht nimmt er ihn ab. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

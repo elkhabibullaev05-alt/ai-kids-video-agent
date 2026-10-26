@@ -1,0 +1,1403 @@
+{
+ "id": "20261026-4-forgot-pips-birthday",
+ "plot": "The day after the storm it is Pip's birthday and nobody seems to remember: bubbly Bertha rushes off with a soap bubble on her roof and Bolt hurries by with a 'boring' box, so guilty Turbo takes Pip on a birthday ride to her favourite car wash, where Grumpy blocks the doors for a 'private party' and Pip, feeling left out, almost goes home; at three the doors open on a surprise party that Grumpy secretly planned all week, Turbo turns out to have brought Pip at exactly the right time by accident, the foam machine overflows onto the cake and everyone laughs; lesson: when you feel left out, tell a friend; then Bolt's present is a driving lesson up the big Wheelburg Hill, all by herself.",
+ "script": {
+  "title": "Did Everyone Forget Pip's Birthday?",
+  "set": {
+   "place": "Wheelburg car wash and the street outside, sunny afternoon after the storm",
+   "press": false,
+   "podium": true,
+   "time": "day"
+  },
+  "description": "It's Pip's birthday and everyone seems too busy for her. Inspector Bolt #16",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "b1",
+    "type": "ball",
+    "color": "white",
+    "on": "bertha",
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "blue",
+    "at": [
+     8.0,
+     7.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "pink",
+    "on": "podium",
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "b2",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     -3.0,
+     14.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.7
+   },
+   {
+    "id": "b3",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     2.5,
+     13.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "b4",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     -7.5,
+     12.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Turbo, wait! It's my birthday! Did everyone really forget?",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Forget? Us? No way! We... um... ohhh no.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ],
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "DID EVERYONE FORGET PIP?",
+    "cam": "close:pip",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the day after the storm. Pip's birthday.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And nobody had said a single word to her.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Not one card. Not one honk. Not even a happy beep.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I was up all night with Grumpy! Puddle practice!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm so sorry, Pip. I forgot too.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Big Bertha came rolling by. Very fast. And very bubbly.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-6,15"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bertha! Do you know what day it is?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Tuesday? No, Wednesday! I'm busy, busy, sweetie! Bye-bye!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Why is there a soap bubble on your roof?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bubble? What bubble? I'm blowing... I mean, going! Bye!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ],
+     [
+      "bertha",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bertha zoomed away. With the bubble still on her roof.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "She forgot too. Everybody forgot.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Not everybody! I remember! Now! Very much!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip, I'm making this the best birthday ever. Starting right now!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "How? You don't have a present. You don't have a cake.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I have something better. A birthday ride! Follow me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A ride? Just us two? Okay. That's a little bit nice.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo drove carefully. Like a real crossing guard now.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then they passed Inspector Bolt, carrying a big wrapped box.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! What's in the box? Is it for somebody special?",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "This? Official police business. Very boring. Good morning, Pip.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ],
+     [
+      "gift",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bolt hurried off. Bolt never hurried.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Even Bolt is too busy for me today.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt said boring. Bolt never says boring. Hmm.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "NOBODY HAS TIME FOR PIP",
+    "cam": "close:pip",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Don't be sad. Turbo's birthday ride is the best ride in town!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Okay. But no zooming. You're a crossing guard now.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Where are we even going?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Your favourite place in the whole wide world!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The car wash? You remembered I love the car wash?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Of course! You say it every day! 'Bubbles are my favourite!'",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they drove to the Wheelburg car wash.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-10,9"
+     ],
+     [
+      "turbo",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big blue one, with the giant spinny brushes.",
+    "cam": "podium",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the doors were shut. And Grumpy was parked right in front.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Closed. Private party. Go away.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "A PARTY... WITHOUT PIP?",
+    "cam": "close:pip",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A party? Today? And I'm not invited?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy! It's Pip's birthday! Let her in for one wash!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Not yet. Rules are rules. Come back at three o'clock.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Three o'clock? That's in one minute. I'll just go home.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ],
+     [
+      "pip",
+      "to:-14,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip turned around. Her little headlights looked very wet.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip, don't go! Please! Just wait one minute with me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-11,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Why? So I can watch everybody have fun without me?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No! Because... I don't know why. But I have a feeling.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind the doors, somebody whispered very loudly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Is she here? Is she here?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I can't hold my honk much longer!",
+    "cam": "podium",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait. That was Bertha's voice. Inside the car wash?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "ONE MINUTE TO THREE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Ten seconds. Nine. Eight. Oh, forget it.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy rolled aside. And the big blue doors opened.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:2,15"
+     ]
+    ]
+   },
+   {
+    "text": "SURPRISE!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Happy birthday, Pip! We remembered! We remembered all along!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "You... you remembered? But everyone was so busy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Busy hiding a party. Hardest case of my career.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I almost told you three times! My honk was so itchy!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And guess who planned it all? For a whole week?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Who? You, Bertha?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Nope! Grumpy!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY?!",
+    "cam": "close:grumpy",
+    "hold": 1.0,
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Don't make a big thing of it. I have a reputation.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That's why you said that last night! You were planning this!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And Turbo! You brought her right at three! Perfect timing!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Yes. I totally knew. I planned it all.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay. I didn't know. I just brought her to the bubbles.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I thought nobody cared. I almost went home all alone.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Next time you feel left out, tell a friend.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "We always, always want to know.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I will. Feeling forgotten is easier when you say it out loud.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Enough talking. Bubble time. I pressed the big red button.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "THE FOAM MACHINE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "b2",
+      "show"
+     ],
+     [
+      "b3",
+      "show"
+     ],
+     [
+      "b4",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Foam poured out. Big foam. Bigger foam. A whole mountain of foam.",
+    "cam": "overhead",
+    "do": [
+     [
+      "b2",
+      "bounce"
+     ],
+     [
+      "b3",
+      "bounce"
+     ],
+     [
+      "b4",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh no! The cake! The cake is wearing a foam hat!",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Foam cake! It's the best cake I ever saw!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Case closed. It is now officially a bubble cake.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone splashed and spun and slid. Even Grumpy did one tiny spin.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That spin never happened. Nobody saw it.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I saw it! It was a lovely spin, Grumpy!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Thank you, everybody! This is my best birthday ever!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Happy birthday, Pip! From your new crossing guard!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "One more thing, Pip. My present. The box was for you.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "gift",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip opened the box. Inside was a little card with a map.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "DRIVING LESSON: WHEELBURG HILL",
+    "cam": "close:pip",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tomorrow you learn to drive up the big hill. All by yourself.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The big hill? By myself? Um... is it very, very steep?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Did Everyone Forget Pip's Birthday? 🎂😢 Car Wash Day",
+  "description": "\"It's my birthday. Not one card, not one honk. Did everybody really forget me?\" — Pip\nOn the day after the storm, all of Pip's friends seem too busy for her, so Turbo takes her on a birthday ride to the car wash. But why is Grumpy blocking the doors? Inspector Bolt #16\n\n#series #3DAnimation #InspectorBolt #Pip #kidscartoon",
+  "tags": [
+   "inspector bolt",
+   "pip",
+   "kids cartoon",
+   "cartoon cars",
+   "3d animation",
+   "series",
+   "birthday",
+   "car wash",
+   "feeling left out",
+   "surprise party",
+   "stories for kids"
+  ],
+  "thumb_text": "FORGOTTEN?!",
+  "thumb_beat": 14,
+  "localizations": {
+   "es": {
+    "title": "¿Todos olvidaron el cumpleaños de Pip? 🎂😢",
+    "description": "\"Es mi cumpleaños. Ni una tarjeta, ni un pito. ¿De verdad todos me olvidaron?\" — Pip\nLa mañana después de la tormenta, todos los amigos de Pip parecen muy ocupados, así que Turbo la lleva a pasear al autolavado. ¿Pero por qué Grumpy bloquea la puerta? Inspector Bolt #16\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Todo mundo esqueceu o aniversário da Pip? 🎂😢",
+    "description": "\"É meu aniversário. Nenhum cartão, nenhuma buzina. Será que todo mundo me esqueceu?\" — Pip\nNa manhã depois da tempestade, todos os amigos da Pip parecem ocupados demais, então o Turbo a leva para um passeio até o lava-rápido. Mas por que o Grumpy está bloqueando a porta? Inspetor Bolt #16\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل نسي الجميع عيد ميلاد بيب؟ 🎂😢",
+    "description": "\"إنه عيد ميلادي. ولا بطاقة ولا زمور واحد. هل نسيني الجميع حقًا؟\" — بيب\nفي الصباح بعد العاصفة، يبدو كل أصدقاء بيب مشغولين جدًا، فيأخذها توربو في جولة إلى مغسلة السيارات. لكن لماذا يسد غرامبي الباب؟ المفتش بولت #16\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Tout le monde a oublié l'anniversaire de Pip ? 🎂😢",
+    "description": "« C'est mon anniversaire. Pas une carte, pas un klaxon. Tout le monde m'a vraiment oubliée ? » — Pip\nLe matin après l'orage, tous les amis de Pip semblent trop occupés, alors Turbo l'emmène faire un tour jusqu'à la station de lavage. Mais pourquoi Grumpy bloque-t-il la porte ? Inspecteur Bolt #16\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "みんなピップのたんじょう日をわすれた?🎂😢 洗車の日",
+    "description": "「今日はわたしのたんじょう日。カードもクラクションもない。ほんとうにみんなわすれちゃったの?」— ピップ\nあらしの次の朝、友だちはみんないそがしそう。ターボはピップを洗車場へドライブにつれていく。でも、どうしてグランピーが入口をふさいでいるの?ボルト警部 #16\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "모두 핍의 생일을 잊어버렸을까? 🎂😢 세차장 날",
+    "description": "\"오늘 내 생일인데. 카드도, 빵빵 소리도 없어. 정말 다 잊어버린 걸까?\" — 핍\n폭풍이 지난 아침, 친구들은 모두 너무 바빠 보여요. 그래서 터보가 핍을 세차장으로 생일 드라이브에 데려가요. 그런데 왜 그럼피가 문을 막고 있을까요? 볼트 형사 #16\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Haben alle Pips Geburtstag vergessen? 🎂😢",
+    "description": "„Heute ist mein Geburtstag. Keine Karte, kein Hupen. Haben mich wirklich alle vergessen?“ — Pip\nAm Morgen nach dem Sturm scheinen alle Freunde von Pip zu beschäftigt, also nimmt Turbo sie mit zur Waschanlage. Aber warum blockiert Grumpy die Tür? Inspektor Bolt #16\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "NOBODY REMEMBERED?!",
+   "title": "Nobody Remembered Pip's Birthday 😢 Ep 16 #shorts",
+   "description": "Not one card. Not one honk. Did everyone forget Pip? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nadie recordó el cumple de Pip 😢 Ep 16 #shorts",
+     "description": "Ni una tarjeta. Ni un pito. ¿Todos olvidaron a Pip? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ninguém lembrou do aniversário da Pip 😢 Ep 16 #shorts",
+     "description": "Nenhum cartão. Nenhuma buzina. Todos esqueceram a Pip? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يتذكر أحد عيد ميلاد بيب 😢 حلقة 16 #shorts",
+     "description": "ولا بطاقة. ولا زمور. هل نسي الجميع بيب؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Personne n'a pensé à l'anniversaire de Pip 😢 Ép 16 #shorts",
+     "description": "Pas une carte. Pas un klaxon. Tout le monde a oublié Pip ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "だれもピップのたんじょう日をおぼえてない 😢 第16話 #shorts",
+     "description": "カードもクラクションもない。みんなピップをわすれたの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "아무도 핍의 생일을 기억 못 했어요 😢 16화 #shorts",
+     "description": "카드도, 빵빵 소리도 없어요. 다들 핍을 잊었을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Keiner dachte an Pips Geburtstag 😢 Folge 16 #shorts",
+     "description": "Keine Karte. Kein Hupen. Haben alle Pip vergessen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 36,
+   "dur": 30,
+   "top": "A PARTY WITHOUT HER?",
+   "title": "Closed. Private Party. Go Away. 🚫🫧 Ep 16 #shorts",
+   "description": "Grumpy blocks the car wash on Pip's birthday. Why? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "grumpy",
+    "car wash"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Cerrado. Fiesta privada. Váyanse. 🚫🫧 Ep 16 #shorts",
+     "description": "Grumpy bloquea el autolavado en el cumple de Pip. ¿Por qué? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Fechado. Festa particular. Vão embora. 🚫🫧 Ep 16 #shorts",
+     "description": "O Grumpy bloqueia o lava-rápido no aniversário da Pip. Por quê? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مغلق. حفلة خاصة. ابتعدوا. 🚫🫧 حلقة 16 #shorts",
+     "description": "غرامبي يسد مغسلة السيارات في عيد ميلاد بيب. لماذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Fermé. Fête privée. Partez. 🚫🫧 Ép 16 #shorts",
+     "description": "Grumpy bloque la station de lavage le jour de l'anniversaire de Pip. Pourquoi ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "おやすみ。プライベートパーティー。帰れ。🚫🫧 第16話 #shorts",
+     "description": "ピップのたんじょう日に、グランピーが洗車場をふさぐ。なぜ?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "영업 끝. 비공개 파티. 돌아가. 🚫🫧 16화 #shorts",
+     "description": "핍의 생일에 그럼피가 세차장을 막아요. 왜일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Geschlossen. Private Party. Geht weg. 🚫🫧 Folge 16 #shorts",
+     "description": "Grumpy blockiert die Waschanlage an Pips Geburtstag. Warum? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 10,
+   "dur": 26,
+   "top": "WHY THE BUBBLE?",
+   "title": "Why Is Bertha Covered in Bubbles? 🫧🚌 Ep 16 #shorts",
+   "description": "Bertha is busy, busy, busy, and there's a bubble on her roof. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "school bus",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué Bertha tiene burbujas? 🫧🚌 Ep 16 #shorts",
+     "description": "Bertha está muy ocupada y tiene una burbuja en el techo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que a Bertha está cheia de bolhas? 🫧🚌 Ep 16 #shorts",
+     "description": "A Bertha está ocupadíssima e tem uma bolha no teto. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا بيرثا مغطاة بالفقاعات؟ 🫧🚌 حلقة 16 #shorts",
+     "description": "بيرثا مشغولة جدًا وهناك فقاعة على سقفها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi Bertha est pleine de bulles ? 🫧🚌 Ép 16 #shorts",
+     "description": "Bertha est super occupée et il y a une bulle sur son toit. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どうしてバーサがあわだらけ?🫧🚌 第16話 #shorts",
+     "description": "バーサはいそがしそう。そして屋根にはあわがひとつ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사는 왜 거품투성이일까? 🫧🚌 16화 #shorts",
+     "description": "버사는 너무 바쁘고, 지붕엔 거품이 하나 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum ist Bertha voller Seifenblasen? 🫧🚌 Folge 16 #shorts",
+     "description": "Bertha hat es eilig, und auf ihrem Dach sitzt eine Blase. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

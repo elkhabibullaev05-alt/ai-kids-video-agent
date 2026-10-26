@@ -1,0 +1,1382 @@
+{
+ "id": "20261026-1-blamed-for-helping",
+ "plot": "On a busy school-drop-off morning with a broken traffic light, Bolt blocks the main street and won't say why while Bertha, Turbo and Grumpy blame and honk at him; Pip hears a quack and, being small, looks under Bolt's bumper: he was shielding a mother duck and three ducklings scared by the honking; everyone goes quiet, the ducks reach the pond, Bertha makes the bell just in time; lesson: before you blame, look at what they see; then a note says the school needs a crossing guard and Turbo wants the job.",
+ "script": {
+  "title": "Why Is Everyone Mad at Bolt?!",
+  "set": {
+   "place": "Wheelburg main street, school drop-off on a Monday morning (broken traffic light)",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "description": "Bolt blocks the busy street at school time and everyone is cross with him. Inspector Bolt #13",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "mum",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.38,
+     0.2
+    ],
+    "at": [
+     4.5,
+     6.0,
+     0.45
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "d1",
+    "type": "ball",
+    "color": "yellow",
+    "at": [
+     3.3,
+     5.6,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "d2",
+    "type": "ball",
+    "color": "yellow",
+    "at": [
+     2.5,
+     5.9,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "d3",
+    "type": "ball",
+    "color": "yellow",
+    "at": [
+     1.7,
+     5.6,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "bertha",
+    "say": "Honk honk! Bolt, move! You are making us late for school!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Why is Bolt blocking every single car on the street?",
+    "cam": "two:turbo,bolt",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS EVERYONE MAD AT BOLT?",
+    "cam": "close:bolt",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Shh. Please, everyone. Just wait one more minute.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Monday morning on Wheelburg's main street. School drop-off time.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The traffic light was broken. And Inspector Bolt stood in the middle.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I have twelve little cars inside me going to school!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The school bell rings in five minutes!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And today the kids sing the morning song together!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt is being bossy again. Procedure, procedure, procedure!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, please. Not so loud right now.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Loud? I am not loud! HONK! HONK! HONK!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, under all the honking, there was one tiny sound.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "QUACK?",
+    "cam": "close:pip",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait. Did anyone else hear a little quack?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That was Bertha's squeaky brakes. Everybody knows that.",
+    "cam": "two:turbo,bertha",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My brakes do NOT quack, thank you very much!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And look. Bolt keeps looking down at the road. Why?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip was right. Bolt's eyes kept going down, down, down.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. A car stuck in the road is a job for me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I could tow you to the side. Nice and slow.",
+    "cam": "two:grumpy,bolt",
+    "do": [
+     [
+      "grumpy",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "No, Grumpy. Please don't move me. Not yet.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt, you always help us. Why won't you help us now?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I am helping, Bertha. I promise. I just can't explain loudly.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Can't explain? Fine. Then I'll just zoom around you!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, STOP! Stay right where you are!",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo stopped so fast that his tires squeaked.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "See? Bossy! He shouted at me! In front of everyone!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "TWO MINUTES TO THE BELL!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Only two minutes! My little ones will miss the morning song!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone was cross. Everyone was honking. And Bolt felt very small.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I tried to help. Now everybody thinks I am the problem.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I know that feeling. It's the worst feeling in town.",
+    "cam": "two:grumpy,bolt",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "So tell us, Inspector. What is going on?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "If I shout, something very small will get scared.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Something small? The only small thing here is Pip!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hey! I am small, but I'm not scared of anything!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha's little passengers pressed their noses to her windows.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The kids are asking why the inspector looks so sad.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tell them I'm not sad. Just... waiting for someone slow.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Waiting for someone slow? Now that is very mysterious.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Slow? Who is slower than a broken traffic light?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo tried to sneak past on the other side.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:9,7"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, please. Back up. Very gently.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Gently? I don't have a gentle button!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Turbo backed up. Slowly. For the first time in his life.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's enough waiting. I'm counting to three. Then I tow.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "One...",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ONE MINUTE LEFT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "If we don't go now, the kids miss the song!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Two...",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait, Grumpy! Small cars are good at one thing. Looking under stuff!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Pip rolled very low and very slow toward Bolt.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:4,7"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Gently, Pip. Very gently. Look by my front wheel.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip peeked under the bumper. And her eyes went wide.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Oh! Oh my! Everybody, please, please be quiet!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Quiet? Why quiet? Pip, what's down there?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT IS UNDER BOLT?",
+    "cam": "close:bolt",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, from under Bolt, a mother duck stepped out.",
+    "cam": "wide",
+    "do": [
+     [
+      "mum",
+      "show"
+     ],
+     [
+      "mum",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And behind her came one, two, three fluffy ducklings!",
+    "cam": "prop:d2",
+    "do": [
+     [
+      "d1",
+      "show"
+     ],
+     [
+      "d2",
+      "show"
+     ],
+     [
+      "d3",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Ducks? You stopped the whole street for DUCKS?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "They were walking to the pond. Then the honking started.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Scared ducks hide under the nearest thing. And that was me.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "That was the quack! It was never Bertha's brakes!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "So that's why you whispered. Hmph. Clever.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Loud noises make little ones freeze. So I stayed very still.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, Bolt. You were helping. And we honked at you.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I called you bossy. Sorry, Bolt. That was not cool.",
+    "cam": "two:turbo,bolt",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, Turbo. Now, everybody. Not one honk.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody honked. Nobody zoomed. The whole street held its breath.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mother duck waddled. The ducklings waddled after her. Waddle, waddle, waddle.",
+    "cam": "prop:mum",
+    "do": [
+     [
+      "mum",
+      "bounce"
+     ],
+     [
+      "d1",
+      "bounce"
+     ],
+     [
+      "d2",
+      "bounce"
+     ],
+     [
+      "d3",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Go, little ducks! You can do it!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Shh, Pip! Whisper! We are a quiet street now!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Look at the last one. Tiny legs. Big effort. Respect.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And one by one, they splashed into the pond.",
+    "cam": "prop:d3",
+    "do": [
+     [
+      "d1",
+      "hide"
+     ],
+     [
+      "d2",
+      "hide"
+     ],
+     [
+      "d3",
+      "hide"
+     ],
+     [
+      "mum",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "They made it! All four of them, safe in the pond!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Now hurry, everyone! The bell!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha rolled to the school gate. Ding, ding, ding!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-6,16"
+     ]
+    ]
+   },
+   {
+    "text": "JUST IN TIME!",
+    "cam": "close:bertha",
+    "hold": 1.0,
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "We made it! And the kids want to say thank you, Bolt!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I don't need a thank you. But next time, please listen first.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Listen first. Honk later. I can do that.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Before you blame someone, look at what they see!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody laughed. Even Grumpy. Almost.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bertha's driver hung a note on the school gate.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "CROSSING GUARD WANTED!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A crossing guard? Tomorrow? I'm getting that job, not Bolt!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Oh, Turbo. That job is all about going slow.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Everyone Mad at Bolt?! 😢🚦 School Traffic Jam",
+  "description": "\"I don't need a thank you for helping. But being blamed for it? That hurts.\" — Inspector Bolt\nThe traffic light is broken, the school bell is about to ring, and Bolt won't let a single car move. Why is he blocking the whole street? Inspector Bolt #13\n\n#series #3DAnimation #InspectorBolt #kidscartoon #cartooncars",
+  "tags": [
+   "inspector bolt",
+   "kids cartoon",
+   "cartoon cars",
+   "3d animation",
+   "series",
+   "school bus",
+   "traffic jam",
+   "ducklings",
+   "stories for kids",
+   "being blamed",
+   "listen first"
+  ],
+  "thumb_text": "WHY IS HE MAD?",
+  "thumb_beat": 3,
+  "localizations": {
+   "es": {
+    "title": "¿¡Por qué todos están enojados con Bolt?! 😢🚦",
+    "description": "\"No necesito gracias por ayudar. ¿Pero que me culpen? Eso duele.\" — Inspector Bolt\nEl semáforo está roto, la campana de la escuela va a sonar y Bolt no deja pasar a ningún coche. ¿Por qué bloquea toda la calle? Inspector Bolt #13\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Por que todo mundo está bravo com o Bolt?! 😢🚦",
+    "description": "\"Não preciso de obrigado por ajudar. Mas ser culpado? Isso dói.\" — Inspetor Bolt\nO semáforo quebrou, o sinal da escola vai tocar e o Bolt não deixa nenhum carro passar. Por que ele está bloqueando a rua inteira? Inspetor Bolt #13\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "لماذا الجميع غاضبون من بولت؟! 😢🚦",
+    "description": "\"لا أحتاج إلى شكر على المساعدة. لكن أن يلومني الجميع؟ هذا يؤلم.\" — المفتش بولت\nإشارة المرور معطلة، وجرس المدرسة سيرن، وبولت لا يسمح لأي سيارة بالمرور. لماذا يغلق الشارع كله؟ المفتش بولت #13\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Pourquoi tout le monde en veut à Bolt ?! 😢🚦",
+    "description": "« Je n'ai pas besoin de merci pour aider. Mais être accusé ? Ça fait mal. » — Inspecteur Bolt\nLe feu est en panne, la cloche de l'école va sonner et Bolt ne laisse passer aucune voiture. Pourquoi bloque-t-il toute la rue ? Inspecteur Bolt #13\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "みんながボルトにおこってる?!😢🚦 朝の大渋滞",
+    "description": "「手伝ってお礼はいらない。でも、ぼくのせいにされるのはつらいな。」— ボルト警部\n信号がこわれて、学校のチャイムがもうすぐ鳴るのに、ボルトは1台も車を通さない。どうして道をふさいでいるの?ボルト警部 #13\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "다들 왜 볼트한테 화났을까?! 😢🚦 등굣길 교통체증",
+    "description": "\"도와주고 고맙다는 말은 필요 없어. 하지만 탓을 받는 건 속상해.\" — 볼트 형사\n신호등은 고장 났고 학교 종이 곧 울리는데, 볼트는 차를 한 대도 지나가게 하지 않아요. 왜 길을 막고 있을까요? 볼트 형사 #13\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Warum sind alle sauer auf Bolt?! 😢🚦 Schulstau",
+    "description": "„Für Hilfe brauche ich kein Danke. Aber dafür beschuldigt werden? Das tut weh.“ — Inspektor Bolt\nDie Ampel ist kaputt, gleich klingelt die Schulglocke, und Bolt lässt kein einziges Auto durch. Warum blockiert er die ganze Straße? Inspektor Bolt #13\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHY WON'T HE MOVE?!",
+   "title": "Bolt Blocked the Whole Street! 😱🚦 Ep 13 #shorts",
+   "description": "The school bell is about to ring and Bolt won't move. Why? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Bolt bloqueó toda la calle! 😱🚦 Ep 13 #shorts",
+     "description": "La campana va a sonar y Bolt no se mueve. ¿Por qué? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bolt bloqueou a rua inteira! 😱🚦 Ep 13 #shorts",
+     "description": "O sinal vai tocar e o Bolt não se mexe. Por quê? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بولت أغلق الشارع كله! 😱🚦 حلقة 13 #shorts",
+     "description": "جرس المدرسة سيرن وبولت لا يتحرك. لماذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bolt a bloqué toute la rue ! 😱🚦 Ép 13 #shorts",
+     "description": "La cloche va sonner et Bolt ne bouge pas. Pourquoi ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボルトが道をぜんぶふさいだ!😱🚦 第13話 #shorts",
+     "description": "チャイムが鳴りそうなのにボルトが動かない。なぜ?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "볼트가 길을 다 막았어요! 😱🚦 13화 #shorts",
+     "description": "종이 곧 울리는데 볼트가 안 움직여요. 왜일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bolt blockiert die ganze Straße! 😱🚦 Folge 13 #shorts",
+     "description": "Gleich klingelt es und Bolt bewegt sich nicht. Warum? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 46,
+   "dur": 30,
+   "top": "WHAT IS UNDER BOLT?",
+   "title": "Grumpy Is Counting to Three! 😬🚚 Ep 13 #shorts",
+   "description": "One minute to the bell and Grumpy is ready to tow Bolt away. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "tow truck"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Grumpy cuenta hasta tres! 😬🚚 Ep 13 #shorts",
+     "description": "Falta un minuto y Grumpy quiere remolcar a Bolt. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Grumpy está contando até três! 😬🚚 Ep 13 #shorts",
+     "description": "Falta um minuto e o Grumpy quer rebocar o Bolt. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "غرامبي يعدّ إلى ثلاثة! 😬🚚 حلقة 13 #shorts",
+     "description": "بقيت دقيقة واحدة وغرامبي مستعد لسحب بولت. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Grumpy compte jusqu'à trois ! 😬🚚 Ép 13 #shorts",
+     "description": "Plus qu'une minute et Grumpy veut remorquer Bolt. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピーが3つ数えてる!😬🚚 第13話 #shorts",
+     "description": "チャイムまであと1分、グランピーがボルトをひっぱろうとする。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "그럼피가 셋을 세고 있어요! 😬🚚 13화 #shorts",
+     "description": "종까지 1분, 그럼피가 볼트를 끌어가려 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grumpy zählt bis drei! 😬🚚 Folge 13 #shorts",
+     "description": "Noch eine Minute und Grumpy will Bolt abschleppen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 12,
+   "dur": 28,
+   "top": "WHO SAID QUACK?",
+   "title": "Did Bertha's Brakes Just Quack?! 🦆 Ep 13 #shorts",
+   "description": "A tiny sound in the big traffic jam. Pip heard it. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "funny cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿¡Los frenos de Bertha hicieron cuac?! 🦆 Ep 13 #shorts",
+     "description": "Un sonidito en el gran atasco. Pip lo oyó. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Os freios da Bertha fizeram quá?! 🦆 Ep 13 #shorts",
+     "description": "Um somzinho no grande engarrafamento. A Pip ouviu. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل قالت فرامل بيرثا كواك؟! 🦆 حلقة 13 #shorts",
+     "description": "صوت صغير وسط الزحام الكبير. بيب سمعته. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les freins de Bertha ont fait coin-coin ?! 🦆 Ép 13 #shorts",
+     "description": "Un petit bruit dans le grand embouteillage. Pip l'a entendu. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサのブレーキがガーって鳴いた?!🦆 第13話 #shorts",
+     "description": "大渋滞の中の小さな音。ピップには聞こえた。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사 브레이크가 꽥 소리를?! 🦆 13화 #shorts",
+     "description": "큰 교통체증 속 작은 소리. 핍이 들었어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Haben Berthas Bremsen gequakt?! 🦆 Folge 13 #shorts",
+     "description": "Ein winziges Geräusch im großen Stau. Pip hat es gehört. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

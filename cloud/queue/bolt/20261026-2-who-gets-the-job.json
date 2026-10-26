@@ -1,0 +1,1337 @@
+{
+ "id": "20261026-2-who-gets-the-job",
+ "plot": "The day after the duck jam, Turbo and Bolt both try out for the school crossing-guard job with retired guard Mrs. Maple at sunset; Turbo rushes his stop and rushes Pip across, Bolt is careful but bores Pip with rules, and during the break Bolt rehearses his thank-you speech while a thump at the crossing goes unnoticed; when the sun touches the hill Maple gives the badge to Turbo, because the break was the real test and he quietly came back, stopped the cars and picked up Pip's spilled books; Bolt is proud of him; lesson: kindness counts most when nobody is watching; then Maple says a storm comes tonight and Turbo has never driven slowly in rain.",
+ "script": {
+  "title": "Who Gets the Crossing Guard Job?",
+  "set": {
+   "place": "Wheelburg school crossing by the park, crossing-guard try-out after school at sunset",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "description": "Turbo and Bolt both want to be the new crossing guard. Inspector Bolt #14",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "maple": {
+    "name": "Mrs. Maple",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.6,
+     0.35
+    ],
+    "kind": "car",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     12.0,
+     14.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "badge",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     10.0,
+     11.0,
+     1.2
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "bag",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -9.0,
+     6.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "c1",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -2.0,
+     5.2,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "c2",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -7.0,
+     5.2,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Out of my way! Wheelburg's new crossing guard is coming through!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "bolt",
+      "enter:left"
+     ],
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Not so fast, Turbo. I am trying for that job too.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO GETS THE JOB?",
+    "cam": "two:turbo,bolt",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the next day after school, by the park crossing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Yesterday Bolt saved the ducks. Today, two friends wanted the same job.",
+    "cam": "wide",
+    "do": [
+     [
+      "maple",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Good afternoon, everyone. My name is Mrs. Maple.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "For thirty years, I kept this crossing safe for every kid.",
+    "cam": "two:maple,turbo",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Now I need someone new. One badge. Two cars.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "badge",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Easy! I'm the fastest car in town. Fast is good, right?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Hmm. We will see, dear. And remember one thing.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "I am always watching. Even when you think the test is over.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ooh! I brought the whole school to cheer for you!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Go, Turbo! Go, Bolt! Go, both of you!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I brought cones. Nobody cheers for cones. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bertha"
+     ],
+     [
+      "c1",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "TEST ONE: STOP AT THE LINE",
+    "cam": "prop:c1",
+    "hold": 1.1,
+    "do": [
+     [
+      "c2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "When I blow my whistle, stop right at the cones.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Not one inch past. Little wheels may be crossing.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Phweeet!",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed toward the cones like a rocket.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-2,7"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Brakes, brakes, brakes! Whoaaa!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ],
+     [
+      "turbo",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He stopped. Exactly at the cones. With his roof a little squished.",
+    "cam": "prop:c1",
+    "do": [
+     [
+      "c1",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Ta-da! Perfect stop! My roof is fine. Mostly.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt rolled up. Slowly. Calmly. And stopped right on the line.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. Look left. Look right. Stop.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Both cones still standing. That's a first for Turbo.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Two good stops. One fast, one careful. Interesting.",
+    "cam": "two:maple,turbo",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "text": "TEST TWO: HELP A KID CROSS",
+    "cam": "close:pip",
+    "hold": 1.1,
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll be the kid! I even have my real school backpack!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Lovely. Turbo, please help Pip cross the road.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Come on, Pip! Go, go, go! Faster! Speed is fun!",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:-12,9"
+     ],
+     [
+      "pip",
+      "to:-9,7"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo! My backpack is heavy! I can't go that fast!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip wobbled across the road, huffing and puffing.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Oh dear. Crossing is not a race, Turbo.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Right. Sorry, Pip. I always forget that one.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Inspector Bolt. Your turn.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, before we cross, we must learn the rules.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:-4,9"
+     ],
+     [
+      "pip",
+      "to:-12,8"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "There are seven rules of the road. Let us begin.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Rule one. Rule two. Rule three, and that's very important...",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt... my wheels are falling asleep.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip? Pip! Wake up! We haven't even reached rule four!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ha! Too slow and too fast! This is so exciting!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHEN THE SUN TOUCHES THE HILL...",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "When the sun touches that hill, I will choose.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Until then, everybody, take a short break.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo rolled away and parked next to Grumpy. He was very quiet.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-3,15"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You're quiet. That's not like you. It's scary.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Everyone says I'm only good at being fast.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I wanted to be good at something else. Just once.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. You're good at more than you think, kid.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Meanwhile, Bolt practised his speech for Mrs. Maple.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:8,12"
+     ],
+     [
+      "bertha",
+      "to:-4,17"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Mrs. Maple, thank you so much for this shiny badge.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I promise to be careful, calm, and correct. Every day.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ooh, that's lovely, Bolt! Say it again, with feeling!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Careful. Calm. Correct. And very, very punctual.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind them, at the crossing, something fell with a loud thump.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "bag",
+      "drop:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Did you hear that?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm? No. Let me practise one more time.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt practised. Bertha clapped. And nobody looked back at the crossing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "THE SUN IS TOUCHING THE HILL!",
+    "cam": "wide",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:maple"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Time is up. Everybody, gather round. I have chosen.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "This is it! I can't look! Somebody tell me when it's over!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "May the most careful car win.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:maple"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Yeah. It's Bolt. We all know it's Bolt.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "The badge goes to... Turbo.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO?!",
+    "cam": "close:turbo",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me? But I zoomed! I squished my roof! I rushed Pip!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Mrs. Maple, with respect. How?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "The break was the real test. I told you I'm always watching.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Pip's backpack fell open on the road. Books everywhere.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And Turbo came back! He turned on his blinking lights!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Every car stopped and waited. Nobody drove over my books.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then he picked up every book. Even the one with my drawings.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ],
+     [
+      "bag",
+      "to:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo! Why didn't you tell anyone?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It wasn't for a prize. Pip needed help. So I helped.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Told you, kid. More than you think.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt was quiet for a moment. Then he rolled up to Turbo.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I was so busy with my speech, I never even looked.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You earned it, Turbo. I'm proud of you. Really.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "A crossing guard watches the road, not the badge.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "badge",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Being kind counts most when nobody is watching!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm the crossing guard! Fast at helping! Slow at crossing!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone honked and cheered. Even Grumpy's cones looked happy.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "c1",
+      "bounce"
+     ],
+     [
+      "c2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Losing to a good friend still feels a lot like winning.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Your first shift is tomorrow at seven. Oh, and one more thing.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "A big storm is coming tonight. Rain, wind, and puddles.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "A STORM TONIGHT?!",
+    "cam": "close:turbo",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Rain? Puddles? I have never driven slowly in the rain...",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Turbo vs Bolt: Who Gets the Job? 🦺🏁 Big Try-Out",
+  "description": "\"Everyone says I'm only good at being fast. Just once, I want to be good at something else.\" — Turbo\nTurbo and Inspector Bolt both want to be Wheelburg's new crossing guard, and Mrs. Maple will choose when the sun touches the hill. Who gets the badge? Inspector Bolt #14\n\n#series #3DAnimation #InspectorBolt #Turbo #kidscartoon",
+  "tags": [
+   "inspector bolt",
+   "turbo",
+   "kids cartoon",
+   "cartoon cars",
+   "3d animation",
+   "series",
+   "crossing guard",
+   "school",
+   "kindness",
+   "stories for kids",
+   "friendship"
+  ],
+  "thumb_text": "WHO WINS?!",
+  "thumb_beat": 62,
+  "localizations": {
+   "es": {
+    "title": "Turbo vs Bolt: ¿quién gana el trabajo? 🦺🏁",
+    "description": "\"Todos dicen que solo soy bueno siendo rápido. Por una vez quiero ser bueno en otra cosa.\" — Turbo\nTurbo y el Inspector Bolt quieren ser el nuevo guardia del cruce escolar, y la Sra. Maple elegirá cuando el sol toque la colina. ¿Quién gana la insignia? Inspector Bolt #14\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Turbo vs Bolt: quem fica com o trabalho? 🦺🏁",
+    "description": "\"Todo mundo diz que eu só sou bom em ser rápido. Só uma vez, quero ser bom em outra coisa.\" — Turbo\nTurbo e o Inspetor Bolt querem ser o novo guarda da faixa da escola, e a Sra. Maple vai escolher quando o sol tocar o morro. Quem ganha o distintivo? Inspetor Bolt #14\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "توربو ضد بولت: من سيحصل على الوظيفة؟ 🦺🏁",
+    "description": "\"الجميع يقول إنني أجيد السرعة فقط. أريد مرة واحدة أن أجيد شيئًا آخر.\" — توربو\nتوربو والمفتش بولت يريدان أن يصبحا حارس معبر المدرسة الجديد، والسيدة مايبل ستختار عندما تلمس الشمس التلة. من سيفوز بالشارة؟ المفتش بولت #14\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Turbo contre Bolt : qui aura le poste ? 🦺🏁",
+    "description": "« Tout le monde dit que je suis seulement bon pour aller vite. Juste une fois, je veux être bon à autre chose. » — Turbo\nTurbo et l'Inspecteur Bolt veulent devenir le nouveau gardien du passage de l'école, et Mme Maple choisira quand le soleil touchera la colline. Qui aura le badge ? Inspecteur Bolt #14\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ターボ対ボルト!しごとはどっち?🦺🏁 大テスト",
+    "description": "「みんな、ぼくは速いだけって言う。一回でいいから、ほかのことでもすごいって言われたいんだ。」— ターボ\nターボとボルト警部が、学校の横断歩道の新しい見守り係になりたい。夕日が丘にふれたら、メイプルさんが決める。バッジはどっちに?ボルト警部 #14\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "터보 대 볼트: 누가 일을 맡을까? 🦺🏁",
+    "description": "\"다들 내가 빠른 것만 잘한대. 딱 한 번만, 다른 걸 잘하고 싶어.\" — 터보\n터보와 볼트 형사가 둘 다 학교 건널목 지킴이가 되고 싶어요. 해가 언덕에 닿으면 메이플 아주머니가 정해요. 배지는 누구에게? 볼트 형사 #14\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Turbo gegen Bolt: Wer kriegt den Job? 🦺🏁",
+    "description": "„Alle sagen, ich kann nur schnell sein. Nur einmal will ich in etwas anderem gut sein.“ — Turbo\nTurbo und Inspektor Bolt wollen beide der neue Schülerlotse werden, und Frau Maple entscheidet, wenn die Sonne den Hügel berührt. Wer bekommt das Abzeichen? Inspektor Bolt #14\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 15,
+   "dur": 28,
+   "top": "CAN TURBO STOP?!",
+   "title": "Turbo's Rocket Stop! 🚀🛑 Ep 14 #shorts",
+   "description": "Stop right at the cones. Not one inch past. Can Turbo do it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "turbo",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La frenada cohete de Turbo! 🚀🛑 Ep 14 #shorts",
+     "description": "Frena justo en los conos. Ni un centímetro más. ¿Podrá Turbo? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A freada foguete do Turbo! 🚀🛑 Ep 14 #shorts",
+     "description": "Pare bem nos cones. Nem um centímetro a mais. O Turbo consegue? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توقف توربو الصاروخي! 🚀🛑 حلقة 14 #shorts",
+     "description": "توقف عند الأقماع تمامًا، ولا إنش أبعد. هل يستطيع توربو؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "L'arrêt fusée de Turbo ! 🚀🛑 Ép 14 #shorts",
+     "description": "S'arrêter pile aux cônes. Pas un centimètre de plus. Turbo y arrivera ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボのロケットストップ!🚀🛑 第14話 #shorts",
+     "description": "コーンの前でぴったり止まれ!ターボにできる?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보의 로켓 정지! 🚀🛑 14화 #shorts",
+     "description": "콘 앞에 딱 멈춰야 해요. 터보가 할 수 있을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbos Raketen-Stopp! 🚀🛑 Folge 14 #shorts",
+     "description": "Genau an den Hütchen anhalten. Keinen Zentimeter weiter. Schafft Turbo das? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 54,
+   "dur": 26,
+   "top": "WHAT WAS THAT THUMP?",
+   "title": "Nobody Looked Back at the Crossing 😮 Ep 14 #shorts",
+   "description": "Something fell at the crossing. Bolt was busy. Who saw it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nadie miró hacia el cruce 😮 Ep 14 #shorts",
+     "description": "Algo cayó en el cruce. Bolt estaba ocupado. ¿Quién lo vio? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ninguém olhou para a faixa 😮 Ep 14 #shorts",
+     "description": "Algo caiu na faixa. O Bolt estava ocupado. Quem viu? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم ينظر أحد إلى المعبر 😮 حلقة 14 #shorts",
+     "description": "سقط شيء عند المعبر. بولت كان مشغولًا. من رآه؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Personne n'a regardé le passage 😮 Ép 14 #shorts",
+     "description": "Quelque chose est tombé au passage. Bolt était occupé. Qui l'a vu ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "だれも横断歩道を見ていなかった 😮 第14話 #shorts",
+     "description": "横断歩道で何かが落ちた。ボルトはいそがしい。だれが見た?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "아무도 건널목을 안 봤어요 😮 14화 #shorts",
+     "description": "건널목에서 뭔가 떨어졌어요. 볼트는 바빴죠. 누가 봤을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Keiner sah zum Übergang zurück 😮 Folge 14 #shorts",
+     "description": "Am Übergang fiel etwas herunter. Bolt war beschäftigt. Wer hat es gesehen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
