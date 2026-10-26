@@ -71,3 +71,6 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Safety notes 2026-10-20
 - News/politics/elections topics: stay neutral, give both sides, no predictions of results, no medical/financial advice. List the 3–5 sources in every description ("Sources: …").
 - Visuals: only self-drawn doodles — no news footage, photos, TV clips or company logos (copyright/trademark claims). Music only self-made or royalty-free with licence noted.
+
+## Safety notes 2026-10-26
+- Repetitive-content risk: 7 of the last 10 titles open with "Why…?". Start at most 1 title in 3 with "Why"; vary the form (statement + number, "What happens if…", place/date first, "X vs Y:"), and vary the first spoken line of each script so openings are not template-identical.
