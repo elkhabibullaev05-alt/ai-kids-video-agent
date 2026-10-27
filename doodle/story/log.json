@@ -602,9 +602,58 @@
           "visibility": "scheduled"
         }
       ]
+    },
+    {
+      "episode": 16,
+      "date": "2026-10-27",
+      "topic": "Serbia snap parliamentary election Oct 25, 2026: Student List 52.54% (~140/250 seats) vs United Serbia 39.29% (103), turnout 68.78% (record since 1992); Vucic concedes; next: PM (likely Ilija Srdanovic), govt within 90 days, presidential vote by Dec 27",
+      "title": "Serbia's Students Beat a 14-Year Government. How?",
+      "minutes": 10.65,
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/25/serbia-voter-turnout-highest-in-decades-as-students-oppose-longtime-leader",
+        "https://www.aljazeera.com/news/2026/10/26/serbia-after-vucic-who-will-be-pm-and-when-will-a-government-be-formed",
+        "https://www.aljazeera.com/news/2026/10/26/aleksandar-vucic-the-serbian-leader-brought-down-by-students",
+        "https://www.abc.net.au/news/2026-10-26/serbia-election-vucic-defeat-student-protest/107307808",
+        "https://www.euronews.com/2026/10/25/vucic-concedes-defeat-in-pivotal-serbian-elections-says-student-movement-has-won"
+      ],
+      "uploads": []
     }
   ],
-  "pending_uploads": [],
+  "pending_uploads": [
+    {
+      "episode": 16,
+      "created": "2026-10-27T03:05:00Z",
+      "script": "doodle/scripts/ep016.json",
+      "why": "computer (Claude app bridge) offline at upload time",
+      "rebuild": "python3 engine/render.py scripts/ep016.json; python3 ../tools/rek_ball.py out/ep016/ep016.mp4 '<title>' --kuchaytir -> upload out/ep016/ep016_d.mp4 (scored 96)",
+      "items": [
+        {
+          "kind": "long",
+          "title": "Serbia's Students Beat a 14-Year Government. How?",
+          "file": "ep016_d.mp4",
+          "rek_ball": 96,
+          "slot": "2026-10-28T20:45:00Z"
+        },
+        {
+          "kind": "short",
+          "title": "A Heart Doctor for Prime Minister? #shorts",
+          "file": "ep016_s1_d.mp4",
+          "rek_ball": 97,
+          "slot": "2026-10-28T12:45:00Z",
+          "make": "make_short.py out/ep016/ep016.mp4 out/ep016/ep016_s1.mp4 --start 414.9 --dur 28.5 --top 'A heart doctor to run Serbia?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+        },
+        {
+          "kind": "short",
+          "title": "68.78% Turnout: Serbia's 30-Year Record #shorts",
+          "file": "ep016_s2_d.mp4",
+          "rek_ball": 96,
+          "slot": "2026-10-28T18:15:00Z",
+          "make": "make_short.py out/ep016/ep016.mp4 out/ep016/ep016_s2.mp4 --start 97.4 --dur 29.5 --top 'Record turnout: 68.78%' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+        }
+      ],
+      "note": "news ages out after 2026-10-29 (4-day rule from Oct 25 election); if slots passed take the earliest free ones"
+    }
+  ],
   "translations_pending": [
     {
       "video_id": "cz-Ik1KrQ14",
@@ -723,8 +772,5 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-10-27T06:25:54Z",
-    "by": "session_01DAYK5TgzjcqvkSaeaA4xkc"
-  }
+  "lock": null
 }
