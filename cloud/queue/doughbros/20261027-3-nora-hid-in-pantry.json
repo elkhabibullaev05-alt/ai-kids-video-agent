@@ -1,0 +1,858 @@
+{
+ "id": "20261027-3-nora-hid-in-pantry",
+ "plot": "On sleepover night at 10 p.m. Pim is slipping off a pantry shelf when a girl, Nora, hides behind the cereal box during hide and seek; the bros freeze, notice nobody comes looking for her, Zeek's can-knock and Lolly's humming fail (the humming makes the puppy scratch at the door), and Bup links her jump at the bark and her 'please, not in here' — she is hiding from the puppy, not the game — so he rolls the red ball out the dog flap, Mia finds and hugs Nora, but Pim falls at Nora's feet, blinks, and she quietly takes him upstairs in her pocket.",
+ "script": {
+  "title": "A Girl Hid in Our Pantry",
+  "set": {
+   "place": "pantry",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cereal",
+    "type": "box",
+    "color": [
+     0.98,
+     0.78,
+     0.15
+    ],
+    "on": null,
+    "at": [
+     3,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 2.0
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": [
+     0.9,
+     0.12,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     -8,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "Help! I'm slipping off the shelf! Somebody grab me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hold on, Pim! The door is opening! Everybody freeze!",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "bup",
+      "to:-5,9"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sleepover night. Ten o'clock. A flashlight beam sweeps the pantry.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A girl squeezes in behind the cereal box. She is hiding.",
+    "cam": "prop:cereal",
+    "do": [
+     [
+      "cereal",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Hide and seek. Six kids. And she picked our pantry.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm hanging on by one bean finger. Do beans have fingers?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Technically no. You are holding on with pure fear.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Nobody move. Food that moves gets talked about forever.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Down the hall, the puppy barks. She jumps and hugs her knees.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. She's crying. Very quietly. Into her sleeve.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Her sleeping bag tag says Nora. Nobody is looking for her.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "FORGOTTEN",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pim",
+    "say": "I know that feeling. Nobody ever looks for the bean.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plan one. I knock over a can. The seekers hear it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek nudges a soup can. It rolls. It clunks. Loudly.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora grabs the cereal box and whispers, please, not in here.",
+    "cam": "prop:cereal",
+    "do": [
+     [
+      "cereal",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Nobody came. They're upstairs eating pizza. They forgot the game.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "And Pim is slipping. If he drops, she sees a moving bean.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I don't move! I fall with style! Big difference!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "HE'S SLIPPING!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "lolly",
+    "say": "Plan two. I hum very softly. Humming calms everybody down.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Last time you sang, the puppy howled for an hour.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly hums one note. Out in the hall, the puppy howls back.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Paws at the pantry door. Sniff. Sniff. Scratch, scratch.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh no. Now the puppy wants to come in here too.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora presses into the corner. She is shaking harder than Pim.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Wait. She jumped at the bark. She said, not in here.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She's not hiding from the game. She's hiding from the puppy.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "SCARED OF DOGS",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "Of course. Lots of people are scared of dogs. Even small ones.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "And at her friend's birthday, she couldn't tell anyone.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If that door opens, she screams, and the whole house comes running!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we don't need the seekers. We need the puppy gone.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "The puppy's red ball. Under the door. Out the dog flap.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup squeezes the red ball through the gap under the door.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "ball",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It bounces across the kitchen and out the dog flap. Boing.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The puppy spins around and races out into the garden after it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It worked? Bup's plan actually worked? Is that allowed?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Don't sound so surprised. Hold on, Pim. Almost there.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia opens the pantry door. Nora! We looked everywhere!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's hugging her. Mia says the puppy sleeps in the garage tonight.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "One good friend fixes more than five loud ones.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora stands up. Her elbow bumps the shelf. Pim lets go.",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THUD.",
+    "cam": "prop:cereal",
+    "hold": 1.0,
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Pim lands on his face. Right at Nora's feet. He blinks.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Did I just blink? Out loud? With my actual eyes?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora stares at him for a long time. Then she smiles.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She puts Pim in her jacket pocket and walks upstairs.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She took Pim! Upstairs! Into the sleepover!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "PIM IS GONE?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Ep 6 · A Girl Hid in Our Pantry and Pim Is Slipping 🔦",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone forgot she was hiding. I know that feeling. I'm a bean.\" — Pim\nOn sleepover night a girl hides in the Dough Bros' pantry, right under Pim, who is slipping off the shelf. Nobody comes to find her, and the bros can't move without being seen.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "pim",
+   "sleepover",
+   "hide and seek",
+   "pantry",
+   "funny animation",
+   "friendship",
+   "scared of dogs"
+  ],
+  "thumb_text": "DON'T LOOK UP!",
+  "thumb_beat": 7,
+  "localizations": {
+   "es": {
+    "title": "Ep 6 · Una niña se escondió en nuestra despensa y Pim resbala 🔦",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Todos olvidaron que se escondía. Conozco esa sensación. Soy un frijol.\" — Pim\nEn la noche de pijamada, una niña se esconde en la despensa de los Dough Bros, justo debajo de Pim, que se está resbalando del estante. Nadie viene a buscarla y los bros no pueden moverse sin ser vistos.\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Ep 6 · Uma menina se escondeu na despensa e o Pim está escorregando 🔦",
+    "description": "O que você acha que vai acontecer na próxima parte? Conta nos comentários.\n\"Todo mundo esqueceu que ela estava escondida. Eu conheço essa sensação. Sou um feijão.\" — Pim\nNa noite da festa do pijama, uma menina se esconde na despensa dos Dough Bros, bem embaixo do Pim, que está escorregando da prateleira. Ninguém vem procurá-la, e os bros não podem se mexer sem serem vistos.\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "Ep 6 · فتاة اختبأت في مخزننا وبيم ينزلق 🔦",
+    "description": "ما رأيك، ماذا سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"الجميع نسي أنها مختبئة. أعرف هذا الشعور. أنا حبة فاصوليا.\" — بيم\nفي ليلة المبيت، تختبئ فتاة في مخزن الدو بروز، تحت بيم مباشرةً وهو ينزلق عن الرف. لا أحد يأتي للبحث عنها، ولا يستطيع الأصدقاء التحرك دون أن يُروا.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Ep 6 · Une fille s'est cachée dans notre garde-manger et Pim glisse 🔦",
+    "description": "À votre avis, que va-t-il se passer dans la prochaine partie ? Dites-le-moi en commentaire.\n« Tout le monde a oublié qu'elle se cachait. Je connais ce sentiment. Je suis un haricot. » — Pim\nLe soir de la soirée pyjama, une fille se cache dans le garde-manger des Dough Bros, juste sous Pim qui glisse de l'étagère. Personne ne vient la chercher, et les bros ne peuvent pas bouger sans être vus.\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "Ep 6 · 女の子が食品庫に隠れた！ピムが落ちそう 🔦",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「みんな、あの子が隠れてることを忘れてた。その気持ち、わかるよ。ぼく豆だもん。」— ピム\nお泊まり会の夜、女の子がドウ・ブロスの食品庫に隠れる。真上の棚ではピムが落ちそう。誰も彼女を探しに来ないし、ブロスは動けば見つかってしまう。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "Ep 6 · 여자아이가 우리 식료품 창고에 숨었고 핌이 미끄러진다 🔦",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려 줘.\n\"다들 그 애가 숨어 있다는 걸 잊었어. 나도 그 기분 알아. 난 콩이거든.\" — 핌\n파자마 파티 밤, 한 여자아이가 도우 브로스의 식료품 창고에 숨는다. 바로 위 선반에선 핌이 미끄러지고 있다. 아무도 그 애를 찾으러 오지 않고, 브로스는 움직이면 들킨다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Ep 6 · Ein Mädchen versteckt sich in der Speisekammer und Pim rutscht 🔦",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Alle haben vergessen, dass sie sich versteckt. Ich kenne das Gefühl. Ich bin eine Bohne.“ — Pim\nIn der Übernachtungsparty-Nacht versteckt sich ein Mädchen in der Speisekammer der Dough Bros, genau unter Pim, der vom Regal rutscht. Niemand sucht sie, und die Bros können sich nicht bewegen, ohne gesehen zu werden.\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "DON'T MOVE!",
+   "title": "Ep 6: Pim Is Slipping and Someone Walked In 😱 #shorts",
+   "description": "Sleepover night, a girl hides in the pantry, and Pim is about to fall. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "pim",
+    "sleepover"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 6: Pim resbala y alguien entró 😱 #shorts",
+     "description": "Noche de pijamada, una niña se esconde en la despensa y Pim está a punto de caer. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 6: O Pim está escorregando e alguém entrou 😱 #shorts",
+     "description": "Noite do pijama, uma menina se esconde na despensa e o Pim está quase caindo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 6: بيم ينزلق وشخص ما دخل 😱 #shorts",
+     "description": "ليلة المبيت، فتاة تختبئ في المخزن، وبيم على وشك السقوط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 6 : Pim glisse et quelqu'un est entré 😱 #shorts",
+     "description": "Soirée pyjama, une fille se cache dans le garde-manger, et Pim va tomber. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第6話：ピムが落ちそう、そこへ誰かが入ってきた 😱 #shorts",
+     "description": "お泊まり会の夜、女の子が食品庫に隠れ、ピムは今にも落ちそう。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "6화: 핌이 미끄러지는데 누가 들어왔다 😱 #shorts",
+     "description": "파자마 파티 밤, 여자아이가 창고에 숨고 핌은 곧 떨어질 것 같다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 6: Pim rutscht und jemand kommt rein 😱 #shorts",
+     "description": "Übernachtungsparty, ein Mädchen versteckt sich in der Speisekammer, und Pim fällt gleich. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

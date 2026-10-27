@@ -1,0 +1,916 @@
+{
+ "id": "20261028-1-pim-in-which-backpack",
+ "plot": "At 8 a.m. after the sleepover six identical purple backpacks hang on the garden fence and Nora's ride is at the gate; Crispy says to listen for Pim's scared humming, Zeek's 'shortest girl, lowest bag' logic opens a sock bag, the sprinklers soak the bros under the bench, and Lolly hears the humming coming from Nora's yellow jacket — Pim never left her pocket — so Zeek and Crispy turn the sprinkler on the gate, Nora hangs her wet jacket on the fence, Bup pulls Pim out, Nora finds the pocket empty and waves at the bench, and Dad announces Grandma, who bakes every morning, arrives tomorrow for a week.",
+ "script": {
+  "title": "Can We Get Pim Back Before Nora Goes Home",
+  "set": {
+   "place": "garden",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bag",
+    "type": "box",
+    "color": [
+     0.55,
+     0.25,
+     0.8
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Six purple backpacks! All the same! Pim is in one of them!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,10"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Run! Before the parents take them home!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ],
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "HONK HONK!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Eight a.m. The sleepover is over. A car waits by the gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Nora took Pim upstairs last night. Then what happened?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then the girls packed. Everything went into the backpacks.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Six backpacks hang on the garden fence. Purple. Zipped. Identical.",
+    "cam": "prop:bag",
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Which one is Nora's? They even have the same keychain!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Listen for humming. Pim always hums when he's scared.",
+    "cam": "two:crispy,zeek",
+    "do": [
+     [
+      "crispy",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros listen. Birds. A lawn mower. Kids yelling about pancakes.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Too noisy. I'll use logic. Nora is the shortest girl.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "So her bag hangs the lowest. That one. Bottom left.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "bag",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four tiny bros run across the wet lawn to the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-3,12"
+     ],
+     [
+      "lolly",
+      "to:1,12"
+     ],
+     [
+      "zeek",
+      "to:4,12"
+     ],
+     [
+      "crispy",
+      "to:7,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'll climb. Bread is great at climbing. Probably.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup tugs the zipper. Socks. A toothbrush. Old pizza crust.",
+    "cam": "prop:bag",
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Pizza crust. Some bread didn't survive the party.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No Pim! Zeek, your logic just opened a sock bag!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The heights were within my error margin. Mostly.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WRONG BAG!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Then a click. A hiss. The morning sprinklers turn on.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Water! My icing! I'm melting! Nobody look at me!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody under the bench! Go, go, go!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-6,8"
+     ],
+     [
+      "lolly",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the garden bench, four soaked bros. Lolly's icing drips.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:2,8"
+     ],
+     [
+      "crispy",
+      "to:6,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'm steaming. This is the closest I get to a spa.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Five bags left. If that car leaves with Pim, he's gone.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "PIM LEAVES TODAY?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "The girls run outside. The sprinklers soak them. Screams. Then laughing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Shh. Listen. Under all that noise. Do you hear it?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hmm hmm hmm. Tiny. Shaky. Humming. But not from the fence.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ],
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It's coming from the girl in the yellow jacket. Nora.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "He's not in a backpack. He never left her pocket!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IN HER POCKET!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:lolly"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "zeek",
+    "say": "So all my logic was about the wrong thing. Wonderful.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Her dad is at the gate. She's walking to the car!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The sprinklers! Wet jackets come off! Zeek, where's the tap?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "By the steps. Turn it all the way. Maximum spray.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek and Crispy push the tap. The sprinkler swings toward the gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ],
+     [
+      "crispy",
+      "to:9,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora gets soaked. She laughs. She hangs her jacket on the fence.",
+    "cam": "prop:bag",
+    "do": [
+     [
+      "bag",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Now, Bup! The pocket! The one that's humming!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs the fence and reaches in. A red bean tumbles out.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "pim",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Hmm hmm! Is it over? Am I home? Did I miss pancakes?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You're home, Pim. And you hum way too loud.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ],
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nora takes back her wet jacket. She checks the pocket. Empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She looks at the bench. She waves. Just once. Then she's gone.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She waved at me. I have a human friend now. I think.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "A good friend makes you a little braver every time.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back in the kitchen, Dad hangs up the phone. He is smiling.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma arrives tomorrow. For a week. She bakes every single morning.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A real baker. In our kitchen. She will know fresh from old.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She'll know exactly what we are.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA'S COMING?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Ep 7 · Can We Get Pim Back Before Nora Goes Home? 🎒",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Six bags. One car. And my brother is in one of them. Somewhere.\" — Lolly\nThe sleepover is over, six identical purple backpacks hang on the fence, and Pim is in one of them. Nora's ride is already at the gate.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "lolly",
+   "pim",
+   "sleepover",
+   "backpack",
+   "garden sprinkler",
+   "funny animation",
+   "friendship"
+  ],
+  "thumb_text": "WHICH ONE?!",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "Ep 7 · ¿Recuperaremos a Pim antes de que Nora se vaya? 🎒",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Seis mochilas. Un coche. Y mi hermano está en una de ellas. En algún lugar.\" — Lolly\nLa pijamada terminó, seis mochilas moradas idénticas cuelgan de la cerca y Pim está en una de ellas. El coche de Nora ya espera en la puerta.\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Ep 7 · Vamos resgatar o Pim antes que a Nora vá embora? 🎒",
+    "description": "O que você acha que vai acontecer na próxima parte? Conta nos comentários.\n\"Seis mochilas. Um carro. E meu irmão está em uma delas. Em algum lugar.\" — Lolly\nA festa do pijama acabou, seis mochilas roxas idênticas estão penduradas na cerca e o Pim está em uma delas. O carro da Nora já está no portão.\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "Ep 7 · هل نستعيد بيم قبل أن تعود نورا إلى بيتها؟ 🎒",
+    "description": "ما رأيك، ماذا سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"ست حقائب. سيارة واحدة. وأخي في واحدة منها. في مكان ما.\" — لولي\nانتهت ليلة المبيت، ست حقائب بنفسجية متطابقة معلّقة على السياج، وبيم في واحدة منها. سيارة نورا تنتظر عند البوابة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Ep 7 · Récupérer Pim avant que Nora rentre chez elle ? 🎒",
+    "description": "À votre avis, que va-t-il se passer dans la prochaine partie ? Dites-le-moi en commentaire.\n« Six sacs. Une voiture. Et mon frère est dans l'un d'eux. Quelque part. » — Lolly\nLa soirée pyjama est finie, six sacs à dos violets identiques pendent à la clôture, et Pim est dans l'un d'eux. La voiture de Nora attend déjà au portail.\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "Ep 7 · ノラが帰る前にピムを取り戻せる？🎒",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「リュックが6つ。車が1台。そのどれかに弟がいる。どこかに。」— ロリー\nお泊まり会が終わり、同じ紫のリュックが6つフェンスにかかっている。そのどれかにピムが。ノラの迎えの車はもう門の前だ。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "Ep 7 · 노라가 집에 가기 전에 핌을 되찾을 수 있을까? 🎒",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려 줘.\n\"가방 여섯 개. 차 한 대. 그리고 그중 하나에 내 동생이 있어. 어딘가에.\" — 롤리\n파자마 파티가 끝났다. 똑같은 보라색 배낭 여섯 개가 울타리에 걸려 있고, 그중 하나에 핌이 있다. 노라를 데리러 온 차는 벌써 대문 앞이다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Ep 7 · Holen wir Pim zurück, bevor Nora nach Hause fährt? 🎒",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Sechs Rucksäcke. Ein Auto. Und mein Bruder steckt in einem davon. Irgendwo.“ — Lolly\nDie Übernachtungsparty ist vorbei, sechs gleiche lila Rucksäcke hängen am Zaun, und Pim steckt in einem davon. Noras Abholung wartet schon am Tor.\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "WHICH BAG?!",
+   "title": "Ep 7: Six Same Backpacks. Pim Is in One 🎒 #shorts",
+   "description": "The sleepover is over and Pim is zipped inside one of six identical backpacks. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lolly",
+    "backpack"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 7: Seis mochilas iguales. Pim está en una 🎒 #shorts",
+     "description": "La pijamada terminó y Pim está dentro de una de seis mochilas idénticas. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 7: Seis mochilas iguais. O Pim está em uma 🎒 #shorts",
+     "description": "A festa do pijama acabou e o Pim está dentro de uma de seis mochilas idênticas. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 7: ست حقائب متطابقة. بيم في واحدة 🎒 #shorts",
+     "description": "انتهت ليلة المبيت، وبيم داخل واحدة من ست حقائب متطابقة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 7 : Six sacs identiques. Pim est dans l'un d'eux 🎒 #shorts",
+     "description": "La soirée pyjama est finie et Pim est dans l'un de six sacs identiques. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第7話：同じリュックが6つ。ピムはどれに？🎒 #shorts",
+     "description": "お泊まり会は終わり、ピムは6つの同じリュックのどれかの中。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "7화: 똑같은 배낭 여섯 개, 핌은 어디에? 🎒 #shorts",
+     "description": "파자마 파티는 끝났고 핌은 똑같은 배낭 여섯 개 중 하나에 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 7: Sechs gleiche Rucksäcke. Pim ist in einem 🎒 #shorts",
+     "description": "Die Party ist vorbei und Pim steckt in einem von sechs gleichen Rucksäcken. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 20,
+   "dur": 32,
+   "top": "SPRINKLERS ON!",
+   "title": "Ep 7: The Sprinklers Hit at the Worst Moment 💦 #shorts",
+   "description": "Wrong bag, soaked bros, and a strange humming. Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "sprinkler",
+    "lolly"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Ep 7: Los aspersores en el peor momento 💦 #shorts",
+     "description": "Mochila equivocada, bros empapados y un zumbido extraño. Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ep 7: Os irrigadores ligam na pior hora 💦 #shorts",
+     "description": "Mochila errada, bros encharcados e um zumbido estranho. Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلقة 7: الرشاشات تعمل في أسوأ لحظة 💦 #shorts",
+     "description": "حقيبة خاطئة، أصدقاء مبللون، وهمهمة غريبة. الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ép 7 : Les arroseurs au pire moment 💦 #shorts",
+     "description": "Mauvais sac, bros trempés et un étrange fredonnement. Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "第7話：最悪のタイミングでスプリンクラー 💦 #shorts",
+     "description": "違うリュック、ずぶ濡れのブロス、そして不思議なハミング。本編はチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "7화: 최악의 순간에 스프링클러가 켜졌다 💦 #shorts",
+     "description": "엉뚱한 가방, 흠뻑 젖은 브로스, 그리고 이상한 콧노래. 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Folge 7: Der Rasensprenger im schlimmsten Moment 💦 #shorts",
+     "description": "Falscher Rucksack, nasse Bros und ein seltsames Summen. Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
