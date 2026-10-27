@@ -8,6 +8,13 @@ Channel: **Seoul Night Remix** — @SeoulNightRemix — Studio id `UCEgWmdwz8gvT
 - Music is made in **Suno (Pro plan, owner's account el_khabibullaev05, in the owner's own Chrome = Claude in Chrome tools)**. Only songs created while Pro is active have commercial rights. Songs in the library from before 2026-10-27 were made on the free plan: never upload or remix them.
 - The owner gave standing permission for this run to create songs, download them and upload/schedule them. Anything else that needs his permission (payment, new account settings, deleting) → stop and ask him in the final message.
 
+## Owner's style rules (2026-10-28, override anything below)
+- **Every song is a love song** (first date, missing someone, confession in the rain, late-night call, breakup and coming back…), told in Seoul night scenes.
+- **Strong remix:** hard-hitting dance remix — 124–128 BPM, punchy kick, deep sub bass, big build-up and a loud drop by 0:45, festival energy, catchy female vocal hook. Rotate: K-pop EDM remix · bass house remix · future bass remix · phonk-pop remix.
+- **Background = a photorealistic (not anime) beautiful young adult Korean woman** in a neon Seoul night scene, made with Canva generate-image (a fictional AI person — never a real person, celebrity or idol, never anyone who looks under 20). New pose/outfit/place every song, same mood. Mark "Altered or synthetic content: Yes" on every upload.
+  Full-size image: open `https://www.canva.com/M/<media id>` in Claude in Chrome, take the largest `<img>` and save it to the Downloads folder, stage it, then `render.py cover "TITLE" out.jpg --bg bg.jpg --tag "LOVE REMIX"`; make a PORTRAIT_9_16 version for the Short (`short … --bg bg_vertical.jpg`).
+- Title: `Song Title – Love Remix (Seoul Night)`; Short: `POV: he finally called back at 2 AM 🌃 Song Title #shorts`.
+
 ## Limits
 - Suno Pro = 2,500 credits (≈ 10 per generation) and **20 downloads / month** (renews on the billing date, next 2026-11-22). 1 song/day needs ~30. Check "remaining downloads" on https://suno.com/account first; keep 1 in reserve. If 0 left: skip the new song, still do any due mix from songs already downloaded, and tell the owner ("Suno yuklab olish limiti tugadi — qo'shimcha yuklab olish sotib olinsa davom etaman").
 - Never stream-rip Suno audio (cdn URLs) to get around the download limit; only the official Download button.
