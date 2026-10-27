@@ -1,0 +1,32 @@
+# Milo Survives — production run (instructions for Claude)
+
+Channel: **Milo Survives** — @MiloSurvivesDaily — Studio id `UCiaE4voy2yYUHOTDr2wfC5A` — Google account eldorbekhabibullaev6 (built-in browser `authuser=5` as of 2026-10-27). Not made for kids. Owner speaks Uzbek; video content is English.
+
+## Format (from the channel's first video, "I Survived 100 Days in a Zombie Hospital")
+2D hand-drawn explainer, cream background, **Milo** = small cartoon guy with big round glasses and a yellow raincoat, calm narrator, burned-in captions, a red "DAY N" tag top right, big hand-lettered numbers ("3 DAYS / 3 WEEKS"). Each episode: **"I Survived 100 Days in/on <dangerous place>"** — a survival story told day by day, teaching REAL survival facts (water before food, shelter, signalling, first aid…). Fiction for the story, facts must be true (cite 2–3 reliable sources in the description: Red Cross, CDC, national park services, survival manuals).
+Places rotate, never repeat within 15 episodes: zombie hospital (done), desert island, Antarctica, Amazon jungle, Sahara, sinking ship, deep cave, Mars base, frozen Siberian forest, abandoned mall, volcano island, Everest, open ocean raft, haunted subway, tornado alley…
+
+Use the Doodle Desk engine — it draws exactly this style: `doodle/engine/render.py` (+ `ink.py`), script format `doodle/story/SCRIPT_FORMAT.md`, helper style `doodle/scripts/_build_ep001.py`. Add Milo as a cast member in your script (glasses + yellow raincoat colours) — do not change the Doodle Desk cast or its files; put Milo's scripts in `milo/scripts/`, renders in `milo/out/` (not committed).
+
+## Studio AI advice for this channel (2026-10-27) — follow it
+- CTR was 1.66% and half the viewers left by 0:18. **First 3 s:** open on the danger ("Day 1. 1 HP. No water. Something is scratching the door.") — no intro, no title card.
+- **Title:** tension/curiosity, < 55 chars ("100 Days Trapped in an Infected Hospital", "Can You Survive 100 Days on a Desert Island?").
+- **Thumbnail:** Milo in clear danger + 2–3 huge words ("DAY 99…", "TRAPPED!"), high contrast, not text-heavy.
+- **Shorts:** cut 2–3 Shorts (30–45 s) from every long video (the scariest/most surprising moment, the best survival fact); title = a hook; description links the long video.
+- **Pace:** something changes every 3–5 s; a "DAY N" jump every 30–60 s.
+
+## Schedule
+- **1 long video (7–10 min) every 2 days + 2 Shorts from it.** Long at 20:15–23:45 UTC (US evening), Shorts at 13:15–15:45 and 17:15–19:45 UTC the next days, minutes :15/:45, ≥ 30 min ahead.
+- `milo/story/log.json` holds `{"lock", "episodes":[{n, date, place, title, sources, uploads:[{kind,title,publish_at,id}]}], "pending_uploads":[]}`. Lock rules as in `doodle/AGENT.md` §0.
+
+## Per run
+1. Lock; if a long video is already scheduled within the next 2 days, only upload `pending_uploads` and stop.
+2. Pick the next place; research 2–3 sources for the survival facts; write `milo/scripts/_build_epNNN.py` → `milo/scripts/epNNN.json` (1,000–1,400 words, 60–90 scenes, a DAY tag in most scenes).
+3. `--check`, `--preview`, render (as in `doodle/AGENT.md` §3); look at 3 frames; Rek-ball gate (`tools/rek_ball.py`, ≥ 85, `--kuchaytir` allowed).
+4. Cut the Shorts with `tools/make_short.py` (`--top` = a hook line, `--bottom "Full story on the channel"`).
+5. Upload with the `doodle/UPLOAD.md` flow but channel `UCiaE4voy2yYUHOTDr2wfC5A`, branch `uploads-milo`, file names `milo_epNNN*.mp4`; check the page shows "Milo Survives"; Not made for kids; altered content: No (hand-drawn). If the channel has an old "upload defaults" title/description/tags, replace them.
+6. Log, unlock, push (scripts + log only). Update the hub `agents/milo` (ArtifactData https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r, pin if_version; activity line, videos, next, status "ok").
+7. Final message in Uzbek, 2–3 lines: episode title, Bishkek release times, Rek-ball scores, problems.
+
+## Never
+Real people's likeness, gore, self-harm methods, dangerous "how to" that could hurt a viewer (no foraging advice that could poison, no fake medical claims), passwords, account/Studio settings, deleting anything.
