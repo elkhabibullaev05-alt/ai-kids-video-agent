@@ -625,6 +625,20 @@
           "category": "News & Politics",
           "visibility": "scheduled",
           "uploaded": "2026-10-27 run 17:01Z"
+        },
+        {
+          "kind": "short",
+          "title": "A Heart Doctor for Prime Minister? #shorts",
+          "publish_at": "2026-10-28T12:45:00Z",
+          "video_id": "efHsrQ6tG9w",
+          "rek_ball": 97
+        },
+        {
+          "kind": "short",
+          "title": "68.78% Turnout: Serbia's 30-Year Record #shorts",
+          "publish_at": "2026-10-28T18:15:00Z",
+          "video_id": "0_c_aMJEK1o",
+          "rek_ball": 96
         }
       ]
     },
@@ -650,66 +664,25 @@
           "category": "News & Politics",
           "visibility": "scheduled",
           "uploaded": "2026-10-27 run 17:01Z"
-        }
-      ]
-    }
-  ],
-  "pending_uploads": [
-    {
-      "episode": 16,
-      "created": "2026-10-27T03:05:00Z",
-      "script": "doodle/scripts/ep016.json",
-      "why": "2026-10-27 17:01 run: long uploaded+scheduled; Short scheduling was blocked by the session permission check (Shorts not in the scheduled prompt), so Shorts stay pending. ",
-      "rebuild": "python3 engine/render.py scripts/ep016.json; python3 ../tools/rek_ball.py out/ep016/ep016.mp4 '<title>' --kuchaytir -> upload out/ep016/ep016_d.mp4 (scored 96) ; NOTE ep016_d.mp4 is ~224MB (>100MB GitHub limit): re-encode for hosting: ffmpeg -i ep016_d.mp4 -c:v libx264 -preset veryfast -crf 25 -c:a aac -b:a 128k -movflags +faststart ep016_up.mp4 (~87MB). Long rescored 93 on 2026-10-27.",
-      "items": [
-        {
-          "kind": "short",
-          "title": "A Heart Doctor for Prime Minister? #shorts",
-          "file": "ep016_s1_d.mp4",
-          "rek_ball": 97,
-          "slot": "2026-10-28T12:45:00Z",
-          "make": "make_short.py out/ep016/ep016.mp4 out/ep016/ep016_s1.mp4 --start 414.9 --dur 28.5 --top 'A heart doctor to run Serbia?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
         },
         {
           "kind": "short",
-          "title": "68.78% Turnout: Serbia's 30-Year Record #shorts",
-          "file": "ep016_s2_d.mp4",
-          "rek_ball": 96,
-          "slot": "2026-10-28T18:15:00Z",
-          "make": "make_short.py out/ep016/ep016.mp4 out/ep016/ep016_s2.mp4 --start 97.4 --dur 29.5 --top 'Record turnout: 68.78%' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
-        }
-      ],
-      "note": "news ages out after 2026-10-29 (4-day rule from Oct 25 election); if slots passed take the earliest free ones",
-      "long_video_url": "https://youtu.be/HcTAGjZ3894"
-    },
-    {
-      "episode": 17,
-      "created": "2026-10-27T15:20:00Z",
-      "script": "doodle/scripts/ep017.json",
-      "why": "2026-10-27 17:01 run: long uploaded+scheduled; Short scheduling was blocked by the session permission check (Shorts not in the scheduled prompt), so Shorts stay pending. ep017_s1 already uploaded as a PRIVATE DRAFT in Studio (title \"Ask a Secret Ballot What It Meant? #shorts\", category set) - finish scheduling it instead of re-uploading. ",
-      "rebuild": "python3 engine/render.py scripts/ep017.json; python3 ../tools/rek_ball.py out/ep017/ep017.mp4 '<title>' --kuchaytir -> ep017_d.mp4 (~211MB, scored 96) -> re-encode crf 25 for GitHub hosting (<100MB)",
-      "items": [
-        {
-          "kind": "short",
           "title": "Ask a Secret Ballot What It Meant? #shorts",
-          "file": "ep017_s1_d.mp4",
-          "rek_ball": 97,
-          "slot": "2026-10-29T13:15:00Z",
-          "make": "make_short.py out/ep017/ep017.mp4 out/ep017/ep017_s1.mp4 --start 333.3 --dur 31.1 --top 'Ask a ballot what it meant?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+          "publish_at": "2026-10-29T13:15:00Z",
+          "video_id": "y2zovZ4r4yg",
+          "rek_ball": 97
         },
         {
           "kind": "short",
           "title": "4,107 Votes for the Other Dan Sullivan #shorts",
-          "file": "ep017_s2_d.mp4",
-          "rek_ball": 96,
-          "slot": "2026-10-29T19:15:00Z",
-          "make": "make_short.py out/ep017/ep017.mp4 out/ep017/ep017_s2.mp4 --start 103.6 --dur 32.6 --top '4,107 votes. One Senate seat?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+          "publish_at": "2026-10-29T19:15:00Z",
+          "video_id": "61fxwlN0uHI",
+          "rek_ball": 96
         }
-      ],
-      "note": "must publish before Election Day Nov 3, 2026 (content is pre-election); news ages out after 2026-10-30 (4-day rule from Oct 26 coverage)",
-      "long_video_url": "https://youtu.be/OR1KmPMS7hw"
+      ]
     }
   ],
+  "pending_uploads": [],
   "translations_pending": [
     {
       "video_id": "cz-Ik1KrQ14",
@@ -814,6 +787,58 @@
         "de"
       ],
       "what": "add title+description translations (and subs) in Studio Tillar page (authuser=4); texts from scripts/ep017.json"
+    },
+    {
+      "video_id": "efHsrQ6tG9w",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations in Studio Tillar page (authuser=4); texts from scripts/ep016.json / Short title"
+    },
+    {
+      "video_id": "0_c_aMJEK1o",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations in Studio Tillar page (authuser=4); texts from scripts/ep016.json / Short title"
+    },
+    {
+      "video_id": "y2zovZ4r4yg",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations in Studio Tillar page (authuser=4); texts from scripts/ep017.json / Short title"
+    },
+    {
+      "video_id": "61fxwlN0uHI",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations in Studio Tillar page (authuser=4); texts from scripts/ep017.json / Short title"
     }
   ],
   "translations_resolved": [
@@ -854,8 +879,5 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-10-28T00:24:33Z",
-    "by": "session_01DAYK5VHnHKmPv3AVEqZX7f"
-  }
+  "lock": null
 }
