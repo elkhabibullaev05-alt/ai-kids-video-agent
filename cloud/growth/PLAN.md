@@ -4,6 +4,7 @@ Source: the owner's guide (Claude Docs, 28 Oct 2026), YouTube Studio AI answers 
 **Deadline: apply for YPP before ~15 Jan 2027** (thresholds double on 1 Feb 2027: 8,000 h or 20M Shorts views).
 **Owner 2026-10-28 02:14: "kamaytirma, vdni sifatini yaxshila" — never lower the number of uploads; keep the old daily counts and put the effort into quality.**
 **Owner 2026-10-28 02:18: if Studio AI says to upload fewer videos, do NOT cut anything yourself — put it in the report as "Studio: <kanal> uchun videoni kamaytirishni tavsiya qilyapti (<raqamlar>) — qaror sizda" and the owner decides. Every other Studio fix (titles, thumbnails, hooks, quality, timing) is applied automatically as usual.**
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
 **Biggest risk:** YouTube's July 2026 "inauthentic content" rule — template-like, near-identical, mass-produced videos are not monetized. Every channel: same number of videos, each clearly different and better made; a human layer in each (own commentary/narration, chapters, story).
 
 The daily Studio analysis run reads this file, works on **every channel every day** (at least one item each), ticks items off here (`- [x] … (done YYYY-MM-DD: what)`), and adds new items when Studio finds new problems. Weekly review measures each channel against its target.
@@ -38,7 +39,7 @@ Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 d
 
 ## Priority 1 — Hollowmere Tales (`hollow`, repo `hollow/`)
 Now: 3 subs, ~540 views/day, long CTR 1 %, Shorts stayed 13.6 %. Model: Mr Nightmare (7.2M subs, 20–30 min "3 TRUE … Stories" compilations, 99 % long).
-- [ ] Halloween: a 15–25 min compilation "3 TRUE Halloween Stories That Still Have No Answer" published by 31 Oct 21:00 UTC (re-cut from existing episodes + narration bridges).
+- [ ] Halloween: a 14:50-max compilation "3 TRUE Halloween Stories That Still Have No Answer" (channel not verified) published by 31 Oct 21:00 UTC (re-cut from existing episodes + narration bridges).
 - [ ] Every week 1–2 compilations "3 TRUE <setting> Stories" (night shift, new house, highway, school) 15–25 min — the long-watch-hours engine.
 - [ ] Titles without "Ep N ·"; thumbnail = one scared face / dark doorway + 2 words.
 - [ ] Shorts open on the shock line; each points to its compilation.

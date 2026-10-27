@@ -33,3 +33,9 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 
 
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Milo section). Structure like Bright Side / Infographics Show: open with the question, answer step by step with pictures.
+
+## Competitor format 2026-10-28 (Beanie Survives 828K, One More Day — applies from the next run)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
+- Cold open: the most dangerous moment, second person, exact time/place ("4:52 p.m., gate B16. The lights go out."). Day 1 starts within 5 s. Never "My name is Milo… stay till the end".
+- Series titles "<Story> Ep. N: <moment> (Day X)"; ~10–14 min (max 14:50); named side characters with their own voices; end screen line pointing to the next episode.
+- Thumbnail frame: huge red "DAY X", the threat filling the frame, or a "DAY 1 | DAY N" split.

@@ -102,3 +102,8 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Wild Sketchbook section)
 - Move weight from "X vs Y: who would win?" fights to curiosity explainers ("This Animal…", "What Happens If…") — fights risk YouTube's July 2026 "distressing content" rule.
 - Short: key fact at frame 0 + bold subtitle; every title unique; mid-video CTA "subscribe for one animal secret a day".
+
+## Competitor format 2026-10-28 (KO MATION 9.8M, Creature Challenge — applies from the next script)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
+- Long ink videos: weekly 4–8 min "tournament / battle royale" with an 8–16 animal bracket (famous animals: lion, tiger, gorilla, grizzly, hippo, croc, great white, orca), max 14:50. Not fact explainers (0 views).
+- Strong angle in titles: "…Is A LIE", "NOT EVEN CLOSE". First frame: both animals charging + "WHO WINS?".

@@ -79,3 +79,8 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Doodle Desk section)
 - Every title = a clear conflict / David-vs-Goliath question (best so far: "How Did a Cheap Team Beat Baseball's $339M Giant?" 2.31 % CTR). No headline-style titles.
 - Thumbnail text adds to the title (2–4 words), never repeats it. State the mystery in the first 15 s; one value-based subscribe line mid-video.
+
+## Competitor format 2026-10-28 (Infographics Show / Paint Explainer / Economics Explained — applies from the next run)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer. (Doodle Desk IS verified: long videos may be 12–15 min, custom thumbnails allowed.)
+- Stop daily news explainers (Fed, polls, Medicare got 1–5 views). Evergreen underdog/money stories: "How a $X <small> Beat a $Y <giant>", or list videos "The N Most … / Every …" with a year-by-year or list structure, 12–15 min.
+- First line = the first item / the conflict, no preamble. Thumbnail: one real recognisable object, ≤ 3 huge words, red arrow, high contrast.

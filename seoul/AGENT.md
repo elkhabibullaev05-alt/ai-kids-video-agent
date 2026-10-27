@@ -46,3 +46,9 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Seoul section)
 - Description of every song: 1 mood line + 2 lyric lines + "Music created with Suno (Pro)" + chapters for mixes (human layer against "inauthentic content").
 - If a song gets a Content ID claim: do not use it again; generate a new one.
+
+## Competitor format 2026-10-28 (essential; 1.5M, soso playlist 1.4M — applies from the next run)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
+- **Mixes max 14:50 until the channel is verified** (so "30-min / 1-hour mix" becomes "14-min mix" of 4–5 songs; switch to 30/60 min after verification).
+- Mix title: "[Playlist] <situation> 🌃 Seoul night drive love remixes" (after work, rainy night, 2 AM drive) + chapters.
+- Song video: on-screen lyric lines (English, plus a short Korean line where the song has one) and a slow animated background (rain/neon drift) instead of a static image. Bright cover with one lyric/mood line.

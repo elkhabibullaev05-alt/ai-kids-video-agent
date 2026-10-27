@@ -86,3 +86,9 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Inspector Bolt section)
 - Keep the usual episode count (owner 28 Oct: "kamaytirma"); release in US mornings/afternoons (13:15–15:45 UTC), not at night.
 - Thumbnails: Bolt's shocked face big, bold colours, no small text; titles < 50 chars ("Lost in the Dark! Can Bolt Save Wren?").
+
+## Competitor format 2026-10-28 (Tayo / Robocar POLI / Gecko's Garage — applies from the next run)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
+- Bring the robot detective Bolt back as the hero of every episode (the "Wheelburg" talking-car uploads 25–27 Oct got 0 views); Bolt's face big in the first frame.
+- Title = emotional cry + searchable tail: "<Friend> Is Trapped! Bolt to the Rescue | Car Cartoons for Kids".
+- Each episode ends with a 20–30 s "Bolt's Safety Rule" song/lesson. Weekly compilation **max 14:50**. Seasonal tie-ins (Halloween now).

@@ -133,3 +133,7 @@ Full answers: `cloud/growth/ask_studio_2026-10-27.md`. Apply to every job from n
 - maxcat: long videos = 8–10 min compilations of finished stories (not 2-min "long" videos); titles start with the hook, never "Max the Curious Cat |"; thumbnail Max's face with a big emotion.
 - roblox Blocky Quest: stays kids, never "Roblox" in titles.
 - Every channel: keep the upload count (owner 28 Oct: "kamaytirma"); every video clearly different and better made — a weak idea is replaced by a stronger one, never padded.
+
+## Competitor format 2026-10-28 — maxcat (Simon's Cat, Talking Tom, Kitty's Games)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer. (Max IS verified: compilations may be 20–30 min, custom thumbnails allowed.)
+- Weekly themed compilation 20–30 min ("Max's Spooky Adventures 🎃 | 25 Min"); story titles plain and emotional; Max's face with a big emotion in the first frame.

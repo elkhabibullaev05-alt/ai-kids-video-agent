@@ -109,3 +109,10 @@ Model: Mr Nightmare (7.2M subs): 20–30 min compilations "3 TRUE … Stories", 
 1. **Halloween (one-time, before 2026-10-31 21:00 UTC):** make ONE 15–25 min compilation "3 TRUE Halloween Stories That Still Have No Answer" — re-use 3 strongest finished episodes (rendered files or re-render from their scripts), add a 15 s cold-open hook and short narration bridges, new title card-free start, own thumbnail (scared face + "NO ANSWER"). Schedule it 2026-10-31 between 18:15–21:45 UTC. Log it as `"kind":"compilation"`. Do this before any new pack.
 2. From then on: every week 1–2 compilations "3 TRUE <setting> Stories" (night shift, new house, highway, school, hospital) 15–25 min, on top of the normal packs at their usual count (owner 28 Oct: never lower uploads, raise quality).
 3. Titles never start with "Ep N ·"; thumbnail one face/doorway + 2 words. Full plan: `cloud/growth/PLAN.md`.
+
+## Competitor format 2026-10-28 (owner: "raqiblar qanday yasasa, shunday" — applies from the next run)
+**Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
+- The Halloween compilation and all "3 TRUE …" compilations: **max 14:50** until the channel is verified (not 15–25 min).
+- Format = Mr Nightmare / Mortis Media: title "3 Terrifying TRUE <setting> Mysteries" (or "… To Fall Asleep To"), never "Ep N ·". Each story standalone (no references to earlier episodes). Open each story with a date + place + the strangest fact in the first 5 s; ambient sound, no title card. Subscribe line in the middle, never before the story.
+- Visual style for new scenes: dark, realistic, desaturated (fog, window at night, shape in a doorway). No cartoon bobble-head characters in the first frame or thumbnail frame.
+- Shorts: open on the shock line at 0 s, end "Full story on the channel".
