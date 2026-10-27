@@ -8,7 +8,7 @@
 cd /opt/kanal/repo || exit 1
 PAR=${KANAL_PAR:-2}
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
-CHS="maxcat doughbros hollow bolt roblox sleep grind"
+CHS="maxcat doughbros hollow bolt roblox grind"  # 2026-10-27: sleep (Calm Rain) removed — owner wants it back to its own real-rain agent (sleeptube), no AI videos
 running=0
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
