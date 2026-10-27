@@ -31,6 +31,8 @@ Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 d
 - [ ] Kill the templates "Best Roblox Games to Play Right Now", "Is X Worth Playing in 2026?", "Have You Played X?"; use this-week angles ("Did Steal An Egg Just Pass MM2?").
 - [ ] Thumbnails: A-vs-B split or one high-contrast moment + 2–4 words ("NEW #1?").
 - [x] Volume stays 1 long + 5 Shorts/day (owner 28 Oct: "kamaytirma") — every Short a different game/angle, no repeated title template.
+- [x] Black/OBS backgrounds fixed 28 Oct (news.py no longer reads ~/Videos OBS recordings); 7 broken scheduled videos made private; ep0034 re-made with game images (checked frames OK).
+- [ ] Long intro card: "BORED? 20 ROBLOX GAMES TO PLAY" wraps into the subtitle line — shorten to f"BORED? TOP {n_long} ROBLOX GAMES" in agent/news.py (title_card call). Do it only when state.json "pending" is empty (no upload running — a restart mid-upload risks duplicates).
 - [ ] Blocky Quest (kids 3D) stays separate, made-for-kids, never "Roblox" in titles.
 - [ ] (competitors 28 Oct) Hook names a pain point ("Bored of the Roblox homepage?"), game #1 within 10 s — like FrostyBlox (1.1M) / HoneySaw.
 - [ ] (competitors 28 Oct) Real gameplay/trailer clips per game + one line on what you DO in it (not still images + visit counts).
