@@ -617,6 +617,21 @@
         "https://www.euronews.com/2026/10/25/vucic-concedes-defeat-in-pivotal-serbian-elections-says-student-movement-has-won"
       ],
       "uploads": []
+    },
+    {
+      "episode": 17,
+      "date": "2026-10-27",
+      "topic": "Alaska 2026 Senate race: two Dan Sullivans on the ballot (Sen. Dan S. Sullivan, R, and retired teacher Daniel J. Sullivan Jr.); DOJ suit (filed Oct 22) asks Alaska not to certify if the senator loses and the other Dan's votes could change the result; primary Peltola 49.54 / Sen. Sullivan 41.40 / Daniel J. 2.47 (4,107 votes); ranked choice explained",
+      "title": "Dan Sullivan vs. Dan Sullivan: Can a Name Stop an Election?",
+      "minutes": 10.2,
+      "sources": [
+        "https://www.aljazeera.com/news/2026/10/24/dan-sullivan-vs-dan-sullivan-why-is-trumps-doj-suing-in-alaska",
+        "https://www.pbs.org/newshour/politics/trump-administration-files-lawsuit-to-block-possible-democratic-win-in-alaska-senate-race",
+        "https://www.alaskasnewssource.com/2026/10/23/trump-sues-disqualify-votes-petersburgs-dan-sullivan/",
+        "https://reason.com/2026/10/26/justice-department-targets-alaska-senate-election/",
+        "https://www.cnbc.com/2026/10/25/blanche-doj-alaska-senate-certification-lawsuit.html"
+      ],
+      "uploads": []
     }
   ],
   "pending_uploads": [
@@ -624,8 +639,8 @@
       "episode": 16,
       "created": "2026-10-27T03:05:00Z",
       "script": "doodle/scripts/ep016.json",
-      "why": "computer (Claude app bridge) offline at upload time",
-      "rebuild": "python3 engine/render.py scripts/ep016.json; python3 ../tools/rek_ball.py out/ep016/ep016.mp4 '<title>' --kuchaytir -> upload out/ep016/ep016_d.mp4 (scored 96)",
+      "why": "computer offline at 03:05 run; 2026-10-27 13:45 run: bridge up but studio.youtube.com never loaded in the built-in browser (stuck/failed, other sites OK)",
+      "rebuild": "python3 engine/render.py scripts/ep016.json; python3 ../tools/rek_ball.py out/ep016/ep016.mp4 '<title>' --kuchaytir -> upload out/ep016/ep016_d.mp4 (scored 96) ; NOTE ep016_d.mp4 is ~224MB (>100MB GitHub limit): re-encode for hosting: ffmpeg -i ep016_d.mp4 -c:v libx264 -preset veryfast -crf 25 -c:a aac -b:a 128k -movflags +faststart ep016_up.mp4 (~87MB). Long rescored 93 on 2026-10-27.",
       "items": [
         {
           "kind": "long",
@@ -652,6 +667,39 @@
         }
       ],
       "note": "news ages out after 2026-10-29 (4-day rule from Oct 25 election); if slots passed take the earliest free ones"
+    },
+    {
+      "episode": 17,
+      "created": "2026-10-27T15:20:00Z",
+      "script": "doodle/scripts/ep017.json",
+      "why": "studio.youtube.com unreachable from the computer's built-in browser this run",
+      "rebuild": "python3 engine/render.py scripts/ep017.json; python3 ../tools/rek_ball.py out/ep017/ep017.mp4 '<title>' --kuchaytir -> ep017_d.mp4 (~211MB, scored 96) -> re-encode crf 25 for GitHub hosting (<100MB)",
+      "items": [
+        {
+          "kind": "long",
+          "title": "Dan Sullivan vs. Dan Sullivan: Can a Name Stop an Election?",
+          "file": "ep017_d.mp4",
+          "rek_ball": 96,
+          "slot": "2026-10-29T22:15:00Z"
+        },
+        {
+          "kind": "short",
+          "title": "Ask a Secret Ballot What It Meant? #shorts",
+          "file": "ep017_s1_d.mp4",
+          "rek_ball": 97,
+          "slot": "2026-10-29T13:15:00Z",
+          "make": "make_short.py out/ep017/ep017.mp4 out/ep017/ep017_s1.mp4 --start 333.3 --dur 31.1 --top 'Ask a ballot what it meant?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+        },
+        {
+          "kind": "short",
+          "title": "4,107 Votes for the Other Dan Sullivan #shorts",
+          "file": "ep017_s2_d.mp4",
+          "rek_ball": 96,
+          "slot": "2026-10-29T19:15:00Z",
+          "make": "make_short.py out/ep017/ep017.mp4 out/ep017/ep017_s2.mp4 --start 103.6 --dur 32.6 --top '4,107 votes. One Senate seat?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
+        }
+      ],
+      "note": "must publish before Election Day Nov 3, 2026 (content is pre-election); news ages out after 2026-10-30 (4-day rule from Oct 26 coverage)"
     }
   ],
   "translations_pending": [
@@ -772,8 +820,5 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-10-27T17:47:00Z",
-    "by": "session_01DAYK5UUbP1QxZ2bGcouWMA"
-  }
+  "lock": null
 }
