@@ -3,6 +3,7 @@
 Source: the owner's guide (Claude Docs, 28 Oct 2026), YouTube Studio AI answers of 27 Oct (`ask_studio_2026-10-27.md`), competitor research.
 **Deadline: apply for YPP before ~15 Jan 2027** (thresholds double on 1 Feb 2027: 8,000 h or 20M Shorts views).
 **Owner 2026-10-28 02:14: "kamaytirma, vdni sifatini yaxshila" — never lower the number of uploads; keep the old daily counts and put the effort into quality.**
+**Owner 2026-10-28 02:18: if Studio AI says to upload fewer videos, do NOT cut anything yourself — put it in the report as "Studio: <kanal> uchun videoni kamaytirishni tavsiya qilyapti (<raqamlar>) — qaror sizda" and the owner decides. Every other Studio fix (titles, thumbnails, hooks, quality, timing) is applied automatically as usual.**
 **Biggest risk:** YouTube's July 2026 "inauthentic content" rule — template-like, near-identical, mass-produced videos are not monetized. Every channel: same number of videos, each clearly different and better made; a human layer in each (own commentary/narration, chapters, story).
 
 The daily Studio analysis run reads this file, works on **every channel every day** (at least one item each), ticks items off here (`- [x] … (done YYYY-MM-DD: what)`), and adds new items when Studio finds new problems. Weekly review measures each channel against its target.
