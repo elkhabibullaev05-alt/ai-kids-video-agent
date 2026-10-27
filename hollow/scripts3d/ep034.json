@@ -1,0 +1,981 @@
+{
+ "title": "Ep 34 · 1662: Who Beat the Drum at Night?",
+ "description": "What do you think happens in the next part? Tell me in the comments.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "village",
+  "fog": 0.05,
+  "eyes": 3,
+  "moonlight": 10
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4.5,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  },
+  "dog": {
+   "name": "Moddey Dhoo",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "kind": "gloamhound",
+   "size": 0.8,
+   "home": [
+    -2.5,
+    8
+   ]
+  },
+  "wren": {
+   "name": "Wren",
+   "voice": "af_sky",
+   "speed": 0.95,
+   "pitch": 3
+  },
+  "mom": {
+   "name": "John Mompesson",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.15,
+    0.12,
+    0.25
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "wife": {
+   "name": "Mrs Mompesson",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.35,
+    0.15,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "drummer": {
+   "name": "William Drury",
+   "voice": "am_adam",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.4,
+    0.3,
+    0.1
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    30,
+    34
+   ]
+  },
+  "glanvill": {
+   "name": "Joseph Glanvill",
+   "voice": "am_michael",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.05,
+    0.05,
+    0.06
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    36
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "cake",
+   "id": "drum",
+   "color": [
+    0.55,
+    0.1,
+    0.08
+   ],
+   "glow": 3,
+   "visible": true,
+   "scale": 0.7,
+   "at": [
+    1.5,
+    9.5,
+    0.3
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.75,
+    0.35
+   ],
+   "glow": 10,
+   "visible": true,
+   "scale": 0.15,
+   "at": [
+    -1.5,
+    10.5,
+    1.8
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "lamp2",
+   "color": [
+    1.0,
+    0.75,
+    0.35
+   ],
+   "glow": 10,
+   "visible": true,
+   "scale": 0.15,
+   "at": [
+    4.0,
+    10.5,
+    1.8
+   ]
+  },
+  {
+   "type": "box",
+   "id": "bed",
+   "color": [
+    0.35,
+    0.3,
+    0.25
+   ],
+   "visible": false,
+   "scale": 1.3,
+   "at": [
+    5.0,
+    11.0,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "paper",
+   "color": [
+    0.92,
+    0.88,
+    0.75
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.35,
+   "at": [
+    -1.0,
+    8.5,
+    1.2
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "pdark",
+   "color": [
+    0.9,
+    0.1,
+    0.05
+   ],
+   "glow": 6,
+   "visible": false,
+   "scale": 0.1,
+   "at": [
+    0.0,
+    15.0,
+    1.4
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "Nobody touched the drum. But every night, it played.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drum",
+     "bounce"
+    ],
+    [
+     "drum",
+     "spin"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT PLAYS ITSELF"
+  },
+  {
+   "who": "moth",
+   "say": "Odo! It's moving! Nobody's holding the sticks!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "drum",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "NOBODY'S THERE"
+  },
+  {
+   "who": "narr",
+   "say": "New episode every day. Subscribe so you don't miss what happens next.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ],
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Last night the black dog led them into the sealed passage. Together.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "to:-1,9,0"
+    ],
+    [
+     "dog",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "NEVER ALONE"
+  },
+  {
+   "who": "odo",
+   "say": "Wren's voice came from down here. Wren? Are you here?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "to:-4,8,0"
+    ],
+    [
+     "pdark",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WREN?"
+  },
+  {
+   "who": "moth",
+   "say": "The tunnel ends in a house. A table. And a drum on it.",
+   "cam": "wide",
+   "do": [
+    [
+     "moth",
+     "to:-3,8,0"
+    ],
+    [
+     "drum",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "A DRUM"
+  },
+  {
+   "who": "narr",
+   "say": "This drum comes from a true story, recorded in the sixteen sixties.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drum",
+     "spin"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A TRUE STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Tedworth, a town in Wiltshire, England. Today it's called Tidworth.",
+   "cam": "wide",
+   "do": [
+    [
+     "lamp",
+     "bounce"
+    ],
+    [
+     "lamp2",
+     "bounce"
+    ]
+   ],
+   "text": "TEDWORTH, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "A landowner named John Mompesson was visiting nearby Ludgershall.",
+   "cam": "close:mom",
+   "do": [
+    [
+     "mom",
+     "to:3,9,0"
+    ],
+    [
+     "mom",
+     "turn:front"
+    ]
+   ],
+   "text": "JOHN MOMPESSON"
+  },
+  {
+   "who": "narr",
+   "say": "There, a wandering drummer, William Drury, was asking for money.",
+   "cam": "close:drummer",
+   "do": [
+    [
+     "drummer",
+     "to:6,10,0"
+    ],
+    [
+     "drummer",
+     "turn:mom"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE DRUMMER"
+  },
+  {
+   "who": "mom",
+   "say": "Your papers are false, drummer. That pass is forged.",
+   "cam": "close:mom",
+   "do": [
+    [
+     "mom",
+     "turn:drummer"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "FORGED PAPERS"
+  },
+  {
+   "who": "narr",
+   "say": "Drury was arrested and later let go. But his drum was taken from him.",
+   "cam": "two:mom,drummer",
+   "do": [
+    [
+     "drum",
+     "to:3.5,9.5,0.3"
+    ],
+    [
+     "drummer",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THEY TOOK HIS DRUM"
+  },
+  {
+   "who": "drummer",
+   "say": "Give me back my drum! That drum is mine!",
+   "cam": "close:drummer",
+   "do": [
+    [
+     "drummer",
+     "jump"
+    ]
+   ],
+   "text": "GIVE IT BACK"
+  },
+  {
+   "who": "narr",
+   "say": "The drum was sent to Mompesson's house. And that's when it started.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drummer",
+     "exit"
+    ],
+    [
+     "drum",
+     "to:1.5,9.5,0.3"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THEN IT STARTED"
+  },
+  {
+   "who": "wife",
+   "say": "Someone is in the house! I hear knocking! Thumping on the roof!",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "to:5,9.5,0"
+    ],
+    [
+     "wife",
+     "turn:front"
+    ],
+    [
+     "wife",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "KNOCKING IN THE NIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "Mompesson heard it too. Drumming, on top of the house, in the dark.",
+   "cam": "close:mom",
+   "do": [
+    [
+     "mom",
+     "eyes_big"
+    ],
+    [
+     "lamp",
+     "vanish"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DRUMMING ON THE ROOF"
+  },
+  {
+   "who": "moth",
+   "say": "Drumming on the roof? Who drums on a roof at night?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "WHO DRUMS AT NIGHT?"
+  },
+  {
+   "who": "narr",
+   "say": "It began when the lights went out. And it came from the room with the drum.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "lamp2",
+     "vanish"
+    ],
+    [
+     "drum",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHEN THE LIGHTS GO OUT"
+  },
+  {
+   "who": "mom",
+   "say": "I'll sleep in that room myself. Then we'll see who plays it.",
+   "cam": "close:mom",
+   "do": [
+    [
+     "mom",
+     "to:2.5,9,0"
+    ]
+   ],
+   "text": "I'LL WATCH IT"
+  },
+  {
+   "who": "narr",
+   "say": "He watched. No one came in. And still, the drum beat.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drum",
+     "bounce"
+    ],
+    [
+     "mom",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "NO ONE CAME IN"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick. The rule here: never take what isn't yours.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEVER TAKE WHAT ISN'T YOURS"
+  },
+  {
+   "who": "moth",
+   "say": "I didn't take anything! Well, one crumb. Does a crumb count?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "When Mrs Mompesson had a baby, the noise stopped for three weeks.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "lamp",
+     "show"
+    ],
+    [
+     "lamp2",
+     "show"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "THREE QUIET WEEKS"
+  },
+  {
+   "who": "narr",
+   "say": "Then it came back. Louder. Into the children's room.",
+   "cam": "prop:bed",
+   "do": [
+    [
+     "bed",
+     "show"
+    ],
+    [
+     "bed",
+     "bounce"
+    ],
+    [
+     "lamp",
+     "vanish"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT CAME BACK"
+  },
+  {
+   "who": "wife",
+   "say": "The beds! Something is shaking the children's beds!",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ],
+    [
+     "bed",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE BEDS SHOOK"
+  },
+  {
+   "who": "narr",
+   "say": "In December sixteen sixty-two, Mompesson wrote a letter about it.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "spin"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "HIS OWN LETTER"
+  },
+  {
+   "who": "mom",
+   "say": "A supernatural beating of drums. Every night. In my own house.",
+   "cam": "close:mom",
+   "do": [
+    [
+     "mom",
+     "turn:front"
+    ]
+   ],
+   "text": "EVERY NIGHT"
+  },
+  {
+   "who": "narr",
+   "say": "In January sixteen sixty-three, a clergyman came to see: Joseph Glanvill.",
+   "cam": "close:glanvill",
+   "do": [
+    [
+     "glanvill",
+     "to:4.5,10,0"
+    ],
+    [
+     "glanvill",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A WITNESS CAME"
+  },
+  {
+   "who": "glanvill",
+   "say": "Scratching. In the girls' room. Behind the bed. I searched. Nothing there.",
+   "cam": "close:glanvill",
+   "do": [
+    [
+     "glanvill",
+     "eyes_big"
+    ],
+    [
+     "bed",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOTHING THERE"
+  },
+  {
+   "who": "narr",
+   "say": "Glanvill later put it in his book, printed in sixteen eighty-one.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "bounce"
+    ]
+   ],
+   "text": "1681: THE BOOK"
+  },
+  {
+   "who": "narr",
+   "say": "And the drummer? In prison, people said, he bragged about it.",
+   "cam": "close:drummer",
+   "do": [
+    [
+     "drummer",
+     "to:6,10,0"
+    ],
+    [
+     "drummer",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HE BRAGGED"
+  },
+  {
+   "who": "drummer",
+   "say": "I have plagued him. He'll never be quiet until he pays me for my drum.",
+   "cam": "close:drummer",
+   "do": [
+    [
+     "drummer",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NEVER QUIET"
+  },
+  {
+   "who": "narr",
+   "say": "He was tried for witchcraft. The court did not find him guilty.",
+   "cam": "two:mom,drummer",
+   "do": [
+    [
+     "mom",
+     "turn:drummer"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "NOT GUILTY"
+  },
+  {
+   "who": "narr",
+   "say": "Some said it was a trick. Nobody ever proved who beat the drum.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drummer",
+     "exit"
+    ],
+    [
+     "mom",
+     "exit"
+    ],
+    [
+     "wife",
+     "exit"
+    ],
+    [
+     "glanvill",
+     "exit"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NO ONE KNOWS"
+  },
+  {
+   "who": "moth",
+   "say": "So it's just an old drum. Old drums don't play. Right, Odo?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "to:0.5,9,0"
+    ],
+    [
+     "moth",
+     "bounce"
+    ]
+   ],
+   "text": "JUST A DRUM?"
+  },
+  {
+   "who": "narr",
+   "say": "Mothwick's wing brushed the drum. It beat. Once.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drum",
+     "bounce"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "BOOM"
+  },
+  {
+   "who": "narr",
+   "say": "And outside, in the fog, another drum answered.",
+   "cam": "wide",
+   "do": [
+    [
+     "pdark",
+     "bounce"
+    ],
+    [
+     "dog",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMETHING ANSWERED"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick. Don't. Touch. Anything.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "DON'T TOUCH IT"
+  },
+  {
+   "who": "narr",
+   "say": "The black dog growled at the window. A tall shape stood in the fog.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "to:-7,13,0"
+    ],
+    [
+     "shepherd",
+     "turn:front"
+    ],
+    [
+     "dog",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "AT THE WINDOW"
+  },
+  {
+   "who": "shepherd",
+   "say": "That drum isn't yours, lantern-bearer. Give it to me.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "GIVE IT TO ME"
+  },
+  {
+   "who": "wren",
+   "say": "Odo, don't give him the drum! It's the only thing he's afraid of!",
+   "cam": "prop:pdark",
+   "do": [
+    [
+     "pdark",
+     "bounce"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "HE'S AFRAID OF IT"
+  },
+  {
+   "who": "odo",
+   "say": "Wren? Where are you? Wren!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "to:-1,11,0"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "text": "WHERE ARE YOU?"
+  },
+  {
+   "who": "narr",
+   "say": "Then the drum began to play by itself. Faster. And faster.",
+   "cam": "prop:drum",
+   "do": [
+    [
+     "drum",
+     "spin"
+    ],
+    [
+     "drum",
+     "bounce"
+    ],
+    [
+     "dog",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "FASTER..."
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens in the next part? Tell me in the comments.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
