@@ -57,12 +57,12 @@ The owner's reference reels (Pommi, 3D character series, 8K–63K likes each) wo
 - Each video = one episode that continues yesterday's: open on the consequence of the last cliffhanger, end on a new cliffhanger ("…without knowing what it's for").
 - Real, relatable emotions as the hook: being blamed for trying to help, a plan falling apart, being left out, a small win. Show the feeling on the character's face in the first 3 s.
 - Description first line = one short emotional line in the character's voice ("I don't need credit for trying to help. But being blamed for it? That gets to me."), then 1–2 lines of plot, then hashtags incl. #series #3DAnimation and the character's name.
-- Shorts from the long episode keep the episode number in the title ("Ep 12"), so people binge the series.
+- Shorts from the long episode keep the episode number at the END of the title ("… (Ep 12)"), so people binge the series.
 - Everything else above (real-life places, kids flags, retention, look-alike rules) still applies.
 
 ## Bolt, Hollowmere, Dough Bros — Pommi-style serial (owner, 2026-10-26, from today)
 Keep each channel's genre and cast kinds (Bolt = gentle car detective mystery, Hollowmere = true-story gothic tale, Dough Bros = creepy-cute kitchen comedy), but tell them like the owner's reference series:
-- **One continuing serial per channel.** Title starts with the episode number ("Ep 14 · …"). Every episode opens on the consequence of the last cliffhanger and ends on a new one.
+- **One continuing serial per channel.** The title starts with the hook/mystery and puts the episode number at the END ("1931: What Was Talking Behind the Wall? (Ep 32)") — never "Ep 14 · …" at the start (Studio AI 2026-10-27: an episode number up front makes new viewers think they must watch Ep 1–31 first; CTR 1%). Every episode opens on the consequence of the last cliffhanger and ends on a new one.
 - **Animal/creature world feel.** Where the cast has animals or creatures (Hollowmere crow, gloamhound, moth, Odo; Max cast for crossovers), let them talk and act together as a group, like Pommi among the hyenas. Use the most "forest / village / market" places each engine has: Hollowmere `forest`, `village`, `clearing`; Dough Bros `garden` and `pantry` (the pantry shelves as a busy market stall row), `table` as the village square; Bolt's town street as the market day in Wheelburg. (New places such as a real market need engine work — do not invent a `set.place` the engine doesn't have.)
 - **Long first, Shorts cut from it** (as now: `shorts[].beat` points into the long). Short 1 = the hook moment, Short 2 = the cliffhanger with "Full episode on the channel".
 - **Start and end lines in the long:**
@@ -117,3 +117,13 @@ Every long job must follow this shape; check it beat by beat before committing.
 
 ## Ready-made AI videos (Claude, 2026-10-26)
 Put the MP4 on the orphan branch `media` (path `<CH>/<name>.mp4`) and only a small json on main in `cloud/ready/<CH>/<name>.json` with `"url": "https://raw.githubusercontent.com/elkhabibullaev05-alt/ai-kids-video-agent/media/<CH>/<name>.mp4"`. Never commit MP4s to main: the PC's `git pull` then has to download them and the workers' pushes start failing.
+
+
+## Studio AI findings 2026-10-27 (all channels — owner: "fix everything Studio says")
+Full answers: `cloud/growth/ask_studio_2026-10-27.md`. Apply to every job from now on:
+- **Frame 1 = motion + the shock line in big text.** No fade, no logo, no title card, no greeting. Shorts lose 60–91 % of viewers in the first 1–2 s on every channel.
+- **Titles:** unique (never reuse or near-reuse a title of the last 40 jobs), < 50 chars, hook in the first 4–5 words, no channel name or "Ep N ·" prefix (episode number only at the end).
+- **Thumbnails:** one face/subject filling 35–50 % of the frame with a big emotion, high contrast, ≤ 3 words that add to the title (never repeat it).
+- **Shorts:** 15–25 s, one beat, loop the last frame into the first; last 2 s = a question or "Next part on the channel".
+- **Long:** state the episode's big question in the first 15 s; change shot/sound every 4–6 s; end screen points to the next episode.
+- **Fewer, better:** Studio says every channel floods its audience. Don't write extra jobs to "fill" a day; a weak idea is skipped, not padded.
