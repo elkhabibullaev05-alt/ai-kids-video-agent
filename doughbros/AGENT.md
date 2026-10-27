@@ -106,3 +106,9 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Studio AI 2026-10-27 (overrides older title rules)
 Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), never "Ep 32 · …" at the start; unique, < 50 chars. Frame 1 = motion + shock line in big text, no fade/title card. See cloud/WRITER.md "Studio AI findings 2026-10-27" and cloud/growth/ask_studio_2026-10-27.md.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Dough Bros section)
+- More "Would YOU…?" dare Shorts (78–87 % viewed); never "Trust X or Y?" openers (29 %).
+- Long episodes = 8–10 min compilations of the best mini-stories (kids watch longer compilations).
+- Keep Made for Kids = Yes.

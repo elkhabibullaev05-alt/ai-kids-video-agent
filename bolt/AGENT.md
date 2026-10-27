@@ -81,3 +81,9 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Studio AI 2026-10-27 (overrides older title rules)
 Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), never "Ep 32 · …" at the start; unique, < 50 chars. Frame 1 = motion + shock line in big text, no fade/title card. See cloud/WRITER.md "Studio AI findings 2026-10-27" and cloud/growth/ask_studio_2026-10-27.md.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Inspector Bolt section)
+- 1 long/week + 2–3 Shorts/week, released weekend mornings US time (13:15–15:45 UTC Sat/Sun), not at night.
+- Thumbnails: Bolt's shocked face big, bold colours, no small text; titles < 50 chars ("Lost in the Dark! Can Bolt Save Wren?").
+- Weekly review on/after 7 Nov decides: < 500 total views → pause.

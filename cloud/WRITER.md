@@ -127,3 +127,9 @@ Full answers: `cloud/growth/ask_studio_2026-10-27.md`. Apply to every job from n
 - **Shorts:** 15–25 s, one beat, loop the last frame into the first; last 2 s = a question or "Next part on the channel".
 - **Long:** state the episode's big question in the first 15 s; change shot/sound every 4–6 s; end screen points to the next episode.
 - **Fewer, better:** Studio says every channel floods its audience. Don't write extra jobs to "fill" a day; a weak idea is skipped, not padded.
+
+
+## Growth plan 2026-10-28 (all channels) — read `cloud/growth/PLAN.md` before writing
+- maxcat: long videos = 8–10 min compilations of finished stories (not 2-min "long" videos); titles start with the hook, never "Max the Curious Cat |"; thumbnail Max's face with a big emotion.
+- roblox Blocky Quest: stays kids, never "Roblox" in titles.
+- Every channel: fewer, clearly different videos; a weak idea is skipped, not padded.

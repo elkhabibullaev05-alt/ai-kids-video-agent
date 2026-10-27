@@ -97,3 +97,8 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 - Titles: curiosity or tension, with the animal names in the first 40 characters.
 - Shorts: every Short ends with a CTA. The renderer keeps captions and banners out of the bottom 20% and the right edge, where YouTube's UI covers them.
 - Subscriber conversion was only 0.05%. Give viewers a reason to come back: a series feel ("Part of the Wild Sketchbook"), and a question that the next video answers.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Wild Sketchbook section)
+- Move weight from "X vs Y: who would win?" fights to curiosity explainers ("This Animal…", "What Happens If…") — fights risk YouTube's July 2026 "distressing content" rule.
+- Short: key fact at frame 0 + bold subtitle; every title unique; mid-video CTA "subscribe for one animal secret a day".

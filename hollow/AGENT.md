@@ -102,3 +102,10 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Studio AI 2026-10-27 (overrides older title rules)
 Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), never "Ep 32 · …" at the start; unique, < 50 chars. Frame 1 = motion + shock line in big text, no fade/title card. See cloud/WRITER.md "Studio AI findings 2026-10-27" and cloud/growth/ask_studio_2026-10-27.md.
+
+
+## Growth plan 2026-10-28 (owner: "hammasini qil") — overrides the pack schedule above where they conflict
+Model: Mr Nightmare (7.2M subs): 20–30 min compilations "3 TRUE … Stories", relatable settings, 99 % long videos.
+1. **Halloween (one-time, before 2026-10-31 21:00 UTC):** make ONE 15–25 min compilation "3 TRUE Halloween Stories That Still Have No Answer" — re-use 3 strongest finished episodes (rendered files or re-render from their scripts), add a 15 s cold-open hook and short narration bridges, new title card-free start, own thumbnail (scared face + "NO ANSWER"). Schedule it 2026-10-31 between 18:15–21:45 UTC. Log it as `"kind":"compilation"`. Do this before any new pack.
+2. From then on: every week 1–2 compilations "3 TRUE <setting> Stories" (night shift, new house, highway, school, hospital) 15–25 min, plus the normal packs reduced to **1 long + 2 Shorts per day** (Studio: don't flood).
+3. Titles never start with "Ep N ·"; thumbnail one face/doorway + 2 words. Full plan: `cloud/growth/PLAN.md`.

@@ -30,3 +30,6 @@ Use the Doodle Desk engine — it draws exactly this style: `doodle/engine/rende
 
 ## Never
 Real people's likeness, gore, self-harm methods, dangerous "how to" that could hurt a viewer (no foraging advice that could poison, no fake medical claims), passwords, account/Studio settings, deleting anything.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Milo section). Structure like Bright Side / Infographics Show: open with the question, answer step by step with pictures.

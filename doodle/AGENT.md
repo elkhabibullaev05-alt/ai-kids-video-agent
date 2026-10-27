@@ -74,3 +74,8 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Safety notes 2026-10-26
 - Repetitive-content risk: 7 of the last 10 titles open with "Why…?". Start at most 1 title in 3 with "Why"; vary the form (statement + number, "What happens if…", place/date first, "X vs Y:"), and vary the first spoken line of each script so openings are not template-identical.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Doodle Desk section)
+- Every title = a clear conflict / David-vs-Goliath question (best so far: "How Did a Cheap Team Beat Baseball's $339M Giant?" 2.31 % CTR). No headline-style titles.
+- Thumbnail text adds to the title (2–4 words), never repeats it. State the mystery in the first 15 s; one value-based subscribe line mid-video.

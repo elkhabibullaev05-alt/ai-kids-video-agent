@@ -41,3 +41,8 @@ Channel: **Seoul Night Remix** — @SeoulNightRemix — Studio id `UCEgWmdwz8gvT
 
 ## Never
 Free-plan songs, other artists' songs/voices/names, downloaded music, stream-ripping, passwords, payments, account/Studio settings, deleting anything.
+
+
+## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Seoul section)
+- Description of every song: 1 mood line + 2 lyric lines + "Music created with Suno (Pro)" + chapters for mixes (human layer against "inauthentic content").
+- If a song gets a Content ID claim: do not use it again; generate a new one.
