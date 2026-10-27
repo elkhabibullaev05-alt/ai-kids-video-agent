@@ -77,3 +77,7 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Safety notes 2026-10-25
 - Repetitive-content risk: all logged titles end with the same "🔍 Cartoon Cars Mystery" tail. Use that tail on at most 1 title in 3; vary the form (statement, character-name first, number, "What happened to…?") and vary the first spoken line of each script. Made for kids = Yes stays.
+
+
+## Studio AI 2026-10-27 (overrides older title rules)
+Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), never "Ep 32 · …" at the start; unique, < 50 chars. Frame 1 = motion + shock line in big text, no fade/title card. See cloud/WRITER.md "Studio AI findings 2026-10-27" and cloud/growth/ask_studio_2026-10-27.md.
