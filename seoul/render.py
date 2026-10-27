@@ -90,16 +90,31 @@ def cover_bg(bg, title, out, w=1920, h=1080, tag="LOVE REMIX"):
     d = ImageDraw.Draw(im)
     big = font(int(h * (0.11 if w > h else 0.07)))
     small = font(int(h * (0.04 if w > h else 0.028)))
-    txt = title.upper()
-    tw = d.textlength(txt, font=big)
-    x = (w - tw) / 2 if w < h else int(w * 0.05)
-    y = int(h * (0.70 if w > h else 0.12))
+    lines, cur = [], ""
+    for wd in title.upper().split():  # wrap to 88 % of the width
+        if cur and d.textlength(cur + " " + wd, font=big) > w * 0.88:
+            lines.append(cur); cur = wd
+        else:
+            cur = (cur + " " + wd).strip()
+    lines.append(cur)
+    lh = int(big.size * 1.08)
+    y = int(h * 0.70) if w > h else int(h * 0.10)
+    if w > h and len(lines) > 1:
+        y -= lh * (len(lines) - 1)
+    x = int(w * 0.05)
     gl = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    ImageDraw.Draw(gl).text((x, y), txt, font=big, fill=(255, 60, 170, 255))
+    gd = ImageDraw.Draw(gl)
+    pos = []
+    for i, ln in enumerate(lines):
+        lx = (w - d.textlength(ln, font=big)) / 2 if w < h else x
+        pos.append((lx, y + i * lh, ln))
+        gd.text((lx, y + i * lh), ln, font=big, fill=(255, 60, 170, 255))
     g = gl.filter(ImageFilter.GaussianBlur(12))
     im.paste(g, (0, 0), g)
     d = ImageDraw.Draw(im)
-    d.text((x, y), txt, font=big, fill=(255, 255, 255), stroke_width=3, stroke_fill=(40, 0, 40))
+    for lx, ly, ln in pos:
+        d.text((lx, ly), ln, font=big, fill=(255, 255, 255), stroke_width=3, stroke_fill=(40, 0, 40))
+    y = y + lh * (len(lines) - 1)
     if tag:
         tx = (w - d.textlength(tag, font=small)) / 2 if w < h else x + 4
         d.text((tx, y + int(big.size * 1.12)), tag, font=small, fill=(120, 230, 255), stroke_width=2, stroke_fill=(0, 0, 0))
