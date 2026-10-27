@@ -1,0 +1,1223 @@
+{
+ "id": "20261028-2-lights-out-pie",
+ "plot": "The evening after Grandma gets well, a storm cuts the power halfway through baking her apple pie; Max thinks his toaster button broke the house and he and Dog open the oven for a peek and let the heat out, until Bird sees the whole street is dark from a branch on the wire, and Max remembers Grandma's rule that a shut oven stays hot, so he guards the door while they play shadow games; the lights return, the pie is golden, and Dog runs out into the biggest mud puddle the night before the Park Pet Show.",
+ "script": {
+  "title": "The Lights Went OUT!",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "oven",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -5.0,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "pie",
+    "type": "cake",
+    "color": "gold",
+    "at": [
+     -5.0,
+     10.6,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "light",
+    "type": "star",
+    "color": "yellow",
+    "at": [
+     0.0,
+     9.0,
+     0.8
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Is the pie ready? Is it ready? Is it ready now?",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not yet, Dog! Twenty more minutes! Stop sniffing the oven!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "LIGHTS OUT!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "The lights went out! And the oven too! The pie!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Will Grandma's apple pie be ruined? Oh no, oh no!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is the evening after Grandma got better from her cold.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Outside, a big wind is blowing. The trees are dancing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Whoosh! The wind blew me in the window! Why is it dark?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Stay calm, dears. The power is off. It happens in storms.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But remember my oven rule. Never open the oven door.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Every time you open it, the warm air runs away.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. It went dark when I pressed the toaster button.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did I do this? Did I break the whole house?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You broke the house? Wow. That's a big button, Max.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,8"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma goes to find her little star night-light.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-7,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click! A tiny yellow star glows in the dark room.",
+    "cam": "prop:light",
+    "do": [
+     [
+      "light",
+      "show"
+     ],
+     [
+      "light",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, the pie is getting cold! We have to check it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-4,11"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! Let's look! Just one tiny peek, okay?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "text": "CREEEAK!",
+    "cam": "prop:oven",
+    "hold": 1.2,
+    "do": [
+     [
+      "oven",
+      "bounce"
+     ],
+     [
+      "pie",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh. A big puff of warm air floats out of the oven.",
+    "cam": "prop:oven",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ooh, warm! It smells so good! Can I lick it?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Close it, dears! Quick! The warm air is running away!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-3,11"
+     ],
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max shuts the door. Bump! But the pie is still pale.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "pie",
+      "hide"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. We let the warm air out. My fault again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "If the oven gets cold, it's a soggy pie forever!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Soggy pie? No! Pie must be crunchy! This is serious!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I pressed the button. I opened the door. I ruin everything.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "to:-1,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hides under the table with his tail around his nose.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wait! I'll fly up and look out of the window!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:3,13"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flaps up to the high window and looks outside.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Come and see! The whole street is dark!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Every house! Every lamp! Even the shop on the corner!",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Every house? But I only pressed one little toaster button.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And look! A big branch is lying on the wire!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The wind did that, Max. Not you. Not one bit.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:0,10"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The helpers with the big truck will fix it soon.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It wasn't me! Phew! But the pie is still in trouble.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Every minute the oven gets colder! Hurry, Max, think!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max thinks very hard. His whiskers twitch. Twitch, twitch.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When I'm cold, I hide under my blanket. And I stay warm.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The blanket keeps the warm in. Like a closed door!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma's rule! The oven is still warm inside, if it stays shut!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Clever cat! A shut oven stays hot for a long time.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the best help is no help. We just wait!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait? Waiting is the hardest thing in the world!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ],
+     [
+      "dog",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog's nose slides closer to the oven door. Sniff. Sniff.",
+    "cam": "prop:oven",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nope! I'm the oven guard now. Nobody opens this door!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ],
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then let's play a dark game while we wait!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:0,9"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma holds up the star light. Shadows pop on the wall.",
+    "cam": "wide",
+    "do": [
+     [
+      "light",
+      "bounce"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look! My wing shadow is a giant eagle! Tweet-roar!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My shadow is a huge bear! A bear who loves pie!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And my tail shadow is a long, wiggly snake. Hissss!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And my shadow is a big hungry bunny. Hop, hop!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ],
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, is it time yet? Is it? Is it now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-4,11"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not yet, Dog. Good guard dogs wait too. Good dog.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs. Nobody opens the oven. Twenty long minutes go by.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "BLINK!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "light",
+      "hide"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bird",
+    "say": "The lights are back! The whole street is shining again!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now, Grandma? Can we open the door now?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ],
+     [
+      "grandma",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now we can. Let's see what the warm oven did.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "TA-DA!",
+    "cam": "prop:pie",
+    "hold": 1.0,
+    "do": [
+     [
+      "pie",
+      "show"
+     ],
+     [
+      "pie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The apple pie is golden and crunchy. And it smells wonderful.",
+    "cam": "prop:pie",
+    "do": [
+     [
+      "pie",
+      "spin"
+     ],
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's perfect! It's crunchy! Max, you saved the pie!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We all did. We just kept the door closed.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Taste tester reporting. Mmm. Best pie in the whole world.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "pie",
+      "give:dog"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When something goes wrong, it isn't always your fault.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And sometimes the best thing to do is wait.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But while they eat, Dog sneaks out of the garden door.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Uh-oh. Dog just jumped in the biggest mud puddle ever!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. And tomorrow is the Park Pet Show!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A muddy dog, a pet show, and a bath. Uh-oh.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Lights Went OUT! Can Max Save Grandma's Pie? 🥧🐱",
+  "description": "\"The lights went out right after I pressed the button... did I break the whole house?\" 🐱\nA storm turns off the power while Grandma's apple pie is still baking. Max is sure it's his fault, until Bird looks out of the window and Max remembers Grandma's oven rule. Max the Curious Cat, Ep 19.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "power cut",
+   "apple pie",
+   "storm for kids",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog"
+  ],
+  "thumb_text": "LIGHTS OUT!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¡Se fue la LUZ! ¿Puede Max salvar la tarta de la abuela? 🥧🐱",
+    "description": "\"Se apagó la luz justo cuando apreté el botón... ¿rompí toda la casa?\" 🐱\nUna tormenta corta la luz mientras la tarta de manzana de la abuela sigue en el horno. Max cree que es su culpa, hasta que Bird mira por la ventana y Max recuerda la regla del horno de la abuela. Max el Gato Curioso, Ep 19.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A LUZ acabou! Max consegue salvar a torta da vovó? 🥧🐱",
+    "description": "\"A luz apagou bem quando eu apertei o botão... será que quebrei a casa toda?\" 🐱\nUma tempestade corta a energia enquanto a torta de maçã da vovó ainda está assando. Max acha que a culpa é dele, até Bird olhar pela janela e Max lembrar a regra do forno da vovó. Max, o Gato Curioso, Ep 19.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "انقطعت الكهرباء! هل ينقذ ماكس فطيرة الجدة؟ 🥧🐱",
+    "description": "\"انطفأت الأضواء بعد أن ضغطت الزر مباشرة... هل كسرت البيت كله؟\" 🐱\nعاصفة تقطع الكهرباء وفطيرة التفاح ما زالت في الفرن. ماكس يظن أنه السبب، حتى تنظر بيرد من النافذة ويتذكر ماكس قاعدة الجدة عن الفرن. ماكس القط الفضولي، الحلقة 19.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Plus de LUMIÈRE ! Max peut-il sauver la tarte de Mamie ? 🥧🐱",
+    "description": "\"La lumière s'est éteinte juste quand j'ai appuyé sur le bouton... j'ai cassé toute la maison ?\" 🐱\nUn orage coupe le courant pendant que la tarte aux pommes de Mamie cuit encore. Max croit que c'est sa faute, jusqu'à ce que Bird regarde par la fenêtre et que Max se souvienne de la règle du four de Mamie. Max le Chat Curieux, Ép 19.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "でんきが消えた！マックスはおばあちゃんのパイを守れる？🥧🐱",
+    "description": "「ボタンをおしたとたんに電気が消えた…ぼくが家をこわしちゃったの？」🐱\nおばあちゃんのアップルパイを焼いているとちゅう、あらしで停電に。マックスは自分のせいだと思いこむけれど、バードが窓の外を見て、マックスはおばあちゃんのオーブンのルールを思い出す。マックス 第19話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "불이 꺼졌다! 맥스는 할머니의 파이를 구할 수 있을까? 🥧🐱",
+    "description": "\"버튼을 누르자마자 불이 꺼졌어... 내가 집을 고장 낸 걸까?\" 🐱\n할머니의 사과 파이가 아직 구워지는 중에 폭풍으로 정전이 돼요. 맥스는 자기 탓이라고 생각하지만, 버드가 창밖을 보고 맥스는 할머니의 오븐 규칙을 떠올려요. 호기심 고양이 맥스 19화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Das LICHT ist aus! Kann Max Omas Kuchen retten? 🥧🐱",
+    "description": "\"Das Licht ging aus, genau als ich den Knopf drückte... hab ich das ganze Haus kaputt gemacht?\" 🐱\nEin Sturm schaltet den Strom ab, während Omas Apfelkuchen noch backt. Max glaubt, es ist seine Schuld, bis Bird aus dem Fenster schaut und Max sich an Omas Ofen-Regel erinnert. Max die neugierige Katze, Folge 19.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 28,
+   "top": "LIGHTS OUT! 😱",
+   "title": "The Lights Go Out Mid-Pie! 🥧😱 Ep 19 #shorts",
+   "description": "Grandma's apple pie is still baking... then everything goes dark. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Se va la luz con la tarta en el horno! 🥧😱 Ep 19 #shorts",
+     "description": "La tarta de la abuela sigue en el horno... y de pronto todo se apaga. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A luz acaba no meio da torta! 🥧😱 Ep 19 #shorts",
+     "description": "A torta da vovó ainda está assando... e de repente tudo fica escuro. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "انقطعت الكهرباء والفطيرة في الفرن! 🥧😱 الحلقة 19 #shorts",
+     "description": "فطيرة الجدة ما زالت في الفرن... ثم يظلم كل شيء. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Coupure de courant en pleine tarte ! 🥧😱 Ép 19 #shorts",
+     "description": "La tarte de Mamie cuit encore... et soudain tout devient noir. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "パイを焼いてるとちゅうで停電！🥧😱 第19話 #shorts",
+     "description": "おばあちゃんのパイはまだオーブンの中…なのに、まっくらに！フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "파이 굽는 중에 정전! 🥧😱 19화 #shorts",
+     "description": "할머니의 파이는 아직 오븐 속인데... 갑자기 모든 게 깜깜해져요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Stromausfall mitten im Kuchenbacken! 🥧😱 Folge 19 #shorts",
+     "description": "Omas Kuchen backt noch... und plötzlich ist alles dunkel. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 16,
+   "dur": 30,
+   "top": "JUST ONE PEEK... 😬",
+   "title": "Max Opens the Oven in the Dark! 😬🥧 Ep 19 #shorts",
+   "description": "Just one tiny peek at the pie... what could go wrong? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max abre el horno a oscuras! 😬🥧 Ep 19 #shorts",
+     "description": "Solo un vistazo a la tarta... ¿qué podría salir mal? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max abre o forno no escuro! 😬🥧 Ep 19 #shorts",
+     "description": "Só uma espiadinha na torta... o que pode dar errado? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يفتح الفرن في الظلام! 😬🥧 الحلقة 19 #shorts",
+     "description": "نظرة صغيرة واحدة على الفطيرة... ماذا قد يحدث؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max ouvre le four dans le noir ! 😬🥧 Ép 19 #shorts",
+     "description": "Juste un petit coup d'œil à la tarte... qu'est-ce qui pourrait mal tourner ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "まっくらの中でオーブンをあけちゃった！😬🥧 第19話 #shorts",
+     "description": "パイをちょっとだけのぞくだけ…だいじょうぶかな？フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "깜깜한데 오븐을 연 맥스! 😬🥧 19화 #shorts",
+     "description": "파이를 딱 한 번만 살짝 볼게... 괜찮겠지? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max öffnet im Dunkeln den Ofen! 😬🥧 Folge 19 #shorts",
+     "description": "Nur ein kleiner Blick auf den Kuchen... was kann schon passieren? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

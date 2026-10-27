@@ -1,0 +1,1156 @@
+{
+ "id": "20261028-3-muddy-dog-bath",
+ "plot": "On the morning of the Park Pet Show Dog is covered in mud and runs from the bath; Max's soap chase only lands him in the puddle, then Mouse notices Dog loves water, and Max discovers Dog is scared of the hose's loud hiss, so they fill the tub quietly with buckets and a floating red ball, Dog jumps in happily, and his shake leaves Max soaked and fluffy just before the show whose poster shows two paws.",
+ "script": {
+  "title": "Muddy Dog Won't Bath",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tub",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -1.0,
+     11.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.4
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     4.0,
+     9.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "soap",
+    "type": "box",
+    "color": "pink",
+    "at": [
+     -3.0,
+     8.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Max! Good morning! Look at me! I'm a chocolate dog!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog shakes. Splat! Splat! Mud flies all over Max.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SPLAT!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "Dog! The Pet Show is today! How do we get you clean?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's the morning after the storm. The garden is one big puddle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Easy. One bath, some soap, and Dog is shiny again.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Here's the blue tub, dears. I'll fill it with the hose.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma turns on the garden hose. Ssssssss!",
+    "cam": "prop:tub",
+    "do": [
+     [
+      "tub",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog jumps high in the air and runs behind the tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "to:7,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Bath? Who said bath? I don't know any dog called Dog.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, please! Muddy dogs can't go in the Pet Show!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:5,12"
+     ],
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then I'll be a tree. Trees don't need baths. I'm a tree.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ],
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Trees don't bark, Dog. And trees don't have muddy tails.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "This tree has a muddy tail. It's a special tree.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Plan one. I grab the soap and catch him.",
+    "cam": "close:max",
+    "do": [
+     [
+      "soap",
+      "show"
+     ],
+     [
+      "soap",
+      "give:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs at Dog. Dog runs around the tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:7,12"
+     ],
+     [
+      "dog",
+      "to:8,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Round and round and round. Dog is very fast.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Got you! No! Got you! No! Where did you go?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SPLOOSH!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "soap",
+      "drop:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Max slips and lands bottom-first in the big mud puddle.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Eww! Now I'm a chocolate cat! And cats hate getting wet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ha! Now we match! Two chocolate friends!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog jumps right into the puddle with Max. Splash!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:6,11"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Wait a minute. Did you all see that?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:4,10"
+     ],
+     [
+      "all",
+      "look:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Dog loves the puddle. He jumped in on purpose!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "So Dog is not scared of water. Not one bit.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then why does he run away from the bath?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The show starts after lunch. Dog has to be clean by then.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Or Dog can't be in the show! Let's find out why.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max and Mouse look at everything like real detectives.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ],
+     [
+      "mouse",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The tub. Water. A puddle. Water. Both the same.",
+    "cam": "prop:tub",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The soap smells like roses. Dog likes roses. He sniffs them.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So it's not the water. And it's not the soap.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Is the tub too small? Dog is a big dog.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No. Last summer he napped in it. All afternoon.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma turns the hose on again to finish filling the tub.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ssssssss! And behind the tree, Dog's ears go flat.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did you see that? He hides when the hose goes sss!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, are you scared of the hose noise?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:6,13"
+     ],
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It goes SSSS. Like a big angry cat. A giant one.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm a cat. And I'm not angry. I'm just muddy.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Yes, but you don't go SSSS for a whole minute.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "So no hose! We fill the tub a quiet way!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No hose? Really? Not even a tiny sss?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not even a tiny one. Cat promise.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I have a watering can and two little buckets.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they carry water. Slosh, slosh. No hissing at all.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1,10"
+     ],
+     [
+      "mouse",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse carries a tiny cup. It takes a very long time.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Twelve cups. Thirteen cups. Okay, a big bucket is faster.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The tub is full! It looks just like a puddle now.",
+    "cam": "prop:tub",
+    "do": [
+     [
+      "tub",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A quiet puddle? Hmm. It still looks a bit like a bath.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then here's one more thing. Your favorite red ball!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "ball",
+      "give:max"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max throws the red ball. Plop! It floats in the tub.",
+    "cam": "prop:tub",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "tub",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My ball! I'm coming, ball! Here I come!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,10"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SPLASH!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Dog jumps in. Water everywhere. Bubbles everywhere.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hey! A bath is just a puddle with a ball in it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse rubs the soap. Max scrubs Dog's ears. Scrub, scrub.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:0,11"
+     ],
+     [
+      "mouse",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look at that. He's not a chocolate dog anymore.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog is clean and shiny. Then he shakes. Shake, shake, shake!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOSH!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Water flies all over Max. Now he is clean and soaking wet.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Brrr! I'm wet! Every hair on me is sticking up!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "You look like a big orange dandelion, Max.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A dandelion? Today? On the day of the Pet Show?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Don't worry, dear. The sun will dry you. Mostly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Thank you, Max. You found out what scared me.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When a friend is scared, first find out why.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then you can help them in a way that works.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Lunch is ready! Then off to the Pet Show!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, the show poster has a picture of two paws. Why two?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Two paws? Never mind. But who is going to dry ME?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Get Muddy Dog Into the Bath? 🛁🐶",
+  "description": "\"I just wanted Dog clean for the show... so why am I the one in the mud?\" 🐱\nOn the morning of the Park Pet Show, Dog is covered in mud and runs from the bath. Max and Mouse play detective to find out what Dog is really afraid of. Max the Curious Cat, Ep 20.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "bath time",
+   "muddy dog",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog",
+   "kindness"
+  ],
+  "thumb_text": "NO BATH?!",
+  "thumb_beat": 3,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max meter al perro embarrado en la bañera? 🛁🐶",
+    "description": "\"Solo quería a Dog limpio para el concurso... ¿por qué yo acabo en el barro?\" 🐱\nLa mañana del concurso de mascotas, Dog está lleno de barro y huye del baño. Max y Mouse juegan a detectives para descubrir qué le da miedo de verdad. Max el Gato Curioso, Ep 20.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max consegue dar banho no cachorro enlameado? 🛁🐶",
+    "description": "\"Eu só queria o Dog limpo para o show... por que eu é que estou na lama?\" 🐱\nNa manhã do Show de Pets, Dog está todo enlameado e foge do banho. Max e Mouse viram detetives para descobrir do que Dog tem medo de verdade. Max, o Gato Curioso, Ep 20.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس إدخال الكلب الموحل إلى الحوض؟ 🛁🐶",
+    "description": "\"أردت فقط أن يكون دوغ نظيفًا للعرض... فلماذا أنا الغارق في الطين؟\" 🐱\nفي صباح عرض الحيوانات الأليفة، دوغ مغطى بالطين ويهرب من الحمام. ماكس وماوس يصبحان محققين ليعرفا ما الذي يخيف دوغ حقًا. ماكس القط الفضولي، الحلقة 20.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max peut-il mettre Chien boueux dans le bain ? 🛁🐶",
+    "description": "\"Je voulais juste un Chien propre pour le concours... alors pourquoi c'est moi dans la boue ?\" 🐱\nLe matin du concours d'animaux, Chien est couvert de boue et fuit le bain. Max et Souris jouent les détectives pour découvrir ce qui lui fait vraiment peur. Max le Chat Curieux, Ép 20.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "どろんこドッグをおふろに入れられる？🛁🐶",
+    "description": "「ショーのためにドッグをきれいにしたかっただけなのに…なんでぼくがどろんこなの？」🐱\nペットショーの朝、ドッグはどろだらけでおふろからにげだす。マックスとマウスは探偵になって、ドッグが本当にこわいものを見つける。マックス 第20話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스는 진흙투성이 도그를 목욕시킬 수 있을까? 🛁🐶",
+    "description": "\"쇼 때문에 도그를 깨끗하게 하고 싶었을 뿐인데... 왜 내가 진흙 속에 있지?\" 🐱\n공원 반려동물 쇼 날 아침, 도그는 진흙투성이인데 목욕을 피해 도망가요. 맥스와 마우스는 탐정이 되어 도그가 진짜 무서워하는 걸 찾아내요. 호기심 고양이 맥스 20화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Schafft Max den Schlamm-Hund in die Wanne? 🛁🐶",
+    "description": "\"Ich wollte Hund nur sauber für die Show machen... warum sitze ich jetzt im Schlamm?\" 🐱\nAm Morgen der Haustier-Show ist Hund voller Schlamm und rennt vor dem Bad weg. Max und Maus spielen Detektiv und finden heraus, wovor Hund wirklich Angst hat. Max die neugierige Katze, Folge 20.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 30,
+   "top": "CATCH THAT DOG! 🐶💨",
+   "title": "Max Chases Muddy Dog... SPLOOSH! 😂 Ep 20 #shorts",
+   "description": "Dog will NOT take a bath. Max has a plan. It does not go well. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max persigue al perro embarrado... ¡PLAF! 😂 Ep 20 #shorts",
+     "description": "Dog NO quiere bañarse. Max tiene un plan. No sale bien. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max persegue o cachorro enlameado... TCHIBUM! 😂 Ep 20 #shorts",
+     "description": "Dog NÃO quer tomar banho. Max tem um plano. Não dá certo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يطارد الكلب الموحل... طاخ! 😂 الحلقة 20 #shorts",
+     "description": "دوغ لا يريد الاستحمام أبدًا. ماكس لديه خطة. لكنها لا تنجح. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max poursuit Chien plein de boue... PLOUF ! 😂 Ép 20 #shorts",
+     "description": "Chien ne VEUT PAS prendre de bain. Max a un plan. Ça se passe mal. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どろんこドッグを追いかけたら…バシャーン！😂 第20話 #shorts",
+     "description": "ドッグはぜったいおふろに入らない。マックスの作戦は…うまくいかない！フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "진흙 도그를 쫓다가... 첨벙! 😂 20화 #shorts",
+     "description": "도그는 절대 목욕 안 해요. 맥스에게 작전이 있지만... 잘 안 돼요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max jagt den Schlamm-Hund... PLATSCH! 😂 Folge 20 #shorts",
+     "description": "Hund will NICHT baden. Max hat einen Plan. Er geht schief. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1221 @@
+{
+ "id": "20261029-1-pet-show-stage",
+ "plot": "At sunset at the Park Pet Show, still-fluffy Max wants a perfect Super Sky Jump, but Dog's happy bark sends him into a bush and he freezes with stage fright as number seven; Mouse finally reads the poster, it is a Best Friends show for pairs, so Max and Dog do their everyday ball and tail-chasing game, the crowd laughs happily and they win the gold cup, whose note promises a first night of camping in the garden tomorrow.",
+ "script": {
+  "title": "Pet Show Stage Fright",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     -6.0,
+     12.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "stage",
+    "type": "box",
+    "color": "red",
+    "at": [
+     0.0,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     5.0,
+     9.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.55
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Big jump! Ready! Here I go! Whoooa!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max lands. Bump! His fluffy fur pops up even more.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I can't go on that stage! I look like a dandelion!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "STAGE FRIGHT!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's the Park Pet Show. The sun is going down.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lots of pets are waiting by a little red stage.",
+    "cam": "prop:stage",
+    "do": [
+     [
+      "stage",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Welcome, welcome! I'm helping the show today! Tweet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The winner gets this shiny gold cup!",
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good luck, Max. Just have fun, dear. That's what matters.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fun? No. Perfect. It has to be perfect, Grandma.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Can I do a perfect trick in front of everyone?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My trick is the Super Sky Jump. Over the whole stage!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The poster has two paws on it. Did you read it?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No time to read! I have to practice!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Other pets are practicing too. A puppy rolls. A parrot sings.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "They are all so good. My trick has to be better.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! Max! I'm so shiny! Can I watch you jump?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When Max is nervous, he chases his own tail. Round and round.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ha! I love that! You always do that when you're worried!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Stop laughing! This is serious! Practice jump. Now!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs. Max jumps. Higher and higher.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Go, Max! Woof! Woof! Woof!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WOOF!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "The bark makes Max wobble. He lands right in a bush.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "max",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now I'm fluffy AND I have leaves on my head.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hold still, Max. I'll pick the leaves off. One, two, three.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But there are twenty leaves. Mouse picks very, very fast.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Next pet is number seven! Max, you're number seven!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Number seven? That's me! In one minute? I can't move!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's paws feel like heavy stones. His tummy feels wobbly.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Everybody feels a little shaky before a stage, dear.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:2,11"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When I sang in the town show, my knees went wobble-wobble.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your knees? Really? But you're Grandma. You're never scared.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But everyone will see my fluffy fur. And my leaves.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! Listen! I finally read the whole poster!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:1,10"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It says: Best Friends Pet Show. Pets come in twos!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ],
+     [
+      "all",
+      "look:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "In twos? So that's why there are two paws!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "You don't need a perfect jump. You need a friend.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A friend... who already loves my silliest trick!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Do you want to be my partner? Right now?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:4,10"
+     ],
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me? On a stage? With you? Yes! Yes! Yes!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. What do we do? We don't have a trick!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sure we do. The one we do every single day.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And now, number seven! Max and... Dog? Two friends!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max and Dog walk up the steps. Everyone is quiet.",
+    "cam": "prop:stage",
+    "do": [
+     [
+      "max",
+      "to:-1,12"
+     ],
+     [
+      "dog",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's paws are still shaking. Just a little bit.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hey, Max. Let's just play like we do at home.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Like at home? Okay. Then... ball time!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog throws the red ball with his nose. Boop!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "ball",
+      "give:max"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max catches it and spins after his tail. Round and round.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog chases his tail too. Two spinning friends!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The crowd starts to giggle. Then everyone laughs out loud.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "They're laughing! But it's a happy laugh!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's paws stop shaking. His tummy stops wobbling.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is fun! This is so much fun!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Now the big finish! Our sleepy bow!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Both friends flop down and pretend to snore. Zzz.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ],
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "CLAP CLAP CLAP!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grandma",
+    "say": "Bravo! That's my Max! That's my Dog!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And the gold cup goes to... the funniest team!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The fluffy cat and the shiny dog! Max and Dog!",
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "bounce"
+     ],
+     [
+      "trophy",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Us? But I didn't even do my Super Sky Jump!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Nobody wanted a sky jump. They wanted the real Max.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird gives the gold cup to Max and Dog together.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "trophy",
+      "give:max"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My first cup! It's shiny like me! Can I lick it?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay, one lick. Then it goes on Grandma's shelf.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog licks the cup. Then he licks Max's fluffy ear too.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You don't have to be perfect to shine.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Just be yourself. And bring a good friend.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Best show ever! Even my feathers are clapping! Tweet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And the prize has one more surprise inside! A note!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It says: A night of camping. Tomorrow. In the garden!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "all",
+      "look:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Camping? In a tent? Outside? When it's dark?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'll bring a flashlight! And snacks! Lots of snacks!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Our first night outside. Who will fall asleep first?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Gets STAGE FRIGHT at the Pet Show! 🏆😱",
+  "description": "\"Everyone will see my fluffy fur... I can't go up there!\" 🐱\nIt's the Park Pet Show and Max wants the perfect Super Sky Jump, but his paws won't move when his number is called. Then Mouse finally reads the whole poster. Max the Curious Cat, Ep 21.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "max the curious cat",
+   "pet show",
+   "stage fright",
+   "friendship",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog"
+  ],
+  "thumb_text": "I CAN'T!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¡Max tiene MIEDO ESCÉNICO en el concurso! 🏆😱",
+    "description": "\"Todos verán mi pelo esponjado... ¡no puedo subir!\" 🐱\nEs el concurso de mascotas del parque y Max quiere el Súper Salto perfecto, pero sus patas no se mueven cuando dicen su número. Entonces Mouse por fin lee todo el cartel. Max el Gato Curioso, Ep 21.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max fica com MEDO DO PALCO no show de pets! 🏆😱",
+    "description": "\"Todo mundo vai ver meu pelo arrepiado... eu não consigo subir!\" 🐱\nÉ o Show de Pets do parque e Max quer o Super Salto perfeito, mas suas patas travam quando chamam seu número. Aí Mouse finalmente lê o cartaz inteiro. Max, o Gato Curioso, Ep 21.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "ماكس يخاف من المسرح في عرض الحيوانات! 🏆😱",
+    "description": "\"الجميع سيرون فرائي المنفوش... لا أستطيع الصعود!\" 🐱\nإنه عرض الحيوانات في الحديقة، وماكس يريد القفزة الخارقة المثالية، لكن قوائمه لا تتحرك عندما يُنادى رقمه. ثم تقرأ ماوس الملصق كله أخيرًا. ماكس القط الفضولي، الحلقة 21.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max a le TRAC au concours d'animaux ! 🏆😱",
+    "description": "\"Tout le monde va voir mes poils tout gonflés... je ne peux pas monter !\" 🐱\nC'est le concours d'animaux du parc et Max veut un Super Saut parfait, mais ses pattes se bloquent quand on appelle son numéro. Alors Souris lit enfin toute l'affiche. Max le Chat Curieux, Ép 21.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "ペットショーでマックスがきんちょうでカチコチ！🏆😱",
+    "description": "「ふわふわの毛、みんなに見られちゃう…ステージに上がれないよ！」🐱\n公園のペットショーで、マックスはかんぺきなスーパー大ジャンプをしたいのに、番号をよばれると足がうごかない。そのとき、マウスがポスターをさいごまで読む。マックス 第21話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "반려동물 쇼에서 무대 공포증에 걸린 맥스! 🏆😱",
+    "description": "\"다들 내 부스스한 털을 볼 거야... 못 올라가겠어!\" 🐱\n공원 반려동물 쇼 날, 맥스는 완벽한 슈퍼 점프를 하고 싶지만 자기 번호가 불리자 발이 움직이지 않아요. 그때 마우스가 포스터를 끝까지 읽어요. 호기심 고양이 맥스 21화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Max hat LAMPENFIEBER bei der Haustier-Show! 🏆😱",
+    "description": "\"Alle sehen mein flauschiges Fell... ich kann da nicht hoch!\" 🐱\nEs ist die Haustier-Show im Park und Max will den perfekten Super-Himmelssprung, doch seine Pfoten bewegen sich nicht, als seine Nummer kommt. Da liest Maus endlich das ganze Plakat. Max die neugierige Katze, Folge 21.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 27,
+   "dur": 28,
+   "top": "IT'S MY TURN?! 😱",
+   "title": "Max Freezes Before His Big Turn! 😱🏆 Ep 21 #shorts",
+   "description": "Number seven is called... and Max can't move a paw. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max se congela antes de su gran turno! 😱🏆 Ep 21 #shorts",
+     "description": "Llaman al número siete... y Max no puede mover ni una pata. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max trava antes da grande vez dele! 😱🏆 Ep 21 #shorts",
+     "description": "Chamam o número sete... e Max não consegue mexer uma pata. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يتجمد قبل دوره الكبير! 😱🏆 الحلقة 21 #shorts",
+     "description": "يُنادى الرقم سبعة... وماكس لا يستطيع تحريك قائمة واحدة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max se fige avant son grand tour ! 😱🏆 Ép 21 #shorts",
+     "description": "On appelle le numéro sept... et Max ne peut plus bouger une patte. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "出番の前にマックスがカチコチ！😱🏆 第21話 #shorts",
+     "description": "7番がよばれた…なのにマックスは足がうごかない。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "큰 차례 직전에 얼어붙은 맥스! 😱🏆 21화 #shorts",
+     "description": "7번이 불렸는데... 맥스는 발 하나도 못 움직여요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max erstarrt vor seinem großen Auftritt! 😱🏆 Folge 21 #shorts",
+     "description": "Nummer sieben wird aufgerufen... und Max kann keine Pfote bewegen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
