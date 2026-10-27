@@ -73,6 +73,40 @@ def loudest_window(f, length=28):
 
 
 # ---------------------------------------------------------------- cover
+def cover_bg(bg, title, out, w=1920, h=1080, tag="LOVE REMIX"):
+    """Owner 2026-10-28: background = our AI-generated art (cute adult Korean woman, neon Seoul rain),
+    cropped to fill, darkened at the edges, title in neon type on the left (face stays visible)."""
+    from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
+    im = Image.open(bg).convert("RGB")
+    s = max(w / im.width, h / im.height)
+    im = im.resize((int(im.width * s) + 1, int(im.height * s) + 1), Image.LANCZOS)
+    left, top = (im.width - w) // 2, max(0, (im.height - h) // 3)
+    im = ImageEnhance.Contrast(im.crop((left, top, left + w, top + h))).enhance(1.12)
+    shade = Image.new("L", (w, h), 0)
+    sd = ImageDraw.Draw(shade)
+    for y in range(h):  # darker bottom so the waveform and text read
+        sd.line([(0, y), (w, y)], fill=int(170 * max(0, (y / h - 0.55) / 0.45) ** 1.5))
+    im = Image.composite(Image.new("RGB", (w, h), (8, 4, 20)), im, shade)
+    d = ImageDraw.Draw(im)
+    big = font(int(h * (0.11 if w > h else 0.07)))
+    small = font(int(h * (0.04 if w > h else 0.028)))
+    txt = title.upper()
+    tw = d.textlength(txt, font=big)
+    x = (w - tw) / 2 if w < h else int(w * 0.05)
+    y = int(h * (0.70 if w > h else 0.12))
+    gl = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(gl).text((x, y), txt, font=big, fill=(255, 60, 170, 255))
+    g = gl.filter(ImageFilter.GaussianBlur(12))
+    im.paste(g, (0, 0), g)
+    d = ImageDraw.Draw(im)
+    d.text((x, y), txt, font=big, fill=(255, 255, 255), stroke_width=3, stroke_fill=(40, 0, 40))
+    if tag:
+        tx = (w - d.textlength(tag, font=small)) / 2 if w < h else x + 4
+        d.text((tx, y + int(big.size * 1.12)), tag, font=small, fill=(120, 230, 255), stroke_width=2, stroke_fill=(0, 0, 0))
+    im.save(out, quality=92)
+    return out
+
+
 def cover(title, out, w=1920, h=1080, seed=None, tag="NIGHT DRIVE"):
     """Neon Seoul night skyline in the rain, title in big type. Our own procedural art (no stock, no logos)."""
     from PIL import Image, ImageDraw, ImageFilter
@@ -182,10 +216,11 @@ def long_video(song, cover_jpg, out):
     return {"start_cut": start, "seconds": round(duration(out), 1)}
 
 
-def short_video(song, hook, out, seed=None, length=28):
+def short_video(song, hook, out, seed=None, length=28, bg=None):
     start = loudest_window(song, length)
     tmp = out + ".cover.jpg"
-    cover(hook, tmp, 1080, 1920, seed=seed, tag="FULL SONG ON THE CHANNEL")
+    (cover_bg(bg, hook, tmp, 1080, 1920, tag="FULL SONG ON THE CHANNEL") if bg else
+     cover(hook, tmp, 1080, 1920, seed=seed, tag="FULL SONG ON THE CHANNEL"))
     wav = _audio(song, out + ".wav", start, length, fade_in=0, fade_out=0.6)
     _video(tmp, wav, out, 1080, 1920, 220, "H-520", fade_out_at=length - 0.4)
     os.remove(tmp)
@@ -232,13 +267,13 @@ if __name__ == "__main__":
     cmd = a.pop(0)
     if cmd == "cover":
         w, h = _opt(a, "--w", 1920, int), _opt(a, "--h", 1080, int)
-        seed, tag = _opt(a, "--seed", None, int), _opt(a, "--tag", "NIGHT DRIVE")
-        print(cover(a[0], a[1], w, h, seed, tag))
+        seed, tag, bg = _opt(a, "--seed", None, int), _opt(a, "--tag", "NIGHT DRIVE"), _opt(a, "--bg")
+        print(cover_bg(bg, a[0], a[1], w, h, tag) if bg else cover(a[0], a[1], w, h, seed, tag))
     elif cmd == "long":
         print(json.dumps(long_video(a[0], a[1], a[2])))
     elif cmd == "short":
-        seed = _opt(a, "--seed", None, int)
-        print(json.dumps(short_video(a[0], a[1], a[2], seed)))
+        seed, bg = _opt(a, "--seed", None, int), _opt(a, "--bg")
+        print(json.dumps(short_video(a[0], a[1], a[2], seed, bg=bg)))
     elif cmd == "mix":
         print(json.dumps(mix_video(a[0], a[1], a[2:])))
     else:
