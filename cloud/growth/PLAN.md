@@ -2,7 +2,8 @@
 
 Source: the owner's guide (Claude Docs, 28 Oct 2026), YouTube Studio AI answers of 27 Oct (`ask_studio_2026-10-27.md`), competitor research.
 **Deadline: apply for YPP before ~15 Jan 2027** (thresholds double on 1 Feb 2027: 8,000 h or 20M Shorts views).
-**Biggest risk:** YouTube's July 2026 "inauthentic content" rule — template-like, near-identical, mass-produced videos are not monetized. Every channel: fewer, clearly different, better videos; a human layer in each (own commentary/narration, chapters, story).
+**Owner 2026-10-28 02:14: "kamaytirma, vdni sifatini yaxshila" — never lower the number of uploads; keep the old daily counts and put the effort into quality.**
+**Biggest risk:** YouTube's July 2026 "inauthentic content" rule — template-like, near-identical, mass-produced videos are not monetized. Every channel: same number of videos, each clearly different and better made; a human layer in each (own commentary/narration, chapters, story).
 
 The daily Studio analysis run reads this file, works on **every channel every day** (at least one item each), ticks items off here (`- [x] … (done YYYY-MM-DD: what)`), and adds new items when Studio finds new problems. Weekly review measures each channel against its target.
 
@@ -15,7 +16,7 @@ Now: 40 subs, ~2,000 views/day, Shorts stayed 35 %. Target 31 Jan: 1,000 subs + 
 - [ ] Titles: switch to challenge/curiosity patterns ("Only 1% Can Watch #1 Without Laughing", "Which Fail Went Too Far?"), < 50 chars; stop "Ranking Funniest X #N".
 - [ ] Frame 1: the peak of the funniest clip + bold question on top; cuts between clips < 0.2 s; last 2 s "#1 or #2? Comment" / "Subscribe for daily rankings".
 - [ ] Own commentary layer on every video (ranking reason captions per clip) — reused-content protection; CC BY credits stay.
-- [ ] 1–2 Shorts/day, 6–8 h apart (no bursts).
+- [ ] Keep 3 Shorts/day (config per_day 3), spread evenly through the day (no bursts).
 - [ ] Weekly 8–10 min horizontal "Funniest moments of the week" compilation (long watch hours) — start this week, not 7 Nov.
 
 ## Priority 1 — Roblox Top 10 Daily (`roblox`, local `robloxtube` + repo `roblox/` Blocky Quest)
@@ -23,7 +24,7 @@ Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 d
 - [ ] Long videos start at 0:00 in gameplay with the #20 entry (no intro/title card); 25–30 s per entry with on-screen stats.
 - [ ] Kill the templates "Best Roblox Games to Play Right Now", "Is X Worth Playing in 2026?", "Have You Played X?"; use this-week angles ("Did Steal An Egg Just Pass MM2?").
 - [ ] Thumbnails: A-vs-B split or one high-contrast moment + 2–4 words ("NEW #1?").
-- [ ] Volume: 1–2 strong Shorts/day + 2 long/week (down from 5–6 uploads/day).
+- [x] Volume stays 1 long + 5 Shorts/day (owner 28 Oct: "kamaytirma") — every Short a different game/angle, no repeated title template.
 - [ ] Blocky Quest (kids 3D) stays separate, made-for-kids, never "Roblox" in titles.
 
 ## Priority 1 — Hollowmere Tales (`hollow`, repo `hollow/`)
@@ -38,7 +39,7 @@ Now: 5 subs, ~940 views/day, Shorts stayed 32 %, ~1 sub / 2,100 views. Education
 - [ ] Shift weight from "X vs Y: who would win?" fights (risk: "distressing content") to ink explainers: "This Animal …", "What Happens If …" — 8–10 min long + 2 Shorts each.
 - [ ] Shorts open on the key fact/comparison at frame 0 + bold subtitle; every title unique.
 - [ ] Mid-video value CTA ("subscribe for one animal secret a day").
-- [ ] Fix the upload limit errors: max 6 uploads/day until the account is phone-verified.
+- [ ] Keep 4/day (config per_day 4); if uploadLimit errors appear, owner phone-verifies the account (no cutting).
 
 ## Priority 2 — Money Story Daily (`money`, local `moneytube`)
 Now: 0 subs, ~36 views/day, Shorts stayed 9.8 %. Highest RPM niche (finance $15–25 CPM).
@@ -71,7 +72,7 @@ Now: 0 subs, 1 video, CTR 1.66 %, half gone by 0:18. Model: Bright Side / Infogr
 Now: 18 subs, ~180 views/day, long CTR 1.39 %. Best title: "How Did a Cheap Team Beat Baseball's $339M Giant?" (2.31 %).
 - [ ] Every title a clear conflict / David-vs-Goliath question; thumbnail text adds to the title.
 - [ ] State the mystery in the first 15 s; mid-video value CTA.
-- [ ] 1 long/day max (already), 2 Shorts each.
+- [ ] 1 long/day + 2 Shorts each (unchanged).
 
 ## Priority 3 — Dough Bros (`dough`, repo `doughbros/`, kids)
 Now: 15 subs, ~540 views/day; "Would YOU…?" Shorts 78–87 % viewed. Agent log stale since 21 Oct — check why.
@@ -83,12 +84,17 @@ Now: 15 subs, ~540 views/day; "Would YOU…?" Shorts 78–87 % viewed. Agent log
 Now: 3 subs, ~150 views/day, CTR 0.88 % on 185k impressions, long videos only ~2 min.
 - [ ] Thumbnails: Max's face with a big emotion 35–40 % of frame, orange on deep blue/green.
 - [ ] Titles lead with the hook, no "Max the Curious Cat |" prefix.
-- [ ] Long videos 8–10 min compilations (not 2-min "long" videos); 1 Short/day + 1–2 long/week.
+- [ ] Long videos 8–10 min compilations (not 2-min "long" videos); upload count unchanged.
 
 ## Priority 4 — Inspector Bolt (`bolt`, repo `bolt/`, kids)
 Now: 0 subs, 6 views total, no new episode since 20 Oct.
-- [ ] Check why it stopped; if fixed, 1 long/week + 2–3 Shorts/week, weekend mornings.
-- [ ] 7 Nov decision (weekly review): < 500 views → pause and move the effort to a priority-1 channel.
+- [ ] Check why it stopped and restart it at its usual count.
+- [ ] Better thumbnails/titles (Bolt's shocked face big, < 50 chars).
+
+## Quality upgrades done 2026-10-28 (owner: "sifatini yaxshila")
+- [x] Upload counts restored to pre-28-Oct values: funny 3/day (6 time slots), roblox 1 long + 5 Shorts, money 2/day, Wild Sketchbook 4/day (config.yaml from .bak_20261028).
+- [x] Sharper render: funnyrank source clips up to 1080p (was 720p) + x264 fast/crf 19; robloxtube editor fast/crf 19; moneytube + maxtube animation fast/crf 18; sleeptube Shorts fast/crf 19 (backups *.bak_20261028q).
+- [ ] Daily run: one quality item per channel per day (hook in frame 1, unique title, better thumbnail, commentary layer, cleaner audio) — never cut the count.
 
 ## Owner to-do (Claude cannot do these)
 - [ ] Phone-verify the accounts (custom thumbnails, Related video links, more uploads/day). One number = 2 accounts/year: first eldorbekkhabibulaev (Funny, Money) and eldorbekkhabibullaev44 (Roblox, Calm Rain).

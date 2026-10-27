@@ -84,6 +84,5 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 
 
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Inspector Bolt section)
-- 1 long/week + 2–3 Shorts/week, released weekend mornings US time (13:15–15:45 UTC Sat/Sun), not at night.
+- Keep the usual episode count (owner 28 Oct: "kamaytirma"); release in US mornings/afternoons (13:15–15:45 UTC), not at night.
 - Thumbnails: Bolt's shocked face big, bold colours, no small text; titles < 50 chars ("Lost in the Dark! Can Bolt Save Wren?").
-- Weekly review on/after 7 Nov decides: < 500 total views → pause.

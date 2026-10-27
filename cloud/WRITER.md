@@ -132,4 +132,4 @@ Full answers: `cloud/growth/ask_studio_2026-10-27.md`. Apply to every job from n
 ## Growth plan 2026-10-28 (all channels) — read `cloud/growth/PLAN.md` before writing
 - maxcat: long videos = 8–10 min compilations of finished stories (not 2-min "long" videos); titles start with the hook, never "Max the Curious Cat |"; thumbnail Max's face with a big emotion.
 - roblox Blocky Quest: stays kids, never "Roblox" in titles.
-- Every channel: fewer, clearly different videos; a weak idea is skipped, not padded.
+- Every channel: keep the upload count (owner 28 Oct: "kamaytirma"); every video clearly different and better made — a weak idea is replaced by a stronger one, never padded.
