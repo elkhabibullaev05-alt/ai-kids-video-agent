@@ -1,0 +1,1333 @@
+{
+ "id": "20261027-1-pip-big-hill",
+ "plot": "The morning after her birthday Pip gets her driving lesson up Wheelburg Hill, but she keeps stopping at the big bump halfway; Turbo's 'just zoom' idea is off the table now that he's a crossing guard, Grumpy says everyone gets stuck there, and Bolt's slow-and-steady lessons don't fix it; the twist is that Pip isn't scared of the hill at all but of the 'big drop' Bertha cheerfully warned about, which she can't see past the top; Bolt tells her to ask instead of guess, drives beside her over the top, and the 'drop' is a gentle little road to the duck pond; lesson: when you can't see what's next, ask, don't guess; then from the top Pip spots a moving truck next to her house — who is moving in?",
+ "script": {
+  "title": "Can Pip Drive Up the Big Hill Alone?",
+  "set": {
+   "place": "Wheelburg Hill road from the bakery up to the top, early morning",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "description": "Pip's first driving lesson up Wheelburg Hill, and why she keeps stopping at the bump. Inspector Bolt #17",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cone",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -3.0,
+     16.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "on": "bolt",
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "brown",
+    "at": [
+     11.0,
+     7.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "I'm rolling backwards! Bolt! Bolt! Help me!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Gentle brakes, Pip! Gentle! There. You stopped. You're safe.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:-11,10"
+     ],
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "CAN PIP CLIMB THE BIG HILL?",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the morning after Pip's birthday.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Her present was a driving lesson. Up Wheelburg Hill. All by herself.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I got to the big bump. Then I rolled back.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Can a little car like me really reach the top alone?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Not if you rush. But if you go slow? Yes.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Lesson one. Low gear. Slow and steady.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No, no! Lesson one is speed! Zoom up before the hill notices!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. You are a crossing guard now.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Right. Sorry. Slow and steady. Boring. But safe!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Good luck, Pip! My shift starts now. Honk from the top!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Turbo drove off, very slowly, to the school corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Big Bertha rolled up, full of morning school bags.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Pip, dear! Driving up the big hill today? Ooh, be careful!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "On the other side, there's a big drop! Whoooosh!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A big... drop?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bye-bye! The school bell won't wait for me!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "A BIG DROP?!",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip didn't say a word. But her little wheels went very still.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Ready for try number two?",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ready. Low gear. Slow and steady.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip started up the hill. Bolt drove right behind her.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-10,12"
+     ],
+     [
+      "bolt",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Past the bakery. Past the red mailbox. Up, up, up.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-7,14"
+     ],
+     [
+      "bolt",
+      "to:-10,11"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wonderful, Pip! Eyes up! Look at the road ahead!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'm doing it! I'm really, really doing it!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then came the big bump. With the orange cone on top.",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "cone",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Pip stopped. Right next to the cone. Again.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-4,15"
+     ],
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK AT THE BUMP AGAIN!",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I can't! If I keep going, I'll go over the top!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Going over the top is the whole idea, Pip.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I mean... my engine is tired. That's all.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Your engine sounds perfect. I am a detective. I listen.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "If we don't find the reason, you'll stop here every time.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they rolled back down, slowly, to the bottom of the hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-13,9"
+     ],
+     [
+      "bolt",
+      "to:-9,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy was parked there, having his morning nap.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Stuck at the bump? Everybody gets stuck at the bump.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Even you, Grumpy?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Not me. I tow the ones who get stuck. Different job.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, every stop has a reason. Let's find yours.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "There's no reason. I'm just small. Small cars can't do big hills.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Your wheels are small. Your engine is strong. I checked.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Small engine, big noise. Like Turbo. Go on, kid.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then why does my engine want to stop at the bump?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "WHY DOES PIP KEEP STOPPING?",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Try once more. This time, tell me everything you see.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Try number three. Low gear. Slow and steady.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-9,12"
+     ],
+     [
+      "bolt",
+      "to:-11,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I see the bakery. I see the mailbox. I see the cone.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And at the big bump, Pip stopped. Again.",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "pip",
+      "to:-4,15"
+     ],
+     [
+      "cone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "What do you see now, Pip? Up there, at the top?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Nothing! Just sky! I can't see what's there! That's the scary part!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Over the top there's a big drop. Bertha said so!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE BIG DROP!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt was quiet for a moment. Then he smiled under his hat.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip. Have you ever seen this big drop?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No. I only imagined it. It got bigger every time.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When you can't see what's next, don't guess. Ask.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So. Ask me.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt... what is on the other side of the hill?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Come and see. This time I'll drive right next to you.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-1,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Side by side, they crept over the big bump.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-1,17"
+     ],
+     [
+      "bolt",
+      "to:3,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Up. Up. Up. Until the sky was all around them.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE TOP OF THE HILL!",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the other side? A gentle little road. Down to the duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "That's it? That little slope is the big drop?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha calls every slope a big drop. And every puddle a lake.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I was scared of a duck pond road! A tiny one!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bertha came puffing up the hill, honking happily.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Pip! You made it! Did you see my big drop? Whoosh!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I saw it, Bertha. It's a very small big drop.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh dear. Did my whoosh scare you, Pip? I'm so sorry!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A little. But I asked Bolt. And now I know.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far below, from the school corner, came a tiny honk.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Beep beep, Turbo! I'm at the top! All by myself!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Almost by yourself. Next time, I'll stay at the bottom.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember: when you can't see what's next, ask. Don't guess.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ask, don't guess. And low gear. Slow and steady!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And this is for the bravest little driver in Wheelburg.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "star",
+      "show"
+     ],
+     [
+      "star",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A gold star! My very first hill star!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ],
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip looked down at all of Wheelburg. Everything looked so small.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then she saw something new. Next to her little house.",
+    "cam": "wide",
+    "do": [
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A big moving truck. And a big pile of boxes.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS MOVING IN?",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! Somebody is moving in next door! Who is it?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Ep 17 · Can Pip Drive Up the Big Hill Alone? ⛰️🚗",
+  "description": "\"I can drive up to the big bump. But past it? I can't see what's there. And that's the scary part.\" — Pip\nPip's birthday present is her first driving lesson up Wheelburg Hill, all by herself. So why does she stop at the very same bump every time? Inspector Bolt #17\n\n#series #3DAnimation #InspectorBolt #Pip #kidscartoon",
+  "tags": [
+   "inspector bolt",
+   "pip",
+   "kids cartoon",
+   "cartoon cars",
+   "3d animation",
+   "series",
+   "learning to drive",
+   "being brave",
+   "first try",
+   "stories for kids",
+   "car cartoon"
+  ],
+  "thumb_text": "TOO SCARY?!",
+  "thumb_beat": 51,
+  "localizations": {
+   "es": {
+    "title": "Ep 17 · ¿Puede Pip subir sola la gran colina? ⛰️🚗",
+    "description": "\"Puedo llegar hasta el gran bache. ¿Pero después? No veo qué hay. Y eso es lo que da miedo.\" — Pip\nEl regalo de cumpleaños de Pip es su primera clase de manejo cuesta arriba, ella sola. ¿Por qué se detiene siempre en el mismo bache? Inspector Bolt #17\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Ep 17 · A Pip consegue subir o morro sozinha? ⛰️🚗",
+    "description": "\"Eu consigo chegar até a lombada. Mas depois? Não vejo o que tem lá. E essa é a parte assustadora.\" — Pip\nO presente de aniversário da Pip é sua primeira aula de direção subindo o Morro de Wheelburg, sozinha. Por que ela sempre para na mesma lombada? Inspetor Bolt #17\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "حلقة 17 · هل تستطيع بيب صعود التلة الكبيرة وحدها؟ ⛰️🚗",
+    "description": "\"أستطيع الوصول إلى المطب الكبير. لكن بعده؟ لا أرى ما هناك. وهذا هو الجزء المخيف.\" — بيب\nهدية عيد ميلاد بيب هي أول درس قيادة لها صعودًا إلى تلة ويلبرغ، وحدها. لماذا تتوقف دائمًا عند المطب نفسه؟ المفتش بولت #17\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Ép 17 · Pip peut-elle monter la grande colline seule ? ⛰️🚗",
+    "description": "« J'arrive jusqu'à la grosse bosse. Mais après ? Je ne vois pas ce qu'il y a. C'est ça qui fait peur. » — Pip\nLe cadeau d'anniversaire de Pip, c'est sa première leçon de conduite pour monter la colline de Wheelburg, toute seule. Pourquoi s'arrête-t-elle toujours à la même bosse ? Inspecteur Bolt #17\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "第17話 · ピップはひとりで大きな坂をのぼれる?⛰️🚗",
+    "description": "「大きなでこぼこまでは行ける。でもその先は?何があるか見えない。それがこわいの。」— ピップ\nピップのたんじょう日プレゼントは、ウィールバーグの坂をひとりでのぼる運転レッスン。どうしていつも同じでこぼこで止まっちゃうの?ボルト警部 #17\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "17화 · 핍은 혼자서 큰 언덕을 오를 수 있을까? ⛰️🚗",
+    "description": "\"큰 턱까지는 갈 수 있어. 그런데 그 너머는? 뭐가 있는지 안 보여. 그게 무서운 거야.\" — 핍\n핍의 생일 선물은 휠버그 언덕을 혼자 오르는 첫 운전 수업이에요. 그런데 왜 매번 같은 턱에서 멈출까요? 볼트 형사 #17\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Folge 17 · Schafft Pip den großen Hügel allein? ⛰️🚗",
+    "description": "„Bis zur großen Bodenwelle schaffe ich es. Aber danach? Ich sehe nicht, was da ist. Das ist das Unheimliche.“ — Pip\nPips Geburtstagsgeschenk ist ihre erste Fahrstunde den Wheelburg-Hügel hinauf, ganz allein. Warum hält sie immer an derselben Bodenwelle an? Inspektor Bolt #17\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 30,
+   "top": "ROLLING BACKWARDS!",
+   "title": "Pip Rolls Backwards Down the Hill! 😱 Ep 17 #shorts",
+   "description": "Pip's first driving lesson up the big hill goes wrong fast. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pip rueda hacia atrás colina abajo! 😱 Ep 17 #shorts",
+     "description": "La primera clase de manejo de Pip sale mal muy rápido. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Pip está descendo o morro de ré! 😱 Ep 17 #shorts",
+     "description": "A primeira aula de direção da Pip dá errado bem rápido. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيب تتدحرج إلى الخلف على التلة! 😱 حلقة 17 #shorts",
+     "description": "أول درس قيادة لبيب يسير بشكل خاطئ بسرعة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pip recule en bas de la colline ! 😱 Ép 17 #shorts",
+     "description": "La première leçon de conduite de Pip tourne mal très vite. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピップが坂をうしろに下がっちゃう!😱 第17話 #shorts",
+     "description": "ピップのはじめての運転レッスンが大ピンチ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍이 언덕에서 뒤로 미끄러져요! 😱 17화 #shorts",
+     "description": "핍의 첫 운전 수업이 금세 꼬여버려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pip rollt rückwärts den Hügel hinunter! 😱 Folge 17 #shorts",
+     "description": "Pips erste Fahrstunde geht ganz schnell schief. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 27,
+   "dur": 30,
+   "top": "STUCK AGAIN?!",
+   "title": "Why Does Pip Always Stop Here? 🤔 Ep 17 #shorts",
+   "description": "Same bump, same stop. What is Pip not saying? Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué Pip siempre se detiene aquí? 🤔 Ep 17 #shorts",
+     "description": "Mismo bache, misma parada. ¿Qué no está diciendo Pip? Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que a Pip sempre para aqui? 🤔 Ep 17 #shorts",
+     "description": "Mesma lombada, mesma parada. O que a Pip não está contando? Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا تتوقف بيب هنا دائمًا؟ 🤔 حلقة 17 #shorts",
+     "description": "المطب نفسه والتوقف نفسه. ما الذي لا تقوله بيب؟ الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi Pip s'arrête toujours ici ? 🤔 Ép 17 #shorts",
+     "description": "Même bosse, même arrêt. Qu'est-ce que Pip ne dit pas ? Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どうしてピップはいつもここで止まるの?🤔 第17話 #shorts",
+     "description": "同じでこぼこで、また止まった。ピップは何をかくしているの?本編はチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍은 왜 항상 여기서 멈출까? 🤔 17화 #shorts",
+     "description": "같은 턱, 같은 멈춤. 핍이 말하지 않는 건 뭘까요? 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum hält Pip immer genau hier? 🤔 Folge 17 #shorts",
+     "description": "Gleiche Bodenwelle, gleicher Halt. Was verschweigt Pip? Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 50,
+   "dur": 25,
+   "top": "WHAT'S UP THERE?",
+   "title": "What Is Over the Hill? ⛰️ Ep 17 #shorts",
+   "description": "Pip can't see past the top, and that's the scary part. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Qué hay al otro lado de la colina? ⛰️ Ep 17 #shorts",
+     "description": "Pip no puede ver más allá de la cima, y eso le da miedo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O que tem do outro lado do morro? ⛰️ Ep 17 #shorts",
+     "description": "A Pip não consegue ver depois do topo, e isso dá medo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماذا يوجد على الجانب الآخر من التلة؟ ⛰️ حلقة 17 #shorts",
+     "description": "لا تستطيع بيب أن ترى ما بعد القمة، وهذا هو المخيف. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qu'y a-t-il de l'autre côté de la colline ? ⛰️ Ép 17 #shorts",
+     "description": "Pip ne voit pas au-delà du sommet, et c'est ça qui fait peur. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "坂のむこうには何がある?⛰️ 第17話 #shorts",
+     "description": "てっぺんの先が見えない。それがピップにはこわいの。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "언덕 너머에는 뭐가 있을까? ⛰️ 17화 #shorts",
+     "description": "꼭대기 너머가 안 보여서 핍은 무서워요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Was ist auf der anderen Seite des Hügels? ⛰️ Folge 17 #shorts",
+     "description": "Pip sieht nicht über die Kuppe, und genau das macht Angst. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
