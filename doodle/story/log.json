@@ -616,7 +616,17 @@
         "https://www.abc.net.au/news/2026-10-26/serbia-election-vucic-defeat-student-protest/107307808",
         "https://www.euronews.com/2026/10/25/vucic-concedes-defeat-in-pivotal-serbian-elections-says-student-movement-has-won"
       ],
-      "uploads": []
+      "uploads": [
+        {
+          "title": "Serbia's Students Beat a 14-Year Government. How?",
+          "publish_at": "2026-10-28T20:45:00Z",
+          "video_id": "HcTAGjZ3894",
+          "rek_ball": 93,
+          "category": "News & Politics",
+          "visibility": "scheduled",
+          "uploaded": "2026-10-27 run 17:01Z"
+        }
+      ]
     },
     {
       "episode": 17,
@@ -631,7 +641,17 @@
         "https://reason.com/2026/10/26/justice-department-targets-alaska-senate-election/",
         "https://www.cnbc.com/2026/10/25/blanche-doj-alaska-senate-certification-lawsuit.html"
       ],
-      "uploads": []
+      "uploads": [
+        {
+          "title": "Dan Sullivan vs. Dan Sullivan: Can a Name Stop an Election?",
+          "publish_at": "2026-10-29T22:15:00Z",
+          "video_id": "OR1KmPMS7hw",
+          "rek_ball": 100,
+          "category": "News & Politics",
+          "visibility": "scheduled",
+          "uploaded": "2026-10-27 run 17:01Z"
+        }
+      ]
     }
   ],
   "pending_uploads": [
@@ -639,16 +659,9 @@
       "episode": 16,
       "created": "2026-10-27T03:05:00Z",
       "script": "doodle/scripts/ep016.json",
-      "why": "computer offline at 03:05 run; 2026-10-27 13:45 run: bridge up but studio.youtube.com never loaded in the built-in browser (stuck/failed, other sites OK)",
+      "why": "2026-10-27 17:01 run: long uploaded+scheduled; Short scheduling was blocked by the session permission check (Shorts not in the scheduled prompt), so Shorts stay pending. ",
       "rebuild": "python3 engine/render.py scripts/ep016.json; python3 ../tools/rek_ball.py out/ep016/ep016.mp4 '<title>' --kuchaytir -> upload out/ep016/ep016_d.mp4 (scored 96) ; NOTE ep016_d.mp4 is ~224MB (>100MB GitHub limit): re-encode for hosting: ffmpeg -i ep016_d.mp4 -c:v libx264 -preset veryfast -crf 25 -c:a aac -b:a 128k -movflags +faststart ep016_up.mp4 (~87MB). Long rescored 93 on 2026-10-27.",
       "items": [
-        {
-          "kind": "long",
-          "title": "Serbia's Students Beat a 14-Year Government. How?",
-          "file": "ep016_d.mp4",
-          "rek_ball": 96,
-          "slot": "2026-10-28T20:45:00Z"
-        },
         {
           "kind": "short",
           "title": "A Heart Doctor for Prime Minister? #shorts",
@@ -666,22 +679,16 @@
           "make": "make_short.py out/ep016/ep016.mp4 out/ep016/ep016_s2.mp4 --start 97.4 --dur 29.5 --top 'Record turnout: 68.78%' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
         }
       ],
-      "note": "news ages out after 2026-10-29 (4-day rule from Oct 25 election); if slots passed take the earliest free ones"
+      "note": "news ages out after 2026-10-29 (4-day rule from Oct 25 election); if slots passed take the earliest free ones",
+      "long_video_url": "https://youtu.be/HcTAGjZ3894"
     },
     {
       "episode": 17,
       "created": "2026-10-27T15:20:00Z",
       "script": "doodle/scripts/ep017.json",
-      "why": "studio.youtube.com unreachable from the computer's built-in browser this run",
+      "why": "2026-10-27 17:01 run: long uploaded+scheduled; Short scheduling was blocked by the session permission check (Shorts not in the scheduled prompt), so Shorts stay pending. ep017_s1 already uploaded as a PRIVATE DRAFT in Studio (title \"Ask a Secret Ballot What It Meant? #shorts\", category set) - finish scheduling it instead of re-uploading. ",
       "rebuild": "python3 engine/render.py scripts/ep017.json; python3 ../tools/rek_ball.py out/ep017/ep017.mp4 '<title>' --kuchaytir -> ep017_d.mp4 (~211MB, scored 96) -> re-encode crf 25 for GitHub hosting (<100MB)",
       "items": [
-        {
-          "kind": "long",
-          "title": "Dan Sullivan vs. Dan Sullivan: Can a Name Stop an Election?",
-          "file": "ep017_d.mp4",
-          "rek_ball": 96,
-          "slot": "2026-10-29T22:15:00Z"
-        },
         {
           "kind": "short",
           "title": "Ask a Secret Ballot What It Meant? #shorts",
@@ -699,7 +706,8 @@
           "make": "make_short.py out/ep017/ep017.mp4 out/ep017/ep017_s2.mp4 --start 103.6 --dur 32.6 --top '4,107 votes. One Senate seat?' --bottom 'Full video on the channel' then rek_ball --kuchaytir"
         }
       ],
-      "note": "must publish before Election Day Nov 3, 2026 (content is pre-election); news ages out after 2026-10-30 (4-day rule from Oct 26 coverage)"
+      "note": "must publish before Election Day Nov 3, 2026 (content is pre-election); news ages out after 2026-10-30 (4-day rule from Oct 26 coverage)",
+      "long_video_url": "https://youtu.be/OR1KmPMS7hw"
     }
   ],
   "translations_pending": [
@@ -780,6 +788,32 @@
         "de"
       ],
       "what": "check Studio Tillar page (authuser=4) once processed/published: YouTube auto-translates into 20 languages; if es,pt,ar,fr,ja,ko,de missing add them manually (texts: translate from scripts/ep015.json description)"
+    },
+    {
+      "video_id": "HcTAGjZ3894",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations (and subs) in Studio Tillar page (authuser=4); texts from scripts/ep016.json"
+    },
+    {
+      "video_id": "OR1KmPMS7hw",
+      "langs": [
+        "es",
+        "pt",
+        "ar",
+        "fr",
+        "ja",
+        "ko",
+        "de"
+      ],
+      "what": "add title+description translations (and subs) in Studio Tillar page (authuser=4); texts from scripts/ep017.json"
     }
   ],
   "translations_resolved": [
@@ -820,8 +854,5 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-10-27T21:03:00Z",
-    "by": "session_01DAYK5T5fTsuQc8QvUAV29X"
-  }
+  "lock": null
 }
