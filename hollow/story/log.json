@@ -1558,12 +1558,59 @@
         }
       ],
       "notes": "Pack 1 of 27 Oct: long 27 Oct 15:15 UTC (27 Oct already had its 4 Shorts from the 26 Oct packs); its 2 Shorts go to 28 Oct 13:45 / 18:15 UTC. Voices 183.9 s, render 854px/12fps 2207 frames ~3.9 s/frame (~2.4 h). assemble_long.sh defaults to 3840x2160 - re-assembled with '1920 1080' args. Plain long scored 82 (weak start motion) -> --kuchaytir 97. Studio pane hidden: date via native setter + form.requestSubmit, time via native setter + focusout. Confirmed in Studio dialogs: long 27 Oct 21:15 Bishkek, short1 28 Oct 19:45 Bishkek; short2 listed as scheduled 29 Oct (00:15 Bishkek set). Custom thumbnail set via file loader, not verified. Translations rely on YouTube auto-translation."
+    },
+    {
+      "episode": 33,
+      "pack": 2,
+      "day": "2026-10-27",
+      "date": "2026-10-27",
+      "format": "3D (engine3d, place 'chapel' fog 0.04 moonlight 10; Moddey Dhoo = small black gloamhound, guards = humans, Wren = voice only)",
+      "theme": "Recorded legend: the Moddey Dhoo ('black dog') of Peel Castle, St Patrick's Isle, Isle of Man. Written down by George Waldron (A Description of the Isle of Man, published 1731); Waldron dates the keys night to about 1650. Large black spaniel with curly shaggy hair; came out of a passage (through the old church to the Captain of the Guard's rooms) at dusk, lay by the guard-room fire when candles were lit, went back at dawn. Soldiers got used to it but would not swear near it or be alone with it; keys carried in pairs. A drunk soldier took the keys alone; a loud noise was heard; he came back sober and silent and never told what he saw (his death three days later left out). Passage closed, dog never seen in the castle again. Walter Scott used it in Peveril of the Peak (1823).",
+      "rule": "Never walk the dark passage alone",
+      "title": "Ep 33 · A Black Dog Guards This Castle. Dare?",
+      "creature": "Moddey Dhoo (black dog), Old/Young Guard and the Boasting Soldier (humans), the Pale Shepherd (stopped by the dog), Wren (voice from the sealed passage)",
+      "bg": [
+        "chapel"
+      ],
+      "summary": "Fleeing the Pale Shepherd, Odo and Mothwick hide in Peel Castle while the Narrator tells the Moddey Dhoo legend: the black dog by the guard-room fire, the rule of carrying the keys in pairs, and the soldier who went alone and never spoke of what he saw. The Shepherd reaches the gate, but the black dog stands in the gateway and he steps back.",
+      "cliffhanger": "Keys jingle behind the sealed passage and Wren's voice calls: 'Odo? Come and get me. But don't come alone.' The black dog walks to the sealed passage and looks back, waiting.",
+      "shorts": [
+        "Ep 33 · He Went Alone. Came Back Silent #shorts"
+      ],
+      "rek_ball": {
+        "long": 97,
+        "short1": 86
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Moddey_Dhoo",
+        "https://isle-of-man.com/manxnotebook/fulltext/ma1863/ch04.htm",
+        "https://isle-of-man.com/manxnotebook/fulltext/sm1911/p129.htm"
+      ],
+      "tags": "true story,legend,Moddey Dhoo,Peel Castle,Isle of Man,black dog,ghost dog,Manx legend,George Waldron,scary story,Hollowmere Tales,series,3D animation",
+      "thumbnail_text": "DON'T GO ALONE",
+      "files_branch": "uploads-hollow-ep033",
+      "uploads": [],
+      "pending_uploads": [
+        {
+          "video": "long",
+          "title": "Ep 33 · A Black Dog Guards This Castle. Dare?",
+          "publish_at": "2026-10-27T19:45:00Z",
+          "file": "hollow_ep033_long.mp4",
+          "thumb": "hollow_ep033_long_thumb.jpg",
+          "text": "long.txt"
+        },
+        {
+          "video": "short1",
+          "title": "Ep 33 · He Went Alone. Came Back Silent #shorts",
+          "publish_at": "2026-10-28T21:45:00Z",
+          "file": "hollow_ep033_short1.mp4",
+          "text": "short1.txt",
+          "cut": "long_final 0.05-4.85 + 105.07-108.75 + 113.28-122.80 + 123.14-128.95 s, make_short --top \"DON'T GO ALONE\"; ends 'He never told anyone what he saw' -> loops to 'A black dog lies by the fire'"
+        }
+      ],
+      "notes": "Pack 2 of 27 Oct. Voices 195.1 s, render 854px/12fps 2342 frames ~6 s/frame (~3.6 h), assembled 1920x1080; plain long 87 -> --kuchaytir 97, re-encoded crf 24 + alimiter (47 MB). Short 23.8 s scored 86. The PC bridge (Claude app on the user's computer) disconnected during the render, so nothing was uploaded: files, thumbnail and title/description/tags (long.txt, short1.txt) are on branch uploads-hollow-ep033 - the next run should upload them from there (no re-render needed)."
     }
   ],
   "translations_pending": [],
-  "translations_note": "2026-10-20: pJreOUaGZU0 and x0k4U8Nu9Ek checked in Studio - YouTube auto-translations already publish title/description, subtitles and audio in es/pt/ar/fr/ja/ko/de (and more); nothing left to add.",
-  "lock": {
-    "until": "2026-10-27T05:45:00Z",
-    "by": "session_01QTBNSUtgR4BUxsRmQkiQ6i"
-  }
+  "translations_note": "2026-10-20: pJreOUaGZU0 and x0k4U8Nu9Ek checked in Studio - YouTube auto-translations already publish title/description, subtitles and audio in es/pt/ar/fr/ja/ko/de (and more); nothing left to add."
 }

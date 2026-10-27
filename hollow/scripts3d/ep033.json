@@ -1,0 +1,990 @@
+{
+ "title": "Ep 33 · A Black Dog Guards This Castle. Dare?",
+ "description": "What do you think happens in the next part? Tell me in the comments.",
+ "lead_in": 0.05,
+ "set": {
+  "place": "chapel",
+  "fog": 0.04,
+  "eyes": 2,
+  "moonlight": 10
+ },
+ "chars": {
+  "odo": {
+   "name": "Odo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.32,
+    0.2,
+    0.12
+   ],
+   "kind": "odo",
+   "size": 1.0,
+   "home": [
+    -6,
+    7
+   ]
+  },
+  "moth": {
+   "name": "Mothwick",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 1,
+   "color": [
+    0.9,
+    0.9,
+    0.8
+   ],
+   "kind": "moth",
+   "size": 0.55,
+   "home": [
+    -4,
+    7
+   ]
+  },
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "shepherd": {
+   "name": "The Pale Shepherd",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -3,
+   "color": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "kind": "shepherd",
+   "size": 0.85,
+   "home": [
+    30,
+    30
+   ]
+  },
+  "dog": {
+   "name": "Moddey Dhoo",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0.02,
+    0.02,
+    0.02
+   ],
+   "kind": "gloamhound",
+   "size": 0.8,
+   "home": [
+    3.0,
+    10.0
+   ]
+  },
+  "guard1": {
+   "name": "Old Guard",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.3,
+    0.12,
+    0.1
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "guard2": {
+   "name": "Young Guard",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 1,
+   "color": [
+    0.15,
+    0.2,
+    0.32
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "boaster": {
+   "name": "The Boasting Soldier",
+   "voice": "am_adam",
+   "speed": 1.05,
+   "pitch": 0,
+   "color": [
+    0.4,
+    0.3,
+    0.1
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    34
+   ]
+  },
+  "wren": {
+   "name": "Wren",
+   "voice": "af_sky",
+   "speed": 0.95,
+   "pitch": 3
+  }
+ },
+ "props": [
+  {
+   "type": "ball",
+   "id": "fire",
+   "color": [
+    1.0,
+    0.45,
+    0.1
+   ],
+   "glow": 12,
+   "visible": true,
+   "scale": 0.6,
+   "at": [
+    1.5,
+    9.0,
+    0.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "candle1",
+   "color": [
+    1.0,
+    0.8,
+    0.4
+   ],
+   "glow": 8,
+   "visible": false,
+   "scale": 0.12,
+   "at": [
+    -1.2,
+    10.5,
+    1.6
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "candle2",
+   "color": [
+    1.0,
+    0.8,
+    0.4
+   ],
+   "glow": 8,
+   "visible": false,
+   "scale": 0.12,
+   "at": [
+    4.0,
+    10.5,
+    1.6
+   ]
+  },
+  {
+   "type": "box",
+   "id": "wallL",
+   "color": [
+    0.2,
+    0.2,
+    0.22
+   ],
+   "visible": true,
+   "scale": 3.2,
+   "at": [
+    -5.0,
+    14.0,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "wallR",
+   "color": [
+    0.2,
+    0.2,
+    0.22
+   ],
+   "visible": true,
+   "scale": 3.2,
+   "at": [
+    5.5,
+    14.0,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "seal",
+   "color": [
+    0.3,
+    0.3,
+    0.32
+   ],
+   "visible": false,
+   "scale": 2.2,
+   "at": [
+    0.3,
+    14.5,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "keys",
+   "color": [
+    0.95,
+    0.8,
+    0.3
+   ],
+   "glow": 3,
+   "visible": false,
+   "scale": 0.18,
+   "at": [
+    -1.0,
+    8.0,
+    1.2
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "pdark",
+   "color": [
+    0.9,
+    0.1,
+    0.05
+   ],
+   "glow": 6,
+   "visible": false,
+   "scale": 0.1,
+   "at": [
+    0.3,
+    13.0,
+    1.2
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "A black dog lies by the fire. Nobody dares pass it alone.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "to:1,8.5,0"
+    ],
+    [
+     "dog",
+     "turn:front"
+    ],
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DON'T GO ALONE"
+  },
+  {
+   "who": "moth",
+   "say": "Odo, stop! Its eyes are open. It's watching us!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "odo",
+     "to:-4,7,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "IT'S WATCHING"
+  },
+  {
+   "who": "narr",
+   "say": "New episode every day. Subscribe so you don't miss what happens next.",
+   "cam": "two:odo,moth",
+   "do": [
+    [
+     "odo",
+     "turn:front"
+    ],
+    [
+     "moth",
+     "turn:front"
+    ]
+   ],
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Last night the Pale Shepherd found them at the farmhouse.",
+   "cam": "wide",
+   "do": [
+    [
+     "odo",
+     "to:-6,7,0"
+    ],
+    [
+     "moth",
+     "to:-4.5,7,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "HE FOUND THEM"
+  },
+  {
+   "who": "odo",
+   "say": "We ran all the way to the sea. He didn't even hurry.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "text": "HE NEVER HURRIES"
+  },
+  {
+   "who": "moth",
+   "say": "A castle on a rock in the water! Stone walls. Odo, stone walls!",
+   "cam": "wide",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "candle1",
+     "show"
+    ],
+    [
+     "candle2",
+     "show"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "A CASTLE ON A ROCK"
+  },
+  {
+   "who": "narr",
+   "say": "A real legend, written down in seventeen thirty-one, on the Isle of Man.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle1",
+     "bounce"
+    ],
+    [
+     "candle2",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A REAL LEGEND"
+  },
+  {
+   "who": "narr",
+   "say": "Peel Castle stands on a little island called Saint Patrick's Isle.",
+   "cam": "wide",
+   "do": [
+    [
+     "guard1",
+     "to:3.5,9.5,0"
+    ],
+    [
+     "guard1",
+     "turn:front"
+    ]
+   ],
+   "text": "PEEL CASTLE"
+  },
+  {
+   "who": "narr",
+   "say": "George Waldron wrote down what the soldiers who guarded it believed.",
+   "cam": "two:guard1,guard2",
+   "do": [
+    [
+     "guard2",
+     "to:5.5,9.8,0"
+    ],
+    [
+     "guard2",
+     "turn:front"
+    ]
+   ],
+   "text": "WHAT THE SOLDIERS SAID"
+  },
+  {
+   "who": "guard1",
+   "say": "Every evening, when we light the candles, it comes in.",
+   "cam": "close:guard1",
+   "do": [
+    [
+     "candle1",
+     "bounce"
+    ],
+    [
+     "candle2",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHEN THE CANDLES ARE LIT"
+  },
+  {
+   "who": "narr",
+   "say": "A big black dog, like a spaniel, with curly, shaggy hair.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "turn:front"
+    ],
+    [
+     "dog",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE BLACK DOG"
+  },
+  {
+   "who": "guard2",
+   "say": "It walks into the guard room and lies down in front of the fire.",
+   "cam": "close:guard2",
+   "do": [
+    [
+     "dog",
+     "to:1.5,8.0,0"
+    ],
+    [
+     "fire",
+     "bounce"
+    ]
+   ],
+   "text": "IT LIES BY THE FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "In Manx they called it the Moddey Dhoo. The black dog.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "shake"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "MODDEY DHOO"
+  },
+  {
+   "who": "moth",
+   "say": "It's lying in our spot. By our fire. Should I ask it to move?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "eyes_big"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "OUR FIRE"
+  },
+  {
+   "who": "narr",
+   "say": "It came out of a dark passage at dusk. At dawn, it went back.",
+   "cam": "prop:pdark",
+   "do": [
+    [
+     "pdark",
+     "show"
+    ],
+    [
+     "pdark",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "FROM THE PASSAGE"
+  },
+  {
+   "who": "narr",
+   "say": "At first the soldiers were terrified. Slowly, they got used to it.",
+   "cam": "two:guard1,guard2",
+   "do": [
+    [
+     "guard1",
+     "turn:guard2"
+    ],
+    [
+     "guard2",
+     "turn:guard1"
+    ]
+   ],
+   "text": "THEY GOT USED TO IT"
+  },
+  {
+   "who": "guard1",
+   "say": "But we never swear when it's here. And we are never alone with it.",
+   "cam": "close:guard1",
+   "do": [
+    [
+     "guard1",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NEVER ALONE"
+  },
+  {
+   "who": "odo",
+   "say": "Mothwick. The rule here: never walk the dark passage alone.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEVER WALK IT ALONE"
+  },
+  {
+   "who": "moth",
+   "say": "Alone? I'm not even walking it with you!",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ]
+   ]
+  },
+  {
+   "who": "narr",
+   "say": "Each night the gates were locked, and the keys carried to the captain.",
+   "cam": "prop:keys",
+   "do": [
+    [
+     "keys",
+     "show"
+    ],
+    [
+     "keys",
+     "spin"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "THE KEYS"
+  },
+  {
+   "who": "narr",
+   "say": "The way went through the old church. Through that passage.",
+   "cam": "prop:pdark",
+   "do": [
+    [
+     "keys",
+     "bounce"
+    ],
+    [
+     "pdark",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THROUGH THE PASSAGE"
+  },
+  {
+   "who": "guard2",
+   "say": "So we always carried the keys in twos. Never one man alone.",
+   "cam": "close:guard2",
+   "do": [
+    [
+     "guard2",
+     "turn:front"
+    ]
+   ],
+   "text": "ALWAYS IN TWOS"
+  },
+  {
+   "who": "narr",
+   "say": "Then, Waldron says around sixteen fifty, one soldier had too much to drink.",
+   "cam": "close:boaster",
+   "do": [
+    [
+     "boaster",
+     "to:-1,8.5,0"
+    ],
+    [
+     "boaster",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "ONE NIGHT"
+  },
+  {
+   "who": "boaster",
+   "say": "Give me the keys! I'll go alone. I'll see if it's a dog or a devil!",
+   "cam": "close:boaster",
+   "do": [
+    [
+     "boaster",
+     "jump"
+    ],
+    [
+     "keys",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "I'LL GO ALONE"
+  },
+  {
+   "who": "guard1",
+   "say": "Don't do it, lad. Not alone. Nobody goes alone.",
+   "cam": "close:guard1",
+   "do": [
+    [
+     "guard1",
+     "shake"
+    ]
+   ],
+   "text": "DON'T DO IT"
+  },
+  {
+   "who": "narr",
+   "say": "He took the keys into the passage. The dog got up and followed.",
+   "cam": "prop:pdark",
+   "do": [
+    [
+     "boaster",
+     "to:0.3,13,0"
+    ],
+    [
+     "dog",
+     "to:0.5,12,0"
+    ],
+    [
+     "keys",
+     "vanish"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "IT FOLLOWED HIM"
+  },
+  {
+   "who": "narr",
+   "say": "Soon the guards heard a terrible noise. Nobody dared look.",
+   "cam": "two:guard1,guard2",
+   "do": [
+    [
+     "guard1",
+     "eyes_big"
+    ],
+    [
+     "guard2",
+     "shake"
+    ],
+    [
+     "fire",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "A TERRIBLE NOISE"
+  },
+  {
+   "who": "narr",
+   "say": "Then he came back. Sober now. Silent. He never told anyone what he saw.",
+   "cam": "close:boaster",
+   "do": [
+    [
+     "boaster",
+     "to:-1,8.5,0"
+    ],
+    [
+     "boaster",
+     "turn:front"
+    ],
+    [
+     "boaster",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE NEVER SPOKE OF IT"
+  },
+  {
+   "who": "odo",
+   "say": "What did he see in there? What could make a man go silent?",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ],
+    [
+     "boaster",
+     "exit"
+    ]
+   ],
+   "text": "WHAT DID HE SEE?"
+  },
+  {
+   "who": "narr",
+   "say": "After that night, the passage was closed up for good.",
+   "cam": "prop:seal",
+   "do": [
+    [
+     "seal",
+     "show"
+    ],
+    [
+     "pdark",
+     "vanish"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THE PASSAGE WAS SEALED"
+  },
+  {
+   "who": "narr",
+   "say": "And the black dog was never seen in Peel Castle again.",
+   "cam": "wide",
+   "do": [
+    [
+     "dog",
+     "exit"
+    ],
+    [
+     "guard1",
+     "exit"
+    ],
+    [
+     "guard2",
+     "exit"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NEVER SEEN AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "In eighteen twenty-three, Walter Scott put the dog in a novel.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle1",
+     "bounce"
+    ],
+    [
+     "candle2",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "1823: WALTER SCOTT"
+  },
+  {
+   "who": "moth",
+   "say": "So the dog is gone. Good. Lovely. Can we sleep now?",
+   "cam": "close:moth",
+   "do": [
+    [
+     "moth",
+     "jump"
+    ],
+    [
+     "odo",
+     "turn:moth"
+    ]
+   ],
+   "text": "CAN WE SLEEP?"
+  },
+  {
+   "who": "narr",
+   "say": "Then the candles flickered. Someone tall stood at the gate.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "to:-7,12,0"
+    ],
+    [
+     "shepherd",
+     "turn:front"
+    ],
+    [
+     "candle1",
+     "vanish"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE'S AT THE GATE"
+  },
+  {
+   "who": "shepherd",
+   "say": "Lantern-bearer. Open the gate. You cannot run from me forever.",
+   "cam": "close:shepherd",
+   "do": [
+    [
+     "shepherd",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "OPEN THE GATE"
+  },
+  {
+   "who": "narr",
+   "say": "But out of the dark, the black dog came back. It stood in the gateway.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "to:-5,10,0"
+    ],
+    [
+     "dog",
+     "turn:shepherd"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE DOG CAME BACK"
+  },
+  {
+   "who": "odo",
+   "say": "It's not hunting us, Mothwick. It's guarding us.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "eyes_big"
+    ]
+   ],
+   "text": "IT'S GUARDING US"
+  },
+  {
+   "who": "narr",
+   "say": "The Shepherd stared at the dog. Then he stepped back into the fog.",
+   "cam": "wide",
+   "do": [
+    [
+     "shepherd",
+     "exit"
+    ],
+    [
+     "dog",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HE STEPPED BACK"
+  },
+  {
+   "who": "narr",
+   "say": "Then, from behind the sealed stones, keys began to jingle.",
+   "cam": "prop:seal",
+   "do": [
+    [
+     "seal",
+     "shake"
+    ],
+    [
+     "pdark",
+     "show"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "KEYS IN THE WALL"
+  },
+  {
+   "who": "wren",
+   "say": "Odo? Is that you? Come and get me. But don't come alone.",
+   "cam": "prop:seal",
+   "do": [
+    [
+     "seal",
+     "bounce"
+    ],
+    [
+     "odo",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "ODO... IS THAT YOU?"
+  },
+  {
+   "who": "odo",
+   "say": "Wren? That's my sister's voice. That's Wren!",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "to:-0.5,12,0"
+    ],
+    [
+     "moth",
+     "jump"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "MY SISTER?"
+  },
+  {
+   "who": "narr",
+   "say": "The black dog walked to the sealed passage. And looked back, waiting.",
+   "cam": "close:dog",
+   "do": [
+    [
+     "dog",
+     "to:1.5,13,0"
+    ],
+    [
+     "dog",
+     "turn:odo"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "IT'S WAITING"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens in the next part? Tell me in the comments.",
+   "cam": "close:odo",
+   "do": [
+    [
+     "odo",
+     "shake"
+    ],
+    [
+     "moth",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
