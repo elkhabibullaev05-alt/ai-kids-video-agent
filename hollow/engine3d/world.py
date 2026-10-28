@@ -300,6 +300,27 @@ def _shape(key, kind, s, ch):
             for h_ in range(26):  # hair tufts
                 bpy.ops.mesh.primitive_cone_add(radius1=0.05 * s, radius2=0, depth=0.3 * s, location=(hx_ + rnd.uniform(-0.45, 0.45) * s, -0.2 * s, rnd.uniform(0.7, 2.4) * s), rotation=(math.radians(-70 + rnd.uniform(-30, 30)), rnd.uniform(-0.6, 0.6), 0)); parent(add(_o(), fur, False), o)
         return o, 2.4 * s, 1.0 * s, 3.4 * s, -0.4 * s, 2.0 * s
+    if kind == "coach":  # 1800s post carriage: dark box cab on four big wheels, two horses in front, two glowing lanterns (front = -y)
+        bd = mat(f"coach_{key}", col, 0.6, 0.1); hide = mat(f"chorse_{key}", (0.16, 0.09, 0.05), 0.7)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0.6 * s, 1.9 * s)); o = add(_o(), bd); o.scale = (1.7 * s, 2.4 * s, 1.7 * s)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0.6 * s, 2.85 * s)); rf = add(_o(), mat("croof", (0.05, 0.04, 0.04), 0.7)); rf.scale = (1.9 * s, 2.6 * s, 0.18 * s); parent(rf, o)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, -0.62 * s, 2.1 * s)); wn = add(_o(), mat("cwin", (0.9, 0.7, 0.35), 0.3, 0, 3)); wn.scale = (1.0 * s, 0.05 * s, 0.6 * s); parent(wn, o)
+        wood = mat("cwheel", (0.12, 0.07, 0.04), 0.8)
+        for wx in (-0.95, 0.95):
+            for wy in (-0.3, 1.5):
+                bpy.ops.mesh.primitive_torus_add(major_radius=0.62 * s, minor_radius=0.08 * s, location=(wx * s, wy * s, 0.7 * s), rotation=(0, 1.5708, 0)); parent(add(_o(), wood), o)
+        for hx_ in (-0.55, 0.55):  # two horses
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.8 * s, location=(hx_ * s, -3.0 * s, 1.55 * s)); hb = add(_o(), hide); hb.scale = (0.42, 1.25, 0.5); parent(hb, o)
+            for lx in (-0.18, 0.18):
+                for ly in (-0.75, 0.75):
+                    bpy.ops.mesh.primitive_cylinder_add(radius=0.08 * s, depth=1.2 * s, location=((hx_ + lx) * s, (-3.0 + ly) * s, 0.6 * s)); parent(add(_o(), hide), o)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.17 * s, depth=0.9 * s, location=(hx_ * s, -4.0 * s, 2.0 * s), rotation=(math.radians(-35), 0, 0)); parent(add(_o(), hide), o)
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.3 * s, location=(hx_ * s, -4.35 * s, 2.35 * s)); hh = add(_o(), hide); hh.scale = (0.65, 1.3, 0.65); parent(hh, o)
+        lampm = mat("clamp", (1, 0.8, 0.45), 0.3, 0, 22)
+        for lx in (-1.0, 1.0):
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.16 * s, location=(lx * s, -0.65 * s, 2.6 * s)); parent(add(_o(), lampm, False), o)
+        bpy.ops.object.light_add(type="POINT", location=(0, -1.2 * s, 2.6 * s)); L = _o(); L.data.energy = 300; L.data.color = (1, 0.8, 0.5); parent(L, o)
+        return o, 2.0 * s, 5.0 * s, 3.0 * s, -0.7 * s, 2.0 * s
     if kind == "car":  # 1920s motor car: long dark body along y, open seat, four wheels, two glowing headlamps at the front (front = -y)
         bd = mat(f"car_{key}", col, 0.5, 0.3)
         bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 0.95 * s)); o = add(_o(), bd); o.scale = (1.6 * s, 3.6 * s, 0.7 * s)
@@ -347,9 +368,9 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman", "watcher", "hands", "car"):
+    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman", "watcher", "hands", "car", "coach"):
         mo.scale = TINY
-    if kind in ("watcher", "hands", "car"):
+    if kind in ("watcher", "hands", "car", "coach"):
         for e_ in eyes: e_.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]

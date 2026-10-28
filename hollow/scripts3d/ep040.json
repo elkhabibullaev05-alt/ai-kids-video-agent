@@ -1,0 +1,855 @@
+{
+ "title": "He Stepped Outside. Where Did He Go? (Ep 40)",
+ "description": "A true story from Perleberg, Prussia, 1809: the vanishing of Benjamin Bathurst. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "village",
+  "fog": 0.025,
+  "eyes": 0,
+  "moonlight": 22
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "bath": {
+   "name": "Benjamin Bathurst",
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.35,
+    0.36,
+    0.4
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -1.5,
+    9.4
+   ]
+  },
+  "krause": {
+   "name": "Krause, his courier",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.3,
+    0.22,
+    0.14
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -4.0,
+    9.0
+   ]
+  },
+  "coach": {
+   "name": "The carriage",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.08,
+    0.07,
+    0.1
+   ],
+   "kind": "coach",
+   "size": 0.8,
+   "home": [
+    5.0,
+    13.0
+   ]
+  },
+  "oldw": {
+   "name": "An old woman",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.4,
+    0.3,
+    0.32
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -11,
+    19
+   ]
+  },
+  "wife": {
+   "name": "Phillida, his wife",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.5,
+    0.2,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -9,
+    20
+   ]
+  },
+  "trav": {
+   "name": "A traveller",
+   "voice": "af_sarah",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.2,
+    0.4,
+    0.5
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    11,
+    19
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "inn",
+   "color": [
+    0.25,
+    0.18,
+    0.1
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.4,
+   "at": [
+    -4.5,
+    15,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.8,
+    0.45
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.3,
+   "at": [
+    -6.8,
+    14,
+    2.6
+   ]
+  },
+  {
+   "type": "box",
+   "id": "coat",
+   "color": [
+    0.35,
+    0.25,
+    0.15
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.55,
+   "at": [
+    -7.5,
+    11.5,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "trousers",
+   "color": [
+    0.55,
+    0.55,
+    0.58
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    -6.5,
+    17,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "letter",
+   "color": [
+    0.9,
+    0.88,
+    0.8
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.4,
+   "at": [
+    -3,
+    9,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "krause",
+   "say": "Sir? Mister Bathurst? Sir, where are you?",
+   "cam": "close:coach",
+   "do": [
+    [
+     "bath",
+     "dive"
+    ],
+    [
+     "krause",
+     "to:-1.5,9.2,0"
+    ],
+    [
+     "krause",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHERE DID HE GO?"
+  },
+  {
+   "who": "narr",
+   "say": "He stepped out to the horses. Seconds later, he was gone. Forever.",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "shake"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "GONE IN SECONDS"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. Perleberg, Prussia. November the twenty-fifth, eighteen-oh-nine.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "krause",
+     "to_home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "PRUSSIA, 1809"
+  },
+  {
+   "who": "narr",
+   "say": "Hours earlier, a carriage rolled into this little town on the road from Berlin.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "bath",
+     "rise"
+    ],
+    [
+     "coach",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "HOURS EARLIER"
+  },
+  {
+   "who": "narr",
+   "say": "Inside sat Benjamin Bathurst. Twenty-five years old. A British diplomat.",
+   "cam": "close:bath",
+   "do": [
+    [
+     "bath",
+     "turn:front"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "A BRITISH ENVOY"
+  },
+  {
+   "who": "narr",
+   "say": "He was rushing home to England from Vienna, in the middle of Napoleon's wars.",
+   "cam": "close:bath",
+   "do": [
+    [
+     "bath",
+     "turn:krause"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NAPOLEON'S WARS"
+  },
+  {
+   "who": "bath",
+   "say": "Remember, Krause. Here I am Mister Koch, a simple merchant. Nobody must know.",
+   "cam": "two:bath,krause",
+   "do": [
+    [
+     "krause",
+     "turn:bath"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A FALSE NAME"
+  },
+  {
+   "who": "krause",
+   "say": "Yes, sir. I will order fresh horses at the post house.",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "happy"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "FRESH HORSES"
+  },
+  {
+   "who": "narr",
+   "say": "Bathurst was afraid. He believed enemy agents were following him.",
+   "cam": "close:bath",
+   "do": [
+    [
+     "bath",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "HE WAS AFRAID"
+  },
+  {
+   "who": "narr",
+   "say": "They waited at a little inn called the White Swan, by the old town gate.",
+   "cam": "prop:inn",
+   "do": [
+    [
+     "inn",
+     "bounce"
+    ],
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "THE WHITE SWAN"
+  },
+  {
+   "who": "bath",
+   "say": "Keep the candles burning, Krause. And keep watching the street.",
+   "cam": "close:bath",
+   "do": [
+    [
+     "bath",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WATCH THE STREET"
+  },
+  {
+   "who": "narr",
+   "say": "For hours he sat inside, writing letter after letter.",
+   "cam": "prop:letter",
+   "do": [
+    [
+     "letter",
+     "show"
+    ],
+    [
+     "letter",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "LETTER AFTER LETTER"
+  },
+  {
+   "who": "narr",
+   "say": "At nine o'clock the fresh horses were ready. The carriage waited in the dark.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "letter",
+     "hide"
+    ],
+    [
+     "coach",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "NINE O'CLOCK"
+  },
+  {
+   "who": "krause",
+   "say": "The carriage is ready, sir. I will bring the bags.",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "turn:coach"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "THE CARRIAGE IS READY"
+  },
+  {
+   "who": "narr",
+   "say": "Bathurst stepped outside first. He walked toward the horses.",
+   "cam": "two:bath,coach",
+   "do": [
+    [
+     "bath",
+     "to:2.8,9.6,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "HE STEPPED OUTSIDE"
+  },
+  {
+   "who": "narr",
+   "say": "Krause followed just a few steps behind him. Only a few seconds.",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "to:-0.5,9.2,0"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A FEW SECONDS"
+  },
+  {
+   "who": "narr",
+   "say": "He walked around the front of the horses. And he never came back.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "bath",
+     "to:4.2,8.4,0"
+    ],
+    [
+     "bath",
+     "dive"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE NEVER CAME BACK"
+  },
+  {
+   "who": "krause",
+   "say": "Sir? Mister Bathurst? Sir!",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "eyes_big"
+    ],
+    [
+     "krause",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SIR?!"
+  },
+  {
+   "who": "narr",
+   "say": "The horses stood still. The lanterns burned. But Benjamin Bathurst was gone.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "coach",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "GONE"
+  },
+  {
+   "who": "narr",
+   "say": "If you love true stories with no answer, subscribe now. It gets stranger.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Soldiers searched every street that night. They even dragged the river.",
+   "cam": "wide",
+   "do": [
+    [
+     "krause",
+     "to:-6,15,0"
+    ],
+    [
+     "oldw",
+     "to:-8,17,0"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THEY DRAGGED THE RIVER"
+  },
+  {
+   "who": "narr",
+   "say": "The next day they searched the town, house after house.",
+   "cam": "prop:inn",
+   "do": [
+    [
+     "inn",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "HOUSE AFTER HOUSE"
+  },
+  {
+   "who": "narr",
+   "say": "In an outhouse behind one family's home, they found his expensive fur coat.",
+   "cam": "prop:coat",
+   "do": [
+    [
+     "coat",
+     "show"
+    ],
+    [
+     "coat",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "HIS COAT"
+  },
+  {
+   "who": "krause",
+   "say": "That is his coat! But where is he?",
+   "cam": "close:krause",
+   "do": [
+    [
+     "krause",
+     "to:-6,12,0"
+    ],
+    [
+     "krause",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHERE IS HE?"
+  },
+  {
+   "who": "narr",
+   "say": "Three weeks later, two old women went into the woods near Quitzow, gathering sticks.",
+   "cam": "close:oldw",
+   "do": [
+    [
+     "coat",
+     "hide"
+    ],
+    [
+     "oldw",
+     "to:-7,16,0"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "3 WEEKS LATER"
+  },
+  {
+   "who": "oldw",
+   "say": "Look, by the path. Somebody's trousers, turned inside out.",
+   "cam": "prop:trousers",
+   "do": [
+    [
+     "trousers",
+     "show"
+    ],
+    [
+     "oldw",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "INSIDE OUT"
+  },
+  {
+   "who": "narr",
+   "say": "They were Bathurst's grey trousers. Two bullet holes. But no blood at all.",
+   "cam": "prop:trousers",
+   "do": [
+    [
+     "trousers",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NO BLOOD"
+  },
+  {
+   "who": "narr",
+   "say": "In the pocket was a wet, half-finished letter to his wife.",
+   "cam": "prop:letter",
+   "do": [
+    [
+     "letter",
+     "show"
+    ],
+    [
+     "letter",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "A LETTER"
+  },
+  {
+   "who": "narr",
+   "say": "He wrote that he feared he would never see England again.",
+   "cam": "prop:letter",
+   "do": [
+    [
+     "letter",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NEVER SEE ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "His young wife, Phillida, crossed war-torn Europe to search for him herself.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "letter",
+     "hide"
+    ],
+    [
+     "trousers",
+     "hide"
+    ],
+    [
+     "wife",
+     "to:-3,11,0"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "HIS WIFE SEARCHED"
+  },
+  {
+   "who": "wife",
+   "say": "Benjamin! Somebody in this town must know where you are!",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMEBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "She found rumours, and letters, and lies. She never found her husband.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "sad"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER FOUND"
+  },
+  {
+   "who": "narr",
+   "say": "Benjamin Bathurst was never seen again. Nobody knows what happened behind those horses.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "wife",
+     "to_home"
+    ],
+    [
+     "oldw",
+     "to_home"
+    ],
+    [
+     "krause",
+     "to_home"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "So here is the rule of Perleberg. Never walk around the horses alone at night.",
+   "cam": "close:coach",
+   "do": [
+    [
+     "coach",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER WALK ALONE"
+  },
+  {
+   "who": "narr",
+   "say": "Many years later, a traveller waits by that same old gate. At nine o'clock.",
+   "cam": "wide",
+   "do": [
+    [
+     "trav",
+     "to:1.5,9.4,0"
+    ],
+    [
+     "moon",
+     "show"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "YEARS LATER"
+  },
+  {
+   "who": "trav",
+   "say": "It's only an old story. I'll just check behind the carriage.",
+   "cam": "close:trav",
+   "do": [
+    [
+     "trav",
+     "happy"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ONLY A STORY"
+  },
+  {
+   "who": "narr",
+   "say": "She steps around the horses. The lanterns flicker. Someone is breathing behind her.",
+   "cam": "two:trav,coach",
+   "do": [
+    [
+     "trav",
+     "to:3.6,8.6,0"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "SOMEONE IS BREATHING"
+  },
+  {
+   "who": "trav",
+   "say": "Who's there? Mister... Bathurst?",
+   "cam": "close:trav",
+   "do": [
+    [
+     "trav",
+     "eyes_big"
+    ],
+    [
+     "bath",
+     "rise"
+    ],
+    [
+     "bath",
+     "to:5.2,8.6,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO'S THERE?"
+  },
+  {
+   "who": "narr",
+   "say": "A young man in a grey coat leans close and whispers: they are still watching.",
+   "cam": "two:trav,bath",
+   "do": [
+    [
+     "bath",
+     "turn:trav"
+    ],
+    [
+     "trav",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THEY'RE STILL WATCHING"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:trav,bath",
+   "do": [
+    [
+     "bath",
+     "shake"
+    ],
+    [
+     "trav",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
