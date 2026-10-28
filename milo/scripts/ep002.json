@@ -1,0 +1,3668 @@
+{
+ "id": "ep002",
+ "title": "Can You Survive 100 Days on a Desert Island?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "Milo and Rosa wash up on a tiny island in the South Pacific with one dry bag. Can they last 100 days? A hand-drawn survival story with real survival facts: why you can never drink sea water, why shade saves water, how to catch rain and boil water, the 'three of anything' distress signal, treating small cuts, avoiding unknown plants, heat stroke warning signs, and staying ready to signal.\n\nThe story is fiction; the survival facts are real. This is not medical advice \u2014 in a real emergency, contact emergency services.\n\nNext episode: 100 Days in Antarctica.\n\nSources:\nNOAA \u2014 Why can't people drink seawater? https://oceanservice.noaa.gov/facts/drinksw.html\nCDC \u2014 Boil water advisory (rolling boil 1 minute) https://www.cdc.gov/natural-disasters/psa-toolkit/boil-water-advisory.html\nCDC \u2014 Heat-related illnesses https://www.cdc.gov/niosh/heat-stress/about/illnesses.html\nAdventureSmart \u2014 Communication & signalling https://www.adventuresmart.ca/communication-signaling/\n\n#survival #desertisland #animation #storytime",
+ "tags": "survival, desert island, 100 days, survival story, animated story, how to survive, castaway, survival tips, milo survives, island survival",
+ "thumbnail": {
+  "bg": "sky",
+  "text": "DAY 99\u2026|NO WATER",
+  "size": 200,
+  "color": "red",
+  "guy": {
+   "pose": "panic",
+   "face": "scream",
+   "look": -1,
+   "extras": [
+    "glasses"
+   ],
+   "shirt": "yellow"
+  },
+  "guy_x": 1450,
+  "items": [
+   {
+    "prop": "island",
+    "x": 1300,
+    "y": 1000,
+    "s": 2.2
+   },
+   {
+    "prop": "fin",
+    "x": 500,
+    "y": 980,
+    "s": 1.6
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "say": "Six forty in the morning, somewhere in the South Pacific. Your boat is upside down. And the only land you can see is a strip of sand.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 980,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "prop": "ship",
+     "x": 700,
+     "y": 860,
+     "s": 0.5,
+     "at": 0,
+     "anim": "shake",
+     "move": [
+      700,
+      960
+     ]
+    },
+    {
+     "prop": "island",
+     "x": 1500,
+     "y": 760,
+     "s": 0.6,
+     "at": 0.6
+    },
+    {
+     "text": "DAY 1",
+     "x": 960,
+     "y": 300,
+     "size": 190,
+     "color": "red",
+     "at": 0.15,
+     "outline": "white",
+     "anim": "pulse"
+    }
+   ],
+   "bg": "sky",
+   "day": 1,
+   "cam": {
+    "from": [
+     960,
+     540,
+     1.15
+    ],
+    "to": [
+     1100,
+     600,
+     1.0
+    ]
+   },
+   "ground": false
+  },
+  {
+   "say": "No phone signal. No fresh water. Nobody knows exactly where you are. Can you survive one hundred days here?",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 760,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "cross": [
+      1300,
+      420,
+      70
+     ],
+     "at": 0.2
+    },
+    {
+     "prop": "phone",
+     "x": 1300,
+     "y": 520,
+     "s": 0.8,
+     "at": 0.1
+    },
+    {
+     "text": "100 DAYS?",
+     "x": 1350,
+     "y": 260,
+     "size": 130,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 1
+  },
+  {
+   "say": "Milo is about to find out. He just crawled out of the surf, still in his yellow raincoat, and he is not alone.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 1040,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "walk": true,
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      880,
+      900
+     ]
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal",
+      "label": "Rosa"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky",
+   "day": 1
+  },
+  {
+   "say": "Okay. Okay. The boat is gone, the radio is gone, and I think I swallowed half the ocean.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1150,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "ship",
+     "x": 1650,
+     "y": 980,
+     "s": 0.4,
+     "at": 0.3,
+     "anim": "shake"
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.1
+    }
+   ],
+   "bg": "sky",
+   "day": 1,
+   "voice": "af_bella"
+  },
+  {
+   "say": "That's Rosa, the skipper. She has one dry bag. Inside: a lighter, a plastic sheet, a small pot, and one bottle of water.",
+   "items": [
+    {
+     "prop": "backpack",
+     "x": 960,
+     "y": 800,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "prop": "pot",
+     "x": 520,
+     "y": 600,
+     "s": 0.6,
+     "at": 0.25
+    },
+    {
+     "prop": "bottle",
+     "x": 820,
+     "y": 560,
+     "s": 0.7,
+     "at": 0.4,
+     "text": "1L"
+    },
+    {
+     "box": [
+      1150,
+      420,
+      260,
+      150
+     ],
+     "color": "white",
+     "at": 0.55
+    },
+    {
+     "text": "SHEET",
+     "x": 1280,
+     "y": 500,
+     "size": 54,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "prop": "fire",
+     "x": 1600,
+     "y": 640,
+     "s": 0.6,
+     "at": 0.75
+    }
+   ],
+   "bg": "yellow",
+   "day": 1,
+   "ground": false,
+   "chapter": "Day 1: The rule of three"
+  },
+  {
+   "say": "Survival experts use a simple rule of three. You can last about three minutes without air,",
+   "items": [
+    {
+     "text": "RULE OF 3",
+     "x": 960,
+     "y": 200,
+     "size": 140,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "3 MINUTES",
+     "x": 600,
+     "y": 500,
+     "size": 90,
+     "color": "dark",
+     "at": 0.5,
+     "outline": "white"
+    },
+    {
+     "text": "AIR",
+     "x": 600,
+     "y": 600,
+     "size": 70,
+     "color": "blue",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "pointup",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "yellow",
+   "day": 1
+  },
+  {
+   "say": "about three hours in harsh weather without shelter, three days without water, and three weeks without food.",
+   "items": [
+    {
+     "text": "3 HOURS = SHELTER",
+     "x": 960,
+     "y": 360,
+     "size": 80,
+     "color": "orange",
+     "at": 0.05,
+     "outline": "white"
+    },
+    {
+     "text": "3 DAYS = WATER",
+     "x": 960,
+     "y": 500,
+     "size": 80,
+     "color": "blue",
+     "at": 0.35,
+     "outline": "white"
+    },
+    {
+     "text": "3 WEEKS = FOOD",
+     "x": 960,
+     "y": 640,
+     "size": 80,
+     "color": "green",
+     "at": 0.65,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 1,
+   "ground": false
+  },
+  {
+   "say": "These are rough numbers, not a countdown. But they tell you the order. Shelter and water first. Food comes way later.",
+   "items": [
+    {
+     "arrow": [
+      [
+       400,
+       500
+      ],
+      [
+       800,
+       500
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "shelter",
+     "x": 300,
+     "y": 700,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "bottle",
+     "x": 1000,
+     "y": 680,
+     "s": 0.9,
+     "at": 0.4
+    },
+    {
+     "prop": "coconut",
+     "x": 1500,
+     "y": 700,
+     "s": 1.0,
+     "at": 0.7
+    },
+    {
+     "text": "LATER",
+     "x": 1500,
+     "y": 460,
+     "size": 70,
+     "color": "grey",
+     "at": 0.8,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 1
+  },
+  {
+   "say": "So Milo does what every movie hero does first. He tries to drink the ocean.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 1040,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 900,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "?!",
+     "x": 1250,
+     "y": 400,
+     "size": 170,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 1
+  },
+  {
+   "say": "Milo, stop! Salt water makes you thirstier. Spit it out!",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "sky",
+   "day": 1,
+   "voice": "af_bella"
+  },
+  {
+   "say": "She's right. According to the U.S. ocean agency NOAA, your kidneys can only make urine that is less salty than sea water.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 980,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "text": "NOAA",
+     "x": 960,
+     "y": 220,
+     "size": 120,
+     "color": "blue",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "box": [
+      560,
+      380,
+      800,
+      260
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "SEA WATER = TOO SALTY",
+     "x": 960,
+     "y": 520,
+     "size": 70,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "sea",
+   "day": 1,
+   "ground": false
+  },
+  {
+   "say": "So to get rid of all that salt, your body has to pee out more water than you drank. You end up drier than before.",
+   "items": [
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "bottle",
+     "x": 1000,
+     "y": 760,
+     "s": 1.0,
+     "at": 0.2,
+     "text": "IN"
+    },
+    {
+     "arrow": [
+      [
+       1080,
+       640
+      ],
+      [
+       1300,
+       640
+      ]
+     ],
+     "at": 0.4
+    },
+    {
+     "prop": "bottle",
+     "x": 1450,
+     "y": 760,
+     "s": 1.4,
+     "at": 0.55,
+     "text": "OUT",
+     "color": "red"
+    }
+   ],
+   "bg": "yellow",
+   "day": 1
+  },
+  {
+   "say": "Rule one on any island. Never drink sea water. Not a sip, not mixed in, not when you're desperate.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 960,
+     "s": 2.0,
+     "at": 0
+    },
+    {
+     "cross": [
+      960,
+      520,
+      220
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "RULE 1",
+     "x": 960,
+     "y": 180,
+     "size": 130,
+     "color": "red",
+     "at": 0.1,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 1,
+   "ground": false
+  },
+  {
+   "say": "Day two. The sun is the first thing trying to kill them. By noon the sand is hot enough to hurt bare feet.",
+   "items": [
+    {
+     "prop": "sun",
+     "x": 1500,
+     "y": 260,
+     "s": 1.6,
+     "at": 0,
+     "anim": "pulse"
+    },
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "prop": "thermo",
+     "x": 1100,
+     "y": 820,
+     "s": 1.0,
+     "at": 0.5,
+     "color": "red"
+    }
+   ],
+   "bg": "sky",
+   "day": 2,
+   "chapter": "Day 2: Shade"
+  },
+  {
+   "say": "Sweating in direct sun can drain a lot of water from your body every hour. So shade is not comfort. Shade is water you don't lose.",
+   "items": [
+    {
+     "prop": "sun",
+     "x": 1550,
+     "y": 260,
+     "s": 1.4,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "bottle",
+     "x": 1000,
+     "y": 760,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "-",
+     "move": [
+      1000,
+      820
+     ]
+    },
+    {
+     "text": "SHADE = WATER",
+     "x": 1100,
+     "y": 420,
+     "size": 100,
+     "color": "blue",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 2
+  },
+  {
+   "say": "Milo and Rosa lean driftwood against a palm, lay palm fronds on top, and crawl under during the hottest hours.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "palm",
+     "x": 600,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "prop": "shelter",
+     "x": 1100,
+     "y": 900,
+     "s": 1.2,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky",
+   "day": 2
+  },
+  {
+   "say": "They move at dawn and dusk, when it's cool. In the middle of the day, they rest. Boring? Yes. Smart? Also yes.",
+   "items": [
+    {
+     "prop": "sun",
+     "x": 400,
+     "y": 300,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "cloud",
+     "x": 900,
+     "y": 260,
+     "s": 0.9,
+     "at": 0.2
+    },
+    {
+     "prop": "shelter",
+     "x": 1100,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1100,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.5
+    },
+    {
+     "text": "REST 11 to 3",
+     "x": 1500,
+     "y": 420,
+     "size": 80,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 2
+  },
+  {
+   "say": "And they build it above the line of dried seaweed on the sand. That line shows how high the tide comes.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 1040,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       600,
+       820
+      ],
+      [
+       1400,
+       820
+      ]
+     ],
+     "color": "green",
+     "at": 0.3
+    },
+    {
+     "text": "HIGH TIDE LINE",
+     "x": 960,
+     "y": 700,
+     "size": 70,
+     "color": "green",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "prop": "shelter",
+     "x": 1550,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky",
+   "day": 2
+  },
+  {
+   "say": "Day three. The bottle is empty. Milo has a headache, his lips are cracked, and his pee is dark.",
+   "items": [
+    {
+     "text": "EMPTY",
+     "x": 960,
+     "y": 250,
+     "size": 120,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "prop": "bottle",
+     "x": 600,
+     "y": 820,
+     "s": 1.0,
+     "at": 0,
+     "color": "grey"
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "yellow",
+   "day": 3,
+   "chapter": "Day 3: Water"
+  },
+  {
+   "say": "Those are classic warning signs of dehydration. Headache, dizziness, dark urine, feeling confused. Water is now the only job.",
+   "items": [
+    {
+     "text": "HEADACHE",
+     "x": 600,
+     "y": 360,
+     "size": 70,
+     "color": "red",
+     "at": 0.1,
+     "outline": "white"
+    },
+    {
+     "text": "DIZZY",
+     "x": 1300,
+     "y": 360,
+     "size": 70,
+     "color": "red",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "text": "DARK PEE",
+     "x": 600,
+     "y": 560,
+     "size": 70,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    },
+    {
+     "text": "CONFUSED",
+     "x": 1300,
+     "y": 560,
+     "size": 70,
+     "color": "red",
+     "at": 0.7,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    }
+   ],
+   "bg": "yellow",
+   "day": 3
+  },
+  {
+   "say": "Then, at four in the afternoon, the sky turns grey.",
+   "items": [
+    {
+     "prop": "cloud",
+     "x": 700,
+     "y": 260,
+     "s": 1.4,
+     "at": 0
+    },
+    {
+     "prop": "cloud",
+     "x": 1250,
+     "y": 300,
+     "s": 1.6,
+     "at": 0.3
+    },
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "pointup",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "grey",
+   "day": 3
+  },
+  {
+   "say": "The sheet! Spread the sheet! Every drop counts!",
+   "items": [
+    {
+     "prop": "storm",
+     "x": 960,
+     "y": 240,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "run",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "grey",
+   "day": 3,
+   "voice": "af_bella"
+  },
+  {
+   "say": "They stretch the plastic sheet between two sticks so it sags in the middle, and the rain runs into the pot.",
+   "items": [
+    {
+     "prop": "storm",
+     "x": 960,
+     "y": 200,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      700,
+      520,
+      520,
+      40
+     ],
+     "color": "white"
+    },
+    {
+     "prop": "pot",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3
+    },
+    {
+     "arrow": [
+      [
+       960,
+       580
+      ],
+      [
+       960,
+       760
+      ]
+     ],
+     "color": "blue",
+     "at": 0.5
+    }
+   ],
+   "bg": "grey",
+   "day": 3
+  },
+  {
+   "say": "Fresh rain caught on a clean surface is one of the best water sources a castaway can get.",
+   "items": [
+    {
+     "prop": "pot",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "text": "RAIN = GOLD",
+     "x": 960,
+     "y": 300,
+     "size": 130,
+     "color": "blue",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky",
+   "day": 3
+  },
+  {
+   "say": "Day four. They find green coconuts. The water inside a young coconut is safe to drink, and it helps. In moderation.",
+   "items": [
+    {
+     "prop": "palm",
+     "x": 600,
+     "y": 900,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "prop": "coconut",
+     "x": 1100,
+     "y": 860,
+     "s": 1.4,
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky",
+   "day": 4
+  },
+  {
+   "say": "But a stream they find in the jungle is a different story. Clear water can still carry germs you can't see.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 900,
+     "s": 1.4,
+     "at": 0,
+     "color": "blue"
+    },
+    {
+     "prop": "magnifier",
+     "x": 1100,
+     "y": 640,
+     "s": 1.1,
+     "at": 0.3
+    },
+    {
+     "text": "GERMS?",
+     "x": 1400,
+     "y": 360,
+     "size": 100,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 4
+  },
+  {
+   "say": "So they boil it. The CDC says bring water to a rolling boil for one minute, or three minutes at high altitude.",
+   "items": [
+    {
+     "prop": "pot",
+     "x": 960,
+     "y": 900,
+     "s": 1.4,
+     "at": 0
+    },
+    {
+     "text": "CDC",
+     "x": 960,
+     "y": 200,
+     "size": 110,
+     "color": "blue",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "1 MINUTE",
+     "x": 960,
+     "y": 380,
+     "size": 120,
+     "color": "red",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "prop": "stopwatch",
+     "x": 1500,
+     "y": 800,
+     "s": 1.0,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky",
+   "day": 4
+  },
+  {
+   "say": "That lighter in the dry bag just became the most valuable object on the island.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 1.6,
+     "at": 0
+    },
+    {
+     "text": "MVP",
+     "x": 960,
+     "y": 300,
+     "size": 150,
+     "color": "gold",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "sky",
+   "day": 4
+  },
+  {
+   "say": "Day five. A plane. Tiny, very high, very fast. Milo jumps and waves and screams. The plane does not care.",
+   "items": [
+    {
+     "prop": "plane",
+     "x": 600,
+     "y": 240,
+     "s": 0.5,
+     "at": 0,
+     "move": [
+      1500,
+      220
+     ]
+    },
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "bob"
+    }
+   ],
+   "bg": "sky",
+   "day": 5,
+   "chapter": "Day 5: Be seen"
+  },
+  {
+   "say": "From the air, one person on a beach looks like a dot. You have to make the island itself shout for help.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 640,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "ring": [
+      960,
+      560,
+      40
+     ],
+     "at": 0.3
+    },
+    {
+     "text": "THIS IS YOU",
+     "x": 960,
+     "y": 300,
+     "size": 90,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 5,
+   "ground": false
+  },
+  {
+   "say": "Rescue groups like AdventureSmart teach this: three of anything means distress. Three fires, three whistle blasts, three piles of rocks.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 500,
+     "y": 860,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.25
+    },
+    {
+     "prop": "fire",
+     "x": 1420,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.5
+    },
+    {
+     "text": "3 = HELP",
+     "x": 960,
+     "y": 300,
+     "size": 150,
+     "color": "red",
+     "at": 0.65,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 5
+  },
+  {
+   "say": "So they build three fire piles in a triangle, ready to light. Dry wood underneath, green leaves on top for thick smoke.",
+   "items": [
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "fire",
+     "x": 700,
+     "y": 900,
+     "s": 0.7,
+     "at": 0
+    },
+    {
+     "prop": "fire",
+     "x": 1220,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2
+    },
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 760,
+     "s": 0.7,
+     "at": 0.4
+    },
+    {
+     "text": "SMOKE BY DAY",
+     "x": 600,
+     "y": 300,
+     "size": 70,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "text": "FLAME BY NIGHT",
+     "x": 1350,
+     "y": 300,
+     "size": 70,
+     "color": "orange",
+     "at": 0.75,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 5
+  },
+  {
+   "say": "Day six. Huge letters on the sand. S O S, made from dark rocks and seaweed so it stands out against the white beach.",
+   "items": [
+    {
+     "prop": "sos",
+     "x": 960,
+     "y": 820,
+     "s": 2.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "sky",
+   "day": 6
+  },
+  {
+   "say": "Big letters, sharp contrast, straight lines. Nature doesn't make straight lines, so pilots notice them.",
+   "items": [
+    {
+     "prop": "sos",
+     "x": 960,
+     "y": 820,
+     "s": 1.6,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       300,
+       300
+      ],
+      [
+       700,
+       600
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "plane",
+     "x": 260,
+     "y": 260,
+     "s": 0.4,
+     "at": 0.2
+    },
+    {
+     "text": "STRAIGHT LINES",
+     "x": 1300,
+     "y": 330,
+     "size": 80,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 6
+  },
+  {
+   "say": "And Milo's secret weapon? His glasses case has a tiny mirror. A flash of sunlight can be seen much farther away than you can shout.",
+   "items": [
+    {
+     "prop": "mirror",
+     "x": 700,
+     "y": 820,
+     "s": 1.4,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       780,
+       700
+      ],
+      [
+       1500,
+       260
+      ]
+     ],
+     "color": "yellow",
+     "at": 0.4
+    },
+    {
+     "prop": "plane",
+     "x": 1600,
+     "y": 240,
+     "s": 0.5,
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "sky",
+   "day": 6
+  },
+  {
+   "say": "Day nine. Rosa slips on the rocks. Sharp coral slices her shin.",
+   "items": [
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "scream",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 1040,
+     "s": 2.2,
+     "at": 0
+    },
+    {
+     "text": "OUCH",
+     "x": 1400,
+     "y": 380,
+     "size": 140,
+     "color": "red",
+     "at": 0.3,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 9,
+   "chapter": "Day 9: Small cuts, big danger"
+  },
+  {
+   "say": "It's just a scratch. I'll rinse it in the sea and forget about it.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "wave",
+     "x": 1300,
+     "y": 960,
+     "s": 1.2,
+     "at": 0.2
+    },
+    {
+     "cross": [
+      1300,
+      760,
+      90
+     ],
+     "at": 0.7
+    }
+   ],
+   "bg": "sky",
+   "day": 9,
+   "voice": "af_bella"
+  },
+  {
+   "say": "On an island, small cuts are a big deal. Sea water and sand can carry bacteria, and there's no doctor for a hundred miles.",
+   "items": [
+    {
+     "prop": "magnifier",
+     "x": 960,
+     "y": 700,
+     "s": 1.3,
+     "at": 0
+    },
+    {
+     "text": "BACTERIA",
+     "x": 960,
+     "y": 300,
+     "size": 110,
+     "color": "red",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "yellow",
+   "day": 9
+  },
+  {
+   "say": "So Milo cleans the cut with boiled water that has cooled down, and covers it with a clean strip of his raincoat lining.",
+   "items": [
+    {
+     "prop": "pot",
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       700,
+       650
+      ],
+      [
+       1000,
+       650
+      ]
+     ],
+     "at": 0.3
+    },
+    {
+     "prop": "bandage",
+     "x": 1200,
+     "y": 760,
+     "s": 1.4,
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "sky",
+   "day": 9
+  },
+  {
+   "say": "Then they watch it every day. Spreading redness, heat, pus or a fever are signs of infection that need real medical help.",
+   "items": [
+    {
+     "text": "REDNESS",
+     "x": 560,
+     "y": 360,
+     "size": 70,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "HEAT",
+     "x": 1360,
+     "y": 360,
+     "size": 70,
+     "color": "red",
+     "at": 0.2,
+     "outline": "white"
+    },
+    {
+     "text": "PUS",
+     "x": 560,
+     "y": 560,
+     "size": 70,
+     "color": "red",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "text": "FEVER",
+     "x": 1360,
+     "y": 560,
+     "size": 70,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    }
+   ],
+   "bg": "yellow",
+   "day": 10
+  },
+  {
+   "say": "Day twelve. The cut is healing. Rosa owes Milo one. She does not say so out loud.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "bandage",
+     "x": 960,
+     "y": 520,
+     "s": 0.8,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky",
+   "day": 12
+  },
+  {
+   "say": "Day fourteen. Their stomachs are loud. And the jungle is full of bright berries.",
+   "items": [
+    {
+     "prop": "palm",
+     "x": 500,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "box": [
+      1100,
+      560,
+      300,
+      200
+     ],
+     "color": "green"
+    },
+    {
+     "text": "BERRIES?",
+     "x": 1250,
+     "y": 460,
+     "size": 80,
+     "color": "purple",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 14,
+   "chapter": "Day 14: Food"
+  },
+  {
+   "say": "This is where many survival stories go wrong. Never eat a plant, berry or mushroom you can't identify for certain.",
+   "items": [
+    {
+     "cross": [
+      1250,
+      660,
+      160
+     ],
+     "at": 0.2
+    },
+    {
+     "text": "UNKNOWN = NO",
+     "x": 960,
+     "y": 260,
+     "size": 120,
+     "color": "red",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "yellow",
+   "day": 14
+  },
+  {
+   "say": "Some poisonous plants look exactly like safe ones. And remember the rule of three. You can go weeks without food. Poison can end things in hours.",
+   "items": [
+    {
+     "text": "WEEKS",
+     "x": 600,
+     "y": 420,
+     "size": 120,
+     "color": "green",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "vs",
+     "x": 960,
+     "y": 420,
+     "size": 80,
+     "color": "dark",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "text": "HOURS",
+     "x": 1320,
+     "y": 420,
+     "size": 120,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ],
+   "bg": "yellow",
+   "day": 14
+  },
+  {
+   "say": "So they stick to the sea. Rosa knows fish. They wade in shallow water at low tide and trap small fish in a ring of rocks.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 980,
+     "s": 2.0,
+     "at": 0
+    },
+    {
+     "ring": [
+      960,
+      860,
+      150
+     ],
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 15,
+   "ground": false
+  },
+  {
+   "say": "Crabs at night, too. Everything gets cooked all the way through on the fire. Raw seafood can make you seriously sick.",
+   "items": [
+    {
+     "prop": "crab",
+     "x": 700,
+     "y": 880,
+     "s": 1.2,
+     "at": 0,
+     "anim": "bob"
+    },
+    {
+     "prop": "fire",
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "COOK IT",
+     "x": 1250,
+     "y": 400,
+     "size": 110,
+     "color": "orange",
+     "at": 0.55,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 15
+  },
+  {
+   "say": "This crab is looking at me. I feel bad. I'm still eating it.",
+   "items": [
+    {
+     "prop": "crab",
+     "x": 1300,
+     "y": 880,
+     "s": 1.5,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "...",
+     "x": 1300,
+     "y": 520,
+     "size": 120,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 15
+  },
+  {
+   "say": "Day twenty one. The wind changes. Clouds pile up on the horizon like a dark wall.",
+   "items": [
+    {
+     "prop": "storm",
+     "x": 960,
+     "y": 300,
+     "s": 2.0,
+     "at": 0
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 1000,
+     "s": 2.4,
+     "at": 0,
+     "anim": "shake"
+    }
+   ],
+   "bg": "grey",
+   "day": 21,
+   "chapter": "Day 21: The storm",
+   "ground": false
+  },
+  {
+   "say": "Grab the pot, the sheet, the lighter. Everything that matters goes to high ground, right now!",
+   "items": [
+    {
+     "guy": {
+      "pose": "run",
+      "face": "scream",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "walk": true,
+      "shirt": "teal"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      1100,
+      900
+     ]
+    },
+    {
+     "prop": "pot",
+     "x": 1500,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.3
+    },
+    {
+     "prop": "storm",
+     "x": 960,
+     "y": 240,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "grey",
+   "day": 21,
+   "voice": "af_bella"
+  },
+  {
+   "say": "In a tropical storm, the danger is not just wind. It's water. Waves and storm surge can wash over a low beach.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 860,
+     "s": 2.4,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "arrow": [
+      [
+       600,
+       760
+      ],
+      [
+       1400,
+       560
+      ]
+     ],
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "text": "STORM SURGE",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "grey",
+   "day": 21,
+   "ground": false
+  },
+  {
+   "say": "They wait it out behind a big rock on the highest point of the island, away from tall trees that can drop branches and coconuts.",
+   "items": [
+    {
+     "box": [
+      700,
+      620,
+      360,
+      280
+     ],
+     "color": "grey"
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1100,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.1
+    },
+    {
+     "prop": "palm",
+     "x": 300,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "prop": "coconut",
+     "x": 300,
+     "y": 480,
+     "s": 0.6,
+     "at": 0.5,
+     "move": [
+      340,
+      880
+     ]
+    }
+   ],
+   "bg": "grey",
+   "day": 21
+  },
+  {
+   "say": "Morning. The shelter is gone. The SOS is half buried. But the lighter is dry, and they're both alive.",
+   "items": [
+    {
+     "prop": "sun",
+     "x": 1550,
+     "y": 260,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "prop": "sos",
+     "x": 960,
+     "y": 820,
+     "s": 1.2,
+     "at": 0,
+     "color": "grey"
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "sky",
+   "day": 22
+  },
+  {
+   "say": "Day thirty. Here's a part nobody shows in movies. The hardest enemy now is not the island. It's the boredom and the fear.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 960,
+     "y": 820,
+     "s": 1.4,
+     "at": 0,
+     "text": "DAY 30"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "BORED. SCARED.",
+     "x": 1400,
+     "y": 360,
+     "size": 80,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 30,
+   "chapter": "Day 30: The mind"
+  },
+  {
+   "say": "Survival trainers say a routine helps. Water at dawn. Fishing at low tide. Fix the signals. Rest at noon. Fire at dusk.",
+   "items": [
+    {
+     "text": "DAWN: WATER",
+     "x": 960,
+     "y": 260,
+     "size": 70,
+     "color": "blue",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "LOW TIDE: FISH",
+     "x": 960,
+     "y": 380,
+     "size": 70,
+     "color": "teal",
+     "at": 0.2,
+     "outline": "white"
+    },
+    {
+     "text": "MORNING: SIGNALS",
+     "x": 960,
+     "y": 500,
+     "size": 70,
+     "color": "red",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "text": "NOON: REST",
+     "x": 960,
+     "y": 620,
+     "size": 70,
+     "color": "orange",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "text": "DUSK: FIRE",
+     "x": 960,
+     "y": 740,
+     "size": 70,
+     "color": "orange",
+     "at": 0.8,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 30,
+   "ground": false
+  },
+  {
+   "say": "Milo scratches a line on a palm trunk every morning. It's a calendar. It's also proof that he's still in charge.",
+   "items": [
+    {
+     "prop": "palm",
+     "x": 960,
+     "y": 900,
+     "s": 1.6,
+     "at": 0
+    },
+    {
+     "text": "IIII IIII IIII",
+     "x": 960,
+     "y": 620,
+     "size": 60,
+     "color": "dark",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    }
+   ],
+   "bg": "sky",
+   "day": 30
+  },
+  {
+   "say": "Rosa, rate my sand castle. Be honest. Actually no, be nice.",
+   "items": [
+    {
+     "box": [
+      1100,
+      700,
+      300,
+      200
+     ],
+     "color": "tan"
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "6/10",
+     "x": 1600,
+     "y": 380,
+     "size": 100,
+     "color": "dark",
+     "at": 0.7,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 38
+  },
+  {
+   "say": "Six out of ten. The tower is leaning.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "sad",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "6/10",
+     "x": 960,
+     "y": 300,
+     "size": 140,
+     "color": "red",
+     "at": 0.1,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 38,
+   "voice": "af_bella"
+  },
+  {
+   "say": "Day forty seven. While Milo is wading for fish, a grey fin cuts through the water.",
+   "items": [
+    {
+     "prop": "fin",
+     "x": 1200,
+     "y": 900,
+     "s": 1.6,
+     "at": 0
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 980,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4,
+     "anim": "shake"
+    }
+   ],
+   "bg": "sky",
+   "day": 47,
+   "chapter": "Day 47: Fin",
+   "ground": false
+  },
+  {
+   "say": "Calm. Don't splash. Back out slowly, face it, and get out of the water.",
+   "items": [
+    {
+     "prop": "fin",
+     "x": 1300,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 900,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "move": [
+      700,
+      900
+     ]
+    }
+   ],
+   "bg": "sky",
+   "day": 47,
+   "voice": "af_bella",
+   "ground": false
+  },
+  {
+   "say": "Shark bites are very rare. But wildlife experts advise avoiding murky water and swimming at dawn and dusk, when many sharks feed.",
+   "items": [
+    {
+     "text": "VERY RARE",
+     "x": 960,
+     "y": 260,
+     "size": 110,
+     "color": "green",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "AVOID DAWN + DUSK",
+     "x": 960,
+     "y": 480,
+     "size": 90,
+     "color": "red",
+     "at": 0.4,
+     "outline": "white"
+    },
+    {
+     "prop": "fin",
+     "x": 960,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.6
+    }
+   ],
+   "bg": "yellow",
+   "day": 47
+  },
+  {
+   "say": "From that day on, Milo fishes only in the shallows, in daylight, and never alone.",
+   "items": [
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 980,
+     "s": 2.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "text": "SHALLOW. DAYLIGHT. TOGETHER.",
+     "x": 960,
+     "y": 300,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 47,
+   "ground": false
+  },
+  {
+   "say": "Day sixty one. A brutal heat wave. No rain for a week. Now Rosa is the one who looks wrong.",
+   "items": [
+    {
+     "prop": "sun",
+     "x": 1500,
+     "y": 260,
+     "s": 1.8,
+     "at": 0,
+     "anim": "pulse"
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "thermo",
+     "x": 1200,
+     "y": 800,
+     "s": 1.0,
+     "at": 0.4,
+     "color": "red"
+    }
+   ],
+   "bg": "sky",
+   "day": 61,
+   "chapter": "Day 61: Heat"
+  },
+  {
+   "say": "She stopped sweating. Her skin is hot and dry. She's talking nonsense. Those can be signs of heat stroke, a real emergency.",
+   "items": [
+    {
+     "text": "HOT, DRY SKIN",
+     "x": 960,
+     "y": 300,
+     "size": 80,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "NO SWEAT",
+     "x": 960,
+     "y": 430,
+     "size": 80,
+     "color": "red",
+     "at": 0.3,
+     "outline": "white"
+    },
+    {
+     "text": "CONFUSED",
+     "x": 960,
+     "y": 560,
+     "size": 80,
+     "color": "red",
+     "at": 0.6,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 400,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    }
+   ],
+   "bg": "yellow",
+   "day": 61
+  },
+  {
+   "say": "The CDC's advice is to cool the person fast. Milo drags her into deep shade, soaks her clothes, and fans her with a palm frond.",
+   "items": [
+    {
+     "prop": "shelter",
+     "x": 700,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 0.6,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "fan",
+     "x": 1500,
+     "y": 700,
+     "s": 0.9,
+     "at": 0.5
+    },
+    {
+     "text": "COOL HER DOWN",
+     "x": 1300,
+     "y": 300,
+     "size": 80,
+     "color": "blue",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 61
+  },
+  {
+   "say": "By night, she's sitting up, sipping coconut water. She's okay. They ration every drop after that.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "coconut",
+     "x": 960,
+     "y": 560,
+     "s": 0.7,
+     "at": 0.5
+    }
+   ],
+   "bg": "sky",
+   "day": 62
+  },
+  {
+   "say": "Day eighty eight. A ship. A real ship, on the horizon.",
+   "items": [
+    {
+     "prop": "ship",
+     "x": 1500,
+     "y": 700,
+     "s": 0.4,
+     "at": 0,
+     "anim": "bob"
+    },
+    {
+     "prop": "wave",
+     "x": 960,
+     "y": 900,
+     "s": 2.4,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "pointup",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "sky",
+   "day": 88,
+   "chapter": "Day 88: So close",
+   "ground": false
+  },
+  {
+   "say": "The fires! Light the fires! Where is the lighter?",
+   "items": [
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0,
+     "anim": "shake"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "scream",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "prop": "ship",
+     "x": 1650,
+     "y": 640,
+     "s": 0.3,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 88,
+   "voice": "af_bella"
+  },
+  {
+   "say": "But the wood is damp from the night. By the time the smoke rises, the ship is gone.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 0.6,
+     "at": 0
+    },
+    {
+     "prop": "ship",
+     "x": 1500,
+     "y": 700,
+     "s": 0.3,
+     "at": 0,
+     "move": [
+      1950,
+      700
+     ]
+    },
+    {
+     "guy": {
+      "pose": "cry",
+      "face": "cry",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "GONE",
+     "x": 1300,
+     "y": 360,
+     "size": 140,
+     "color": "dark",
+     "at": 0.7,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 88
+  },
+  {
+   "say": "Lesson learned the hard way. Signal fires only work if they're ready in seconds. Keep dry tinder covered and the lighter in your pocket.",
+   "items": [
+    {
+     "text": "READY IN SECONDS",
+     "x": 960,
+     "y": 260,
+     "size": 100,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "prop": "fire",
+     "x": 700,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "box": [
+      1150,
+      640,
+      300,
+      220
+     ],
+     "color": "tan",
+     "at": 0.5
+    },
+    {
+     "text": "DRY TINDER",
+     "x": 1300,
+     "y": 590,
+     "size": 50,
+     "color": "dark",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "day": 88
+  },
+  {
+   "say": "From now on, Milo sleeps with the lighter. Rosa covers the tinder with the plastic sheet every single night.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 0.6,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "tired",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "stopwatch",
+     "x": 1600,
+     "y": 520,
+     "s": 0.7,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky",
+   "day": 89
+  },
+  {
+   "say": "Day ninety nine. A low humming sound from the north. Milo knows that sound.",
+   "items": [
+    {
+     "prop": "cloud",
+     "x": 600,
+     "y": 260,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "heli",
+     "x": 1650,
+     "y": 280,
+     "s": 0.5,
+     "at": 0.3,
+     "anim": "bob"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 800,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.1
+    }
+   ],
+   "bg": "sky",
+   "day": 99,
+   "chapter": "Day 99: The sound"
+  },
+  {
+   "say": "Rosa lights all three fires in under a minute. Green leaves on top. Three thick columns of smoke.",
+   "items": [
+    {
+     "prop": "fire",
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "fire",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.2
+    },
+    {
+     "prop": "fire",
+     "x": 1320,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "prop": "cloud",
+     "x": 600,
+     "y": 500,
+     "s": 0.8,
+     "at": 0.5,
+     "color": "grey"
+    },
+    {
+     "prop": "cloud",
+     "x": 960,
+     "y": 460,
+     "s": 0.8,
+     "at": 0.6,
+     "color": "grey"
+    },
+    {
+     "prop": "cloud",
+     "x": 1320,
+     "y": 500,
+     "s": 0.8,
+     "at": 0.7,
+     "color": "grey"
+    }
+   ],
+   "bg": "sky",
+   "day": 99
+  },
+  {
+   "say": "Milo aims the mirror. Flash. Flash. Flash. Three flashes, again and again.",
+   "items": [
+    {
+     "prop": "mirror",
+     "x": 600,
+     "y": 820,
+     "s": 1.4,
+     "at": 0,
+     "anim": "pulse"
+    },
+    {
+     "arrow": [
+      [
+       700,
+       700
+      ],
+      [
+       1500,
+       300
+      ]
+     ],
+     "color": "yellow",
+     "at": 0.3
+    },
+    {
+     "prop": "heli",
+     "x": 1600,
+     "y": 280,
+     "s": 0.6,
+     "at": 0.4
+    },
+    {
+     "text": "FLASH x3",
+     "x": 1100,
+     "y": 640,
+     "size": 90,
+     "color": "gold",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky",
+   "day": 99
+  },
+  {
+   "say": "The helicopter turns. It circles once. It's coming down.",
+   "items": [
+    {
+     "prop": "heli",
+     "x": 960,
+     "y": 260,
+     "s": 1.0,
+     "at": 0,
+     "move": [
+      960,
+      480
+     ],
+     "anim": "bob"
+    },
+    {
+     "prop": "island",
+     "x": 960,
+     "y": 960,
+     "s": 2.4,
+     "at": 0,
+     "in": "none"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "anim": "bob"
+    },
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 0.8,
+     "at": 0,
+     "anim": "bob"
+    }
+   ],
+   "bg": "sky",
+   "day": 99
+  },
+  {
+   "say": "Coast guard. We saw your smoke and the S O S. Is anyone hurt?",
+   "items": [
+    {
+     "prop": "heli",
+     "x": 1300,
+     "y": 600,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hardhat"
+      ],
+      "shirt": "orange",
+      "label": "Coast guard"
+     },
+     "x": 900,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 100,
+   "voice": "bm_george"
+  },
+  {
+   "say": "Day one hundred. Sunburned, skinny, and very alive.",
+   "items": [
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "bun",
+       "cap"
+      ],
+      "shirt": "teal"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "DAY 100",
+     "x": 960,
+     "y": 280,
+     "size": 180,
+     "color": "red",
+     "at": 0.2,
+     "outline": "white",
+     "anim": "pulse"
+    },
+    {
+     "prop": "sun",
+     "x": 1650,
+     "y": 260,
+     "s": 0.8,
+     "at": 0
+    }
+   ],
+   "bg": "sky",
+   "day": 100
+  },
+  {
+   "say": "So, could you survive one hundred days on a desert island? Here's what kept Milo and Rosa alive.",
+   "items": [
+    {
+     "text": "WHAT WORKED",
+     "x": 960,
+     "y": 220,
+     "size": 130,
+     "color": "red",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "yellow",
+   "chapter": "What kept them alive"
+  },
+  {
+   "say": "One. Never drink sea water. Two. Shade before anything, because sweat is water you lose.",
+   "items": [
+    {
+     "text": "1. NO SEA WATER",
+     "x": 960,
+     "y": 380,
+     "size": 90,
+     "color": "blue",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "2. SHADE FIRST",
+     "x": 960,
+     "y": 540,
+     "size": 90,
+     "color": "orange",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "ground": false
+  },
+  {
+   "say": "Three. Catch rain, and boil other water for a full minute. Four. Three of anything means help, and signals must be ready in seconds.",
+   "items": [
+    {
+     "text": "3. RAIN + BOIL 1 MIN",
+     "x": 960,
+     "y": 380,
+     "size": 90,
+     "color": "blue",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "4. THREES = HELP",
+     "x": 960,
+     "y": 540,
+     "size": 90,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "ground": false
+  },
+  {
+   "say": "Five. Treat small cuts like big problems. And never eat anything you can't identify. Hunger is slow. Poison is fast.",
+   "items": [
+    {
+     "text": "5. CLEAN EVERY CUT",
+     "x": 960,
+     "y": 380,
+     "size": 90,
+     "color": "green",
+     "at": 0,
+     "outline": "white"
+    },
+    {
+     "text": "6. UNKNOWN FOOD = NO",
+     "x": 960,
+     "y": 540,
+     "size": 90,
+     "color": "red",
+     "at": 0.5,
+     "outline": "white"
+    }
+   ],
+   "bg": "yellow",
+   "ground": false
+  },
+  {
+   "say": "Next time, Milo wakes up somewhere much colder. One hundred days in Antarctica. Subscribe so you don't miss it.",
+   "items": [
+    {
+     "prop": "thermo",
+     "x": 700,
+     "y": 860,
+     "s": 1.2,
+     "at": 0,
+     "color": "blue"
+    },
+    {
+     "text": "NEXT: ANTARCTICA",
+     "x": 1150,
+     "y": 300,
+     "size": 100,
+     "color": "blue",
+     "at": 0.2,
+     "outline": "white"
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "yellow"
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    },
+    {
+     "text": "-40",
+     "x": 700,
+     "y": 420,
+     "size": 110,
+     "color": "blue",
+     "at": 0.6,
+     "outline": "white"
+    }
+   ],
+   "bg": "sky"
+  }
+ ]
+}
