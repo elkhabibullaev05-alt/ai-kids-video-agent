@@ -1,0 +1,876 @@
+{
+ "id": "20261028-3-nobody-believes-grandma",
+ "plot": "At dinner the same evening Grandma taps the bread basket and tells the family the bread can talk; the bros freeze, Mom and Dad think she is tired and confused, Zeek's pea message gets eaten by Mia, Lolly's basket wiggle and Bup's three knocks are blamed on the puppy and the pipes, and when Mom plans a doctor's check-up and Grandma says she'll go home Monday, scared Pim climbs the basket and shouts that she's right — Dad laughs that Grandma hid Mia's squeaky walkie-talkie in the bread (Zeek said it sounds just like Pim), Grandma winks and stays, and that night the walkie-talkie crackles: 'Hello, bread box? I know it wasn't Grandma. Over.'",
+ "script": {
+  "title": "Nobody Believes Grandma About Us",
+  "set": {
+   "place": "table",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.6,
+     0.4,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "radio",
+    "type": "box",
+    "color": [
+     1.0,
+     0.8,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     5,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Grandma just told everyone! She said the bread talks!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,9"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Freeze! The whole family is staring at the bread basket!",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SHE TOLD THEM!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dinner, the same evening. Grandma taps the bread basket.",
+    "cam": "wide",
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ],
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Go on, little loaf. Say good evening to the family.'",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Don't. Move. Not one crumb.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Silence. Mia giggles. Mom and Dad share a worried look.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia's walkie-talkie beeps. Dad frowns. 'No toys at the table.'",
+    "cam": "prop:radio",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fascinating. That toy squeaks exactly like Pim.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I do NOT squeak. I speak... with energy.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom says softly, 'You've been up since four. You're just tired.'",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma looks at the basket. Her eyes say, 'Please. Just once.'",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "They think she's confused! She's not! She's right!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Stay quiet. Humans who know... tell other humans.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The last human who saw me move screamed for an hour.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's smile fades. She puts her fork down.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She stood up for us. And now she's standing alone.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "NOBODY BELIEVES HER",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "New plan. We prove it without talking. Zeek?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Peas. I'll spell a message with peas. Very subtle.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek rolls peas across Grandma's plate. S. H. E. S. R.",
+    "cam": "overhead",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia reaches over and eats the R. Then the S.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My message! She ate my punctuation!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then I'll wiggle the basket. Wiggling isn't talking.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:0,12"
+     ],
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The basket wobbles. Dad laughs. 'The puppy bumped the table.'",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "basket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The puppy is asleep. On the other side of the room.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "This family explains away EVERYTHING!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "One more try. I'll knock on the basket. Three knocks means yes.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Knock. Knock. Knock. Dad smiles. 'Hear that? The old pipes again.'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "See? They'll never believe it. Not unless one of us speaks.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom says, 'Tomorrow I'll call Dr. Lee. Just a check-up.'",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma nods slowly. 'Maybe I'll just go home on Monday.'",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She's leaving? Because of us? Because we hid?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA'S LEAVING?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "If we talk, everything changes. Forever.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She talked to us like friends. Friends speak up.",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "pim",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim, the most scared bean in the kitchen, climbs onto the basket.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She's RIGHT! We talk! Hello, family! Please don't eat me!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "PIM TALKED!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Silence. Then Dad bursts out laughing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Mom! You hid Mia's walkie-talkie in the bread! Great prank!'",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He thinks Pim is a toy. I told you. Squeaky.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom laughs. Mia laughs. Grandma looks at Pim, and winks.",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Got you all,' says Grandma. Nobody calls Dr. Lee.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia's toy saved us. And Grandma played along like a pro!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The little bean spoke first. Sometimes brave beats careful.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She's staying! Grandma's staying!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Later that night, the house is dark. The bros are home.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from the table. A beep. A crackle. The walkie-talkie.",
+    "cam": "prop:radio",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia's sleepy voice. 'Hello, bread box? I know it wasn't Grandma.'",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A long crackle. Then one more word. 'Over.'",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "MIA KNOWS?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Nobody Believes Grandma About Us 😢 (Ep 9)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"She stood up for us. Now it's our turn, even if it changes everything.\" — Pim\nAt dinner Grandma tells the family the bread can talk, and nobody believes her. Mom wants to call the doctor, Grandma wants to go home, and the bros must choose: stay hidden or speak up.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "grandma",
+   "family dinner",
+   "pim",
+   "crispy",
+   "lolly",
+   "believe",
+   "funny animation"
+  ],
+  "thumb_text": "SAY SOMETHING!",
+  "thumb_beat": 5,
+  "localizations": {
+   "es": {
+    "title": "Nadie le cree a la abuela sobre nosotros 😢 (Ep 9)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Ella nos defendió. Ahora nos toca a nosotros, aunque cambie todo.\" — Pim\nEn la cena la abuela le dice a la familia que el pan habla, y nadie le cree. Mamá quiere llamar al médico, la abuela quiere irse a casa, y los bros deben elegir: esconderse o hablar.\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Ninguém acredita na vovó sobre nós 😢 (Ep 9)",
+    "description": "O que você acha que vai acontecer na próxima parte? Conta nos comentários.\n\"Ela nos defendeu. Agora é a nossa vez, mesmo que isso mude tudo.\" — Pim\nNo jantar a vovó conta à família que o pão fala, e ninguém acredita. A mãe quer chamar o médico, a vovó quer ir embora, e os bros precisam escolher: continuar escondidos ou falar.\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لا أحد يصدّق الجدة بشأننا 😢 (Ep 9)",
+    "description": "ما رأيك، ماذا سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"دافعت عنا. الآن دورنا، حتى لو تغيّر كل شيء.\" — بيم\nعلى العشاء تخبر الجدة العائلة أن الخبز يتكلم، ولا أحد يصدقها. الأم تريد الاتصال بالطبيب، والجدة تريد العودة إلى بيتها، وعلى الأصدقاء أن يختاروا: البقاء مختبئين أم التكلم.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Personne ne croit Mamie à notre sujet 😢 (Ep 9)",
+    "description": "À votre avis, que va-t-il se passer dans la prochaine partie ? Dites-le-moi en commentaire.\n« Elle nous a défendus. Maintenant c'est notre tour, même si ça change tout. » — Pim\nAu dîner, Mamie raconte à la famille que le pain parle, et personne ne la croit. Maman veut appeler le médecin, Mamie veut rentrer chez elle, et les bros doivent choisir : rester cachés ou parler.\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "誰もおばあちゃんを信じない 😢 (Ep 9)",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「おばあちゃんはぼくたちをかばってくれた。今度はぼくたちの番だ。すべてが変わっても。」— ピム\n夕食でおばあちゃんは「パンがしゃべる」と家族に話すが、誰も信じない。ママは医者を呼ぼうとし、おばあちゃんは帰ろうとする。ブロスは選ばなければ――隠れ続けるか、声を上げるか。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "아무도 할머니 말을 안 믿는다 😢 (Ep 9)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려 줘.\n\"할머니가 우리 편을 들어 줬어. 이제 우리 차례야. 모든 게 바뀌더라도.\" — 핌\n저녁 식사 때 할머니가 빵이 말을 한다고 하지만 아무도 믿지 않는다. 엄마는 의사를 부르려 하고 할머니는 집에 가려 한다. 브로스는 선택해야 한다. 계속 숨을까, 말을 할까.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Niemand glaubt Oma, was sie über uns sagt 😢 (Ep 9)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Sie hat zu uns gehalten. Jetzt sind wir dran, auch wenn sich alles ändert.“ — Pim\nBeim Abendessen erzählt Oma der Familie, dass das Brot spricht, und niemand glaubt ihr. Mama will den Arzt anrufen, Oma will nach Hause fahren, und die Bros müssen wählen: versteckt bleiben oder etwas sagen.\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "TALK OR STAY QUIET?",
+   "title": "Would YOU Talk or Stay Quiet? 😳 (Ep 9) #shorts",
+   "description": "Grandma told the whole family the bread talks, and everyone is staring at the basket. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "grandma",
+    "would you"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Hablarías o te quedarías callado? 😳 (Ep 9) #shorts",
+     "description": "La abuela le dijo a toda la familia que el pan habla, y todos miran la canasta. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você falaria ou ficaria quieto? 😳 (Ep 9) #shorts",
+     "description": "A vovó contou para a família toda que o pão fala, e todos estão olhando para a cesta. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تتكلم أم تبقى صامتًا؟ 😳 (Ep 9) #shorts",
+     "description": "أخبرت الجدة العائلة كلها أن الخبز يتكلم، والجميع يحدّق في السلة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu parles ou tu te tais ? 😳 (Ep 9) #shorts",
+     "description": "Mamie a dit à toute la famille que le pain parle, et tout le monde fixe la corbeille. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "しゃべる？黙ってる？😳 (Ep 9) #shorts",
+     "description": "おばあちゃんが家族みんなに「パンがしゃべる」と言い、全員がパンかごを見つめている。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "말할까, 조용히 있을까? 😳 (Ep 9) #shorts",
+     "description": "할머니가 온 가족에게 빵이 말한다고 했고, 모두가 빵 바구니를 쳐다보고 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU reden oder still bleiben? 😳 (Ep 9) #shorts",
+     "description": "Oma hat der ganzen Familie erzählt, dass das Brot spricht, und alle starren auf den Korb. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

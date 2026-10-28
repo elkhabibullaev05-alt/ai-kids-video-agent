@@ -1,0 +1,917 @@
+{
+ "id": "20261028-2-grandma-cant-see",
+ "plot": "On Grandma's first morning at 6 a.m. her glasses are gone and she bakes her famous cinnamon rolls blind; Zeek reads the recipe while the bros secretly nudge the sugar jar to her, swap Pim (grabbed as a raisin) for a real raisin, push the oven knob back from 450 and slip her the cinnamon instead of Crispy, Lolly's 'the puppy took them' guess finds only a sock, and Zeek remembers the clink when she scooped flour — Bup dives into the flour bin and comes out with the glasses, the rolls come out perfect, Grandma puts her glasses on, sees five little foods around her bowl and whispers 'Well. Good morning to you.'",
+ "script": {
+  "title": "Grandma Cant See and the Oven Is On",
+  "set": {
+   "place": "kitchen",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "flour",
+    "type": "box",
+    "color": [
+     0.95,
+     0.94,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     -3,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "rolls",
+    "type": "cake",
+    "color": [
+     0.78,
+     0.5,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     3,
+     15,
+     0
+    ],
+    "visible": false,
+    "scale": 1.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Grandma's glasses fell! She can't see, and the oven is on!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ],
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's reaching for the salt! That's not sugar, Grandma!",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:3,9"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA CAN'T SEE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Six a.m. Grandma's first morning here. Her famous cinnamon rolls.",
+    "cam": "wide",
+    "do": [
+     [
+      "rolls",
+      "show"
+     ],
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She scoops the flour. Clink. She frowns, then keeps going.",
+    "cam": "prop:flour",
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She cleaned her glasses, put them down... and now they're gone.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma pats the counter and smiles. 'Fifty years. I bake blind.'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If these rolls fail, she'll think she's too old.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then they won't fail. We help. Quietly.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I'll read the recipe card. You four move the jars.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Step one. One cup of sugar. Blue jar, not white.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly pushes the blue jar. It slides right into Grandma's hand.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Sugar is in! I'm basically a famous chef now!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next, raisins. Grandma's fingers walk across the counter. They find... Pim.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-n-no! I'm a bean! Beans don't go in rolls!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NOT A RAISIN!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Swap! Real raisin coming through! Pim, roll away!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:-2,10"
+     ],
+     [
+      "pim",
+      "to:-5,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A real raisin drops into the bowl. Grandma never noticed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I almost became breakfast. Nobody ever tell me that again.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You smell like cinnamon now. It suits you.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma turns the oven knob. Too far. Way too far.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Four hundred fifty! The card says three hundred fifty!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, with me! Push the knob back!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:7,10"
+     ],
+     [
+      "crispy",
+      "to:9,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bread and coal push together. The knob creaks. Click. Just right.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "crispy",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I know ovens. Too hot is how I got like this.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We can't do this all morning! We need her glasses!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The puppy! Puppies chew everything. I'll check his basket.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly sneaks into the basket. Inside: one sock. One squeaky duck.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No glasses. Just a very wet sock. I need a bath.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma rolls the dough and reaches for cinnamon. Her hand finds Crispy.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That's not cinnamon! He's barely even food!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Rude. Accurate. But rude.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup slides the real cinnamon under her fingers. Just in time.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We can't keep this up. The rolls go in soon!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE ARE THEY?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Logic. It failed me yesterday. This time, I listened.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She read the card. Then she scooped flour. Then: clink.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Glass in flour goes clink. Her glasses are in the flour!",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IN THE FLOUR!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Flour is where bread comes from. I'm going home.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup dives into the flour bin. A white cloud fills the kitchen.",
+    "cam": "prop:flour",
+    "do": [
+     [
+      "flour",
+      "bounce"
+     ],
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He climbs out white as a ghost, holding a pair of glasses.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bup! You look like a very scary marshmallow!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros slide the glasses under Grandma's hand. She puts them on.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ding. The cinnamon rolls come out golden. Soft. Perfect.",
+    "cam": "prop:rolls",
+    "do": [
+     [
+      "rolls",
+      "spin"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We did it! Grandma's rolls are perfect!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "See? Nobody is too old for a good morning.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma looks down. At five little foods around her bowl.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A floury loaf. A bean. A cookie. A triangle. A coal.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She leans in close and whispers. 'Well. Good morning to you.'",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SHE SAW US!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Grandma Can't See and the Oven Is On 😬 (Ep 8)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"She doesn't need to know we helped. She just can't give up.\" — Bup\nGrandma's first morning in the kitchen: her glasses are gone, the oven is on, and she is baking her famous cinnamon rolls blind. Five tiny bros have to help her without being seen.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "grandma",
+   "cinnamon rolls",
+   "baking",
+   "bup",
+   "zeek",
+   "pim",
+   "funny animation"
+  ],
+  "thumb_text": "NOT A RAISIN!",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "La abuela no ve y el horno está encendido 😬 (Ep 8)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"No necesita saber que la ayudamos. Solo no puede rendirse.\" — Bup\nLa primera mañana de la abuela en la cocina: sus gafas desaparecieron, el horno está encendido y hornea sus famosos rollos de canela a ciegas. Cinco pequeños bros deben ayudarla sin ser vistos.\n#serie #animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "A vovó não enxerga e o forno está ligado 😬 (Ep 8)",
+    "description": "O que você acha que vai acontecer na próxima parte? Conta nos comentários.\n\"Ela não precisa saber que ajudamos. Só não pode desistir.\" — Bup\nA primeira manhã da vovó na cozinha: os óculos sumiram, o forno está ligado e ela assa seus famosos rolinhos de canela às cegas. Cinco bros pequeninos precisam ajudá-la sem serem vistos.\n#série #animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "الجدة لا ترى والفرن مشتعل 😬 (Ep 8)",
+    "description": "ما رأيك، ماذا سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لا داعي لأن تعرف أننا ساعدناها. المهم ألا تستسلم.\" — بوب\nأول صباح للجدة في المطبخ: نظارتها اختفت، والفرن مشتعل، وهي تخبز لفائف القرفة الشهيرة دون أن ترى. على خمسة أصدقاء صغار مساعدتها دون أن تراهم.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Mamie ne voit rien et le four est allumé 😬 (Ep 8)",
+    "description": "À votre avis, que va-t-il se passer dans la prochaine partie ? Dites-le-moi en commentaire.\n« Elle n'a pas besoin de savoir qu'on l'a aidée. Elle ne doit juste pas abandonner. » — Bup\nPremier matin de Mamie dans la cuisine : ses lunettes ont disparu, le four est allumé et elle prépare ses fameux roulés à la cannelle à l'aveugle. Cinq petits bros doivent l'aider sans être vus.\n#série #animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "おばあちゃんが見えない、オーブンはオン 😬 (Ep 8)",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「手伝ったことは知らなくていい。ただ、あきらめてほしくないんだ。」— バップ\nおばあちゃんがキッチンで迎える最初の朝。メガネが消え、オーブンはオン、名物のシナモンロールを手探りで焼いている。小さなブロス5人は、見つからずに手伝わなければならない。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "할머니는 안 보이고 오븐은 켜져 있다 😬 (Ep 8)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려 줘.\n\"우리가 도운 건 몰라도 돼. 할머니가 포기하지만 않으면 돼.\" — 법\n할머니가 부엌에서 맞는 첫 아침. 안경은 사라졌고 오븐은 켜져 있고, 할머니는 앞도 안 보이는 채로 유명한 시나몬 롤을 굽는다. 작은 브로스 다섯은 들키지 않고 도와야 한다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Oma sieht nichts und der Ofen ist an 😬 (Ep 8)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Sie muss nicht wissen, dass wir geholfen haben. Sie darf nur nicht aufgeben.“ — Bup\nOmas erster Morgen in der Küche: Ihre Brille ist weg, der Ofen ist an, und sie backt ihre berühmten Zimtschnecken blind. Fünf kleine Bros müssen ihr helfen, ohne gesehen zu werden.\n#serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "HELP HER OR HIDE?",
+   "title": "Would YOU Help Grandma or Hide? 😬 (Ep 8) #shorts",
+   "description": "Grandma can't see, she's grabbing the salt, and the oven is on. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "grandma",
+    "would you"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Ayudarías a la abuela o te esconderías? 😬 (Ep 8) #shorts",
+     "description": "La abuela no ve, agarra la sal y el horno está encendido. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você ajudaria a vovó ou se esconderia? 😬 (Ep 8) #shorts",
+     "description": "A vovó não enxerga, está pegando o sal e o forno está ligado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تساعد الجدة أم تختبئ؟ 😬 (Ep 8) #shorts",
+     "description": "الجدة لا ترى، تمسك الملح، والفرن مشتعل. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu aides Mamie ou tu te caches ? 😬 (Ep 8) #shorts",
+     "description": "Mamie ne voit rien, elle prend le sel et le four est allumé. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "おばあちゃんを助ける？隠れる？😬 (Ep 8) #shorts",
+     "description": "おばあちゃんは見えず、塩をつかみ、オーブンはオン。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "할머니를 도울까, 숨을까? 😬 (Ep 8) #shorts",
+     "description": "할머니는 앞이 안 보이고, 소금을 집고, 오븐은 켜져 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU Oma helfen oder dich verstecken? 😬 (Ep 8) #shorts",
+     "description": "Oma sieht nichts, greift zum Salz, und der Ofen ist an. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 21,
+   "dur": 25,
+   "top": "FIX IT OR RUN?",
+   "title": "Would YOU Fix the Oven or Run? 🔥 (Ep 8) #shorts",
+   "description": "The knob is turned way too far and Grandma still can't see. Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "oven",
+    "would you"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Arreglarías el horno o correrías? 🔥 (Ep 8) #shorts",
+     "description": "La perilla está demasiado alta y la abuela sigue sin ver. Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você consertaria o forno ou fugiria? 🔥 (Ep 8) #shorts",
+     "description": "O botão está alto demais e a vovó ainda não enxerga. Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تصلح الفرن أم تهرب؟ 🔥 (Ep 8) #shorts",
+     "description": "المقبض مُدار أكثر من اللازم والجدة ما زالت لا ترى. الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu règles le four ou tu fuis ? 🔥 (Ep 8) #shorts",
+     "description": "Le bouton est tourné bien trop fort et Mamie ne voit toujours rien. Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "オーブンを直す？逃げる？🔥 (Ep 8) #shorts",
+     "description": "つまみは回しすぎ、おばあちゃんはまだ見えない。本編はチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "오븐을 고칠까, 도망칠까? 🔥 (Ep 8) #shorts",
+     "description": "손잡이는 너무 많이 돌아갔고 할머니는 여전히 안 보인다. 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU den Ofen retten oder fliehen? 🔥 (Ep 8) #shorts",
+     "description": "Der Knopf ist viel zu weit gedreht, und Oma sieht immer noch nichts. Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
