@@ -1,0 +1,821 @@
+{
+ "title": "What Floated Over Her Dinner Table? (Ep 38)",
+ "description": "A true account from the Tower of London, 1817: the Jewel House ghost. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "village",
+  "fog": 0.05,
+  "eyes": 0,
+  "moonlight": 12
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "swifte": {
+   "name": "Edmund Swifte",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.16,
+    0.13,
+    0.12
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -3.2,
+    8.2
+   ]
+  },
+  "wife": {
+   "name": "His wife",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.35,
+    0.12,
+    0.16
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    3.2,
+    8.2
+   ]
+  },
+  "sentry": {
+   "name": "The sentry",
+   "voice": "am_adam",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.45,
+    0.07,
+    0.06
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "bear": {
+   "name": "The shape",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.12,
+    0.08,
+    0.05
+   ],
+   "kind": "gloamhound",
+   "size": 1.0,
+   "home": [
+    -30,
+    36
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "table",
+   "color": [
+    0.22,
+    0.14,
+    0.08
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.2,
+   "at": [
+    0,
+    9.5,
+    0
+   ]
+  },
+  {
+   "type": "tube",
+   "id": "tube",
+   "color": [
+    0.55,
+    0.78,
+    1.0
+   ],
+   "glow": 1.4,
+   "visible": true,
+   "scale": 1.0,
+   "at": [
+    0,
+    9.5,
+    3.4
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "candle",
+   "color": [
+    1.0,
+    0.85,
+    0.5
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.35,
+   "at": [
+    -0.8,
+    9.2,
+    1.4
+   ]
+  },
+  {
+   "type": "box",
+   "id": "chair",
+   "color": [
+    0.3,
+    0.2,
+    0.1
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.8,
+   "at": [
+    -3.2,
+    6.8,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "door",
+   "color": [
+    0.25,
+    0.18,
+    0.1
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 2.4,
+   "at": [
+    -6,
+    12,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "paper",
+   "color": [
+    0.9,
+    0.88,
+    0.8
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    3.5,
+    8.5,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "wife",
+   "say": "Oh, it has seized me! Something has seized me!",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ],
+    [
+     "tube",
+     "to:3.2,8.6,3.0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT SEIZED ME"
+  },
+  {
+   "who": "narr",
+   "say": "A glowing glass tube is floating over a dinner table. And it just stopped behind her.",
+   "cam": "prop:tube",
+   "do": [
+    [
+     "tube",
+     "spin"
+    ],
+    [
+     "wife",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT IS THAT?"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true account, from inside the Tower of London. October, eighteen seventeen.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "tube",
+     "to:0,9.5,3.4"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "TOWER OF LONDON, 1817"
+  },
+  {
+   "who": "narr",
+   "say": "The man at the table was Edmund Swifte, Keeper of the Crown Jewels.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "swifte",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "KEEPER OF THE JEWELS"
+  },
+  {
+   "who": "swifte",
+   "say": "A quiet Saturday supper. My wife, our little boy, her sister. Nothing more.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "swifte",
+     "happy"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "A QUIET SUPPER"
+  },
+  {
+   "who": "narr",
+   "say": "They ate in the Jewel House, in the old Martin Tower. The doors were shut.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE DOORS WERE SHUT"
+  },
+  {
+   "who": "narr",
+   "say": "Near midnight, his wife lifted a glass of wine and water to her lips.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEAR MIDNIGHT"
+  },
+  {
+   "who": "wife",
+   "say": "Good God! What is that?",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "eyes_big"
+    ],
+    [
+     "wife",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHAT IS THAT?"
+  },
+  {
+   "who": "narr",
+   "say": "Above the table hung a shape like a glass tube. As thick as a man's arm.",
+   "cam": "prop:tube",
+   "do": [
+    [
+     "tube",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "A GLASS TUBE"
+  },
+  {
+   "who": "narr",
+   "say": "Inside it, a thick liquid swirled. White and pale blue, turning and turning.",
+   "cam": "prop:tube",
+   "do": [
+    [
+     "tube",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "WHITE AND PALE BLUE"
+  },
+  {
+   "who": "swifte",
+   "say": "It hung there two minutes. Between the ceiling and the table.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "swifte",
+     "turn:wife"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "2 MINUTES"
+  },
+  {
+   "who": "narr",
+   "say": "Then it began to move. Slowly, around the edge of the table.",
+   "cam": "wide",
+   "do": [
+    [
+     "tube",
+     "to:2,7.5,3.2"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THEN IT MOVED"
+  },
+  {
+   "who": "narr",
+   "say": "It passed the sister. It passed the little boy. It passed Swifte himself.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "tube",
+     "to:-3.2,8.6,3.2"
+    ],
+    [
+     "swifte",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "IT PASSED HIM"
+  },
+  {
+   "who": "narr",
+   "say": "Then it glided behind his wife, and stopped over her right shoulder.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "tube",
+     "to:3.2,8.8,3.0"
+    ],
+    [
+     "wife",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "OVER HER SHOULDER"
+  },
+  {
+   "who": "wife",
+   "say": "It has seized me! Edmund, it has seized me!",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT HAS SEIZED ME!"
+  },
+  {
+   "who": "narr",
+   "say": "Swifte grabbed his chair and swung it hard at the thing behind her.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "chair",
+     "show"
+    ],
+    [
+     "chair",
+     "to:3,8.8,2.2"
+    ],
+    [
+     "swifte",
+     "to:1.5,8,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "HE SWUNG THE CHAIR"
+  },
+  {
+   "who": "narr",
+   "say": "The chair struck the wooden wall. The shape slid away, toward the window.",
+   "cam": "prop:tube",
+   "do": [
+    [
+     "chair",
+     "hide"
+    ],
+    [
+     "tube",
+     "to:0,13,3.4"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "TOWARD THE WINDOW"
+  },
+  {
+   "who": "narr",
+   "say": "And then it was gone. Only two of the four had seen it.",
+   "cam": "wide",
+   "do": [
+    [
+     "tube",
+     "hide"
+    ],
+    [
+     "swifte",
+     "to_home"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "ONLY 2 SAW IT"
+  },
+  {
+   "who": "narr",
+   "say": "If you love true stories with no answer, subscribe now. The worst part is next.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Because that same night, a guard stood alone outside the Jewel Office door.",
+   "cam": "close:sentry",
+   "do": [
+    [
+     "sentry",
+     "to:-4.5,10.5,0"
+    ],
+    [
+     "door",
+     "show"
+    ],
+    [
+     "sentry",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE SAME NIGHT"
+  },
+  {
+   "who": "sentry",
+   "say": "Quiet watch. Nobody gets past this door. Nobody.",
+   "cam": "close:sentry",
+   "do": [
+    [
+     "sentry",
+     "turn:front"
+    ]
+   ],
+   "sfx": "engine",
+   "text": "NOBODY GETS PAST"
+  },
+  {
+   "who": "narr",
+   "say": "Then something came out from under the door. Something large and dark.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "bear",
+     "to:-6,10.6,0"
+    ],
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "UNDER THE DOOR"
+  },
+  {
+   "who": "sentry",
+   "say": "A bear? A bear, loose in the Tower?",
+   "cam": "close:sentry",
+   "do": [
+    [
+     "sentry",
+     "eyes_big"
+    ],
+    [
+     "bear",
+     "rise"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A BEAR?"
+  },
+  {
+   "who": "narr",
+   "say": "It stood up on its hind legs, like a bear. And it came toward him.",
+   "cam": "close:bear",
+   "do": [
+    [
+     "bear",
+     "rise"
+    ],
+    [
+     "bear",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "IT STOOD UP"
+  },
+  {
+   "who": "narr",
+   "say": "The guard thrust his bayonet at it. The blade went through, and stuck in the door.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "sentry",
+     "shake"
+    ],
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "STUCK IN THE DOOR"
+  },
+  {
+   "who": "narr",
+   "say": "The shape was gone. The guard fell to the floor in shock.",
+   "cam": "close:sentry",
+   "do": [
+    [
+     "bear",
+     "exit"
+    ],
+    [
+     "sentry",
+     "sleep"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "HE FELL"
+  },
+  {
+   "who": "narr",
+   "say": "Another guard swore he was not asleep, and not drunk. Records say he never recovered.",
+   "cam": "close:sentry",
+   "do": [
+    [
+     "sentry",
+     "sad"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NOT ASLEEP. NOT DRUNK."
+  },
+  {
+   "who": "swifte",
+   "say": "I saw that guard the next day. He was shaking. He had seen something.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "swifte",
+     "sad"
+    ],
+    [
+     "sentry",
+     "exit"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HE SAW SOMETHING"
+  },
+  {
+   "who": "narr",
+   "say": "Swifte kept quiet for over forty years. In eighteen sixty, he finally wrote it all down.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "spin"
+    ],
+    [
+     "door",
+     "hide"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "43 YEARS LATER"
+  },
+  {
+   "who": "narr",
+   "say": "He was a lawyer and a careful man. He said he could not explain it.",
+   "cam": "close:swifte",
+   "do": [
+    [
+     "paper",
+     "hide"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO EXPLANATION"
+  },
+  {
+   "who": "narr",
+   "say": "Skeptics say candle smoke, or a trick of the light on the glass.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "A TRICK OF LIGHT?"
+  },
+  {
+   "who": "narr",
+   "say": "But a trick of light does not grab a woman. And it does not leave a bayonet in a door.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT GRABBED HER"
+  },
+  {
+   "who": "narr",
+   "say": "So here is the rule of the Jewel House. Never sit with your back to the window.",
+   "cam": "wide",
+   "do": [
+    [
+     "wife",
+     "turn:swifte"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER TURN YOUR BACK"
+  },
+  {
+   "who": "narr",
+   "say": "Years later, a new family sat down to supper in that same room.",
+   "cam": "wide",
+   "do": [
+    [
+     "swifte",
+     "exit"
+    ],
+    [
+     "candle",
+     "bounce"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "YEARS LATER"
+  },
+  {
+   "who": "wife",
+   "say": "It's only a story, dear. Pass the bread. Nothing ever happens here.",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "happy"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ONLY A STORY"
+  },
+  {
+   "who": "narr",
+   "say": "Then the candle flickered. And the air above the table began to swirl.",
+   "cam": "prop:tube",
+   "do": [
+    [
+     "tube",
+     "show"
+    ],
+    [
+     "tube",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE AIR SWIRLED"
+  },
+  {
+   "who": "wife",
+   "say": "Who is standing behind my chair?",
+   "cam": "close:wife",
+   "do": [
+    [
+     "wife",
+     "eyes_big"
+    ],
+    [
+     "tube",
+     "to:3.2,8.8,3.0"
+    ],
+    [
+     "bear",
+     "to:5.5,10,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO IS BEHIND ME?"
+  },
+  {
+   "who": "narr",
+   "say": "Behind her, something white and blue was waiting. And something dark stood up beside it.",
+   "cam": "two:wife,bear",
+   "do": [
+    [
+     "bear",
+     "rise"
+    ],
+    [
+     "tube",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "IT'S BACK"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:wife,bear",
+   "do": [
+    [
+     "wife",
+     "shake"
+    ],
+    [
+     "bear",
+     "shake"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
