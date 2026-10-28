@@ -1,6 +1,6 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
-SET.place: forest | hill | clearing | graveyard | swamp | village | chapel
+SET.place: forest | hill | moor | clearing | graveyard | swamp | village | chapel
 Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | greyman | human
 """
 TOD = "night"
@@ -31,9 +31,11 @@ def tree(x, y, h, lean=0.0):
                                         rotation=(math.sin(ang) * -0.9, math.cos(ang) * 0.9, 0)); add(bpy.context.object, bark)
 
 
-if PLACE in ("forest", "clearing", "swamp", "hill"):
-    for i in range(70):
+if PLACE in ("forest", "clearing", "swamp", "hill", "moor"):
+    for i in range(70 if PLACE != "moor" else 14):
         x = rnd.uniform(-45, 45); y = rnd.uniform(6, 60)
+        if PLACE == "moor" and y < 42:  # open moorland: only a few far, bent trees
+            y = rnd.uniform(42, 62)
         if PLACE == "hill" and abs(x) < 16 and y < 30:  # open hilltop field
             continue
         if PLACE == "clearing" and math.hypot(x, y - 12) < 9:
@@ -56,6 +58,22 @@ if PLACE == "hill":  # Flatwoods hilltop: a dark grassy mound behind the field, 
     gr_ = mat("grass", (0.06, 0.08, 0.04), 0.9)
     for i in range(60):
         bpy.ops.mesh.primitive_cone_add(radius1=0.25, depth=rnd.uniform(0.5, 1.1), location=(rnd.uniform(-16, 16), rnd.uniform(4, 28), 0.3)); add(bpy.context.object, gr_, False)
+if PLACE == "moor":  # Dartmoor: an empty road across the moor, low stone walls, heather, a granite tor on the skyline
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 11, 0.02)); rd = add(bpy.context.object, mat("road", (0.03, 0.03, 0.032), 0.6)); rd.scale = (160, 4.5, 1)
+    lm_ = mat("roadline", (0.75, 0.72, 0.6), 0.6, 0, 0.3)
+    for i in range(-20, 21):
+        bpy.ops.mesh.primitive_plane_add(size=1, location=(i * 4.0, 11, 0.03)); add(bpy.context.object, lm_, False).scale = (1.6, 0.12, 1)
+    for wy in (14.4,):  # only the far wall: the near side stays open for the camera
+        for i in range(-24, 25):
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(i * 2.0 + rnd.uniform(-0.2, 0.2), wy, 0.35)); ws_ = add(bpy.context.object, stone_m, False); ws_.scale = (1.9, 0.6, 0.7 + rnd.uniform(-0.15, 0.15))
+    he_ = mat("heather", (0.07, 0.045, 0.06), 0.95)
+    for i in range(70):
+        x = rnd.uniform(-30, 30); y = rnd.uniform(15, 40)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=rnd.uniform(0.4, 0.9), location=(x, y, 0.1)); hb_ = add(bpy.context.object, he_, False); hb_.scale = (1.4, 1, 0.45)
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=1, location=(-6, 46, -5)); add(bpy.context.object, mat("moorhill", (0.04, 0.045, 0.035), 0.95)).scale = (40, 14, 9)
+    for k in range(6):
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(-10 + k * 1.6, 44 + rnd.uniform(-1, 1), 4.5 + rnd.uniform(0, 1.5))); tr_ = add(bpy.context.object, stone_m, False)
+        tr_.scale = (1.5, 1.5, rnd.uniform(1.5, 3.2)); tr_.rotation_euler = (0, rnd.uniform(-0.15, 0.15), rnd.uniform(0, 0.6))
 if PLACE == "graveyard":
     for i in range(26):
         x = rnd.uniform(-14, 14); y = rnd.uniform(6, 26)
@@ -267,6 +285,35 @@ def _shape(key, kind, s, ch):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.62 * s, location=(0, 0.05 * s, 5.45 * s)); hd = add(_o(), fur); hd.scale = (1, 1, 1.15); parent(hd, o)
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.42 * s, location=(0, -0.3 * s, 5.35 * s)); fc = add(_o(), mat(f"gmf_{key}", (0.62, 0.64, 0.66), 0.7, 0, 0.25)); fc.scale = (0.9, 0.6, 1.1); parent(fc, o)
         return o, 2.6 * s, 1.6 * s, 6.1 * s, -0.55 * s, 5.45 * s
+    if kind == "hands":  # Hairy Hands of Dartmoor: two huge disembodied dark hands with thick hair, floating (front = -y)
+        fur = mat(f"hh_{key}", col, 0.98)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.2 * s, location=(0, 0, 2.0 * s)); o = add(_o(), fur); o.scale = (0.2, 0.2, 0.2)
+        for sx in (-1, 1):
+            hx_ = sx * 1.1 * s
+            bpy.ops.mesh.primitive_cube_add(size=1, location=(hx_, 0, 2.0 * s)); pm = add(_o(), fur); pm.scale = (0.95 * s, 0.35 * s, 1.0 * s); parent(pm, o)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.3 * s, depth=1.1 * s, location=(hx_, 0.05 * s, 1.1 * s)); parent(add(_o(), fur), o)
+            for f in range(4):
+                fx = hx_ + (f - 1.5) * 0.23 * s; L_ = (0.75 + 0.15 * (1 - abs(f - 1.5) / 1.5)) * s
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.1 * s, depth=L_, location=(fx, -0.08 * s, 2.5 * s + L_ / 2), rotation=(math.radians(-25), 0, 0)); parent(add(_o(), fur), o)
+                bpy.ops.mesh.primitive_cone_add(radius1=0.09 * s, radius2=0.01, depth=0.16 * s, location=(fx, -0.08 * s - math.sin(math.radians(25)) * L_, 2.5 * s + L_ * 0.92), rotation=(math.radians(-25), 0, 0)); parent(add(_o(), mat("nail", (0.35, 0.3, 0.22), 0.5)), o)
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.12 * s, depth=0.7 * s, location=(hx_ - sx * 0.6 * s, -0.1 * s, 2.15 * s), rotation=(0, sx * math.radians(55), 0)); parent(add(_o(), fur), o)
+            for h_ in range(26):  # hair tufts
+                bpy.ops.mesh.primitive_cone_add(radius1=0.05 * s, radius2=0, depth=0.3 * s, location=(hx_ + rnd.uniform(-0.45, 0.45) * s, -0.2 * s, rnd.uniform(0.7, 2.4) * s), rotation=(math.radians(-70 + rnd.uniform(-30, 30)), rnd.uniform(-0.6, 0.6), 0)); parent(add(_o(), fur, False), o)
+        return o, 2.4 * s, 1.0 * s, 3.4 * s, -0.4 * s, 2.0 * s
+    if kind == "car":  # 1920s motor car: long dark body along y, open seat, four wheels, two glowing headlamps at the front (front = -y)
+        bd = mat(f"car_{key}", col, 0.5, 0.3)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 0.95 * s)); o = add(_o(), bd); o.scale = (1.6 * s, 3.6 * s, 0.7 * s)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0.5 * s, 1.6 * s)); st_ = add(_o(), mat("seat", (0.1, 0.06, 0.04), 0.8)); st_.scale = (1.4 * s, 1.4 * s, 0.6 * s); parent(st_, o)
+        tyre = mat("tyre", (0.02, 0.02, 0.02), 0.8)
+        for wx in (-0.85, 0.85):
+            for wy in (-1.2, 1.2):
+                bpy.ops.mesh.primitive_cylinder_add(radius=0.5 * s, depth=0.3 * s, location=(wx * s, wy * s, 0.5 * s), rotation=(0, 1.5708, 0)); parent(add(_o(), tyre), o)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.32 * s, minor_radius=0.05 * s, location=(-0.3 * s, -0.55 * s, 1.75 * s), rotation=(math.radians(60), 0, 0)); parent(add(_o(), tyre), o)
+        lamp = mat("headlamp", (1, 0.9, 0.6), 0.3, 0, 25)
+        for lx in (-0.55, 0.55):
+            bpy.ops.mesh.primitive_uv_sphere_add(radius=0.2 * s, location=(lx * s, -1.85 * s, 1.15 * s)); parent(add(_o(), lamp, False), o)
+        bpy.ops.object.light_add(type="SPOT", location=(0, -2.0 * s, 1.2 * s), rotation=(math.radians(-90), 0, 0)); L = _o(); L.data.energy = 900; L.data.color = (1, 0.88, 0.6); L.data.spot_size = math.radians(55); parent(L, o)
+        return o, 1.8 * s, 3.8 * s, 2.0 * s, -1.9 * s, 1.4 * s
     # human (villager, Wren, historical people)
     cl = mat(f"cl_{key}", col, 0.9)
     bpy.ops.mesh.primitive_cylinder_add(radius=0.55 * s, depth=2.6 * s, location=(0, 0, 1.3 * s)); o = add(_o(), cl)
@@ -300,9 +347,9 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman", "watcher"):
+    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman", "watcher", "hands", "car"):
         mo.scale = TINY
-    if kind == "watcher":
+    if kind in ("watcher", "hands", "car"):
         for e_ in eyes: e_.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]
