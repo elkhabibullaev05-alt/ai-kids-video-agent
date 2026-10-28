@@ -20,6 +20,7 @@ import shutil
 import socket
 import subprocess
 import sys
+import time
 import traceback
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -113,6 +114,20 @@ def status(stage, **kw):
 
 # ---------------------------------------------------------------- YouTube
 _yt = None
+NET_PREFIX = "internet:"
+_NET_WORDS = ("ssl", "name resolution", "nameresolution", "getaddrinfo", "timed out", "timeout", "connection",
+              "unable to find the server", "max retries", "temporarily unavailable", "network is unreachable",
+              "remote end closed", "decryption failed", "wrong version number", "eof occurred")
+
+
+def _is_net(e):
+    """True for connection problems (retry later), False for real token problems such as invalid_grant."""
+    txt = f"{type(e).__name__} {e}".lower()
+    if "invalid_grant" in txt or "unauthorized_client" in txt or "invalid_client" in txt:
+        return False
+    if isinstance(e, (OSError, socket.timeout, ConnectionError)):
+        return True
+    return any(w in txt for w in _NET_WORDS)
 
 
 def yt():
@@ -121,22 +136,35 @@ def yt():
         import youtube_up
         # safety: upload only with a token that belongs to THIS channel. If the owner picked the channels in a
         # different order while signing in, the right token sits in another channel's folder — use that one.
-        seen = []
+        seen, net_err = [], None
         for tok in [TOKEN] + sorted(glob.glob(os.path.join(os.path.dirname(HOME), "*", "token.json"))) + \
                 sorted(glob.glob("/mnt/c/Users/*/Documents/*/token.json")):  # the owner's local agents (sleeptube…), read only
             if tok in seen or not os.path.exists(tok):
                 continue
             seen.append(tok)
-            try:
-                c = youtube_up.client(tok)
-                if youtube_up.my_channel_id(c) == CFG["id"]:
-                    _yt = c
-                    if tok != TOKEN:
-                        log("using token from", tok)
+            cid = None
+            for attempt in range(3):  # a network blip must not look like a missing token (2026-10-28)
+                try:
+                    c = youtube_up.client(tok)
+                    cid = youtube_up.my_channel_id(c)
                     break
-            except Exception as e:
-                log("token check failed:", tok, str(e)[:120])
+                except Exception as e:
+                    if _is_net(e):
+                        if attempt < 2 and net_err is None:
+                            log("network error, retry in 20 s:", tok, str(e)[:120])
+                            time.sleep(20)
+                            continue
+                        net_err = e  # network is down: later tokens get no extra retries
+                    log("token check failed:", tok, str(e)[:120])
+                    break
+            if cid == CFG["id"]:
+                _yt = c
+                if tok != TOKEN:
+                    log("using token from", tok)
+                break
         if _yt is None:
+            if net_err is not None:
+                raise SystemExit(f"{NET_PREFIX} YouTube'ga ulanib bo'lmadi ({str(net_err)[:160]}) — keyingi ishda qayta uriniladi.")
             raise SystemExit(f"no token for {CFG['name']} ({CFG['id']}) — stop.")
     return _yt
 
@@ -468,7 +496,10 @@ if __name__ == "__main__":
     except SystemExit as e:
         if e.code not in (None, 0):  # e.g. "no token for …" — make it visible in status.json (2026-10-20)
             try:
-                status("error", error=str(e.code)[-500:]); push("error", [RES])
+                if str(e.code).startswith(NET_PREFIX):  # network down: not the token's fault, next run retries
+                    status("net_wait", error=str(e.code)[-500:]); push("net wait", [RES])
+                else:
+                    status("error", error=str(e.code)[-500:]); push("error", [RES])
             except Exception:
                 pass
         raise
