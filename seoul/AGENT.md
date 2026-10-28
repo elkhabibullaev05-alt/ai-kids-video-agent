@@ -4,7 +4,7 @@ Channel: **Seoul Night Remix** — @SeoulNightRemix — Studio id `UCEgWmdwz8gvT
 
 ## Owner's plan (2026-10-28)
 - **Every day:** 1 new song as a long music video + **1 Short** cut from that song, linked to it.
-- **Every 10 songs:** a ~30-minute mix of the last 10 songs. **Every 20 songs:** a ~1-hour mix of the last 20.
+- **Every week (owner choice 2026-10-28, replaces the 10/20-song mixes):** one mix of the week's newest 4–5 Pro songs, **max 14:50** while the channel is not phone-verified (after verification: 30 min weekly, 1 h every 4 weeks). Competitors: Creative-AI Music K-POP × EDM mixes 5.4k median views vs ~400 for AI singles. The daily song + Short stay — upload count never drops.
 - Music is made in **Suno (Pro plan, owner's account el_khabibullaev05, in the owner's own Chrome = Claude in Chrome tools)**. Only songs created while Pro is active have commercial rights. Songs in the library from before 2026-10-27 were made on the free plan: never upload or remix them.
 - The owner gave standing permission for this run to create songs, download them and upload/schedule them. Anything else that needs his permission (payment, new account settings, deleting) → stop and ask him in the final message.
 
@@ -29,10 +29,10 @@ Channel: **Seoul Night Remix** — @SeoulNightRemix — Studio id `UCEgWmdwz8gvT
    - `python3 render.py cover "TITLE" out/NNN.jpg --seed NNN --tag "<STYLE IN 2 WORDS>"`
    - `python3 render.py long out/NNN.mp3 out/NNN.jpg out/NNN_long.mp4` (starts at the first loud moment, ≈3x realtime)
    - `python3 render.py short out/NNN.mp3 "<POV hook line>" out/NNN_short.mp4 --seed NNN` (loudest 28 s, 1080×1920, loops)
-   - Mix when `len(songs) % 10 == 0`: `python3 render.py mix out/mixNN.mp4 out/mixNN.jpg <last 10 (or 20) mp3s>`; the json gives chapter times for the description. Mix mp3s: re-stage them from Downloads if the workspace was reset.
+   - Mix every **Sunday** run when ≥ 4 Pro songs exist that are not in an earlier mix (`mixes[].songs`): `python3 render.py mix out/mixNN.mp4 out/mixNN.jpg <4–5 newest unmixed mp3s>` — check the result is ≤ 14:50 (drop the last song if longer); the json gives chapter times for the description. Mix mp3s: re-stage them from Downloads if the workspace was reset.
    Check a frame of each file (Read the jpg) before uploading.
 6. **Host temporarily** on the orphan branch `uploads-seoul` (exactly like `hollow/UPLOAD.md` §1). Files over 90 MB: `split -b 90M` into `.partNN` and reassemble in the page with `new Blob([...parts])`.
-7. **Upload & schedule** in the built-in browser with the helpers from `hollow/UPLOAD.md` §2–3 (same Studio dialog; this channel's UI may be Uzbek or Russian — match buttons by both). Not made for kids. Release times (UTC; pick minutes not :00/:30, ≥ 30 min ahead): long **12:45–13:45** (Seoul 21:45–22:45), Short **23:15–00:15** (US evening), mix on the next free day at 13:15.
+7. **Upload & schedule** in the built-in browser with the helpers from `hollow/UPLOAD.md` §2–3 (same Studio dialog; this channel's UI may be Uzbek or Russian — match buttons by both). Not made for kids. Release times (UTC; pick minutes not :00/:30, ≥ 30 min ahead): long **12:45–13:45** (Seoul 21:45–22:45), Short **23:15–00:15** (US evening), mix on Sunday at 13:15 UTC (or the next free day).
    - **Title formula (Studio AI 2026-10-27):** `Song Title – <Remix style> (<Vibe>)`, e.g. `Neon Rain – Dance Pop Remix (Seoul Night Drive)`; Short: `POV: 2 AM in Seoul 🌃 Neon Rain #shorts`; mix: `1 Hour Seoul Night Drive Mix 🌃 K-Pop Dance Remixes (No Ads Between)` / `30 Min …`. Never a question/CTA as the title.
    - **Description:** 1 mood line, "Full song: <long URL>" (Short) or the chapter list with mm:ss (mix), "Music created with Suno (Pro) — original song by Seoul Night Remix", hashtags `#kpop #nightdrive #remix #seoul`. Lyric question goes in a comment, not the title.
    - **Link the Short to the song:** Studio → the Short → "Related video"/"Видео по теме" → the long video. If Studio asks to verify a phone number, skip and put "Siz: Seoul akkauntida telefon raqamni tasdiqlang (Shorts → Related video)" in the report.
@@ -57,3 +57,8 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 - Every upload (long, Short, mix): in the Studio dialog set **"Altered or synthetic content" / "Изменённый или синтетический контент" = Yes** (photoreal AI woman background). Check the radio's aria-checked before Save; if it can't be set, stop and put "Siz: …" in the report instead of publishing.
 - Backgrounds stay fashion-tasteful: no lingerie/swimwear, no cleavage close-ups, no bed scenes, clearly adult — avoids age restriction and limited ads.
 - Only songs with `"made": "... (Pro)"` in log.json may be public; free-plan songs (before 2026-10-27) never.
+
+## Owner decisions 2026-10-28 (competitor research)
+- Weekly mix: YES (see plan above). Title: "Seoul Night Drive 🌃 K-Pop Bass House Mix | <situation> (Vol. N)" with chapters mm:ss — Song (style); one big cover with the mix name; a new girl/outfit/place cover for every mix.
+- Background girl: a **different** fictional adult woman every song and every mix (owner chose this over one recurring character). Keep the tasteful-fashion rule and the synthetic-content disclosure.
+- Not chosen for now (don't do unless the owner asks): situation-style song titles, animated backgrounds/on-screen lyrics, 2–3 Shorts per song.
