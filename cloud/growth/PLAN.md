@@ -41,7 +41,7 @@ Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 d
 
 ## Priority 1 — Hollowmere Tales (`hollow`, repo `hollow/`)
 Now: 3 subs, ~540 views/day, long CTR 1 %, Shorts stayed 13.6 %. Model: Mr Nightmare (7.2M subs, 20–30 min "3 TRUE … Stories" compilations, 99 % long).
-- [ ] Halloween: a 14:50-max compilation "3 TRUE Halloween Stories That Still Have No Answer" (channel not verified) published by 31 Oct 21:00 UTC (re-cut from existing episodes + narration bridges).
+- [x] Halloween: a 14:50-max compilation "3 TRUE Halloween Stories That Still Have No Answer" (channel not verified) published by 31 Oct 21:00 UTC (re-cut from existing episodes + narration bridges). (done 2026-10-28: "4 TRUE Halloween Stories With No Answer", 13:59, eps 26/32/34/35 + cold open + bridges, chapters, scheduled 31 Oct 20:15 UTC, id cSM2-ob1xyM)
 - [ ] Every week 1–2 compilations "3 TRUE <setting> Stories" (night shift, new house, highway, school) 15–25 min — the long-watch-hours engine.
 - [ ] Titles without "Ep N ·"; thumbnail = one scared face / dark doorway + 2 words.
 - [ ] Shorts open on the shock line; each points to its compilation.
