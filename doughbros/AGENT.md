@@ -117,3 +117,6 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 **Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
 - Every Short = "Would YOU eat…? A or B" with both choices drawn big on screen in the first second (For Kids TV food-choice Shorts 30–49K views). Never "Trust X or Y?".
 - Weekly compilation of the best mini-stories, **max 14:50** (channel not verified). Episodes end on a cliffhanger.
+
+## Safety notes 2026-10-28
+- CONFLICT: "Growth plan 2026-10-28" says "Keep Made for Kids = Yes", but UPLOAD.md clicks VIDEO_MADE_FOR_KIDS_NOT_MFK and the bible/channels.json say 13+ not child-directed. Until the owner decides, keep uploading exactly as UPLOAD.md does (do not flip the flag yourself) and never write kid-targeted titles/tags; the owner must choose one setting.

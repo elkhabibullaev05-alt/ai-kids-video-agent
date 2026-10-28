@@ -52,3 +52,8 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 - **Mixes max 14:50 until the channel is verified** (so "30-min / 1-hour mix" becomes "14-min mix" of 4–5 songs; switch to 30/60 min after verification).
 - Mix title: "[Playlist] <situation> 🌃 Seoul night drive love remixes" (after work, rainy night, 2 AM drive) + chapters.
 - Song video: on-screen lyric lines (English, plus a short Korean line where the song has one) and a slow animated background (rain/neon drift) instead of a static image. Bright cover with one lyric/mood line.
+
+## Safety notes 2026-10-28
+- Every upload (long, Short, mix): in the Studio dialog set **"Altered or synthetic content" / "Изменённый или синтетический контент" = Yes** (photoreal AI woman background). Check the radio's aria-checked before Save; if it can't be set, stop and put "Siz: …" in the report instead of publishing.
+- Backgrounds stay fashion-tasteful: no lingerie/swimwear, no cleavage close-ups, no bed scenes, clearly adult — avoids age restriction and limited ads.
+- Only songs with `"made": "... (Pro)"` in log.json may be public; free-plan songs (before 2026-10-27) never.
