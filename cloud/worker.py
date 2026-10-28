@@ -398,6 +398,16 @@ def take_ready(st):
                     sh(["curl", "-fsSL", "-o", it["file"], it["url"]], timeout=1800)
             else:
                 it["file"] = os.path.join(rd, it["file"])
+            if it.get("thumb_url"):  # custom thumbnail hosted next to the video (2026-10-29)
+                th = os.path.join(HOME, "dl", os.path.basename(it["thumb_url"]))
+                os.makedirs(os.path.dirname(th), exist_ok=True)
+                if not os.path.exists(th):
+                    try:
+                        sh(["curl", "-fsSL", "-o", th, it["thumb_url"]], timeout=300)
+                    except Exception as e:
+                        log("thumb download failed", e)
+                if os.path.exists(th):
+                    it["thumb"] = th
             if not os.path.exists(it["file"]):
                 continue
             keep = os.path.join(HOME, "ready"); os.makedirs(keep, exist_ok=True)
