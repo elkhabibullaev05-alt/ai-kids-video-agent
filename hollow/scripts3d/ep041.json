@@ -1,0 +1,948 @@
+{
+ "title": "Never Walk Round This Tomb 13 Times (Ep 41)",
+ "description": "A true legend from Buckfastleigh, Devon: the tomb of Squire Richard Cabell (1677) and his phantom hounds. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "graveyard",
+  "fog": 0.03,
+  "eyes": 6,
+  "moonlight": 20
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "boy": {
+   "name": "A village boy",
+   "voice": "am_echo",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.3,
+    0.24,
+    0.16
+   ],
+   "kind": "human",
+   "size": 0.7,
+   "home": [
+    -3.0,
+    8.6
+   ]
+  },
+  "friend": {
+   "name": "His friend",
+   "voice": "af_sarah",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.25,
+    0.3,
+    0.4
+   ],
+   "kind": "human",
+   "size": 0.68,
+   "home": [
+    -6.0,
+    9.4
+   ]
+  },
+  "squire": {
+   "name": "Squire Richard Cabell",
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": -3,
+   "color": [
+    0.06,
+    0.05,
+    0.07
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    -30,
+    34
+   ]
+  },
+  "parson": {
+   "name": "A villager",
+   "voice": "am_michael",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.28,
+    0.22,
+    0.16
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    -30,
+    30
+   ]
+  },
+  "hound1": {
+   "name": "Hound",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "kind": "gloamhound",
+   "size": 0.9,
+   "home": [
+    -34,
+    40
+   ]
+  },
+  "hound2": {
+   "name": "Hound",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "kind": "gloamhound",
+   "size": 0.8,
+   "home": [
+    -38,
+    42
+   ]
+  },
+  "hound3": {
+   "name": "Hound",
+   "voice": "am_onyx",
+   "speed": 0.8,
+   "pitch": -5,
+   "color": [
+    0,
+    0,
+    0
+   ],
+   "kind": "gloamhound",
+   "size": 0.85,
+   "home": [
+    -42,
+    44
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "tomb",
+   "color": [
+    0.32,
+    0.31,
+    0.3
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.6,
+   "at": [
+    2.2,
+    11.5,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "door",
+   "color": [
+    0.16,
+    0.1,
+    0.06
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 0.9,
+   "at": [
+    2.2,
+    10.1,
+    0.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "keyhole",
+   "color": [
+    1.0,
+    0.75,
+    0.35
+   ],
+   "glow": 3,
+   "visible": true,
+   "scale": 0.07,
+   "at": [
+    2.2,
+    9.6,
+    1.1
+   ]
+  },
+  {
+   "type": "box",
+   "id": "stone",
+   "color": [
+    0.4,
+    0.4,
+    0.38
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 1.2,
+   "at": [
+    -5,
+    12,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "book",
+   "color": [
+    0.5,
+    0.12,
+    0.1
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -3.5,
+    8.5,
+    1.4
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.8,
+    0.45
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.18,
+   "at": [
+    0.3,
+    9.9,
+    2.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "boy",
+   "say": "Eleven. Twelve. Thirteen times round the tomb. Now the finger in the keyhole.",
+   "cam": "two:boy,friend",
+   "do": [
+    [
+     "boy",
+     "to:0.8,9.3,0"
+    ],
+    [
+     "keyhole",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DON'T TOUCH THE KEYHOLE"
+  },
+  {
+   "who": "friend",
+   "say": "Don't do it! They say the Squire bites!",
+   "cam": "close:friend",
+   "do": [
+    [
+     "friend",
+     "shake"
+    ],
+    [
+     "friend",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE SQUIRE BITES"
+  },
+  {
+   "who": "narr",
+   "say": "Behind that iron door lies a man the whole town was afraid of. Even after he died.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "tomb",
+     "bounce"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "LOCKED IN HIS TOMB"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true legend, from a real churchyard. Buckfastleigh, Devon, England.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "boy",
+     "to_home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "DEVON, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "The tomb on this hill belongs to Squire Richard Cabell, of Brook Manor.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "SQUIRE RICHARD CABELL"
+  },
+  {
+   "who": "narr",
+   "say": "In the sixteen hundreds he owned land all across the south of Dartmoor.",
+   "cam": "close:squire",
+   "do": [
+    [
+     "squire",
+     "to:-1,10.5,0"
+    ],
+    [
+     "squire",
+     "turn:front"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE 1600s"
+  },
+  {
+   "who": "narr",
+   "say": "He loved one thing more than anything. Hunting on the moor, with his pack of hounds.",
+   "cam": "two:squire,hound1",
+   "do": [
+    [
+     "hound1",
+     "to:3,12,0"
+    ],
+    [
+     "hound2",
+     "to:5,13.5,0"
+    ],
+    [
+     "squire",
+     "turn:hound1"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HIS HOUNDS"
+  },
+  {
+   "who": "squire",
+   "say": "Faster, my hounds! Nobody on this moor escapes me.",
+   "cam": "close:squire",
+   "do": [
+    [
+     "squire",
+     "laugh"
+    ],
+    [
+     "hound1",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NOBODY ESCAPES"
+  },
+  {
+   "who": "narr",
+   "say": "People whispered that he was cruel. Some even said he sold his soul to the Devil.",
+   "cam": "close:squire",
+   "do": [
+    [
+     "squire",
+     "eyes_big"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HE SOLD HIS SOUL?"
+  },
+  {
+   "who": "parson",
+   "say": "Shut the doors at night. The Squire is out riding again.",
+   "cam": "close:parson",
+   "do": [
+    [
+     "parson",
+     "to:-5,10,0"
+    ],
+    [
+     "parson",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "SHUT THE DOORS"
+  },
+  {
+   "who": "narr",
+   "say": "Then, on the fifth of July, sixteen seventy-seven, Richard Cabell died.",
+   "cam": "wide",
+   "do": [
+    [
+     "squire",
+     "sad"
+    ],
+    [
+     "hound1",
+     "to_home"
+    ],
+    [
+     "hound2",
+     "to_home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "5 JULY 1677"
+  },
+  {
+   "who": "narr",
+   "say": "And that is when the strange part began.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "squire",
+     "to_home"
+    ],
+    [
+     "tomb",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THEN IT BEGAN"
+  },
+  {
+   "who": "narr",
+   "say": "The night he was buried, a pack of black hounds came racing across the moor.",
+   "cam": "wide",
+   "do": [
+    [
+     "hound1",
+     "to:-2,13,0"
+    ],
+    [
+     "hound2",
+     "to:5.5,14,0"
+    ],
+    [
+     "hound3",
+     "to:-6,15,0"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "BLACK HOUNDS CAME"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody owned them. Nobody knew where they came from. Their eyes burned red.",
+   "cam": "close:hound1",
+   "do": [
+    [
+     "hound1",
+     "turn:front"
+    ],
+    [
+     "hound1",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "EYES OF FIRE"
+  },
+  {
+   "who": "parson",
+   "say": "Listen! They're howling at his grave!",
+   "cam": "close:parson",
+   "do": [
+    [
+     "parson",
+     "eyes_big"
+    ],
+    [
+     "parson",
+     "turn:hound1"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HOWLING AT HIS GRAVE"
+  },
+  {
+   "who": "narr",
+   "say": "All night long they circled the churchyard, howling. Round and round the grave.",
+   "cam": "two:hound2,hound3",
+   "do": [
+    [
+     "hound2",
+     "to:6,9,0"
+    ],
+    [
+     "hound3",
+     "to:-2,9.5,0"
+    ],
+    [
+     "hound1",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "ROUND AND ROUND"
+  },
+  {
+   "who": "narr",
+   "say": "If you love true legends like this, subscribe now. It gets stranger.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "The people of Buckfastleigh were terrified he would not stay in his grave.",
+   "cam": "close:parson",
+   "do": [
+    [
+     "parson",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "HE WON'T STAY DOWN"
+  },
+  {
+   "who": "narr",
+   "say": "So they buried him deep, and laid a heavy stone on top of him.",
+   "cam": "prop:stone",
+   "do": [
+    [
+     "stone",
+     "show"
+    ],
+    [
+     "stone",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "A HEAVY STONE"
+  },
+  {
+   "who": "narr",
+   "say": "Then they built a little stone house over the grave. With iron bars on the windows.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "stone",
+     "hide"
+    ],
+    [
+     "tomb",
+     "bounce"
+    ],
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "IRON BARS"
+  },
+  {
+   "who": "parson",
+   "say": "There. Locked in. Now he can never get out.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "parson",
+     "to:-0.5,9.6,0"
+    ],
+    [
+     "parson",
+     "happy"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "LOCKED IN"
+  },
+  {
+   "who": "narr",
+   "say": "But the stories say it did not work.",
+   "cam": "close:parson",
+   "do": [
+    [
+     "parson",
+     "turn:front"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "IT DID NOT WORK"
+  },
+  {
+   "who": "narr",
+   "say": "On the night he died, every year, the Squire rides out again, leading his phantom pack.",
+   "cam": "two:squire,hound1",
+   "do": [
+    [
+     "squire",
+     "to:-3,13,0"
+    ],
+    [
+     "hound1",
+     "to:0,14,0"
+    ],
+    [
+     "hound2",
+     "to:3,15,0"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HE RIDES AGAIN"
+  },
+  {
+   "who": "squire",
+   "say": "Out, my hounds. Out onto the moor.",
+   "cam": "close:squire",
+   "do": [
+    [
+     "squire",
+     "turn:front"
+    ],
+    [
+     "hound3",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "OUT ONTO THE MOOR"
+  },
+  {
+   "who": "narr",
+   "say": "And when the pack is not hunting, people say it waits around his tomb, howling.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "squire",
+     "to_home"
+    ],
+    [
+     "hound1",
+     "to:0,9,0"
+    ],
+    [
+     "hound2",
+     "to:5,10,0"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THEY WAIT AT THE TOMB"
+  },
+  {
+   "who": "narr",
+   "say": "Over two hundred years later, in nineteen-oh-one, a famous writer came to Dartmoor.",
+   "cam": "wide",
+   "do": [
+    [
+     "hound1",
+     "to_home"
+    ],
+    [
+     "hound2",
+     "to_home"
+    ],
+    [
+     "hound3",
+     "to_home"
+    ],
+    [
+     "book",
+     "show"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "1901"
+  },
+  {
+   "who": "narr",
+   "say": "Arthur Conan Doyle heard the legends of the Squire and his black dogs.",
+   "cam": "prop:book",
+   "do": [
+    [
+     "book",
+     "spin"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "ARTHUR CONAN DOYLE"
+  },
+  {
+   "who": "narr",
+   "say": "Soon he wrote one of the most famous mysteries ever. The Hound of the Baskervilles.",
+   "cam": "prop:book",
+   "do": [
+    [
+     "book",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE HOUND"
+  },
+  {
+   "who": "narr",
+   "say": "And the children of Buckfastleigh had a dare of their own.",
+   "cam": "two:boy,friend",
+   "do": [
+    [
+     "book",
+     "hide"
+    ],
+    [
+     "boy",
+     "to:-1.5,8.8,0"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE DARE"
+  },
+  {
+   "who": "narr",
+   "say": "Walk round the tomb thirteen times. Then put your finger in the keyhole.",
+   "cam": "prop:keyhole",
+   "do": [
+    [
+     "keyhole",
+     "bounce"
+    ],
+    [
+     "boy",
+     "to:0.8,9.3,0"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "13 TIMES ROUND"
+  },
+  {
+   "who": "narr",
+   "say": "Some say seven times. And the Squire, or the Devil, will bite your finger.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE WILL BITE"
+  },
+  {
+   "who": "narr",
+   "say": "In nineteen ninety-two, a fire burned the old church to a shell. The tomb still stands.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "lamp",
+     "spin"
+    ],
+    [
+     "tomb",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE TOMB STILL STANDS"
+  },
+  {
+   "who": "narr",
+   "say": "So here is the rule of Buckfastleigh. Never walk round Cabell's tomb thirteen times.",
+   "cam": "prop:tomb",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER WALK ROUND IT"
+  },
+  {
+   "who": "narr",
+   "say": "Tonight, the boy has already walked round twelve times.",
+   "cam": "two:boy,friend",
+   "do": [
+    [
+     "boy",
+     "to:4.2,9.6,0"
+    ],
+    [
+     "friend",
+     "to:-2,9.2,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "TWELVE TIMES"
+  },
+  {
+   "who": "friend",
+   "say": "Stop! Can't you hear that? Something is howling on the moor!",
+   "cam": "close:friend",
+   "do": [
+    [
+     "friend",
+     "shake"
+    ],
+    [
+     "hound1",
+     "to:-6,16,0"
+    ],
+    [
+     "hound2",
+     "to:7,17,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMETHING IS HOWLING"
+  },
+  {
+   "who": "boy",
+   "say": "Thirteen. It's just an old story.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "to:0.8,9.3,0"
+    ],
+    [
+     "boy",
+     "happy"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THIRTEEN"
+  },
+  {
+   "who": "narr",
+   "say": "He slides his finger into the keyhole. Inside the tomb, something moves.",
+   "cam": "prop:keyhole",
+   "do": [
+    [
+     "keyhole",
+     "spin"
+    ],
+    [
+     "door",
+     "shake"
+    ],
+    [
+     "tomb",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "SOMETHING MOVES"
+  },
+  {
+   "who": "squire",
+   "say": "Who woke me?",
+   "cam": "close:squire",
+   "do": [
+    [
+     "squire",
+     "to:4.5,10.4,0"
+    ],
+    [
+     "squire",
+     "turn:boy"
+    ],
+    [
+     "boy",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO WOKE ME?"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:boy,squire",
+   "do": [
+    [
+     "hound1",
+     "to:0,12,0"
+    ],
+    [
+     "boy",
+     "shake"
+    ],
+    [
+     "squire",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
