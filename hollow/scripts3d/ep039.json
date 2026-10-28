@@ -1,0 +1,808 @@
+{
+ "title": "Who Took the Old Man From His Chair? (Ep 39)",
+ "description": "A true story from Shepton Mallet, England, 1768: the vanishing of Owen Parfitt. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "village",
+  "fog": 0.025,
+  "eyes": 0,
+  "moonlight": 22
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -1
+  },
+  "owen": {
+   "name": "Owen Parfitt",
+   "voice": "bm_daniel",
+   "speed": 0.85,
+   "pitch": -2,
+   "color": [
+    0.42,
+    0.3,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.85,
+   "home": [
+    0,
+    9.2
+   ]
+  },
+  "sister": {
+   "name": "His sister",
+   "voice": "bf_isabella",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.55,
+    0.35,
+    0.5
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -4.2,
+    8.4
+   ]
+  },
+  "neigh": {
+   "name": "The neighbour",
+   "voice": "af_sarah",
+   "speed": 1.0,
+   "pitch": 1,
+   "color": [
+    0.75,
+    0.5,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    4.2,
+    8.4
+   ]
+  },
+  "farm": {
+   "name": "A farm worker",
+   "voice": "am_michael",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.25,
+    0.3,
+    0.15
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -13,
+    19
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "chair",
+   "color": [
+    0.5,
+    0.32,
+    0.16
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 0.9,
+   "at": [
+    0,
+    10.4,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "coat",
+   "color": [
+    0.2,
+    0.22,
+    0.38
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    0,
+    10.3,
+    1.05
+   ]
+  },
+  {
+   "type": "box",
+   "id": "door",
+   "color": [
+    0.25,
+    0.18,
+    0.1
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.4,
+   "at": [
+    0,
+    13.2,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.8,
+    0.45
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.3,
+   "at": [
+    -2.6,
+    12.4,
+    2.6
+   ]
+  },
+  {
+   "type": "box",
+   "id": "bones",
+   "color": [
+    0.85,
+    0.82,
+    0.72
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    6,
+    11,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "paper",
+   "color": [
+    0.9,
+    0.88,
+    0.8
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -3,
+    9,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "sister",
+   "say": "Owen? Owen! Where are you? You cannot even walk!",
+   "cam": "prop:chair",
+   "do": [
+    [
+     "sister",
+     "to:-1.6,8.6,0"
+    ],
+    [
+     "coat",
+     "bounce"
+    ],
+    [
+     "owen",
+     "dive"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE CAN'T WALK"
+  },
+  {
+   "who": "narr",
+   "say": "His chair is still here. His coat is still here. But the man is gone.",
+   "cam": "prop:coat",
+   "do": [
+    [
+     "coat",
+     "spin"
+    ],
+    [
+     "sister",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "THE CHAIR IS EMPTY"
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. Shepton Mallet, England. A June evening in seventeen sixty-eight.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "coat",
+     "home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "ENGLAND, 1768"
+  },
+  {
+   "who": "narr",
+   "say": "Minutes earlier, an old man named Owen Parfitt sat in that chair by the door.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "rise"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "MINUTES EARLIER"
+  },
+  {
+   "who": "owen",
+   "say": "Put me by the door, sister. I want to watch the evening.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "turn:sister"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "BY THE DOOR"
+  },
+  {
+   "who": "narr",
+   "say": "Owen was about seventy. He was paralysed. He could not stand up on his own.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "sad"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HE COULD NOT STAND"
+  },
+  {
+   "who": "narr",
+   "say": "His elderly sister and a young neighbour carried him out, chair and all.",
+   "cam": "two:sister,neigh",
+   "do": [
+    [
+     "sister",
+     "to:-2.2,8.8,0"
+    ],
+    [
+     "neigh",
+     "to:2.2,8.8,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THEY CARRIED HIM OUT"
+  },
+  {
+   "who": "neigh",
+   "say": "There you are, Mister Parfitt. Your greatcoat is right behind you.",
+   "cam": "close:neigh",
+   "do": [
+    [
+     "coat",
+     "bounce"
+    ],
+    [
+     "neigh",
+     "happy"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "HIS GREATCOAT"
+  },
+  {
+   "who": "narr",
+   "say": "People said Owen had sailed the seas when he was young. Some whispered he had been a pirate.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "laugh"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "A PIRATE?"
+  },
+  {
+   "who": "owen",
+   "say": "I have seen things out there, girl. Things you would not believe.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "turn:neigh"
+    ],
+    [
+     "neigh",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THINGS OUT THERE"
+  },
+  {
+   "who": "narr",
+   "say": "Across the road, farm workers were busy in the field. Just a few yards away.",
+   "cam": "close:farm",
+   "do": [
+    [
+     "farm",
+     "turn:owen"
+    ]
+   ],
+   "sfx": "engine",
+   "text": "A FEW YARDS AWAY"
+  },
+  {
+   "who": "narr",
+   "say": "Then the sky went dark. A storm was rolling in.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "hide"
+    ],
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "A STORM IS COMING"
+  },
+  {
+   "who": "sister",
+   "say": "Rain is coming. Let us get his bed ready, then bring him in.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "turn:neigh"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "BRING HIM IN"
+  },
+  {
+   "who": "narr",
+   "say": "The two women stepped inside the house. Only for a few minutes.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "sister",
+     "to:-1,12.6,0"
+    ],
+    [
+     "neigh",
+     "to:1,12.6,0"
+    ],
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "ONLY A FEW MINUTES"
+  },
+  {
+   "who": "narr",
+   "say": "Owen sat alone by the open door. The wind began to blow.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "turn:front"
+    ],
+    [
+     "lamp",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "ALONE"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody knows what he saw next. Nobody ever will.",
+   "cam": "close:owen",
+   "do": [
+    [
+     "owen",
+     "eyes_big"
+    ],
+    [
+     "owen",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT DID HE SEE?"
+  },
+  {
+   "who": "narr",
+   "say": "The women came back out. And the chair was empty.",
+   "cam": "prop:chair",
+   "do": [
+    [
+     "owen",
+     "dive"
+    ],
+    [
+     "sister",
+     "to:-1.6,8.6,0"
+    ],
+    [
+     "neigh",
+     "to:1.6,8.6,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE CHAIR WAS EMPTY"
+  },
+  {
+   "who": "neigh",
+   "say": "He cannot walk! How can he be gone?",
+   "cam": "close:neigh",
+   "do": [
+    [
+     "neigh",
+     "eyes_big"
+    ],
+    [
+     "neigh",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HOW?"
+  },
+  {
+   "who": "narr",
+   "say": "His greatcoat still lay on the chair, exactly where they had left it.",
+   "cam": "prop:coat",
+   "do": [
+    [
+     "coat",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "THE COAT STAYED"
+  },
+  {
+   "who": "narr",
+   "say": "If you love true stories with no answer, subscribe now. It gets stranger.",
+   "cam": "wide",
+   "do": [
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "sister",
+   "say": "You men! Did someone take my brother? Did you see anyone?",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "to:-6,12,0"
+    ],
+    [
+     "farm",
+     "to:-9,15,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DID YOU SEE ANYONE?"
+  },
+  {
+   "who": "farm",
+   "say": "Nobody passed this road. We saw nothing. We heard nothing.",
+   "cam": "close:farm",
+   "do": [
+    [
+     "farm",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WE SAW NOTHING"
+  },
+  {
+   "who": "narr",
+   "say": "A man who could not walk had vanished in minutes, in plain sight of the road.",
+   "cam": "wide",
+   "do": [
+    [
+     "farm",
+     "turn:sister"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "GONE IN MINUTES"
+  },
+  {
+   "who": "narr",
+   "say": "The whole town searched through the storm. Fields, ditches, wells, the woods.",
+   "cam": "wide",
+   "do": [
+    [
+     "sister",
+     "to:6,16,0"
+    ],
+    [
+     "neigh",
+     "to:-6,16,0"
+    ],
+    [
+     "farm",
+     "to:0,18,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE TOWN SEARCHED"
+  },
+  {
+   "who": "neigh",
+   "say": "Owen! Owen Parfitt! Can you hear us?",
+   "cam": "close:neigh",
+   "do": [
+    [
+     "neigh",
+     "turn:front"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "CAN YOU HEAR US?"
+  },
+  {
+   "who": "narr",
+   "say": "They searched for days. They found no footprint, no button, no trace at all.",
+   "cam": "prop:chair",
+   "do": [
+    [
+     "coat",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NO TRACE"
+  },
+  {
+   "who": "narr",
+   "say": "Some in the town said the Devil came for him that night.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "sad"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE DEVIL?"
+  },
+  {
+   "who": "narr",
+   "say": "Others said old pirate friends carried him off, to show them buried treasure.",
+   "cam": "close:farm",
+   "do": [
+    [
+     "farm",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "OLD PIRATE FRIENDS?"
+  },
+  {
+   "who": "narr",
+   "say": "Forty-five years later, in eighteen thirteen, builders dug up bones near the town.",
+   "cam": "prop:bones",
+   "do": [
+    [
+     "bones",
+     "show"
+    ],
+    [
+     "bones",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "1813: BONES FOUND"
+  },
+  {
+   "who": "narr",
+   "say": "Everyone said, it is Owen at last. But doctors said they belonged to a young woman.",
+   "cam": "prop:bones",
+   "do": [
+    [
+     "bones",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NOT OWEN"
+  },
+  {
+   "who": "narr",
+   "say": "Owen Parfitt was never seen again. No one has ever explained it.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "bones",
+     "hide"
+    ],
+    [
+     "sister",
+     "to_home"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NEVER SEEN AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "So here is the rule of Shepton Mallet. Never leave anyone alone by the door when a storm comes.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER LEAVE THEM ALONE"
+  },
+  {
+   "who": "narr",
+   "say": "Many years later, a new family moved into that same house.",
+   "cam": "wide",
+   "do": [
+    [
+     "neigh",
+     "to_home"
+    ],
+    [
+     "farm",
+     "exit"
+    ],
+    [
+     "moon",
+     "show"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "YEARS LATER"
+  },
+  {
+   "who": "neigh",
+   "say": "It's only an old story. I'll just leave Grandpa by the door for one minute.",
+   "cam": "close:neigh",
+   "do": [
+    [
+     "neigh",
+     "happy"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ONLY ONE MINUTE"
+  },
+  {
+   "who": "narr",
+   "say": "She turned her back. The wind rose. And the old chair began to creak.",
+   "cam": "prop:chair",
+   "do": [
+    [
+     "lamp",
+     "spin"
+    ],
+    [
+     "chair",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE CHAIR CREAKED"
+  },
+  {
+   "who": "neigh",
+   "say": "Grandpa? Who is that standing in our doorway?",
+   "cam": "close:neigh",
+   "do": [
+    [
+     "neigh",
+     "eyes_big"
+    ],
+    [
+     "owen",
+     "rise"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO IS IN THE DOOR?"
+  },
+  {
+   "who": "narr",
+   "say": "In the doorway stood an old man in a sailor's coat. And he was smiling.",
+   "cam": "two:neigh,owen",
+   "do": [
+    [
+     "owen",
+     "turn:neigh"
+    ],
+    [
+     "owen",
+     "laugh"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "HE CAME BACK"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:neigh,owen",
+   "do": [
+    [
+     "neigh",
+     "shake"
+    ],
+    [
+     "owen",
+     "shake"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
