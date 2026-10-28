@@ -120,3 +120,6 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 
 ## Safety notes 2026-10-28
 - CONFLICT: "Growth plan 2026-10-28" says "Keep Made for Kids = Yes", but UPLOAD.md clicks VIDEO_MADE_FOR_KIDS_NOT_MFK and the bible/channels.json say 13+ not child-directed. Until the owner decides, keep uploading exactly as UPLOAD.md does (do not flip the flag yourself) and never write kid-targeted titles/tags; the owner must choose one setting.
+
+## Owner decision 2026-10-28 — audience
+- Dough Bros = **Not made for kids** (13+ general audience), exactly as UPLOAD.md sets (VIDEO_MADE_FOR_KIDS_NOT_MFK) and the bible says. The earlier "Keep Made for Kids = Yes" lines and the CONFLICT notes above are resolved — do not flip the flag. Safety checks must expect "No" for this channel.
