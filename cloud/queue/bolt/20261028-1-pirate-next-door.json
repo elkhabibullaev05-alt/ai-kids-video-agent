@@ -1,0 +1,1414 @@
+{
+ "id": "20261028-1-pirate-next-door",
+ "plot": "The day after her hill lesson Pip sees a moving truck next door and hears a big box go 'plong', guesses 'piano' and tells Turbo, who mishears 'piranha'; Bertha turns it into a pirate and Grumpy adds a ship, so by sunset all Wheelburg fears the new neighbour; Bolt follows the story back car by car to Pip, whose 'piano' was itself only a guess, and the neighbour who arrives at sunset saying 'Ahoy!' is retired crossing guard Mrs. Maple, back from a ferry trip, with a real piano by the window; lesson: tell what you saw, not what you heard; then a box left on the street says 'For Inspector Bolt. From an old friend.'",
+ "script": {
+  "title": "Is a Pirate Moving In Next to Pip?",
+  "set": {
+   "place": "Bakery Lane next to Pip's house and Turbo's school corner, moving day afternoon until sunset",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "description": "A moving truck, a mysterious plong, and a rumour that grows all over Wheelburg. Inspector Bolt #18",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "maple": {
+    "name": "Mrs. Maple",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.6,
+     0.35
+    ],
+    "kind": "car",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     12.0,
+     14.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "box",
+    "type": "box",
+    "color": "brown",
+    "at": [
+     -10.0,
+     12.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 1.4
+   },
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "on": "hal",
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "blue",
+    "at": [
+     9.0,
+     7.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Wait! Wait for me! Who is moving in next to my house?",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Easy with the big one! Mind the black and white keys!",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "show"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS MOVING IN?",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip raced all the way down the hill. Straight to the truck.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-14,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The moving truck was called Hal. He carried homes for a living.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hello, Hal! Who's going to live here? A little car like me?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:hal"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Can't tell you, little one. Movers keep secrets. Rule number one.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "But she wants this by the window. To watch the school crossing.",
+    "cam": "two:hal,pip",
+    "do": [
+     [
+      "hal",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Hal rolled the big box down his ramp.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "PLONG!",
+    "hold": 0.9,
+    "sfx": "suspicious",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Plong? What goes plong? Something big and heavy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Big, heavy and plong. I bet it's a piano!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip never saw inside the box.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I have to tell somebody! Turbo! Turbo!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo was at his school corner, stopping cars for the bell.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Stop! Wait! Go! Stop! Wait! Go! Best job ever!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo! My new neighbour has a big piano! It goes plong!",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Pip zoomed home. She didn't wait for an answer.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And just then, a big lorry honked. Turbo heard only half.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A big... piranha? A giant fish with teeth? Next to Pip?!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "A PIRANHA?!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "After school, Big Bertha pulled up to the corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bertha! Pip's new neighbour keeps a giant piranha! Plong!",
+    "cam": "two:turbo,bertha",
+    "do": [
+     [
+      "turbo",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A piranha?! Oh my wheels! Who keeps a pet like that?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Only one kind of car keeps a piranha. A pirate!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "A PIRATE?!",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "two:bertha,turbo",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Off went Bertha, telling every car she passed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "to:-4,18"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy was parked by the bakery, eating his quiet lunch.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! A pirate is moving onto Bakery Lane! With a piranha!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "A pirate. Hmph. Pirates come with ships.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Ships don't fit on Bakery Lane. I'll tow it to sea.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "By the afternoon, the whole town was talking about it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:1,14"
+     ],
+     [
+      "bertha",
+      "to:-6,17"
+     ]
+    ]
+   },
+   {
+    "text": "A PIRATE SHIP?!",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inspector Bolt was polishing his hat when the honking began.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt! A pirate is moving in! With a ship and a piranha!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A pirate? In Wheelburg? Before dinner?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Very well. Which one of you saw this pirate?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody said a word. Everybody looked at everybody else.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "turn:bertha"
+     ],
+     [
+      "bertha",
+      "turn:grumpy"
+     ],
+     [
+      "grumpy",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! Everybody says my new neighbour is a pirate!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:2,10"
+     ],
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I wanted a friend next door. Now everyone is scared of her.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "If they all shout pirate, she'll drive straight back home!",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "She arrives at sunset. That's when I give her the keys.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:-8,12"
+     ],
+     [
+      "key",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "SUNSET! NOT MUCH TIME!",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we find the truth before the sun goes down.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A story is like tyre tracks. Let's follow it back.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt drove to the last car who heard it.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "to:grumpy"
+     ],
+     [
+      "fx",
+      "tracks:grumpy-bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy. Who told you about the pirate ship?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha said pirate. I added the ship. Ships make sense.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha. Did you see a pirate with your own headlights?",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bolt",
+      "to:bertha"
+     ],
+     [
+      "fx",
+      "tracks:bertha-turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Well, no. Turbo said piranha. And who keeps a piranha? A pirate!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. Did you see a piranha?",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "to:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Not exactly. A lorry was honking. Pip said piranha. I think.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And every headlight in Wheelburg turned to look at Pip.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ],
+     [
+      "fx",
+      "tracks:turbo-pip"
+     ]
+    ]
+   },
+   {
+    "text": "IT STARTED WITH PIP?!",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Me? I never said piranha! I said piano! Pi-a-no!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Piano. Piranha. Pirate. Oh no. They all start the same!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I made a fish into a pirate. Oh, dear me.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "One more question, Pip. Did you see a piano?",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No. I heard a plong. And then I guessed.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So the very first piece of the story was a guess too.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then nobody knows who she is! Not even me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, the sun touched the top of Wheelburg Hill.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hal",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two headlights came slowly down Bakery Lane.",
+    "cam": "wide",
+    "do": [
+     [
+      "maple",
+      "enter"
+     ],
+     [
+      "maple",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S HERE!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:maple"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Everybody stay calm. Nobody say pirate.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:maple"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Ahoy there, Wheelburg!",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "She said ahoy! Pirates say ahoy!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ],
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait! I know that voice! It's Mrs. Maple!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Hello, dear Pip! Sorry. I just came back from a ferry trip.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "On the ferry, everybody says ahoy. It's a hard habit to stop.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The old crossing guard who gave Turbo his badge!",
+    "cam": "two:maple,turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:maple"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "I moved close to the school. Now I can watch my crossing.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "to:-11,12"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Your keys, Mrs. Maple. And your piano is by the window.",
+    "cam": "two:hal,maple",
+    "do": [
+     [
+      "key",
+      "give:maple"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "So it really was a piano! Not a pirate! Not a piranha!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "A piranha? Goodness, no. I don't even own a goldfish.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mrs. Maple rolled up to her piano. And she played.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "PLONG! PLING! PLONG!",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody honked along. Even Grumpy. Very, very quietly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Mrs. Maple, I'm sorry. I called you a pirate all afternoon.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "That's alright, Bertha. I've been called worse. A slowpoke, mostly.",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember, everyone. Tell what you saw. Not what you heard.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Tell what you saw. Not what you heard. I'll remember!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "And Pip, would you like piano lessons? Next door, every Friday?",
+    "cam": "two:maple,pip",
+    "do": [
+     [
+      "pip",
+      "to:maple"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A friend next door AND piano lessons? Yes, please!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal closed his doors. But one box stayed on the street.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "exit"
+     ],
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On it, in big letters: For Inspector Bolt. From an old friend.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHO SENT BOLT A BOX?",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "An old friend? Hmm. I wonder which one.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Is a Pirate Moving In Next to Pip?! 🚚😱 (Ep 18)",
+  "description": "\"I only said piano. How did it turn into a pirate?\" — Pip\nA moving truck parks next to Pip's house, a big box goes PLONG, and by sunset all of Wheelburg thinks a pirate is moving in. Inspector Bolt follows the story back, car by car, to see where it really started. Inspector Bolt #18\n\n#series #3DAnimation #InspectorBolt #Pip #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "pip",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "new neighbour",
+   "moving day",
+   "rumours",
+   "telling the truth",
+   "stories for kids"
+  ],
+  "thumb_text": "A PIRATE?!",
+  "thumb_beat": 35,
+  "localizations": {
+   "es": {
+    "title": "¿Un pirata se muda al lado de Pip?! 🚚😱 (Ep 18)",
+    "description": "\"Yo solo dije piano. ¿Cómo se convirtió en un pirata?\" — Pip\nUn camión de mudanzas se para junto a la casa de Pip, una caja enorme hace PLONG y al atardecer todo Wheelburg cree que llega un pirata. El Inspector Bolt sigue la historia hacia atrás, coche por coche, para ver dónde empezó. Inspector Bolt #18\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Um pirata vai morar ao lado da Pip?! 🚚😱 (Ep 18)",
+    "description": "\"Eu só disse piano. Como isso virou um pirata?\" — Pip\nUm caminhão de mudança para ao lado da casa da Pip, uma caixa enorme faz PLONG e, ao pôr do sol, toda Wheelburg acha que um pirata está chegando. O Inspetor Bolt segue a história de volta, carro por carro, para ver onde ela começou. Inspetor Bolt #18\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل سينتقل قرصان للعيش بجوار بيب؟! 🚚😱 (حلقة 18)",
+    "description": "\"قلتُ بيانو فقط. كيف صار قرصانًا؟\" — بيب\nشاحنة نقل تقف بجوار بيت بيب، وصندوق كبير يصدر صوت بلونغ، وعند الغروب تظن ويلبرغ كلها أن قرصانًا سيسكن هناك. المفتش بولت يتتبع الحكاية إلى الوراء، سيارة بعد سيارة، ليعرف أين بدأت. المفتش بولت #18\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Un pirate emménage à côté de Pip ?! 🚚😱 (Ép 18)",
+    "description": "« J'ai juste dit piano. Comment c'est devenu un pirate ? » — Pip\nUn camion de déménagement se gare à côté de chez Pip, une grosse caisse fait PLONG, et au coucher du soleil tout Wheelburg croit qu'un pirate arrive. L'inspecteur Bolt remonte l'histoire, voiture par voiture, pour voir où elle a commencé. Inspecteur Bolt #18\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ピップのおとなりに海賊がひっこしてくる?!🚚😱(第18話)",
+    "description": "「わたし、ピアノって言っただけなのに。どうして海賊になっちゃったの?」— ピップ\nピップの家のとなりにひっこしトラックがとまり、大きな箱が「ポローン」。夕方には町じゅうが「海賊が来る!」と大さわぎ。ボルト警部はうわさを一台ずつさかのぼって、どこから始まったのかを調べます。ボルト警部 #18\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "해적이 핍네 옆집으로 이사 온다고?! 🚚😱 (18화)",
+    "description": "\"난 피아노라고만 했어. 그게 어떻게 해적이 된 거야?\" — 핍\n핍네 집 옆에 이삿짐 트럭이 서고, 커다란 상자에서 '플롱!' 소리가 나요. 해 질 무렵엔 휠버그 전체가 해적이 이사 온다고 믿게 돼요. 볼트 형사는 소문을 차 한 대씩 거슬러 올라가 어디서 시작됐는지 찾아요. 볼트 형사 #18\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Zieht ein Pirat neben Pip ein?! 🚚😱 (Folge 18)",
+    "description": "„Ich habe nur Klavier gesagt. Wie wurde daraus ein Pirat?“ — Pip\nEin Umzugswagen hält neben Pips Haus, eine riesige Kiste macht PLONG, und bei Sonnenuntergang glaubt ganz Wheelburg, dass ein Pirat einzieht. Inspektor Bolt verfolgt die Geschichte Auto für Auto zurück, um zu sehen, wo sie wirklich anfing. Inspektor Bolt #18\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "WHAT WENT PLONG?!",
+   "title": "Pip's New Neighbour Goes PLONG?! 📦 (Ep 18) #shorts",
+   "description": "A moving truck, a giant box, and one very strange sound. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿La nueva vecina de Pip hace PLONG?! 📦 (Ep 18) #shorts",
+     "description": "Un camión de mudanzas, una caja gigante y un sonido muy raro. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A nova vizinha da Pip faz PLONG?! 📦 (Ep 18) #shorts",
+     "description": "Um caminhão de mudança, uma caixa gigante e um som muito estranho. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "جارة بيب الجديدة تقول بلونغ؟! 📦 (حلقة 18) #shorts",
+     "description": "شاحنة نقل وصندوق عملاق وصوت غريب جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La nouvelle voisine de Pip fait PLONG ?! 📦 (Ép 18) #shorts",
+     "description": "Un camion de déménagement, une caisse géante et un bruit très étrange. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピップの新しいおとなりは「ポローン」?!📦(第18話)#shorts",
+     "description": "ひっこしトラックと大きな箱、そしてふしぎな音。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍의 새 이웃이 '플롱'?! 📦 (18화) #shorts",
+     "description": "이삿짐 트럭, 거대한 상자, 그리고 아주 이상한 소리. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pips neue Nachbarin macht PLONG?! 📦 (Folge 18) #shorts",
+     "description": "Ein Umzugswagen, eine Riesenkiste und ein sehr seltsames Geräusch. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 18,
+   "dur": 25,
+   "top": "PIANO... PIRANHA?!",
+   "title": "How Did a Piano Become a Pirate?! 😂 (Ep 18) #shorts",
+   "description": "One honk, and the story starts to grow. Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "turbo",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Cómo un piano se volvió un pirata?! 😂 (Ep 18) #shorts",
+     "description": "Un bocinazo y la historia empieza a crecer. Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Como um piano virou um pirata?! 😂 (Ep 18) #shorts",
+     "description": "Uma buzinada e a história começa a crescer. Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كيف صار البيانو قرصانًا؟! 😂 (حلقة 18) #shorts",
+     "description": "زمّور واحد، والحكاية تبدأ تكبر. الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Comment un piano est devenu un pirate ?! 😂 (Ép 18) #shorts",
+     "description": "Un coup de klaxon, et l'histoire commence à grossir. Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピアノがどうして海賊に?!😂(第18話)#shorts",
+     "description": "クラクションひとつで、うわさがどんどん大きくなる。本編はチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "피아노가 어떻게 해적이 됐을까?! 😂 (18화) #shorts",
+     "description": "경적 한 번에 이야기가 점점 커져요. 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wie wurde aus einem Klavier ein Pirat?! 😂 (Folge 18) #shorts",
+     "description": "Ein Hupen, und die Geschichte wird immer größer. Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 62,
+   "dur": 22,
+   "top": "SHE'S HERE!",
+   "title": "Who Is in the Headlights?! 🌅 (Ep 18) #shorts",
+   "description": "The sun goes down, and the new neighbour arrives. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "pip",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién viene en esos faros?! 🌅 (Ep 18) #shorts",
+     "description": "El sol se pone y llega la nueva vecina. La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem está naqueles faróis?! 🌅 (Ep 18) #shorts",
+     "description": "O sol se põe e a nova vizinha chega. A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من صاحب هذه الأضواء؟! 🌅 (حلقة 18) #shorts",
+     "description": "تغرب الشمس وتصل الجارة الجديدة. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui arrive dans ces phares ?! 🌅 (Ép 18) #shorts",
+     "description": "Le soleil se couche et la nouvelle voisine arrive. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "あのヘッドライトはだれ?!🌅(第18話)#shorts",
+     "description": "夕日がしずんで、新しいおとなりさんがやってくる。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "저 헤드라이트는 누구지?! 🌅 (18화) #shorts",
+     "description": "해가 지고, 새 이웃이 도착해요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer kommt da im Scheinwerferlicht?! 🌅 (Folge 18) #shorts",
+     "description": "Die Sonne geht unter und die neue Nachbarin kommt. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
