@@ -123,6 +123,9 @@ DRUMS_UP = [False]
 
 def move(c, t, d, to):
     r = C[c]["root"]; to = Vector(to)
+    if globals().get("PLACE") == "house" and abs(to.x) < 30:  # never walk behind/into the sofa or wall: the camera loses the character
+        if -12.6 < to.x < -3.4 and to.y > 12.8: to.y = 12.8
+        to.y = min(to.y, 16.0)
     K(r, t, "location", POS[c]); K(r, t + d, "location", to); POS[c] = to
 
 
