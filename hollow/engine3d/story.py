@@ -78,6 +78,8 @@ def make_prop(p):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.9); o = add(bpy.context.object, m)
     elif t == "banana":
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.35); o = add(bpy.context.object, m); o.scale = (0.6, 1.6, 0.6)
+    elif t == "tube":  # glass-tube apparition (Jewel House, 1817): upright glowing cylinder
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.32, depth=2.0, location=(0, 0, 0)); o = add(bpy.context.object, m)
     elif t == "cone":
         bpy.ops.mesh.primitive_cone_add(radius1=0.6, depth=1.4, location=(0, 0, 0.7)); o = add(bpy.context.object, m)
     elif t == "star":
