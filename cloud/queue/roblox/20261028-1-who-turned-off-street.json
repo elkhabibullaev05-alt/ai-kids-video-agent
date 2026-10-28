@@ -1,0 +1,1036 @@
+{
+ "id": "20261028-1-who-turned-off-street",
+ "plot": "Minutes before Zed's first movie night the whole street goes dark; everyone blames Rex's giant glowing sign, but Chip finds the blinking switch box — Zed plugged in too many big machines — and a grown-up, Mrs. Volt, safely switches the power back on.",
+ "script": {
+  "title": "Who Turned Off the Whole Street? 🔦",
+  "set": {
+   "place": "city",
+   "time": "night"
+  },
+  "lead_in": 0,
+  "chars": {
+   "blox": {
+    "name": "Blox",
+    "voice": "am_puck",
+    "speed": 1.08,
+    "pitch": 1,
+    "kind": "blocky",
+    "size": 0.8,
+    "home": [
+     -3,
+     6
+    ],
+    "color": [
+     0.15,
+     0.45,
+     1.0
+    ],
+    "pants": [
+     0.12,
+     0.14,
+     0.25
+    ],
+    "hair": "cap",
+    "hair_color": [
+     0.9,
+     0.15,
+     0.15
+    ]
+   },
+   "pixel": {
+    "name": "Pixel",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 3,
+    "kind": "blocky",
+    "size": 0.75,
+    "home": [
+     2,
+     5.5
+    ],
+    "color": [
+     1.0,
+     0.4,
+     0.7
+    ],
+    "pants": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "skin": [
+     0.78,
+     0.55,
+     0.38
+    ],
+    "hair": "bun",
+    "hair_color": [
+     0.12,
+     0.08,
+     0.06
+    ]
+   },
+   "rex": {
+    "name": "Rich Rex",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "kind": "blocky",
+    "size": 0.85,
+    "home": [
+     6,
+     8
+    ],
+    "color": [
+     0.95,
+     0.75,
+     0.1
+    ],
+    "pants": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "hair": "crown"
+   },
+   "gizmo": {
+    "name": "Gizmo",
+    "voice": "am_echo",
+    "speed": 1.0,
+    "pitch": -2,
+    "kind": "robot",
+    "size": 0.8,
+    "home": [
+     -7,
+     9
+    ],
+    "color": [
+     0.55,
+     0.6,
+     0.68
+    ],
+    "pants": [
+     0.3,
+     0.32,
+     0.36
+    ]
+   },
+   "zed": {
+    "name": "Zed",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "kind": "zombie",
+    "size": 0.8,
+    "home": [
+     9,
+     10
+    ],
+    "color": [
+     0.3,
+     0.55,
+     0.7
+    ],
+    "pants": [
+     0.25,
+     0.2,
+     0.45
+    ]
+   },
+   "chip": {
+    "name": "Chip",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "kind": "pet",
+    "size": 0.7,
+    "home": [
+     0,
+     4
+    ],
+    "color": [
+     0.95,
+     0.6,
+     0.25
+    ]
+   },
+   "volt": {
+    "name": "Mrs. Volt",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "kind": "blocky",
+    "size": 0.85,
+    "home": [
+     -10,
+     13
+    ],
+    "color": [
+     1.0,
+     0.82,
+     0.1
+    ],
+    "pants": [
+     0.15,
+     0.2,
+     0.45
+    ],
+    "skin": [
+     0.9,
+     0.7,
+     0.55
+    ],
+    "hair": "helmet",
+    "hair_color": [
+     1.0,
+     0.55,
+     0.05
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_adam",
+    "speed": 1.05,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lamp1",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     -11,
+     15,
+     6
+    ],
+    "scale": 0.45,
+    "glow": 3.0
+   },
+   {
+    "id": "lamp2",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     0,
+     17,
+     7
+    ],
+    "scale": 0.45,
+    "glow": 3.0
+   },
+   {
+    "id": "lamp3",
+    "type": "ball",
+    "color": "white",
+    "at": [
+     11,
+     15,
+     6
+    ],
+    "scale": 0.45,
+    "glow": 3.0
+   },
+   {
+    "id": "popper",
+    "type": "box",
+    "color": "red",
+    "at": [
+     11.5,
+     11.5,
+     0
+    ],
+    "visible": false,
+    "scale": 0.8,
+    "glow": 0.6
+   },
+   {
+    "id": "sign",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     6,
+     13,
+     5
+    ],
+    "scale": 1.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "blox",
+    "say": "Whoa! The street lights just went out! All at once!",
+    "cam": "wide",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ],
+     [
+      "lamp1",
+      "hide"
+     ],
+     [
+      "lamp2",
+      "hide"
+     ],
+     [
+      "lamp3",
+      "hide"
+     ],
+     [
+      "chip",
+      "spin"
+     ]
+    ],
+    "text": "LIGHTS OUT!"
+   },
+   {
+    "who": "pixel",
+    "say": "Who turned off the whole street? Right before movie night!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "My popcorn! My movie! I planned this night all week.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "After the gold-cube day, the friends wanted a quiet movie night.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:zed"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zed had never hosted before. He made a list. And a snack.",
+    "cam": "two:zed,pixel",
+    "do": [
+     [
+      "popper",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Meet my new popcorn machine. Popcorn for one hundred friends!",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Zed, we are only five friends. Plus Chip.",
+    "cam": "two:pixel,zed",
+    "do": [
+     [
+      "pixel",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "I plugged it in with the heater, fridge and disco ball.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Street brightness: zero percent. My face brightness: four percent.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "chip",
+    "say": "Woof! Woof woof!",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "I know who did it. Look up there!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "turn:rex"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across the street, one giant gold sign still glowed. It said: REX.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "Isn't it beautiful? My face sign! I switched it on just now.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Five minutes ago? That's exactly when the lights went out!",
+    "cam": "two:pixel,rex",
+    "do": [
+     [
+      "pixel",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "No way! My sign has its own battery. I'm rich, not silly.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Then prove it, Rex. Switch it off!",
+    "cam": "two:blox,rex",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rex sighed a long sigh and switched off his beautiful sign.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "sign",
+      "vanish"
+     ],
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now the street was even darker. The lights did not come back.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "text": "STILL DARK!"
+   },
+   {
+    "who": "rex",
+    "say": "See? Not me. And now nobody can see my face. Tragic.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "The movie starts in ten minutes, and nobody can find my door!",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "shake"
+     ]
+    ],
+    "text": "10 MINUTES!"
+   },
+   {
+    "who": "gizmo",
+    "say": "Do not worry. I have a flashlight mode. Activating now.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Gizmo's antenna gave one tiny blink. Like a firefly with a cold.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "Flashlight power: two percent. Enough to see my own nose.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "New plan! Everybody walk in a line and follow my voice!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they all walked in a line. Straight into each other.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ],
+    "text": "BONK!"
+   },
+   {
+    "who": "narr",
+    "say": "But Chip did not walk in the line. Chip followed his nose.",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "to:10,12"
+     ]
+    ]
+   },
+   {
+    "who": "chip",
+    "say": "Woof! Grrr. Woof woof!",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Chip found something by Zed's door. A little red light!",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "turn:chip"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "By Zed's door, a small wall box blinked red. Click, click.",
+    "cam": "prop:popper",
+    "do": [
+     [
+      "popper",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "If we can't fix this, the whole street stays dark all night!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "gizmo",
+    "say": "That's the switch box. It cuts power when houses use too much.",
+    "cam": "two:gizmo,pixel",
+    "do": [
+     [
+      "gizmo",
+      "turn:pixel"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Too much power? Who would use that much power at night?",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "turn:zed"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Very slowly, everyone turned to look at Zed.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "all",
+      "look:zed"
+     ]
+    ],
+    "text": "ZED?!"
+   },
+   {
+    "who": "zed",
+    "say": "Popcorn machine. Heater. Fridge. Disco ball. Oh no. It was me.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "I wanted the best movie night ever. Now the street is dark.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "You didn't ruin anything. You just plugged in too much at once.",
+    "cam": "two:pixel,zed",
+    "do": [
+     [
+      "pixel",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Easy! I'll open the box and flip the switch back on!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Stop, Blox! Kids never open switch boxes. We call a grown-up.",
+    "cam": "close:pixel",
+    "do": [
+     [
+      "pixel",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "I know one! I call her whenever my sign gets too shiny.",
+    "cam": "close:rex",
+    "do": [
+     [
+      "rex",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Soon Mrs. Volt arrived, with a yellow helmet and a big flashlight.",
+    "cam": "wide",
+    "do": [
+     [
+      "volt",
+      "enter:left"
+     ]
+    ],
+    "text": "HELP IS HERE!"
+   },
+   {
+    "who": "volt",
+    "say": "Evening, friends! Before I touch anything, unplug the big machines, please.",
+    "cam": "close:volt",
+    "do": [
+     [
+      "volt",
+      "turn:zed"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Unplugging the heater. Unplugging the fridge. Goodbye, disco ball.",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "volt",
+    "say": "One machine at a time is fine. Ten together? Box says no.",
+    "cam": "close:volt",
+    "do": [
+     [
+      "volt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mrs. Volt opened the box, pushed one switch up, and... click.",
+    "cam": "prop:popper",
+    "do": [
+     [
+      "popper",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every light on the street came back on at once!",
+    "cam": "wide",
+    "do": [
+     [
+      "lamp1",
+      "show"
+     ],
+     [
+      "lamp2",
+      "show"
+     ],
+     [
+      "lamp3",
+      "show"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "text": "LIGHTS ON!"
+   },
+   {
+    "who": "gizmo",
+    "say": "Brightness: one hundred percent. My nose looks fantastic.",
+    "cam": "close:gizmo",
+    "do": [
+     [
+      "gizmo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rex",
+    "say": "And my sign? Can my beautiful face come back too?",
+    "cam": "close:rex",
+    "do": [
+     [
+      "sign",
+      "show"
+     ],
+     [
+      "rex",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pixel",
+    "say": "Only on its own battery, Rex. Deal?",
+    "cam": "two:pixel,rex",
+    "do": [
+     [
+      "pixel",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Zed plugged in only the popcorn machine. Nothing else.",
+    "cam": "two:zed,pixel",
+    "do": [
+     [
+      "popper",
+      "bounce"
+     ],
+     [
+      "zed",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zed",
+    "say": "Popcorn for one hundred friends. Or six friends and Mrs. Volt!",
+    "cam": "close:zed",
+    "do": [
+     [
+      "zed",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "volt",
+    "say": "I never say no to popcorn. Big machines, one at a time!",
+    "cam": "two:volt,zed",
+    "do": [
+     [
+      "volt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "blox",
+    "say": "Best movie night ever. And the movie hasn't even started yet!",
+    "cam": "close:blox",
+    "do": [
+     [
+      "blox",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Chip trotted back with something in his mouth. A bus ticket!",
+    "cam": "close:chip",
+    "do": [
+     [
+      "chip",
+      "spin"
+     ]
+    ],
+    "text": "A BUS TICKET?"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: whose ticket is it, and where does that bus go?",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:chip"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Turned Off the Whole Street? 🔦",
+  "description": "\"I only wanted the best movie night ever… so why is the whole street dark?\" — Zed\nMinutes before movie night, every light on the block goes out. Everyone blames Rex's giant glowing sign, but Chip follows a tiny blinking red light… A blocky cartoon about a real-life power cut.\n#series #3DAnimation #BlockyQuest",
+  "tags": [
+   "blocky quest",
+   "blocky animation",
+   "kids cartoon",
+   "power cut",
+   "movie night",
+   "3d animation",
+   "zed zombie",
+   "series"
+  ],
+  "thumb_text": "LIGHTS OUT!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Quién apagó toda la calle? 🔦",
+    "description": "¡La noche de cine de Zed se queda a oscuras! Todos culpan al gran letrero de Rex, pero Chip sigue una pequeña luz roja… Una caricatura de bloques sobre un apagón de verdad.\n#caricatura #animacion3d #niños"
+   },
+   "pt": {
+    "title": "Quem apagou a rua inteira? 🔦",
+    "description": "A noite de cinema do Zed fica no escuro! Todos culpam a placa gigante do Rex, mas o Chip segue uma luzinha vermelha… Um desenho de blocos sobre uma queda de energia de verdade.\n#desenho #animacao3d #criancas"
+   },
+   "ar": {
+    "title": "من أطفأ الشارع كله؟ 🔦",
+    "description": "ليلة السينما عند زِد تغرق في الظلام! الجميع يلوم لافتة ريكس الكبيرة، لكن تشيب يتبع ضوءًا أحمر صغيرًا… كرتون مكعبات عن انقطاع كهرباء حقيقي.\n#رسوم_متحركة #أطفال #كرتون"
+   },
+   "fr": {
+    "title": "Qui a éteint toute la rue ? 🔦",
+    "description": "La soirée cinéma de Zed tombe dans le noir ! Tout le monde accuse le grand panneau de Rex, mais Chip suit une petite lumière rouge… Un dessin animé en blocs sur une vraie panne de courant.\n#dessinanime #animation3d #enfants"
+   },
+   "ja": {
+    "title": "通りの電気を消したのはだれ？🔦",
+    "description": "ゼッドの映画ナイトが真っ暗に！みんなはレックスの大きな看板のせいだと思うけど、チップは小さな赤いライトを見つける…本当の停電を描いたブロックのアニメ。\n#アニメ #3Dアニメ #キッズ"
+   },
+   "ko": {
+    "title": "누가 거리 불을 다 껐을까? 🔦",
+    "description": "제드의 영화의 밤이 깜깜해졌어요! 모두 렉스의 커다란 간판 탓을 하지만, 칩은 작은 빨간 불빛을 따라가요… 진짜 정전 이야기를 담은 블록 만화.\n#만화 #3D애니메이션 #키즈"
+   },
+   "de": {
+    "title": "Wer hat die ganze Straße ausgeknipst? 🔦",
+    "description": "Zeds Filmabend versinkt im Dunkeln! Alle geben Rex' riesigem Leuchtschild die Schuld, doch Chip folgt einem kleinen roten Licht… Ein Klötzchen-Cartoon über einen echten Stromausfall.\n#zeichentrick #3Danimation #kinder"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "WHO TURNED OFF THE STREET?",
+   "title": "Who Turned Off the Lights? 🔦😱 #shorts",
+   "description": "Everyone blames Rex… but was it him? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "blocky animation",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién apagó las luces? 🔦😱 #shorts",
+     "description": "Todos culpan a Rex… ¿pero fue él? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem apagou as luzes? 🔦😱 #shorts",
+     "description": "Todos culpam o Rex… mas foi ele? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من أطفأ الأنوار؟ 🔦😱 #shorts",
+     "description": "الجميع يلوم ريكس… لكن هل هو الفاعل؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a éteint les lumières ? 🔦😱 #shorts",
+     "description": "Tout le monde accuse Rex… mais est-ce lui ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "電気を消したのはだれ？🔦😱 #shorts",
+     "description": "みんなレックスのせいだと思ってる…でも本当に？本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 불을 껐을까? 🔦😱 #shorts",
+     "description": "모두 렉스 탓을 하는데… 정말 렉스일까? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer hat das Licht ausgemacht? 🔦😱 #shorts",
+     "description": "Alle beschuldigen Rex… aber war er es? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 25,
+   "dur": 22,
+   "top": "WHAT IS THAT RED LIGHT?",
+   "title": "What Is That Red Light? 🔴 #shorts",
+   "description": "Chip found something by Zed's door… Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "blocky animation",
+    "kids cartoon"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Qué es esa luz roja? 🔴 #shorts",
+     "description": "Chip encontró algo en la puerta de Zed… Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Que luz vermelha é essa? 🔴 #shorts",
+     "description": "O Chip achou algo na porta do Zed… Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ما هذا الضوء الأحمر؟ 🔴 #shorts",
+     "description": "وجد تشيب شيئًا عند باب زِد… الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "C'est quoi, cette lumière rouge ? 🔴 #shorts",
+     "description": "Chip a trouvé quelque chose près de la porte de Zed… Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "あの赤いライトは何？🔴 #shorts",
+     "description": "チップがゼッドのドアで何かを見つけた…本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "저 빨간 불빛은 뭐지? 🔴 #shorts",
+     "description": "칩이 제드의 문 앞에서 뭔가를 찾았어요… 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Was ist das für ein rotes Licht? 🔴 #shorts",
+     "description": "Chip hat an Zeds Tür etwas gefunden… Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
