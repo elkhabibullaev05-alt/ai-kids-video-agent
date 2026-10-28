@@ -25,6 +25,9 @@ Now: 40 subs, ~2,000 views/day, Shorts stayed 35 %. Target 31 Jan: 1,000 subs + 
 - [ ] (competitors 28 Oct) Empty 1–5 list that fills on each reveal, #1 last ("Wait for #1"); total 25–35 s; first clip at 0 s.
 - [ ] (competitors 28 Oct) Titles: "Ranking Best <specific object> Fails" (trampoline, pool, treadmill) — our "Ranking…" titles already win; drop "Which…".
 
+- [x] Retention fix 28 Oct 18:40 (owner "ishla shu ustida"): rank.py now rejects off-topic clips (a "how to draw a cat" tutorial was #4 in "Cat Fails"), needs a funny/fail word in the clip title, prefers 720p+ and 2016+ clips, no duplicate labels ("Cat Chaos" x3). Backup rank.py.bak_20261028d.
+- [ ] Next: measure "stayed to watch" for Shorts made after 28 Oct 19:00 vs before (Studio → Content → Shorts) in the daily run.
+
 ## Priority 1 — Roblox Top 10 Daily (`roblox`, local `robloxtube` + repo `roblox/` Blocky Quest)
 Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 days. Target: 1,000 subs + 4,000 h.
 - [ ] Long videos start at 0:00 in gameplay with the #20 entry (no intro/title card); 25–30 s per entry with on-screen stats.
@@ -60,6 +63,8 @@ Now: 5 subs, ~940 views/day, Shorts stayed 32 %, ~1 sub / 2,100 views. Education
 - [ ] (competitors 28 Oct) Famous/debated matchups (lion vs tiger, gorilla, chimp, grizzly vs hippo); strong angle ("NOT EVEN CLOSE", "…Is A LIE") — Creature Challenge, KO MATION (9.8M).
 - [ ] (competitors 28 Oct) Thumbnails: colour-washed ink faces of both animals on a red/blue split + 2–4 bold words (not pale sketch + tiny caption).
 - [ ] (competitors 28 Oct) Long videos: weekly 4–6 min ink "tournament / battle royale" with 8–16 animal brackets (explainers got 0 views).
+
+- [x] 28 Oct: outro shows the verdict on screen ("MY PICK: BEAR" in the winner's colour + "AGREE? COMMENT 1 OR 2") instead of "WHO WINS? 1=… 2=…" (fight.py/animals.py, backups .bak_20261028d).
 
 ## Priority 2 — Money Story Daily (`money`, local `moneytube`)
 Now: 0 subs, ~36 views/day, Shorts stayed 9.8 %. Highest RPM niche (finance $15–25 CPM).
