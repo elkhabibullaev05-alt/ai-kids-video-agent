@@ -50,8 +50,8 @@ PlayResY: {H}
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Lyric,Poppins,74,&H0000E8FF&,&H00FFFFFF&,&H0030A0FF&,&H80000000&,1,0,0,0,100,100,1,0,1,7,3,2,80,80,60,1
-Style: Card,Poppins,150,&H00FFFFFF&,&H00FFFFFF&,&H002050FF&,&H80000000&,1,0,0,0,100,100,2,0,1,12,6,5,60,60,60,1
+Style: Lyric,Poppins,92,&H0000E8FF&,&H00FFFFFF&,&H0030A0FF&,&H80000000&,1,0,0,0,100,100,1,0,1,7,3,2,80,80,60,1
+Style: Card,Poppins,150,&H00FFFFFF&,&H00FFFFFF&,&H002050FF&,&H80000000&,1,0,0,0,100,100,2,0,1,12,6,8,60,60,70,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
