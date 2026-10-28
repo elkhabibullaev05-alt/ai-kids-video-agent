@@ -249,6 +249,14 @@ def _shape(key, kind, s, ch):
                 bpy.ops.mesh.primitive_cone_add(radius1=0.04 * s, depth=0.45 * s, location=(sx * 1.35 * s + fx * s, -0.95 * s, 3.75 * s), rotation=(math.radians(-60), 0, 0)); parent(add(_o(), mat("claw", (0.7, 0.7, 0.75), 0.2, 1.0)), o)
         o.location.z += 0.35 * s
         return o, 2.7 * s, 1.4 * s, 8.0 * s, -0.4 * s, 6.1 * s
+    if kind == "watcher":  # Dark Watcher of Big Sur: very tall featureless black silhouette, long cloak, brimmed hat, walking stick (front = -y)
+        blk = mat(f"wt_{key}", col, 0.98)
+        bpy.ops.mesh.primitive_cone_add(vertices=16, radius1=1.0 * s, radius2=0.42 * s, depth=5.2 * s, location=(0, 0, 2.6 * s)); o = add(_o(), blk)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.5 * s, location=(0, 0, 5.55 * s)); parent(add(_o(), blk), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=1.05 * s, depth=0.08 * s, location=(0, 0, 5.85 * s)); parent(add(_o(), blk), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.5 * s, depth=0.75 * s, location=(0, 0, 6.25 * s)); parent(add(_o(), blk), o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.06 * s, depth=5.4 * s, location=(1.05 * s, -0.2 * s, 2.7 * s)); parent(add(_o(), blk), o)
+        return o, 2.0 * s, 2.0 * s, 6.6 * s, -0.5 * s, 5.55 * s
     if kind == "greyman":  # Grey Man of Ben Macdui (Am Fear Liath Mor): very tall grey hooded shape half lost in the mist, long arms, long legs, pale grey face (front = -y)
         fur = mat(f"gm_{key}", col, 0.95, 0, 0.18)
         bpy.ops.mesh.primitive_cone_add(vertices=12, radius1=1.1 * s, radius2=0.75 * s, depth=4.2 * s, location=(0, 0, 2.6 * s)); o = add(_o(), fur)
@@ -292,8 +300,10 @@ def make_char(key, ch):
     mo.scale = (1.3, 0.3, 0.25); mo.parent = body
     if kind == "wickeater":
         mo.scale = (4.0, 0.3, 0.6)
-    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman"):
+    if kind in ("horseman", "winged", "demon", "flatwoods", "greyman", "watcher"):
         mo.scale = TINY
+    if kind == "watcher":
+        for e_ in eyes: e_.scale = TINY
     hat = bpy.data.objects.new(key + "_hat", None); sc.collection.objects.link(hat); hat.parent = body; hat.scale = TINY; hat.keyframe_insert("scale", frame=1)
     hx, hy = ch["home"]
     root.location = (hx, hy, 0)
