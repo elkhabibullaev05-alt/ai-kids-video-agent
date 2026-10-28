@@ -111,7 +111,7 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 ## Growth plan 2026-10-28 — see cloud/growth/PLAN.md (Dough Bros section)
 - More "Would YOU…?" dare Shorts (78–87 % viewed); never "Trust X or Y?" openers (29 %).
 - Long episodes = 8–10 min compilations of the best mini-stories (kids watch longer compilations).
-- Keep Made for Kids = Yes.
+- Made-for-Kids flag: keep exactly what UPLOAD.md sets (correction 28 Oct: the earlier "Keep Made for Kids = Yes" line was a mistake — the channel bible says 13+, not child-directed).
 
 ## Competitor format 2026-10-28 (applies from the next run)
 **Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.

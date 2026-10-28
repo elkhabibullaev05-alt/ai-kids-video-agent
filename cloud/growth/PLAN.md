@@ -109,7 +109,7 @@ Now: 18 subs, ~180 views/day, long CTR 1.39 %. Best title: "How Did a Cheap Team
 - [ ] (competitors 28 Oct) Thumbnail: one real recognisable object/place + ≤ 3 huge words + red arrow (not yellow bg + stick figure).
 - [ ] (competitors 28 Oct) Long videos 12–15 min in list / year-by-year structure (Paint Explainer, Infographics Show).
 
-## Priority 3 — Dough Bros (`dough`, repo `doughbros/`, kids)
+## Priority 3 — Dough Bros (`dough`, repo `doughbros/`, 13+ per bible — flag as UPLOAD.md)
 Now: 15 subs, ~540 views/day; "Would YOU…?" Shorts 78–87 % viewed. Agent log stale since 21 Oct — check why.
 - [ ] Find and fix why the hub shows no new episode since 21 Oct.
 - [ ] More "Would YOU…?" dare Shorts; drop "Trust X or Y?" openers (29 %).
