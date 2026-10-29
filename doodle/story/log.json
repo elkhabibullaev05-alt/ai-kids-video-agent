@@ -680,9 +680,62 @@
           "rek_ball": 96
         }
       ]
+    },
+    {
+      "episode": 18,
+      "date": "2026-10-29",
+      "topic": "FTC + 20 states sue Dollar General (Oct 26, 2026, M.D. Tenn.) for charging more at the register than shelf/tag/ad prices: FTC undercover buys 4/4 overcharged (Cleveland 13/58 = 22.4%, net +$3.25); 29,265 'Did Not Honor Marked Price' complaints Jan 2023-Mar 2026; state inspection fails (KY 23.97% of 242, KS 39%+, NM 53%, UT Nephi 15/19); 7 settlements/6 states >$6M; DG: goal 100% accuracy, will defend",
+      "title": "20 States vs. Dollar General: Who Pays the Extra Dollar?",
+      "minutes": 10.7,
+      "sources": [
+        "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-state-partners-sue-dollar-general-charging-consumers-more-advertised-many-products",
+        "https://www.ftc.gov/system/files/ftc_gov/pdf/DollarGeneral-Complaint.pdf",
+        "https://www.cbsnews.com/news/dollar-general-sued-ftc-overcharging-prices",
+        "https://fortune.com/2026/10/28/dollar-general-ftc-lawsuit-overcharging-shelf-prices",
+        "https://www.consumeraffairs.com/news/ftc-and-20-states-sue-dollar-general-over-alleged-overcharges-102726.html"
+      ],
+      "rek_ball": 87,
+      "uploads": []
     }
   ],
-  "pending_uploads": [],
+  "pending_uploads": [
+    {
+      "episode": 18,
+      "created": "2026-10-29T07:25:00Z",
+      "script": "doodle/scripts/ep018.json",
+      "why": "2026-10-29 06:54Z run: computer not connected to the bridge (get_device_info failed), nothing uploaded.",
+      "hosted": "files already on orphan branch uploads-doodle: doodle_ep018.mp4 (long, rek 87), doodle_ep018_thumb.png, doodle_ep018_s1_d.mp4, doodle_ep018_s2_d.mp4, doodle_ep018_subs_en.srt, doodle_ep018_translations.json (es pt ar fr ja ko de title+desc), doodle_ep018_upload.txt. Do NOT force-push that branch before these are uploaded (add new files on top instead).",
+      "rebuild": "python3 engine/render.py scripts/ep018.json (long scored 87 without --kuchaytir, 68MB)",
+      "items": [
+        {
+          "kind": "long",
+          "title": "20 States vs. Dollar General: Who Pays the Extra Dollar?",
+          "file": "doodle_ep018.mp4",
+          "thumb": "doodle_ep018_thumb.png",
+          "rek_ball": 87,
+          "slot": "2026-10-30T21:15:00Z",
+          "category": "News & Politics"
+        },
+        {
+          "kind": "short",
+          "title": "One Dollar Store Failed 44 Price Checks #shorts",
+          "file": "doodle_ep018_s1_d.mp4",
+          "rek_ball": 100,
+          "slot": "2026-10-30T12:45:00Z",
+          "make": "make_short.py out/ep018/ep018.mp4 out/ep018/ep018_s1.mp4 --start 257.4 --dur 30.0 --top 'One store failed 44 price checks' then rek_ball --kuchaytir"
+        },
+        {
+          "kind": "short",
+          "title": "4 Secret Shopping Trips, 4 Overcharges #shorts",
+          "file": "doodle_ep018_s2_d.mp4",
+          "rek_ball": 100,
+          "slot": "2026-10-30T18:45:00Z",
+          "make": "make_short.py out/ep018/ep018.mp4 out/ep018/ep018_s2.mp4 --start 119.2 --dur 28.8 --top '4 secret shops. 4 overcharges.' then rek_ball --kuchaytir"
+        }
+      ],
+      "note": "news from Oct 26 -> ages out after 2026-10-30 (4-day rule). If the 30 Oct slots have passed, take the earliest free slots on Oct 30 or skip as too old."
+    }
+  ],
   "translations_pending": [
     {
       "video_id": "cz-Ik1KrQ14",
@@ -879,8 +932,5 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-10-29T11:00:00Z",
-    "by": "session_01DAYK5UqYTVRP5ms4ru3J22"
-  }
+  "lock": null
 }
