@@ -84,3 +84,6 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 **Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer. (Doodle Desk IS verified: long videos may be 12–15 min, custom thumbnails allowed.)
 - Stop daily news explainers (Fed, polls, Medicare got 1–5 views). Evergreen underdog/money stories: "How a $X <small> Beat a $Y <giant>", or list videos "The N Most … / Every …" with a year-by-year or list structure, 12–15 min.
 - First line = the first item / the conflict, no preamble. Thumbnail: one real recognisable object, ≤ 3 huge words, red arrow, high contrast.
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Topic mix: if the last 3 episodes were all news, the next topic is an evergreen underdog story (someone small beating something big), not news.

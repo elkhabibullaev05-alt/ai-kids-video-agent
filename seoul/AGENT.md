@@ -62,3 +62,6 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 - Weekly mix: YES (see plan above). Title: "Seoul Night Drive 🌃 K-Pop Bass House Mix | <situation> (Vol. N)" with chapters mm:ss — Song (style); one big cover with the mix name; a new girl/outfit/place cover for every mix.
 - Background girl: a **different** fictional adult woman every song and every mix (owner chose this over one recurring character). Keep the tasteful-fashion rule and the synthetic-content disclosure.
 - Not chosen for now (don't do unless the owner asks): situation-style song titles, animated backgrounds/on-screen lyrics, 2–3 Shorts per song.
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Thumbnail: bright, high-contrast colours plus one short lyric line, nothing else.

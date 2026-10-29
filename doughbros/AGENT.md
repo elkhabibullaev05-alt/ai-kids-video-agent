@@ -123,3 +123,6 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 
 ## Owner decision 2026-10-28 — audience
 - Dough Bros = **Not made for kids** (13+ general audience), exactly as UPLOAD.md sets (VIDEO_MADE_FOR_KIDS_NOT_MFK) and the bible says. The earlier "Keep Made for Kids = Yes" lines and the CONFLICT notes above are resolved — do not flip the flag. Safety checks must expect "No" for this channel.
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Shorts titles only in the "Would YOU…?" form. "Trust X or Y?" titles are banned.

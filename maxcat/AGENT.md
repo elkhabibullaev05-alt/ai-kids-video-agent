@@ -15,3 +15,6 @@ Rek-ball ≥ 85 (`../tools/rek_ball.py`). Upload with `UPLOAD.md` — **Made for
 SendUserFile: 1080p preview, thumbnail, Shorts; short Uzbek message with titles, scores and Bishkek times.
 
 Never type passwords, never add accounts, never change channel settings; upload only to Max the Curious Cat.
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Titles never start with the channel name ("Max the Curious Cat | …"). Start with the story hook; the channel name may follow later or stay out.

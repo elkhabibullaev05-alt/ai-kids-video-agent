@@ -116,3 +116,9 @@ Model: Mr Nightmare (7.2M subs): 20–30 min compilations "3 TRUE … Stories", 
 - Format = Mr Nightmare / Mortis Media: title "3 Terrifying TRUE <setting> Mysteries" (or "… To Fall Asleep To"), never "Ep N ·". Each story standalone (no references to earlier episodes). Open each story with a date + place + the strangest fact in the first 5 s; ambient sound, no title card. Subscribe line in the middle, never before the story.
 - Visual style for new scenes: dark, realistic, desaturated (fog, window at night, shape in a doorway). No cartoon bobble-head characters in the first frame or thumbnail frame.
 - Shorts: open on the shock line at 0 s, end "Full story on the channel".
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Titles: no episode number ("Ep 33", "(Ep 35)") anywhere in the title — Studio says it reads as a series viewers missed the start of.
+- Shorts loop: the last line leads straight back into the first frame, so the Short replays seamlessly.
+- Before every upload, a 4-point check: (1) title < 55 chars with no episode number, (2) the first frame shows the threat, not a title card, (3) the Short's last line loops into its first, (4) the description links the long video.
+- Studio also suggests fewer uploads here (1 long + 2–3 Shorts a week). The owner decides — do not cut the schedule on your own (PLAN.md owner rule).

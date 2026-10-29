@@ -92,3 +92,6 @@ Titles: hook/mystery first, episode number only at the END ("… (Ep 32)"), neve
 - Bring the robot detective Bolt back as the hero of every episode (the "Wheelburg" talking-car uploads 25–27 Oct got 0 views); Bolt's face big in the first frame.
 - Title = emotional cry + searchable tail: "<Friend> Is Trapped! Bolt to the Rescue | Car Cartoons for Kids".
 - Each episode ends with a 20–30 s "Bolt's Safety Rule" song/lesson. Weekly compilation **max 14:50**. Seasonal tie-ins (Halloween now).
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- The channel is running (Ep 19 is queued). Every title contains "Bolt" and ends with "| Car Cartoons for Kids".

@@ -107,3 +107,6 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 **Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer.
 - Long ink videos: weekly 4–8 min "tournament / battle royale" with an 8–16 animal bracket (famous animals: lion, tiger, gorilla, grizzly, hippo, croc, great white, orca), max 14:50. Not fact explainers (0 views).
 - Strong angle in titles: "…Is A LIE", "NOT EVEN CLOSE". First frame: both animals charging + "WHO WINS?".
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Shorts: frame 0 already shows the fact or the number (no build-up), and every title is checked against the channel's existing titles so none is repeated.

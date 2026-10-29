@@ -39,3 +39,6 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 - Cold open: the most dangerous moment, second person, exact time/place ("4:52 p.m., gate B16. The lights go out."). Day 1 starts within 5 s. Never "My name is Milo… stay till the end".
 - Series titles "<Story> Ep. N: <moment> (Day X)"; ~10–14 min (max 14:50); named side characters with their own voices; end screen line pointing to the next episode.
 - Thumbnail frame: huge red "DAY X", the threat filling the frame, or a "DAY 1 | DAY N" split.
+
+## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
+- Thumbnail: a huge red "DAY N" and the threat filling half of the frame.

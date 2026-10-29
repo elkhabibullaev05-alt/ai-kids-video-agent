@@ -152,3 +152,9 @@ Now: 0 subs, 6 views total, no new episode since 20 Oct.
 - [ ] Phone-verify the accounts (custom thumbnails, Related video links, more uploads/day). One number = 2 accounts/year: first eldorbekkhabibulaev (Funny, Money) and eldorbekkhabibullaev44 (Roblox, Calm Rain).
 - [ ] Run `1_YOUTUBE_ULASH.bat` once in each local agent folder showing "YouTube ulanmagan".
 - [ ] Approve making Seoul's old free-plan songs private before the YPP application.
+
+## 2026-10-29 Ask Studio
+- Main problem on every channel: Shorts are swiped away in the first 1–2 s (Funny 35 %, Roblox 40 %, Calm Rain 9 % stay). Fix = the hook/fact in frame 0, no intro.
+- Cloud-channel rules from today's run were rebuilt into hollow, doodle, bolt, doughbros, maxcat, ink (Wild Sketchbook), seoul, milo AGENT files (the run's push got 403).
+- Roblox (local robloxtube agent): drop dates like "(October 27)" from titles — they make the video look old.
+- Studio suggests fewer uploads for Hollowmere and Roblox — owner decides (rule above).
