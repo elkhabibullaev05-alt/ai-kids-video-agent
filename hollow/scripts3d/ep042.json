@@ -1,0 +1,947 @@
+{
+ "title": "She Heard Footsteps by Her Bed. Who? (Ep 42)",
+ "description": "A true haunting from Hinton Ampner, Hampshire (1765-1771): footsteps, voices in the walls and a man in brown. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "village",
+  "fog": 0.05,
+  "eyes": 0,
+  "moonlight": 12
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "mary": {
+   "name": "Mary Ricketts",
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0,
+   "color": [
+    0.32,
+    0.2,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.8,
+   "home": [
+    -3.2,
+    8.2
+   ]
+  },
+  "nurse": {
+   "name": "The nurse",
+   "voice": "bf_isabella",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.5,
+    0.48,
+    0.42
+   ],
+   "kind": "human",
+   "size": 0.78,
+   "home": [
+    3.2,
+    8.2
+   ]
+  },
+  "jervis": {
+   "name": "Captain John Jervis",
+   "voice": "bm_lewis",
+   "speed": 0.95,
+   "pitch": -1,
+   "color": [
+    0.08,
+    0.1,
+    0.25
+   ],
+   "kind": "human",
+   "size": 0.92,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "lutt": {
+   "name": "Captain Luttrell",
+   "voice": "am_adam",
+   "speed": 1.0,
+   "pitch": 0,
+   "color": [
+    0.3,
+    0.1,
+    0.08
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -34,
+    34
+   ]
+  },
+  "drab": {
+   "name": "The man in brown",
+   "voice": "bm_daniel",
+   "speed": 0.8,
+   "pitch": -4,
+   "color": [
+    0.2,
+    0.15,
+    0.09
+   ],
+   "kind": "human",
+   "size": 0.95,
+   "home": [
+    -36,
+    40
+   ]
+  },
+  "silk": {
+   "name": "The woman in silk",
+   "voice": "bf_alice",
+   "speed": 0.9,
+   "pitch": -1,
+   "color": [
+    0.75,
+    0.75,
+    0.8
+   ],
+   "kind": "lady",
+   "size": 0.85,
+   "home": [
+    36,
+    40
+   ],
+   "ghost": true
+  },
+  "girl": {
+   "name": "A little girl",
+   "voice": "af_sarah",
+   "speed": 1.08,
+   "pitch": 2,
+   "color": [
+    0.4,
+    0.3,
+    0.45
+   ],
+   "kind": "human",
+   "size": 0.6,
+   "home": [
+    -40,
+    44
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "door",
+   "color": [
+    0.25,
+    0.17,
+    0.1
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.4,
+   "at": [
+    -6,
+    12,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "bed",
+   "color": [
+    0.55,
+    0.45,
+    0.2
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 0.9,
+   "at": [
+    1.8,
+    11.0,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "candle",
+   "color": [
+    1.0,
+    0.85,
+    0.5
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.35,
+   "at": [
+    -0.8,
+    9.2,
+    1.4
+   ]
+  },
+  {
+   "type": "box",
+   "id": "floorbox",
+   "color": [
+    0.18,
+    0.12,
+    0.07
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.6,
+   "at": [
+    3.5,
+    8.0,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "skull",
+   "color": [
+    0.92,
+    0.9,
+    0.82
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.3,
+   "at": [
+    3.5,
+    8.0,
+    0.9
+   ]
+  },
+  {
+   "type": "box",
+   "id": "letter",
+   "color": [
+    0.9,
+    0.88,
+    0.8
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -3.5,
+    8.5,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "mary",
+   "say": "Footsteps. Heavy footsteps, right beside my bed. And there is nobody there.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "eyes_big"
+    ],
+    [
+     "drab",
+     "to:-0.5,10.4,0"
+    ],
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMEONE IS IN MY ROOM"
+  },
+  {
+   "who": "narr",
+   "say": "For six years, this English manor would not let its family sleep.",
+   "cam": "wide",
+   "do": [
+    [
+     "bed",
+     "bounce"
+    ],
+    [
+     "drab",
+     "to_home"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "6 YEARS. NO SLEEP."
+  },
+  {
+   "who": "narr",
+   "say": "This is a true story. Hinton Ampner, Hampshire, England. The year, seventeen sixty-five.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "HAMPSHIRE, 1765"
+  },
+  {
+   "who": "narr",
+   "say": "Mary Ricketts rented the old manor house with her husband, three children and their servants.",
+   "cam": "two:mary,nurse",
+   "do": [
+    [
+     "mary",
+     "turn:front"
+    ],
+    [
+     "nurse",
+     "turn:mary"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "A NEW HOME"
+  },
+  {
+   "who": "mary",
+   "say": "Such a fine old house, and so peaceful. The children will love it here.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "happy"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SO PEACEFUL"
+  },
+  {
+   "who": "narr",
+   "say": "In the daytime it was peaceful. At night, the doors began to slam.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ],
+    [
+     "mary",
+     "jump"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "DOORS SLAMMING"
+  },
+  {
+   "who": "narr",
+   "say": "The servants searched every room. Every lock was closed. They found no one.",
+   "cam": "wide",
+   "do": [
+    [
+     "nurse",
+     "to:-5,11,0"
+    ],
+    [
+     "nurse",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NOBODY THERE"
+  },
+  {
+   "who": "nurse",
+   "say": "Madam! A man just walked into your bedroom. A man in dull brown clothes!",
+   "cam": "close:nurse",
+   "do": [
+    [
+     "nurse",
+     "shake"
+    ],
+    [
+     "drab",
+     "to:-6,12.5,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A MAN IN BROWN"
+  },
+  {
+   "who": "narr",
+   "say": "They ran after him into the Yellow Room, her bedroom. It was empty.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "drab",
+     "to_home"
+    ],
+    [
+     "mary",
+     "to:-4.5,11,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE YELLOW ROOM"
+  },
+  {
+   "who": "narr",
+   "say": "Other servants saw a woman in a rustling silk dress, gliding along the passage.",
+   "cam": "close:silk",
+   "do": [
+    [
+     "silk",
+     "to:4.5,12,0"
+    ],
+    [
+     "silk",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A WOMAN IN SILK"
+  },
+  {
+   "who": "narr",
+   "say": "Then came the moans. Low, dismal moans in the dark, night after night.",
+   "cam": "wide",
+   "do": [
+    [
+     "silk",
+     "to_home"
+    ],
+    [
+     "candle",
+     "spin"
+    ],
+    [
+     "nurse",
+     "to_home"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE MOANS"
+  },
+  {
+   "who": "narr",
+   "say": "In seventeen sixty-nine, her husband sailed far away to Jamaica, on business.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "to_home"
+    ],
+    [
+     "mary",
+     "sad"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "SHE WAS ALONE"
+  },
+  {
+   "who": "mary",
+   "say": "So now it is only me, my children, and whatever walks these halls.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "sad"
+    ],
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT WALKS THESE HALLS?"
+  },
+  {
+   "who": "narr",
+   "say": "One night, heavy plodding footsteps crossed her room and stopped beside her bed.",
+   "cam": "two:mary,drab",
+   "do": [
+    [
+     "drab",
+     "to:0.2,10.2,0"
+    ],
+    [
+     "bed",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "PLOD. PLOD. PLOD."
+  },
+  {
+   "who": "mary",
+   "say": "Who is there? Answer me!",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "shake"
+    ],
+    [
+     "mary",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO IS THERE?"
+  },
+  {
+   "who": "narr",
+   "say": "Nothing answered. The footsteps simply stopped.",
+   "cam": "wide",
+   "do": [
+    [
+     "drab",
+     "to_home"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SILENCE"
+  },
+  {
+   "who": "narr",
+   "say": "Then the voices began. A murmur inside the walls, moving from room to room.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "spin"
+    ],
+    [
+     "candle",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "VOICES IN THE WALLS"
+  },
+  {
+   "who": "narr",
+   "say": "Sometimes the murmur turned into real words. Nobody could ever say whose.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "turn:front"
+    ],
+    [
+     "mary",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHOSE VOICE?"
+  },
+  {
+   "who": "narr",
+   "say": "And sometimes a rushing sound fell on a room, as fast and hard as a falling wall.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle",
+     "spin"
+    ],
+    [
+     "bed",
+     "jump"
+    ],
+    [
+     "mary",
+     "jump"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "A RUSHING SOUND"
+  },
+  {
+   "who": "narr",
+   "say": "If you like true stories like this one, subscribe. Because now, her brother arrives.",
+   "cam": "wide",
+   "do": [
+    [
+     "jervis",
+     "to:-5,9.5,0"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Mary's brother was Captain John Jervis of the Royal Navy, later a famous admiral.",
+   "cam": "close:jervis",
+   "do": [
+    [
+     "jervis",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "HER BROTHER, THE CAPTAIN"
+  },
+  {
+   "who": "jervis",
+   "say": "Ghosts? Nonsense, sister. I will catch whoever is playing these tricks.",
+   "cam": "two:jervis,mary",
+   "do": [
+    [
+     "jervis",
+     "laugh"
+    ],
+    [
+     "mary",
+     "to:-1.5,9,0"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "I WILL CATCH IT"
+  },
+  {
+   "who": "narr",
+   "say": "He and his friend, Captain Luttrell, sat up night after night, armed and waiting.",
+   "cam": "two:jervis,lutt",
+   "do": [
+    [
+     "lutt",
+     "to:-2.5,11,0"
+    ],
+    [
+     "lutt",
+     "turn:front"
+    ],
+    [
+     "jervis",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "ARMED AND WAITING"
+  },
+  {
+   "who": "narr",
+   "say": "They heard groans. Banging. Dragging footsteps in the empty rooms.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ],
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "GROANS. BANGING."
+  },
+  {
+   "who": "lutt",
+   "say": "There! In the passage! Someone is running!",
+   "cam": "close:lutt",
+   "do": [
+    [
+     "lutt",
+     "jump"
+    ],
+    [
+     "drab",
+     "to:-7,13,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THERE!"
+  },
+  {
+   "who": "narr",
+   "say": "They ran out with candles. The passage was empty. Nobody was ever caught.",
+   "cam": "wide",
+   "do": [
+    [
+     "jervis",
+     "to:-6,12,0"
+    ],
+    [
+     "lutt",
+     "to:-5,12.6,0"
+    ],
+    [
+     "drab",
+     "to_home"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "EMPTY"
+  },
+  {
+   "who": "narr",
+   "say": "Once, Jervis even heard a gunshot inside the house. Nobody had fired.",
+   "cam": "close:jervis",
+   "do": [
+    [
+     "jervis",
+     "eyes_big"
+    ],
+    [
+     "jervis",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "A GUNSHOT?"
+  },
+  {
+   "who": "jervis",
+   "say": "Sister, pack your things. You are not staying here one more night.",
+   "cam": "two:jervis,mary",
+   "do": [
+    [
+     "jervis",
+     "turn:mary"
+    ],
+    [
+     "mary",
+     "sad"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "LEAVE. NOW."
+  },
+  {
+   "who": "narr",
+   "say": "In seventeen seventy-one, Mary Ricketts gave up the house and left for good.",
+   "cam": "wide",
+   "do": [
+    [
+     "mary",
+     "to_home"
+    ],
+    [
+     "jervis",
+     "to_home"
+    ],
+    [
+     "lutt",
+     "to_home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "SHE LEFT, 1771"
+  },
+  {
+   "who": "narr",
+   "say": "Years later, one writer claimed a maid had played tricks. Mary never believed it.",
+   "cam": "close:mary",
+   "do": [
+    [
+     "mary",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A TRICK?"
+  },
+  {
+   "who": "narr",
+   "say": "No maid could explain the voices, the rushing sound, or the man in brown.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NO ANSWER"
+  },
+  {
+   "who": "narr",
+   "say": "In seventeen ninety-three, the old house was pulled down.",
+   "cam": "wide",
+   "do": [
+    [
+     "door",
+     "hide"
+    ],
+    [
+     "bed",
+     "hide"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "PULLED DOWN, 1793"
+  },
+  {
+   "who": "narr",
+   "say": "Under the floor, the workmen found a box. Inside it was a small skull.",
+   "cam": "prop:floorbox",
+   "do": [
+    [
+     "floorbox",
+     "show"
+    ],
+    [
+     "skull",
+     "show"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A SKULL UNDER THE FLOOR"
+  },
+  {
+   "who": "narr",
+   "say": "Some said it was a monkey's skull. Nobody ever found out why it was there.",
+   "cam": "prop:skull",
+   "do": [
+    [
+     "skull",
+     "spin"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHY WAS IT THERE?"
+  },
+  {
+   "who": "narr",
+   "say": "A new house was built a short walk away. It still stands today.",
+   "cam": "wide",
+   "do": [
+    [
+     "skull",
+     "hide"
+    ],
+    [
+     "floorbox",
+     "hide"
+    ],
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "IT STILL STANDS"
+  },
+  {
+   "who": "narr",
+   "say": "So remember the rule of Hinton Ampner. Never answer the voices in the walls.",
+   "cam": "wide",
+   "do": [
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER ANSWER THE WALLS"
+  },
+  {
+   "who": "narr",
+   "say": "Years later, a little girl lies awake in the dark.",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "to:-1.5,9.5,0"
+    ],
+    [
+     "bed",
+     "show"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "YEARS LATER..."
+  },
+  {
+   "who": "girl",
+   "say": "Hello? Is somebody there?",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "eyes_big"
+    ],
+    [
+     "girl",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "HELLO?"
+  },
+  {
+   "who": "narr",
+   "say": "Plod. Plod. Plod. The footsteps stop beside her bed. And something answers.",
+   "cam": "two:girl,drab",
+   "do": [
+    [
+     "drab",
+     "to:0.2,10.2,0"
+    ],
+    [
+     "girl",
+     "jump"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT ANSWERED"
+  },
+  {
+   "who": "drab",
+   "say": "Yes. I have always been here.",
+   "cam": "close:drab",
+   "do": [
+    [
+     "drab",
+     "turn:girl"
+    ],
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "I HAVE ALWAYS BEEN HERE"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:girl,drab",
+   "do": [
+    [
+     "girl",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
