@@ -467,6 +467,8 @@ def main():
         items, err = produce(json.load(open(jobs[0])), jobs[0])
         log("QUICK result:", err or [(i["kind"], i["file"], i["ball"]) for i in items])
         return
+    if CFG.get("stopped"):  # channel's worker switched off by the owner (roblox Blocky Quest, 2026-10-29)
+        status("ok", note="stopped: " + str(CFG["stopped"])[:200]); push("worker stopped", [RES]); return
     unpublish_wrong()
     status("sync")
     sync_from_youtube(st); save_state(st)
