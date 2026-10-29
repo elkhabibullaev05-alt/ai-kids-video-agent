@@ -1,0 +1,1024 @@
+{
+ "title": "Who Picked the Glass From Her Window?",
+ "description": "A recorded English legend: the Croglin Grange 'vampire' of Cumberland, told as true in 1874 and written down by Augustus Hare. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "graveyard",
+  "fog": 0.05,
+  "eyes": 0,
+  "moonlight": 16
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "sister": {
+   "name": "The sister",
+   "voice": "bf_emma",
+   "speed": 0.97,
+   "pitch": 0,
+   "color": [
+    0.55,
+    0.5,
+    0.6
+   ],
+   "kind": "human",
+   "size": 0.78,
+   "home": [
+    -2.2,
+    8.6
+   ]
+  },
+  "bro1": {
+   "name": "Her elder brother",
+   "voice": "bm_lewis",
+   "speed": 0.97,
+   "pitch": -1,
+   "color": [
+    0.15,
+    0.18,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "bro2": {
+   "name": "Her younger brother",
+   "voice": "am_adam",
+   "speed": 1.02,
+   "pitch": 0,
+   "color": [
+    0.3,
+    0.16,
+    0.1
+   ],
+   "kind": "human",
+   "size": 0.88,
+   "home": [
+    -34,
+    34
+   ]
+  },
+  "thing": {
+   "name": "The thing",
+   "voice": "bm_daniel",
+   "speed": 0.78,
+   "pitch": -5,
+   "color": [
+    0.22,
+    0.14,
+    0.07
+   ],
+   "kind": "human",
+   "size": 0.98,
+   "home": [
+    9,
+    22
+   ]
+  },
+  "writer": {
+   "name": "Charles Harper",
+   "voice": "am_michael",
+   "speed": 0.98,
+   "pitch": -1,
+   "color": [
+    0.2,
+    0.2,
+    0.22
+   ],
+   "kind": "human",
+   "size": 0.86,
+   "home": [
+    -38,
+    40
+   ]
+  },
+  "girl": {
+   "name": "A girl",
+   "voice": "af_sarah",
+   "speed": 1.06,
+   "pitch": 2,
+   "color": [
+    0.4,
+    0.3,
+    0.45
+   ],
+   "kind": "human",
+   "size": 0.62,
+   "home": [
+    -42,
+    44
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "window",
+   "color": [
+    0.12,
+    0.14,
+    0.2
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 0.55,
+   "at": [
+    1.4,
+    10.6,
+    1.0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "pane",
+   "color": [
+    0.75,
+    0.85,
+    1.0
+   ],
+   "glow": 2,
+   "visible": true,
+   "scale": 0.2,
+   "at": [
+    1.4,
+    10.2,
+    1.25
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "eyeL",
+   "color": [
+    1.0,
+    0.35,
+    0.05
+   ],
+   "glow": 6,
+   "visible": true,
+   "scale": 0.12,
+   "at": [
+    7.6,
+    21,
+    2.2
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "eyeR",
+   "color": [
+    1.0,
+    0.35,
+    0.05
+   ],
+   "glow": 6,
+   "visible": true,
+   "scale": 0.12,
+   "at": [
+    8.2,
+    21,
+    2.2
+   ]
+  },
+  {
+   "type": "box",
+   "id": "wall",
+   "color": [
+    0.3,
+    0.3,
+    0.28
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    6,
+    15,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "vault",
+   "color": [
+    0.22,
+    0.21,
+    0.2
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 2.2,
+   "at": [
+    -5.5,
+    14,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "coffin",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.8,
+   "at": [
+    -4.5,
+    11.5,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "candle",
+   "color": [
+    1.0,
+    0.85,
+    0.5
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 0.3,
+   "at": [
+    -1.0,
+    9.3,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  },
+  {
+   "type": "box",
+   "id": "book",
+   "color": [
+    0.5,
+    0.12,
+    0.1
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -3.5,
+    8.5,
+    1.4
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "sister",
+   "say": "Something is scratching at my window. And it is picking the glass out.",
+   "cam": "two:sister,thing",
+   "do": [
+    [
+     "thing",
+     "to:2.7,11.8,0"
+    ],
+    [
+     "pane",
+     "spin"
+    ],
+    [
+     "sister",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT'S AT THE WINDOW"
+  },
+  {
+   "who": "narr",
+   "say": "Scratch. Scratch. A long fingernail, pulling the lead from around one little pane.",
+   "cam": "prop:pane",
+   "do": [
+    [
+     "pane",
+     "bounce"
+    ],
+    [
+     "window",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SCRATCH. SCRATCH."
+  },
+  {
+   "who": "narr",
+   "say": "This story was told as true by a captain in eighteen seventy-four. Cumberland, England.",
+   "cam": "wide",
+   "do": [
+    [
+     "thing",
+     "to_home"
+    ],
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "CUMBERLAND, ENGLAND"
+  },
+  {
+   "who": "narr",
+   "say": "The writer Augustus Hare wrote it down. People still argue about it today.",
+   "cam": "prop:book",
+   "do": [
+    [
+     "book",
+     "show"
+    ],
+    [
+     "book",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "TOLD AS TRUE"
+  },
+  {
+   "who": "narr",
+   "say": "The house was called Croglin Grange. One storey, low and old, beside a churchyard.",
+   "cam": "wide",
+   "do": [
+    [
+     "book",
+     "hide"
+    ],
+    [
+     "wall",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "CROGLIN GRANGE"
+  },
+  {
+   "who": "narr",
+   "say": "Two brothers and their sister rented it. They loved how quiet it was.",
+   "cam": "two:sister,bro1",
+   "do": [
+    [
+     "bro1",
+     "to:-5,9.6,0"
+    ],
+    [
+     "bro2",
+     "to:-6.8,10.4,0"
+    ],
+    [
+     "bro1",
+     "turn:sister"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "SO QUIET"
+  },
+  {
+   "who": "bro1",
+   "say": "No neighbours, no noise. Only the church and the graves next door.",
+   "cam": "close:bro1",
+   "do": [
+    [
+     "bro1",
+     "happy"
+    ],
+    [
+     "bro2",
+     "laugh"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "ONLY THE GRAVES"
+  },
+  {
+   "who": "narr",
+   "say": "One hot summer night, the sister could not sleep. She sat up by her window.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "bro1",
+     "to_home"
+    ],
+    [
+     "bro2",
+     "to_home"
+    ],
+    [
+     "sister",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SHE COULDN'T SLEEP"
+  },
+  {
+   "who": "narr",
+   "say": "Far off, between the trees and the churchyard, she saw two little lights.",
+   "cam": "prop:eyeL",
+   "do": [
+    [
+     "eyeL",
+     "bounce"
+    ],
+    [
+     "eyeR",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "TWO LIGHTS"
+  },
+  {
+   "who": "sister",
+   "say": "Lanterns? At this hour? Who walks among the graves at midnight?",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHO WALKS THERE?"
+  },
+  {
+   "who": "narr",
+   "say": "The lights came closer. They were not lanterns. They were eyes.",
+   "cam": "prop:eyeR",
+   "do": [
+    [
+     "eyeL",
+     "spin"
+    ],
+    [
+     "eyeR",
+     "spin"
+    ],
+    [
+     "thing",
+     "to:6,17,0"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THEY WERE EYES"
+  },
+  {
+   "who": "narr",
+   "say": "A dark figure was crossing the grass. Straight towards her window.",
+   "cam": "two:sister,thing",
+   "do": [
+    [
+     "thing",
+     "to:3,14,0"
+    ],
+    [
+     "eyeL",
+     "hide"
+    ],
+    [
+     "eyeR",
+     "hide"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "COMING CLOSER"
+  },
+  {
+   "who": "narr",
+   "say": "She jumped from her chair and ran for the door. It was locked from the inside.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "to:-4.5,8.2,0"
+    ],
+    [
+     "sister",
+     "shake"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE DOOR WON'T OPEN"
+  },
+  {
+   "who": "narr",
+   "say": "Her fingers shook. The key would not turn. Behind her, the scratching began.",
+   "cam": "prop:window",
+   "do": [
+    [
+     "window",
+     "bounce"
+    ],
+    [
+     "thing",
+     "to:2.7,11.8,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SCRATCHING"
+  },
+  {
+   "who": "narr",
+   "say": "Then the little pane fell inside. A hand reached through and turned the catch.",
+   "cam": "prop:pane",
+   "do": [
+    [
+     "pane",
+     "hide"
+    ],
+    [
+     "window",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A HAND CAME THROUGH"
+  },
+  {
+   "who": "narr",
+   "say": "The window swung open. The thing climbed into her room.",
+   "cam": "two:sister,thing",
+   "do": [
+    [
+     "thing",
+     "to:-1.5,10.2,0"
+    ],
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "IT CAME IN"
+  },
+  {
+   "who": "narr",
+   "say": "Its face was brown and dried, like old leather. Its eyes burned like fire.",
+   "cam": "close:thing",
+   "do": [
+    [
+     "thing",
+     "turn:sister"
+    ],
+    [
+     "thing",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "EYES LIKE FIRE"
+  },
+  {
+   "who": "sister",
+   "say": "Help me! Somebody, help me!",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "shake"
+    ],
+    [
+     "sister",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HELP ME!"
+  },
+  {
+   "who": "narr",
+   "say": "Her brothers broke down the door. The creature fled over the wall into the churchyard.",
+   "cam": "wide",
+   "do": [
+    [
+     "bro1",
+     "to:-4,9.4,0"
+    ],
+    [
+     "bro2",
+     "to:-5.6,10,0"
+    ],
+    [
+     "thing",
+     "to:6,17,0"
+    ],
+    [
+     "wall",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "OVER THE WALL"
+  },
+  {
+   "who": "bro2",
+   "say": "It's gone! Into the graves! I lost it in the dark!",
+   "cam": "close:bro2",
+   "do": [
+    [
+     "bro2",
+     "shake"
+    ],
+    [
+     "thing",
+     "to_home"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "INTO THE GRAVES"
+  },
+  {
+   "who": "narr",
+   "say": "The sister was hurt and frightened, but she lived. The doctors sent her far away to rest.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "sad"
+    ],
+    [
+     "bro1",
+     "turn:sister"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "SHE LIVED"
+  },
+  {
+   "who": "narr",
+   "say": "If you like true legends like this one, subscribe. Because the family came back.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "Months later, they returned to Croglin. The sister said she was not afraid.",
+   "cam": "two:sister,bro1",
+   "do": [
+    [
+     "bro1",
+     "to:-4.5,9.6,0"
+    ],
+    [
+     "sister",
+     "turn:bro1"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THEY CAME BACK"
+  },
+  {
+   "who": "sister",
+   "say": "Lightning does not strike twice. But please, sleep in the room next to mine.",
+   "cam": "close:sister",
+   "do": [
+    [
+     "sister",
+     "turn:front"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SLEEP NEXT DOOR"
+  },
+  {
+   "who": "narr",
+   "say": "Her brothers slept next door, ready, with the window always in sight.",
+   "cam": "two:bro1,bro2",
+   "do": [
+    [
+     "bro2",
+     "to:-6,10.6,0"
+    ],
+    [
+     "bro1",
+     "turn:front"
+    ],
+    [
+     "bro2",
+     "turn:front"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "READY"
+  },
+  {
+   "who": "narr",
+   "say": "For a long time, nothing came. Then, one cold night in March...",
+   "cam": "prop:window",
+   "do": [
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "ONE NIGHT IN MARCH"
+  },
+  {
+   "who": "narr",
+   "say": "Scratch. Scratch. Scratch.",
+   "cam": "prop:pane",
+   "do": [
+    [
+     "pane",
+     "show"
+    ],
+    [
+     "pane",
+     "bounce"
+    ],
+    [
+     "thing",
+     "to:2.7,11.8,0"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "IT CAME BACK"
+  },
+  {
+   "who": "bro1",
+   "say": "It's here! At the window! Quick!",
+   "cam": "close:bro1",
+   "do": [
+    [
+     "bro1",
+     "jump"
+    ],
+    [
+     "bro1",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT'S HERE!"
+  },
+  {
+   "who": "narr",
+   "say": "The brothers rushed out. The creature ran across the grass, limping, and vanished.",
+   "cam": "wide",
+   "do": [
+    [
+     "thing",
+     "to:-5.5,14.5,0"
+    ],
+    [
+     "bro1",
+     "to:-2,12,0"
+    ],
+    [
+     "bro2",
+     "to:-3,12.6,0"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "IT RAN"
+  },
+  {
+   "who": "narr",
+   "say": "It vanished into an old family vault in the churchyard. Nobody had opened it in years.",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "vault",
+     "show"
+    ],
+    [
+     "thing",
+     "to_home"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "THE OLD VAULT"
+  },
+  {
+   "who": "narr",
+   "say": "The next morning, the brothers opened the vault. Every coffin had been broken open, except one.",
+   "cam": "prop:coffin",
+   "do": [
+    [
+     "coffin",
+     "show"
+    ],
+    [
+     "vault",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "EXCEPT ONE"
+  },
+  {
+   "who": "narr",
+   "say": "Inside lay a dried, brown figure. The same face. And a fresh wound in its leg.",
+   "cam": "close:bro2",
+   "do": [
+    [
+     "bro2",
+     "eyes_big"
+    ],
+    [
+     "coffin",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE SAME FACE"
+  },
+  {
+   "who": "narr",
+   "say": "So the story says, they burned it. And the thing never came back.",
+   "cam": "wide",
+   "do": [
+    [
+     "coffin",
+     "hide"
+    ],
+    [
+     "candle",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER CAME BACK"
+  },
+  {
+   "who": "narr",
+   "say": "Fifty years later, the writer Charles Harper went looking for Croglin Grange.",
+   "cam": "close:writer",
+   "do": [
+    [
+     "writer",
+     "to:-2.5,9.2,0"
+    ],
+    [
+     "writer",
+     "turn:front"
+    ],
+    [
+     "vault",
+     "hide"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "1924: THE SEARCH"
+  },
+  {
+   "who": "writer",
+   "say": "There is no Croglin Grange here. And the church has no record of any vault.",
+   "cam": "close:writer",
+   "do": [
+    [
+     "writer",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO SUCH HOUSE?"
+  },
+  {
+   "who": "narr",
+   "say": "Some say the captain made it up. Some say the names were changed. Nobody knows.",
+   "cam": "wide",
+   "do": [
+    [
+     "writer",
+     "to_home"
+    ],
+    [
+     "wall",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "So remember the rule of Croglin. If you see two lights in the trees, close your shutters.",
+   "cam": "prop:window",
+   "do": [
+    [
+     "eyeL",
+     "show"
+    ],
+    [
+     "eyeR",
+     "show"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "CLOSE YOUR SHUTTERS"
+  },
+  {
+   "who": "narr",
+   "say": "Tonight, a girl is staying in an old farmhouse near Croglin. She cannot sleep.",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "to:-2.2,8.8,0"
+    ],
+    [
+     "girl",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "TONIGHT..."
+  },
+  {
+   "who": "girl",
+   "say": "Two little lights, out in the trees. Lanterns, I suppose.",
+   "cam": "close:girl",
+   "do": [
+    [
+     "girl",
+     "happy"
+    ],
+    [
+     "eyeL",
+     "bounce"
+    ],
+    [
+     "eyeR",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "TWO LITTLE LIGHTS"
+  },
+  {
+   "who": "narr",
+   "say": "The lights blink. Then, very softly, something scratches at her window.",
+   "cam": "two:girl,thing",
+   "do": [
+    [
+     "thing",
+     "to:2.7,11.8,0"
+    ],
+    [
+     "pane",
+     "spin"
+    ],
+    [
+     "girl",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SCRATCH..."
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "two:girl,thing",
+   "do": [
+    [
+     "girl",
+     "shake"
+    ],
+    [
+     "thing",
+     "turn:girl"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
