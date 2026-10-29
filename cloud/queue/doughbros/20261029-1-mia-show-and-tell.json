@@ -1,0 +1,1049 @@
+{
+ "id": "20261029-1-mia-show-and-tell",
+ "plot": "On Sunday at sunset Mia carries the bread basket into the garden and says over the walkie-talkie she'll bring the talking bread to show-and-tell tomorrow; Zeek's 'it was a dream' trick, the flowerpot hide-out and Plan Stale all fail and Bup ends up in her lunchbox, until Pim links her blank show-and-tell card and the wobble in her voice on 'everyone' and realizes she is scared to speak to her class, so he answers on the walkie, the bros become her practice audience for a talk on Grandma's cinnamon rolls, Bup is freed — but on Monday morning the backpack zips, the bus honks and Bup is missing from the basket.",
+ "script": {
+  "title": "Mia Wants to Take Us to School",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.6,
+     0.4,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "radio",
+    "type": "box",
+    "color": [
+     1.0,
+     0.8,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     -5,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "lunchbox",
+    "type": "box",
+    "color": [
+     0.2,
+     0.6,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     4,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "card",
+    "type": "box",
+    "color": [
+     1.0,
+     1.0,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     -2,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.4
+   },
+   {
+    "id": "roll",
+    "type": "cake",
+    "color": [
+     0.78,
+     0.5,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     1,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "We're moving! Mia is carrying the whole basket outside!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Into the garden? At sunset? Why us?!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia sets the basket on the bench and lifts her walkie-talkie.",
+    "cam": "wide",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ],
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Tomorrow is show-and-tell. I'm bringing talking bread. Over.'",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHOW-AND-TELL?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "School? Thirty hungry kids at lunchtime?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We hid from one family for years. Now a class?",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "One teacher sees us move. We're on the news.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia drops a card on the bench: 'My Show and Tell.'",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nothing else on it. Her voice wobbles on 'everyone.'",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then she runs in for dinner, leaving the walkie behind.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Simple. I'll tell her it was a dream.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek holds the button and makes his voice deep.",
+    "cam": "prop:radio",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Mia. This is your dream. Bread does not talk. Over.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A crackle from the window. 'Dreams don't say over, silly.'",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Beaten. By a seven-year-old. With a juice box.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Plan B! We hide where she'll never look!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The flowerpots! Everybody in, quick!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five little foods dive into five flowerpots.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm a loaf. In dirt. I'm turning into compost.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia returns with a flashlight. One pot. Two. Three.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Found you!' She lifts out Crispy, black as coal.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Hiding fails when you're the only black rock here.",
+    "cam": "two:crispy,lolly",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SHE FOUND US",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If she takes us tomorrow, we may never come home!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia packs her lunchbox and pokes five holes in the lid.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Air holes?! She's packing us like a hamster!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Five holes. Five of us. She counted us too.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Plan C. We act like normal bread. Stale. Boring.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros go stiff. Bup tries his crustiest face.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia sniffs Bup. 'You smell like Grandma's cinnamon.'",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup smiles. 'Gotcha!' Mia drops him in the lunchbox.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "bup",
+      "to:3,12"
+     ],
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "BUP'S IN THE BOX!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Why? Fame. Talking bread gets you a TV show.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Or she trades us for a hundred stickers!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The school bus leaves at eight. With Bup on it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia sits on the grass with her card. Still blank.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait. Her card is still empty.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And her voice wobbled on 'everyone.'",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I know that wobble. That was me last night at dinner.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S SCARED",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She's not showing off. She's scared to talk to her class!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So what do we do, little bean?",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Like Grandma did for us. We stand next to her.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim holds the button. This time, no deep voice.",
+    "cam": "prop:radio",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Mia? It's Pim. Practise on us. We'll listen.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, Mia stands before five tiny listeners.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'My show-and-tell is... my Grandma's cinnamon rolls.'",
+    "cam": "prop:roll",
+    "do": [
+     [
+      "roll",
+      "show"
+     ],
+     [
+      "roll",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Louder, sweetie! Chin up! Shine!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Tell them the recipe! Teachers love lists.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Once. Twice. The third time, no wobble at all.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "You did it, Mia! Not one wobble!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm still in a lunchbox, but SO proud!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia frees Bup, carries the basket home. 'Thanks, Pim. Over.'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ],
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The scared one helped the scared one. That's courage.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday morning. Mia's backpack zips. The bus honks.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "exit"
+     ],
+     [
+      "radio",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly counts the basket. One, two, three, four. No Bup.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE'S BUP?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Mia Wants to Take Us to School 😨 (Ep 10)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"She wants to take us to school. I wanted to hide. Then I heard her voice wobble.\" — Pim\nMia knows the bread talks and wants to bring them to show-and-tell tomorrow. Zeek's dream trick, the flowerpot hide-out and Plan Stale all fail, and Bup ends up in her lunchbox.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "show and tell",
+   "school",
+   "mia",
+   "pim",
+   "walkie talkie",
+   "stage fright",
+   "funny animation"
+  ],
+  "thumb_text": "NOT SCHOOL!",
+  "thumb_beat": 6,
+  "localizations": {
+   "es": {
+    "title": "Mia quiere llevarnos a la escuela 😨 (Ep 10)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Quiere llevarnos a la escuela. Yo quería esconderme. Luego oí temblar su voz.\" — Pim\nMia sabe que el pan habla y quiere llevarlo mañana a la clase de mostrar y contar. El truco del sueño de Zeek, el escondite en las macetas y el Plan Pan Duro fallan, y Bup acaba en su lonchera.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "A Mia quer nos levar para a escola 😨 (Ep 10)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Ela quer nos levar para a escola. Eu queria me esconder. Aí ouvi a voz dela tremer.\" — Pim\nA Mia sabe que o pão fala e quer levá-los amanhã para a apresentação na escola. O truque do sonho do Zeek, o esconderijo nos vasos e o Plano Pão Duro falham, e o Bup acaba na lancheira dela.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "ميا تريد أخذنا إلى المدرسة 😨 (Ep 10)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"تريد أن تأخذنا إلى المدرسة. أردتُ أن أختبئ. ثم سمعتُ صوتها يرتجف.\" — بيم\nميا تعرف أن الخبز يتكلم وتريد أن تأخذه غدًا إلى فقرة «اعرض واحكِ». تفشل خدعة الحلم التي قام بها زيك، والاختباء في أصص الزهور، وخطة الخبز اليابس، وينتهي الأمر ببوب في علبة غدائها.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Mia veut nous emmener à l'école 😨 (Ep 10)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n« Elle veut nous emmener à l'école. Je voulais me cacher. Puis j'ai entendu sa voix trembler. » — Pim\nMia sait que le pain parle et veut l'apporter demain à l'exposé de classe. Le coup du rêve de Zeek, la cachette dans les pots de fleurs et le Plan Pain Rassis échouent, et Bup finit dans sa boîte à goûter.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアがぼくたちを学校へ連れて行く 😨 (Ep 10)",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「ミアはぼくたちを学校に連れて行きたいんだ。ぼくは隠れたかった。でも、彼女の声がふるえるのが聞こえた。」— ピム\nパンがしゃべると知ったミアは、明日の発表会にパンたちを連れて行くつもり。ジークの「夢だよ」作戦も、植木鉢かくれんぼも、カチカチパン作戦も失敗し、バップはお弁当箱の中へ。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아가 우리를 학교에 데려가려 해 😨 (Ep 10)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려 줘.\n\"미아는 우리를 학교에 데려가고 싶어 해. 난 숨고 싶었어. 그런데 미아 목소리가 떨리는 걸 들었어.\" — 핌\n빵이 말한다는 걸 알게 된 미아는 내일 발표 시간에 빵들을 데려가려 한다. 지크의 꿈 작전, 화분 숨기, 딱딱한 빵 작전 모두 실패하고, 법은 미아의 도시락통에 갇힌다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mia will uns mit in die Schule nehmen 😨 (Ep 10)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Sie will uns mit in die Schule nehmen. Ich wollte mich verstecken. Dann hörte ich ihre Stimme zittern.“ — Pim\nMia weiß, dass das Brot spricht, und will es morgen zum Vorstellen in die Klasse mitbringen. Zeeks Traum-Trick, das Blumentopf-Versteck und der Plan Altbrot scheitern, und Bup landet in ihrer Brotdose.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "HIDE OR GO TO SCHOOL?",
+   "title": "Would YOU Hide or Go to School? 😳 (Ep 10) #shorts",
+   "description": "Mia wants to bring the talking bread to school tomorrow. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "school"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Te esconderías o irías a la escuela? 😳 (Ep 10) #shorts",
+     "description": "Mia quiere llevar el pan que habla a la escuela mañana. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você se esconderia ou iria para a escola? 😳 (Ep 10) #shorts",
+     "description": "A Mia quer levar o pão falante para a escola amanhã. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تختبئ أم تذهب إلى المدرسة؟ 😳 (Ep 10) #shorts",
+     "description": "ميا تريد أخذ الخبز المتكلم إلى المدرسة غدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu te caches ou tu vas à l'école ? 😳 (Ep 10) #shorts",
+     "description": "Mia veut emmener le pain qui parle à l'école demain. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "隠れる？学校へ行く？😳 (Ep 10) #shorts",
+     "description": "ミアはしゃべるパンを明日学校へ連れて行くつもり。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "숨을까, 학교에 갈까? 😳 (Ep 10) #shorts",
+     "description": "미아가 말하는 빵을 내일 학교에 데려가려 한다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU dich verstecken oder zur Schule gehen? 😳 (Ep 10) #shorts",
+     "description": "Mia will das sprechende Brot morgen mit in die Schule nehmen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 56,
+   "dur": 15,
+   "top": "WHERE IS BUP?",
+   "title": "Bup Vanished Before the School Bus 😱 (Ep 10) #shorts",
+   "description": "Monday morning: the backpack zips and Bup is gone. Next part on the channel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "cliffhanger",
+    "school bus"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Bup desapareció antes del autobús escolar 😱 (Ep 10) #shorts",
+     "description": "Lunes por la mañana: la mochila se cierra y falta Bup. Siguiente parte en el canal. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bup sumiu antes do ônibus escolar 😱 (Ep 10) #shorts",
+     "description": "Segunda de manhã: a mochila fecha e o Bup sumiu. Próxima parte no canal. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بوب اختفى قبل حافلة المدرسة 😱 (Ep 10) #shorts",
+     "description": "صباح الاثنين: تُغلق الحقيبة وبوب مفقود. الجزء التالي على القناة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bup a disparu avant le bus scolaire 😱 (Ep 10) #shorts",
+     "description": "Lundi matin : le sac se ferme et Bup n'est plus là. La suite sur la chaîne. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "スクールバスの前にバップが消えた 😱 (Ep 10) #shorts",
+     "description": "月曜の朝、リュックが閉まり、バップがいない。続きはチャンネルで。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "스쿨버스 직전에 법이 사라졌다 😱 (Ep 10) #shorts",
+     "description": "월요일 아침, 가방 지퍼가 닫히고 법이 없다. 다음 편은 채널에서. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bup ist vor dem Schulbus verschwunden 😱 (Ep 10) #shorts",
+     "description": "Montagmorgen: Der Rucksack geht zu und Bup fehlt. Nächster Teil auf dem Kanal. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
