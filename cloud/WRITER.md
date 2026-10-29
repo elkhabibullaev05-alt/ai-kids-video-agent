@@ -107,7 +107,8 @@ Every long job must follow this shape; check it beat by beat before committing.
   - write enough beats for **3:10 or more**.
 - 2026-10-24 measured (spoken words → rendered length): maxcat speaks fast — 590–650 words = 3:11–3:15, and `kite-tree-climb` (602 words) came out under 3:00 and was rejected; hollow 406–408 words = ~3:00 (`black-hunt-1127` rejected). So write at least **maxcat ≥ 660 words**, **hollow ≥ 470 words**, doughbros 470–500 (renders 3:17–3:27, fine). Beat 1 and beat 2 both need a `do` action (hollow `black-hunt-1127` had only 1 of the first 3 beats moving → "boshlanishi sust").
 
-## roblox (Blocky Quest 3D, added 2026-10-20)
+## roblox (Blocky Quest 3D, added 2026-10-20) — STOPPED 2026-10-29
+- **Owner 29 Oct: no kids videos on Roblox Top 10 Daily ever again.** Never write Blocky Quest jobs into `cloud/queue/roblox/` (old jobs moved to `cloud/hold/roblox/`). The channel is teen/adult Roblox news only (robloxtube agent on the PC, Made for Kids = NO). The rules below are kept only as history.
 - Bible: `roblox/story/bible.md`; cast `roblox/scripts3d/cast.json`; places obby | lava | tower | tycoon | city | lobby, time day | night.
 - Our own blocky designs only: never "Roblox" in titles or thumb_text, no logo, no official avatars/items/maps, never claim real gameplay.
 - Made for Kids: gentle peril only (lava = a funny respawn), no comment requests.

@@ -381,6 +381,28 @@ def small_thumb(src, dst):
         pass
 
 
+def unpublish_wrong():
+    """channels.json "unpublish": [video ids] → make them private (e.g. kids videos that landed on a teen channel, 2026-10-29).
+    Done ids are kept in results/<CH>/unpublished.json. Needs a token with youtube.force-ssl (cloud/auth.py since 2026-10-29)."""
+    ids = CFG.get("unpublish") or []
+    if not ids:
+        return
+    import youtube_up
+    f = os.path.join(RES, "unpublished.json")
+    done = json.load(open(f)) if os.path.exists(f) else {}
+    todo = [v for v in ids if v not in done]
+    if not todo:
+        return
+    for v in todo:
+        try:
+            done[v] = youtube_up.make_private(yt(), v) + " " + NOW.isoformat(timespec="minutes")
+            log("made private:", v, done[v])
+        except Exception as e:
+            log("could not make private (re-run cloud/auth.py for this channel — the token needs youtube.force-ssl):", v, str(e)[:160])
+    json.dump(done, open(f, "w"), indent=1)
+    push("unpublish wrong videos", [RES])
+
+
 def take_ready(st):
     """Ready-made videos (AI clips assembled by Claude): cloud/ready/<CH>/<name>.json + the mp4 next to it.
     {"file": "<name>.mp4", "kind": "short"|"long", "title", "description", "tags": [], "synthetic": true}
@@ -445,6 +467,7 @@ def main():
         items, err = produce(json.load(open(jobs[0])), jobs[0])
         log("QUICK result:", err or [(i["kind"], i["file"], i["ball"]) for i in items])
         return
+    unpublish_wrong()
     status("sync")
     sync_from_youtube(st); save_state(st)
     if not do_uploads(st):

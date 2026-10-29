@@ -36,7 +36,8 @@ Now: 94 subs, ~1,400 views/day, long AVD 38 s, 142 near-identical titles in 28 d
 - [x] Volume stays 1 long + 5 Shorts/day (owner 28 Oct: "kamaytirma") — every Short a different game/angle, no repeated title template.
 - [x] Black/OBS backgrounds fixed 28 Oct (news.py no longer reads ~/Videos OBS recordings); 7 broken scheduled videos made private; ep0034 re-made with game images (checked frames OK).
 - [ ] Long intro card: "BORED? 20 ROBLOX GAMES TO PLAY" wraps into the subtitle line — shorten to f"BORED? TOP {n_long} ROBLOX GAMES" in agent/news.py (title_card call). Do it only when state.json "pending" is empty (no upload running — a restart mid-upload risks duplicates).
-- [ ] Blocky Quest (kids 3D) stays separate, made-for-kids, never "Roblox" in titles.
+- [x] 29 Oct (owner): Blocky Quest kids 3D STOPPED on this channel for good — worker `ready_only`, kids=false, queue moved to cloud/hold/roblox, its 3 uploads (oi9Cfu6D1Q4, 6Xb5U6n5FFk, kVwK2l79GqI) listed in channels.json `unpublish` → made private as soon as the roblox token is re-made with cloud/auth.py.
+- [ ] Teen/adult only (13+, Made for Kids = NO on every upload and as the channel default in Studio → Settings → Channel → Advanced). On the PC check robloxtube config/uploader: made_for_kids false, and Studio default audience = "No, it's not made for kids".
 - [ ] (competitors 28 Oct) Hook names a pain point ("Bored of the Roblox homepage?"), game #1 within 10 s — like FrostyBlox (1.1M) / HoneySaw.
 - [ ] (competitors 28 Oct) Real gameplay/trailer clips per game + one line on what you DO in it (not still images + visit counts).
 - [ ] (competitors 28 Oct) Evergreen long series "N Roblox Games To Play When Bored (2026)", N rising each time; Shorts "The SCARIEST/most FUN Roblox Game To Play With Friends".

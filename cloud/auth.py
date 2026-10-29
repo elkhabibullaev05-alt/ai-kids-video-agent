@@ -10,7 +10,8 @@ import sys
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
+          "https://www.googleapis.com/auth/youtube.force-ssl"]  # force-ssl: lets the worker make a wrong video private (2026-10-29)
 secret, out = sys.argv[1], sys.argv[2]
 cr = InstalledAppFlow.from_client_secrets_file(secret, SCOPES).run_local_server(port=0, prompt="consent")
 ch = build("youtube", "v3", credentials=cr).channels().list(part="snippet", mine=True).execute()["items"][0]

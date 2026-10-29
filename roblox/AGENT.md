@@ -1,3 +1,5 @@
+> **STOPPED 2026-10-29 (owner):** Blocky Quest kids videos must never be made or uploaded to Roblox Top 10 Daily again. The channel is teen/adult Roblox news only (Made for Kids = NO).
+
 # Blocky Quest 3D (on "Roblox Top 10 Daily", UCVqJ3Zvk_qPnZDyE5d1bppw)
 
 - Rendered and uploaded by the owner's PC worker (`cloud/worker.py roblox`, queue `cloud/queue/roblox/`, status `cloud/results/roblox/status.json`).

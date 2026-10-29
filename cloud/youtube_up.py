@@ -27,6 +27,22 @@ def my_channel_id(yt):
     return r["items"][0]["id"] if r.get("items") else None
 
 
+def make_private(yt, vid):
+    """Set a video to private and cancel its schedule. Needs a token with the youtube.force-ssl scope.
+    Returns 'ok', 'gone' (deleted/not ours) or raises HttpError (e.g. 403 insufficient scope)."""
+    r = yt.videos().list(part="status", id=vid).execute()
+    if not r.get("items"):
+        return "gone"
+    st = r["items"][0]["status"]
+    if st.get("privacyStatus") == "private" and not st.get("publishAt"):
+        return "ok"
+    body = {"id": vid, "status": {"privacyStatus": "private",
+                                  "selfDeclaredMadeForKids": st.get("selfDeclaredMadeForKids", False),
+                                  "embeddable": st.get("embeddable", True)}}
+    yt.videos().update(part="status", body=body).execute()
+    return "ok"
+
+
 def _reason(e):
     try:
         return e.error_details[0].get("reason", "")
