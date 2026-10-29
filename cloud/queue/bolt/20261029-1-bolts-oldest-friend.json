@@ -1,0 +1,1346 @@
+{
+ "id": "20261029-1-bolts-oldest-friend",
+ "plot": "The evening after the pirate fuss, Bolt opens the box from 'an old friend': a silver star, a popcorn smell, wobbly writing and a drawing of a tiny laughing van, but he can't remember who it is; Turbo's famous-racer guess and Bertha's cousin guess fail, Pip stops him pretending, and at the old drive-in cinema at night the memory of a tiny purple van comes back, a rustle turns out to be a hedgehog, and near midnight huge Hal the moving truck arrives with his 'ho-ho-honk' laugh (heard early on) — he was little Hally, who grew up and moved away, and Bolt didn't recognise him; Hal stays in Wheelburg for good; lesson: faces change, friends stay; then a light blinks on in the old projector room.",
+ "script": {
+  "title": "Bolt Forgot His Oldest Friend?!",
+  "set": {
+   "place": "Bakery Lane at dusk, then the old drive-in cinema field at the edge of Wheelburg until midnight",
+   "press": false,
+   "podium": false,
+   "time": "night"
+  },
+  "description": "A box from 'an old friend' and a detective who can't remember who sent it. Inspector Bolt #19",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "box",
+    "type": "box",
+    "color": "brown",
+    "at": [
+     9.0,
+     7.0,
+     0.4
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": [
+     0.82,
+     0.84,
+     0.88
+    ],
+    "at": [
+     9.0,
+     7.0,
+     1.3
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "bolt",
+    "say": "A box for me? From an old friend? Which old friend?",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Open it, Bolt! Open it! I can't wait!",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "to:2,8"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO SENT THIS BOX?",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the same evening. The street lights were just coming on.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. First we look. Then we open.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:7,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Brown paper. A smell of popcorn. And very wobbly writing.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Popcorn? Maybe it's a snack! Open it already!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside lay a little silver star. And a folded note.",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "show"
+     ],
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Dear Bolt. I still have our promise. Do you?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Meet me where the big screen shows the stars. Tonight.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "star",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And at the bottom, a drawing. A tiny laughing van!",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS IT?!",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A promise? A star? I don't remember any of it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But Bolt, you remember everything! Every single tyre track!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every tyre track in Wheelburg. But not this friend.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, Hal the moving truck rolled back down Bakery Lane.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Forgot my ramp straps! Evening, everyone! Ho-ho-honk!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody looked up. Everybody was staring at the little star.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "exit"
+     ],
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A big screen? That's the old drive-in cinema by the fields!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Closed for years. Weeds. Crickets. One big white wall.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I went there once. When I was a very small car.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But who did he go with? Bolt could not remember.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I know! It's Blaze McRev! The famous racing car!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Everybody wants to be his friend. Even me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, I have never met a famous racing car.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe you forgot that too! Vroom vroom!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "A FAMOUS RACER?!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, stop it, Turbo. Famous cars don't draw little vans.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt, maybe it's your cousin! Cousins always say old friend.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "My cousin Cog is two years old. He can't write yet.",
+    "cam": "two:bertha,bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two guesses. Two wrong. And the sky was getting darker.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "My friend still has our promise. And I forgot it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "If I don't remember by tonight, my friend will feel forgotten.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "BEFORE THE STARS COME OUT!",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "cam": "prop:star",
+    "do": [
+     [
+      "star",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Bolt had an idea. A not very good idea.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I'll just say, Old pal! Of course I remember you!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! That's pretending. That's not the truth.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You're right, Pip. A detective never pretends.",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Then stop guessing. Be a detective. Look at the clues.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:1,13"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Clue one. Popcorn. Clue two. Wobbly writing.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wobbly like a car who writes while driving!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Clue three. A little van that laughs. Let's go.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So off they drove, out to the edge of Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:-2,10"
+     ],
+     [
+      "pip",
+      "to:-6,9"
+     ],
+     [
+      "turbo",
+      "to:2,14"
+     ],
+     [
+      "bertha",
+      "to:-8,17"
+     ],
+     [
+      "grumpy",
+      "to:-1,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The old drive-in. A field of crickets. A giant empty screen.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "text": "THE OLD DRIVE-IN",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It's so quiet. Too quiet. Where's the popcorn?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt parked right in front of the big white screen.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And slowly, very slowly, a memory came back.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I sat right here. Next to a tiny purple van.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "He was smaller than Pip! And he laughed all night.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Smaller than me? Nobody is smaller than me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "We watched the stars. Then he had to move away.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I gave him my silver star. To keep until he came back.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "star",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "No name. No friend. And midnight was coming fast.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Something rustled in the weeds. Everybody spun around.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "SOMETHING'S THERE!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A tiny van! It must be him! Hello, little friend!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's a hedgehog, Bertha. A very surprised hedgehog.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha laughed so hard her roof went flat.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "flat_roof"
+     ],
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The stars came out, one by one. Nobody else came.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's almost midnight. Maybe my friend gave up on me.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "NOBODY CAME?",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait, Bolt. Look! Two great big headlights!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A huge truck rolled slowly across the field.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "hal",
+      "to:-9,13"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hal? Did you forget your straps again?",
+    "cam": "two:turbo,hal",
+    "do": [
+     [
+      "turbo",
+      "turn:hal"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "No straps tonight. I came to meet an old friend.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Ho-ho-honk!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt knew that laugh. He had heard it right here.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THAT LAUGH!",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hally? Little Hally? But you were tiny!",
+    "cam": "two:bolt,hal",
+    "do": [
+     [
+      "bolt",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I grew up, Bolt. Quite a lot, really.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Yesterday you looked right at me. You said, Good afternoon, sir.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Oh, Hally. I'm so sorry. I didn't know it was you.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "That's why I sent the star. And the popcorn smell.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "star",
+      "give:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And the wobbly writing! You wrote it while driving!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Bumpy roads. Movers write everywhere.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I moved homes for everybody. Now I want my own. Here.",
+    "cam": "two:hal,bolt",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then our promise is kept. Welcome home, old friend.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Fine. I brought popcorn. Just in case.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy switched on his work lights. The big screen glowed.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Shadow shapes! Look, I'm a giant hedgehog!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember, everyone. Faces change. Friends stay.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Faces change. Friends stay. I'll remember that!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, high in the old projector room, a light blinked on.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:hal"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS UP THERE?",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Bolt Forgot His Oldest Friend?! 📦😳 (Ep 19)",
+  "description": "\"I remember every tyre track in Wheelburg. So how did I forget a friend?\" — Inspector Bolt\nA box arrives with a silver star, a popcorn smell and a note from \"an old friend\" — and Bolt can't remember who it is. Before the stars come out, he follows the clues to the old drive-in cinema. Inspector Bolt #19\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "bolt",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "old friends",
+   "friendship",
+   "drive-in",
+   "stories for kids",
+   "wheelburg"
+  ],
+  "thumb_text": "WHO ARE YOU?!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¡¿Bolt olvidó a su amigo más antiguo?! 📦😳 (Ep 19)",
+    "description": "\"Recuerdo cada huella de neumático en Wheelburg. ¿Cómo olvidé a un amigo?\" — Inspector Bolt\nLlega una caja con una estrella plateada, olor a palomitas y una nota de \"un viejo amigo\", y Bolt no recuerda quién es. Antes de que salgan las estrellas, sigue las pistas hasta el viejo autocine. Inspector Bolt #19\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "O Bolt esqueceu o amigo mais antigo?! 📦😳 (Ep 19)",
+    "description": "\"Eu lembro de cada marca de pneu em Wheelburg. Como esqueci um amigo?\" — Inspetor Bolt\nChega uma caixa com uma estrela prateada, cheiro de pipoca e um bilhete de \"um velho amigo\", e o Bolt não lembra quem é. Antes das estrelas aparecerem, ele segue as pistas até o velho cinema drive-in. Inspetor Bolt #19\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل نسي بولت أقدم صديق له؟! 📦😳 (حلقة 19)",
+    "description": "\"أتذكر كل أثر إطار في ويلبرغ. فكيف نسيتُ صديقًا؟\" — المفتش بولت\nيصل صندوق فيه نجمة فضية ورائحة فشار ورسالة من \"صديق قديم\"، ولا يتذكر بولت من هو. قبل أن تظهر النجوم، يتتبع الأدلة حتى سينما السيارات القديمة. المفتش بولت #19\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Bolt a oublié son plus vieil ami ?! 📦😳 (Ép 19)",
+    "description": "« Je me souviens de chaque trace de pneu à Wheelburg. Comment ai-je pu oublier un ami ? » — Inspecteur Bolt\nUne boîte arrive avec une étoile argentée, une odeur de pop-corn et un mot d'« un vieil ami », et Bolt ne se souvient pas de qui il s'agit. Avant que les étoiles ne brillent, il suit les indices jusqu'au vieux ciné-parc. Inspecteur Bolt #19\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ボルト、いちばん古い友だちをわすれちゃった?!📦😳(第19話)",
+    "description": "「ウィールバーグのタイヤのあとは全部おぼえているのに、どうして友だちをわすれたんだろう?」— ボルト警部\n銀色の星、ポップコーンのにおい、そして「むかしの友だちより」という手紙が入った箱がとどきます。でもボルトはだれなのか思い出せません。星が出るまえに、手がかりをたどって古いドライブイン映画館へ。ボルト警部 #19\n\n#シリーズ #3Dアニメ #ボルト警部"
+   },
+   "ko": {
+    "title": "볼트가 가장 오랜 친구를 잊었다고?! 📦😳 (19화)",
+    "description": "\"휠버그의 바퀴 자국은 다 기억하는데, 어떻게 친구를 잊었을까?\" — 볼트 형사\n은색 별, 팝콘 냄새, 그리고 '옛 친구가'라는 쪽지가 든 상자가 도착해요. 그런데 볼트는 누군지 기억이 안 나요. 별이 뜨기 전에 단서를 따라 옛 자동차 극장으로 가요. 볼트 형사 #19\n\n#시리즈 #3D애니메이션 #볼트형사"
+   },
+   "de": {
+    "title": "Hat Bolt seinen ältesten Freund vergessen?! 📦😳 (Folge 19)",
+    "description": "„Ich kenne jede Reifenspur in Wheelburg. Wie konnte ich einen Freund vergessen?“ — Inspektor Bolt\nEine Kiste kommt an: ein silberner Stern, Popcorn-Duft und ein Zettel von „einem alten Freund“ – doch Bolt weiß nicht mehr, wer das ist. Bevor die Sterne aufgehen, folgt er den Hinweisen zum alten Autokino. Inspektor Bolt #19\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "A BOX FROM WHO?!",
+   "title": "A Mystery Box for Bolt?! 📦 (Ep 19) #shorts",
+   "description": "A silver star, a popcorn smell and a note from an old friend. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Una caja misteriosa para Bolt?! 📦 (Ep 19) #shorts",
+     "description": "Una estrella plateada, olor a palomitas y una nota de un viejo amigo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma caixa misteriosa para o Bolt?! 📦 (Ep 19) #shorts",
+     "description": "Uma estrela prateada, cheiro de pipoca e um bilhete de um velho amigo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "صندوق غامض لبولت؟! 📦 (حلقة 19) #shorts",
+     "description": "نجمة فضية ورائحة فشار ورسالة من صديق قديم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une boîte mystère pour Bolt ?! 📦 (Ép 19) #shorts",
+     "description": "Une étoile argentée, une odeur de pop-corn et un mot d'un vieil ami. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボルトになぞの箱?!📦(第19話)#shorts",
+     "description": "銀色の星とポップコーンのにおい、そしてむかしの友だちからの手紙。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "볼트에게 수수께끼 상자가?! 📦 (19화) #shorts",
+     "description": "은색 별, 팝콘 냄새, 그리고 옛 친구의 쪽지. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine geheimnisvolle Kiste für Bolt?! 📦 (Folge 19) #shorts",
+     "description": "Ein silberner Stern, Popcorn-Duft und ein Zettel von einem alten Freund. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 54,
+   "dur": 20,
+   "top": "WHAT'S IN THE WEEDS?!",
+   "title": "Who Is Hiding at the Drive-In? 🌙 (Ep 19) #shorts",
+   "description": "Midnight at the old drive-in, and something rustles in the weeds. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Algo se esconde en el autocine! 🌙 (Ep 19) #shorts",
+     "description": "Medianoche en el viejo autocine y algo se mueve entre la hierba. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Tem algo escondido no drive-in! 🌙 (Ep 19) #shorts",
+     "description": "Meia-noite no velho drive-in, e algo se mexe no mato. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شيء ما يختبئ في سينما السيارات! 🌙 (حلقة 19) #shorts",
+     "description": "منتصف الليل في سينما السيارات القديمة، وشيء يتحرك بين الأعشاب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelque chose se cache au ciné-parc ! 🌙 (Ép 19) #shorts",
+     "description": "Minuit au vieux ciné-parc, et quelque chose bouge dans les herbes. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ドライブインに何かがかくれてる!🌙(第19話)#shorts",
+     "description": "真夜中の古いドライブイン、草むらで何かがガサガサ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "자동차 극장에 뭔가 숨어 있어! 🌙 (19화) #shorts",
+     "description": "한밤중 옛 자동차 극장, 풀숲에서 뭔가 바스락거려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Im Autokino versteckt sich etwas! 🌙 (Folge 19) #shorts",
+     "description": "Mitternacht im alten Autokino, und im Gras raschelt etwas. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 59,
+   "dur": 15,
+   "top": "NOBODY CAME?!",
+   "title": "Did Bolt's Old Friend Give Up? 😢 (Ep 19) #shorts",
+   "description": "Almost midnight, and then two big headlights. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿El viejo amigo de Bolt se rindió? 😢 (Ep 19) #shorts",
+     "description": "Casi medianoche y, de pronto, dos grandes faros. La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O velho amigo do Bolt desistiu? 😢 (Ep 19) #shorts",
+     "description": "Quase meia-noite e, de repente, dois faróis enormes. A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل استسلم صديق بولت القديم؟ 😢 (حلقة 19) #shorts",
+     "description": "قرب منتصف الليل، ثم يظهر مصباحان كبيران. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le vieil ami de Bolt a abandonné ? 😢 (Ép 19) #shorts",
+     "description": "Presque minuit, puis deux gros phares. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボルトのむかしの友だち、来ないの?😢(第19話)#shorts",
+     "description": "もうすぐ真夜中。そのとき、大きなヘッドライトが2つ。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "볼트의 옛 친구는 포기한 걸까? 😢 (19화) #shorts",
+     "description": "자정이 다 되었을 때, 커다란 헤드라이트 두 개가. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hat Bolts alter Freund aufgegeben? 😢 (Folge 19) #shorts",
+     "description": "Fast Mitternacht, und dann zwei große Scheinwerfer. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
