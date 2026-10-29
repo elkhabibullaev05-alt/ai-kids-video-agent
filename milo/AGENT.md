@@ -42,3 +42,8 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 
 ## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
 - Thumbnail: a huge red "DAY N" and the threat filling half of the frame.
+
+## Auto catch-up when the computer comes back (owner 2026-10-29)
+- If this run ends with anything left in `pending_uploads` because the computer was off or disconnected, write a flag to the hub database before finishing: ArtifactData `set` collection `catchup`, doc_id `milo`, data `{"agent": "milo", "at": "<ISO now>", "pending": <count>}` (url https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r; if the doc exists, get it and pin if_version). The hourly hub runner fires this task again as soon as the computer is reachable.
+- When a run is a catch-up (the extra message says so): only upload `pending_uploads` (for an interrupted upload, look in Studio for the partial video id first and finish it instead of uploading again), do not make a new video, then delete `catchup/milo` (pin if_version) if nothing is left pending.
+

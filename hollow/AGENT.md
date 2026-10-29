@@ -122,3 +122,8 @@ Model: Mr Nightmare (7.2M subs): 20–30 min compilations "3 TRUE … Stories", 
 - Shorts loop: the last line leads straight back into the first frame, so the Short replays seamlessly.
 - Before every upload, a 4-point check: (1) title < 55 chars with no episode number, (2) the first frame shows the threat, not a title card, (3) the Short's last line loops into its first, (4) the description links the long video.
 - Studio also suggests fewer uploads here (1 long + 2–3 Shorts a week). The owner decides — do not cut the schedule on your own (PLAN.md owner rule).
+
+## Auto catch-up when the computer comes back (owner 2026-10-29)
+- If this run ends with anything left in `pending_uploads` because the computer was off or disconnected, write a flag to the hub database before finishing: ArtifactData `set` collection `catchup`, doc_id `hollow`, data `{"agent": "hollow", "at": "<ISO now>", "pending": <count>}` (url https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r; if the doc exists, get it and pin if_version). The hourly hub runner fires this task again as soon as the computer is reachable.
+- When a run is a catch-up (the extra message says so): only upload `pending_uploads` (for an interrupted upload, look in Studio for the partial video id first and finish it instead of uploading again), do not make a new video, then delete `catchup/hollow` (pin if_version) if nothing is left pending.
+
