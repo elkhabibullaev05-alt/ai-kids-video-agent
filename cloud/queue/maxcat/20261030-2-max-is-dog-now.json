@@ -1,0 +1,1275 @@
+{
+ "id": "20261030-2-max-is-dog-now",
+ "plot": "On Halloween morning Max wears Grandma's floppy dog ears and Dog wears little cat ears, and they bet a pumpkin cookie that Grandma won't spot the swap; Max has to fetch, roll and bark (a 'mee-woof'), Dog eats Max's fish and purrs like a fridge, until the tired pair decide to tell the truth together and find out Grandma knew since breakfast from Max's question-mark tail and Dog's wag, then she shows her own costume, big mouse ears, and splits the cookie; next morning the big pumpkin has one tiny bite in it.",
+ "script": {
+  "title": "Max Turned Into a Dog for Halloween",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cookie",
+    "type": "cake",
+    "color": "orange",
+    "at": [
+     0.5,
+     9.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     4.0,
+     10.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "pumpkin",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     -7.0,
+     11.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 1.1
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Meow! Cats climb sofas, right? Up I go! Whoaaa!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh, Dog! Grandma will hear! Woof! I mean... woof!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Can a cat and a dog swap places for a whole day?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS WHO?!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's Halloween morning. Max had the silliest idea ever.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max wears Grandma's floppy brown dog ears.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Dog wears pointy cat ears. Very tiny on his big head.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Today I'm Dog, and you're Max. Grandma will never know!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I am Max. I am a cat. I do cat things. Meow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'm the judge. Whoever Grandma spots first loses.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Easy. I'm the best dog ever. Look at my floppy ears!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The winner gets Grandma's first pumpkin cookie.",
+    "cam": "prop:cookie",
+    "do": [
+     [
+      "cookie",
+      "show"
+     ],
+     [
+      "cookie",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Cookie! I mean... meow. A cookie. How nice. Meow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma comes in with breakfast. Everybody freezes.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good morning, my two Halloween pumpkins!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma smiles a little smile. And winks at Mouse.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits very still. His tail curls up like a question mark.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Dog's tail? Wag, wag, wag. It never stops.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog, dear. Time to play. Fetch your red ball!",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ],
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fetch? Me? Oh. Yes. Woof! Fetching!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max chases the ball across the rug. It bounces off his nose.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Got it! In my mouth! Bleh. It tastes like old socks.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "ball",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hey! That's my favorite taste! I mean... meow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good boy! Now roll over, Dog! Roll, roll, roll!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max rolls once. Twice. Three times. The whole room spins.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Is the sofa upside down? Or is it me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And now, Max, dear. Your fish snack is ready.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog looks at the fish. Dog has never eaten fish.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Crunch, munch. Hey! Fish is GREAT! Meow, meow!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's my fish! Being a dog is not fair!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Careful! Grandma is looking very closely now.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One wrong move, and you lose the pumpkin cookie!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "DON'T GET CAUGHT!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Max, dear, come sit on my lap and purr for me.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Purr? Uh-oh. I don't know how to purr.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog climbs on Grandma's lap. Very slowly. He is very big.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Mmmmmmmmm. Brrrrrrrr. Mmmmmmmm.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My, my. That's a very deep purr today.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And Max, dear, you feel a little... bigger today.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's my fluffy morning fur. Very fluffy. Meow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "He sounds like the fridge! I can't stop laughing!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! Dogs don't giggle like that. Act like a dog!",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the doorbell rings. Ding dong!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DING DONG!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grandma",
+    "say": "Dog, dear, who's at the door? Go and bark!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bark? I have to bark? Real dogs bark so loud.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs to the door. He takes a big breath.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mee-WOOF! Mee-woof, mee-woof!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A meow-woof?! That's not a bark! She'll know for sure!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's only the mail. A little card falls through the door.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It says Happy Halloween, from Luna! She'd love this game.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse is right. One more mistake, and we're caught!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, I mean, Dog. Max? I forgot who I am.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Being someone else is hard work. Max is tired.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fetching is hard. Barking is hard. And Dog got my fish.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Purring is hard. Climbing is harder. My ears are too small.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Let's tell Grandma the truth. Together.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Even if we lose the pumpkin cookie?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Even if we lose the cookie. No more tricks.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They walk to Grandma, slowly, side by side.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,7"
+     ],
+     [
+      "dog",
+      "to:-3,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, we have to tell you something big.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Do you mean that you're Max, dear? And he is Dog?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "SHE KNEW?!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "You knew? Since when?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Since breakfast. Your tail curled like a question mark.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max's tail always does that. And cats don't wag, Dog.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My tail told on me! Bad tail. Good tail. Happy tail!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So why did you play along all morning?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Because it's Halloween. And because I have a costume too!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "spin"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma puts on two big, round, grey ears.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grandma is a mouse! Grandma is ME!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA MOUSE!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "mouse",
+    "say": "So who wins the pumpkin cookie?",
+    "cam": "prop:cookie",
+    "do": [
+     [
+      "cookie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You both told the truth together. So you both win.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "cookie",
+      "spin"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma breaks the cookie in two. One half for each.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "cookie",
+      "to:max"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Being Dog was fun for one morning. But being me is best.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me too. But can I keep the fish?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, the big pumpkin sits by the door.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the morning, it has one tiny bite in it. Who?",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A bite in Grandma's pumpkin? I'm going to find out!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Turned Into a DOG for Halloween?! 🎃🐶",
+  "description": "\"Fetching is hard. Barking is hard. And Dog got my fish!\" 🐱\nOn Halloween morning Max and Dog swap places, cat ears for dog ears, and bet a pumpkin cookie that Grandma won't notice. Max the Curious Cat, Ep 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween",
+  "tags": [
+   "halloween",
+   "halloween costume",
+   "cat and dog",
+   "pumpkin",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "MEE-WOOF?!",
+  "thumb_beat": 45,
+  "localizations": {
+   "es": {
+    "title": "¿Max se convirtió en PERRO por Halloween? 🎃🐶",
+    "description": "\"Traer la pelota es difícil. Ladrar es difícil. ¡Y Perro se comió mi pescado!\" 🐱\nEn la mañana de Halloween, Max y Perro cambian de lugar, orejas de gato por orejas de perro, y apuestan una galleta de calabaza a que la abuela no se dará cuenta. Max el Gato Curioso, Ep 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "pt": {
+    "title": "O Max virou um CACHORRO no Halloween?! 🎃🐶",
+    "description": "\"Buscar a bola é difícil. Latir é difícil. E o Cachorro comeu meu peixe!\" 🐱\nNa manhã de Halloween, Max e Cachorro trocam de lugar, orelhas de gato por orelhas de cachorro, e apostam um biscoito de abóbora que a vovó não vai perceber. Max, o Gato Curioso, Ep 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "ar": {
+    "title": "ماكس صار كلبًا في الهالوين؟! 🎃🐶",
+    "description": "\"جلب الكرة صعب. النباح صعب. والكلب أكل سمكتي!\" 🐱\nفي صباح الهالوين يتبادل ماكس والكلب الأدوار، آذان قطة مقابل آذان كلب، ويتراهنان على كعكة يقطين أن الجدة لن تلاحظ. ماكس القط الفضولي، الحلقة 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "fr": {
+    "title": "Max s'est transformé en CHIEN pour Halloween ?! 🎃🐶",
+    "description": "« Rapporter la balle, c'est dur. Aboyer, c'est dur. Et Chien a mangé mon poisson ! » 🐱\nLe matin d'Halloween, Max et Chien échangent leurs places, oreilles de chat contre oreilles de chien, et parient un biscuit à la citrouille que Mamie ne verra rien. Max le Chat Curieux, Ép 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "ja": {
+    "title": "マックスがハロウィンでイヌになった？！🎃🐶",
+    "description": "「ボールを取ってくるのも、ほえるのもたいへん。しかもイヌがぼくの魚を食べた！」🐱\nハロウィンの朝、マックスとイヌはネコ耳とイヌ耳を交換して入れかわり！おばあちゃんが気づかないか、かぼちゃクッキーをかけて勝負。好奇心いっぱいのネコ マックス 第24話。\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "ko": {
+    "title": "맥스가 핼러윈에 강아지가 됐다고?! 🎃🐶",
+    "description": "\"공 물어 오기도 힘들고, 짖기도 힘들어. 게다가 강아지가 내 생선을 먹었어!\" 🐱\n핼러윈 아침, 맥스와 강아지는 고양이 귀와 강아지 귀를 바꿔 쓰고 서로 역할을 바꿔요. 할머니가 눈치채지 못할지 호박 쿠키를 걸었어요. 호기심 많은 고양이 맥스 24화.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   },
+   "de": {
+    "title": "Max wird zum HUND an Halloween?! 🎃🐶",
+    "description": "„Apportieren ist schwer. Bellen ist schwer. Und Hund hat meinen Fisch gegessen!“ 🐱\nAm Halloween-Morgen tauschen Max und Hund die Rollen, Katzenohren gegen Hundeohren, und wetten um einen Kürbiskeks, dass Oma nichts merkt. Max die neugierige Katze, Folge 24.\n#MaxTheCuriousCat #series #3DAnimation #Halloween"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 43,
+   "dur": 20,
+   "top": "A CAT HAS TO BARK?! 🐶",
+   "title": "Max Tries to Bark Like a Dog! 🎃🐶 (Ep 24) #shorts",
+   "description": "Ding dong! Max has to bark... and out comes a mee-woof. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "halloween"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max intenta ladrar como un perro! 🎃🐶 (Ep 24) #shorts",
+     "description": "¡Ding dong! Max tiene que ladrar... y le sale un miau-guau. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max tenta latir como um cachorro! 🎃🐶 (Ep 24) #shorts",
+     "description": "Ding dong! Max precisa latir... e sai um miau-au. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يحاول النباح مثل الكلب! 🎃🐶 (الحلقة 24) #shorts",
+     "description": "دينغ دونغ! على ماكس أن ينبح... فيخرج صوت مياو-هاو. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max essaie d'aboyer comme un chien ! 🎃🐶 (Ép 24) #shorts",
+     "description": "Ding dong ! Max doit aboyer... et il sort un miaou-ouaf. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、イヌみたいにほえられる？🎃🐶（第24話）#shorts",
+     "description": "ピンポーン！ほえなきゃいけないマックス…出てきたのは「ニャワン！」続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 강아지처럼 짖어 본다! 🎃🐶 (24화) #shorts",
+     "description": "딩동! 맥스가 짖어야 하는데... 나온 건 야옹-멍! 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max versucht zu bellen wie ein Hund! 🎃🐶 (Folge 24) #shorts",
+     "description": "Ding dong! Max muss bellen... und heraus kommt ein Miau-Wuff. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

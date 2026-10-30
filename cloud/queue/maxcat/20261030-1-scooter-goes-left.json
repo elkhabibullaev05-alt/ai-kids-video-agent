@@ -1,0 +1,1349 @@
+{
+ "id": "20261030-1-scooter-goes-left",
+ "plot": "The morning after camping Grandma teaches Max to ride her old blue scooter in the park, but every ride turns left into the bush or the pond and Max blames the scooter; his aim-right plan ends in the muddy pond edge, until Bird watches from the tree and sees Max's head turns to the ducks he waves at, so Max learns the scooter goes where he looks, rides straight to Grandma's red ball, and finds her Halloween costume box with floppy dog ears.",
+ "script": {
+  "title": "Why Does Max's Scooter Only Go Left?",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "scooter",
+    "type": "wheel",
+    "color": "blue",
+    "at": [
+     -2.0,
+     6.8,
+     0.2
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "cone1",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     0.0,
+     9.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "cone2",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     1.0,
+     11.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     2.5,
+     13.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "purple",
+    "at": [
+     -6.0,
+     7.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Whoa! Whoa! Left again! Why does this scooter only go LEFT?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Watch out for the bushes! Too late. Crunch!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ten rides. Ten times into the same bush. Why?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY LEFT?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "This morning started so well. Grandma's old blue scooter came out.",
+    "cam": "prop:scooter",
+    "do": [
+     [
+      "scooter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I rode this scooter when I was little. Now it's your turn.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Easy! One paw on, one paw push. Zoom!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks around the park. The ducks are by the pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, ducks! Watch me! I'm going to be fast!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max loves the ducks. He waves at them every single morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grandma made a path with cones. Ride straight to the big tree.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "cone1",
+      "show"
+     ],
+     [
+      "cone2",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Straight to the tree. No problem. Here I go!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Push. Push. The scooter rolls... and turns left.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,9"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "text": "CRUNCH!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bird",
+    "say": "Max is in the bush! Only his tail is sticking out!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm okay! The bush is soft. Pointy, but soft.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "to:-2,6"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Wobbly at first is normal, dear. Try again.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tries again. And again. Left. Left. Always left.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,9"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This scooter is broken! It only knows one way!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,6"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Let me check the wheel. It spins fine. Look.",
+    "cam": "prop:scooter",
+    "do": [
+     [
+      "mouse",
+      "to:-1,7"
+     ],
+     [
+      "scooter",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then the scooter just doesn't like me. Not one bit.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "If it ends in the pond, it goes back to the shed.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Back to the shed? No! I have to ride it straight!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ONE MORE CHANCE",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "I have a plan. If it goes left, I aim right!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Aim right to go straight? That's so silly it might work!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max points the scooter far to the right. Push. Push.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,9"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's working! It's going right! Look, ducks! Look at me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max waves at the ducks. And the scooter turns. Left.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,11"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "text": "SPLASH!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Right into the muddy edge of the pond. Wet paws!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The ducks are laughing! Quack, quack, quack!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Even my plan goes left! This scooter is a duck scooter!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. Wet paws. Maybe that's enough for today.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-4,8"
+     ],
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, please! One more ride! I almost had it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Wait. Before we give up, let's test the scooter alone.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:0,7"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Alone? A scooter can't ride by itself, Mouse.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One big push. Nobody on it. Let's see where it goes.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max gives the empty scooter one big push. Off it rolls.",
+    "cam": "prop:scooter",
+    "do": [
+     [
+      "scooter",
+      "to:grandma"
+     ],
+     [
+      "scooter",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "STRAIGHT?!",
+    "cam": "prop:scooter",
+    "hold": 1.2,
+    "do": [
+     [
+      "scooter",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It rolls straight past the cones. All the way to Grandma's feet.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ],
+     [
+      "cone1",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It goes straight without me? Then... it's not broken?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "So the scooter is fine. Something about YOU makes it turn!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me? But I'm doing everything right! Paw on, paw push!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "One last ride, dear. Then the scooter goes home to the shed.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies up into the big tree to think.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:2,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "From up here, I can see the whole park. Ride once more!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes off one more time. Bird watches from above.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-5,9"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's head turns to the ducks. Then his paws turn too.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "to:-7,10"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Stop! I saw it! I saw what makes you go left!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "What? A rock? A bad wheel? A sneaky duck?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It's your eyes, Max! You always look at the ducks!",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "bird",
+      "to:-3,7"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Your head turns to them. Then your body follows. Whoosh, left!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My eyes? The scooter goes where I look?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "IT WAS MAX?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Bird is right. A scooter follows your eyes, dear.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the scooter was never broken. I was just saying hello!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then look at something that isn't a duck.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Grandma, stand by the big tree. I'll look only at you.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma stands by the tree and holds up a red ball.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "grandma",
+      "to:2,13"
+     ],
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Eyes on the ball. Eyes on Grandma. Not on the ducks.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Push. Push. The scooter wobbles. Then it rolls straight.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,10"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Past the first cone. Past the second cone. Straight, straight!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:2,12"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ],
+     [
+      "cone1",
+      "bounce"
+     ],
+     [
+      "cone2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "HE DID IT!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "I did it! I rode all the way to the big tree!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Beautiful! You ride better than I did at your age.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Okay, now you can say hello to the ducks. Slowly!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, ducks! I'm riding to you on purpose this time!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stops right by the pond. Not one paw gets wet.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look where you want to go. Then you get there.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That works for scooters. And for lots of other things too.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the way home, Max rides the scooter in front of everyone.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,6"
+     ],
+     [
+      "scooter",
+      "to:max"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grandma, what is in that big box by your door?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:grandma"
+     ],
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My old costume box. Tomorrow is Halloween, you know!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max peeks inside the box. He sees floppy brown dog ears.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog ears? Grandma... I have the silliest idea ever.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Does Max's Scooter Only Go LEFT? 🛴😹",
+  "description": "\"Ten rides. Ten times into the same bush. Why?!\" 🐱\nGrandma teaches Max to ride her old blue scooter in the park, but it keeps turning left, into the bush and into the pond. Max the Curious Cat, Ep 23.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "scooter",
+   "learning to ride",
+   "park",
+   "ducks",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "CRUNCH AGAIN?!",
+  "thumb_beat": 22,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué el patinete de Max solo va a la IZQUIERDA? 🛴😹",
+    "description": "\"Diez viajes. Diez veces al mismo arbusto. ¡¿Por qué?!\" 🐱\nLa abuela enseña a Max a montar su viejo patinete azul en el parque, pero siempre gira a la izquierda: al arbusto y al estanque. Max el Gato Curioso, Ep 23.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Por que o patinete do Max só vai pra ESQUERDA? 🛴😹",
+    "description": "\"Dez voltas. Dez vezes no mesmo arbusto. Por quê?!\" 🐱\nA vovó ensina o Max a andar no velho patinete azul dela no parque, mas ele sempre vira para a esquerda: no arbusto e no lago. Max, o Gato Curioso, Ep 23.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "لماذا يذهب سكوتر ماكس إلى اليسار فقط؟ 🛴😹",
+    "description": "\"عشر مرات. وعشر مرات في نفس الشجيرة. لماذا؟!\" 🐱\nالجدة تعلّم ماكس ركوب السكوتر الأزرق القديم في الحديقة، لكنه يلتف دائمًا إلى اليسار: إلى الشجيرة وإلى البركة. ماكس القط الفضولي، الحلقة 23.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Pourquoi la trottinette de Max va toujours à GAUCHE ? 🛴😹",
+    "description": "« Dix essais. Dix fois dans le même buisson. Pourquoi ?! » 🐱\nMamie apprend à Max à rouler sur sa vieille trottinette bleue au parc, mais elle tourne toujours à gauche : dans le buisson et dans la mare. Max le Chat Curieux, Ép 23.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスのキックボード、なぜ左にしか行かない？🛴😹",
+    "description": "「10回乗って、10回とも同じしげみに…なんで？！」🐱\nおばあちゃんが公園で古い青いキックボードの乗り方を教えてくれるけど、いつも左へ曲がって、しげみや池へ。好奇心いっぱいのネコ マックス 第23話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스의 킥보드는 왜 왼쪽으로만 갈까? 🛴😹",
+    "description": "\"열 번 탔는데 열 번 다 같은 덤불로! 왜?!\" 🐱\n할머니가 공원에서 맥스에게 오래된 파란 킥보드 타는 법을 가르쳐 주지만, 킥보드는 자꾸 왼쪽으로 꺾여 덤불과 연못으로 가요. 호기심 많은 고양이 맥스 23화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Warum fährt Max' Roller nur nach LINKS? 🛴😹",
+    "description": "„Zehn Fahrten. Zehnmal in denselben Busch. Warum?!“ 🐱\nOma bringt Max im Park bei, mit ihrem alten blauen Roller zu fahren, aber er biegt immer nach links ab: in den Busch und in den Teich. Max die neugierige Katze, Folge 23.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 12,
+   "dur": 20,
+   "top": "WHY ALWAYS LEFT?! 🛴",
+   "title": "Max Rides Straight Into a Bush! 🛴😹 (Ep 23) #shorts",
+   "description": "He aims for the tree... and the scooter turns left. Again. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "scooter"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max se mete directo en un arbusto! 🛴😹 (Ep 23) #shorts",
+     "description": "Apunta al árbol... y el patinete gira a la izquierda. Otra vez. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max vai direto para o arbusto! 🛴😹 (Ep 23) #shorts",
+     "description": "Ele mira na árvore... e o patinete vira para a esquerda. De novo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يدخل الشجيرة مباشرة! 🛴😹 (الحلقة 23) #shorts",
+     "description": "يتجه نحو الشجرة... فيلتف السكوتر إلى اليسار. مرة أخرى. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max fonce droit dans un buisson ! 🛴😹 (Ép 23) #shorts",
+     "description": "Il vise l'arbre... et la trottinette tourne à gauche. Encore. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、しげみにまっしぐら！🛴😹（第23話）#shorts",
+     "description": "木をめざしたのに…キックボードはまた左へ。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스, 덤불로 직진! 🛴😹 (23화) #shorts",
+     "description": "나무를 향해 갔는데... 킥보드가 또 왼쪽으로. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max fährt direkt in einen Busch! 🛴😹 (Folge 23) #shorts",
+     "description": "Er zielt auf den Baum... und der Roller biegt wieder links ab. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 35,
+   "dur": 24,
+   "top": "IT WAS NEVER BROKEN?! 😲",
+   "title": "Without Max It Goes Straight?! 🛴 (Ep 23) #shorts",
+   "description": "Empty, it rolls perfectly straight. So what makes Max turn? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "scooter"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿El patinete va recto sin Max? 🛴 (Ep 23) #shorts",
+     "description": "Vacío, rueda perfectamente recto. Entonces, ¿qué hace girar a Max? Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O patinete anda reto sem o Max? 🛴 (Ep 23) #shorts",
+     "description": "Vazio, ele anda perfeitamente reto. Então o que faz o Max virar? Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "السكوتر يسير مستقيمًا بدون ماكس؟ 🛴 (الحلقة 23) #shorts",
+     "description": "وهو فارغ يسير مستقيمًا تمامًا. فما الذي يجعل ماكس يلتف؟ التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La trottinette roule droit sans Max ?! 🛴 (Ép 23) #shorts",
+     "description": "Vide, elle roule parfaitement droit. Alors qu'est-ce qui fait tourner Max ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスがいないとまっすぐ進む？！🛴（第23話）#shorts",
+     "description": "だれも乗らないとまっすぐ進む。じゃあ、マックスが曲がるのはなぜ？続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 없으면 킥보드가 똑바로 간다고?! 🛴 (23화) #shorts",
+     "description": "아무도 안 타면 똑바로 굴러가요. 그럼 맥스는 왜 꺾일까? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ohne Max fährt der Roller geradeaus?! 🛴 (Folge 23) #shorts",
+     "description": "Leer rollt er perfekt geradeaus. Was lässt Max also abbiegen? Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
