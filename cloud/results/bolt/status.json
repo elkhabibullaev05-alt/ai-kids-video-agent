@@ -1,9 +1,10 @@
 {
  "channel": "bolt",
  "host": "el",
- "time": "2026-10-30T14:25:24+00:00",
- "stage": "voices",
+ "time": "2026-10-30T14:26:10+00:00",
+ "stage": "error",
  "queue": 4,
  "pending": 0,
- "job": "20261027-1-pip-big-hill"
+ "job": "20261027-1-pip-big-hill",
+ "error": "soundtrack.py failed: Traceback (most recent call last):\n  File \"/opt/kanal/repo/bolt/engine/soundtrack.py\", line 11, in <module>\n    EV = json.load(open(os.path.join(OD, \"frames\", \"events.json\")))[\"events\"]\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/root/kanal/bolt/work/20261027-1-pip-big-hill/frames/events.json'\n"
 }
