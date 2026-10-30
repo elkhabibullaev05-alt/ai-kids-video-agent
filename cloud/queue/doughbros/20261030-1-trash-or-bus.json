@@ -1,0 +1,1023 @@
+{
+ "id": "20261030-1-trash-or-bus",
+ "plot": "On Monday morning Bup is missing from the basket; Pim is sure Mia took him on the school bus, the walkie is switched off, the bros tear open the trash bag before the garbage truck arrives and Zeek interrogates Mom's new sliced loaf, until Lolly realizes the warm cinnamon smell she noticed at the start can't be Grandma's eaten rolls: half-asleep Dad dropped Bup into the toaster; Pim unplugs it, the unplugged lever pops Bup out into the butter — and Bup slides into Mom's phone, which drops into the sink.",
+ "script": {
+  "title": "Is Bup in the Trash or on the Bus?",
+  "set": {
+   "place": "table",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "toaster",
+    "type": "box",
+    "color": [
+     0.78,
+     0.78,
+     0.82
+    ],
+    "on": null,
+    "at": [
+     6,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "bin",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     -6,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 1.4
+   },
+   {
+    "id": "bag",
+    "type": "box",
+    "color": [
+     0.95,
+     0.85,
+     0.6
+    ],
+    "on": null,
+    "at": [
+     -1,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 1.1
+   },
+   {
+    "id": "radio",
+    "type": "box",
+    "color": [
+     1.0,
+     0.8,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     -4,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "phone",
+    "type": "box",
+    "color": [
+     0.1,
+     0.2,
+     0.6
+    ],
+    "on": null,
+    "at": [
+     9,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Bup's gone! He was right here, and now he's gone!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The bus! Mia took him on the school bus!",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday, eight a.m. The yellow bus pulls away.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:2,8"
+     ],
+     [
+      "radio",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "BUP IS GONE",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Logic first. Bup is heavy. Mia's backpack is tiny.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,7"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "She waved at the basket. She counted four, not five.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. Do you smell that? Something warm. Like cinnamon.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The smell drifts from Dad's end of the table, near the toaster.",
+    "cam": "prop:toaster",
+    "do": [
+     [
+      "toaster",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That's Grandma's rolls from yesterday. Old news. Focus, Lolly.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad's plate is empty. One butter knife. No toast on it.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "He's on that bus! Kids will poke him with pencils!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then we call the bus. Lolly, the walkie-talkie!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly squeezes the button. Only static. Mia switched hers off.",
+    "cam": "prop:radio",
+    "do": [
+     [
+      "radio",
+      "bounce"
+     ],
+     [
+      "lolly",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She switched us off? That's just rude, sweetie.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a deep rumble outside. The garbage truck turns into the street.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Monday is trash day. Mom tosses old bread on trash day.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bup's in the trash?! We have to dig!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TRASH DAY?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The trash bag waits by the table leg, tightly knotted.",
+    "cam": "prop:bin",
+    "do": [
+     [
+      "bin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One knot. My crumb-sized fingers. This could take years.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly bites. Pim pulls. Crispy pushes. The knot finally gives.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside: eggshells, a banana peel, Mia's crayon drawing. No Bup.",
+    "cam": "prop:bin",
+    "do": [
+     [
+      "bin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If the truck takes that bag, we'll never find him!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The truck is three houses away. We need a real clue.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The new bread! Mom bought a fresh loaf yesterday!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A bag with a shiny new loaf lies by the fruit bowl.",
+    "cam": "prop:bag",
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "They swapped him! Out with old Bup, in with the new guy!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Leave this to me. Loaf. Where is our brother?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The new loaf says nothing. It's just bread. Very normal bread.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "NO CLUES LEFT",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The truck rumbles closer. Two houses away now.",
+    "cam": "wide",
+    "do": [
+     [
+      "bin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "We lost him. We really lost Bup.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Shh. Everybody stop talking. Smell again.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Warm cinnamon. Stronger now. And the toaster is ticking.",
+    "cam": "prop:toaster",
+    "do": [
+     [
+      "toaster",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Grandma's rolls were eaten last night. Every single one!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "That smell isn't rolls. That smell is Bup!",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "BUP'S IN THE TOASTER",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hello? Anybody? It's getting a bit toasty in here!",
+    "cam": "prop:toaster",
+    "do": [
+     [
+      "toaster",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Half asleep, Dad dropped Bup in. Then his phone rang.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ],
+     [
+      "all",
+      "look:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Nobody pokes a toaster. Rule one: unplug it first!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The plug hides behind the fruit bowl. Only Pim fits back there.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pim",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Me? Back there? With the spiders?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, you got Mia through her speech. You've got this.",
+    "cam": "prop:toaster",
+    "do": [
+     [
+      "toaster",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim squeezes in, grabs the plug and pulls with his whole bean.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click. The little red light goes dark.",
+    "cam": "prop:toaster",
+    "do": [
+     [
+      "toaster",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I did it! I unplugged a whole toaster!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Now the lever. Unplugged, it won't stay down. It pops.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then we push together. On three.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One. Two. Three. Ka-CHUNK!",
+    "cam": "wide",
+    "do": [
+     [
+      "toaster",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup flies out, golden brown, and lands right in the butter.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "enter"
+     ],
+     [
+      "toaster",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Warm, crunchy, buttery. Best Monday of my life.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We almost chased a garbage truck for nothing!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Next time, we trust Lolly's nose before Zeek's plans.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Bup is still sliding on the butter. Straight at Mom's phone.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "bup",
+      "to:7,12"
+     ],
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The phone tips off the edge. Plop. Into the sink.",
+    "cam": "wide",
+    "do": [
+     [
+      "phone",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "text": "MOM'S PHONE!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Is Bup in the Trash or on the Bus? 🗑️ (Ep 11)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone thought I was on the bus. I just needed somebody to smell me.\" — Bup\nOn Monday morning Bup is gone. The Dough Bros search the school bus, the trash bag and Mom's new loaf while the garbage truck gets closer.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "trash day",
+   "toaster",
+   "lost",
+   "bup",
+   "lolly",
+   "monday morning",
+   "funny animation"
+  ],
+  "thumb_text": "TRASH OR BUS?",
+  "thumb_beat": 32,
+  "localizations": {
+   "es": {
+    "title": "¿Bup está en la basura o en el autobús? 🗑️ (Ep 11)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todos pensaron que me había ido en el autobús. Yo solo quería que alguien me oliera.\" — Bup\nEl lunes por la mañana Bup desaparece. Los Dough Bros revisan el autobús, la bolsa de basura y el pan nuevo mientras el camión de la basura se acerca.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O Bup está no lixo ou no ônibus? 🗑️ (Ep 11)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo mundo achou que eu fui de ônibus. Eu só queria que alguém sentisse meu cheiro.\" — Bup\nNa segunda de manhã o Bup some. Os Dough Bros procuram no ônibus, no saco de lixo e no pão novo enquanto o caminhão do lixo se aproxima.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "هل بوب في القمامة أم في الحافلة؟ 🗑️ (Ep 11)",
+    "description": "ماذا تظن سيحدث في الجزء التالي؟ أخبرني في التعليقات.\n\"الجميع ظنّ أنني ركبت الحافلة. كنت أريد فقط أن يشمّني أحد.\" — بوب\nصباح الاثنين يختفي بوب. يبحث الدو بروز في الحافلة وكيس القمامة والخبز الجديد بينما تقترب شاحنة القمامة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Bup est dans la poubelle ou dans le bus ? 🗑️ (Ep 11)",
+    "description": "Selon toi, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Tout le monde croyait que j'étais dans le bus. Je voulais juste qu'on me sente.\" — Bup\nLundi matin, Bup a disparu. Les Dough Bros fouillent le bus, le sac poubelle et le pain neuf pendant que le camion poubelle approche.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "バップはゴミ袋の中？それともバスの中？🗑️ (Ep 11)",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「みんな僕がバスに乗ったと思ってた。誰かに匂いで気づいてほしかっただけなんだ。」— バップ\n月曜の朝、バップが消えた。ゴミ収集車が近づく中、ドウ・ブロズはバス、ゴミ袋、新しいパンを調べる。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "법은 쓰레기봉투에? 아니면 버스에? 🗑️ (Ep 11)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려줘.\n\"다들 내가 버스를 탔다고 생각했어. 누가 내 냄새만 맡아주길 바랐는데.\" — 법\n월요일 아침, 법이 사라졌다. 쓰레기차가 다가오는 동안 도우 브로스는 버스, 쓰레기봉투, 새 빵을 뒤진다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Ist Bup im Müll oder im Bus? 🗑️ (Ep 11)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alle dachten, ich sitze im Bus. Ich wollte nur, dass mich jemand riecht.\" — Bup\nAm Montagmorgen ist Bup verschwunden. Die Dough Bros durchsuchen den Bus, den Müllbeutel und das neue Brot, während das Müllauto näher kommt.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "WHERE DID BUP GO?",
+   "title": "Where Is Bup? Nobody Knows 😨 (Ep 11) #shorts",
+   "description": "Bup vanishes on Monday morning. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "missing",
+    "monday"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Dónde está Bup? Nadie lo sabe 😨 (Ep 11) #shorts",
+     "description": "Bup desaparece el lunes por la mañana. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Cadê o Bup? Ninguém sabe 😨 (Ep 11) #shorts",
+     "description": "O Bup some na segunda de manhã. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أين بوب؟ لا أحد يعرف 😨 (Ep 11) #shorts",
+     "description": "بوب يختفي صباح الاثنين. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Où est Bup ? Personne ne sait 😨 (Ep 11) #shorts",
+     "description": "Bup disparaît lundi matin. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バップはどこ？誰も知らない 😨 (Ep 11) #shorts",
+     "description": "月曜の朝、バップが消えた。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "법은 어디에? 아무도 모른다 😨 (Ep 11) #shorts",
+     "description": "월요일 아침, 법이 사라졌다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wo ist Bup? Keiner weiß es 😨 (Ep 11) #shorts",
+     "description": "Bup verschwindet am Montagmorgen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 15,
+   "dur": 22,
+   "top": "IS BUP IN THE TRASH?",
+   "title": "We Have to Open the Trash Bag 🗑️ (Ep 11) #shorts",
+   "description": "The garbage truck is coming and Bup is still missing. Next part on the channel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "trash day",
+    "cliffhanger"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Hay que abrir la bolsa de basura 🗑️ (Ep 11) #shorts",
+     "description": "El camión de la basura viene y Bup sigue sin aparecer. Siguiente parte en el canal. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Temos que abrir o saco de lixo 🗑️ (Ep 11) #shorts",
+     "description": "O caminhão do lixo vem aí e o Bup continua sumido. Próxima parte no canal. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "علينا فتح كيس القمامة 🗑️ (Ep 11) #shorts",
+     "description": "شاحنة القمامة قادمة وبوب ما زال مفقودًا. الجزء التالي على القناة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il faut ouvrir le sac poubelle 🗑️ (Ep 11) #shorts",
+     "description": "Le camion poubelle arrive et Bup reste introuvable. La suite sur la chaîne. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ゴミ袋を開けなきゃ 🗑️ (Ep 11) #shorts",
+     "description": "ゴミ収集車が来るのに、バップはまだ見つからない。続きはチャンネルで。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "쓰레기봉투를 열어야 해 🗑️ (Ep 11) #shorts",
+     "description": "쓰레기차가 오는데 법은 아직 없다. 다음 편은 채널에서. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wir müssen den Müllbeutel aufmachen 🗑️ (Ep 11) #shorts",
+     "description": "Das Müllauto kommt und Bup ist immer noch weg. Nächster Teil auf dem Kanal. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

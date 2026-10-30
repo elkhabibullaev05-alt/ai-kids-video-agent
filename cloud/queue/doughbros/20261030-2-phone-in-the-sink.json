@@ -1,0 +1,947 @@
+{
+ "id": "20261030-2-phone-in-the-sink",
+ "plot": "Right after the toaster rescue Mom's phone is at the bottom of the soapy sink twenty minutes before her job call; guilty Bup dives in and comes out soggy, Zeek's rice bag bursts over the floor, Crispy's warmth is ruled out and Lolly's towel rub leaves the screen black, until Bup reads the beach case planted at the start — it is waterproof and the towel only pressed the power button; the call comes, Mom gets the job — and then says it means the family has to move to another city.",
+ "script": {
+  "title": "We Dropped Mom's Phone in the Sink",
+  "set": {
+   "place": "kitchen",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "sink",
+    "type": "box",
+    "color": [
+     0.85,
+     0.88,
+     0.92
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 2.0
+   },
+   {
+    "id": "phone",
+    "type": "box",
+    "color": [
+     0.1,
+     0.35,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     2,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "rice",
+    "type": "box",
+    "color": [
+     0.97,
+     0.95,
+     0.88
+    ],
+    "on": null,
+    "at": [
+     -6,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.1
+   },
+   {
+    "id": "towel",
+    "type": "box",
+    "color": [
+     0.9,
+     0.3,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     6,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "No, no, no! Mom's phone is in the sink!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "sink",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Soapy water. Dirty forks. Worst place on earth for a phone.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ],
+     [
+      "bup",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bubbles rise from the dishwater. The phone sinks to the bottom.",
+    "cam": "prop:sink",
+    "do": [
+     [
+      "sink",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "PHONE IN THE SINK",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mom said nobody touches that phone today. Nobody!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The job call. At ten. She has waited all week for it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's nine forty. Mom is upstairs, ironing her best shirt.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the bubbles, the phone glows in its fat blue beach case.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I slid into it. This is my fault. I'm going in.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bup, you're bread! Bread and water are not friends!",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup dives. Splash. He hugs the phone and kicks to the top.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "sink",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He climbs out twice his normal size. Soggy. Dripping.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I feel like a sponge. A sad, heavy, bubbly sponge.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SOGGY BUP",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The phone lies on the counter. Its screen still glows. For now.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Stand back. Science time. Rice dries everything.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek drags the big rice bag across the counter.",
+    "cam": "prop:rice",
+    "do": [
+     [
+      "rice",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Gently, Zeek. That bag looks very, very full.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rip. A white waterfall of rice pours onto the floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "rice",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's raining rice! It's in my ear! It's in my bandage!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Small setback. Also, rice mostly just leaves dust in the holes.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Footsteps upstairs. The iron just clicked off.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If that phone doesn't ring, she loses her dream job!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Let me. I'm always warm. I'll dry it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "No! Too much heat cracks screens! Everybody knows that!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Everybody except me, apparently.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Towel! We pat it dry, like a baby after a bath.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly and Pim drag a dish towel up the cupboard door.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:4,11"
+     ],
+     [
+      "pim",
+      "to:5,12"
+     ],
+     [
+      "towel",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They rub and rub and rub. Something clicks under the towel.",
+    "cam": "prop:towel",
+    "do": [
+     [
+      "towel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The screen goes black.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's dead. We broke Mom's phone.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S DEAD?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Her dream job. Gone. Because of a sink.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup, still dripping, sits beside the phone. He feels terrible.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I slid into it. She loses her chance because of me.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Mistakes happen, Bup. What matters is what you do next.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A drop of water rolls off the blue case. Bup leans closer.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Wait. The beach case. There's writing on the side.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "'Waterproof. Pool safe. Two meters deep.'",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S WATERPROOF",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then why is the screen black, Mister Sponge?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That click. Lolly's towel pressed the power button.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I switched it off? With love? By accident?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup holds the button. The screen lights up. Nine fifty-nine.",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "It's alive! Oh, sweetie, it's alive!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rrring! The phone buzzes on the counter. Footsteps on the stairs.",
+    "cam": "wide",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Positions. We are bread. We are rocks. We are nothing.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom grabs the phone. 'Hello? Yes, it's me!'",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She listens. She gasps. She jumps. 'I got the job?!'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She got it! We didn't ruin everything!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Note for science: read the case before the rice.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm still a little soggy. But I'm a happy sponge.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mom says one more thing into the phone.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'Start in two weeks? In another city? So we'd have to move.'",
+    "cam": "prop:phone",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WE'RE MOVING?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "We Dropped Mom's Phone in the Sink 📱 (Ep 12)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I knocked it in. The least I could do was jump in after it.\" — Bup\nMom's phone lands in the dishwater minutes before the call about her new job. Rice, heat and a dish towel all go wrong, and the screen goes black.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "phone in water",
+   "kitchen",
+   "bup",
+   "zeek",
+   "job interview",
+   "accident",
+   "funny animation"
+  ],
+  "thumb_text": "SOGGY!",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "Se nos cayó el móvil de mamá al fregadero 📱 (Ep 12)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Yo lo tiré al agua. Lo mínimo era tirarme detrás.\" — Bup\nEl móvil de mamá cae al agua del fregadero justo antes de la llamada de su nuevo trabajo. El arroz, el calor y la toalla salen mal, y la pantalla se queda negra.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Derrubamos o celular da mamãe na pia 📱 (Ep 12)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Fui eu que derrubei. O mínimo era pular atrás dele.\" — Bup\nO celular da mamãe cai na água da pia logo antes da ligação do novo emprego. O arroz, o calor e a toalha dão errado, e a tela fica preta.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "أسقطنا هاتف أمي في الحوض 📱 (Ep 12)",
+    "description": "ماذا تظن سيحدث في الجزء التالي؟ أخبرني في التعليقات.\n\"أنا من أسقطه. أقل ما يمكنني فعله أن أقفز وراءه.\" — بوب\nيسقط هاتف أمي في ماء الحوض قبل مكالمة وظيفتها الجديدة. الأرز والحرارة والمنشفة تفشل، وتصبح الشاشة سوداء.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "On a fait tomber le téléphone de maman dans l'évier 📱 (Ep 12)",
+    "description": "Selon toi, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"C'est moi qui l'ai fait tomber. Le moins que je pouvais faire, c'était plonger.\" — Bup\nLe téléphone de maman tombe dans l'eau de vaisselle juste avant l'appel pour son nouveau travail. Le riz, la chaleur et le torchon échouent, et l'écran devient noir.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ママのスマホをシンクに落とした 📱 (Ep 12)",
+    "description": "次のパートで何が起こると思う？コメントで教えてね。\n「落としたのは僕だ。だから飛び込むしかなかった。」— バップ\n新しい仕事の電話の直前、ママのスマホが洗い桶の水に落ちた。お米も熱もタオルも失敗し、画面は真っ暗に。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "엄마 휴대폰을 싱크대에 빠뜨렸다 📱 (Ep 12)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려줘.\n\"떨어뜨린 건 나야. 그러니 뛰어드는 게 당연했어.\" — 법\n새 직장 전화가 오기 직전, 엄마 휴대폰이 설거지물에 빠진다. 쌀도, 열도, 행주도 실패하고 화면이 꺼진다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mamas Handy ist in die Spüle gefallen 📱 (Ep 12)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich habe es reingeschubst. Also bin ich hinterhergesprungen.\" — Bup\nMamas Handy fällt ins Spülwasser, kurz bevor der Anruf wegen ihres neuen Jobs kommt. Reis, Wärme und Geschirrtuch gehen schief, und der Bildschirm wird schwarz.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 25,
+   "top": "WOULD YOU JUMP IN?",
+   "title": "Bup Jumped in the Sink for Mom's Phone 😱 (Ep 12) #shorts",
+   "description": "Mom's phone is underwater. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "phone",
+    "sink"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Bup saltó al fregadero por el móvil 😱 (Ep 12) #shorts",
+     "description": "El móvil de mamá está bajo el agua. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bup pulou na pia atrás do celular 😱 (Ep 12) #shorts",
+     "description": "O celular da mamãe está debaixo d'água. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بوب قفز في الحوض لإنقاذ الهاتف 😱 (Ep 12) #shorts",
+     "description": "هاتف أمي تحت الماء. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bup a plongé dans l'évier pour le téléphone 😱 (Ep 12) #shorts",
+     "description": "Le téléphone de maman est sous l'eau. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バップがスマホを追ってシンクにダイブ 😱 (Ep 12) #shorts",
+     "description": "ママのスマホが水の中。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "법이 휴대폰을 구하러 싱크대에 뛰어들었다 😱 (Ep 12) #shorts",
+     "description": "엄마 휴대폰이 물속에 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bup springt dem Handy in die Spüle nach 😱 (Ep 12) #shorts",
+     "description": "Mamas Handy liegt unter Wasser. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
