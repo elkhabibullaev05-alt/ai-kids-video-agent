@@ -1,0 +1,1282 @@
+{
+ "id": "20261030-1-turbo-tell-truth",
+ "plot": "The morning after Hal came home, Turbo zooms up to the old drive-in's blinking light and bumps the projector, then finds a crack in the lens just as Hal announces Saturday's movie night; Turbo blames 'the wind', the shop has no lens for fifty years, and Grumpy decides to tow away the tree that 'caused' it, the hedgehog's home, so at sunset Turbo shouts the truth; Hal laughs: the crack is twenty years old, made by his own first honk as little Hally, and Turbo's bump only knocked off the old yellow tape seen on the floor; lesson: the truth is lighter than a secret; at movie night the old film shows a young Bolt in a brown hat.",
+ "script": {
+  "title": "Will Turbo Tell the Truth?",
+  "set": {
+   "place": "the old drive-in cinema field at the edge of Wheelburg, the morning after Hal came home, until sunset",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "description": "Turbo cracks the old cinema lens — or did he? Inspector Bolt #20",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lens",
+    "type": "wheel",
+    "color": [
+     0.62,
+     0.82,
+     0.98
+    ],
+    "at": [
+     0.0,
+     8.0,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "That light is still blinking! I'll get there first!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "CRASH!",
+    "hold": 0.9,
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "bounce"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "Uh-oh. The big round glass. It has a crack!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Nobody saw me. Should I tell? Or... not?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WILL TURBO TELL THE TRUTH?",
+    "hold": 1.2,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It was the morning after Hal came home to Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "hal",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Here, at the old drive-in cinema, a light had blinked all night.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Found it. An old bulb on a loose wire.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Old wires. Old bulbs. Old everything.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the floor lay a strip of very old, yellow tape.",
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody looked at it. Not yet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Big news, everyone! Ho-ho-honk!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Movie night! Right here! This Saturday! The whole town!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A movie under the stars! I'll bring my biggest blanket!",
+    "cam": "two:bertha,hal",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "bertha",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Which movie, Hal? Which one? Tell me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "My favourite. The Little Purple Van. On the old projector.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "That round lens is its heart. Careful with it.",
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Believe me. I know how easily it breaks.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "The heart? Did you say... the heart?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo's tyres felt heavy. Heavier than ever before.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. Before Saturday, we check every part.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wires, fine. Screen, fine. Lens...",
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. A crack. Right across the middle.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE LENS IS CRACKED!",
+    "hold": 1.0,
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Oh no! Who did this?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody looked around. Turbo looked at the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:hal"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Um... the wind! A big wind! Last night!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Wind? I was out all night. There was no wind.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Well, a little wind. My blanket flapped once!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then the wind is a crack-maker! Naughty wind!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt said nothing. But he saw a tiny sparkle on Turbo's bumper.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Interesting. Very interesting.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Without the lens, there's no movie. No movie night.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No movie night? But I already told my whole street!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "We have until sunset to fix it. Or Saturday is off.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "FIX IT BY SUNSET!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "I'll get a new lens! Fast! I'm the fastest!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo raced to the shop on Bakery Lane.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A round glass for an old projector? Not for fifty years, said the shop.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lens",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Fifty years? Oh no. Oh no, no, no.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back at the cinema, Grumpy had a plan.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "If the wind did it, it used that old tree.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Its branch bangs the window. At sunset, I tow the tree away.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Good thinking, Grumpy! No tree, no wind trouble!",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait! The hedgehog lives under that tree!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The one from the night we found Hal!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Hedgehogs can move. Trees can't.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE HEDGEHOG'S HOME?!",
+    "hold": 1.1,
+    "cam": "two:pip,grumpy",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Turbo heard everything. His little lie was growing.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "First the lens. Now the tree. And the hedgehog.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled over. Slowly. Quietly.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. Do you know what a secret is like?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A stone in your tyre. It gets heavier every mile.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Heavier every minute. I know.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun was low now. Grumpy hooked his chain to the tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:-10,12"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "He's pulling it! The hedgehog's home is going!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SUNSET! THE TREE IS GOING!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "STOP! Grumpy, stop! It wasn't the wind!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It was me! I zoomed up to see the light.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I bumped the lens. Crash. And then I lied.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody went very quiet. Even the birds.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm sorry, Hal. I broke your movie night.",
+    "cam": "two:turbo,hal",
+    "do": [
+     [
+      "hal",
+      "to:-3,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal looked at the lens. Then he began to shake.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Ho... ho-ho-HONK!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS HAL LAUGHING?!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "hal",
+    "say": "Turbo, that crack is older than you are!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I made it. Twenty years ago. When I was little Hally.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "My very first big honk. Too close to the glass!",
+    "cam": "two:hal,turbo",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Then what went crash this morning?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The yellow tape. It covered the old crack for years.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo's bump only knocked the tape off.",
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So I didn't break it? I was scared all day for nothing?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Not for nothing. You told the truth when it was hard.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And the truth saved a tree. And a hedgehog.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Tree stays. Good. I like that tree.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember, everyone. The truth is lighter than a secret.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The truth is lighter than a secret! I feel lighter too!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy brought new tape. Turbo and Hal stuck it on together.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:1,9"
+     ],
+     [
+      "hal",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That Saturday, the big screen lit up at last.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Look! A little line across the picture. Like a smile!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "That's the Hally line. It's always been there!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody laughed. Even Grumpy. Even the hedgehog, probably.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the old film showed a little blue car in a brown hat.",
+    "cam": "prop:lens",
+    "do": [
+     [
+      "lens",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt? Is that YOU in the movie?!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Oh dear. I hoped nobody would ever see that.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS BOLT IN THE MOVIE?",
+    "hold": 1.1,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Will Turbo Tell the Truth? 😬🎬 (Ep 20)",
+  "description": "\"Nobody saw me. So why does my secret feel so heavy?\" — Turbo\nZooming up to the old drive-in's blinking light, Turbo bumps the projector — and the lens has a crack. Movie night is Saturday, Grumpy wants to tow away the hedgehog's tree, and Turbo's little lie keeps growing. Inspector Bolt #20\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "bolt",
+   "turbo",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "telling the truth",
+   "honesty",
+   "drive-in",
+   "stories for kids",
+   "wheelburg"
+  ],
+  "thumb_text": "HE BROKE IT?!",
+  "thumb_beat": 18,
+  "localizations": {
+   "es": {
+    "title": "¿Dirá Turbo la verdad? 😬🎬 (Ep 20)",
+    "description": "\"Nadie me vio. ¿Entonces por qué mi secreto pesa tanto?\" — Turbo\nCorriendo hacia la luz que parpadea en el viejo autocine, Turbo choca con el proyector y la lente tiene una grieta. La noche de cine es el sábado, Grumpy quiere quitar el árbol del erizo y la pequeña mentira de Turbo sigue creciendo. Inspector Bolt #20\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "O Turbo vai contar a verdade? 😬🎬 (Ep 20)",
+    "description": "\"Ninguém me viu. Então por que meu segredo pesa tanto?\" — Turbo\nCorrendo até a luz que pisca no velho cinema drive-in, o Turbo esbarra no projetor e a lente fica com uma rachadura. A noite de cinema é no sábado, o Grumpy quer rebocar a árvore do ouriço e a pequena mentira do Turbo só cresce. Inspetor Bolt #20\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل سيقول توربو الحقيقة؟ 😬🎬 (حلقة 20)",
+    "description": "\"لم يرني أحد. فلماذا يبدو سري ثقيلاً جداً؟\" — توربو\nيسرع توربو نحو الضوء الذي يومض في السينما القديمة في الهواء الطلق، فيصطدم بجهاز العرض، وتظهر في العدسة شقّة. ليلة الفيلم يوم السبت، وغرامبي يريد سحب شجرة القنفذ، وكذبة توربو الصغيرة تكبر وتكبر. المفتش بولت #20\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Turbo va-t-il dire la vérité ? 😬🎬 (Ép 20)",
+    "description": "« Personne ne m'a vu. Alors pourquoi mon secret est-il si lourd ? » — Turbo\nEn fonçant vers la lumière qui clignote au vieux cinéma en plein air, Turbo cogne le projecteur, et l'objectif est fêlé. La soirée cinéma, c'est samedi, Grumpy veut enlever l'arbre du hérisson, et le petit mensonge de Turbo grandit. Inspecteur Bolt #20\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ターボは本当のことを言える?😬🎬(第20話)",
+    "description": "「だれも見てなかった。なのに、どうしてひみつがこんなに重いの?」— ターボ\n古いドライブインシアターで光るあかりを見に走ったターボは、映写機にぶつかってしまい、レンズにひびが!映画の夜は土曜日。グランピーはハリネズミの木を運ぼうとして、ターボの小さなうそはどんどん大きくなっていく。インスペクター・ボルト #20\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "터보는 진실을 말할까? 😬🎬 (20화)",
+    "description": "\"아무도 못 봤어. 그런데 왜 내 비밀은 이렇게 무거울까?\" — 터보\n낡은 자동차 극장에서 깜빡이는 불빛을 보러 달려간 터보가 영사기에 부딪히고, 렌즈에 금이 갔어요. 영화의 밤은 토요일, 그럼피는 고슴도치의 나무를 끌어내려 하고, 터보의 작은 거짓말은 점점 커져요. 인스펙터 볼트 #20\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Sagt Turbo die Wahrheit? 😬🎬 (Folge 20)",
+    "description": "„Niemand hat mich gesehen. Warum ist mein Geheimnis dann so schwer?\" — Turbo\nAuf dem Weg zum blinkenden Licht im alten Autokino stößt Turbo gegen den Projektor – und die Linse hat einen Riss. Am Samstag ist Filmabend, Grumpy will den Baum des Igels abschleppen, und Turbos kleine Lüge wird immer größer. Inspektor Bolt #20\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "DID HE BREAK IT?!",
+   "title": "Turbo Cracked the Glass?! 😬 (Ep 20) #shorts",
+   "description": "Nobody saw him... should he tell? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Turbo rompió el cristal?! 😬 (Ep 20) #shorts",
+     "description": "Nadie lo vio... ¿debería decirlo? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Turbo rachou o vidro?! 😬 (Ep 20) #shorts",
+     "description": "Ninguém viu... ele deve contar? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كسر توربو الزجاج؟! 😬 (حلقة 20) #shorts",
+     "description": "لم يره أحد... هل يجب أن يخبرهم؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo a fêlé la vitre ?! 😬 (Ép 20) #shorts",
+     "description": "Personne ne l'a vu... doit-il le dire ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボがガラスをわった?!😬(第20話)#shorts",
+     "description": "だれも見てない…言うべき?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보가 유리를 깼다고?! 😬 (20화) #shorts",
+     "description": "아무도 못 봤는데... 말해야 할까? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hat Turbo das Glas zerbrochen?! 😬 (Folge 20) #shorts",
+     "description": "Niemand hat es gesehen... soll er es sagen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 54,
+   "dur": 24,
+   "top": "STOP! IT WAS ME!",
+   "title": "Why Is Hal Laughing?! 🤭 (Ep 20) #shorts",
+   "description": "Turbo finally tells the truth... and Hal starts to shake. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Por qué se ríe Hal?! 🤭 (Ep 20) #shorts",
+     "description": "Turbo por fin dice la verdad... y Hal empieza a temblar. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que o Hal está rindo?! 🤭 (Ep 20) #shorts",
+     "description": "O Turbo finalmente conta a verdade... e o Hal começa a tremer. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا يضحك هال؟! 🤭 (حلقة 20) #shorts",
+     "description": "توربو يقول الحقيقة أخيراً... وهال يبدأ بالاهتزاز. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi Hal rit-il ?! 🤭 (Ép 20) #shorts",
+     "description": "Turbo dit enfin la vérité... et Hal se met à trembler. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どうしてハルはわらってるの?!🤭(第20話)#shorts",
+     "description": "ターボがついに本当のことを言うと…ハルがふるえだした。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "할은 왜 웃는 거야?! 🤭 (20화) #shorts",
+     "description": "터보가 드디어 진실을 말하자... 할이 떨기 시작해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum lacht Hal?! 🤭 (Folge 20) #shorts",
+     "description": "Turbo sagt endlich die Wahrheit... und Hal fängt an zu zittern. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
