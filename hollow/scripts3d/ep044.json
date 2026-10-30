@@ -1,0 +1,1008 @@
+{
+ "title": "25 People Vanished. Can You Explain It?",
+ "description": "A newspaper mystery from 1930: the empty camp at Angikuni Lake, northern Canada. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "tundra",
+  "fog": 0.035,
+  "eyes": 0,
+  "moonlight": 5
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "labelle": {
+   "name": "Joe Labelle",
+   "voice": "am_michael",
+   "speed": 0.98,
+   "pitch": -1,
+   "color": [
+    0.35,
+    0.18,
+    0.1
+   ],
+   "kind": "human",
+   "size": 0.88,
+   "home": [
+    -3.2,
+    8.4
+   ]
+  },
+  "kelleher": {
+   "name": "Emmett Kelleher",
+   "voice": "am_adam",
+   "speed": 1.04,
+   "pitch": 0,
+   "color": [
+    0.18,
+    0.2,
+    0.3
+   ],
+   "kind": "human",
+   "size": 0.84,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "nelson": {
+   "name": "Sergeant Nelson",
+   "voice": "bm_lewis",
+   "speed": 0.96,
+   "pitch": -1,
+   "color": [
+    0.55,
+    0.08,
+    0.08
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -34,
+    34
+   ]
+  },
+  "edwards": {
+   "name": "Frank Edwards",
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "pitch": -1,
+   "color": [
+    0.22,
+    0.22,
+    0.24
+   ],
+   "kind": "human",
+   "size": 0.86,
+   "home": [
+    -38,
+    40
+   ]
+  },
+  "boy": {
+   "name": "A young trapper",
+   "voice": "am_puck",
+   "speed": 1.04,
+   "pitch": 1,
+   "color": [
+    0.25,
+    0.3,
+    0.2
+   ],
+   "kind": "human",
+   "size": 0.7,
+   "home": [
+    -42,
+    44
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "cone",
+   "id": "tent1",
+   "color": [
+    0.22,
+    0.19,
+    0.16
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 1.5,
+   "at": [
+    -4.5,
+    14.5,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "tent2",
+   "color": [
+    0.25,
+    0.21,
+    0.17
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 1.7,
+   "at": [
+    2.5,
+    15.5,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "tent3",
+   "color": [
+    0.2,
+    0.18,
+    0.15
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 1.4,
+   "at": [
+    6.5,
+    18,
+    0
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "fire",
+   "color": [
+    1.0,
+    0.45,
+    0.08
+   ],
+   "glow": 5,
+   "visible": true,
+   "scale": 0.4,
+   "at": [
+    0.6,
+    11.2,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "pot",
+   "color": [
+    0.12,
+    0.12,
+    0.13
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.35,
+   "at": [
+    0.6,
+    11.2,
+    0.8
+   ]
+  },
+  {
+   "type": "box",
+   "id": "shirt",
+   "color": [
+    0.75,
+    0.68,
+    0.55
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    -0.6,
+    12.8,
+    0.3
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "needle",
+   "color": [
+    0.85,
+    0.9,
+    1.0
+   ],
+   "glow": 3,
+   "visible": false,
+   "scale": 0.12,
+   "at": [
+    -0.4,
+    12.5,
+    0.7
+   ]
+  },
+  {
+   "type": "box",
+   "id": "rifle",
+   "color": [
+    0.25,
+    0.16,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.35,
+   "at": [
+    -3.4,
+    13.0,
+    0.6
+   ]
+  },
+  {
+   "type": "box",
+   "id": "paper",
+   "color": [
+    0.85,
+    0.83,
+    0.75
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.55,
+   "at": [
+    -1.2,
+    9.4,
+    1.3
+   ]
+  },
+  {
+   "type": "box",
+   "id": "photo",
+   "color": [
+    0.55,
+    0.52,
+    0.45
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.4,
+   "at": [
+    1.2,
+    9.6,
+    1.4
+   ]
+  },
+  {
+   "type": "box",
+   "id": "book",
+   "color": [
+    0.5,
+    0.12,
+    0.1
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    -1.0,
+    9.2,
+    1.4
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "light",
+   "color": [
+    0.7,
+    1.0,
+    0.8
+   ],
+   "glow": 8,
+   "visible": false,
+   "scale": 0.6,
+   "at": [
+    3,
+    30,
+    9
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "labelle",
+   "say": "Hello? Is anyone here? The fire is still burning, and the whole camp is empty!",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "to:-1.2,9.8,0"
+    ],
+    [
+     "fire",
+     "spin"
+    ],
+    [
+     "labelle",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THE WHOLE CAMP IS GONE"
+  },
+  {
+   "who": "narr",
+   "say": "Six tents. Twenty-five men, women and children. And not one of them answered.",
+   "cam": "prop:tent2",
+   "do": [
+    [
+     "tent1",
+     "bounce"
+    ],
+    [
+     "tent2",
+     "bounce"
+    ],
+    [
+     "tent3",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "25 PEOPLE GONE"
+  },
+  {
+   "who": "narr",
+   "say": "This story was printed in the newspapers as true, in November nineteen thirty.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "labelle",
+     "to_home"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "NOVEMBER 1930"
+  },
+  {
+   "who": "narr",
+   "say": "Angikuni Lake, far in the frozen north of Canada. Today it is part of Nunavut.",
+   "cam": "wide",
+   "do": [
+    [
+     "tent3",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "ANGIKUNI LAKE, CANADA"
+  },
+  {
+   "who": "narr",
+   "say": "The trapper was called Joe Labelle. He said he had stayed in this camp before.",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "turn:front"
+    ]
+   ],
+   "sfx": "chime",
+   "text": "JOE LABELLE"
+  },
+  {
+   "who": "labelle",
+   "say": "Good people live here. Always a warm fire and a hot meal for a tired trapper.",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "happy"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "A WARM WELCOME"
+  },
+  {
+   "who": "narr",
+   "say": "But that night, no dogs barked. No children came running out to meet him.",
+   "cam": "prop:tent1",
+   "do": [
+    [
+     "labelle",
+     "to:-4.2,10.2,0"
+    ],
+    [
+     "tent1",
+     "shake"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "NO DOGS BARKING"
+  },
+  {
+   "who": "labelle",
+   "say": "Hello! It's Joe! Joe Labelle!",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "jump"
+    ],
+    [
+     "labelle",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HELLO?"
+  },
+  {
+   "who": "narr",
+   "say": "Only the wind answered. He pulled back the flap of the first tent.",
+   "cam": "prop:tent1",
+   "do": [
+    [
+     "tent1",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "ONLY THE WIND"
+  },
+  {
+   "who": "narr",
+   "say": "A pot of food still hung over the fire pit. Nobody had eaten it.",
+   "cam": "prop:pot",
+   "do": [
+    [
+     "pot",
+     "show"
+    ],
+    [
+     "pot",
+     "bounce"
+    ],
+    [
+     "fire",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "FOOD ON THE FIRE"
+  },
+  {
+   "who": "labelle",
+   "say": "They left their supper? Nobody leaves good food out here. Not in winter.",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THEY LEFT THEIR SUPPER"
+  },
+  {
+   "who": "narr",
+   "say": "Nearby lay a half-sewn piece of clothing. The needle was still stuck in it.",
+   "cam": "prop:shirt",
+   "do": [
+    [
+     "shirt",
+     "show"
+    ],
+    [
+     "needle",
+     "show"
+    ],
+    [
+     "needle",
+     "spin"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "THE NEEDLE WAS STILL IN IT"
+  },
+  {
+   "who": "narr",
+   "say": "Someone had put down her sewing, and simply never come back for it.",
+   "cam": "prop:needle",
+   "do": [
+    [
+     "needle",
+     "bounce"
+    ],
+    [
+     "shirt",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NEVER CAME BACK"
+  },
+  {
+   "who": "narr",
+   "say": "A rifle stood by a tent door. Out here, a hunter does not leave his rifle.",
+   "cam": "prop:rifle",
+   "do": [
+    [
+     "rifle",
+     "show"
+    ],
+    [
+     "rifle",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "HE LEFT HIS RIFLE"
+  },
+  {
+   "who": "labelle",
+   "say": "Where did they go? Twenty-five people cannot just vanish!",
+   "cam": "close:labelle",
+   "do": [
+    [
+     "labelle",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "WHERE DID THEY GO?"
+  },
+  {
+   "who": "narr",
+   "say": "He searched along the shore of the lake. He found no sign of where they went.",
+   "cam": "wide",
+   "do": [
+    [
+     "labelle",
+     "to:4,12.5,0"
+    ],
+    [
+     "labelle",
+     "turn:front"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "NO SIGN"
+  },
+  {
+   "who": "narr",
+   "say": "Joe Labelle hurried south to tell people. And the newspapers loved his story.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "labelle",
+     "to_home"
+    ],
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "spin"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THE NEWSPAPERS"
+  },
+  {
+   "who": "narr",
+   "say": "If you like true mysteries like this one, subscribe. Because the story was not finished.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ],
+    [
+     "paper",
+     "hide"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "A reporter named Emmett Kelleher wrote it up. A whole village had vanished, he said.",
+   "cam": "close:kelleher",
+   "do": [
+    [
+     "kelleher",
+     "to:-1.6,9.2,0"
+    ],
+    [
+     "kelleher",
+     "turn:front"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "VANISHED!"
+  },
+  {
+   "who": "kelleher",
+   "say": "Twenty-five people, gone without a trace! The North has a new mystery!",
+   "cam": "close:kelleher",
+   "do": [
+    [
+     "kelleher",
+     "happy"
+    ],
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "GONE WITHOUT A TRACE"
+  },
+  {
+   "who": "narr",
+   "say": "Papers as far away as Virginia printed it. Readers were frightened and fascinated.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "spin"
+    ],
+    [
+     "kelleher",
+     "to_home"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "PRINTED FAR AWAY"
+  },
+  {
+   "who": "narr",
+   "say": "Then the Royal Canadian Mounted Police began to ask questions.",
+   "cam": "close:nelson",
+   "do": [
+    [
+     "paper",
+     "hide"
+    ],
+    [
+     "nelson",
+     "to:-1.4,9.4,0"
+    ],
+    [
+     "nelson",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE MOUNTIES"
+  },
+  {
+   "who": "narr",
+   "say": "Sergeant Nelson, at The Pas in Manitoba, looked into the story.",
+   "cam": "close:nelson",
+   "do": [
+    [
+     "nelson",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SERGEANT NELSON"
+  },
+  {
+   "who": "nelson",
+   "say": "That photograph in the paper. I know it. It is an old one, from our own files.",
+   "cam": "prop:photo",
+   "do": [
+    [
+     "photo",
+     "show"
+    ],
+    [
+     "photo",
+     "spin"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "AN OLD PHOTO"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody in the north had heard of a missing camp. Not trappers. Not missionaries.",
+   "cam": "wide",
+   "do": [
+    [
+     "photo",
+     "hide"
+    ],
+    [
+     "tent2",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NOBODY HAD HEARD"
+  },
+  {
+   "who": "nelson",
+   "say": "And Joe Labelle does not even work in that area. This story is a hoax.",
+   "cam": "close:nelson",
+   "do": [
+    [
+     "nelson",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "A HOAX?"
+  },
+  {
+   "who": "narr",
+   "say": "In January nineteen thirty-one, his report said the whole thing was made up.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "JANUARY 1931"
+  },
+  {
+   "who": "narr",
+   "say": "Then, in nineteen fifty-nine, a radio man named Frank Edwards put it in a book.",
+   "cam": "close:edwards",
+   "do": [
+    [
+     "paper",
+     "hide"
+    ],
+    [
+     "nelson",
+     "to_home"
+    ],
+    [
+     "edwards",
+     "to:-1.5,9.4,0"
+    ],
+    [
+     "edwards",
+     "turn:front"
+    ],
+    [
+     "book",
+     "show"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "1959: THE BOOK"
+  },
+  {
+   "who": "edwards",
+   "say": "Stranger than Science! A whole village, vanished without a trace!",
+   "cam": "close:edwards",
+   "do": [
+    [
+     "edwards",
+     "happy"
+    ],
+    [
+     "book",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "STRANGER THAN SCIENCE"
+  },
+  {
+   "who": "narr",
+   "say": "With every retelling, the story grew. Some later books said a thousand people were gone.",
+   "cam": "wide",
+   "do": [
+    [
+     "book",
+     "hide"
+    ],
+    [
+     "tent1",
+     "bounce"
+    ],
+    [
+     "tent2",
+     "bounce"
+    ],
+    [
+     "tent3",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "THE STORY GREW"
+  },
+  {
+   "who": "narr",
+   "say": "Others added strange glowing lights in the sky above the lake.",
+   "cam": "prop:light",
+   "do": [
+    [
+     "light",
+     "show"
+    ],
+    [
+     "light",
+     "spin"
+    ],
+    [
+     "edwards",
+     "to_home"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "LIGHTS IN THE SKY?"
+  },
+  {
+   "who": "narr",
+   "say": "Today the Mounted Police call it a legend. They say there is no evidence it ever happened.",
+   "cam": "wide",
+   "do": [
+    [
+     "light",
+     "hide"
+    ],
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "JUST A LEGEND?"
+  },
+  {
+   "who": "narr",
+   "say": "But the old newspaper story is real. And Joe Labelle was a real man. So what did he see?",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WHAT DID HE SEE?"
+  },
+  {
+   "who": "narr",
+   "say": "A camp that simply moved on? A tall tale told by a lonely fire? Nobody knows for sure.",
+   "cam": "wide",
+   "do": [
+    [
+     "paper",
+     "hide"
+    ],
+    [
+     "fire",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "So remember the rule of Angikuni. If a camp is silent, do not step inside.",
+   "cam": "prop:tent2",
+   "do": [
+    [
+     "tent2",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "DON'T STEP INSIDE"
+  },
+  {
+   "who": "narr",
+   "say": "Tonight, a young trapper is crossing the same frozen land. He sees six tents.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "to:-2,9,0"
+    ],
+    [
+     "boy",
+     "turn:front"
+    ],
+    [
+     "pot",
+     "hide"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "TONIGHT..."
+  },
+  {
+   "who": "boy",
+   "say": "Tents, and a fire! Thank goodness. Hello? Can I come in and get warm?",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "happy"
+    ],
+    [
+     "boy",
+     "jump"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "CAN I COME IN?"
+  },
+  {
+   "who": "narr",
+   "say": "Nobody answers. Then, from inside the dark tent, something softly calls his name.",
+   "cam": "prop:tent1",
+   "do": [
+    [
+     "tent1",
+     "shake"
+    ],
+    [
+     "boy",
+     "eyes_big"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "IT CALLS HIS NAME"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "shake"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
