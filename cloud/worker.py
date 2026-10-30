@@ -314,6 +314,34 @@ def blender(args):
         raise RuntimeError("blender: " + (p.stderr or p.stdout)[-800:])
 
 
+MOVES = ("turn", "to", "to_home", "enter", "exit", "vanish", "spin")
+
+
+def safe_thumb_beat(sb, tb):
+    """Writer's thumb_beat unless the frame will be side-on/empty: a close-up beat with no turn/move/exit
+    in it or the 3 beats before (2026-10-29/30 bolt thumbs showed Pip/Bolt side-on, no eyes). Else nearest such beat."""
+    want = str(sb[tb].get("cam", "")) if 0 <= tb < len(sb) else ""
+    want = want if want.startswith("close:") else ""
+
+    def ok(i, cam=""):
+        if not (0 <= i < len(sb)) or not str(sb[i].get("cam", "")).startswith(cam or "close:"):
+            return False
+        who = str(sb[i]["cam"]).split(":", 1)[1]
+        for k in range(max(0, i - 3), i + 1):
+            for a in sb[k].get("do", []) or []:
+                if len(a) > 1 and a[0] in (who, "all") and str(a[1]).split(":")[0] in MOVES:
+                    return False
+        return True
+    if not sb or ok(tb):
+        return tb
+    for cam in ([want] if want else []) + [""]:
+        for dist in range(1, len(sb)):
+            for i in (tb - dist, tb + dist):
+                if ok(i, cam):
+                    return i
+    return tb
+
+
 def produce(job, jf):
     jid = job["id"]
     d = os.path.join(WORK, jid)
@@ -335,6 +363,8 @@ def produce(job, jf):
     frames = sorted(glob.glob(os.path.join(d, "frames", "f_*.png")))
     beats = tl["beats"]
     tb = job["long"].get("thumb_beat", len(beats) // 2)
+    if CFG.get("dir") == "bolt":  # cars have a face only on the front
+        tb = safe_thumb_beat(job["script"].get("beats", []), tb)
     fi = min(len(frames) - 1, int((beats[min(tb, len(beats) - 1)]["start"] + 0.8) * 12))
     thumb = os.path.join(d, "thumb.jpg")
     sh([PY, os.path.join(ENG, "thumb.py"), frames[max(fi, 0)], thumb, job["long"].get("thumb_text", "WATCH THIS"),
