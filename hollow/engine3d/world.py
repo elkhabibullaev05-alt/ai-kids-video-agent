@@ -1,6 +1,6 @@
 """Hollowmere Tales 3D world: night forest places + lantern-bearers + creatures.
 Executed inside story.py (exec). Defines TOD, PODIUM_TOP, DRUMS, C, make_char(), hat_m and builds the set.
-SET.place: forest | hill | moor | clearing | graveyard | swamp | village | chapel
+SET.place: forest | hill | moor | tundra | clearing | graveyard | swamp | village | chapel
 Character kinds: odo | moth | lochbeast | narr(none) | gloamhound | rootwraith | shepherd | crow | wickeater | hollowmother | horseman | soldier (+ghost) | lady (+ghost, Brown Lady) | greyman | human
 """
 TOD = "night"
@@ -17,7 +17,7 @@ try:
 except Exception:
     pass
 
-ground_col = {"swamp": (0.04, 0.06, 0.04), "graveyard": (0.07, 0.07, 0.06), "village": (0.08, 0.07, 0.06)}.get(PLACE, (0.05, 0.045, 0.035))
+ground_col = {"swamp": (0.04, 0.06, 0.04), "graveyard": (0.07, 0.07, 0.06), "village": (0.08, 0.07, 0.06), "tundra": (0.13, 0.14, 0.17)}.get(PLACE, (0.05, 0.045, 0.035))
 bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 10, 0)); g = add(bpy.context.object, mat("ground", ground_col, 0.95)); g.scale = (160, 120, 1)
 bark = mat("bark", (0.03, 0.025, 0.02), 0.9)
 stone_m = mat("stone", (0.25, 0.25, 0.27), 0.8)
@@ -74,6 +74,15 @@ if PLACE == "moor":  # Dartmoor: an empty road across the moor, low stone walls,
     for k in range(6):
         bpy.ops.mesh.primitive_cube_add(size=1, location=(-10 + k * 1.6, 44 + rnd.uniform(-1, 1), 4.5 + rnd.uniform(0, 1.5))); tr_ = add(bpy.context.object, stone_m, False)
         tr_.scale = (1.5, 1.5, rnd.uniform(1.5, 3.2)); tr_.rotation_euler = (0, rnd.uniform(-0.15, 0.15), rnd.uniform(0, 0.6))
+if PLACE == "tundra":  # Arctic barren lands (Angikuni Lake): pale snowy flats, a frozen lake behind, low far ridges, no trees
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 34, 0.03)); add(bpy.context.object, mat("ice", (0.05, 0.065, 0.09), 0.25, 0.0)).scale = (90, 22, 1)
+    sn_ = mat("snowmound", (0.12, 0.13, 0.16), 0.95)
+    for i in range(40):
+        x = rnd.uniform(-40, 40); y = rnd.uniform(15, 24)
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=rnd.uniform(0.5, 1.3), location=(x, y, 0.0)); add(bpy.context.object, sn_, False).scale = (2.2, 1, 0.35)
+    for k in range(5):
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=1, location=(-40 + k * 20 + rnd.uniform(-4, 4), 62, -6)); add(bpy.context.object, mat("ridge", (0.07, 0.075, 0.09), 0.95)).scale = (18, 8, 8 + rnd.uniform(0, 3))
+    bpy.ops.object.light_add(type="POINT", location=(0.6, 11.2, 1.2)); f = bpy.context.object; f.data.energy = 350; f.data.color = (1, 0.5, 0.15)
 if PLACE == "graveyard":
     for i in range(26):
         x = rnd.uniform(-14, 14); y = rnd.uniform(6, 26)
