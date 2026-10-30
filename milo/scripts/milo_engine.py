@@ -164,6 +164,78 @@ for _n, _f in {"palm": _palm, "island": _island, "coconut": _coconut, "crab": _c
     ink.PROPS[_n] = _f
 
 
+# --- cold / Antarctica props (ep003)
+def _tent(p, t, color, text):
+    flap = math.sin(t * 6) * 8
+    p.shape([(-170, 0), (0, -190), (170, 0)], color or "orange", 5)
+    p.shape([(-45, 0), (0, -90 + flap * 0.3), (45 + flap, 0)], "dark", 3)
+    p.line([(0, -190), (0, -230)], 5)
+
+
+def _penguin(p, t, color, text):
+    w = math.sin(t * 5) * 5
+    p.ellipse(0, -80, 45, 80, "black")
+    p.ellipse(0, -70, 30, 62, "white", 3)
+    p.circle(0, -165, 30, "black")
+    p.circle(-10, -170, 6, "white", 2)
+    p.shape([(18, -165), (40, -158), (18, -152)], "orange", 3)
+    p.shape([(-40, -120), (-60 - w, -50), (-38, -60)], "black", 3)
+    p.shape([(40, -120), (60 + w, -50), (38, -60)], "black", 3)
+    p.ellipse(-15, -2, 16, 6, "orange", 3)
+    p.ellipse(15, -2, 16, 6, "orange", 3)
+
+
+def _iceberg(p, t, color, text):
+    b = math.sin(t * 1.3) * 5
+    p.shape([(-220, b), (-150, -170 + b), (-40, -230 + b), (60, -150 + b), (150, -210 + b), (230, b)], color or "white", 5)
+    p.line([(-40, -230 + b), (-10, -120 + b)], 3, "sky")
+    p.line([(150, -210 + b), (120, -110 + b)], 3, "sky")
+    if text:
+        p.text(text, 0, -90 + b, 50, "dark")
+
+
+def _snow(p, t, color, text):
+    for k in range(40):
+        x = ((k * 197) % 1800) - 900 + math.sin(t * 2 + k) * 30 - (t * 300) % 200
+        y = ((k * 131 + t * (200 + (k % 5) * 60)) % 900) - 800
+        p.dot(x, y, 5 + k % 3, color or "white")
+
+
+def _hut(p, t, color, text):
+    p.rect(-200, -200, 400, 200, color or "red", 5)
+    p.shape([(-220, -200), (0, -300), (220, -200)], "white", 5)
+    p.rect(-40, -120, 80, 120, "dark", 4)
+    p.rect(100, -160, 60, 50, "sky", 4)
+    if text:
+        p.text(text, 0, -230, 40, "dark")
+
+
+def _rope(p, t, color, text):
+    pts = [(-500 + k * 50, -60 + 18 * math.sin(k * 0.9 + t)) for k in range(21)]
+    p.line(pts, 6, color or "orange")
+    for k in range(0, 21, 5):
+        x = -500 + k * 50
+        p.line([(x, 0), (x, -140)], 5, "dark")
+        p.shape([(x, -140), (x + 50, -120), (x, -100)], "red", 3)
+
+
+def _plane2(p, t, color, text):  # ski plane
+    p.ellipse(0, -80, 170, 40, color or "red")
+    p.rect(-40, -160, 80, 160, "white", 3, alpha=0.0)
+    p.shape([(-30, -90), (60, -90), (20, -10), (-60, -10)], "white", 4)
+    p.shape([(-170, -85), (-210, -150), (-150, -95)], color or "red", 4)
+    p.line([(-100, -40), (-100, -10)], 4)
+    p.line([(80, -40), (80, -10)], 4)
+    p.line([(-140, -8), (130, -8)], 6, "dark")
+    a = t * 30
+    p.line([(175, -80 - 40 * math.cos(a)), (175, -80 + 40 * math.cos(a))], 6)
+
+
+for _n, _f in {"tent": _tent, "penguin": _penguin, "iceberg": _iceberg, "snow": _snow, "hut": _hut, "rope": _rope,
+               "skiplane": _plane2}.items():
+    ink.PROPS[_n] = _f
+
+
 # ----------------------------------------------------------------------------- per-scene voice
 _orig_tts = render.tts
 _cur_voice = {"v": None}
