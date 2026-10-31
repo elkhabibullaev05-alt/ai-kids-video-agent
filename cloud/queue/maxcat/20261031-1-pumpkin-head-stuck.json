@@ -1,0 +1,1352 @@
+{
+ "id": "20261031-1-pumpkin-head-stuck",
+ "plot": "The morning after Halloween Max sneaks up on Grandma's bitten pumpkin lantern to find the biter, pokes his head inside and gets stuck right before the neighbours' pumpkin-soup lunch; Dog's gentle tail pull only rolls them across the grass, until Bird peeks through the tiny bite hole and sees Max's ears standing up like hooks, so everyone goes quiet in 'sneak mode', Max's ears go flat and he slides out with the pumpkin uncracked; the biter turns out to be a squirrel stuffing its cheeks with seeds, and Max wants to befriend it tomorrow.",
+ "script": {
+  "title": "Max's Head Is Stuck in a Pumpkin",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "pumpkin",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     -3.0,
+     12.0,
+     0.9
+    ],
+    "visible": false,
+    "scale": 1.0
+   },
+   {
+    "id": "pumpkin_hat",
+    "type": "ball",
+    "color": "orange",
+    "on": "max",
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "pumpkin2",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     6.0,
+     10.5,
+     0.9
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Help! Help! My head is stuck in Grandma's pumpkin!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "pumpkin_hat",
+      "show"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Whoa! Max is a pumpkin! A walking, talking pumpkin cat!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "How do you get a cat out of a pumpkin?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "PUMPKIN HEAD?!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "How did this happen? Let's go back ten minutes.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumpkin_hat",
+      "vanish"
+     ],
+     [
+      "pumpkin",
+      "show"
+     ],
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's a crisp autumn morning, the day after Halloween.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's pumpkin lantern still sits by the garden door.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look! Someone took a tiny bite out of it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A pumpkin biter, in our garden? I'll find out who!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max goes into sneak mode. Low, and slow, and quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ],
+     [
+      "max",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In sneak mode, Max's ears go flat. Flat as pancakes.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, why are you walking like a fluffy carpet?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh! Sneak mode! The biter could be hiding inside!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma cut a lid in the top for Halloween.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max lifts the lid. He pushes his head in, deep.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "PLOP!",
+    "cam": "close:max",
+    "hold": 1.0,
+    "do": [
+     [
+      "pumpkin",
+      "vanish"
+     ],
+     [
+      "pumpkin_hat",
+      "show"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "It's dark in here. And it smells like soup.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No biter inside. Okay. Head out now. Pull!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Max's head won't come out. Not even a little bit.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm stuck! I'm really, really stuck!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I twist left. I twist right. Nope! Still stuck!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK!",
+    "cam": "two:max,mouse",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "mouse",
+    "say": "Don't panic! But that's Grandma's soup pumpkin for lunch!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Max can't stay still. All he can see is orange.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Where's the garden? Where's the sky? Where's my tail?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, stop! You're walking into Grandma's flowers!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Too late. Max walks right into the flower bed. Squish.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:5,6"
+     ],
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, flowers! I can't see you! Everything is orange!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry! I'll pull you out by your tail. Gently!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog holds Max's tail in his soft mouth. One, two, three...",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog pulls back. Max goes back. The pumpkin goes too.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:9,10"
+     ],
+     [
+      "max",
+      "to:6,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They roll across the grass like a big orange snowball.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oops. Now we're both dizzy. And you're still a pumpkin.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Pulling made it worse. The pumpkin is hugging him tighter!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh my! Max! Is that my soup pumpkin on your head?",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The neighbours are coming for pumpkin soup at lunch!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "If the pumpkin cracks, there's no soup for the whole street!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NO SOUP?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "And if it doesn't crack, I'm a pumpkin forever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Nobody pulls. Nobody pushes. First we stay calm and look.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the pumpkin, Max tries to be calm. He hums.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hmm hmm hmmm... Hey! My voice is huge in here!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hellooo! Hellooo! Hellooo!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wow! The pumpkin is singing! Can it sing my bone song?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from the old tree, a tiny sound. Chitter, chitter.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ],
+     [
+      "bird",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Did you hear that? Something up in the tree is giggling.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No time for that! Look, the neighbours are at the fence!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Over the fence, the neighbours wave. They hold empty soup bowls.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Soup bowls? Can I have the very first bowl?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Only a few minutes until lunch, my dears!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hurry, friends! I don't want to be a pumpkin forever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "HURRY, MAX!",
+    "cam": "two:max,grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "Wait! There's a little hole right here. The tiny bite!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird flies up and peeks through the tiny bite hole.",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "bird",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello in there! I see a nose. I see whiskers.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And your ears! They're standing straight up, like two hooks!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "EARS UP!",
+    "cam": "two:bird,max",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "mouse",
+    "say": "Up? But when Max sneaked in, his ears were flat!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Flat ears went in. Up ears can't come out!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I need sneak mode again. But I'm too wiggly!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Then let's all be very, very quiet. Sneak mode, everyone.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone gets low and slow. Dog tiptoes. Bird whispers.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "flat_roof"
+     ],
+     [
+      "mouse",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Shhh, Max. Sneak mode. Low, and slow, and quiet.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max takes a big, calm breath. His ears go flat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now tip your chin down, and back out very slowly.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tips his chin down. He backs up. Slowly. Slowly...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "to:6,7"
+     ]
+    ]
+   },
+   {
+    "text": "POP!",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "pumpkin_hat",
+      "vanish"
+     ],
+     [
+      "pumpkin2",
+      "show"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "I'm out! Hello, garden! Hello, sky! Hello, tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Clever ears, clever cat. And clever Bird, too.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And the pumpkin? Not one single crack!",
+    "cam": "prop:pumpkin2",
+    "do": [
+     [
+      "pumpkin2",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Soup for everyone! And Max, you can stir the pot.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "SOUP SAVED!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "max",
+    "say": "When you're stuck, don't pull harder. Stay calm, and think.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And maybe don't put your head in pumpkins.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But who took the tiny bite? Chitter, chitter, from the tree!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "mouse",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look up! A little squirrel with an orange nose!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Squirrels hide seeds for winter. That's why it took a bite!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The pumpkin biter! And it's waving its fluffy tail at me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The squirrel's cheeks are full of pumpkin seeds. Big, round cheeks.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, I'm going to make friends with that squirrel!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max's Head Is STUCK in a Pumpkin! 🎃😹",
+  "description": "\"I only wanted to find the pumpkin biter. Now I AM the pumpkin!\" 🐱\nThe morning after Halloween Max peeks inside Grandma's soup pumpkin and gets his head stuck, just before the neighbours come for lunch. Max the Curious Cat, Ep 25.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "cat stuck in pumpkin",
+   "pumpkin",
+   "after halloween",
+   "autumn",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "squirrel"
+  ],
+  "thumb_text": "HEAD STUCK!",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "¡La cabeza de Max se ATASCÓ en una calabaza! 🎃😹",
+    "description": "\"Solo quería encontrar al que mordió la calabaza. ¡Ahora YO soy la calabaza!\" 🐱\nLa mañana después de Halloween, Max mira dentro de la calabaza de sopa de la abuela y se le atasca la cabeza, justo antes de que los vecinos vengan a almorzar. Max el Gato Curioso, Ep 25.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A cabeça do Max ficou PRESA numa abóbora! 🎃😹",
+    "description": "\"Eu só queria achar quem mordeu a abóbora. Agora EU sou a abóbora!\" 🐱\nNa manhã depois do Halloween, Max espia dentro da abóbora de sopa da vovó e a cabeça dele fica presa, bem antes de os vizinhos chegarem para o almoço. Max, o Gato Curioso, Ep 25.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "رأس ماكس عَلِق داخل يقطينة! 🎃😹",
+    "description": "\"أردت فقط أن أعرف من قضم اليقطينة. والآن أنا اليقطينة!\" 🐱\nفي الصباح التالي للهالوين يُدخل ماكس رأسه في يقطينة الحساء الخاصة بالجدة فيعلق، قبل أن يأتي الجيران للغداء بقليل. ماكس القط الفضولي، الحلقة 25.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "La tête de Max est COINCÉE dans une citrouille ! 🎃😹",
+    "description": "« Je voulais juste trouver qui a croqué la citrouille. Maintenant, c'est MOI la citrouille ! » 🐱\nLe matin après Halloween, Max regarde dans la citrouille à soupe de Mamie et sa tête reste coincée, juste avant que les voisins arrivent pour le déjeuner. Max le Chat Curieux, Ép 25.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスの頭がかぼちゃにハマった！🎃😹",
+    "description": "「かぼちゃをかじった犯人をさがしてただけなのに。今はぼくがかぼちゃだよ！」🐱\nハロウィンの次の朝、マックスはおばあちゃんのスープ用かぼちゃをのぞきこんで、頭がぬけなくなっちゃった。もうすぐご近所さんがお昼に来るのに！好奇心いっぱいのネコ マックス 第25話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스 머리가 호박에 끼었어요! 🎃😹",
+    "description": "\"호박을 깨문 범인을 찾고 싶었을 뿐인데. 이제 내가 호박이 됐어!\" 🐱\n핼러윈 다음 날 아침, 맥스는 할머니의 수프용 호박 속을 들여다보다가 머리가 끼어 버려요. 이웃들이 점심 먹으러 오기 직전에요! 호기심 많은 고양이 맥스 25화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Max' Kopf STECKT im Kürbis fest! 🎃😹",
+    "description": "„Ich wollte nur den Kürbis-Knabberer finden. Jetzt BIN ich der Kürbis!“ 🐱\nAm Morgen nach Halloween schaut Max in Omas Suppenkürbis und bleibt mit dem Kopf stecken, kurz bevor die Nachbarn zum Mittagessen kommen. Max die neugierige Katze, Folge 25.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 25,
+   "top": "HEAD IN A PUMPKIN?! 🎃",
+   "title": "Max Peeks Inside the Pumpkin... PLOP! 🎃😹 (Ep 25) #shorts",
+   "description": "Max only wanted one little look inside. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "pumpkin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max mira dentro de la calabaza... ¡PLOP! 🎃😹 (Ep 25) #shorts",
+     "description": "Max solo quería mirar un poquito dentro. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max espia dentro da abóbora... PLOFT! 🎃😹 (Ep 25) #shorts",
+     "description": "Max só queria dar uma olhadinha lá dentro. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس ينظر داخل اليقطينة... بلوب! 🎃😹 (الحلقة 25) #shorts",
+     "description": "أراد ماكس نظرة صغيرة واحدة فقط إلى الداخل. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max regarde dans la citrouille... PLOP ! 🎃😹 (Ép 25) #shorts",
+     "description": "Max voulait juste jeter un petit coup d'œil dedans. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、かぼちゃの中をのぞいたら…スポッ！🎃😹（第25話）#shorts",
+     "description": "ちょっとだけのぞくつもりだったのに。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 호박 속을 들여다보다가... 쏙! 🎃😹 (25화) #shorts",
+     "description": "맥스는 딱 한 번만 살짝 보고 싶었을 뿐이에요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max schaut in den Kürbis... PLOPP! 🎃😹 (Folge 25) #shorts",
+     "description": "Max wollte nur einmal kurz hineinschauen. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 52,
+   "dur": 20,
+   "top": "WHY WON'T HE COME OUT?! 🎃",
+   "title": "Bird Peeks Through the Bite Hole... 🐦🎃 (Ep 25) #shorts",
+   "description": "Bird looks inside the pumpkin and sees something surprising. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "pumpkin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pájaro mira por el agujerito... 🐦🎃 (Ep 25) #shorts",
+     "description": "Pájaro mira dentro de la calabaza y ve algo sorprendente. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Passarinho espia pelo buraquinho... 🐦🎃 (Ep 25) #shorts",
+     "description": "O Passarinho olha dentro da abóbora e vê uma surpresa. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "العصفور ينظر من ثقب القضمة... 🐦🎃 (الحلقة 25) #shorts",
+     "description": "ينظر العصفور داخل اليقطينة فيرى شيئًا مدهشًا. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau regarde par le petit trou... 🐦🎃 (Ép 25) #shorts",
+     "description": "Oiseau regarde dans la citrouille et voit une surprise. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリがかじり穴からのぞくと…🐦🎃（第25話）#shorts",
+     "description": "トリがかぼちゃの中をのぞくと、びっくり！続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새가 작은 구멍으로 들여다보니... 🐦🎃 (25화) #shorts",
+     "description": "새가 호박 속을 들여다보고 깜짝 놀라요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel schaut durchs Knabberloch... 🐦🎃 (Folge 25) #shorts",
+     "description": "Vogel schaut in den Kürbis und sieht etwas Überraschendes. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
