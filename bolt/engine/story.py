@@ -165,12 +165,14 @@ for key, ch in TL["chars"].items():
 
 # ---------------- props ----------------
 PCOL = {"gold": (1.0, 0.72, 0.15), "red": (0.9, 0.1, 0.1), "blue": (0.1, 0.35, 0.95), "green": (0.15, 0.75, 0.25),
-        "yellow": (1, 0.85, 0.1), "pink": (1, 0.45, 0.7), "white": (0.95, 0.95, 0.95), "orange": (1, 0.5, 0.1), "purple": (0.6, 0.25, 0.85)}
+        "yellow": (1, 0.85, 0.1), "pink": (1, 0.45, 0.7), "white": (0.95, 0.95, 0.95), "orange": (1, 0.5, 0.1), "purple": (0.6, 0.25, 0.85),
+        "brown": (0.45, 0.28, 0.14), "grey": (0.55, 0.56, 0.58), "gray": (0.55, 0.56, 0.58), "black": (0.06, 0.06, 0.07),
+        "silver": (0.82, 0.84, 0.88)}
 P = {}
 
 
 def make_prop(p):
-    col = p.get("color", "gold"); col = PCOL.get(col, col) if isinstance(col, str) else tuple(col)
+    col = p.get("color", "gold"); col = PCOL.get(col.lower(), PCOL["white"]) if isinstance(col, str) else tuple(col)[:3]  # unknown name → white (2026-10-31: "brown" crashed pip-big-hill)
     shiny = col == PCOL["gold"]
     m = mat("p_" + p["id"], col, 0.18 if shiny else 0.45, 1.0 if shiny else 0.0, 0.4 if shiny else 0)
     t = p.get("type", "box"); s = p.get("scale", 1.0)

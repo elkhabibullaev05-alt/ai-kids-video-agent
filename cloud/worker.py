@@ -306,7 +306,7 @@ def rek(path, title, kind):
 
 
 def blender(args):
-    cmd = [BL, "-b", "--factory-startup", "-P", os.path.join(ENG, "story.py"), "--", *args]
+    cmd = [BL, "-b", "--factory-startup", "--python-exit-code", "1", "-P", os.path.join(ENG, "story.py"), "--", *args]
     p = sh(cmd, check=False, cwd=os.path.join(ROOT, CFG["dir"]))
     if p.returncode and shutil.which("xvfb-run"):
         p = sh(["xvfb-run", "-a", *cmd], check=False, cwd=os.path.join(ROOT, CFG["dir"]))
