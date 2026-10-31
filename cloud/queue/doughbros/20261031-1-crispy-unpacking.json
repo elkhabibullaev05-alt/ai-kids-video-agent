@@ -1,0 +1,1002 @@
+{
+ "id": "20261031-1-crispy-unpacking",
+ "plot": "Two weeks before the family moves, Crispy keeps taking his things out of Zeek's 'Box of Us' and says he isn't coming; angry Lolly chases him, skids into a moving box and gets taped in, Crispy melts the tape to free her, Mr. Pot on the trash pile says burnt things never go to a new house, and Zeek sees that Crispy wasn't unpacking at all — he neatly packed everyone else and left himself out because Mom's box said 'old burnt pans: trash'; the bros all climb out and sit with him (five spots or zero), and then Dad reads that the movers allow no food in the truck — eat it or toss it by Saturday.",
+ "script": {
+  "title": "Why Is Crispy Unpacking Everything?",
+  "set": {
+   "place": "kitchen",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     10,
+     13
+    ],
+    "brows": 18
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "movebox",
+    "type": "box",
+    "color": [
+     0.72,
+     0.52,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     -3,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "lunchbox",
+    "type": "box",
+    "color": [
+     0.3,
+     0.75,
+     0.45
+    ],
+    "on": null,
+    "at": [
+     3,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "bin",
+    "type": "box",
+    "color": [
+     0.45,
+     0.47,
+     0.5
+    ],
+    "on": null,
+    "at": [
+     13,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.5
+   },
+   {
+    "id": "tape",
+    "type": "box",
+    "color": [
+     0.95,
+     0.8,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     -7,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Crispy! Why are you unpacking our moving box?!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,10"
+     ],
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Because I'm not coming. You go without me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:7,9"
+     ],
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunset. Boxes everywhere. The family moves in two weeks.",
+    "cam": "wide",
+    "do": [
+     [
+      "movebox",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "I'M NOT COMING",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-not coming? We're the Dough Bros. All five!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I built that box myself. Straw door, sock beds.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek calls it the Box of Us. One spot per bro.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four spots are full. Crispy's spot is empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody, breathe. Crispy, just talk to us.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Nothing to say. The kitchen stays here. So do I.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom walks in with tape and a fat black marker.",
+    "cam": "wide",
+    "do": [
+     [
+      "tape",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She writes on a box: 'Old burnt pans. Trash.' Crispy flinches.",
+    "cam": "prop:movebox",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Fine. If he won't pack himself, I'll pack him.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly chases Crispy across the counter, waving a sock bed.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:7,9"
+     ],
+     [
+      "crispy",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Lolly. Slow down. You'll melt your icing.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My icing! Is! Perfectly! Fine!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy steps aside. Lolly skids into the big moving box.",
+    "cam": "prop:movebox",
+    "do": [
+     [
+      "lolly",
+      "to:-3,12"
+     ],
+     [
+      "movebox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Lolly's in the box! The box Mom is taping!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rrrip. Mom tapes the top. One strip. Then two.",
+    "cam": "prop:tape",
+    "do": [
+     [
+      "tape",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TAPED IN!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If that box gets stacked, Lolly leaves with the plates!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom turns to look for the marker. The box rocks.",
+    "cam": "wide",
+    "do": [
+     [
+      "movebox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Lever theory! A teaspoon under the flap!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The teaspoon bends in half. The tape doesn't move.",
+    "cam": "prop:movebox",
+    "do": [
+     [
+      "movebox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why is it super tape? Who buys super tape?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a warm orange glow rolls up behind the box.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Tape is just glue. And glue hates heat.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy leans on the tape. It softens. It sags. It peels.",
+    "cam": "prop:movebox",
+    "do": [
+     [
+      "movebox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly pops out like toast, face first into the sugar.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You saved me. After I chased you with a sock.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom sees the open box, sighs, and blames the cheap tape.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, beside the trash bin, something laughs. Low and slow.",
+    "cam": "prop:bin",
+    "do": [
+     [
+      "bin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Burnt pans go in the trash. Welcome to the club.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "MR. POT?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mr. Pot sits on the trash pile. His sticker says: TRASH.",
+    "cam": "two:pot,crispy",
+    "do": [
+     [
+      "pot",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Nobody takes burnt things to a new house. Ask me.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Two weeks. Nobody gets left in this kitchen. Nobody!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hold on. Everybody look at the Box of Us.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every spot is neat. Bup's crumbs. Pim's bandage. Zeek's screws.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Someone packed for us. Perfectly. Only one spot is empty.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "You weren't unpacking. You packed us, and left yourself out.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "text": "HE PACKED US",
+    "cam": "wide",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You're bread, cookie, bean, samsa. They'll want you.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'm the burnt one. Burnt goes in the bin. I saw it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "So you'd stay here alone and never tell us?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs out of the Box of Us. Then Pim. Zeek.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:6,9"
+     ],
+     [
+      "pim",
+      "to:7,7"
+     ],
+     [
+      "zeek",
+      "to:9,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Five spots or zero spots. That's the only rule.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I'm out too. And I am not asking nicely.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "lolly",
+      "to:5,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four bros sit down around one small, warm, black rock.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You're all very bad at leaving people out.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Ugh. Friendship. Somebody give me my lid.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad walks in, reading a letter from the movers.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'No food in the truck. Eat it or toss it by Saturday.'",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "text": "EAT IT OR TOSS IT?!",
+    "cam": "wide",
+    "hold": 1.6,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Crispy Unpacking Everything? 📦 (Ep 13)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Nobody has to pick me. I just didn't want you to watch me stay behind.\" — Crispy\nThe family moves in two weeks, and Crispy keeps taking his things out of the Dough Bros' box. Lolly chases him, ends up taped inside a moving box, and Mr. Pot turns up in the trash.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "moving day",
+   "moving boxes",
+   "crispy",
+   "lolly",
+   "friendship",
+   "left behind",
+   "funny animation"
+  ],
+  "thumb_text": "NOT COMING?!",
+  "thumb_beat": 10,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué Crispy lo está sacando todo? 📦 (Ep 13)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"No hace falta que nadie me elija. Solo no quería que me vieran quedarme atrás.\" — Crispy\nLa familia se muda en dos semanas y Crispy no deja de sacar sus cosas de la caja de los Dough Bros. Lolly lo persigue, acaba encerrada con cinta en una caja de mudanza, y Mr. Pot aparece en la basura.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Por que o Crispy está tirando tudo da caixa? 📦 (Ep 13)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Ninguém precisa me escolher. Eu só não queria que me vissem ficar para trás.\" — Crispy\nA família se muda em duas semanas e o Crispy não para de tirar as coisas dele da caixa dos Dough Bros. A Lolly corre atrás dele, acaba lacrada numa caixa de mudança, e o Mr. Pot aparece no lixo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا يُخرج كريسبي كل شيء من الصندوق؟ 📦 (Ep 13)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لا أحتاج أن يختارني أحد. فقط لم أرد أن يروني أبقى وحدي.\" — كريسبي\nالعائلة ستنتقل بعد أسبوعين، وكريسبي يواصل إخراج أغراضه من صندوق الأصدقاء. لولي تطارده فتُغلق عليها علبة النقل بالشريط، ويظهر السيد بوت في سلة المهملات.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi Crispy vide-t-il toute la boîte ? 📦 (Ep 13)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Personne n'a besoin de me choisir. Je ne voulais juste pas qu'on me voie rester derrière.\" — Crispy\nLa famille déménage dans deux semaines et Crispy n'arrête pas de retirer ses affaires de la boîte des Dough Bros. Lolly le poursuit, se retrouve scotchée dans un carton, et Mr. Pot surgit de la poubelle.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "クリスピーはなぜ全部出しちゃうの？ 📦 (Ep 13)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「選ばれなくてもいい。ただ、置いていかれるところを見られたくなかった。」— クリスピー\n家族は2週間後に引っ越し。クリスピーはドウ・ブロスの箱から自分の物ばかり出してしまう。追いかけたロリーは引っ越し箱にテープで閉じ込められ、ゴミ箱からはミスター・ポットが現れる。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "크리스피는 왜 전부 꺼내는 걸까? 📦 (Ep 13)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"누가 날 골라 줄 필요는 없어. 그냥 혼자 남는 걸 보이고 싶지 않았어.\" — 크리스피\n가족은 2주 뒤에 이사를 가고, 크리스피는 도우 브로스 상자에서 자기 물건만 자꾸 꺼낸다. 쫓아가던 롤리는 이삿짐 상자에 테이프로 갇히고, 쓰레기통에서 미스터 팟이 나타난다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Warum packt Crispy alles wieder aus? 📦 (Ep 13)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Niemand muss mich aussuchen. Ich wollte nur nicht, dass ihr seht, wie ich zurückbleibe.\" — Crispy\nDie Familie zieht in zwei Wochen um, und Crispy räumt immer wieder seine Sachen aus der Kiste der Dough Bros. Lolly jagt ihn, landet zugeklebt in einem Umzugskarton, und Mr. Pot taucht im Müll auf.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 17,
+   "dur": 25,
+   "top": "TAPED IN A BOX?!",
+   "title": "Lolly Got Taped Inside a Moving Box 😱 (Ep 13) #shorts",
+   "description": "The tape won't let go. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "moving box",
+    "lolly"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Lolly quedó encerrada en una caja de mudanza 😱 (Ep 13) #shorts",
+     "description": "La cinta no se suelta. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Lolly ficou lacrada numa caixa de mudança 😱 (Ep 13) #shorts",
+     "description": "A fita não solta. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لولي عالقة داخل صندوق النقل 😱 (Ep 13) #shorts",
+     "description": "الشريط لا ينفك. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Lolly est scotchée dans un carton 😱 (Ep 13) #shorts",
+     "description": "Le scotch ne lâche pas. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ロリーが引っ越し箱に閉じ込められた 😱 (Ep 13) #shorts",
+     "description": "テープがはがれない。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "롤리가 이삿짐 상자에 갇혔다 😱 (Ep 13) #shorts",
+     "description": "테이프가 안 떨어진다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Lolly steckt im Umzugskarton fest 😱 (Ep 13) #shorts",
+     "description": "Das Klebeband hält. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 32,
+   "dur": 25,
+   "top": "WOULD YOU TRUST HIM?",
+   "title": "Would YOU Believe Mr. Pot? 🗑️ (Ep 13) #shorts",
+   "description": "Mr. Pot says burnt things go in the trash. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "mr pot",
+    "crispy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Le creerías a Mr. Pot? 🗑️ (Ep 13) #shorts",
+     "description": "Mr. Pot dice que lo quemado va a la basura. Siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Você acreditaria no Mr. Pot? 🗑️ (Ep 13) #shorts",
+     "description": "O Mr. Pot diz que coisa queimada vai pro lixo. Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل ستصدّق السيد بوت؟ 🗑️ (Ep 13) #shorts",
+     "description": "السيد بوت يقول إن المحروق مكانه القمامة. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tu croirais Mr. Pot ? 🗑️ (Ep 13) #shorts",
+     "description": "Mr. Pot dit que tout ce qui est brûlé finit à la poubelle. Suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ミスター・ポットを信じる？ 🗑️ (Ep 13) #shorts",
+     "description": "焦げたものはゴミ箱行きだとポットは言う。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "미스터 팟의 말을 믿을래? 🗑️ (Ep 13) #shorts",
+     "description": "탄 건 쓰레기통으로 간다는 미스터 팟. 다음 편은 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU Mr. Pot glauben? 🗑️ (Ep 13) #shorts",
+     "description": "Mr. Pot sagt, Verbranntes landet im Müll. Nächster Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
