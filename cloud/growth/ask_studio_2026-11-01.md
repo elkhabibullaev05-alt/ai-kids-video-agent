@@ -20,3 +20,5 @@ signed-in browser on the PC. No answers were invented; no agent files were chang
 
 Second run in a row without PC access (also 2026-10-31). Latest real answers remain in `ask_studio_2026-10-27.md`; compare the next run against that file.
 To fix: open the scheduled task in the Claude desktop app on the PC and turn on "Require this computer".
+
+**Second run on 2026-11-01:** same result — the scheduled run again had no PC/browser link (no `remote-devices` tools available). Nothing asked, nothing changed. Third consecutive day without real Ask Studio answers.
