@@ -136,7 +136,7 @@ def yt():
         import youtube_up
         # safety: upload only with a token that belongs to THIS channel. If the owner picked the channels in a
         # different order while signing in, the right token sits in another channel's folder — use that one.
-        seen, net_err = [], None
+        seen, net_err, fails = [], None, []
         for tok in [TOKEN] + sorted(glob.glob(os.path.join(os.path.dirname(HOME), "*", "token.json"))) + \
                 sorted(glob.glob("/mnt/c/Users/*/Documents/*/token.json")):  # the owner's local agents (sleeptube…), read only
             if tok in seen or not os.path.exists(tok):
@@ -156,7 +156,10 @@ def yt():
                             continue
                         net_err = e  # network is down: later tokens get no extra retries
                     log("token check failed:", tok, str(e)[:120])
+                    fails.append(f"{tok}: {str(e)[:80]}")
                     break
+            if cid and cid != CFG["id"]:
+                fails.append(f"{tok}: other channel {cid}")
             if cid == CFG["id"]:
                 _yt = c
                 if tok != TOKEN:
@@ -165,7 +168,8 @@ def yt():
         if _yt is None:
             if net_err is not None:
                 raise SystemExit(f"{NET_PREFIX} YouTube'ga ulanib bo'lmadi ({str(net_err)[:160]}) — keyingi ishda qayta uriniladi.")
-            raise SystemExit(f"no token for {CFG['name']} ({CFG['id']}) — stop.")
+            why = "; ".join(fails[:4]) if fails else "no token.json found (looked in " + TOKEN + ")"
+            raise SystemExit(f"no token for {CFG['name']} ({CFG['id']}) — stop. {why}"[:600])
     return _yt
 
 
