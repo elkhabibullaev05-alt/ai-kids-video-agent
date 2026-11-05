@@ -1,0 +1,1040 @@
+{
+ "id": "20261105-6-bluff-creek-footprints",
+ "plot": "Odo and Mothwick follow the true story of Bluff Creek, California (1958): bulldozer driver Jerry Crew finds 16-inch footprints, a plaster cast hits the front page and the name Bigfoot is born, then the 1967 Patterson-Gimlin film appears; the twist is Ray Wallace's family revealing carved wooden feet in 2002, though a crew member disputes it and the film stays unexplained — and a 'tree' steps behind Odo.",
+ "script": {
+  "title": "16-Inch Footprints Around His Bulldozer",
+  "lead_in": 0,
+  "set": {
+   "place": "clearing",
+   "fog": 0.04,
+   "eyes": 3,
+   "moonlight": 10
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "crew": {
+    "name": "Jerry Crew",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.45,
+     0.32,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "worker": {
+    "name": "A road worker",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.22,
+     0.3,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "genzoli": {
+    "name": "Andrew Genzoli",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.18,
+     0.18,
+     0.24
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "patt": {
+    "name": "Roger Patterson",
+    "voice": "am_liam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.25,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -42,
+     42
+    ]
+   },
+   "son": {
+    "name": "Michael Wallace",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.24,
+     0.32
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -46,
+     46
+    ]
+   },
+   "ed": {
+    "name": "Ed Schillinger",
+    "voice": "am_onyx",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.18,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -50,
+     50
+    ]
+   },
+   "big": {
+    "name": "The figure",
+    "voice": "am_onyx",
+    "speed": 0.8,
+    "pitch": -5,
+    "color": [
+     0.2,
+     0.13,
+     0.08
+    ],
+    "kind": "greyman",
+    "size": 0.62,
+    "home": [
+     26,
+     44
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "dozer",
+    "type": "box",
+    "color": [
+     0.85,
+     0.62,
+     0.1
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 1.6,
+    "at": [
+     3.5,
+     14,
+     0
+    ]
+   },
+   {
+    "id": "cab",
+    "type": "box",
+    "color": [
+     0.2,
+     0.2,
+     0.22
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 0.8,
+    "at": [
+     3.5,
+     14,
+     1.9
+    ]
+   },
+   {
+    "id": "drum",
+    "type": "tube",
+    "color": [
+     0.35,
+     0.36,
+     0.38
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 0.6,
+    "at": [
+     -6.5,
+     13,
+     1.0
+    ]
+   },
+   {
+    "id": "cast",
+    "type": "box",
+    "color": [
+     0.92,
+     0.92,
+     0.88
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.6,
+     9.6,
+     1.4
+    ]
+   },
+   {
+    "id": "paper",
+    "type": "box",
+    "color": [
+     0.85,
+     0.83,
+     0.75
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.0,
+     9.4,
+     1.6
+    ]
+   },
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.08,
+     0.08,
+     0.08
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     6.4,
+     10.4,
+     1.6
+    ]
+   },
+   {
+    "id": "feet",
+    "type": "banana",
+    "color": [
+     0.45,
+     0.3,
+     0.15
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     1.4,
+     9.6,
+     1.4
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "crew",
+    "say": "Look at these! Footprints all around my bulldozer! Huge ones!",
+    "cam": "close:crew",
+    "do": [
+     [
+      "crew",
+      "to:5,10.5,0"
+     ],
+     [
+      "crew",
+      "eyes_big"
+     ],
+     [
+      "cab",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "FOOTPRINTS AROUND MY DOZER"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. Bluff Creek, northern California, August nineteen fifty-eight.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ],
+     [
+      "fx",
+      "tracks:crew-big"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "BLUFF CREEK, 1958"
+   },
+   {
+    "who": "narr",
+    "say": "Sixteen inches long, sunk deep in the mud. So who made them?",
+    "cam": "overhead",
+    "do": [
+     [
+      "dozer",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "16 INCHES LONG"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "A black noon, a red moon... and now giant footprints.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "GIANT FOOTPRINTS"
+   },
+   {
+    "who": "moth",
+    "say": "They come out of the mud, Odo. Straight into the trees.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "INTO THE TREES"
+   },
+   {
+    "who": "narr",
+    "say": "Jerry Crew drove a bulldozer, cutting a logging road through the forest.",
+    "cam": "prop:dozer",
+    "do": [
+     [
+      "cab",
+      "bounce"
+     ]
+    ],
+    "text": "JERRY CREW"
+   },
+   {
+    "who": "narr",
+    "say": "His crew worked for a road contractor named Ray Wallace.",
+    "cam": "wide",
+    "do": [
+     [
+      "crew",
+      "turn:front"
+     ]
+    ],
+    "text": "RAY WALLACE'S CREW"
+   },
+   {
+    "who": "crew",
+    "say": "Somebody's pulling a prank on us. It has to be.",
+    "cam": "close:crew",
+    "do": [
+     [
+      "crew",
+      "shake"
+     ]
+    ],
+    "text": "A PRANK?"
+   },
+   {
+    "who": "narr",
+    "say": "But other men said they had seen tracks like these before.",
+    "cam": "close:worker",
+    "do": [
+     [
+      "worker",
+      "to:-5,11,0"
+     ]
+    ],
+    "text": "SEEN THEM BEFORE"
+   },
+   {
+    "who": "worker",
+    "say": "And that oil drum? Four hundred fifty pounds. Something moved it.",
+    "cam": "close:worker",
+    "do": [
+     [
+      "worker",
+      "turn:front"
+     ],
+     [
+      "drum",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "450 POUNDS. MOVED."
+   },
+   {
+    "who": "narr",
+    "say": "The men had a name for whatever was walking there at night.",
+    "cam": "wide",
+    "do": [
+     [
+      "drum",
+      "spin"
+     ]
+    ],
+    "text": "IT HAD A NAME"
+   },
+   {
+    "who": "worker",
+    "say": "Bigfoot. That's what we call him. Bigfoot.",
+    "cam": "close:worker",
+    "do": [
+     [
+      "worker",
+      "jump"
+     ]
+    ],
+    "text": "BIGFOOT"
+   },
+   {
+    "who": "odo",
+    "say": "They named it... before anyone had even seen it?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOBODY HAD SEEN IT"
+   },
+   {
+    "who": "narr",
+    "say": "When Jerry found more prints, he made a plaster cast of one.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "show"
+     ],
+     [
+      "cast",
+      "bounce"
+     ]
+    ],
+    "text": "A PLASTER CAST"
+   },
+   {
+    "who": "crew",
+    "say": "Sixteen inches. My own boot looks tiny next to it.",
+    "cam": "close:crew",
+    "do": [
+     [
+      "crew",
+      "eyes_big"
+     ]
+    ],
+    "text": "MY BOOT LOOKS TINY"
+   },
+   {
+    "who": "narr",
+    "say": "He took it to Andrew Genzoli, a reporter at the Humboldt Times.",
+    "cam": "close:genzoli",
+    "do": [
+     [
+      "worker",
+      "to_home"
+     ],
+     [
+      "genzoli",
+      "to:8,12,0"
+     ]
+    ],
+    "text": "THE NEWSPAPER"
+   },
+   {
+    "who": "genzoli",
+    "say": "Hold it up, Jerry. Right there. This one's for the front page.",
+    "cam": "close:genzoli",
+    "do": [
+     [
+      "genzoli",
+      "turn:front"
+     ],
+     [
+      "paper",
+      "show"
+     ]
+    ],
+    "text": "FRONT PAGE"
+   },
+   {
+    "who": "narr",
+    "say": "The story spread fast. And the name Bigfoot spread with it.",
+    "cam": "wide",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "text": "THE NAME SPREAD"
+   },
+   {
+    "who": "narr",
+    "say": "October sixth, nineteen fifty-eight. Bigfoot was in the paper. Soon, everywhere.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "spin"
+     ],
+     [
+      "cast",
+      "hide"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "OCTOBER 6, 1958"
+   },
+   {
+    "who": "moth",
+    "say": "The New York Times came calling. Now the whole country wanted answers.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "THE WHOLE COUNTRY"
+   },
+   {
+    "who": "narr",
+    "say": "Nine years later, two men rode up Bluff Creek with a camera.",
+    "cam": "wide",
+    "do": [
+     [
+      "genzoli",
+      "to_home"
+     ],
+     [
+      "paper",
+      "hide"
+     ],
+     [
+      "patt",
+      "to:7,11.5,0"
+     ],
+     [
+      "camera",
+      "show"
+     ]
+    ],
+    "text": "1967"
+   },
+   {
+    "who": "patt",
+    "say": "Bob, look! Across the creek! Get the camera running!",
+    "cam": "close:patt",
+    "do": [
+     [
+      "patt",
+      "turn:front"
+     ],
+     [
+      "patt",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "GET THE CAMERA!"
+   },
+   {
+    "who": "narr",
+    "say": "On October twentieth, Roger Patterson and Bob Gimlin filmed something walking.",
+    "cam": "wide",
+    "do": [
+     [
+      "big",
+      "to:11,24,0"
+     ]
+    ],
+    "text": "OCTOBER 20, 1967"
+   },
+   {
+    "who": "narr",
+    "say": "The film runs just under a minute. It is still studied today.",
+    "cam": "close:big",
+    "do": [
+     [
+      "big",
+      "turn:front"
+     ]
+    ],
+    "text": "59.5 SECONDS"
+   },
+   {
+    "who": "odo",
+    "say": "It's turning its head... it's looking straight at them.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "IT'S LOOKING AT THEM"
+   },
+   {
+    "who": "narr",
+    "say": "Many experts think the film is a hoax. Others still argue.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "big",
+      "to:30,46,0"
+     ],
+     [
+      "patt",
+      "to_home"
+     ],
+     [
+      "camera",
+      "spin"
+     ]
+    ],
+    "text": "A HOAX?"
+   },
+   {
+    "who": "moth",
+    "say": "If those tracks were real, Odo, something huge still walks here.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "STILL WALKING HERE?"
+   },
+   {
+    "who": "narr",
+    "say": "Then, in two thousand two, Ray Wallace died. Remember that name?",
+    "cam": "wide",
+    "do": [
+     [
+      "camera",
+      "hide"
+     ],
+     [
+      "moth",
+      "turn:odo"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "2002: RAY WALLACE"
+   },
+   {
+    "who": "narr",
+    "say": "His family shared a secret. Big wooden feet, carved by hand.",
+    "cam": "prop:feet",
+    "do": [
+     [
+      "feet",
+      "show"
+     ],
+     [
+      "feet",
+      "bounce"
+     ],
+     [
+      "son",
+      "to:6,11,0"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "WOODEN FEET"
+   },
+   {
+    "who": "son",
+    "say": "Dad made those tracks. Bigfoot started as a joke.",
+    "cam": "close:son",
+    "do": [
+     [
+      "son",
+      "turn:front"
+     ]
+    ],
+    "text": "IT WAS A JOKE"
+   },
+   {
+    "who": "odo",
+    "say": "The boss made the footprints? All of them?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "ALL OF THEM?"
+   },
+   {
+    "who": "narr",
+    "say": "His family said relatives used the feet to stamp prank tracks.",
+    "cam": "prop:feet",
+    "do": [
+     [
+      "feet",
+      "spin"
+     ]
+    ],
+    "text": "PRANK TRACKS"
+   },
+   {
+    "who": "narr",
+    "say": "But Ed Schillinger, who worked on that road job, strongly disagreed.",
+    "cam": "close:ed",
+    "do": [
+     [
+      "son",
+      "to_home"
+     ],
+     [
+      "ed",
+      "to:6,11,0"
+     ]
+    ],
+    "text": "NOT SO FAST"
+   },
+   {
+    "who": "ed",
+    "say": "Those tracks weren't made with wooden feet. I was there.",
+    "cam": "close:ed",
+    "do": [
+     [
+      "ed",
+      "turn:front"
+     ],
+     [
+      "ed",
+      "shake"
+     ]
+    ],
+    "text": "NOT WOODEN FEET"
+   },
+   {
+    "who": "narr",
+    "say": "And wooden feet cannot explain what walked across that film.",
+    "cam": "wide",
+    "do": [
+     [
+      "ed",
+      "to_home"
+     ],
+     [
+      "feet",
+      "hide"
+     ]
+    ],
+    "text": "AND THE FILM?"
+   },
+   {
+    "who": "narr",
+    "say": "Scientists point out that no bones or body have ever been found.",
+    "cam": "overhead",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ]
+    ],
+    "text": "NO BONES. NO BODY."
+   },
+   {
+    "who": "narr",
+    "say": "Many sightings, they say, are bears standing up in poor light.",
+    "cam": "wide",
+    "do": [
+     [
+      "big",
+      "to:20,36,0"
+     ]
+    ],
+    "text": "A BEAR?"
+   },
+   {
+    "who": "moth",
+    "say": "And still, every year, people come to Bluff Creek to look.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "STILL LOOKING"
+   },
+   {
+    "who": "odo",
+    "say": "So was it a joke? Or something hiding behind a joke?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "A JOKE... OR NOT?"
+   },
+   {
+    "who": "narr",
+    "say": "The cast, the newspaper, the film. All of them are real.",
+    "cam": "prop:dozer",
+    "do": [
+     [
+      "cab",
+      "bounce"
+     ]
+    ],
+    "text": "ALL REAL"
+   },
+   {
+    "who": "narr",
+    "say": "What made them is still an open question.",
+    "cam": "wide",
+    "do": [
+     [
+      "big",
+      "to:14,28,0"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "STILL UNANSWERED"
+   },
+   {
+    "who": "moth",
+    "say": "Odo. Behind you. That tree just took a step.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ],
+     [
+      "big",
+      "to:9,20,0"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THAT TREE MOVED"
+   },
+   {
+    "who": "narr",
+    "say": "Next time, the lantern leads us somewhere new. Don't miss it.",
+    "cam": "wide",
+    "do": [
+     [
+      "big",
+      "turn:front"
+     ],
+     [
+      "odo",
+      "jump"
+     ]
+    ],
+    "text": "NEXT TIME..."
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "16-Inch Footprints Around His Bulldozer 👣 (Ep 50)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"The footprints had a name before anyone ever saw what made them.\" — Odo\n\nA true story from Bluff Creek, California: in 1958 bulldozer driver Jerry Crew found 16-inch footprints in the mud, and a newspaper gave the world the word Bigfoot. Then came a film in 1967 — and in 2002, a family secret.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#truestory #series #3DAnimation #Odo #bigfoot",
+  "tags": [
+   "Bigfoot",
+   "Bluff Creek",
+   "Jerry Crew",
+   "Patterson-Gimlin film",
+   "Ray Wallace",
+   "1958",
+   "California",
+   "Sasquatch",
+   "true story",
+   "unsolved mystery",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "WHO WALKED HERE?",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "Huellas de 40 cm junto a su excavadora 👣 (Ep 50)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Las huellas tuvieron nombre antes de que nadie viera qué las hizo.\" — Odo\n\nUna historia real de Bluff Creek, California: en 1958 el operador de excavadora Jerry Crew encontró huellas de 40 cm en el barro, y un periódico le dio al mundo la palabra Bigfoot. Luego llegó una película en 1967… y en 2002, un secreto familiar.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#historiareal #serie #3DAnimation #Odo #bigfoot"
+   },
+   "pt": {
+    "title": "Pegadas de 40 cm em volta do trator 👣 (Ep 50)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"As pegadas ganharam nome antes de alguém ver o que as fez.\" — Odo\n\nUma história real de Bluff Creek, Califórnia: em 1958 o tratorista Jerry Crew achou pegadas de 40 cm na lama, e um jornal deu ao mundo a palavra Bigfoot. Depois veio um filme em 1967 — e, em 2002, um segredo de família.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#historiareal #serie #3DAnimation #Odo #bigfoot"
+   },
+   "ar": {
+    "title": "آثار أقدام بطول 40 سم حول جرافته 👣 (الحلقة 50)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"حصلت آثار الأقدام على اسم قبل أن يرى أحد ما صنعها.\" — أودو\n\nقصة حقيقية من بلاف كريك في كاليفورنيا: عام 1958 وجد سائق الجرافة جيري كرو آثار أقدام بطول 40 سم في الطين، ومنحت صحيفة العالم كلمة \"بيغ فوت\". ثم جاء فيلم عام 1967، وفي 2002 سرّ عائلي.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #bigfoot"
+   },
+   "fr": {
+    "title": "Des empreintes de 40 cm autour de son bulldozer 👣 (Ep 50)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Les empreintes avaient un nom avant que quiconque voie ce qui les avait faites. » — Odo\n\nUne histoire vraie de Bluff Creek, en Californie : en 1958, le conducteur de bulldozer Jerry Crew trouve des empreintes de 40 cm dans la boue, et un journal offre au monde le mot Bigfoot. Puis vient un film en 1967 — et en 2002, un secret de famille.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#histoirevraie #serie #3DAnimation #Odo #bigfoot"
+   },
+   "ja": {
+    "title": "ブルドーザーの周りに40cmの足跡 👣 (Ep 50)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「何が付けたのか誰も見ないうちに、足跡には名前が付いていた。」— オド\n\nカリフォルニア州ブラフ・クリークの実話。1958年、ブルドーザー運転手ジェリー・クルーが泥の中に40cmの足跡を見つけ、新聞が「ビッグフット」という言葉を世界に広めました。そして1967年のフィルム、2002年の家族の秘密へ。\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#実話 #シリーズ #3DAnimation #Odo #ビッグフット"
+   },
+   "ko": {
+    "title": "불도저 주변의 40cm 발자국 👣 (Ep 50)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"누가 만들었는지 아무도 보기 전에, 그 발자국엔 이름부터 생겼어.\" — 오도\n\n캘리포니아 블러프 크릭의 실화: 1958년 불도저 기사 제리 크루가 진흙에서 40cm 발자국을 발견했고, 한 신문이 '빅풋'이라는 이름을 세상에 알렸습니다. 이어 1967년의 필름, 그리고 2002년 한 가족의 비밀이 드러납니다.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#실화 #시리즈 #3DAnimation #Odo #빅풋"
+   },
+   "de": {
+    "title": "40-cm-Fußspuren rund um seinen Bulldozer 👣 (Ep 50)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Die Spuren hatten einen Namen, bevor jemand sah, was sie machte.“ — Odo\n\nEine wahre Geschichte aus Bluff Creek, Kalifornien: 1958 fand Bulldozerfahrer Jerry Crew 40 cm lange Fußspuren im Schlamm, und eine Zeitung schenkte der Welt das Wort Bigfoot. Dann kam 1967 ein Film – und 2002 ein Familiengeheimnis.\n\nSources:\nhttps://en.wikipedia.org/wiki/Bigfoot\nhttps://en.wikipedia.org/wiki/Raymond_L._Wallace\n\n#wahregeschichte #serie #3DAnimation #Odo #bigfoot"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 25,
+   "top": "SOMETHING MOVED IT",
+   "title": "Who moved a 450-pound oil drum? 👣 (Ep 50) #shorts",
+   "description": "1958, Bluff Creek: huge footprints, a moved oil drum, and a name nobody had heard before. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Bigfoot",
+    "Bluff Creek"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién movió un bidón de 200 kilos? 👣 (Ep 50) #shorts",
+     "description": "1958, Bluff Creek: huellas enormes, un bidón movido y un nombre que nadie conocía. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem moveu um tambor de 200 quilos? 👣 (Ep 50) #shorts",
+     "description": "1958, Bluff Creek: pegadas enormes, um tambor de óleo movido e um nome que ninguém conhecia. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من حرّك برميلًا وزنه 200 كغ؟ 👣 (الحلقة 50) #shorts",
+     "description": "1958، بلاف كريك: آثار أقدام ضخمة، وبرميل نفط تحرّك، واسم لم يسمعه أحد من قبل. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a déplacé un baril de 200 kilos ? 👣 (Ep 50) #shorts",
+     "description": "1958, Bluff Creek : des empreintes géantes, un baril déplacé et un nom encore inconnu. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "200kgのドラム缶を動かしたのは誰? 👣 (Ep 50) #shorts",
+     "description": "1958年ブラフ・クリーク。巨大な足跡、動いたドラム缶、そして誰も知らなかった名前。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 200kg 드럼통을 옮겼을까? 👣 (Ep 50) #shorts",
+     "description": "1958년 블러프 크릭: 거대한 발자국, 옮겨진 드럼통, 그리고 아무도 몰랐던 이름. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer bewegte ein 200-Kilo-Ölfass? 👣 (Ep 50) #shorts",
+     "description": "1958, Bluff Creek: riesige Spuren, ein verschobenes Ölfass und ein Name, den keiner kannte. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

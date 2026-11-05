@@ -1,0 +1,992 @@
+{
+ "id": "20261105-5-dark-day-1780",
+ "plot": "Odo and Mothwick follow the true story of New England's Dark Day (19 May 1780): the sun vanishes by noon, hens roost, candles are lit and Connecticut's council fears Judgment Day while Abraham Davenport asks for candles; the twist is that tree rings later showed smoke from a distant Canadian forest fire mixed with fog, and the episode ends on huge footprints in the mud.",
+ "script": {
+  "title": "1780: Why Did Noon Turn to Night?",
+  "lead_in": 0,
+  "set": {
+   "place": "hill",
+   "fog": 0.06,
+   "eyes": 0,
+   "moonlight": 8
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "farmer": {
+    "name": "A New England farmer",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.36,
+     0.26,
+     0.14
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "williams": {
+    "name": "Professor Samuel Williams",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "martin": {
+    "name": "Private Joseph Plumb Martin",
+    "voice": "am_puck",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.15,
+     0.22,
+     0.45
+    ],
+    "kind": "human",
+    "size": 0.82,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "council": {
+    "name": "A frightened councilman",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.12,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -42,
+     42
+    ]
+   },
+   "daven": {
+    "name": "Abraham Davenport",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.1,
+     0.1,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -46,
+     46
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "sun",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.82,
+     0.4
+    ],
+    "glow": 6,
+    "visible": true,
+    "scale": 1.6,
+    "at": [
+     10,
+     45,
+     16
+    ]
+   },
+   {
+    "id": "moon",
+    "type": "ball",
+    "color": [
+     0.85,
+     0.2,
+     0.1
+    ],
+    "glow": 5,
+    "visible": false,
+    "scale": 1.3,
+    "at": [
+     -10,
+     45,
+     14
+    ]
+   },
+   {
+    "id": "candle1",
+    "type": "cone",
+    "color": [
+     1.0,
+     0.85,
+     0.6
+    ],
+    "glow": 4,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     1.6,
+     9.6,
+     0
+    ]
+   },
+   {
+    "id": "candle2",
+    "type": "cone",
+    "color": [
+     1.0,
+     0.85,
+     0.6
+    ],
+    "glow": 4,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     3.0,
+     10.4,
+     0
+    ]
+   },
+   {
+    "id": "candle3",
+    "type": "cone",
+    "color": [
+     1.0,
+     0.85,
+     0.6
+    ],
+    "glow": 4,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     5.6,
+     10.8,
+     0
+    ]
+   },
+   {
+    "id": "hen",
+    "type": "ball",
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     -5,
+     11,
+     0.5
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.4,
+     0.25,
+     0.12
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     8.2,
+     12,
+     1.4
+    ]
+   },
+   {
+    "id": "fire",
+    "type": "cone",
+    "color": [
+     1.0,
+     0.4,
+     0.08
+    ],
+    "glow": 6,
+    "visible": false,
+    "scale": 3.0,
+    "at": [
+     -12,
+     34,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "farmer",
+    "say": "It isn't even noon! Why is the sun going out?",
+    "cam": "close:farmer",
+    "do": [
+     [
+      "farmer",
+      "to:-6,10,0"
+     ],
+     [
+      "farmer",
+      "eyes_big"
+     ],
+     [
+      "sun",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE SUN IS GOING OUT"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. New England, the nineteenth of May, seventeen eighty.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ],
+     [
+      "sun",
+      "vanish"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "MAY 19, 1780"
+   },
+   {
+    "who": "narr",
+    "say": "In the middle of the morning, day turned into night. Why?",
+    "cam": "overhead",
+    "do": [
+     [
+      "candle1",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "NIGHT AT NOON"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "A serpent in the harbour, and now the sky goes black?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "THE SKY WENT BLACK"
+   },
+   {
+    "who": "moth",
+    "say": "The water went still, Odo. Now the whole sky has.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "STAY CLOSE"
+   },
+   {
+    "who": "narr",
+    "say": "In Vermont, the sun was already hidden when it rose that morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "farmer",
+      "turn:front"
+     ]
+    ],
+    "text": "HIDDEN AT SUNRISE"
+   },
+   {
+    "who": "narr",
+    "say": "Thick fog and low cloud hung over the land as well.",
+    "cam": "overhead",
+    "do": [
+     [
+      "candle1",
+      "bounce"
+     ]
+    ],
+    "text": "FOG AND CLOUD"
+   },
+   {
+    "who": "narr",
+    "say": "In Cambridge, a professor named Samuel Williams watched the sky fade.",
+    "cam": "close:williams",
+    "do": [
+     [
+      "williams",
+      "to:6,12,0"
+     ]
+    ],
+    "text": "PROFESSOR WILLIAMS"
+   },
+   {
+    "who": "williams",
+    "say": "Half past ten, and darker still. Note the time exactly.",
+    "cam": "close:williams",
+    "do": [
+     [
+      "williams",
+      "turn:front"
+     ],
+     [
+      "book",
+      "show"
+     ]
+    ],
+    "text": "10:30 A.M."
+   },
+   {
+    "who": "narr",
+    "say": "By noon, people had to light candles just to see indoors.",
+    "cam": "prop:candle2",
+    "do": [
+     [
+      "candle2",
+      "show"
+     ],
+     [
+      "candle2",
+      "bounce"
+     ]
+    ],
+    "text": "CANDLES AT NOON"
+   },
+   {
+    "who": "farmer",
+    "say": "The hens are going to roost. They think it's night!",
+    "cam": "close:farmer",
+    "do": [
+     [
+      "hen",
+      "show"
+     ],
+     [
+      "farmer",
+      "jump"
+     ]
+    ],
+    "text": "THE HENS WENT TO BED"
+   },
+   {
+    "who": "narr",
+    "say": "In Ipswich, roosters crowed and frogs peeped at two in the afternoon.",
+    "cam": "prop:hen",
+    "do": [
+     [
+      "hen",
+      "bounce"
+     ]
+    ],
+    "text": "2 P.M."
+   },
+   {
+    "who": "narr",
+    "say": "Woodcocks whistled their evening calls. In the middle of the day.",
+    "cam": "wide",
+    "do": [
+     [
+      "hen",
+      "hide"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "EVENING CALLS AT MIDDAY"
+   },
+   {
+    "who": "odo",
+    "say": "What could swallow the sun over a whole country?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHAT SWALLOWED THE SUN?"
+   },
+   {
+    "who": "narr",
+    "say": "The darkness reached from Maine all the way to New Jersey.",
+    "cam": "overhead",
+    "do": [
+     [
+      "candle1",
+      "spin"
+     ]
+    ],
+    "text": "MAINE TO NEW JERSEY"
+   },
+   {
+    "who": "narr",
+    "say": "And in New Jersey, a young soldier was writing it all down.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "williams",
+      "to_home"
+     ],
+     [
+      "martin",
+      "to:6,11,0"
+     ]
+    ],
+    "text": "A YOUNG SOLDIER"
+   },
+   {
+    "who": "martin",
+    "say": "The fowls have gone to roost. Whip-poor-wills are singing!",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "turn:front"
+     ],
+     [
+      "martin",
+      "shake"
+     ]
+    ],
+    "text": "WHIP-POOR-WILLS"
+   },
+   {
+    "who": "narr",
+    "say": "This was seventeen eighty. America was in the middle of a war.",
+    "cam": "wide",
+    "do": [
+     [
+      "martin",
+      "to_home"
+     ]
+    ],
+    "text": "IN THE MIDDLE OF A WAR"
+   },
+   {
+    "who": "moth",
+    "say": "Many people believed it was the end of the world.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE END OF THE WORLD?"
+   },
+   {
+    "who": "narr",
+    "say": "In Hartford, Connecticut's leaders were meeting when the darkness came.",
+    "cam": "wide",
+    "do": [
+     [
+      "council",
+      "to:3,12,0"
+     ],
+     [
+      "daven",
+      "to:7.5,12.5,0"
+     ]
+    ],
+    "text": "HARTFORD"
+   },
+   {
+    "who": "council",
+    "say": "This is the Day of Judgment! We must stop and go home!",
+    "cam": "close:council",
+    "do": [
+     [
+      "council",
+      "turn:front"
+     ],
+     [
+      "council",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "JUDGMENT DAY!"
+   },
+   {
+    "who": "narr",
+    "say": "One man, Abraham Davenport, would not leave his seat.",
+    "cam": "close:daven",
+    "do": [
+     [
+      "daven",
+      "turn:front"
+     ]
+    ],
+    "text": "ABRAHAM DAVENPORT"
+   },
+   {
+    "who": "daven",
+    "say": "The day of judgment is either approaching, or it is not.",
+    "cam": "close:daven",
+    "do": [
+     [
+      "candle3",
+      "show"
+     ]
+    ],
+    "text": "EITHER IT IS, OR IT IS NOT"
+   },
+   {
+    "who": "daven",
+    "say": "If it is, I choose to be found doing my duty.",
+    "cam": "close:daven",
+    "do": [
+     [
+      "candle3",
+      "bounce"
+     ]
+    ],
+    "text": "DOING MY DUTY"
+   },
+   {
+    "who": "daven",
+    "say": "I wish, therefore, that candles may be brought.",
+    "cam": "prop:candle3",
+    "do": [
+     [
+      "candle1",
+      "bounce"
+     ],
+     [
+      "candle2",
+      "bounce"
+     ]
+    ],
+    "text": "BRING CANDLES"
+   },
+   {
+    "who": "narr",
+    "say": "So they worked by candlelight. The dark lasted deep into the night.",
+    "cam": "wide",
+    "do": [
+     [
+      "council",
+      "to_home"
+     ],
+     [
+      "candle3",
+      "spin"
+     ]
+    ],
+    "text": "BY CANDLELIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "And when the moon finally rose, people said it looked red.",
+    "cam": "prop:moon",
+    "do": [
+     [
+      "moon",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "A RED MOON"
+   },
+   {
+    "who": "odo",
+    "say": "A red moon after a black noon. I don't like this.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "A RED MOON"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody that day could explain it. Not preachers. Not professors.",
+    "cam": "wide",
+    "do": [
+     [
+      "williams",
+      "to:6,12,0"
+     ]
+    ],
+    "text": "NOBODY COULD EXPLAIN IT"
+   },
+   {
+    "who": "moth",
+    "say": "If the sun can vanish once, Odo, it can vanish again.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "IT COULD HAPPEN AGAIN"
+   },
+   {
+    "who": "narr",
+    "say": "The answer waited over two hundred years, hidden inside trees.",
+    "cam": "wide",
+    "do": [
+     [
+      "williams",
+      "to_home"
+     ],
+     [
+      "moon",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "HIDDEN IN TREES"
+   },
+   {
+    "who": "narr",
+    "say": "Scientists studied old tree rings and fire scars in Ontario, Canada.",
+    "cam": "overhead",
+    "do": [
+     [
+      "candle1",
+      "bounce"
+     ]
+    ],
+    "text": "TREE RINGS"
+   },
+   {
+    "who": "narr",
+    "say": "They found the marks of a forest fire, burning in seventeen eighty.",
+    "cam": "prop:fire",
+    "do": [
+     [
+      "fire",
+      "show"
+     ],
+     [
+      "fire",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "A FIRE IN 1780"
+   },
+   {
+    "who": "narr",
+    "say": "Its smoke rolled south, and mixed with that thick fog and cloud.",
+    "cam": "prop:fire",
+    "do": [
+     [
+      "fire",
+      "bounce"
+     ]
+    ],
+    "text": "SMOKE + FOG"
+   },
+   {
+    "who": "odo",
+    "say": "So the sun was never gone. Just buried in smoke.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "BURIED IN SMOKE"
+   },
+   {
+    "who": "moth",
+    "say": "Smoke from a fire hundreds of miles away. And nobody knew.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "NOBODY KNEW"
+   },
+   {
+    "who": "narr",
+    "say": "For one day, a whole land lived in the dark.",
+    "cam": "wide",
+    "do": [
+     [
+      "fire",
+      "hide"
+     ],
+     [
+      "sun",
+      "show"
+     ]
+    ],
+    "text": "ONE DAY OF DARK"
+   },
+   {
+    "who": "narr",
+    "say": "And one stubborn man asked for candles, and kept on working.",
+    "cam": "close:daven",
+    "do": [
+     [
+      "daven",
+      "eyes_big"
+     ]
+    ],
+    "text": "AND KEPT WORKING"
+   },
+   {
+    "who": "daven",
+    "say": "Whatever comes, let it find us doing our duty.",
+    "cam": "close:daven",
+    "do": [
+     [
+      "candle3",
+      "bounce"
+     ]
+    ],
+    "text": "WHATEVER COMES"
+   },
+   {
+    "who": "narr",
+    "say": "That is the true story of New England's Dark Day.",
+    "cam": "wide",
+    "do": [
+     [
+      "daven",
+      "to_home"
+     ],
+     [
+      "moon",
+      "bounce"
+     ]
+    ],
+    "text": "THE DARK DAY"
+   },
+   {
+    "who": "moth",
+    "say": "The sky is clearing, Odo. But look at the mud. Huge footprints.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ],
+     [
+      "fx",
+      "tracks:odo-moth"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "HUGE FOOTPRINTS"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: a California road crew finds footprints sixteen inches long.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "NEXT: 16-INCH TRACKS"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "candle2",
+      "spin"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "1780: Why Did Noon Turn to Night? 🌑 (Ep 49)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"Everyone thought the world was ending. One man just asked for candles.\" — Odo\n\nA true story: on 19 May 1780 the sky over New England went dark by midday. Hens went to roost, candles were lit at noon and the moon rose red. More than 200 years later, tree rings finally gave the answer.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#truestory #series #3DAnimation #Odo #darkday",
+  "tags": [
+   "New England's Dark Day",
+   "Dark Day 1780",
+   "Abraham Davenport",
+   "May 19 1780",
+   "Connecticut",
+   "Massachusetts",
+   "true story",
+   "unsolved mystery",
+   "history mystery",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "THE WORLD ENDING?",
+  "thumb_beat": 21,
+  "localizations": {
+   "es": {
+    "title": "1780: ¿Por qué el mediodía se volvió noche? 🌑 (Ep 49)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Todos creyeron que el mundo se acababa. Un hombre solo pidió velas.\" — Odo\n\nUna historia real: el 19 de mayo de 1780 el cielo de Nueva Inglaterra se oscureció a mediodía. Las gallinas se fueron a dormir, se encendieron velas y la luna salió roja. Más de 200 años después, los anillos de los árboles dieron la respuesta.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#historiareal #serie #3DAnimation #Odo #diaoscuro"
+   },
+   "pt": {
+    "title": "1780: por que o meio-dia virou noite? 🌑 (Ep 49)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"Todos acharam que era o fim do mundo. Um homem só pediu velas.\" — Odo\n\nUma história real: em 19 de maio de 1780 o céu da Nova Inglaterra escureceu ao meio-dia. As galinhas foram dormir, velas foram acesas e a lua nasceu vermelha. Mais de 200 anos depois, os anéis das árvores deram a resposta.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#historiareal #serie #3DAnimation #Odo #diaescuro"
+   },
+   "ar": {
+    "title": "1780: لماذا تحوّل الظهر إلى ليل؟ 🌑 (الحلقة 49)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"ظن الجميع أن العالم ينتهي. رجل واحد طلب الشموع فقط.\" — أودو\n\nقصة حقيقية: في 19 مايو 1780 أظلمت سماء نيو إنجلاند عند الظهيرة. ذهب الدجاج إلى أعشاشه، وأُشعلت الشموع، وطلع القمر أحمر. وبعد أكثر من 200 عام كشفت حلقات الأشجار الجواب.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #اليوم_المظلم"
+   },
+   "fr": {
+    "title": "1780 : pourquoi midi est-il devenu la nuit ? 🌑 (Ep 49)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Tout le monde croyait à la fin du monde. Un homme a simplement demandé des bougies. » — Odo\n\nUne histoire vraie : le 19 mai 1780, le ciel de Nouvelle-Angleterre s'assombrit dès midi. Les poules vont se coucher, on allume des bougies et la lune se lève rouge. Plus de 200 ans plus tard, les cernes des arbres ont donné la réponse.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#histoirevraie #serie #3DAnimation #Odo #journeenoire"
+   },
+   "ja": {
+    "title": "1780年、なぜ真昼が夜になった? 🌑 (Ep 49)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「みんな世界の終わりだと思った。一人の男は、ただろうそくを頼んだ。」— オド\n\n実話:1780年5月19日、ニューイングランドの空は昼前に真っ暗になりました。ニワトリは寝床に入り、正午にろうそくが灯され、月は赤く昇りました。200年以上後、木の年輪がその答えを明かします。\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#実話 #シリーズ #3DAnimation #Odo #暗黒日"
+   },
+   "ko": {
+    "title": "1780년, 왜 한낮이 밤이 됐을까? 🌑 (Ep 49)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"모두 세상의 끝이라고 생각했어. 한 남자는 그냥 촛불을 가져오라고 했지.\" — 오도\n\n실화: 1780년 5월 19일, 뉴잉글랜드의 하늘이 한낮에 캄캄해졌습니다. 닭들은 잠자리에 들고, 정오에 촛불을 켜고, 달은 붉게 떠올랐습니다. 200여 년 뒤, 나무의 나이테가 답을 알려 주었습니다.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#실화 #시리즈 #3DAnimation #Odo #어두운날"
+   },
+   "de": {
+    "title": "1780: Warum wurde der Mittag zur Nacht? 🌑 (Ep 49)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Alle dachten, die Welt geht unter. Ein Mann ließ einfach Kerzen bringen.“ — Odo\n\nEine wahre Geschichte: Am 19. Mai 1780 wurde der Himmel über Neuengland schon mittags dunkel. Hühner gingen schlafen, Kerzen wurden angezündet, der Mond ging rot auf. Über 200 Jahre später lieferten Baumringe die Antwort.\n\nSources:\nhttps://en.wikipedia.org/wiki/New_England%27s_Dark_Day\nhttps://newenglandhistoricalsociety.com/new-england-dark-day-may-19-1780/\n\n#wahregeschichte #serie #3DAnimation #Odo #darkday"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 19,
+   "dur": 25,
+   "top": "THEY THOUGHT IT WAS THE END",
+   "title": "Black noon. He asked for candles 🕯 (Ep 49) #shorts",
+   "description": "May 19, 1780: Connecticut's leaders feared Judgment Day. Abraham Davenport didn't move. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Dark Day 1780"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El mediodía se volvió negro. Pidió velas 🕯️ (Ep 49) #shorts",
+     "description": "19 de mayo de 1780: los líderes de Connecticut temieron el Juicio Final. Davenport no se movió. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O meio-dia escureceu. Ele pediu velas 🕯️ (Ep 49) #shorts",
+     "description": "19 de maio de 1780: os líderes de Connecticut temeram o Juízo Final. Davenport não se mexeu. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أظلم الظهر… فطلب الشموع 🕯️ (الحلقة 49) #shorts",
+     "description": "19 مايو 1780: خشي قادة كونيتيكت يوم القيامة، لكن أبراهام دافنبورت لم يتحرك. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Midi est devenu noir. Il a demandé des bougies 🕯️ (Ep 49) #shorts",
+     "description": "19 mai 1780 : les élus du Connecticut craignent le Jugement dernier. Davenport ne bouge pas. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "真昼が真っ暗に。彼はろうそくを求めた 🕯️ (Ep 49) #shorts",
+     "description": "1780年5月19日、議員たちは最後の審判を恐れた。ダベンポートは動かなかった。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "한낮이 캄캄해졌다. 그는 촛불을 원했다 🕯️ (Ep 49) #shorts",
+     "description": "1780년 5월 19일, 코네티컷 의원들은 심판의 날을 두려워했지만 데이븐포트는 꿈쩍하지 않았습니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Mittag wurde schwarz. Er wollte Kerzen 🕯️ (Ep 49) #shorts",
+     "description": "19. Mai 1780: Connecticuts Räte fürchteten das Jüngste Gericht. Davenport blieb sitzen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

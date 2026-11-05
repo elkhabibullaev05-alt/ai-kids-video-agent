@@ -1,0 +1,1080 @@
+{
+ "id": "20261105-3-cottingley-fifth-photo",
+ "plot": "Odo and Mothwick follow the true story of the Cottingley Fairies (1917): two cousins photograph fairies by the beck, experts and Arthur Conan Doyle believe them, and in 1983 they confess the fairies were paper cut from a book — except Frances swears the fifth photo was real, and something small watches Odo's lantern by the water.",
+ "script": {
+  "title": "1917: Two Girls Photographed Fairies",
+  "lead_in": 0,
+  "set": {
+   "place": "forest",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 14
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "frances": {
+    "name": "Frances Griffiths",
+    "voice": "af_sky",
+    "speed": 0.98,
+    "pitch": 0,
+    "color": [
+     0.55,
+     0.5,
+     0.62
+    ],
+    "kind": "human",
+    "size": 0.68,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "elsie": {
+    "name": "Elsie Wright",
+    "voice": "bf_alice",
+    "speed": 0.98,
+    "pitch": 0,
+    "color": [
+     0.32,
+     0.4,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "arthur": {
+    "name": "Arthur Wright",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.2,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "doyle": {
+    "name": "Arthur Conan Doyle",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.16,
+     0.16,
+     0.2
+    ],
+    "kind": "human",
+    "size": 1.0,
+    "home": [
+     -42,
+     42
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "fairy1",
+    "type": "star",
+    "color": [
+     1.0,
+     0.85,
+     0.95
+    ],
+    "glow": 5,
+    "visible": false,
+    "scale": 0.22,
+    "at": [
+     2.6,
+     10.4,
+     2.4
+    ]
+   },
+   {
+    "id": "fairy2",
+    "type": "star",
+    "color": [
+     1.0,
+     0.85,
+     0.95
+    ],
+    "glow": 5,
+    "visible": false,
+    "scale": 0.18,
+    "at": [
+     3.4,
+     10.8,
+     2.9
+    ]
+   },
+   {
+    "id": "fairy3",
+    "type": "star",
+    "color": [
+     1.0,
+     0.85,
+     0.95
+    ],
+    "glow": 5,
+    "visible": false,
+    "scale": 0.2,
+    "at": [
+     1.8,
+     10.9,
+     2.0
+    ]
+   },
+   {
+    "id": "gnome",
+    "type": "cone",
+    "color": [
+     0.6,
+     0.15,
+     0.1
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     7.4,
+     11.6,
+     0
+    ]
+   },
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.08,
+     0.08,
+     0.08
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     5.2,
+     10,
+     1.4
+    ]
+   },
+   {
+    "id": "photo1",
+    "type": "box",
+    "color": [
+     0.85,
+     0.82,
+     0.72
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.2,
+     9.6,
+     1.6
+    ]
+   },
+   {
+    "id": "photo5",
+    "type": "box",
+    "color": [
+     0.8,
+     0.78,
+     0.7
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.4,
+     9.6,
+     1.6
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.55,
+     0.2,
+     0.3
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     0.8,
+     9.4,
+     1.4
+    ]
+   },
+   {
+    "id": "mag",
+    "type": "box",
+    "color": [
+     0.2,
+     0.3,
+     0.55
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.6,
+     9.5,
+     1.5
+    ]
+   },
+   {
+    "id": "pin",
+    "type": "cone",
+    "color": [
+     0.85,
+     0.85,
+     0.9
+    ],
+    "glow": 2,
+    "visible": false,
+    "scale": 0.12,
+    "at": [
+     2.6,
+     10.4,
+     1.4
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "frances",
+    "say": "Elsie, quick! They're dancing right in front of me! Take it!",
+    "cam": "close:frances",
+    "do": [
+     [
+      "frances",
+      "to:3.5,11,0"
+     ],
+     [
+      "fairy1",
+      "show"
+     ],
+     [
+      "fairy1",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "TAKE THE PICTURE!"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. Cottingley, England, nineteen seventeen. Two girls and a camera.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ],
+     [
+      "fairy2",
+      "show"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "COTTINGLEY, 1917"
+   },
+   {
+    "who": "narr",
+    "say": "Their photos fooled the world. So what did these girls really see?",
+    "cam": "prop:photo1",
+    "do": [
+     [
+      "photo1",
+      "show"
+     ],
+     [
+      "photo1",
+      "spin"
+     ]
+    ],
+    "text": "WHAT DID THEY SEE?"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "photo1",
+      "hide"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "Small footprints in a sealed tomb... and now fairies?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "FAIRIES?"
+   },
+   {
+    "who": "moth",
+    "say": "Those footprints ran north, Odo. Into these very woods.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "INTO THE WOODS"
+   },
+   {
+    "who": "narr",
+    "say": "Elsie Wright was sixteen. Her cousin, Frances Griffiths, was nine.",
+    "cam": "two:elsie,frances",
+    "do": [
+     [
+      "elsie",
+      "to:7,12,0"
+     ],
+     [
+      "frances",
+      "turn:front"
+     ]
+    ],
+    "text": "ELSIE 16, FRANCES 9"
+   },
+   {
+    "who": "narr",
+    "say": "Frances had come from South Africa. She brought a picture book.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "A PICTURE BOOK"
+   },
+   {
+    "who": "narr",
+    "say": "She kept coming home soaked from the beck, the stream nearby.",
+    "cam": "close:frances",
+    "do": [
+     [
+      "book",
+      "hide"
+     ],
+     [
+      "frances",
+      "sad"
+     ]
+    ],
+    "text": "SOAKED AGAIN"
+   },
+   {
+    "who": "frances",
+    "say": "I only go down there to see the fairies. That's all.",
+    "cam": "close:frances",
+    "do": [
+     [
+      "frances",
+      "shake"
+     ]
+    ],
+    "text": "TO SEE THE FAIRIES"
+   },
+   {
+    "who": "elsie",
+    "say": "Lend us your camera, Father. We'll prove it to you.",
+    "cam": "close:elsie",
+    "do": [
+     [
+      "elsie",
+      "turn:front"
+     ],
+     [
+      "camera",
+      "show"
+     ]
+    ],
+    "text": "WE'LL PROVE IT"
+   },
+   {
+    "who": "narr",
+    "say": "Her father lent them his camera. They ran straight to the stream.",
+    "cam": "wide",
+    "do": [
+     [
+      "arthur",
+      "to:9,13,0"
+     ],
+     [
+      "camera",
+      "bounce"
+     ]
+    ],
+    "text": "TO THE STREAM"
+   },
+   {
+    "who": "narr",
+    "say": "In his darkroom, a picture appeared. Frances, and tiny dancing fairies.",
+    "cam": "prop:fairy1",
+    "do": [
+     [
+      "fairy1",
+      "bounce"
+     ],
+     [
+      "fairy3",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "DANCING FAIRIES"
+   },
+   {
+    "who": "arthur",
+    "say": "Cardboard cutouts, that's all. A prank, girls. Nothing more.",
+    "cam": "close:arthur",
+    "do": [
+     [
+      "arthur",
+      "turn:front"
+     ],
+     [
+      "arthur",
+      "shake"
+     ]
+    ],
+    "text": "CARDBOARD?"
+   },
+   {
+    "who": "narr",
+    "say": "Then came a gnome. After that, he stopped lending them his camera.",
+    "cam": "prop:gnome",
+    "do": [
+     [
+      "gnome",
+      "show"
+     ],
+     [
+      "gnome",
+      "bounce"
+     ]
+    ],
+    "text": "A GNOME"
+   },
+   {
+    "who": "odo",
+    "say": "Why would two young girls lie about fairies?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHY LIE?"
+   },
+   {
+    "who": "moth",
+    "say": "Who said they lied? Wait until you hear who believed them.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "WHO BELIEVED THEM?"
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen nineteen, Elsie's mother took the photos to a Bradford meeting.",
+    "cam": "wide",
+    "do": [
+     [
+      "arthur",
+      "to_home"
+     ],
+     [
+      "gnome",
+      "hide"
+     ],
+     [
+      "photo1",
+      "show"
+     ]
+    ],
+    "text": "1919: BRADFORD"
+   },
+   {
+    "who": "narr",
+    "say": "A photography expert, Harold Snelling, studied the glass negatives.",
+    "cam": "prop:photo1",
+    "do": [
+     [
+      "photo1",
+      "bounce"
+     ]
+    ],
+    "text": "THE EXPERT"
+   },
+   {
+    "who": "narr",
+    "say": "He found no sign of cutouts, and no studio tricks.",
+    "cam": "prop:fairy1",
+    "do": [
+     [
+      "fairy1",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "NO TRICKS FOUND"
+   },
+   {
+    "who": "narr",
+    "say": "Kodak found no faking either, but refused to certify them.",
+    "cam": "prop:photo1",
+    "do": [
+     [
+      "photo1",
+      "spin"
+     ]
+    ],
+    "text": "KODAK: NO FAKING FOUND"
+   },
+   {
+    "who": "narr",
+    "say": "In summer nineteen twenty, the girls got new cameras and marked plates.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ],
+     [
+      "photo1",
+      "hide"
+     ]
+    ],
+    "text": "MARKED PLATES"
+   },
+   {
+    "who": "narr",
+    "say": "Three more photos. A leaping fairy, flowers offered, a sunbath.",
+    "cam": "prop:fairy2",
+    "do": [
+     [
+      "fairy2",
+      "bounce"
+     ],
+     [
+      "fairy3",
+      "bounce"
+     ]
+    ],
+    "text": "THREE MORE PHOTOS"
+   },
+   {
+    "who": "narr",
+    "say": "Then came the most famous believer of all. Arthur Conan Doyle.",
+    "cam": "close:doyle",
+    "do": [
+     [
+      "doyle",
+      "to:8,12,0"
+     ]
+    ],
+    "text": "CONAN DOYLE"
+   },
+   {
+    "who": "doyle",
+    "say": "Fairies, photographed at last! The whole world must see this.",
+    "cam": "close:doyle",
+    "do": [
+     [
+      "doyle",
+      "turn:front"
+     ],
+     [
+      "doyle",
+      "happy"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE WORLD MUST SEE"
+   },
+   {
+    "who": "narr",
+    "say": "The creator of Sherlock Holmes wrote about them in December nineteen twenty.",
+    "cam": "prop:mag",
+    "do": [
+     [
+      "mag",
+      "show"
+     ],
+     [
+      "mag",
+      "spin"
+     ]
+    ],
+    "text": "DECEMBER 1920"
+   },
+   {
+    "who": "narr",
+    "say": "The magazine sold out within days.",
+    "cam": "wide",
+    "do": [
+     [
+      "mag",
+      "bounce"
+     ]
+    ],
+    "text": "SOLD OUT"
+   },
+   {
+    "who": "odo",
+    "say": "If Sherlock Holmes's creator believed them, who would dare doubt?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHO WOULD DOUBT?"
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen sixty-six, a reporter found Elsie and asked her again.",
+    "cam": "close:elsie",
+    "do": [
+     [
+      "doyle",
+      "to_home"
+     ],
+     [
+      "mag",
+      "hide"
+     ]
+    ],
+    "text": "1966"
+   },
+   {
+    "who": "elsie",
+    "say": "Perhaps I photographed my own thoughts. Who can say?",
+    "cam": "close:elsie",
+    "do": [
+     [
+      "elsie",
+      "shake"
+     ]
+    ],
+    "text": "MY OWN THOUGHTS?"
+   },
+   {
+    "who": "narr",
+    "say": "Ten years later, both women were asked on television. Both denied faking.",
+    "cam": "wide",
+    "do": [
+     [
+      "fairy1",
+      "spin"
+     ]
+    ],
+    "text": "1976: STILL DENIED"
+   },
+   {
+    "who": "moth",
+    "say": "Sixty years of questions, Odo. And they still would not say fake.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "60 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Then, in nineteen eighty-three, they finally confessed. The fairies were paper.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "1983: THE TRUTH"
+   },
+   {
+    "who": "narr",
+    "say": "Elsie had copied them from that picture book Frances brought.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "COPIED FROM A BOOK"
+   },
+   {
+    "who": "frances",
+    "say": "Hatpins held them up. Afterwards, we threw them in the beck.",
+    "cam": "close:frances",
+    "do": [
+     [
+      "pin",
+      "show"
+     ],
+     [
+      "pin",
+      "bounce"
+     ]
+    ],
+    "text": "HATPINS"
+   },
+   {
+    "who": "odo",
+    "say": "So it was all a trick. Every single photo.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ],
+     [
+      "fairy1",
+      "vanish"
+     ],
+     [
+      "fairy2",
+      "vanish"
+     ],
+     [
+      "fairy3",
+      "vanish"
+     ],
+     [
+      "pin",
+      "hide"
+     ]
+    ],
+    "text": "ALL A TRICK?"
+   },
+   {
+    "who": "moth",
+    "say": "Not every one, Odo. Not according to Frances.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "NOT EVERY ONE"
+   },
+   {
+    "who": "narr",
+    "say": "Elsie said the fifth photo was faked like all the others.",
+    "cam": "prop:photo5",
+    "do": [
+     [
+      "book",
+      "hide"
+     ],
+     [
+      "photo5",
+      "show"
+     ]
+    ],
+    "text": "THE FIFTH PHOTO"
+   },
+   {
+    "who": "frances",
+    "say": "No. That last one is real. I know what I saw.",
+    "cam": "close:frances",
+    "do": [
+     [
+      "frances",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "THAT ONE IS REAL"
+   },
+   {
+    "who": "narr",
+    "say": "Both women still said that they really had seen fairies.",
+    "cam": "wide",
+    "do": [
+     [
+      "elsie",
+      "shake"
+     ]
+    ],
+    "text": "THEY SAW FAIRIES"
+   },
+   {
+    "who": "narr",
+    "say": "And each of them claimed that she had taken the fifth photo.",
+    "cam": "prop:photo5",
+    "do": [
+     [
+      "photo5",
+      "bounce"
+     ]
+    ],
+    "text": "WHO TOOK IT?"
+   },
+   {
+    "who": "odo",
+    "say": "Two cousins, one photo, and two different stories.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "TWO STORIES"
+   },
+   {
+    "who": "narr",
+    "say": "More than a hundred years later, that fifth photograph still divides people.",
+    "cam": "prop:photo5",
+    "do": [
+     [
+      "photo5",
+      "spin"
+     ]
+    ],
+    "text": "STILL NO ANSWER"
+   },
+   {
+    "who": "moth",
+    "say": "Odo... by the water. Something small just looked at your lantern.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "fairy3",
+      "show"
+     ],
+     [
+      "fairy3",
+      "drift:-1.2,8.4,2.6"
+     ],
+     [
+      "moth",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "SOMETHING SMALL"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: hundreds of witnesses, one harbour, and a sea serpent.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "photo5",
+      "hide"
+     ]
+    ],
+    "text": "NEXT: THE SEA SERPENT"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "fairy3",
+      "spin"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "1917: Two Girls Photographed Fairies 🧚 (Ep 47)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"They admitted the trick. So why did one of them swear the last photo was real?\" — Odo\n\nA true story from Cottingley, England: in 1917 two cousins photographed fairies by a stream, and experts and Arthur Conan Doyle believed them. In 1983 they confessed — but Frances never gave up the fifth photograph.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#truestory #series #3DAnimation #Odo #cottingleyfairies",
+  "tags": [
+   "Cottingley Fairies",
+   "fairy photographs",
+   "Elsie Wright",
+   "Frances Griffiths",
+   "Arthur Conan Doyle",
+   "1917",
+   "Yorkshire",
+   "true story",
+   "unsolved mystery",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "WAS ONE REAL?",
+  "thumb_beat": 38,
+  "localizations": {
+   "es": {
+    "title": "1917: dos niñas fotografiaron hadas 🧚 (Ep 47)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Admitieron el truco. ¿Entonces por qué una juró que la última foto era real?\" — Odo\n\nUna historia real de Cottingley, Inglaterra: en 1917 dos primas fotografiaron hadas junto a un arroyo, y expertos y Arthur Conan Doyle les creyeron. En 1983 confesaron, pero Frances nunca renunció a la quinta fotografía.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#historiareal #serie #3DAnimation #Odo #cottingley"
+   },
+   "pt": {
+    "title": "1917: duas meninas fotografaram fadas 🧚 (Ep 47)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"Elas admitiram o truque. Então por que uma jurou que a última foto era real?\" — Odo\n\nUma história real de Cottingley, Inglaterra: em 1917 duas primas fotografaram fadas perto de um riacho, e especialistas e Arthur Conan Doyle acreditaram. Em 1983 elas confessaram — mas Frances nunca abriu mão da quinta foto.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#historiareal #serie #3DAnimation #Odo #cottingley"
+   },
+   "ar": {
+    "title": "1917: فتاتان صوّرتا الجنيات 🧚 (الحلقة 47)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"اعترفتا بالخدعة. فلماذا أقسمت إحداهما أن الصورة الأخيرة حقيقية؟\" — أودو\n\nقصة حقيقية من كوتينغلي في إنجلترا: عام 1917 صوّرت ابنتا عم جنيات قرب جدول ماء، وصدّقهما خبراء وآرثر كونان دويل. عام 1983 اعترفتا، لكن فرانسيس لم تتخلَّ أبدًا عن الصورة الخامسة.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #cottingley"
+   },
+   "fr": {
+    "title": "1917 : deux filles ont photographié des fées 🧚 (Ep 47)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Elles ont avoué la ruse. Alors pourquoi l'une d'elles jurait que la dernière photo était vraie ? » — Odo\n\nUne histoire vraie de Cottingley, en Angleterre : en 1917, deux cousines photographient des fées près d'un ruisseau, et des experts comme Arthur Conan Doyle les croient. En 1983 elles avouent — mais Frances n'a jamais renié la cinquième photo.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#histoirevraie #serie #3DAnimation #Odo #cottingley"
+   },
+   "ja": {
+    "title": "1917年、少女たちは妖精を撮った 🧚 (Ep 47)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「トリックだと認めたのに、なぜ一人は最後の写真だけは本物だと言い続けたんだろう。」— オド\n\nイギリス・コティングリーの実話。1917年、いとこ同士の少女が小川のそばで妖精を撮影し、専門家やコナン・ドイルまでが信じました。1983年に二人は告白しましたが、フランシスは5枚目の写真だけは本物だと譲りませんでした。\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#実話 #シリーズ #3DAnimation #Odo #コティングリー妖精事件"
+   },
+   "ko": {
+    "title": "1917년, 두 소녀가 요정을 찍었다 🧚 (Ep 47)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"속임수를 인정했어. 그런데 왜 한 명은 마지막 사진만은 진짜라고 했을까?\" — 오도\n\n영국 코팅리의 실화: 1917년 두 사촌 소녀가 시냇가에서 요정 사진을 찍었고, 전문가들과 아서 코난 도일까지 믿었습니다. 1983년 두 사람은 고백했지만, 프랜시스는 다섯 번째 사진만은 끝까지 진짜라고 했습니다.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#실화 #시리즈 #3DAnimation #Odo #코팅리요정"
+   },
+   "de": {
+    "title": "1917: Zwei Mädchen fotografierten Feen 🧚 (Ep 47)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Sie gaben den Trick zu. Warum schwor dann eine, das letzte Foto sei echt?“ — Odo\n\nEine wahre Geschichte aus Cottingley, England: 1917 fotografierten zwei Cousinen Feen an einem Bach, und Experten wie Arthur Conan Doyle glaubten ihnen. 1983 gestanden sie – doch Frances hielt das fünfte Foto bis zuletzt für echt.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cottingley_Fairies\nhttps://psi-encyclopedia.spr.ac.uk/articles/cottingley-fairies\n\n#wahregeschichte #serie #3DAnimation #Odo #cottingley"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 25,
+   "top": "SHE SAID SHE SAW FAIRIES",
+   "title": "She said she saw fairies. Then… 🧚 (Ep 47) #shorts",
+   "description": "1917: two cousins borrowed a camera to prove the fairies by the stream were real. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Cottingley Fairies"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Dijo que veía hadas. Y entonces… 🧚 (Ep 47) #shorts",
+     "description": "1917: dos primas pidieron una cámara para probar que las hadas del arroyo eran reales. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ela dizia ver fadas. E então… 🧚 (Ep 47) #shorts",
+     "description": "1917: duas primas pegaram uma câmera para provar que as fadas do riacho eram reais. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قالت إنها ترى الجنيات… ثم 🧚 (الحلقة 47) #shorts",
+     "description": "1917: استعارت ابنتا عم كاميرا لتثبتا أن جنيات الجدول حقيقية. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Elle disait voir des fées. Puis… 🧚 (Ep 47) #shorts",
+     "description": "1917 : deux cousines empruntent un appareil photo pour prouver que les fées du ruisseau sont réelles. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "妖精が見えると言った少女。そして… 🧚 (Ep 47) #shorts",
+     "description": "1917年、いとこ同士の少女たちは小川の妖精が本物だと証明するためカメラを借りた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "요정을 봤다던 소녀. 그리고… 🧚 (Ep 47) #shorts",
+     "description": "1917년, 두 사촌 소녀가 시냇가의 요정이 진짜라는 걸 증명하려고 카메라를 빌렸습니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Sie sagte, sie sehe Feen. Dann… 🧚 (Ep 47) #shorts",
+     "description": "1917: Zwei Cousinen liehen sich eine Kamera, um die Feen am Bach zu beweisen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

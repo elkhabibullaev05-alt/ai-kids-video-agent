@@ -1,0 +1,975 @@
+{
+ "id": "20261105-4-gloucester-sea-serpent",
+ "plot": "Odo and Mothwick follow the true story of the Gloucester sea serpent (Massachusetts, August 1817): hundreds of townspeople see a 60-foot humped creature in daylight, a gunshot fails, and Boston scientists name a new species from a small bumpy snake — the twist is that the snake was just a deformed black snake, but nobody has explained what the crowds saw, and the water starts moving with no wind.",
+ "script": {
+  "title": "Hundreds Saw It. Would You Swim Here?",
+  "lead_in": 0,
+  "set": {
+   "place": "swamp",
+   "fog": 0.02,
+   "eyes": 0,
+   "moonlight": 22
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "fisher": {
+    "name": "A Gloucester fisherman",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.3,
+     0.42
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "allen": {
+    "name": "Captain Solomon Allen",
+    "voice": "bm_fable",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.14,
+     0.14,
+     0.22
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "bigelow": {
+    "name": "Jacob Bigelow",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.2,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "farmer": {
+    "name": "A Gloucester farmer",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.38,
+     0.3,
+     0.16
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -42,
+     42
+    ]
+   },
+   "serp": {
+    "name": "The serpent",
+    "voice": "am_onyx",
+    "speed": 0.8,
+    "pitch": -5,
+    "color": [
+     0.06,
+     0.1,
+     0.09
+    ],
+    "kind": "lochbeast",
+    "size": 1.2,
+    "home": [
+     5,
+     18
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "gun",
+    "type": "box",
+    "color": [
+     0.3,
+     0.2,
+     0.1
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     1.8,
+     9.6,
+     1.3
+    ]
+   },
+   {
+    "id": "paper",
+    "type": "box",
+    "color": [
+     0.85,
+     0.83,
+     0.75
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.2,
+     9.4,
+     1.5
+    ]
+   },
+   {
+    "id": "snake",
+    "type": "banana",
+    "color": [
+     0.06,
+     0.06,
+     0.06
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     1.6,
+     9.4,
+     1.3
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "fisher",
+    "say": "There! In the harbor! Something long is coming straight at us!",
+    "cam": "close:fisher",
+    "do": [
+     [
+      "fisher",
+      "to:-6,10,0"
+     ],
+     [
+      "serp",
+      "rise"
+     ],
+     [
+      "fisher",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "SOMETHING IN THE HARBOR"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. Gloucester, Massachusetts, August eighteen seventeen. Broad daylight.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "GLOUCESTER, AUGUST 1817"
+   },
+   {
+    "who": "narr",
+    "say": "Hundreds of people saw it. So why could nobody ever catch it?",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "HUNDREDS SAW IT"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "Fairies by a stream... and now something in the sea?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "NOW THE SEA?"
+   },
+   {
+    "who": "moth",
+    "say": "Whatever watched your lantern ran toward the water, Odo.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "TOWARD THE WATER"
+   },
+   {
+    "who": "narr",
+    "say": "Gloucester was a fishing town. Its people knew the sea well.",
+    "cam": "wide",
+    "do": [
+     [
+      "fisher",
+      "turn:front"
+     ]
+    ],
+    "text": "A FISHING TOWN"
+   },
+   {
+    "who": "narr",
+    "say": "But for days that August, crowds gathered on the shore to stare.",
+    "cam": "overhead",
+    "do": [
+     [
+      "serp",
+      "rise"
+     ]
+    ],
+    "text": "CROWDS ON THE SHORE"
+   },
+   {
+    "who": "narr",
+    "say": "A Boston newspaper said hundreds watched it over several days.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "to:6,16,0"
+     ]
+    ],
+    "text": "SEVERAL DAYS"
+   },
+   {
+    "who": "fisher",
+    "say": "Sixty feet long, at least! And as thick as a barrel!",
+    "cam": "close:fisher",
+    "do": [
+     [
+      "fisher",
+      "jump"
+     ]
+    ],
+    "text": "AS THICK AS A BARREL"
+   },
+   {
+    "who": "narr",
+    "say": "Witnesses said its head looked like a turtle's, but far bigger.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "to:3,15,0"
+     ]
+    ],
+    "text": "A HEAD LIKE A TURTLE"
+   },
+   {
+    "who": "narr",
+    "say": "Its back rose in humps, like buoys strung along a net.",
+    "cam": "wide",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "text": "HUMPS LIKE BUOYS"
+   },
+   {
+    "who": "narr",
+    "say": "It was fast. It could double back on itself in an instant.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "rise"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "FAST"
+   },
+   {
+    "who": "odo",
+    "say": "Something that big... and nobody could catch it?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOBODY CAUGHT IT?"
+   },
+   {
+    "who": "narr",
+    "say": "On August fourteenth, men rowed out to it with a gun.",
+    "cam": "wide",
+    "do": [
+     [
+      "fisher",
+      "to:-5,9.5,0"
+     ],
+     [
+      "gun",
+      "show"
+     ]
+    ],
+    "text": "AUGUST 14"
+   },
+   {
+    "who": "fisher",
+    "say": "Steady... steady... now! Fire!",
+    "cam": "close:fisher",
+    "do": [
+     [
+      "fisher",
+      "turn:serp"
+     ],
+     [
+      "fisher",
+      "shake"
+     ],
+     [
+      "gun",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "FIRE!"
+   },
+   {
+    "who": "narr",
+    "say": "The creature sank. Then it rose again, a hundred yards away.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ],
+     [
+      "gun",
+      "hide"
+     ]
+    ],
+    "text": "100 YARDS AWAY"
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.5,
+    "text": "IT CAME BACK",
+    "do": [
+     [
+      "serp",
+      "rise"
+     ]
+    ]
+   },
+   {
+    "who": "moth",
+    "say": "A gunshot couldn't stop it. So what on earth was it?",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "WHAT WAS IT?"
+   },
+   {
+    "who": "narr",
+    "say": "A ship's captain, Solomon Allen, put his sighting into words.",
+    "cam": "close:allen",
+    "do": [
+     [
+      "fisher",
+      "to_home"
+     ],
+     [
+      "allen",
+      "to:-6,10,0"
+     ]
+    ],
+    "text": "CAPTAIN ALLEN"
+   },
+   {
+    "who": "allen",
+    "say": "A strange marine animal. I believe it to be a serpent.",
+    "cam": "close:allen",
+    "do": [
+     [
+      "allen",
+      "turn:front"
+     ]
+    ],
+    "text": "A SERPENT"
+   },
+   {
+    "who": "narr",
+    "say": "In Boston, the Linnaean Society sent a committee to find out more.",
+    "cam": "close:bigelow",
+    "do": [
+     [
+      "allen",
+      "to_home"
+     ],
+     [
+      "bigelow",
+      "to:-6,10,0"
+     ]
+    ],
+    "text": "THE SCIENTISTS"
+   },
+   {
+    "who": "bigelow",
+    "say": "Every witness, one at a time. We will write it all down.",
+    "cam": "close:bigelow",
+    "do": [
+     [
+      "bigelow",
+      "turn:front"
+     ],
+     [
+      "paper",
+      "show"
+     ]
+    ],
+    "text": "EVERY WITNESS"
+   },
+   {
+    "who": "narr",
+    "say": "One member, John Davis, warned that the stories did not agree.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "text": "THE STORIES DIFFERED"
+   },
+   {
+    "who": "narr",
+    "say": "It was seen badly, he said, and always moving fast.",
+    "cam": "wide",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "text": "ALWAYS MOVING"
+   },
+   {
+    "who": "narr",
+    "say": "In late September, a farmer killed a strange snake by the shore.",
+    "cam": "close:farmer",
+    "do": [
+     [
+      "bigelow",
+      "to:-10,12.5,0"
+     ],
+     [
+      "farmer",
+      "to:-6.5,10,0"
+     ]
+    ],
+    "text": "SEPTEMBER 1817"
+   },
+   {
+    "who": "farmer",
+    "say": "Three feet long, and look! Its whole back is bumpy!",
+    "cam": "close:farmer",
+    "do": [
+     [
+      "farmer",
+      "turn:front"
+     ],
+     [
+      "snake",
+      "show"
+     ],
+     [
+      "snake",
+      "bounce"
+     ]
+    ],
+    "text": "A BUMPY BACK"
+   },
+   {
+    "who": "bigelow",
+    "say": "Humps! Just like the serpent. This must be its young!",
+    "cam": "close:bigelow",
+    "do": [
+     [
+      "bigelow",
+      "turn:front"
+     ],
+     [
+      "bigelow",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "ITS BABY?"
+   },
+   {
+    "who": "narr",
+    "say": "The society named a brand new species. Scoliophis atlanticus.",
+    "cam": "prop:snake",
+    "do": [
+     [
+      "snake",
+      "spin"
+     ]
+    ],
+    "text": "A NEW SPECIES"
+   },
+   {
+    "who": "odo",
+    "say": "So they found it! The mystery is solved!",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "SOLVED?"
+   },
+   {
+    "who": "moth",
+    "say": "If that little snake is wrong, the whole report looks foolish.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "OR FOOLED?"
+   },
+   {
+    "who": "narr",
+    "say": "Many laughed at the report. A playwright even mocked it on stage.",
+    "cam": "wide",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "text": "LAUGHED AT"
+   },
+   {
+    "who": "narr",
+    "say": "Decades later, Boston scientists looked at that little snake again.",
+    "cam": "prop:snake",
+    "do": [
+     [
+      "snake",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "DECADES LATER"
+   },
+   {
+    "who": "narr",
+    "say": "It was a common black snake. Its spine was simply deformed.",
+    "cam": "prop:snake",
+    "do": [
+     [
+      "snake",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "JUST A BLACK SNAKE"
+   },
+   {
+    "who": "odo",
+    "say": "So the scientists' great proof was just an ordinary snake?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "AN ORDINARY SNAKE"
+   },
+   {
+    "who": "narr",
+    "say": "The famous baby serpent had never been a serpent at all.",
+    "cam": "close:bigelow",
+    "do": [
+     [
+      "bigelow",
+      "sad"
+     ],
+     [
+      "snake",
+      "hide"
+     ]
+    ],
+    "text": "NEVER A SERPENT"
+   },
+   {
+    "who": "narr",
+    "say": "So what did hundreds of people see? Many now suggest a whale.",
+    "cam": "wide",
+    "do": [
+     [
+      "farmer",
+      "to_home"
+     ],
+     [
+      "bigelow",
+      "to_home"
+     ],
+     [
+      "paper",
+      "hide"
+     ],
+     [
+      "serp",
+      "rise"
+     ]
+    ],
+    "text": "A WHALE?"
+   },
+   {
+    "who": "narr",
+    "say": "A feeding humpback, rolling at the surface, can look like humps.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "text": "ROLLING HUMPS"
+   },
+   {
+    "who": "odo",
+    "say": "A whale that doubles back on itself in an instant?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "IN AN INSTANT?"
+   },
+   {
+    "who": "moth",
+    "say": "A whale that stayed in one harbor for days, before crowds?",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "FOR DAYS?"
+   },
+   {
+    "who": "narr",
+    "say": "The sightings went on. Nahant in eighteen nineteen, then for a century.",
+    "cam": "wide",
+    "do": [
+     [
+      "serp",
+      "rise"
+     ]
+    ],
+    "text": "OVER A CENTURY"
+   },
+   {
+    "who": "narr",
+    "say": "The last reports of a serpent off Gloucester came in nineteen sixty.",
+    "cam": "close:serp",
+    "do": [
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "text": "1960: THE LAST"
+   },
+   {
+    "who": "narr",
+    "say": "Since then, nothing. The harbor has stayed quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "QUIET"
+   },
+   {
+    "who": "odo",
+    "say": "Mothwick... the water is moving. But there's no wind.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "serp",
+      "rise"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "NO WIND"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: the day New England's sun went out at noon.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEXT: NIGHT AT NOON"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "serp",
+      "dive"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Hundreds Saw It. Would You Swim Here? 🐍 (Ep 48)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"A whole town saw it in daylight. And still nobody could say what it was.\" — Odo\n\nA true story from Gloucester, Massachusetts: in August 1817 hundreds of people watched a huge humped serpent in their harbor. A gunshot failed, scientists named a new species — and then their proof fell apart.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#truestory #series #3DAnimation #Odo #seaserpent",
+  "tags": [
+   "Gloucester sea serpent",
+   "sea serpent",
+   "sea monster",
+   "Massachusetts",
+   "1817",
+   "Linnaean Society",
+   "true story",
+   "unsolved mystery",
+   "real horror story",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "60 FEET LONG",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "Cientos lo vieron. ¿Nadarías aquí? 🐍 (Ep 48)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Todo un pueblo lo vio a plena luz del día. Y nadie supo decir qué era.\" — Odo\n\nUna historia real de Gloucester, Massachusetts: en agosto de 1817, cientos de personas vieron una enorme serpiente con jorobas en su puerto. Un disparo falló, los científicos nombraron una nueva especie… y luego su prueba se vino abajo.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#historiareal #serie #3DAnimation #Odo #serpientemarina"
+   },
+   "pt": {
+    "title": "Centenas viram. Você nadaria aqui? 🐍 (Ep 48)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"Uma cidade inteira viu à luz do dia. E ninguém soube dizer o que era.\" — Odo\n\nUma história real de Gloucester, Massachusetts: em agosto de 1817, centenas de pessoas viram uma enorme serpente com corcovas no porto. Um tiro falhou, cientistas batizaram uma nova espécie — e depois a prova desmoronou.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#historiareal #serie #3DAnimation #Odo #serpentemarinha"
+   },
+   "ar": {
+    "title": "رآه المئات. هل ستسبح هنا؟ 🐍 (الحلقة 48)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"رأته بلدة كاملة في وضح النهار، ولم يعرف أحد ما هو.\" — أودو\n\nقصة حقيقية من غلوستر في ماساتشوستس: في أغسطس 1817 شاهد المئات ثعبانًا ضخمًا ذا حدبات في الميناء. فشلت رصاصة، وأطلق العلماء اسمًا لنوع جديد، ثم انهار دليلهم.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #ثعبان_البحر"
+   },
+   "fr": {
+    "title": "Des centaines l'ont vu. Nageriez-vous ici ? 🐍 (Ep 48)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Toute une ville l'a vu en plein jour. Et personne n'a su dire ce que c'était. » — Odo\n\nUne histoire vraie de Gloucester, Massachusetts : en août 1817, des centaines de personnes observent un immense serpent à bosses dans le port. Un coup de feu échoue, des savants nomment une nouvelle espèce — puis leur preuve s'effondre.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#histoirevraie #serie #3DAnimation #Odo #serpentdemer"
+   },
+   "ja": {
+    "title": "何百人も目撃。ここで泳げる? 🐍 (Ep 48)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「町じゅうが昼間に見た。それでも誰も正体を言えなかった。」— オド\n\nアメリカ・マサチューセッツ州グロスターの実話。1817年8月、何百人もの人々が港でこぶのある巨大な海蛇を目撃しました。銃撃は効かず、学者たちは新種と名付けましたが、その証拠はやがて崩れ去ります。\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#実話 #シリーズ #3DAnimation #Odo #シーサーペント"
+   },
+   "ko": {
+    "title": "수백 명이 봤다. 여기서 수영할래? 🐍 (Ep 48)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"온 마을이 대낮에 봤어. 그런데도 아무도 그게 뭔지 몰랐지.\" — 오도\n\n미국 매사추세츠주 글로스터의 실화: 1817년 8월, 수백 명이 항구에서 혹이 달린 거대한 바다뱀을 봤습니다. 총격은 실패했고, 학자들은 새로운 종이라고 발표했지만 그 증거는 곧 무너졌습니다.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#실화 #시리즈 #3DAnimation #Odo #바다뱀"
+   },
+   "de": {
+    "title": "Hunderte sahen es. Würdest du hier schwimmen? 🐍 (Ep 48)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Eine ganze Stadt sah es am helllichten Tag. Und keiner wusste, was es war.“ — Odo\n\nEine wahre Geschichte aus Gloucester, Massachusetts: Im August 1817 sahen Hunderte eine riesige Seeschlange mit Höckern im Hafen. Ein Schuss versagte, Forscher benannten eine neue Art – dann zerfiel ihr Beweis.\n\nSources:\nhttps://masshist.org/beehiveblog/2019/10/it-appeared-so-strange-and-wonderful\nhttps://hoaxes.org/serpent.html\n\n#wahregeschichte #serie #3DAnimation #Odo #seeschlange"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 24,
+   "top": "THEY SHOT AT IT…",
+   "title": "They shot at it. It came back 🐍 (Ep 48) #shorts",
+   "description": "August 1817: a gun was fired at the Gloucester sea serpent — it sank, then rose 100 yards away. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "sea serpent",
+    "Gloucester"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Le dispararon. Volvió 🐍 (Ep 48) #shorts",
+     "description": "Agosto de 1817: dispararon a la serpiente de Gloucester; se hundió y reapareció a 90 metros. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Atiraram nele. Ele voltou 🐍 (Ep 48) #shorts",
+     "description": "Agosto de 1817: atiraram na serpente de Gloucester; ela afundou e voltou a 90 metros. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أطلقوا النار عليه… فعاد 🐍 (الحلقة 48) #shorts",
+     "description": "أغسطس 1817: أُطلقت النار على ثعبان غلوستر البحري، فغاص ثم ظهر على بعد 90 مترًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ils lui ont tiré dessus. Il est revenu 🐍 (Ep 48) #shorts",
+     "description": "Août 1817 : on tire sur le serpent de Gloucester — il plonge, puis réapparaît 90 m plus loin. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "撃った。それでも戻ってきた 🐍 (Ep 48) #shorts",
+     "description": "1817年8月、グロスターの海蛇に発砲。沈んだ後、約90m先に再び現れた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "총을 쐈다. 그런데 돌아왔다 🐍 (Ep 48) #shorts",
+     "description": "1817년 8월, 글로스터 바다뱀에게 총을 쐈지만 가라앉았다가 90m 떨어진 곳에서 다시 나타났습니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Sie schossen. Es kam zurück 🐍 (Ep 48) #shorts",
+     "description": "August 1817: Auf die Seeschlange von Gloucester wurde geschossen – sie tauchte ab und 90 m weiter wieder auf. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 41,
+   "dur": 24,
+   "top": "THE WATER IS MOVING",
+   "title": "No wind. So why is it moving? 🌊 (Ep 48) #shorts",
+   "description": "The Gloucester serpent was last reported in 1960. Since then, the harbor has been quiet. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "sea serpent",
+    "unsolved mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Sin viento. ¿Por qué se mueve el agua? 🌊 (Ep 48) #shorts",
+     "description": "La serpiente de Gloucester se vio por última vez en 1960. Desde entonces, silencio. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Sem vento. Por que a água se mexe? 🌊 (Ep 48) #shorts",
+     "description": "A serpente de Gloucester foi vista pela última vez em 1960. Desde então, silêncio. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لا ريح… فلماذا يتحرك الماء؟ 🌊 (الحلقة 48) #shorts",
+     "description": "آخر بلاغ عن ثعبان غلوستر كان عام 1960. ومنذ ذلك الحين يسود الهدوء. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pas de vent. Pourquoi l'eau bouge-t-elle ? 🌊 (Ep 48) #shorts",
+     "description": "Le serpent de Gloucester a été signalé pour la dernière fois en 1960. Depuis, le calme. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "風はない。なぜ水が動く? 🌊 (Ep 48) #shorts",
+     "description": "グロスターの海蛇の最後の報告は1960年。それ以来、港は静かなまま。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "바람이 없다. 그런데 왜 물이 움직일까? 🌊 (Ep 48) #shorts",
+     "description": "글로스터 바다뱀의 마지막 목격은 1960년. 그 뒤로 항구는 조용합니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Kein Wind. Warum bewegt sich das Wasser? 🌊 (Ep 48) #shorts",
+     "description": "Die Seeschlange von Gloucester wurde zuletzt 1960 gemeldet. Seitdem ist es still. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

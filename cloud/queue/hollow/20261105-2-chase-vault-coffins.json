@@ -1,0 +1,998 @@
+{
+ "id": "20261105-2-chase-vault-coffins",
+ "plot": "Odo and Mothwick follow the tale of the Chase Vault in Barbados, where lead coffins were said to move inside a cemented tomb until Lord Combermere sealed it and spread sand on the floor; the twist is that no record of it exists before 1833, but the vault has stayed empty ever since, and fresh small footprints appear by its door.",
+ "script": {
+  "title": "Sealed Tomb. Moving Coffins. Who?",
+  "lead_in": 0,
+  "set": {
+   "place": "chapel",
+   "fog": 0.035,
+   "eyes": 2,
+   "moonlight": 10
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "mason": {
+    "name": "A church mason",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.4,
+     0.36,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "comb": {
+    "name": "Lord Combermere",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.55,
+     0.08,
+     0.08
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "lang": {
+    "name": "Andrew Lang",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.22,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     38
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "door",
+    "type": "box",
+    "color": [
+     0.42,
+     0.42,
+     0.44
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 2.4,
+    "at": [
+     6.5,
+     16,
+     0
+    ]
+   },
+   {
+    "id": "c1",
+    "type": "box",
+    "color": [
+     0.32,
+     0.33,
+     0.36
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.55,
+    "at": [
+     2.2,
+     12,
+     0
+    ]
+   },
+   {
+    "id": "c2",
+    "type": "box",
+    "color": [
+     0.32,
+     0.33,
+     0.36
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.55,
+    "at": [
+     3.4,
+     12,
+     0
+    ]
+   },
+   {
+    "id": "c3",
+    "type": "box",
+    "color": [
+     0.32,
+     0.33,
+     0.36
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.75,
+    "at": [
+     4.8,
+     12.5,
+     0
+    ]
+   },
+   {
+    "id": "c4",
+    "type": "box",
+    "color": [
+     0.32,
+     0.33,
+     0.36
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.2,
+     13.5,
+     0
+    ]
+   },
+   {
+    "id": "seal",
+    "type": "wheel",
+    "color": "red",
+    "glow": 1,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     5.0,
+     13.6,
+     1.6
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.5,
+     0.14,
+     0.1
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.0,
+     9.6,
+     1.3
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "mason",
+    "say": "Who did this? The coffins are scattered across the floor!",
+    "cam": "close:mason",
+    "do": [
+     [
+      "mason",
+      "to:5,10,0"
+     ],
+     [
+      "mason",
+      "eyes_big"
+     ],
+     [
+      "door",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE COFFINS MOVED"
+   },
+   {
+    "who": "narr",
+    "say": "A tale told as true, from Barbados, in the early eighteen-hundreds.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ],
+     [
+      "c1",
+      "show"
+     ],
+     [
+      "c2",
+      "show"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "BARBADOS, 1800s"
+   },
+   {
+    "who": "narr",
+    "say": "Who moves heavy lead coffins inside a tomb nobody can enter?",
+    "cam": "prop:c2",
+    "do": [
+     [
+      "c2",
+      "drift:3.8,13.2,0"
+     ],
+     [
+      "c1",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "NOBODY CAN ENTER"
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "c1",
+      "hide"
+     ],
+     [
+      "c2",
+      "hide"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "A ghost ship on the ice, and now a locked tomb?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "A LOCKED TOMB?"
+   },
+   {
+    "who": "moth",
+    "say": "That ship's bell rang us south, Odo. All the way here.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "FOLLOW THE BELL"
+   },
+   {
+    "who": "narr",
+    "say": "The vault sits in the churchyard of Christ Church, near Oistins.",
+    "cam": "prop:door",
+    "do": [
+     [
+      "mason",
+      "turn:front"
+     ]
+    ],
+    "text": "CHRIST CHURCH, BARBADOS"
+   },
+   {
+    "who": "narr",
+    "say": "Its door was one huge slab of stone.",
+    "cam": "wide",
+    "do": [
+     [
+      "mason",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "ONE HUGE STONE"
+   },
+   {
+    "who": "mason",
+    "say": "Push, all of you! Six or seven men, and it barely moves!",
+    "cam": "close:mason",
+    "do": [
+     [
+      "mason",
+      "turn:front"
+     ],
+     [
+      "mason",
+      "jump"
+     ]
+    ],
+    "text": "SIX OR SEVEN MEN"
+   },
+   {
+    "who": "narr",
+    "say": "After every burial, masons cemented that door shut again.",
+    "cam": "prop:door",
+    "do": [
+     [
+      "mason",
+      "shake"
+     ]
+    ],
+    "text": "CEMENTED SHUT"
+   },
+   {
+    "who": "narr",
+    "say": "Most of what we know comes from tales a local rector told.",
+    "cam": "wide",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "spin"
+     ]
+    ],
+    "text": "A RECTOR'S TALES"
+   },
+   {
+    "who": "narr",
+    "say": "The story says a little girl was laid here in eighteen-oh-eight.",
+    "cam": "prop:c1",
+    "do": [
+     [
+      "book",
+      "hide"
+     ],
+     [
+      "c1",
+      "show"
+     ]
+    ],
+    "text": "1808"
+   },
+   {
+    "who": "narr",
+    "say": "In eighteen twelve, her sister followed. Two small coffins, side by side.",
+    "cam": "prop:c2",
+    "do": [
+     [
+      "c2",
+      "show"
+     ]
+    ],
+    "text": "SIDE BY SIDE"
+   },
+   {
+    "who": "narr",
+    "say": "That same year, their father, Thomas Chase, was laid beside them.",
+    "cam": "wide",
+    "do": [
+     [
+      "c3",
+      "show"
+     ]
+    ],
+    "text": "THOMAS CHASE"
+   },
+   {
+    "who": "mason",
+    "say": "Roll the stone back. Mind your feet. Bring the lamp in.",
+    "cam": "close:mason",
+    "do": [
+     [
+      "mason",
+      "to:3,10.5,0"
+     ]
+    ],
+    "text": "OPEN THE VAULT"
+   },
+   {
+    "who": "narr",
+    "say": "When they rolled the stone away, the small coffins had moved.",
+    "cam": "prop:c1",
+    "do": [
+     [
+      "c1",
+      "drift:1.6,14.2,0"
+     ],
+     [
+      "c2",
+      "drift:5.4,11.4,0"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "THEY HAD MOVED"
+   },
+   {
+    "who": "odo",
+    "say": "Moved? But who could even get inside?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHO GOT IN?"
+   },
+   {
+    "who": "moth",
+    "say": "Nobody, Odo. That is exactly the problem.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "NOBODY"
+   },
+   {
+    "who": "narr",
+    "say": "The men set the coffins straight and sealed the door again.",
+    "cam": "prop:door",
+    "do": [
+     [
+      "c1",
+      "home"
+     ],
+     [
+      "c2",
+      "home"
+     ]
+    ],
+    "text": "PUT BACK"
+   },
+   {
+    "who": "narr",
+    "say": "But each time the vault was opened, the coffins had moved again.",
+    "cam": "wide",
+    "do": [
+     [
+      "c3",
+      "drift:6,11.5,0"
+     ],
+     [
+      "c4",
+      "show"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "AGAIN... AND AGAIN"
+   },
+   {
+    "who": "mason",
+    "say": "If this goes on, no family will ever rest in here!",
+    "cam": "close:mason",
+    "do": [
+     [
+      "mason",
+      "turn:front"
+     ],
+     [
+      "mason",
+      "shake"
+     ]
+    ],
+    "text": "NO ONE WILL REST"
+   },
+   {
+    "who": "narr",
+    "say": "Word reached the governor of Barbados himself, Lord Combermere.",
+    "cam": "close:comb",
+    "do": [
+     [
+      "mason",
+      "to_home"
+     ],
+     [
+      "comb",
+      "to:5,10,0"
+     ]
+    ],
+    "text": "THE GOVERNOR"
+   },
+   {
+    "who": "comb",
+    "say": "Then we shall be certain. Nobody enters without my seal.",
+    "cam": "close:comb",
+    "do": [
+     [
+      "comb",
+      "turn:front"
+     ]
+    ],
+    "text": "MY SEAL"
+   },
+   {
+    "who": "narr",
+    "say": "The story says he attended a burial there in eighteen nineteen.",
+    "cam": "prop:c4",
+    "do": [
+     [
+      "c4",
+      "bounce"
+     ]
+    ],
+    "text": "1819"
+   },
+   {
+    "who": "narr",
+    "say": "He had fine sand spread over the floor, to catch any footprint.",
+    "cam": "overhead",
+    "do": [
+     [
+      "c3",
+      "home"
+     ]
+    ],
+    "text": "SAND ON THE FLOOR"
+   },
+   {
+    "who": "narr",
+    "say": "Then he pressed his own seal into the wet cement.",
+    "cam": "prop:seal",
+    "do": [
+     [
+      "seal",
+      "show"
+     ],
+     [
+      "seal",
+      "spin"
+     ]
+    ],
+    "text": "THE GOVERNOR'S SEAL"
+   },
+   {
+    "who": "comb",
+    "say": "Now let us see who walks in here.",
+    "cam": "close:comb",
+    "do": [
+     [
+      "comb",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHO WALKS IN?"
+   },
+   {
+    "who": "narr",
+    "say": "In April eighteen twenty, they broke the seals and opened it again.",
+    "cam": "wide",
+    "do": [
+     [
+      "seal",
+      "vanish"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "APRIL 1820"
+   },
+   {
+    "who": "narr",
+    "say": "The story says the coffins lay scattered. One leaned against the door.",
+    "cam": "prop:c3",
+    "do": [
+     [
+      "c1",
+      "drift:1,14.8,0"
+     ],
+     [
+      "c2",
+      "drift:6,12,0"
+     ],
+     [
+      "c3",
+      "drift:5.6,14.6,0"
+     ]
+    ],
+    "text": "SCATTERED"
+   },
+   {
+    "who": "comb",
+    "say": "The sand! Look at the sand. Not a single footprint!",
+    "cam": "close:comb",
+    "do": [
+     [
+      "comb",
+      "jump"
+     ],
+     [
+      "comb",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "NO FOOTPRINTS"
+   },
+   {
+    "who": "narr",
+    "say": "He ordered the coffins buried elsewhere. The vault was left empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "c1",
+      "vanish"
+     ],
+     [
+      "c2",
+      "vanish"
+     ],
+     [
+      "c3",
+      "vanish"
+     ],
+     [
+      "c4",
+      "vanish"
+     ]
+    ],
+    "text": "LEFT EMPTY"
+   },
+   {
+    "who": "moth",
+    "say": "Floods? An earthquake? People asked. But no water marks were found.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "FLOOD? EARTHQUAKE?"
+   },
+   {
+    "who": "odo",
+    "say": "Then something moved them. Something already inside.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "SOMETHING INSIDE?"
+   },
+   {
+    "who": "narr",
+    "say": "Or maybe nothing moved at all. Here is the strangest part.",
+    "cam": "wide",
+    "do": [
+     [
+      "comb",
+      "to_home"
+     ],
+     [
+      "odo",
+      "turn:moth"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "OR NOTHING AT ALL?"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody printed this story until eighteen thirty-three, in a travel book.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "spin"
+     ]
+    ],
+    "text": "FIRST PRINTED: 1833"
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen-oh-seven, the writer Andrew Lang went looking for proof.",
+    "cam": "close:lang",
+    "do": [
+     [
+      "lang",
+      "to:5,10,0"
+     ]
+    ],
+    "text": "1907: THE SEARCH"
+   },
+   {
+    "who": "lang",
+    "say": "The burial register. The island newspapers. Not one word about coffins.",
+    "cam": "close:lang",
+    "do": [
+     [
+      "lang",
+      "turn:front"
+     ],
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "NOT ONE WORD"
+   },
+   {
+    "who": "narr",
+    "say": "Even the rector's own versions of the tale did not match.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "THE STORIES CHANGED"
+   },
+   {
+    "who": "narr",
+    "say": "In two thousand eleven, an investigator stepped inside the empty vault.",
+    "cam": "wide",
+    "do": [
+     [
+      "lang",
+      "to_home"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "2011"
+   },
+   {
+    "who": "narr",
+    "say": "The brick walls were intact. No marks from heavy coffins hitting them.",
+    "cam": "prop:door",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "NO MARKS"
+   },
+   {
+    "who": "odo",
+    "say": "So it never happened? It was only a story?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "ONLY A STORY?"
+   },
+   {
+    "who": "moth",
+    "say": "Then why has nobody been laid in that vault ever since?",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "EMPTY EVER SINCE"
+   },
+   {
+    "who": "narr",
+    "say": "Two hundred years on, it stands empty. And nobody knows for sure.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "NOBODY KNOWS"
+   },
+   {
+    "who": "moth",
+    "say": "Odo... the sand by the door. Fresh footprints. Small ones.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ],
+     [
+      "fx",
+      "tracks:odo-moth"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "FRESH FOOTPRINTS"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: two girls, an English stream, and five strange photographs.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "NEXT: FIVE PHOTOGRAPHS"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Sealed Tomb. Moving Coffins. Who? ⚰️ (Ep 46)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"A door seven men can barely move. And still, something got in.\" — Odo\n\nA tale told as true from Barbados: in the Chase Vault at Christ Church, heavy lead coffins were said to move every time the tomb was opened — even after the governor sealed it and covered the floor with sand.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#truestory #series #3DAnimation #Odo #chasevault",
+  "tags": [
+   "Chase Vault",
+   "moving coffins",
+   "Barbados",
+   "Christ Church",
+   "Lord Combermere",
+   "true story",
+   "unsolved mystery",
+   "real horror story",
+   "legend",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "NOBODY GOT IN",
+  "thumb_beat": 29,
+  "localizations": {
+   "es": {
+    "title": "¿Quién movió los ataúdes de esta tumba? ⚰️ (Ep 46)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Una puerta que siete hombres apenas mueven. Y aun así, algo entró.\" — Odo\n\nUn relato contado como cierto en Barbados: en la cripta Chase de Christ Church, los pesados ataúdes de plomo se movían cada vez que se abría la tumba, incluso después de que el gobernador la sellara y cubriera el suelo de arena.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#historiareal #serie #3DAnimation #Odo #chasevault"
+   },
+   "pt": {
+    "title": "Quem moveu os caixões deste túmulo? ⚰️ (Ep 46)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"Uma porta que sete homens mal conseguem mover. E mesmo assim algo entrou.\" — Odo\n\nUma história contada como verdadeira em Barbados: na cripta Chase, em Christ Church, pesados caixões de chumbo se moviam sempre que o túmulo era aberto — mesmo depois que o governador o selou e cobriu o chão de areia.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#historiareal #serie #3DAnimation #Odo #chasevault"
+   },
+   "ar": {
+    "title": "من حرّك التوابيت في هذا القبر؟ ⚰️ (الحلقة 46)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"باب بالكاد يحركه سبعة رجال. ومع ذلك دخل شيء ما.\" — أودو\n\nحكاية تُروى على أنها حقيقية من باربادوس: في قبو عائلة تشيس بكنيسة كرايست تشيرش، قيل إن توابيت الرصاص الثقيلة كانت تتحرك كلما فُتح القبر، حتى بعد أن ختمه الحاكم وفرش الأرض بالرمل.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #chasevault"
+   },
+   "fr": {
+    "title": "Qui a déplacé les cercueils de ce tombeau ? ⚰️ (Ep 46)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Une porte que sept hommes bougent à peine. Et pourtant, quelque chose est entré. » — Odo\n\nUn récit raconté comme vrai à la Barbade : dans le caveau Chase de Christ Church, de lourds cercueils de plomb auraient bougé à chaque ouverture — même après que le gouverneur l'a scellé et a couvert le sol de sable.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#histoirevraie #serie #3DAnimation #Odo #chasevault"
+   },
+   "ja": {
+    "title": "封印された墓の棺を動かしたのは誰? ⚰️ (Ep 46)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「7人がかりでやっと動く扉。それでも、何かが入った。」— オド\n\nバルバドスで実話として語られる話。クライストチャーチのチェイス家の納骨堂では、開けるたびに重い鉛の棺が動いていたといいます。総督が封印し、床に砂をまいた後でさえも。\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#実話 #シリーズ #3DAnimation #Odo #chasevault"
+   },
+   "ko": {
+    "title": "누가 이 무덤 속 관을 옮겼을까? ⚰️ (Ep 46)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"일곱 명이 겨우 움직이는 문. 그런데도 뭔가가 들어갔어.\" — 오도\n\n바베이도스에서 실화로 전해지는 이야기: 크라이스트 처치의 체이스 납골당에서는 무덤을 열 때마다 무거운 납관이 움직여 있었다고 합니다. 총독이 봉인하고 바닥에 모래를 깐 뒤에도요.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#실화 #시리즈 #3DAnimation #Odo #chasevault"
+   },
+   "de": {
+    "title": "Wer bewegte die Särge in diesem Grab? ⚰️ (Ep 46)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Eine Tür, die sieben Männer kaum bewegen. Und trotzdem kam etwas hinein.“ — Odo\n\nEine als wahr erzählte Geschichte aus Barbados: In der Chase-Gruft von Christ Church sollen sich schwere Bleisärge bei jeder Öffnung bewegt haben – selbst nachdem der Gouverneur sie versiegelt und Sand auf den Boden streuen ließ.\n\nSources:\nhttps://en.wikipedia.org/wiki/Chase_Vault\nhttps://skeptoid.com/episodes/4399\n\n#wahregeschichte #serie #3DAnimation #Odo #chasevault"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 23,
+   "dur": 26,
+   "top": "SEALED. SAND ON THE FLOOR.",
+   "title": "Sealed tomb. The coffins moved ⚰️ (Ep 46) #shorts",
+   "description": "The governor sealed the vault and spread sand on the floor — then they opened it. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Chase Vault",
+    "moving coffins"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Selló la tumba. Los ataúdes se movieron ⚰️ (Ep 46) #shorts",
+     "description": "El gobernador selló la cripta y echó arena en el suelo; luego la abrieron. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele selou o túmulo. Os caixões se moveram ⚰️ (Ep 46) #shorts",
+     "description": "O governador selou a cripta e espalhou areia no chão; depois a abriram. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ختم القبر… فتحركت التوابيت ⚰️ (الحلقة 46) #shorts",
+     "description": "ختم الحاكم القبو وفرش الرمل على الأرض، ثم فتحوه. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il a scellé le tombeau. Les cercueils ont bougé ⚰️ (Ep 46) #shorts",
+     "description": "Le gouverneur scelle le caveau et couvre le sol de sable — puis on l'ouvre. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "墓を封印した。なのに棺が動いた ⚰️ (Ep 46) #shorts",
+     "description": "総督が納骨堂を封印し床に砂をまいた。そして扉が開かれた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "무덤을 봉인했다. 그런데 관이 움직였다 ⚰️ (Ep 46) #shorts",
+     "description": "총독이 납골당을 봉인하고 바닥에 모래를 깔았습니다. 그리고 문이 열렸죠. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er versiegelte das Grab. Die Särge bewegten sich ⚰️ (Ep 46) #shorts",
+     "description": "Der Gouverneur versiegelte die Gruft und streute Sand – dann wurde sie geöffnet. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

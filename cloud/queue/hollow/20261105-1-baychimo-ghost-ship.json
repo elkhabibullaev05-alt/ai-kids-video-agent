@@ -1,0 +1,1116 @@
+{
+ "id": "20261105-1-baychimo-ghost-ship",
+ "plot": "Odo and Mothwick follow the true story of the SS Baychimo (Alaska, 1931): ice traps the fur steamer, a blizzard takes her and the crew thinks she sank, but she keeps reappearing empty for 38 years; the twist is the storm freed her as the ice had once before, and the episode ends with a ship's bell ringing on the ice.",
+ "script": {
+  "title": "This Ship Escaped Its Crew for 38 Years",
+  "lead_in": 0,
+  "set": {
+   "place": "tundra",
+   "fog": 0.04,
+   "eyes": 0,
+   "moonlight": 6
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "sailor": {
+    "name": "A Baychimo sailor",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.16,
+     0.32
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "hunter": {
+    "name": "An Inuit hunter",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.42,
+     0.3,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "isobel": {
+    "name": "Isobel Hutchison",
+    "voice": "bf_emma",
+    "speed": 0.98,
+    "pitch": 0,
+    "color": [
+     0.3,
+     0.14,
+     0.24
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "polson": {
+    "name": "Captain Hugh Polson",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.14,
+     0.14,
+     0.17
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -42,
+     42
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "hull1",
+    "type": "box",
+    "color": [
+     0.1,
+     0.1,
+     0.11
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.6,
+    "at": [
+     2.4,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "hull2",
+    "type": "box",
+    "color": [
+     0.1,
+     0.1,
+     0.11
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.6,
+    "at": [
+     4.3,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "hull3",
+    "type": "box",
+    "color": [
+     0.1,
+     0.1,
+     0.11
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.6,
+    "at": [
+     6.2,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "cabin",
+    "type": "box",
+    "color": [
+     0.75,
+     0.72,
+     0.65
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     4.3,
+     17,
+     1.9
+    ]
+   },
+   {
+    "id": "funnel",
+    "type": "tube",
+    "color": [
+     0.45,
+     0.08,
+     0.06
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.8,
+    "at": [
+     4.3,
+     17,
+     3.9
+    ]
+   },
+   {
+    "id": "furs",
+    "type": "box",
+    "color": [
+     0.35,
+     0.22,
+     0.12
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     1.5,
+     10.5,
+     0
+    ]
+   },
+   {
+    "id": "hut",
+    "type": "box",
+    "color": [
+     0.32,
+     0.22,
+     0.13
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 1.3,
+    "at": [
+     -7,
+     14,
+     0
+    ]
+   },
+   {
+    "id": "plane",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.85,
+     0.5
+    ],
+    "glow": 6,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     -14,
+     30,
+     10
+    ]
+   },
+   {
+    "id": "bell",
+    "type": "trophy",
+    "color": "gold",
+    "glow": 3,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     3.5,
+     13,
+     1.2
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "sailor",
+    "say": "She's gone! The whole ship is gone! Where is the Baychimo?",
+    "cam": "close:sailor",
+    "do": [
+     [
+      "sailor",
+      "to:6,11,0"
+     ],
+     [
+      "hut",
+      "bounce"
+     ],
+     [
+      "sailor",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE SHIP IS GONE"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. Alaska, November nineteen thirty-one. A ship vanished overnight.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "ALASKA, 1931"
+   },
+   {
+    "who": "narr",
+    "say": "How did a ship with no crew sail on for thirty-eight years?",
+    "cam": "overhead",
+    "do": [
+     [
+      "hull1",
+      "show"
+     ],
+     [
+      "hull2",
+      "show"
+     ],
+     [
+      "hull3",
+      "show"
+     ],
+     [
+      "cabin",
+      "show"
+     ],
+     [
+      "funnel",
+      "show"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "38 YEARS. NO CREW."
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day — subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW EPISODE EVERY DAY"
+   },
+   {
+    "who": "odo",
+    "say": "After that silent snowy camp, I hoped for a quiet night.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "NOT AGAIN..."
+   },
+   {
+    "who": "moth",
+    "say": "Quiet? Odo, we are standing on a frozen sea.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "A FROZEN SEA"
+   },
+   {
+    "who": "narr",
+    "say": "She was a steel steamer, built in Sweden in nineteen fourteen.",
+    "cam": "prop:cabin",
+    "do": [
+     [
+      "cabin",
+      "bounce"
+     ]
+    ],
+    "text": "THE BAYCHIMO"
+   },
+   {
+    "who": "narr",
+    "say": "The Hudson's Bay Company sent her north each year to trade furs.",
+    "cam": "wide",
+    "do": [
+     [
+      "furs",
+      "show"
+     ],
+     [
+      "furs",
+      "bounce"
+     ]
+    ],
+    "text": "A FUR SHIP"
+   },
+   {
+    "who": "narr",
+    "say": "On October first, pack ice locked her in, near Barrow, Alaska.",
+    "cam": "prop:hull2",
+    "do": [
+     [
+      "hull2",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "LOCKED IN ICE"
+   },
+   {
+    "who": "narr",
+    "say": "The crew walked to shore. Two days later, she had broken free.",
+    "cam": "close:sailor",
+    "do": [
+     [
+      "sailor",
+      "jump"
+     ]
+    ],
+    "text": "SHE BROKE FREE"
+   },
+   {
+    "who": "sailor",
+    "say": "She freed herself! But the ice will grab her again.",
+    "cam": "close:sailor",
+    "do": [
+     [
+      "sailor",
+      "turn:front"
+     ]
+    ],
+    "text": "IT WILL COME BACK"
+   },
+   {
+    "who": "narr",
+    "say": "It did, a week later. Planes flew twenty-two men out.",
+    "cam": "overhead",
+    "do": [
+     [
+      "plane",
+      "show"
+     ],
+     [
+      "plane",
+      "drift:-30,45,16"
+     ]
+    ],
+    "text": "22 MEN FLOWN OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Fifteen men stayed behind, in a wooden hut near the ship.",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "15 MEN STAYED"
+   },
+   {
+    "who": "odo",
+    "say": "Fifteen men, alone on the ice, guarding one ship.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "ALONE ON THE ICE"
+   },
+   {
+    "who": "narr",
+    "say": "Then, on November twenty-fourth, a blizzard came howling off the sea.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THE BLIZZARD"
+   },
+   {
+    "sfx": "suspicious",
+    "cam": "wide",
+    "hold": 1.6,
+    "text": "NOV 24, 1931",
+    "do": [
+     [
+      "hull1",
+      "vanish"
+     ],
+     [
+      "hull2",
+      "vanish"
+     ],
+     [
+      "hull3",
+      "vanish"
+     ],
+     [
+      "cabin",
+      "vanish"
+     ],
+     [
+      "funnel",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "sailor",
+    "say": "When the snow stopped, she was gone. Just gone.",
+    "cam": "close:sailor",
+    "do": [
+     [
+      "sailor",
+      "eyes_big"
+     ]
+    ],
+    "text": "JUST GONE"
+   },
+   {
+    "who": "narr",
+    "say": "Their captain believed she had sunk in the storm.",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "SUNK?"
+   },
+   {
+    "who": "moth",
+    "say": "If she sank, Odo, the furs and the ship are lost forever.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "LOST FOREVER?"
+   },
+   {
+    "who": "narr",
+    "say": "Days later, an Inuit seal hunter arrived with strange news.",
+    "cam": "close:hunter",
+    "do": [
+     [
+      "hunter",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "A HUNTER'S NEWS"
+   },
+   {
+    "who": "hunter",
+    "say": "I saw your ship. Forty-five miles away. Drifting all alone.",
+    "cam": "close:hunter",
+    "do": [
+     [
+      "hunter",
+      "turn:front"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "45 MILES AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "There she was, stuck in the ice again. Empty. Still floating.",
+    "cam": "prop:cabin",
+    "do": [
+     [
+      "hull1",
+      "show"
+     ],
+     [
+      "hull2",
+      "show"
+     ],
+     [
+      "hull3",
+      "show"
+     ],
+     [
+      "cabin",
+      "show"
+     ],
+     [
+      "funnel",
+      "show"
+     ]
+    ],
+    "text": "STILL FLOATING"
+   },
+   {
+    "who": "sailor",
+    "say": "Take the best furs! She won't survive another winter.",
+    "cam": "close:sailor",
+    "do": [
+     [
+      "sailor",
+      "jump"
+     ]
+    ],
+    "text": "TAKE THE FURS"
+   },
+   {
+    "who": "narr",
+    "say": "They carried the most valuable furs off. Then they abandoned her.",
+    "cam": "prop:furs",
+    "do": [
+     [
+      "furs",
+      "to:sailor"
+     ]
+    ],
+    "text": "ABANDONED"
+   },
+   {
+    "who": "odo",
+    "say": "So she sank after that... didn't she?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "sailor",
+      "to_home"
+     ],
+     [
+      "hunter",
+      "to_home"
+     ],
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "DID SHE SINK?"
+   },
+   {
+    "who": "narr",
+    "say": "In January nineteen thirty-two, a man crossing by dog sled saw her.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hull2",
+      "bounce"
+     ]
+    ],
+    "text": "JANUARY 1932"
+   },
+   {
+    "who": "narr",
+    "say": "She floated near the shore. Nobody aboard. Nobody at the wheel.",
+    "cam": "prop:cabin",
+    "do": [
+     [
+      "cabin",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "NOBODY AT THE WHEEL"
+   },
+   {
+    "who": "narr",
+    "say": "In March nineteen thirty-three, Inuit travellers climbed aboard her.",
+    "cam": "wide",
+    "do": [
+     [
+      "hunter",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "MARCH 1933"
+   },
+   {
+    "who": "hunter",
+    "say": "The storm is too strong! We have to stay inside her!",
+    "cam": "close:hunter",
+    "do": [
+     [
+      "hunter",
+      "turn:front"
+     ],
+     [
+      "hunter",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "TRAPPED ABOARD"
+   },
+   {
+    "who": "narr",
+    "say": "A sudden storm kept them aboard the empty ship for ten days.",
+    "cam": "prop:hull3",
+    "do": [
+     [
+      "hull3",
+      "bounce"
+     ]
+    ],
+    "text": "10 DAYS"
+   },
+   {
+    "who": "moth",
+    "say": "Ten days inside a ship nobody owns. Would you sleep there?",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "shake"
+     ]
+    ],
+    "text": "WOULD YOU SLEEP THERE?"
+   },
+   {
+    "who": "narr",
+    "say": "And here is what nobody guessed. That blizzard never sank her.",
+    "cam": "wide",
+    "do": [
+     [
+      "hunter",
+      "to_home"
+     ],
+     [
+      "funnel",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "SHE NEVER SANK"
+   },
+   {
+    "who": "narr",
+    "say": "Just like that first time in October, the storm broke her free.",
+    "cam": "prop:hull1",
+    "do": [
+     [
+      "hull1",
+      "bounce"
+     ]
+    ],
+    "text": "THE STORM SET HER FREE"
+   },
+   {
+    "who": "narr",
+    "say": "In August nineteen thirty-three, Scottish traveller Isobel Hutchison went aboard.",
+    "cam": "close:isobel",
+    "do": [
+     [
+      "isobel",
+      "to:5,11,0"
+     ]
+    ],
+    "text": "AUGUST 1933"
+   },
+   {
+    "who": "isobel",
+    "say": "Everything is still here, as if the crew might come back.",
+    "cam": "close:isobel",
+    "do": [
+     [
+      "isobel",
+      "turn:front"
+     ]
+    ],
+    "text": "AS IF THEY'D COME BACK"
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen thirty-nine, Captain Hugh Polson came to claim her.",
+    "cam": "close:polson",
+    "do": [
+     [
+      "isobel",
+      "to_home"
+     ],
+     [
+      "polson",
+      "to:6,11,0"
+     ]
+    ],
+    "text": "1939"
+   },
+   {
+    "who": "polson",
+    "say": "Get a line on her, before the ice starts moving!",
+    "cam": "close:polson",
+    "do": [
+     [
+      "polson",
+      "turn:front"
+     ],
+     [
+      "polson",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "GET A LINE ON HER!"
+   },
+   {
+    "who": "narr",
+    "say": "Creeping ice floes forced him to give up. She drifted on.",
+    "cam": "prop:hull2",
+    "do": [
+     [
+      "polson",
+      "to_home"
+     ],
+     [
+      "hull2",
+      "bounce"
+     ]
+    ],
+    "text": "SHE DRIFTED ON"
+   },
+   {
+    "who": "narr",
+    "say": "In the forties and fifties, people kept seeing her. Nobody caught her.",
+    "cam": "wide",
+    "do": [
+     [
+      "cabin",
+      "bounce"
+     ]
+    ],
+    "text": "NOBODY CAUGHT HER"
+   },
+   {
+    "who": "narr",
+    "say": "In March nineteen sixty-two, Inuit saw her drifting off the Beaufort coast.",
+    "cam": "prop:cabin",
+    "do": [
+     [
+      "funnel",
+      "spin"
+     ]
+    ],
+    "text": "1962"
+   },
+   {
+    "who": "narr",
+    "say": "In nineteen sixty-nine, she was seen frozen in the pack ice.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hull3",
+      "bounce"
+     ]
+    ],
+    "text": "1969: LAST SIGHTING"
+   },
+   {
+    "who": "narr",
+    "say": "Thirty-eight years after her crew walked away. Then, never again.",
+    "cam": "wide",
+    "do": [
+     [
+      "hull1",
+      "vanish"
+     ],
+     [
+      "hull2",
+      "vanish"
+     ],
+     [
+      "hull3",
+      "vanish"
+     ],
+     [
+      "cabin",
+      "vanish"
+     ],
+     [
+      "funnel",
+      "vanish"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "NEVER AGAIN"
+   },
+   {
+    "who": "odo",
+    "say": "Never? Not even when people went looking for her?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOT EVEN ONCE?"
+   },
+   {
+    "who": "narr",
+    "say": "In two thousand six, Alaska began a search. She is still missing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "STILL MISSING"
+   },
+   {
+    "who": "moth",
+    "say": "Odo, don't move. Listen. Out on the ice... a ship's bell.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "bell",
+      "show"
+     ],
+     [
+      "bell",
+      "bounce"
+     ],
+     [
+      "moth",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "A SHIP'S BELL"
+   },
+   {
+    "who": "narr",
+    "say": "Next time: a sealed tomb in Barbados, where the coffins moved.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "NEXT: THE SEALED TOMB"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "bell",
+      "spin"
+     ]
+    ],
+    "text": "WHAT HAPPENS NEXT?"
+   }
+  ]
+ },
+ "long": {
+  "title": "This Ship Escaped Its Crew for 38 Years 🚢 (Ep 45)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\n\"I thought ships that sink stay sunk. This one never learned.\" — Odo\n\nA true story: in 1931 ice trapped the fur steamer SS Baychimo off Alaska. After a blizzard her crew believed she had sunk — yet people kept finding her drifting, empty, until 1969.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#truestory #series #3DAnimation #Odo #ghostship",
+  "tags": [
+   "SS Baychimo",
+   "ghost ship",
+   "true story",
+   "unsolved mystery",
+   "real horror story",
+   "Alaska",
+   "Arctic",
+   "Hudson's Bay Company",
+   "1931",
+   "abandoned ship",
+   "Hollowmere Tales",
+   "series",
+   "3D animation"
+  ],
+  "thumb_text": "NOBODY ON BOARD",
+  "thumb_beat": 16,
+  "localizations": {
+   "es": {
+    "title": "Este barco escapó de su tripulación 38 años 🚢 (Ep 45)",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\n\"Creía que los barcos hundidos se quedaban hundidos. Este nunca lo aprendió.\" — Odo\n\nUna historia real: en 1931 el hielo atrapó al vapor peletero SS Baychimo frente a Alaska. Tras una ventisca, su tripulación lo creyó hundido, pero siguieron viéndolo a la deriva, vacío, hasta 1969.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#historiareal #serie #3DAnimation #Odo #barcofantasma"
+   },
+   "pt": {
+    "title": "Este navio fugiu da tripulação por 38 anos 🚢 (Ep 45)",
+    "description": "O que você acha que acontece na próxima parte? Conte nos comentários.\n\n\"Eu achava que navio afundado ficava afundado. Este nunca aprendeu.\" — Odo\n\nUma história real: em 1931 o gelo prendeu o vapor de peles SS Baychimo perto do Alasca. Depois de uma nevasca, a tripulação achou que ele tinha afundado, mas ele continuou aparecendo à deriva, vazio, até 1969.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#historiareal #serie #3DAnimation #Odo #naviofantasma"
+   },
+   "ar": {
+    "title": "سفينة هربت من طاقمها 38 عامًا 🚢 (الحلقة 45)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\n\"ظننت أن السفن التي تغرق تبقى غارقة. هذه لم تتعلم ذلك أبدًا.\" — أودو\n\nقصة حقيقية: عام 1931 حاصر الجليد سفينة الفراء SS Baychimo قرب ألاسكا. بعد عاصفة ثلجية ظن طاقمها أنها غرقت، لكن الناس ظلوا يرونها تنجرف فارغة حتى عام 1969.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#قصة_حقيقية #مسلسل #3DAnimation #Odo #سفينة_أشباح"
+   },
+   "fr": {
+    "title": "Ce navire a échappé à son équipage 38 ans 🚢 (Ep 45)",
+    "description": "Selon vous, que se passe-t-il dans la prochaine partie ? Dites-le-moi en commentaire.\n\n« Je croyais qu'un navire coulé restait au fond. Celui-ci ne l'a jamais compris. » — Odo\n\nUne histoire vraie : en 1931, la glace emprisonne le vapeur de fourrures SS Baychimo au large de l'Alaska. Après un blizzard, l'équipage le croit coulé — pourtant on le revoit dériver, vide, jusqu'en 1969.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#histoirevraie #serie #3DAnimation #Odo #navirefantome"
+   },
+   "ja": {
+    "title": "乗組員から38年逃げ続けた船 🚢 (Ep 45)",
+    "description": "次のパートで何が起こると思いますか?コメントで教えてください。\n\n「沈んだ船は沈んだままだと思っていた。この船は違った。」— オド\n\n実話:1931年、アラスカ沖で毛皮貿易船ベイチモ号が氷に閉じ込められました。吹雪のあと乗組員は沈没したと思いましたが、その後も1969年まで、無人で漂う姿が目撃され続けました。\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#実話 #シリーズ #3DAnimation #Odo #幽霊船"
+   },
+   "ko": {
+    "title": "선원들에게서 38년간 도망친 배 🚢 (Ep 45)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려주세요.\n\n\"가라앉은 배는 가라앉은 채로 있는 줄 알았어. 이 배는 달랐지.\" — 오도\n\n실화: 1931년 알래스카 앞바다에서 모피 화물선 SS 베이치모호가 얼음에 갇혔습니다. 눈보라 뒤 선원들은 배가 가라앉았다고 믿었지만, 배는 1969년까지 텅 빈 채 떠다니는 모습으로 계속 목격되었습니다.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#실화 #시리즈 #3DAnimation #Odo #유령선"
+   },
+   "de": {
+    "title": "Dieses Schiff entkam 38 Jahre seiner Crew 🚢 (Ep 45)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es mir in die Kommentare.\n\n„Ich dachte, gesunkene Schiffe bleiben unten. Dieses hat es nie gelernt.“ — Odo\n\nEine wahre Geschichte: 1931 schließt das Eis den Pelzdampfer SS Baychimo vor Alaska ein. Nach einem Schneesturm hält die Crew ihn für gesunken – doch bis 1969 sieht man ihn immer wieder leer treiben.\n\nSources:\nhttps://en.wikipedia.org/wiki/SS_Baychimo\nhttps://explorersweb.com/exploration-mysteries-baychimo-ghost-ship/\n\n#wahregeschichte #serie #3DAnimation #Odo #geisterschiff"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 25,
+   "top": "THE SHIP VANISHED IN ONE NIGHT",
+   "title": "The storm took the ship. Then… 🚢 (Ep 45) #shorts",
+   "description": "In 1931 a blizzard swallowed the Baychimo — then a hunter saw her 45 miles away. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "ghost ship",
+    "Baychimo"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La tormenta se llevó el barco. Y luego… 🚢 (Ep 45) #shorts",
+     "description": "En 1931 una ventisca se tragó al Baychimo; luego un cazador lo vio a 72 km. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A tempestade levou o navio. E então… 🚢 (Ep 45) #shorts",
+     "description": "Em 1931 uma nevasca engoliu o Baychimo; depois um caçador o viu a 72 km. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أخذت العاصفة السفينة. ثم… 🚢 (الحلقة 45) #shorts",
+     "description": "عام 1931 ابتلعت عاصفة ثلجية سفينة Baychimo، ثم رآها صياد على بعد 72 كم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La tempête a pris le navire. Puis… 🚢 (Ep 45) #shorts",
+     "description": "En 1931, un blizzard engloutit le Baychimo — puis un chasseur le revoit à 72 km. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "嵐が船を消した。そして… 🚢 (Ep 45) #shorts",
+     "description": "1931年、吹雪がベイチモ号を消した。数日後、猟師が72km先で目撃。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "폭풍이 배를 삼켰다. 그런데… 🚢 (Ep 45) #shorts",
+     "description": "1931년 눈보라가 베이치모호를 삼켰고, 며칠 뒤 사냥꾼이 72km 떨어진 곳에서 배를 봤습니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Sturm nahm das Schiff. Dann… 🚢 (Ep 45) #shorts",
+     "description": "1931 verschluckte ein Schneesturm die Baychimo – dann sah ein Jäger sie 72 km entfernt. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 41,
+   "dur": 24,
+   "top": "38 YEARS. STILL MISSING.",
+   "title": "A ship's bell on the empty ice 🔔 (Ep 45) #shorts",
+   "description": "Seen until 1969, searched for since 2006, never found. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "ghost ship",
+    "unsolved mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Una campana de barco en el hielo vacío 🔔 (Ep 45) #shorts",
+     "description": "Visto hasta 1969, buscado desde 2006, nunca encontrado. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um sino de navio no gelo vazio 🔔 (Ep 45) #shorts",
+     "description": "Visto até 1969, procurado desde 2006, nunca encontrado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "جرس سفينة فوق الجليد الخالي 🔔 (الحلقة 45) #shorts",
+     "description": "شوهدت حتى 1969، ويُبحث عنها منذ 2006، ولم يُعثر عليها قط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une cloche de navire sur la glace vide 🔔 (Ep 45) #shorts",
+     "description": "Vu jusqu'en 1969, recherché depuis 2006, jamais retrouvé. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "誰もいない氷の上で鳴る船の鐘 🔔 (Ep 45) #shorts",
+     "description": "1969年まで目撃、2006年から捜索、いまだ見つからない。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "텅 빈 얼음 위에서 울리는 배의 종 🔔 (Ep 45) #shorts",
+     "description": "1969년까지 목격, 2006년부터 수색, 아직도 찾지 못했습니다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Schiffsglocke auf dem leeren Eis 🔔 (Ep 45) #shorts",
+     "description": "Gesehen bis 1969, gesucht seit 2006, nie gefunden. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
