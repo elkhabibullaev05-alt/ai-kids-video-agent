@@ -9,6 +9,19 @@ cd /opt/kanal/repo || exit 1
 PAR=${KANAL_PAR:-2}
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
 CHS="maxcat doughbros hollow bolt roblox grind"  # 2026-10-27: sleep (Calm Rain) removed — owner wants it back to its own real-rain agent (sleeptube), no AI videos
+# 2026-11-05: stories Claude writes on the PC (Documents\kanal_navbat\<ch>\*.json) go into the queue
+NAV=$(ls -d /mnt/c/Users/*/Documents/kanal_navbat 2>/dev/null | head -1)
+if [ -n "$NAV" ] && ls "$NAV"/*/*.json >/dev/null 2>&1; then
+  ( flock 9
+    for f in "$NAV"/*/*.json; do
+      ch=$(basename "$(dirname "$f")"); mkdir -p cloud/queue/$ch
+      python3 -c "import json,sys;json.load(open(sys.argv[1]))" "$f" && mv -f "$f" cloud/queue/$ch/ || mv -f "$f" "$f.bad"
+    done
+    git add -A cloud/queue
+    git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm "[pc] stories from kanal_navbat" && \
+      (GIT_TERMINAL_PROMPT=0 git push -q origin HEAD:main || (git pull -q --rebase && git push -q origin HEAD:main))
+  ) 9>/tmp/kanal-git.lock
+fi
 running=0
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
