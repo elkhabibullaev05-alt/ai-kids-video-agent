@@ -36,14 +36,47 @@ def _trim(a, thr=0.012, keep=0.03):
     return a[i:j]
 
 
+CACHE = None
+
+
+def set_cache(d, days=4):
+    """Per-sentence TTS cache (float16 .npy) so a failed/retried run doesn't re-synthesise; old files pruned."""
+    global CACHE
+    import time
+    os.makedirs(d, exist_ok=True)
+    CACHE = d
+    for f in os.listdir(d):
+        p = os.path.join(d, f)
+        try:
+            if time.time() - os.path.getmtime(p) > days * 86400:
+                os.remove(p)
+        except OSError:
+            pass
+
+
+def _tts(s, v, speed):
+    import hashlib
+    key = hashlib.md5(f"{v}|{speed:.3f}|{s}".encode()).hexdigest()
+    p = os.path.join(CACHE, key + ".npy") if CACHE else None
+    if p and os.path.exists(p):
+        try:
+            return np.load(p).astype(np.float32)
+        except Exception:
+            pass
+    a, sr = kokoro().create(_clean(s), voice=v, speed=speed, lang="en-gb" if v.startswith("b") else "en-us")
+    a = _trim(np.asarray(a, np.float32))
+    if p:
+        np.save(p, a.astype(np.float16))
+    return a
+
+
 def say(text, speed=None):
     """-> (audio float32 @24k, words [(word, t0, t1)]). Synthesised sentence by sentence; words spread by length."""
     sents = [s for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
     parts, words, t = [], [], 0.0
     v = VOICE
     for i, s in enumerate(sents):
-        a, sr = kokoro().create(_clean(s), voice=v, speed=speed or SPEED, lang="en-gb" if v.startswith("b") else "en-us")
-        a = _trim(np.asarray(a, np.float32))
+        a = _tts(s, v, speed or SPEED)
         if not len(a):
             continue
         dur = len(a) / SR

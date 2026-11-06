@@ -22,14 +22,14 @@ def ff(args, **kw):
 
 
 # ------------------------------------------------------------------ camera
-def plan_shots(dur, rng, shot_len, first=False, end_at=None):
+def plan_shots(dur, rng, shot_len, first=False, end_at=None, first_len=1.0, drift=1.0):
     """List of shots (t0, t1, (z0, cx0, cy0), (z1, cx1, cy1)). A jump between shots = 'punch-in' cut."""
     shots, t = [], 0.0
     lens = []
     while t < dur - 0.05:
         L = shot_len * rng.uniform(0.85, 1.15)
         if first and t < 3.2:
-            L = 1.0
+            L = first_len
         if dur - (t + L) < shot_len * 0.5:
             L = dur - t
         lens.append((t, min(dur, t + L)))
@@ -43,9 +43,9 @@ def plan_shots(dur, rng, shot_len, first=False, end_at=None):
             if prev_z is not None and abs(z - prev_z) < 0.12:
                 z = 1.02 + (z - 1.02 + 0.15) % 0.30
             cx, cy = rng.uniform(0.38, 0.62), rng.uniform(0.38, 0.6)
-            dz = rng.choice([0.07, 0.09, -0.06])
+            dz = rng.choice([0.07, 0.09, -0.06]) * drift
             s0 = (z, cx, cy)
-            s1 = (max(1.0, z + dz), cx + rng.uniform(-0.04, 0.04), cy + rng.uniform(-0.03, 0.03))
+            s1 = (max(1.0, z + dz), cx + rng.uniform(-0.04, 0.04) * drift, cy + rng.uniform(-0.03, 0.03) * drift)
         prev_z = s0[0]
         shots.append((a, b, s0, s1))
     if end_at is not None and shots:

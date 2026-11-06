@@ -13,3 +13,10 @@ fi
 "$HOME/.deno/bin/deno" --version 2>/dev/null | head -1 || deno --version 2>/dev/null | head -1 || node --version
 # yt-dlp breaks when YouTube changes; keep it fresh (cheap): add to cron or run before the worker, e.g.
 #   pip install --break-system-packages -U "yt-dlp[default]"   (weekly)
+
+# --- ufc (Wild Sketchbook): Kokoro TTS + numpy/pillow/soundfile (normally already installed) and two free
+# Google Fonts (OFL/Apache) for the sketchbook look. ufc.py also downloads the fonts itself into HOME/fonts if missing.
+python3 -c "import kokoro_onnx, soundfile, numpy, PIL" 2>/dev/null || pip install --break-system-packages kokoro-onnx soundfile numpy pillow
+mkdir -p "$HOME/.fonts"
+[ -s "$HOME/.fonts/Kalam-Bold.ttf" ] || curl -fsSL -o "$HOME/.fonts/Kalam-Bold.ttf" https://github.com/google/fonts/raw/main/ofl/kalam/Kalam-Bold.ttf || echo "Kalam font download failed (DejaVu fallback is used)"
+[ -s "$HOME/.fonts/PermanentMarker-Regular.ttf" ] || curl -fsSL -o "$HOME/.fonts/PermanentMarker-Regular.ttf" https://github.com/google/fonts/raw/main/apache/permanentmarker/PermanentMarker-Regular.ttf || echo "Permanent Marker font download failed (DejaVu fallback is used)"

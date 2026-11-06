@@ -490,7 +490,7 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
         if s.get("label") and not (i == 0 and s.get("hook")):
             lb = art.label_layer(s["label"], maxw=900)
             ovs.append(dict(png=save_png(lb, work, f"slab{i}"), x=(SW - lb.width) // 2, y=CARD[1] + 30, t0=0.2,
-                            t1=dur + 1, fade_in=0.15))
+                            t1=(dur - 0.6) if last else dur + 1, fade_in=0.15, fade_out=0.2 if last else 0))
         # word-by-word captions
         ws = words[i]
         chunks = caption_chunks(ws)
@@ -508,7 +508,7 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
                             t0=0.0, t1=max(0.5, dur - 0.55), fade_in=0.15, fade_out=0.2))
             if hook_png:  # loop: the hook comes back on the last frames so the end matches frame 0
                 ovs.append(dict(png=hook_png, x=hook_xy[0], y=hook_xy[1], t0=max(0, dur - 0.45), t1=dur + 1, fade_in=0.3))
-        shots = render.plan_shots(dur, rng, 1.5, first=(i == 0), end_at=first_cam if last else None)
+        shots = render.plan_shots(dur, rng, 0.9, first=(i == 0), end_at=first_cam if last else None, first_len=0.5, drift=2.2)
         if last and used[i] != used[0]:
             pass
         rs.append(dict(n=nfr[i], base=idx[k if not last else (k0 if used[0] else k)], shots=shots, overlays=ovs, card=CARD,
@@ -637,6 +637,7 @@ def main():
         sys.exit(3)
     log(f"script {sid}: making {sorted(todo)}")
     art.setup_fonts(a.home, offline=a.offline_test)
+    voice.set_cache(os.path.join(a.home, "tts_cache"))
     t_start = time.time()
     photos, metas = gather_images(sc, todo, os.path.join(a.home, "img_cache"), a.offline_test)
     log(f"images: {len(photos)} free photos")

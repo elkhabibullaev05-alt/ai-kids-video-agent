@@ -42,7 +42,7 @@ def setup_fonts(home, offline=False):
 def _find(name):
     for d in FONT_DIRS:
         p = os.path.join(d, name)
-        if os.path.exists(p):
+        if os.path.exists(p) and os.path.getsize(p) > 10000:
             return p
     return None
 
