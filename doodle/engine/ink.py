@@ -888,7 +888,38 @@ def _magnifier(p, t, color, text):
         p.text(text, 0, -110, min(56, int(300 / max(1, len(text)))), "dark")
 
 
+def _football(p, t, color, text):
+    p.circle(0, -90, 90, color or "white", 5)
+    pts = [(0 + 34 * math.cos(a), -90 + 34 * math.sin(a)) for a in [(-math.pi / 2) + k * 2 * math.pi / 5 for k in range(5)]]
+    p.shape(pts, "dark", 3)
+    for a in [(-math.pi / 2) + k * 2 * math.pi / 5 for k in range(5)]:
+        p.line([(34 * math.cos(a), -90 + 34 * math.sin(a)), (80 * math.cos(a), -90 + 80 * math.sin(a))], 3)
+    if text:
+        p.text(text, 0, -210, 34, "dark")
+
+
+def _goal(p, t, color, text):
+    p.rect(-300, -260, 600, 260, "white", 3, alpha=0.6)
+    for k in range(-240, 300, 60):
+        p.line([(k, -260), (k, 0)], 2, color="grey")
+    for k in range(-200, 0, 50):
+        p.line([(-300, k), (300, k)], 2, color="grey")
+    p.line([(-300, 0), (-300, -260), (300, -260), (300, 0)], 12, color=color or "white")
+    p.line([(-300, 0), (-300, -260), (300, -260), (300, 0)], 4, color="dark")
+    if text:
+        p.text(text, 0, -310, 50, "dark")
+
+
+def _lake(p, t, color, text):
+    p.shape([(-420, -40), (-300, -330), (-160, -170), (0, -420), (170, -200), (300, -340), (420, -40)], "grey")
+    p.shape([(-60, -330), (0, -420), (60, -330)], "white", 3)
+    p.ellipse(0, -20, 460, 60, color or "sea", 4)
+    if text:
+        p.text(text, 0, -470, 50, "dark")
+
+
 PROPS = {
+    "football": _football, "goal": _goal, "lake": _lake,
     "booth": _booth, "magnifier": _magnifier,
     "flag": _flag, "canflag": _canflag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
     "chip": _chip, "balloon": _balloon, "tanker": _tanker, "pipeline": _pipeline,
