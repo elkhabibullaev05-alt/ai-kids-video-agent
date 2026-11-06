@@ -73,7 +73,25 @@ for ch, key in MAP.items():
     if st.get("pending"): extra.append(f"yuklashni kutyapti: {st['pending']}")
     if st.get("ahead") is not None: extra.append(f"oldinga rejalangan: {st['ahead']}")
     extra.append(f"oxirgi 24 soatda yuklandi: {up_24}")
+    # 2026-11-06: release schedule + uploaded videos for the hub's "Keyingi chiqishlar" and channel cards
+    items = []
+    for rf in glob.glob(f"{repo}/cloud/results/{ch}/*.json"):
+        if rf.endswith("status.json"):
+            continue
+        try:
+            r = json.load(open(rf))
+        except Exception:
+            continue
+        ents = ([("long", r["long"])] if isinstance(r.get("long"), dict) else []) + [("short", x) for x in r.get("shorts", []) if isinstance(x, dict)]
+        for kind, e in ents:
+            if e.get("publish_at") and e.get("title"):
+                items.append({"at": e["publish_at"], "title": e["title"], "id": e.get("video"), "kind": kind})
+    nowiso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    nxt = sorted((x for x in items if x["at"] > nowiso), key=lambda x: x["at"])[:12]
+    out_v = sorted((x for x in items if x["at"] <= nowiso), key=lambda x: x["at"], reverse=True)[:12]
     doc = {"status": status, "status_text": text + " · " + ", ".join(extra), "activity": act,
+           "next": [{"at": x["at"], "title": x["title"]} for x in nxt],
+           "videos": [{"t": x["title"], "id": x["id"], "kind": x["kind"], "at": x["at"]} for x in out_v],
            "last_seen": st.get("time"), "host": st.get("host"), "today_made": up_today}
     json.dump(doc, open(f"{out}/agents/{key}.json", "w"), ensure_ascii=False)
     summary.append(f"{key}:{status}")

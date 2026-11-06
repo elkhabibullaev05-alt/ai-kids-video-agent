@@ -17,6 +17,7 @@ import hashlib
 import json
 import os
 import random
+import re
 import shutil
 import sys
 import tempfile
@@ -75,6 +76,7 @@ def norm(t):
     return " ".join("".join(c if c.isalnum() else " " for c in (t or "").lower()).split())
 
 
+OLD_MADE_MAX = 12  # last cloud/ink/animals script number the old ufctube agent rendered
 SEED_BEFORE = os.environ.get("UFC_SEED_BEFORE", "2026-10-30")  # old laptop broke ~30 Oct: older scripts were made by it
 
 
@@ -109,6 +111,11 @@ def pick_script(a, st, titles):
             continue
         sid = sc.get("id") or os.path.splitext(os.path.basename(path))[0]
         if sid in st["done"] and not a.script:
+            continue
+        # 2026-11-06: scripts 001–012 were already made by the lost laptop agent (git dates are unreliable in a
+        # shallow clone, so the first-run seeding missed them and 001 was made twice). Never make them again.
+        m = re.match(r"(\d+)", os.path.basename(path))
+        if m and int(m.group(1)) <= OLD_MADE_MAX and not a.script:
             continue
         parts = set(st["parts"].get(sid, []))
         if norm(sc.get("title")) in titles or sid in titles:
