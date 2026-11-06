@@ -1,0 +1,3346 @@
+{
+ "id": "ep021",
+ "title": "41 Small Towns vs. Big Tech: Who Won the Data Center Vote?",
+ "voice": "am_michael",
+ "speed": 1.0,
+ "description": "On Nov 3, 2026, the same day as the US midterms, voters decided 41 local ballot measures on data centers in 10 states, the largest wave of such votes on record. Most were put on the ballot by residents' petitions. Almost every one went against data center development; the one exception, Harwood, North Dakota, did not affect the campus already approved there. We go through what was on the ballot, the results (Urbana 77%, Trenton 80%, Monroeville 87.75%, Alhambra 82%, Emporia 4,346-2,891), the Trenton, Ohio fight over a planned 1,000 MW Amazon data center, why people voted no (power bills, water, secret deals), what the industry says, and what comes next (Clarksville, AR on Dec 1, Mandan, ND on Dec 15, a possible Ohio statewide vote in 2027). Real people appear only as generic labelled stick figures; quotes are as reported. Results are unofficial until certified.\n\nWe don't pick sides. We just count the facts.\n\nSources:\nCNBC, Voters rebuff data centers in every ballot measure except one (Nov 4, 2026): https://www.cnbc.com/2026/11/04/data-center-ballot-measures-2026-midterm.html\nDuane Morris Government Strategies / Ballotpedia data, Data Centers on the Ballot: Where Things Stand (Nov 4, 2026): https://statecapitallobbyist.com/artificial-intelligence-ai/data-centers/data-centers-on-the-ballot-where-things-stand/\nWVXU (NPR Cincinnati), Trenton votes to ban data centers (Nov 3, 2026): https://www.wvxu.org/environment/2026-11-03/trenton-votes-to-ban-data-centers\nCincinnati Enquirer, Ohioans overwhelmingly pass data center bans (Nov 4, 2026): https://www.cincinnati.com/story/news/politics/2026/11/04/see-how-ohioan-voted-on-data-center-bans/92479076007/\nEmporia Gazette, Emporia voters approve data center bans (Nov 3, 2026): https://www.emporiagazette.com/free/article_36632afb-2bdf-4a1e-9d12-8c8e2239f7c0.html\nNew York Times, Voters Rejected A.I. in the Midterms (Nov 4, 2026): https://www.nytimes.com/2026/11/04/technology/midterm-elections-ai-data-centers.html\nBreezyScroll, Data centers lost 37 of 38 local ballot votes counted so far (Nov 4, 2026), citing St. Louis Public Radio, Route Fifty, Semafor, E&E News: https://www.breezyscroll.com/technology-news/data-center-ballot-measures-voters-reject\n\n#datacenters #ai #election #ohio #electricity #localnews #explained #stickfigure",
+ "tags": [
+  "data centers",
+  "data center ballot measures",
+  "data center ban",
+  "trenton ohio",
+  "amazon data center",
+  "ai data centers",
+  "electricity bills",
+  "midterms 2026",
+  "ballot measures",
+  "local elections",
+  "news explained",
+  "stick figure animation",
+  "the doodle desk"
+ ],
+ "thumbnail": {
+  "bg": "yellow",
+  "text": "TOWNS|SAID NO",
+  "size": 190,
+  "color": "black",
+  "guy": {
+   "pose": "stand",
+   "face": "smug",
+   "look": -1,
+   "extras": [
+    "cap"
+   ],
+   "shirt": "green"
+  },
+  "guy_x": 1450,
+  "guy_y": 2050,
+  "guy_s": 5.0,
+  "items": [
+   {
+    "prop": "datacenter",
+    "x": 400,
+    "y": 1050,
+    "s": 1.0
+   },
+   {
+    "cross": [
+     400,
+     900,
+     230
+    ],
+    "color": "red"
+   },
+   {
+    "arrow": [
+     [
+      700,
+      760
+     ],
+     [
+      1000,
+      600
+     ]
+    ],
+    "color": "red"
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "say": "This is a data center. It's the size of a few football fields, it hums all night, and it wanted to move in next to Dave.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 1250,
+     "y": 900,
+     "s": 1.3,
+     "at": 0,
+     "text": "COMING SOON"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "hmmmmm",
+     "x": 1250,
+     "y": 330,
+     "size": 70,
+     "color": "grey",
+     "at": 0.6,
+     "anim": "shake"
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Dave did not write an angry post. Dave did something much more boring. He signed a petition, and then he voted.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 900,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.2,
+     "text": "PETITION"
+    },
+    {
+     "prop": "ballot",
+     "x": 1400,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.55
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "On Tuesday, November third, about forty-one towns, cities and counties held the same kind of vote. Here's the scoreboard.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "NOV 3"
+    },
+    {
+     "count": [
+      0,
+      41
+     ],
+     "fmt": "{:.0f} votes",
+     "x": 1300,
+     "y": 430,
+     "size": 170,
+     "color": "navy",
+     "at": 0.3,
+     "dur": 1.8
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Data centers: one. Neighbors: forty, according to the New York Times count.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 960,
+     "y": 760,
+     "s": 1.1,
+     "at": 0,
+     "text": "DATA CENTERS 1|NEIGHBORS 40"
+    },
+    {
+     "stamp": "40 OF 41",
+     "x": 1550,
+     "y": 330,
+     "size": 80,
+     "w": 420,
+     "at": 0.6
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "So here's today's question. How did a bunch of small towns beat one of the richest industries on Earth, and does it actually stop anything?",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 250,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.0
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.04
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.08
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 850,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.12
+    },
+    {
+     "text": "vs",
+     "x": 1050,
+     "y": 500,
+     "size": 120,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "prop": "datacenter",
+     "x": 1500,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.4
+    },
+    {
+     "text": "?",
+     "x": 1500,
+     "y": 300,
+     "size": 200,
+     "color": "red",
+     "at": 0.7
+    }
+   ],
+   "chapter": "Today's question",
+   "bg": "paper"
+  },
+  {
+   "say": "We'll look at what was on the ballot, the numbers, why people voted the way they did, what the industry says, and what happens next.",
+   "items": [
+    {
+     "prop": "ballot",
+     "x": 350,
+     "y": 860,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "chart",
+     "x": 750,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.15
+    },
+    {
+     "prop": "drop",
+     "x": 1100,
+     "y": 880,
+     "s": 0.6,
+     "at": 0.3
+    },
+    {
+     "prop": "speech",
+     "x": 1430,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.45
+    },
+    {
+     "prop": "calendar",
+     "x": 1720,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.6,
+     "text": "NEXT"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "First, what a data center is. It's a warehouse full of computers. Every chatbot answer, every video stream, every cloud photo lives in one somewhere.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 1300,
+     "y": 900,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "prop": "phone",
+     "x": 450,
+     "y": 860,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       600,
+       620
+      ],
+      [
+       950,
+       620
+      ]
+     ],
+     "color": "red",
+     "at": 0.4
+    }
+   ],
+   "chapter": "Part 1: What was on the ballot",
+   "bg": "paper"
+  },
+  {
+   "say": "And artificial intelligence needs a lot more of them. Bigger ones, too. Which means they need land, electricity, and often water for cooling.",
+   "items": [
+    {
+     "prop": "robot",
+     "x": 450,
+     "y": 900,
+     "s": 0.9,
+     "at": 0
+    },
+    {
+     "prop": "datacenter",
+     "x": 1100,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.2
+    },
+    {
+     "prop": "powerline",
+     "x": 1550,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.45
+    },
+    {
+     "prop": "drop",
+     "x": 1800,
+     "y": 880,
+     "s": 0.5,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Usually, a city council or a county board decides whether one gets built. Voters don't get a say.",
+   "items": [
+    {
+     "prop": "desk",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1250,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "council",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "text": "developer",
+     "x": 1250,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "This year, that changed in a lot of places. Ballotpedia, which tracks every measure, counted at least fifty local data center votes in thirteen states in twenty twenty-six.",
+   "items": [
+    {
+     "count": [
+      0,
+      50
+     ],
+     "fmt": "{:.0f}",
+     "x": 650,
+     "y": 430,
+     "size": 220,
+     "color": "navy",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "local votes",
+     "x": 650,
+     "y": 620,
+     "size": 70,
+     "color": "dark",
+     "at": 0.2
+    },
+    {
+     "count": [
+      0,
+      13
+     ],
+     "fmt": "{:.0f}",
+     "x": 1350,
+     "y": 430,
+     "size": 220,
+     "color": "navy",
+     "at": 0.4,
+     "dur": 1.8
+    },
+    {
+     "text": "states",
+     "x": 1350,
+     "y": 620,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Forty-one of them landed on the same day as the midterm elections, in ten states. That's the largest wave of data center votes on record.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 500,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "NOV 3"
+    },
+    {
+     "count": [
+      0,
+      41
+     ],
+     "fmt": "{:.0f}",
+     "x": 1100,
+     "y": 430,
+     "size": 240,
+     "color": "red",
+     "at": 0.2,
+     "dur": 1.8
+    },
+    {
+     "stamp": "RECORD",
+     "x": 1550,
+     "y": 600,
+     "size": 80,
+     "w": 320,
+     "at": 0.6
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And most of them weren't put there by politicians. In Ballotpedia's September count, thirty-one of thirty-eight came from citizen petitions.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       31,
+       7
+      ],
+      "labels": [
+       "petitions",
+       "councils"
+      ],
+      "colors": [
+       "green",
+       "grey"
+      ],
+      "fmt": "{}",
+      "w": 640,
+      "h": 400
+     },
+     "x": 700,
+     "y": 860
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    },
+    {
+     "prop": "clipboard",
+     "x": 1650,
+     "y": 860,
+     "s": 0.6,
+     "at": 0.6
+    },
+    {
+     "text": "resident",
+     "x": 1450,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Neighbors with clipboards, standing outside grocery stores, asking strangers to sign. The least glamorous way to fight a trillion-dollar technology boom.",
+   "items": [
+    {
+     "prop": "cart",
+     "x": 450,
+     "y": 900,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 900,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1060,
+     "y": 830,
+     "s": 0.5,
+     "at": 0.1
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.35
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The questions weren't all the same. Some were outright bans. Some added rules. Some were advisory, basically asking: would you like one of these here? Yes or no.",
+   "items": [
+    {
+     "text": "BAN",
+     "x": 450,
+     "y": 420,
+     "size": 110,
+     "color": "red",
+     "at": 0
+    },
+    {
+     "text": "RULES",
+     "x": 960,
+     "y": 420,
+     "size": 110,
+     "color": "orange",
+     "at": 0.25
+    },
+    {
+     "text": "YES / NO?",
+     "x": 1500,
+     "y": 420,
+     "size": 110,
+     "color": "navy",
+     "at": 0.5
+    },
+    {
+     "prop": "ballot",
+     "x": 960,
+     "y": 880,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "That makes counting tricky. In twenty-eight of them, voting yes limited data centers. In thirteen, voting yes supported them.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       28,
+       13
+      ],
+      "labels": [
+       "yes = limit",
+       "yes = allow"
+      ],
+      "colors": [
+       "red",
+       "green"
+      ],
+      "fmt": "{}",
+      "w": 640,
+      "h": 400
+     },
+     "x": 700,
+     "y": 860
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "confused",
+      "look": -1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "So the honest way to score it is by which side won, not by yes or no. Linda insisted on this. Linda always insists on this.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "scale",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "Linda",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "So, the numbers. By Wednesday evening, thirty-nine of the forty-one had been called. Thirty-eight went against data center development.",
+   "items": [
+    {
+     "count": [
+      0,
+      38
+     ],
+     "fmt": "{:.0f}",
+     "x": 650,
+     "y": 430,
+     "size": 260,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "of 39 called",
+     "x": 650,
+     "y": 640,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1350,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "chapter": "Part 2: The scoreboard",
+   "bg": "paper"
+  },
+  {
+   "say": "CNBC, using Ballotpedia's data, reported that voters sided against data centers in every measure except one. The Times later put it at forty of forty-one.",
+   "items": [
+    {
+     "prop": "tv",
+     "x": 600,
+     "y": 880,
+     "s": 1.0,
+     "at": 0,
+     "text": "40 / 41"
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "And the six votes held earlier this year? All six also went against data centers, by margins of sixty-six to ninety percent.",
+   "items": [
+    {
+     "prop": "ballot",
+     "x": 360,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.0
+    },
+    {
+     "prop": "ballot",
+     "x": 600,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.06
+    },
+    {
+     "prop": "ballot",
+     "x": 840,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.12
+    },
+    {
+     "prop": "ballot",
+     "x": 1080,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.18
+    },
+    {
+     "prop": "ballot",
+     "x": 1320,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.24
+    },
+    {
+     "prop": "ballot",
+     "x": 1560,
+     "y": 600,
+     "s": 0.5,
+     "at": 0.3
+    },
+    {
+     "text": "66% - 90%",
+     "x": 960,
+     "y": 330,
+     "size": 120,
+     "color": "red",
+     "at": 0.55
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Ohio had the most of any state: eighteen towns and cities voted on data center measures. They all went the same way.",
+   "items": [
+    {
+     "text": "OHIO",
+     "x": 600,
+     "y": 330,
+     "size": 150,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      18
+     ],
+     "fmt": "{:.0f} places",
+     "x": 600,
+     "y": 560,
+     "size": 110,
+     "color": "red",
+     "at": 0.2,
+     "dur": 1.8
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1100,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.44
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.48000000000000004
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.52
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "In Urbana, Ohio, a ban passed with seventy-seven percent. Two thousand nine hundred seventy-eight votes to eight hundred seventy-seven.",
+   "items": [
+    {
+     "text": "Urbana, OH",
+     "x": 650,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      77
+     ],
+     "fmt": "{:.0f}%",
+     "x": 650,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.1,
+     "dur": 1.8
+    },
+    {
+     "bars": {
+      "values": [
+       2978,
+       877
+      ],
+      "labels": [
+       "yes",
+       "no"
+      ],
+      "colors": [
+       "green",
+       "grey"
+      ],
+      "fmt": "{:,}",
+      "w": 520,
+      "h": 380
+     },
+     "x": 1400,
+     "y": 860,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In Upper Sandusky, also seventy-seven percent. In Defiance, sixty-five. In Sunbury, seventy-nine.",
+   "items": [
+    {
+     "text": "Upper Sandusky",
+     "x": 450,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      77
+     ],
+     "fmt": "{:.0f}%",
+     "x": 450,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.1,
+     "dur": 1.8
+    },
+    {
+     "text": "Defiance",
+     "x": 960,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "count": [
+      0,
+      65
+     ],
+     "fmt": "{:.0f}%",
+     "x": 960,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.4,
+     "dur": 1.8
+    },
+    {
+     "text": "Sunbury",
+     "x": 1480,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0.6
+    },
+    {
+     "count": [
+      0,
+      79
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1480,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.7,
+     "dur": 1.8
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "In Ashville, voters rejected a deal the village had worked out with a data center company. Eighty-two percent said no.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 680,
+     "y": 830,
+     "s": 0.5,
+     "at": 0
+    },
+    {
+     "cross": [
+      690,
+      760,
+      120
+     ],
+     "at": 0.4
+    },
+    {
+     "text": "Ashville, OH",
+     "x": 1350,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "count": [
+      0,
+      82
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1350,
+     "y": 420,
+     "size": 170,
+     "color": "red",
+     "at": 0.4,
+     "dur": 1.8
+    },
+    {
+     "text": "developer",
+     "x": 500,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In Wilmington, around eighty percent rejected rezoning land for a data center. They had to vote on it four separate times, once per parcel of land.",
+   "items": [
+    {
+     "prop": "ballot",
+     "x": 450,
+     "y": 640,
+     "s": 0.6,
+     "at": 0.0
+    },
+    {
+     "prop": "ballot",
+     "x": 780,
+     "y": 640,
+     "s": 0.6,
+     "at": 0.1
+    },
+    {
+     "prop": "ballot",
+     "x": 1110,
+     "y": 640,
+     "s": 0.6,
+     "at": 0.2
+    },
+    {
+     "prop": "ballot",
+     "x": 1440,
+     "y": 640,
+     "s": 0.6,
+     "at": 0.30000000000000004
+    },
+    {
+     "text": "x4",
+     "x": 1700,
+     "y": 400,
+     "size": 140,
+     "color": "red",
+     "at": 0.5
+    },
+    {
+     "count": [
+      0,
+      80
+     ],
+     "fmt": "~{:.0f}%",
+     "x": 960,
+     "y": 330,
+     "size": 120,
+     "color": "red",
+     "at": 0.6,
+     "dur": 1.8
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "And in the village of Monroeville, an advisory question asked if people wanted data centers at all. Eighty-seven point seven five percent said no.",
+   "items": [
+    {
+     "count": [
+      0,
+      87.75
+     ],
+     "fmt": "{:.2f}%",
+     "x": 700,
+     "y": 430,
+     "size": 170,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "NO",
+     "x": 700,
+     "y": 640,
+     "size": 120,
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    },
+    {
+     "text": "developer",
+     "x": 1400,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "It wasn't just Ohio. In Alhambra, California, a ban passed with eighty-two percent. In Edgewater, Florida, seventy-seven.",
+   "items": [
+    {
+     "text": "Alhambra, CA",
+     "x": 600,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      82
+     ],
+     "fmt": "{:.0f}%",
+     "x": 600,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.1,
+     "dur": 1.8
+    },
+    {
+     "text": "Edgewater, FL",
+     "x": 1350,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "count": [
+      0,
+      77
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1350,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.5,
+     "dur": 1.8
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "In Emporia, Kansas, a ban on large data centers passed four thousand three hundred forty-six to two thousand eight hundred ninety-one. About sixty percent.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       4346,
+       2891
+      ],
+      "labels": [
+       "ban",
+       "no ban"
+      ],
+      "colors": [
+       "green",
+       "grey"
+      ],
+      "fmt": "{:,}",
+      "w": 600,
+      "h": 400
+     },
+     "x": 700,
+     "y": 860
+    },
+    {
+     "text": "Emporia, KS",
+     "x": 1450,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "count": [
+      0,
+      60
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1450,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.5,
+     "dur": 1.8
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In Madison County, Illinois, four townships said no to data centers. In Chouteau Township, eighty-three percent.",
+   "items": [
+    {
+     "text": "Madison County, IL",
+     "x": 960,
+     "y": 300,
+     "size": 90,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "house",
+     "x": 450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.0
+    },
+    {
+     "prop": "house",
+     "x": 790,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.1
+    },
+    {
+     "prop": "house",
+     "x": 1130,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.2
+    },
+    {
+     "prop": "house",
+     "x": 1470,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.30000000000000004
+    },
+    {
+     "count": [
+      0,
+      83
+     ],
+     "fmt": "{:.0f}%",
+     "x": 960,
+     "y": 520,
+     "size": 130,
+     "color": "red",
+     "at": 0.5,
+     "dur": 1.8
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "The woman who led that signature drive, Heather Groetecke, told St. Louis Public Radio: I am so stunned by the numbers.",
+   "items": [
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      1050,
+      320,
+      700,
+      200
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "\"I am so stunned",
+     "x": 1400,
+     "y": 390,
+     "size": 60,
+     "color": "dark",
+     "at": 0.35
+    },
+    {
+     "text": "by the numbers.\"",
+     "x": 1400,
+     "y": 460,
+     "size": 60,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "petition organizer",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Dave was also stunned. Mostly because he has never, in his life, agreed with eighty-three percent of anyone about anything.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 900,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      83
+     ],
+     "fmt": "{:.0f}%",
+     "x": 1400,
+     "y": 400,
+     "size": 150,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Now, the one exception. Harwood, North Dakota.",
+   "items": [
+    {
+     "text": "HARWOOD, ND",
+     "x": 960,
+     "y": 380,
+     "size": 130,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "flag",
+     "x": 960,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 3: The one exception",
+   "bg": "paper"
+  },
+  {
+   "say": "Harwood voted on a charter amendment that would have required extra independent review of big industrial projects, including data centers.",
+   "items": [
+    {
+     "prop": "magnifier",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "datacenter",
+     "x": 1300,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.3
+    },
+    {
+     "text": "extra review?",
+     "x": 960,
+     "y": 300,
+     "size": 90,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Seventy-five percent voted no. So that counts as a win for development.",
+   "items": [
+    {
+     "count": [
+      0,
+      75
+     ],
+     "fmt": "{:.0f}%",
+     "x": 700,
+     "y": 430,
+     "size": 220,
+     "color": "green",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "NO to extra review",
+     "x": 700,
+     "y": 640,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "But even that one is small. Route Fifty noted it would not have affected the big data center campus already approved there.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 1100,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "ALREADY APPROVED"
+    },
+    {
+     "stamp": "UNCHANGED",
+     "x": 1400,
+     "y": 330,
+     "size": 70,
+     "w": 380,
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "glasses",
+       "tie"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "So, depending on how you count, the industry's best result of the night was a vote that left everything exactly where it already was.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 960,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "text": "NIGHT'S BEST|NO CHANGE"
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "tired",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "To see what's really at stake, look at one town. Trenton, Ohio, in Butler County, between Cincinnati and Dayton.",
+   "items": [
+    {
+     "text": "TRENTON, OHIO",
+     "x": 960,
+     "y": 330,
+     "size": 130,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "prop": "house",
+     "x": 600,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.3
+    },
+    {
+     "prop": "house",
+     "x": 900,
+     "y": 900,
+     "s": 0.7,
+     "at": 0.35
+    },
+    {
+     "prop": "house",
+     "x": 1200,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.4
+    }
+   ],
+   "chapter": "Part 4: One town, up close",
+   "bg": "purple"
+  },
+  {
+   "say": "A local group called the Woodsdale and Trenton Environmental Resistance gathered signatures for Issue Seventeen: a ban on data centers above twenty-five megawatts.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 300,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 500,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.04
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.08
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 900,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.12
+    },
+    {
+     "prop": "clipboard",
+     "x": 1350,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.3,
+     "text": "ISSUE 17"
+    },
+    {
+     "text": "> 25 MW",
+     "x": 1350,
+     "y": 330,
+     "size": 110,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Then, in August, the city council voted not to certify the petition. So it wasn't going on the ballot.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1250,
+     "y": 860,
+     "s": 0.9,
+     "at": 0,
+     "text": "ISSUE 17"
+    },
+    {
+     "cross": [
+      1250,
+      720,
+      150
+     ],
+     "at": 0.4
+    },
+    {
+     "text": "city council",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "The residents went to the Ohio Supreme Court. The court found the council had disregarded the law and ordered it to certify the petition.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "dark"
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "scale",
+     "x": 1450,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.2
+    },
+    {
+     "stamp": "CERTIFY IT",
+     "x": 500,
+     "y": 400,
+     "size": 70,
+     "w": 380,
+     "at": 0.55
+    },
+    {
+     "text": "Ohio Supreme Court",
+     "x": 960,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "On Tuesday, Issue Seventeen passed with eighty percent of the vote.",
+   "items": [
+    {
+     "count": [
+      0,
+      80
+     ],
+     "fmt": "{:.0f}%",
+     "x": 960,
+     "y": 430,
+     "size": 300,
+     "color": "green",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 400,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 624,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.54
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 848,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.58
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1072,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.62
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": -1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1296,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.66
+    },
+    {
+     "guy": {
+      "pose": "fist",
+      "face": "grin",
+      "look": 1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1520,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.7
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Here's why that matters. According to WVXU, the ban blocks plans for Trenton to annex land for a one thousand megawatt Amazon data center.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 1250,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "1,000 MW"
+    },
+    {
+     "count": [
+      0,
+      1000
+     ],
+     "fmt": "{:,.0f} MW",
+     "x": 500,
+     "y": 400,
+     "size": 130,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "cross": [
+      1250,
+      720,
+      260
+     ],
+     "at": 0.7
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "One thousand megawatts is forty times the new limit. That's not a building, that's a small power-plant-sized appetite.",
+   "items": [
+    {
+     "bars": {
+      "values": [
+       25,
+       1000
+      ],
+      "labels": [
+       "limit",
+       "planned"
+      ],
+      "colors": [
+       "green",
+       "red"
+      ],
+      "fmt": "{} MW",
+      "w": 640,
+      "h": 440
+     },
+     "x": 700,
+     "y": 860
+    },
+    {
+     "text": "x40",
+     "x": 1450,
+     "y": 450,
+     "size": 200,
+     "color": "red",
+     "at": 0.5
+    },
+    {
+     "prop": "powerline",
+     "x": 1600,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.6
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "It also puts a question mark over a two hundred fifty megawatt facility already being built by the company Prologis in the city's industrial park.",
+   "items": [
+    {
+     "prop": "building",
+     "x": 700,
+     "y": 900,
+     "s": 0.9,
+     "at": 0,
+     "text": "250 MW"
+    },
+    {
+     "text": "?",
+     "x": 1300,
+     "y": 450,
+     "size": 300,
+     "color": "red",
+     "at": 0.4
+    },
+    {
+     "prop": "truck",
+     "x": 1500,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Barry Blankenship, a leader of the group, told WVXU: It's a sigh of relief. When people go to bed tonight, they can actually sleep.",
+   "items": [
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 550,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      900,
+      330,
+      900,
+      220
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "\"It's a sigh of relief.\"",
+     "x": 1350,
+     "y": 400,
+     "size": 58,
+     "color": "dark",
+     "at": 0.35
+    },
+    {
+     "text": "\"...they can actually sleep.\"",
+     "x": 1350,
+     "y": 480,
+     "size": 52,
+     "color": "dark",
+     "at": 0.45
+    },
+    {
+     "text": "resident group leader",
+     "x": 550,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Dave, meanwhile, has started going to bed at nine. Not because of a data center. He just likes saying it's for civic reasons.",
+   "items": [
+    {
+     "prop": "house",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "prop": "sun",
+     "x": 1500,
+     "y": 400,
+     "s": 0.6,
+     "at": 0.2
+    },
+    {
+     "text": "zzz",
+     "x": 1100,
+     "y": 450,
+     "size": 90,
+     "color": "navy",
+     "at": 0.5,
+     "anim": "bob"
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Quick pause. If you like news explained without anyone yelling at you, subscribe. We draw it, we count it, we let you decide.",
+   "items": [
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "SUBSCRIBE?",
+     "x": 960,
+     "y": 320,
+     "size": 110,
+     "color": "red",
+     "at": 0.3
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "So why did people vote like this? Reporters heard the same three reasons again and again.",
+   "items": [
+    {
+     "text": "WHY?",
+     "x": 960,
+     "y": 400,
+     "size": 200,
+     "color": "red",
+     "at": 0
+    }
+   ],
+   "chapter": "Part 5: Why people voted no",
+   "bg": "paper"
+  },
+  {
+   "say": "Reason one: electricity bills. Big data centers draw huge amounts of power, and people worry the cost of new power lines and plants lands on their bill.",
+   "items": [
+    {
+     "prop": "powerline",
+     "x": 500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "dollar",
+     "x": 1000,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "prop": "arrowup",
+     "x": 1400,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.5
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "worried",
+      "look": -1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.8,
+     "at": 0.6
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "In a June Reuters slash Ipsos poll, cited by Newsweek, seventy-seven percent of respondents said they worried data centers could raise their electricity rates.",
+   "items": [
+    {
+     "count": [
+      0,
+      77
+     ],
+     "fmt": "{:.0f}%",
+     "x": 700,
+     "y": 430,
+     "size": 240,
+     "color": "red",
+     "at": 0,
+     "dur": 1.8
+    },
+    {
+     "text": "worried about rates",
+     "x": 700,
+     "y": 650,
+     "size": 70,
+     "color": "dark",
+     "at": 0.3
+    },
+    {
+     "prop": "chart",
+     "x": 1400,
+     "y": 900,
+     "s": 0.9,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Reason two: water, used for cooling. In Grove City, Ohio, voters now get a say on any big project using more than half a million gallons.",
+   "items": [
+    {
+     "prop": "drop",
+     "x": 500,
+     "y": 880,
+     "s": 1.1,
+     "at": 0,
+     "text": "H2O"
+    },
+    {
+     "count": [
+      0,
+      500000
+     ],
+     "fmt": "{:,.0f} gal",
+     "x": 1200,
+     "y": 430,
+     "size": 110,
+     "color": "blue",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "text": "Grove City: 55% yes",
+     "x": 1200,
+     "y": 620,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Reason three: the deals. Route Fifty reported that voters pointed to secretive agreements between local officials and developers, often with tax breaks attached.",
+   "items": [
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "tie"
+      ],
+      "shirt": "navy"
+     },
+     "x": 650,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "hold",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1050,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.15
+    },
+    {
+     "prop": "envelope",
+     "x": 850,
+     "y": 650,
+     "s": 0.6,
+     "at": 0.3
+    },
+    {
+     "prop": "lock",
+     "x": 1500,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "In the village of Perry, Ohio, eighty-seven percent voted that developers seeking tax breaks must give the village financial guarantees.",
+   "items": [
+    {
+     "text": "Perry, OH",
+     "x": 700,
+     "y": 280,
+     "size": 80,
+     "color": "dark",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      87
+     ],
+     "fmt": "{:.0f}%",
+     "x": 700,
+     "y": 420,
+     "size": 170,
+     "color": "green",
+     "at": 0.1,
+     "dur": 1.8
+    },
+    {
+     "prop": "moneybag",
+     "x": 1400,
+     "y": 880,
+     "s": 1.0,
+     "at": 0.4
+    },
+    {
+     "text": "guarantees",
+     "x": 1400,
+     "y": 450,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "And there's a fourth thing that isn't on any ballot: the feeling of being steamrolled.",
+   "items": [
+    {
+     "prop": "truck",
+     "x": 900,
+     "y": 900,
+     "s": 1.4,
+     "at": 0,
+     "move": [
+      1300,
+      900
+     ]
+    },
+    {
+     "guy": {
+      "pose": "panic",
+      "face": "shock",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 400,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Blankenship put it this way: city governments and these big businesses want to come into these little communities and roll over us.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "angry",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      950,
+      350,
+      850,
+      180
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "\"...come into these little",
+     "x": 1375,
+     "y": 410,
+     "size": 54,
+     "color": "dark",
+     "at": 0.35
+    },
+    {
+     "text": "communities and roll over us\"",
+     "x": 1375,
+     "y": 470,
+     "size": 54,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "resident group leader",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Now the other side, because there is one. The industry says the fears about bills are wrong.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 1500,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "industry",
+     "x": 1500,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 6: What the industry says",
+   "bg": "paper"
+  },
+  {
+   "say": "The Data Center Coalition, the main trade group, says data centers don't cause higher bills. In July, it said the industry is committed to paying our full energy costs.",
+   "items": [
+    {
+     "guy": {
+      "pose": "present",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      950,
+      330,
+      820,
+      170
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "\"paying our full",
+     "x": 1360,
+     "y": 390,
+     "size": 60,
+     "color": "dark",
+     "at": 0.35
+    },
+    {
+     "text": "energy costs\"",
+     "x": 1360,
+     "y": 450,
+     "size": 60,
+     "color": "dark",
+     "at": 0.4
+    },
+    {
+     "text": "trade group",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Its president, Josh Levi, told E and E News the industry's own research found the buildout had not raised costs for other customers.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "chart",
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3,
+     "text": "their research"
+    },
+    {
+     "text": "trade group president",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "He also admitted they hadn't made that case loudly enough. Quote: the absence of really leaning forward with those facts leaves a vacuum.",
+   "items": [
+    {
+     "guy": {
+      "pose": "shrug",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "tie",
+       "briefcase"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "box": [
+      950,
+      330,
+      860,
+      170
+     ],
+     "color": "white",
+     "at": 0.3
+    },
+    {
+     "text": "\"...leaves a vacuum\"",
+     "x": 1380,
+     "y": 415,
+     "size": 64,
+     "color": "dark",
+     "at": 0.35
+    },
+    {
+     "text": "trade group president",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "There's also money on the table for towns. In Emporia, the local paper reported a warning that the vote signals to investors the city is narrowing its opportunities.",
+   "items": [
+    {
+     "prop": "moneybag",
+     "x": 600,
+     "y": 880,
+     "s": 1.1,
+     "at": 0
+    },
+    {
+     "arrow": [
+      [
+       800,
+       640
+      ],
+      [
+       1200,
+       640
+      ]
+     ],
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "prop": "arrowdown",
+     "x": 1450,
+     "y": 880,
+     "s": 0.9,
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And the city itself said the votes do not resolve the legal questions. Some of these bans may be challenged in court.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "guy": {
+      "pose": "think",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "glasses"
+      ],
+      "shirt": "dark"
+     },
+     "x": 1300,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.3
+    },
+    {
+     "text": "courts?",
+     "x": 1300,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "So depending on who you ask, these votes protected people's bills and water, or scared off jobs and tax money. We just count the facts.",
+   "items": [
+    {
+     "prop": "scale",
+     "x": 960,
+     "y": 900,
+     "s": 1.2,
+     "at": 0
+    },
+    {
+     "text": "bills & water",
+     "x": 520,
+     "y": 400,
+     "size": 70,
+     "color": "green",
+     "at": 0.2
+    },
+    {
+     "text": "jobs & taxes",
+     "x": 1400,
+     "y": 400,
+     "size": 70,
+     "color": "orange",
+     "at": 0.35
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "Back to the big question. Does any of this actually stop the AI buildout?",
+   "items": [
+    {
+     "prop": "robot",
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "STOP?",
+     "x": 1300,
+     "y": 450,
+     "size": 160,
+     "color": "red",
+     "at": 0.3
+    }
+   ],
+   "chapter": "Part 7: Does it stop anything?",
+   "bg": "sky"
+  },
+  {
+   "say": "Not directly. These are local votes. A company blocked in one town can look in the next county, or the next state.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 500,
+     "y": 900,
+     "s": 0.6,
+     "at": 0,
+     "text": "NO"
+    },
+    {
+     "arrow": [
+      [
+       750,
+       600
+      ],
+      [
+       1150,
+       600
+      ]
+     ],
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "prop": "datacenter",
+     "x": 1450,
+     "y": 900,
+     "s": 0.6,
+     "at": 0.5,
+     "text": "MAYBE?"
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "But money is paying attention. Semafor reported that banks and asset managers backing the buildout have started treating local opposition as a credit risk.",
+   "items": [
+    {
+     "guy": {
+      "pose": "think",
+      "face": "worried",
+      "look": 1,
+      "extras": [
+       "tie",
+       "tophat"
+      ],
+      "shirt": "grey"
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1000,
+     "y": 860,
+     "s": 0.7,
+     "at": 0.3,
+     "text": "RISK"
+    },
+    {
+     "text": "local opposition",
+     "x": 1450,
+     "y": 400,
+     "size": 70,
+     "color": "red",
+     "at": 0.5
+    },
+    {
+     "text": "lender",
+     "x": 600,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "teal"
+  },
+  {
+   "say": "Translation: if a project might get voted out, the loan for it gets harder or more expensive. Petitions are now a line on a spreadsheet.",
+   "items": [
+    {
+     "prop": "laptop",
+     "x": 700,
+     "y": 880,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "clipboard",
+     "x": 1250,
+     "y": 860,
+     "s": 0.8,
+     "at": 0.3,
+     "text": "PETITION"
+    },
+    {
+     "arrow": [
+      [
+       1000,
+       600
+      ],
+      [
+       850,
+       650
+      ]
+     ],
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And more votes are coming. On December first, Clarksville, Arkansas, votes on bonds for data center projects, up to fifty billion dollars and five billion dollars.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 500,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "DEC 1"
+    },
+    {
+     "count": [
+      0,
+      50
+     ],
+     "fmt": "${:.0f}B",
+     "x": 1200,
+     "y": 430,
+     "size": 180,
+     "color": "money",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "text": "+ $5B",
+     "x": 1200,
+     "y": 620,
+     "size": 90,
+     "color": "money",
+     "at": 0.55
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "On December fifteenth, Mandan, North Dakota, votes on banning data centers of twenty-five megawatts or more.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "DEC 15"
+    },
+    {
+     "text": "Mandan, ND",
+     "x": 1300,
+     "y": 380,
+     "size": 100,
+     "color": "navy",
+     "at": 0.3
+    },
+    {
+     "text": "> 25 MW?",
+     "x": 1300,
+     "y": 540,
+     "size": 100,
+     "color": "red",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "And the biggest test may be in Ohio in twenty twenty-seven. Backers of a statewide ban on large data centers need four hundred thirteen thousand four hundred eighty-seven valid signatures.",
+   "items": [
+    {
+     "text": "OHIO 2027",
+     "x": 960,
+     "y": 300,
+     "size": 120,
+     "color": "navy",
+     "at": 0
+    },
+    {
+     "count": [
+      0,
+      413487
+     ],
+     "fmt": "{:,.0f}",
+     "x": 960,
+     "y": 520,
+     "size": 150,
+     "color": "red",
+     "at": 0.3,
+     "dur": 1.8
+    },
+    {
+     "prop": "clipboard",
+     "x": 1650,
+     "y": 880,
+     "s": 0.7,
+     "at": 0.6
+    }
+   ],
+   "bg": "sky"
+  },
+  {
+   "say": "They missed this year's deadline, and say they're aiming for the November twenty twenty-seven ballot. That would be all of Ohio voting, not just one town.",
+   "items": [
+    {
+     "prop": "calendar",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "NOV 2027"
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1000,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1175,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.44
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1350,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.48000000000000004
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": 1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1525,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.52
+    },
+    {
+     "guy": {
+      "pose": "stand",
+      "face": "neutral",
+      "look": -1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.45,
+     "at": 0.56
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "Let's recap. On November third, forty-one local votes on data centers happened in ten states, mostly started by residents with petitions.",
+   "items": [
+    {
+     "prop": "clipboard",
+     "x": 600,
+     "y": 860,
+     "s": 1.0,
+     "at": 0,
+     "text": "41 VOTES"
+    },
+    {
+     "prop": "ballot",
+     "x": 1300,
+     "y": 860,
+     "s": 1.0,
+     "at": 0.3
+    }
+   ],
+   "chapter": "Recap",
+   "bg": "teal"
+  },
+  {
+   "say": "Almost every one went against data centers. The single exception, Harwood, North Dakota, didn't change the project already approved there.",
+   "items": [
+    {
+     "prop": "scoreboard",
+     "x": 960,
+     "y": 760,
+     "s": 1.0,
+     "at": 0,
+     "text": "DATA CENTERS 1|NEIGHBORS 40"
+    },
+    {
+     "text": "Harwood: unchanged",
+     "x": 960,
+     "y": 300,
+     "size": 70,
+     "color": "dark",
+     "at": 0.5
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "The industry says it pays its own way and costs nobody else. Voters weren't convinced. Next up: December, then maybe all of Ohio.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 600,
+     "y": 900,
+     "s": 0.7,
+     "at": 0
+    },
+    {
+     "text": "vs",
+     "x": 960,
+     "y": 500,
+     "size": 100,
+     "color": "red",
+     "at": 0.3
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "cap"
+      ],
+      "shirt": "green"
+     },
+     "x": 1200,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.4
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": 1,
+      "extras": [
+       "hair"
+      ],
+      "shirt": "orange"
+     },
+     "x": 1450,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.44
+    },
+    {
+     "guy": {
+      "pose": "hips",
+      "face": "smug",
+      "look": -1,
+      "extras": [
+       "bun"
+      ],
+      "shirt": "purple"
+     },
+     "x": 1700,
+     "y": 900,
+     "s": 0.5,
+     "at": 0.48000000000000004
+    }
+   ],
+   "bg": "purple"
+  },
+  {
+   "say": "Meanwhile, Dave's town didn't get the data center. Dave celebrated by streaming three movies, uploading two hundred photos to the cloud, and asking a chatbot for a cake recipe.",
+   "items": [
+    {
+     "guy": {
+      "pose": "type",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 600,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "laptop",
+     "x": 950,
+     "y": 860,
+     "s": 0.8,
+     "at": 0
+    },
+    {
+     "prop": "tv",
+     "x": 1350,
+     "y": 880,
+     "s": 0.7,
+     "at": 0.3
+    },
+    {
+     "prop": "phone",
+     "x": 1650,
+     "y": 860,
+     "s": 0.6,
+     "at": 0.5
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "All of which, of course, happened in a data center. Somewhere else.",
+   "items": [
+    {
+     "prop": "datacenter",
+     "x": 1100,
+     "y": 900,
+     "s": 1.2,
+     "at": 0,
+     "text": "SOMEWHERE ELSE"
+    },
+    {
+     "guy": {
+      "pose": "facepalm",
+      "face": "confused",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 450,
+     "y": 900,
+     "s": 1.0,
+     "at": 0.4
+    }
+   ],
+   "bg": "yellow"
+  },
+  {
+   "say": "Your turn. Should your town get a vote on a data center, or should that be up to the council? Tell us in the comments.",
+   "items": [
+    {
+     "guy": {
+      "pose": "point",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "bun"
+      ]
+     },
+     "x": 700,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "prop": "ballot",
+     "x": 1250,
+     "y": 860,
+     "s": 0.9,
+     "at": 0.3
+    },
+    {
+     "text": "vote or council?",
+     "x": 1250,
+     "y": 380,
+     "size": 80,
+     "color": "navy",
+     "at": 0.4
+    },
+    {
+     "text": "Linda",
+     "x": 700,
+     "y": 470,
+     "size": 44,
+     "color": "dark",
+     "at": 0
+    }
+   ],
+   "bg": "paper"
+  },
+  {
+   "say": "If this helped, subscribe for calm, stick-figure explainers. See you at the next one.",
+   "items": [
+    {
+     "guy": {
+      "pose": "wave",
+      "face": "happy",
+      "look": 1,
+      "extras": [
+       "hair"
+      ]
+     },
+     "x": 960,
+     "y": 900,
+     "s": 1.0,
+     "at": 0
+    },
+    {
+     "text": "THE DOODLE DESK",
+     "x": 960,
+     "y": 330,
+     "size": 110,
+     "color": "dark",
+     "at": 0.3
+    }
+   ],
+   "bg": "teal"
+  }
+ ]
+}

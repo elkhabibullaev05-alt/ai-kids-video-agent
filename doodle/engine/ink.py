@@ -918,7 +918,49 @@ def _lake(p, t, color, text):
         p.text(text, 0, -470, 50, "dark")
 
 
+def _datacenter(p, t, color, text):
+    p.rect(-330, -260, 660, 260, color or "grey")
+    p.rect(-330, -280, 660, 24, "dark", 3)
+    for i in range(6):
+        x = -290 + i * 100
+        p.rect(x, -230, 70, 170, "navy", 4)
+        for j in range(4):
+            on = (int(t * 4) + i + j) % 3 == 0
+            p.circle(x + 20, -205 + j * 40, 7, "green" if on else "teal", 2)
+            p.rect(x + 34, -210 + j * 40, 26, 8, "white", 1)
+    for k in (-230, 0, 230):
+        p.rect(k - 30, -330, 60, 50, "white", 3)
+        p.line([(k - 18, -305 - 6 * math.sin(t * 9 + k)), (k + 18, -305 + 6 * math.sin(t * 9 + k))], 4)
+    if text:
+        p.rect(-170, -40, 340, 40, "white", 3)
+        p.text(text, 0, -20, min(32, int(620 / max(1, len(text)))), "dark")
+
+
+def _powerline(p, t, color, text):
+    for k in (-1, 1):
+        p.line([(k * 120, 0), (k * 30, -520)], 8)
+    p.line([(-30, -520), (30, -520)], 8)
+    for y in (-440, -330):
+        p.line([(-190, y), (190, y)], 7)
+        p.line([(-95, y), (95, y - 90)], 4)
+        p.line([(95, y), (-95, y - 90)], 4)
+    p.line([(-300, -440), (-190, -440)], 3, color or "dark")
+    p.line([(190, -440), (300, -420)], 3, color or "dark")
+    zx = 230 + 10 * math.sin(t * 12)
+    p.shape([(zx, -520), (zx - 30, -470), (zx, -470), (zx - 35, -410), (zx + 20, -485), (zx - 10, -485)], "yellow", 3)
+    if text:
+        p.text(text, 0, -580, 40, "dark")
+
+
+def _drop(p, t, color, text):
+    p.shape([(0, -360), (-110, -150), (-120, -90), (-90, -30), (-40, 0), (40, 0), (90, -30), (120, -90), (110, -150)], color or "sky")
+    p.ellipse(-50, -120, 22, 40, "white", 0)
+    if text:
+        p.text(text, 0, -100, min(56, int(200 / max(1, len(text)) * 1.6)), "dark")
+
+
 PROPS = {
+    "datacenter": _datacenter, "powerline": _powerline, "drop": _drop,
     "football": _football, "goal": _goal, "lake": _lake,
     "booth": _booth, "magnifier": _magnifier,
     "flag": _flag, "canflag": _canflag, "satellite": _satellite, "drone": _drone, "sign": _sign, "dish": _dish,
