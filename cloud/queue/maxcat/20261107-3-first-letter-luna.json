@@ -1,0 +1,1149 @@
+{
+ "id": "20261107-3-first-letter-luna",
+ "plot": "The morning after the bare tree Max wants to send his first letter to cousin Luna before the noon mail, but his painted M looks like a blue pancake and Dog walks blue paw prints onto Grandma's sofa; Mouse asks whether little Luna can even read, so Max paints pictures of their week instead, despairs that it is a messy scribble, until Bird sees he painted on an upside-down paper and turning it round shows Nutty, the snow and his budding tree; Max signs with a paw print, the letter goes just in time, and three days later a pink envelope with a tiny white paw print arrives.",
+ "script": {
+  "title": "Max Can't Write! His First Letter to Luna",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "paper",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -0.5,
+     3.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "paint",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     1.5,
+     3.2,
+     0.3
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "reply",
+    "type": "box",
+    "color": "pink",
+    "at": [
+     -7.0,
+     5.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Oh no! My paw slipped! Now it's a big blue blob!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "paint",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! You painted the paper, the rug and your own nose!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "How do cats write letters? I can't even make an M!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "MAX CAN'T WRITE!",
+    "cam": "two:max,mouse",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a quiet morning, the day after the bare tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max wants to send his first letter. To his cousin Luna.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I miss her. I want to tell her about the tiny buds.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Mouse knows her letters. Maybe she can help you.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Of course! Lesson one. The letter M. For Max!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Up, down, up, down. Like two mountains.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mountains. Easy. I climb things all the time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max dips his paw in the blue paint and tries.",
+    "cam": "prop:paint",
+    "do": [
+     [
+      "paint",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:-0.5,5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Up... down... up... SPLAT!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hmm. That M looks like a blue pancake.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not a pancake. It's a very modern M.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Let's try the A. A is like a little tent.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A tent... with a blob on top. Hmm. A blue blob tent.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I help? I'm good at paws! I have four!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog steps in the paint. Then he walks across the paper.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ],
+     [
+      "paint",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then across the rug. Then up onto the sofa.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "to:5,10"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog! My sofa! It's covered in blue paw prints!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Now the sofa can send a letter too!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is a disaster. Luna will never get my letter.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The mail lady comes at noon, Max. Only one hour left.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One hour? I can't learn the whole alphabet in one hour!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Wait, Max. How old is Luna?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She's little. Littler than me. Why?",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Can Luna read letters?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Um... no. Grandma reads her stories at bedtime.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then she won't read words anyway! But she can read pictures!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Pictures? Like drawing? I can draw!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Draw her everything you want to tell her. One picture for each.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max gets a fresh paper. He thinks very hard.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Um, Max? Your paper is upside...",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh! An artist needs quiet.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish. Swoosh. Dab, dab, dab. Max paints and paints.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "paint",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Here is Nutty, eating seeds from my fur.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Here is the snow. And Bird, and the feeder.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And here is my tree, with a hundred tiny buds.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max steps back to look at his picture.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. It's all wrong. It's just a big messy scribble.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It looks like... a blue spaghetti dinner?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Luna will think I can't do anything right.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ten minutes until the mail lady comes, Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello, everyone! Why is the sofa blue?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Long story, Bird. Very blue story.",
+    "cam": "two:dog,bird",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's a mess. But it's all I have. Let's send it anyway.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's brave, Max. Let me fold it for the envelope.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma picks up the picture. She turns it around to fold it.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then Grandma stops. She looks. She smiles.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max... come and look at this. The right way up.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "UPSIDE DOWN?!",
+    "cam": "prop:paper",
+    "hold": 1.2,
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "mouse",
+    "say": "I tried to tell you! The paper was upside down!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks over. Slowly. And he looks.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-1,5"
+     ],
+     [
+      "mouse",
+      "to:-0.5,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And now, everyone can see it.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Max. There's Nutty. There's the snow. There's your tree!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And there's me! I'm the blue spaghetti!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not a scribble. It's our whole week!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And there's me, eating at the feeder! You got my feathers!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I drew it upside down, and it still came out right!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "You don't need fancy words to tell a friend you miss her.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. One more thing. A letter needs my name.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max dips his paw in the paint. And presses it down.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "There. A paw print. That's how cats sign their name.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma folds the picture into an envelope.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Just in time. Here comes the mail lady!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The letter goes into the mail bag. Off to Luna!",
+    "cam": "wide",
+    "do": [
+     [
+      "paper",
+      "vanish"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "A picture letter! Luna is going to love it!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I send the sofa next?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma looks at Dog. Dog looks at the sofa.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "First, you can help me clean it, Dog.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Friends don't need perfect words. They need a little piece of you.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Three days later, there's a plop at the front door.",
+    "cam": "wide",
+    "do": [
+     [
+      "reply",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A letter! For me? From who?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the pink envelope, there's one tiny white paw print.",
+    "cam": "prop:reply",
+    "do": [
+     [
+      "reply",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! I think Luna wrote back!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What did Luna send to Max?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Can't Write! His First Letter to Luna ✉️🐱",
+  "description": "\"I miss my cousin. But how does a cat write a letter?\" 🐱\nMax wants to send little Luna a letter before the mail lady comes, but his M looks like a pancake and Dog paints the sofa blue. Max the Curious Cat, Ep 31.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "first letter",
+   "writing a letter",
+   "learning to write",
+   "missing a friend",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "painting"
+  ],
+  "thumb_text": "HOW DO I WRITE?",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¡Max no sabe escribir! Su primera carta para Luna ✉️🐱",
+    "description": "\"Extraño a mi prima. Pero ¿cómo escribe una carta un gato?\" 🐱\nMax quiere mandarle una carta a la pequeña Luna antes de que llegue la cartera, pero su M parece un panqueque y Perro pinta el sofá de azul. Max el Gato Curioso, Ep 31.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max não sabe escrever! Sua primeira carta para Luna ✉️🐱",
+    "description": "\"Sinto falta da minha prima. Mas como um gato escreve uma carta?\" 🐱\nMax quer mandar uma carta para a pequena Luna antes de a carteira chegar, mas o M dele parece uma panqueca e o Cachorro pinta o sofá de azul. Max, o Gato Curioso, Ep 31.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "ماكس لا يعرف الكتابة! رسالته الأولى إلى لونا ✉️🐱",
+    "description": "\"أشتاق إلى ابنة عمي. لكن كيف يكتب القط رسالة؟\" 🐱\nيريد ماكس أن يرسل رسالة إلى لونا الصغيرة قبل أن تأتي ساعية البريد، لكن حرف M عنده يشبه فطيرة والكلب يلوّن الأريكة بالأزرق. ماكس القط الفضولي، الحلقة 31.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max ne sait pas écrire ! Sa 1re lettre à Luna ✉️🐱",
+    "description": "« Ma cousine me manque. Mais comment un chat écrit-il une lettre ? » 🐱\nMax veut envoyer une lettre à la petite Luna avant le passage de la factrice, mais son M ressemble à une crêpe et Chien peint le canapé en bleu. Max le Chat Curieux, Ép 31.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスは字が書けない！ルナへのはじめての手紙 ✉️🐱",
+    "description": "「いとこに会いたいな。でもネコってどうやって手紙を書くの？」🐱\n郵便屋さんが来る前に小さなルナへ手紙を送りたいマックス。でもMはパンケーキみたい、イヌはソファを青くぬっちゃう！好奇心いっぱいのネコ マックス 第31話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스는 글씨를 못 써요! 루나에게 보내는 첫 편지 ✉️🐱",
+    "description": "\"사촌이 보고 싶어. 그런데 고양이는 편지를 어떻게 쓰지?\" 🐱\n맥스는 집배원 아주머니가 오기 전에 꼬마 루나에게 편지를 보내고 싶지만, M은 팬케이크처럼 보이고 강아지는 소파를 파랗게 칠해 버려요. 호기심 많은 고양이 맥스 31화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Max kann nicht schreiben! Sein erster Brief an Luna ✉️🐱",
+    "description": "„Ich vermisse meine Cousine. Aber wie schreibt eine Katze einen Brief?“ 🐱\nMax will der kleinen Luna einen Brief schicken, bevor die Postbotin kommt, aber sein M sieht aus wie ein Pfannkuchen und Hund malt das Sofa blau an. Max die neugierige Katze, Folge 31.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 18,
+   "dur": 20,
+   "top": "BLUE PAWS EVERYWHERE! 🐾",
+   "title": "Dog Helps With the Letter... Oh No, the Sofa! 🐾💙 (Ep 31) #shorts",
+   "description": "Four paws, one pot of blue paint, and Grandma's sofa. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog",
+    "painting"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perro ayuda con la carta... ¡Oh no, el sofá! 🐾💙 (Ep 31) #shorts",
+     "description": "Cuatro patas, un bote de pintura azul y el sofá de la abuela. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro ajuda com a carta... Ah não, o sofá! 🐾💙 (Ep 31) #shorts",
+     "description": "Quatro patas, um pote de tinta azul e o sofá da vovó. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يساعد في الرسالة... أوه لا، الأريكة! 🐾💙 (الحلقة 31) #shorts",
+     "description": "أربع أقدام وعلبة طلاء زرقاء وأريكة الجدة. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien aide pour la lettre... Oh non, le canapé ! 🐾💙 (Ép 31) #shorts",
+     "description": "Quatre pattes, un pot de peinture bleue et le canapé de Mamie. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが手紙をおてつだい…あっ、ソファが！🐾💙（第31話）#shorts",
+     "description": "4本の足と青いペンキとおばあちゃんのソファ。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 편지를 도와주다가... 앗, 소파가! 🐾💙 (31화) #shorts",
+     "description": "발 네 개, 파란 물감 한 통, 그리고 할머니의 소파. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund hilft beim Brief... Oh nein, das Sofa! 🐾💙 (Folge 31) #shorts",
+     "description": "Vier Pfoten, ein Topf blaue Farbe und Omas Sofa. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

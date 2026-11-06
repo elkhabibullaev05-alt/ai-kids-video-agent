@@ -1,0 +1,1231 @@
+{
+ "id": "20261106-2-snow-feeder-fight",
+ "plot": "The morning after the first snow, Bird and Nutty fight over Grandma's new bird feeder and Max doesn't know whose side to take; hanging the feeder higher fails when Nutty leaps onto it and showers Dog with seeds, so Max sits still, watches, and asks why, finding out Nutty isn't greedy but hungry because snow buried her secret seed spot; Max remembers she ran past Grandma's flower pot yesterday, digs her seeds out, sets a squirrel plate under the porch beside the bird feeder, and Grandma announces tonight's holiday family photo.",
+ "script": {
+  "title": "Snow Fight at the Bird Feeder!",
+  "set": {
+   "place": "snow",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "nutty": {
+    "name": "Nutty",
+    "voice": "af_sarah",
+    "speed": 1.2,
+    "pitch": 5,
+    "color": [
+     0.62,
+     0.34,
+     0.14
+    ],
+    "kind": "mouse",
+    "size": 1.35,
+    "home": [
+     8,
+     13
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "feeder",
+    "type": "box",
+    "color": "yellow",
+    "at": [
+     3.0,
+     13.0,
+     2.6
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "seeds",
+    "type": "ball",
+    "color": "yellow",
+    "on": "nutty",
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "pot",
+    "type": "box",
+    "color": [
+     0.78,
+     0.36,
+     0.2
+    ],
+    "at": [
+     -7.5,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "plate",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -1.5,
+     3.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "bird",
+    "say": "Hey! That's MY breakfast! Get off the feeder, Nutty!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "nutty",
+      "enter"
+     ],
+     [
+      "feeder",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Mine now! Seeds, seeds, seeds! Munch, munch, munch!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Stop! Stop! Please, no fighting in the snow!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SNOW FIGHT!",
+    "cam": "two:bird,nutty",
+    "hold": 1.2,
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "nutty",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's the morning after the first snow. Everything is white.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "nutty",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma hung a new bird feeder on the apple tree.",
+    "cam": "prop:feeder",
+    "do": [
+     [
+      "feeder",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When it snows, birds can't find food. So we help them.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And yesterday I made a new friend. Nutty the squirrel!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:nutty"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Nutty doesn't look happy this morning.",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Dig, dig. Not here. Dig, dig. Not here either!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "to:6,9"
+     ],
+     [
+      "nutty",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nutty, what are you looking for under the snow?",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "to:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "No time! Too busy! Must eat! Feeder!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Not again! Grandma made that feeder for BIRDS!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Squirrels are just birds with no wings! Munch!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ha! That's a funny one, Nutty. But it's not true.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "That's not even true! Max, tell her!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Um... friends? Could we maybe... share?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody is listening. Seeds fly everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "seeds",
+      "drop:nutty"
+     ],
+     [
+      "dog",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Seeds in the snow! It's raining breakfast!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird is my friend. Nutty is my friend. Who do I help?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "BIRD OR SQUIRREL?",
+    "cam": "two:max,bird",
+    "hold": 1.0,
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I've got it! I'll hang the feeder up higher!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs the fence and moves the feeder to a high branch.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,11"
+     ],
+     [
+      "feeder",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Up, up, up. Careful, paws. Don't look down.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "There! Too high for squirrels. Just right for birds!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh, thank you, Max! Finally, a quiet breakfast.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from the very top of the tree...",
+    "cam": "overhead",
+    "do": [
+     [
+      "nutty",
+      "to:4,15"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Wheee! Squirrels can jump really, really far!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nutty lands on the feeder. It swings. Swish! Swoosh!",
+    "cam": "prop:feeder",
+    "do": [
+     [
+      "feeder",
+      "spin"
+     ],
+     [
+      "feeder",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Whoa! Whoa! I'm dizzy! The whole garden is spinning!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And all the seeds pour down... right onto Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "seeds",
+      "drop:dog"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A seed shower! Best morning of my life!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog rolls in the seeds like they're a warm bath.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Higher didn't work. Squirrels are amazing jumpers!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "If she eats it all, my bird friends go hungry!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And more snow is coming tonight. Everyone needs breakfast.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I have to fix it today. But how?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Easy! Give me all the seeds. Problem solved!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nice try, Dog. But no.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits very still in the snow. Just like Dog taught him.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I want to fix it, first I have to understand it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So he watches. Nutty runs back under the tree.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "nutty",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Dig, dig. Not here. Dig, dig. Where did it go?",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She's digging again. Just like this morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She isn't playing. She's looking for something.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Maybe she lost a ball? I lose balls all the time.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, Dog. Squirrels don't lose balls. They hide food.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks over. Slowly. Gently. No chasing.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nutty? Why do you keep digging in the snow?",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "turn:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "My seeds! Yesterday I hid them all. Now the snow hides them!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Everything is white. I can't find my secret spot!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE SECRET SPOT!",
+    "cam": "two:max,nutty",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "So you're not greedy at all. You're just really hungry!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh. Hungry? I didn't know that, Nutty.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ],
+     [
+      "bird",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Hungry squirrels are grumpy squirrels. Sorry, Bird.",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Sorry too. I was a grumpy bird.",
+    "cam": "two:bird,nutty",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Friends again? Feather and tail?",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. Yesterday you ran off with your cheeks full of seeds.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max closes his eyes and remembers. Puffy cheeks. A fluffy tail. Running...",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You ran past the door. Past Grandma's flower pot!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs to the big flower pot by the garden door.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-6,10"
+     ],
+     [
+      "pot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dig, dig. Dig, dig, dig!",
+    "cam": "prop:pot",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "pot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "My seeds! My secret spot! Max, you found it!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "to:-3,13"
+     ],
+     [
+      "nutty",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wow! Max dug like a real dog! I'm so proud!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your seeds are safe, Nutty. And I have one more idea.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts a plate by the porch, where no snow falls.",
+    "cam": "wide",
+    "do": [
+     [
+      "plate",
+      "show"
+     ],
+     [
+      "max",
+      "to:-1,6"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This plate is for squirrels. The feeder is for birds.",
+    "cam": "prop:plate",
+    "do": [
+     [
+      "plate",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Seeds on the plate. Nuts on the plate. A squirrel buffet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "One for you, and one for me? I love it!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "One for me, one for you! No more snow fights!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you didn't pick a side. You asked why.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When a friend grabs, maybe they're just hungry.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird eats up high. Nutty eats down low.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And I eat whatever falls in the middle!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And that's exactly what Dog does. All afternoon.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now everyone inside. Brush the snow off your paws.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tonight we take our holiday family photo!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A photo? I'll make my very best face ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's best face. What could possibly go wrong?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Snow Fight at the Bird Feeder! 🐦❄️🐿️",
+  "description": "\"Bird is my friend. Nutty is my friend. So whose side am I on?\" 🐱\nThe morning after the first snow, Bird and Nutty the squirrel fight over Grandma's new bird feeder, and Max is stuck in the middle. Max the Curious Cat, Ep 27.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "bird feeder",
+   "squirrel",
+   "first snow",
+   "winter",
+   "sharing",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "WHO DO I HELP?",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "¡Pelea en la nieve por el comedero de pájaros! 🐦❄️🐿️",
+    "description": "\"Pájaro es mi amigo. Nutty es mi amiga. ¿De qué lado estoy?\" 🐱\nLa mañana después de la primera nevada, Pájaro y la ardilla Nutty se pelean por el nuevo comedero de la abuela, y Max queda en el medio. Max el Gato Curioso, Ep 27.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Briga na neve pelo comedouro dos pássaros! 🐦❄️🐿️",
+    "description": "\"O Pássaro é meu amigo. A Nutty é minha amiga. De que lado eu fico?\" 🐱\nNa manhã depois da primeira neve, o Pássaro e a esquilinha Nutty brigam pelo novo comedouro da vovó, e o Max fica no meio. Max, o Gato Curioso, Ep 27.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "شجار في الثلج عند مُطعِم الطيور! 🐦❄️🐿️",
+    "description": "\"الطائر صديقي. ونَتي صديقتي. فمع من أقف؟\" 🐱\nفي الصباح التالي لأول ثلج، يتشاجر الطائر والسنجابة نَتي على مُطعِم الطيور الجديد الخاص بالجدة، ويقع ماكس في المنتصف. ماكس القط الفضولي، الحلقة 27.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Bataille dans la neige à la mangeoire ! 🐦❄️🐿️",
+    "description": "« Oiseau est mon ami. Nutty est mon amie. Alors je suis de quel côté ? » 🐱\nLe matin après la première neige, Oiseau et l'écureuil Nutty se disputent la nouvelle mangeoire de Mamie, et Max est coincé au milieu. Max le Chat Curieux, Ép 27.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "雪の中で鳥のエサ台をめぐって大げんか！🐦❄️🐿️",
+    "description": "「トリも友だち。ナッティも友だち。ぼくはどっちの味方？」🐱\n初雪の次の朝、トリとリスのナッティがおばあちゃんの新しいエサ台を取り合って、マックスはまん中でこまっちゃう。好奇心いっぱいのネコ マックス 第27話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "눈 속 새 모이통 대소동! 🐦❄️🐿️",
+    "description": "\"새도 내 친구, 너티도 내 친구. 나는 누구 편이지?\" 🐱\n첫눈이 온 다음 날 아침, 새와 다람쥐 너티가 할머니의 새 모이통을 두고 다투고 맥스는 그 사이에서 난감해요. 호기심 많은 고양이 맥스 27화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Schneestreit am Vogelhäuschen! 🐦❄️🐿️",
+    "description": "„Vogel ist mein Freund. Nutty ist meine Freundin. Auf wessen Seite bin ich?“ 🐱\nAm Morgen nach dem ersten Schnee streiten Vogel und das Eichhörnchen Nutty um Omas neues Vogelhäuschen, und Max steckt mittendrin. Max die neugierige Katze, Folge 27.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "BIRD OR SQUIRREL?! ❄️",
+   "title": "Bird vs Squirrel: Whose Breakfast Is It? 🐦🐿️ (Ep 27) #shorts",
+   "description": "Max has two friends and only one bird feeder. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "bird feeder",
+    "squirrel"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pájaro contra ardilla: ¿de quién es el desayuno? 🐦🐿️ (Ep 27) #shorts",
+     "description": "Max tiene dos amigos y un solo comedero. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Pássaro contra esquilo: de quem é o café da manhã? 🐦🐿️ (Ep 27) #shorts",
+     "description": "Max tem dois amigos e só um comedouro. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "طائر ضد سنجاب: فطور من هذا؟ 🐦🐿️ (الحلقة 27) #shorts",
+     "description": "لدى ماكس صديقان ومُطعِم طيور واحد فقط. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Oiseau contre écureuil : à qui le petit-déj ? 🐦🐿️ (Ép 27) #shorts",
+     "description": "Max a deux amis et une seule mangeoire. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トリ対リス：だれの朝ごはん？🐦🐿️（第27話）#shorts",
+     "description": "友だちはふたり、エサ台はひとつ。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새 대 다람쥐: 누구 아침밥이야? 🐦🐿️ (27화) #shorts",
+     "description": "친구는 둘, 모이통은 하나뿐이에요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Vogel gegen Eichhörnchen: Wessen Frühstück? 🐦🐿️ (Folge 27) #shorts",
+     "description": "Max hat zwei Freunde und nur ein Vogelhäuschen. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

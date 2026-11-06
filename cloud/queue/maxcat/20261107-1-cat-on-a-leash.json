@@ -1,0 +1,1178 @@
+{
+ "id": "20261107-1-cat-on-a-leash",
+ "plot": "The morning after the photo Max wears his new red harness for Grandma's noon walk to the duck pond, but his legs 'forget' how to walk and Dog pulls him like a sled into a leaf pile; Mouse asks who decides where Max goes at home, Max follows a white feather and walks on his own as soon as he leads, and since Dog always follows Max, Max ends up walking Dog and Grandma to the pond right at twelve, then finds his favorite garden tree has lost its leaves.",
+ "script": {
+  "title": "A Cat on a Leash! Max's First Park Walk",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "leaves",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     8.0,
+     14.0,
+     0.3
+    ],
+    "visible": true,
+    "scale": 1.4
+   },
+   {
+    "id": "feather",
+    "type": "star",
+    "color": "white",
+    "at": [
+     -1.0,
+     3.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Come on, Max! Walk! Walk! It's the best thing ever!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nope. I'm not walking. I'm a puddle now.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, it's only a harness. Just one little step?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "text": "A CAT ON A LEASH?!",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a bright morning in the park, the day after the photo.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "bird",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max is wearing his new red harness for the very first time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It feels like someone is hugging me. All the time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It looks very smart on you, Max. Like a little hero.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Walks are the best, Max! Wherever you go, I go!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's true. Dog always follows Max. To the kitchen. To the sofa.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He even followed Max to the bathroom once. Grandma wasn't happy.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "At twelve, my friends meet at the duck pond. Big walk!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everyone will see me walk? On a leash?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You have to walk all the way across the park, Max!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Max has a cat secret. When cats wear a harness...",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...sometimes their legs forget how to walk.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My legs are broken. Both of them. All four of them.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, you have four legs. That's two more than both.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then all four are broken. Very, very broken.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No problem! I'll pull you. I'm a very strong dog!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Gently, Dog. Gently!",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Too late. Dog runs. And Max slides behind him like a sled.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:5,12"
+     ],
+     [
+      "max",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wheee! I mean, help! I mean, wheee!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish, through the grass. Swoosh, round the bench...",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "to:7,15"
+     ],
+     [
+      "max",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "...and FLUMP! Right into a big pile of leaves.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max? Max! Where did you go?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:7,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm in here. I am a leaf now. Please leave me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "A cat-shaped leaf! With a red scarf!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sorry, Max! Was that too fast?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Being pulled is the worst. Cats don't like to be pulled!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. It's almost twelve, and the pond is far away.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'll stay in the leaves. Forever. Goodbye, everyone.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK IN THE LEAVES!",
+    "cam": "two:max,grandma",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Hmm. Max, can I ask you something?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "At home, who decides where you go? You or Grandma?",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me, of course. I'm a cat. I go where I want.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And when Dog pulled you, who decided?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog decided. And I didn't like it one bit.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "So maybe cats don't walk behind. Maybe cats walk in front!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "In front? Like the boss of the walk?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Exactly. You choose the way. Your legs will remember.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs out of the leaves. He shakes off a red leaf.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he sees something. A white feather on the path.",
+    "cam": "prop:feather",
+    "do": [
+     [
+      "feather",
+      "show"
+     ],
+     [
+      "feather",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ooh. A feather. I must check that feather.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step, step, step. Max walks to the feather all by himself.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max! You're walking! On your leash!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Am I? I was just being curious!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max is walking! Max is walking! Hooray!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Keep going! You choose the way, Grandma holds the leash.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max walks in front. Sniffing a flower. Checking a stone.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This way, everyone! This way is very interesting!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look behind you, Max! Look who's following you!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog follows Max. Step for step. Just like at home.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Grandma holds both leashes, trying to keep up.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Slow down, you two! My legs are older than yours!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS WALKING WHO?",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "Max! Are you walking me now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I think I am! Follow me, Dog. To the pond!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hurry, Max! Only two minutes until twelve!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max takes a shortcut past the bench. Dog follows.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:2,15"
+     ],
+     [
+      "dog",
+      "to:4,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma follows Dog. Mouse rides on Grandma's shoe!",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:0,14"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Faster, Grandma! We're a walking train!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And they reach the duck pond just as the clock strikes twelve.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look at all the dogs! And one cat leading the way!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My friends can't believe it. A cat who walks his dog!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best walk ever, Max. You're a great boss.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thanks, Dog. Tomorrow, you can be the boss. Maybe.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Being pulled was terrible. Choosing the way is wonderful.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Everyone walks better when they can follow their own nose.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Some friends like to follow. Some friends like to lead.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And a good walk has room for both.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That afternoon, Max walks all the way home. In front.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to_home"
+     ],
+     [
+      "dog",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Home again! Now I'll climb my favorite tree in the garden.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But when Max looks up at his tree, his mouth falls open.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! My tree! Where did all the leaves go?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Is Max's favorite tree sick?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "A Cat on a LEASH?! Max's First Park Walk 🐾😹",
+  "description": "\"It feels like someone is hugging me. All the time.\" 🐱\nMax tries his new red harness for Grandma's big park walk, but his legs 'forget' how to walk and Dog pulls him like a sled into the leaves. Max the Curious Cat, Ep 29.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "cat on a leash",
+   "cat harness",
+   "walk in the park",
+   "dog walk",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "autumn leaves"
+  ],
+  "thumb_text": "NOT WALKING!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¿Un gato con CORREA? El primer paseo de Max 🐾😹",
+    "description": "\"Es como si alguien me abrazara. Todo el tiempo.\" 🐱\nMax prueba su nuevo arnés rojo para el gran paseo de la abuela, pero sus patas 'olvidan' caminar y Perro lo arrastra como un trineo hasta las hojas. Max el Gato Curioso, Ep 29.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Um gato na COLEIRA?! O primeiro passeio do Max 🐾😹",
+    "description": "\"Parece que alguém está me abraçando. O tempo todo.\" 🐱\nMax experimenta seu novo peitoral vermelho para o grande passeio da vovó, mas as patas dele 'esquecem' de andar e o Cachorro o puxa como um trenó até as folhas. Max, o Gato Curioso, Ep 29.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "قط بمِقوَد؟! أول نزهة لماكس في الحديقة 🐾😹",
+    "description": "\"أشعر وكأن أحدًا يعانقني. طوال الوقت.\" 🐱\nيجرب ماكس حزامه الأحمر الجديد لنزهة الجدة الكبيرة، لكن قوائمه 'تنسى' المشي فيجرّه الكلب كالمزلجة إلى كومة الأوراق. ماكس القط الفضولي، الحلقة 29.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Un chat en LAISSE ?! La 1re promenade de Max 🐾😹",
+    "description": "« C'est comme si quelqu'un me faisait un câlin. Tout le temps. » 🐱\nMax essaie son nouveau harnais rouge pour la grande promenade de Mamie, mais ses pattes « oublient » de marcher et Chien le tire comme une luge jusque dans les feuilles. Max le Chat Curieux, Ép 29.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "ネコがリードでおさんぽ？！マックスのはじめての公園散歩 🐾😹",
+    "description": "「ずっとだれかにギュッとされてるみたい。」🐱\nおばあちゃんの大きなおさんぽ会のために赤いハーネスをつけたマックス。でも足が歩き方を「わすれて」、イヌにソリみたいに引っぱられて落ち葉の山へ！好奇心いっぱいのネコ マックス 第29話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "목줄 찬 고양이?! 맥스의 첫 공원 산책 🐾😹",
+    "description": "\"누가 계속 나를 꼭 껴안고 있는 것 같아.\" 🐱\n맥스는 할머니의 공원 산책 모임을 위해 새 빨간 하네스를 차 보지만, 다리가 걷는 법을 '잊어버리고' 강아지에게 썰매처럼 끌려 낙엽 더미로 쏙! 호기심 많은 고양이 맥스 29화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Eine Katze an der LEINE?! Max' erster Spaziergang 🐾😹",
+    "description": "„Es fühlt sich an, als würde mich jemand umarmen. Die ganze Zeit.“ 🐱\nMax probiert sein neues rotes Geschirr für Omas großen Parkspaziergang, aber seine Beine „vergessen“ das Laufen und Hund zieht ihn wie einen Schlitten in den Laubhaufen. Max die neugierige Katze, Folge 29.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "CATS DON'T WALK! 😹",
+   "title": "Max Tries a Harness... and Becomes a Puddle 🐾😹 (Ep 29) #shorts",
+   "description": "Max's legs 'forget' how to walk. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "cat harness"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max prueba un arnés... y se vuelve un charco 🐾😹 (Ep 29) #shorts",
+     "description": "Las patas de Max 'olvidan' cómo caminar. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max experimenta um peitoral... e vira uma poça 🐾😹 (Ep 29) #shorts",
+     "description": "As patas do Max 'esquecem' como andar. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يجرب الحزام... فيصبح بركة 🐾😹 (الحلقة 29) #shorts",
+     "description": "قوائم ماكس 'تنسى' كيف تمشي. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max essaie un harnais... et devient une flaque 🐾😹 (Ép 29) #shorts",
+     "description": "Les pattes de Max « oublient » comment marcher. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、ハーネスをつけたら…ぺちゃんこ！🐾😹（第29話）#shorts",
+     "description": "マックスの足が歩き方をわすれちゃった？続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "하네스를 찬 맥스... 납작 엎드려 버렸어요 🐾😹 (29화) #shorts",
+     "description": "맥스의 다리가 걷는 법을 '잊어버렸어요'. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max probiert ein Geschirr... und wird zur Pfütze 🐾😹 (Folge 29) #shorts",
+     "description": "Max' Beine „vergessen“, wie man läuft. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 21,
+   "dur": 20,
+   "top": "CAT SLED! 🍂",
+   "title": "Dog Pulls Max Like a Sled! WHEEE! 🍂😹 (Ep 29) #shorts",
+   "description": "Gently, Dog... too late! Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "autumn leaves"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Perro arrastra a Max como un trineo! ¡UIII! 🍂😹 (Ep 29) #shorts",
+     "description": "Despacio, Perro... ¡demasiado tarde! Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro puxa o Max como um trenó! UIII! 🍂😹 (Ep 29) #shorts",
+     "description": "Devagar, Cachorro... tarde demais! Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يجرّ ماكس كالمزلجة! ويييي! 🍂😹 (الحلقة 29) #shorts",
+     "description": "بلطف يا كلب... فات الأوان! التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien tire Max comme une luge ! YOUPIII ! 🍂😹 (Ép 29) #shorts",
+     "description": "Doucement, Chien... trop tard ! La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌがマックスをソリみたいに引っぱった！ヒャッホー！🍂😹（第29話）#shorts",
+     "description": "そっとね、イヌ…もうおそい！続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 맥스를 썰매처럼 끌어요! 야호! 🍂😹 (29화) #shorts",
+     "description": "살살해, 강아지야... 이미 늦었어! 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund zieht Max wie einen Schlitten! JUHUU! 🍂😹 (Folge 29) #shorts",
+     "description": "Sanft, Hund... zu spät! Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

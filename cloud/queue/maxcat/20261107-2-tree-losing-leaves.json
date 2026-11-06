@@ -1,0 +1,1134 @@
+{
+ "id": "20261107-2-tree-losing-leaves",
+ "plot": "On a windy sunset after the park walk Max is sure his favorite apple tree is sick because it drops all its leaves, and his honey plan only glues the leaves to himself; when he climbs up to say goodnight he finds tiny buds on every twig, Grandma explains the tree is only resting and keeps next spring's leaves safe inside, Bird spots her old nest in the bare branches, and the wiggling leaf pile turns out to be Nutty's warm winter bed, so Max gives the leaves back and wants to write to Luna, but he can't write.",
+ "script": {
+  "title": "Is Max's Favorite Tree Sick?",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "nutty": {
+    "name": "Nutty",
+    "voice": "af_sarah",
+    "speed": 1.2,
+    "pitch": 5,
+    "color": [
+     0.62,
+     0.34,
+     0.14
+    ],
+    "kind": "mouse",
+    "size": 1.35,
+    "home": [
+     8,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "leaves",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     8.0,
+     14.0,
+     0.4
+    ],
+    "visible": true,
+    "scale": 2.0
+   },
+   {
+    "id": "honey",
+    "type": "box",
+    "color": "gold",
+    "at": [
+     3.0,
+     4.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "bud",
+    "type": "ball",
+    "color": [
+     0.45,
+     0.3,
+     0.15
+    ],
+    "at": [
+     -3.0,
+     13.0,
+     2.6
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "nest",
+    "type": "ball",
+    "color": [
+     0.5,
+     0.35,
+     0.2
+    ],
+    "at": [
+     -4.5,
+     14.0,
+     3.2
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Grandma! Come quick! My tree is losing all its leaves!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Another one fell! And another! It's raining leaves!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My poor tree must be sick! I have to save it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IS MAX'S TREE SICK?",
+    "cam": "two:max,bird",
+    "hold": 1.2,
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a windy sunset, the evening after the big park walk.",
+    "cam": "wide",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "This apple tree is where Max naps, and climbs, and dreams.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "All summer it was green and full. Now look at it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It looks like a big brown broom. Upside down.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, this is not funny. This is serious tree business.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, dear, look closely before you worry.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No time to look closely, Grandma! It's an emergency!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Funny. My old nest tree did this last year too.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then we'll put the leaves back! Every single one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "All of them? Max, there are a million leaves!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'll start with one. And then another one.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max gathers leaves from the big pile by the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The pile wiggles a little. Max doesn't notice.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now I need glue. Something really sticky.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grandma's honey jar! It's the stickiest thing in the house!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "honey",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max dips his paw into the honey. Sticky, sticky, sticky.",
+    "cam": "prop:honey",
+    "do": [
+     [
+      "honey",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:3,5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One leaf here. One leaf there. Hold on, little leaf!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the leaves don't stick to the tree. They stick to Max!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! You're not a cat anymore! You're a walking leaf pile!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Get them off! They tickle my whiskers!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I can help! Can I lick the honey off? Please?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, Dog! Well... okay, just one paw.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Mmm. Honey cat. My favorite flavor.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the wind blows harder. Whoosh! Ten more leaves fall.",
+    "cam": "wide",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's getting worse! By morning, my tree will be bare!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tonight is the first frost, Max. The rest will fall soon.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I tried my best. And I still can't save my tree.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits under the tree, sticky, leafy, and sad.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-2,10"
+     ],
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, let's climb up and say goodnight. Like we always do.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. But only because it might be the last time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max climbs up, branch by branch, to his favorite spot.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,12"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, tree. I'm sorry. I couldn't fix you.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max sees something at the tip of a twig.",
+    "cam": "prop:bud",
+    "do": [
+     [
+      "bud",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. What's this? A tiny brown bump. And another one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT ARE THESE?",
+    "cam": "prop:bud",
+    "hold": 1.2,
+    "do": [
+     [
+      "bud",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "There's one on every twig! Hundreds of them!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the next twig. And the next. Buds everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:-3,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Are they spots? Is my tree getting spots now?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now you're looking closely, Max. Good.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Those are buds. Inside each one is a tiny folded leaf.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A leaf? Inside? Already? But it's almost winter!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Your tree isn't sick. It's resting for the winter.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It lets old leaves go and keeps new ones safe in buds.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So it's not sick. It's sleeping! Like me after lunch!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And look what we can see now that the leaves are gone!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Up in the bare branches sits Bird's old summer nest.",
+    "cam": "prop:nest",
+    "do": [
+     [
+      "nest",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "My old nest! It was hiding behind the leaves all summer!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bare trees have secrets. You just have to look.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But the fallen leaves are so sad. Nobody wants them.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, someone wants them very much. Listen.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big leaf pile wiggles again. Rustle, rustle, rustle.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS IN THE LEAVES?",
+    "cam": "two:max,grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "nutty",
+    "say": "Hey! Who's so noisy? I'm making my winter bed!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "to:6,11"
+     ],
+     [
+      "nutty",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nutty! You were in the leaf pile the whole time?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Of course! Leaves are the best blankets in the world!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Warm, soft and crunchy. And you kept taking them!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "So that's why the pile kept wiggling!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oops. Sorry, Nutty. I'll give them back. Not stick them back.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Fallen leaves keep little animals warm. And they feed the soil.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "So in spring, your tree grows even stronger.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the leaves didn't leave. They just got a new job!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts every leaf back on Nutty's pile. None on the tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ],
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And I licked all the honey off. Teamwork!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sometimes things that look like an ending are a getting-ready.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hugs the bare tree. Good night, tree. See you in spring.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I wish Luna could see this. She'd love the tiny buds.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Then why don't you write her a letter, Max?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A letter? Me? But Grandma... I can't write!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Can a cat who can't write send a letter?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Is Max's Favorite Tree SICK? 🍂😿",
+  "description": "\"My tree is losing every leaf. I have to save it!\" 🐱\nThe evening after the park walk, Max's favorite apple tree drops its leaves in the wind, and Max tries to stick them back on with honey. Max the Curious Cat, Ep 30.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "autumn leaves",
+   "why do leaves fall",
+   "trees in winter",
+   "autumn",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "nature for kids"
+  ],
+  "thumb_text": "SAVE MY TREE!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Está ENFERMO el árbol favorito de Max? 🍂😿",
+    "description": "\"Mi árbol está perdiendo todas sus hojas. ¡Tengo que salvarlo!\" 🐱\nLa tarde después del paseo por el parque, el manzano favorito de Max pierde sus hojas con el viento y Max intenta pegarlas otra vez con miel. Max el Gato Curioso, Ep 30.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A árvore favorita do Max está DOENTE? 🍂😿",
+    "description": "\"Minha árvore está perdendo todas as folhas. Preciso salvá-la!\" 🐱\nNa tarde depois do passeio no parque, a macieira favorita do Max perde as folhas com o vento, e o Max tenta colá-las de volta com mel. Max, o Gato Curioso, Ep 30.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "هل شجرة ماكس المفضلة مريضة؟ 🍂😿",
+    "description": "\"شجرتي تفقد كل أوراقها. يجب أن أنقذها!\" 🐱\nفي المساء التالي لنزهة الحديقة، تُسقط الريح أوراق شجرة التفاح المفضلة لدى ماكس، فيحاول إلصاقها من جديد بالعسل. ماكس القط الفضولي، الحلقة 30.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "L'arbre préféré de Max est-il MALADE ? 🍂😿",
+    "description": "« Mon arbre perd toutes ses feuilles. Je dois le sauver ! » 🐱\nLe soir après la promenade au parc, le pommier préféré de Max perd ses feuilles dans le vent, et Max essaie de les recoller avec du miel. Max le Chat Curieux, Ép 30.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスの大好きな木がびょうき？🍂😿",
+    "description": "「ぼくの木の葉っぱがぜんぶ落ちちゃう。助けなきゃ！」🐱\n公園のおさんぽの次の夕方、マックスのお気に入りのリンゴの木が風で葉っぱを落とし、マックスははちみつでくっつけようとします。好奇心いっぱいのネコ マックス 第30話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스가 제일 좋아하는 나무가 아파요? 🍂😿",
+    "description": "\"내 나무가 잎을 다 잃고 있어. 꼭 구해야 해!\" 🐱\n공원 산책 다음 날 저녁, 맥스가 아끼는 사과나무가 바람에 잎을 떨어뜨리고, 맥스는 꿀로 잎을 다시 붙여 보려고 해요. 호기심 많은 고양이 맥스 30화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Ist Max' Lieblingsbaum KRANK? 🍂😿",
+    "description": "„Mein Baum verliert jedes Blatt. Ich muss ihn retten!“ 🐱\nAm Abend nach dem Parkspaziergang verliert Max' liebster Apfelbaum im Wind seine Blätter, und Max versucht, sie mit Honig wieder festzukleben. Max die neugierige Katze, Folge 30.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 20,
+   "dur": 22,
+   "top": "HONEY + LEAVES = ?! 🍯",
+   "title": "Max Tries to Glue the Leaves Back On! 🍯🍂 (Ep 30) #shorts",
+   "description": "Max has a sticky plan to save his tree. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "autumn leaves"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max intenta pegar las hojas otra vez! 🍯🍂 (Ep 30) #shorts",
+     "description": "Max tiene un plan pegajoso para salvar su árbol. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max tenta colar as folhas de volta! 🍯🍂 (Ep 30) #shorts",
+     "description": "Max tem um plano grudento para salvar sua árvore. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يحاول لصق الأوراق من جديد! 🍯🍂 (الحلقة 30) #shorts",
+     "description": "لدى ماكس خطة لزجة لإنقاذ شجرته. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max essaie de recoller les feuilles ! 🍯🍂 (Ép 30) #shorts",
+     "description": "Max a un plan collant pour sauver son arbre. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、葉っぱを木にもどそうとする！🍯🍂（第30話）#shorts",
+     "description": "マックスのベタベタ作戦で木は助かる？続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 나뭇잎을 다시 붙이려고 해요! 🍯🍂 (30화) #shorts",
+     "description": "맥스에게는 나무를 구할 끈적끈적한 계획이 있어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max will die Blätter wieder ankleben! 🍯🍂 (Folge 30) #shorts",
+     "description": "Max hat einen klebrigen Plan, um seinen Baum zu retten. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

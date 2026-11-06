@@ -1,0 +1,1219 @@
+{
+ "id": "20261106-3-say-cheese-photo",
+ "plot": "On the snowy evening after the feeder fight Grandma wants one smiling family photo for her holiday cards, but Bird blinks, Dog's tail blurs and Max makes a lemon 'best face'; Max's rule that nobody moves gives a photo of five sad potatoes, until Mouse finds the accidental photo six, taken when Dog sneezed and everyone fell over laughing, so the family stops posing, Bird's feather tickle brings a new sneeze and a real happy photo, and Grandma gives Max a red harness for tomorrow's park walk.",
+ "script": {
+  "title": "Say Cheese! Why Won't Anyone Smile?",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.18
+    ],
+    "at": [
+     -9.0,
+     4.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "red",
+    "at": [
+     -3.5,
+     4.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Ah... ah... AH-CHOO!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "prop:camera",
+    "hold": 0.8,
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No! Not again! That's photo number ten!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ten photos, and not one where we all smile!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WHY WON'T ANYONE SMILE?",
+    "cam": "two:max,grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a snowy evening, after the big bird feeder fight.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma wants one photo for her holiday cards.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "One nice photo of my whole family. That's all I wish for.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And I'm the photographer! I press the button with my whole body!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse climbs on top of Grandma's old camera.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "mouse",
+      "to:-8,5"
+     ],
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Everybody look at me! Big smiles! Ready, set...",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Grandma. I'll make my best face ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Let's go back and see the first nine photos.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Photo one. Max makes his best face.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, why do you look like you just ate a lemon?",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's my handsome face! Very serious. Very cool.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Handsome, yes. But you look like you need a nap, dear.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Photo two. Bird blinks. Photo three. Bird blinks again.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The flash is so bright! My eyes close all by themselves!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Photo four. Dog's tail wags so hard, he's just a blur.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I can't help it! I'm happy! My tail is happy!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Dog, you look like a brown windmill!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Photo five. Max watches Dog's tail instead of the camera.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And photo six... Dog sneezes. AH-CHOO!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone falls over laughing, and Mouse slips onto the button.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "prop:camera",
+    "hold": 0.8,
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Oops! Sorry, sorry! That one doesn't count!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Never mind, dear. Let's try again.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Photos seven, eight and nine. Blink. Blur. Lemon face.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "sleep"
+     ],
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Which brings us back to photo number ten.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The cards must go to the post office tomorrow morning.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then we need a perfect photo tonight. I'll fix it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "New rule! Nobody moves. Nobody blinks. Nobody wags.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No wagging? That's the hardest rule in the world.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, Dog. Hold your tail still if you have to.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'll hold my eyes open with my feathers!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And I'll try my best smile. Like this. Cheeeese.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everyone, stand in a line. Straight and tall. Chins up!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "dog",
+      "turn:front"
+     ],
+     [
+      "bird",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone stands very, very still. Not one whisker moves.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Ready? One... two... three!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "prop:camera",
+    "hold": 0.8,
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse looks at the photo. Then she looks at Max.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max... we look like five sad potatoes.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. Everyone looks so stiff. And a little bit worried.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But nobody blinked! Nobody wagged! It was perfect!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It was perfect. And very, very boring.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then what do we do? We're out of smiles!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Maybe we're just not a smiling family.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, we are, Bird. I'm sure of it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse looks back through all the photos. One by one.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Lemon face. Blink. Blur. Blink. Wait. What's this one?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "PHOTO SIX!",
+    "cam": "two:mouse,max",
+    "hold": 1.2,
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "mouse",
+    "say": "The oops photo! The one where Dog sneezed!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But that was a mistake! Everyone was falling over!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Look, Max. Everyone is laughing. Even you!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the oops photo, Grandma's eyes are crinkly with joy.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird's feathers are fluffy. Dog's tongue is out. Max is giggling.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh my. That's the happiest picture of us I've ever seen.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the best photo is the one we didn't even try for?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Real smiles come when we have fun together. Not when we pose.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then let's not pose. Let's have fun!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Can you do your big sneeze again?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I don't know. A sneeze has to come all by itself.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Leave it to me! One feather tickle, coming up!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:dog"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird tickles Dog's nose with one soft blue feather.",
+    "cam": "two:dog,bird",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ah... ah... ah...",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Everyone ready? Don't pose! Just be you!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "No more cheese. This time we all say... AH-CHOO!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "AH-CHOO!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "prop:camera",
+    "hold": 0.8,
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max laughs so hard, he rolls right over on the rug.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Did I do it? Did I do the sneeze right?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You did the best sneeze ever, Dog!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Perfect. Two perfect photos. One silly, and one even sillier.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Best photographer in the whole world? Me!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, every holiday card gets a funny, happy photo.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And Max, I have a little present for you.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A present? For me? What is it?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the box is a tiny red harness. And a leash.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow, you can come on Dog's walk in the park!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A cat... on a walk? On a leash?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Walks are the best thing in the world, Max! You'll see!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max on a leash. Tomorrow is going to be very interesting.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Say CHEESE! Why Won't Anyone Smile? 📸😹",
+  "description": "\"Ten photos. Blink, blur, lemon face. Not one smile!\" 🐱\nGrandma wants one nice family photo for her holiday cards, but Bird blinks, Dog wags and Max makes his 'best face'. Max the Curious Cat, Ep 28.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "family photo",
+   "say cheese",
+   "holiday cards",
+   "funny photo",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "winter"
+  ],
+  "thumb_text": "SAY CHEESE?!",
+  "thumb_beat": 44,
+  "localizations": {
+   "es": {
+    "title": "¡Digan PATATA! ¿Por qué nadie sonríe? 📸😹",
+    "description": "\"Diez fotos. Parpadeo, borrón, cara de limón. ¡Ni una sonrisa!\" 🐱\nLa abuela quiere una bonita foto familiar para sus tarjetas, pero Pájaro parpadea, Perro mueve la cola y Max pone su 'mejor cara'. Max el Gato Curioso, Ep 28.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Diga XIS! Por que ninguém sorri? 📸😹",
+    "description": "\"Dez fotos. Piscada, borrão, cara de limão. Nenhum sorriso!\" 🐱\nA vovó quer uma foto bonita da família para os cartões de fim de ano, mas o Pássaro pisca, o Cachorro abana o rabo e o Max faz sua 'melhor cara'. Max, o Gato Curioso, Ep 28.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "قولوا تشيز! لماذا لا يبتسم أحد؟ 📸😹",
+    "description": "\"عشر صور. رمشة، ضبابية، وجه ليمونة. ولا ابتسامة واحدة!\" 🐱\nتريد الجدة صورة عائلية جميلة لبطاقات العيد، لكن الطائر يرمش والكلب يهز ذيله وماكس يصنع 'أفضل وجه' لديه. ماكس القط الفضولي، الحلقة 28.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Dites CHEESE ! Pourquoi personne ne sourit ? 📸😹",
+    "description": "« Dix photos. Clignement, flou, tête de citron. Pas un seul sourire ! » 🐱\nMamie veut une jolie photo de famille pour ses cartes de fêtes, mais Oiseau cligne des yeux, Chien remue la queue et Max fait sa « plus belle tête ». Max le Chat Curieux, Ép 28.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "はい、チーズ！どうしてだれも笑わないの？📸😹",
+    "description": "「写真10まい。まばたき、ブレブレ、レモン顔。笑顔はゼロ！」🐱\nおばあちゃんはカード用の家族写真がほしいのに、トリはまばたき、イヌはしっぽをふりふり、マックスは「キメ顔」。好奇心いっぱいのネコ マックス 第28話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "김치~! 왜 아무도 안 웃는 거야? 📸😹",
+    "description": "\"사진 열 장. 눈 감고, 흔들리고, 레몬 얼굴. 웃는 얼굴은 하나도 없어!\" 🐱\n할머니는 연말 카드에 넣을 가족사진 한 장을 원하지만, 새는 눈을 감고 강아지는 꼬리를 흔들고 맥스는 '최고의 표정'을 지어요. 호기심 많은 고양이 맥스 28화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Bitte LÄCHELN! Warum lacht denn keiner? 📸😹",
+    "description": "„Zehn Fotos. Blinzeln, verwackelt, Zitronengesicht. Kein einziges Lächeln!“ 🐱\nOma möchte ein schönes Familienfoto für ihre Festtagskarten, aber Vogel blinzelt, Hund wedelt und Max macht sein „bestes Gesicht“. Max die neugierige Katze, Folge 28.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 32,
+   "dur": 22,
+   "top": "NOBODY MOVE! 📸",
+   "title": "Max's Rule: NOBODY Moves for the Photo! 📸😹 (Ep 28) #shorts",
+   "description": "No blinking, no wagging... what could the photo look like? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "family photo"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La regla de Max: ¡NADIE se mueve en la foto! 📸😹 (Ep 28) #shorts",
+     "description": "Sin parpadear, sin mover la cola... ¿cómo saldrá la foto? Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A regra do Max: NINGUÉM se mexe na foto! 📸😹 (Ep 28) #shorts",
+     "description": "Sem piscar, sem abanar o rabo... como vai ficar a foto? Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قاعدة ماكس: لا أحد يتحرك في الصورة! 📸😹 (الحلقة 28) #shorts",
+     "description": "لا رمش ولا هز ذيل... كيف ستبدو الصورة؟ التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La règle de Max : PERSONNE ne bouge pour la photo ! 📸😹 (Ép 28) #shorts",
+     "description": "Pas de clignement, pas de queue qui remue... à quoi ressemblera la photo ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスのルール：写真のあいだ、だれも動かない！📸😹（第28話）#shorts",
+     "description": "まばたき禁止、しっぽ禁止…どんな写真になる？続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스의 규칙: 사진 찍을 때 아무도 움직이지 마! 📸😹 (28화) #shorts",
+     "description": "눈 깜빡임 금지, 꼬리 흔들기 금지... 사진은 어떻게 나올까요? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max' Regel: KEINER bewegt sich beim Foto! 📸😹 (Folge 28) #shorts",
+     "description": "Kein Blinzeln, kein Wedeln... wie wird das Foto wohl aussehen? Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

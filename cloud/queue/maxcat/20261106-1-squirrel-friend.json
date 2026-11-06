@@ -1,0 +1,1267 @@
+{
+ "id": "20261106-1-squirrel-friend",
+ "plot": "The morning after the pumpkin mystery Max wants the shy squirrel Nutty as a friend before tonight's first snow, but chasing and offering fish only send her up the tree; Dog shows that squirrels come to whoever lies still like a boring log, Max can't stop pouncing at leaves, and when he finally lies still Nutty comes to sniff the pumpkin seeds still stuck in his fur, so Max shares them and they become friends just as the first snowflakes fall on her hidden seeds.",
+ "script": {
+  "title": "Can Max Make Friends With a Wild Squirrel?",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "nutty": {
+    "name": "Nutty",
+    "voice": "af_sarah",
+    "speed": 1.2,
+    "pitch": 5,
+    "color": [
+     0.62,
+     0.34,
+     0.14
+    ],
+    "kind": "mouse",
+    "size": 1.35,
+    "home": [
+     8,
+     13
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "seeds",
+    "type": "ball",
+    "color": "yellow",
+    "on": "max",
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "fish",
+    "type": "banana",
+    "color": [
+     0.62,
+     0.75,
+     0.85
+    ],
+    "at": [
+     -1.0,
+     4.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Wait! Come back, squirrel! I just want to be friends!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "nutty",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Eek! A big orange cat! Up the tree, up, up!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "to:9,16"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, every time you run, she runs even faster!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHY DOES SHE RUN?",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a cool autumn morning, the day after the pumpkin mystery.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "nutty",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Yesterday Max found out who bit Grandma's pumpkin lantern.",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It was her! The squirrel with the giant fluffy tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:nutty"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Today I'll make her my friend. My very best friend!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you still have pumpkin seeds stuck in your fur.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "seeds",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Seeds? No time, Grandma! I'm busy making friends!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Squirrels are shy, Max. You must be very gentle.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Gentle? I'm the gentlest cat in the whole garden!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tiptoes to the tree. Then he just can't wait.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, squirrel! Want to play tag? Ready? You're it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Nope! Nope! Too big! Too fast! Too orange!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "to:12,18"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ha! She went right over the fence!",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max tries a snack. Everybody loves fish, right?",
+    "cam": "wide",
+    "do": [
+     [
+      "fish",
+      "show"
+     ],
+     [
+      "max",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Here, squirrel! Yummy fish! Come and get it!",
+    "cam": "prop:fish",
+    "do": [
+     [
+      "fish",
+      "bounce"
+     ],
+     [
+      "nutty",
+      "to:7,14"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Fish? Squirrels don't eat fish, silly cat! Yuck!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And with one flick of her tail, she's gone again.",
+    "cam": "wide",
+    "do": [
+     [
+      "nutty",
+      "exit"
+     ],
+     [
+      "fish",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, why are you waving a fish at a tree?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm making a friend, Bird. It's not going very well.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Squirrels like nuts and seeds. Everybody knows that!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She doesn't like me. Nobody fluffy ever likes me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't be sad, Max. I know a squirrel secret.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You? But you chase squirrels every single day!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I used to. Now I'm smarter. Watch me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog lies down in the leaves, as still as a log.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "flat_roof"
+     ],
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One minute later... tip, tap, tip, tap.",
+    "cam": "wide",
+    "do": [
+     [
+      "nutty",
+      "enter"
+     ],
+     [
+      "nutty",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Hmm. A big brown log. A warm log. Nice log.",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She walked right past his nose! How did he do that?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Squirrels come to you when you're boring, Max.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No running. No shouting. Just be a sleepy log.",
+    "cam": "two:dog,nutty",
+    "do": [
+     [
+      "nutty",
+      "to:9,16"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "BE A... LOG?!",
+    "cam": "close:max",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And hurry, Max. Snow is coming tonight.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When it snows, squirrels hide away for days.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tonight? Then today is my only chance!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay. Lesson one. Lie down. Tummy on the ground.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Lesson two. Don't look at the squirrel. Look at nothing.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look at nothing? But everything is so interesting!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max lies down. Very still. Very, very boring.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I am a log. A quiet orange log. Nothing to see.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a yellow leaf floats right past his nose.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A leaf! A dancing leaf! I must catch it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Eek! The log jumped! Logs don't jump!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "nutty",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max... logs don't catch leaves.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Being boring is the hardest thing I've ever done!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Psst! Max! Try again! She's peeking from the branch!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max lies down again. This time, he closes his eyes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ],
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He thinks of quiet things. Clouds. Pillows. Grandma's slippers.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Boring, boring, boring. I am the most boring cat ever.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Sniff, sniff. What is that yummy smell?",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "enter"
+     ],
+     [
+      "nutty",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tip, tap. Closer. Tip, tap. Even closer.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "nutty",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! Don't move! Not one whisker!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. She's sniffing my back. Why my back?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT DOES SHE WANT?",
+    "cam": "prop:seeds",
+    "hold": 1.2,
+    "do": [
+     [
+      "seeds",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "nutty",
+    "say": "Pumpkin seeds! A whole cat covered in pumpkin seeds!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The seeds! Grandma said they were stuck in my fur!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So she never ran from you. She came for the snack!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I know just what a good friend would do.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max picks the seeds out of his fur, one by one.",
+    "cam": "wide",
+    "do": [
+     [
+      "seeds",
+      "drop:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "These are for you, little squirrel. You can have them all.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "seeds",
+      "give:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "For me? A cat who shares? That's so... un-cat!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "My name is Nutty. What's yours, kind log?",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm Max! And, um, I'm not really a log.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "I know. Logs don't purr when they're happy.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well done, Max. Gentle and sharing. That's how friends begin.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And being boring! Don't forget the boring part!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nutty stuffs her cheeks with seeds. Puff, puff, puff!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "I'll hide some for winter. In my secret spot!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Where is your secret spot, Nutty?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:nutty"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "If I tell you, it won't be a secret anymore!",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "nutty",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "nutty",
+    "say": "Bye, Max! Thank you for the seeds! See you tomorrow!",
+    "cam": "close:nutty",
+    "do": [
+     [
+      "nutty",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did you hear that, Dog? She said see you tomorrow!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Friends don't come when we chase.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They come when we are gentle, and when we share.",
+    "cam": "two:max,nutty",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then something small and cold lands on Max's nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! The sky is falling! In tiny white pieces!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The first snow! And Nutty's seeds are still out there...",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "nutty",
+      "exit"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Make Friends With a Wild Squirrel? 🐿️🐱",
+  "description": "\"I only wanted a new friend. Why does she keep running away?\" 🐱\nMax wants the shy squirrel from the garden to be his friend, but every chase sends her up the tree. Dog has a funny secret: be as boring as a log! Max the Curious Cat, Ep 26.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "squirrel",
+   "cat and squirrel",
+   "making friends",
+   "autumn",
+   "first snow",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "COME BACK!",
+  "thumb_beat": 30,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max hacerse amigo de una ardilla salvaje? 🐿️🐱",
+    "description": "\"Solo quería una nueva amiga. ¿Por qué sigue huyendo?\" 🐱\nMax quiere que la ardilla tímida del jardín sea su amiga, pero cada vez que corre ella sube al árbol. Perro tiene un secreto divertido: ¡ser tan aburrido como un tronco! Max el Gato Curioso, Ep 26.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max consegue fazer amizade com um esquilo? 🐿️🐱",
+    "description": "\"Eu só queria um novo amigo. Por que ela continua fugindo?\" 🐱\nMax quer que a esquilinha tímida do jardim seja sua amiga, mas cada corrida a manda para cima da árvore. O Cachorro tem um segredo engraçado: seja chato como um tronco! Max, o Gato Curioso, Ep 26.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس مصادقة سنجاب بري؟ 🐿️🐱",
+    "description": "\"أردت صديقة جديدة فقط. لماذا تهرب مني دائمًا؟\" 🐱\nيريد ماكس أن تصبح السنجابة الخجولة في الحديقة صديقته، لكن كل مطاردة ترسلها إلى أعلى الشجرة. لدى الكلب سرّ مضحك: كن مملًا مثل جذع شجرة! ماكس القط الفضولي، الحلقة 26.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max peut-il devenir ami avec un écureuil ? 🐿️🐱",
+    "description": "« Je voulais juste une nouvelle amie. Pourquoi elle s'enfuit toujours ? » 🐱\nMax veut que l'écureuil timide du jardin devienne son amie, mais chaque course la renvoie en haut de l'arbre. Chien a un secret rigolo : être aussi ennuyeux qu'une bûche ! Max le Chat Curieux, Ép 26.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスは野生のリスと友だちになれる？🐿️🐱",
+    "description": "「新しい友だちがほしいだけなのに。どうして逃げちゃうの？」🐱\nマックスは庭のはずかしがりやのリスと友だちになりたいけど、追いかけるたびに木の上へ。イヌにはおもしろいひみつが…丸太みたいにじっとすること！好奇心いっぱいのネコ マックス 第26話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스는 야생 다람쥐와 친구가 될 수 있을까? 🐿️🐱",
+    "description": "\"새 친구를 원했을 뿐인데. 왜 자꾸 도망가는 거야?\" 🐱\n맥스는 정원의 수줍은 다람쥐와 친구가 되고 싶지만, 쫓아갈 때마다 다람쥐는 나무 위로 올라가요. 강아지에게는 재미있는 비밀이 있어요. 통나무처럼 지루해지기! 호기심 많은 고양이 맥스 26화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Kann Max sich mit einem Eichhörnchen anfreunden? 🐿️🐱",
+    "description": "„Ich wollte doch nur eine neue Freundin. Warum rennt sie immer weg?“ 🐱\nMax möchte, dass das scheue Eichhörnchen im Garten seine Freundin wird, doch jede Jagd schickt es auf den Baum. Hund hat ein lustiges Geheimnis: so langweilig sein wie ein Baumstamm! Max die neugierige Katze, Folge 26.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "WHY DOES SHE RUN?! 🐿️",
+   "title": "Max Just Wants ONE Squirrel Friend! 🐿️😹 (Ep 26) #shorts",
+   "description": "Every time Max runs, the squirrel runs faster. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "squirrel"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max solo quiere UNA amiga ardilla! 🐿️😹 (Ep 26) #shorts",
+     "description": "Cada vez que Max corre, la ardilla corre más rápido. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max só quer UMA amiga esquilo! 🐿️😹 (Ep 26) #shorts",
+     "description": "Toda vez que Max corre, a esquilinha corre mais rápido. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يريد صديقة سنجابة واحدة فقط! 🐿️😹 (الحلقة 26) #shorts",
+     "description": "كلما ركض ماكس، ركضت السنجابة أسرع. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max veut juste UNE amie écureuil ! 🐿️😹 (Ép 26) #shorts",
+     "description": "Chaque fois que Max court, l'écureuil court plus vite. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスはリスの友だちがほしいだけ！🐿️😹（第26話）#shorts",
+     "description": "マックスが走るたび、リスはもっと速く逃げちゃう。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스는 다람쥐 친구 딱 한 명이면 돼요! 🐿️😹 (26화) #shorts",
+     "description": "맥스가 달릴 때마다 다람쥐는 더 빨리 도망가요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max will nur EINE Eichhörnchen-Freundin! 🐿️😹 (Folge 26) #shorts",
+     "description": "Jedes Mal, wenn Max rennt, rennt das Eichhörnchen schneller. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 40,
+   "dur": 20,
+   "top": "CAN A CAT BE A LOG? 🪵",
+   "title": "Max Tries to Be a Log... It Doesn't Go Well 🪵😹 (Ep 26) #shorts",
+   "description": "Being boring is the hardest thing Max has ever done. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "squirrel"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max intenta ser un tronco... y no sale bien 🪵😹 (Ep 26) #shorts",
+     "description": "Ser aburrido es lo más difícil que Max ha hecho. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max tenta ser um tronco... e não dá certo 🪵😹 (Ep 26) #shorts",
+     "description": "Ser chato é a coisa mais difícil que o Max já fez. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يحاول أن يكون جذع شجرة... ولا ينجح 🪵😹 (الحلقة 26) #shorts",
+     "description": "أن تكون مملًا هو أصعب شيء فعله ماكس. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max essaie d'être une bûche... ça ne marche pas 🪵😹 (Ép 26) #shorts",
+     "description": "Être ennuyeux, c'est le plus dur que Max ait jamais fait. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、丸太になろうとするけど…🪵😹（第26話）#shorts",
+     "description": "じっとしているのが、マックスにはいちばんむずかしい！続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 통나무가 되어 보려는데... 쉽지 않아요 🪵😹 (26화) #shorts",
+     "description": "지루하게 있기는 맥스에게 세상에서 제일 어려운 일이에요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max versucht, ein Baumstamm zu sein... klappt nicht 🪵😹 (Folge 26) #shorts",
+     "description": "Langweilig sein ist das Schwerste, was Max je gemacht hat. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
