@@ -209,7 +209,8 @@ def render(script, out_mp4, work, log=print):
     th = theme(script)
     scenes = script["scenes"]
     voice = script.get("voice") or "af_heart"
-    audio, timing, T = mvoice.speak(scenes, voice=voice, speed=float(script.get("speed", 1.08)))
+    audio, timing, T = mvoice.speak(scenes, voice=voice, speed=float(script.get("speed", 1.08)),
+                                     cache=os.path.join(work, "tts"))
     T = round(math.ceil(T * FPS) / FPS, 4)
     nfr = int(round(T * FPS))
     audio = np.pad(audio, (0, max(0, int(T * SR) - len(audio))))[: int(T * SR)]
@@ -223,7 +224,7 @@ def render(script, out_mp4, work, log=print):
     wav = os.path.join(work, "mix.wav")
     sf.write(wav, mixd.astype(np.float32), SR)
     ln = loudnorm_args(wav)
-    log(f"audio {T:.1f}s, tts+mix {time.time() - t_start:.0f}s")
+    log(f"audio {T:.1f}s, speech {timing[-1]['speech_end']:.1f}s, tts+mix {time.time() - t_start:.0f}s")
 
     caps = [chunks(tm["words"]) for tm in timing]
     base = make_bg(th)

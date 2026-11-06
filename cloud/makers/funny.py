@@ -54,6 +54,31 @@ def tags(theme_name):
             "funny moments", "try not to laugh", "funny videos", "shorts", "funny rank daily"]
 
 
+def selfcheck(mp4, title):
+    """Same gate the worker uses (tools/rek_ball.py). Below 85 → one try with its kuchaytir (punch-in re-edit)."""
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(HERE)), "tools"))
+        import rek_ball
+    except Exception as e:
+        log("rek_ball not importable:", e)
+        return None
+    r = rek_ball.baho(mp4, title, "short")
+    log("rek-ball", r["ball"], r["qism"], r["muammo"])
+    if r["ball"] >= 85:
+        return r["ball"]
+    try:
+        nf = rek_ball.kuchaytir(mp4, "short")
+        r2 = rek_ball.baho(nf, title, "short")
+        log("rek-ball after kuchaytir", r2["ball"], r2["muammo"])
+        if r2["ball"] > r["ball"]:
+            os.replace(nf, mp4)
+            return r2["ball"]
+        os.remove(nf)
+    except Exception as e:
+        log("kuchaytir failed:", str(e)[:200])
+    return r["ball"]
+
+
 def build(clips, theme, sc, out_dir, name, work, titles, seed, rng):
     """clips: list of ≥5 dicts with 'file'. Picks moments, ranks, renders, writes mp4+json. Returns item or None."""
     scored = []
@@ -76,10 +101,17 @@ def build(clips, theme, sc, out_dir, name, work, titles, seed, rng):
     title = TH.make_title(theme[0], titles, rng)
     mp4 = os.path.join(out_dir, name + ".mp4")
     info = R.render_short(order, theme[0], sc, mp4, work, seed=seed, log=log)
+    ball = selfcheck(mp4, title)
+    if ball is not None:
+        info["rek"] = ball
+        if ball < 85:
+            log(f"rek-ball {ball} < 85 → not handed to the worker")
+            os.remove(mp4)
+            return None
     item = {"file": name + ".mp4", "kind": "short", "title": title,
             "description": description(sc, order, theme[0]), "tags": tags(theme[0]),
             "sources": [{"rank": r, "id": c["id"], "title": c["title"], "channel": c["channel"],
-                         "start": c["m"]["start"]} for r, c in zip((5, 4, 3, 2, 1), order)],
+                         "peak_s": c["m"]["peak"]} for r, c in zip((5, 4, 3, 2, 1), order)],
             "render": info}
     json.dump(item, open(os.path.join(out_dir, name + ".json"), "w"), ensure_ascii=False, indent=1)
     log("made", name, "|", title, "|", info)

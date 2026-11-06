@@ -132,7 +132,10 @@ def _render_scene(i):
                     a = min(a, max(0.0, (o["t1"] - t) / o["fade_out"]))
                 if a > 0:
                     art.composite(fr, ov, a)
-        p.stdin.write(np.ascontiguousarray(fr, dtype=np.uint8).tobytes())
+        try:
+            p.stdin.write(np.ascontiguousarray(fr, dtype=np.uint8).tobytes())
+        except BrokenPipeError:
+            raise RuntimeError(f"ffmpeg died (scene {i}, frame shape {fr.shape}): " + p.stderr.read().decode()[-400:])
     p.stdin.close()
     err = p.stderr.read().decode()
     if p.wait():

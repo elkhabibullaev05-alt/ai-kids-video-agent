@@ -170,7 +170,7 @@ def synth_clips(dst_dir, n=5, seed=1):
               f"[3:a]volume='0.9*between(t,{peak},{peak + 0.5})':eval=frame[nz];[t][nz]amix=inputs=2:normalize=0[a]")
         cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
                "-f", "lavfi", "-i", vsrc,
-               "-f", "lavfi", "-i", f"color=c={cols[i]}:s=180x180:r=30:d={d}",
+               "-f", "lavfi", "-i", f"color=c={cols[i % len(cols)]}:s=180x180:r=30:d={d}",
                "-f", "lavfi", "-i", f"sine=f={rng.choice([220, 330, 440, 550])}:d={d}:sample_rate=48000",
                "-f", "lavfi", "-i", f"anoisesrc=d={d}:c=pink:a=0.5:r=48000",
                "-filter_complex", vf + ";" + af, "-map", "[v]", "-map", "[a]", "-t", str(d),

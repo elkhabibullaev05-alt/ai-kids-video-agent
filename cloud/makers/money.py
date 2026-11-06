@@ -146,7 +146,8 @@ def main():
                 "tags": tags_of(sc), "queue_file": os.path.relpath(jf, repo).replace(os.sep, "/")}
         json.dump(meta, open(os.path.join(a.out, stem + ".json"), "w"), ensure_ascii=False, indent=1)
         used.add(norm(sc["title"]))
-        shutil.rmtree(work, ignore_errors=True)
+        if not os.environ.get("MONEY_KEEP_WORK"):
+            shutil.rmtree(work, ignore_errors=True)
         made += 1
         log(f"money: made {stem}.mp4 ({r['duration']:.1f}s, {r['seconds_render']:.0f}s render)")
     if made:

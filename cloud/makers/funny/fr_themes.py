@@ -117,10 +117,12 @@ FUNNY_WORDS = ["fail", "fails", "funny", "funniest", "lol", "oops", "epic", "hil
 BAD_WORDS = ["injur", "hurt", "blood", "hospital", "accident", "crash", "died", "death", "dead", "kill", "fight",
              "abuse", "cruel", "attack", "bite", "bitten", "broken", "ambulance", "war", "gun", "shoot", "scary",
              "horror", "nsfw", "sexy", "bikini", "tutorial", "how to", "review", "unboxing", "asmr", "podcast",
-             "news", "reaction", "reacts", "prank", "scare", "scared", "vomit", "puke", "drunk", "weed", "fire",
-             "burn", "knife", "police", "cop", "arrest", "explosion", "explode", "tragic", "rip ", "funeral",
+             "news", "reaction", "reacts", "prank", "pranks", "scare", "scared", "vomit", "puke", "drunk", "weed", "fire",
+             "burn", "knife", "police", "cop", "arrest", "explosion", "explode", "tragic", "rip", "funeral",
              "cucumber", "1 hour", "livestream", "live stream", "trailer", "music video", "lyrics", "slaughter",
-             "hunting", "rescue", "sick", "vet ", "surgery", "storm", "flood", "tornado", "earthquake"]
+             "hunting", "rescue", "sick", "vet", "surgery", "storm", "flood", "tornado", "earthquake"]
+
+BAD_PREFIX = {"injur", "explo", "crash", "burn", "kill", "attack", "bit", "scar"}
 
 TITLE_PATTERNS = [
     "Ranking {n} (Wait for #1) 💀",
@@ -187,10 +189,12 @@ def pick_themes(titles, home, n, rng=random, skip=()):
     hist = load_hist(home)
     cut = (dt.date.today() - dt.timedelta(days=12)).isoformat()
     ok = [t for t in THEMES if _norm(t[0]) not in recent and hist.get(t[0], "") < cut and t[0] not in skip]
-    if len(ok) < n:  # everything used lately → least recently used
-        ok = sorted([t for t in THEMES if t[0] not in skip], key=lambda t: hist.get(t[0], ""))[:max(n * 3, 10)]
     rng.shuffle(ok)
     ok.sort(key=lambda t: hist.get(t[0], ""))  # never-used first, shuffle within ties
+    if len(ok) < n:  # almost everything used lately → add least recently used themes not in recent titles first
+        rest = [t for t in THEMES if t not in ok and t[0] not in skip]
+        rest.sort(key=lambda t: (_norm(t[0]) in recent, hist.get(t[0], "")))
+        ok += rest
     return ok
 
 
@@ -223,7 +227,7 @@ def script(rng=random):
 
 def clip_ok(title, desc, kws):
     t = " " + (title or "").lower() + " "
-    if any(re.search(r"\b" + re.escape(b.strip()), t) for b in BAD_WORDS):
+    if any(re.search(r"\b" + re.escape(b) + ("" if b in BAD_PREFIX else r"s?\b"), t) for b in BAD_WORDS):
         return False
     if not any(k in t for k in kws):
         return False

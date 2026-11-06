@@ -267,28 +267,35 @@ def _env(x, win):
 
 
 # ------------------------------------------------------------------ render
-def render_segment(src, start, length, out, ov, ov_end=None, end_from=None, intro=False, fw=W, fh=608, punch_seed=0):
+def render_part(p, out, fw, fh, seed=0):
+    """One shot. p: src, start (source s), len (output s), speed (<1 = slow-mo), style intro|main|replay,
+    ov (png), ov_end/end_from (second png that replaces ov from end_from s)."""
     cy = BOX_Y + BOX_H // 2
-    if intro:
-        z = f"(1.22-0.12*t/{length:.2f})"
-    else:
-        ph = 1.1 + (punch_seed % 3) * 0.2
-        z = f"((1+0.015*t)*if(lt(mod(t+{punch_seed % 2}*{ph:.2f},{2 * ph:.2f}),{ph:.2f}),1.0,1.11))"
-    inputs = ["-ss", f"{start:.3f}", "-t", f"{length:.3f}", "-i", src,
-              "-loop", "1", "-framerate", str(FPS), "-t", f"{length:.3f}", "-i", ov]
-    fc = (f"[0:v]fps={FPS},setpts=PTS-STARTPTS,setsar=1,split=2[a][b];"
+    L, sp = p["len"], p.get("speed", 1.0)
+    if p["style"] in ("intro", "replay"):  # zoomed on the peak, dark spotlight background
+        z = f"(1.34-0.10*t/{L:.2f})"
+        bright = -0.30
+    else:  # punch-in every ~1.2-1.6 s
+        ph = 1.2 + (seed % 3) * 0.2
+        z = f"((1+0.015*t)*if(lt(mod(t+{seed % 2}*{ph:.2f},{2 * ph:.2f}),{ph:.2f}),1.0,1.11))"
+        bright = -0.06
+    inputs = ["-ss", f"{p['start']:.3f}", "-t", f"{L * sp + 0.1:.3f}", "-i", p["src"],
+              "-loop", "1", "-framerate", str(FPS), "-t", f"{L:.3f}", "-i", p["ov"]]
+    fc = (f"[0:v]setpts=(PTS-STARTPTS)/{sp},fps={FPS},setsar=1,split=2[a][b];"
           f"[a]scale=270:480:force_original_aspect_ratio=increase,crop=270:480,boxblur=8:2,"
-          f"scale={W}:{H},eq=brightness=-0.08:saturation=1.35[bg];"
+          f"scale={W}:{H},eq=brightness={bright}:saturation=1.35[bg];"
           f"[b]scale=w='trunc({fw}*{z}/2)*2':h='trunc({fh}*{z}/2)*2':eval=frame,"
           f"eq=contrast=1.06:saturation=1.15[fg];"
-          f"[bg][fg]overlay=x='(W-w)/2':y='{cy}-h/2':eval=frame[m];[m][1:v]overlay=0:0[o]")
-    last = "o"
-    if ov_end:
-        inputs += ["-loop", "1", "-framerate", str(FPS), "-t", f"{length:.3f}", "-i", ov_end]
-        fc += f";[o][2:v]overlay=0:0:enable='gte(t,{end_from:.2f})'[o2]"
-        last = "o2"
-    fc += f";[{last}]" + ("" if intro else "fade=t=in:st=0:d=0.10:color=white,") + "format=yuv420p[v]"
-    ff(inputs + ["-filter_complex", fc, "-map", "[v]", "-t", f"{length:.3f}", "-r", str(FPS),
+          f"[bg][fg]overlay=x='(W-w)/2':y='{cy}-h/2':eval=frame[m]")
+    if p.get("ov_end"):
+        inputs += ["-loop", "1", "-framerate", str(FPS), "-t", f"{L:.3f}", "-i", p["ov_end"]]
+        e = p["end_from"]
+        fc += (f";[m][1:v]overlay=0:0:enable='lt(t,{e:.2f})'[o1]"
+               f";[o1][2:v]overlay=0:0:enable='gte(t,{e:.2f})'[o]")
+    else:
+        fc += ";[m][1:v]overlay=0:0[o]"
+    fc += ";[o]" + ("fade=t=in:st=0:d=0.10:color=white," if p["style"] == "main" else "") + "format=yuv420p[v]"
+    ff(inputs + ["-filter_complex", fc, "-map", "[v]", "-t", f"{L:.3f}", "-r", str(FPS),
                  "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-an", out])
     return out
 
@@ -300,8 +307,17 @@ def fit(w, h):
     return int(w * s) // 2 * 2, int(h * s) // 2 * 2
 
 
+def _slow(a, speed):
+    """Slow-mo audio by resampling (pitch drops — the classic funny replay sound)."""
+    if speed >= 0.999 or not len(a):
+        return a
+    n = int(len(a) / speed)
+    return np.interp(np.linspace(0, len(a) - 1, n), np.arange(len(a)), a).astype(np.float32)
+
+
 def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
-    """clips: 5 dicts with file + moment (start,len,peak,w,h,audio), already ordered #5..#1."""
+    """clips: 5 dicts with file + moment m (start,len,peak,w,h,audio,dur), ordered #5..#1.
+    Shots: intro (#1 peak, slow zoom, hook text) → for each rank: main shot (+voice) → slow-mo replay of its peak."""
     t0 = time.time()
     rng = random.Random(seed)
     os.makedirs(work, exist_ok=True)
@@ -310,55 +326,60 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
     lines = [sc["hook"]] + [sc["ranks"][r]["say"] for r in (5, 4, 3, 2, 1)] + [sc["end_say"]]
     vo = tts(lines, voice=voice, speed=1.15)
     hook_v, rank_v, end_v = vo[0], vo[1:6], vo[6]
-    # timeline
-    one = clips[4]
-    intro_len = max(1.6, len(hook_v) / SR + 0.15)
-    segs = [{"kind": "intro", "clip": one, "len": intro_len,
-             "start": max(0.0, min(one["m"]["peak"] - 0.5, one["m"]["dur"] - intro_len - 0.05))}]
-    for i, r in enumerate((5, 4, 3, 2, 1)):
-        c = clips[i]
-        base = 6.3 if r == 1 else 5.0
-        need = len(rank_v[i]) / SR + (len(end_v) / SR + 1.6 if r == 1 else 0.9)
-        L = max(base, need)
-        L = min(L, c["m"]["dur"] - 0.05) if c["m"]["dur"] > 2.5 else L
-        st = c["m"]["start"]
-        if st + L > c["m"]["dur"]:
-            st = max(0.0, c["m"]["dur"] - L - 0.05)
-        segs.append({"kind": "rank", "rank": r, "clip": c, "len": L, "start": st})
-    total = sum(s["len"] for s in segs)
-    log(f"timeline {total:.1f}s, voice {voice}")
-    # overlays + video segments
-    files = []
+    sec = lambda a: len(a) / SR  # noqa
+    RS = 0.5  # replay speed
+
+    def rep_src(m, out_len):  # source window for a replay ending a little after the peak
+        src_len = out_len * RS
+        return max(0.0, min(m["peak"] - 0.6 * src_len, m["dur"] - src_len - 0.05))
+
+    one = clips[4]["m"]
+    parts = []
+    intro_len = max(1.5, sec(hook_v) + 0.15)
+    parts.append({"style": "intro", "clip": clips[4], "len": intro_len, "speed": RS,
+                  "start": rep_src(one, intro_len), "voice": [(hook_v, 0.0)]})
     revealed = []
     ov_intro = overlay(os.path.join(work, "ov_intro.png"), theme_name, color, sc, big=sc["hook_text"])
-    for k, s in enumerate(segs):
-        c = s["clip"]
-        fw, fh = fit(c["m"]["w"], c["m"]["h"])
-        out = os.path.join(work, f"seg{k}.mp4")
-        if s["kind"] == "intro":
-            render_segment(c["file"], s["start"], s["len"], out, ov_intro, intro=True, fw=fw, fh=fh)
-        else:
-            r = s["rank"]
-            ov = overlay(os.path.join(work, f"ov{r}.png"), theme_name, color, sc, rank=r,
-                         caption=sc["ranks"][r]["line"], revealed=tuple(revealed))
-            ov_end = end_from = None
-            if r == 1:
-                ov_end = overlay(os.path.join(work, "ov_end.png"), theme_name, color, sc, rank=None,
-                                 caption="COMMENT BELOW", big=sc["end_text"], revealed=(1, 2, 3, 4, 5))
-                end_from = s["len"] - len(end_v) / SR - 0.3
-                s["end_from"] = end_from
-            render_segment(c["file"], s["start"], s["len"], out, ov, ov_end, end_from, fw=fw, fh=fh, punch_seed=k)
-            revealed.append(r)
-        files.append(out)
+    parts[0]["ov"] = ov_intro
+    for i, r in enumerate((5, 4, 3, 2, 1)):
+        c = clips[i]
+        m = c["m"]
+        main_len = max(4.6 if r == 1 else 4.0, sec(rank_v[i]) + 0.9)
+        main_len = min(main_len, m["dur"] - 0.1)
+        # main shot ends ~0.3 s after the peak, so the replay right after it shows the payoff again
+        st = max(0.0, min(m["peak"] + 0.3 - main_len, m["dur"] - main_len - 0.05))
+        ov = overlay(os.path.join(work, f"ov{r}.png"), theme_name, color, sc, rank=r,
+                     caption=sc["ranks"][r]["line"], revealed=tuple(revealed))
+        parts.append({"style": "main", "clip": c, "len": main_len, "speed": 1.0, "start": st, "ov": ov,
+                      "voice": [(rank_v[i], 0.12)], "sfx": True})
+        rep_len = 2.2 if r == 1 else 1.6
+        ov_r = overlay(os.path.join(work, f"ov{r}r.png"), theme_name, color, sc, rank=r,
+                       caption="SLOW-MO REPLAY", revealed=tuple(revealed))
+        rp = {"style": "replay", "clip": c, "len": rep_len, "speed": RS, "start": rep_src(m, rep_len), "ov": ov_r,
+              "voice": []}
+        if r == 1:  # end question over the last replay (looks like frame 0 → smooth loop)
+            rp["len"] = rep_len = max(rep_len, sec(end_v) + 0.4)
+            rp["start"] = rep_src(m, rep_len)
+            rp["ov_end"] = overlay(os.path.join(work, "ov_end.png"), theme_name, color, sc,
+                                   caption="COMMENT BELOW", big=sc["end_text"], revealed=(1, 2, 3, 4, 5))
+            rp["end_from"] = 0.25
+            rp["voice"] = [(end_v, 0.25)]
+        parts.append(rp)
+        revealed.append(r)
+    total = sum(p["len"] for p in parts)
+    log(f"timeline {total:.1f}s in {len(parts)} shots, voice {voice}")
+    files = []
+    for k, p in enumerate(parts):
+        p["src"] = p["clip"]["file"]
+        fw, fh = fit(p["clip"]["m"]["w"], p["clip"]["m"]["h"])
+        files.append(render_part(p, os.path.join(work, f"part{k:02d}.mp4"), fw, fh, seed=k))
     lst = os.path.join(work, "list.txt")
     open(lst, "w").write("".join(f"file '{os.path.abspath(f)}'\n" for f in files))
     vid = os.path.join(work, "video.mp4")
     ff(["-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", vid])
-    # audio mix
+    # ---- audio: clip sound (normalised, ducked under the voice) + voice + synth music bed + whooshes
     n = int(round(total * SR))
-    clip_t = np.zeros(n, np.float32)
-    voice_t = np.zeros(n, np.float32)
-    sfx_t = np.zeros(n, np.float32)
+    clip_t, voice_t, sfx_t = (np.zeros(n, np.float32) for _ in range(3))
 
     def put(arr, sig, at):
         i = int(at * SR)
@@ -367,30 +388,29 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
             arr[i:j] += sig[:j - i]
 
     T = 0.0
-    for k, s in enumerate(segs):
-        a = clip_audio(s["clip"]["file"], s["start"], s["len"], s["clip"]["m"]["audio"])
+    for p in parts:
+        a = clip_audio(p["src"], p["start"], p["len"] * p["speed"], p["clip"]["m"]["audio"])
+        a = _slow(a, p["speed"])[:int(p["len"] * SR)]
         fade = int(0.03 * SR)
-        a[:fade] *= np.linspace(0, 1, fade)
-        a[-fade:] *= np.linspace(1, 0, fade)
+        if len(a) > 2 * fade:
+            a[:fade] *= np.linspace(0, 1, fade)
+            a[-fade:] *= np.linspace(1, 0, fade)
         put(clip_t, a, T)
-        if s["kind"] == "intro":
-            put(voice_t, hook_v, 0.0)
-        else:
-            i = (5, 4, 3, 2, 1).index(s["rank"])
-            put(voice_t, rank_v[i], T + 0.12)
-            put(sfx_t, whoosh(rng), max(0, T - 0.12))
-            if s["rank"] == 1:
-                put(voice_t, end_v, T + s["end_from"] + 0.1)
-        T += s["len"]
+        for sig, at in p["voice"]:
+            put(voice_t, sig, T + at)
+        if p.get("sfx"):
+            put(sfx_t, whoosh(rng), max(0.0, T - 0.12))
+        T += p["len"]
     bed = music(total, rng)
     env = _env(voice_t, int(0.25 * SR))
-    mix = clip_t * (1 - 0.72 * env) + voice_t * 0.95 + bed * (0.16 - 0.08 * env) + sfx_t * 0.35
+    mix = clip_t * (1 - 0.72 * env) + voice_t * 0.95 + bed * (0.17 - 0.08 * env) + sfx_t * 0.35
     mix = mix / max(1.0, np.abs(mix).max() / 0.95)
     wav = os.path.join(work, "mix.wav")
     import soundfile as sf
     sf.write(wav, mix, SR)
     ff(["-i", vid, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
-        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,alimiter=limit=0.84:level=false,aresample=48000",
+        "-af", "acompressor=threshold=0.1:ratio=3:attack=10:release=150,"
+               "loudnorm=I=-13:TP=-1.5:LRA=7,alimiter=limit=0.84:level=false,aresample=48000",
         "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out_mp4])
     log(f"rendered {out_mp4} in {time.time() - t0:.0f}s")
-    return {"duration": round(total, 2), "voice": voice, "render_s": round(time.time() - t0)}
+    return {"duration": round(total, 2), "voice": voice, "shots": len(parts), "render_s": round(time.time() - t0)}
