@@ -82,6 +82,18 @@ def make_prop(p):
         bpy.ops.mesh.primitive_cylinder_add(radius=0.32, depth=2.0, location=(0, 0, 0)); o = add(bpy.context.object, m)
     elif t == "cone":
         bpy.ops.mesh.primitive_cone_add(radius1=0.6, depth=1.4, location=(0, 0, 0.7)); o = add(bpy.context.object, m)
+    elif t == "ship":  # 1930s steel cargo steamer (Baychimo): long dark hull along x, white deckhouse, one funnel, two masts; "lit": glowing portholes
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 0.55)); o = add(bpy.context.object, m, False); o.scale = (6.0, 1.3, 1.1)
+        bpy.ops.mesh.primitive_cone_add(vertices=4, radius1=0.92, depth=1.3, location=(3.55, 0, 0.55), rotation=(0, math.radians(90), math.radians(45))); bw = add(bpy.context.object, m, False); bw.scale = (0.85, 1.0, 1.0); parent(bw, o)
+        dk = mat("p_deck", (0.55, 0.53, 0.48), 0.6)
+        bpy.ops.mesh.primitive_cube_add(size=1, location=(-0.6, 0, 1.45)); h_ = add(bpy.context.object, dk, False); h_.scale = (1.8, 0.95, 0.7); parent(h_, o)
+        bpy.ops.mesh.primitive_cylinder_add(radius=0.22, depth=1.3, location=(-0.6, 0, 2.3)); parent(add(bpy.context.object, mat("p_funnel", (0.12, 0.1, 0.09), 0.5)), o)
+        for mx in (1.9, -2.4):
+            bpy.ops.mesh.primitive_cylinder_add(radius=0.05, depth=3.2, location=(mx, 0, 2.7)); parent(add(bpy.context.object, dk), o)
+        if p.get("lit"):
+            wm_ = mat("p_port", (1.0, 0.8, 0.4), 0.4, 0, 6)
+            for wx in (-1.2, -0.6, 0.0):
+                bpy.ops.mesh.primitive_uv_sphere_add(radius=0.09, location=(wx, -0.49, 1.5)); parent(add(bpy.context.object, wm_), o)
     elif t == "star":
         bpy.ops.mesh.primitive_cone_add(vertices=5, radius1=1.0, depth=0.4, rotation=(math.radians(90), 0, 0)); o = add(bpy.context.object, m, False)
     elif t == "trophy":
