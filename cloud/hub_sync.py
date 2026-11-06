@@ -87,10 +87,10 @@ for ch, key in MAP.items():
             if e.get("publish_at") and e.get("title"):
                 items.append({"at": e["publish_at"], "title": e["title"], "id": e.get("video"), "kind": kind})
     nowiso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    nxt = sorted((x for x in items if x["at"] > nowiso), key=lambda x: x["at"])[:12]
+    nxt = sorted((x for x in items if x["at"] > nowiso), key=lambda x: x["at"])[:30]
     out_v = sorted((x for x in items if x["at"] <= nowiso), key=lambda x: x["at"], reverse=True)[:12]
     doc = {"status": status, "status_text": text + " · " + ", ".join(extra), "activity": act,
-           "next": [{"at": x["at"], "title": x["title"]} for x in nxt],
+           "next": [{"at": x["at"], "title": x["title"], "kind": x["kind"]} for x in nxt],
            "videos": [{"t": x["title"], "id": x["id"], "kind": x["kind"], "at": x["at"]} for x in out_v],
            "last_seen": st.get("time"), "host": st.get("host"), "today_made": up_today}
     json.dump(doc, open(f"{out}/agents/{key}.json", "w"), ensure_ascii=False)
