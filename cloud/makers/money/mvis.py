@@ -201,7 +201,7 @@ def v_big_number(d, s, p, D, th):
         k = back(p / 0.45)
         icon(d, s["icon"], CX, top + 105, int(200 * max(0.05, k)), th["accent"], th["bg"])
         top += 240
-    v = _count(frm, val, p)
+    v = _count(frm, val, p, dur=float(s.get("count_dur", 1.1)))
     txt = fmt(v, pre, suf, dec)
     f = fit(fmt(val, pre, suf, dec), X1 - X0, 260)
     ctext(d, (CX, top + 140), txt, f, th["accent"] if s.get("hi", True) else th["ink"])

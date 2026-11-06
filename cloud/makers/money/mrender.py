@@ -192,7 +192,7 @@ def make_bg(th):
 def palette(th):
     """Background tones that alternate on every beat (cream -> accent tint -> sand)."""
     cream = th["bg"]
-    return [cream, V.mix(cream, th["accent"], 0.2), V.hexc("#E5DBC8")]
+    return [cream, V.mix(cream, th["accent"], 0.2), cream, V.hexc("#DDD0B8")]
 
 
 def frame_bg(base, t, T, col):
@@ -265,10 +265,11 @@ def render(script, out_mp4, work, log=print):
         th_f = dict(th, bg=col, soft=V.mix(col, th["ink"], 0.12))
         img = frame_bg(base, t, T, col)
         d = ImageDraw.Draw(img)
-        sb = [b for b in beats if tm["t0"] < b <= t]  # punches already passed inside this scene
-        if i == 0:
-            p += 0.45  # frame 0 already shows the number counting and the icon
         spec = scenes[i].get("visual", {"type": "statement", "text": scenes[i]["say"]})
+        sb = [b for b in beats if tm["t0"] < b <= t]  # punches already passed inside this scene
+        if i == 0:  # frame 0 already shows the icon; the number counts up through the whole hook
+            p += 0.45
+            spec = dict(scenes[0].get("visual", {}), count_dur=2.4)
         if i == 0 and hook:
             ybot = draw_hook(img, d, hook, t, th_f)
             scale_base, py = 0.76, max(ybot + 10, 660)
@@ -298,12 +299,12 @@ def render(script, out_mp4, work, log=print):
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p", "-r", str(FPS),
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{T:.3f}", "-movflags", "+faststart", out_mp4]
     pr = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-    fade = 0.3
+    fade = 0.4
     for k in range(nfr):
         t = k / FPS
         im = frame0 if k == 0 else draw(t)
         if t > T - fade:  # loop: the last frames melt into frame 0
-            im = Image.blend(im, frame0, V.clamp((t - (T - fade)) / (fade - 1 / FPS)))
+            im = Image.blend(im, frame0, V.clamp((t - (T - fade)) / (fade - 0.15)))
         pr.stdin.write(im.tobytes())
         if k % 300 == 0:
             log(f"  frame {k}/{nfr}  {time.time() - t_start:.0f}s")

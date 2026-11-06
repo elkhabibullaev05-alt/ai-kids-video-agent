@@ -41,6 +41,14 @@ def words(n):
     return str(n)
 
 
+def money_words(n):
+    """How Americans say amounts: 4,100 -> forty-one hundred, 1,450 -> fourteen fifty, 6,000 -> six thousand."""
+    if 1100 <= n < 10000 and n % 1000:
+        hi, lo = divmod(n, 100)
+        return words(hi) + (" hundred" if lo == 0 else " " + (words(lo) if lo >= 10 else "oh " + words(lo)))
+    return words(n)
+
+
 def _num(s):
     """'5,000' / '3.5' / '1.2' -> words."""
     s = s.replace(",", "")
@@ -59,7 +67,7 @@ def _money(m):
         num = _num(whole + ("." + cents if cents else ""))
         return f"{num} {_MULT[mult]} dollars"
     w = int(whole or 0)
-    out = words(w) + (" dollar" if w == 1 else " dollars")
+    out = money_words(w) + (" dollar" if w == 1 else " dollars")
     if cents and int(cents):
         c = int(cents.ljust(2, "0")[:2])
         out = (words(w) + " " + words(c)) if w and w < 100 else out + " and " + words(c) + " cents"
@@ -108,7 +116,7 @@ def _tts(text, voice, speed, cache=None):
     if cache:
         import hashlib
         os.makedirs(cache, exist_ok=True)
-        cf = os.path.join(cache, hashlib.sha1(f"{text}|{voice}|{speed:.3f}".encode()).hexdigest()[:16] + ".npy")
+        cf = os.path.join(cache, hashlib.sha1(f"{spoken(text)}|{voice}|{speed:.3f}".encode()).hexdigest()[:16] + ".npy")
         if os.path.exists(cf):
             return np.load(cf)
         a = _tts(text, voice, speed)
