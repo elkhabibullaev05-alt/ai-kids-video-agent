@@ -28,7 +28,7 @@ def _panel_mask():
 
 
 class Entry:
-    def __init__(self, g, rank, banner, seed, total_ranks=10):
+    def __init__(self, g, rank, banner, seed, total_ranks=10, label="TOP 10 ROBLOX GAMES RIGHT NOW"):
         self.g, self.rank, self.banner = g, rank, banner
         th = gx.load_rgb(g["thumb"])
         ic = gx.load_rgb(g["icon"], (512, 512))
@@ -46,7 +46,7 @@ class Entry:
         ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         d = ImageDraw.Draw(ov)
         d.rectangle((0, 0, W, 92), fill=(10, 12, 28, 235))
-        gx.draw_text(d, (40, 46), "TOP 10 ROBLOX GAMES RIGHT NOW", gx.font(40), gx.WHITE, anchor="lm")
+        gx.draw_text(d, (40, 46), label, gx.font(40), gx.WHITE, anchor="lm")
         for k in range(total_ranks, 0, -1):  # progress chips 10..1
             x = W - 70 - (k - 1) * 66
             on = k == rank
@@ -141,7 +141,8 @@ class Entry:
 
 
 class Hook:
-    def __init__(self, top):
+    def __init__(self, top, sub="TOP 10 BY LIVE PLAYERS"):
+        self.sub = sub
         th = gx.load_rgb(top[0]["thumb"])
         self.bg = gx.KenBurns(th.filter(ImageFilter.GaussianBlur(14)), W, H, (1.35, 1.0), pan=(0, 0, 0, 0))
         self.icons = [gx.framed(gx.cover(gx.load_rgb(g["icon"], (512, 512)), 190, 190), 5, gx.WHITE, 24)
@@ -155,7 +156,7 @@ class Hook:
         gx.draw_text(d, (W // 2, 250), "TODAY'S #1 IS...", gx.font(int(130 * pulse)), gx.YELLOW, stroke=10,
                      anchor="mm", shadow=8)
         gx.draw_text(d, (W // 2, 540), "?", gx.font(int(330 * pulse)), gx.WHITE, stroke=14, anchor="mm", shadow=10)
-        gx.draw_text(d, (W // 2, 770), "TOP 10 BY LIVE PLAYERS", gx.font(64), gx.WHITE, stroke=6, anchor="mm")
+        gx.draw_text(d, (W // 2, 770), self.sub, gx.font(64), gx.WHITE, stroke=6, anchor="mm")
         # icon conveyor
         n = len(self.icons)
         span = n * 230
@@ -225,10 +226,10 @@ def thumbnail(top, path, rng, mode):
     return path
 
 
-def build(games, back, titles, out_dir, name, rng, day, workers=None, voice="am_adam"):
+def build(games, back, titles, out_dir, name, rng, day, workers=None, voice="am_adam", force_mode=""):
     t_start = time.time()
     mode = "players"
-    if back == 1 and day.toordinal() % 3 == 0:
+    if force_mode != "players" and back == 1 and (force_mode == "gainers" or day.toordinal() % 3 == 0):
         gainers = sorted([g for g in games[:40] if g.get("d_visits")], key=lambda g: -g["d_visits"])
         if len(gainers) >= 10:
             mode = "gainers"
@@ -244,11 +245,14 @@ def build(games, back, titles, out_dir, name, rng, day, workers=None, voice="am_
         segs.append(("entry", r, txt, banner))
     segs.append(("outro", None, tx.outro_script(top, rng), None))
     # narration
+    audios = [au.tts(txt, voice=voice, speed=1.1)[0] for _, _, txt, _ in segs]
+    speech = sum(len(x) for x in audios) / au.SR
+    # entries get 0.45 s air; more (max 2 s) if the video would end under ~3:15
+    epad = min(2.0, max(0.45, (195 - speech - 7.0) / 10))
     voice_parts, timeline, t = [], [], 0.0
     sfx_marks = []
-    for kind, r, txt, banner in segs:
-        a, _ = au.tts(txt, voice=voice, speed=1.1)
-        pad = 0.45 if kind == "entry" else 0.3
+    for (kind, r, txt, banner), a in zip(segs, audios):
+        pad = epad if kind == "entry" else 0.3
         dur = len(a) / au.SR + pad
         if kind == "hook":
             dur = max(dur, 6.0)
@@ -273,11 +277,13 @@ def build(games, back, titles, out_dir, name, rng, day, workers=None, voice="am_
     objs = []
     for s in timeline:
         if s["kind"] == "hook":
-            objs.append(Hook(top))
+            objs.append(Hook(top, "MOST VISITS GAINED IN 24H" if mode == "gainers" else "TOP 10 BY LIVE PLAYERS"))
         elif s["kind"] == "outro":
             objs.append(Outro(top))
         else:
-            objs.append(Entry(top[s["rank"] - 1], s["rank"], s["banner"], seed=s["rank"] * 7 + day.toordinal()))
+            objs.append(Entry(top[s["rank"] - 1], s["rank"], s["banner"], seed=s["rank"] * 7 + day.toordinal(),
+                             label="TOP 10 FASTEST GROWING ROBLOX GAMES" if mode == "gainers"
+                             else "TOP 10 ROBLOX GAMES RIGHT NOW"))
     starts = [s["start"] for s in timeline]
 
     def frame_fn(i):

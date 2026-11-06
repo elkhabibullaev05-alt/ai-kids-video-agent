@@ -113,7 +113,7 @@ def entry_script(g, r, rng, mode):
     lines = [intro, stats]
     if d and mode != "gainers":
         lines.append(rng.choice(d))
-    lines += [x[0] for x in facts[:2]]
+    lines += [x[0] for x in facts[:3 if mode == "gainers" or not d else 2]]
     banner = facts[0][1] if facts else (g.get("genre") or "").upper()
     return " ".join(lines), banner
 
@@ -183,7 +183,10 @@ def long_description(title, top, chapters, mode, day):
              f" (data pulled {day.strftime('%B %-d, %Y')}). New ranking every day.", ""]
     for r in range(10, 0, -1):
         g = top[r - 1]
-        lines.append(f"#{r} {g['clean']} — {short_num(g.get('playing'))} playing, {short_num(g.get('visits'))} visits")
+        if mode == "gainers":
+            lines.append(f"#{r} {g['clean']} — +{short_num(g.get('d_visits'))} visits in 24h, {short_num(g.get('playing'))} playing")
+        else:
+            lines.append(f"#{r} {g['clean']} — {short_num(g.get('playing'))} playing, {short_num(g.get('visits'))} visits")
     lines += ["", "Chapters:"] + chapters + ["",
               "Which game should be #1 tomorrow? Comment below and subscribe for tomorrow's Top 10.", "",
               "Data: public Roblox game pages (live players, visits, favorites, likes).", DISCLAIMER, "",

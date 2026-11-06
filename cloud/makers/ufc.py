@@ -38,8 +38,10 @@ FPS = render.FPS
 LW, LH = 1920, 1080
 LBASE = (2208, 1242)
 SW, SH = 1080, 1920
-CARD = (0, 170, 1080, 1080)
-SBASE = (1296, 1296)
+CARD = (0, 0, 1080, 1920)   # Shorts: full-bleed vertical sketch
+SBASE = (1188, 2112)
+CAP_Y = 1110                 # captions (bottom 20% and right edge stay clear)
+TOP_Y = 190                  # hook / labels below the header strip
 MAX_LONG = 14 * 60 + 40
 MAX_SHORT = 58.5
 CTA_LINE = "Want one animal secret every day? Subscribe to the Wild Sketchbook."
@@ -469,20 +471,11 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
     nfr = frames_for(starts, durs)
 
     # static background: paper + header + card frame
-    bgim = Image.fromarray(art.paper(SW, SH, 9)).convert("RGBA")
-    hdr = art.text_layer(sh.get("header") or sc["title"], "hand", 900, 120, 72, fill=art.INK, stroke=(255, 250, 235), sw=3,
-                         max_lines=1)
-    bgim.alpha_composite(hdr, ((SW - hdr.width) // 2 - 40, max(0, (CARD[1] - hdr.height) // 2)))
-    tagl = art.text_layer("WILD SKETCHBOOK", "hand", 600, 70, 46, fill=(120, 95, 70), stroke=(255, 250, 235), sw=2, max_lines=1)
-    bgim.alpha_composite(tagl, (60, CARD[1] + CARD[3] + 330))
-    bgs = {"s": np.asarray(bgim.convert("RGB")).copy()}
-    frame_ov = Image.new("RGBA", (SW, CARD[3] + 20), (0, 0, 0, 0))
-    fd = ImageDraw.Draw(frame_ov)
-    rr = random.Random(2)
-    for k in range(2):
-        fd.line([(0, 8 + rr.randint(-3, 3)), (SW, 8 + rr.randint(-3, 3))], fill=art.INK + (255,), width=6)
-        fd.line([(0, CARD[3] + 8 + rr.randint(-3, 3)), (SW, CARD[3] + 8 + rr.randint(-3, 3))], fill=art.INK + (255,), width=6)
-    fpng = save_png(frame_ov, work, "sframe")
+    bgs = {"s": np.zeros((SH, SW, 3), np.uint8)}
+    hdr = art.text_layer(sh.get("header") or sc["title"], "hand", 860, 100, 64, fill=art.INK, stroke=(255, 250, 235), sw=2,
+                         max_lines=1, bg=art.PAPER + (235,), pad=18)
+    fpng = save_png(hdr, work, "sheader")
+    hdr_xy = (max(20, 470 - hdr.width // 2), 50)
 
     keys = list(dict.fromkeys(u or ("card:" + (s.get("img") or sh["title"])) for u, s in zip(used, scenes)))
     bases, idx = [], {}
@@ -501,15 +494,15 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
         k = used[i] or ("card:" + (s.get("img") or sh["title"]))
         dur = nfr[i] / FPS
         last = i == len(scenes) - 1
-        ovs = [dict(png=fpng, x=0, y=CARD[1] - 8, t0=0, t1=dur + 1)]
+        ovs = [dict(png=fpng, x=hdr_xy[0], y=hdr_xy[1], t0=0, t1=dur + 1)]
         if i == 0 and s.get("hook"):
             hk = art.text_layer(s["hook"].upper(), "marker", 940, 520, 150, sw=12, rot=-2)
             hook_png = save_png(hk, work, "shook")
-            hook_xy = ((SW - hk.width) // 2, CARD[1] + 40)
+            hook_xy = ((SW - hk.width) // 2, TOP_Y)
             ovs.append(dict(png=hook_png, x=hook_xy[0], y=hook_xy[1], t0=0, t1=min(dur, 3.2), fade_out=0.25))
         if s.get("label") and not (i == 0 and s.get("hook")):
             lb = art.label_layer(s["label"], maxw=900)
-            ovs.append(dict(png=save_png(lb, work, f"slab{i}"), x=(SW - lb.width) // 2, y=CARD[1] + 30, t0=0.2,
+            ovs.append(dict(png=save_png(lb, work, f"slab{i}"), x=max(10, 470 - lb.width // 2), y=TOP_Y, t0=0.2,
                             t1=(dur - 0.6) if last else dur + 1, fade_in=0.15, fade_out=0.2 if last else 0))
         # word-by-word captions
         ws = words[i]
@@ -520,15 +513,16 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
             t0 = 0.0 if n_ == 0 else w[1]
             t1 = flat[n_ + 1] and chunks[flat[n_ + 1][0]][flat[n_ + 1][1]][1] if n_ + 1 < len(flat) else dur + 1
             p, cw, chh = caption_png(chunks[ci], j, work, f"cap{i}_{n_}")
-            ovs.append(dict(png=p, x=max(20, min(470 - cw // 2, 900 - cw)), y=CARD[1] + CARD[3] + 40, t0=t0, t1=t1))
+            ovs.append(dict(png=p, x=max(20, min(470 - cw // 2, 900 - cw)), y=CAP_Y, t0=t0, t1=t1))
         if last:
-            bn = art.text_layer("FULL STORY ON MY CHANNEL", "bold", 820, 90, 60, fill=(255, 255, 255), stroke=(0, 0, 0), sw=3,
+            bn = art.text_layer("FULL STORY ON MY CHANNEL", "bold", 860, 110, 72, fill=(255, 255, 255), stroke=(0, 0, 0), sw=3,
                                 bg=(204, 0, 0, 240), pad=22, max_lines=1)
-            ovs.append(dict(png=save_png(bn, work, "banner"), x=max(20, 470 - bn.width // 2), y=CARD[1] + CARD[3] - bn.height - 30,
+            ovs.append(dict(png=save_png(bn, work, "banner"), x=max(20, 470 - bn.width // 2), y=1430,
                             t0=0.0, t1=max(0.5, dur - 0.55), fade_in=0.15, fade_out=0.2))
             if hook_png:  # loop: the hook comes back on the last frames so the end matches frame 0
                 ovs.append(dict(png=hook_png, x=hook_xy[0], y=hook_xy[1], t0=max(0, dur - 0.45), t1=dur + 1, fade_in=0.3))
-        shots = render.plan_shots(dur, rng, 0.9, first=(i == 0), end_at=first_cam if last else None, first_len=0.5, drift=0.5, min_jump=0.24)
+        shots = render.plan_shots(dur, rng, 0.85, first=(i == 0), end_at=first_cam if last else None, first_len=0.5,
+                                   drift=0.5, min_jump=0.26, zmax=1.42)
         if last and used[i] != used[0]:
             pass
         rs.append(dict(n=nfr[i], base=idx[k if not last else (k0 if used[0] else k)], shots=shots, overlays=ovs, card=CARD,

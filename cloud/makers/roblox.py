@@ -35,6 +35,7 @@ def main():
     ap.add_argument("--offline-test", action="store_true", help="use cloud/makers/roblox/fixture.json, no network")
     ap.add_argument("--shorts", type=int, default=2)
     ap.add_argument("--workers", type=int, default=0)
+    ap.add_argument("--long-mode", default="", help="players|gainers (testing; default rotates by day)")
     ap.add_argument("--formats", default="", help="force short formats, e.g. visits,guess (testing)")
     a = ap.parse_args()
     if not a.need_long and not a.need_short:
@@ -68,7 +69,7 @@ def main():
     import rbx_shorts
     if a.need_long:
         meta = rbx_long.build(games, back, titles, a.out, f"{pack}-0-long", rng, today, workers=workers,
-                              voice=rng.choice(["am_adam", "am_michael"]))
+                              voice=rng.choice(["am_adam", "am_michael"]), force_mode=a.long_mode)
         meta.pop("top", None)
         meta.pop("mode", None)
         made.append((f"{pack}-0-long", meta))

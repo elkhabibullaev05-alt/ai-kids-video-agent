@@ -174,7 +174,7 @@ def mix_and_master(voice, music, sfx, total, out_wav, music_gain=0.16, duck=0.55
     raw = out_wav + ".raw.wav"
     sf.write(raw, mix.astype(np.float32), SR)
     r = subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", raw, "-af",
-                        "loudnorm=I=-14:TP=-1.5:LRA=11,alimiter=limit=0.85,aresample=48000",
+                        "loudnorm=I=-13:TP=-1.5:LRA=11,alimiter=limit=0.85,aresample=48000",
                         "-ar", "48000", "-ac", "2", out_wav], capture_output=True, text=True)
     os.remove(raw)
     if r.returncode:

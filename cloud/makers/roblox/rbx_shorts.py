@@ -305,8 +305,12 @@ class Card:
             ox = int((bw - W) / 2 + math.sin(0) * (bw - W) / 2.2 * (1 - u) + math.sin(t_abs * 0.9) * (bw - W) / 2.2 * u)
             oy = int((bh - H) / 2 + (bh - H) / 2.2 * (1 - u) + math.cos(t_abs * 0.7) * (bh - H) / 2.2 * u)
         im = self.bg.crop((ox, oy, ox + W, oy + H))
-        if dur > 3.0 and lt >= dur / 2 and not loop_end:  # second half: tinted background (visible beat)
-            im = Image.blend(im, Image.new("RGB", im.size, self.acc), 0.35)
+        tint = getattr(self, "tint", None)
+        bright = getattr(self, "bright", False)
+        if dur > 3.0 and lt >= dur / 2 and not loop_end:  # second half: opposite-brightness wash (visible beat)
+            im = Image.blend(im, Image.new("RGB", im.size, (8, 10, 40) if bright else (255, 230, 120)), 0.45)
+        elif tint:  # every card has its own colour wash, so each card change reads as a cut
+            im = Image.blend(im, Image.new("RGB", im.size, tint), 0.5)
         d = ImageDraw.Draw(im)
         v = c["vis"]
         still = loop_end or getattr(self, "first", False)  # frame 0 and the loop end: no pop-in
@@ -467,6 +471,10 @@ def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_mich
         cards[-1]["strip"] = strip if cards[-1]["vis"] == cards[0]["vis"] else []
     objs = [Card(c, seed=c["g"]["id"] % 997 + (1 if c.get("alt") else 0)) for c in cards]
     objs[0].first = True
+    washes = [(255, 225, 40), (40, 10, 90), (90, 230, 255), (120, 0, 40), (255, 160, 220), (0, 50, 60)]
+    for k, o in enumerate(objs):
+        o.tint = None if (k == 0 or cards[k].get("loop")) else washes[k % len(washes)]
+        o.bright = bool(o.tint) and sum(o.tint) > 400
     starts = [c["start"] for c in cards]
 
     def frame_fn(i):

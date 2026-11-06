@@ -22,7 +22,7 @@ def ff(args, **kw):
 
 
 # ------------------------------------------------------------------ camera
-def plan_shots(dur, rng, shot_len, first=False, end_at=None, first_len=1.0, drift=1.0, min_jump=0.12):
+def plan_shots(dur, rng, shot_len, first=False, end_at=None, first_len=1.0, drift=1.0, min_jump=0.12, zmax=1.42):
     """List of shots (t0, t1, (z0, cx0, cy0), (z1, cx1, cy1)). A jump between shots = 'punch-in' cut."""
     shots, t = [], 0.0
     lens = []
@@ -41,13 +41,13 @@ def plan_shots(dur, rng, shot_len, first=False, end_at=None, first_len=1.0, drif
         else:
             z = rng.uniform(1.02, 1.32)
             if prev_z is not None and abs(z - prev_z) < min_jump:  # make every new shot a visible punch
-                z = rng.uniform(prev_z + min_jump, max(prev_z + min_jump, 1.42)) if prev_z < 1.2 \
+                z = rng.uniform(prev_z + min_jump, max(prev_z + min_jump, zmax)) if prev_z < (1.0 + zmax) / 2 - 0.02 \
                     else rng.uniform(1.0, max(1.0, prev_z - min_jump))
             cx, cy = rng.uniform(0.36, 0.64), rng.uniform(0.36, 0.62)
             dz = rng.choice([0.07, 0.09, -0.06]) * drift
             s0 = (z, cx, cy)
             s1 = (max(1.0, z + dz), cx + rng.uniform(-0.04, 0.04) * drift, cy + rng.uniform(-0.03, 0.03) * drift)
-        prev_z = s0[0]
+        prev_z = s1[0]
         shots.append((a, b, s0, s1))
     if end_at is not None and shots:
         a, b, s0, _ = shots[-1]
