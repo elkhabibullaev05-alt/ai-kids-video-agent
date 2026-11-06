@@ -1,5 +1,6 @@
 """YouTube Data API upload (no browser, no Claude).
 token.json = authorized-user JSON made once on the owner's PC with cloud/auth.py."""
+import ssl, http.client
 import time
 
 from google.oauth2.credentials import Credentials
@@ -67,10 +68,20 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
     for attempt in range(2):
         try:
             req = yt.videos().insert(part=parts, body=body,
-                                     media_body=MediaFileUpload(path, chunksize=16 * 1024 * 1024, resumable=True))
-            resp = None
+                                     media_body=MediaFileUpload(path, chunksize=8 * 1024 * 1024, resumable=True))
+            resp, fails = None, 0
             while resp is None:
-                _, resp = req.next_chunk(num_retries=5)
+                try:
+                    _, resp = req.next_chunk(num_retries=5)
+                    fails = 0
+                except (ssl.SSLError, OSError, http.client.HTTPException) as ne:
+                    # 2026-11-06: weak home link (big game download) -> "EOF occurred in violation of protocol".
+                    # The upload is resumable: wait and continue from the last chunk instead of failing the job.
+                    fails += 1
+                    if fails > 30:
+                        raise ConnectionError(f"upload stalled: {ne}")
+                    print(f"upload chunk network error {fails}/30, retry in {min(300, 20 * fails)} s:", ne, flush=True)
+                    time.sleep(min(300, 20 * fails))
             vid = resp["id"]
             break
         except HttpError as e:
