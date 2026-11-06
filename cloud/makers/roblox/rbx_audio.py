@@ -28,6 +28,21 @@ def _trim(a, thr=0.012):
 
 def tts(text, voice="am_adam", speed=1.1):
     """-> (float32 mono @24k, [(word, t0, t1), ...]) — word times spread by letter count within each sentence."""
+    cdir = os.environ.get("RBX_TTS_CACHE")  # dev only: reuse narration between test renders
+    if cdir:
+        import hashlib
+        import pickle
+        os.makedirs(cdir, exist_ok=True)
+        cf = os.path.join(cdir, hashlib.md5(f"{voice}|{speed}|{text}".encode()).hexdigest() + ".pkl")
+        if os.path.exists(cf):
+            return pickle.load(open(cf, "rb"))
+        r = _tts(text, voice, speed)
+        pickle.dump(r, open(cf, "wb"))
+        return r
+    return _tts(text, voice, speed)
+
+
+def _tts(text, voice, speed):
     k = kokoro()
     parts = [p.strip() for p in re.split(r"(?<=[.!?])\s+", text.strip()) if p.strip()]
     chunks, words, t = [], [], 0.0
