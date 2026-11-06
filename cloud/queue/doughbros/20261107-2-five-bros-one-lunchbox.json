@@ -1,0 +1,873 @@
+{
+ "id": "20261107-2-five-bros-one-lunchbox",
+ "plot": "The night before the movers come, Zeek's Plan Lunch is to ride to the new house in Mia's lunchbox, but his numbers say only four bros fit and someone must stay behind; while hiding from Dad's midnight snack run, scared Pim dives under the box and finds what Zeek's measuring from above missed — a hidden bottom drawer — so the bros carry Mia's forty crayons to her pencil case (rescuing her favorite blue one), all five fit on two floors, and at dawn Dad sets the lunchbox on the car roof and starts the engine.",
+ "script": {
+  "title": "5 Bros, 1 Lunchbox",
+  "set": {
+   "place": "pantry",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lunchbox",
+    "type": "box",
+    "color": [
+     0.25,
+     0.7,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     0,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "cheese",
+    "type": "banana",
+    "color": "yellow",
+    "on": null,
+    "at": [
+     3,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "grape",
+    "type": "ball",
+    "color": "purple",
+    "on": null,
+    "at": [
+     -3,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "crayons",
+    "type": "box",
+    "color": "orange",
+    "on": null,
+    "at": [
+     6,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "Zeek! My head is stuck in the lid! Help!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hold still! You're ruining my packing diagram!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wednesday night. The movers come tomorrow. The truck takes no food.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "5 BROS. 1 BOX.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Mia's lunchbox rides in the car. On her lap. Safe.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek calls it Plan Lunch. He drew it on a napkin.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Love it. Everyone in. Biggest first. That's me.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup goes in. Lolly goes in. Her points stick out.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lolly",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Ow. Ow. Who packed a grape in here?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "grape",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls in. The cheese stick starts to sweat.",
+    "cam": "prop:cheese",
+    "do": [
+     [
+      "crispy",
+      "to:1,12"
+     ],
+     [
+      "cheese",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Sorry, cheese. I run warm.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "narr",
+    "say": "Zeek squeezes in. Then there's Pim. And no room at all.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wh-where do I go? On the roof?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My numbers say four of us fit. Not five.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY 4 FIT",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we pack lighter. Lose the grape!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Out goes the grape. And a napkin. And some of Bup's pride.",
+    "cam": "wide",
+    "do": [
+     [
+      "grape",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The lid still won't close. It isn't even close.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "So one of us rides in the truck. In a sock.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-no! The truck is dark! Boxes fall in trucks!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "If this lid won't shut by morning, someone stays behind.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Upstairs, a door creaks. Slow footsteps. Someone wants a snack.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "HIDE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four bros dive into the lunchbox. Pim dives under it.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "pim",
+      "to:0,13"
+     ],
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's Dad. In socks. He opens the pantry and yawns.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "He grabs crackers. He stares right at the lunchbox.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Don't see me. I'm a strawberry. A tiny strawberry.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad shrugs, munches a cracker, and shuffles back upstairs.",
+    "cam": "wide"
+   },
+   {
+    "who": "bup",
+    "say": "Pim? You can come out now. It's safe.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Zeek, there's a little door down here. Under the box.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A door? Lunchboxes don't have doors. That's absurd.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim pushes. A flat drawer slides out of the bottom.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "A SECRET DRAWER?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's a two-floor lunchbox. Zeek only measured the top floor.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I measured from above. I never once looked underneath.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I always look underneath. That's where I hide.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nice work, little bean. Seriously. Nice work.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the drawer is packed. Forty crayons. Mia's whole rainbow.",
+    "cam": "prop:crayons",
+    "do": [
+     [
+      "crayons",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If we dump them, Mia loses her colors. No way.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then we carry them. To her pencil case. All of them.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five Dough Bros carry crayons like logs. Trip after trip.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "crayons",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim drops the blue one. It rolls under the shelf.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-not the blue! Blue is her favorite! Everybody knows that!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy glows under the shelf like a flashlight. Pim grabs it.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Lolly up top. Zeek, Pim and Crispy downstairs.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "FIVE FIT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It's cozy. Nobody touch my ember.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "pim",
+    "say": "I f-found a door. Me. I'm a finder now.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "New rule. Before I measure anything, I ask Pim.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They fall asleep on two floors, snoring in perfect stereo.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Dawn. Car doors slam. Mia grabs the lunchbox and runs outside.",
+    "cam": "wide",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad takes it. 'One second, sweetie.' It goes on the car roof.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He climbs in. The engine starts. Dad never checks the roof.",
+    "cam": "overhead"
+   },
+   {
+    "text": "ON THE ROOF?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "5 Bros, 1 Lunchbox, No Room 🍱 (Ep 15)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone says I hide too much. Turns out hiding is how you find things.\" — Pim\nThe movers come tomorrow and the only safe ride is Mia's lunchbox. Zeek's math says it fits four. There are five Dough Bros.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "moving day",
+   "lunchbox",
+   "pim",
+   "zeek",
+   "packing",
+   "friendship",
+   "funny animation"
+  ],
+  "thumb_text": "NO ROOM?!",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "5 amigos, 1 lonchera, cero espacio 🍱 (Ep 15)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todos dicen que me escondo demasiado. Resulta que escondiéndote encuentras cosas.\" — Pim\nLos de la mudanza llegan mañana y el único viaje seguro es la lonchera de Mia. Las cuentas de Zeek dicen que caben cuatro. Los Dough Bros son cinco.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "5 amigos, 1 lancheira, nenhum espaço 🍱 (Ep 15)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo mundo diz que eu me escondo demais. Pelo jeito é escondendo que se acha as coisas.\" — Pim\nA mudança chega amanhã e a única carona segura é a lancheira da Mia. A conta do Zeek diz que cabem quatro. Os Dough Bros são cinco.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "5 أصدقاء، علبة غداء واحدة، ولا مكان 🍱 (Ep 15)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"الجميع يقول إنني أختبئ كثيرًا. اتضح أن الاختباء هو طريقة العثور على الأشياء.\" — بيم\nعمال النقل يأتون غدًا، والطريق الآمن الوحيد هو علبة غداء ميا. حسابات زيك تقول إنها تتسع لأربعة. لكنهم خمسة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "5 potes, 1 boîte à lunch, zéro place 🍱 (Ep 15)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Tout le monde dit que je me cache trop. En fait, c'est en se cachant qu'on trouve des choses.\" — Pim\nLes déménageurs arrivent demain et le seul trajet sûr, c'est la boîte à lunch de Mia. Selon Zeek, on tient à quatre. Les Dough Bros sont cinq.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "5人、お弁当箱1つ、すき間ゼロ 🍱 (Ep 15)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「隠れてばかりって言われる。でも、隠れるから見つけられるんだ。」— ピム\n明日は引っ越し業者が来る。安全に行ける方法はミアのお弁当箱だけ。ジークの計算では入るのは4人。でもドウ・ブロスは5人。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "다섯 친구, 도시락 하나, 자리 없음 🍱 (Ep 15)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"다들 내가 너무 숨는대. 그런데 숨어야 뭔가를 찾을 수 있더라.\" — 핌\n내일 이삿짐 업체가 온다. 안전하게 갈 방법은 미아의 도시락뿐. 지크의 계산으로는 넷만 들어간다. 도우 브로스는 다섯이다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "5 Freunde, 1 Brotdose, kein Platz 🍱 (Ep 15)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alle sagen, ich verstecke mich zu oft. Dabei findet man beim Verstecken die besten Sachen.\" — Pim\nMorgen kommen die Umzugsleute, und die einzige sichere Fahrt ist Mias Brotdose. Zeeks Rechnung sagt: Platz für vier. Die Dough Bros sind fünf.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 12,
+   "dur": 24,
+   "top": "ONLY 4 FIT?!",
+   "title": "Five Bros, Room for Four 😬 (Ep 15) #shorts",
+   "description": "Someone has to stay behind. Who would YOU leave? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lunchbox",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Cinco amigos, sitio para cuatro 😬 (Ep 15) #shorts",
+     "description": "Alguien tiene que quedarse. ¿A quién dejarías TÚ? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Cinco amigos, lugar pra quatro 😬 (Ep 15) #shorts",
+     "description": "Alguém vai ter que ficar. Quem VOCÊ deixaria? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "خمسة أصدقاء ومكان لأربعة فقط 😬 (Ep 15) #shorts",
+     "description": "يجب أن يبقى أحدهم. من ستترك أنت؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Cinq potes, de la place pour quatre 😬 (Ep 15) #shorts",
+     "description": "Quelqu'un doit rester. Toi, tu laisserais qui ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "5人なのに、入るのは4人だけ 😬 (Ep 15) #shorts",
+     "description": "誰かが残らなきゃいけない。あなたなら誰を残す？本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "다섯 친구, 자리는 넷뿐 😬 (Ep 15) #shorts",
+     "description": "누군가는 남아야 한다. 당신이라면 누구를? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Fünf Freunde, Platz für vier 😬 (Ep 15) #shorts",
+     "description": "Einer muss zurückbleiben. Wen würdest DU lassen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

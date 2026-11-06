@@ -1,0 +1,965 @@
+{
+ "id": "20261107-1-someone-bought-our-table",
+ "plot": "On yard-sale morning the Dough Bros' dinner table is sold for twenty dollars; Bup insists it's just wood while Lolly wants to leave a goodbye, the bros sneak from a shoe box to under the table so Crispy can write 'D.B. Five' in soot, the buyer's van comes early and — the twist — tough Bup is the one who can't let go, hugging the notched leg where he first woke up and met Pim, until Lolly presses his crumb face into the notch so he can take it with him; the buyer keeps the writing, and then Dad hears the movers come Thursday, not Saturday.",
+ "script": {
+  "title": "Someone Bought Our Table",
+  "set": {
+   "place": "garden",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "table",
+    "type": "box",
+    "color": [
+     0.55,
+     0.36,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 2.4
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     4,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "van",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     13,
+     16,
+     0
+    ],
+    "visible": true,
+    "scale": 2.6
+   },
+   {
+    "id": "shoes",
+    "type": "box",
+    "color": [
+     0.35,
+     0.3,
+     0.45
+    ],
+    "on": null,
+    "at": [
+     -6,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 1.1
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Bup! They're selling our table! Our actual table!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-1,10"
+     ],
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Calm down. It's just wood with legs.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Yard sale morning. Anything that isn't moving gets sold.",
+    "cam": "wide",
+    "do": [
+     [
+      "table",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SOLD: $20",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "That's where we have meetings! And snacks! And naps!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "First no food in the truck. Now no table?!",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Twenty dollars. The buyer comes back at noon with a van.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So we say goodbye. Fast. No crying. Moving on.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup keeps patting one table leg. The one with the notch.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "bup",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then we leave it something. A goodbye note.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Underneath. Where buyers never look. Nobody checks under tables.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I can write. With soot. Slowly.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One problem. The front lawn is full of people.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Neighbors. Strollers. A toddler grabbing anything small.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm small! I'm extremely small! I'm the smallest!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five Dough Bros hide inside a box of old shoes.",
+    "cam": "prop:shoes",
+    "do": [
+     [
+      "bup",
+      "to:-6,11"
+     ],
+     [
+      "lolly",
+      "to:-5,11"
+     ],
+     [
+      "shoes",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Nobody breathe. These shoes smell like a gym.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad puts a lamp on the table. Then a fish tank.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "We can't write under a fish tank! Physics says no!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NOON IS COMING",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. Under the table. Go, go, go!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They dash across the grass. A price sticker lands on Pim.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:1,12"
+     ],
+     [
+      "lolly",
+      "to:1,11"
+     ],
+     [
+      "zeek",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why does my back say fifty cents?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Because you're a bargain, sweetie. Keep running.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fifty cents? He's worth at least a whole dollar!",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the table it's dark and cool. Crispy starts writing.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "crispy",
+      "to:0,13"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "D. B. Five. Dough Bros. All five.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Write bigger. So it lasts. So it really lasts.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a big white van rolls up to the curb. Early.",
+    "cam": "prop:van",
+    "do": [
+     [
+      "van",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "THEY'RE EARLY!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Faster, Crispy! The van door is opening!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two big hands grab the tabletop. The table lifts.",
+    "cam": "wide",
+    "do": [
+     [
+      "table",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Everybody out! Now! Let it go!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four bros run out onto the grass. One doesn't.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-3,9"
+     ],
+     [
+      "zeek",
+      "to:-2,9"
+     ],
+     [
+      "crispy",
+      "to:-4,10"
+     ],
+     [
+      "lolly",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup is hugging the table leg. Hugging it hard.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup! You said it's just wood!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I lied. I woke up right here. Behind this leg.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Stale. Alone. Then a red bean said hello.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "pim",
+    "say": "Th-that was me. I was so scared of you.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "That notch is my first day. I can't leave it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The table rises. Bup's little feet leave the grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "BUP, LET GO!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then don't leave it. Take it with you. Like this.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly presses Bup's face to the notch. A crumb print stays.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Now you're in the table. And the table's in you.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup lets go. He drops into a pile of four friends.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay. Goodbye, table. Thanks for everything.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The buyer tips the table into the van. Then he stops.",
+    "cam": "prop:van",
+    "do": [
+     [
+      "van",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the top, in soot: D.B. Five. And a tiny crumb face.",
+    "cam": "prop:table"
+   },
+   {
+    "who": "zeek",
+    "say": "He's going to wipe it off. I just know it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He doesn't. He smiles, and slides it in very carefully.",
+    "cam": "prop:van",
+    "do": [
+     [
+      "van",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Good table. Good man. I didn't hate that.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dad's phone rings. He listens. His face drops.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "'The movers come Thursday. Not Saturday. This Thursday.'",
+    "cam": "overhead"
+   },
+   {
+    "text": "TWO DAYS GONE?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Someone Bought Our Table for $20 😢 (Ep 14)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone says it's just a table. I said it too. I was lying.\" — Bup\nYard sale day: the table where the Dough Bros grew up is sold, the buyer comes back early, and the toughest bro is the one who won't let go.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "yard sale",
+   "moving day",
+   "bup",
+   "lolly",
+   "saying goodbye",
+   "friendship",
+   "funny animation"
+  ],
+  "thumb_text": "HE WON'T LET GO",
+  "thumb_beat": 37,
+  "localizations": {
+   "es": {
+    "title": "Alguien compró nuestra mesa por $20 😢 (Ep 14)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todos dicen que es solo una mesa. Yo también lo dije. Mentía.\" — Bup\nDía de venta de garaje: venden la mesa donde crecieron los Dough Bros, el comprador vuelve antes de tiempo y el más duro del grupo es el que no la suelta.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Alguém comprou a nossa mesa por $20 😢 (Ep 14)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo mundo diz que é só uma mesa. Eu também disse. Era mentira.\" — Bup\nDia de bazar na garagem: a mesa onde os Dough Bros cresceram é vendida, o comprador volta mais cedo e o mais durão de todos é quem não consegue soltar.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "أحدهم اشترى طاولتنا بـ 20 دولارًا 😢 (Ep 14)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"الجميع يقول إنها مجرد طاولة. وأنا قلت ذلك أيضًا. كنت أكذب.\" — بَب\nيوم بيع أغراض البيت: تُباع الطاولة التي كبر تحتها الأصدقاء، ويعود المشتري مبكرًا، وأقوى واحد فيهم هو من لا يستطيع أن يتركها.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Quelqu'un a acheté notre table pour 20 $ 😢 (Ep 14)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Tout le monde dit que ce n'est qu'une table. Je l'ai dit aussi. Je mentais.\" — Bup\nJour de vide-grenier : la table où les Dough Bros ont grandi est vendue, l'acheteur revient en avance, et le plus dur de la bande est celui qui ne peut pas la lâcher.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "僕らのテーブルが20ドルで売れた 😢 (Ep 14)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「ただのテーブルだって、みんな言う。僕も言った。うそだったんだ。」— バップ\nガレージセールの日。ドウ・ブロスが育ったテーブルが売れてしまい、買い手は早めに戻ってくる。そして手を離せなかったのは、いちばん強がりなあいつだった。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "누가 우리 식탁을 20달러에 샀다 😢 (Ep 14)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"다들 그냥 식탁이래. 나도 그렇게 말했어. 거짓말이었어.\" — 법\n차고 세일 날, 도우 브로스가 자란 식탁이 팔리고 구매자는 일찍 돌아온다. 그리고 끝까지 놓지 못한 건 가장 강한 척하던 친구였다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Jemand hat unseren Tisch für 20 $ gekauft 😢 (Ep 14)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alle sagen, es ist nur ein Tisch. Ich hab's auch gesagt. Ich hab gelogen.\" — Bup\nFlohmarkt vor dem Haus: Der Tisch, unter dem die Dough Bros aufgewachsen sind, wird verkauft, der Käufer kommt zu früh zurück, und ausgerechnet der Härteste kann nicht loslassen.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 21,
+   "dur": 22,
+   "top": "PIM IS FOR SALE?!",
+   "title": "Why Does Pim's Back Say 50 Cents? 🏷️ (Ep 14) #shorts",
+   "description": "Yard sale chaos, and Pim just got a price tag. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "yard sale",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué Pim lleva un precio de 50 centavos? 🏷️ (Ep 14) #shorts",
+     "description": "Caos en la venta de garaje y Pim acaba de recibir una etiqueta. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que as costas do Pim dizem 50 centavos? 🏷️ (Ep 14) #shorts",
+     "description": "Bagunça no bazar e o Pim ganhou uma etiqueta de preço. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا على ظهر بيم سعر 50 سنتًا؟ 🏷️ (Ep 14) #shorts",
+     "description": "فوضى في بيع الأغراض، وبيم حصل على ملصق سعر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi le dos de Pim dit 50 centimes ? 🏷️ (Ep 14) #shorts",
+     "description": "Chaos au vide-grenier, et Pim vient de recevoir une étiquette de prix. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピムの背中に「50セント」？ 🏷️ (Ep 14) #shorts",
+     "description": "ガレージセールは大混乱。ピムに値札が貼られた。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "핌 등에 왜 50센트가 붙었지? 🏷️ (Ep 14) #shorts",
+     "description": "난장판 차고 세일, 핌 등에 가격표가 붙었다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum steht auf Pims Rücken 50 Cent? 🏷️ (Ep 14) #shorts",
+     "description": "Chaos auf dem Flohmarkt, und Pim hat ein Preisschild abbekommen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 34,
+   "dur": 24,
+   "top": "WHY WON'T HE LET GO?",
+   "title": "Bup Won't Let Go of the Table 😢 (Ep 14) #shorts",
+   "description": "The van is here and Bup is still hugging the leg. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "bup",
+    "saying goodbye"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Bup no quiere soltar la mesa 😢 (Ep 14) #shorts",
+     "description": "La furgoneta ya llegó y Bup sigue abrazado a la pata. Siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bup não larga a mesa 😢 (Ep 14) #shorts",
+     "description": "A van chegou e o Bup ainda está abraçado à perna da mesa. Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بَب لا يريد أن يترك الطاولة 😢 (Ep 14) #shorts",
+     "description": "وصلت الشاحنة وبَب ما زال يعانق رِجل الطاولة. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bup refuse de lâcher la table 😢 (Ep 14) #shorts",
+     "description": "La camionnette est là et Bup serre toujours le pied de la table. Suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バップがテーブルを離さない 😢 (Ep 14) #shorts",
+     "description": "バンが来たのに、バップはまだ脚にしがみついている。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "법이 식탁을 놓지 않는다 😢 (Ep 14) #shorts",
+     "description": "밴이 왔는데 법은 아직 식탁 다리를 끌어안고 있다. 다음 편은 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bup lässt den Tisch nicht los 😢 (Ep 14) #shorts",
+     "description": "Der Transporter ist da, und Bup umarmt immer noch das Tischbein. Nächster Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

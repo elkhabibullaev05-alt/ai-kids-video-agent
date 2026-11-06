@@ -1,0 +1,879 @@
+{
+ "id": "20261107-3-dad-drove-off-roof",
+ "plot": "At dawn on moving day the lunchbox slides off Dad's car roof onto the wet lawn and the family drives away, so the Dough Bros must cross the lawn to Grandma's red car before she leaves, but it starts raining and every drop dims Crispy's embers; they dodge movers' boots under the ramp, a leaf umbrella fails, Grandma comes out early, and — the twist — Bup uses the one thing stale bread is great at, soaking up water, riding on top of Crispy as a bread roof so Crispy glows again; they leap into Grandma's knitting bag, she dries soggy Bup on the heater, and her phone starts the route to Grandma's house, three hours the wrong way.",
+ "script": {
+  "title": "Dad Drove Off With Us on the Roof",
+  "set": {
+   "place": "garden",
+   "time": "dawn"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lunchbox",
+    "type": "box",
+    "color": [
+     0.25,
+     0.7,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     -2,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "gcar",
+    "type": "box",
+    "color": "red",
+    "on": null,
+    "at": [
+     12,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 2.6
+   },
+   {
+    "id": "truck",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     -12,
+     17,
+     0
+    ],
+    "visible": true,
+    "scale": 3.2
+   },
+   {
+    "id": "leaf",
+    "type": "star",
+    "color": "green",
+    "on": null,
+    "at": [
+     3,
+     9,
+     0
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Hold on! Everybody hold on to something!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "There's nothing to hold! It's a lunchbox!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dawn. Moving day. Dad drives off with the lunchbox on the roof.",
+    "cam": "wide",
+    "do": [
+     [
+      "lunchbox",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the corner it slides off. Thump. Onto the wet lawn.",
+    "cam": "prop:lunchbox",
+    "do": [
+     [
+      "lunchbox",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "LEFT BEHIND!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The car is gone. Mia is gone. Everybody's gone!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Not everybody. Grandma follows at seven. In her own car.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's little red car waits at the far end of the lawn.",
+    "cam": "prop:gcar",
+    "do": [
+     [
+      "gcar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we cross the lawn. Easy. Thirty steps.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Not easy. The grass is soaked. Then it starts to rain.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Rain. Of course. My one weakness.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every drop that hits Crispy hisses. His glow gets a little darker.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "If Crispy g-goes out, does he come back on?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I don't know. I've never been out.",
+    "cam": "close:crispy"
+   },
+   {
+    "text": "CRISPY IS FADING",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. We run under things. We stay dry.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They run under the movers' ramp. Huge boots thump above them.",
+    "cam": "prop:truck",
+    "do": [
+     [
+      "truck",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "to:-6,13"
+     ],
+     [
+      "pim",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Movers carry the couch. Then the beds. Then Mom's plants.",
+    "cam": "prop:truck",
+    "do": [
+     [
+      "truck",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Boot! Left! Boot! Right! Another boot!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A boot lands one inch from Pim. Pim faints flat.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pick him up! Fainted beans still count!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm awake! I'm awake! Was that a boot?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the end of the ramp there's only open grass. And rain.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Twenty steps of rain. I won't make it. I'm sure.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We came off that roof together. We cross together.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek holds a leaf over Crispy. The rain pours straight through.",
+    "cam": "prop:leaf",
+    "do": [
+     [
+      "leaf",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Leaves are terrible umbrellas. I'll write a strongly worded paper.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma's front door opens. Car keys jingle.",
+    "cam": "prop:gcar",
+    "do": [
+     [
+      "gcar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA'S LEAVING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's early! Grandma is never early! Never!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy is barely glowing now. One small orange dot.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Crispy, stay on. Please. You're our night-light.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup looks at the rain. Then at himself. Old. Dry. Hard.",
+    "cam": "close:bup"
+   },
+   {
+    "who": "bup",
+    "say": "Stale bread drinks water. It's the one thing I'm great at.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "BUP HAS AN IDEA",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs on top of Crispy, like a little bread roof.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Bup. You'll get soggy. You'll never be crusty again.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crusty is totally overrated. Everybody, run! Now!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They run. The rain hits Bup. Bup drinks every drop.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "gcar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under him, Crispy stays dry. His embers glow bright orange again.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "BUP THE UMBRELLA",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma opens the back door to put in her knitting bag.",
+    "cam": "prop:gcar",
+    "do": [
+     [
+      "gcar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Now! Jump now! Into the knitting bag!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five Dough Bros leap into the bag. Plop. Plop. Squish.",
+    "cam": "prop:gcar",
+    "do": [
+     [
+      "gcar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma looks down. Five little faces. One very soggy loaf.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "She tuts, and sets the soggy one on the warm heater vent.",
+    "cam": "prop:gcar"
+   },
+   {
+    "who": "bup",
+    "say": "Oh. Oh, that's nice. That's very, very nice.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You drank the rain for me. I won't forget that.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You'd do it for me. Slowly. But you would.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "All five. In a car. Going to the new house!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma taps her phone. A calm voice speaks.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "'Starting route. To: Grandma's house. Three hours.'",
+    "cam": "prop:gcar",
+    "do": [
+     [
+      "gcar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Grandma's house? That's the completely wrong way!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE WRONG WAY?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Dad Drove Off With Us on the Roof 😱 (Ep 16)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone thinks stale bread is useless. Today it was the only umbrella we had.\" — Bup\nMoving day: the family car leaves, the Dough Bros are left on a wet lawn, and the rain is putting out Crispy's glow one drop at a time.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "moving day",
+   "rain",
+   "bup",
+   "crispy",
+   "left behind",
+   "friendship",
+   "funny animation"
+  ],
+  "thumb_text": "LEFT BEHIND!",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "Papá arrancó con nosotros en el techo 😱 (Ep 16)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todos creen que el pan duro no sirve. Hoy fue el único paraguas que teníamos.\" — Bup\nDía de mudanza: el coche de la familia se va, los Dough Bros quedan en el césped mojado y la lluvia apaga el brillo de Crispy gota a gota.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O pai saiu com a gente no teto do carro 😱 (Ep 16)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo mundo acha que pão velho não serve pra nada. Hoje ele foi o nosso único guarda-chuva.\" — Bup\nDia de mudança: o carro da família vai embora, os Dough Bros ficam na grama molhada e a chuva apaga o brilho do Crispy gota por gota.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "أبي انطلق ونحن فوق سقف السيارة 😱 (Ep 16)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"الجميع يظن أن الخبز اليابس بلا فائدة. اليوم كان المظلة الوحيدة لدينا.\" — بَب\nيوم الانتقال: تغادر سيارة العائلة، ويبقى الأصدقاء على العشب المبلل، والمطر يطفئ وهج كريسبي قطرة بعد قطرة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Papa est parti avec nous sur le toit 😱 (Ep 16)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Tout le monde croit que le pain rassis ne sert à rien. Aujourd'hui, c'était notre seul parapluie.\" — Bup\nJour du déménagement : la voiture de la famille s'en va, les Dough Bros restent sur la pelouse mouillée, et la pluie éteint la lueur de Crispy goutte après goutte.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "パパが屋根に僕らを乗せたまま出発 😱 (Ep 16)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「固くなったパンは役立たずだってみんな思ってる。でも今日は、たった一本の傘だった。」— バップ\n引っ越しの日。家族の車は行ってしまい、ドウ・ブロスはぬれた芝生に取り残される。そして雨が、クリスピーの光を一滴ずつ消していく。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "아빠가 우리를 차 지붕에 두고 출발했다 😱 (Ep 16)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"다들 굳은 빵은 쓸모없다고 생각해. 오늘은 그게 우리의 유일한 우산이었어.\" — 법\n이삿날, 가족의 차는 떠나고 도우 브로스는 젖은 잔디밭에 남겨진다. 그리고 비가 크리스피의 불빛을 한 방울씩 꺼뜨린다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Papa fuhr los – wir lagen auf dem Dach 😱 (Ep 16)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alle denken, altes Brot ist nutzlos. Heute war es unser einziger Regenschirm.\" — Bup\nUmzugstag: Das Familienauto fährt weg, die Dough Bros bleiben auf dem nassen Rasen zurück, und der Regen löscht Crispys Glut Tropfen für Tropfen.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 10,
+   "dur": 24,
+   "top": "RAIN PUTS HIM OUT?!",
+   "title": "The Rain Is Putting Crispy Out 🌧️ (Ep 16) #shorts",
+   "description": "Every drop makes his glow darker. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "rain",
+    "crispy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La lluvia está apagando a Crispy 🌧️ (Ep 16) #shorts",
+     "description": "Cada gota oscurece su brillo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A chuva está apagando o Crispy 🌧️ (Ep 16) #shorts",
+     "description": "Cada gota deixa o brilho dele mais fraco. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المطر يطفئ كريسبي 🌧️ (Ep 16) #shorts",
+     "description": "كل قطرة تجعل وهجه أضعف. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La pluie est en train d'éteindre Crispy 🌧️ (Ep 16) #shorts",
+     "description": "Chaque goutte assombrit sa lueur. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "雨でクリスピーが消えそう 🌧️ (Ep 16) #shorts",
+     "description": "一滴ごとに光が暗くなっていく。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "비가 크리스피를 꺼뜨리고 있다 🌧️ (Ep 16) #shorts",
+     "description": "빗방울마다 불빛이 어두워진다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Regen löscht Crispy aus 🌧️ (Ep 16) #shorts",
+     "description": "Jeder Tropfen macht seine Glut dunkler. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
