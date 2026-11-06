@@ -123,9 +123,9 @@
   "name": "Roblox Top 10 Daily",
   "id": "UCVqJ3Zvk_qPnZDyE5d1bppw",
   "dir": "roblox",
-  "engine": "roblox/engine3d",
+  "engine": "none",
   "kids": false,
-  "category": "1",
+  "category": "20",
   "per_day": {
    "long": 1,
    "short": 2
@@ -144,37 +144,37 @@
    220
   ],
   "thumb_color": "3cc8ff",
-  "ready_only": true,
   "note": "2026-10-29 owner: no kids (Blocky Quest) videos on this channel ever again; teen/adult Roblox news only (robloxtube agent on the PC).",
-  "stopped": "2026-10-29 owner: Blocky Quest kids worker off for good; uploads come from the robloxtube agent on the PC. The 3 kids videos were made private in Studio."
+  "maker": "cloud/makers/roblox.py",
+  "note2": "2026-11-06 owner: rebuild the lost robloxtube PC agent here — Roblox Top 10 news/rankings for teens/adults, never kids content."
  },
  "sleep": {
   "name": "Calm Rain for Sleep",
   "id": "UCmDhWfz5KM_sVy58F8i6dEQ",
   "dir": "sleep",
   "engine": "none",
-  "ready_only": true,
   "kids": false,
   "category": "10",
   "per_day": {
-   "long": 0,
-   "short": 2
+   "long": 1,
+   "short": 1
   },
   "slots": {
    "long": [
-    "01:45",
-    "03:15"
+    "01:45"
    ],
    "short": [
-    "14:45",
-    "20:15"
+    "19:15"
    ]
   },
   "seconds": [
    0,
    0
   ],
-  "thumb_color": "5a7a8c"
+  "thumb_color": "5a7a8c",
+  "maker": "cloud/makers/sleep.py",
+  "no_rek": true,
+  "note": "2026-11-06: real rain only (Wikimedia Commons free-licence recordings), rebuilt after the old sleeptube agent was lost."
  },
  "grind": {
   "name": "Grind_video",
@@ -203,5 +203,92 @@
    0
   ],
   "thumb_color": "ffb000"
+ },
+ "funny": {
+  "name": "Funny Rank Daily",
+  "id": "UChKpt9p1vDhAlnWuMMKHUgQ",
+  "dir": "funny",
+  "engine": "none",
+  "maker": "cloud/makers/funny.py",
+  "kids": false,
+  "category": "23",
+  "per_day": {
+   "long": 0,
+   "short": 6
+  },
+  "slots": {
+   "long": [
+    "20:15"
+   ],
+   "short": [
+    "15:15",
+    "17:15",
+    "20:15",
+    "23:15",
+    "01:15",
+    "03:15"
+   ]
+  },
+  "seconds": [
+   0,
+   0
+  ],
+  "thumb_color": "ffd21e"
+ },
+ "money": {
+  "name": "Money Story Daily",
+  "id": "UCyAwBREYT8kQ_3tYLb4CMKg",
+  "dir": "money",
+  "engine": "none",
+  "maker": "cloud/makers/money.py",
+  "kids": false,
+  "category": "27",
+  "per_day": {
+   "long": 0,
+   "short": 3
+  },
+  "slots": {
+   "long": [
+    "18:15"
+   ],
+   "short": [
+    "13:15",
+    "15:15",
+    "18:15"
+   ]
+  },
+  "seconds": [
+   0,
+   0
+  ],
+  "thumb_color": "2ecc71"
+ },
+ "ufc": {
+  "name": "Wild Sketchbook",
+  "id": "UCbWs87aJxQxohE0M2MaO7GQ",
+  "dir": "ufc",
+  "engine": "none",
+  "maker": "cloud/makers/ufc.py",
+  "kids": false,
+  "category": "15",
+  "per_day": {
+   "long": 1,
+   "short": 3
+  },
+  "slots": {
+   "long": [
+    "22:15"
+   ],
+   "short": [
+    "13:15",
+    "17:15",
+    "02:15"
+   ]
+  },
+  "seconds": [
+   0,
+   0
+  ],
+  "thumb_color": "f5a623"
  }
 }
