@@ -6,6 +6,12 @@
 # both slots and hollow/bolt never ran). A channel without its own token still runs: worker.py picks the
 # token whose channel id matches from any ~/kanal/*/token.json and reports "no token" in its status if none.
 cd /opt/kanal/repo || exit 1
+# 2026-11-06: owner can pause all channel work (e.g. so a big game download gets the whole internet):
+# cloud/pause_until holds an ISO UTC time; until then nothing starts. Pulled here so a pause pushed from outside arrives.
+GIT_TERMINAL_PROMPT=0 timeout 120 git pull -q --rebase --autostash 2>/dev/null
+if [ -f cloud/pause_until ] && [ "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \< "$(head -c 20 cloud/pause_until)" ]; then
+  echo "$(date -u) paused until $(cat cloud/pause_until)" >> /root/kanal/pause.log; exit 0
+fi
 # makers need extra tools (yt-dlp …) — installed once per change of cloud/makers/setup.sh
 if [ -f cloud/makers/setup.sh ] && ! cmp -s cloud/makers/setup.sh /root/kanal/.makers_setup 2>/dev/null; then
   bash cloud/makers/setup.sh >> /root/kanal/makers_setup.log 2>&1 && mkdir -p /root/kanal && cp cloud/makers/setup.sh /root/kanal/.makers_setup
