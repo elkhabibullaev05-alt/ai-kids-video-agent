@@ -12,6 +12,13 @@ fp = next(f for f in FONTS if os.path.exists(f))
 
 im = Image.open(src).convert("RGB").resize((1280, 720), Image.LANCZOS)
 im = ImageEnhance.Color(im).enhance(1.35); im = ImageEnhance.Contrast(im).enhance(1.12)
+# night scenes came out too dark to read on a phone (mean luma 26-35, review 2026-11-06): lift shadows with a gamma
+# curve until the mean is ~70, keeping the spooky mood (no flat brightening of the highlights)
+from PIL import ImageStat
+mean = ImageStat.Stat(im.convert("L")).mean[0]
+if mean < 60:
+    g = max(0.45, min(1.0, __import__("math").log(70 / 255) / __import__("math").log(max(mean, 8) / 255)))
+    im = im.point([round(255 * (i / 255) ** g) for i in range(256)] * 3)
 d = ImageDraw.Draw(im)
 words = text.upper().split(); lines = [" ".join(words[: (len(words) + 1) // 2]), " ".join(words[(len(words) + 1) // 2:])] if len(words) > 2 else [" ".join(words)]
 size = 150
