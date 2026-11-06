@@ -1,0 +1,1343 @@
+{
+ "id": "20261106-2-one-camera-two-friends",
+ "plot": "The day after the double splash, Pip and her grown-up helper Grumpy must make one film for the Wheelburg film contest by sunset with Hal's only camera, but Pip wants fast zooming cars and Grumpy films one slow leaf and a puddle; a camera tug of war ends in the grass, they split up and each film the same Main Street their own way (Turbo splashes Grumpy's puddle shot), and Hal joins the halves in a rush; the twist: he puts them side by side, so the screen shows Grumpy's 'two faces of one street', fast and slow at once, and they win the gold star; lesson: two different ideas can make one better idea; then Bertha sneezes and feels sick the night before the school farm trip.",
+ "script": {
+  "title": "1 Camera, 2 Friends, 0 Agreement!",
+  "set": {
+   "place": "Wheelburg school yard, Main Street and the square, Monday afternoon until the film contest at sunset",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "description": "Pip wants fast, Grumpy wants slow — and they have one camera. Inspector Bolt #22",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "at": [
+     2.0,
+     9.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Action! Fast cars! Big jumps! Go, go, go!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Cut. Stop. Too fast. Nobody can see anything.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THEY CAN'T AGREE!",
+    "hold": 0.9,
+    "cam": "two:pip,grumpy",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "The film contest is at sunset! And we have nothing!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "ONE FILM BY SUNSET?",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It was Monday afternoon, the day after the double splash.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every Wheelburg kid was making a film with a grown-up helper.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The best film wins a gold star for my school door!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "And I'll show the winner on the big screen tonight!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal lent them his old camera. Only one camera. For two.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "My film is called Zoom! Racing! Jumping! Honking!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My film is called Leaf. One leaf. Falling. Slowly.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A leaf? For the whole film?!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Every street has two faces. A fast one and a slow one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Everybody films the fast one. I like the slow one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Slow is boring! Nobody watches boring!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Fast is blurry. Nobody watches blurry.",
+    "cam": "two:grumpy,hal",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And that is how the whole afternoon went.",
+    "cam": "overhead",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip filmed Turbo doing jumps. Very fast. Very wobbly.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Am I a movie star? Film my good side! Both sides!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grumpy filmed a puddle. For five whole minutes.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Is the puddle going to do something? Ever?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Shh. It is reflecting the sky. That is the something.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy, give me the camera! It's my turn!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You had nine turns. I had one puddle.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CAMERA TUG OF WAR!",
+    "hold": 0.9,
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Pip pulled one way. Grumpy pulled the other way.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ],
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The camera flew up high... and landed in the soft grass.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Goodness! Is everyone all right? Is the camera all right?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "It's fine. Old cameras are tough. Like old trucks.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip, Grumpy. Tell me. What is your film about?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Fast!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Slow.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Ah. I see. A film about arguing. Very modern.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The sun is going down, my darlings! One hour left!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY ONE HOUR LEFT!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "One hour? I can zoom around town twelve times in one hour!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, Turbo. Not helping.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "We will lose. Our film is half fast and half slow.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Half a film is no film. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Fine! I film my half. You film your half. Separately!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Fine. Separately. My favourite word.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip raced down Main Street, filming everything that moved.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:7,9"
+     ],
+     [
+      "camera",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bakery! Zoom! Ducks! Zoom! Turbo's crossing! Zoom, zoom!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She zoomed so fast that she only filmed crumbs and feathers.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Crumbs? Where is the bakery? Where did the ducks go?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Stop, cars! Kids cross now! Hi, Pip! Am I in it?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grumpy drove down the very same street. Very, very slowly.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "to:6,12"
+     ],
+     [
+      "camera",
+      "give:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bakery. Warm bread. Ducks. Sleepy. Crossing. Quiet.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A leaf fell. Grumpy filmed it all the way down.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Got it. The leaf. The best moment of my day.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Same places. Same street. But they looked so different.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then, right in Grumpy's quiet puddle shot...",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Crossing guard coming through! Splash! Oops. Sorry!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Turbo. That was my best puddle.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Contest time! Everybody to the big screen! Hurry, hurry!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Quick! Give me both halves. I'll stick them together!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal hurried. He joined the two films in a very big rush.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "give:hal"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Our film will be a mess. Fast, slow, fast, slow...",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "We will be last. Like a leaf. Falling.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THE WORST FILM EVER?",
+    "hold": 1.0,
+    "cam": "two:grumpy,hal",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "The sun touched the hill. Every car in Wheelburg came to watch.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Film after film played. Everybody clapped for every single kid.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And the last film! By Pip and Grumpy!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I can't look. Tell me when it's over.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But in his big rush, Hal had made a mistake.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He didn't put the halves one after the other.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Oh no. I put them side by side! On one screen!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SIDE BY SIDE!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:hal"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Left side, the bakery went zoom! Right side, warm and still.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Left, ducks racing. Right, ducks sleeping. One street, two faces.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Look! There's me! Fast me AND splashy me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "It's like the street is breathing! Fast, slow, fast, slow!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remarkable. One street, two faces. Grumpy, you said that today!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I did. But I only made the slow face.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And I made the fast face! Together, it's the whole street!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then everybody honked. The whole square honked.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The gold star goes to... Pip and Grumpy!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip got the gold star. And Grumpy got a big hug.",
+    "cam": "two:grumpy,hal",
+    "do": [
+     [
+      "pip",
+      "to:-2,13"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Hugs are fast. ...I liked it anyway.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Two different ideas can make one better idea!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Well said, Pip. Different doesn't mean wrong.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "And my big mistake made the best film. Ha!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Ah... ah... ACHOO!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ACHOO!",
+    "hold": 0.8,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Oh dear. My engine feels all fuzzy and sniffly.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But Bertha! Tomorrow is the school trip to the farm!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IS BERTHA SICK?!",
+    "hold": 1.1,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "1 Camera, 2 Friends, 0 Agreement! 🎥😤 (Ep 22)",
+  "description": "\"I want fast. He wants slow. And we only have ONE camera!\" — Pip\nPip and Grumpy must make one film for the Wheelburg film contest by sunset, but she films zooming cars and he films... a leaf. Then Hal joins their two halves in a big rush. Inspector Bolt #22\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "pip",
+   "grumpy",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "teamwork",
+   "working together",
+   "film contest",
+   "stories for kids",
+   "wheelburg"
+  ],
+  "thumb_text": "ONLY A LEAF?!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¡1 cámara, 2 amigos, 0 acuerdos! 🎥😤 (Ep 22)",
+    "description": "\"Yo quiero rápido. Él quiere lento. ¡Y solo tenemos UNA cámara!\" — Pip\nPip y Grumpy deben hacer una película para el concurso de Wheelburg antes del atardecer, pero ella graba coches que vuelan y él graba... una hoja. Luego Hal une sus dos mitades a toda prisa. Inspector Bolt #22\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "1 câmera, 2 amigos, 0 acordo! 🎥😤 (Ep 22)",
+    "description": "\"Eu quero rápido. Ele quer devagar. E só temos UMA câmera!\" — Pip\nA Pip e o Grumpy precisam fazer um filme para o concurso de Wheelburg até o pôr do sol, mas ela filma carros voando e ele filma... uma folha. Depois o Hal junta as duas metades com muita pressa. Inspetor Bolt #22\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "كاميرا واحدة، صديقان، ولا اتفاق! 🎥😤 (حلقة 22)",
+    "description": "\"أنا أريد السرعة. هو يريد البطء. ولدينا كاميرا واحدة فقط!\" — بيب\nعلى بيب وغرامبي أن يصنعا فيلماً واحداً لمسابقة ويلبرغ قبل الغروب، لكنها تصوّر السيارات المسرعة وهو يصوّر... ورقة شجر. ثم يجمع هال النصفين على عجل. المفتش بولت #22\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "1 caméra, 2 amis, 0 accord ! 🎥😤 (Ép 22)",
+    "description": "« Moi, je veux du rapide. Lui, du lent. Et on n'a qu'UNE caméra ! » — Pip\nPip et Grumpy doivent faire un film pour le concours de Wheelburg avant le coucher du soleil, mais elle filme des voitures qui foncent et lui filme... une feuille. Puis Hal colle leurs deux moitiés en vitesse. Inspecteur Bolt #22\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "カメラ1台、友だち2人、意見0!🎥😤(第22話)",
+    "description": "「わたしははやいのがいい。かれはゆっくりがいい。なのにカメラは1台だけ!」— ピップ\nピップとグランピーは夕方までにホイールバーグの映画コンテストの作品を作らなきゃ。でもピップはビュンビュン走る車をとって、グランピーは…葉っぱを1まい。そしてハルが大いそぎで2つをつなげることに。インスペクター・ボルト #22\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "카메라 1대, 친구 2명, 합의 0! 🎥😤 (22화)",
+    "description": "\"나는 빠른 게 좋아. 그럼피는 느린 게 좋대. 그런데 카메라는 딱 한 대야!\" — 핍\n핍과 그럼피는 해가 지기 전에 휠버그 영화 대회에 낼 영화를 만들어야 해요. 그런데 핍은 쌩쌩 달리는 자동차를, 그럼피는... 나뭇잎 하나를 찍어요. 그리고 할이 두 반쪽을 허둥지둥 이어 붙여요. 인스펙터 볼트 #22\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "1 Kamera, 2 Freunde, 0 Einigung! 🎥😤 (Folge 22)",
+    "description": "„Ich will schnell. Er will langsam. Und wir haben nur EINE Kamera!\" — Pip\nPip und Grumpy müssen bis Sonnenuntergang einen Film für den Wettbewerb in Wheelburg drehen, aber sie filmt flitzende Autos und er filmt... ein Blatt. Dann klebt Hal die beiden Hälften in großer Eile zusammen. Inspektor Bolt #22\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "FAST OR SLOW?!",
+   "title": "Pip and Grumpy Can't Agree! 😤 (Ep 22) #shorts",
+   "description": "One camera, two friends, one sunset deadline. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pip y Grumpy no se ponen de acuerdo! 😤 (Ep 22) #shorts",
+     "description": "Una cámara, dos amigos y el atardecer como límite. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Pip e Grumpy não se entendem! 😤 (Ep 22) #shorts",
+     "description": "Uma câmera, dois amigos, prazo até o pôr do sol. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيب وغرامبي لا يتفقان! 😤 (حلقة 22) #shorts",
+     "description": "كاميرا واحدة، صديقان، والموعد عند الغروب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pip et Grumpy ne sont jamais d'accord ! 😤 (Ép 22) #shorts",
+     "description": "Une caméra, deux amis, et le coucher du soleil pour finir. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピップとグランピー、意見が合わない!😤(第22話)#shorts",
+     "description": "カメラ1台、友だち2人、しめきりは夕方。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍과 그럼피는 의견이 안 맞아! 😤 (22화) #shorts",
+     "description": "카메라 한 대, 친구 둘, 마감은 해 질 녘. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pip und Grumpy sind sich nie einig! 😤 (Folge 22) #shorts",
+     "description": "Eine Kamera, zwei Freunde, Frist bis Sonnenuntergang. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 23,
+   "dur": 18,
+   "top": "WHO GETS THE CAMERA?",
+   "title": "Camera Tug of War! 🎥 (Ep 22) #shorts",
+   "description": "Nine turns for Pip, one puddle for Grumpy... uh-oh. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Tira y afloja con la cámara! 🎥 (Ep 22) #shorts",
+     "description": "Nueve turnos para Pip, un charco para Grumpy... ¡ay! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Cabo de guerra pela câmera! 🎥 (Ep 22) #shorts",
+     "description": "Nove vezes para a Pip, uma poça para o Grumpy... ih! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شدّ الحبل على الكاميرا! 🎥 (حلقة 22) #shorts",
+     "description": "تسع مرات لبيب، وبركة ماء واحدة لغرامبي... أوه! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tir à la corde avec la caméra ! 🎥 (Ép 22) #shorts",
+     "description": "Neuf tours pour Pip, une flaque pour Grumpy... oh oh. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "カメラのひっぱりあい!🎥(第22話)#shorts",
+     "description": "ピップは9回、グランピーは水たまり1つ…あらら。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "카메라 줄다리기! 🎥 (22화) #shorts",
+     "description": "핍은 아홉 번, 그럼피는 물웅덩이 하나... 어머나! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Tauziehen um die Kamera! 🎥 (Folge 22) #shorts",
+     "description": "Neunmal Pip, eine Pfütze für Grumpy... oh oh. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 63,
+   "dur": 18,
+   "top": "HAL MADE A MISTAKE!",
+   "title": "Hal Mixed Up Their Film! 😱 (Ep 22) #shorts",
+   "description": "Is it the worst film ever... or not? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Hal mezcló su película! 😱 (Ep 22) #shorts",
+     "description": "¿Es la peor película del mundo... o no? Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Hal misturou o filme deles! 😱 (Ep 22) #shorts",
+     "description": "É o pior filme do mundo... ou não? A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هال خلط فيلمهما! 😱 (حلقة 22) #shorts",
+     "description": "هل هو أسوأ فيلم على الإطلاق... أم لا؟ التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Hal a mélangé leur film ! 😱 (Ép 22) #shorts",
+     "description": "Le pire film du monde... ou pas ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ハルがフィルムをまちがえた!😱(第22話)#shorts",
+     "description": "史上さいあくの映画…それとも?つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "할이 영화를 뒤섞었어요! 😱 (22화) #shorts",
+     "description": "세상에서 제일 엉망인 영화일까... 아닐까? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hal hat ihren Film vertauscht! 😱 (Folge 22) #shorts",
+     "description": "Der schlechteste Film aller Zeiten... oder nicht? Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

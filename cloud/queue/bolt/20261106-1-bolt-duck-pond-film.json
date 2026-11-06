@@ -1,0 +1,1295 @@
+{
+ "id": "20261106-1-bolt-duck-pond-film",
+ "plot": "The Sunday after movie night, all Wheelburg talks about the old film clip of little Bolt splashing into the duck pond, which snapped before the end; embarrassed Bolt hides in his garage and even borrows the reel to make it 'get lost', while Grumpy strangely wants it locked away too; Turbo reminds Bolt that secrets get heavy, the friends watch the end privately and it shows little Grumpy coming to tow Bolt out and rolling in backwards too; Bolt laughs at last, the whole town watches at sunset; lesson: laugh with your friends and silly moments become happy memories; then Pip learns her helper for the school film contest is Grumpy.",
+ "script": {
+  "title": "Bolt Fell in the Duck Pond?!",
+  "set": {
+   "place": "Wheelburg town square and Bolt's garage corner, the Sunday morning after movie night, until sunset",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "description": "Bolt's old pond splash is on film — and so is someone else. Inspector Bolt #21",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "reel",
+    "type": "wheel",
+    "color": [
+     0.18,
+     0.18,
+     0.2
+    ],
+    "at": [
+     -6.0,
+     10.0,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Splash! Splash! Bolt went splash in the duck pond!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "BOLT IN THE DUCK POND?!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo! Please! Not so loud. The whole town is listening.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The film stopped right at the splash! What happened next?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nothing happened. Nothing at all. Good morning, everyone.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Inspector Bolt drove into his garage corner and stayed there.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:14,7"
+     ]
+    ]
+   },
+   {
+    "text": "WHY IS BOLT HIDING?",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It was Sunday morning, the day after movie night in Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Last night the old film had snapped. Right at the biggest splash.",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "reel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Good morning, everyone! I fixed the film! It works again!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, wonderful! I want to see the end! The whole end!",
+    "cam": "two:bertha,hal",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. Some old films should stay in the box.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody needs to see the end. Trust me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Why not, Grumpy? Do you know what happens?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I know nothing. I am a tow truck. I tow.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy looked away very quickly. Pip tilted her head.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I filmed it myself, you know. When I was tiny!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "My very first camera. Wobbly pictures. Lots of laughing.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hal, let's show it tonight! Here in the square! For everyone!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "TONIGHT, FOR THE WHOLE TOWN!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "In his corner, Bolt heard every single word.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The whole town? Laughing at little me? Oh dear, oh dear.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt, it was so funny! You went whoosh, then sploosh!",
+    "cam": "two:turbo,bolt",
+    "do": [
+     [
+      "turbo",
+      "to:11,8"
+     ],
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Funny for you, Turbo. Not so funny for me.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo stopped laughing. He knew that heavy feeling. From yesterday.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry, Bolt. I didn't know it made you sad.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt, what is the worst part? The splash?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:10,6"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The worst part is a detective who falls into a pond.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Detectives must look clever. Always. That is the rule.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "The show starts at sunset! Bertha is bringing the chairs!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Sunset? That is only a few hours away!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "ONLY A FEW HOURS LEFT!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt had an idea. A detective idea. A sneaky idea.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hal, may I hold the film? Just to check it. Carefully.",
+    "cam": "two:bolt,hal",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Of course, old friend! Here you go.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ],
+     [
+      "reel",
+      "give:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And now the old film was with Bolt.",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "reel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt? Why are you driving away with it?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Me? I am checking it. Very far away. In my garage.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt parked in his garage and stared at the film.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:14,7"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "If this film got lost, nobody would laugh. Easy.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "But that isn't right, is it? Hmm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt! Remember what you told me yesterday? About secrets?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:11,9"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "You said a secret gets heavier and heavier. You did!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I did say that. Oh, bother. You were listening.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bolt. Give me that film. I'll lock it in my tow yard.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:9,11"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy! You want it hidden too? But why?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No reason. Just tidy. I like tidy things.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy's tow hook was shaking. Grumpy's hook never shakes.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Two friends who want one film hidden? Very strange!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:5,14"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I know! We watch the end first. Just us. Right now!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Friends first, town later! Hal, the projector, please!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Ready! Pointing it at the garage wall!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:8,13"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT REALLY HAPPENED?",
+    "hold": 1.1,
+    "cam": "wide",
+    "do": [
+     [
+      "reel",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "The film began to roll. Click, click, click.",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "reel",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "There was little Bolt, learning to drive beside the duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Look at your hat! It is bigger than you!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Little Hally honked. Little Bolt jumped. And... splash!",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Here it comes. The end of my detective life.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the film kept rolling. Someone came to pull little Bolt out.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A small grey tow truck. With a very shaky hook.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S LITTLE GRUMPY!",
+    "hold": 1.1,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Little Grumpy pulled. He slipped. And he rolled in too. Backwards!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Two splashes! A double splash! Best film ever!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's why I wanted it locked away. Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I was going to be the hero. I became a fountain.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt looked at Grumpy. Grumpy looked at Bolt.",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A fountain! Oh, Grumpy. You were a lovely fountain!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bolt laughed. A big, warm, honking laugh.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Heh. Heh-heh. It was a very good splash.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the film, little Bolt and little Grumpy laughed too. Dripping wet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "See? It isn't a sad film. It's a friendship film!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hal. Show it tonight. The whole thing. To everyone.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Even the double splash?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Especially the double splash!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At sunset, the whole town sat in the square to watch.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When the splash came, everybody laughed. Bolt laughed the loudest.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Laugh with your friends, and silly moments become happy memories.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Silly moments become happy memories! I love that one!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "One splash only. Nobody mention the second one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Too late, Grumpy. Everybody saw the second one.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Pip, didn't your class get a letter today?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Oh! A film contest! Every kid gets a grown-up helper!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And my helper is... wait. Him?!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "PIP AND... GRUMPY?!",
+    "hold": 1.1,
+    "cam": "two:pip,grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Bolt Fell in the Duck Pond?! 🦆😳 (Ep 21)",
+  "description": "\"A detective must always look clever. So why did the whole town see me fall in a pond?\" — Bolt\nThe old film snapped right at little Bolt's big splash, and tonight Hal wants to show the whole thing to Wheelburg. Bolt wants it hidden... and so, strangely, does Grumpy. Inspector Bolt #21\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "bolt",
+   "grumpy",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "embarrassed",
+   "laughing together",
+   "friendship",
+   "duck pond",
+   "stories for kids",
+   "wheelburg"
+  ],
+  "thumb_text": "DON'T PLAY IT!",
+  "thumb_beat": 30,
+  "localizations": {
+   "es": {
+    "title": "¡¿Bolt se cayó al estanque de patos?! 🦆😳 (Ep 21)",
+    "description": "\"Un detective siempre debe parecer listo. ¿Entonces por qué todo el pueblo me vio caer en un estanque?\" — Bolt\nLa vieja película se cortó justo en el gran chapuzón del pequeño Bolt, y esta noche Hal quiere mostrarla entera a Wheelburg. Bolt quiere esconderla... y, qué raro, Grumpy también. Inspector Bolt #21\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "O Bolt caiu no lago dos patos?! 🦆😳 (Ep 21)",
+    "description": "\"Um detetive precisa sempre parecer esperto. Então por que a cidade inteira me viu cair num lago?\" — Bolt\nO filme antigo arrebentou bem no grande mergulho do pequeno Bolt, e hoje à noite o Hal quer mostrar tudo para Wheelburg. O Bolt quer escondê-lo... e, que estranho, o Grumpy também. Inspetor Bolt #21\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل سقط بولت في بركة البط؟! 🦆😳 (حلقة 21)",
+    "description": "\"على المحقق أن يبدو ذكياً دائماً. فلماذا رأتني البلدة كلها أسقط في بركة؟\" — بولت\nانقطع الفيلم القديم تماماً عند سقطة بولت الصغير الكبيرة في الماء، والليلة يريد هال أن يعرضه كاملاً على ويلبرغ. بولت يريد إخفاءه... والغريب أن غرامبي يريد ذلك أيضاً. المفتش بولت #21\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Bolt est tombé dans la mare aux canards ?! 🦆😳 (Ép 21)",
+    "description": "« Un détective doit toujours avoir l'air malin. Alors pourquoi toute la ville m'a vu tomber dans une mare ? » — Bolt\nLe vieux film s'est cassé pile au grand plouf du petit Bolt, et ce soir Hal veut le montrer en entier à Wheelburg. Bolt veut le cacher... et, bizarrement, Grumpy aussi. Inspecteur Bolt #21\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ボルトがアヒルの池に落ちた?!🦆😳(第21話)",
+    "description": "「探偵はいつもかしこく見えなきゃ。なのに、どうして町じゅうに池に落ちるところを見られたの?」— ボルト\n古いフィルムは、小さいボルトが池にドボンと落ちたところで切れてしまった。今夜ハルはそれを町のみんなに全部見せたい。ボルトはかくしたい…そしてふしぎなことに、グランピーも。インスペクター・ボルト #21\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "볼트가 오리 연못에 빠졌다고?! 🦆😳 (21화)",
+    "description": "\"탐정은 언제나 똑똑해 보여야 해. 그런데 왜 온 마을이 내가 연못에 빠지는 걸 봤을까?\" — 볼트\n낡은 필름이 꼬마 볼트가 풍덩 빠지는 순간에 딱 끊겼어요. 오늘 밤 할은 그 필름을 휠버그 모두에게 보여 주고 싶어 해요. 볼트는 숨기고 싶어 하고... 이상하게도 그럼피도 그래요. 인스펙터 볼트 #21\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Ist Bolt in den Ententeich gefallen?! 🦆😳 (Folge 21)",
+    "description": "„Ein Detektiv muss immer klug aussehen. Warum hat dann die ganze Stadt gesehen, wie ich in einen Teich falle?\" — Bolt\nDer alte Film ist genau beim großen Platsch des kleinen Bolt gerissen, und heute Abend will Hal ihn ganz Wheelburg zeigen. Bolt will ihn verstecken... und seltsamerweise Grumpy auch. Inspektor Bolt #21\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "BOLT WENT SPLASH?!",
+   "title": "The Whole Town Saw Bolt Splash! 🦆 (Ep 21) #shorts",
+   "description": "Bolt is hiding... what happened in that pond? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Todo el pueblo vio el chapuzón de Bolt! 🦆 (Ep 21) #shorts",
+     "description": "Bolt se esconde... ¿qué pasó en ese estanque? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A cidade toda viu o mergulho do Bolt! 🦆 (Ep 21) #shorts",
+     "description": "O Bolt está se escondendo... o que aconteceu naquele lago? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "البلدة كلها رأت سقطة بولت! 🦆 (حلقة 21) #shorts",
+     "description": "بولت يختبئ... ماذا حدث في تلك البركة؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Toute la ville a vu le plouf de Bolt ! 🦆 (Ép 21) #shorts",
+     "description": "Bolt se cache... que s'est-il passé dans cette mare ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "町じゅうがボルトのドボンを見た!🦆(第21話)#shorts",
+     "description": "ボルトがかくれちゃった…池で何があったの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "온 마을이 볼트의 풍덩을 봤어요! 🦆 (21화) #shorts",
+     "description": "볼트가 숨어 버렸어요... 그 연못에서 무슨 일이? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die ganze Stadt sah Bolts Platsch! 🦆 (Folge 21) #shorts",
+     "description": "Bolt versteckt sich... was ist im Teich passiert? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 32,
+   "dur": 24,
+   "top": "BOLT HAS A SNEAKY IDEA",
+   "title": "Is Bolt Hiding the Film?! 🎞️ (Ep 21) #shorts",
+   "description": "A detective with a secret... will he keep it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Bolt esconde la película?! 🎞️ (Ep 21) #shorts",
+     "description": "Un detective con un secreto... ¿lo guardará? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Bolt está escondendo o filme?! 🎞️ (Ep 21) #shorts",
+     "description": "Um detetive com um segredo... ele vai guardá-lo? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل يخفي بولت الفيلم؟! 🎞️ (حلقة 21) #shorts",
+     "description": "محقق لديه سر... هل سيحتفظ به؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bolt cache-t-il le film ?! 🎞️ (Ép 21) #shorts",
+     "description": "Un détective avec un secret... va-t-il le garder ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボルトがフィルムをかくしてる?!🎞️(第21話)#shorts",
+     "description": "ひみつをもった探偵…このままかくすの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "볼트가 필름을 숨기는 거야?! 🎞️ (21화) #shorts",
+     "description": "비밀이 생긴 탐정... 끝까지 숨길까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Versteckt Bolt den Film?! 🎞️ (Folge 21) #shorts",
+     "description": "Ein Detektiv mit einem Geheimnis... behält er es? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 52,
+   "dur": 21,
+   "top": "WHO IS COMING?!",
+   "title": "Who Pulled Bolt Out of the Pond? 🦆 (Ep 21) #shorts",
+   "description": "The old film keeps rolling... someone is coming! Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién sacó a Bolt del estanque? 🦆 (Ep 21) #shorts",
+     "description": "La vieja película sigue... ¡alguien viene! Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem tirou o Bolt do lago? 🦆 (Ep 21) #shorts",
+     "description": "O filme antigo continua... alguém está chegando! A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من أخرج بولت من البركة؟ 🦆 (حلقة 21) #shorts",
+     "description": "الفيلم القديم يستمر... أحدهم قادم! التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a sorti Bolt de la mare ? 🦆 (Ép 21) #shorts",
+     "description": "Le vieux film continue... quelqu'un arrive ! La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "池からボルトを引っぱったのはだれ?🦆(第21話)#shorts",
+     "description": "古いフィルムはまだつづく…だれか来た!つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 볼트를 연못에서 꺼냈을까? 🦆 (21화) #shorts",
+     "description": "낡은 필름이 계속 돌아가요... 누군가 와요! 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer zog Bolt aus dem Teich? 🦆 (Folge 21) #shorts",
+     "description": "Der alte Film läuft weiter... jemand kommt! Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1283 @@
+{
+ "id": "20261106-3-bertha-quiet-night",
+ "plot": "The night after the film contest, Big Bertha has a cold and must be well by sunrise to drive thirty kids to the farm; she asks only for one quiet night, but 'Team Get-Well' (Turbo's fast soup, Grumpy's dusty 1980 blanket, Hal's loud lullaby, Pip's seat-bouncing, headlight checks) keeps waking her and she gets worse; Bolt's notebook shows every sneeze comes right after a visit, so the helpers were the cause; they take the blanket away and park outside as silent guards, fall asleep themselves, and Bertha wakes well and drives the kids on time; lesson: sometimes the kindest help is doing just what they ask; then a letter invites Turbo to the City Race Team.",
+ "script": {
+  "title": "Shh! Bertha Needs ONE Quiet Night",
+  "set": {
+   "place": "Bertha's bus depot on Gear Street, a cold windy night until sunrise before the school farm trip",
+   "press": false,
+   "podium": false,
+   "time": "night"
+  },
+  "description": "Team Get-Well tries very hard to help a sick Bertha. Maybe too hard. Inspector Bolt #23",
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "soup",
+    "type": "box",
+    "color": [
+     0.85,
+     0.2,
+     0.12
+    ],
+    "at": [
+     -5.5,
+     15.5,
+     0.35
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "blanket",
+    "type": "box",
+    "color": [
+     0.55,
+     0.5,
+     0.42
+    ],
+    "at": [
+     -9.0,
+     18.0,
+     2.6
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "bertha",
+    "say": "Ah... ah... ACHOO! Oh no. Not tonight. Not tonight!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "BERTHA IS SICK!",
+    "hold": 0.9,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "Bertha! The farm trip is at sunrise! Thirty kids!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I know, love. I must get well by morning.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WELL BY SUNRISE?",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It was the night after the film contest. Cold and windy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Big Bertha parked in her bus depot, sniffing and sneezing.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "All I need is one quiet night. Just sleep. That's all.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then sleep you shall. Good night, Bertha. Sweet dreams.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha closed her eyes. The depot was quiet. For one minute.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Psst! Team! We can't just leave her alone! She needs help!",
+    "cam": "two:turbo,bolt",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A get-well team! I'll be the boss of pillows!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And I'll be the boss of soup! Hot, fast soup!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I have a blanket. In my tow yard. Since nineteen eighty.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "And I'll sing her a lullaby. I'm very good. Very loud.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Friends. She asked for one quiet night.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Quiet help! The quietest help in the world! Go, team!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TEAM GET-WELL!",
+    "hold": 0.9,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "At nine o'clock, Turbo zoomed in with a pot of soup.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-6,15"
+     ],
+     [
+      "soup",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bertha! Wake up! Soup time! Careful, it's very fast soup!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hmm? Oh. Thank you, love. Ah... ACHOO!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt took out his little notebook. Nine o'clock. One sneeze.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At ten past nine, Grumpy brought his old blanket. Very dusty.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:-11,15"
+     ],
+     [
+      "blanket",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Here. Warm. A bit dusty. Dust is also warm.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "ACHOO! ACHOO! Oh my. Thank you, Grumpy.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt wrote again. Ten past nine. Two sneezes.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At twenty past nine, Hal began his lullaby.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:-13,13"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Sleep, little bus, sleep! Sleep, sleep, SLEEEEP!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hal, dear... that isn't very quiet... ACHOO!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THREE SNEEZES!",
+    "hold": 0.9,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "She's getting worse! Not better! What do we do?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Only nine hours until sunrise! We need MORE help!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "More help? Hmm. Or perhaps a different kind of help.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But nobody heard him. Team Get-Well was much too busy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll fluff her pillows! Wait. Do buses have pillows?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip bounced on Bertha's seats to make them soft. Boing, boing!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-7,16"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Pip, darling... it's ten o'clock... I was nearly asleep.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt wrote it down. Ten o'clock. Bouncing. One sneeze.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Eleven o'clock! Headlight check! Open your eyes, Bertha!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-7,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo shone his bright headlights right into Bertha's eyes.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Too bright, love! ACHOO! ACHOO!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "She's cold. More blanket. Blanket fixes everything.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy shook his dusty blanket. A big grey cloud went puff.",
+    "cam": "prop:blanket",
+    "do": [
+     [
+      "blanket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "ACHOO! ACHOO! ACHOO!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "She needs a stronger lullaby! I'll sing it twice as loud!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hal, please. Midnight is not for loud singing.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight came. Bertha's engine went cough, cough, rattle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I'm so tired, my wipers are drooping.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Thirty kids are waiting for the farm. Will she make it?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "If Bertha can't drive, no farm trip! No cows! No piglets!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NO FARM TRIP?!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "hal",
+    "say": "I could take the kids! I'm big!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You're a moving truck. You have no seats. Only boxes.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Ah. Kids in boxes. That's not a good idea, is it?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt looked at his little notebook. And he looked again.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nine o'clock, soup. Sneeze. Ten past nine, blanket. Sneeze.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Song, sneeze. Bouncing, sneeze. Headlights, sneeze. Dust, sneeze!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every sneeze comes right after one of us visits!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S US?!",
+    "hold": 1.1,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "Us? But we're helping! We're Team Get-Well!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha told us what she needed. One quiet night.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And we gave her soup, songs, dust and headlights.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My blanket... was the dust? Since nineteen eighty?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "We were so busy helping, we forgot to listen.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh no. Team Get-Well was Team Keep-Awake.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then let us give her what she asked for. Silence.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy took his dusty blanket home. Very, very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "blanket",
+      "hide"
+     ],
+     [
+      "grumpy",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then everyone parked in a row outside the depot. Like quiet guards.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Psst. Is this quiet enough? Am I being quiet?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo. Shh.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "No soup. No songs. No headlights. Just the wind.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And one by one, the quiet guards fell asleep too.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When the sun came up, a big yellow bus was wide awake.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Good morning, Wheelburg! No sneezes! I feel brand new!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Huh? What? Is it morning? Did we oversleep?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "You did, my darlings. But I slept best of all.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Thank you for the quiet. It was the best present.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Sometimes the kindest help is doing just what they ask.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Even when what they ask is... nothing at all!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bertha drove thirty happy kids to the farm. Right on time.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:0,8"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Turbo! A letter came for you this morning. A fancy one!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "For me? City Race Team? They want me to race?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "In the big city? But Turbo... you'd have to leave!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "IS TURBO LEAVING?!",
+    "hold": 1.1,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Shh! Bertha Needs ONE Quiet Night 🤧🌙 (Ep 23)",
+  "description": "\"All I asked for was one quiet night... so why is everyone so busy helping?\" — Bertha\nBig Bertha has a cold, and thirty kids are waiting for the farm trip at sunrise. Team Get-Well brings soup, songs and a very old blanket — but Bertha keeps sneezing, and Bolt's little notebook is filling up. Inspector Bolt #23\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "big bertha",
+   "turbo",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "listening",
+   "helping friends",
+   "get well soon",
+   "stories for kids",
+   "wheelburg"
+  ],
+  "thumb_text": "ACHOO! NOT NOW!",
+  "thumb_beat": 3,
+  "localizations": {
+   "es": {
+    "title": "¡Shh! Bertha necesita UNA noche tranquila 🤧🌙 (Ep 23)",
+    "description": "\"Solo pedí una noche tranquila... ¿por qué todos están tan ocupados ayudando?\" — Bertha\nLa gran Bertha está resfriada y treinta niños esperan la excursión a la granja al amanecer. El Equipo Ponte-Bien trae sopa, canciones y una manta muy vieja, pero Bertha sigue estornudando y la libretita de Bolt se va llenando. Inspector Bolt #23\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Shh! A Bertha precisa de UMA noite tranquila 🤧🌙 (Ep 23)",
+    "description": "\"Eu só pedi uma noite tranquila... então por que todo mundo está tão ocupado ajudando?\" — Bertha\nA grande Bertha está resfriada, e trinta crianças esperam o passeio à fazenda ao nascer do sol. A Equipe Melhoras traz sopa, canções e um cobertor bem velho, mas a Bertha não para de espirrar, e o caderninho do Bolt vai se enchendo. Inspetor Bolt #23\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "صه! بيرثا تحتاج ليلة هادئة واحدة 🤧🌙 (حلقة 23)",
+    "description": "\"كل ما طلبته ليلة هادئة واحدة... فلماذا الجميع مشغولون بالمساعدة؟\" — بيرثا\nبيرثا الكبيرة مصابة بالزكام، وثلاثون طفلاً ينتظرون رحلة المزرعة عند شروق الشمس. فريق الشفاء يحضر الحساء والأغاني وبطانية قديمة جداً، لكن بيرثا لا تتوقف عن العطس، ودفتر بولت الصغير يمتلئ. المفتش بولت #23\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Chut ! Bertha a besoin d'UNE nuit calme 🤧🌙 (Ép 23)",
+    "description": "« J'ai juste demandé une nuit calme... alors pourquoi tout le monde est si occupé à m'aider ? » — Bertha\nLa grande Bertha est enrhumée, et trente enfants attendent la sortie à la ferme au lever du soleil. L'équipe Bon-Rétablissement apporte de la soupe, des chansons et une très vieille couverture, mais Bertha éternue encore, et le petit carnet de Bolt se remplit. Inspecteur Bolt #23\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "シーッ!バーサにしずかな夜を1つだけ🤧🌙(第23話)",
+    "description": "「おねがいしたのは、しずかな夜ひとつだけ…なのに、どうしてみんなそんなにいそがしく手伝うの?」— バーサ\n大きなバーサはかぜをひいてしまった。朝には30人の子どもたちが牧場への遠足を待っている。「早くよくなってチーム」はスープに歌にとても古い毛布を持ってくるけど、バーサのくしゃみは止まらず、ボルトの小さなノートはどんどんうまっていく。インスペクター・ボルト #23\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "쉿! 버사에게 조용한 밤 하나만 🤧🌙 (23화)",
+    "description": "\"조용한 밤 하나만 부탁했는데... 왜 다들 그렇게 바쁘게 도와주는 걸까?\" — 버사\n큰 버사가 감기에 걸렸어요. 해 뜨면 서른 명의 아이들이 농장 소풍을 기다려요. 쾌유 팀은 수프와 노래, 아주 오래된 담요를 가져오지만 버사는 계속 재채기를 하고, 볼트의 작은 수첩은 점점 채워져요. 인스펙터 볼트 #23\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Pssst! Bertha braucht EINE ruhige Nacht 🤧🌙 (Folge 23)",
+    "description": "„Ich wollte nur eine ruhige Nacht... warum helfen dann alle so eifrig?\" — Bertha\nDie große Bertha ist erkältet, und dreißig Kinder warten bei Sonnenaufgang auf den Ausflug zum Bauernhof. Das Gute-Besserung-Team bringt Suppe, Lieder und eine sehr alte Decke – aber Bertha niest weiter, und Bolts kleines Notizbuch wird immer voller. Inspektor Bolt #23\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "SICK BEFORE THE TRIP!",
+   "title": "Bertha Is Sick Before the Big Trip! 🤧 (Ep 23) #shorts",
+   "description": "Thirty kids, one sneezy bus, one night to get well. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Bertha se enferma antes de la gran excursión! 🤧 (Ep 23) #shorts",
+     "description": "Treinta niños, un autobús que estornuda y una noche para curarse. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Bertha ficou doente antes do grande passeio! 🤧 (Ep 23) #shorts",
+     "description": "Trinta crianças, um ônibus espirrando e uma noite para melhorar. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيرثا مريضة قبل الرحلة الكبيرة! 🤧 (حلقة 23) #shorts",
+     "description": "ثلاثون طفلاً، حافلة تعطس، وليلة واحدة للشفاء. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bertha est malade avant la grande sortie ! 🤧 (Ép 23) #shorts",
+     "description": "Trente enfants, un bus qui éternue et une nuit pour guérir. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "大事な遠足の前にバーサがかぜ!🤧(第23話)#shorts",
+     "description": "子ども30人、くしゃみのバス、なおすための夜はひとつだけ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "큰 소풍 전에 버사가 아파요! 🤧 (23화) #shorts",
+     "description": "아이들 서른 명, 재채기하는 버스, 나을 시간은 하룻밤. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bertha ist vor dem großen Ausflug krank! 🤧 (Folge 23) #shorts",
+     "description": "Dreißig Kinder, ein niesender Bus und eine Nacht zum Gesundwerden. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 44,
+   "dur": 21,
+   "top": "STILL SNEEZING?!",
+   "title": "Why Does Bertha Keep Sneezing?! 🤧 (Ep 23) #shorts",
+   "description": "Soup, songs, a blanket... and more sneezes. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Por qué Bertha no deja de estornudar?! 🤧 (Ep 23) #shorts",
+     "description": "Sopa, canciones, una manta... y más estornudos. Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que a Bertha não para de espirrar?! 🤧 (Ep 23) #shorts",
+     "description": "Sopa, canções, um cobertor... e mais espirros. A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا لا تتوقف بيرثا عن العطس؟! 🤧 (حلقة 23) #shorts",
+     "description": "حساء، أغانٍ، بطانية... ومزيد من العطس. التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi Bertha éternue-t-elle encore ?! 🤧 (Ép 23) #shorts",
+     "description": "Soupe, chansons, couverture... et encore des éternuements. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どうしてバーサのくしゃみが止まらないの?!🤧(第23話)#shorts",
+     "description": "スープ、歌、毛布…それでもくしゃみ。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사는 왜 계속 재채기를 할까?! 🤧 (23화) #shorts",
+     "description": "수프, 노래, 담요... 그리고 또 재채기. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum niest Bertha immer weiter?! 🤧 (Folge 23) #shorts",
+     "description": "Suppe, Lieder, eine Decke... und noch mehr Niesen. Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
