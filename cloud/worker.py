@@ -493,6 +493,71 @@ def take_ready(st):
     return added
 
 
+def ahead(st, kind):
+    return sum(1 for x in st["taken"] if x["kind"] == kind and x["t"] > dt.datetime.now(dt.timezone.utc).isoformat())
+
+
+def run_maker(st):
+    """2026-11-06 — "maker" channels (funny, money, ufc, roblox, sleep): a channel script makes finished videos itself.
+    cloud/makers/<ch>.py --out DIR --home HOME --repo ROOT --titles FILE  writes DIR/<name>.mp4 + DIR/<name>.json
+    {"file", "kind": "short"|"long", "title", "description", "tags", "thumb"?, "localizations"?, "synthetic"?,
+     "pack"?: same value on a long and its Shorts (their description's {LONG_URL} then links the long),
+     "queue_file"?: repo-relative path of the script it used (moved to cloud/done/<ch>/ once taken)}.
+    Every file passes the rek-ball gate (>= 85) before it joins the upload list. Two days of slots stay filled."""
+    pd = CFG["per_day"]
+    want_s, want_l = pd.get("short", 0) * 2, pd.get("long", 0) * 2
+    if len(st["pending"]) > 2 or (ahead(st, "short") >= want_s and ahead(st, "long") >= want_l):
+        status("idle", ahead=ahead(st, "short") + ahead(st, "long")); push("idle", [RES]); return
+    out = os.path.join(HOME, "made")
+    os.makedirs(out, exist_ok=True)
+    if not glob.glob(os.path.join(out, "*.json")):
+        tf = os.path.join(HOME, "titles.json")
+        json.dump(st.get("titles", []), open(tf, "w"))
+        status("render"); push("making", [RES])
+        p = sh([PY, os.path.join(ROOT, CFG["maker"]), "--out", out, "--home", HOME, "--repo", ROOT, "--titles", tf,
+                "--need-long", str(int(ahead(st, "long") < want_l)), "--need-short", str(int(ahead(st, "short") < want_s))],
+               check=False, timeout=5 * 3600)
+        log((p.stdout or "")[-1500:])
+        if p.returncode == 3:  # maker: nothing to make right now (e.g. no new script in the queue)
+            status("queue_empty", ahead=ahead(st, "short") + ahead(st, "long")); push("queue empty", [RES]); return
+        if p.returncode:
+            raise RuntimeError("maker failed: " + (p.stderr or p.stdout)[-600:])
+    status("check")
+    moved, added = [], 0
+    for jf in sorted(glob.glob(os.path.join(out, "*.json"))):
+        it = json.load(open(jf))
+        it["file"] = os.path.join(out, os.path.basename(it["file"]))
+        if it.get("thumb"):
+            it["thumb"] = os.path.join(out, os.path.basename(it["thumb"]))
+        name = os.path.splitext(os.path.basename(jf))[0]
+        if CFG.get("no_rek"):  # Calm Rain: still, quiet rain loops by design — the retention gate does not apply
+            ball, why = 100, "no_rek channel"
+        else:
+            ball, why = rek(it["file"], it["title"], it.get("kind", "short"))
+        log("rek", name, ball, why)
+        if ball < GATE:
+            os.makedirs(REJ, exist_ok=True)
+            json.dump({"reason": f"rek-ball {ball}: {why}", "title": it["title"], "time": NOW.isoformat()},
+                      open(os.path.join(REJ, name + ".reason.json"), "w"), ensure_ascii=False)
+            os.remove(jf); moved.append(REJ)
+            continue
+        keep = os.path.join(HOME, "ready"); os.makedirs(keep, exist_ok=True)
+        dst = os.path.join(keep, os.path.basename(it["file"])); shutil.move(it["file"], dst); it["file"] = dst
+        if it.get("thumb") and os.path.exists(it["thumb"]):
+            th = os.path.join(keep, os.path.basename(it["thumb"])); shutil.move(it["thumb"], th); it["thumb"] = th
+        qf = it.pop("queue_file", None)
+        if qf and os.path.exists(os.path.join(ROOT, qf)):
+            os.replace(os.path.join(ROOT, qf), os.path.join(DONE, os.path.basename(qf))); moved += [Q, DONE]
+        it.update(job=it.pop("pack", None) or name, kind=it.get("kind", "short"), ball=ball)
+        st["pending"].append(it); added += 1
+        os.remove(jf)
+    save_state(st)
+    status("upload", made=added); push(f"{added} video(s) made", [RES] + moved)
+    if not do_uploads(st):
+        status("quota_wait"); push("quota wait", [RES]); return
+    status("ok", ahead=ahead(st, "short") + ahead(st, "long")); push("done", [RES])
+
+
 def main():
     pull()
     st = load_state()
@@ -510,6 +575,8 @@ def main():
         status("quota_wait"); push("quota wait", [RES]); return
     if take_ready(st) and not do_uploads(st):
         status("quota_wait"); push("quota wait", [RES]); return
+    if CFG.get("maker"):  # 2026-11-06: channels whose old PC agent was lost with the old laptop
+        run_maker(st); return
     if CFG.get("ready_only"):
         status("ok"); push("ready-only run", [RES]); return
     if len(st["pending"]) > 2:
