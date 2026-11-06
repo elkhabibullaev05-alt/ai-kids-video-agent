@@ -12,7 +12,7 @@ if [ -f cloud/makers/setup.sh ] && ! cmp -s cloud/makers/setup.sh /root/kanal/.m
 fi
 PAR=${KANAL_PAR:-3}  # 2026-11-06: 10 channels now (makers are mostly ffmpeg, lighter than Blender)
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
-CHS="maxcat doughbros hollow bolt roblox grind funny money ufc sleep"  # 2026-11-06: funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
+CHS="maxcat doughbros hollow bolt roblox funny money ufc sleep"  # 2026-11-06 owner: grind paused for now (no token, not needed yet); funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
 # 2026-10-27: sleep (Calm Rain) removed — owner wants it back to its own real-rain agent (sleeptube), no AI videos
 # 2026-11-05: stories Claude writes on the PC (Documents\kanal_navbat\<ch>\*.json) go into the queue
 NAV=$(ls -d /mnt/c/Users/*/Documents/kanal_navbat 2>/dev/null | head -1)
