@@ -277,7 +277,7 @@ class Card:
         elif v == "stat":
             self.ic = gx.framed(gx.cover(self.icon, 380, 380), 8, gx.WHITE, 40)
         elif v in ("duo", "duo3"):
-            sz = 420 if v == "duo" else 290
+            sz = 340 if v == "duo" else 230
             self.ics = [gx.framed(gx.cover(gx.load_rgb(x["icon"], (512, 512)), sz, sz), 8, gx.WHITE, 40)
                         for x in c["gs"]]
         elif v == "chart":
@@ -318,7 +318,7 @@ class Card:
         # mid-card punch: a held zoom jump halfway through longer cards (a second "cut" per card)
         mid = dur > 3.0 and lt >= dur / 2 and not loop_end
         if mid:
-            pop *= 1.35
+            pop *= 1.35 if c["vis"] in ("hero", "blur") else 1.1
         if v in ("hero", "blur"):
             view = self.kb.at(u, pop)
             d.rounded_rectangle((VX - 10, VY - 10, VX + VW + 10, VY + VH + 10), 40, fill=self.acc)
@@ -363,7 +363,7 @@ class Card:
         elif v in ("duo", "duo3"):
             n = len(self.ics)
             for j, ic in enumerate(self.ics):
-                cx = (W // (n + 1)) * (j + 1) if n == 3 else (300 if j == 0 else 780)
+                cx = (200 + j * 340) if n == 3 else (270 if j == 0 else 810)
                 bob = int(14 * math.sin(t_abs * 4 + j * 1.7))
                 win = c.get("win") == j
                 s = (1.08 if win else (0.9 if c.get("win") is not None else 1.0)) * pop
@@ -371,7 +371,7 @@ class Card:
                 y = VY + (170 if n == 2 else 230) + bob
                 im.paste(icr, (cx - icr.width // 2, y - icr.height // 2), icr)
                 nm = c["gs"][j]["clean"]
-                gx.draw_text(d, (cx, y + icr.height // 2 + 45), nm, gx.fit_font(nm, 460 if n == 2 else 320, 44, 22),
+                gx.draw_text(d, (cx, y + icr.height // 2 + 45), nm, gx.fit_font(nm, 400 if n == 2 else 300, 44, 20),
                              gx.WHITE, stroke=5, anchor="mm")
                 if c.get("vals"):
                     vv = c["vals"][j]
@@ -410,8 +410,7 @@ class Card:
             for k, (w_, a_, b_) in enumerate(words):
                 if t_abs >= a_:
                     cur = k
-            g0 = cur - cur % 3
-            grp = words[g0:g0 + 3]
+            g0, grp = self.groups[cur]
             f = gx.font(82)
             txts = [w_[0].upper() for w_ in grp]
             full = " ".join(txts)
@@ -470,7 +469,16 @@ def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_mich
         cards[0]["strip"] = strip
         cards[-1]["strip"] = strip if cards[-1]["vis"] == cards[0]["vis"] else []
     objs = [Card(c, seed=c["g"]["id"] % 997 + (1 if c.get("alt") else 0)) for c in cards]
+    groups, k = [], 0  # caption groups of <= 3 words that never cross a sentence end
+    while k < len(words):
+        e = k
+        while e < k + 2 and e + 1 < len(words) and not words[e][0][-1:] in ".?!:":
+            e += 1
+        groups += [(k, words[k:e + 1])] * (e + 1 - k)
+        k = e + 1
     objs[0].first = True
+    for o in objs:
+        o.groups = groups
     washes = [(255, 225, 40), (40, 10, 90), (90, 230, 255), (120, 0, 40), (255, 160, 220), (0, 50, 60)]
     for k, o in enumerate(objs):
         o.tint = None if (k == 0 or cards[k].get("loop")) else washes[k % len(washes)]
