@@ -16,11 +16,16 @@ def _chunk(job):
                           "-s", f"{w}x{h}", "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
                           "-crf", "19", "-pix_fmt", "yuv420p", "-g", str(fps * 2), "-threads", "2", path],
                          stdin=subprocess.PIPE)
-    for i in range(a, b):
-        im = _FN(i)
-        if im.size != (w, h) or im.mode != "RGB":
-            im = im.convert("RGB").resize((w, h))
-        p.stdin.write(im.tobytes())
+    try:
+        for i in range(a, b):
+            im = _FN(i)
+            if im.size != (w, h) or im.mode != "RGB":
+                im = im.convert("RGB").resize((w, h))
+            p.stdin.write(im.tobytes())
+    except BaseException:
+        p.kill()
+        p.wait()
+        raise
     p.stdin.close()
     if p.wait():
         raise RuntimeError("ffmpeg chunk failed")

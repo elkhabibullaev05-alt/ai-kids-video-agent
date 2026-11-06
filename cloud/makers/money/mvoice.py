@@ -145,9 +145,13 @@ def speak(scenes, voice="af_heart", speed=1.08, gap=0.16, max_total=58.0, cache=
     """TTS every scene; if the total runs past max_total, re-speak faster (once, up to speed 1.28)."""
     clips = [_tts(s["say"], voice, speed, cache) for s in scenes]
     total = sum(len(c) for c in clips) / SR + gap * (len(clips) - 1) + 0.5
-    if total > max_total:
-        sp = min(1.28, speed * total / (max_total - 0.5))
+    sp = speed
+    for _ in range(2):  # too long: re-speak a little faster (Kokoro speed is not exactly linear)
+        if total <= max_total or sp >= 1.3:
+            break
+        sp = min(1.3, sp * total / (max_total - 0.8))
         clips = [_tts(s["say"], voice, sp, cache) for s in scenes]
+        total = sum(len(c) for c in clips) / SR + gap * (len(clips) - 1) + 0.5
     parts, timing, t = [], [], 0.0
     g = np.zeros(int(gap * SR), np.float32)
     for i, (s, c) in enumerate(zip(scenes, clips)):

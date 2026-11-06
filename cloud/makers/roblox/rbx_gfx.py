@@ -149,8 +149,9 @@ class KenBurns:
         ch = cw * self.h / self.w
         px = self.pan[0] + (self.pan[2] - self.pan[0]) * u
         py = self.pan[1] + (self.pan[3] - self.pan[1]) * u
-        x = (sw - cw) / 2 * (1 + px)
-        y = (sh - ch) / 2 * (1 + py)
+        ch = min(ch, sh)
+        x = max(0.0, (sw - cw) / 2 * (1 + px))
+        y = max(0.0, (sh - ch) / 2 * (1 + py))
         return self.src.resize((self.w, self.h), Image.BILINEAR, box=(x, y, x + cw, y + ch))
 
 

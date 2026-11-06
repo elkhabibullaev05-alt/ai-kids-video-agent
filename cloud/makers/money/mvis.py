@@ -199,27 +199,29 @@ def v_big_number(d, s, p, D, th):
     top = 70
     if s.get("icon"):
         k = back(p / 0.45)
-        icon(d, s["icon"], CX, top + 95, int(170 * max(0.05, k)), th["accent"], th["bg"])
-        top += 210
+        icon(d, s["icon"], CX, top + 105, int(200 * max(0.05, k)), th["accent"], th["bg"])
+        top += 240
     v = _count(frm, val, p)
     txt = fmt(v, pre, suf, dec)
-    f = fit(fmt(val, pre, suf, dec), X1 - X0, 230)
-    ctext(d, (CX, top + 130), txt, f, th["accent"] if s.get("hi", True) else th["ink"])
+    f = fit(fmt(val, pre, suf, dec), X1 - X0, 260)
+    ctext(d, (CX, top + 140), txt, f, th["accent"] if s.get("hi", True) else th["ink"])
+    y = top + 315
     if s.get("label"):
         a = ease((p - 0.5) / 0.4)
-        f2, lines = wrap(s["label"], X1 - X0, 66, maxlines=2)
+        f2, lines = wrap(s["label"], X1 - X0, 74, maxlines=2)
         for i, l in enumerate(lines):
-            ctext(d, (CX, top + 290 + i * 78 + (1 - a) * 40), l, f2, mix(th["bg"], th["ink"], a))
+            ctext(d, (CX, y + i * 86 + (1 - a) * 40), l, f2, mix(th["bg"], th["ink"], a))
+        y += 86 * len(lines)
     if s.get("sub"):
-        a = ease((p - 1.6) / 0.4)
-        f3, lines = wrap(s["sub"], X1 - X0, 50, bold=False, maxlines=2)
-        y = top + 290 + 78 * (2 if s.get("label") and len(wrap(s["label"], X1 - X0, 66, maxlines=2)[1]) > 1 else 1) + 30
-        w = max(f3.getlength(l) for l in lines) + 70
+        a = ease((p - 1.4) / 0.4)
+        f3, lines = wrap(s["sub"], X1 - X0 - 60, 56, bold=False, maxlines=2)
+        y += 20
+        w = max(f3.getlength(l) for l in lines) + 80
         if a > 0:
-            d.rounded_rectangle([CX - w / 2, y - 10, CX + w / 2, y + 62 * len(lines) + 10], radius=36,
-                                fill=mix(th["bg"], th["soft"], a))
+            d.rounded_rectangle([CX - w / 2, y - 12, CX + w / 2, y + 70 * len(lines) + 12], radius=40,
+                                fill=mix(th["bg"], th["ink"], a))
         for i, l in enumerate(lines):
-            ctext(d, (CX, y + 31 + i * 62), l, f3, mix(th["bg"], th["ink"], a))
+            ctext(d, (CX, y + 35 + i * 70), l, f3, mix(th["ink"], th["bg"], a))
 
 
 def v_bars(d, s, p, D, th):
@@ -228,10 +230,10 @@ def v_bars(d, s, p, D, th):
     mx = max([abs(float(i["value"])) for i in items] + [1e-9])
     y = 40
     if s.get("title"):
-        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 60), th["ink"])
-        y += 100
+        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 70), th["ink"])
+        y += 120
     n = max(1, len(items))
-    rowh = min(150, (PANEL_H - y - 20) / n)
+    rowh = min(200, (PANEL_H - y - 20) / n)
     stag = min(0.45, max(0.2, (D * 0.55) / n))
     for i, it in enumerate(items):
         t0 = 0.1 + i * stag
@@ -241,12 +243,13 @@ def v_bars(d, s, p, D, th):
         yy = y + i * rowh
         hi = it.get("hi")
         col = th["accent"] if hi else th["ink"]
-        d.text((X0, yy + 4), it["label"], font=fit(it["label"], 520, 46), fill=mix(th["bg"], th["ink"], ease((p - t0) / 0.3)))
-        bw = (X1 - X0 - 220) * abs(float(it["value"])) / mx * a
-        d.rounded_rectangle([X0, yy + 62, X0 + max(bw, 24), yy + 62 + rowh * 0.42], radius=int(rowh * 0.12), fill=col)
+        d.text((X0, yy), it["label"], font=fit(it["label"], 600, 56), fill=mix(th["bg"], th["ink"], ease((p - t0) / 0.3)))
+        bw = (X1 - X0 - 250) * abs(float(it["value"])) / mx * a
+        bh = rowh * 0.42
+        d.rounded_rectangle([X0, yy + 72, X0 + max(bw, 28), yy + 72 + bh], radius=int(bh * 0.3), fill=col)
         val = float(it["value"]) * a
-        d.text((X0 + max(bw, 24) + 18, yy + 62 + rowh * 0.21), fmt(val, pre, suf, decimals_of(it["value"])),
-               font=font(50), fill=col, anchor="lm")
+        d.text((X0 + max(bw, 28) + 20, yy + 72 + bh / 2), fmt(val, pre, suf, decimals_of(it["value"])),
+               font=font(64), fill=col, anchor="lm")
 
 
 def v_versus(d, s, p, D, th):
@@ -263,10 +266,10 @@ def v_versus(d, s, p, D, th):
         if a > 0:
             d.rounded_rectangle([cx - 130, base - max(h, 20), cx + 130, base], radius=26, fill=col)
             ctext(d, (cx, base - max(h, 20) - 60), fmt(float(side.get("value", 0)) * a, pre, suf,
-                                                      decimals_of(side.get("value", 0))), fit(fmt(float(side.get("value", 0)), pre, suf), 400, 76), col)
-        ctext(d, (cx, base + 55), side.get("label", ""), fit(side.get("label", ""), 400, 50), th["ink"])
+                                                      decimals_of(side.get("value", 0))), fit(fmt(float(side.get("value", 0)), pre, suf), 400, 92), col)
+        ctext(d, (cx, base + 55), side.get("label", ""), fit(side.get("label", ""), 400, 58), th["ink"])
         if side.get("sub"):
-            ctext(d, (cx, base + 112), side["sub"], fit(side["sub"], 400, 40, bold=False), th["muted"])
+            ctext(d, (cx, base + 118), side["sub"], fit(side["sub"], 400, 48, bold=False), th["ink"])
     a = back((p - 0.6) / 0.4)
     if a > 0:
         r = 52 * a
@@ -283,9 +286,9 @@ def v_stack(d, s, p, D, th):
     total = float(s.get("total") or sum(float(i["value"]) for i in items) or 1)
     y = 30
     if s.get("title"):
-        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 60), th["ink"])
-        y += 95
-    bx0, bx1, by0, by1 = X0, X1, y + 10, y + 150
+        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 70), th["ink"])
+        y += 110
+    bx0, bx1, by0, by1 = X0, X1, y + 10, y + 170
     d.rounded_rectangle([bx0, by0, bx1, by1], radius=28, fill=th["soft"])
     n = max(1, len(items))
     stag = min(0.55, max(0.25, D * 0.6 / n))
@@ -299,11 +302,11 @@ def v_stack(d, s, p, D, th):
         col = th["accent"] if hi else mix(th["ink"], th["soft"], SHADES[i % len(SHADES)])
         if a > 0:
             d.rectangle([x, by0, x + segw * a, by1], fill=col)
-            ly = by1 + 50 + i * 92
-            d.rounded_rectangle([X0, ly, X0 + 50, ly + 50], radius=12, fill=col)
+            ly = by1 + 45 + i * min(100, (PANEL_H - by1 - 60) / n)
+            d.rounded_rectangle([X0, ly, X0 + 56, ly + 56], radius=14, fill=col)
             tc = mix(th["bg"], th["accent"] if hi else th["ink"], a)
-            d.text((X0 + 75, ly + 25), it["label"], font=fit(it["label"], 470, 50), fill=tc, anchor="lm")
-            d.text((X1, ly + 25), fmt(float(it["value"]) * a, pre, "", decimals_of(it["value"])), font=font(52),
+            d.text((X0 + 80, ly + 28), it["label"], font=fit(it["label"], 480, 58), fill=tc, anchor="lm")
+            d.text((X1, ly + 28), fmt(float(it["value"]) * a, pre, "", decimals_of(it["value"])), font=font(60),
                    fill=tc, anchor="rm")
         x += segw
     # round the bar ends again (cover square corners)
@@ -314,11 +317,11 @@ def v_checklist(d, s, p, D, th):
     items = s.get("items", [])[:6]
     y = 40
     if s.get("title"):
-        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 62), th["ink"])
-        y += 110
+        ctext(d, (CX, y + 30), s["title"], fit(s["title"], X1 - X0, 72), th["ink"])
+        y += 125
     n = max(1, len(items))
     stag = min(0.7, max(0.3, D * 0.7 / n))
-    rowh = min(130, (PANEL_H - y) / n)
+    rowh = min(160, (PANEL_H - y) / n)
     for i, it in enumerate(items):
         if isinstance(it, str):
             it = {"text": it, "ok": True}
@@ -338,7 +341,7 @@ def v_checklist(d, s, p, D, th):
             else:
                 d.line([(X0 + 26, yy + 31), (X0 + 54, yy + 59)], fill=th["bg"], width=9)
                 d.line([(X0 + 54, yy + 31), (X0 + 26, yy + 59)], fill=th["bg"], width=9)
-        f, lines = wrap(it["text"], X1 - X0 - 110, 54, maxlines=2, minsize=36)
+        f, lines = wrap(it["text"], X1 - X0 - 110, 60, maxlines=2, minsize=38)
         tc = mix(th["bg"], th["ink"] if ok else th["muted"], a)
         for j, l in enumerate(lines):
             d.text((X0 + 105, yy + 45 + (j - (len(lines) - 1) / 2) * (f.size + 6)), l, font=f, fill=tc, anchor="lm")
@@ -422,7 +425,7 @@ def v_statement(d, s, p, D, th):
         k = back(p / 0.45)
         icon(d, s["icon"], CX, top + 90, int(170 * max(0.05, k)), th["accent"], th["bg"])
         top += 220
-    f, lines = wrap(s.get("text", ""), X1 - X0, 104, maxlines=4, minsize=56)
+    f, lines = wrap(s.get("text", ""), X1 - X0, 116, maxlines=4, minsize=56)
     lh = f.size * 1.18
     for i, l in enumerate(lines):
         a = ease((p - 0.08 - i * 0.18) / 0.35)
@@ -446,13 +449,13 @@ def v_math(d, s, p, D, th):
     if s.get("title"):
         ctext(d, (CX, y + 20), s["title"], fit(s["title"], X1 - X0, 58), th["ink"])
         y += 110
-    rowh = min(175, (PANEL_H - y - 20) / n)
+    rowh = min(210, (PANEL_H - y - 20) / n)
     for i, r in enumerate(rows):
         a = ease((p - 0.1 - i * stag) / 0.35)
         if a <= 0:
             continue
         last = i == n - 1
-        f = fit(r, X1 - X0 - 40, 104 if last else 84)
+        f = fit(r, X1 - X0 - 60, 124 if last else 96)
         yy = y + i * rowh + rowh / 2
         if last:
             w = f.getlength(r) + 70

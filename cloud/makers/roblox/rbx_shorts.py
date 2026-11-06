@@ -287,10 +287,16 @@ class Card:
             ox = int((bw - W) / 2 + math.sin(0) * (bw - W) / 2.2 * (1 - u) + math.sin(t_abs * 0.9) * (bw - W) / 2.2 * u)
             oy = int((bh - H) / 2 + (bh - H) / 2.2 * (1 - u) + math.cos(t_abs * 0.7) * (bh - H) / 2.2 * u)
         im = self.bg.crop((ox, oy, ox + W, oy + H))
+        if dur > 3.0 and lt >= dur / 2 and not loop_end:  # second half: tinted background (visible beat)
+            im = Image.blend(im, Image.new("RGB", im.size, self.acc), 0.35)
         d = ImageDraw.Draw(im)
         v = c["vis"]
         still = loop_end or getattr(self, "first", False)  # frame 0 and the loop end: no pop-in
         pop = 1.0 + 0.25 * max(0.0, 1 - lt / 0.25) if not still else 1.0
+        # mid-card punch: a held zoom jump halfway through longer cards (a second "cut" per card)
+        mid = dur > 3.0 and lt >= dur / 2 and not loop_end
+        if mid:
+            pop *= 1.35
         if v in ("hero", "blur"):
             view = self.kb.at(u, pop)
             d.rounded_rectangle((VX - 10, VY - 10, VX + VW + 10, VY + VH + 10), 40, fill=self.acc)

@@ -161,8 +161,21 @@ def clean_desc(s, limit=4900):
     return s[:limit]
 
 
+def _cut(x, n):
+    """Shorten a source line without breaking a URL in half."""
+    if len(x) <= n:
+        return x
+    cut = x[:n]
+    sp = cut.rfind(" ")
+    if sp > 0 and not x[n:n + 1].isspace() and cut[sp + 1:].startswith("http"):
+        cut = cut[:sp]
+    elif sp > n * 0.6 and not x[n:n + 1].isspace():
+        cut = cut[:sp]
+    return cut.rstrip(" ;,(") + " …"
+
+
 def build_desc(head, sc, cred_lines, extra=""):
-    src = [("- " + x[:330] + ("…" if len(x) > 330 else "")) for x in sc.get("sources", [])]
+    src = ["- " + _cut(x, 330) for x in sc.get("sources", [])]
     parts = [head.strip()]
     if extra:
         parts.append(extra)
@@ -174,7 +187,7 @@ def build_desc(head, sc, cred_lines, extra=""):
     parts.append("Narration: synthetic voice (Kokoro). Music: generated ambient pad.")
     d = "\n\n".join(parts)
     while len(d) > 4900 and src:  # keep image credits (licence requirement); shorten sources first
-        src = [x[:160] for x in src]
+        src = [_cut(x, 160) for x in src]
         parts[-3 if not extra else -3] = "Sources:\n" + "\n".join(src)
         d = "\n\n".join(parts)
         if len(d) > 4900:

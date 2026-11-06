@@ -20,7 +20,7 @@ import mvoice
 
 W, H, FPS = V.W, V.H, 30
 SR = mvoice.SR
-PANEL_Y = 410
+PANEL_Y = 430
 CAP_Y = 1395            # caption centre line (bottom 20 % = y > 1536 stays clear)
 CAP_W = 840
 
@@ -181,17 +181,23 @@ def make_bg(th):
     bg = Image.new("RGB", (W, H), th["bg"][:3])
     blob = Image.new("RGBA", (900, 900), th["accent"][:3] + (0,))
     bd = ImageDraw.Draw(blob)
-    bd.ellipse([150, 150, 750, 750], fill=th["accent"][:3] + (46,))
+    bd.ellipse([150, 150, 750, 750], fill=th["accent"][:3] + (60,))
     blob = blob.filter(ImageFilter.GaussianBlur(90))
-    blob2 = Image.new("RGBA", (800, 800), th["ink"][:3] + (0,))
-    ImageDraw.Draw(blob2).ellipse([150, 150, 650, 650], fill=th["ink"][:3] + (22,))
+    blob2 = Image.new("RGBA", (800, 800), th["accent"][:3] + (0,))
+    ImageDraw.Draw(blob2).ellipse([150, 150, 650, 650], fill=th["accent"][:3] + (34,))
     blob2 = blob2.filter(ImageFilter.GaussianBlur(80))
     return bg, blob, blob2
 
 
-def frame_bg(base, t, T):
+def palette(th):
+    """Background tones that alternate on every beat (cream -> accent tint -> sand)."""
+    cream = th["bg"]
+    return [cream, V.mix(cream, th["accent"], 0.2), V.hexc("#E5DBC8")]
+
+
+def frame_bg(base, t, T, col):
     bg, blob, blob2 = base
-    img = bg.copy()
+    img = Image.new("RGB", (W, H), col[:3])
     a = 2 * math.pi * t / T
     x1 = int(380 + 420 * math.cos(a)) - 450
     y1 = int(700 + 520 * math.sin(2 * a)) - 450
@@ -237,33 +243,51 @@ def render(script, out_mp4, work, log=print):
                 return i, tm
         return len(timing) - 1, timing[-1]
 
+    # beats: every scene start + one punch halfway through longer scenes (+ two extra in the hook)
+    beats = []
+    for i, tm in enumerate(timing):
+        D = tm["t1"] - tm["t0"]
+        beats.append(tm["t0"])
+        if i == 0:
+            beats += [x for x in (0.9, 1.9) if x < D - 0.8]
+        tp = tm["t0"] + max(1.7, D * 0.5)
+        if D > 3.4 and tp > beats[-1] + 1.2:
+            beats.append(tp)
+    beats = sorted(set(round(b, 3) for b in beats))
+    pal = palette(th)
+
     def draw(t):
-        img = frame_bg(base, t, T)
-        d = ImageDraw.Draw(img)
         i, tm = scene_at(t)
         p = t - tm["t0"]
         D = tm["t1"] - tm["t0"]
+        bi = max(0, sum(1 for b in beats if b <= t) - 1)
+        col = pal[bi % len(pal)]
+        th_f = dict(th, bg=col, soft=V.mix(col, th["ink"], 0.12))
+        img = frame_bg(base, t, T, col)
+        d = ImageDraw.Draw(img)
+        sb = [b for b in beats if tm["t0"] < b <= t]  # punches already passed inside this scene
+        if i == 0:
+            p += 0.45  # frame 0 already shows the number counting and the icon
         spec = scenes[i].get("visual", {"type": "statement", "text": scenes[i]["say"]})
         if i == 0 and hook:
-            ybot = draw_hook(img, d, hook, t, th)
-            scale_base, py = 0.74, max(ybot + 10, 690)
+            ybot = draw_hook(img, d, hook, t, th_f)
+            scale_base, py = 0.76, max(ybot + 10, 660)
         else:
-            draw_header(d, header, th, V.ease((t - timing[1]["t0"]) / 0.35) if len(timing) > 1 and i == 1 else 1.0)
+            draw_header(d, header, th_f, V.ease((t - timing[1]["t0"]) / 0.35) if len(timing) > 1 and i == 1 else 1.0)
             scale_base, py = 1.0, PANEL_Y
-        layer = Image.new("RGBA", (W, V.PANEL_H), th["bg"][:3] + (0,))
-        V.draw_visual(layer, spec, p, D, th)
-        # camera: slow push + a punch-in halfway through longer scenes (a visual change every ~2-3 s)
+        layer = Image.new("RGBA", (W, V.PANEL_H), col[:3] + (0,))
+        V.draw_visual(layer, spec, p, D, th_f)
+        # camera: slow push + a punch-in on every beat (a visual change every ~2-3 s)
         z = scale_base * (1 + 0.012 * p)
-        tp = max(1.7, D * 0.5)
-        if D > 3.4 and p > tp:
-            z *= 1 + 0.07 * V.ease((p - tp) / 0.12)
+        for b in sb:
+            z *= 1 + 0.06 * V.ease((t - b) / 0.12)
         slide = 0 if i == 0 else (1 - V.ease(p / 0.24)) * 300
         lw, lh = int(W * z), int(V.PANEL_H * z)
         lay = layer.resize((lw, lh), Image.BILINEAR) if abs(z - 1) > 1e-3 else layer
         x = int(V.CX - V.CX * z + slide)
         y = int(py + (V.PANEL_H * scale_base - lh) / 2)
         img.paste(lay, (x, y), lay)
-        draw_caption(d, caps[i], t, th)
+        draw_caption(d, caps[i], t, th_f)
         return img
 
     frame0 = draw(0.0)
