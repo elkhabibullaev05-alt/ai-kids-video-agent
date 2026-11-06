@@ -45,7 +45,8 @@ for ch in $order; do
   [ $running -ge $PAR ] && break
   if flock -n /tmp/kanal-$ch.lock -c true; then
     date +%s > /root/kanal/$ch/.last_start
-    flock -n /tmp/kanal-$ch.lock python3 cloud/worker.py $ch >> /root/kanal/$ch/worker.log 2>&1 &
+    # 2026-11-06: timeout — never let one hung worker hold its slot forever
+    flock -n /tmp/kanal-$ch.lock timeout -k 60 5h python3 cloud/worker.py $ch >> /root/kanal/$ch/worker.log 2>&1 &
     running=$((running+1)); sleep 5
   fi
 done

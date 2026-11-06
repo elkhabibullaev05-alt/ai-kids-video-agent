@@ -19,6 +19,7 @@ import re
 import shutil
 import socket
 import subprocess
+socket.setdefaulttimeout(300)  # 2026-11-06: a dead connection must fail (and retry next run), never hang a worker for hours
 import sys
 import time
 import traceback

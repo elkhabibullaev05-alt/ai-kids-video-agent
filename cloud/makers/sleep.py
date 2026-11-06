@@ -139,7 +139,7 @@ def main():
     sh("ffmpeg", "-y", "-v", "error", "-i", vid["path"], "-i", vid["path"], "-filter_complex",
        f"[0:v]{pre},trim={X}:{L + X},setpts=PTS-STARTPTS[body];[1:v]{pre},trim=0:{X},setpts=PTS-STARTPTS[head];"
        f"[body][head]xfade=transition=fade:duration={X}:offset={L - X},format=yuv420p[v]",
-       "-map", "[v]", "-an", "-c:v", "libx264", "-preset", "medium", "-b:v", "1800k", "-maxrate", "2200k", "-bufsize", "4M",
+       "-map", "[v]", "-an", "-c:v", "libx264", "-preset", "medium", "-b:v", "1100k", "-maxrate", "1500k", "-bufsize", "3M",
        "-g", "60", unit)
     # 2) real rain audio: loop with a 3 s crossfade, gentle EQ, -20 LUFS (sleep content is quieter on purpose)
     au_len = float(sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", aud["path"]).strip() or 60)
