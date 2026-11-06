@@ -176,7 +176,7 @@ def fmt_losers(games, titles, rng, back):
 
 
 def fmt_guess(games, titles, rng, back):
-    top = games[:5]
+    top = games[:7]
     n1 = top[0]
     title = titles.pick(["Can You Guess Today's #1 Roblox Game? #shorts",
                          f"Guess Today's #1 Roblox Game ({short_num(n1['playing'])} Players) #shorts",
@@ -187,7 +187,7 @@ def fmt_guess(games, titles, rng, back):
         return None
     cards = [dict(say="Can you guess today's number one Roblox game? Let's count down.", head="GUESS TODAY'S #1",
                   vis="blur", g=n1)]
-    for k in range(5, 1, -1):
+    for k in range(7, 1, -1):
         g = top[k - 1]
         cards.append(dict(say=f"Number {k}: {g['clean']}, with {say_num(g['playing'])} players.",
                           head=f"#{k} {short_num(g['playing'])}", vis="hero", g=g, alt=k % 2 == 0))
@@ -196,7 +196,7 @@ def fmt_guess(games, titles, rng, back):
     cards.append(dict(say=f"It's {n1['clean']}!", head=f"#1 {n1['clean'].upper()}", vis="hero", g=n1, reveal=True))
     cards.append(dict(say="Did you get it right? Comment your guess for tomorrow.", head="GUESS TODAY'S #1",
                       vis="blur", g=n1, loop=True))
-    desc = f"Today's top 5 by live players: " + ", ".join(f"#{i + 1} {g['clean']}" for i, g in enumerate(top)) + \
+    desc = f"Today's top 7 by live players: " + ", ".join(f"#{i + 1} {g['clean']}" for i, g in enumerate(top)) + \
            ". Full Top 10: {LONG_URL}"
     return title, cards, desc, ["guess the roblox game", "roblox quiz"]
 
@@ -213,6 +213,7 @@ def fmt_versus(games, titles, rng, back):
             break
     else:
         return None
+    title = t
     rounds = [("LIVE PLAYERS", "playing", "players right now"), ("TOTAL VISITS", "visits", "total visits"),
               ("FAVORITES", "favoritedCount", "favorites")]
     cards = [dict(say=f"{a['clean']} versus {b['clean']}. Which one is bigger right now?",
@@ -236,6 +237,21 @@ def fmt_versus(games, titles, rng, back):
                       loop=True))
     desc = f"{a['clean']} vs {b['clean']} with live numbers from today. Full Top 10: {{LONG_URL}}"
     return title, cards, desc, [a["clean"].lower(), b["clean"].lower(), "roblox vs"]
+
+
+def extra_cards(g, rng):
+    out = []
+    for s_, b, _ in sorted(tx.hot_facts(g), key=lambda x: -x[2]):
+        out.append(dict(say=s_, head=b if len(b) <= 18 else "WHY IT'S HOT", sub=b if len(b) > 18 else "",
+                        vis="hero", g=g, alt=len(out) % 2 == 0))
+    if g.get("creator_name"):
+        out.append(dict(say=f"It is made by {g['creator_name']}" + (f", and it started back in {g['year']}." if g.get("year") else "."),
+                        head="WHO MADE IT?", sub=g["creator_name"].upper(), vis="hero", g=g, alt=True))
+    if g.get("maxPlayers"):
+        out.append(dict(say=f"Each server holds up to {g['maxPlayers']} players, so that is a lot of full servers.",
+                        head=f"{short_num((g.get('playing') or 0) / max(1, g['maxPlayers']))}+ SERVERS",
+                        vis="stat", g=g, val=(g.get("playing") or 0) / max(1, g["maxPlayers"]), lab="FULL SERVERS NOW"))
+    return out
 
 
 FORMATS = {"visits": fmt_visits, "players": fmt_players, "climber": fmt_climber, "losers": fmt_losers,
@@ -402,6 +418,14 @@ def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_mich
     if not r:
         return None
     title, cards, desc, tags = r
+    # at least ~32 s: add more facts about the main game before the loop card
+    have = {c.get("head") for c in cards}
+    for c in ([] if fmt_name == "guess" else extra_cards(cards[0]["g"], rng)):
+        if sum(len(x["say"].split()) for x in cards) >= 92:
+            break
+        if c["head"] not in have and c["say"] not in {x["say"] for x in cards}:
+            cards.insert(len(cards) - 1, c)
+            have.add(c["head"])
     # keep it 30-45 s: ~2.8 spoken words per second -> drop middle cards above ~118 words
     while sum(len(c["say"].split()) for c in cards) > 118 and len(cards) > 5:
         cards.pop(-2)

@@ -123,9 +123,10 @@ def draw_caption(d, chs, t, th):
     sp = f.getlength(" ")
     total = sum(f.getlength(w) for w in words) + sp * (len(words) - 1)
     x = V.CX - total / 2
-    for w in cur:
+    for j, w in enumerate(cur):
         ww = f.getlength(w["w"])
-        active = w["t0"] - 0.03 <= t < w["t1"] + 0.03
+        nxt = cur[j + 1]["t0"] if j + 1 < len(cur) else w["t1"] + 0.25
+        active = (w["t0"] <= t < nxt) or (j == 0 and t < w["t0"])
         if active:
             d.rounded_rectangle([x - 14, CAP_Y - size * 0.72, x + ww + 14, CAP_Y + size * 0.62], radius=20, fill=th["accent"])
             d.text((x, CAP_Y), w["w"], font=f, fill=th["bg"], anchor="lm")
@@ -269,7 +270,7 @@ def render(script, out_mp4, work, log=print):
         sb = [b for b in beats if tm["t0"] < b <= t]  # punches already passed inside this scene
         if i == 0:  # frame 0 already shows the icon; the number counts up through the whole hook
             p += 0.45
-            spec = dict(scenes[0].get("visual", {}), count_dur=2.4)
+            spec = dict(scenes[0].get("visual", {}), count_dur=2.6, count_linear=True)
         if i == 0 and hook:
             ybot = draw_hook(img, d, hook, t, th_f)
             scale_base, py = 0.76, max(ybot + 10, 660)
@@ -279,7 +280,7 @@ def render(script, out_mp4, work, log=print):
         layer = Image.new("RGBA", (W, V.PANEL_H), col[:3] + (0,))
         V.draw_visual(layer, spec, p, D, th_f)
         # camera: slow push + a punch-in on every beat (a visual change every ~2-3 s)
-        z = scale_base * (1 + 0.012 * p)
+        z = scale_base * (1 + (0.04 * min(p, 3.0) if i == 0 else 0.012 * p))
         for b in sb:
             z *= 1 + 0.06 * V.ease((t - b) / 0.12)
         slide = 0 if i == 0 else (1 - V.ease(p / 0.24)) * 300

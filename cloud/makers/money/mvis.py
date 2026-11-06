@@ -187,8 +187,8 @@ def icon(d, kind, cx, cy, s, col, bg):
 
 
 # ---------------------------------------------------------------- visuals
-def _count(spec_from, to, p, t0=0.15, dur=1.1):
-    k = ease((p - t0) / dur)
+def _count(spec_from, to, p, t0=0.15, dur=1.1, linear=False):
+    k = clamp((p - t0) / dur) if linear else ease((p - t0) / dur)
     return spec_from + (to - spec_from) * k
 
 
@@ -201,7 +201,7 @@ def v_big_number(d, s, p, D, th):
         k = back(p / 0.45)
         icon(d, s["icon"], CX, top + 105, int(200 * max(0.05, k)), th["accent"], th["bg"])
         top += 240
-    v = _count(frm, val, p, dur=float(s.get("count_dur", 1.1)))
+    v = _count(frm, val, p, dur=float(s.get("count_dur", 1.1)), linear=bool(s.get("count_linear")))
     txt = fmt(v, pre, suf, dec)
     f = fit(fmt(val, pre, suf, dec), X1 - X0, 260)
     ctext(d, (CX, top + 140), txt, f, th["accent"] if s.get("hi", True) else th["ink"])
