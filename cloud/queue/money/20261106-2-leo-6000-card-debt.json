@@ -7,31 +7,163 @@
  "accent": "red",
  "voice": "af_bella",
  "scenes": [
-  {"say": "Leo owes $6,000 on a credit card, and he pays $150 every single month.",
-   "visual": {"type": "big_number", "value": 6000, "label": "card balance", "sub": "pays $150 a month", "icon": "card"}},
-  {"say": "Sounds responsible. But his card charges about 24% a year.",
-   "visual": {"type": "big_number", "value": 24, "prefix": "", "suffix": "%", "label": "APR on his card", "icon": "fire"}},
-  {"say": "That's roughly $120 of interest, every month.",
-   "visual": {"type": "math", "rows": ["$6,000 × 24%", "÷ 12 months", "= $120 a month"]}},
-  {"say": "So out of his $150, only about $30 actually touches the debt.",
-   "visual": {"type": "stack", "title": "Where his $150 goes", "total": 150, "items": [{"label": "Interest", "value": 120, "hi": true}, {"label": "Actual debt", "value": 30}]}},
-  {"say": "At that pace, it takes him almost 7 years to pay it off.",
-   "visual": {"type": "line", "label": "Balance at $150 a month", "points": [6000, 5598, 5087, 4441, 3620, 2579, 1259, 0], "start_label": "Today", "end_label": "Year 7"}},
-  {"say": "He'd pay about $12,200 in total. Over $6,000 of that is pure interest.",
-   "visual": {"type": "big_number", "value": 12200, "label": "total he pays", "sub": "about $6,200 is interest", "icon": "card"}},
-  {"say": "Now watch what $300 a month does to the same card.",
-   "visual": {"type": "statement", "text": "Same card. $300 a month.", "icon": "card"}},
-  {"say": "He's debt free in about 26 months, and the interest drops to roughly $1,700.",
-   "visual": {"type": "versus", "left": {"label": "$150 a month", "value": 6200, "sub": "about 7 years", "hi": true}, "right": {"label": "$300 a month", "value": 1700, "sub": "about 2 years", "hi": false}}},
-  {"say": "The extra $150 can come from one paused subscription, two home-cooked dinners a week, and one thing sold online.",
-   "visual": {"type": "checklist", "title": "Finding $150", "items": [{"text": "Pause one subscription: $15", "ok": true}, {"text": "Cook 2 more dinners a week: $90", "ok": true}, {"text": "Sell one thing a month: $45", "ok": true}]}},
-  {"say": "Same debt, same card, and he keeps about $4,500 in his own pocket.",
-   "visual": {"type": "big_number", "value": 4500, "label": "interest he keeps", "icon": "piggy"}},
-  {"say": "What's the APR on your card? Check it, before you spend $150 a month for 7 years.",
-   "visual": {"type": "question", "text": "What's the APR on your card?"}}
+  {
+   "say": "Leo owes $6,000 on a credit card. He pays $150, every single month.",
+   "visual": {
+    "type": "big_number",
+    "value": 6000,
+    "label": "card balance",
+    "sub": "pays $150 a month",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "Sounds responsible. But his card charges about 24% a year.",
+   "visual": {
+    "type": "big_number",
+    "value": 24,
+    "prefix": "",
+    "suffix": "%",
+    "label": "APR on his card",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "That's roughly $120 of interest, every month.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$6,000 × 24%",
+     "÷ 12 months",
+     "= $120 a month"
+    ]
+   }
+  },
+  {
+   "say": "So out of his $150, only about $30 touches the debt.",
+   "visual": {
+    "type": "stack",
+    "title": "Where his $150 goes",
+    "total": 150,
+    "items": [
+     {
+      "label": "Interest",
+      "value": 120,
+      "hi": true
+     },
+     {
+      "label": "Actual debt",
+      "value": 30
+     }
+    ]
+   }
+  },
+  {
+   "say": "At that pace, it takes almost 7 years to pay off.",
+   "visual": {
+    "type": "line",
+    "label": "Balance at $150 a month",
+    "points": [
+     6000,
+     5598,
+     5087,
+     4441,
+     3620,
+     2579,
+     1259,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 7"
+   }
+  },
+  {
+   "say": "He'd pay about $12,200 in total. Half of it is pure interest.",
+   "visual": {
+    "type": "big_number",
+    "value": 12200,
+    "label": "total he pays",
+    "sub": "about $6,200 is interest",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "Now watch what $300 a month does.",
+   "visual": {
+    "type": "statement",
+    "text": "Same card. $300 a month.",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "Debt free in about 26 months, and interest drops to roughly $1,700.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$150 a month",
+     "value": 6200,
+     "sub": "about 7 years",
+     "hi": true
+    },
+    "right": {
+     "label": "$300 a month",
+     "value": 1700,
+     "sub": "about 2 years",
+     "hi": false
+    }
+   }
+  },
+  {
+   "say": "The extra $150? Pause one subscription, cook two more dinners a week, sell one thing.",
+   "visual": {
+    "type": "checklist",
+    "title": "Finding $150",
+    "items": [
+     {
+      "text": "Pause one subscription: $15",
+      "ok": true
+     },
+     {
+      "text": "Cook 2 more dinners a week: $90",
+      "ok": true
+     },
+     {
+      "text": "Sell one thing a month: $45",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Same card, and he keeps about $4,500 in his pocket.",
+   "visual": {
+    "type": "big_number",
+    "value": 4500,
+    "label": "interest he keeps",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "What's the APR on your card? Check it, before you pay $150 a month for 7 years.",
+   "visual": {
+    "type": "question",
+    "text": "What's the APR on your card?"
+   }
+  }
  ],
  "question": "What's the APR on your card? Most people have to look it up.",
  "description": "Leo owes about $6,000 on a card at roughly 24% APR and pays $150 a month. Here's why that takes almost 7 years and about $12,200 — and how doubling the payment cuts it to about 26 months and saves roughly $4,500 in interest. Estimates assume a fixed 24% APR and no new charges.",
- "tags": ["credit card debt", "credit card interest", "APR explained", "minimum payment trap", "pay off debt", "debt payoff", "debt free"],
- "hashtags": ["#creditcarddebt", "#debtfree"]
+ "tags": [
+  "credit card debt",
+  "credit card interest",
+  "APR explained",
+  "minimum payment trap",
+  "pay off debt",
+  "debt payoff",
+  "debt free"
+ ],
+ "hashtags": [
+  "#creditcarddebt",
+  "#debtfree"
+ ]
 }

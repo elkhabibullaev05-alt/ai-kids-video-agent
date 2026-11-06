@@ -70,7 +70,27 @@ def save_state(home, st):
 
 
 def norm(t):
-    return " ".join((t or "").lower().split())
+    return " ".join("".join(c if c.isalnum() else " " for c in (t or "").lower()).split())
+
+
+SEED_BEFORE = os.environ.get("UFC_SEED_BEFORE", "2026-10-30")  # old laptop broke ~30 Oct: older scripts were made by it
+
+
+def seed_state(a, st):
+    """First run only (no made_ids.json): scripts committed before SEED_BEFORE count as made by the lost agent."""
+    import subprocess
+    sdir = os.path.join(a.repo, "cloud", "ink", "animals")
+    for f in sorted(os.listdir(sdir)):
+        if not f.endswith(".json"):
+            continue
+        try:
+            d = subprocess.run(["git", "-C", a.repo, "log", "--diff-filter=A", "--format=%cI", "--", os.path.join(sdir, f)],
+                               capture_output=True, text=True, timeout=30).stdout.split()
+        except Exception:
+            return
+        if d and d[-1][:10] < SEED_BEFORE:
+            st["done"].append(os.path.splitext(f)[0])
+    log(f"first run: {len(st['done'])} scripts older than {SEED_BEFORE} marked as already made")
 
 
 def pick_script(a, st, titles):
@@ -508,7 +528,7 @@ def make_short(sc, sh, photos, metas, a, work, out_dir, pack, num=1):
                             t0=0.0, t1=max(0.5, dur - 0.55), fade_in=0.15, fade_out=0.2))
             if hook_png:  # loop: the hook comes back on the last frames so the end matches frame 0
                 ovs.append(dict(png=hook_png, x=hook_xy[0], y=hook_xy[1], t0=max(0, dur - 0.45), t1=dur + 1, fade_in=0.3))
-        shots = render.plan_shots(dur, rng, 0.9, first=(i == 0), end_at=first_cam if last else None, first_len=0.5, drift=2.2)
+        shots = render.plan_shots(dur, rng, 0.9, first=(i == 0), end_at=first_cam if last else None, first_len=0.5, drift=0.5, min_jump=0.24)
         if last and used[i] != used[0]:
             pass
         rs.append(dict(n=nfr[i], base=idx[k if not last else (k0 if used[0] else k)], shots=shots, overlays=ovs, card=CARD,
@@ -628,7 +648,11 @@ def main():
             titles = {norm(t) for t in json.load(open(a.titles, encoding="utf-8")) if isinstance(t, str)}
         except Exception:
             pass
+    first = not os.path.exists(os.path.join(a.home, "made_ids.json"))
     st = load_state(a.home)
+    if first and not a.script and not a.offline_test:
+        seed_state(a, st)
+        save_state(a.home, st)
     sid, sc, path, todo, changed = pick_script(a, st, titles)
     if changed and not a.offline_test:
         save_state(a.home, st)

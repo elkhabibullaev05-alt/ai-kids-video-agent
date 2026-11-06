@@ -7,31 +7,183 @@
  "accent": "purple",
  "voice": "af_heart",
  "scenes": [
-  {"say": "Nora pays for 9 subscriptions, and every single one feels tiny.",
-   "visual": {"type": "big_number", "value": 9, "prefix": "", "label": "subscriptions", "sub": "most under $20", "icon": "phone"}},
-  {"say": "Three streaming services. About $18, $16, and $10.",
-   "visual": {"type": "bars", "title": "Streaming", "items": [{"label": "Streaming #1", "value": 18}, {"label": "Streaming #2", "value": 16}, {"label": "Streaming #3", "value": 10}]}},
-  {"say": "Music is $12. A news app, $10. Cloud storage, $3.",
-   "visual": {"type": "bars", "title": "The extras", "items": [{"label": "Music", "value": 12}, {"label": "News app", "value": 10}, {"label": "Cloud storage", "value": 3}]}},
-  {"say": "Then the big ones. A $45 gym she visits twice a month, plus two apps at $15 and $13.",
-   "visual": {"type": "bars", "title": "The big ones", "items": [{"label": "Gym (2 visits)", "value": 45, "hi": true}, {"label": "Fitness app", "value": 15}, {"label": "Language app", "value": 13}]}},
-  {"say": "Add it all up, and it's about $142, every month.",
-   "visual": {"type": "math", "rows": ["$44 streaming", "+ $25 extras + $73 big ones", "= $142 a month"]}},
-  {"say": "Over a year, that's roughly $1,700. Gone in small bites.",
-   "visual": {"type": "counter", "from": 142, "to": 1704, "steps": 12, "unit": "Month", "label": "paid in subscriptions"}},
-  {"say": "So she did a one-hour audit. Keep one streamer, rotate the others, and switch to a $10 gym.",
-   "visual": {"type": "checklist", "title": "The 1-hour audit", "items": [{"text": "Keep one streaming service", "ok": true}, {"text": "Rotate the other two monthly", "ok": true}, {"text": "$45 gym to a $10 basic gym", "ok": true}, {"text": "News + language app", "ok": false}]}},
-  {"say": "The news app and the language app? Cancelled. She hadn't opened them since spring.",
-   "visual": {"type": "statement", "text": "Not opened since spring", "sub": "cancelled: $23 a month", "icon": "phone"}},
-  {"say": "Her new total is about $71 a month. Same shows, same music.",
-   "visual": {"type": "versus", "left": {"label": "Before", "value": 142, "hi": false}, "right": {"label": "After", "value": 71, "hi": true}}},
-  {"say": "That's about $850 a year back, without losing anything she actually uses.",
-   "visual": {"type": "big_number", "value": 850, "label": "back every year", "icon": "piggy"}},
-  {"say": "How many subscriptions do you pay for? Count them. Nora thought it was 4. It was 9 apps, at $142 a month.",
-   "visual": {"type": "question", "text": "How many subscriptions do you pay for?"}}
+  {
+   "say": "Nora pays for 9 subscriptions, and each one feels tiny.",
+   "visual": {
+    "type": "big_number",
+    "value": 9,
+    "prefix": "",
+    "label": "subscriptions",
+    "sub": "most under $20",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "Three streaming services: about $18, $16, and $10.",
+   "visual": {
+    "type": "bars",
+    "title": "Streaming",
+    "items": [
+     {
+      "label": "Streaming #1",
+      "value": 18
+     },
+     {
+      "label": "Streaming #2",
+      "value": 16
+     },
+     {
+      "label": "Streaming #3",
+      "value": 10
+     }
+    ]
+   }
+  },
+  {
+   "say": "Music is $12. A news app, $10. Cloud storage, $3.",
+   "visual": {
+    "type": "bars",
+    "title": "The extras",
+    "items": [
+     {
+      "label": "Music",
+      "value": 12
+     },
+     {
+      "label": "News app",
+      "value": 10
+     },
+     {
+      "label": "Cloud storage",
+      "value": 3
+     }
+    ]
+   }
+  },
+  {
+   "say": "Then the big ones: a $45 gym she visits twice a month, and two apps at $15 and $13.",
+   "visual": {
+    "type": "bars",
+    "title": "The big ones",
+    "items": [
+     {
+      "label": "Gym (2 visits)",
+      "value": 45,
+      "hi": true
+     },
+     {
+      "label": "Fitness app",
+      "value": 15
+     },
+     {
+      "label": "Language app",
+      "value": 13
+     }
+    ]
+   }
+  },
+  {
+   "say": "Add it up: about $142, every month.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$44 streaming",
+     "+ $25 extras + $73 big ones",
+     "= $142 a month"
+    ]
+   }
+  },
+  {
+   "say": "That's roughly $1,700 a year, gone in small bites.",
+   "visual": {
+    "type": "counter",
+    "from": 142,
+    "to": 1704,
+    "steps": 12,
+    "unit": "Month",
+    "label": "paid in subscriptions"
+   }
+  },
+  {
+   "say": "So she did a one-hour audit: keep one streamer, rotate the others, and switch to a $10 gym.",
+   "visual": {
+    "type": "checklist",
+    "title": "The 1-hour audit",
+    "items": [
+     {
+      "text": "Keep one streaming service",
+      "ok": true
+     },
+     {
+      "text": "Rotate the other two monthly",
+      "ok": true
+     },
+     {
+      "text": "$45 gym to a $10 basic gym",
+      "ok": true
+     },
+     {
+      "text": "News + language app",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "The news app and language app? Cancelled. Not opened since spring.",
+   "visual": {
+    "type": "statement",
+    "text": "Not opened since spring",
+    "sub": "cancelled: $23 a month",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "New total: about $71 a month. Same shows, same music.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 142,
+     "hi": false
+    },
+    "right": {
+     "label": "After",
+     "value": 71,
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "That's about $850 a year back, without losing anything she uses.",
+   "visual": {
+    "type": "big_number",
+    "value": 850,
+    "label": "back every year",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "How many subscriptions do you pay for? Nora guessed 4. It was 9 apps, at $142 a month.",
+   "visual": {
+    "type": "question",
+    "text": "How many subscriptions do you pay for?"
+   }
+  }
  ],
  "question": "How many subscriptions do you pay for? Count them before you answer.",
  "description": "Nora pays for 9 subscriptions — about $142 a month, roughly $1,700 a year. A one-hour audit (keep one streamer, rotate the rest, cheaper gym, cancel what she never opens) cut it to about $71 a month. Prices are typical US estimates, rounded.",
- "tags": ["subscriptions", "subscription audit", "save money on subscriptions", "streaming costs", "monthly budget", "money habits", "cancel subscriptions"],
- "hashtags": ["#subscriptions", "#savemoney"]
+ "tags": [
+  "subscriptions",
+  "subscription audit",
+  "save money on subscriptions",
+  "streaming costs",
+  "monthly budget",
+  "money habits",
+  "cancel subscriptions"
+ ],
+ "hashtags": [
+  "#subscriptions",
+  "#savemoney"
+ ]
 }

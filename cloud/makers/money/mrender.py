@@ -21,7 +21,7 @@ import mvoice
 W, H, FPS = V.W, V.H, 30
 SR = mvoice.SR
 PANEL_Y = 430
-CAP_Y = 1395            # caption centre line (bottom 20 % = y > 1536 stays clear)
+CAP_Y = 1440            # caption centre line (bottom 20 % = y > 1536 stays clear)
 CAP_W = 840
 
 ACCENTS = {"green": "#0E9F6E", "red": "#E0472B", "blue": "#2563EB", "orange": "#EE7B11", "purple": "#7C3AED",
@@ -270,7 +270,9 @@ def render(script, out_mp4, work, log=print):
         sb = [b for b in beats if tm["t0"] < b <= t]  # punches already passed inside this scene
         if i == 0:  # frame 0 already shows the icon; the number counts up through the whole hook
             p += 0.45
-            spec = dict(scenes[0].get("visual", {}), count_dur=2.6, count_linear=True)
+            spec = dict(scenes[0].get("visual", {}), count_dur=2.6, count_linear=True, sub=None)
+            if abs(float(spec.get("value", 100) or 0)) < 100:
+                spec["count_dur"] = 0.01  # small numbers (9 apps, 24 %) are shown whole on frame 0
         if i == 0 and hook:
             ybot = draw_hook(img, d, hook, t, th_f)
             scale_base, py = 0.76, max(ybot + 10, 660)
@@ -280,7 +282,7 @@ def render(script, out_mp4, work, log=print):
         layer = Image.new("RGBA", (W, V.PANEL_H), col[:3] + (0,))
         V.draw_visual(layer, spec, p, D, th_f)
         # camera: slow push + a punch-in on every beat (a visual change every ~2-3 s)
-        z = scale_base * (1 + (0.04 * min(p, 3.0) if i == 0 else 0.012 * p))
+        z = scale_base * (1 + (0.03 * min(p, 3.0) if i == 0 else 0.012 * p))
         for b in sb:
             z *= 1 + 0.06 * V.ease((t - b) / 0.12)
         slide = 0 if i == 0 else (1 - V.ease(p / 0.24)) * 300

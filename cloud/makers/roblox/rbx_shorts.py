@@ -290,6 +290,8 @@ class Card:
         self.mask = Image.new("L", (VW, VH), 0)
         ImageDraw.Draw(self.mask).rounded_rectangle((0, 0, VW - 1, VH - 1), 30, fill=255)
         self.acc = gx.accent(g["clean"])
+        self.strip = [gx.framed(gx.cover(gx.load_rgb(x["icon"], (512, 512)), 124, 124), 4, gx.WHITE, 18)
+                      for x in c.get("strip", [])]
 
     def frame(self, lt, dur, words, t_abs, loop_end=False):
         c = self.c
@@ -378,6 +380,13 @@ class Card:
                                  gx.font(64), gx.RED, stroke=6, anchor="mm")
             if n == 2:
                 gx.draw_text(d, (W // 2, VY + 170), "VS", gx.font(120), gx.YELLOW, stroke=10, anchor="mm", shadow=6)
+        # icon conveyor on the opening (and loop) card: strong motion in the first seconds
+        if self.strip:
+            span = len(self.strip) * 150
+            off = (t_abs * 420) % span
+            for j, ic in enumerate(self.strip):
+                x = int(W - ((j * 150 + off) % span))
+                im.paste(ic, (x, VY + VH + 40), ic)
         # headline (visible at frame 0)
         hs = 1.0 + 0.18 * max(0.0, 1 - lt / 0.2) if not still else 1.0
         head = c["head"]
@@ -452,6 +461,10 @@ def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_mich
     music = au.beat(total + 1, bpm=rng.choice([128, 136, 140]), seed=day.toordinal() + len(title))
     wav = os.path.join(out_dir, name + ".wav")
     au.mix_and_master(vbuf, music, sbuf, total, wav, music_gain=0.2)
+    strip = [x for x in games[:9] if not (fmt_name == "guess" and x["rank"] == 1)][:8]
+    if cards[0]["vis"] in ("hero", "blur"):
+        cards[0]["strip"] = strip
+        cards[-1]["strip"] = strip if cards[-1]["vis"] == cards[0]["vis"] else []
     objs = [Card(c, seed=c["g"]["id"] % 997 + (1 if c.get("alt") else 0)) for c in cards]
     objs[0].first = True
     starts = [c["start"] for c in cards]

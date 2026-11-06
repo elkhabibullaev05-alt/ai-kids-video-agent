@@ -273,8 +273,8 @@ def v_versus(d, s, p, D, th):
     a = back((p - 0.6) / 0.4)
     if a > 0:
         r = 52 * a
-        d.ellipse([CX - r, top - 120 - r, CX + r, top - 120 + r], fill=th["ink"])
-        ctext(d, (CX, top - 120), "VS", font(int(44 * a) + 1), th["bg"])
+        d.ellipse([CX - r, base - 90 - r, CX + r, base - 90 + r], fill=th["ink"])
+        ctext(d, (CX, base - 90), "VS", font(int(44 * a) + 1), th["bg"])
 
 
 SHADES = (0.0, 0.45, 0.7, 0.25, 0.85, 0.55)

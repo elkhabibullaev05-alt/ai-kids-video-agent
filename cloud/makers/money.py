@@ -81,9 +81,76 @@ def tags_of(sc):
     return out
 
 
+def est_seconds(sc):
+    """Voice length estimate: Kokoro at speed 1.08 says ~2.93 spoken words/s (numbers expanded), 0.16 s between scenes."""
+    import mvoice
+    n = sum(len(mvoice.spoken(s.get("say", "")).replace("-", " ").split()) for s in sc.get("scenes", []))
+    return n / 2.93 * 1.08 / float(sc.get("speed", 1.08)) + 0.16 * (len(sc.get("scenes", [])) - 1) + 0.5
+
+
+def check_queue(repo):
+    """Writer-side validation of every queued script. Prints OK/FAIL per file; exit 0 only if all are OK."""
+    qdir = os.path.join(repo, "cloud", "queue", "money")
+    ddir = os.path.join(repo, "cloud", "done", "money")
+    done = []
+    for f in sorted(glob.glob(os.path.join(ddir, "*.json"))):
+        try:
+            done.append(json.load(open(f)))
+        except Exception:
+            pass
+    used = {norm(d.get("title", "")) for d in done}
+    combos = {(str(d.get("character", "")).lower(), str(d.get("amount", ""))) for d in done}
+    bad_n = 0
+    for f in sorted(glob.glob(os.path.join(qdir, "*.json"))):
+        errs = []
+        try:
+            sc = json.load(open(f))
+        except Exception as e:
+            print(f"FAIL {os.path.basename(f)}: bad json: {e}")
+            bad_n += 1
+            continue
+        e = check(sc, used)
+        if e:
+            errs.append(e)
+        t, hook = sc.get("title", ""), sc.get("hook", "")
+        if len(t) > 60:
+            errs.append(f"title {len(t)} chars (max 60)")
+        if not re.search(r"[\d$]", t):
+            errs.append("title has no number/$ amount")
+        if not hook or len(hook.split()) > 6:
+            errs.append("hook missing or > 6 words")
+        n = len(sc.get("scenes", []))
+        if not 8 <= n <= 12:
+            errs.append(f"{n} scenes (need 8-12)")
+        if n and (sc["scenes"][-1].get("visual") or {}).get("type") != "question":
+            errs.append("last scene must be a question visual")
+        for k in ("question", "description", "tags"):
+            if not sc.get(k):
+                errs.append(f"missing {k}")
+        combo = (str(sc.get("character", "")).lower(), str(sc.get("amount", "")))
+        if combo[0] and combo in combos:
+            errs.append(f"character+amount {combo} already used")
+        secs = est_seconds(sc)
+        if not 42 <= secs <= 57.5:
+            errs.append(f"voice ~{secs:.0f}s (need 45-57: {'cut words' if secs > 57 else 'add a scene'})")
+        types = {(s.get("visual") or {}).get("type") for s in sc.get("scenes", [])}
+        if len(types) < 5:
+            errs.append(f"only {len(types)} visual types (need >= 5)")
+        name = os.path.basename(f)
+        if errs:
+            bad_n += 1
+            print(f"FAIL {name}: " + "; ".join(errs))
+        else:
+            print(f"OK   {name}  ~{secs:.0f}s  {t}")
+        used.add(norm(t))
+        combos.add(combo)
+    return 1 if bad_n else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", required=True)
+    ap.add_argument("--out", default="")
+    ap.add_argument("--check", action="store_true", help="only validate cloud/queue/money/*.json (writer task)")
     ap.add_argument("--home", default=".")
     ap.add_argument("--repo", default=os.path.dirname(os.path.dirname(HERE)))
     ap.add_argument("--titles", default="")
@@ -92,6 +159,10 @@ def main():
     ap.add_argument("--max", type=int, default=3)
     ap.add_argument("--only", default="")
     a = ap.parse_args()
+    if a.check:
+        return check_queue(os.path.abspath(a.repo))
+    if not a.out:
+        ap.error("--out is required")
     if str(a.need_short) == "0" and not a.only:
         log("money: no Shorts needed (this channel makes Shorts only)")
         return 3
