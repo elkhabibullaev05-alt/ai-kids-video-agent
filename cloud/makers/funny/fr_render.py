@@ -344,7 +344,9 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
     for i, r in enumerate((5, 4, 3, 2, 1)):
         c = clips[i]
         m = c["m"]
-        main_len = max(4.6 if r == 1 else 4.0, sec(rank_v[i]) + 0.9)
+        # 2026-11-07 Ask Studio (Funny): 31-s Shorts hold 52 %; the 18-s one held 60 % stayed / 65-74 % viewed →
+        # aim ~20-22 s: shorter #5-#3 shots and a slow-mo replay only for #1 (it also makes the loop).
+        main_len = max(4.6 if r == 1 else (3.6 if r == 2 else 3.0), sec(rank_v[i]) + 0.6)
         main_len = min(main_len, m["dur"] - 0.1)
         # main shot ends ~0.3 s after the peak, so the replay right after it shows the payoff again
         st = max(0.0, min(m["peak"] + 0.3 - main_len, m["dur"] - main_len - 0.05))
@@ -364,7 +366,8 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
                                    caption="COMMENT BELOW", big=sc["end_text"], revealed=(1, 2, 3, 4, 5))
             rp["end_from"] = 0.25
             rp["voice"] = [(end_v, 0.25)]
-        parts.append(rp)
+        if r == 1:
+            parts.append(rp)
         revealed.append(r)
     total = sum(p["len"] for p in parts)
     log(f"timeline {total:.1f}s in {len(parts)} shots, voice {voice}")

@@ -48,3 +48,46 @@ Numbers from Studio Analytics, last 28 days (9 Oct – 5 Nov). Ask Studio questi
 
 ## Other 8 channels
 Not checked today (time) — next run. Part C (SAFETY_DAILY.md) also left for the next run, as COMPETITORS.md allows.
+
+---
+# Update 2 — same day ~10:00 UTC (owner: "hamma narsani sen qil, hozir"): the other 8 channels + Funny Ask Studio
+
+## funny — Ask Studio now worked (no identity check this time)
+- 83,284 views, 155 h, +50 subs (1 per 1,665 views). Stayed 37 % (Duck Moments 24.5 %, Zipline 26 %); best "Ranking Crazy Trampoline Fails" 60 % stayed, **18 s long**. Avg 14 s of 31 s (52 %).
+- Fix: Shorts 15–20 s; no title card; titles less formulaic ("Ranking … (Wait for #1)"); on-screen/pinned question "Which was worse: #3 or #1?".
+- Changed: `cloud/makers/funny/fr_render.py` — #5–#3 shots 3.0 s, #2 3.6 s, slow-mo replay only on #1 → ~21 s instead of ~31 s (rek_ball still gives full length score 15–45 s). Could not render-test here (no kokoro TTS in the cloud box) — the laptop worker's self-check gates it.
+
+## sleep — Calm Rain for Sleep
+- Shorts 1.9K views (77 %), long 592; 230 h watch time; +3 subs; impressions 5.6K, CTR 2.9–3.1 %, avg 4:59 from impressions; Shorts stayed 12 %.
+- Studio AI: dark, identical thumbnails; repeated titles; Shorts lose 90 % in 1–2 s; uploads clustered; best video "Gentle Night Rain… 60 Minutes" avg 32 min.
+- Changed: `cloud/makers/sleep.py` thumbnail brighter/more contrast and the badge names this video's scene (not "RAIN FOR SLEEP" every time). Fewer uploads → owner.
+
+## max — Max the Curious Cat
+- 186.3K impressions, CTR 0.9 %, avg 0:34 (12.6 %); 4,114 views, +3 subs; Shorts 14 % stayed. 97 % of impressions from Suggested.
+- Changed: worker strips "(Ep N)" for maxcat too (`cloud/worker.py studio_title`); WRITER.md: one emoji, start inside the problem, Max's face ≥ 1/3 of thumb, Shorts 15–20 s.
+
+## seoul — Seoul Night Remix
+- 622 views, 5.2 h, +1 sub, 9 uploads; long CTR 3.49 % on 6,272 impressions; Shorts 15 % stayed.
+- Changed: `seoul/AGENT.md` title order [Vibe/Setting] • [Genre] (Song), neon thumbnails, Shorts start on the hook.
+
+## milo — Milo Survives (since 22 Oct)
+- 2.3K views, 0 subs; long 1,902 impressions, CTR 1.74 %; "Zombie Hospital" avg 1:03 of 7:46, 37 % lost by 20 s.
+- Changed: `milo/AGENT.md` danger in first 3 s, first-person titles ≤ 55 chars.
+
+## dough — Dough Bros (no Ask Studio button; Analytics only)
+- Shorts 9.9K views, long 4K; +21 subs; 147.8K impressions, CTR 2.0 %, avg 0:34.
+- Changed: WRITER.md note (object + problem in second 1).
+
+## doodle — The Doodle Desk
+- Shorts 3.6K, long 649; +2 subs; long 12K impressions, CTR 1.37 % (Suggested 0.98 %); avg 1:47–2:07 of 10 min.
+- Changed: `doodle/AGENT.md` stakes-not-names titles, conflict in 10 s.
+
+## bolt — Inspector Bolt
+- 2,797 impressions, CTR 1.36 %, 67 views, avg 0:15 (7 %), 0 subs (since 18 Oct).
+- Changed: WRITER.md bolt note (problem in second 1, one big face).
+
+## money — Money Story Daily
+- 2,125 views (all Shorts), 0 subs, 35 uploads; Shorts 11 % stayed; avg 17 s of 40–55 s; drop between s4–s8.
+- Changed: `cloud/makers/money/WRITER.md` punchline number first, 25–30 s scripts, subscribe line at the end.
+
+**Studio AI's message on almost every channel: post less (1–2 long/week).** Not applied — owner's rule: never lower per_day automatically.

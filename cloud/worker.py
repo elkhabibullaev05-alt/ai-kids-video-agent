@@ -304,7 +304,7 @@ def similar(job, st):
 def studio_title(t):
     """Studio AI 2026-10-29 (hollow): no episode number anywhere in the title — it reads as a series viewers
     missed the start of. The writer still adds "(Ep N)"; strip it here (2026-11-07). Other channels unchanged."""
-    if CH != "hollow" or not t:
+    if CH not in ("hollow", "maxcat") or not t:  # maxcat added 2026-11-07 (Ask Studio: "(Ep 29)" in Max titles)
         return t
     return re.sub(r"\s*\((?:Ep|EP|Episode)\.?\s*\d+\)", "", t).strip()
 

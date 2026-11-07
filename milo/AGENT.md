@@ -56,3 +56,4 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 
 ## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
 - Survival stories this week: "Trapped In <Place> After Closing 1 Year (Full Story)" (17.6k-sub channel, 1.4M views in 5 days, 49 min) and numbered parts "(<Place>, Part 5)" on a 62k channel. Use one fixed place per mini-series and put `(<Place>, Part N)` at the end of the title; the first line states the time ("Day 1 of 365…"). Max 14:50 (channel not phone-verified).
+- Ask Studio 2026-11-07 (28 d: 2.3K views, long CTR 1.74 %, "Zombie Hospital" avg 1:03 of 7:46 = 13.6 %, 0 subs): no "Welcome back" — first 3 s = the danger; first-person titles ≤ 55 chars ("I Froze for 100 Days in Antarctica's Dead Zone"); thumbnail = Milo + one threat + high contrast.

@@ -158,3 +158,9 @@ Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those
 - hollow tags must include: "true scary stories", "true horror stories animated", "scary stories animated", "creepy true story", "horror story", plus the place and year of this story.
 **maxcat / bolt:** kids leaders this week are 20–45 min compilations and big-stakes plain titles (a 5k-sub 3D kids channel got 520k views in 7 days with "A <Big Thing> Stole Our Entire <Place>! 😱", 9 min). For Max/Bolt write the stakes in plain words in the first 30 chars ("The Whole Park Lost Its Leaves!"), gentle (no "terrifying"), one emoji. Kids flags unchanged.
 **doughbros:** keep the "Would YOU…?" Shorts rule above; the long title should name the one object + the problem in ≤ 45 chars (stakes first).
+
+## Ask Studio 2026-11-07 (laptop run, all channels) — applies from the next job
+- **maxcat** (28 d: 186K impressions, CTR 0.9 %, avg view 0:34 = 12.6 %, Shorts 14 % stayed): no "(Ep N)" in any title (worker strips it now too); max **one** emoji; the first 5 s start inside the problem (leash goes on → Max panics), no title card; thumbnail = Max's face with ONE big emotion filling ≥ 1/3 of the frame; Shorts 15–20 s.
+- **bolt** (since 18 Oct: 2,797 impressions, CTR 1.36 %, avg view 0:15 = 7 %, 0 subs): second 1 = the problem on screen (Pip stuck, the splash), the stakes said in the first 5 s, no title card; thumbnail = one big Bolt face + one clear problem object. Studio also says post less — owner decides.
+- **doughbros** (Analytics only, no Ask Studio: 147.8K impressions, CTR 2.0 %, avg view 0:34; Shorts 9.9K views, +21 subs): keep the "Would YOU…?" Shorts; long opens on the object + problem in second 1.
+- **hollow**: see ask_studio_2026-11-07.md — hook in 5 s, end with a line pointing to another story ("If this one got you, the Bluff Creek footprints story is next on the channel").

@@ -73,3 +73,4 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 
 ## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
 - K-pop remix winners this week label the **genre in the title** ("🔥 Dark Cabaret Remix", "Dark K-Pop Remix"). Our titles must name our own song + its genre tag (e.g. "<Our Song> 🔥 Dark K-Pop Remix"); never another artist's or song's name.
+- Ask Studio 2026-11-07 (28 d: 622 views, long CTR 3.49 %, Shorts 15 % stayed): title order **[Vibe / Setting] • [Genre] (Song Title)**, e.g. "Rainy Night Drive in Seoul • Dark K-Pop Love Remix (Neon Rain)"; thumbnails with warm neon (magenta/cyan/amber) + one focal object (rainy windshield, cafe window); Shorts start on the drop/hook line, never a hashtag-only title.

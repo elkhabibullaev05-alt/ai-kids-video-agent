@@ -166,9 +166,12 @@ def main():
            "-map", "0:v", "-map", "1:a", "-c", "copy", "-movflags", "+faststart", long_f, timeout=4 * 3600)
         thumb = os.path.join(a.out, f"{stamp}-0-long.jpg")
         txt = f"{int(hours)} HOURS" if not a.offline_test else "3 HOURS"
+        # 2026-11-07 Ask Studio (Calm Rain): thumbs were flat/dark and identical → brighter, more contrast, and the
+        # badge names this video's scene ("CABIN WINDOW") instead of the same "RAIN FOR SLEEP" every time.
+        badge = re.sub(r"[^A-Za-z ]", "", name).strip().upper()[:22] or "RAIN FOR SLEEP"
         sh("ffmpeg", "-y", "-v", "error", "-ss", "3", "-i", unit, "-frames:v", "1", "-vf",
-           f"scale=1280:720,eq=brightness=-0.08,drawtext=fontfile={FONT}:text='{txt}':fontsize=110:fontcolor=white:"
-           f"borderw=6:bordercolor=black@0.6:x=60:y=h-th-150,drawtext=fontfile={FONT}:text='RAIN FOR SLEEP':fontsize=64:"
+           f"scale=1280:720,eq=brightness=0.03:saturation=1.2:contrast=1.08,drawtext=fontfile={FONT}:text='{txt}':fontsize=110:fontcolor=white:"
+           f"borderw=6:bordercolor=black@0.6:x=60:y=h-th-150,drawtext=fontfile={FONT}:text='{badge}':fontsize=64:"
            f"fontcolor=white@0.95:borderw=4:bordercolor=black@0.6:x=64:y=h-th-70", thumb)
         hrs = f"{int(hours)} Hours"
         # 2026-11-07 (PLAN competitors): searchable "Insomnia" + honest "(Real Rain, No AI)" tail, tried first

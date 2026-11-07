@@ -167,3 +167,8 @@ fewer uploads, report it in the final message and let the owner decide.
 
 ## Competitor lessons 2026-11-07 (daily competitor run)
 - The finance videos pushed hardest this month name an **age + a mistake** ("I'm 56. Here Are the Biggest Wealth Killers in Your 30s", 625k) or audit a real-looking budget. For our story Shorts: at least 1 in 3 titles = `<Name>, <age>: <the one money mistake>` (e.g. "Leo, 29: The Card That Doubled His Debt"). Characters stay fictional and the numbers must match the script.
+
+## Ask Studio 2026-11-07 (28 d: 2,125 views, Shorts 11 % stayed / 89 % swiped, avg 17 s of 40–55 s, 0 subs)
+- **First spoken line = the punchline number**, not a name or backstory: "This $6 coffee cost $1,560 by December." The name comes after.
+- Scripts **25–30 s** total (was 40–55 s): use **6–8 scenes** (the checker allows 6–14). Cut the middle, keep the fix.
+- Last line: "Subscribe so you don't make this mistake on your next paycheck."

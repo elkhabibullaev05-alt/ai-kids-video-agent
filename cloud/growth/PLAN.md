@@ -174,3 +174,8 @@ Now: 0 subs, 6 views total, no new episode since 20 Oct.
 - [ ] Roblox Shorts: trim to 15–25 s (Ask Studio 2026-11-07: Shorts under 25 s held >50 %; channel stayed-to-watch 38.5 %) — needs a narration-length cap in rbx_shorts.py.
 - [ ] Hollowmere: Studio sees 8–12 words of burned-in subtitle on the thumbnail (channel not phone-verified → YouTube auto-frame is used). Either phone-verify (owner) or render the auto-frame candidates (start/middle/end) without subtitles.
 - [ ] Funny Rank: Ask Studio blocked by a "prove it's you" identity check on this account (2026-11-07) — owner must pass it once in Chrome.
+- [x] Funny Shorts ~31 s → ~21 s (done 2026-11-07: Ask Studio, cloud/makers/funny/fr_render.py — replay only on #1).
+- [x] Calm Rain thumbnail brighter + scene badge (done 2026-11-07: cloud/makers/sleep.py).
+- [x] Max titles without "(Ep N)" (done 2026-11-07: cloud/worker.py studio_title + WRITER.md).
+- [x] Money Shorts 25–30 s (done 2026-11-07: money/WRITER.md — 6–8 scenes; money.py --check allows 6–14).
+- [ ] Owner question (Ask Studio, 2026-11-07, nearly every channel): post fewer, better videos (1–2 long/week). Counts unchanged until the owner decides.

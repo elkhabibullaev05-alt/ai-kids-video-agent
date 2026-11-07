@@ -117,3 +117,6 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 - Give the explainers a **numbered series name** in the description's first line and the playlist ("Animal Secrets #12"), not in the title (Ask Studio 2026-11-07 says title formulas confuse viewers). Count from the existing titles in `cloud/ink/animals/`.
 - **Ask Studio 2026-11-07 (Wild Sketchbook, 28 days: CTR 1.45 % on 20.9k impressions, long avg view 1:02 = 13 %, +5 subs from 70 uploads):** NO title tails like "#1 Is New" / "#1 Is in You" — write one clear curiosity title ("How Crocodiles Survived the Asteroid That Wiped Out the Dinosaurs"). Shorts titles must each be a different hook — never "The #1 Secret: X | Topic" again. First 5 s of the long = the main visual + the promise; no slow context.
 - "What if <animal> evolved…?" speculative stories also get pushed (56k-sub channel, 55k in 6 days) — allowed once a week, clearly framed as "what if" (not as fact).
+
+## Safety notes 2026-11-07
+- No restrictions on any video. Risk o'rta only for sameness: Shorts titles "The #1 Secret: X | Topic" repeat — every Short title must be a different sentence shape (repetitive-content rule).

@@ -100,3 +100,4 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 
 ## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
 - Breaking-news explainers win when posted within 24 h of the event: a 794-sub channel got 93k views in 19 h with "What Brought Down the <X>? The <N> Theories Explained". Title form for big events: `What <verb> <event>? <N> <Facts/Theories> Explained` — only theories that are publicly reported, clearly labelled as theories.
+- Ask Studio 2026-11-07 (28 d: long CTR 1.37 % on 12K impressions, avg 1:47–2:07 = 17–20 % of 10 min, 0 subs from long): titles explain the stakes, never rely on unknown names ("The Bizarre Election Where Both Candidates Had the Same Name", not "Dan Sullivan vs. Dan Sullivan"); core conflict in the first 10 s; say the question that the end answers; one clear focal object on the thumbnail.
