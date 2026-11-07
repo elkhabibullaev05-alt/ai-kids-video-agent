@@ -47,3 +47,8 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 - If this run ends with anything left in `pending_uploads` because the computer was off or disconnected, write a flag to the hub database before finishing: ArtifactData `set` collection `catchup`, doc_id `milo`, data `{"agent": "milo", "at": "<ISO now>", "pending": <count>}` (url https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r; if the doc exists, get it and pin if_version). The hourly hub runner fires this task again as soon as the computer is reachable.
 - When a run is a catch-up (the extra message says so): only upload `pending_uploads` (for an interrupted upload, look in Studio for the partial video id first and finish it instead of uploading again), do not make a new video, then delete `catchup/milo` (pin if_version) if nothing is left pending.
 
+
+## Restart + backlog 2026-11-07 (daily Studio run)
+- Only 1 episode since 2026-10-22 (log.json). Next run: make episode 2 straight away (plan: every 2 days + 2 Shorts) — do not spend the run choosing a topic.
+- Backlog, in order (each a different danger, all "I Survived 100 Days …"): 2 a frozen research station in Antarctica · 3 an abandoned underground metro · 4 a sinking cruise ship · 5 a desert after the plane went down · 6 a flooded city. Skip one only if a newer Studio note says otherwise.
+- Every episode: cold open on the worst moment (rule above), "DAY 1" on screen within 5 s, red "DAY N" thumbnail.

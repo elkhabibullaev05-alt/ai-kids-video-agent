@@ -442,7 +442,10 @@ def make_long(sc, photos, metas, a, work, out_dir, pack):
     log(f"long rendered in {time.time() - t0:.0f} s -> {out}")
     # thumbnail
     th_src = next((photos[u] for u in used if u), None)
-    art.thumbnail(th_src, sc.get("thumb_text") or sc["title"], os.path.join(out_dir, f"{pack}-0-long.jpg"))
+    # Studio 27 Oct: thumbnail <= 4 words that are NOT the title repeated (2026-11-07)
+    th_text = sc.get("thumb_text") or (sc.get("scenes") or [{}])[0].get("hook") or sc["title"]
+    th_text = " ".join(th_text.split()[:4])
+    art.thumbnail(th_src, th_text, os.path.join(out_dir, f"{pack}-0-long.jpg"))
     desc = build_desc(sc.get("description", ""), sc, credits([u for u in used if u], metas),
                       "Subscribe for one animal secret a day — this is the Wild Sketchbook.")
     meta = {"file": f"{pack}-0-long.mp4", "kind": "long", "title": sc["title"][:100], "description": desc,

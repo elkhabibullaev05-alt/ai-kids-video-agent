@@ -65,3 +65,7 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 
 ## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
 - Thumbnail: bright, high-contrast colours plus one short lyric line, nothing else.
+
+## Open item 2026-11-07 (daily Studio run)
+- Song 1 "Neon Rain" (long 2io3wcEvC2M) still has no Short (`short_id` null in log.json). Next run: cut its 20–30 s Short first (chorus at 0 s, lyric line on screen, "Full song:" link in the description), then the new song.
+- Song count is 2; first 30-min mix comes after song 10 (PLAN.md) — keep 1 song a day so it lands before the YPP window.

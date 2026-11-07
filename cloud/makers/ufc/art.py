@@ -274,15 +274,14 @@ def thumbnail(photo_sketch_src, text, out_path):
     if photo_sketch_src is not None:
         base = sketch(photo_sketch_src, W, H, seed=3, wash=0.85)
     else:
-        base = title_card(text, W, H)
+        base = title_card("", W, H)  # 2026-11-07: no second copy of the text behind the marker words
     im = Image.fromarray(base).convert("RGBA")
     # darken left side for contrast
     grad = Image.linear_gradient("L").rotate(90).resize((W, H))
     shade = Image.new("RGBA", (W, H), (20, 14, 8, 0))
     shade.putalpha(grad.point(lambda v: int(v * 0.55)))
     im = Image.alpha_composite(im, shade)
-    t = text_layer(text.upper(), "marker", 760, 560, 190, fill=YELLOW, sw=12, max_lines=3, rot=4)
+    t = text_layer(" ".join(text.upper().split()[:4]), "marker", 760, 560, 190, fill=YELLOW, sw=12, max_lines=3, rot=4)
     im.alpha_composite(t, (30, max(10, (H - t.height) // 2)))
-    tag = text_layer("WILD SKETCHBOOK", "hand", 420, 80, 44, fill=(255, 248, 230), sw=5, max_lines=1)
-    im.alpha_composite(tag, (W - tag.width - 20, H - tag.height - 10))
+    # 2026-11-07: no channel-name tag — Studio: thumbnails cluttered/text-heavy; one subject + <= 4 words
     im.convert("RGB").save(out_path, quality=92)

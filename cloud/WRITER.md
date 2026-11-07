@@ -138,3 +138,16 @@ Full answers: `cloud/growth/ask_studio_2026-10-27.md`. Apply to every job from n
 ## Competitor format 2026-10-28 — maxcat (Simon's Cat, Talking Tom, Kitty's Games)
 **Phone verification (checked in Studio 2026-10-28):** verified = Roblox, Calm Rain, Max, Doodle Desk. NOT verified = Hollowmere, Dough Bros, Wild Sketchbook, Money Story, Funny Rank, Inspector Bolt, Seoul Night Remix, Milo Survives → on these channels no video may be longer than **14:50**, and no custom thumbnails / Related-video links (they fail). Re-check in Studio → Settings → Channel → Feature eligibility before making anything longer. (Max IS verified: compilations may be 20–30 min, custom thumbnails allowed.)
 - Weekly themed compilation 20–30 min ("Max's Spooky Adventures 🎃 | 25 Min"); story titles plain and emotional; Max's face with a big emotion in the first frame.
+
+## hollow — overrides 2026-11-07 (daily Studio run; PLAN.md Hollowmere items)
+Newer than the 2026-10-26 "Pommi-style serial" rule for Hollowmere (owner 28 Oct: "raqiblar qanday yasasa, shunday" + Studio 29 Oct):
+- **No episode number anywhere** in long or Short titles (no "(Ep 50)"). The worker now strips it too, but write titles without it.
+- **Every story standalone**: never refer to earlier episodes; no "What do you think happens in the next part?" line. End the long on: "Have you heard a story like this one? Tell me in the comments." and use the same line as the description's first line.
+- The Narrator's subscribe line goes in the **middle** of the long (after the strangest fact is revealed), never right after the hook.
+- First spoken line of every long = year + place + strangest fact ("1958, Bluff Creek, California: a bulldozer driver found 16-inch footprints around his machine.").
+- thumb_text: 2–3 words that add to the title, dark/realistic frame (fog, doorway, window) — pick `thumb_beat` on a beat without the cartoon cast's faces filling the frame.
+
+## doughbros — Shorts rule 2026-11-07 (daily Studio run; PLAN.md Dough Bros)
+Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those are the only ones Studio shows at 78–87 % viewed (doughbros/AGENT.md lines 78–128).
+- **Every job: at least one Short (put it first in `shorts`) titled `Would YOU <verb> <this object>? <emoji> #shorts`**, with `top` = the same question in ≤ 5 words ("WOULD YOU OPEN IT?") and its `beat` on the moment the object is shown. If a job has 2 Shorts, the second may be a different form, never "Trust X or Y?".
+- Never repeat a verb+object pair from the last 14 days of `cloud/done/doughbros/`.

@@ -158,3 +158,9 @@ Icons (shapes only): `card house cart cup car phone piggy calendar chart fire bo
 ## If YouTube Studio says "upload less"
 Owner's rule: never lower the number of uploads (3 Shorts/day). Make each one better instead; if Studio advises
 fewer uploads, report it in the final message and let the owner decide.
+
+## Series slot (daily Studio run 2026-11-07 — PLAN.md Money "one series on our winning format")
+- Every **Monday and Thursday** (UTC date of the job), job `-1` of that day is the series **"Every Level"**: one job, 3 incomes side by side
+  (`compare`/`stack` visuals), title pattern "`<Job/Place>` at Every Level: $X vs $Y vs $Z" (e.g. "Nurses at Every Level: $3k vs $6k vs $9k").
+  Different profession/city each time; never two "Every Level" jobs on the same day. All numbers realistic US 2026, general education only.
+- Last scene `cta`: "Follow for Every Level, twice a week".

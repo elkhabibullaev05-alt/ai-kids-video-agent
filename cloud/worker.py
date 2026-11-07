@@ -301,6 +301,14 @@ def similar(job, st):
 
 
 # ---------------------------------------------------------------- production
+def studio_title(t):
+    """Studio AI 2026-10-29 (hollow): no episode number anywhere in the title — it reads as a series viewers
+    missed the start of. The writer still adds "(Ep N)"; strip it here (2026-11-07). Other channels unchanged."""
+    if CH != "hollow" or not t:
+        return t
+    return re.sub(r"\s*\((?:Ep|EP|Episode)\.?\s*\d+\)", "", t).strip()
+
+
 def rek(path, title, kind):
     p = sh([PY, os.path.join(ROOT, "tools", "rek_ball.py"), path, title, kind], check=False, timeout=1800)
     try:
@@ -337,6 +345,13 @@ def safe_thumb_beat(sb, tb):
                 if len(a) > 1 and a[0] in (who, "all") and str(a[1]).split(":")[0] in MOVES:
                     return False
         return True
+    # 2026-11-07 (PLAN Max/Bolt: hero's face on the thumbnail): on maxcat/bolt prefer a clean close-up of the hero
+    hero = {"maxcat": "close:max", "bolt": "close:bolt"}.get(CH, "")
+    if hero and sb and not str(sb[tb].get("cam", "") if 0 <= tb < len(sb) else "").startswith(hero):
+        for dist in range(0, len(sb)):
+            for i in (tb - dist, tb + dist):
+                if str((sb[i] if 0 <= i < len(sb) else {}).get("cam", "")) == hero and ok(i, hero):
+                    return i
     if not sb or ok(tb):
         return tb
     for cam in ([want] if want else []) + [""]:
@@ -381,6 +396,7 @@ def produce(job, jf):
     if ball < GATE and not QUICK:
         return None, f"long rek-ball {ball}: {why}"
     L = job["long"]
+    L["title"] = studio_title(L["title"])
     items.append(dict(job=jid, kind="long", file=long_mp4, title=L["title"], description=L["description"], tags=L.get("tags", []),
                       localizations=L.get("localizations"), thumb=thumb, ball=ball))
     for n, s in enumerate(job.get("shorts", []), 1):
@@ -403,7 +419,7 @@ def produce(job, jf):
         log(f"rek short {n}", sb, swhy)
         if sb < GATE and not QUICK:
             continue
-        items.append(dict(job=jid, kind="short", file=out, title=s["title"], description=s["description"], tags=s.get("tags", []),
+        items.append(dict(job=jid, kind="short", file=out, title=studio_title(s["title"]), description=s["description"], tags=s.get("tags", []),
                           localizations=s.get("localizations"), ball=sb))
     return items, None
 

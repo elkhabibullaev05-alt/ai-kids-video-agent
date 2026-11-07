@@ -166,7 +166,9 @@ def main():
            f"borderw=6:bordercolor=black@0.6:x=60:y=h-th-150,drawtext=fontfile={FONT}:text='RAIN FOR SLEEP':fontsize=64:"
            f"fontcolor=white@0.95:borderw=4:bordercolor=black@0.6:x=64:y=h-th-70", thumb)
         hrs = f"{int(hours)} Hours"
-        variants = [f"{name} 🌧️ {hrs} of Real Rain Sounds for Deep Sleep", f"{hrs} of {name} — Fall Asleep Fast",
+        # 2026-11-07 (PLAN competitors): searchable "Insomnia" + honest "(Real Rain, No AI)" tail, tried first
+        variants = [f"{name} for Insomnia | {hrs} (Real Rain, No AI)", f"{hrs} {name} to Sleep | Real Rain, No AI",
+                    f"{name} 🌧️ {hrs} of Real Rain Sounds for Deep Sleep", f"{hrs} of {name} — Fall Asleep Fast",
                     f"Can't Sleep? {name} for {hrs} (Real Rain)", f"{name} Sounds for Sleeping — {hrs} | Calm Your Mind"]
         title = next((t for t in variants if t not in titles and t not in used["titles"]), variants[0] + f" ({stamp[4:8]})")
         json.dump({"file": os.path.basename(long_f), "kind": "long", "pack": stamp, "thumb": os.path.basename(thumb),

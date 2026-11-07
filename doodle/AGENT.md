@@ -92,3 +92,7 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 - If this run ends with anything left in `pending_uploads` because the computer was off or disconnected, write a flag to the hub database before finishing: ArtifactData `set` collection `catchup`, doc_id `doodle`, data `{"agent": "doodle", "at": "<ISO now>", "pending": <count>}` (url https://claude.ai/artifact/2itJTvfLFuvUaP66WW2V8r; if the doc exists, get it and pin if_version). The hourly hub runner fires this task again as soon as the computer is reachable.
 - When a run is a catch-up (the extra message says so): only upload `pending_uploads` (for an interrupted upload, look in Studio for the partial video id first and finish it instead of uploading again), do not make a new video, then delete `catchup/doodle` (pin if_version) if nothing is left pending.
 
+
+## Title form 2026-11-07 (daily Studio run)
+- The last 6 titles all end in a question ("…How?", "Who Pays…?", "Underdog or Not?") and 3 use "A vs. B:" — a new template. At most 1 of any 3 consecutive titles may end with "?", at most 1 of 3 may use "vs.". Mix in statement titles with the number first ("$339M Lost to a $60M Team. Here's How").
+- Topic check before writing: 2 of the last 6 were news (election names, data-center votes). The next 2 episodes are evergreen underdog/money stories, not news.

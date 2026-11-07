@@ -211,7 +211,7 @@ def thumbnail(top, path, rng, mode):
         sd.line([(x, 0), (x, 720)], fill=(0, 0, 0, int(200 * (1 - x / 700))))
     im = Image.alpha_composite(im.convert("RGBA"), sh).convert("RGB")
     d = ImageDraw.Draw(im)
-    words = rng.choice([["NEW", "#1?"], ["TOP 10", "TODAY"], ["WHO'S", "#1?"], ["#1 RIGHT", "NOW"]]) \
+    words = rng.choice([["NEW", "#1?"], ["TOP 10", "TODAY"], ["WHO'S", "#1?"], ["#1 RIGHT", "NOW"], ["BORED?", "PLAY THESE"]]) \
         if mode != "gainers" else rng.choice([["FASTEST", "GROWING"], ["+" + gx.short_num(g.get("d_visits")), "IN 1 DAY"]])
     gx.draw_text(d, (40, 150), words[0], gx.fit_font(words[0], 640, 170), gx.WHITE, stroke=12, anchor="lm", shadow=8)
     gx.draw_text(d, (40, 330), words[1], gx.fit_font(words[1], 640, 190), gx.YELLOW, stroke=12, anchor="lm", shadow=8)

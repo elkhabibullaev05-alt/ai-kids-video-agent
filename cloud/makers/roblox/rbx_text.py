@@ -135,8 +135,8 @@ def hook_script(top, prev1_name, rng, mode):
         f"{say_num(n1.get('playing'))} by itself. Can you guess it before the end? Let's count down.",
         f"Bored of the Roblox home page? These are the ten games everyone is actually playing right now. "
         f"Number one has {say_num(n1.get('playing'))} players online. Let's go.",
-        f"Ten games, {say_num(total)} players, live numbers. Stay to the end to see which game is number one "
-        f"today. Let's count it down."])
+        f"Not sure what to play on Roblox today? These ten games have {say_num(total)} players online right now. "
+        f"Number ten first. Let's go."])
 
 
 def outro_script(top, rng):
@@ -146,6 +146,10 @@ def outro_script(top, rng):
         f"Which game should be number one tomorrow? Comment your pick, and subscribe for tomorrow's ranking.",
         f"So {a} takes the crown today. Can {b} catch it tomorrow? Tell me in the comments, and subscribe so "
         f"you see tomorrow's live top ten."])
+
+
+def prev1_changed(top):
+    return bool(top[0].get("prev_rank")) and top[0]["prev_rank"] != 1
 
 
 def long_titles(top, mode, titles, rng):
@@ -165,7 +169,20 @@ def long_titles(top, mode, titles, rng):
               f"{short_num(top[0].get('playing'))} Players?! Top 10 Roblox Games Right Now"]
         for g in climbers[:2]:
             c.append(f"{g['clean']} Jumped to #{g['rank']}! Top 10 Roblox Games Today")
-    t = titles.pick(c, rng)
+    # 2026-11-07 (PLAN: kill the "Top 10 Roblox Games…" template — 142 near-identical titles): angle-first titles
+    # that name this day's story are tried first; the template list above is only the fallback.
+    angles = []
+    if mode != "gainers":
+        angles += [f"Can {b} Beat {a}? The Most Played Roblox Games Now",
+                   "Bored? The 10 Roblox Games Everyone Plays Now",
+                   f"Why Is Everyone Playing {a} Right Now?"]
+        if prev1_changed(top):
+            angles.insert(0, f"{a} Just Took #1 on Roblox. Here's the Top 10")
+        elif top[0].get("prev_rank") == 1:
+            angles.append(f"{a} Is Still #1, But {b} Is Close")
+    for g in climbers[:2]:
+        angles.append(f"Why Is {g['clean']} Suddenly Blowing Up on Roblox?")
+    t = titles.pick(angles, rng) or titles.pick(c, rng)
     k = 2
     while not t:
         t = titles.pick([f"Top 10 Roblox Games Right Now ({a}, {b}, {top[k]['clean']})",

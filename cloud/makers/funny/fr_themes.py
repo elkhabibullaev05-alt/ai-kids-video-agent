@@ -220,7 +220,9 @@ def script(rng=random):
     ranks = {}
     for r in range(5, 0, -1):
         tag, line = rng.choice(REACTIONS[r])
-        spoken = f"Number {NUM_WORDS[r]}! {line}" if r > 1 else f"And number one! {line}"
+        # 2026-11-07: voice only names the rank — the clip's own audio/laughs carry it (competitor format);
+        # the reaction line stays on screen as our commentary caption.
+        spoken = f"Number {NUM_WORDS[r]}!" if r > 1 else "And number one!"
         ranks[r] = {"tag": tag, "line": line, "say": spoken}
     return {"hook": hook, "hook_text": HOOK_TEXT[hook], "end_text": end[0], "end_say": end[1], "ranks": ranks}
 
