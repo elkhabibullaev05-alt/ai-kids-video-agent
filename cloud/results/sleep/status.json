@@ -1,9 +1,8 @@
 {
  "channel": "sleep",
  "host": "KOMPUTER",
- "time": "2026-11-07T07:01:52+00:00",
- "stage": "error",
+ "time": "2026-11-07T07:50:08+00:00",
+ "stage": "render",
  "queue": 0,
- "pending": 0,
- "error": "                      ^^^^^^^^^^^^^\n  File \"/opt/kanal/repo/cloud/makers/sleep.py\", line 98, in pick\n    o.write(r.read())\n            ^^^^^^^^\n  File \"/usr/lib/python3.12/http/client.py\", line 500, in read\n    s = self._safe_read(self.length)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/http/client.py\", line 663, in _safe_read\n    raise IncompleteRead(data.getvalue(), amt - data.tell())\nhttp.client.IncompleteRead: IncompleteRead(80740352 bytes read, 922134114 more expected)\n"
+ "pending": 0
 }
