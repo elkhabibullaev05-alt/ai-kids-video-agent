@@ -1,0 +1,1146 @@
+{
+ "id": "20261108-2-dogs-birthday-cake",
+ "plot": "On Dog's birthday at sunset Max is made Chief Cake Sharer, but his straight stripes give Mouse a crumb and someone a giant middle piece, so he finds that every piece must touch the candle and cuts five petal-shaped pieces; then a knock reveals Dog's secret wish, his park friend Pepper, and instead of re-cutting, everyone gives Pepper one bite so her piece is made of everybody.",
+ "script": {
+  "title": "1 Birthday Cake, 5 Plates... Then a Knock!",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "pepper": {
+    "name": "Pepper",
+    "voice": "af_nicole",
+    "speed": 1.1,
+    "pitch": 3,
+    "color": [
+     0.95,
+     0.93,
+     0.88
+    ],
+    "kind": "dog",
+    "size": 0.7,
+    "home": [
+     9,
+     5
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": "pink",
+    "at": [
+     0.0,
+     3.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.1
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "blue",
+    "at": [
+     8.0,
+     4.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Whoa! Catch the cake! Don't let it fall!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My birthday cake! Max, you saved it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Phew. Now, how do we share one cake fairly?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "ONE CAKE. WHO GETS WHAT?",
+    "cam": "prop:cake",
+    "hold": 1.2,
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's Dog's birthday, and the sun is going down.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma baked a round strawberry cake with one candle.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you are the Chief Cake Sharer today.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Your job: every piece exactly the same.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Chief Cake Sharer! The most important job in the house!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Just remember, I'm small. But my tummy is not.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Count everybody! And one plate for my... um... never mind.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "For your what, Dog?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "For my... tail! My tail gets hungry too. Ha ha!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Me, Dog, Mouse, Grandma... and Bird. Five friends.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'm here! I'm here! Did somebody say cake?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Five pieces, Grandma. All the same.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the cake. He holds his paw like a knife.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,4"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cut here. And here. And here. Nice straight lines!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma makes little marks across the cake. Five long stripes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ],
+     [
+      "grandma",
+      "to:-2,5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A round cake is wide in the middle, thin at the ends.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max... my stripe is a crumb with a line of cream.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Mine is all crust! Where's my strawberry?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And the middle stripe is as big as my head!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody looks at the giant middle piece. Then at Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. Stripes are not fair on a round cake.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good thing I only made little marks. We can still fix it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Candle time is in ten minutes! I need a better plan!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks around the cake. Once. Twice. Three times.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,5"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From above, the cake is a circle. The candle is the middle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The candle! Every piece should touch the candle!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Pointy in the middle, round at the edge. Like a pizza!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! Then everybody gets middle and edge and strawberry!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma smooths the marks away with her spoon. A fresh start.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But five is a tricky number. How do I go around?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Like my paw! Four toes and one thumb. Five!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max taps five spots around the cake, like a flower's petals.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:0,4.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma cuts from each spot to the candle. Swish, swish, swish.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Five pieces, Max. Pointy in the middle, round at the edge.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "All the same size! I measured them with my wing!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And mine has a whole strawberry! Chief Cake Sharer, you did it!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Five friends, five pieces. Nobody gets a crumb!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well done, Chief. Fair and square. Or fair and round!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My nose says strawberry. My tummy says hurry!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma lights the candle. Everybody starts to sing.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Happy birthday, dear Dog! Happy birthday to you!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I wish... I wish... I can't say it. It's a secret!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog blows. Whoosh! The candle goes out.",
+    "cam": "wide",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then... knock, knock, knock. At the front door.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS AT THE DOOR?",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:dog"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "She came! My wish came true! It's Pepper from the park!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "to:7,6"
+     ]
+    ]
+   },
+   {
+    "who": "pepper",
+    "say": "Hi! Happy birthday, Dog! Am I too late?",
+    "cam": "close:pepper",
+    "do": [
+     [
+      "pepper",
+      "enter"
+     ],
+     [
+      "pepper",
+      "happy"
+     ],
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I invited her yesterday. She was my secret plate!",
+    "cam": "two:dog,pepper",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Six friends?! But I only have five pieces!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Somebody gets nothing! On a birthday!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pepper",
+    "say": "Oh. It's okay. I don't need cake. I can just watch.",
+    "cam": "close:pepper",
+    "do": [
+     [
+      "pepper",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No! Nobody just watches at my party. Everybody eats!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Should I cut all the pieces again, Max?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No. They're perfect. Cutting again makes a cake mess.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at his own piece. Then at Pepper's empty plate.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:pepper"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I know! Everybody gives Pepper one little bite!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the first bite from his piece on Pepper's plate.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:pepper"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Here's my strawberry bite!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And my crusty bite, with extra cream!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And one big Grandma bite.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And the birthday bite. The biggest one of all!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five little bites make one whole piece for Pepper!",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pepper",
+    "say": "A piece made of everybody! That's the best piece ever!",
+    "cam": "close:pepper",
+    "do": [
+     [
+      "pepper",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pepper",
+    "say": "And I brought you a present, Dog. A brand new ball!",
+    "cam": "close:pepper",
+    "do": [
+     [
+      "gift",
+      "to:dog"
+     ],
+     [
+      "pepper",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A ball! Now my party has everything!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Six friends, six pieces. And the sharing was the sweetest part!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sharing isn't about the biggest piece. It's about leaving nobody out.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best birthday ever! Can we have another one tomorrow?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Birthdays come once a year, Dog. But cake crumbs stay all week.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, it gets very cold. Grandma looks out the window.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "First frost tonight. Bring your water bowls inside, everyone.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Max's water bowl stays out in the garden all night.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And in the morning, something very strange happens to it.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "1 Birthday Cake, 5 Plates... Then a Knock! 🎂🐶",
+  "description": "\"I'm the Chief Cake Sharer. Every piece has to be the same!\" 🐱\nIt's Dog's birthday and Max must share one round cake fairly, but straight lines don't work on a circle, and then someone knocks at the door. Max the Curious Cat, Ep 33.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "birthday cake",
+   "sharing",
+   "fair shares",
+   "dog birthday",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "fractions for kids"
+  ],
+  "thumb_text": "NOT FAIR!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "1 pastel, 5 platos... ¡y tocan la puerta! 🎂🐶",
+    "description": "\"Soy el Repartidor Oficial del Pastel. ¡Todos los trozos iguales!\" 🐱\nEs el cumpleaños de Perro y Max debe repartir un pastel redondo de forma justa, pero las rayas rectas no sirven en un círculo, y entonces alguien toca la puerta. Max el Gato Curioso, Ep 33.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "1 bolo, 5 pratos... e batem na porta! 🎂🐶",
+    "description": "\"Eu sou o Chefe da Divisão do Bolo. Todos os pedaços iguais!\" 🐱\nÉ aniversário do Cachorro e Max precisa dividir um bolo redondo de forma justa, mas linhas retas não funcionam num círculo, e então alguém bate na porta. Max, o Gato Curioso, Ep 33.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "كعكة واحدة و5 صحون... ثم طرقة على الباب! 🎂🐶",
+    "description": "\"أنا رئيس تقسيم الكعكة. كل القطع يجب أن تكون متساوية!\" 🐱\nإنه عيد ميلاد الكلب، وعلى ماكس أن يقسم كعكة مستديرة بالعدل، لكن الخطوط المستقيمة لا تنفع مع الدائرة، ثم يطرق أحدهم الباب. ماكس القط الفضولي، الحلقة 33.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "1 gâteau, 5 assiettes... et on frappe ! 🎂🐶",
+    "description": "« Je suis le Chef du Partage du Gâteau. Toutes les parts pareilles ! » 🐱\nC'est l'anniversaire de Chien et Max doit partager un gâteau rond équitablement, mais les lignes droites ne marchent pas sur un cercle, et soudain on frappe à la porte. Max le Chat Curieux, Ép 33.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "ケーキ1つにお皿5まい…そしてノックの音！🎂🐶",
+    "description": "「ぼくはケーキ分けがかり長。みんな同じ大きさにしなきゃ！」🐱\nイヌのお誕生日。マックスはまるいケーキを公平に分けなきゃいけないけど、まっすぐな線じゃうまくいかない。そのとき、ドアをノックする音が…。好奇心いっぱいのネコ マックス 第33話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "케이크 1개, 접시 5개... 그런데 똑똑! 🎂🐶",
+    "description": "\"나는 케이크 나누기 대장이야. 모든 조각이 똑같아야 해!\" 🐱\n강아지의 생일날, 맥스는 동그란 케이크를 공평하게 나눠야 해요. 그런데 직선으로는 동그라미를 똑같이 못 나누고, 그때 누군가 문을 두드려요. 호기심 많은 고양이 맥스 33화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "1 Torte, 5 Teller... und dann klopft es! 🎂🐶",
+    "description": "„Ich bin der Chef-Tortenverteiler. Jedes Stück muss gleich sein!\" 🐱\nHund hat Geburtstag und Max soll eine runde Torte gerecht teilen, aber gerade Linien klappen bei einem Kreis nicht, und dann klopft jemand an die Tür. Max, die neugierige Katze, Folge 33.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 17,
+   "dur": 22,
+   "top": "IS THIS FAIR?! 🎂",
+   "title": "Max Cuts the Birthday Cake... Uh-Oh! 🎂😹 (Ep 33) #shorts",
+   "description": "Five straight stripes on a round cake. What could go wrong? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "birthday cake"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max corta el pastel de cumpleaños... ¡Uy! 🎂😹 (Ep 33) #shorts",
+     "description": "Cinco rayas rectas en un pastel redondo. ¿Qué podría salir mal? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max corta o bolo de aniversário... Ops! 🎂😹 (Ep 33) #shorts",
+     "description": "Cinco listras retas num bolo redondo. O que pode dar errado? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يقطع كعكة عيد الميلاد... أوه لا! 🎂😹 (الحلقة 33) #shorts",
+     "description": "خمسة خطوط مستقيمة على كعكة مستديرة. ما الذي قد يحدث؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max coupe le gâteau d'anniversaire... Oups ! 🎂😹 (Ép 33) #shorts",
+     "description": "Cinq bandes droites sur un gâteau rond. Qu'est-ce qui pourrait mal tourner ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスがお誕生日ケーキを切ったら…あれれ？🎂😹（第33話）#shorts",
+     "description": "まるいケーキに、まっすぐな線が5本。どうなっちゃう？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 생일 케이크를 잘랐더니... 어머나! 🎂😹 (33화) #shorts",
+     "description": "동그란 케이크에 일자로 다섯 줄. 무슨 일이 생길까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max schneidet die Geburtstagstorte... Oje! 🎂😹 (Folge 33) #shorts",
+     "description": "Fünf gerade Streifen auf einer runden Torte. Was kann da schiefgehen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

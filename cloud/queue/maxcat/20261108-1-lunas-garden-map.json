@@ -1,0 +1,1186 @@
+{
+ "id": "20261108-1-lunas-garden-map",
+ "plot": "When Luna's letter brings a hand-drawn map to a present hidden in the garden, Max reads its mountain and sun as the apple tree and the sky and digs holes everywhere, throwing away three 'onions' from his first hole, until Dog lies in the grass and sees that from a kitten's height the watering can is the mountain and Max's red ball the sun; the X is that first hole, the onions were Luna's tulip bulbs, Dog sniffs them out of the leaf pile and Max replants them as his first perfect M.",
+ "script": {
+  "title": "Where Did Luna Hide Max's Present?",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "map",
+    "type": "box",
+    "color": "pink",
+    "at": [
+     -0.5,
+     3.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "bulbs",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.38,
+     0.2
+    ],
+    "at": [
+     -1.5,
+     3.2,
+     0.25
+    ],
+    "visible": true,
+    "scale": 0.3
+   },
+   {
+    "id": "can",
+    "type": "cone",
+    "color": "green",
+    "at": [
+     -4.5,
+     3.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     1.5,
+     2.5,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "hose",
+    "type": "banana",
+    "color": "green",
+    "at": [
+     -1.5,
+     1.8,
+     0.2
+    ],
+    "visible": true,
+    "scale": 1.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Dig, dig, dig! Luna's present has to be right here!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "bulbs",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! That's your fifth hole! The garden looks like cheese!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Luna hid a present for me. But where is it?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE IS THE PRESENT?",
+    "cam": "two:max,dog",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "This morning, a pink letter came from cousin Luna.",
+    "cam": "wide",
+    "do": [
+     [
+      "map",
+      "bounce"
+     ],
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside was a map, drawn by Luna's tiny paw.",
+    "cam": "prop:map",
+    "do": [
+     [
+      "map",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look! A big green mountain. And a round red sun.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A wiggly snake. And a big X in the middle!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "X means... somebody buried a bone there?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "X means present! Luna hid it when she visited!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I helped her a little. But I promised not to tell.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Careful where you dig, Max. Some things are sleeping.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sleeping? Presents don't sleep, Grandma. Presents wait for me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max reads the map the way a big cat sees it.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A big green mountain. That must be the apple tree!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And the round red sun is... the sun! Up there!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the tree behind him and walks toward the sun.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1.5,4"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ten steps. Twenty steps. Then he starts to dig.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "bulbs",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm a great digger! Let me help! Dig, dig, dig!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I found something! Three little brown... onions?",
+    "cam": "prop:bulbs",
+    "do": [
+     [
+      "bulbs",
+      "bounce"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "They were sitting in a neat row. Like ducks on a walk.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Onions are not presents. Luna would never give me onions.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tosses the onions far away, onto the big leaf pile.",
+    "cam": "prop:bulbs",
+    "do": [
+     [
+      "bulbs",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Keep digging, Dog! The sun will show us the way!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the sun does not stay still. It slides across the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait! Now the sun is over there! It moved!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Luna will call tonight to ask if you found it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tonight? If I can't find it, she'll think I didn't try!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max digs a sixth hole. A seventh. An eighth.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:2,3"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nothing! Just dirt and one very surprised worm.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello! Why does the garden have so many holes?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "We're hunting Luna's present. The sun keeps running away.",
+    "cam": "two:dog,bird",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm a terrible map reader. I give up.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max flops down on the grass. Dog flops down beside him.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ahh. A rest in the grass. Best part of any job.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog opens one eye. Then the other. Then both, very wide.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max. Look at the watering can from down here.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's just Grandma's green watering can. So what?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "From down here, it looks as big as a mountain!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts his chin on the grass, low like a kitten.",
+    "cam": "prop:can",
+    "do": [
+     [
+      "can",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A big green mountain! Dog, you're right!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Luna is little. She drew the map from down here!",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then the round red sun isn't the sun at all...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Right next to the mountain sits Max's red ball.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My ball! It's the round red sun!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And the wiggly snake is Grandma's green hose!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "hose",
+      "bounce"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The mountain, the sun and the snake make a little triangle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ball",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And the X is right in the middle. Right... here.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1.5,4"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks down. And his whiskers droop.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's my very first hole. And it's empty!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE FIRST HOLE?!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Max... where are the brown onions you found here?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I threw them on the leaf pile. They were just onions.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Those weren't onions, Max. They were flower bulbs.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Luna planted them for you. That was her present.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Flower bulbs? I threw away Luna's present!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Bulbs need the ground. If they dry out, no flowers.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And Luna calls tonight! But the leaf pile is huge!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Leave that to me. My nose never forgets a smell.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-6,12"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sniff, sniff. Dog dives in. Leaves fly up like rain.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One! Two! Three! They smell like Luna's paws!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "bulbs",
+      "show"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you found them all! Best nose in the whole town!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max carries the bulbs back to the first hole. Gently.",
+    "cam": "prop:bulbs",
+    "do": [
+     [
+      "bulbs",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, which way do they go? Up or down?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Pointy end up, toward the sky. Then a blanket of dirt.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll plant them in a shape. A shape just for Luna.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One bulb here. One there. One in the middle. Pat, pat.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-0.5,4"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, do you see what shape you made?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's an M! My first perfect M! Made of flowers!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "In spring, they'll be red tulips. An M for Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To read a friend's map, look at the world with their eyes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, Luna calls, and Max tells her everything.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Luna, your present is safe! Dog's nose saved the day!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Speaking of days... tomorrow is my birthday!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog's birthday! Five hungry friends. And only one cake.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Where Did Luna Hide Max's Present? 🗺️🐱",
+  "description": "\"My little cousin made me a treasure map. Why can't I read it?\" 🐱\nLuna hid a present in Max's garden and sent him a map: a big green mountain, a round red sun and a wiggly snake. Max digs eight holes, but the answer is hiding at kitten height. Max the Curious Cat, Ep 32.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "treasure map",
+   "hidden present",
+   "planting flowers",
+   "tulip bulbs",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "garden"
+  ],
+  "thumb_text": "WHERE IS IT?",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Dónde escondió Luna el regalo de Max? 🗺️🐱",
+    "description": "\"Mi primita me hizo un mapa del tesoro. ¿Por qué no lo entiendo?\" 🐱\nLuna escondió un regalo en el jardín de Max y le mandó un mapa: una gran montaña verde, un sol rojo y redondo y una serpiente ondulada. Max cava ocho hoyos, pero la respuesta está a la altura de un gatito. Max el Gato Curioso, Ep 32.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Onde Luna escondeu o presente do Max? 🗺️🐱",
+    "description": "\"Minha priminha fez um mapa do tesouro para mim. Por que não consigo ler?\" 🐱\nLuna escondeu um presente no jardim do Max e mandou um mapa: uma grande montanha verde, um sol vermelho e redondo e uma cobra ondulada. Max cava oito buracos, mas a resposta está na altura de um gatinho. Max, o Gato Curioso, Ep 32.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "أين خبّأت لونا هدية ماكس؟ 🗺️🐱",
+    "description": "\"ابنة عمي الصغيرة رسمت لي خريطة كنز. لماذا لا أفهمها؟\" 🐱\nخبّأت لونا هدية في حديقة ماكس وأرسلت له خريطة: جبل أخضر كبير وشمس حمراء مستديرة وأفعى متعرّجة. يحفر ماكس ثماني حفر، لكن الجواب مختبئ على ارتفاع قطة صغيرة. ماكس القط الفضولي، الحلقة 32.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Où Luna a-t-elle caché le cadeau de Max ? 🗺️🐱",
+    "description": "« Ma petite cousine m'a dessiné une carte au trésor. Pourquoi je n'arrive pas à la lire ? » 🐱\nLuna a caché un cadeau dans le jardin de Max et lui a envoyé une carte : une grande montagne verte, un soleil rouge tout rond et un serpent ondulé. Max creuse huit trous, mais la réponse se cache à hauteur de chaton. Max le Chat Curieux, Ép 32.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "ルナはマックスのプレゼントをどこにかくしたの？🗺️🐱",
+    "description": "「小さないとこが宝の地図をくれたんだ。なんで読めないの？」🐱\nルナはマックスの庭にプレゼントをかくして、地図を送ってきた。大きな緑の山、まるい赤い太陽、くねくねのヘビ。マックスは穴を8つほるけど、答えは子ネコの目の高さにかくれていた。好奇心いっぱいのネコ マックス 第32話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "루나는 맥스의 선물을 어디에 숨겼을까? 🗺️🐱",
+    "description": "\"꼬마 사촌이 보물 지도를 그려 줬어. 그런데 왜 못 읽겠지?\" 🐱\n루나가 맥스의 정원에 선물을 숨기고 지도를 보냈어요. 커다란 초록 산, 동그란 빨간 해, 꼬불꼬불 뱀. 맥스는 구멍을 여덟 개나 파지만, 답은 아기 고양이 눈높이에 숨어 있어요. 호기심 많은 고양이 맥스 32화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Wo hat Luna Max' Geschenk versteckt? 🗺️🐱",
+    "description": "„Meine kleine Cousine hat mir eine Schatzkarte gemalt. Warum kann ich sie nicht lesen?\" 🐱\nLuna hat ein Geschenk in Max' Garten versteckt und ihm eine Karte geschickt: ein großer grüner Berg, eine runde rote Sonne und eine wackelige Schlange. Max gräbt acht Löcher, doch die Antwort versteckt sich auf Kätzchenhöhe. Max, die neugierige Katze, Folge 32.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "5 HOLES, NO PRESENT! 🕳️",
+   "title": "Max Digs Up the Whole Garden! 🕳️🐱 (Ep 32) #shorts",
+   "description": "A map from Luna, a big red X and way too many holes. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "treasure map"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max excava todo el jardín! 🕳️🐱 (Ep 32) #shorts",
+     "description": "Un mapa de Luna, una gran X roja y demasiados hoyos. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max cava o jardim inteiro! 🕳️🐱 (Ep 32) #shorts",
+     "description": "Um mapa da Luna, um grande X vermelho e buracos demais. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يحفر الحديقة كلها! 🕳️🐱 (الحلقة 32) #shorts",
+     "description": "خريطة من لونا وعلامة X حمراء كبيرة وحفر كثيرة جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max creuse tout le jardin ! 🕳️🐱 (Ép 32) #shorts",
+     "description": "Une carte de Luna, un grand X rouge et beaucoup trop de trous. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、庭じゅうをほりまくる！🕳️🐱（第32話）#shorts",
+     "description": "ルナの地図、大きな赤いX、そして穴だらけの庭。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 정원을 다 파헤쳤어요! 🕳️🐱 (32화) #shorts",
+     "description": "루나의 지도, 커다란 빨간 X, 그리고 너무 많은 구멍. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max gräbt den ganzen Garten um! 🕳️🐱 (Folge 32) #shorts",
+     "description": "Eine Karte von Luna, ein großes rotes X und viel zu viele Löcher. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 35,
+   "dur": 22,
+   "top": "LOOK FROM DOWN HERE! 👀",
+   "title": "Dog Lies Down and Sees a MOUNTAIN! 🐶⛰️ (Ep 32) #shorts",
+   "description": "A nap in the grass changes everything. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog",
+    "treasure map"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Perro se acuesta y ve una MONTAÑA! 🐶⛰️ (Ep 32) #shorts",
+     "description": "Una siesta en el pasto lo cambia todo. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro deita e vê uma MONTANHA! 🐶⛰️ (Ep 32) #shorts",
+     "description": "Um cochilo na grama muda tudo. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يستلقي ويرى جبلًا! 🐶⛰️ (الحلقة 32) #shorts",
+     "description": "قيلولة على العشب تغيّر كل شيء. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien s'allonge et voit une MONTAGNE ! 🐶⛰️ (Ép 32) #shorts",
+     "description": "Une sieste dans l'herbe change tout. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌがねころんだら山が見えた！🐶⛰️（第32話）#shorts",
+     "description": "草の上のひとやすみで、すべてが変わる。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 누웠더니 산이 보여요! 🐶⛰️ (32화) #shorts",
+     "description": "풀밭에서 잠깐 누웠더니 모든 게 달라졌어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund legt sich hin und sieht einen BERG! 🐶⛰️ (Folge 32) #shorts",
+     "description": "Ein Nickerchen im Gras ändert alles. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

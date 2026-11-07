@@ -1,0 +1,1123 @@
+{
+ "id": "20261108-3-water-turned-to-stone",
+ "plot": "On the frosty morning after Dog's birthday Max's water bowl and Bird's bird bath have turned to 'stone' just as Bird's twelve relatives fly in for a drink; scratching the ice only lands Max in the snow, but sitting on his bowl leaves a little puddle, so he learns warm turns ice back into water, and when the group hug is too slow he remembers the drip from the sunny porch roof, they push the bird bath out of the shadow into the sun under the drip, and the whole flock drinks.",
+ "script": {
+  "title": "Max's Water Turned to STONE?!",
+  "set": {
+   "place": "snow",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bowl",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     -1.0,
+     3.6,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "bath",
+    "type": "trophy",
+    "color": "white",
+    "at": [
+     3.5,
+     6.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Hey! My water won't move! Tap, tap... WHOA!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "bowl",
+      "bounce"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bowl slides across the ice. And so does Max.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:3,4"
+     ],
+     [
+      "bowl",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My water turned into STONE! Who did this?!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "MY WATER IS STONE?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's the morning after Dog's birthday. Everything is white and sparkly.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm so thirsty. And my water is a rock!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Drip. A cold drop falls from the porch roof onto his nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! Why is the roof crying on my nose today?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Help! The bird bath turned to stone too!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And my whole family is flying here for a morning drink!",
+    "cam": "two:bird,max",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your whole family? How many birds is that?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Twelve! My aunties, my cousins, and Grandpa Tweet!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Twelve thirsty birds and zero water. Uh-oh.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Did the water run away in the night?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Maybe it's hiding under the stone. Like a fish.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll get it back. Cats are great at opening things!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps up on the bird bath and scratches the stone water.",
+    "cam": "prop:bath",
+    "do": [
+     [
+      "max",
+      "to:3,5"
+     ],
+     [
+      "bath",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Scratch, scratch! Open up, water! Open up!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His paws slip. Max slides off into the snow. Poof!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ten out of ten for that landing!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, you have a snow hat now. A very tall one.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not a hat. It's a very cold crown.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My paws are freezing. I'll sit down on my bowl and think.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits right on top of the frozen bowl.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "max",
+      "to:-1,4.6"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ooh! Cold seat! Cold seat! Very cold seat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hops up. And then he looks down at the bowl.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "A LITTLE PUDDLE?",
+    "cam": "prop:bowl",
+    "hold": 1.2,
+    "do": [
+     [
+      "bowl",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "There's water on top! A puddle shaped like my bottom!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Real water! Where did it come from?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "From the stone! My warm fur made it soft again!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So the stone is just water that got very, very cold?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! Cold makes water hard. Warm makes it water again!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's right, Max. Hard, cold water is called ice.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Last night was so cold, the water froze.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Froze? Like when I freeze in front of the vacuum?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then let's make the bird bath warm! Everybody, hug!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max, Dog and Mouse hug the bird bath. A big warm hug.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,5.5"
+     ],
+     [
+      "dog",
+      "to:4.5,6"
+     ],
+     [
+      "mouse",
+      "to:2,5.5"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Brr. My nose is turning into an ice cube.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm big and fluffy. The bird bath loves me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, slowly, a tiny puddle melts on top.",
+    "cam": "prop:bath",
+    "do": [
+     [
+      "bath",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "One sip! That's enough for one bird. Maybe half a bird.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Half a bird? Which half gets the water?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bird looks up at the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh no! There they are! My family is coming!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Twelve little birds fly over the trees toward the garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Twelve birds! We can't hug fast enough! We need more warm!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I can't get any fluffier. I already tried.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And my tiny paws only melt a tiny dot.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then, drip. Another cold drop lands on Max's nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The roof again! Wait... why is the roof dripping?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks up. The porch roof is in the bright morning sun.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The sun is melting the snow on the roof!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The sun is warmer than all of us together!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE SUN!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "The bird bath stands in the cold blue shadow by the fence.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bath",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We put it in the wrong place! Dog, help me push!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,7"
+     ],
+     [
+      "dog",
+      "to:-1,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes. Dog pushes. Mouse pushes with her whole tiny body.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "to:-2,6.5"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bird bath slides into the sun, right under the drip.",
+    "cam": "prop:bath",
+    "do": [
+     [
+      "bath",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Drip, drip, drip. The sun shines. The ice starts to melt.",
+    "cam": "prop:bath",
+    "do": [
+     [
+      "bath",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Water! Lots of water! Shiny and sparkly!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just in time. Twelve birds land around the bird bath.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Auntie, Grandpa Tweet, everybody! Drink up!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Grandpa Tweet says it's the best bird bath in town!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you found the warmest spot in the whole garden.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not me. The sun and the drippy roof found it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And Max's bottom found the first puddle!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes his own bowl into the sun, too.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:-2.5,6.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ahh. Water. The best drink on a cold morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And the roof is your water helper. Drip, drip!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Cold turns water into ice. Warm sun turns it back again.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Thank you, Max! My family will come back every morning!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Every morning? Then I'll check the sun every morning!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That evening, Grandma sits by the window and hums a song.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "La la la... la la... Oh dear. How does it end?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma forgot the end of her song?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And tomorrow night, someone will need that song very much.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max's Water Turned to STONE?! 🧊😹",
+  "description": "\"I'm so thirsty, and my water turned into a rock!\" 🐱\nOn the first frosty morning Max's bowl and Bird's bird bath are hard as stone, and twelve thirsty birds are on their way. Can Max find out how to bring the water back? Max the Curious Cat, Ep 34.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "ice",
+   "frozen water",
+   "winter morning",
+   "first frost",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "science for kids"
+  ],
+  "thumb_text": "MY WATER?!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¡¿El agua de Max se volvió PIEDRA?! 🧊😹",
+    "description": "\"¡Tengo mucha sed y mi agua se volvió una roca!\" 🐱\nEn la primera mañana de helada, el plato de Max y el bebedero de Pájaro están duros como piedra, y doce pájaros sedientos vienen en camino. ¿Podrá Max descubrir cómo recuperar el agua? Max el Gato Curioso, Ep 34.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A água do Max virou PEDRA?! 🧊😹",
+    "description": "\"Estou com tanta sede, e minha água virou uma pedra!\" 🐱\nNa primeira manhã de geada, a tigela do Max e a banheira do Pássaro estão duras como pedra, e doze pássaros com sede estão chegando. Max vai descobrir como trazer a água de volta? Max, o Gato Curioso, Ep 34.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "ماء ماكس تحوّل إلى حجر؟! 🧊😹",
+    "description": "\"أنا عطشان جدًا، وماء صحني صار صخرة!\" 🐱\nفي أول صباح بارد يصبح صحن ماكس وحوض الطائر قاسيين كالحجر، واثنا عشر طائرًا عطشانًا في الطريق. هل يكتشف ماكس كيف يعيد الماء؟ ماكس القط الفضولي، الحلقة 34.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "L'eau de Max s'est changée en PIERRE ?! 🧊😹",
+    "description": "« J'ai tellement soif, et mon eau est devenue un caillou ! » 🐱\nPar le premier matin de gel, le bol de Max et le bain d'Oiseau sont durs comme de la pierre, et douze oiseaux assoiffés arrivent. Max trouvera-t-il comment faire revenir l'eau ? Max le Chat Curieux, Ép 34.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックスの水が石になっちゃった！？🧊😹",
+    "description": "「のどがカラカラなのに、ぼくの水が石になっちゃった！」🐱\nはじめて霜がおりた朝、マックスの水入れもトリの水浴び場も石みたいにカチカチ。しかも、のどのかわいた12羽の鳥がやってくる！マックスは水を取りもどせるかな？好奇心いっぱいのネコ マックス 第34話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스의 물이 돌이 됐다고?! 🧊😹",
+    "description": "\"너무 목마른데, 내 물이 돌덩이가 됐어!\" 🐱\n첫서리가 내린 아침, 맥스의 물그릇과 새의 물놀이통이 돌처럼 딱딱해졌어요. 게다가 목마른 새 열두 마리가 날아오고 있어요. 맥스는 물을 되찾을 수 있을까요? 호기심 많은 고양이 맥스 34화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Max' Wasser ist zu STEIN geworden?! 🧊😹",
+    "description": "„Ich habe so Durst, und mein Wasser ist ein Stein!\" 🐱\nAm ersten frostigen Morgen sind Max' Napf und Vogels Vogelbad hart wie Stein, und zwölf durstige Vögel sind schon unterwegs. Findet Max heraus, wie das Wasser zurückkommt? Max, die neugierige Katze, Folge 34.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 18,
+   "top": "WHY WON'T IT MOVE?! 🧊",
+   "title": "Why Won't Max's Water Move?! 🧊😹 (Ep 34) #shorts",
+   "description": "Tap, tap... whoosh! A very slippery morning. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "ice"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿¡Por qué no se mueve el agua de Max!? 🧊😹 (Ep 34) #shorts",
+     "description": "Tap, tap... ¡zas! Una mañana muy resbalosa. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que a água do Max não se mexe?! 🧊😹 (Ep 34) #shorts",
+     "description": "Toc, toc... zum! Uma manhã muito escorregadia. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا لا يتحرك ماء ماكس؟! 🧊😹 (الحلقة 34) #shorts",
+     "description": "طق، طق... ووش! صباح زلق جدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi l'eau de Max ne bouge pas ?! 🧊😹 (Ép 34) #shorts",
+     "description": "Tap, tap... zioup ! Un matin très glissant. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスの水がうごかない！？🧊😹（第34話）#shorts",
+     "description": "トントン…つるーん！とってもすべる朝。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스의 물이 왜 안 움직이지?! 🧊😹 (34화) #shorts",
+     "description": "톡톡... 쭈욱! 아주 미끄러운 아침. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum bewegt sich Max' Wasser nicht?! 🧊😹 (Folge 34) #shorts",
+     "description": "Tipp, tipp... huiii! Ein sehr rutschiger Morgen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
