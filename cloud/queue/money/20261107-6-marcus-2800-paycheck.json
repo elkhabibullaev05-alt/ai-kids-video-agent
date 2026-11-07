@@ -1,0 +1,176 @@
+{
+ "title": "Marcus Earns $2,800. Here's Every Dollar.",
+ "hook": "$2,800 in. $0 left.",
+ "header": "Marcus · $2,800 take-home",
+ "character": "Marcus",
+ "amount": "$2,800",
+ "accent": "green",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Marcus takes home $2,800 a month, and every dollar is gone by the 30th.",
+   "visual": {
+    "type": "big_number",
+    "value": 2800,
+    "label": "monthly take-home",
+    "sub": "$0 left by the 30th",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Rent is $1,250, almost half of it.",
+   "visual": {
+    "type": "big_number",
+    "value": 1250,
+    "label": "rent",
+    "sub": "about 45% of his pay",
+    "icon": "house"
+   }
+  },
+  {
+   "say": "His car and insurance take another $680.",
+   "visual": {
+    "type": "bars",
+    "title": "The car",
+    "items": [
+     {
+      "label": "Car payment",
+      "value": 520,
+      "hi": true
+     },
+     {
+      "label": "Insurance",
+      "value": 160
+     }
+    ]
+   }
+  },
+  {
+   "say": "Groceries, utilities, phone and internet: about $690.",
+   "visual": {
+    "type": "bars",
+    "title": "The basics",
+    "items": [
+     {
+      "label": "Groceries",
+      "value": 420
+     },
+     {
+      "label": "Utilities",
+      "value": 140
+     },
+     {
+      "label": "Phone + internet",
+      "value": 130
+     }
+    ]
+   }
+  },
+  {
+   "say": "And the leak he never noticed: about $180 a month in food delivery.",
+   "visual": {
+    "type": "statement",
+    "text": "$180 a month in delivery",
+    "sub": "about 6 orders",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "Every single dollar has a job, just not the job he wants.",
+   "visual": {
+    "type": "stack",
+    "title": "Where $2,800 goes",
+    "total": 2800,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1250
+     },
+     {
+      "label": "Car + insurance",
+      "value": 680
+     },
+     {
+      "label": "Basics",
+      "value": 690
+     },
+     {
+      "label": "Delivery",
+      "value": 180,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "So he set two small changes.",
+   "visual": {
+    "type": "checklist",
+    "title": "Two changes",
+    "items": [
+     {
+      "text": "Delivery: 6 orders to 2",
+      "ok": true
+     },
+     {
+      "text": "Phone plan: $70 to $35",
+      "ok": true
+     },
+     {
+      "text": "Move $155 on payday",
+      "ok": true
+     },
+     {
+      "text": "Cut groceries to $200",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Delivery drops to about $60. The phone saves $35. That's $155.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$120 delivery",
+     "+ $35 phone",
+     "= $155 a month"
+    ]
+   }
+  },
+  {
+   "say": "In a year, that's around $1,860 saved, without a strict budget.",
+   "visual": {
+    "type": "counter",
+    "from": 155,
+    "to": 1860,
+    "steps": 12,
+    "unit": "Month",
+    "label": "saved",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "Which one would you cut first? Because right now, it's $2,800 in, and $0 left.",
+   "visual": {
+    "type": "question",
+    "text": "Which bill would you cut first?"
+   }
+  }
+ ],
+ "question": "Which would you cut first: delivery, the phone plan, or something else?",
+ "description": "Marcus takes home $2,800 a month: rent about $1,250, car and insurance $680, basics about $690 and roughly $180 in food delivery leave him at $0. Cutting delivery to two orders and switching to a cheaper phone plan frees about $155 a month — around $1,860 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "paycheck breakdown",
+  "budget breakdown",
+  "where does my money go",
+  "2800 a month budget",
+  "low income budget",
+  "how to save money",
+  "monthly budget"
+ ],
+ "hashtags": [
+  "#paycheck",
+  "#budget"
+ ]
+}

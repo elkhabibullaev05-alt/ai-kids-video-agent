@@ -1,0 +1,175 @@
+{
+ "title": "Same $55k Salary, Two Very Different Years",
+ "hook": "Same $55k. $8,400 apart.",
+ "header": "Hana vs Sam · $55k each",
+ "character": "Hana",
+ "amount": "$55k",
+ "accent": "pink",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Hana and Sam both earn $55k. One year later, they're about $8,400 apart.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Hana",
+     "value": 6000,
+     "sub": "saved",
+     "hi": true
+    },
+    "right": {
+     "label": "Sam",
+     "value": 2400,
+     "sub": "owed on a card"
+    }
+   }
+  },
+  {
+   "say": "After taxes, each takes home roughly $3,600 a month.",
+   "visual": {
+    "type": "big_number",
+    "value": 3600,
+    "label": "take-home each",
+    "sub": "from $55k a year",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Same rent, $1,500. Same car payment, $480.",
+   "visual": {
+    "type": "stack",
+    "title": "Both: fixed bills",
+    "total": 3600,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1500
+     },
+     {
+      "label": "Car",
+      "value": 480
+     },
+     {
+      "label": "Everything else",
+      "value": 1620,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The difference is the order. Hana saves $500 on payday, first.",
+   "visual": {
+    "type": "statement",
+    "text": "Save first. Spend the rest.",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "Sam plans to save whatever's left at the end of the month.",
+   "visual": {
+    "type": "statement",
+    "text": "Spend first. Save the rest?",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "Most months, nothing's left. Some months, he's short and the card covers it.",
+   "visual": {
+    "type": "bars",
+    "title": "Sam's monthly savings",
+    "items": [
+     {
+      "label": "Planned",
+      "value": 500
+     },
+     {
+      "label": "Actually saved",
+      "value": 0,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "By December, Hana has about $6,000 saved.",
+   "visual": {
+    "type": "counter",
+    "from": 500,
+    "to": 6000,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Hana's savings",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "Sam has roughly $2,400 on a card, at about 24%.",
+   "visual": {
+    "type": "line",
+    "label": "Sam's card balance",
+    "points": [
+     0,
+     200,
+     400,
+     800,
+     1000,
+     1400,
+     1600,
+     2000,
+     2200,
+     2400
+    ],
+    "start_label": "January",
+    "end_label": "December"
+   }
+  },
+  {
+   "say": "Hana's three rules were simple.",
+   "visual": {
+    "type": "checklist",
+    "title": "Hana's system",
+    "items": [
+     {
+      "text": "Auto-move $500 on payday",
+      "ok": true
+     },
+     {
+      "text": "Bills paid next",
+      "ok": true
+     },
+     {
+      "text": "Spend what's left, guilt-free",
+      "ok": true
+     },
+     {
+      "text": "Save whatever's left over",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Who are you right now? Because the same $55k can end up $8,400 apart.",
+   "visual": {
+    "type": "question",
+    "text": "Are you more Hana or more Sam?"
+   }
+  }
+ ],
+ "question": "Are you more Hana or more Sam right now? No judgment.",
+ "description": "Hana and Sam both earn $55k and take home about $3,600 a month. Hana moves $500 to savings on payday; Sam saves what's left. A year later Hana has about $6,000 and Sam has roughly $2,400 on a card. That's about $8,400 apart. Numbers are rounded US estimates.",
+ "tags": [
+  "pay yourself first",
+  "same salary different results",
+  "how to save money",
+  "55k salary budget",
+  "budgeting tips",
+  "saving vs spending",
+  "money habits"
+ ],
+ "hashtags": [
+  "#payyourselffirst",
+  "#savingmoney"
+ ]
+}

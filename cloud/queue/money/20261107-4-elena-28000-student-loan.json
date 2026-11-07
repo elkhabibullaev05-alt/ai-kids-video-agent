@@ -1,0 +1,171 @@
+{
+ "title": "Elena's $28,000 Loan: 10 Years or 20?",
+ "hook": "$109 less. $12,000 more.",
+ "header": "Elena · $28,000 at 6.5%",
+ "character": "Elena",
+ "amount": "$28,000",
+ "accent": "red",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Elena could cut her loan payment by $109 a month. It would cost her about $12,000 more.",
+   "visual": {
+    "type": "statement",
+    "text": "$109 less. $12,000 more.",
+    "icon": "cap"
+   }
+  },
+  {
+   "say": "She owes $28,000 in student loans at about 6.5%.",
+   "visual": {
+    "type": "big_number",
+    "value": 28000,
+    "label": "student loans",
+    "sub": "about 6.5% interest",
+    "icon": "cap"
+   }
+  },
+  {
+   "say": "On a 10-year plan, she pays about $318 a month.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$28,000 at 6.5%",
+     "over 120 months",
+     "= about $318 a month"
+    ]
+   }
+  },
+  {
+   "say": "A 20-year plan drops that to roughly $209. Tempting.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "10 years",
+     "value": 318,
+     "sub": "per month"
+    },
+    "right": {
+     "label": "20 years",
+     "value": 209,
+     "sub": "per month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "But look at the interest. About $10,200 versus $22,100.",
+   "visual": {
+    "type": "bars",
+    "title": "Total interest",
+    "items": [
+     {
+      "label": "10 years",
+      "value": 10200
+     },
+     {
+      "label": "20 years",
+      "value": 22100,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The longer plan costs about $12,000 extra, for ten more years of payments.",
+   "visual": {
+    "type": "big_number",
+    "value": 11900,
+    "label": "extra interest",
+    "sub": "for the 20-year plan",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "Where her total goes on the long plan: more than 40% is interest.",
+   "visual": {
+    "type": "stack",
+    "title": "20 years: total paid",
+    "total": 50100,
+    "items": [
+     {
+      "label": "Borrowed",
+      "value": 28000
+     },
+     {
+      "label": "Interest",
+      "value": 22100,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "So she keeps the 10-year plan, and covers the $109 difference.",
+   "visual": {
+    "type": "checklist",
+    "title": "Finding $109",
+    "items": [
+     {
+      "text": "Cheaper phone plan: $35",
+      "ok": true
+     },
+     {
+      "text": "Cook 2 more dinners: $50",
+      "ok": true
+     },
+     {
+      "text": "Cancel one app: $24",
+      "ok": true
+     },
+     {
+      "text": "Stretch to 20 years",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Debt free in 10 years, not 20.",
+   "visual": {
+    "type": "line",
+    "label": "Balance on 10-year plan",
+    "points": [
+     28000,
+     25400,
+     22600,
+     19600,
+     16200,
+     12700,
+     8800,
+     4600,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 10"
+   }
+  },
+  {
+   "say": "Would you pick the lower payment? Because $109 less a month can mean $12,000 more.",
+   "visual": {
+    "type": "question",
+    "text": "Lower payment or less interest?"
+   }
+  }
+ ],
+ "question": "Would you pick the lower monthly payment, or the plan with less interest?",
+ "description": "Elena owes $28,000 in student loans at about 6.5%. A 10-year plan is roughly $318 a month with about $10,200 in interest; a 20-year plan is around $209 a month but about $22,100 in interest. Numbers are rounded US estimates assuming a fixed rate and no extra payments.",
+ "tags": [
+  "student loans",
+  "student loan repayment",
+  "student loan interest",
+  "10 year vs 20 year",
+  "pay off student loans",
+  "debt payoff",
+  "loan math"
+ ],
+ "hashtags": [
+  "#studentloans",
+  "#debtfree"
+ ]
+}

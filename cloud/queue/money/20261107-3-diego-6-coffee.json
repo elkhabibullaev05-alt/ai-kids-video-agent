@@ -1,0 +1,150 @@
+{
+ "title": "Diego's $6 Coffee Is a $1,560 Yearly Bill",
+ "hook": "$6 a day. $1,560 a year.",
+ "header": "Diego · $6 coffee, 5 days",
+ "character": "Diego",
+ "amount": "$6",
+ "accent": "gold",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Diego spends $6 on coffee every workday, and it adds up to about $1,560 a year.",
+   "visual": {
+    "type": "big_number",
+    "value": 6,
+    "label": "one coffee",
+    "sub": "every workday",
+    "icon": "cup",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "Here's the math. $6, five days a week, 52 weeks.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$6 × 5 days",
+     "× 52 weeks",
+     "= $1,560 a year"
+    ]
+   }
+  },
+  {
+   "say": "That's about $130 a month, poured into paper cups.",
+   "visual": {
+    "type": "statement",
+    "text": "$130 a month, in cups",
+    "icon": "cup"
+   }
+  },
+  {
+   "say": "Over five years, it's roughly $7,800.",
+   "visual": {
+    "type": "counter",
+    "from": 1560,
+    "to": 7800,
+    "steps": 12,
+    "unit": "Year",
+    "label": "spent on coffee",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "He doesn't want to quit coffee. He just wants a better deal.",
+   "visual": {
+    "type": "statement",
+    "text": "Keep the coffee. Fix the price.",
+    "icon": "bolt"
+   }
+  },
+  {
+   "say": "At home, a good cup costs him about 75 cents.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Café",
+     "value": 6,
+     "hi": true
+    },
+    "right": {
+     "label": "Home brew",
+     "value": 0.75
+    }
+   }
+  },
+  {
+   "say": "So he keeps two café days a week, and brews the other three.",
+   "visual": {
+    "type": "checklist",
+    "title": "Diego's coffee plan",
+    "items": [
+     {
+      "text": "Café on Monday and Friday",
+      "ok": true
+     },
+     {
+      "text": "Brew at home 3 days",
+      "ok": true
+     },
+     {
+      "text": "Travel mug in his bag",
+      "ok": true
+     },
+     {
+      "text": "Quit coffee completely",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "New yearly cost: about $740 instead of $1,560.",
+   "visual": {
+    "type": "bars",
+    "title": "Coffee per year",
+    "items": [
+     {
+      "label": "Before",
+      "value": 1560,
+      "hi": true
+     },
+     {
+      "label": "After",
+      "value": 740
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's around $820 back every year, and still his Friday latte.",
+   "visual": {
+    "type": "big_number",
+    "value": 820,
+    "label": "back every year",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "What's your daily habit worth? Do the math, because $6 a day is $1,560 a year.",
+   "visual": {
+    "type": "question",
+    "text": "What does your daily habit cost?"
+   }
+  }
+ ],
+ "question": "What does your daily habit cost you per year? Do the math in the comments.",
+ "description": "Diego buys a $6 coffee every workday — about $1,560 a year and roughly $7,800 over five years. Keeping two café days and brewing at home for about $0.75 a cup the other three drops it to around $740 a year. Prices are rounded US estimates.",
+ "tags": [
+  "coffee habit",
+  "latte factor",
+  "small habits add up",
+  "how to save money",
+  "daily spending",
+  "frugal tips",
+  "money habits"
+ ],
+ "hashtags": [
+  "#savemoney",
+  "#moneyhabits"
+ ]
+}
