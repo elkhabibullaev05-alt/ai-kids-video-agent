@@ -170,3 +170,7 @@ Now: 0 subs, 6 views total, no new episode since 20 Oct.
 - [ ] Roblox: a weekly 10–14 min "I ranked every <genre> Roblox game" long (data + verdict), series "Part N" — the 3.5-min daily list does not match the 13–25 min winners.
 - [ ] Funny: numbered series in titles ("Fails Ranked #N") — needs a counter in fr_themes.make_title read from past titles.
 - [ ] Wild Sketchbook: grid-of-animals first frame (art.py) for the "N animals vs X" format.
+- [x] Roblox long slot 17:45 → 09:45 UTC (done 2026-11-07: Ask Studio — audience peak 13:00–18:00 MSK, post long 1–2 h before; cloud/channels.json).
+- [ ] Roblox Shorts: trim to 15–25 s (Ask Studio 2026-11-07: Shorts under 25 s held >50 %; channel stayed-to-watch 38.5 %) — needs a narration-length cap in rbx_shorts.py.
+- [ ] Hollowmere: Studio sees 8–12 words of burned-in subtitle on the thumbnail (channel not phone-verified → YouTube auto-frame is used). Either phone-verify (owner) or render the auto-frame candidates (start/middle/end) without subtitles.
+- [ ] Funny Rank: Ask Studio blocked by a "prove it's you" identity check on this account (2026-11-07) — owner must pass it once in Chrome.
