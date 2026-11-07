@@ -1,0 +1,919 @@
+{
+ "id": "20261107-6-pot-full-of-flowers",
+ "plot": "The morning after dinner Grandma has planted petunias in Mr. Pot on the garden table, and a bee on his flowers makes the stuck, dirt-filled villain shake toward the edge, where a crack would mean the trash; Bup gloats, but Crispy says nobody deserves the trash, Zeek's Plan Breeze only lands the bee on Pot's nose, Grandma comes out with her watering can, and — the twist — Pim, who is scared of everything, is calm with bees because he grew up on a bean plant (he said it early on): he walks the bee to the lavender while Grandma waters Pot; grateful Mr. Pot tells them the baker who lived here left an old bread box in the pantry, and it isn't empty.",
+ "script": {
+  "title": "Mr. Pot Has Flowers Growing Out of Him",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     12
+    ],
+    "brows": 18
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "flowers",
+    "type": "star",
+    "color": "purple",
+    "on": "pot",
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "bee",
+    "type": "ball",
+    "color": "yellow",
+    "on": null,
+    "at": [
+     5,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 0.3
+   },
+   {
+    "id": "lavender",
+    "type": "cone",
+    "color": "purple",
+    "on": null,
+    "at": [
+     -11,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "can",
+    "type": "box",
+    "color": "green",
+    "on": null,
+    "at": [
+     12,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "pot",
+    "say": "Get. This. Bee. Off. My. Flowers!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ],
+     [
+      "bee",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Mr. Pot has... flowers on his head?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Morning in the garden. Grandma planted petunias in Mr. Pot.",
+    "cam": "wide",
+    "do": [
+     [
+      "flowers",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He's full of dirt. He can't move. And a bee found him.",
+    "cam": "prop:bee",
+    "do": [
+     [
+      "bee",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "MR. POT IS A FLOWERPOT",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Team, this is the best morning of my life.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup! Don't be mean. Not even to him.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Laugh now, crumbs. When I'm free, you're all toast.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bee buzzes past his three eyes. He freezes.",
+    "cam": "prop:bee",
+    "do": [
+     [
+      "bee",
+      "spin"
+     ],
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Is it on me? Don't tell me. Tell me!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fascinating. The great Mr. Pot is scared of a bee.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pot"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bees are nice. Back home, bees visited my bean flowers.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim, you're scared of spoons. Please focus.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He shakes so hard he slides toward the garden table's edge.",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "If he falls, he cracks. Cracked pots go in the trash.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Nobody deserves the trash. I know how that feels.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SAVE MR. POT?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plan Breeze. We blow the bee away. One, two, three!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five tiny breads blow. Pfff.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bee lands right on Mr. Pot's nose.",
+    "cam": "prop:bee",
+    "do": [
+     [
+      "bee",
+      "to:pot"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "IT'S ON MY NOSE! I CAN SEE IT WITH ALL THREE EYES!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He rocks. Left. Right. Half of him hangs over the edge.",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Grab his handles! Everybody pull him back!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:pot"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They pull. He tips back. Barely. Dirt rains on Zeek.",
+    "cam": "two:bup,pot",
+    "do": [
+     [
+      "pot",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I have soil in my glasses. This is a new low.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The back door opens. Grandma comes out with her watering can.",
+    "cam": "prop:can",
+    "do": [
+     [
+      "can",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Grandma's coming! And he still can't stop shaking!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "If he falls in front of her, he's trash by lunch.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "I'm not shaking. I'm... vibrating. With anger. Mostly.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone thinks hard. Everyone except Pim.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim walks up to the bee. Slowly. He isn't shaking.",
+    "cam": "two:pim,pot",
+    "do": [
+     [
+      "pim",
+      "to:pot"
+     ]
+    ]
+   },
+   {
+    "text": "PIM ISN'T SCARED?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Bees aren't mean. They're just very busy. Like Zeek.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim holds out one hand. The bee walks right onto it.",
+    "cam": "prop:bee",
+    "do": [
+     [
+      "bee",
+      "to:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim. You're scared of your own shadow!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I grew up on a bean plant. Bees are family.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bee won't leave his hand. Grandma is three steps away.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, she'll see you! Move that bee, and move yourself!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bees love purple. The lavender by the fence! Take it there!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim walks the bee across the lawn. One careful step.",
+    "cam": "prop:lavender",
+    "do": [
+     [
+      "pim",
+      "to:-10,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A slipper lands next to him. Pim freezes. Just a bean.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma waters the petunias. Mr. Pot gargles quietly.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Glug. I. Hate. This. Glug.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "narr",
+    "say": "At the lavender, the bee hums and flies into the purple.",
+    "cam": "prop:lavender",
+    "do": [
+     [
+      "bee",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THE BEE IS GONE",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mr. Pot stops shaking. For once, he's still.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "You... helped me. Why would a bean help me?",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Because you were scared. I know what scared looks like.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "And because Grandma likes you. Lucky old pot.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma pats Mr. Pot. 'Prettiest pot in the whole garden.'",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Don't. Tell. Anyone.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Too late. Pim the bee whisperer. I'm telling everyone.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mr. Pot grumbles. Then he lowers his voice.",
+    "cam": "two:pot,crispy",
+    "do": [
+     [
+      "pot",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Fine. I owe you one. Listen. A baker lived here before you.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "pot",
+    "say": "His old bread box is still in the pantry. It's not empty.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHO'S IN THE BREAD BOX?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Mr. Pot Has Flowers Growing Out of Him 🌸 (Ep 19)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everyone thinks I'm scared of everything. Not bees. Bees are family.\" — Pim\nGrandma turned Mr. Pot into a flowerpot, a bee won't leave him alone, and if he shakes off the garden table he cracks — so the Dough Bros have to decide whether to save their old enemy.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "mr pot",
+   "pim",
+   "bee",
+   "garden",
+   "funny animation",
+   "villain",
+   "grandma"
+  ],
+  "thumb_text": "DON'T MOVE!",
+  "thumb_beat": 10,
+  "localizations": {
+   "es": {
+    "title": "A Mr. Pot le salen flores de la cabeza 🌸 (Ep 19)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todos creen que me asusta todo. Las abejas no. Las abejas son familia.\" — Pim\nLa abuela convirtió a Mr. Pot en una maceta, una abeja no lo deja en paz y si se cae de la mesa del jardín se rompe: los Dough Bros deben decidir si salvan a su viejo enemigo.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Estão nascendo flores no Mr. Pot 🌸 (Ep 19)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo mundo acha que eu tenho medo de tudo. De abelha, não. Abelha é família.\" — Pim\nA vovó transformou o Mr. Pot em vaso de flores, uma abelha não larga ele e, se ele cair da mesa do jardim, racha — os Dough Bros precisam decidir se salvam o velho inimigo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "الزهور تنمو من رأس السيد بوت 🌸 (Ep 19)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"الجميع يظن أنني أخاف من كل شيء. إلا النحل. النحل عائلتي.\" — بيم\nحوّلت الجدة السيد بوت إلى أصيص زهور، ونحلة لا تتركه، وإن سقط عن طاولة الحديقة سيتشقق — فعلى الأصدقاء أن يقرروا: هل ينقذون عدوهم القديم؟\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Des fleurs poussent sur Mr. Pot 🌸 (Ep 19)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Tout le monde croit que j'ai peur de tout. Pas des abeilles. Les abeilles, c'est la famille.\" — Pim\nMamie a transformé Mr. Pot en pot de fleurs, une abeille ne le lâche plus, et s'il tombe de la table du jardin, il se fend : les Dough Bros doivent décider s'ils sauvent leur vieil ennemi.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミスター・ポットから花が生えてきた 🌸 (Ep 19)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「みんな僕が何でも怖がると思ってる。でもハチは平気。ハチは家族なんだ。」— ピム\nおばあちゃんがミスター・ポットを植木鉢にしてしまった。ハチは離れず、庭のテーブルから落ちれば割れてしまう。ドウ・ブロスは昔の敵を助けるのか？\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미스터 팟에게서 꽃이 자라고 있다 🌸 (Ep 19)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"다들 내가 뭐든 무서워한다고 생각해. 벌은 아니야. 벌은 가족이거든.\" — 핌\n할머니가 미스터 팟을 화분으로 만들었고, 벌 한 마리가 떠나지 않는다. 정원 테이블에서 떨어지면 깨지고 만다 — 도우 브로스는 옛 적을 구할까?\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Aus Mr. Pot wachsen Blumen 🌸 (Ep 19)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alle denken, ich habe vor allem Angst. Nicht vor Bienen. Bienen sind Familie.\" — Pim\nOma hat Mr. Pot zum Blumentopf gemacht, eine Biene lässt ihn nicht in Ruhe, und fällt er vom Gartentisch, bekommt er einen Sprung – die Dough Bros müssen entscheiden, ob sie ihren alten Feind retten.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 22,
+   "top": "WOULD YOU SHOO IT?",
+   "title": "Would YOU Shoo This Bee? 🐝 (Ep 19) #shorts",
+   "description": "It landed on the scariest pot in the house. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "bee"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ espantarías esta abeja? 🐝 (Ep 19) #shorts",
+     "description": "Se posó en la olla más temida de la casa. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ espantaria essa abelha? 🐝 (Ep 19) #shorts",
+     "description": "Ela pousou na panela mais assustadora da casa. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستُبعد هذه النحلة؟ 🐝 (Ep 19) #shorts",
+     "description": "حطّت على أكثر قِدر مخيف في البيت. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU chasserais cette abeille ? 🐝 (Ep 19) #shorts",
+     "description": "Elle s'est posée sur la marmite la plus effrayante de la maison. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのハチを追い払える？ 🐝 (Ep 19) #shorts",
+     "description": "家でいちばん怖い鍋にとまっちゃった。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 벌을 쫓아낼 수 있어? 🐝 (Ep 19) #shorts",
+     "description": "집에서 제일 무서운 냄비 위에 앉았다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diese Biene verscheuchen? 🐝 (Ep 19) #shorts",
+     "description": "Sie ist auf dem gruseligsten Topf im Haus gelandet. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

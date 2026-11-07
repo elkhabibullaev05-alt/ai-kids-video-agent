@@ -1,0 +1,955 @@
+{
+ "id": "20261107-5-folding-table-dinner",
+ "plot": "At the first dinner in the new house Grandma's borrowed folding table tips every time Dad leans, sliding Mia's milk and Grandma's first soup toward the edge; Zeek blames a sloping floor and his napkin fix tips it the other way while Crispy holds the soup, until Bup, under the table, finds the real cause — the leg Dad never clicked (seen in the opening) — and — the twist — the hinge can only lock with no weight on it, so Lolly rings a spoon on Mia's glass, Mia calls a standing toast for Grandma, and Zeek clicks the leg shut; then Grandma announces she'll plant her petunias tomorrow in 'that ugly old black pot'.",
+ "script": {
+  "title": "Can Zeek Hold Up the Dinner Table?",
+  "set": {
+   "place": "table",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "table",
+    "type": "box",
+    "color": [
+     0.55,
+     0.4,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": true,
+    "scale": 2.2
+   },
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.85,
+     0.65,
+     0.35
+    ],
+    "on": null,
+    "at": [
+     -5,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 1.2
+   },
+   {
+    "id": "soup",
+    "type": "cake",
+    "color": "orange",
+    "on": null,
+    "at": [
+     3,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "milk",
+    "type": "cone",
+    "color": "white",
+    "on": null,
+    "at": [
+     8,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "pea",
+    "type": "ball",
+    "color": "green",
+    "on": null,
+    "at": [
+     -1,
+     9,
+     0
+    ],
+    "visible": true,
+    "scale": 0.25
+   },
+   {
+    "id": "leg",
+    "type": "box",
+    "color": [
+     0.6,
+     0.62,
+     0.65
+    ],
+    "on": null,
+    "at": [
+     -9,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "The table is tilting! Four degrees and climbing!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ],
+     [
+      "basket",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody to the high side of the basket! Go!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "First dinner in the new house. On Grandma's old folding table.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "table",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every time Dad leans on his elbow, the whole table tips.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "DINNER IS TIPPING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And Mr. Pot is somewhere in this house. Somewhere!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "One problem at a time, Pim. Table first.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the middle of the table: Grandma's soup. Her first soup here.",
+    "cam": "prop:soup",
+    "do": [
+     [
+      "soup",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "She hummed the whole time she cooked it. I listened.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then this dinner is perfect. Nobody spills anything.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Earlier, Dad unfolded the table. One leg didn't click. He shrugged.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "leg",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad leans again. Mia's milk slides an inch toward the edge.",
+    "cam": "prop:milk",
+    "do": [
+     [
+      "milk",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The milk is walking! Somebody stop the milk!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations say it's the floor. The floor slopes toward Dad.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek rolls a pea. It rolls toward Dad. Then it stops.",
+    "cam": "prop:pea",
+    "do": [
+     [
+      "pea",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "See? Science. We just lift Dad's side a little bit.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Pim drag a folded napkin under Dad's table leg.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-6,12"
+     ],
+     [
+      "pim",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad leans. The table tips the other way. Toward Grandma.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "spin"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "TOWARD THE SOUP!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The soup is three inches from the edge! Three!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Hot soup. Grandma's lap. Right there!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy leans on the soup bowl. Holding it back.",
+    "cam": "two:crispy,lolly",
+    "do": [
+     [
+      "crispy",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Hold it as long as you need. Warm is my thing.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "But my numbers... the floor... the pea...",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup climbs down under the table. It's dark. Shoes everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-2,14"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Dad's sock. Mia's sneaker. Grandma's slippers. Phew.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bup sees it. One table leg. Its metal knee is bent.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "leg",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Zeek! It's not the floor! This leg never clicked!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE LEG IS LOOSE",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A loose hinge! That's why the pea stopped. The tilt kept changing!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To lock it, someone must push the hinge until it clicks.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "leg",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That someone is me. I know exactly where the lock is.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-1,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek has never pushed anything heavier than a pencil.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He pushes. Nothing. The whole family is leaning on the table.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "It won't move while they lean on it. Impossible!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Above them, Dad puts his elbow down. Hard.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S FOLDING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If that leg folds, everything comes down. Soup, milk, us!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "They all have to stop leaning. All at the same time!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "How do you make a whole family stand up at once?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Easy. Mia loves a toast. Watch this.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly taps a spoon on Mia's glass. Ting. Ting. Ting.",
+    "cam": "prop:milk",
+    "do": [
+     [
+      "milk",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia jumps up. 'A toast! Everybody stand up for Grandma!'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Chairs scrape. Everyone stands. Nobody leans. The table is light.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Now!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek pushes with everything. Glasses crooked. Eyes shut.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "leg",
+      "spin"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The leg locks. The table stands flat. Perfectly flat.",
+    "cam": "prop:table",
+    "do": [
+     [
+      "table",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma raises her glass. 'To the new house. And this table.'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations were completely wrong. I've never been happier.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You pushed something heavier than a pencil, Zeek.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "And the soup survived. Listen. She's humming again.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma says one more thing.",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "'Tomorrow I plant my petunias. In that ugly old black pot.'",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Ugly old black pot? Three eyes? That pot?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "FLOWERS IN MR. POT?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Zeek Hold Up the Dinner Table? 🍽️ (Ep 18)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I measured everything. I was still wrong. Best dinner of my life.\" — Zeek\nThe first family dinner in the new house is on a wobbly folding table, Grandma's soup is sliding toward her lap, and the genius's theory is making it worse.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "family dinner",
+   "zeek",
+   "wobbly table",
+   "new house",
+   "funny animation",
+   "grandma",
+   "friendship"
+  ],
+  "thumb_text": "IT'S TIPPING!",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "¿Podrá Zeek sostener la mesa de la cena? 🍽️ (Ep 18)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Lo medí todo. Igual me equivoqué. La mejor cena de mi vida.\" — Zeek\nLa primera cena familiar en la casa nueva es en una mesa plegable que se tambalea, la sopa de la abuela se desliza hacia su regazo y la teoría del genio lo empeora todo.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O Zeek consegue segurar a mesa do jantar? 🍽️ (Ep 18)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu medi tudo. Mesmo assim errei. Melhor jantar da minha vida.\" — Zeek\nO primeiro jantar em família na casa nova é numa mesa dobrável bamba, a sopa da vovó escorrega rumo ao colo dela e a teoria do gênio só piora tudo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "هل يستطيع زيك أن يُبقي طاولة العشاء واقفة؟ 🍽️ (Ep 18)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"قِست كل شيء، ومع ذلك أخطأت. أفضل عشاء في حياتي.\" — زيك\nأول عشاء عائلي في البيت الجديد على طاولة قابلة للطي تهتز، وحساء الجدة ينزلق نحو حجرها، ونظرية العبقري تزيد الأمر سوءًا.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Zeek peut-il sauver la table du dîner ? 🍽️ (Ep 18)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"J'ai tout mesuré. Et je me suis quand même trompé. Le meilleur dîner de ma vie.\" — Zeek\nLe premier dîner de famille dans la nouvelle maison se joue sur une table pliante bancale, la soupe de Mamie glisse vers ses genoux, et la théorie du génie empire tout.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ジークは夕食のテーブルを支えられる？ 🍽️ (Ep 18)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「全部計算した。それでも間違ってた。人生最高の夕食だよ。」— ジーク\n新しい家での初めての家族の夕食は、ぐらぐらの折りたたみテーブルの上。おばあちゃんのスープはひざに向かって滑り出し、天才の理論は事態を悪化させるばかり。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "지크는 저녁 식탁을 지킬 수 있을까? 🍽️ (Ep 18)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"전부 계산했는데도 틀렸어. 인생 최고의 저녁이었지.\" — 지크\n새 집에서의 첫 가족 저녁은 흔들리는 접이식 테이블 위. 할머니의 수프는 무릎 쪽으로 미끄러지고, 천재의 이론은 상황을 더 나쁘게 만든다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Kann Zeek den Esstisch retten? 🍽️ (Ep 18)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich habe alles gemessen. Und lag trotzdem falsch. Bestes Abendessen meines Lebens.\" — Zeek\nDas erste Familienessen im neuen Haus findet an einem wackeligen Klapptisch statt, Omas Suppe rutscht auf ihren Schoß zu, und die Theorie des Genies macht alles schlimmer.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 12,
+   "dur": 22,
+   "top": "WOULD YOU EAT HERE?",
+   "title": "Would YOU Eat at This Table? 🍽️ (Ep 18) #shorts",
+   "description": "Every time Dad leans, the soup slides closer to the edge. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "wobbly table"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ cenarías en esta mesa que se tambalea? 🍽️ (Ep 18) #shorts",
+     "description": "Cada vez que papá se apoya, la sopa se acerca más al borde. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ jantaria nessa mesa bamba? 🍽️ (Ep 18) #shorts",
+     "description": "Toda vez que o pai se apoia, a sopa chega mais perto da beirada. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستأكل على هذه الطاولة المهتزة؟ 🍽️ (Ep 18) #shorts",
+     "description": "كلما اتكأ الأب، اقترب الحساء أكثر من الحافة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU mangerais à cette table bancale ? 🍽️ (Ep 18) #shorts",
+     "description": "Chaque fois que Papa s'accoude, la soupe glisse plus près du bord. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのぐらぐらテーブルで食べる？ 🍽️ (Ep 18) #shorts",
+     "description": "パパがひじをつくたびに、スープが端に近づいていく。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 흔들리는 식탁에서 먹을래? 🍽️ (Ep 18) #shorts",
+     "description": "아빠가 기댈 때마다 수프가 가장자리로 더 가까워진다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU an diesem Wackeltisch essen? 🍽️ (Ep 18) #shorts",
+     "description": "Jedes Mal, wenn Papa sich aufstützt, rutscht die Suppe näher an die Kante. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

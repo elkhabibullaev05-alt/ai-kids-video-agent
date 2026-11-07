@@ -1,0 +1,1052 @@
+{
+ "id": "20261107-4-lolly-melting-window",
+ "plot": "On the first morning in the new house (Mia had saved it as 'Grandma's house' because Grandma lives with them now) Lolly refuses to leave the sunny windowsill — her first window ever — while the sun melts her icing; Zeek's cookbook wall vanishes when Grandma picks it up, Crispy points out the striped shadow, the tassel Pim tripped on turns out to be a blind cord caught on a high hook, and — the twist — scared Pim climbs it for Lolly; the blind comes down, her icing sets into a crown, and from the top Pim sees Dad carry Mr. Pot in from the moving truck.",
+ "script": {
+  "title": "Why Is Lolly Melting?",
+  "set": {
+   "place": "kitchen",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     13
+    ],
+    "brows": 18
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "window",
+    "type": "box",
+    "color": [
+     0.6,
+     0.85,
+     1.0
+    ],
+    "on": null,
+    "at": [
+     7,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 2.4
+   },
+   {
+    "id": "cord",
+    "type": "cone",
+    "color": "gold",
+    "on": null,
+    "at": [
+     10,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "sun",
+    "type": "star",
+    "color": "yellow",
+    "on": null,
+    "at": [
+     4,
+     9,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": "red",
+    "on": null,
+    "at": [
+     -3,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "truck",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     -13,
+     18,
+     0
+    ],
+    "visible": true,
+    "scale": 3.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "I'm dripping! Why are my points dripping?!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "sun",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Lolly, your icing is sliding down your face!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "First morning in the new house. A giant sunny window.",
+    "cam": "wide",
+    "do": [
+     [
+      "window",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly picked the windowsill. Now the sun is melting her.",
+    "cam": "prop:window",
+    "do": [
+     [
+      "sun",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY IS MELTING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "And the wrong way? It wasn't wrong at all.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia saved the new house as 'Grandma's house'.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma lives here now. With all of them.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So Grandma's house is our house. Best mistake ever.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Lovely. Now somebody make the sun stop!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Easy. Get off the windowsill. Into the shade.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No! I lived in a dark pantry my whole life.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My first window ever. I can see the whole street!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Outside: a jogger, a mail truck, the moving truck.",
+    "cam": "prop:truck",
+    "do": [
+     [
+      "truck",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's pretty. But you're m-melting, Lolly. Like, a lot.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim trips on a cord by the window. It has a tassel.",
+    "cam": "prop:cord",
+    "do": [
+     [
+      "cord",
+      "bounce"
+     ],
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "What is this rope for? Is it a trap?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Decoration. Humans hang strings on everything. Ignore it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek has a better idea. Grandma's giant cookbook.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Stand it up. Instant wall. Instant shade.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The cookbook stands. Lolly sits in its cool shadow.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ],
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Ahh. Shade. I could live here forever.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma walks in and picks up the cookbook.",
+    "cam": "wide",
+    "do": [
+     [
+      "book",
+      "vanish"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE SHADE IS GONE",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "One more hour and I'm a puddle with a face!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun climbs higher. The tiles get warmer.",
+    "cam": "prop:sun",
+    "do": [
+     [
+      "sun",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. Lolly, I'm sorry, but we're carrying you.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Touch one point and I'll ice you to the floor!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody touches her. Nobody ever touches angry Lolly.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A low voice comes from under the shelf.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I've lived in shadows for years. Shadows are never still.",
+    "cam": "close:crispy"
+   },
+   {
+    "who": "crispy",
+    "say": "Look at the wall. Something up there makes stripes.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the window: a rolled-up blind. The tassel cord is its string.",
+    "cam": "prop:window",
+    "do": [
+     [
+      "cord",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "It's not decoration. It's a blind! Pull it, shade comes down!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the cord is caught on a hook, up by the ceiling.",
+    "cam": "prop:cord",
+    "do": [
+     [
+      "cord",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Someone has to climb up there and flip it free.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup is a loaf. Crispy is too heavy. Zeek can't see.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'll do it.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "PIM?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, you're scared of the bottom stair.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "You sing to me every night. My turn.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:9,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim grabs the cord. He climbs. Hand over hand. Bean over bean.",
+    "cam": "prop:cord",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "cord",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma comes back. She reaches for the window handle.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA'S OPENING IT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "If that window opens, the cord swings. Pim goes flying!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim is halfway. His bandage slips. He dangles by one hand.",
+    "cam": "prop:cord",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "cord",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "PIM! YOU HOLD ON RIGHT NOW!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Yes ma'am! Holding on! Very much holding on!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma stops. Sniffs her tea. Walks off to find sugar.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim reaches the hook. He flips the cord free. Zip!",
+    "cam": "prop:window",
+    "do": [
+     [
+      "window",
+      "bounce"
+     ],
+     [
+      "cord",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The blind rolls down. Striped shade falls over the windowsill.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "SHADE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly's icing stops dripping. It sets like a little crown.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My window, my street, and stripes. It's perfect.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Don't tell anyone I climbed. Especially not me.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Too late. You're a climber now, Pim.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From up there, Pim sees the moving truck.",
+    "cam": "prop:truck",
+    "do": [
+     [
+      "truck",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad carries in one last thing. Black. Round. Three eyes.",
+    "cam": "prop:truck",
+    "do": [
+     [
+      "pot",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Fresh... dough. Did you miss me?",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "MR. POT IS HERE?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Lolly Melting? ☀️ (Ep 17)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"My first window ever. I wasn't leaving it, even if I melted.\" — Lolly\nFirst morning in the new house: the sun is melting Lolly's icing, the only shade is up a cord near the ceiling, and the one who has to climb it is scared of the bottom stair.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "new house",
+   "lolly",
+   "pim",
+   "sunny window",
+   "funny animation",
+   "friendship",
+   "moving"
+  ],
+  "thumb_text": "I'M DRIPPING!",
+  "thumb_beat": 25,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué se está derritiendo Lolly? ☀️ (Ep 17)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Mi primera ventana. No pensaba irme, aunque me derritiera.\" — Lolly\nPrimera mañana en la casa nueva: el sol derrite el glaseado de Lolly, la única sombra está tras un cordón junto al techo, y quien debe trepar le teme hasta al primer escalón.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Por que a Lolly está derretendo? ☀️ (Ep 17)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Minha primeira janela. Eu não ia sair dali, nem derretendo.\" — Lolly\nPrimeira manhã na casa nova: o sol está derretendo a cobertura da Lolly, a única sombra depende de uma cordinha lá perto do teto, e quem precisa subir tem medo até do primeiro degrau.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا تذوب لولي؟ ☀️ (Ep 17)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أول نافذة في حياتي. لم أكن سأتركها حتى لو ذبت.\" — لولي\nأول صباح في البيت الجديد: الشمس تذيب طبقة السكر على لولي، والظل الوحيد معلّق بحبل قرب السقف، ومن عليه أن يتسلقه يخاف حتى من الدرجة الأولى.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi Lolly est-elle en train de fondre ? ☀️ (Ep 17)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Ma toute première fenêtre. Je ne la quittais pas, même en fondant.\" — Lolly\nPremier matin dans la nouvelle maison : le soleil fait fondre le glaçage de Lolly, la seule ombre dépend d'un cordon près du plafond, et celui qui doit grimper a peur de la première marche.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "どうしてロリーが溶けてるの？ ☀️ (Ep 17)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「生まれて初めての窓。溶けたって離れるつもりはなかった。」— ロリー\n新しい家の最初の朝。日差しがロリーのアイシングを溶かしていく。日陰を作るには天井近くのひもを外すしかない。登らなきゃいけないのは、階段の一段目すら怖いあの子だった。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "롤리는 왜 녹고 있을까? ☀️ (Ep 17)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"내 인생 첫 창문이야. 녹더라도 떠날 생각 없었어.\" — 롤리\n새 집에서의 첫 아침. 햇빛이 롤리의 아이싱을 녹이고, 그늘을 만들 방법은 천장 근처의 줄뿐인데, 올라가야 하는 건 계단 첫 칸도 무서워하는 친구다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Warum schmilzt Lolly? ☀️ (Ep 17)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Mein allererstes Fenster. Ich wollte nicht weg, auch wenn ich schmelze.\" — Lolly\nErster Morgen im neuen Haus: Die Sonne schmilzt Lollys Zuckerguss, der einzige Schatten hängt an einer Schnur unter der Decke, und klettern muss ausgerechnet der, der schon vor der untersten Stufe Angst hat.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 16,
+   "dur": 22,
+   "top": "WOULD YOU CLIMB IT?",
+   "title": "Would YOU Climb This Cord? 🪢 (Ep 17) #shorts",
+   "description": "It's caught on a hook way up by the ceiling. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ treparías este cordón? 🪢 (Ep 17) #shorts",
+     "description": "Está enganchado allá arriba, junto al techo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ subiria nessa cordinha? 🪢 (Ep 17) #shorts",
+     "description": "Ela está presa num gancho lá perto do teto. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستتسلق هذا الحبل؟ 🪢 (Ep 17) #shorts",
+     "description": "إنه عالق في خطّاف قرب السقف. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU grimperais à ce cordon ? 🪢 (Ep 17) #shorts",
+     "description": "Il est coincé sur un crochet tout près du plafond. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのひもを登れる？ 🪢 (Ep 17) #shorts",
+     "description": "天井近くのフックに引っかかってる。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 줄을 오를 수 있어? 🪢 (Ep 17) #shorts",
+     "description": "천장 근처 고리에 걸려 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diese Schnur hochklettern? 🪢 (Ep 17) #shorts",
+     "description": "Sie hängt an einem Haken ganz oben unter der Decke. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "SHE'S MELTING!",
+   "title": "The Sun Is Melting Lolly ☀️ (Ep 17) #shorts",
+   "description": "Her first window ever, and she won't leave it. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lolly",
+    "melting"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El sol está derritiendo a Lolly ☀️ (Ep 17) #shorts",
+     "description": "Su primera ventana, y no piensa irse. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O sol está derretendo a Lolly ☀️ (Ep 17) #shorts",
+     "description": "A primeira janela dela, e ela não quer sair. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الشمس تذيب لولي ☀️ (Ep 17) #shorts",
+     "description": "أول نافذة لها، وهي لا تريد تركها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le soleil fait fondre Lolly ☀️ (Ep 17) #shorts",
+     "description": "Sa toute première fenêtre, et elle refuse de la quitter. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "太陽がロリーを溶かしてる ☀️ (Ep 17) #shorts",
+     "description": "初めての窓。彼女は動こうとしない。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "햇빛이 롤리를 녹이고 있다 ☀️ (Ep 17) #shorts",
+     "description": "생애 첫 창문, 그녀는 떠나려 하지 않는다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Sonne schmilzt Lolly ☀️ (Ep 17) #shorts",
+     "description": "Ihr erstes Fenster, und sie will nicht weg. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
