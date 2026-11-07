@@ -122,7 +122,12 @@ def scene_name(vtitle):
     for name, keys in SCENES:
         if any(k and k in t for k in keys):
             return name
-    return "Gentle Rain Falling"
+    # 2026-11-07 review: generic clips all became "Gentle Rain Falling" (3 uploads in a row) — rotate neutral names
+    recent = " ".join(used["titles"][-8:])
+    return next((n for n in GENERIC if n not in recent), random.choice(GENERIC))
+
+
+GENERIC = ["Gentle Rain Falling", "Soft Steady Rain", "Peaceful Rainfall", "Relaxing Rain Shower", "Quiet Rainy Day"]
 
 
 def main():
