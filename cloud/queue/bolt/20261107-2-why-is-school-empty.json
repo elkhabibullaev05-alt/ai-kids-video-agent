@@ -1,0 +1,1274 @@
+{
+ "id": "20261107-2-why-is-school-empty",
+ "plot": "The morning after Turbo's try-out, Bertha arrives at school at eight to find no kids at the stops or the school; Benny's bakery is still shut, the street lamps are still on, Grumpy and Pip insist it's seven, and the kids are found asleep in pyjamas; Bolt finally remembers the note the wind blew away: the clocks went back one hour last night, so it is the 'eight o'clock' cars who are an hour early, and Bolt says sorry for not sharing the clue; they spend the extra hour watching the sunrise with Benny's free rolls and pick the kids up right on time; lesson: when something looks strange, check the simple things first; cliffhanger: Hal will sell his grandma's apples at market day from his moving truck.",
+ "script": {
+  "title": "Why Is the School Empty?!",
+  "description": "Thirty kids are missing from school... or are they? Inspector Bolt #25",
+  "set": {
+   "place": "Wheelburg school gate, Benny's bakery, Grumpy's tow yard and Gear Street, Wednesday at dawn",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "benny": {
+    "name": "Benny",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.95,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 0.9,
+    "hat": false,
+    "home": [
+     12.0,
+     17.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bread",
+    "type": "cake",
+    "color": [
+     0.82,
+     0.55,
+     0.25
+    ],
+    "at": [
+     10.0,
+     14.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "bertha",
+    "say": "Eight o'clock! School time! Honk, honk! Good morning, kids!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Kids? Hello? Where IS everybody?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE SCHOOL IS EMPTY!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "No kids at the bus stops. No kids at school. Not one!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Wednesday morning, the day after Turbo's big try-out.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the sun was only just peeking over the hills.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning, Bertha. Eight o'clock sharp, as always.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Sharp, yes! But where are my thirty kids?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thirty kids, nowhere to be seen? Then this is a case.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE ARE THE KIDS?",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Just then, Hal rolled by, stretching and smiling.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Morning! What a lovely long sleep. Like I got an extra hour!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hal! Have you seen any kids this morning?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Kids? Not yet. Only one very sleepy bird.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Anyway, I'm off to paint something special. Bye!",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let us start where the kids start. The bakery.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Every school morning, the kids buy warm rolls at Benny's bakery.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:8,13"
+     ],
+     [
+      "bertha",
+      "to:2,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But this morning, the bakery door was shut tight.",
+    "cam": "overhead",
+    "do": [
+     [
+      "benny",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Shut? Benny never shuts on a school day!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "I'm here! Still baking! The shop opens at eight.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "bread",
+      "show"
+     ],
+     [
+      "benny",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "But Benny, it IS eight! Look at my clock!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Is it? My oven clock says five past seven.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, poor Benny. Your clock is broken, dear.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Broken? It's a brand new clock. Hmm. Strange.",
+    "cam": "prop:bread",
+    "do": [
+     [
+      "bread",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt didn't say a word. He looked up at the sky.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The sun is very low for eight o'clock.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Never mind the sun, Bolt! My kids are nowhere!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Morning, team! I'm at my crossing at eight, like always!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "But nobody wants to cross! Not even one kid!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO'S KIDS TOO?!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "If we don't find them, there's no school today!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No school? But today is painting day! They love painting day!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt noticed something odd. The street lamps were still on.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The lamps switch off at half past seven. Every day.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So why are they still shining at eight?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Maybe the lamps overslept too?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Lamps don't oversleep, Turbo. Let's ask someone who knows lamps.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they rolled to Grumpy's tow yard. Grumpy was fast asleep.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Zzz... Go away. It's seven. I have one more hour.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Seven? Grumpy, it's eight! Your clock is broken too!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My clock is fine. You're the one who's broken.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a tiny pink car rolled out of her garage, yawning.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Why is everyone up so early? It's only seven.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SEVEN... OR EIGHT?",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Benny says seven. Grumpy says seven. Pip says seven.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha says eight. Turbo says eight. My clock says eight.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So half of Wheelburg is broken? Which half?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Not our half! We're the ones who are always on time!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then let's look in a house! Are the kids even there?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They rolled quietly to the yellow house on Gear Street.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip peeked through the window. Two kids were fast asleep.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "They're in pyjamas! They're still sleeping!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "STILL IN BED?!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "On a school day? Who sleeps until eight on a school day?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The bell rings at half past eight! They'll all be late!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Should I honk? A tiny honk? A medium honk?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wait. No honking. Something doesn't fit.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt thought about the lamps. The bakery. The sleepy kids.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then about a little note, flying away in the wind.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The note on the town hall door. Last night. Oh dear.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It said, 'Tonight the clocks go back one hour.'",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE CLOCKS WENT BACK!",
+    "hold": 1.1,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Our clocks say eight. But the real time is seven.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "So the kids aren't late... we are one hour EARLY!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So the lamps, the bakery, Grumpy... they were all right?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Told you. My clock is fine.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I'm afraid this is my fault. I read the note and forgot.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I'm sorry, everyone. A good detective shares his clues.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, Bolt. Everybody forgets sometimes. Even detectives.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "So we have a whole extra hour? What do we do with it?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Something we never have time for! Come on, everyone!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So they parked in a row on the hill and watched the sunrise.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Warm rolls for the early birds! The first ones are free!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "bread",
+      "give:bertha"
+     ],
+     [
+      "benny",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Best mistake ever! Can the clocks go back every day?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At eight o'clock, the real eight o'clock, the kids came running.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Good morning, my darlings! All aboard! We're right on time!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When something looks strange, check the simple things first.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Like the clock!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Look, everyone! I used my extra hour to paint a sign!",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Tomorrow is market day. I'm selling my grandma's apples!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Apples? From a big moving truck?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmm. Who buys apples from a moving truck?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WILL ANYONE BUY?",
+    "hold": 1.1,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is the School Empty?! 🏫⏰ (Ep 25)",
+  "description": "\"Eight o'clock sharp, thirty kids... and not one of them is here!\" — Bertha\nBig Bertha arrives at school right on time, but there are no kids at the stops, the bakery is shut and the street lamps are still on. Something in Wheelburg is very strange this morning. Inspector Bolt #25\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "big bertha",
+   "school bus cartoon",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "clocks go back",
+   "telling the time",
+   "stories for kids",
+   "wheelburg",
+   "mystery for kids"
+  ],
+  "thumb_text": "KIDS GONE?!",
+  "thumb_beat": 7,
+  "localizations": {
+   "es": {
+    "title": "¡¿Por qué está vacía la escuela?! 🏫⏰ (Ep 25)",
+    "description": "\"Las ocho en punto, treinta niños... ¡y no hay ni uno!\" — Bertha\nLa gran Bertha llega a la escuela a tiempo, pero no hay niños en las paradas, la panadería está cerrada y las farolas siguen encendidas. Algo muy raro pasa en Wheelburg esta mañana. Inspector Bolt #25\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Por que a escola está vazia?! 🏫⏰ (Ep 25)",
+    "description": "\"Oito em ponto, trinta crianças... e nenhuma está aqui!\" — Bertha\nA grande Bertha chega à escola na hora certa, mas não há crianças nos pontos, a padaria está fechada e os postes ainda estão acesos. Algo muito estranho acontece em Wheelburg esta manhã. Inspetor Bolt #25\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "لماذا المدرسة فارغة؟! 🏫⏰ (حلقة 25)",
+    "description": "\"الثامنة تماماً، ثلاثون طفلاً... ولا أحد منهم هنا!\" — بيرثا\nتصل بيرثا الكبيرة إلى المدرسة في الوقت المحدد، لكن لا أطفال في المحطات، والمخبز مغلق، وأضواء الشارع ما زالت مضاءة. شيء غريب جداً يحدث في ويلبرغ هذا الصباح. المفتش بولت #25\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Pourquoi l'école est vide ?! 🏫⏰ (Ép 25)",
+    "description": "« Huit heures pile, trente enfants... et pas un seul ici ! » — Bertha\nLa grande Bertha arrive à l'école à l'heure, mais il n'y a aucun enfant aux arrêts, la boulangerie est fermée et les lampadaires sont encore allumés. Quelque chose de très bizarre se passe à Wheelburg ce matin. Inspecteur Bolt #25\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "どうして学校にだれもいないの?!🏫⏰(第25話)",
+    "description": "「8時ちょうど、子ども30人…なのに、ひとりもいない!」— バーサ\nバーサは時間どおりに学校に着いたのに、バス停にも子どもがいない。パン屋さんはしまっていて、街灯はまだついたまま。けさのウィールバーグは何かがとてもへん。インスペクター・ボルト #25\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "학교가 왜 텅 비었을까?! 🏫⏰ (25화)",
+    "description": "\"여덟 시 정각, 아이들 서른 명... 그런데 한 명도 없어!\" — 버사\n큰 버사가 제시간에 학교에 왔지만 정류장에도 아이들이 없고, 빵집은 닫혀 있고, 가로등은 아직 켜져 있어요. 오늘 아침 휠버그에서 뭔가 아주 이상한 일이 일어나고 있어요. 인스펙터 볼트 #25\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Warum ist die Schule leer?! 🏫⏰ (Folge 25)",
+    "description": "„Punkt acht Uhr, dreißig Kinder... und kein einziges ist da!\" — Bertha\nDie große Bertha kommt pünktlich zur Schule, aber an den Haltestellen sind keine Kinder, die Bäckerei ist zu und die Straßenlaternen brennen noch. Heute Morgen ist in Wheelburg etwas sehr seltsam. Inspektor Bolt #25\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "THE SCHOOL IS EMPTY!",
+   "title": "Bertha's Bus Stops Are Empty! 🏫 (Ep 25) #shorts",
+   "description": "Eight o'clock, thirty kids, zero kids. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Las paradas de Bertha están vacías! 🏫 (Ep 25) #shorts",
+     "description": "Las ocho, treinta niños, cero niños. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Os pontos da Bertha estão vazios! 🏫 (Ep 25) #shorts",
+     "description": "Oito horas, trinta crianças, zero crianças. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "محطات بيرثا فارغة! 🏫 (حلقة 25) #shorts",
+     "description": "الثامنة، ثلاثون طفلاً، صفر أطفال. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les arrêts de Bertha sont vides ! 🏫 (Ép 25) #shorts",
+     "description": "Huit heures, trente enfants, zéro enfant. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサのバス停にだれもいない!🏫(第25話)#shorts",
+     "description": "8時、子ども30人、なのに0人。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사의 정류장이 텅 비었어요! 🏫 (25화) #shorts",
+     "description": "여덟 시, 아이들 서른 명, 그런데 0명. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Berthas Haltestellen sind leer! 🏫 (Folge 25) #shorts",
+     "description": "Acht Uhr, dreißig Kinder, null Kinder. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 43,
+   "dur": 22,
+   "top": "SEVEN OR EIGHT?",
+   "title": "Is It Seven or Eight O'Clock?! ⏰ (Ep 25) #shorts",
+   "description": "Half of Wheelburg says seven. Who is right? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡¿Son las siete o las ocho?! ⏰ (Ep 25) #shorts",
+     "description": "Medio Wheelburg dice las siete. ¿Quién tiene razón? Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "São sete ou oito horas?! ⏰ (Ep 25) #shorts",
+     "description": "Metade de Wheelburg diz sete. Quem está certo? A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل الساعة السابعة أم الثامنة؟! ⏰ (حلقة 25) #shorts",
+     "description": "نصف ويلبرغ يقول السابعة. من على حق؟ التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il est sept heures ou huit heures ?! ⏰ (Ép 25) #shorts",
+     "description": "La moitié de Wheelburg dit sept heures. Qui a raison ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "いまは7時?それとも8時?!⏰(第25話)#shorts",
+     "description": "町の半分は7時だと言う。正しいのはだれ?つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "지금 일곱 시야, 여덟 시야?! ⏰ (25화) #shorts",
+     "description": "휠버그의 절반은 일곱 시래요. 누가 맞을까요? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ist es sieben oder acht Uhr?! ⏰ (Folge 25) #shorts",
+     "description": "Halb Wheelburg sagt sieben. Wer hat recht? Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

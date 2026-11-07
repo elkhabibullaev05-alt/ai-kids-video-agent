@@ -1,0 +1,1357 @@
+{
+ "id": "20261107-1-is-turbo-leaving",
+ "plot": "The day after the farm trip, Turbo's letter from the City Race Team invites him to a try-out at twelve, exactly when he promised to guard the school crossing; Grumpy's 'do both fast' plan nearly causes a near-miss, tiny Pip can't be seen holding the stop cone and finally admits she doesn't want him to go; Turbo keeps his promise and stays at the corner, and Coach Vera arrives there: the corner WAS the try-out, because the race needs a careful pace car on Saturdays only (clue planted: the letter said 'we saw you at the school corner'); lesson: keeping a promise is a win too; cliffhanger: Bolt forgets to tell anyone that the clocks go back tonight.",
+ "script": {
+  "title": "Is Turbo Leaving Wheelburg?!",
+  "description": "Turbo's dream try-out is at the same time as his promise. Inspector Bolt #24",
+  "set": {
+   "place": "Wheelburg Main Street and the school crossing, Tuesday morning until noon, then evening at the town hall",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "vera": {
+    "name": "Coach Vera",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.1,
+     0.68,
+     0.64
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     12.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "letter",
+    "type": "box",
+    "color": "white",
+    "on": "turbo",
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "cone",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -4.0,
+     6.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "note",
+    "type": "box",
+    "color": [
+     0.98,
+     0.95,
+     0.75
+    ],
+    "at": [
+     8.0,
+     15.5,
+     2.2
+    ],
+    "visible": false,
+    "scale": 0.25
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Woo-hoo! A letter from the City Race Team! For ME!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "letter",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "IS TURBO LEAVING?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "Leaving? Turbo, are you moving to the big city?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Try-out at twelve o'clock! If I win, I race there forever!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Tuesday morning in Wheelburg, the day after the farm trip.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Turbo had already read his fancy letter eleven times.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Can I read it too? Just once?",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "pip",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It says... 'We saw you at the school corner on Monday.'",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Of course they did! They saw my speed! Zoom, zoom!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But at the corner you go slowly. For the kids.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Details, Pip! Details! The city wants a champion!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Well done, Turbo. But twelve o'clock... isn't that your lunch shift?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My lunch shift? At the school crossing?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SAME TIME!",
+    "hold": 0.9,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "At twelve, the kids walk home for lunch. Turbo keeps them safe.",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "cone",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I promised Mrs. Maple I would never miss a shift.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "But this is the City Race Team! It's my dream!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A big dream and a big promise. That's a heavy load, sweetie.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Easy. Do the shift fast. Then drive to the city fast.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Yes! Fast shift! Fast trip! Grumpy, you're a genius!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I know. Nobody ever says it. But I know.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Turbo made a super-fast plan. And Pip didn't say a word.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "He's leaving. And he looks so happy about it.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip. You can tell him how you feel, you know.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:-11,9"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No. It's his dream. I don't want to spoil it.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At ten o'clock, Turbo practised his race start on Main Street.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:9,11"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Ready, steady... VROOOM! Did you see that, Wheelburg?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Turbo! Careful! I'm carrying the bakery's cakes!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Phew! Little kids can't jump away that fast, Turbo.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry, Hal. I'm just... so excited.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "ONE HOUR LEFT!",
+    "hold": 0.9,
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "One hour left! I leave at half past eleven!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And who will watch the crossing at twelve, dear?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Um. Someone? Grumpy? Bolt? Anyone with good brakes?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I tow cars at twelve. Cars don't tow themselves.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And I open the town hall at twelve. Procedure.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll do it! I'll hold the stop cone!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip rolled to the crossing. The cone was taller than her.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-4,7"
+     ],
+     [
+      "cone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Stop, cars! Stop, please! Um... can anybody see me?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A delivery van drove right past. It never saw tiny Pip.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Oh no. I'm too small to keep the kids safe.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip! Are you okay?",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:-7,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'm fine. I only wanted to help you go.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Because... I don't want you to go. But I want you happy.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "PIP IS SAD!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "You don't want me to go?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Who will race me to the bakery? Who will be silly with me?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo looked at his letter. Then at the empty crossing.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt... what do I do? Both things are important.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I can't choose for you, Turbo. But ask yourself one thing.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Which choice will you be proud of tomorrow?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Half past eleven. Time to leave for the city.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Turbo! Last chance! The city road is that way!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "STAY OR GO?",
+    "hold": 1.1,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "If I go, the kids cross the road alone.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A promise is a promise. I'm staying at my corner.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But... your dream, Turbo!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Dreams can wait. Kids crossing the road can't.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "cone",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At twelve o'clock, the school bell rang. Ding, ding!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo stood at the crossing with his big stop cone.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-4,9"
+     ],
+     [
+      "cone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Stop, please! Kids crossing! Thank you! Have a yummy lunch!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a shiny teal car rolled up and parked. She watched.",
+    "cam": "wide",
+    "do": [
+     [
+      "vera",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "Excuse me. Are you Turbo? The car from my letter?",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Yes. But I can't come to the try-out. I'm sorry.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "Oh, you didn't miss it. This IS the try-out.",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "THIS IS THE TRY-OUT?!",
+    "hold": 1.1,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:vera"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "vera",
+    "say": "I'm Coach Vera. Our race needs a pace car.",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "A car who leads the racers and stops them if someone's in danger.",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "On Monday I saw you stop for the kids. Every single time.",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "That's what the letter said! 'We saw you at the school corner!'",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "Today I wanted to see one thing. Would you keep your promise?",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "vera",
+    "say": "And you did. The job is yours. Saturdays only.",
+    "cam": "close:vera",
+    "do": [
+     [
+      "vera",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Saturdays only? So I don't have to leave Wheelburg?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "You're staying! Turbo's staying!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "TURBO STAYS!",
+    "hold": 0.9,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Hooray! Honk, honk! That's our Turbo!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Good. Who else would I complain about?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Keeping a promise is a win too, Turbo.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip! Race you to the bakery after lunch? Winner gets a cookie!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That evening, Bolt found a note on the town hall door.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:8,14"
+     ],
+     [
+      "note",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "'Tonight the clocks go back one hour.' I must tell everyone!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But a gust of wind took the note away. Whoosh!",
+    "cam": "overhead",
+    "do": [
+     [
+      "note",
+      "vanish"
+     ],
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Bolt was so happy for Turbo, he forgot to tell anyone.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "WHO WILL BE LATE?!",
+    "hold": 1.1,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Is Turbo Leaving Wheelburg?! 🏁😢 (Ep 24)",
+  "description": "\"It's my dream... but I made a promise.\" — Turbo\nA letter from the City Race Team invites Turbo to a try-out at twelve o'clock — the exact time he guards the school crossing. Pip says nothing, but her face says everything. Inspector Bolt #24\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "turbo",
+   "pip",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "keeping promises",
+   "friendship",
+   "stories for kids",
+   "wheelburg",
+   "race car cartoon"
+  ],
+  "thumb_text": "LEAVING US?!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¡¿Turbo se va de Wheelburg?! 🏁😢 (Ep 24)",
+    "description": "\"Es mi sueño... pero hice una promesa.\" — Turbo\nUna carta del Equipo de Carreras de la Ciudad invita a Turbo a una prueba a las doce, justo cuando él cuida el cruce de la escuela. Pip no dice nada, pero su cara lo dice todo. Inspector Bolt #24\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "O Turbo vai embora de Wheelburg?! 🏁😢 (Ep 24)",
+    "description": "\"É o meu sonho... mas eu fiz uma promessa.\" — Turbo\nUma carta da Equipe de Corrida da Cidade convida o Turbo para um teste ao meio-dia, bem na hora em que ele cuida da faixa da escola. A Pip não diz nada, mas o rosto dela diz tudo. Inspetor Bolt #24\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "هل سيغادر توربو ويلبرغ؟! 🏁😢 (حلقة 24)",
+    "description": "\"إنه حلمي... لكنني وعدت.\" — توربو\nرسالة من فريق سباق المدينة تدعو توربو إلى اختبار عند الساعة الثانية عشرة، في نفس الوقت الذي يحرس فيه معبر المدرسة. بيب لا تقول شيئاً، لكن وجهها يقول كل شيء. المفتش بولت #24\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Turbo quitte Wheelburg ?! 🏁😢 (Ép 24)",
+    "description": "« C'est mon rêve... mais j'ai fait une promesse. » — Turbo\nUne lettre de l'Équipe de Course de la Ville invite Turbo à un essai à midi, pile à l'heure où il garde le passage de l'école. Pip ne dit rien, mais son visage dit tout. Inspecteur Bolt #24\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "ターボがウィールバーグを出ていっちゃう?!🏁😢(第24話)",
+    "description": "「ゆめなんだ…でも、やくそくしたんだ。」— ターボ\n町のレースチームから、12時のテストへの招待状が届いた。でもそれは、ターボが学校の横断歩道を守る時間とまったく同じ。ピップは何も言わないけれど、顔にぜんぶ出ている。インスペクター・ボルト #24\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "터보가 휠버그를 떠난다고?! 🏁😢 (24화)",
+    "description": "\"내 꿈이야... 그런데 약속했어.\" — 터보\n도시 레이싱 팀에서 열두 시 테스트 초대장이 왔어요. 바로 터보가 학교 횡단보도를 지키는 시간이에요. 핍은 아무 말도 안 하지만, 얼굴이 모든 걸 말해요. 인스펙터 볼트 #24\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Verlässt Turbo Wheelburg?! 🏁😢 (Folge 24)",
+    "description": "„Es ist mein Traum... aber ich habe es versprochen.\" — Turbo\nEin Brief vom Stadt-Rennteam lädt Turbo um zwölf Uhr zum Probefahren ein – genau dann, wenn er den Schulübergang bewacht. Pip sagt nichts, aber ihr Gesicht sagt alles. Inspektor Bolt #24\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "IS TURBO LEAVING?!",
+   "title": "Turbo Got a Letter From the City! 🏁 (Ep 24) #shorts",
+   "description": "One letter, one dream, one big problem. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo recibió una carta de la ciudad! 🏁 (Ep 24) #shorts",
+     "description": "Una carta, un sueño y un gran problema. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Turbo recebeu uma carta da cidade! 🏁 (Ep 24) #shorts",
+     "description": "Uma carta, um sonho e um grande problema. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو وصلته رسالة من المدينة! 🏁 (حلقة 24) #shorts",
+     "description": "رسالة واحدة، حلم واحد، ومشكلة كبيرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo a reçu une lettre de la ville ! 🏁 (Ép 24) #shorts",
+     "description": "Une lettre, un rêve, un gros problème. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボに町から手紙がとどいた!🏁(第24話)#shorts",
+     "description": "手紙ひとつ、ゆめひとつ、そして大きななやみ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보에게 도시에서 편지가 왔어요! 🏁 (24화) #shorts",
+     "description": "편지 한 통, 꿈 하나, 그리고 큰 고민. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo hat einen Brief aus der Stadt! 🏁 (Folge 24) #shorts",
+     "description": "Ein Brief, ein Traum, ein großes Problem. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 36,
+   "dur": 24,
+   "top": "TOO SMALL TO HELP?",
+   "title": "Can Tiny Pip Stop the Traffic? 🚧 (Ep 24) #shorts",
+   "description": "Pip holds a cone taller than she is. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Puede la pequeña Pip parar el tráfico? 🚧 (Ep 24) #shorts",
+     "description": "Pip sostiene un cono más alto que ella. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A pequena Pip consegue parar o trânsito? 🚧 (Ep 24) #shorts",
+     "description": "A Pip segura um cone maior do que ela. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل تستطيع بيب الصغيرة إيقاف السيارات؟ 🚧 (حلقة 24) #shorts",
+     "description": "بيب تحمل مخروطاً أطول منها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La petite Pip peut-elle arrêter les voitures ? 🚧 (Ép 24) #shorts",
+     "description": "Pip tient un cône plus grand qu'elle. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "小さなピップは車を止められる?🚧(第24話)#shorts",
+     "description": "ピップが自分より大きなコーンを持っている。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "작은 핍이 차들을 멈출 수 있을까? 🚧 (24화) #shorts",
+     "description": "핍이 자기보다 큰 고깔을 들고 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Kann die kleine Pip den Verkehr stoppen? 🚧 (Folge 24) #shorts",
+     "description": "Pip hält einen Kegel, der größer ist als sie. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 48,
+   "dur": 20,
+   "top": "STAY OR GO?",
+   "title": "Dream or Promise? Turbo Must Choose! 🏁 (Ep 24) #shorts",
+   "description": "Half past eleven. The city road is waiting. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Sueño o promesa? ¡Turbo debe elegir! 🏁 (Ep 24) #shorts",
+     "description": "Las once y media. El camino a la ciudad espera. Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Sonho ou promessa? O Turbo precisa escolher! 🏁 (Ep 24) #shorts",
+     "description": "Onze e meia. A estrada da cidade está esperando. A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الحلم أم الوعد؟ على توربو أن يختار! 🏁 (حلقة 24) #shorts",
+     "description": "الحادية عشرة والنصف. طريق المدينة ينتظر. التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Rêve ou promesse ? Turbo doit choisir ! 🏁 (Ép 24) #shorts",
+     "description": "Onze heures et demie. La route de la ville attend. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ゆめか、やくそくか?ターボがえらぶ!🏁(第24話)#shorts",
+     "description": "11時半。町への道が待っている。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "꿈일까, 약속일까? 터보가 골라야 해요! 🏁 (24화) #shorts",
+     "description": "열한 시 반. 도시로 가는 길이 기다려요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Traum oder Versprechen? Turbo muss wählen! 🏁 (Folge 24) #shorts",
+     "description": "Halb zwölf. Die Straße in die Stadt wartet. Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
