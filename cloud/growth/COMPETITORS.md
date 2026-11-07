@@ -99,5 +99,20 @@ Rules:
   - Set `analysis/competitors_<date>` to `{"at", "channels": {<key>: {"winners": [{"title","views","age","channel","why"}], "works": [...], "diff": [...], "changed": [...]}}}`.
   - Get `analysis/latest` (pin if_version). Set its `competitors` field to `{date, channels: {<key>: {"works": [...], "changed": [...]}}}` and append the changes to `actions`. Keep all other fields.
 
+## Same run, after the competitor research: Studio analysis and safety check (owner, 2026-11-07: "hamma narsani sen qil")
+
+This task is the one that runs on the owner's laptop with his Chrome. So, after the competitor part, continue in the same run:
+- **Part B:** follow `cloud/growth/STUDIO_DAILY.md` completely: "why videos are not shown" analytics, Ask Studio, fixes for every channel, hub report.
+- **Part C:** follow `cloud/growth/SAFETY_DAILY.md` (quick risk check of every channel).
+
+Then send ONE combined final Uzbek message, 6–10 lines:
+- competitor lessons
+- why videos are not shown
+- what was changed
+- any risks
+- what the owner must do himself
+
+If time runs short, finish Part B for the priority-1 channels first, then the others, and leave Part C for the next day.
+
 ## Log of good search terms and competitor channels (update as you learn)
 - (empty: first run 2026-11-07)
