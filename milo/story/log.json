@@ -1,12 +1,10 @@
 {
-  "lock": {
-    "until": "2026-11-07T09:25Z",
-    "by": "session_01DAYK5TFdkPwcw9xzEcntm1"
-  },
+  "lock": null,
   "channel": {
     "id": "UCiaE4voy2yYUHOTDr2wfC5A",
     "handle": "@MiloSurvivesDaily",
-    "authuser": 5
+    "authuser": 5,
+    "authuser_chrome": 2
   },
   "episodes": [
     {
@@ -110,7 +108,63 @@
         }
       ],
       "note": "no custom thumbnail (channel not phone-verified)"
+    },
+    {
+      "n": 4,
+      "date": "2026-11-07",
+      "place": "abandoned underground metro",
+      "title": "Can You Survive 100 Days in an Abandoned Metro?",
+      "minutes": 9.1,
+      "sources": [
+        "https://www.ready.gov/earthquakes",
+        "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+        "https://www.cdc.gov/leptospirosis/prevention/index.html",
+        "https://www.londonmuseum.org.uk/blog/blitz-underground-how-war-artists-saw-tube-shelters/"
+      ],
+      "rek_ball": {
+        "long": 92,
+        "s1": 93,
+        "s2": 93
+      },
+      "uploads": [],
+      "note": "made 2026-11-07 in a cloud run without Claude in Chrome -> not uploaded; re-render from milo/scripts/ep004.json (milo_engine.py), then cut Shorts with the 'cut' params below + rek_ball --kuchaytir"
     }
   ],
-  "pending_uploads": []
+  "pending_uploads": [
+    {
+      "ep": 4,
+      "kind": "long",
+      "file": "milo_ep004.mp4",
+      "title": "Can You Survive 100 Days in an Abandoned Metro?",
+      "slot": "earliest free 20:15-23:45 UTC"
+    },
+    {
+      "ep": 4,
+      "kind": "short",
+      "file": "milo_ep004_s1.mp4",
+      "title": "Sealed 40 Metres Under the City #shorts",
+      "cut": {
+        "start": 0,
+        "dur": 36,
+        "top": "Trapped 40 metres underground",
+        "kuchaytir": true
+      },
+      "rek_ball": 93,
+      "slot": "next day 13:15-15:45 UTC"
+    },
+    {
+      "ep": 4,
+      "kind": "short",
+      "file": "milo_ep004_s2.mp4",
+      "title": "The Metro Rail That Can Kill You in a Second #shorts",
+      "cut": {
+        "start": 169.9,
+        "dur": 31,
+        "top": "Never touch THIS rail",
+        "kuchaytir": true
+      },
+      "rek_ball": 93,
+      "slot": "next day 17:15-19:45 UTC"
+    }
+  ]
 }

@@ -236,6 +236,121 @@ for _n, _f in {"tent": _tent, "penguin": _penguin, "iceberg": _iceberg, "snow": 
     ink.PROPS[_n] = _f
 
 
+# --- metro / underground props (ep004)
+def _train(p, t, color, text):  # metro car, side view
+    p.rect(-330, -260, 660, 220, color or "grey", 5)
+    for k in range(4):
+        p.rect(-290 + k * 150, -225, 110, 80, "sky", 4)
+    p.rect(-20, -230, 60, 180, "dark", 4)
+    p.line([(-330, -110), (330, -110)], 4, "red")
+    for x in (-230, -150, 150, 230):
+        p.circle(x, -35, 28, "dark", 4)
+    if text:
+        p.text(text, 0, -290, 46, "dark")
+
+
+def _tunnel(p, t, color, text):  # tunnel mouth
+    p.shape([(-300, 0), (-300, -300)] + [(300 * math.cos(math.pi - a * math.pi / 16), -300 - 220 * math.sin(math.pi - a * math.pi / 16)) for a in range(17)] + [(300, 0)],
+            color or "grey", 6)
+    p.shape([(-230, 0), (-230, -280)] + [(230 * math.cos(math.pi - a * math.pi / 16), -280 - 170 * math.sin(math.pi - a * math.pi / 16)) for a in range(17)] + [(230, 0)],
+            "black", 4)
+    for k in range(4):
+        p.line([(-150 + k * 100, -10), (-150 + k * 100 + 20, -10)], 4, "grey")
+    if text:
+        p.text(text, 0, -420, 46, "dark")
+
+
+def _rails(p, t, color, text):  # two running rails + live third rail
+    p.line([(-500, -10), (500, -10)], 8, "dark")
+    p.line([(-500, -60), (500, -60)], 8, "dark")
+    for k in range(11):
+        p.line([(-480 + k * 96, 5), (-450 + k * 96, -80)], 6, "brown")
+    glow = 0.5 + 0.5 * math.sin(t * 7)
+    p.line([(-500, -110), (500, -110)], 10, color or "red", alpha=0.6 + 0.4 * glow)
+    if text:
+        p.text(text, 0, -170, 46, "red")
+
+
+def _torch(p, t, color, text):  # flashlight with beam
+    f = 0.75 + 0.25 * math.sin(t * 11) * math.sin(t * 3.1)
+    p.shape([(40, -60), (420, -170), (420, 50), (40, -20)], "yellow", 0, stroke=False, alpha=0.35 * f)
+    p.rect(-120, -60, 140, 40, color or "dark", 4)
+    p.shape([(20, -70), (60, -82), (60, 2), (20, -10)], "grey", 4)
+    if text:
+        p.text(text, 0, -120, 40, "dark")
+
+
+def _rat(p, t, color, text):
+    h = math.sin(t * 10) * 4
+    p.ellipse(0, -30 + h, 60, 30, color or "grey")
+    p.circle(55, -40 + h, 20, color or "grey")
+    p.circle(48, -62 + h, 10, "pink", 3)
+    p.dot(65, -44 + h, 4, "black")
+    p.line([(-60, -25 + h), (-120, -40 + math.sin(t * 6) * 12), (-150, -20)], 4, "pink")
+
+
+def _whistle(p, t, color, text):
+    p.rect(-70, -70, 110, 50, color or "orange", 4)
+    p.circle(-45, -45, 32, color or "orange", 4)
+    p.circle(-45, -45, 10, "dark", 3)
+    p.line([(40, -70), (75, -100)], 4)
+    for k in range(3):
+        r = 30 + k * 28 + (t * 60) % 28
+        p.arc(60, -45, r, -0.6, 0.6, 4, "dark")
+
+
+def _pipe(p, t, color, text):
+    p.rect(-450, -140, 900, 60, color or "grey", 5)
+    for x in (-300, 0, 300):
+        p.rect(x - 25, -150, 50, 80, "dark", 3)
+    if text:
+        p.text(text, 0, -190, 46, "dark")
+
+
+def _rubble(p, t, color, text):
+    for k in range(12):
+        x = -330 + (k * 61) % 660
+        y = -(k % 4) * 55
+        r = 40 + (k * 17) % 45
+        p.shape([(x - r, y), (x - r * 0.6, y - r), (x + r * 0.5, y - r * 1.1), (x + r, y)], color or "brown", 4)
+    for k in range(18):
+        p.dot(-300 + (k * 37) % 600, -260 - ((k * 53 + t * 120) % 220), 4, "grey")
+
+
+def _vent(p, t, color, text):  # ventilation shaft grate with light from above
+    p.shape([(-90, -600), (90, -600), (160, 0), (-160, 0)], "yellow", 0, stroke=False, alpha=0.25)
+    p.rect(-110, -640, 220, 70, color or "grey", 5)
+    for k in range(5):
+        p.line([(-90 + k * 45, -640), (-90 + k * 45, -570)], 4, "dark")
+    if text:
+        p.text(text, 0, -680, 44, "dark")
+
+
+def _tins(p, t, color, text):
+    for k, (x, y) in enumerate([(-80, 0), (0, 0), (80, 0), (-40, -95), (40, -95), (0, -190)]):
+        p.rect(x - 35, y - 90, 70, 90, color or "grey", 4)
+        p.rect(x - 35, y - 65, 70, 35, "red" if k % 2 else "orange", 3)
+    if text:
+        p.text(text, 0, -320, 44, "dark")
+
+
+def _battery(p, t, color, text):
+    p.rect(-50, -200, 100, 200, color or "dark", 5)
+    p.rect(-20, -220, 40, 20, "grey", 4)
+    lvl = 0.25 + 0.15 * math.sin(t * 2)
+    p.rect(-35, -185 + 170 * (1 - lvl), 70, 170 * lvl, "green", 3)
+
+
+def _stairs(p, t, color, text):
+    for k in range(6):
+        p.rect(-300 + k * 100, -60 - k * 60, 100, 60 + k * 60, color or "grey", 4)
+
+
+for _n, _f in {"train": _train, "tunnel": _tunnel, "rails": _rails, "torch": _torch, "rat": _rat, "whistle": _whistle,
+               "pipe": _pipe, "rubble": _rubble, "vent": _vent, "tins": _tins, "battery": _battery, "stairs": _stairs}.items():
+    ink.PROPS[_n] = _f
+
+
 # ----------------------------------------------------------------------------- per-scene voice
 _orig_tts = render.tts
 _cur_voice = {"v": None}
