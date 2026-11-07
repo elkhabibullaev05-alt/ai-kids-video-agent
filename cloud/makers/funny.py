@@ -51,7 +51,8 @@ def description(sc, clips, theme_name):
 def tags(theme_name):
     base = theme_name.lower()
     return [base, base.replace(" fails", " fail"), "funny " + base, "ranking", "top 5", "funny fails", "fails",
-            "funny moments", "try not to laugh", "funny videos", "shorts", "funny rank daily"]
+            "funny moments", "try not to laugh", "funny videos", "shorts", "funny rank daily",
+            "fails compilation", "epic fails", "instant regret"]
 
 
 def selfcheck(mp4, title):

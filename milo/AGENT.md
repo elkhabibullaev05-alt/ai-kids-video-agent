@@ -52,3 +52,7 @@ Real people's likeness, gore, self-harm methods, dangerous "how to" that could h
 - Only 1 episode since 2026-10-22 (log.json). Next run: make episode 2 straight away (plan: every 2 days + 2 Shorts) — do not spend the run choosing a topic.
 - Backlog, in order (each a different danger, all "I Survived 100 Days …"): 2 a frozen research station in Antarctica · 3 an abandoned underground metro · 4 a sinking cruise ship · 5 a desert after the plane went down · 6 a flooded city. Skip one only if a newer Studio note says otherwise.
 - Every episode: cold open on the worst moment (rule above), "DAY 1" on screen within 5 s, red "DAY N" thumbnail.
+
+
+## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
+- Survival stories this week: "Trapped In <Place> After Closing 1 Year (Full Story)" (17.6k-sub channel, 1.4M views in 5 days, 49 min) and numbered parts "(<Place>, Part 5)" on a 62k channel. Use one fixed place per mini-series and put `(<Place>, Part N)` at the end of the title; the first line states the time ("Day 1 of 365…"). Max 14:50 (channel not phone-verified).

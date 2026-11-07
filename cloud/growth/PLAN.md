@@ -164,3 +164,9 @@ Now: 0 subs, 6 views total, no new episode since 20 Oct.
 - [ ] Grind_video (`grind`) worker: "no token for Grind_video" since 6 Nov — owner must connect that channel's token (cloud/auth.py) or remove it from channels.json.
 - [ ] Wild Sketchbook thumbnail: red/blue split with both animals (art.thumbnail) — still open.
 - [ ] Calm Rain: one black-screen long per week — still open (needs a dark-video variant in sleep.py).
+
+## 2026-11-07 competitor run (cloud/growth/competitors/2026-11-07.md) — bigger engine work
+- [ ] Hollowmere: weekly compilation long "3 True Stories Animated" ≤ 14:50 (stitch 3 finished longs + new intro/outro) — competitors' true-horror compilations get 75k–135k in 2–3 days.
+- [ ] Roblox: a weekly 10–14 min "I ranked every <genre> Roblox game" long (data + verdict), series "Part N" — the 3.5-min daily list does not match the 13–25 min winners.
+- [ ] Funny: numbered series in titles ("Fails Ranked #N") — needs a counter in fr_themes.make_title read from past titles.
+- [ ] Wild Sketchbook: grid-of-animals first frame (art.py) for the "N animals vs X" format.

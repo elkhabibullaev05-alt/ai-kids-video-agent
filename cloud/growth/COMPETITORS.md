@@ -115,4 +115,6 @@ Then send ONE combined final Uzbek message, 6–10 lines:
 If time runs short, finish Part B for the priority-1 channels first, then the others, and leave Part C for the next day.
 
 ## Log of good search terms and competitor channels (update as you learn)
-- (empty: first run 2026-11-07)
+- 2026-11-07: use sort "views + this week" `sp=CAMSBAgDEAE%253D`; read data with in-page `fetch('/results?...')` / `fetch('/watch?v=')` (no playback, ~1000-char tool output limit → print ≤ 10 rows). Shorts-only search is noisy — skip it. Owner's account is Uzbek/regional: ignore Hindi/VN results.
+- Good terms: roblox → "roblox news", "best roblox games"; funny → "fails compilation", "funniest fails of the week"; ufc → "what if animals", "strongest animal", "animal facts"; hollow → "true scary stories animated", "creepy true story"; sleep → "rain sounds for sleeping" (use month filter `CAMSBAgEEAE%253D`); money → "personal finance" (month); milo → "survival story animated"; doodle → "news explained animated".
+- Channels to re-check: Shivang Mini, KreekCraft (roblox); FailArmy, BRAIN TIME, AFV (funny); Professor Zezé, What Gives?, CreatureArchive (ufc); Mort, Broccoli Animation, Serious History (hollow); PLUVORA SOUNDS (sleep); Toodle Berry Kids (max); One Year Inside, Nobody Gets In (milo); Unfolded (doodle).

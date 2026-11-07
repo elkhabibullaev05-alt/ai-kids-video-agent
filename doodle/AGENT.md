@@ -96,3 +96,7 @@ Every uploaded video gets its title and description in **es, pt, ar, fr, ja, ko,
 ## Title form 2026-11-07 (daily Studio run)
 - The last 6 titles all end in a question ("…How?", "Who Pays…?", "Underdog or Not?") and 3 use "A vs. B:" — a new template. At most 1 of any 3 consecutive titles may end with "?", at most 1 of 3 may use "vs.". Mix in statement titles with the number first ("$339M Lost to a $60M Team. Here's How").
 - Topic check before writing: 2 of the last 6 were news (election names, data-center votes). The next 2 episodes are evergreen underdog/money stories, not news.
+
+
+## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
+- Breaking-news explainers win when posted within 24 h of the event: a 794-sub channel got 93k views in 19 h with "What Brought Down the <X>? The <N> Theories Explained". Title form for big events: `What <verb> <event>? <N> <Facts/Theories> Explained` — only theories that are publicly reported, clearly labelled as theories.

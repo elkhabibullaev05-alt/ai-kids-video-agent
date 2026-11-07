@@ -164,3 +164,6 @@ fewer uploads, report it in the final message and let the owner decide.
   (`compare`/`stack` visuals), title pattern "`<Job/Place>` at Every Level: $X vs $Y vs $Z" (e.g. "Nurses at Every Level: $3k vs $6k vs $9k").
   Different profession/city each time; never two "Every Level" jobs on the same day. All numbers realistic US 2026, general education only.
 - Last scene `cta`: "Follow for Every Level, twice a week".
+
+## Competitor lessons 2026-11-07 (daily competitor run)
+- The finance videos pushed hardest this month name an **age + a mistake** ("I'm 56. Here Are the Biggest Wealth Killers in Your 30s", 625k) or audit a real-looking budget. For our story Shorts: at least 1 in 3 titles = `<Name>, <age>: <the one money mistake>` (e.g. "Leo, 29: The Card That Doubled His Debt"). Characters stay fictional and the numbers must match the script.

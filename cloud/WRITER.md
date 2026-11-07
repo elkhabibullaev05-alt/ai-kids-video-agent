@@ -151,3 +151,10 @@ Newer than the 2026-10-26 "Pommi-style serial" rule for Hollowmere (owner 28 Oct
 Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those are the only ones Studio shows at 78–87 % viewed (doughbros/AGENT.md lines 78–128).
 - **Every job: at least one Short (put it first in `shorts`) titled `Would YOU <verb> <this object>? <emoji> #shorts`**, with `top` = the same question in ≤ 5 words ("WOULD YOU OPEN IT?") and its `beat` on the moment the object is shown. If a job has 2 Shorts, the second may be a different form, never "Trust X or Y?".
 - Never repeat a verb+object pair from the last 14 days of `cloud/done/doughbros/`.
+
+## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
+**hollow:** the animated true-horror leaders this week (250k–860k subs, 75k–135k views in 2–3 days) all put the words **"True" + "Story/Stories" + "Animated"** in the title. Our titles had none of these search words.
+- Every hollow long title: keep the year/place/strangest-fact hook, then end with the searchable tail ` | True Story Animated` (only when the story is based on a real report — the owner's 2026-10-26 real-life rule says it should be; if not, use ` | Creepy Story Animated`). Total still ≤ 60 chars (job-file rule): shorten the hook, drop the emoji if needed.
+- hollow tags must include: "true scary stories", "true horror stories animated", "scary stories animated", "creepy true story", "horror story", plus the place and year of this story.
+**maxcat / bolt:** kids leaders this week are 20–45 min compilations and big-stakes plain titles (a 5k-sub 3D kids channel got 520k views in 7 days with "A <Big Thing> Stole Our Entire <Place>! 😱", 9 min). For Max/Bolt write the stakes in plain words in the first 30 chars ("The Whole Park Lost Its Leaves!"), gentle (no "terrifying"), one emoji. Kids flags unchanged.
+**doughbros:** keep the "Would YOU…?" Shorts rule above; the long title should name the one object + the problem in ≤ 45 chars (stakes first).

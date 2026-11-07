@@ -198,10 +198,24 @@ def pick_themes(titles, home, n, rng=random, skip=()):
     return ok
 
 
+# 2026-11-07 competitors (fail channels at 250k-1M views/week): the title names the OUTCOME/feeling, not "Ranking …".
+# Only for "… Fails" themes (the video is a ranked top 5 of fails, so these deliver). Tried before TITLE_PATTERNS.
+FAIL_PATTERNS = [
+    "{n} That Went Horribly Wrong 💀",
+    "Instant Regret: Top 5 {n} 😂",
+    "{n} Ranked From Bad to WORST 💀",
+    "Top 5 {n}… #1 Hurts 💀",
+]
+
+
 def make_title(name, titles, rng=random):
     used = {_norm(t) for t in titles}
     pats = TITLE_PATTERNS[:]
     rng.shuffle(pats)
+    if name.lower().endswith(" fails"):
+        fp = FAIL_PATTERNS[:]
+        rng.shuffle(fp)
+        pats = fp[:2] + pats
     for p in pats:
         t = p.format(n=name)
         if len(t) <= 50 and _norm(t) not in used:

@@ -110,3 +110,9 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 
 ## Studio AI 2026-10-29 (Ask Studio, rebuilt from the daily analysis — the run's own patch could not be pushed) — applies from the next run
 - Shorts: frame 0 already shows the fact or the number (no build-up), and every title is checked against the channel's existing titles so none is repeated.
+
+## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md) — applies from the next script
+- **"N animals that could beat ONE famous animal"** list is this week's fastest drawn-animal format (68k-sub channel: 73k views in 2 days, 8 min). Write one per week as the long: famous animal in the title's first 25 chars + a number ("6 Animals That Could Beat a Gorilla — and Why"). Compare by real measurements (bite force, weight, speed) — no blood, no injury close-ups.
+- Frame 0 / first scene = a **grid of all the inked animals with a 1-word label under each** + 3–4 caps words ("GORILLA vs 6?"). It reads at phone size and matches our ink style.
+- Give the explainers a **numbered series name** in the title tail: "… | Animal Secrets #12" (a 110k channel's "Weird Animal Facts – Part 11" series keeps getting 30k+ in 3 days). Count from the existing titles in `cloud/ink/animals/`.
+- "What if <animal> evolved…?" speculative stories also get pushed (56k-sub channel, 55k in 6 days) — allowed once a week, clearly framed as "what if" (not as fact).

@@ -173,7 +173,9 @@ def long_titles(top, mode, titles, rng):
     # that name this day's story are tried first; the template list above is only the fallback.
     angles = []
     if mode != "gainers":
-        angles += [f"Can {b} Beat {a}? The Most Played Roblox Games Now",
+        # 2026-11-07 competitors (Roblox winners 0.5-2M/week): "I RANKED EVERY…" framing + ONE caps word + ".." ending
+        angles += [f"Ranking the 10 BIGGEST Roblox Games Right Now..", f"{a} Is DOMINATING Roblox Right Now..",
+                   f"Can {b} Beat {a}? The Most Played Roblox Games Now",
                    "Bored? The 10 Roblox Games Everyone Plays Now",
                    f"Why Is Everyone Playing {a} Right Now?"]
         if prev1_changed(top):
@@ -212,4 +214,5 @@ def long_description(title, top, chapters, mode, day):
 
 
 TAGS = ["roblox", "roblox games", "top 10 roblox games", "best roblox games", "roblox news", "roblox top 10",
-        "most played roblox games", "roblox games to play", "roblox 2026", "gaming"]
+        "most played roblox games", "roblox games to play", "roblox 2026", "gaming",
+        "roblox ranking", "popular roblox games", "trending roblox games"]

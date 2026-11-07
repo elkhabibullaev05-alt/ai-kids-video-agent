@@ -69,3 +69,7 @@ Free-plan songs, other artists' songs/voices/names, downloaded music, stream-rip
 ## Open item 2026-11-07 (daily Studio run)
 - Song 1 "Neon Rain" (long 2io3wcEvC2M) still has no Short (`short_id` null in log.json). Next run: cut its 20–30 s Short first (chorus at 0 s, lyric line on screen, "Full song:" link in the description), then the new song.
 - Song count is 2; first 30-min mix comes after song 10 (PLAN.md) — keep 1 song a day so it lands before the YPP window.
+
+
+## Competitor lessons 2026-11-07 (daily competitor run — cloud/growth/competitors/2026-11-07.md)
+- K-pop remix winners this week label the **genre in the title** ("🔥 Dark Cabaret Remix", "Dark K-Pop Remix"). Our titles must name our own song + its genre tag (e.g. "<Our Song> 🔥 Dark K-Pop Remix"); never another artist's or song's name.
