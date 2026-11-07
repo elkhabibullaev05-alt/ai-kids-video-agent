@@ -222,6 +222,62 @@ def longs_ahead(st):
     return sum(1 for x in st["taken"] if x["kind"] == "long" and x["t"] > NOW.isoformat())
 
 
+def browser_handoff(st):
+    """API daily quota is full → move the still-pending videos to the browser-upload queue (owner, 2026-11-07:
+    "brauzer bilan yuklagin"). Each video + thumb is pushed to its own throwaway orphan branch up-<CH>-<slug>
+    (temporary host, GitHub), and a small manifest is written to cloud/browser_queue/<CH>/<slug>.json with
+    everything a Claude-in-Chrome run needs (title, description, tags, publish slot, kids, category). The slot is
+    reserved in st["taken"] so the API worker won't reuse it or over-produce; the browser task publishes it and
+    deletes its branch + manifest. This keeps API as the fast primary and the browser as the no-limit overflow."""
+    import tempfile
+    REPO = "https://github.com/elkhabibullaev05-alt/ai-kids-video-agent"
+    RAW = "https://raw.githubusercontent.com/elkhabibullaev05-alt/ai-kids-video-agent"
+    bq = os.path.join(ROOT, "cloud", "browser_queue", CH)
+    os.makedirs(bq, exist_ok=True)
+    moved = 0
+    while st["pending"]:
+        it = st["pending"][0]
+        if not it.get("file") or not os.path.exists(it["file"]):
+            st["pending"].pop(0); save_state(st); continue
+        res_f = os.path.join(RES, it["job"] + ".json")
+        res = json.load(open(res_f)) if os.path.exists(res_f) else {}
+        long_id = (res.get("long") or {}).get("video", "")
+        desc = it["description"].replace("{LONG_URL}", f"https://youtu.be/{long_id}" if long_id else f"https://www.youtube.com/channel/{CFG['id']}")
+        after = None
+        if it["kind"] == "short" and (res.get("long") or {}).get("publish_at"):
+            after = dt.datetime.fromisoformat(res["long"]["publish_at"].replace("Z", "+00:00")) + dt.timedelta(minutes=20)
+        when = free_slot(st, it["kind"], after)
+        slug = re.sub(r"[^a-z0-9]+", "-", (CH + "-" + it["job"] + "-" + it["kind"]).lower()).strip("-")[:70]
+        branch = "up-" + slug
+        tmp = tempfile.mkdtemp()
+        try:
+            mp4n = slug + ".mp4"; shutil.copy(it["file"], os.path.join(tmp, mp4n)); thumbn = None
+            if it.get("thumb") and os.path.exists(it["thumb"]):
+                thumbn = slug + os.path.splitext(it["thumb"])[1]; shutil.copy(it["thumb"], os.path.join(tmp, thumbn))
+            sh(["git", "init", "-q"], cwd=tmp)
+            sh(["git", "checkout", "-q", "--orphan", branch], cwd=tmp)
+            sh(["git", "add", "."], cwd=tmp)
+            sh(["git", "-c", "user.name=Claude", "-c", "user.email=noreply@anthropic.com", "commit", "-qm", "upload " + slug], cwd=tmp)
+            sh(["git", "push", "-q", "-f", REPO, branch], cwd=tmp, timeout=3600)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+        man = {"ch": CH, "channel_id": CFG["id"], "job": it["job"], "kind": it["kind"], "title": it["title"],
+               "description": desc, "tags": it.get("tags", []), "kids": CFG["kids"], "category": CFG.get("category", "1"),
+               "synthetic": it.get("synthetic", False), "localizations": it.get("localizations"), "publish_at": when,
+               "branch": branch, "mp4_url": f"{RAW}/{branch}/{mp4n}", "thumb_url": (f"{RAW}/{branch}/{thumbn}" if thumbn else None),
+               "queued_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+        json.dump(man, open(os.path.join(bq, slug + ".json"), "w"), ensure_ascii=False, indent=1)
+        st["taken"].append({"t": when, "kind": it["kind"]})
+        st["pending"].pop(0); save_state(st)
+        if not any(p["job"] == it["job"] for p in st["pending"]):
+            shutil.rmtree(os.path.join(WORK, it["job"]), ignore_errors=True)
+        log("handed to browser upload:", it["kind"], it["job"], "->", branch, when); moved += 1
+    if moved:
+        status("browser_wait", made=moved)
+        push(f"{moved} video(s) to browser upload (API quota full)", [RES, bq])
+    return moved
+
+
 def do_uploads(st):
     import youtube_up
     while st["pending"]:
@@ -249,8 +305,12 @@ def do_uploads(st):
                                     CFG.get("category", "1"), it.get("localizations"), it.get("thumb"),
                                     synthetic=it.get("synthetic", False))
         except youtube_up.Quota as e:
-            log("quota used up, later:", e)
-            return False
+            log("quota used up, handing remaining to browser upload:", e)
+            try:
+                browser_handoff(st)
+            except Exception as e2:
+                log("browser handoff failed, will retry next run:", str(e2)[:200])
+            return len(st["pending"]) == 0
         except Exception as e:  # network timeout etc.: let the other pending videos go first, retry this one next run
             if not it["job"].startswith("ready-") or len(st["pending"]) < 2 or it.get("_rotated"):
                 raise

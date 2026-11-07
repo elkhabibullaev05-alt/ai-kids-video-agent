@@ -15,7 +15,8 @@ UZ = {"sync": "YouTube bilan solishtiryapti", "voices": "ovoz yozyapti", "render
       "assemble": "montaj qilyapti", "check": "sifatni tekshiryapti", "upload": "YouTube'ga yuklayapti",
       "ok": "tayyor, keyingisini kutyapti", "idle": "oldinga yetarli video bor — dam olyapti",
       "queue_empty": "yangi hikoya kutyapti", "quota_wait": "YouTube kunlik limiti tugadi — limit yangilanganda o'zi yuklaydi",
-      "net_wait": "internet uzildi — o'zi qayta urinadi", "rejected": "video sifatdan o'tmadi, qayta qilinadi"}
+      "net_wait": "internet uzildi — o'zi qayta urinadi", "rejected": "video sifatdan o'tmadi, qayta qilinadi",
+      "browser_wait": "API kunlik limiti to'ldi — qolgan videolar brauzer orqali yuklanadi"}
 
 def git(*a):
     return subprocess.run(["git", "-C", repo, *a], capture_output=True, text=True).stdout
@@ -63,7 +64,7 @@ for ch, key in MAP.items():
             status, text = "bad", "Xato: " + e[:160]
     elif age_h > 3:
         status, text = "bad", f"Ishchi {int(age_h)} soatdan beri jim — noutbuk o'chiq yoki uxlayaptimi?"
-    elif stage in ("quota_wait", "queue_empty", "net_wait", "rejected"):
+    elif stage in ("quota_wait", "queue_empty", "net_wait", "rejected", "browser_wait"):
         status, text = "warn", UZ.get(stage, stage)
     else:
         status, text = "ok", UZ.get(stage, stage)
