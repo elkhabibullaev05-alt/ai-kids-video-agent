@@ -6,6 +6,12 @@
 # both slots and hollow/bolt never ran). A channel without its own token still runs: worker.py picks the
 # token whose channel id matches from any ~/kanal/*/token.json and reports "no token" in its status if none.
 cd /opt/kanal/repo || exit 1
+# 2026-11-08 owner: no internet -> start nothing and wait; this task runs again every 20 min, so work resumes
+# by itself as soon as the internet is back (uploads already in progress pause and continue, see youtube_up.py).
+if ! timeout 15 bash -c 'exec 3<>/dev/tcp/www.googleapis.com/443' 2>/dev/null && \
+   ! timeout 15 bash -c 'exec 3<>/dev/tcp/github.com/443' 2>/dev/null; then
+  mkdir -p /root/kanal; echo "$(date -u) internet yo'q - kutilmoqda" >> /root/kanal/offline.log; exit 0
+fi
 # 2026-11-06: owner can pause all channel work (e.g. so a big game download gets the whole internet):
 # cloud/pause_until holds an ISO UTC time; until then nothing starts. Pulled here so a pause pushed from outside arrives.
 GIT_TERMINAL_PROMPT=0 timeout 120 git pull -q --rebase --autostash 2>/dev/null

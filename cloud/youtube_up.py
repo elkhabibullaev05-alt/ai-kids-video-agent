@@ -1,6 +1,6 @@
 """YouTube Data API upload (no browser, no Claude).
 token.json = authorized-user JSON made once on the owner's PC with cloud/auth.py."""
-import ssl, http.client
+import ssl, http.client, socket
 import time
 
 from google.oauth2.credentials import Credentials
@@ -10,6 +10,33 @@ from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
+
+
+def online(timeout=8):
+    """True when the internet (YouTube's API host) answers. Used to pause instead of failing when the link drops."""
+    for host in ("www.googleapis.com", "youtube.googleapis.com"):
+        try:
+            socket.create_connection((host, 443), timeout=timeout).close()
+            return True
+        except OSError:
+            pass
+    return False
+
+
+def wait_online(max_wait=4 * 3600, step=30):
+    """2026-11-08 owner: when the internet drops, stop and wait; when it is back, continue where it stopped.
+    Returns True when back online, False if still offline after max_wait seconds."""
+    if online():
+        return True
+    print("internet yo'q — kutyapman, qaytishi bilan davom etadi", flush=True)
+    waited = 0
+    while waited < max_wait:
+        time.sleep(step)
+        waited += step
+        if online():
+            print(f"internet qaytdi ({waited // 60} daqiqadan keyin) — davom etyapman", flush=True)
+            return True
+    return False
 
 
 class Quota(Exception):
@@ -77,6 +104,12 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
                 except (ssl.SSLError, OSError, http.client.HTTPException) as ne:
                     # 2026-11-06: weak home link (big game download) -> "EOF occurred in violation of protocol".
                     # The upload is resumable: wait and continue from the last chunk instead of failing the job.
+                    # 2026-11-08: internet fully gone -> pause (does not count as a failure) until it is back,
+                    # then the same resumable session continues from the last uploaded chunk.
+                    if not online():
+                        if not wait_online():
+                            raise ConnectionError(f"internet down > 4 h: {ne}")
+                        continue
                     fails += 1
                     if fails > 30:
                         raise ConnectionError(f"upload stalled: {ne}")
