@@ -1,0 +1,1134 @@
+{
+ "id": "20261108-1-shackleton-fourth-man",
+ "plot": "Odo and Mothwick follow the true story of Shackleton's crossing of South Georgia (May 1916): after the Endurance is lost, Shackleton, Worsley and Crean cross unmapped mountains for 36 hours to save 22 men on Elephant Island, and Shackleton feels they were 'four, not three'; the twist is that all three secretly felt the extra companion and only admitted it weeks later — today called the Third Man factor — and the story ends with every man rescued.",
+ "script": {
+  "title": "Who Walked With Shackleton?",
+  "lead_in": 0,
+  "set": {
+   "place": "tundra",
+   "fog": 0.04,
+   "eyes": 0,
+   "moonlight": 12
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "shack": {
+    "name": "Ernest Shackleton",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.28,
+     0.22,
+     0.16
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "wors": {
+    "name": "Frank Worsley",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.24,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "crean": {
+    "name": "Tom Crean",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.36,
+     0.26,
+     0.16
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     36
+    ]
+   },
+   "sorlle": {
+    "name": "Thoralf Sørlle",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.16,
+     0.18,
+     0.24
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     40,
+     40
+    ]
+   },
+   "smythe": {
+    "name": "Frank Smythe",
+    "voice": "bm_fable",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.42,
+     0.18,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -46,
+     46
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "boat",
+    "type": "box",
+    "color": [
+     0.32,
+     0.22,
+     0.13
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 1.3,
+    "at": [
+     -7,
+     13,
+     0
+    ]
+   },
+   {
+    "id": "rope",
+    "type": "wheel",
+    "color": [
+     0.6,
+     0.5,
+     0.32
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     1.2,
+     9.8,
+     0.6
+    ]
+   },
+   {
+    "id": "station",
+    "type": "box",
+    "color": [
+     0.36,
+     0.3,
+     0.26
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.5,
+    "at": [
+     8,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "whistle",
+    "type": "tube",
+    "color": [
+     0.7,
+     0.68,
+     0.62
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     8,
+     17,
+     2.6
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.3,
+     0.12,
+     0.1
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.4,
+     9.6,
+     1.4
+    ]
+   },
+   {
+    "id": "cake",
+    "type": "box",
+    "color": [
+     0.92,
+     0.92,
+     0.86
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     1.6,
+     9.6,
+     1.3
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1916, South Georgia. Three men crossed the ice, but felt four.",
+    "cam": "wide",
+    "do": [
+     [
+      "shack",
+      "to:-3,12,0"
+     ],
+     [
+      "wors",
+      "to:-1.5,12.6,0"
+     ],
+     [
+      "crean",
+      "to:0,12,0"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "THREE MEN. FOUR WALKED."
+   },
+   {
+    "who": "odo",
+    "say": "Four? There were only three of them. So who was the fourth?",
+    "cam": "overhead",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "WHO WAS THE FOURTH?"
+   },
+   {
+    "who": "narr",
+    "say": "A true story, written by Ernest Shackleton in his own book.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "turn:front"
+     ],
+     [
+      "book",
+      "show"
+     ]
+    ],
+    "text": "A TRUE STORY"
+   },
+   {
+    "who": "moth",
+    "say": "Three frozen men, Odo. Remember that number. Three.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "REMEMBER: THREE"
+   },
+   {
+    "who": "narr",
+    "say": "Their ship, Endurance, was crushed by Antarctic sea ice in 1915.",
+    "cam": "prop:boat",
+    "do": [
+     [
+      "boat",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "ENDURANCE: CRUSHED"
+   },
+   {
+    "who": "narr",
+    "say": "Twenty-eight men were left with nothing but the frozen sea.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "28 MEN ON THE ICE"
+   },
+   {
+    "who": "narr",
+    "say": "They drifted for months, then rowed to Elephant Island.",
+    "cam": "wide",
+    "do": [
+     [
+      "boat",
+      "spin"
+     ],
+     [
+      "shack",
+      "to:-5,13,0"
+     ]
+    ],
+    "text": "ELEPHANT ISLAND"
+   },
+   {
+    "who": "shack",
+    "say": "Nobody will ever look for us here. So we go to them.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "turn:front"
+     ],
+     [
+      "shack",
+      "shake"
+     ]
+    ],
+    "text": "WE GO TO THEM"
+   },
+   {
+    "who": "narr",
+    "say": "Six men sailed a tiny open boat eight hundred miles.",
+    "cam": "prop:boat",
+    "do": [
+     [
+      "boat",
+      "bounce"
+     ],
+     [
+      "wors",
+      "to:-6,11,0"
+     ]
+    ],
+    "text": "800 MILES. OPEN BOAT."
+   },
+   {
+    "who": "narr",
+    "say": "After about two weeks, they reached South Georgia. On the wrong side.",
+    "cam": "wide",
+    "do": [
+     [
+      "crean",
+      "to:-4,11,0"
+     ],
+     [
+      "crean",
+      "jump"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "THE WRONG SIDE"
+   },
+   {
+    "who": "narr",
+    "say": "The whaling station was beyond mountains and glaciers no one had crossed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "station",
+      "show"
+     ],
+     [
+      "station",
+      "bounce"
+     ]
+    ],
+    "text": "NO ONE HAD CROSSED"
+   },
+   {
+    "who": "narr",
+    "say": "May nineteenth, three in the morning. Shackleton, Worsley and Crean set off.",
+    "cam": "wide",
+    "do": [
+     [
+      "shack",
+      "to:-2,14,0"
+     ],
+     [
+      "wors",
+      "to:-0.5,14.6,0"
+     ],
+     [
+      "crean",
+      "to:1,14,0"
+     ]
+    ],
+    "text": "3 A.M., MAY 19"
+   },
+   {
+    "who": "crean",
+    "say": "Screws from the boat, Boss. In our boots, for grip.",
+    "cam": "close:crean",
+    "do": [
+     [
+      "crean",
+      "turn:front"
+     ],
+     [
+      "crean",
+      "jump"
+     ]
+    ],
+    "text": "SCREWS IN THEIR BOOTS"
+   },
+   {
+    "who": "narr",
+    "say": "No tent. No sleeping bags. Just rope, a stove, and an adze.",
+    "cam": "prop:rope",
+    "do": [
+     [
+      "rope",
+      "show"
+     ],
+     [
+      "rope",
+      "bounce"
+     ]
+    ],
+    "text": "NO TENT. NO BEDS."
+   },
+   {
+    "who": "moth",
+    "say": "If they fail, Odo, twenty-two men on that island are lost.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "22 LIVES WAITING"
+   },
+   {
+    "who": "narr",
+    "say": "High on a ridge, night fell fast. Fog climbed up behind them.",
+    "cam": "wide",
+    "do": [
+     [
+      "shack",
+      "turn:front"
+     ],
+     [
+      "wors",
+      "shake"
+     ]
+    ],
+    "text": "FOG BEHIND THEM"
+   },
+   {
+    "who": "shack",
+    "say": "We can't stay up here. We'll freeze. We slide.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "shake"
+     ]
+    ],
+    "text": "WE SLIDE"
+   },
+   {
+    "who": "narr",
+    "say": "They coiled the rope, sat on it, and slid into the dark.",
+    "cam": "overhead",
+    "do": [
+     [
+      "shack",
+      "to:2,10,0"
+     ],
+     [
+      "wors",
+      "to:3,10.6,0"
+     ],
+     [
+      "crean",
+      "to:4,10,0"
+     ],
+     [
+      "rope",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "INTO THE DARK"
+   },
+   {
+    "who": "narr",
+    "say": "At one stop, Shackleton let the other two sleep for five minutes.",
+    "cam": "two:wors,crean",
+    "do": [
+     [
+      "wors",
+      "sleep"
+     ],
+     [
+      "crean",
+      "sleep"
+     ]
+    ],
+    "text": "FIVE MINUTES"
+   },
+   {
+    "who": "shack",
+    "say": "Up, both of you. You've slept half an hour. Let's go.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "turn:front"
+     ],
+     [
+      "shack",
+      "jump"
+     ]
+    ],
+    "text": "HALF AN HOUR?"
+   },
+   {
+    "who": "narr",
+    "say": "That night, Shackleton felt something he could not explain.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "shack",
+      "to:-1,13,0"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "SOMETHING STRANGE"
+   },
+   {
+    "who": "narr",
+    "say": "Later, he wrote it down in his book, South.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "HIS BOOK: SOUTH"
+   },
+   {
+    "who": "shack",
+    "say": "It seemed to me often that we were four, not three.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "turn:front"
+     ],
+     [
+      "shack",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "FOUR, NOT THREE"
+   },
+   {
+    "who": "moth",
+    "say": "Four. But we counted three, Odo. Only three.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "WE COUNTED THREE"
+   },
+   {
+    "who": "narr",
+    "say": "New true story every day. Subscribe so you never miss one.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW TRUE STORY DAILY"
+   },
+   {
+    "who": "narr",
+    "say": "Dawn. At about half past six, a faint sound rose from below.",
+    "cam": "prop:station",
+    "do": [
+     [
+      "whistle",
+      "show"
+     ],
+     [
+      "whistle",
+      "bounce"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "6:30 A.M."
+   },
+   {
+    "who": "shack",
+    "say": "A steam whistle. The whalers, called to work. People!",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "jump"
+     ]
+    ],
+    "text": "PEOPLE!"
+   },
+   {
+    "who": "narr",
+    "say": "The first sound from the outside world in seventeen months.",
+    "cam": "wide",
+    "do": [
+     [
+      "crean",
+      "happy"
+     ],
+     [
+      "wors",
+      "happy"
+     ]
+    ],
+    "text": "17 MONTHS"
+   },
+   {
+    "who": "narr",
+    "say": "May twentieth, afternoon. Three ragged men walked into Stromness.",
+    "cam": "prop:station",
+    "do": [
+     [
+      "station",
+      "bounce"
+     ],
+     [
+      "sorlle",
+      "to:9,11,0"
+     ]
+    ],
+    "text": "STROMNESS, MAY 20"
+   },
+   {
+    "who": "sorlle",
+    "say": "Who are you three? I don't know you.",
+    "cam": "close:sorlle",
+    "do": [
+     [
+      "sorlle",
+      "turn:front"
+     ],
+     [
+      "sorlle",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHO ARE YOU?"
+   },
+   {
+    "who": "shack",
+    "say": "My name is Shackleton.",
+    "cam": "close:shack",
+    "do": [
+     [
+      "shack",
+      "turn:sorlle"
+     ]
+    ],
+    "text": "SHACKLETON"
+   },
+   {
+    "who": "moth",
+    "say": "They made it, Odo. But who walked beside them out there?",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "turn:odo"
+     ],
+     [
+      "sorlle",
+      "to_home"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "WHO WALKED WITH THEM?"
+   },
+   {
+    "who": "narr",
+    "say": "Here is the strangest part. On the march, Shackleton said nothing.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "HE SAID NOTHING"
+   },
+   {
+    "who": "narr",
+    "say": "Weeks later, Worsley was the first to speak.",
+    "cam": "close:wors",
+    "do": [
+     [
+      "wors",
+      "turn:shack"
+     ]
+    ],
+    "text": "WEEKS LATER"
+   },
+   {
+    "who": "wors",
+    "say": "Boss, on that march I kept feeling another person with us.",
+    "cam": "close:wors",
+    "do": [
+     [
+      "wors",
+      "turn:front"
+     ],
+     [
+      "wors",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "ANOTHER PERSON"
+   },
+   {
+    "who": "crean",
+    "say": "So did I. The whole way across.",
+    "cam": "close:crean",
+    "do": [
+     [
+      "crean",
+      "turn:front"
+     ],
+     [
+      "crean",
+      "eyes_big"
+     ]
+    ],
+    "text": "SO DID I"
+   },
+   {
+    "who": "odo",
+    "say": "All three felt it... and each kept it a secret?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "ALL THREE FELT IT"
+   },
+   {
+    "who": "narr",
+    "say": "In 1933, the climber Frank Smythe was alone high on Everest.",
+    "cam": "wide",
+    "do": [
+     [
+      "shack",
+      "to_home"
+     ],
+     [
+      "wors",
+      "to_home"
+     ],
+     [
+      "crean",
+      "to_home"
+     ],
+     [
+      "smythe",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "EVEREST, 1933"
+   },
+   {
+    "who": "smythe",
+    "say": "Here. Take half of my mint cake.",
+    "cam": "close:smythe",
+    "do": [
+     [
+      "smythe",
+      "turn:front"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ],
+    "text": "TAKE HALF"
+   },
+   {
+    "who": "narr",
+    "say": "He turned to hand it over. Nobody was there.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ],
+     [
+      "smythe",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOBODY THERE"
+   },
+   {
+    "who": "narr",
+    "say": "Today it has a name: the Third Man factor.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "THE THIRD MAN FACTOR"
+   },
+   {
+    "who": "narr",
+    "say": "Doctors think a mind at its limit can give itself a companion.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "A MIND AT ITS LIMIT"
+   },
+   {
+    "who": "moth",
+    "say": "A poet read Shackleton's book and wrote it into The Waste Land.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "turn:odo"
+     ]
+    ],
+    "text": "T. S. ELIOT, 1922"
+   },
+   {
+    "who": "moth",
+    "say": "Who is the third who walks always beside you?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ],
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHO IS THE THIRD?"
+   },
+   {
+    "who": "narr",
+    "say": "And the twenty-two men on Elephant Island? Every one came home.",
+    "cam": "wide",
+    "do": [
+     [
+      "boat",
+      "bounce"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "EVERY ONE CAME HOME"
+   },
+   {
+    "who": "odo",
+    "say": "Maybe it doesn't matter who it was. It got them home.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "IT GOT THEM HOME"
+   },
+   {
+    "who": "narr",
+    "say": "Liked this? The Baychimo ghost ship story is next on the channel.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEXT: THE BAYCHIMO"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Snow 1916: Who Walked With Shackleton? | True Story Animated",
+  "description": "Previous true story: https://youtu.be/ZjsuX8aDNa0\nHave you heard a story like this one? Tell me in the comments.\n\n\"Three men crossed the mountains. All three felt a fourth.\" — Odo\n\nA true story from South Georgia, May 1916: after the Endurance was crushed by the ice, Ernest Shackleton, Frank Worsley and Tom Crean crossed unmapped mountains for 36 hours to save their 22 stranded men. Shackleton later wrote that it often seemed they were four, not three.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#truestory #scarystories #3DAnimation #Odo #shackleton",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "South Georgia",
+   "1916",
+   "Ernest Shackleton",
+   "Endurance expedition",
+   "Third Man factor",
+   "Antarctica",
+   "winter true story",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "WHO WAS FOURTH?",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "Nieve 1916: ¿Quién caminó con Shackleton? | Historia real animada",
+    "description": "Historia real anterior: https://youtu.be/ZjsuX8aDNa0\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\n\"Tres hombres cruzaron las montañas. Los tres sintieron a un cuarto.\" — Odo\n\nUna historia real de Georgia del Sur, mayo de 1916: tras perder el Endurance en el hielo, Ernest Shackleton, Frank Worsley y Tom Crean cruzaron montañas sin mapa durante 36 horas para salvar a 22 compañeros. Shackleton escribió que a menudo parecían ser cuatro, no tres.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#historiareal #historiasdeterror #3DAnimation #Odo #shackleton"
+   },
+   "pt": {
+    "title": "Neve 1916: Quem caminhou com Shackleton? | História real animada",
+    "description": "História real anterior: https://youtu.be/ZjsuX8aDNa0\nVocê já ouviu uma história assim? Conte nos comentários.\n\n\"Três homens cruzaram as montanhas. Os três sentiram um quarto.\" — Odo\n\nUma história real da Geórgia do Sul, maio de 1916: depois que o Endurance foi esmagado pelo gelo, Ernest Shackleton, Frank Worsley e Tom Crean cruzaram montanhas sem mapa por 36 horas para salvar 22 companheiros. Shackleton escreveu que muitas vezes pareciam ser quatro, não três.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#historiareal #historiasdeterror #3DAnimation #Odo #shackleton"
+   },
+   "ar": {
+    "title": "ثلوج 1916: من سار مع شاكلتون؟ | قصة حقيقية متحركة",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/ZjsuX8aDNa0\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\n\"عبر ثلاثة رجال الجبال، وشعر الثلاثة برابع.\" — أودو\n\nقصة حقيقية من جورجيا الجنوبية، مايو 1916: بعد أن حطم الجليد السفينة إندورانس، عبر إرنست شاكلتون وفرانك وورسلي وتوم كرين جبالًا غير مرسومة على الخرائط مدة 36 ساعة لإنقاذ 22 رجلًا عالقين. وكتب شاكلتون لاحقًا أنه بدا له كثيرًا أنهم كانوا أربعة لا ثلاثة.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#قصة_حقيقية #قصص_رعب #3DAnimation #Odo #shackleton"
+   },
+   "fr": {
+    "title": "Neige 1916 : qui marchait avec Shackleton ? | Histoire vraie animée",
+    "description": "Histoire vraie précédente : https://youtu.be/ZjsuX8aDNa0\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\n« Trois hommes ont traversé les montagnes. Tous les trois en ont senti un quatrième. » — Odo\n\nUne histoire vraie de Géorgie du Sud, mai 1916 : après la perte de l'Endurance dans les glaces, Ernest Shackleton, Frank Worsley et Tom Crean traversent pendant 36 heures des montagnes jamais cartographiées pour sauver 22 hommes. Shackleton écrira qu'il lui semblait souvent qu'ils étaient quatre, et non trois.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#histoirevraie #histoiresdhorreur #3DAnimation #Odo #shackleton"
+   },
+   "ja": {
+    "title": "雪の1916年:シャクルトンと歩いたのは誰? | 実話アニメ",
+    "description": "前回の実話: https://youtu.be/ZjsuX8aDNa0\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n「3人で山を越えた。3人とも4人目を感じていた。」— オド\n\n1916年5月、サウスジョージア島の実話。エンデュアランス号を氷に失ったアーネスト・シャクルトン、フランク・ワースリー、トム・クリーンは、取り残された22人を救うため、地図のない山々を36時間かけて越えました。シャクルトンは後に「我々は3人ではなく4人のように思えた」と書いています。\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#実話 #怖い話 #3DAnimation #Odo #シャクルトン"
+   },
+   "ko": {
+    "title": "눈 속의 1916년: 섀클턴과 함께 걸은 자는? | 실화 애니메이션",
+    "description": "이전 실화: https://youtu.be/ZjsuX8aDNa0\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n\"세 사람이 산을 넘었다. 셋 모두 네 번째 사람을 느꼈다.\" — 오도\n\n1916년 5월 사우스조지아의 실화: 인듀어런스호를 얼음에 잃은 어니스트 섀클턴, 프랭크 워슬리, 톰 크린은 남겨진 22명을 구하려고 지도에도 없는 산맥을 36시간 동안 넘었습니다. 섀클턴은 훗날 '우리는 셋이 아니라 넷인 것 같았다'고 썼습니다.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#실화 #무서운이야기 #3DAnimation #Odo #섀클턴"
+   },
+   "de": {
+    "title": "Schnee 1916: Wer ging mit Shackleton? | Wahre Geschichte animiert",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/ZjsuX8aDNa0\nKennst du eine Geschichte wie diese? Schreib es mir in die Kommentare.\n\n„Drei Männer überquerten die Berge. Alle drei spürten einen Vierten.“ — Odo\n\nEine wahre Geschichte aus Südgeorgien, Mai 1916: Nachdem das Eis die Endurance zerdrückt hatte, überquerten Ernest Shackleton, Frank Worsley und Tom Crean 36 Stunden lang unkartierte Berge, um 22 gestrandete Männer zu retten. Shackleton schrieb später, es sei ihm oft vorgekommen, als wären sie vier, nicht drei.\n\nSources:\nhttps://en.wikipedia.org/wiki/Voyage_of_the_James_Caird\nhttps://hekint.org/2018/03/08/shackletons-angel/\nhttps://en.wikipedia.org/wiki/Third_man_factor\n\n#wahregeschichte #gruselgeschichten #3DAnimation #Odo #shackleton"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 21,
+   "dur": 22,
+   "top": "THREE MEN. FOUR?",
+   "title": "He counted three men. He felt four ❄️ #shorts",
+   "description": "1916, South Georgia: three exhausted men crossed the mountains, and Shackleton wrote that they seemed to be four. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Shackleton",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Contó tres hombres. Sintió cuatro ❄️ #shorts",
+     "description": "1916, Georgia del Sur: tres hombres agotados cruzaron las montañas y Shackleton escribió que parecían ser cuatro. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele contou três homens. Sentiu quatro ❄️ #shorts",
+     "description": "1916, Geórgia do Sul: três homens exaustos cruzaram as montanhas e Shackleton escreveu que pareciam ser quatro. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "عدّ ثلاثة رجال، وشعر بأربعة ❄️ #shorts",
+     "description": "1916، جورجيا الجنوبية: عبر ثلاثة رجال منهكين الجبال، وكتب شاكلتون أنهم بدوا أربعة. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il comptait trois hommes. Il en sentait quatre ❄️ #shorts",
+     "description": "1916, Géorgie du Sud : trois hommes épuisés traversent les montagnes, et Shackleton écrit qu'ils semblaient être quatre. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "数えたのは3人、感じたのは4人 ❄️ #shorts",
+     "description": "1916年サウスジョージア島。疲れ果てた3人が山を越え、シャクルトンは「4人いるように思えた」と書いた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "세 명을 셌는데, 네 명이 느껴졌다 ❄️ #shorts",
+     "description": "1916년 사우스조지아: 지친 세 사람이 산을 넘었고, 섀클턴은 넷인 것 같았다고 썼다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er zählte drei Männer. Er spürte vier ❄️ #shorts",
+     "description": "1916, Südgeorgien: Drei erschöpfte Männer überquerten die Berge, und Shackleton schrieb, es schienen vier zu sein. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 33,
+   "dur": 24,
+   "top": "NOBODY SAID A WORD",
+   "title": "All three felt it. Nobody said a word 🧊 #shorts",
+   "description": "Weeks after the crossing, Worsley spoke first. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Third Man factor",
+    "creepy true story"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Los tres lo sintieron. Nadie dijo nada 🧊 #shorts",
+     "description": "Semanas después de la travesía, Worsley habló primero. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Os três sentiram. Ninguém disse nada 🧊 #shorts",
+     "description": "Semanas depois da travessia, Worsley falou primeiro. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شعر الثلاثة به، ولم يقل أحد كلمة 🧊 #shorts",
+     "description": "بعد أسابيع من العبور، تكلّم وورسلي أولًا. التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tous les trois l'ont senti. Personne n'a rien dit 🧊 #shorts",
+     "description": "Des semaines après la traversée, Worsley parle le premier. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "3人とも感じていた。誰も言わなかった 🧊 #shorts",
+     "description": "山越えから数週間後、最初に口を開いたのはワースリーだった。続きはチャンネルで: {LONG_URL}"
+    },
+    "ko": {
+     "title": "셋 다 느꼈다. 아무도 말하지 않았다 🧊 #shorts",
+     "description": "횡단 몇 주 뒤, 워슬리가 먼저 입을 열었다. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Alle drei spürten es. Keiner sagte ein Wort 🧊 #shorts",
+     "description": "Wochen nach der Überquerung sprach Worsley als Erster. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

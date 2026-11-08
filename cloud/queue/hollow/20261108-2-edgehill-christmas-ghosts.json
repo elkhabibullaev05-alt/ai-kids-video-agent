@@ -1,0 +1,1083 @@
+{
+ "id": "20261108-2-edgehill-christmas-ghosts",
+ "plot": "Odo and Mothwick follow the recorded account of the Edgehill phantom battle (Warwickshire, Christmas 1642): two months after the first great battle of the English Civil War, shepherds see the battle fought again in the midnight sky, Kineton's magistrate and minister report it and King Charles sends six officers to disprove it; the twist is that the officers see it too and recognise fallen men they knew, including the king's standard bearer Sir Edmund Verney, and swear to it under oath — tradition says the sightings stopped once the dead were buried.",
+ "script": {
+  "title": "Ghost Army in the Sky",
+  "lead_in": 0,
+  "set": {
+   "place": "hill",
+   "fog": 0.05,
+   "eyes": 0,
+   "moonlight": 8
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "shep": {
+    "name": "A shepherd",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.34,
+     0.28,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     32
+    ]
+   },
+   "wood": {
+    "name": "William Wood",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.18,
+     0.16,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     34
+    ]
+   },
+   "marsh": {
+    "name": "Samuel Marshall",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.08,
+     0.08,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     36
+    ]
+   },
+   "kirke": {
+    "name": "Colonel Lewis Kirke",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.42,
+     0.12,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -42,
+     40
+    ]
+   },
+   "verney": {
+    "name": "Sir Edmund Verney",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "color": [
+     0.62,
+     0.66,
+     0.74
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     30,
+     46
+    ]
+   },
+   "g1": {
+    "name": "A phantom soldier",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "color": [
+     0.55,
+     0.58,
+     0.66
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     34,
+     48
+    ]
+   },
+   "g2": {
+    "name": "A phantom soldier",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -3,
+    "color": [
+     0.5,
+     0.54,
+     0.62
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     38,
+     50
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "drum",
+    "type": "tube",
+    "color": [
+     0.42,
+     0.1,
+     0.08
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 0.6,
+    "at": [
+     -6,
+     14,
+     0.8
+    ]
+   },
+   {
+    "id": "cannon",
+    "type": "tube",
+    "color": [
+     0.12,
+     0.12,
+     0.13
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 0.7,
+    "at": [
+     6.5,
+     15,
+     0.6
+    ]
+   },
+   {
+    "id": "banner",
+    "type": "box",
+    "color": [
+     0.75,
+     0.12,
+     0.1
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     3,
+     13,
+     2.2
+    ]
+   },
+   {
+    "id": "pamphlet",
+    "type": "box",
+    "color": [
+     0.86,
+     0.82,
+     0.7
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.2,
+     9.6,
+     1.5
+    ]
+   },
+   {
+    "id": "grave",
+    "type": "box",
+    "color": [
+     0.25,
+     0.25,
+     0.27
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.7,
+    "at": [
+     -4.5,
+     11,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Christmas Eve, 1642, Edgehill: shepherds saw a battle in the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "shep",
+      "to:-3,11,0"
+     ],
+     [
+      "shep",
+      "eyes_big"
+     ],
+     [
+      "drum",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "A BATTLE IN THE SKY"
+   },
+   {
+    "who": "odo",
+    "say": "A battle in the sky? Who could be fighting up there?",
+    "cam": "overhead",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "WHO WAS FIGHTING?"
+   },
+   {
+    "who": "narr",
+    "say": "A true story. Printed in a pamphlet in January 1643.",
+    "cam": "prop:pamphlet",
+    "do": [
+     [
+      "pamphlet",
+      "show"
+     ],
+     [
+      "pamphlet",
+      "bounce"
+     ]
+    ],
+    "text": "PRINTED IN 1643"
+   },
+   {
+    "who": "narr",
+    "say": "Two months earlier, on October twenty-third, a real battle raged here.",
+    "cam": "wide",
+    "do": [
+     [
+      "pamphlet",
+      "hide"
+     ],
+     [
+      "cannon",
+      "bounce"
+     ]
+    ],
+    "sfx": "horn",
+    "text": "OCTOBER 23, 1642"
+   },
+   {
+    "who": "narr",
+    "say": "King Charles against Parliament. The first big battle of England's civil war.",
+    "cam": "prop:cannon",
+    "do": [
+     [
+      "cannon",
+      "spin"
+     ]
+    ],
+    "text": "THE CIVIL WAR BEGINS"
+   },
+   {
+    "who": "narr",
+    "say": "Almost thirty thousand men fought here for about three hours.",
+    "cam": "overhead",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ],
+     [
+      "cannon",
+      "bounce"
+     ]
+    ],
+    "text": "30,000 MEN"
+   },
+   {
+    "who": "odo",
+    "say": "And when it was over, who had won?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHO WON?"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody, really. And hundreds of men never left this field.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "NOBODY WON"
+   },
+   {
+    "who": "moth",
+    "say": "One of them carried the king's own banner, Odo. Remember him.",
+    "cam": "prop:banner",
+    "do": [
+     [
+      "banner",
+      "show"
+     ],
+     [
+      "banner",
+      "bounce"
+     ]
+    ],
+    "text": "THE KING'S BANNER"
+   },
+   {
+    "who": "narr",
+    "say": "His name was Sir Edmund Verney. He never came home.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "sad"
+     ],
+     [
+      "banner",
+      "hide"
+     ]
+    ],
+    "text": "SIR EDMUND VERNEY"
+   },
+   {
+    "who": "narr",
+    "say": "Then came Christmas. A Saturday night, between twelve and one.",
+    "cam": "wide",
+    "do": [
+     [
+      "shep",
+      "to:-1,13,0"
+     ],
+     [
+      "shep",
+      "turn:front"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "MIDNIGHT"
+   },
+   {
+    "who": "shep",
+    "say": "Listen. Drums. Far away at first... and coming closer.",
+    "cam": "close:shep",
+    "do": [
+     [
+      "shep",
+      "eyes_big"
+     ],
+     [
+      "drum",
+      "bounce"
+     ]
+    ],
+    "text": "DRUMS FAR AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Then groans. Clashing armour. Horses. Cannons firing in the dark.",
+    "cam": "overhead",
+    "do": [
+     [
+      "drum",
+      "spin"
+     ],
+     [
+      "cannon",
+      "bounce"
+     ],
+     [
+      "g1",
+      "to:10,24,0"
+     ],
+     [
+      "g2",
+      "to:14,26,0"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "CANNONS AT MIDNIGHT"
+   },
+   {
+    "who": "shep",
+    "say": "Look up! Two armies! Fighting the same battle again!",
+    "cam": "close:shep",
+    "do": [
+     [
+      "shep",
+      "jump"
+     ]
+    ],
+    "text": "LOOK UP!"
+   },
+   {
+    "who": "narr",
+    "say": "Shepherds and travellers stood frozen until two or three in the morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "g1",
+      "turn:front"
+     ],
+     [
+      "g2",
+      "turn:front"
+     ]
+    ],
+    "text": "UNTIL 3 A.M."
+   },
+   {
+    "who": "narr",
+    "say": "They ran to Kineton's magistrate, William Wood, and minister, Samuel Marshall.",
+    "cam": "two:wood,marsh",
+    "do": [
+     [
+      "wood",
+      "to:6,12,0"
+     ],
+     [
+      "marsh",
+      "to:8,12.4,0"
+     ]
+    ],
+    "text": "THE MAGISTRATE AND THE MINISTER"
+   },
+   {
+    "who": "wood",
+    "say": "Two armies in the sky? Then show us, if it's true.",
+    "cam": "close:wood",
+    "do": [
+     [
+      "wood",
+      "turn:front"
+     ],
+     [
+      "wood",
+      "shake"
+     ]
+    ],
+    "text": "SHOW US"
+   },
+   {
+    "who": "moth",
+    "say": "If it is true, Odo, the dead of Edgehill are still fighting.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "STILL FIGHTING?"
+   },
+   {
+    "who": "narr",
+    "say": "Christmas night, it came again. Then a whole week of silence.",
+    "cam": "wide",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ],
+     [
+      "shep",
+      "to_home"
+     ]
+    ],
+    "text": "CHRISTMAS NIGHT"
+   },
+   {
+    "who": "marsh",
+    "say": "Then it returned. Saturday, Sunday. Four hours each time.",
+    "cam": "close:marsh",
+    "do": [
+     [
+      "marsh",
+      "turn:front"
+     ],
+     [
+      "marsh",
+      "shake"
+     ]
+    ],
+    "text": "4 HOURS EACH TIME"
+   },
+   {
+    "who": "narr",
+    "say": "Word of it travelled all the way to the king, at Oxford.",
+    "cam": "prop:pamphlet",
+    "do": [
+     [
+      "pamphlet",
+      "show"
+     ],
+     [
+      "pamphlet",
+      "spin"
+     ]
+    ],
+    "text": "TO THE KING AT OXFORD"
+   },
+   {
+    "who": "narr",
+    "say": "King Charles chose six men of his own to find the truth.",
+    "cam": "wide",
+    "do": [
+     [
+      "pamphlet",
+      "hide"
+     ],
+     [
+      "wood",
+      "to_home"
+     ],
+     [
+      "kirke",
+      "to:4,12,0"
+     ]
+    ],
+    "text": "SIX MEN SENT"
+   },
+   {
+    "who": "narr",
+    "say": "Colonel Lewis Kirke, Captain Dudley, Captain Wainman, and three more gentlemen.",
+    "cam": "close:kirke",
+    "do": [
+     [
+      "kirke",
+      "turn:front"
+     ]
+    ],
+    "text": "THE KING'S OFFICERS"
+   },
+   {
+    "who": "kirke",
+    "say": "We'll see for ourselves what these people really saw.",
+    "cam": "close:kirke",
+    "do": [
+     [
+      "kirke",
+      "jump"
+     ]
+    ],
+    "text": "SEE FOR OURSELVES"
+   },
+   {
+    "who": "narr",
+    "say": "They waited in the winter cold until the next Saturday night.",
+    "cam": "wide",
+    "do": [
+     [
+      "kirke",
+      "to:0,13,0"
+     ],
+     [
+      "marsh",
+      "to:2,13.4,0"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "WAITING IN THE COLD"
+   },
+   {
+    "who": "narr",
+    "say": "At midnight, far off, the drums began again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ],
+     [
+      "g1",
+      "to:9,22,0"
+     ],
+     [
+      "g2",
+      "to:12,24,0"
+     ]
+    ],
+    "text": "THE DRUMS AGAIN"
+   },
+   {
+    "who": "kirke",
+    "say": "There! Two armies... just as they stood in October!",
+    "cam": "close:kirke",
+    "do": [
+     [
+      "kirke",
+      "eyes_big"
+     ],
+     [
+      "kirke",
+      "turn:g1"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "JUST AS IN OCTOBER"
+   },
+   {
+    "who": "narr",
+    "say": "The king's own officers saw the phantom battle with their own eyes.",
+    "cam": "wide",
+    "do": [
+     [
+      "g1",
+      "turn:front"
+     ],
+     [
+      "g2",
+      "turn:front"
+     ],
+     [
+      "cannon",
+      "bounce"
+     ]
+    ],
+    "text": "THEY SAW IT TOO"
+   },
+   {
+    "who": "narr",
+    "say": "New true story every day. Subscribe so you never miss one.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEW TRUE STORY DAILY"
+   },
+   {
+    "who": "moth",
+    "say": "Now they must report to the king, Odo. Under oath.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "turn:odo"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "UNDER OATH"
+   },
+   {
+    "who": "narr",
+    "say": "Sunday night they watched again. This time, they saw a face.",
+    "cam": "wide",
+    "do": [
+     [
+      "verney",
+      "to:7,16,0"
+     ],
+     [
+      "banner",
+      "show"
+     ]
+    ],
+    "text": "THIS TIME, A FACE"
+   },
+   {
+    "who": "kirke",
+    "say": "That man with the banner. I know him.",
+    "cam": "close:kirke",
+    "do": [
+     [
+      "kirke",
+      "shake"
+     ]
+    ],
+    "text": "I KNOW HIM"
+   },
+   {
+    "who": "narr",
+    "say": "They recognised Sir Edmund Verney. The banner bearer who fell in October.",
+    "cam": "close:verney",
+    "do": [
+     [
+      "verney",
+      "turn:front"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "SIR EDMUND VERNEY"
+   },
+   {
+    "who": "odo",
+    "say": "The man who never came home... came back to the field.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "HE CAME BACK"
+   },
+   {
+    "who": "narr",
+    "say": "Other faces too. Men the officers had known, killed in that battle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "g1",
+      "to:6,18,0"
+     ],
+     [
+      "g2",
+      "to:9,19,0"
+     ]
+    ],
+    "text": "FACES THEY KNEW"
+   },
+   {
+    "who": "narr",
+    "say": "They swore to the king that it was all true.",
+    "cam": "close:kirke",
+    "do": [
+     [
+      "kirke",
+      "turn:front"
+     ],
+     [
+      "banner",
+      "hide"
+     ]
+    ],
+    "text": "THEY SWORE IT"
+   },
+   {
+    "who": "narr",
+    "say": "Then the pamphlet was printed: A Great Wonder in Heaven.",
+    "cam": "prop:pamphlet",
+    "do": [
+     [
+      "pamphlet",
+      "show"
+     ],
+     [
+      "pamphlet",
+      "bounce"
+     ],
+     [
+      "verney",
+      "to_home"
+     ]
+    ],
+    "text": "A GREAT WONDER IN HEAVEN"
+   },
+   {
+    "who": "narr",
+    "say": "Local tradition says the dead still lying out there were then buried.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "pamphlet",
+      "hide"
+     ],
+     [
+      "g1",
+      "to_home"
+     ],
+     [
+      "g2",
+      "to_home"
+     ]
+    ],
+    "text": "BURIED AT LAST"
+   },
+   {
+    "who": "narr",
+    "say": "And after that, the great battles in the sky stopped.",
+    "cam": "wide",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ],
+     [
+      "kirke",
+      "to_home"
+     ],
+     [
+      "marsh",
+      "to_home"
+     ]
+    ],
+    "text": "THE BATTLES STOPPED"
+   },
+   {
+    "who": "odo",
+    "say": "So all they wanted was to rest?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "ONLY TO REST"
+   },
+   {
+    "who": "narr",
+    "say": "Visitors still say they hear drums near October twenty-third.",
+    "cam": "wide",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ]
+    ],
+    "text": "EVERY OCTOBER 23"
+   },
+   {
+    "who": "narr",
+    "say": "It is often said these are England's only officially recorded ghosts.",
+    "cam": "prop:drum",
+    "do": [
+     [
+      "drum",
+      "spin"
+     ]
+    ],
+    "text": "OFFICIALLY RECORDED"
+   },
+   {
+    "who": "moth",
+    "say": "Not a campfire legend, Odo. A report written for a king.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "turn:odo"
+     ]
+    ],
+    "text": "A REPORT FOR A KING"
+   },
+   {
+    "who": "odo",
+    "say": "My lantern stays here tonight. For the ones who never got home.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "FOR THOSE WHO STAYED"
+   },
+   {
+    "who": "narr",
+    "say": "Liked this? The sealed Chase Vault story is next on the channel.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "NEXT: THE CHASE VAULT"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Christmas 1642: Ghost Army in the Sky | True Story Animated",
+  "description": "Previous true story: https://youtu.be/cYidzaBqMbY\nHave you heard a story like this one? Tell me in the comments.\n\n\"They were sent to prove it was nonsense. Then they saw a face they knew.\" — Odo\n\nA true record from Edgehill, Warwickshire: two months after the first great battle of the English Civil War, shepherds saw the battle fought again in the night sky at Christmas 1642. King Charles I sent his own officers to investigate, and the 1643 pamphlet 'A Great Wonder in Heaven' tells what they saw.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#truestory #scarystories #3DAnimation #Odo #edgehill",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Edgehill",
+   "1642",
+   "Kineton",
+   "Warwickshire",
+   "phantom battle",
+   "English Civil War ghosts",
+   "Christmas ghost story",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "THEY CAME BACK",
+  "thumb_beat": 14,
+  "localizations": {
+   "es": {
+    "title": "Navidad de 1642: un ejército fantasma en el cielo | Historia real animada",
+    "description": "Historia real anterior: https://youtu.be/cYidzaBqMbY\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\n\"Los enviaron a demostrar que era mentira. Entonces vieron una cara conocida.\" — Odo\n\nUn registro real de Edgehill, Inglaterra: dos meses después de la primera gran batalla de la guerra civil inglesa, unos pastores vieron la batalla repetirse en el cielo nocturno en la Navidad de 1642. El rey Carlos I envió a sus propios oficiales, y el panfleto de 1643 \"A Great Wonder in Heaven\" cuenta lo que vieron.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#historiareal #historiasdeterror #3DAnimation #Odo #edgehill"
+   },
+   "pt": {
+    "title": "Natal de 1642: um exército fantasma no céu | História real animada",
+    "description": "História real anterior: https://youtu.be/cYidzaBqMbY\nVocê já ouviu uma história assim? Conte nos comentários.\n\n\"Foram enviados para provar que era bobagem. Então viram um rosto conhecido.\" — Odo\n\nUm registro real de Edgehill, Inglaterra: dois meses depois da primeira grande batalha da guerra civil inglesa, pastores viram a batalha se repetir no céu noturno no Natal de 1642. O rei Carlos I enviou seus próprios oficiais, e o panfleto de 1643 \"A Great Wonder in Heaven\" conta o que eles viram.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#historiareal #historiasdeterror #3DAnimation #Odo #edgehill"
+   },
+   "ar": {
+    "title": "عيد الميلاد 1642: جيش من الأشباح في السماء | قصة حقيقية متحركة",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/cYidzaBqMbY\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\n\"أُرسلوا ليثبتوا أنها خرافة، ثم رأوا وجهًا يعرفونه.\" — أودو\n\nسجل حقيقي من إيدجهيل في إنجلترا: بعد شهرين من أول معركة كبرى في الحرب الأهلية الإنجليزية، رأى رعاة المعركة تتكرر في سماء الليل في عيد الميلاد عام 1642. أرسل الملك تشارلز الأول ضباطه للتحقيق، ويروي كتيّب عام 1643 \"A Great Wonder in Heaven\" ما رأوه.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#قصة_حقيقية #قصص_رعب #3DAnimation #Odo #edgehill"
+   },
+   "fr": {
+    "title": "Noël 1642 : une armée fantôme dans le ciel | Histoire vraie animée",
+    "description": "Histoire vraie précédente : https://youtu.be/cYidzaBqMbY\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\n« On les a envoyés prouver que c'était absurde. Puis ils ont vu un visage connu. » — Odo\n\nUn récit réel d'Edgehill, en Angleterre : deux mois après la première grande bataille de la guerre civile anglaise, des bergers voient la bataille se rejouer dans le ciel nocturne à Noël 1642. Le roi Charles Ier envoie ses propres officiers enquêter, et le pamphlet de 1643 « A Great Wonder in Heaven » raconte ce qu'ils ont vu.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#histoirevraie #histoiresdhorreur #3DAnimation #Odo #edgehill"
+   },
+   "ja": {
+    "title": "1642年のクリスマス:空に現れた亡霊の軍勢 | 実話アニメ",
+    "description": "前回の実話: https://youtu.be/cYidzaBqMbY\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n「嘘だと証明するために送られた。そして、知っている顔を見た。」— オド\n\nイングランド・エッジヒルの実際の記録。イングランド内戦最初の大きな戦いから2か月後の1642年のクリスマス、羊飼いたちは夜空で同じ戦いが繰り返されるのを見ました。国王チャールズ1世は自らの士官を調査に送り、1643年の小冊子『A Great Wonder in Heaven』に彼らが見たものが記されています。\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#実話 #怖い話 #3DAnimation #Odo #エッジヒル"
+   },
+   "ko": {
+    "title": "1642년 크리스마스: 하늘의 유령 군대 | 실화 애니메이션",
+    "description": "이전 실화: https://youtu.be/cYidzaBqMbY\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n\"헛소리임을 증명하러 갔다. 그런데 아는 얼굴을 보았다.\" — 오도\n\n잉글랜드 에지힐의 실제 기록: 잉글랜드 내전 첫 대전투 두 달 뒤인 1642년 크리스마스, 양치기들은 밤하늘에서 같은 전투가 다시 벌어지는 것을 보았습니다. 찰스 1세는 직접 장교들을 보내 조사했고, 1643년 소책자 『A Great Wonder in Heaven』에 그들이 본 것이 남아 있습니다.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#실화 #무서운이야기 #3DAnimation #Odo #에지힐"
+   },
+   "de": {
+    "title": "Weihnachten 1642: Eine Geisterarmee am Himmel | Wahre Geschichte animiert",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/cYidzaBqMbY\nKennst du eine Geschichte wie diese? Schreib es mir in die Kommentare.\n\n„Sie sollten beweisen, dass es Unsinn war. Dann sahen sie ein bekanntes Gesicht.“ — Odo\n\nEin echter Bericht aus Edgehill, England: Zwei Monate nach der ersten großen Schlacht des Englischen Bürgerkriegs sahen Schäfer zu Weihnachten 1642 dieselbe Schlacht noch einmal am Nachthimmel. König Karl I. schickte seine eigenen Offiziere, und das Flugblatt „A Great Wonder in Heaven“ von 1643 erzählt, was sie sahen.\n\nSources:\nhttps://historic-uk.com/HistoryUK/HistoryofEngland/Phantom-Battle-of-Edgehill\nhttps://www.ourwarwickshire.org.uk/content/article/ghostly-happenings-after-the-battle-of-edgehill\n\n#wahregeschichte #gruselgeschichten #3DAnimation #Odo #edgehill"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 10,
+   "dur": 24,
+   "top": "DRUMS AT MIDNIGHT",
+   "title": "Christmas Eve, 1642: drums in the empty sky 🥁 #shorts",
+   "description": "Two months after the battle of Edgehill, shepherds heard drums at midnight and looked up. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Edgehill",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nochebuena de 1642: tambores en el cielo vacío 🥁 #shorts",
+     "description": "Dos meses después de la batalla de Edgehill, unos pastores oyeron tambores a medianoche y miraron arriba. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Véspera de Natal de 1642: tambores no céu vazio 🥁 #shorts",
+     "description": "Dois meses depois da batalha de Edgehill, pastores ouviram tambores à meia-noite e olharam para cima. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ليلة الميلاد 1642: طبول في السماء الخالية 🥁 #shorts",
+     "description": "بعد شهرين من معركة إيدجهيل، سمع رعاة طبولًا عند منتصف الليل ورفعوا أعينهم. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Veille de Noël 1642 : des tambours dans le ciel vide 🥁 #shorts",
+     "description": "Deux mois après la bataille d'Edgehill, des bergers entendent des tambours à minuit et lèvent les yeux. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "1642年のイブ:誰もいない空から太鼓の音 🥁 #shorts",
+     "description": "エッジヒルの戦いから2か月後、真夜中に太鼓を聞いた羊飼いたちは空を見上げた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1642년 성탄 전야: 빈 하늘의 북소리 🥁 #shorts",
+     "description": "에지힐 전투 두 달 뒤, 양치기들은 자정에 북소리를 듣고 하늘을 올려다보았다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Heiligabend 1642: Trommeln am leeren Himmel 🥁 #shorts",
+     "description": "Zwei Monate nach der Schlacht von Edgehill hörten Schäfer um Mitternacht Trommeln und blickten nach oben. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
