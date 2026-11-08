@@ -1,0 +1,147 @@
+{
+ "title": "Grace's Phone Habit: $6,000 in 10 Years",
+ "hook": "$1,200 phone. Every 2 years.",
+ "header": "Grace · a $1,200 phone",
+ "character": "Grace",
+ "amount": "$1,200",
+ "accent": "gold",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$6,000 on phones in ten years. That's where Grace's habit is heading.",
+   "visual": {
+    "type": "big_number",
+    "value": 6000,
+    "from": 0,
+    "label": "on phones in 10 years",
+    "sub": "before trade-ins",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "She buys a new $1,200 phone every two years, right when it comes out.",
+   "visual": {
+    "type": "statement",
+    "text": "$1,200. Every two years.",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "Over ten years, that's five phones and about $6,000, before any trade-in credit.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$1,200 × 5 phones",
+     "in 10 years",
+     "= $6,000"
+    ]
+   }
+  },
+  {
+   "say": "Watch the total jump every other year, like clockwork, even though the old phone still worked fine.",
+   "visual": {
+    "type": "line",
+    "label": "Spent on phones",
+    "points": [
+     1200,
+     1200,
+     2400,
+     2400,
+     3600,
+     3600,
+     4800,
+     4800,
+     6000,
+     6000
+    ],
+    "start_label": "Year 1",
+    "end_label": "Year 10",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "Now, what if she kept each phone for four years instead?",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Every 2 years",
+     "value": 6000,
+     "sub": "5 phones",
+     "hi": true
+    },
+    "right": {
+     "label": "Every 4 years",
+     "value": 3000,
+     "sub": "about 2.5 phones"
+    }
+   }
+  },
+  {
+   "say": "That's roughly $3,000 back, or about $25 a month she never misses.",
+   "visual": {
+    "type": "big_number",
+    "value": 3000,
+    "from": 0,
+    "label": "kept in 10 years",
+    "sub": "about $25 a month",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "Put that $25 a month aside, and the next phone is already paid for in cash.",
+   "visual": {
+    "type": "counter",
+    "from": 25,
+    "to": 300,
+    "steps": 12,
+    "unit": "Month",
+    "label": "set aside for a phone",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "A new battery and a case can keep an older phone going.",
+   "visual": {
+    "type": "checklist",
+    "title": "Making it last",
+    "items": [
+     {
+      "text": "New battery: about $90",
+      "ok": true
+     },
+     {
+      "text": "Good case + screen guard",
+      "ok": true
+     },
+     {
+      "text": "Upgrade only when it breaks",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "How old is your phone right now? Subscribe so you don't make this mistake on your next paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "How old is your phone right now?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "How old is your phone right now — and do you really need a new one?",
+ "description": "Grace buys a new $1,200 phone every two years: five phones and about $6,000 in ten years, before trade-ins. Keeping each one for four years cuts that to roughly $3,000 — about $25 a month she gets to keep. Numbers are rounded US estimates.",
+ "tags": [
+  "phone upgrade cost",
+  "how to save money",
+  "small habits big savings",
+  "money habits",
+  "frugal tips",
+  "budgeting tips",
+  "cost of a new phone"
+ ],
+ "hashtags": [
+  "#savingmoney",
+  "#moneyhabits"
+ ]
+}

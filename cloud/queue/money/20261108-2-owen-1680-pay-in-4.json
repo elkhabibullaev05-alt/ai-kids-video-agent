@@ -1,0 +1,159 @@
+{
+ "title": "4 Small 'Pay in 4' Plans Became $840 a Month",
+ "hook": "Four small plans. $840 a month.",
+ "header": "Owen · 4 plans at once",
+ "character": "Owen",
+ "amount": "$1,680",
+ "accent": "red",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$840 a month. That's what four small 'pay in 4' plans now take from Owen.",
+   "visual": {
+    "type": "big_number",
+    "value": 840,
+    "from": 60,
+    "label": "a month in plans",
+    "sub": "four plans at once",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "Sneakers, headphones, a jacket, and a couch. Each one felt tiny at checkout, so he never added them up.",
+   "visual": {
+    "type": "bars",
+    "title": "What he bought",
+    "items": [
+     {
+      "label": "Sneakers",
+      "value": 240
+     },
+     {
+      "label": "Headphones",
+      "value": 360
+     },
+     {
+      "label": "Jacket",
+      "value": 480
+     },
+     {
+      "label": "Couch",
+      "value": 600,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's $1,680 of stuff, split into four payments, every two weeks.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$240 + $360 + $480 + $600",
+     "= $1,680",
+     "÷ 4 payments"
+    ]
+   }
+  },
+  {
+   "say": "So every two weeks, about $420 leaves his account at once.",
+   "visual": {
+    "type": "stack",
+    "title": "Every 2 weeks",
+    "total": 420,
+    "items": [
+     {
+      "label": "Sneakers",
+      "value": 60
+     },
+     {
+      "label": "Headphones",
+      "value": 90
+     },
+     {
+      "label": "Jacket",
+      "value": 120
+     },
+     {
+      "label": "Couch",
+      "value": 150,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Each plan only said $60 or $90. Together, over a month, it's almost the size of a rent payment.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "What it felt like",
+     "value": 60,
+     "sub": "one payment"
+    },
+    "right": {
+     "label": "What it is",
+     "value": 840,
+     "sub": "a month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "And if one payment bounces, late fees can land on top of everything else.",
+   "visual": {
+    "type": "statement",
+    "text": "One bounce. Fees stack.",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "His new rules are simple, and they stop the stacking.",
+   "visual": {
+    "type": "checklist",
+    "title": "Owen's rules",
+    "items": [
+     {
+      "text": "Only one plan at a time",
+      "ok": true
+     },
+     {
+      "text": "Could I pay cash today?",
+      "ok": true
+     },
+     {
+      "text": "Wait 48 hours first",
+      "ok": true
+     },
+     {
+      "text": "New plan for every buy",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "How many plans are you paying right now? Subscribe so you don't make this mistake on your next paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "How many plans are you paying now?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "How many 'pay in 4' plans are you paying off right now?",
+ "description": "Owen split sneakers, headphones, a jacket and a couch — about $1,680 in total — into four 'pay in 4' plans at once. Together they take roughly $420 every two weeks, about $840 a month. Here's the math and three simple rules that stop the stacking. Numbers are rounded US estimates.",
+ "tags": [
+  "buy now pay later",
+  "pay in 4",
+  "bnpl debt",
+  "how to avoid debt",
+  "budgeting tips",
+  "impulse spending",
+  "money mistakes"
+ ],
+ "hashtags": [
+  "#buynowpaylater",
+  "#debt"
+ ]
+}

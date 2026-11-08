@@ -1,0 +1,133 @@
+{
+ "title": "The $9,000 Wedding Still Being Paid in 2032",
+ "hook": "$9,000 wedding. 65 months of payments.",
+ "header": "Aisha · $9,000 at 24% APR",
+ "character": "Aisha",
+ "amount": "$9,000",
+ "accent": "pink",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "65 months of payments. That's what Aisha's $9,000 wedding on a card will take.",
+   "visual": {
+    "type": "big_number",
+    "value": 65,
+    "prefix": "",
+    "from": 0,
+    "label": "months of payments",
+    "sub": "$9,000 at 24% APR",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "At roughly 24% a year, her card adds about $180 of interest in month one.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$9,000 × 24%",
+     "÷ 12 months",
+     "= $180 interest"
+    ]
+   }
+  },
+  {
+   "say": "She pays $250 a month, so only about $70 touches the actual debt at first.",
+   "visual": {
+    "type": "stack",
+    "title": "Her first $250",
+    "total": 250,
+    "items": [
+     {
+      "label": "Interest",
+      "value": 180,
+      "hi": true
+     },
+     {
+      "label": "Actual debt",
+      "value": 70
+     }
+    ]
+   }
+  },
+  {
+   "say": "At that pace, the balance only hits zero in about five and a half years.",
+   "visual": {
+    "type": "line",
+    "label": "Balance at $250 a month",
+    "points": [
+     9000,
+     8061,
+     6870,
+     5360,
+     3445,
+     1016,
+     0
+    ],
+    "start_label": "Wedding",
+    "end_label": "Month 65",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "In total, she'd pay about $16,100. Around $7,100 is pure interest.",
+   "visual": {
+    "type": "big_number",
+    "value": 16100,
+    "from": 9000,
+    "label": "total paid",
+    "sub": "about $7,100 interest",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "But at $450 a month, she's done in about 26 months, with roughly $2,600 interest.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$250 a month",
+     "value": 7100,
+     "sub": "65 months",
+     "hi": true
+    },
+    "right": {
+     "label": "$450 a month",
+     "value": 2600,
+     "sub": "26 months"
+    }
+   }
+  },
+  {
+   "say": "That's about $4,500 kept, from the same card and the same wedding.",
+   "visual": {
+    "type": "big_number",
+    "value": 4500,
+    "from": 0,
+    "label": "interest she keeps",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "Would you pay $250, or push to $450? Subscribe so you don't make this mistake on your next paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "Would you pay $250 or $450?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "Would you pay $250 a month, or push to $450 to be done in two years?",
+ "description": "Aisha put about $9,000 of wedding costs on a card at roughly 24% APR. At $250 a month it takes about 65 months and around $16,100 in total; at $450 a month it's about 26 months and roughly $2,600 in interest. Estimates assume a fixed 24% APR and no new charges, rounded US numbers.",
+ "tags": [
+  "wedding debt",
+  "credit card debt",
+  "credit card interest",
+  "pay off debt faster",
+  "wedding budget",
+  "debt payoff",
+  "APR explained"
+ ],
+ "hashtags": [
+  "#weddingbudget",
+  "#debtfree"
+ ]
+}

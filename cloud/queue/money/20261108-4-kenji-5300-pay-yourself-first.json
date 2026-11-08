@@ -1,0 +1,171 @@
+{
+ "title": "Kenji, 34: Saving Whatever Was Left Over",
+ "hook": "$5,300 a month. $0 saved.",
+ "header": "Kenji · $5,300 take-home",
+ "character": "Kenji",
+ "amount": "$5,300",
+ "accent": "purple",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$0 saved on $5,300 a month. Kenji, 34, only saved whatever was left over.",
+   "visual": {
+    "type": "big_number",
+    "value": 5300,
+    "from": 0,
+    "label": "monthly take-home",
+    "sub": "$0 saved",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "And at the end of every month, nothing was ever left over.",
+   "visual": {
+    "type": "statement",
+    "text": "Leftover money never shows up.",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "Rent, the car, loans, groceries. Then about $1,670 drifts into fun and shopping.",
+   "visual": {
+    "type": "stack",
+    "title": "Where $5,300 goes",
+    "total": 5300,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1850
+     },
+     {
+      "label": "Car + insurance",
+      "value": 730
+     },
+     {
+      "label": "Loan + bills",
+      "value": 570
+     },
+     {
+      "label": "Groceries",
+      "value": 480
+     },
+     {
+      "label": "Eating out + fun",
+      "value": 970,
+      "hi": true
+     },
+     {
+      "label": "Shopping + misc",
+      "value": 700,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "So he flipped the order. $400 moves to savings the moment he's paid.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$5,300 paycheck",
+     "- $400 saved first",
+     "= $4,900 to spend"
+    ]
+   }
+  },
+  {
+   "say": "He trimmed fun and shopping by $200 each, and barely noticed.",
+   "visual": {
+    "type": "bars",
+    "title": "After the flip",
+    "items": [
+     {
+      "label": "Fun: was $970",
+      "value": 770,
+      "hi": true
+     },
+     {
+      "label": "Shopping: was $700",
+      "value": 500,
+      "hi": true
+     },
+     {
+      "label": "Savings",
+      "value": 400
+     }
+    ]
+   }
+  },
+  {
+   "say": "The money leaves before he can spend it, so the budget just quietly shrinks around it.",
+   "visual": {
+    "type": "line",
+    "label": "Savings, month by month",
+    "points": [
+     400,
+     1200,
+     2000,
+     2800,
+     3600,
+     4400,
+     4800
+    ],
+    "start_label": "Month 1",
+    "end_label": "Month 12",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "One year later, about $4,800 is sitting there.",
+   "visual": {
+    "type": "counter",
+    "from": 400,
+    "to": 4800,
+    "steps": 12,
+    "unit": "Month",
+    "label": "saved first",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "Same paycheck. The only change is which bill gets paid first.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Save the leftovers",
+     "value": 0,
+     "sub": "a year",
+     "hi": true
+    },
+    "right": {
+     "label": "Save first",
+     "value": 4800,
+     "sub": "a year"
+    }
+   }
+  },
+  {
+   "say": "Do you save first, or last? Subscribe so you don't make this mistake on your next paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "Do you save first or last?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "Do you save first on payday, or whatever is left at the end?",
+ "description": "Kenji, 34, takes home about $5,300 a month and only saved what was left — which was always $0. Moving $400 to savings on payday and trimming fun and shopping by $200 each leaves roughly $4,800 saved after a year. Numbers are rounded US estimates.",
+ "tags": [
+  "pay yourself first",
+  "how to save money",
+  "saving money tips",
+  "paycheck breakdown",
+  "budget breakdown",
+  "automatic savings",
+  "personal finance in your 30s"
+ ],
+ "hashtags": [
+  "#payyourselffirst",
+  "#savingmoney"
+ ]
+}

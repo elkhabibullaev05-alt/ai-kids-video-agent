@@ -1,0 +1,179 @@
+{
+ "title": "Rosa's 'Surprise' Bills Were $1,800 a Year",
+ "hook": "$1,800 of surprises. Every year.",
+ "header": "Rosa · $1,800 a year",
+ "character": "Rosa",
+ "amount": "$1,800",
+ "accent": "teal",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$1,800 a year in surprise bills kept landing on Rosa's credit card.",
+   "visual": {
+    "type": "big_number",
+    "value": 1800,
+    "from": 0,
+    "label": "surprise bills a year",
+    "sub": "all went on the card",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "Holidays, a car repair, birthdays, the vet, the registration. Every single year.",
+   "visual": {
+    "type": "bars",
+    "title": "The 'surprises'",
+    "items": [
+     {
+      "label": "Holidays",
+      "value": 600,
+      "hi": true
+     },
+     {
+      "label": "Car repairs",
+      "value": 500
+     },
+     {
+      "label": "Birthdays",
+      "value": 300
+     },
+     {
+      "label": "Vet",
+      "value": 250
+     },
+     {
+      "label": "Registration",
+      "value": 150
+     }
+    ]
+   }
+  },
+  {
+   "say": "They weren't surprises at all. She just never saved for them ahead of time.",
+   "visual": {
+    "type": "statement",
+    "text": "Not surprises. Just unplanned.",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "So she split the yearly total into twelve small pieces.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$1,800 a year",
+     "÷ 12 months",
+     "= $150 a month"
+    ]
+   }
+  },
+  {
+   "say": "Now $150 moves into a separate savings account the day she gets paid.",
+   "visual": {
+    "type": "stack",
+    "title": "Her $150 a month",
+    "total": 150,
+    "items": [
+     {
+      "label": "Holidays",
+      "value": 50,
+      "hi": true
+     },
+     {
+      "label": "Car repairs",
+      "value": 42
+     },
+     {
+      "label": "Birthdays",
+      "value": 25
+     },
+     {
+      "label": "Vet",
+      "value": 21
+     },
+     {
+      "label": "Registration",
+      "value": 12
+     }
+    ]
+   }
+  },
+  {
+   "say": "Each bucket has a name, so she knows exactly what every dollar is waiting for.",
+   "visual": {
+    "type": "checklist",
+    "title": "Rosa's buckets",
+    "items": [
+     {
+      "text": "Holidays: $50 a month",
+      "ok": true
+     },
+     {
+      "text": "Car repairs: $42 a month",
+      "ok": true
+     },
+     {
+      "text": "Birthdays + vet: $46",
+      "ok": true
+     },
+     {
+      "text": "Registration: $12",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "By December, about $1,800 is sitting there, ready for every so-called surprise.",
+   "visual": {
+    "type": "counter",
+    "from": 150,
+    "to": 1800,
+    "steps": 12,
+    "unit": "Month",
+    "label": "saved for surprises",
+    "prefix": "$"
+   }
+  },
+  {
+   "say": "No new card debt, and no panic when the car makes a weird noise.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 1800,
+     "sub": "on the card",
+     "hi": true
+    },
+    "right": {
+     "label": "After",
+     "value": 0,
+     "sub": "new card debt"
+    }
+   }
+  },
+  {
+   "say": "Which bill always surprises you? Subscribe so you don't make this mistake on your next paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "Which bill always surprises you?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "Which yearly bill always seems to surprise you?",
+ "description": "Rosa's holidays, car repairs, birthdays, vet visits and car registration add up to roughly $1,800 a year — and they kept landing on her credit card. Splitting that into about $150 a month, set aside on payday, covers them before they arrive. Numbers are rounded US estimates.",
+ "tags": [
+  "sinking funds",
+  "how to budget for irregular expenses",
+  "budgeting tips",
+  "how to save money",
+  "annual expenses",
+  "stop using credit cards",
+  "money tips"
+ ],
+ "hashtags": [
+  "#sinkingfunds",
+  "#savingmoney"
+ ]
+}
