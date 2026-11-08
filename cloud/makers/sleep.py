@@ -176,7 +176,8 @@ def main():
         hrs = f"{int(hours)} Hours"
         # 2026-11-07 (PLAN competitors): searchable "Insomnia" + honest "(Real Rain, No AI)" tail, tried first
         # 2026-11-07 (competitors: tiny rain channels at 800k-1M views lead with "Fall Asleep Fast!" + the sound): tried first
-        variants = [f"Fall Asleep Fast! {name} | {hrs} of Real Rain Sounds", f"{name} for Insomnia | {hrs} (Real Rain, No AI)", f"{hrs} {name} to Sleep | Real Rain, No AI",
+        # 2026-11-08 (competitors: "Cozy <shelter> in Heavy Rain 🌧️" 3-6 h titles at 44-59k/6 d on small channels): cozy mood variant 2nd
+        variants = [f"Fall Asleep Fast! {name} | {hrs} of Real Rain Sounds", f"Cozy Rainy Night 🌧️ {name} | {hrs} to Sleep (Real Rain)", f"{name} for Insomnia | {hrs} (Real Rain, No AI)", f"{hrs} {name} to Sleep | Real Rain, No AI",
                     f"{name} 🌧️ {hrs} of Real Rain Sounds for Deep Sleep", f"{hrs} of {name} — Fall Asleep Fast",
                     f"Can't Sleep? {name} for {hrs} (Real Rain)", f"{name} Sounds for Sleeping — {hrs} | Calm Your Mind"]
         title = next((t for t in variants if t not in titles and t not in used["titles"]), variants[0] + f" ({stamp[4:8]})")
@@ -187,7 +188,7 @@ def main():
                                   "\n\n#rain #rainsounds #sleep #relaxing #whitenoise",
                    "tags": ["rain sounds", "rain for sleep", "sleep sounds", "relaxing rain", "real rain", "white noise",
                             f"{int(hours)} hours rain", "deep sleep", "study", "asmr rain",
-                            "rain sounds for sleeping", "fall asleep fast", "rain on window"]},
+                            "rain sounds for sleeping", "fall asleep fast", "rain on window", "cozy rain", "rainy night sleep"]},
                   open(os.path.join(a.out, f"{stamp}-0-long.json"), "w"), ensure_ascii=False, indent=1)
         used["titles"].append(title); made += 1
     if a.need_short:

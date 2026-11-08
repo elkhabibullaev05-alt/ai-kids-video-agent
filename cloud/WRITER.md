@@ -159,6 +159,10 @@ Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those
 **maxcat / bolt:** kids leaders this week are 20–45 min compilations and big-stakes plain titles (a 5k-sub 3D kids channel got 520k views in 7 days with "A <Big Thing> Stole Our Entire <Place>! 😱", 9 min). For Max/Bolt write the stakes in plain words in the first 30 chars ("The Whole Park Lost Its Leaves!"), gentle (no "terrifying"), one emoji. Kids flags unchanged.
 **doughbros:** keep the "Would YOU…?" Shorts rule above; the long title should name the one object + the problem in ≤ 45 chars (stakes first).
 
+## Competitor lessons 2026-11-08 (cloud/growth/competitors/2026-11-08.md)
+**hollow:** this week's horror winners use a **season + setting** ("Insanely Creepy Winter Camping Stories", 170k in 4 days) or a **named legend** + "STORY" (555k in 5 days). In November–February prefer true stories set in winter/snow/cold places when one fits, and put the season or the legend's name in the first 30 chars. Description line 1 = link to the previous Hollowmere story ("Next/previous true story: {link}") so viewers chain videos.
+**maxcat / bolt / doughbros:** kids leaders this week are seasonal ("A Taste of Autumn", 1.4M in 5 days). In November write autumn/first-snow episodes (leaves, warm cocoa, first snow) and say the season in the title once. Kids flags unchanged.
+
 ## Ask Studio 2026-11-07 (laptop run, all channels) — applies from the next job
 - **maxcat** (28 d: 186K impressions, CTR 0.9 %, avg view 0:34 = 12.6 %, Shorts 14 % stayed): no "(Ep N)" in any title (worker strips it now too); max **one** emoji; the first 5 s start inside the problem (leash goes on → Max panics), no title card; thumbnail = Max's face with ONE big emotion filling ≥ 1/3 of the frame; Shorts 15–20 s.
 - **bolt** (since 18 Oct: 2,797 impressions, CTR 1.36 %, avg view 0:15 = 7 %, 0 subs): second 1 = the problem on screen (Pip stuck, the splash), the stakes said in the first 5 s, no title card; thumbnail = one big Bolt face + one clear problem object. Studio also says post less — owner decides.

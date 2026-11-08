@@ -179,3 +179,8 @@ Now: 0 subs, 6 views total, no new episode since 20 Oct.
 - [x] Max titles without "(Ep N)" (done 2026-11-07: cloud/worker.py studio_title + WRITER.md).
 - [x] Money Shorts 25–30 s (done 2026-11-07: money/WRITER.md — 6–8 scenes; money.py --check allows 6–14).
 - [ ] Owner question (Ask Studio, 2026-11-07, nearly every channel): post fewer, better videos (1–2 long/week). Counts unchanged until the owner decides.
+
+## 2026-11-08 competitor run (cloud/growth/competitors/2026-11-08.md)
+- [ ] Milo: "Day 1 to 100" thumbnail template (huge "DAY N" + red status word + scared close-up) in the thumbnail maker.
+- [ ] Hollowmere: description line 1 auto-link to the previous Hollowmere video (worker fills {PREV_URL}).
+- [ ] Calm Rain: source real rain footage seen from a shelter (cabin / van / tent window) — "Cozy <shelter> in Heavy Rain" titles lead this week, but we may only name what the footage shows.

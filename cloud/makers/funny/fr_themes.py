@@ -205,6 +205,9 @@ FAIL_PATTERNS = [
     "Instant Regret: Top 5 {n} 😂",
     "{n} Ranked From Bad to WORST 💀",
     "Top 5 {n}… #1 Hurts 💀",
+    # 2026-11-08 competitors: situation/feeling titles ("HE THOUGHT NO ONE WAS WATCHING 😭" 268k/2 d)
+    "{n} Nobody Saw Coming 😭",
+    "Worst Day Ever? {n} 💀",
 ]
 
 

@@ -184,6 +184,9 @@ def long_titles(top, mode, titles, rng):
             angles.append(f"{a} Is Still #1, But {b} Is Close")
     for g in climbers[:2]:
         angles.append(f"Why Is {g['clean']} Suddenly Blowing Up on Roblox?")
+        # 2026-11-08 competitors: discovery framing ("I FOUND THE HIDDEN SECRET…" 545k in 1 day) — only for a real climber
+        if g["prev_rank"] - g["rank"] >= 5:  # honest only for a big jump
+            angles.append(f"{g['clean']} Came Out of NOWHERE to #{g['rank']} on Roblox..")
     t = titles.pick(angles, rng) or titles.pick(c, rng)
     k = 2
     while not t:

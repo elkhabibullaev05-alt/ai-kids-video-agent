@@ -118,5 +118,10 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 - **Ask Studio 2026-11-07 (Wild Sketchbook, 28 days: CTR 1.45 % on 20.9k impressions, long avg view 1:02 = 13 %, +5 subs from 70 uploads):** NO title tails like "#1 Is New" / "#1 Is in You" — write one clear curiosity title ("How Crocodiles Survived the Asteroid That Wiped Out the Dinosaurs"). Shorts titles must each be a different hook — never "The #1 Secret: X | Topic" again. First 5 s of the long = the main visual + the promise; no slow context.
 - "What if <animal> evolved…?" speculative stories also get pushed (56k-sub channel, 55k in 6 days) — allowed once a week, clearly framed as "what if" (not as fact).
 
+## Competitor lessons 2026-11-08 (cloud/growth/competitors/2026-11-08.md)
+- **Second-person "What if YOU could…?" questions** are the fastest drawn-animal outlier this week (916-sub channel: 49k views in ~1.5 days, 15 min). Once a week the "what if" long is written to the viewer: "What If You Could <power> With <animals>?" — clearly framed as imagination, our own animals and scenes.
+- Tags for that video = 5–7 wordings of the same question ("what if you could …", "if animals could …", "<animals> …"), not generic "animals".
+- Frame 0 for it: our inked scene + **2 caps words as a command or reaction** (e.g. "RUN NOW!"), not the title repeated.
+
 ## Safety notes 2026-11-07
 - No restrictions on any video. Risk o'rta only for sameness: Shorts titles "The #1 Secret: X | Topic" repeat — every Short title must be a different sentence shape (repetitive-content rule).
