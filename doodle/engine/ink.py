@@ -959,7 +959,30 @@ def _drop(p, t, color, text):
         p.text(text, 0, -100, min(56, int(200 / max(1, len(text)) * 1.6)), "dark")
 
 
+def _basketball(p, t, color, text):
+    p.circle(0, -90, 90, color or "orange", 5)
+    p.line([(-90, -90), (90, -90)], 4)
+    p.line([(0, -180), (0, 0)], 4)
+    p.line([(-62, -155), (-35, -90), (-62, -25)], 4)
+    p.line([(62, -155), (35, -90), (62, -25)], 4)
+    if text:
+        p.text(text, 0, -210, 34, "dark")
+
+
+def _hoop(p, t, color, text):
+    p.rect(-14, -560, 28, 560, "grey", 4)
+    p.rect(-150, -720, 300, 200, "white", 6)
+    p.rect(-55, -650, 110, 80, "white", 4)
+    p.line([(-95, -520), (95, -520)], 10, color=color or "red")
+    for k in range(-80, 100, 40):
+        p.line([(k, -520), (k * 0.6, -420)], 3, color="grey")
+    p.line([(-57, -420), (57, -420)], 3, color="grey")
+    if text:
+        p.text(text, 0, -760, 44, "dark")
+
+
 PROPS = {
+    "basketball": _basketball, "hoop": _hoop,
     "datacenter": _datacenter, "powerline": _powerline, "drop": _drop,
     "football": _football, "goal": _goal, "lake": _lake,
     "booth": _booth, "magnifier": _magnifier,
