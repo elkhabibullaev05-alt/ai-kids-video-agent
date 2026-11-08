@@ -1,8 +1,5 @@
 {
-  "lock": {
-    "until": "2026-11-08T09:30:00Z",
-    "by": "session_01DAYK5SBnYNF3h8DPq31Li8"
-  },
+  "lock": null,
   "channel": {
     "id": "UCiaE4voy2yYUHOTDr2wfC5A",
     "handle": "@MiloSurvivesDaily",
@@ -129,45 +126,44 @@
         "s1": 93,
         "s2": 93
       },
-      "uploads": [],
-      "note": "made 2026-11-07 in a cloud run without Claude in Chrome -> not uploaded; re-render from milo/scripts/ep004.json (milo_engine.py), then cut Shorts with the 'cut' params below + rek_ball --kuchaytir"
+      "uploads": [
+        {
+          "kind": "long",
+          "title": "Can You Survive 100 Days in an Abandoned Metro?",
+          "publish_at": "2026-11-08T21:45:00Z",
+          "id": "ii1T8qgG6R8",
+          "rek_ball": 89,
+          "note": "re-rendered 2026-11-08, re-encoded crf30 (29 MB) because the laptop downloads at ~15 KB/s"
+        },
+        {
+          "kind": "short",
+          "title": "Sealed 40 Metres Under the City #shorts",
+          "publish_at": "2026-11-09T13:45:00Z",
+          "id": "_g0h_FT4d78",
+          "rek_ball": 90,
+          "cut": {
+            "start": 0,
+            "dur": 36,
+            "top": "Trapped 40 metres underground",
+            "kuchaytir": true
+          }
+        },
+        {
+          "kind": "short",
+          "title": "The Metro Rail That Can Kill You in a Second #shorts",
+          "publish_at": "2026-11-09T18:15:00Z",
+          "id": "cxx1CFbdonU",
+          "rek_ball": 90,
+          "cut": {
+            "start": 169.9,
+            "dur": 31,
+            "top": "Never touch THIS rail",
+            "kuchaytir": true
+          }
+        }
+      ],
+      "note": "uploaded 2026-11-08 via Claude in Chrome (authuser=2); no custom thumbnail (channel not phone-verified)"
     }
   ],
-  "pending_uploads": [
-    {
-      "ep": 4,
-      "kind": "long",
-      "file": "milo_ep004.mp4",
-      "title": "Can You Survive 100 Days in an Abandoned Metro?",
-      "slot": "earliest free 20:15-23:45 UTC"
-    },
-    {
-      "ep": 4,
-      "kind": "short",
-      "file": "milo_ep004_s1.mp4",
-      "title": "Sealed 40 Metres Under the City #shorts",
-      "cut": {
-        "start": 0,
-        "dur": 36,
-        "top": "Trapped 40 metres underground",
-        "kuchaytir": true
-      },
-      "rek_ball": 93,
-      "slot": "next day 13:15-15:45 UTC"
-    },
-    {
-      "ep": 4,
-      "kind": "short",
-      "file": "milo_ep004_s2.mp4",
-      "title": "The Metro Rail That Can Kill You in a Second #shorts",
-      "cut": {
-        "start": 169.9,
-        "dur": 31,
-        "top": "Never touch THIS rail",
-        "kuchaytir": true
-      },
-      "rek_ball": 93,
-      "slot": "next day 17:15-19:45 UTC"
-    }
-  ]
+  "pending_uploads": []
 }
