@@ -15,6 +15,8 @@ fi
 # 2026-11-06: owner can pause all channel work (e.g. so a big game download gets the whole internet):
 # cloud/pause_until holds an ISO UTC time; until then nothing starts. Pulled here so a pause pushed from outside arrives.
 GIT_TERMINAL_PROMPT=0 timeout 120 git pull -q --rebase --autostash 2>/dev/null
+# 2026-11-08: un-stick git + push waiting status + report to Documents\kanal_holat.txt (at most every 20 min)
+[ -f cloud/pc_git_heal.sh ] && timeout 400 bash cloud/pc_git_heal.sh
 if [ -f cloud/pause_until ] && [ "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \< "$(head -c 20 cloud/pause_until)" ]; then
   echo "$(date -u) paused until $(cat cloud/pause_until)" >> /root/kanal/pause.log; exit 0
 fi
