@@ -1,0 +1,892 @@
+{
+ "id": "20261108-2-autumn-bread-wont-rise",
+ "plot": "At midnight before the first frost Grandma's harvest dough for every porch on Maple Street hasn't risen; Zeek's float test sinks and the bros fear Walter's fifty-year-old starter is dead, Bup's tea-towel blanket changes nothing, Grandma comes down and sighs over the flat dough, and then — the twist — Zeek realizes his glasses keep fogging because the whole kitchen is cold (the old window is open a crack), so the starter is only asleep; they shut the window and push the bowl into the oven with only the light on, the dough domes by 4 a.m., and at sunrise the neighbour who gets the first loaf reads the card and gasps 'Rosie came back?'.",
+ "script": {
+  "title": "Grandma's Autumn Bread Won't Rise",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bowl",
+    "type": "cake",
+    "color": [
+     0.95,
+     0.88,
+     0.7
+    ],
+    "on": null,
+    "at": [
+     0,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "glass",
+    "type": "box",
+    "color": [
+     0.7,
+     0.85,
+     1.0
+    ],
+    "on": null,
+    "at": [
+     -3,
+     10,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "oven",
+    "type": "box",
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "on": null,
+    "at": [
+     6,
+     14,
+     0
+    ],
+    "visible": false,
+    "scale": 2.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "Flat! Five hours, and Grandma's dough hasn't risen at all!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ],
+     [
+      "bowl",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then why won't it rise? Is Walter's starter broken?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight in the kitchen. Autumn wind rattles the old window.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At five, Grandma bakes twelve loaves. One for every porch.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "NO RISE, NO BREAD",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If it stays flat, Grandma thinks she let Walter down.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Not on our counter. We fix this dough tonight.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek climbs the bowl rim and pokes the dough. Nothing.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "zeek",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy leans in to look. Zeek's glasses fog up white.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,10"
+     ],
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy! Stop breathing on my glasses. I can't see.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I don't breathe. I smolder.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then test the starter. A spoon of Mother in water.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "If it floats, the yeast is awake. If it sinks...",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim drops the spoonful into a glass. Plop. It sinks.",
+    "cam": "prop:glass",
+    "do": [
+     [
+      "glass",
+      "show"
+     ],
+     [
+      "glass",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "IS MOTHER DEAD?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No! Fifty years old, and she dies on OUR counter?!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She's just tired. Tired things need a blanket. Tea towel!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Lolly drag a tea towel over the bowl. Tuck, tuck.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:1,9"
+     ],
+     [
+      "lolly",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They wait. And wait. Under the towel, nothing moves.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One o'clock. Four hours left. Twelve loaves. Zero rise.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Then the street wakes up to nothing. Just empty porches.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Creak. Footsteps on the stairs. The bros dive behind the toaster.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma comes down in her slippers for a glass of water.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She lifts the towel and pats the flat dough. She sighs.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Come on, Mother, she whispers. Not tonight. Please.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She goes back upstairs slowly. The bros come out.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Did you see her face? We can't let her down.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay. What do we know? Think, everyone. Think hard.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek leans close to Crispy again. Again his glasses fog.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hmm. Glasses only fog when cold glass meets warm air.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "So my glasses are cold. So the air is cold.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "So this whole kitchen is freezing, and nobody noticed!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE KITCHEN IS COLD?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim points at the window: open a crack, frost on the glass.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Yeast sleeps in the cold. Mother isn't dead. She's asleep!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Old baker trick. Oven door shut. Only the little light on.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Put Grandma's bread IN the oven? On p-purpose?!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup reaches up toward a big black knob.",
+    "cam": "prop:oven",
+    "do": [
+     [
+      "oven",
+      "show"
+     ],
+     [
+      "bup",
+      "to:5,13"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup. NOBODY. Touches. The heat knob.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Light switch. Got it. Totally meant the light switch.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five bros push the heavy bowl across the counter. Inch by inch.",
+    "cam": "wide",
+    "do": [
+     [
+      "bowl",
+      "to:bup"
+     ],
+     [
+      "all",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Into the oven. Door shut. Click. A warm yellow glow.",
+    "cam": "prop:oven",
+    "do": [
+     [
+      "oven",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They close the window together. Push, push, thunk.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "4 A.M.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros press their faces to the oven glass.",
+    "cam": "prop:oven",
+    "do": [
+     [
+      "all",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The dough has risen into a big, soft dome!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She wasn't old. She was just cold. Like a new house.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Zeek's foggy glasses saved the whole street!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At five, Grandma finds the bowl glowing in the oven. Doubled.",
+    "cam": "wide",
+    "do": [
+     [
+      "bowl",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At sunrise, Mia leaves the first warm loaf on the next porch.",
+    "cam": "wide",
+    "do": [
+     [
+      "bowl",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The door opens. An old woman reads the card and gasps.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rosie? Rosie came back to Maple Street?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO KNOWS GRANDMA?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Grandma's Autumn Bread Won't Rise 🍂 (Ep 21)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Mother wasn't dead. She was just cold. My glasses knew first.\" — Zeek\nAt midnight before the first frost, Grandma's harvest dough for every porch on the street lies flat on the counter — and the Dough Bros have until five to wake up a fifty-year-old starter.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "autumn",
+   "bread",
+   "sourdough",
+   "zeek",
+   "grandma",
+   "first frost",
+   "funny animation"
+  ],
+  "thumb_text": "WHY SO FLAT?",
+  "thumb_beat": 0,
+  "localizations": {
+   "es": {
+    "title": "El pan de otoño de la abuela no sube 🍂 (Ep 21)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Mother no estaba muerta. Solo tenía frío. Mis gafas lo supieron primero.\" — Zeek\nA medianoche, antes de la primera helada, la masa de la cosecha que la abuela hizo para cada porche de la calle sigue plana — y los Dough Bros tienen hasta las cinco para despertar una masa madre de cincuenta años.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O pão de outono da vovó não cresce 🍂 (Ep 21)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"A Mother não tinha morrido. Ela só estava com frio. Meus óculos perceberam primeiro.\" — Zeek\nÀ meia-noite antes da primeira geada, a massa da colheita que a vovó fez para cada varanda da rua continua murcha — e os Dough Bros têm até as cinco para acordar um fermento de cinquenta anos.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "خبز الخريف عند الجدة لا ينتفخ 🍂 (Ep 21)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لم تكن الخميرة ميتة. كانت تشعر بالبرد فقط. نظارتي عرفت أولًا.\" — زيك\nفي منتصف الليل قبل أول صقيع، عجينة الحصاد التي صنعتها الجدة لكل شرفة في الشارع ما زالت مسطّحة — وأمام الأصدقاء حتى الخامسة لإيقاظ خميرة عمرها خمسون عامًا.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Le pain d'automne de Mamie ne lève pas 🍂 (Ep 21)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Mother n'était pas morte. Elle avait juste froid. Mes lunettes l'ont su en premier.\" — Zeek\nÀ minuit, avant la première gelée, la pâte des moissons que Mamie a préparée pour chaque perron de la rue reste toute plate — et les Dough Bros ont jusqu'à cinq heures pour réveiller un levain de cinquante ans.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "おばあちゃんの秋のパンがふくらまない 🍂 (Ep 21)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「マザーは死んでなかった。寒かっただけ。最初に気づいたのは僕のメガネ。」— ジーク\n初霜の前の真夜中、通りのすべての家に配るはずのおばあちゃんの収穫パンの生地はぺちゃんこのまま。ドウ・ブロスは5時までに50年もののパン種を起こせるのか。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "할머니의 가을 빵이 부풀지 않는다 🍂 (Ep 21)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"마더는 죽은 게 아니었어. 그냥 추웠던 거야. 내 안경이 먼저 알았지.\" — 지크\n첫서리 전날 자정, 할머니가 거리의 모든 현관에 놓으려고 만든 수확 빵 반죽이 납작한 그대로다 — 도우 브로스는 다섯 시까지 50년 된 발효종을 깨워야 한다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Omas Herbstbrot geht nicht auf 🍂 (Ep 21)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Mother war nicht tot. Ihr war nur kalt. Meine Brille wusste es zuerst.\" — Zeek\nUm Mitternacht vor dem ersten Frost liegt Omas Erntebrot-Teig für jede Veranda der Straße platt auf der Arbeitsplatte – und die Dough Bros haben bis fünf Uhr Zeit, einen fünfzig Jahre alten Sauerteig aufzuwecken.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 38,
+   "dur": 15,
+   "top": "WOULD YOU TOUCH IT?",
+   "title": "Would YOU Touch This Oven Knob? 🔥 (Ep 21) #shorts",
+   "description": "Grandma's bread is going in. Lolly says hands off. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "oven"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ tocarías esta perilla del horno? 🔥 (Ep 21) #shorts",
+     "description": "El pan de la abuela va adentro. Lolly dice: manos fuera. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ tocaria nesse botão do forno? 🔥 (Ep 21) #shorts",
+     "description": "O pão da vovó vai entrar. A Lolly diz: tira a mão. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستلمس مقبض الفرن هذا؟ 🔥 (Ep 21) #shorts",
+     "description": "خبز الجدة سيدخل الفرن. ولولي تقول: لا تلمسوا شيئًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU toucherais ce bouton du four ? 🔥 (Ep 21) #shorts",
+     "description": "Le pain de Mamie va entrer. Lolly dit : pas touche. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのオーブンのつまみにさわれる？ 🔥 (Ep 21) #shorts",
+     "description": "おばあちゃんのパンがオーブンへ。ロリーは「さわっちゃダメ」。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 오븐 손잡이를 만질 수 있어? 🔥 (Ep 21) #shorts",
+     "description": "할머니의 빵이 오븐에 들어간다. 롤리는 손대지 말라고 한다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen Ofenknopf anfassen? 🔥 (Ep 21) #shorts",
+     "description": "Omas Brot kommt in den Ofen. Lolly sagt: Finger weg. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
