@@ -1,0 +1,1347 @@
+{
+ "id": "20261107-3-nobody-buys-hals-apples",
+ "plot": "On market day Hal sells his grandma's apples from his truck, but every car slows down, looks, says 'what a pity' and drives away; Grumpy dulls the 'too shiny' apples and Hal starts to think Wheelburg doesn't want him, while Pip (who came from the front) buys the first one; Bolt watches from across the street and sees every car is reading something at the back, so tall Bertha drives behind and reads the other side of Hal's two-sided board: 'SORRY! CLOSED TODAY! MOVING DAY!' (clue planted: Hal painted his apple sign on the back of his old moving sign); Grumpy flips it with his tow hook and every apple sells in an hour; lesson: before you feel sad, try to see it the way others see it; cliffhanger: the first snowflake lands on Bolt's hat.",
+ "script": {
+  "title": "Nobody Buys Hal's Apples!",
+  "description": "Every car stops, looks... and drives away. Why? Inspector Bolt #26",
+  "set": {
+   "place": "Wheelburg Main Street on market day, Thursday afternoon until the market closes",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.75
+    ],
+    "kind": "truck",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     -12.0,
+     15.0
+    ]
+   },
+   "maple": {
+    "name": "Mrs. Maple",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.6,
+     0.35
+    ],
+    "kind": "car",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     12.0,
+     14.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "a1",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -9.5,
+     12.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "a2",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -8.8,
+     12.2,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "a3",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.85,
+     0.2
+    ],
+    "at": [
+     -10.2,
+     12.2,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -12.0,
+     18.2,
+     2.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "hal",
+    "say": "Fresh apples! Grandma's apples! Come and get them! Anybody?",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "enter"
+     ],
+     [
+      "hal",
+      "jump"
+     ],
+     [
+      "a1",
+      "show"
+     ],
+     [
+      "a2",
+      "show"
+     ],
+     [
+      "a3",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A green car slowed down... looked... and drove away.",
+    "cam": "wide",
+    "do": [
+     [
+      "maple",
+      "enter"
+     ],
+     [
+      "maple",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "NOBODY BUYS?!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "hal",
+    "say": "Two hours at market day. Not one apple sold!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Thursday afternoon. Market day on Main Street.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal had parked his big truck right in the middle.",
+    "cam": "wide",
+    "do": [
+     [
+      "a1",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Earlier that morning, he had hung up his brand new sign.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "My new apple sign! Painted on the back of my old moving sign.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Two signs in one board. Very clever, Hal. Very clever.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'll help you sell. I'm good with customers.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-3,14"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Really, Grumpy? You?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. But I'm good at standing still. Same thing.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A blue car slowed down. It looked. Then it drove away too.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "bolt",
+      "to:9,10"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Bolt! Even you? Don't you like apples?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I love apples, Hal. I was only on my way to the bank.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "But I'll come back. Hmm. Why didn't I stop just now?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHY WON'T THEY STOP?",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "hal",
+    "say": "Maybe my apples look bad. Grumpy, taste one.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "a1",
+      "give:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Crunchy. Sweet. Too shiny. I don't like shiny.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Too shiny! That's it! Let's make them less shiny!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Grumpy rubbed each apple with his dusty old cloth.",
+    "cam": "prop:a2",
+    "do": [
+     [
+      "a2",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "There. Dull and sad. Just like my weekends.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Thank you, Grumpy. Now they look a bit like potatoes.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Potatoes are honest food. Nobody says no to potatoes.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the cars still slowed down, looked, and drove away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hi, Hal! Ooh, apples! Oh. Oh no. Sorry, Hal! Bye!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "turbo",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Turbo too? He said sorry! Sorry for what?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "TWO HOURS LEFT!",
+    "hold": 0.9,
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "hal",
+    "say": "The market closes at five. I have only two hours left.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Maybe Wheelburg doesn't want a new stall. Or a new truck.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Wheelburg wants you. Wheelburg is just... slow.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hal! Hal! I came to buy the shiniest apple!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip rolled right up to Hal's cab, from the front.",
+    "cam": "two:hal,pip",
+    "do": [
+     [
+      "pip",
+      "to:-9,13"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "One apple, please! I'm your very first customer!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "My first customer! Oh, Pip. Thank you.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But why is nobody else here? Your apples are yummy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I don't know, Pip. Maybe they don't like big trucks.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I like big trucks! Big trucks carry the best things!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt came back from the bank and parked across the street.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:9,8"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let us watch for a minute. Quietly.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A red car slowed down. It looked. 'What a pity,' it said.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A small car slowed down. 'Oh, what a pity.' Off it went.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every car slows down. Every car looks at the same spot.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And every car says, 'What a pity.' They are reading something!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "READING WHAT?",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Reading? But I didn't read anything. I came from the front.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Precisely, Pip. The cars come from the back.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Hurry, Bolt. Grandma's apples will go soft by tomorrow.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "If I can't sell them today, I'll have to throw them away.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hello, my darlings! What's all the fuss on Main Street?",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha! You're the tallest of us. Drive behind Hal's truck.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tell us what the cars see. Every word.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha rolled slowly behind the truck and looked at the open door.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "to:-12,19"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh! Oh dear. Hal, sweetie... it says something very sad.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "'SORRY! CLOSED TODAY! MOVING DAY!'",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CLOSED?!",
+    "hold": 1.1,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:hal"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "hal",
+    "say": "My old moving sign? But I see my apple sign!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You see the inside, Hal. The cars see the outside.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When you opened the door, your new sign turned to face you.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Two signs in one board! Very clever, Hal!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Ha! Not so clever after all.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "So nobody was saying no to me. They thought I was closed!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And Turbo said sorry because he thought you were leaving again.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let us flip it around. The right way. Ready?",
+    "cam": "two:bolt,hal",
+    "do": [
+     [
+      "bolt",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy hooked the sign with his tow hook. And turned it. Clunk!",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ],
+     [
+      "grumpy",
+      "to:-10,14"
+     ]
+    ]
+   },
+   {
+    "text": "APPLES! OPEN!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "The very next car stopped. And the next. And the next!",
+    "cam": "overhead",
+    "do": [
+     [
+      "maple",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "maple",
+    "say": "Apples? Oh, how lovely! I thought you were closed, dear!",
+    "cam": "close:maple",
+    "do": [
+     [
+      "maple",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hal! You're not moving away! Three apples, please! No, five!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In one hour, every single apple was sold.",
+    "cam": "wide",
+    "do": [
+     [
+      "a2",
+      "vanish"
+     ],
+     [
+      "a3",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Sold out! Grandma will be so proud!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "They didn't dislike me. They just couldn't see what I meant.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Before you feel sad, try to see it the way others see it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "From the front AND from the back!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Same time next week, Hal? I'll bring my thirty kids!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'll bring my cloth. For less shine.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "As the market closed, something tiny and white floated down.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It landed right on Bolt's brown hat.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Cold. Soft. Is this... snow? In Wheelburg?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Snow? I've never driven on snow! Is it slippery?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "FIRST SNOW?!",
+    "hold": 1.1,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Nobody Buys Hal's Apples! 🍎😢 (Ep 26)",
+  "description": "\"Maybe Wheelburg doesn't want a new stall... or a new truck.\" — Hal\nIt's market day, and Hal is selling his grandma's apples. Every car slows down, looks, says 'what a pity' — and drives away. Inspector Bolt watches from across the street. Inspector Bolt #26\n\n#series #3DAnimation #InspectorBolt #carcartoons",
+  "tags": [
+   "inspector bolt",
+   "hal the truck",
+   "market day",
+   "kids cartoon",
+   "cartoon cars",
+   "car cartoons for kids",
+   "3d animation",
+   "series",
+   "feelings for kids",
+   "new in town",
+   "stories for kids",
+   "wheelburg",
+   "truck cartoon"
+  ],
+  "thumb_text": "WHY NOBODY?",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "¡Nadie compra las manzanas de Hal! 🍎😢 (Ep 26)",
+    "description": "\"Quizás Wheelburg no quiere un puesto nuevo... ni un camión nuevo.\" — Hal\nEs día de mercado y Hal vende las manzanas de su abuela. Cada coche frena, mira, dice \"qué pena\" y se va. El Inspector Bolt observa desde el otro lado de la calle. Inspector Bolt #26\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Ninguém compra as maçãs do Hal! 🍎😢 (Ep 26)",
+    "description": "\"Talvez Wheelburg não queira uma barraca nova... nem um caminhão novo.\" — Hal\nÉ dia de feira, e o Hal está vendendo as maçãs da avó. Cada carro diminui a velocidade, olha, diz \"que pena\" e vai embora. O Inspetor Bolt observa do outro lado da rua. Inspetor Bolt #26\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "لا أحد يشتري تفاح هال! 🍎😢 (حلقة 26)",
+    "description": "\"ربما لا تريد ويلبرغ كشكاً جديداً... ولا شاحنة جديدة.\" — هال\nإنه يوم السوق، وهال يبيع تفاح جدته. كل سيارة تبطئ، تنظر، تقول \"يا للأسف\" وترحل. المفتش بولت يراقب من الجهة الأخرى من الشارع. المفتش بولت #26\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Personne n'achète les pommes de Hal ! 🍎😢 (Ép 26)",
+    "description": "« Peut-être que Wheelburg ne veut pas d'un nouveau stand... ni d'un nouveau camion. » — Hal\nC'est jour de marché, et Hal vend les pommes de sa grand-mère. Chaque voiture ralentit, regarde, dit « quel dommage » et repart. L'inspecteur Bolt observe depuis l'autre côté de la rue. Inspecteur Bolt #26\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "だれもハルのリンゴを買ってくれない!🍎😢(第26話)",
+    "description": "「ウィールバーグは、新しいお店も新しいトラックもいらないのかな…」— ハル\n今日は市場の日。ハルはおばあちゃんのリンゴを売っている。でも車はみんなスピードを落として、見て、「ざんねん」と言って行ってしまう。ボルトは通りの向こうから見ている。インスペクター・ボルト #26\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "아무도 할의 사과를 안 사요! 🍎😢 (26화)",
+    "description": "\"휠버그는 새 가게도, 새 트럭도 원하지 않나 봐...\" — 할\n장날이에요. 할은 할머니의 사과를 팔고 있어요. 그런데 차들이 모두 속도를 줄이고, 쳐다보고, \"아쉽다\"라고 말하고는 가 버려요. 인스펙터 볼트가 길 건너에서 지켜봐요. 인스펙터 볼트 #26\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Niemand kauft Hals Äpfel! 🍎😢 (Folge 26)",
+    "description": "„Vielleicht will Wheelburg keinen neuen Stand... und keinen neuen Lastwagen.\" — Hal\nEs ist Markttag, und Hal verkauft die Äpfel seiner Oma. Jedes Auto bremst, schaut, sagt „wie schade\" – und fährt weiter. Inspektor Bolt beobachtet alles von der anderen Straßenseite. Inspektor Bolt #26\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "NOBODY BUYS?!",
+   "title": "Two Hours, Zero Apples Sold! 🍎 (Ep 26) #shorts",
+   "description": "Every car looks... and drives away. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Dos horas y cero manzanas vendidas! 🍎 (Ep 26) #shorts",
+     "description": "Cada coche mira... y se va. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Duas horas e nenhuma maçã vendida! 🍎 (Ep 26) #shorts",
+     "description": "Cada carro olha... e vai embora. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ساعتان ولم تُبع تفاحة واحدة! 🍎 (حلقة 26) #shorts",
+     "description": "كل سيارة تنظر... ثم ترحل. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Deux heures, zéro pomme vendue ! 🍎 (Ép 26) #shorts",
+     "description": "Chaque voiture regarde... et repart. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "2時間でリンゴが1こも売れない!🍎(第26話)#shorts",
+     "description": "車はみんな見るだけで行ってしまう。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "두 시간 동안 사과가 하나도 안 팔렸어요! 🍎 (26화) #shorts",
+     "description": "차들이 보기만 하고 가 버려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zwei Stunden, null Äpfel verkauft! 🍎 (Folge 26) #shorts",
+     "description": "Jedes Auto schaut... und fährt weiter. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 17,
+   "dur": 22,
+   "top": "TOO SHINY?!",
+   "title": "Grumpy Thinks the Apples Are Too Shiny! 🍎 (Ep 26) #shorts",
+   "description": "Grumpy has a very grumpy plan. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Grumpy cree que las manzanas brillan demasiado! 🍎 (Ep 26) #shorts",
+     "description": "Grumpy tiene un plan muy gruñón. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Grumpy acha as maçãs brilhantes demais! 🍎 (Ep 26) #shorts",
+     "description": "O Grumpy tem um plano bem rabugento. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "غرامبي يظن أن التفاح لامع أكثر من اللازم! 🍎 (حلقة 26) #shorts",
+     "description": "غرامبي عنده خطة متذمرة جداً. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Grumpy trouve les pommes trop brillantes ! 🍎 (Ép 26) #shorts",
+     "description": "Grumpy a un plan très grognon. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピー「リンゴがピカピカすぎる!」🍎(第26話)#shorts",
+     "description": "グランピーのとってもふきげんな作戦。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "그럼피는 사과가 너무 반짝인대요! 🍎 (26화) #shorts",
+     "description": "그럼피의 아주 투덜거리는 작전. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grumpy findet die Äpfel zu glänzend! 🍎 (Folge 26) #shorts",
+     "description": "Grumpy hat einen sehr grummeligen Plan. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 39,
+   "dur": 22,
+   "top": "WHAT DO THEY SEE?",
+   "title": "Every Car Says 'What a Pity'! Why? 🍎 (Ep 26) #shorts",
+   "description": "Bolt watches. Every car looks at the same spot. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Cada coche dice \"qué pena\"! ¿Por qué? 🍎 (Ep 26) #shorts",
+     "description": "Bolt observa. Todos los coches miran el mismo lugar. Lo que sigue, en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Todo carro diz \"que pena\"! Por quê? 🍎 (Ep 26) #shorts",
+     "description": "O Bolt observa. Todos os carros olham para o mesmo lugar. A continuação está no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كل سيارة تقول \"يا للأسف\"! لماذا؟ 🍎 (حلقة 26) #shorts",
+     "description": "بولت يراقب. كل السيارات تنظر إلى المكان نفسه. التتمة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chaque voiture dit « quel dommage » ! Pourquoi ? 🍎 (Ép 26) #shorts",
+     "description": "Bolt observe. Toutes les voitures regardent au même endroit. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "どの車も「ざんねん」と言うのはなぜ?🍎(第26話)#shorts",
+     "description": "ボルトが見ている。どの車も同じところを見ている。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "차마다 \"아쉽다\"고 말해요! 왜일까? 🍎 (26화) #shorts",
+     "description": "볼트가 지켜봐요. 모든 차가 같은 곳을 봐요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Jedes Auto sagt „wie schade\"! Warum? 🍎 (Folge 26) #shorts",
+     "description": "Bolt schaut zu. Alle Autos sehen auf dieselbe Stelle. Weiter geht's auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
