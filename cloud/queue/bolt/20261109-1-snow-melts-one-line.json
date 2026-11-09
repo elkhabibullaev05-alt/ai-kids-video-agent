@@ -1,0 +1,1344 @@
+{
+ "id": "20261109-1-snow-melts-one-line",
+ "plot": "The morning after the first snow, one long green line in Wheelburg square keeps melting and growing two hours before Bertha's noon Snow Slide; Grumpy blames Turbo's hot engine, but Bolt's test clears him, the ground is warm, and the line leads to Benny's bakery, whose oven kept going cold all morning (clue planted at the start): grandpa's old hot-water pipe under the square is leaking; Grumpy lifts the lid, Benny shuts the valve, fresh snow covers the line and the slide happens; lesson: when two strange things happen, they may be one problem; cliffhanger: Bertha asks Grumpy to babysit little Tot tonight.",
+ "script": {
+  "title": "The Snow Melts in One Long Line!",
+  "description": "The first snow fell on Wheelburg... but one long line won't stay white. Inspector Bolt #27",
+  "set": {
+   "place": "Wheelburg town square and the corner of Gear Street by Benny's bakery, the morning after the first snow until noon",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "benny": {
+    "name": "Benny",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.95,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 0.9,
+    "hat": false,
+    "home": [
+     12.0,
+     17.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "lid",
+    "type": "wheel",
+    "color": [
+     0.35,
+     0.35,
+     0.38
+    ],
+    "at": [
+     -7.5,
+     10.5,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "valve",
+    "type": "wheel",
+    "color": "red",
+    "at": [
+     -8.8,
+     9.6,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "rolls",
+    "type": "cake",
+    "color": [
+     0.82,
+     0.55,
+     0.25
+    ],
+    "at": [
+     10.0,
+     14.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Snow! Real snow! Wheee! Wait. Why is THIS line green?",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter"
+     ],
+     [
+      "turbo",
+      "spin"
+     ],
+     [
+      "fx",
+      "tracks:turbo-square"
+     ]
+    ]
+   },
+   {
+    "text": "THE SNOW WON'T STAY!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "Everything is white. But this long line keeps melting!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Last night, the very first snow fell on Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo, darling! Thirty kids are coming for the Snow Slide at noon!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And our slide goes right across that green line!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "No snow, no slide? The kids will be so sad!",
+    "cam": "two:turbo,bertha",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, Benny the baker van rolled by, grumbling.",
+    "cam": "wide",
+    "do": [
+     [
+      "benny",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "My oven went cold again! Three times this morning!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "A cold oven on the coldest day. Maybe no warm rolls today.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh no, Benny. Is it the snow?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Must be. Everything is cold today. Even my poor oven.",
+    "cam": "wide",
+    "do": [
+     [
+      "benny",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Snow. Cold, white and quiet. My kind of weather.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Except this line. This line is loud. And green.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I know! A space car landed here last night!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Space cars land in circles. Not in lines.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. I think your engine did it, Turbo. You zoom. You're hot.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-2,13"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me? I just got here! Well... I did zoom a bit.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "DID TURBO MELT IT?",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Inspector Bolt rolled into the square, slowly, on his new snow tyres.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning. Nobody is guilty until we test it. Procedure.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, please drive one big circle in the fresh snow. Fast.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed a big circle. Vroom! Round and round he went.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:9,15"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Look! The snow is still white! I'm not a heater!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Correct. A hot engine passing by melts almost nothing.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "But snow can melt from above. Or from below.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! Bolt! The green line is getting wider! Look!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S GROWING!",
+    "hold": 1.0,
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:pip-turbo"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "At breakfast it was thin like me. Now it's Turbo-wide!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Two hours to noon! If it grows, the Snow Slide is cancelled!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we must find where it starts. Everyone, follow the line.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So the cars followed the green line across the square.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-4,11"
+     ],
+     [
+      "pip",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I don't follow lines. Lines follow me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy, you're standing on it. Your tyres are all wet!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Wet? Snow is not wet. Snow is dry and cold.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Precisely. But this ground is wet. And... warm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WARM GROUND?!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Put your tyre right here, Pip. Gently.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "pip",
+      "to:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ooh! It feels like a bath! The ground is warm!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Warm ground in winter? Is there a volcano under Wheelburg?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "A volcano? Oh my wheels! Under my bus stop?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "No volcano, Bertha. Volcanoes are not this polite.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The line ran straight. Past the bench. Past the lamp post.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:4,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then it turned left, towards Gear Street.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It's going to the bakery! To Benny's bakery!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Benny melted the snow? With what? His rolls?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Super hot rolls! Rolling under the street at night!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. Benny's oven kept going cold all morning.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And our line kept growing all morning. On the same street.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "TWO MYSTERIES?",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Benny came out of the bakery, looking very worried.",
+    "cam": "wide",
+    "do": [
+     [
+      "benny",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Bolt! Now my oven is ice cold. And my floor is wet!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "If my oven stays cold, Wheelburg gets no bread tomorrow!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "No bread AND no Snow Slide? On the first snow day?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Benny, tell me. How does your old oven stay hot?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Hot water. It runs in an old pipe under the square.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "My grandpa put it there, to keep the bakery warm.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Under the square. Exactly under our green line.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "A LEAKY PIPE!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "The pipe has a little leak. Hot water comes out.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It melts the snow. And your oven loses its heat.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "So the cold oven and the green line are ONE problem!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And I'm not a heater! I knew it!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I said it was you, Turbo. I'm sorry.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That's okay, Grumpy. I zoom a lot. I'd guess me too.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Benny, where can we shut the water off?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Under the old lid on the corner. But it's very heavy.",
+    "cam": "prop:lid",
+    "do": [
+     [
+      "lid",
+      "show"
+     ],
+     [
+      "valve",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Heavy? That's my favourite word.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy hooked the old lid with his tow hook. And pulled. Clunk!",
+    "cam": "prop:lid",
+    "do": [
+     [
+      "grumpy",
+      "to:-6,13"
+     ],
+     [
+      "lid",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Benny turned the little red wheel. Squeak. Squeak. Hiss... stop.",
+    "cam": "prop:valve",
+    "do": [
+     [
+      "valve",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Listen! No more hissing!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And now, my strong yellow tape. Wrap, wrap, wrap.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "A plumber comes tomorrow. And look! My oven is hot again!",
+    "cam": "close:benny",
+    "do": [
+     [
+      "benny",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then it started to snow again. Big, soft flakes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "By noon, the green line was white like everything else.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lid",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "text": "SNOW SLIDE TIME!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Kids, ready? One, two, three... slide! Wheeee!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Benny brought a tray of warm rolls for everyone.",
+    "cam": "prop:rolls",
+    "do": [
+     [
+      "rolls",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "benny",
+    "say": "Fresh and warm! Thanks to a very careful inspector.",
+    "cam": "close:benny",
+    "do": [
+     [
+      "rolls",
+      "give:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When two strange things happen, they may be one problem.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "One problem, two clues! I'll remember that!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That evening, Bertha came to Grumpy with a big favour.",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "to:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy, could you look after my little cousin Tot tonight?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Me? Babysit? A tiny car? All night long?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY BABYSITS?!",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Snow Melts in One Long Line! ❄️ (Ep 27)",
+  "description": "\"Everything is white. So why won't this one line stay white?\" — Turbo\nThe morning after the first snow, a long green line keeps melting across Wheelburg square — right where the kids' Snow Slide starts at noon. And Benny's oven keeps going cold. Inspector Bolt #27\n\n#series #3DAnimation #InspectorBolt #firstsnow",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "first snow",
+   "winter cartoon",
+   "snow day",
+   "turbo",
+   "benny the baker",
+   "mystery for kids"
+  ],
+  "thumb_text": "WHY IS IT GREEN?",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¡La nieve se derrite en una sola línea! ❄️ (Ep 27)",
+    "description": "\"Todo está blanco. ¿Por qué esta línea no se queda blanca?\" — Turbo\nLa mañana después de la primera nevada, una larga línea verde se derrite en la plaza de Wheelburg, justo donde empieza el Tobogán de Nieve de los niños al mediodía. Y el horno de Benny se enfría una y otra vez. Inspector Bolt #27\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "A neve derrete em uma linha só! ❄️ (Ep 27)",
+    "description": "\"Está tudo branco. Por que esta linha não fica branca?\" — Turbo\nNa manhã depois da primeira neve, uma longa linha verde continua derretendo na praça de Wheelburg, bem onde começa o Escorregador de Neve das crianças ao meio-dia. E o forno do Benny não para de esfriar. Inspetor Bolt #27\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "الثلج يذوب في خط واحد طويل! ❄️ (حلقة 27)",
+    "description": "\"كل شيء أبيض. فلماذا لا يبقى هذا الخط أبيض؟\" — توربو\nفي الصباح بعد أول ثلج، يظل خط أخضر طويل يذوب في ساحة ويلبرغ، تماماً حيث تبدأ زلاجة الثلج للأطفال عند الظهر. وفرن بيني يبرد مرة بعد مرة. المفتش بولت #27\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "La neige fond sur une seule ligne ! ❄️ (Ép 27)",
+    "description": "« Tout est blanc. Alors pourquoi cette ligne ne reste pas blanche ? » — Turbo\nLe matin après la première neige, une longue ligne verte fond sur la place de Wheelburg, juste là où la Glissade des enfants commence à midi. Et le four de Benny n'arrête pas de refroidir. Inspecteur Bolt #27\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "雪が1本の線だけとけていく!❄️(第27話)",
+    "description": "「ぜんぶ真っ白なのに、どうしてこの線だけ白くならないの?」— ターボ\nはじめての雪の朝、ウィールバーグの広場で長い緑の線がどんどんとけていく。そこはお昼に子どもたちの雪すべりが始まる場所。しかもベニーのオーブンが何度も冷たくなる。インスペクター・ボルト #27\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "눈이 한 줄로만 녹고 있어요! ❄️ (27화)",
+    "description": "\"다 하얀데, 왜 이 줄만 하얗지 않을까?\" — 터보\n첫눈이 온 다음 날 아침, 휠버그 광장에 긴 초록 줄이 계속 녹아요. 바로 정오에 아이들의 눈썰매가 시작되는 곳이에요. 게다가 베니의 오븐은 자꾸 차가워져요. 인스펙터 볼트 #27\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Der Schnee schmilzt in einer Linie! ❄️ (Folge 27)",
+    "description": "„Alles ist weiß. Warum bleibt nur diese Linie nicht weiß?\" — Turbo\nAm Morgen nach dem ersten Schnee schmilzt eine lange grüne Linie quer über den Platz von Wheelburg – genau dort, wo mittags die Schneerutsche der Kinder beginnt. Und Bennys Ofen wird immer wieder kalt. Inspektor Bolt #27\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "THE SNOW WON'T STAY!",
+   "title": "First Snow, But This Line Won't Stay White! ❄️ (Ep 27) #shorts",
+   "description": "Everything is white... except one line. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "first snow"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Primera nieve, pero esta línea no se queda blanca! ❄️ (Ep 27) #shorts",
+     "description": "Todo está blanco... menos una línea. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Primeira neve, mas esta linha não fica branca! ❄️ (Ep 27) #shorts",
+     "description": "Tudo está branco... menos uma linha. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أول ثلج، لكن هذا الخط لا يبقى أبيض! ❄️ (حلقة 27) #shorts",
+     "description": "كل شيء أبيض... إلا خطاً واحداً. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Première neige, mais cette ligne ne reste pas blanche ! ❄️ (Ép 27) #shorts",
+     "description": "Tout est blanc... sauf une ligne. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "はじめての雪…でもこの線だけ白くならない!❄️(第27話)#shorts",
+     "description": "ぜんぶ真っ白…この線をのぞいて。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "첫눈인데 이 줄만 하얗지 않아요! ❄️ (27화) #shorts",
+     "description": "다 하얀데… 한 줄만 빼고요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Erster Schnee, aber diese Linie bleibt nicht weiß! ❄️ (Folge 27) #shorts",
+     "description": "Alles ist weiß... außer einer Linie. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 12,
+   "dur": 22,
+   "top": "DID TURBO MELT IT?",
+   "title": "Did Turbo's Hot Engine Melt the Snow? ❄️ (Ep 27) #shorts",
+   "description": "Grumpy thinks Turbo did it. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿El motor caliente de Turbo derritió la nieve? ❄️ (Ep 27) #shorts",
+     "description": "Grumpy cree que fue Turbo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O motor quente do Turbo derreteu a neve? ❄️ (Ep 27) #shorts",
+     "description": "O Grumpy acha que foi o Turbo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل أذاب محرك توربو الساخن الثلج؟ ❄️ (حلقة 27) #shorts",
+     "description": "غرامبي يظن أن توربو هو الفاعل. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le moteur chaud de Turbo a fait fondre la neige ? ❄️ (Ép 27) #shorts",
+     "description": "Grumpy pense que c'est Turbo. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボのあついエンジンが雪をとかしたの?❄️(第27話)#shorts",
+     "description": "グランピーはターボのせいだと思っている。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보의 뜨거운 엔진이 눈을 녹였을까? ❄️ (27화) #shorts",
+     "description": "그럼피는 터보가 그랬다고 생각해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hat Turbos heißer Motor den Schnee geschmolzen? ❄️ (Folge 27) #shorts",
+     "description": "Grumpy glaubt, Turbo war's. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 34,
+   "dur": 22,
+   "top": "WARM GROUND?!",
+   "title": "Why Is the Ground Warm in Winter? ❄️ (Ep 27) #shorts",
+   "description": "Is there a volcano under Wheelburg? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué el suelo está caliente en invierno? ❄️ (Ep 27) #shorts",
+     "description": "¿Hay un volcán bajo Wheelburg? La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que o chão está quente no inverno? ❄️ (Ep 27) #shorts",
+     "description": "Tem um vulcão embaixo de Wheelburg? Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا الأرض دافئة في الشتاء؟ ❄️ (حلقة 27) #shorts",
+     "description": "هل يوجد بركان تحت ويلبرغ؟ الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi le sol est chaud en hiver ? ❄️ (Ép 27) #shorts",
+     "description": "Un volcan sous Wheelburg ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "冬なのにどうして地面があったかいの?❄️(第27話)#shorts",
+     "description": "ウィールバーグの下に火山?つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "겨울인데 왜 땅이 따뜻할까? ❄️ (27화) #shorts",
+     "description": "휠버그 아래에 화산이 있을까? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum ist der Boden im Winter warm? ❄️ (Folge 27) #shorts",
+     "description": "Ein Vulkan unter Wheelburg? Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

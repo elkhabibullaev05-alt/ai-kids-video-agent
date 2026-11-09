@@ -1,0 +1,1352 @@
+{
+ "id": "20261109-2-grumpy-babysits-snowy-night",
+ "plot": "On a snowy evening Grumpy babysits Bertha's toddler cousin Tot at his tow yard while Bertha drives the school choir over the hill (she says she blinks her lights three times if she needs help, planted early); Grumpy's rules and a bedtime 'Tow Truck Manual' story fail, Tot copies his 'hmph', Bolt and Turbo on patrol warn the hill road is slippery and Bolt says 'look where the witness looks'; Tot keeps beeping 'Blinky! Big Yellow!' at the hill and Grumpy thinks he just misses Bertha, until he goes down to Tot's height and sees three blinks: Bertha's bus is stuck in a ditch; Grumpy takes Tot on his first real tow and pulls her out; lesson: even the smallest voice can say the biggest thing; cliffhanger: Pip's grandma visits tomorrow and wants to meet Grumpy.",
+ "script": {
+  "title": "Grumpy Babysits on a Snowy Night?!",
+  "description": "Grumpy has rules. Tot has a beep. And Bertha is out on the snowy hill. Inspector Bolt #28",
+  "set": {
+   "place": "Grumpy's tow yard at the edge of Wheelburg and the snowy hill road above it, a snowy evening until late night",
+   "press": false,
+   "podium": false,
+   "time": "night"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "tot": {
+    "name": "Tot",
+    "voice": "af_sarah",
+    "speed": 1.1,
+    "pitch": 5,
+    "color": [
+     0.45,
+     0.85,
+     0.95
+    ],
+    "kind": "small",
+    "size": 0.5,
+    "hat": false,
+    "home": [
+     -12.5,
+     20.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.85,
+     0.2,
+     0.15
+    ],
+    "at": [
+     1.5,
+     13.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     -8.0,
+     17.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "lights",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     14.0,
+     22.0,
+     3.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "tot",
+    "say": "Beep beep beep! Vroom vroom! Again! Again!",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ],
+     [
+      "tot",
+      "enter:left"
+     ],
+     [
+      "tot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "BABYSITTER GRUMPY?!",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha. You said he sleeps. He does not sleep.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a snowy evening at Grumpy's tow yard.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "He'll sleep, sweetie. Just keep him happy and warm.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I'm driving the school choir over the hill to the Winter Concert.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Back at nine. And remember, if I ever need help...",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I blink my big lights. Three times. Blink, blink, blink!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody needs help. Go. Sing. Come back.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Bye-bye, Big Yellow! Bye-bye!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha drove off into the snow. Now it was just the two of them.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Rule number one. In my yard, we are quiet.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "BEEEP!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Rule number two. We do not zoom.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Zoom zoom zoom! Round the tyres!",
+    "cam": "overhead",
+    "do": [
+     [
+      "tot",
+      "to:-4,13"
+     ],
+     [
+      "tot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Rule number three. Rules are not a game.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tot zoomed past the old tyres, the crane and the junk pile.",
+    "cam": "wide",
+    "do": [
+     [
+      "tot",
+      "to:6,16"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Grumpy funny! Grumpy big and grey!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I am not funny. I am a professional.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy had one idea. A bedtime story.",
+    "cam": "wide",
+    "do": [
+     [
+      "book",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "The Tow Truck Manual. Page one. Chapter one. Hooks.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "A hook is a hook. It hooks. The end.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Again! Again! Hook hook hook!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That was the best part. There is no again.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "STILL NOT SLEEPY!",
+    "hold": 1.0,
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Hmph!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Don't copy me. That's my hmph.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "My hmph! Hmph, hmph, hmph!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "For one tiny second, Grumpy almost smiled. Almost.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then two cars came through the snow. Bolt and Turbo, on night patrol.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening, Grumpy. We heard rather a lot of beeping.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "We closed the hill road with a cone. It's super slippery!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Even I drove slowly! Well... slowly for me.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Do you need any help with the little one?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No. I have rules. And a manual.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Very well. Remember: a good inspector looks where the witness looks.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm not an inspector. And he's not a witness. He's a beeper.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt and Turbo drove on. And Tot rolled to the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "exit"
+     ],
+     [
+      "turbo",
+      "exit"
+     ],
+     [
+      "tot",
+      "to:-10,19"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Blinky! Blinky! Big Yellow! Big Yellow!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Big Yellow is at the concert. She comes back at nine.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "If you're still awake at nine, Bertha won't trust me again.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "No sleep! Blinky! Blinky!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT IS BLINKY?",
+    "hold": 1.0,
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grumpy",
+    "say": "Blinky. Is that your toy? Your blanket? Your ball?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "No ball! BLINKY!",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tot honked louder. And louder. Right at the dark hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Little ones miss their family. That's all it is.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You miss Big Yellow. I get it. She'll be back soon.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Big Yellow BLINKY!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy sighed. Then he remembered what Bolt had said.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Look where the witness looks. Fine. Just this once.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy rolled to the fence. And went down low, low, low. To Tot's size.",
+    "cam": "two:grumpy,tot",
+    "do": [
+     [
+      "grumpy",
+      "to:tot"
+     ],
+     [
+      "grumpy",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmph. From down here, I can see... the hill road.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, on the dark hill, a yellow light blinked.",
+    "cam": "prop:lights",
+    "do": [
+     [
+      "lights",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Blink. Blink. Blink.",
+    "cam": "prop:lights",
+    "do": [
+     [
+      "lights",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THREE BLINKS!",
+    "hold": 1.0,
+    "cam": "prop:lights",
+    "do": [
+     [
+      "lights",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grumpy",
+    "say": "Three times. 'If I need help, I blink three times.'",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tot wasn't fussing. He was telling me. All along!",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Blinky! Big Yellow stuck!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha's stuck in the snow. With thirty kids.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy looked at the hill. Then at Tot. He couldn't leave Tot alone.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tot. Want to see a real tow? Stay close to me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Real tow! Real tow! Yay!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, carefully, past Turbo's cone and up the slippery hill road.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:8,16"
+     ],
+     [
+      "tot",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "There was Big Bertha, two wheels deep in a snowy ditch.",
+    "cam": "wide",
+    "do": [
+     [
+      "lights",
+      "hide"
+     ],
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! Oh, Grumpy! How did you see my blinks?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I didn't. Tot did. I only listened. Finally.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "My little Tot! You saw me from all the way down there?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Tot see! Tot tell! Grumpy slow!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the bus, thirty kids were warm, singing a winter song.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hook on. Nice and gentle. One... two... pull.",
+    "cam": "two:grumpy,bertha",
+    "do": [
+     [
+      "grumpy",
+      "to:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Creak. Crunch. Pop! Big Bertha rolled out of the ditch.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S OUT!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "You did it! The kids will be home in time for bed!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Again! Again!",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No again. Once is plenty.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back at the yard, Tot finally closed his eyes.",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "He sleeps. Rule number four. Little ones see things too.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Thank you, Grumpy. You were the best babysitter tonight.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Don't tell anyone. I have a grumpy name to keep.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Too late, old friend. Turbo has already told the whole town.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Even the smallest voice can say the biggest thing.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "tot",
+    "say": "Hmph... zzz...",
+    "cam": "close:tot",
+    "do": [
+     [
+      "tot",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The next morning, Pip zoomed into the yard with big news.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "My grandma is coming to visit tomorrow! For the very first time!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And she wants to meet ALL my friends. Even you, Grumpy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Me? Meet a grandma? What do I say to a grandma?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "MEET PIP'S GRANDMA?!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Grumpy Babysits on a Snowy Night?! 🍼 (Ep 28)",
+  "description": "\"I have rules. I have a manual. I do not have a sleepy toddler.\" — Grumpy\nOn a snowy evening, Grumpy looks after Bertha's tiny cousin Tot at the tow yard. Tot won't sleep and keeps beeping one word at the dark hill: 'Blinky!' What is he trying to say? Inspector Bolt #28\n\n#series #3DAnimation #InspectorBolt #towtruck",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "first snow",
+   "winter cartoon",
+   "babysitting",
+   "grumpy the tow truck",
+   "tow truck cartoon",
+   "toddler",
+   "listening"
+  ],
+  "thumb_text": "HE WON'T SLEEP!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Grumpy de niñero en una noche de nieve? 🍼 (Ep 28)",
+    "description": "\"Tengo reglas. Tengo un manual. No tengo un bebé con sueño.\" — Grumpy\nEn una tarde de nieve, Grumpy cuida al pequeño primo de Bertha, Tot, en su depósito de grúas. Tot no quiere dormir y repite una palabra mirando la colina oscura: \"¡Blinky!\" ¿Qué quiere decir? Inspector Bolt #28\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Grumpy de babá numa noite de neve?! 🍼 (Ep 28)",
+    "description": "\"Eu tenho regras. Tenho um manual. Não tenho um bebê com sono.\" — Grumpy\nNuma noite de neve, o Grumpy cuida do priminho da Bertha, o Tot, no pátio do guincho. O Tot não dorme e buzina uma palavra para o morro escuro: \"Blinky!\" O que ele quer dizer? Inspetor Bolt #28\n\n#série #Animação3D #InspetorBolt"
+   },
+   "ar": {
+    "title": "غرامبي جليس أطفال في ليلة ثلجية؟! 🍼 (حلقة 28)",
+    "description": "\"عندي قواعد. عندي دليل. لكن ليس عندي طفل نعسان.\" — غرامبي\nفي مساء ثلجي، يعتني غرامبي بتوت، ابن عم بيرثا الصغير، في ساحة القطر. توت لا يريد النوم ويكرر كلمة واحدة نحو التل المظلم: \"بلينكي!\" ماذا يحاول أن يقول؟ المفتش بولت #28\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #المفتش_بولت"
+   },
+   "fr": {
+    "title": "Grumpy baby-sitter par une nuit de neige ?! 🍼 (Ép 28)",
+    "description": "« J'ai des règles. J'ai un manuel. Je n'ai pas de bébé qui dort. » — Grumpy\nUn soir de neige, Grumpy garde Tot, le petit cousin de Bertha, à la fourrière. Tot ne veut pas dormir et klaxonne un seul mot vers la colline sombre : « Blinky ! » Qu'essaie-t-il de dire ? Inspecteur Bolt #28\n\n#série #Animation3D #InspecteurBolt"
+   },
+   "ja": {
+    "title": "雪の夜、グランピーがベビーシッター!?🍼(第28話)",
+    "description": "「ルールはある。マニュアルもある。でも、ねむい赤ちゃんはいない。」— グランピー\n雪の夜、グランピーはレッカー置き場でバーサの小さないとこ、トットのおせわをする。トットはねむらずに、暗い丘にむかって「ブリンキー!」とくりかえす。何を言いたいの?インスペクター・ボルト #28\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "눈 오는 밤, 그럼피가 아기 돌보기?! 🍼 (28화)",
+    "description": "\"규칙도 있고, 설명서도 있어. 졸린 아기만 없어.\" — 그럼피\n눈 오는 저녁, 그럼피는 견인차 마당에서 버사의 꼬마 사촌 토트를 돌봐요. 토트는 잠을 안 자고 어두운 언덕을 보며 한 단어만 외쳐요. \"블링키!\" 무슨 뜻일까요? 인스펙터 볼트 #28\n\n#시리즈 #3D애니메이션 #인스펙터볼트"
+   },
+   "de": {
+    "title": "Grumpy als Babysitter in der Schneenacht?! 🍼 (Folge 28)",
+    "description": "„Ich habe Regeln. Ich habe ein Handbuch. Ich habe kein müdes Kleinkind.\" — Grumpy\nAn einem verschneiten Abend passt Grumpy auf dem Abschlepphof auf Berthas kleinen Cousin Tot auf. Tot will nicht schlafen und hupt immer wieder ein Wort zum dunklen Hügel: „Blinky!\" Was will er sagen? Inspektor Bolt #28\n\n#Serie #3DAnimation #InspektorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "HE WON'T SLEEP!",
+   "title": "Grumpy vs a Toddler Who Won't Sleep! 🍼 (Ep 28) #shorts",
+   "description": "Grumpy has rules. Tot has a beep. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "babysitting"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Grumpy contra un bebé que no quiere dormir! 🍼 (Ep 28) #shorts",
+     "description": "Grumpy tiene reglas. Tot tiene un pitido. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Grumpy contra um bebê que não quer dormir! 🍼 (Ep 28) #shorts",
+     "description": "O Grumpy tem regras. O Tot tem uma buzina. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "غرامبي ضد طفل لا يريد النوم! 🍼 (حلقة 28) #shorts",
+     "description": "غرامبي عنده قواعد. توت عنده بوق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Grumpy contre un bébé qui ne veut pas dormir ! 🍼 (Ép 28) #shorts",
+     "description": "Grumpy a des règles. Tot a un klaxon. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピー vs ねむらない赤ちゃん!🍼(第28話)#shorts",
+     "description": "グランピーにはルール、トットにはクラクション。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "그럼피 vs 잠 안 자는 아기! 🍼 (28화) #shorts",
+     "description": "그럼피에겐 규칙, 토트에겐 빵빵. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grumpy gegen ein Kleinkind, das nicht schläft! 🍼 (Folge 28) #shorts",
+     "description": "Grumpy hat Regeln. Tot hat eine Hupe. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 38,
+   "dur": 22,
+   "top": "WHAT IS BLINKY?",
+   "title": "Tot Keeps Beeping 'Blinky!' at the Hill! 🍼 (Ep 28) #shorts",
+   "description": "What is Tot trying to say? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Tot no para de pitar \"Blinky\" a la colina! 🍼 (Ep 28) #shorts",
+     "description": "¿Qué intenta decir Tot? La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Tot não para de buzinar \"Blinky\" para o morro! 🍼 (Ep 28) #shorts",
+     "description": "O que o Tot quer dizer? Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توت يكرر \"بلينكي!\" نحو التل! 🍼 (حلقة 28) #shorts",
+     "description": "ماذا يحاول توت أن يقول؟ الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tot klaxonne « Blinky ! » vers la colline ! 🍼 (Ép 28) #shorts",
+     "description": "Qu'essaie de dire Tot ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "トットが丘にむかって「ブリンキー!」🍼(第28話)#shorts",
+     "description": "トットは何を言いたいの?つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "토트가 언덕을 보며 \"블링키!\"를 외쳐요! 🍼 (28화) #shorts",
+     "description": "토트는 무슨 말을 하고 싶은 걸까요? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Tot hupt immer wieder „Blinky!\" zum Hügel! 🍼 (Folge 28) #shorts",
+     "description": "Was will Tot sagen? Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
