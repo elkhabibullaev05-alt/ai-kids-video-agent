@@ -4,6 +4,22 @@
 # SSH-443-write remotes, push what is waiting, and write a readable report to the owner's Documents folder
 # (C:\Users\<user>\Documents\kanal_holat.txt) so Claude can read it through the desktop app. No secrets printed.
 cd /opt/kanal/repo || exit 0
+# 2026-11-09: a hard power-off left an EMPTY object file in .git ("object file ... is empty", "bad object HEAD"),
+# so every channel failed to commit/pull/push and the fixes from GitHub could not arrive. Self-heal: when HEAD is
+# unreadable, re-clone from GitHub, keep the broken copy as /opt/kanal/repo.bad_<time> (nothing deleted), and put
+# this PC's results + untracked/ignored files back on top.
+if ! git rev-parse -q --verify HEAD >/dev/null 2>&1 || git fsck --connectivity-only 2>&1 | grep -q "is empty"; then
+  ts=$(date +%Y%m%d%H%M%S); cd /opt/kanal && rm -rf repo.new
+  if GIT_TERMINAL_PROMPT=0 timeout 900 git clone -q https://github.com/elkhabibullaev05-alt/ai-kids-video-agent.git repo.new; then
+    mv repo "repo.bad_$ts" && mv repo.new repo
+    cp -a "repo.bad_$ts/cloud/results/." repo/cloud/results/ 2>/dev/null
+    ( cd "repo.bad_$ts" && tar --exclude=./.git -cf - . ) | ( cd repo && tar --skip-old-files -xf - ) 2>/dev/null
+    cd repo && git add -A cloud/results && \
+      git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm "[pc] results after repo re-clone $ts" 2>/dev/null
+    echo "repo was corrupt -> re-cloned (old copy: /opt/kanal/repo.bad_$ts)"
+  fi
+  cd /opt/kanal/repo || exit 0
+fi
 R=elkhabibullaev05-alt/ai-kids-video-agent
 DOC=$(ls -d /mnt/c/Users/*/Documents 2>/dev/null | grep -v -e Public -e Default | head -1)
 OUT=${DOC:+$DOC/kanal_holat.txt}
