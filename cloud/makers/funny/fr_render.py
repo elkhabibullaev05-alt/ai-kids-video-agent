@@ -405,6 +405,9 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
             put(sfx_t, whoosh(rng), max(0.0, T - 0.12))
         T += p["len"]
     bed = music(total, rng)
+    # 2026-11-09: music() cuts with int(), n uses round() -> 1 sample short -> "operands could not be broadcast"
+    #             (every Short failed since 8 Nov). Force the bed to exactly n samples.
+    bed = np.pad(bed, (0, max(0, n - len(bed))))[:n].astype(np.float32)
     env = _env(voice_t, int(0.25 * SR))
     mix = clip_t * (1 - 0.72 * env) + voice_t * 0.95 + bed * (0.17 - 0.08 * env) + sfx_t * 0.35
     mix = mix / max(1.0, np.abs(mix).max() / 0.95)
