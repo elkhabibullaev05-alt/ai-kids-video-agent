@@ -206,6 +206,14 @@ def free_slot(st, kind, after=None):
     now = dt.datetime.now(dt.timezone.utc)  # NOW is the process start; a render takes hours, so it is stale here
     after = max(after or now, now + dt.timedelta(minutes=45))
     used = {x["t"] for x in st["taken"]}
+    # 2026-11-09: one-off extra slots (e.g. owner wants more Shorts today) — "extra_slots": {"short": [ISO UTC, ...]}
+    for iso in sorted(CFG.get("extra_slots", {}).get(kind, [])):
+        try:
+            t = dt.datetime.strptime(iso, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+        except ValueError:
+            continue
+        if t >= after and iso not in used:
+            return iso
     day = after.date()
     for _ in range(30):
         for hm in sorted(CFG["slots"][kind]):
