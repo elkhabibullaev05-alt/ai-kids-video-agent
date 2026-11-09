@@ -1,0 +1,947 @@
+{
+ "id": "20261108-1-who-feeds-the-jar",
+ "plot": "At sunset in the new house's pantry the bros open the old baker's bread box and find a bubbling sourdough jar called Mother that someone fed this morning while the spare key is missing; they build a soup-can burglar alarm and hide, but Lolly links the warm cinnamon smell to the one person who bakes every dawn — too late, the tower crashes on Grandma, whose name is Rosie: the baker Walter kept the starter alive for her for fifty years; she mixes his harvest dough for every porch on the street at first frost, but at midnight the dough hasn't risen at all.",
+ "script": {
+  "title": "Who Keeps Feeding the Baker's Old Jar?",
+  "set": {
+   "place": "pantry",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "breadbox",
+    "type": "box",
+    "color": [
+     0.45,
+     0.28,
+     0.14
+    ],
+    "on": null,
+    "at": [
+     0,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 1.4
+   },
+   {
+    "id": "jar",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     2,
+     10,
+     0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "cans",
+    "type": "box",
+    "color": "red",
+    "on": null,
+    "at": [
+     -11,
+     9,
+     0
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "The lid is moving! Something in there is bubbling!",
+    "cam": "prop:breadbox",
+    "do": [
+     [
+      "breadbox",
+      "bounce"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we open it. Who lives in the baker's bread box?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunset in the pantry of the new house. The lid creaks open.",
+    "cam": "wide",
+    "do": [
+     [
+      "breadbox",
+      "spin"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside sits an old glass jar. Something in it goes pop.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "show"
+     ],
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S ALIVE?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Calm down. It's sourdough starter. Flour, water and wild yeast.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The tag says: Mother. Since 1974. Feed her every day.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The baker left a year ago. So who's feeding her?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek touches the flour on the rim. Soft. Fresh.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "zeek",
+      "to:-1,7"
+     ],
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fed this morning. Someone was in our pantry today.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And the cloth smells like warm cinnamon. Mmm.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lolly, every kitchen smells like cinnamon. Focus.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim looks at the key hook by the back door. It's empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The old spare key is gone! Anybody could walk in!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Whoever feeds her comes back. Feeding time is our trap.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Starters eat twice a day. Morning, and five o'clock.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The pantry clock says ten to five.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "WHO HAS THE KEY?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If a stranger has our key, Mia isn't safe. Nobody is.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We catch them first. Zeek, build an alarm. Now.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek stacks soup cans into a tall tower behind the door.",
+    "cam": "prop:cans",
+    "do": [
+     [
+      "cans",
+      "show"
+     ],
+     [
+      "zeek",
+      "to:-9,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One push of that door and the whole house wakes up.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim leans on the tower for a little rest. It sways.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-10,8"
+     ],
+     [
+      "cans",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim. Do. Not. Lean. On. The. Alarm.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "S-sorry! My legs get scared too!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind them, the jar bubbles up and over the rim.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mother is escaping! Somebody catch her!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup scoops the sticky goo back with a bottle cap.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It's warm. It's sticky. It's like holding a sneeze.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros hide behind the flour sack. The light turns orange.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Footsteps in the hall. Slow ones. Then a jingle. A key.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. That cinnamon again. Stronger. It's coming from the hall.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The stranger smells like cinnamon? That's the scariest part!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly thinks. Cinnamon. Flour on the hands. Up before the sun.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Who bakes every single morning in this house? Who?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY KNOWS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Stop the alarm! Don't let those cans fall!",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:-9,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Too late. The door swings open. The tower falls. Crash!",
+    "cam": "prop:cans",
+    "do": [
+     [
+      "cans",
+      "vanish"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two quick, floury hands catch the last can in the air.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S GRANDMA!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Grandma bakes every morning. Grandma smells like cinnamon. It's her!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We built a burglar trap... for Grandma.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She turns the tag over. Lolly reads the back.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "For Rosie, if she ever comes back to Maple Street. Walter.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Rosie. Grandma is Rosie. She grew up on this street!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "So the key isn't a stranger's. Walter sent it to her.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma whispers to the jar. Hello, old girl. My turn now.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Fifty years of feeding one jar for a friend. Respect.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Sorry, Grandma. Great alarm. Wrong burglar.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma mixes flour, water and Mother in a big bowl.",
+    "cam": "wide",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Walter's harvest bread, she says. One loaf for every porch.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "First frost tonight. She'll bake at five in the morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At midnight, the bros check the bowl. Not one bubble.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "text": "WHY WON'T IT RISE?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Keeps Feeding the Baker's Old Jar? 🍞 (Ep 20)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"We built a burglar alarm. It caught Grandma.\" — Bup\nThe old baker's bread box hides a living jar that somebody fed this morning, and the spare key is gone — so the Dough Bros set a soup-can trap in the pantry and wait for five o'clock.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "sourdough",
+   "bread box",
+   "grandma",
+   "lolly",
+   "pantry",
+   "mystery",
+   "funny animation"
+  ],
+  "thumb_text": "WHO HAS A KEY?",
+  "thumb_beat": 14,
+  "localizations": {
+   "es": {
+    "title": "¿Quién sigue alimentando el viejo frasco del panadero? 🍞 (Ep 20)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Construimos una alarma antirrobo. Atrapó a la abuela.\" — Bup\nLa vieja panera del panadero esconde un frasco vivo que alguien alimentó esta mañana, y la llave de repuesto ha desaparecido: los Dough Bros montan una trampa de latas en la despensa y esperan a las cinco.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Quem alimenta o velho pote do padeiro? 🍞 (Ep 20)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"A gente montou um alarme contra ladrão. Ele pegou a vovó.\" — Bup\nA velha caixa de pão do padeiro esconde um pote vivo que alguém alimentou hoje de manhã, e a chave reserva sumiu — os Dough Bros armam uma torre de latas na despensa e esperam dar cinco horas.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "من يطعم برطمان الخبّاز القديم؟ 🍞 (Ep 20)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"صنعنا جهاز إنذار ضد اللصوص. فأمسك بالجدة.\" — بوب\nصندوق خبز الخبّاز القديم يخفي برطمانًا حيًّا أطعمه أحدهم هذا الصباح، والمفتاح الاحتياطي اختفى — فينصب الأصدقاء فخًّا من علب الحساء في المخزن وينتظرون الساعة الخامسة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Qui nourrit encore le vieux bocal du boulanger ? 🍞 (Ep 20)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"On a fabriqué une alarme anti-voleur. Elle a attrapé Mamie.\" — Bup\nLa vieille boîte à pain du boulanger cache un bocal vivant que quelqu'un a nourri ce matin, et la clé de secours a disparu : les Dough Bros montent un piège de boîtes de conserve dans le cellier et attendent cinq heures.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "パン屋の古いビンにエサをあげているのは誰？ 🍞 (Ep 20)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「泥棒よけのアラームを作った。つかまえたのはおばあちゃんだった。」— バップ\n前のパン屋が残したブレッドボックスには、今朝だれかがエサをあげた“生きているビン”。しかも合鍵が消えた——ドウ・ブロスはパントリーに缶のタワーのワナをしかけ、5時を待つ。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "누가 제빵사의 낡은 병에 먹이를 줄까? 🍞 (Ep 20)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"도둑 잡는 알람을 만들었어. 할머니가 걸렸어.\" — 법\n옛 제빵사의 빵 상자 속에는 누군가 오늘 아침 먹이를 준 살아 있는 병이 있고, 예비 열쇠는 사라졌다 — 도우 브로스는 식료품실에 통조림 탑 함정을 만들고 다섯 시를 기다린다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Wer füttert das alte Glas des Bäckers? 🍞 (Ep 20)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Wir haben eine Einbrecher-Alarmanlage gebaut. Sie hat Oma erwischt.\" — Bup\nIm alten Brotkasten des Bäckers steht ein lebendiges Glas, das heute Morgen jemand gefüttert hat, und der Ersatzschlüssel ist weg – also bauen die Dough Bros in der Speisekammer eine Dosenfalle und warten auf fünf Uhr.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "WOULD YOU OPEN IT?",
+   "title": "Would YOU Open This Bread Box? 🍞 (Ep 20) #shorts",
+   "description": "Nobody opened it for a year. Now something inside goes pop. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "bread box"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ abrirías esta panera? 🍞 (Ep 20) #shorts",
+     "description": "Nadie la abrió en un año. Ahora algo dentro hace pop. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ abriria essa caixa de pão? 🍞 (Ep 20) #shorts",
+     "description": "Ninguém abriu por um ano. Agora algo lá dentro faz pop. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستفتح صندوق الخبز هذا؟ 🍞 (Ep 20) #shorts",
+     "description": "لم يفتحه أحد منذ عام. والآن شيء بداخله يفرقع. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU ouvrirais cette boîte à pain ? 🍞 (Ep 20) #shorts",
+     "description": "Personne ne l'a ouverte depuis un an. Et là, quelque chose fait pop dedans. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのパン箱を開けられる？ 🍞 (Ep 20) #shorts",
+     "description": "1年だれも開けなかった箱。中で何かがポンと鳴った。 本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 빵 상자를 열 수 있어? 🍞 (Ep 20) #shorts",
+     "description": "1년 동안 아무도 열지 않았다. 그런데 안에서 뭔가 펑 소리가 난다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen Brotkasten öffnen? 🍞 (Ep 20) #shorts",
+     "description": "Ein Jahr lang hat ihn niemand geöffnet. Jetzt macht drinnen etwas plopp. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 31,
+   "dur": 24,
+   "top": "SOMEONE HAS OUR KEY",
+   "title": "Footsteps, a Key and a Tower of Cans 😳 (Ep 20) #shorts",
+   "description": "Someone is unlocking the pantry. Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "pantry",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pasos, una llave y una torre de latas 😳 (Ep 20) #shorts",
+     "description": "Alguien está abriendo la despensa. Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Passos, uma chave e uma torre de latas 😳 (Ep 20) #shorts",
+     "description": "Alguém está destrancando a despensa. Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "خطوات ومفتاح وبرج من العلب 😳 (Ep 20) #shorts",
+     "description": "أحدهم يفتح باب المخزن. الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Des pas, une clé et une tour de conserves 😳 (Ep 20) #shorts",
+     "description": "Quelqu'un ouvre le cellier. Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "足音とカギと缶のタワー 😳 (Ep 20) #shorts",
+     "description": "だれかがパントリーのカギを開けている。 本編はチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "발소리, 열쇠, 그리고 통조림 탑 😳 (Ep 20) #shorts",
+     "description": "누군가 식료품실 문을 열고 있다. 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Schritte, ein Schlüssel und ein Dosenturm 😳 (Ep 20) #shorts",
+     "description": "Jemand schließt die Speisekammer auf. Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
