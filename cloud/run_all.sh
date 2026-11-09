@@ -55,8 +55,8 @@ fi
 # 2026-11-09: two separate slot pools. Before, the 3D Blender channels (hours per episode) held all 3 slots and the
 # light ffmpeg "maker" channels (funny = 12 Shorts/day, money, ufc, sleep, roblox) waited for hours -> Funny Rank starved.
 MAKERS="funny money ufc sleep roblox"
-PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-2}
-[ "$PAR" = "1" ] && { PAR3D=1; PARMK=1; }   # a game is running: one of each
+PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-5}  # 2026-11-09: all 5 light makers at once — idle ones exit in seconds; with 2 slots Funny waited behind idle channels
+[ "$PAR" = "1" ] && { PAR3D=1; PARMK=3; }   # a game is running: one 3D render, light makers still run
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
   [ -n "$TOK" ] && [ -s "$TOK/token_$ch.json" ] && cp -f "$TOK/token_$ch.json" /root/kanal/$ch/token.json
