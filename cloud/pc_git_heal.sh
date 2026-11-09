@@ -10,7 +10,7 @@ cd /opt/kanal/repo || exit 0
 # this PC's results + untracked/ignored files back on top.
 if ! git rev-parse -q --verify HEAD >/dev/null 2>&1 || git fsck --connectivity-only 2>&1 | grep -q "is empty"; then
   ts=$(date +%Y%m%d%H%M%S); cd /opt/kanal && rm -rf repo.new
-  if GIT_TERMINAL_PROMPT=0 timeout 900 git clone -q https://github.com/elkhabibullaev05-alt/ai-kids-video-agent.git repo.new; then
+  if GIT_TERMINAL_PROMPT=0 timeout 900 git clone -q --depth 50 https://github.com/elkhabibullaev05-alt/ai-kids-video-agent.git repo.new; then
     mv repo "repo.bad_$ts" && mv repo.new repo
     cp -a "repo.bad_$ts/cloud/results/." repo/cloud/results/ 2>/dev/null
     ( cd "repo.bad_$ts" && tar --exclude=./.git -cf - . ) | ( cd repo && tar --skip-old-files -xf - ) 2>/dev/null
