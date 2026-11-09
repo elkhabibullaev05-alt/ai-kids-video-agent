@@ -1,0 +1,138 @@
+{
+ "title": "Aisha Finally Checked Where $380 Went",
+ "hook": "12 deliveries. $380 gone.",
+ "header": "Aisha · food delivery",
+ "character": "Aisha",
+ "amount": "$380",
+ "accent": "gold",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$380 a month on food delivery. Aisha finally checked her statement.",
+   "visual": {
+    "type": "big_number",
+    "value": 380,
+    "suffix": "/mo",
+    "from": 0,
+    "label": "food delivery",
+    "sub": "one month",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "12 orders, about $32 each. The food itself was only about $20.",
+   "visual": {
+    "type": "math",
+    "title": "Her month",
+    "rows": [
+     "12 orders × $32",
+     "= about $380 a month"
+    ]
+   }
+  },
+  {
+   "say": "The other $12 per order? Fees, tips and higher menu prices.",
+   "visual": {
+    "type": "stack",
+    "title": "One $32 order",
+    "total": 32,
+    "items": [
+     {
+      "label": "Food",
+      "value": 20
+     },
+     {
+      "label": "Fees & markup",
+      "value": 7,
+      "hi": true
+     },
+     {
+      "label": "Tip",
+      "value": 5
+     }
+    ]
+   }
+  },
+  {
+   "say": "Over a year, that's about $1,700 that never touches the food.",
+   "visual": {
+    "type": "counter",
+    "from": 0,
+    "to": 1728,
+    "steps": 12,
+    "unit": "Month",
+    "label": "fees, tips, markup"
+   }
+  },
+  {
+   "say": "So she set one rule: 4 deliveries a month, and cook 8 more nights.",
+   "visual": {
+    "type": "checklist",
+    "title": "Her new rule",
+    "items": [
+     {
+      "text": "4 deliveries a month",
+      "ok": true
+     },
+     {
+      "text": "8 home meals at about $6",
+      "ok": true
+     },
+     {
+      "text": "Delivery every weekend",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "4 orders is about $128. Eight home meals, about $48.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 380,
+     "sub": "12 deliveries",
+     "hi": true
+    },
+    "right": {
+     "label": "After",
+     "value": 176,
+     "sub": "4 orders + 8 meals"
+    }
+   }
+  },
+  {
+   "say": "She keeps about $200 a month. That's roughly $2,400 a year.",
+   "visual": {
+    "type": "big_number",
+    "value": 2400,
+    "label": "kept each year",
+    "sub": "about $200 a month",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "How many deliveries did you order last month? Subscribe so you don't make this mistake on your next paycheck, because 12 deliveries means $380 gone.",
+   "visual": {
+    "type": "question",
+    "text": "How many deliveries last month?"
+   }
+  }
+ ],
+ "question": "How many food deliveries did you order last month?",
+ "description": "Aisha checked her statement and found about $380 a month on food delivery: 12 orders at roughly $32, of which about $12 each was fees, tips and menu markup. Cutting to 4 deliveries and cooking 8 simple meals keeps about $200 a month, roughly $2,400 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "food delivery cost",
+  "delivery fees",
+  "how to save money",
+  "spending habits",
+  "save money on food",
+  "budgeting tips",
+  "small habits"
+ ],
+ "hashtags": [
+  "#savingmoney",
+  "#fooddelivery"
+ ]
+}

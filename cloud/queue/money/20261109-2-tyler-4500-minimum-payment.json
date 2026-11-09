@@ -1,0 +1,134 @@
+{
+ "title": "Tyler, 27: Paying the Minimum on $4,500",
+ "hook": "$4,500 card. 18 years to pay.",
+ "header": "Tyler · $4,500 at 23% APR",
+ "character": "Tyler",
+ "amount": "$4,500",
+ "accent": "red",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Paying only the minimum, Tyler's $4,500 card takes about 18 years.",
+   "visual": {
+    "type": "big_number",
+    "value": 18,
+    "prefix": "",
+    "suffix": " years",
+    "from": 0,
+    "label": "to pay off $4,500",
+    "sub": "minimum payments only",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "His card charges about 23%. His first minimum is around $131.",
+   "visual": {
+    "type": "math",
+    "title": "His first minimum",
+    "rows": [
+     "$4,500 × 23% ÷ 12 = $86",
+     "+ 1% of balance = $45",
+     "= about $131"
+    ]
+   }
+  },
+  {
+   "say": "But as the balance drops, the minimum shrinks too, so the debt crawls.",
+   "visual": {
+    "type": "line",
+    "label": "Balance, minimum only",
+    "points": [
+     4500,
+     3134,
+     2182,
+     1520,
+     1058,
+     710,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 18"
+   }
+  },
+  {
+   "say": "He'd pay about $12,000 in total. Roughly $7,500 is interest.",
+   "visual": {
+    "type": "big_number",
+    "value": 12000,
+    "label": "total paid",
+    "sub": "about $7,500 is interest",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "The fix is boring: keep paying $131, even when the minimum drops.",
+   "visual": {
+    "type": "statement",
+    "text": "Lock it at $131.",
+    "sub": "even when the minimum drops",
+    "icon": "shield"
+   }
+  },
+  {
+   "say": "That clears it in under 5 years, with about $2,900 of interest.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Minimum only",
+     "value": 7500,
+     "sub": "about 18 years",
+     "hi": true
+    },
+    "right": {
+     "label": "$131 every month",
+     "value": 2900,
+     "sub": "under 5 years"
+    }
+   }
+  },
+  {
+   "say": "Push it to $250 a month, and he's free in 2 years, paying about $1,100.",
+   "visual": {
+    "type": "bars",
+    "title": "Interest paid",
+    "items": [
+     {
+      "label": "Minimum only",
+      "value": 7500,
+      "hi": true
+     },
+     {
+      "label": "$131 fixed",
+      "value": 2900
+     },
+     {
+      "label": "$250 fixed",
+      "value": 1100
+     }
+    ]
+   }
+  },
+  {
+   "say": "Do you pay the minimum or a fixed amount? Subscribe so you don't make this mistake on your next paycheck, because $4,500 shouldn't take 18 years.",
+   "visual": {
+    "type": "question",
+    "text": "Minimum or a fixed amount?"
+   }
+  }
+ ],
+ "question": "Do you pay the minimum or a fixed amount on your card?",
+ "description": "Tyler owes about $4,500 on a card at roughly 23% APR. Paying only the shrinking minimum (interest plus 1%) takes about 18 years and around $7,500 of interest. Locking the payment at $131 cuts it to under 5 years, and $250 a month to about 2 years. Rounded estimates assuming a fixed APR and no new charges.",
+ "tags": [
+  "minimum payment",
+  "credit card debt",
+  "credit card interest",
+  "minimum payment trap",
+  "pay off credit card",
+  "APR explained",
+  "debt payoff"
+ ],
+ "hashtags": [
+  "#creditcarddebt",
+  "#debtfree"
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "title": "The 50/30/20 Rule on Ben's $3,600 Paycheck",
+ "hook": "$3,600 in. $200 saved.",
+ "header": "Ben · $3,600 take-home",
+ "character": "Ben",
+ "amount": "$3,600",
+ "accent": "green",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$200 saved out of $3,600. That's Ben's whole month.",
+   "visual": {
+    "type": "big_number",
+    "value": 200,
+    "from": 3600,
+    "label": "saved from $3,600",
+    "sub": "every month",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Needs take $2,100, wants take $1,300, and savings get $200.",
+   "visual": {
+    "type": "stack",
+    "title": "Where $3,600 goes",
+    "total": 3600,
+    "items": [
+     {
+      "label": "Needs",
+      "value": 2100
+     },
+     {
+      "label": "Wants",
+      "value": 1300,
+      "hi": true
+     },
+     {
+      "label": "Savings",
+      "value": 200
+     }
+    ]
+   }
+  },
+  {
+   "say": "The 50/30/20 rule says half for needs, 30% wants, 20% savings.",
+   "visual": {
+    "type": "math",
+    "title": "50/30/20 on $3,600",
+    "rows": [
+     "50% needs = $1,800",
+     "30% wants = $1,080",
+     "20% savings = $720"
+    ]
+   }
+  },
+  {
+   "say": "His needs are already about 58%. With today's rent, that's common.",
+   "visual": {
+    "type": "big_number",
+    "value": 58,
+    "prefix": "",
+    "suffix": "%",
+    "label": "of pay on needs",
+    "icon": "house"
+   }
+  },
+  {
+   "say": "So he bends the rule, and trims wants down to $940.",
+   "visual": {
+    "type": "checklist",
+    "title": "Trimming wants",
+    "items": [
+     {
+      "text": "Eating out: −$200",
+      "ok": true
+     },
+     {
+      "text": "Weekend shopping: −$130",
+      "ok": true
+     },
+     {
+      "text": "2 subscriptions: −$30",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Savings jump from $200 to $560 a month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 200,
+     "sub": "a month"
+    },
+    "right": {
+     "label": "After",
+     "value": 560,
+     "sub": "a month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "That's about $6,700 a year, instead of $2,400.",
+   "visual": {
+    "type": "bars",
+    "title": "Saved per year",
+    "items": [
+     {
+      "label": "Before",
+      "value": 2400
+     },
+     {
+      "label": "After",
+      "value": 6720,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "What's your split? Subscribe so you don't make this mistake on your next paycheck, because right now it's $3,600 in, and $200 saved.",
+   "visual": {
+    "type": "question",
+    "text": "What's your needs/wants/savings split?"
+   }
+  }
+ ],
+ "question": "What's your split between needs, wants and savings?",
+ "description": "Ben takes home about $3,600 a month but saves only $200. Here's his budget run through the 50/30/20 rule, why his needs already take about 58%, and how trimming wants by $360 lifts savings to roughly $6,700 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "50/30/20 rule",
+  "budgeting for beginners",
+  "how to budget",
+  "paycheck budget",
+  "how to save money",
+  "budget breakdown",
+  "simple budget"
+ ],
+ "hashtags": [
+  "#budgeting",
+  "#savingmoney"
+ ]
+}

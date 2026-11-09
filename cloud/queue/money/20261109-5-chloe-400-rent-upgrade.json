@@ -1,0 +1,148 @@
+{
+ "title": "Chloe, 29: The $400 Rent Upgrade",
+ "hook": "$400 more rent. $14,400 gone.",
+ "header": "Chloe · $1,500 → $1,900 rent",
+ "character": "Chloe",
+ "amount": "$400",
+ "accent": "purple",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$14,400. That's what Chloe's nicer apartment costs over three years.",
+   "visual": {
+    "type": "big_number",
+    "value": 14400,
+    "from": 0,
+    "label": "extra rent, 3 years",
+    "sub": "for a nicer place",
+    "icon": "house"
+   }
+  },
+  {
+   "say": "Her old place was $1,500 a month. The new one is $1,900.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Old place",
+     "value": 1500,
+     "sub": "a month"
+    },
+    "right": {
+     "label": "New place",
+     "value": 1900,
+     "sub": "a month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "$400 a month sounds small, until you multiply it.",
+   "visual": {
+    "type": "math",
+    "title": "The real cost",
+    "rows": [
+     "$400 × 12 months",
+     "= $4,800 a year",
+     "× 3 years = $14,400"
+    ]
+   }
+  },
+  {
+   "say": "Then add about $60 more for utilities and parking.",
+   "visual": {
+    "type": "stack",
+    "title": "New monthly extra",
+    "total": 460,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 400,
+      "hi": true
+     },
+     {
+      "label": "Utilities",
+      "value": 40
+     },
+     {
+      "label": "Parking",
+      "value": 20
+     }
+    ]
+   }
+  },
+  {
+   "say": "She earns about $66k, so $1,900 is roughly 35% of her gross pay.",
+   "visual": {
+    "type": "bars",
+    "title": "Rent vs 30% guide",
+    "items": [
+     {
+      "label": "30% of her pay",
+      "value": 1650
+     },
+     {
+      "label": "Her new rent",
+      "value": 1900,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The mistake wasn't the apartment. It was signing without the math.",
+   "visual": {
+    "type": "statement",
+    "text": "Do the math before signing.",
+    "sub": "then wait 48 hours",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "Next lease: rent near 30%, count every fee, and sleep on it twice.",
+   "visual": {
+    "type": "checklist",
+    "title": "Before the next lease",
+    "items": [
+     {
+      "text": "Rent near 30% of gross pay",
+      "ok": true
+     },
+     {
+      "text": "Add parking, utilities, fees",
+      "ok": true
+     },
+     {
+      "text": "Wait 48 hours to sign",
+      "ok": true
+     },
+     {
+      "text": "Sign at the first tour",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "How much of your pay goes to rent? Subscribe so you don't make this mistake on your next paycheck, because $400 more rent is $14,400 gone.",
+   "visual": {
+    "type": "question",
+    "text": "What % of your pay goes to rent?"
+   }
+  }
+ ],
+ "question": "What percent of your pay goes to rent?",
+ "description": "Chloe moved from a $1,500 apartment to a $1,900 one. That $400 a month is about $4,800 a year and $14,400 over three years, plus roughly $60 a month in extra utilities and parking. On a $66k salary her rent is now about 35% of gross pay. Numbers are rounded US estimates.",
+ "tags": [
+  "rent budget",
+  "how much rent can I afford",
+  "30% rule rent",
+  "lifestyle creep",
+  "apartment cost",
+  "renting tips",
+  "budgeting tips"
+ ],
+ "hashtags": [
+  "#rent",
+  "#budgeting"
+ ]
+}
