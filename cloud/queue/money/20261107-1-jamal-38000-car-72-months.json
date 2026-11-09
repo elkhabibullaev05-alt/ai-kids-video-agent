@@ -1,0 +1,170 @@
+{
+ "title": "The $38,000 Car That Really Costs $47,000",
+ "hook": "$38,000 car. $47,000 paid.",
+ "header": "Jamal · 72-month car loan",
+ "character": "Jamal",
+ "amount": "$38,000",
+ "accent": "orange",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Jamal bought a $38,000 car, but he'll pay about $47,000 for it.",
+   "visual": {
+    "type": "big_number",
+    "value": 38000,
+    "label": "sticker price",
+    "sub": "paid: about $47,000",
+    "icon": "car"
+   }
+  },
+  {
+   "say": "He put $3,000 down and borrowed the other $35,000.",
+   "visual": {
+    "type": "stack",
+    "title": "How he paid",
+    "total": 38000,
+    "items": [
+     {
+      "label": "Down payment",
+      "value": 3000
+     },
+     {
+      "label": "Car loan",
+      "value": 35000,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The dealer offered 72 months at about 8%. The payment looked fine.",
+   "visual": {
+    "type": "statement",
+    "text": "72 months at 8%",
+    "sub": "about $614 a month",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "$614 a month, for six full years.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$614 a month",
+     "× 72 months",
+     "= about $44,200"
+    ]
+   }
+  },
+  {
+   "say": "That's roughly $9,200 in interest, on top of the car.",
+   "visual": {
+    "type": "big_number",
+    "value": 9200,
+    "label": "interest paid",
+    "sub": "on a 6-year loan",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "And the balance drops slowly. After three years, he still owes about $19,600.",
+   "visual": {
+    "type": "line",
+    "label": "Loan balance",
+    "points": [
+     35000,
+     30265,
+     25137,
+     19583,
+     13568,
+     7055,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 6"
+   }
+  },
+  {
+   "say": "Now the same loan over 48 months.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "72 months",
+     "value": 614,
+     "sub": "$9,200 interest",
+     "hi": true
+    },
+    "right": {
+     "label": "48 months",
+     "value": 854,
+     "sub": "$6,000 interest"
+    }
+   }
+  },
+  {
+   "say": "The payment is higher, but he'd keep about $3,200.",
+   "visual": {
+    "type": "bars",
+    "title": "Interest paid",
+    "items": [
+     {
+      "label": "72 months",
+      "value": 9200,
+      "hi": true
+     },
+     {
+      "label": "48 months",
+      "value": 6000
+     }
+    ]
+   }
+  },
+  {
+   "say": "A common guideline: 20% down, 4 years max, and car costs under 10% of income.",
+   "visual": {
+    "type": "checklist",
+    "title": "The 20/4/10 guideline",
+    "items": [
+     {
+      "text": "20% down payment",
+      "ok": true
+     },
+     {
+      "text": "Loan of 4 years or less",
+      "ok": true
+     },
+     {
+      "text": "Car costs under 10% of pay",
+      "ok": true
+     },
+     {
+      "text": "72 months to lower the payment",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "How long is your car loan? Because a 72-month loan is how a $38,000 car becomes $47,000 paid.",
+   "visual": {
+    "type": "question",
+    "text": "How many months is your car loan?"
+   }
+  }
+ ],
+ "question": "How many months is your car loan? 48, 60, 72 or more?",
+ "description": "Jamal buys a $38,000 car with $3,000 down and a $35,000 loan at about 8% for 72 months. That's roughly $614 a month and about $9,200 in interest — around $47,000 paid in total. The same loan over 48 months costs about $854 a month but saves roughly $3,200. Numbers are rounded US estimates.",
+ "tags": [
+  "car loan",
+  "72 month car loan",
+  "car loan interest",
+  "total cost of a car",
+  "auto loan",
+  "20/4/10 rule",
+  "buying a car"
+ ],
+ "hashtags": [
+  "#carloan",
+  "#carbuying"
+ ]
+}
