@@ -173,6 +173,7 @@ def main():
     os.makedirs(cache, exist_ok=True)
     t_start = time.time()
     made, tried = [], set()
+    why = {"search_fail": "", "few_cc": 0, "dl_fail": 0, "render_fail": 0}  # 2026-11-09 watchdog: say WHY in status
     max_search = 2 * args.count + 2
     for theme in TH.pick_themes(titles, args.home, args.count * 3, rng):
         if len(made) >= args.count or finder.searches >= max_search:
@@ -189,11 +190,13 @@ def main():
         except Exception as e:
             r = str(e)
             log("search failed:", r[:300])
+            why["search_fail"] = r[:160]
             if "quota" in r.lower() or "rateLimit" in r:
                 break
             continue
         log(f"{len(cands)} CC BY candidates (searches so far {finder.searches})")
         if len(cands) < 5:
+            why["few_cc"] += 1
             continue
         work = tempfile.mkdtemp(prefix="funny_", dir=cache)
         got = []
@@ -206,6 +209,7 @@ def main():
                 break
         if len(got) < 5:
             log("not enough downloads for", theme[0])
+            why["dl_fail"] += 1
             shutil.rmtree(work, ignore_errors=True)
             continue
         name = f"funny-{dt.date.today():%Y%m%d}-{TH.slug(theme[0])}-{int(time.time()) % 10000}"
@@ -218,6 +222,7 @@ def main():
             res = None
         shutil.rmtree(work, ignore_errors=True)
         if not res:
+            why["render_fail"] += 1
             continue
         item, used = res
         made.append(item)
@@ -229,7 +234,10 @@ def main():
     shutil.rmtree(os.path.join(cache, "src"), ignore_errors=True)
     log(f"done: {len(made)} Short(s); API calls: search {finder.searches}, list {finder.lists}")
     if not made:
-        print("no Short made (no CC BY clips found / downloads failed / quota)", file=sys.stderr)
+        print("no Short made (no CC BY clips found / downloads failed / quota) | searches %d; themes with <5 CC clips %d;"
+              " yt-dlp download failures %d; render failures %d; search error: %s"
+              % (finder.searches, why["few_cc"], why["dl_fail"], why["render_fail"], why["search_fail"] or "-"),
+              file=sys.stderr)
         return 1
     return 0
 

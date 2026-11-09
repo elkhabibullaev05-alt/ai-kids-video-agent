@@ -24,6 +24,12 @@ fi
 if [ -f cloud/makers/setup.sh ] && ! cmp -s cloud/makers/setup.sh /root/kanal/.makers_setup 2>/dev/null; then
   bash cloud/makers/setup.sh >> /root/kanal/makers_setup.log 2>&1 && mkdir -p /root/kanal && cp cloud/makers/setup.sh /root/kanal/.makers_setup
 fi
+# 2026-11-09 watchdog: funny (Funny Rank) failed every run since 8 Nov ("no Short made"); yt-dlp breaks whenever
+# YouTube changes and setup.sh only ran once. Keep yt-dlp fresh: upgrade at most once a day.
+if [ "$(cat /root/kanal/.ytdlp_day 2>/dev/null)" != "$(date -u +%F)" ]; then
+  timeout 300 pip install --break-system-packages -q -U "yt-dlp[default]" >> /root/kanal/makers_setup.log 2>&1 && \
+    date -u +%F > /root/kanal/.ytdlp_day
+fi
 PAR=${KANAL_PAR:-3}  # 2026-11-06: 10 channels now (makers are mostly ffmpeg, lighter than Blender)
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
 CHS="maxcat doughbros hollow bolt roblox funny money ufc sleep"  # 2026-11-06 owner: grind paused for now (no token, not needed yet); funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
