@@ -52,21 +52,31 @@ if [ -n "$NAV" ] && ls "$NAV"/*/*.json >/dev/null 2>&1; then
       (GIT_TERMINAL_PROMPT=0 git push -q origin HEAD:main || (git pull -q --rebase && git push -q origin HEAD:main))
   ) 9>/tmp/kanal-git.lock
 fi
-running=0
+# 2026-11-09: two separate slot pools. Before, the 3D Blender channels (hours per episode) held all 3 slots and the
+# light ffmpeg "maker" channels (funny = 12 Shorts/day, money, ufc, sleep, roblox) waited for hours -> Funny Rank starved.
+MAKERS="funny money ufc sleep roblox"
+PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-2}
+[ "$PAR" = "1" ] && { PAR3D=1; PARMK=1; }   # a game is running: one of each
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
   [ -n "$TOK" ] && [ -s "$TOK/token_$ch.json" ] && cp -f "$TOK/token_$ch.json" /root/kanal/$ch/token.json
-  if ! flock -n /tmp/kanal-$ch.lock -c true; then running=$((running+1)); fi
 done
-# oldest last start first
-order=$(for ch in $CHS; do echo "$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0) $ch"; done | sort -n | awk '{print $2}')
-for ch in $order; do
-  [ $running -ge $PAR ] && break
-  if flock -n /tmp/kanal-$ch.lock -c true; then
-    date +%s > /root/kanal/$ch/.last_start
-    # 2026-11-06: timeout — never let one hung worker hold its slot forever
-    flock -n /tmp/kanal-$ch.lock timeout -k 60 5h python3 cloud/worker.py $ch >> /root/kanal/$ch/worker.log 2>&1 &
-    running=$((running+1)); sleep 5
-  fi
-done
+start_pool() {  # $1 = max parallel, rest = channels of this pool
+  local max=$1; shift; local running=0 ch order
+  for ch in "$@"; do flock -n /tmp/kanal-$ch.lock -c true || running=$((running+1)); done
+  order=$(for ch in "$@"; do echo "$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0) $ch"; done | sort -n | awk '{print $2}')
+  for ch in $order; do
+    [ $running -ge $max ] && break
+    if flock -n /tmp/kanal-$ch.lock -c true; then
+      date +%s > /root/kanal/$ch/.last_start
+      # 2026-11-06: timeout — never let one hung worker hold its slot forever
+      flock -n /tmp/kanal-$ch.lock timeout -k 60 5h python3 cloud/worker.py $ch >> /root/kanal/$ch/worker.log 2>&1 &
+      running=$((running+1)); sleep 5
+    fi
+  done
+}
+mk=""; d3=""
+for ch in $CHS; do case " $MAKERS " in *" $ch "*) mk="$mk $ch";; *) d3="$d3 $ch";; esac; done
+start_pool $PARMK $mk
+start_pool $PAR3D $d3
 wait
