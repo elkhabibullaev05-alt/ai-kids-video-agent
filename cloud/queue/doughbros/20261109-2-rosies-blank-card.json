@@ -1,0 +1,914 @@
+{
+ "id": "20261109-2-rosies-blank-card",
+ "plot": "The afternoon after the reunion Grandma and June leave the rusty tin they dug up under the apple tree on the kitchen counter; Crispy refuses to warm the lid because he only burns things, Bup's teaspoon tapping pops it open, but inside is a blank card and June will think Rosie tricked her again, until Lolly smells lemons and Bup remembers Grandma's joke about June's 'lemon spy letters' (said at the start) — the twist: it's invisible lemon ink, and scared-of-himself Crispy gently heats it so the words appear ('Our bakery is waiting') and a hidden key turns up; June laughs and cries, the key's tag says Maple Street Bakery, closed fifty years — yet tonight a light is on inside.",
+ "script": {
+  "title": "Why Is Rosie's Secret Card Blank?",
+  "set": {
+   "place": "kitchen",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tin",
+    "type": "box",
+    "color": [
+     0.6,
+     0.33,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     0,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "card",
+    "type": "box",
+    "color": [
+     0.97,
+     0.96,
+     0.92
+    ],
+    "on": null,
+    "at": [
+     0,
+     10,
+     0
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "key",
+    "type": "key",
+    "color": "gold",
+    "on": null,
+    "at": [
+     1,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Fifty years under a tree, and this tin still won't open!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ],
+     [
+      "tin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-maybe it doesn't want to be opened.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Afternoon. Grandma and June dug it up at noon.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now it sits on the counter. Rusty. Something rattles inside.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT DID ROSIE HIDE?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma and June went next door to find a hammer.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma laughed on the way out: June and her lemon spy letters!",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "They'll be back soon. Let's take one little peek.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Rust glues the lid shut. We need force. Or heat.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy. Warm metal grows a tiny bit. Sit on the lid.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "No. I burn things. That's all I ever do.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Whatever's in there is fifty years old. I'd ruin it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Fine. Then we do it the old way. Tap, tap, tap.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup taps around the rim with a teaspoon. Tink. Tink.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rust flakes fall like brown snow. The lid creaks.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S MOVING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop! The lid flies off and lands on Pim like a hat.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm f-fine. I live here now. Under the lid.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros climb up the rim and peer inside.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One folded white card. That's it. Nothing else.",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "show"
+     ],
+     [
+      "card",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Open it, Bup. Gently. It's Rosie's big secret!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup unfolds it. The front is blank. The back is blank.",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S EMPTY?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Fifty years under a tree... for a blank card?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Maybe the ink faded. Sun, rain, fifty winters.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Or it's g-ghost writing. Only ghosts can read it.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "There are no ghosts, Pim. Only very old paper.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If June sees this blank, she'll think Rosie tricked her again!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Footsteps outside. Grandma and June are coming back.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly sniffs the card. Then she sniffs it again.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. Why does a fifty-year-old card smell like lemons?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lemons... Grandma said it! June and her lemon spy letters!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Of course! Lemon juice dries invisible. Heat turns it brown.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "An old spy trick. The words were there all along!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "INVISIBLE INK!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Then the toaster! Quick! Toast the card!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, NO. Toasters make charcoal. We want words.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone turns slowly. And everyone looks at Crispy.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Not me. Everything I touch turns black. You know that.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mr. Pot burnt you. That doesn't mean it's all you are.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Gentle heat. Like a warm hand. You've got this.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The front door handle turns. They have one chance.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy holds the card high above his glowing eyes. Slowly.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A soft brown line appears. Then a letter. Then a word.",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "June. I never forgot you. Our bakery is waiting. Rosie.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And under the words, a tiny drawing of a key.",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup lifts the tin's paper lining. Something gold clinks.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "key",
+      "show"
+     ],
+     [
+      "key",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "A KEY!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I didn't burn it. Not one corner. Look at it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You didn't just warm a card, Crispy. You saved it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The door swings open. The bros dive behind the bread box.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "June reads the brown words. She laughs and cries at once.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma lifts the key. On its tag: Maple Street Bakery.",
+    "cam": "prop:key",
+    "do": [
+     [
+      "key",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Walter's old bakery. Closed for fifty years.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But tonight, across the street, a light is on inside.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO'S IN THE BAKERY?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Rosie's Secret Card Blank? 💌 (Ep 23)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everything I touch turns black. That's what I thought, anyway.\" — Crispy\nGrandma's fifty-year-old tin finally opens on an autumn afternoon — and the only thing inside is a blank card. The Dough Bros have one minute before June walks back in.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "autumn",
+   "invisible ink",
+   "lemon",
+   "crispy",
+   "old friends",
+   "secret",
+   "funny animation"
+  ],
+  "thumb_text": "NOT ME!",
+  "thumb_beat": 39,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué está en blanco la tarjeta de Rosie? 💌 (Ep 23)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todo lo que toco se vuelve negro. Eso pensaba, por lo menos.\" — Crispy\nLa lata de la abuela, enterrada hace cincuenta años, por fin se abre una tarde de otoño… y dentro solo hay una tarjeta en blanco. Los Dough Bros tienen un minuto antes de que June vuelva.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Por que o cartão secreto da Rosie está em branco? 💌 (Ep 23)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Tudo o que eu toco fica preto. Pelo menos era o que eu achava.\" — Crispy\nA lata de cinquenta anos da vovó finalmente abre numa tarde de outono — e a única coisa lá dentro é um cartão em branco. Os Dough Bros têm um minuto antes de a June voltar.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا بطاقة روزي السرية فارغة؟ 💌 (Ep 23)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"كل ما ألمسه يصبح أسود. هذا ما كنت أظنه على الأقل.\" — كريسبي\nعلبة الجدة المدفونة منذ خمسين عامًا تُفتح أخيرًا في عصر خريفي — ولا يوجد بداخلها سوى بطاقة فارغة. أمام الأصدقاء دقيقة واحدة قبل أن تعود جون.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi la carte secrète de Rosie est vide ? 💌 (Ep 23)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Tout ce que je touche devient noir. C'est ce que je croyais, en tout cas.\" — Crispy\nLa vieille boîte en fer de Mamie s'ouvre enfin, un après-midi d'automne — et dedans, il n'y a qu'une carte blanche. Les Dough Bros ont une minute avant que June ne revienne.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ロージーの秘密のカードはなぜ白紙？ 💌 (Ep 23)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「さわるものは全部黒くなる。少なくとも、そう思ってた。」— クリスピー\n50年前の缶が秋の午後にやっと開いた。でも中にあったのは白紙のカード1枚だけ。ジューンが戻るまで、ドウ・ブロスに残された時間はあと1分。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "로지의 비밀 카드는 왜 비어 있을까? 💌 (Ep 23)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"내가 만지는 건 다 까맣게 돼. 적어도 그렇게 생각했어.\" — 크리스피\n할머니의 50년 된 깡통이 어느 가을 오후 마침내 열린다 — 그런데 안에 든 건 빈 카드 한 장뿐. 도우 브로스에게는 준이 돌아오기까지 1분밖에 없다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Warum ist Rosies geheime Karte leer? 💌 (Ep 23)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alles, was ich berühre, wird schwarz. Dachte ich jedenfalls.\" — Crispy\nOmas fünfzig Jahre alte Blechdose geht an einem Herbstnachmittag endlich auf – und drinnen liegt nur eine leere Karte. Die Dough Bros haben eine Minute, bevor June zurückkommt.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 3,
+   "dur": 20,
+   "top": "WOULD YOU SHAKE IT?",
+   "title": "Would YOU Shake This Rusty Old Tin? 🥫 (Ep 23) #shorts",
+   "description": "Buried fifty years. Something rattles inside. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "tin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ sacudirías esta vieja lata oxidada? 🥫 (Ep 23) #shorts",
+     "description": "Enterrada cincuenta años. Algo suena dentro. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ sacudiria essa lata velha e enferrujada? 🥫 (Ep 23) #shorts",
+     "description": "Enterrada por cinquenta anos. Algo chacoalha lá dentro. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستهز هذه العلبة الصدئة القديمة؟ 🥫 (Ep 23) #shorts",
+     "description": "مدفونة منذ خمسين عامًا. شيء ما يخشخش بداخلها. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU secouerais cette vieille boîte rouillée ? 🥫 (Ep 23) #shorts",
+     "description": "Enterrée cinquante ans. Quelque chose bouge dedans. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのサビた古い缶をふれる？ 🥫 (Ep 23) #shorts",
+     "description": "50年間うまっていた缶。中で何かがカタカタ鳴る。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 녹슨 낡은 깡통을 흔들어 볼래? 🥫 (Ep 23) #shorts",
+     "description": "50년 동안 묻혀 있었다. 안에서 뭔가 달그락거린다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diese rostige alte Dose schütteln? 🥫 (Ep 23) #shorts",
+     "description": "Fünfzig Jahre vergraben. Drinnen klappert etwas. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

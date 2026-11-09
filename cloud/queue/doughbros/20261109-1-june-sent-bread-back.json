@@ -1,0 +1,991 @@
+{
+ "id": "20261109-1-june-sent-bread-back",
+ "plot": "At sunrise the neighbour June returns Grandma's harvest loaf with a note 'Not from her. No thanks'; Lolly and Pim lead the bros through the fence to find out why, see June holding an old photo of Rosie and June as girls, scatter from her leaf blower, and — the twist — scared Pim hides in June's rusty mailbox (rusted shut, seen at the start) and finds Rosie's 1976 goodbye letter that got stuck in it fifty years ago; Lolly saves it from the wind, June reads it and runs to Grandma's door, they hug, and June whispers: is our tin still under the apple tree?",
+ "script": {
+  "title": "June Sent Grandma's Bread Back",
+  "set": {
+   "place": "garden",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "loaf",
+    "type": "cake",
+    "color": [
+     0.82,
+     0.56,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     0,
+     10,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "mailbox",
+    "type": "box",
+    "color": [
+     0.55,
+     0.25,
+     0.15
+    ],
+    "on": null,
+    "at": [
+     10,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "leaves",
+    "type": "cone",
+    "color": [
+     0.9,
+     0.45,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     -9,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "letter",
+    "type": "box",
+    "color": [
+     0.95,
+     0.9,
+     0.7
+    ],
+    "on": null,
+    "at": [
+     9,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "She sent it BACK? Grandma's warm bread?!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "loaf",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "W-why would anyone send back warm bread?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunrise on Maple Street. Autumn leaves blow everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the loaf, a note in shaky old writing.",
+    "cam": "prop:loaf",
+    "do": [
+     [
+      "loaf",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "NOT FROM HER. NO THANKS.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Who says no thanks to free bread?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That loaf went to Mrs. June. Across the fence.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "If Grandma sees this note, it will break her heart.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "So we find out why. Before Grandma wakes.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros squeeze through a hole in the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "June's garden. Leaves everywhere. And one rusty tin mailbox.",
+    "cam": "prop:mailbox",
+    "do": [
+     [
+      "mailbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "That mailbox is rusted shut. Nobody has opened it in years.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "G-good. Let's keep it that way. Let's go home.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Through the window, June sits alone, holding an old photo.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two young girls with flour on their noses, laughing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The photo says Rosie and June. Rosie is Grandma's name!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then they were best friends. So why the angry note?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bang! The back door swings open. June steps outside.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In her hands: a big, loud, roaring leaf blower.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "LEAF BLOWER!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-n-nope! I'm a small, light bean! I will fly away!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Leaves fly up. The bros tumble across the grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Hide! If she spots us, we never find out why!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup, Zeek and Lolly dive into the big leaf pile.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "bup",
+      "to:-9,12"
+     ],
+     [
+      "zeek",
+      "to:-8,13"
+     ],
+     [
+      "lolly",
+      "to:-10,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls behind a flowerpot. Pim runs the other way.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:6,14"
+     ],
+     [
+      "pim",
+      "to:10,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Straight to the rusty mailbox. He squeezes in through the slot.",
+    "cam": "prop:mailbox",
+    "do": [
+     [
+      "pim",
+      "to:10,13"
+     ],
+     [
+      "mailbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's dark. It's d-dusty. And something is poking my back.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The blower roars past. The mailbox rattles like a drum.",
+    "cam": "prop:mailbox",
+    "do": [
+     [
+      "mailbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim? Pim! Are you still in one piece?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "One piece. But there's paper back here. Stuck in a crack.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "June switches off the blower and goes inside.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros pull Pim out by his bandage. Pop!",
+    "cam": "prop:mailbox",
+    "do": [
+     [
+      "pim",
+      "to:9,12"
+     ],
+     [
+      "all",
+      "to:8,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In his arms: an old, yellow envelope.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "TO JUNE. FROM ROSIE.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The stamp says 1976. Fifty years stuck in a rusty box!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Read it, Zeek. Carefully. Very, very carefully.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "June. Dad got a job far away. We leave tonight.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I'm sorry. I couldn't say goodbye to your face.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I hid our tin under the apple tree. Dig it up someday.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So Rosie did say goodbye. June just never got it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Fifty years she thought Rosie left without a word.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then June reads this today. Not one more year. Today.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly lays the letter on June's doormat. Knock, knock, knock!",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:2,14"
+     ],
+     [
+      "letter",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But a gust grabs the envelope. It flips toward the leaf pile!",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THE LETTER IS FLYING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh no you don't. NOBODY blows away Grandma's letter!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly leaps and lands on it, icing first. Splat. Stuck.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ],
+     [
+      "letter",
+      "to:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The door opens. The bros freeze, flat as garden stones.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "June bends down. She sees Rosie's handwriting. Her hand shakes.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She reads it once. Twice. Then she runs out the gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across the lawn to Grandma's door.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma opens it in her robe. Two old friends. Fifty years.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "They're h-hugging. I'm not crying. Beans don't cry.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then June whispers: Rosie, is our tin still under the tree?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT'S IN THE TIN?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "June Sent Grandma's Bread Back 🍂 (Ep 22)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Fifty years she thought her best friend left without a word. Fifty years!\" — Pim\nOn a windy autumn morning the neighbour sends Grandma's warm loaf back with a cold little note — and the Dough Bros sneak into her garden to find out why.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "autumn",
+   "old friends",
+   "letter",
+   "lolly",
+   "pim",
+   "grandma",
+   "funny animation"
+  ],
+  "thumb_text": "SHE SAID NO?",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "June devolvió el pan de la abuela 🍂 (Ep 22)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Cincuenta años creyendo que su mejor amiga se fue sin decir nada. ¡Cincuenta años!\" — Pim\nUna mañana ventosa de otoño, la vecina devuelve el pan caliente de la abuela con una nota fría, y los Dough Bros se cuelan en su jardín para descubrir por qué.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "June devolveu o pão da vovó 🍂 (Ep 22)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Cinquenta anos achando que a melhor amiga foi embora sem dizer nada. Cinquenta anos!\" — Pim\nNuma manhã de outono cheia de vento, a vizinha devolve o pão quentinho da vovó com um bilhete frio — e os Dough Bros entram escondidos no jardim dela para descobrir o motivo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "جون أعادت خبز الجدة 🍂 (Ep 22)",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"خمسون عامًا وهي تظن أن صديقتها رحلت دون كلمة. خمسون عامًا!\" — بيم\nفي صباح خريفي عاصف، تعيد الجارة رغيف الجدة الدافئ مع رسالة باردة — فيتسلل الأصدقاء إلى حديقتها ليعرفوا السبب.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "June a rendu le pain de Mamie 🍂 (Ep 22)",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Cinquante ans à croire que sa meilleure amie était partie sans un mot. Cinquante ans !\" — Pim\nUn matin d'automne venteux, la voisine rend le pain chaud de Mamie avec un petit mot glacial — et les Dough Bros se faufilent dans son jardin pour comprendre pourquoi.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ジューンがおばあちゃんのパンを返してきた 🍂 (Ep 22)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「50年間、親友は何も言わずに去ったと思ってたんだ。50年も！」— ピム\n風の強い秋の朝、お隣さんがおばあちゃんの焼きたてパンを冷たいメモつきで返してきた。ドウ・ブロスは理由を探りに、こっそり彼女の庭へ。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "준이 할머니의 빵을 돌려보냈다 🍂 (Ep 22)",
+    "description": "다음 편에서는 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"50년 동안 단짝이 말 한마디 없이 떠난 줄 알았대. 50년이나!\" — 핌\n바람 부는 가을 아침, 이웃이 할머니의 따뜻한 빵을 차가운 쪽지와 함께 돌려보낸다 — 도우 브로스는 이유를 알아내려고 그녀의 정원에 몰래 들어간다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "June hat Omas Brot zurückgeschickt 🍂 (Ep 22)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Fünfzig Jahre dachte sie, ihre beste Freundin sei ohne ein Wort gegangen. Fünfzig Jahre!\" — Pim\nAn einem windigen Herbstmorgen schickt die Nachbarin Omas warmes Brot mit einem kalten Zettel zurück – und die Dough Bros schleichen sich in ihren Garten, um herauszufinden, warum.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 26,
+   "dur": 20,
+   "top": "WOULD YOU REACH IN?",
+   "title": "Would YOU Reach Into This Rusty Mailbox? 📬 (Ep 22) #shorts",
+   "description": "Pim squeezed in. Something is poking his back. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "would you",
+    "series",
+    "mailbox"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ meterías la mano en este buzón oxidado? 📬 (Ep 22) #shorts",
+     "description": "Pim se metió dentro. Algo le pincha la espalda. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ colocaria a mão nessa caixa de correio enferrujada? 📬 (Ep 22) #shorts",
+     "description": "O Pim entrou. Tem algo cutucando as costas dele. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستمد يدك داخل صندوق البريد الصدئ هذا؟ 📬 (Ep 22) #shorts",
+     "description": "بيم دخل إلى الداخل. شيء ما يخزّ ظهره. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU mettrais la main dans cette boîte aux lettres rouillée ? 📬 (Ep 22) #shorts",
+     "description": "Pim s'est glissé dedans. Quelque chose lui pique le dos. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのサビたポストに手を入れられる？ 📬 (Ep 22) #shorts",
+     "description": "ピムが中にもぐりこんだ。背中に何かが当たってる。本編：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 녹슨 우편함에 손을 넣을 수 있어? 📬 (Ep 22) #shorts",
+     "description": "핌이 안으로 비집고 들어갔다. 뭔가 등을 찌른다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU in diesen rostigen Briefkasten greifen? 📬 (Ep 22) #shorts",
+     "description": "Pim ist hineingekrochen. Etwas piekst ihn in den Rücken. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 18,
+   "dur": 20,
+   "top": "LEAF BLOWER INCOMING",
+   "title": "A Leaf Blower vs One Tiny Bean 🍂 (Ep 22) #shorts",
+   "description": "Five bros, one big leaf pile, nowhere to hide. Full episode on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "autumn",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Un soplador de hojas contra un frijolito 🍂 (Ep 22) #shorts",
+     "description": "Cinco amigos, un montón de hojas y ningún escondite. Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um soprador de folhas contra um feijãozinho 🍂 (Ep 22) #shorts",
+     "description": "Cinco amigos, um monte de folhas e nenhum esconderijo. Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "منفاخ أوراق ضد حبة فاصوليا صغيرة 🍂 (Ep 22) #shorts",
+     "description": "خمسة أصدقاء، كومة أوراق كبيرة، ولا مكان للاختباء. الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un souffleur de feuilles contre un petit haricot 🍂 (Ep 22) #shorts",
+     "description": "Cinq copains, un gros tas de feuilles, aucune cachette. Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "落ち葉ブロワー vs 小さな豆 🍂 (Ep 22) #shorts",
+     "description": "5人の仲間、大きな落ち葉の山、隠れる場所なし。本編はチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "낙엽 송풍기 vs 작은 콩 하나 🍂 (Ep 22) #shorts",
+     "description": "다섯 친구, 커다란 낙엽 더미, 숨을 곳은 없다. 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Laubbläser gegen eine winzige Bohne 🍂 (Ep 22) #shorts",
+     "description": "Fünf Freunde, ein großer Laubhaufen, kein Versteck. Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
