@@ -54,6 +54,7 @@ echo "disk free: $(df -h / | awk 'NR==2{print $4}')"
 for ch in maxcat doughbros hollow bolt roblox funny money ufc sleep; do
   echo "--- $ch: $(python3 -c "import json;d=json.load(open('cloud/results/$ch/status.json'));print(d.get('time'),d.get('stage'),d.get('error','')[:150])" 2>/dev/null)"
   tail -4 /root/kanal/$ch/worker.log 2>/dev/null | cut -c1-220 | sed 's/^/    /'
+  [ -f /root/kanal/$ch/maker.log ] && tail -6 /root/kanal/$ch/maker.log | cut -c1-220 | sed 's/^/    maker: /'
 done
 } > /tmp/kanal_holat.txt 2>&1
 [ -n "$OUT" ] && cp -f /tmp/kanal_holat.txt "$OUT"

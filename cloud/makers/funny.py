@@ -32,8 +32,18 @@ RUN_BUDGET_S = 100 * 60
 HASHTAGS = "#shorts #funny #fails #ranking #funnyvideos"
 
 
+LOGF = None  # 2026-11-09: live progress file (HOME/maker.log) — the worker only sees stdout after the run ends
+
+
 def log(*a):
-    print(time.strftime("%H:%M:%S"), *a, flush=True)
+    line = " ".join([time.strftime("%H:%M:%S")] + [str(x) for x in a])
+    print(line, flush=True)
+    if LOGF:
+        try:
+            with open(LOGF, "a") as f:
+                f.write(time.strftime("%m-%d ") + line + "\n")
+        except Exception:
+            pass
 
 
 def description(sc, clips, theme_name):
@@ -167,6 +177,9 @@ def main():
     rng = random.Random(args.seed)
     sys.path.insert(0, os.path.dirname(HERE))  # cloud/ → youtube_up.py
     import youtube_up
+    global LOGF
+    LOGF = os.path.join(args.home, "maker.log")
+    log("=== funny maker start, need-short", args.need_short if hasattr(args, "need_short") else "?")
     yt = youtube_up.client(os.path.join(args.home, "token.json"))
     finder = SRC.Finder(yt, args.home, log)
     cache = os.path.join(args.home, "funny_cache")
