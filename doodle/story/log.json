@@ -890,9 +890,67 @@
           "rek_ball": 93
         }
       ]
+    },
+    {
+      "episode": 23,
+      "date": "2026-11-09",
+      "topic": "DraftKings Q3 2026 (Nov 5): stock -21.3% to $18.51 on Nov 6 (low $16.55, 3-yr low, ~-50% YTD) after raising Predictions spend to $650-700M and cutting 2026 adj. EBITDA guide $700-900M -> $175-275M; Q3 rev $1.33B (+16%) vs $1.39B exp, adj. EBITDA -$317M; what prediction markets are (Kalshi $22B, Polymarket, CFTC vs state gaming law); circuit split (3rd for Kalshi; 9th, 6th, 2nd for states), NJ cert petition + 39 states/DC brief, Kalshi SCOTUS deadline Feb 2 2027, CFTC rule comments Nov 18; both sides quoted",
+      "title": "The Betting Giant Made a $700M Bet. Wall Street Ran.",
+      "minutes": 10.6,
+      "sources": [
+        "https://s21.q4cdn.com/869500724/files/doc_earnings/2026/q3/generic/BU-Q3-26.pdf",
+        "https://247wallst.com/investing/2026/11/06/draftkings-plunges-27-on-weak-2027-forecast-and-prediction-market-spending-flutter-sinks-8-penn-entertainment-drops-4/",
+        "https://stocktwits.com/news-articles/markets/equity/why-did-dkng-soun-orcl-stocks-plunge-to-52-week-lows-last-week/cNGAv0oR9I6",
+        "https://bigmoves.substack.com/p/big-moves-november-6-2026",
+        "https://www.bostonglobe.com/2026/11/06/business/draftkings-prediction-markets-stock-expenses/",
+        "https://www.foley.com/insights/publications/2026/11/prediction-markets-overview-regulation-litigation-and-the-road-to-the-supreme-court",
+        "https://cdcgaming.com/u-s-appeals-court-denies-kalshis-petition-for-rehearing-in-nevada-case/",
+        "https://oag.ca.gov/news/press-releases/attorney-general-bonta-defends-state-gambling-laws-against-kalshi-again",
+        "https://www.sportsbettingdime.com/news/industry/second-circuit-denies-kalshi-coinbase-injunction-motion-in-new-york-and-connecticut/",
+        "https://cdn.ca9.uscourts.gov/datastore/opinions/2026/08/28/25-7516.pdf"
+      ],
+      "rek_ball": {
+        "long": 87,
+        "s1": 93,
+        "s2": 100
+      },
+      "uploads": []
     }
   ],
-  "pending_uploads": [],
+  "pending_uploads": [
+    {
+      "episode": 23,
+      "date": "2026-11-09",
+      "script": "scripts/ep023.json",
+      "reason": "computer/Chrome not reachable from this run (no browser tools)",
+      "items": [
+        {
+          "kind": "long",
+          "title": "The Betting Giant Made a $700M Bet. Wall Street Ran.",
+          "file": "out/ep023/ep023.mp4",
+          "thumbnail": "out/ep023/thumbnail.png",
+          "planned_publish_at": "2026-11-10T20:15:00Z",
+          "rek_ball": 87
+        },
+        {
+          "kind": "short",
+          "title": "\"Not Betting,\" Says the App That Said Betting #shorts",
+          "file": "out/ep023/ep023_s1_d.mp4",
+          "make": "make_short.py --start 207.9 --dur 34.8 --top '\"Not betting,\" says the betting app' then rek_ball --kuchaytir",
+          "planned_publish_at": "2026-11-10T18:15:00Z",
+          "rek_ball": 93
+        },
+        {
+          "kind": "short",
+          "title": "A Betting Giant Lost 21% in One Day #shorts",
+          "file": "out/ep023/ep023_s2_d.mp4",
+          "make": "make_short.py --start 129.3 --dur 29.6 --top '-21% IN ONE DAY' then rek_ball --kuchaytir",
+          "planned_publish_at": "2026-11-10T12:45:00Z",
+          "rek_ball": 100
+        }
+      ]
+    }
+  ],
   "translations_pending": [
     {
       "video_id": "cz-Ik1KrQ14",
@@ -1284,9 +1342,6 @@
       "note": "2026-10-25: Studio Tillar shows 20 translations 'Chop etilgan' (YouTube auto) incl. es,pt,ar,fr,ja,ko,de"
     }
   ],
-  "lock": {
-    "until": "2026-11-09T09:20:42Z",
-    "by": "session_01DAYK5TUA42ynkVNC72PT37"
-  },
+  "lock": null,
   "upload_tip": "2026-11-07: raw.githubusercontent is ~2 KB/s on the laptop; cdn.jsdelivr.net/gh/<repo>@<commit sha>/<file> gave 10-50 KB/s (use Range-resume loop, files <=20 MB). YouTube upload itself is fast. Second Studio tabs need ?authuser=4."
 }
