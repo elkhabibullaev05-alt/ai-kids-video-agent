@@ -443,7 +443,7 @@ def produce(job, jf):
     frames = sorted(glob.glob(os.path.join(d, "frames", "f_*.png")))
     beats = tl["beats"]
     tb = job["long"].get("thumb_beat", len(beats) // 2)
-    if CFG.get("dir") == "bolt":  # cars have a face only on the front
+    if CFG.get("engine", "none") != "none":  # bolt: cars have a face only on the front; 2026-11-09 hollow wide-shot thumb (tiny figures) → prefer a clean close-up on every 3D channel
         tb = safe_thumb_beat(job["script"].get("beats", []), tb)
     fi = min(len(frames) - 1, int((beats[min(tb, len(beats) - 1)]["start"] + 0.8) * 12))
     thumb = os.path.join(d, "thumb.jpg")
