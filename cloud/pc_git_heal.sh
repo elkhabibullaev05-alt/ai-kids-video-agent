@@ -33,6 +33,10 @@ find .git -maxdepth 2 -name '*.lock' -mmin +30 -print -delete 2>/dev/null | sed 
 git remote set-url origin https://github.com/$R.git
 git remote set-url --push origin ssh://git@ssh.github.com:443/$R.git
 git config core.sshCommand "ssh -i /root/.ssh/kanal_deploy -o IdentitiesOnly=yes -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new"
+# 2026-11-09: the repo got an EMPTY object file twice in one day (WSL was killed mid-write while a game + renders ran).
+# Make git flush every object/ref to disk before it counts as written, so a sudden stop cannot leave empty files.
+git config core.fsync objects,derived-metadata,reference 2>/dev/null; git config core.fsyncMethod fsync 2>/dev/null
+git config core.fsyncObjectFiles true 2>/dev/null
 echo "branch: $(git status -sb | head -1)"
 echo "local commits not on GitHub: $(git rev-list --count origin/main..HEAD 2>/dev/null)"
 # 3. pull + push waiting commits

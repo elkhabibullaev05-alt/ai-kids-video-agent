@@ -31,6 +31,11 @@ if [ "$(cat /root/kanal/.ytdlp_day 2>/dev/null)" != "$(date -u +%F)" ]; then
     date -u +%F > /root/kanal/.ytdlp_day
 fi
 PAR=${KANAL_PAR:-3}  # 2026-11-06: 10 channels now (makers are mostly ffmpeg, lighter than Blender)
+# 2026-11-09: while the owner plays a game (Call of Duty etc.) the laptop runs out of memory and Windows kills WSL
+# mid-render (jobs restarted every 20 min, git objects left empty). During a game: only 1 channel at a time.
+if /mnt/c/Windows/System32/tasklist.exe /NH 2>/dev/null | grep -qiE '^(cod\.exe|sp[0-9]+-cod|mp[0-9]+-cod|cod[0-9]+|FortniteClient|RobloxPlayerBeta|NFS|BeamNG)'; then
+  PAR=1; echo "$(date -u) game running -> PAR=1" >> /root/kanal/game.log
+fi
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
 CHS="maxcat doughbros hollow bolt roblox funny money ufc sleep"  # 2026-11-06 owner: grind paused for now (no token, not needed yet); funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
 # 2026-10-27: sleep (Calm Rain) removed — owner wants it back to its own real-rain agent (sleeptube), no AI videos
