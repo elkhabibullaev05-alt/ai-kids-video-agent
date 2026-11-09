@@ -1,0 +1,1177 @@
+{
+ "id": "20261110-1-dog-wont-come-back",
+ "plot": "Once the snow melts, Grandma lets Dog run off-leash in the park only if he comes back three times when called at sunset, and Coach Max chases him around trees until he hangs upside down from a swing; when Max gives up and walks home, Dog follows on his own, so Max learns Dog chases whatever runs away and trains him by running the other way, but in the sunset test Max himself runs off after a yellow leaf and Dog calls him back with the same trick, so both pass, and tomorrow Grandma's friend brings a parrot that copies every word.",
+ "script": {
+  "title": "Dog Won't Come Back",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -8.0,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "leaf",
+    "type": "star",
+    "color": "yellow",
+    "at": [
+     -3.0,
+     5.0,
+     1.2
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Dog! Come back! DOG! COME BACK HERE!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "to:-12,16"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can't stop! The ball is getting away!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "ball",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "text": "DOG IS GONE AGAIN!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Three sunny days later, the big snow has melted away.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And today is Dog's big day in the park.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog may run free without his leash, Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But only if he comes back every time we call him.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "At sunset, I will call him three times. That's the test.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Grandma. I'm his coach. He'll learn by sunset.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, you're a cat. Cats never come when they're called.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's different. Cats come when we WANT to.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I love running! I love chasing! Anything that runs away from me!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:5,8"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lesson one. Max stands up very tall, like a real coach.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. Sit. Good. Now... come!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sees a pigeon. And he's gone.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-12,16"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not the pigeon! Me! Come to ME!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fine. If you won't come to me, I'll catch you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs after Dog. And Dog sees Max running after him.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-9,13"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Yippee! Max wants to play tag!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The faster Max runs, the faster Dog runs. Around trees. Around benches.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:10,14"
+     ],
+     [
+      "max",
+      "to:7,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs under the swings. Bonk! A swing taps his head.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And somehow, Max ends up hanging on the swing, upside down.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is NOT how coaching works!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hi, Max! Why are you hanging upside down?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm resting. Coaches need rest too.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lesson one is over. And the sun is already getting lower.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Only one hour until sunset, my dears!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One hour! If Dog fails, he wears the leash all winter!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "All winter? But I love running free!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then try! When I call, you come back. Like a boomerang!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:2,7"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "What's a boomerang?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Something you throw that always comes back to you.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay! I'm a boomerang! Watch me go! Boom!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "to:-12,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the boomerang goes. Far away. After a duck.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's it. I give up. I'm going home.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max turns around and stomps away across the grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,4"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Stomp. Stomp. Stomp. He doesn't look back once.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he hears something behind him. Pat-pat-pat-pat-pat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait for me, Max! Where are we going? Can I come?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog is right beside him. And nobody even called him.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You came back! All by yourself!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You were walking away. I love chasing things that go away!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. Say that one more time.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I love... chasing things that go away?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's it! I was chasing you. But you chase what runs AWAY!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So when I call you, I won't chase you. I'll run away!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A coach who runs away from his team? This I must see.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lesson two. Dog is sniffing a bush, far, far away.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:10,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Come!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Max runs the other way, as fast as he can.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog's ears go up. Zoom! He races right after Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Got you! I came back! Did I come back?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You came back! Good boy, Dog! Good boomerang!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They try again. And again. Dog comes back every single time.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Five times in a row! He really is a boomerang!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sky turns orange. It's time for the big test.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ready, Dog? Ready, Coach Max?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ready! Dog will come back. I promise.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs off to the big tree. Grandma takes a deep breath.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-10,16"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog! Come!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs away. Dog zooms back. That's one!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,6"
+     ],
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog! Come!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs away again. Dog zooms back. That's two!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,6"
+     ],
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a big yellow leaf flutters right past Max's nose.",
+    "cam": "prop:leaf",
+    "do": [
+     [
+      "leaf",
+      "show"
+     ],
+     [
+      "leaf",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A leaf! A flying leaf! Must... catch... it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And now Max is the one running off across the park!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-12,16"
+     ],
+     [
+      "leaf",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "text": "NOW MAX WON'T COME BACK!",
+    "cam": "wide",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Max! Max, come! Oh dear. The coach ran away.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Grandma. I know a good trick.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! Come!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Dog runs away from Max, as fast as he can.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:8,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's ears go up. He forgets the leaf. Zoom! He chases Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! I came back! Did I just come back?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's three! Dog passes the test. And so does Max!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The player called the coach, and the coach came!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm the coach now. Sit, Max. Good kitty!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs all the way home in the orange sunset.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Learning takes practice. And sometimes your friend teaches you back.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow, my old friend Polly visits. With her parrot.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "A parrot? Parrots copy every word you say!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Every word? Uh-oh. Dog says a LOT of silly words.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Dog Won't Come Back When Called! 🐶",
+  "description": "\"I'm his coach. He'll learn by sunset. Probably.\" 🐱\nDog may run in the park without his leash, but only if he comes back when Grandma calls him three times at sunset. And Dog chases everything. Max the Curious Cat, Ep 38.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "dog training",
+   "come when called",
+   "park",
+   "off leash",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog",
+   "autumn park"
+  ],
+  "thumb_text": "COACH MAX?!",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "¡Perro no vuelve cuando lo llaman! 🐶",
+    "description": "\"Soy su entrenador. Aprenderá antes del atardecer. Seguramente.\" 🐱\nPerro puede correr en el parque sin correa, pero solo si vuelve cuando la abuela lo llame tres veces al atardecer. Y Perro persigue todo. Max el Gato Curioso, Ep 38.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "O Cachorro não volta quando chamado! 🐶",
+    "description": "\"Eu sou o treinador dele. Ele aprende até o pôr do sol. Provavelmente.\" 🐱\nO Cachorro pode correr no parque sem coleira, mas só se voltar quando a vovó chamar três vezes ao pôr do sol. E o Cachorro corre atrás de tudo. Max, o Gato Curioso, Ep 38.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "الكلب لا يعود عندما نناديه! 🐶",
+    "description": "\"أنا مدربه. سيتعلم قبل الغروب. على الأرجح.\" 🐱\nيمكن للكلب أن يركض في الحديقة بلا مقود، لكن فقط إذا عاد عندما تناديه الجدة ثلاث مرات عند الغروب. والكلب يطارد كل شيء. ماكس القط الفضولي، الحلقة 38.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Chien ne revient pas quand on l'appelle ! 🐶",
+    "description": "« Je suis son coach. Il apprendra avant le coucher du soleil. Sûrement. » 🐱\nChien peut courir au parc sans laisse, mais seulement s'il revient quand Mamie l'appelle trois fois au coucher du soleil. Et Chien court après tout. Max le Chat Curieux, Ép 38.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "よんでもイヌがもどってこない！🐶",
+    "description": "「ぼくがコーチだ。夕方までにおぼえるよ。たぶんね。」🐱\nイヌはリードなしで公園を走ってもいい。ただし夕方、おばあちゃんが3回よんで、ちゃんともどってきたら。でもイヌはなんでも追いかけちゃう。好奇心ねこマックス 第38話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "불러도 강아지가 안 돌아와요! 🐶",
+    "description": "\"내가 코치야. 해 질 때까지 배울 거야. 아마도.\" 🐱\n강아지는 목줄 없이 공원을 달릴 수 있어요. 단, 해 질 녘에 할머니가 세 번 부를 때 돌아와야 해요. 그런데 강아지는 뭐든 쫓아가요. 호기심 고양이 맥스, 38화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Hund kommt nicht zurück, wenn man ruft! 🐶",
+    "description": "„Ich bin sein Trainer. Bis Sonnenuntergang lernt er es. Wahrscheinlich.“ 🐱\nHund darf ohne Leine im Park rennen, aber nur, wenn er zurückkommt, wenn Oma ihn bei Sonnenuntergang dreimal ruft. Und Hund jagt alles. Max die neugierige Katze, Folge 38.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 16,
+   "dur": 18,
+   "top": "COACH MAX VS DOG",
+   "title": "Coach Max Chases Dog... Bonk! 😹 #shorts",
+   "description": "The faster Max runs, the faster Dog runs. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog",
+    "park"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El entrenador Max persigue a Perro... ¡Bonk! 😹 #shorts",
+     "description": "Cuanto más corre Max, más corre Perro. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Treinador Max corre atrás do Cachorro... Bonk! 😹 #shorts",
+     "description": "Quanto mais Max corre, mais o Cachorro corre. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المدرب ماكس يطارد الكلب... بونك! 😹 #shorts",
+     "description": "كلما ركض ماكس أسرع، ركض الكلب أسرع. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Coach Max poursuit Chien... Bonk ! 😹 #shorts",
+     "description": "Plus Max court vite, plus Chien court vite. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "コーチ・マックスがイヌを追いかけたら…ゴツン！😹 #shorts",
+     "description": "マックスが速く走るほど、イヌも速く走る。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스 코치가 강아지를 쫓다가… 쿵! 😹 #shorts",
+     "description": "맥스가 빨리 뛸수록 강아지도 빨리 뛰어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Trainer Max jagt Hund... Bonk! 😹 #shorts",
+     "description": "Je schneller Max rennt, desto schneller rennt Hund. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1218 @@
+{
+ "id": "20261109-2-snow-taller-than-max",
+ "plot": "The morning after the biggest snowstorm of the winter Max wants the old sled from the shed before the sledding hill opens at noon, but he sinks in snow taller than himself; hopping in Dog's deep footprints works until Dog chases snowflakes in circles and the shed door turns out to be buried, then Max notices Grandma's cookie tray never sank, works out that big flat things spread out on snow, and the tray slides him down the yard: it was the sled all along, Grandma's own childhood trick, and that night everyone must sleep by the fire next to Dog.",
+ "script": {
+  "title": "The Snow Is Taller Than Max",
+  "set": {
+   "place": "snow",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tray",
+    "type": "box",
+    "color": [
+     0.8,
+     0.82,
+     0.86
+    ],
+    "at": [
+     -3.0,
+     4.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "bigtray",
+    "type": "box",
+    "color": [
+     0.7,
+     0.72,
+     0.78
+    ],
+    "at": [
+     7.0,
+     6.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "shed",
+    "type": "box",
+    "color": [
+     0.55,
+     0.33,
+     0.18
+    ],
+    "at": [
+     10.0,
+     13.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 2.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Whoa! Whoa! Where did the ground go?!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! I can only see your ears!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "THE SNOW SWALLOWED MAX!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Last night, the biggest snowstorm of the winter came.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "This morning, the snow is taller than Max.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I just need the shed! The old sled is in there!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The sledding hill opens at noon, my dears.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When I was little, we never had a sled at all.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No sled? Then how did you go down the hill?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, I had my own little trick. Now, cookies first!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma puts her hot cookie tray on the snow to cool.",
+    "cam": "prop:tray",
+    "do": [
+     [
+      "tray",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The tray sits right on top of the snow, flat and shiny.",
+    "cam": "prop:tray",
+    "do": [
+     [
+      "tray",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Cookies later, Max. Focus. The shed. The sled. Noon.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The shed is right there. Twenty big jumps. Easy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps. Poof! He sinks right down.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He jumps again. Poof! Even deeper.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "You look like a carrot stuck in a snowman!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cats are not made for snow! My legs are too short!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look at me, Max! I just fly right over it!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Show-off. Cats can't fly, Bird.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then flap your paws harder!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max flaps his paws. Nothing happens. Only more snow in his ears.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Coming through! Snow day! SNOW DAY!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "to:-1,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog bounces across the yard on his long, strong legs.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:4,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! Look behind Dog. Big deep holes, in a line!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "His footprints! They look like little stairs.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I hop into Dog's holes, the snow is already pushed down!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hop. Hop. Hop. Max lands in every big paw print.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It works! I'm not sinking! Mouse, climb on my back!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Full speed ahead, Captain Max!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why is everybody following me? Is this a parade?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yes! The best parade! Keep walking, Dog! To the shed!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Only one hour until the hill opens. Go, go, go!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog walks toward the shed. Then a snowflake lands on his nose.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A snowflake! And another one! I must catch them all!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs in circles. Round and round and round.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now his footprints go everywhere, like a big bowl of noodles.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Which holes go to the shed?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hops into the wrong hole. Plop! Snow up to his nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Achoo! There's snow in my whiskers!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We're stuck again. And look at the shed door.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A giant hill of snow is leaning on the shed door.",
+    "cam": "prop:shed",
+    "do": [
+     [
+      "shed",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "THE SLED IS BURIED!",
+    "cam": "prop:shed",
+    "hold": 1.2,
+    "do": [
+     [
+      "shed",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "No door, no sled. No sled, no hill!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The other kids are walking to the hill already!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Our very first big snow day, and we're going to miss it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then something shiny catches Max's eye. Grandma's cookie tray.",
+    "cam": "prop:tray",
+    "do": [
+     [
+      "tray",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's still on top of the snow. It didn't sink at all.",
+    "cam": "prop:tray",
+    "do": [
+     [
+      "tray",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. I sink. But the tray doesn't. Why not?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My paws are tiny. They poke right down into the snow.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But the tray is big and flat. It spreads out!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Like me on the sofa! I'm a very good spreader.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pulls himself up onto the tray. And he stays on top!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,4.5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! Look! I'm floating on the snow!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Grandma's yard has a little slope. The tray starts to move.",
+    "cam": "wide",
+    "do": [
+     [
+      "tray",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. It's moving. It's MOVING!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Max slides down the yard, right past the shed!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,10"
+     ],
+     [
+      "tray",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! You're not stuck anymore. You're sledding!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The tray IS a sled! We had a sled the whole time!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ah! You found my little trick!",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:4,9"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When I was little, I slid down hills on my mama's tray.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So that's how you went sledding without a sled!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Baking trays are the fastest sleds in the whole town.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I ride one too? I'll be very, very small.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog is not very small.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Grandma brings out her biggest tray, the turkey tray.",
+    "cam": "prop:bigtray",
+    "do": [
+     [
+      "bigtray",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At noon, they are first at the top of the hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ready, Mouse? Hold on to my scarf!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Holding! Holding very, very tight!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoooosh! Max and Mouse fly down the hill on the little tray.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ],
+     [
+      "tray",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog slides behind them. Sideways. Then backwards. Then spinning.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "bigtray",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best. Snow day. EVER!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'm flying right next to you! Same speed!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not today, Bird! Today the cats are the fastest!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When a problem feels too big, try a new way over it.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, can we go sledding again tomorrow?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tonight will be the coldest night of the winter, Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "So tonight, everybody sleeps together by the warm fire.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "All together. In one room. Right next to Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Next to Dog? Oh no. Nobody told Max what happens at night.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Winter Snow Is Taller Than Max! ❄️",
+  "description": "\"I took one jump into the snow... and the ground disappeared.\" 🐱\nThe morning after the big snowstorm, Max needs the old sled before the hill opens at noon, but the snow is taller than he is and the shed door is buried. Max the Curious Cat, Ep 36.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "snow day",
+   "first snow",
+   "winter",
+   "sledding",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "winter stories for kids"
+  ],
+  "thumb_text": "WHERE'S THE GROUND?!",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "¡La nieve del invierno es más alta que Max! ❄️",
+    "description": "\"Di un salto en la nieve... y el suelo desapareció.\" 🐱\nLa mañana después de la gran tormenta, Max necesita el viejo trineo antes de que abra la colina al mediodía, pero la nieve es más alta que él y la puerta del cobertizo está enterrada. Max el Gato Curioso, Ep 36.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A neve do inverno é mais alta que o Max! ❄️",
+    "description": "\"Dei um pulo na neve... e o chão sumiu.\" 🐱\nNa manhã depois da grande tempestade, Max precisa do velho trenó antes de o morro abrir ao meio-dia, mas a neve é mais alta que ele e a porta do galpão está enterrada. Max, o Gato Curioso, Ep 36.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "ثلج الشتاء أطول من ماكس! ❄️",
+    "description": "\"قفزت قفزة واحدة في الثلج... واختفت الأرض.\" 🐱\nفي الصباح بعد العاصفة الثلجية الكبيرة، يحتاج ماكس إلى الزلاجة القديمة قبل أن يفتح التل عند الظهر، لكن الثلج أطول منه وباب السقيفة مدفون. ماكس القط الفضولي، الحلقة 36.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "La neige d'hiver est plus haute que Max ! ❄️",
+    "description": "« J'ai fait un saut dans la neige... et le sol a disparu. » 🐱\nLe matin après la grosse tempête, Max veut la vieille luge avant que la colline ouvre à midi, mais la neige est plus haute que lui et la porte de la cabane est enterrée. Max le Chat Curieux, Ép 36.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "冬の雪がマックスより高い！❄️",
+    "description": "「雪にジャンプしたら…地面がなくなっちゃった。」🐱\n大雪の次の朝、マックスはお昼にそり山がひらく前に古いそりを取りに行きたい。でも雪はマックスより高く、物置のドアは雪にうまっていた。好奇心ねこマックス 第36話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "겨울 눈이 맥스보다 높아요! ❄️",
+    "description": "\"눈에 한 번 뛰어들었더니… 땅이 사라졌어.\" 🐱\n큰 눈보라가 지나간 아침, 맥스는 정오에 썰매 언덕이 열리기 전에 낡은 썰매를 꺼내야 해요. 하지만 눈은 맥스보다 높고 창고 문은 눈에 묻혀 버렸어요. 호기심 고양이 맥스, 36화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Der Winterschnee ist höher als Max! ❄️",
+    "description": "„Ich bin einmal in den Schnee gesprungen... und der Boden war weg.“ 🐱\nAm Morgen nach dem großen Schneesturm braucht Max den alten Schlitten, bevor der Rodelhügel mittags aufmacht, aber der Schnee ist höher als er und die Schuppentür ist zugeschneit. Max die neugierige Katze, Folge 36.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 18,
+   "top": "TWENTY JUMPS. EASY?",
+   "title": "Max Jumps Into Deep Snow... Poof! ❄️ #shorts",
+   "description": "Twenty jumps to the shed. What could go wrong? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "snow day"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max salta a la nieve profunda... ¡Puf! ❄️ #shorts",
+     "description": "Veinte saltos hasta el cobertizo. ¿Qué podría salir mal? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max pula na neve funda... Puf! ❄️ #shorts",
+     "description": "Vinte pulos até o galpão. O que pode dar errado? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس يقفز في الثلج العميق... بوف! ❄️ #shorts",
+     "description": "عشرون قفزة حتى السقيفة. ما الذي قد يحدث؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max saute dans la neige profonde... Pouf ! ❄️ #shorts",
+     "description": "Vingt sauts jusqu'à la cabane. Qu'est-ce qui pourrait mal tourner ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、深い雪にジャンプ…ボフッ！❄️ #shorts",
+     "description": "物置までジャンプ20回。かんたん…かな？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 깊은 눈에 점프하면… 퐁! ❄️ #shorts",
+     "description": "창고까지 점프 스무 번. 뭐가 잘못될까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max springt in tiefen Schnee... Puff! ❄️ #shorts",
+     "description": "Zwanzig Sprünge bis zum Schuppen. Was soll schon schiefgehen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 33,
+   "dur": 22,
+   "top": "WHICH WAY NOW?!",
+   "title": "Snowflakes Ruined Our Path! ❄️ #shorts",
+   "description": "The footprint path is gone and the shed door is buried. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog",
+    "snow"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perro persiguió copos... ¡y ahora estamos atascados! ❄️ #shorts",
+     "description": "El camino de huellas desapareció y la puerta está enterrada. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro correu atrás dos flocos... e agora? ❄️ #shorts",
+     "description": "O caminho de pegadas sumiu e a porta do galpão está enterrada. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب طارد ندف الثلج... والآن علقنا! ❄️ #shorts",
+     "description": "اختفى طريق آثار الأقدام وباب السقيفة مدفون. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien a chassé les flocons... on est coincés ! ❄️ #shorts",
+     "description": "Le chemin d'empreintes a disparu et la porte est enterrée. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが雪を追いかけて…動けない！❄️ #shorts",
+     "description": "足あとの道がぐちゃぐちゃ、物置のドアは雪の中。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 눈송이를 쫓다가… 갇혔어요! ❄️ #shorts",
+     "description": "발자국 길은 사라지고 창고 문은 눈에 묻혔어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund jagt Schneeflocken... jetzt stecken wir fest! ❄️ #shorts",
+     "description": "Der Spurenweg ist weg und die Schuppentür zugeschneit. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

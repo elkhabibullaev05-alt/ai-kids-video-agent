@@ -1,0 +1,1153 @@
+{
+ "id": "20261109-3-who-snores-coldest-night",
+ "plot": "On the coldest night of the winter everyone sleeps by the fire, and a huge snore keeps Max awake; everyone blames Dog, Max's earmuff plan lands him in the cold water bowl, then he finds Dog is quiet on his side and rolls him over with a cookie crumb, but the whistle goes on, and the real snorer is Grandma, the 'little tea kettle' her mama talked about, so Max lets her sleep, moves himself into the warm laundry basket, and in the morning learns Dog may run off-leash only if he comes back when called.",
+ "script": {
+  "title": "Who Snores on the Coldest Night",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "muffs",
+    "type": "box",
+    "color": "pink",
+    "at": [
+     -7.0,
+     12.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.4
+   },
+   {
+    "id": "bowl",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     3.5,
+     4.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "basket",
+    "type": "box",
+    "color": "white",
+    "at": [
+     8.5,
+     11.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "What is that noise?! Is the whole house growling?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "SNOOORE... wheeeee. SNOOORE... wheeeee.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "mouse",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS SNORING?!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's the coldest night of the winter so far.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "grandma",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One hour ago, Grandma made cozy beds for everyone by the fire.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Blankets for Dog, a sock bed for Mouse, a pillow for me.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And a blanket for Max! Right next to me!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, sleep far away from Dog. Trust me.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why? Dog is my best friend. And he's so warm!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Don't worry. I sleep like a quiet little mouse.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My mama called me her little tea kettle. I never knew why.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma had a big day. Sledding, baking, and drying wet Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lights out. The fire crackles. Everyone closes their eyes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "SNOOORE... wheeeee.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! Psst! Mouse, are you awake?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Nobody can sleep through that. It sounds like a tractor.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's Dog. It has to be Dog. Look at his big nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog is fast asleep on his back, all four paws up high.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I told you. Sleep far away from Dog.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I won't hear it! I'll wear Grandma's earmuffs!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max finds Grandma's fluffy pink earmuffs on the sofa.",
+    "cam": "prop:muffs",
+    "do": [
+     [
+      "muffs",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Much too big! They cover his ears, his eyes, his nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "muffs",
+      "to:max"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ahh. Quiet. Perfectly, wonderfully quiet.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! Stop! You're walking right into Dog's water bowl!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "What? I can't hear you, Mouse! It's so nice and quiet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3.5,4.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splash! Max sits right down in the water bowl. Ice cold water.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "bounce"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Meeeow! Cold! Cold! Cold!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The earmuffs fly off. And the snore is still there.",
+    "cam": "wide",
+    "do": [
+     [
+      "muffs",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "SNOOORE... wheeeee.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now I'm wet AND awake. This is the longest night ever.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I don't sleep, I'll be too tired to play tomorrow!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse, I'm going to look at that snore. Up close.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tiptoes over to Dog. Mouse rides on his tail.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,7"
+     ],
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "SNOOORE...",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hear that? The SNOOORE part comes out of Dog's nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog wiggles in his sleep and rolls onto one side.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The growl stops. Just for a moment.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did you see that? On his side, he's quiet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And on his back, he's a tractor!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Dog rolls back again. Paws up. SNOOORE.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then we roll him over. Gently. On three.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One... two... Max! He's as heavy as the sofa!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes. Mouse pushes. Dog smiles in his sleep and doesn't move.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Mmm... more cookies, Grandma... mmm...",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "He's dreaming about cookies! That gives me an idea.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max picks one cookie crumb out of his whiskers.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He holds it out, just beside Dog's sleeping nose.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sniff. Sniff, sniff. And Dog rolls right over onto his side.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The growl is gone. Dog sleeps like a big, quiet loaf.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We did it, Mouse! Now we can finally sleep.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max curls up. Mouse curls up. Everything is still.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ],
+     [
+      "mouse",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wheeeeeeee.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE SNORE IS STILL HERE!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "But Dog is quiet now! So who is whistling?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Maybe the wind? Maybe the fire?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max follows the sound. Not to the fire. Not to the window.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To the big pillow next to the sofa.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wheeeee... SNORT. Wheeeee... SNORT.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S GRANDMA!",
+    "cam": "two:max,grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "mouse",
+    "say": "Grandma? But she sleeps like a quiet little mouse!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Her mama called her a tea kettle. Now I know why!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Do we roll Grandma over too?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No. Grandma worked so hard today. Let her sleep.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If the noise can't move, then I'll move.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tries the sofa. Wheeee. Too close.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,12.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He tries the window. Brrr. Too cold.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he finds Grandma's laundry basket, full of warm, soft towels.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "basket",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Warm. Soft. And far, far away from the tea kettle.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:8,12"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Scoot over, Max. I'm coming in too.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And soon, the whole living room is fast asleep.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the morning, the sun shines on the snow.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good morning, my dears! I slept like a quiet little mouse!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max and Mouse look at each other. Nobody says a word.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I slept great! Did anybody else hear a tractor?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs. Even Grandma.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody makes funny noises in their sleep. And that's okay.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When the snow melts, Dog may run in the park, leash-free.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But only if he comes back every time we call him.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog? Come back? He never comes back! He chases everything!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Snores on the Coldest Night? 😴",
+  "description": "\"It was the coldest night of the year, and I could not sleep for one minute.\" 🐱\nEveryone sleeps by the warm fire, but a giant SNORE... wheeee keeps Max awake. Everybody thinks it's Dog. Max goes to find out. Max the Curious Cat, Ep 37.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "snoring",
+   "bedtime",
+   "winter night",
+   "sleepover",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog",
+   "bedtime stories for kids"
+  ],
+  "thumb_text": "CAN'T SLEEP!",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "¿Quién ronca en la noche más fría? 😴",
+    "description": "\"Era la noche más fría del año y no pude dormir ni un minuto.\" 🐱\nTodos duermen junto al fuego, pero un RONQUIDO gigante... fiuuu no deja dormir a Max. Todos creen que es Perro. Max va a averiguarlo. Max el Gato Curioso, Ep 37.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Quem ronca na noite mais fria? 😴",
+    "description": "\"Era a noite mais fria do ano e eu não consegui dormir nem um minuto.\" 🐱\nTodos dormem perto da lareira, mas um RONCO gigante... fiuuu não deixa o Max dormir. Todo mundo acha que é o Cachorro. Max vai descobrir. Max, o Gato Curioso, Ep 37.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "من يشخر في أبرد ليلة؟ 😴",
+    "description": "\"كانت أبرد ليلة في السنة، ولم أستطع النوم دقيقة واحدة.\" 🐱\nالجميع ينامون قرب المدفأة الدافئة، لكن شخيرًا عملاقًا... ويييي يُبقي ماكس مستيقظًا. الجميع يظن أنه الكلب. ماكس يذهب ليكتشف. ماكس القط الفضولي، الحلقة 37.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Qui ronfle pendant la nuit la plus froide ? 😴",
+    "description": "« C'était la nuit la plus froide de l'année, et je n'ai pas dormi une minute. » 🐱\nTout le monde dort près du feu, mais un énorme RONFLEMENT... fiiiou empêche Max de dormir. Tout le monde pense que c'est Chien. Max mène l'enquête. Max le Chat Curieux, Ép 37.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "いちばん寒い夜、いびきをかいているのはだれ？😴",
+    "description": "「一年でいちばん寒い夜、ぼくは一分もねむれなかった。」🐱\nみんなでだんろのそばでねたけれど、大きないびき…ピーッでマックスはねむれない。みんなはイヌだと思っている。マックスがたしかめに行く。好奇心ねこマックス 第37話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "가장 추운 밤, 누가 코를 골까요? 😴",
+    "description": "\"일 년 중 가장 추운 밤이었는데, 나는 일 분도 못 잤어.\" 🐱\n모두 따뜻한 난로 옆에서 자는데, 엄청난 코골이… 휘이이 소리에 맥스는 잠을 못 자요. 모두 강아지라고 생각해요. 맥스가 알아보러 가요. 호기심 고양이 맥스, 37화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Wer schnarcht in der kältesten Nacht? 😴",
+    "description": "„Es war die kälteste Nacht des Jahres, und ich konnte keine Minute schlafen.“ 🐱\nAlle schlafen am warmen Kamin, aber ein riesiges SCHNARCHEN... fiiiep hält Max wach. Alle denken, es ist Hund. Max findet es heraus. Max die neugierige Katze, Folge 37.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 20,
+   "dur": 20,
+   "top": "PERFECTLY QUIET...?",
+   "title": "Max Can't Hear a Thing... SPLASH! 😹 #shorts",
+   "description": "Earmuffs on, snoring gone. What could go wrong? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "snoring"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max no oye nada... ¡SPLASH! 😹 #shorts",
+     "description": "Orejeras puestas, ronquido fuera. ¿Qué podría salir mal? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max não ouve nada... SPLASH! 😹 #shorts",
+     "description": "Protetor de orelhas, ronco sumiu. O que pode dar errado? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس لا يسمع شيئًا... طرطشة! 😹 #shorts",
+     "description": "غطاء الأذنين على رأسه والشخير اختفى. ما الذي قد يحدث؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max n'entend plus rien... PLOUF ! 😹 #shorts",
+     "description": "Cache-oreilles en place, plus de ronflement. Qu'est-ce qui pourrait mal tourner ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、なにも聞こえない…バシャッ！😹 #shorts",
+     "description": "イヤーマフをつけたら、いびきが消えた。でも…？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스는 아무것도 안 들려요… 첨벙! 😹 #shorts",
+     "description": "귀마개를 쓰니 코골이가 사라졌어요. 뭐가 잘못될까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max hört gar nichts... PLATSCH! 😹 #shorts",
+     "description": "Ohrenschützer auf, Schnarchen weg. Was soll schon schiefgehen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
