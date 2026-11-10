@@ -11,8 +11,8 @@ import youtube_up as Y
 HOME = "/root/kanal/cod"; TOKEN = os.path.join(HOME, "token.json"); STATE = os.path.join(HOME, "uploaded.json")
 JOB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "job.json")))
 OUT = JOB["out"]; LOG = os.path.join(OUT, "yuklash.txt")
-PER_DAY = {"long": 1, "short": 3}
-SLOTS = {"long": [23], "short": [16, 20, 1]}   # UTC hours = 11:00, 15:00, 20:00 / 18:00 US Eastern
+PER_DAY = {"long": 2, "short": 6}   # 2026-11-11 owner: 2 long + 6 Shorts a day (API quota ~6/day -> rest rolls to next day until a 2nd project is added)
+SLOTS = {"long": [23, 2], "short": [13, 15, 17, 19, 21, 1]}   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
         "cod mw4", "call of duty 2026", "fps", "gaming"]
