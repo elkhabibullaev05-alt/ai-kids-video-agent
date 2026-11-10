@@ -1,0 +1,1232 @@
+{
+ "id": "20261110-2-who-taught-the-parrot",
+ "plot": "On a crisp autumn morning Grandma's friend Polly brings her parrot Pickles to tea, and while the ladies are inside Pickles shouts 'Somebody snores like a tea kettle!'; Max is sure someone told Grandma's secret, blames Dog and then Bird, and his try to teach Pickles nicer words only adds 'Squirrel!', until Max listens to the voice instead of the words and it sounds like Polly; at the table Pickles shouts it again and Polly laughs that it is her own morning line about herself, so both ladies are 'two old tea kettles', and tomorrow Max must wrap Polly's birthday present with sticky tape.",
+ "script": {
+  "title": "Who Taught the Parrot That?",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "pickles": {
+    "name": "Pickles",
+    "voice": "am_onyx",
+    "speed": 1.15,
+    "pitch": 4,
+    "color": [
+     0.15,
+     0.75,
+     0.3
+    ],
+    "kind": "bird",
+    "size": 1.3,
+    "home": [
+     7,
+     14
+    ]
+   },
+   "polly": {
+    "name": "Polly",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.55,
+     0.85
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -10,
+     12
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": [
+     0.85,
+     0.55,
+     0.3
+    ],
+    "at": [
+     -1.0,
+     10.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "pickles",
+    "say": "Somebody snores like a tea kettle! Squawk!",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "enter:left"
+     ],
+     [
+      "pickles",
+      "to:8,12"
+     ],
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "to:5,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shhh! Stop shouting that! Who taught you that?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:7,10"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO TAUGHT THE PARROT?",
+    "cam": "close:pickles",
+    "hold": 1.2,
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "One hour earlier, on a crisp autumn morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "polly",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's oldest friend, Polly, came for tea in the garden.",
+    "cam": "two:grandma,polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Hello, dear Max! Meet Pickles, my clever parrot.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Hello, dear Max! Hello, dear Max!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "to:6,13"
+     ],
+     [
+      "pickles",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Whoa. He sounds exactly like you, Polly!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Oh dear, yes. He copies the words he hears every day.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "At my house, he copies me from breakfast to bedtime.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "A bird who talks more than me? That's not possible!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pickles grabs a paper napkin and rips it into tiny pieces.",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Oh, Pickles! Sorry, Grandma. He loves paper.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Never mind! Polly and I will make tea and cut the cake.",
+    "cam": "two:grandma,polly",
+    "do": [
+     [
+      "grandma",
+      "turn:polly"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, please keep Pickles company out here.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma and Polly go inside. The garden is quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-14,14"
+     ],
+     [
+      "polly",
+      "to:-12,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Leaves fall. Dog chews his ball. Pickles cleans a feather.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Pickles opens his beak.",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Oh dear! Somebody snores like a tea kettle!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "What? How does he know about Grandma's snoring?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max remembers the coldest night. Grandma's snore went wheee... wheee...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma would be so embarrassed if Polly heard that!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Somebody told the parrot Grandma's secret!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And I know who talks the most around here.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone turns to look at Dog.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "all",
+      "look:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me? I only say good words! Ball. Cookie. Squirrel!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,8"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Squirrel! Squirrel! Ball! Cookie!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "See? He copies me. But I never, ever said kettle.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hmm. Then it was you, Bird. You love telling news.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Me? I don't even know what a tea kettle is!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From the kitchen comes the clink of cups and plates.",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "to:9,13"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Two more minutes, my dears! The apple cake is almost ready!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-11,12"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Two minutes! If he says it at tea, Grandma turns red!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "New plan. I'll teach him nicer words instead.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:7,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Say it with me, Pickles. Grandma bakes the best cake.",
+    "cam": "two:max,pickles",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Grandma bakes... the best... SQUIRREL!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, no, no! Not squirrel! Cake!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "No, no, no! Not squirrel! Cake!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog hears the word cake. He runs to the kitchen door, barking.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-12,13"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, come back! Not now!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Dog, come back! Not now! Somebody snores like a tea kettle!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now the parrot shouts it louder than ever.",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "to:5,13"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Shhh! The whole street can hear him!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:6,11"
+     ],
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's no use. He only learns what he hears every day.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stops. Every day. That's what Polly said this morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But Pickles doesn't live here. He never heard Grandma snore!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:pickles"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Say it one more time, Pickles. Nice and slowly.",
+    "cam": "two:max,pickles",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Oh dear... Somebody snores... like a tea kettle!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now Max doesn't listen to the words. He listens to the voice.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's not Dog's voice. And it's not Bird's voice.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It sounds like a nice lady. A lady who says oh dear.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:3,8"
+     ],
+     [
+      "dog",
+      "turn:pickles"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A nice lady who says oh dear... every single morning?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But before Max can say more, the kitchen door swings open.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ],
+     [
+      "polly",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tea time! Warm apple cake for everyone!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "cake",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. Here it comes. Everybody, stay calm!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone sits down. Pickles hops right up next to the cake.",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He looks at Grandma. He takes a big, deep breath.",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Oh dear! Somebody snores like a tea kettle! Squawk!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "HE SAID IT!",
+    "cam": "close:max",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Max covers his eyes. Dog hides under the table.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-2,9"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Polly starts to laugh. A big, happy laugh.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Oh, Pickles! You just told everybody my secret!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "turn:pickles"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "YOUR secret? Not Grandma's?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Every morning I say, oh dear, I snore like a tea kettle!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Pickles hears it every day. So of course he learned it.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's cheeks turn a little pink. Then she giggles too.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Polly. My mama called me her little tea kettle!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:polly"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Two old tea kettles! What a pair we are!",
+    "cam": "two:grandma,polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ],
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So nobody told your secret, Grandma. Polly told her own!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So I'm not in trouble? Can I have cake now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-2,8"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Can I have cake now? Squawk!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone laughs. Even Pickles laughs, in Polly's voice.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Fine. He talks more than me. But I sing better!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Pickles, what do we say for the lovely cake?",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "turn:pickles"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Thank you, dear Max! Oh dear! Thank you!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry I blamed you, Dog. And you too, Bird.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Before you blame a friend, find out the whole story.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, Polly's birthday is tomorrow. You can wrap her present!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wrap it? With sticky tape? Uh-oh. Tape and cats...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Taught the Parrot THAT? 🦜",
+  "description": "\"If that parrot says it at tea, Grandma will turn red.\" 🐱\nGrandma's old friend Polly comes for autumn tea with her parrot Pickles. And Pickles shouts a secret nobody was supposed to hear. Max the Curious Cat, Ep 39.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "parrot",
+   "talking parrot",
+   "tea party",
+   "autumn",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny parrot",
+   "grandma"
+  ],
+  "thumb_text": "HE SAID WHAT?!",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "¿Quién le enseñó ESO al loro? 🦜",
+    "description": "\"Si ese loro lo dice en la merienda, la abuela se pondrá roja.\" 🐱\nLa vieja amiga de la abuela, Polly, viene a tomar el té de otoño con su loro Pickles. Y Pickles grita un secreto que nadie debía oír. Max el Gato Curioso, Ep 39.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Quem ensinou ISSO ao papagaio? 🦜",
+    "description": "\"Se esse papagaio falar isso no chá, a vovó vai ficar vermelha.\" 🐱\nA velha amiga da vovó, Polly, vem para o chá de outono com o papagaio Pickles. E Pickles grita um segredo que ninguém devia ouvir. Max, o Gato Curioso, Ep 39.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "من علّم الببغاء هذا الكلام؟ 🦜",
+    "description": "\"إذا قالها الببغاء على مائدة الشاي، سيحمرّ وجه الجدة.\" 🐱\nبولي، صديقة الجدة القديمة، تأتي لشاي الخريف مع ببغائها بيكلز. وبيكلز يصيح بسرّ لم يكن يجب أن يسمعه أحد. ماكس القط الفضولي، الحلقة 39.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Qui a appris ÇA au perroquet ? 🦜",
+    "description": "« Si ce perroquet le dit au goûter, Mamie va devenir toute rouge. » 🐱\nPolly, la vieille amie de Mamie, vient prendre le thé d'automne avec son perroquet Pickles. Et Pickles crie un secret que personne ne devait entendre. Max le Chat Curieux, Ép 39.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "オウムにアレを教えたのはだれ？🦜",
+    "description": "「お茶の時間にオウムがあれを言ったら、おばあちゃんがまっ赤になっちゃう！」🐱\nおばあちゃんの古いともだちポリーが、オウムのピクルスをつれて秋のお茶会にやってきた。でもピクルスは、ないしょの話を大声でさけびはじめる。好奇心ねこマックス 第39話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "누가 앵무새한테 그 말을 가르쳤지? 🦜",
+    "description": "\"앵무새가 티타임에 그 말을 하면 할머니 얼굴이 빨개질 거야.\" 🐱\n할머니의 오랜 친구 폴리가 앵무새 피클스와 함께 가을 티타임에 와요. 그런데 피클스가 아무도 들으면 안 되는 비밀을 외쳐요. 호기심 고양이 맥스, 39화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Wer hat dem Papagei DAS beigebracht? 🦜",
+    "description": "„Wenn der Papagei das beim Tee sagt, wird Oma ganz rot.“ 🐱\nOmas alte Freundin Polly kommt mit ihrem Papagei Pickles zum Herbsttee. Und Pickles ruft ein Geheimnis, das niemand hören sollte. Max die neugierige Katze, Folge 39.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 17,
+   "dur": 18,
+   "top": "WHO TOLD THE PARROT?",
+   "title": "The Parrot Shouts a Secret... 😬 #shorts",
+   "description": "Who taught the parrot that? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "parrot",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El loro grita un secreto… 😬 #shorts",
+     "description": "¿Quién le enseñó eso al loro? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O papagaio grita um segredo… 😬 #shorts",
+     "description": "Quem ensinou isso ao papagaio? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الببغاء يصيح بسرّ… 😬 #shorts",
+     "description": "من علّم الببغاء هذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le perroquet crie un secret… 😬 #shorts",
+     "description": "Qui a appris ça au perroquet ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "オウムがひみつをさけんだ…😬 #shorts",
+     "description": "だれがオウムに教えたの？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "앵무새가 비밀을 외쳤어요… 😬 #shorts",
+     "description": "누가 앵무새에게 가르쳤을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Papagei ruft ein Geheimnis… 😬 #shorts",
+     "description": "Wer hat ihm das beigebracht? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 52,
+   "dur": 20,
+   "top": "HERE IT COMES...",
+   "title": "The Parrot Is About to Say It... 🦜 #shorts",
+   "description": "Everyone sits down. Pickles takes a deep breath. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "parrot",
+    "tea party"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El loro está a punto de decirlo… 🦜 #shorts",
+     "description": "Todos a la mesa. Pickles respira hondo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O papagaio vai falar AGORA… 🦜 #shorts",
+     "description": "Todos à mesa. Pickles respira fundo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الببغاء على وشك أن يقولها… 🦜 #shorts",
+     "description": "الجميع على المائدة. بيكلز يأخذ نفسًا عميقًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le perroquet va le dire… 🦜 #shorts",
+     "description": "Tout le monde à table. Pickles inspire fort. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "オウムがいまにも言っちゃう…🦜 #shorts",
+     "description": "みんながテーブルに。ピクルスが大きくいきをすう。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "앵무새가 막 말하려고 해요… 🦜 #shorts",
+     "description": "모두 테이블에 앉았어요. 피클스가 숨을 크게 들이쉬어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Gleich sagt es der Papagei… 🦜 #shorts",
+     "description": "Alle sitzen am Tisch. Pickles holt tief Luft. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

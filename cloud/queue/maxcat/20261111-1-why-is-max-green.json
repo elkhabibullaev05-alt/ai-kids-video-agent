@@ -1,0 +1,1130 @@
+{
+ "id": "20261111-1-why-is-max-green",
+ "plot": "After an autumn picnic on a new-smelling park bench (Grandma forgot her glasses and can't read its little sign), Max, Dog and Bird find green stripes on their fur and feathers; Bird fears a green sickness and Max blames Dog's splash in the green duck pond, but his leaf test shows the pond water leaves no green and Bird never touched it, so Max counts the stripes — four long straight ones on him and Dog, one on Bird — runs back and matches them to the bench boards, Grandma finds her spare glasses and reads WET PAINT, turns round with green stripes on her own coat, washes everyone in warm soapy water, and promises Max a sign-reading walk tomorrow.",
+ "script": {
+  "title": "Why Is Max Turning Green?",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "sign",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -5.0,
+     9.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "lunch",
+    "type": "cake",
+    "color": "yellow",
+    "at": [
+     -3.0,
+     9.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "leaf",
+    "type": "star",
+    "color": "yellow",
+    "at": [
+     9.0,
+     14.0,
+     0.8
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Dog's tail is green! And now MY back is green too!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:5,9"
+     ],
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "My tail feathers too! Look! We're all turning green!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:3,10"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "WHY ARE WE TURNING GREEN?",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "One hour earlier, on a golden autumn morning in the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Picnic time! Cheese sandwiches for everyone!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "lunch",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma finds a nice bench right next to the duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody climbs up. Max stretches out on his back.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ],
+     [
+      "dog",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hmm. This bench smells new, doesn't it?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, look! There's a little sign. It has letters on it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A small white sign hangs on the end of the bench.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear, I left my glasses at home. Never mind!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird sits on the back of the bench. Dog wags his tail.",
+    "cam": "two:bird,dog",
+    "do": [
+     [
+      "bird",
+      "to:-1,10"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wag, wag, wag. Swish, swish, swish. On the bench.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best bench ever! Can we play now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They play all morning. Dog jumps into the green duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:10,15"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Splash! Hello, ducks! I'm a duck too!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max chases crunchy yellow leaves. Bird races the wind.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,12"
+     ],
+     [
+      "bird",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And that's when Max sees Dog's tail. It's green.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back to now. Three friends, all with green stripes.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:4,9"
+     ],
+     [
+      "dog",
+      "to:1,8"
+     ],
+     [
+      "bird",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It's a green sickness! We'll be green forever!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Forever? Will I start to eat grass?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Will I have to live in a tree like a leaf?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:4,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Calm down, everyone. Green doesn't come from nowhere.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Something made us green. And I'm going to find it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks around the park. What is green here?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The grass. The pond. And the ducks' pond weed.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The pond! Dog, you jumped in the green duck pond!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You splashed all of us. That's why we're green!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Oh no. I'm sorry. I did splash a lot.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Wait. I never went near the water. Not once!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:5,11"
+     ],
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hmm. Then let's test it. Science time!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max dips a yellow leaf in the pond. He pulls it out.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The leaf is wet, but still yellow. Not one bit green.",
+    "cam": "prop:leaf",
+    "do": [
+     [
+      "leaf",
+      "show"
+     ],
+     [
+      "leaf",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The pond water doesn't make things green. It's not the pond!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Phew! I'm a good duck after all!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max touches his green back. It feels sticky. And a bit hard.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. It's getting stiff! Soon my fur will be crunchy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Crunchy like the leaves? I don't want crunchy feathers!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then we must find out what it is. Before it dries!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at Dog's tail very carefully. He counts.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Four green stripes. Long and straight. All the same.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max twists round and counts his own back.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Four stripes on me too! Long and straight!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And my tail has one long stripe. Just one.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Something with four long straight boards. And one on top.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max thinks. Where did all three of us sit today?",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The BENCH! The new-smelling bench!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs all the way back across the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ],
+     [
+      "dog",
+      "to:0,8"
+     ],
+     [
+      "bird",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bench has four long green boards to sit on.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And one more green board on the back. Right where Bird sat.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And look! The boards have little paw-shaped spots. Our spots!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "So we didn't catch green sickness. We caught green bench!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the little white sign again.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The first letter goes up, down, up, down. Like a W.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma walks over. She finds her spare glasses in her pocket.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh! I had them all along. Now, let me see...",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "W-E-T. Wet. P-A-I-N-T. Paint. Wet paint!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WET PAINT!",
+    "cam": "prop:sign",
+    "hold": 1.0,
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma turns around. And everyone gasps.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "spin"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's purple coat has four green stripes too!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Grandma! You're a green-striped grandma!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well! We're a matching family now!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody laughs so hard that Dog falls over on the grass.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Green grandma, green cat, green dog. And a green bird!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now home quickly, before it dries. Warm water and soap!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And nobody licks it off. Paint is not food, Dog.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Not even a tiny lick? Okay. No licking.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At home, Grandma washes everyone in a big tub of warm bubbles.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Scrub, scrub, scrub. The green stripes slide away.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My fur is orange again! Soft, fluffy and orange!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And my feathers are blue! Not crunchy at all!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Signs are there to help you. If you can't read one, ask!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, teach me to read signs. All of them!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow, we'll go on a sign-reading walk around town.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And the first word I'll learn is... WET!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Max Turning GREEN This Autumn? 🍂",
+  "description": "\"Dog's tail is green! And now MY back is green too!\" 🐱\nAn autumn picnic in the park, and suddenly Max, Dog and Bird all have green stripes. Is it the duck pond? Max investigates before it dries. Max the Curious Cat, Ep 41.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "autumn picnic",
+   "park",
+   "wet paint",
+   "mystery for kids",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "autumn"
+  ],
+  "thumb_text": "GREEN?!",
+  "thumb_beat": 36,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué Max se está volviendo VERDE este otoño? 🍂",
+    "description": "\"¡La cola de Perro es verde! ¡Y ahora mi espalda también!\" 🐱\nUn picnic de otoño en el parque, y de repente Max, Perro y Pájaro tienen rayas verdes. ¿Es el estanque de los patos? Max investiga antes de que se seque. Max el Gato Curioso, Ep 41.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Por que o Max está ficando VERDE neste outono? 🍂",
+    "description": "\"O rabo do Cachorro está verde! E agora minhas costas também!\" 🐱\nUm piquenique de outono no parque e, de repente, Max, Cachorro e Pássaro têm listras verdes. Será o lago dos patos? Max investiga antes que seque. Max, o Gato Curioso, Ep 41.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "لماذا يتحول ماكس إلى الأخضر هذا الخريف؟ 🍂",
+    "description": "\"ذيل الكلب أخضر! والآن ظهري أخضر أيضًا!\" 🐱\nنزهة خريفية في الحديقة، وفجأة صار عند ماكس والكلب والعصفور خطوط خضراء. هل هي بركة البط؟ ماكس يحقق قبل أن تجف. ماكس القط الفضولي، الحلقة 41.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Pourquoi Max devient-il VERT cet automne ? 🍂",
+    "description": "« La queue de Chien est verte ! Et maintenant mon dos aussi ! » 🐱\nUn pique-nique d'automne au parc, et soudain Max, Chien et Oiseau ont des rayures vertes. C'est la mare aux canards ? Max enquête avant que ça sèche. Max le Chat Curieux, Ép 41.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "この秋、マックスがみどりになっちゃう？🍂",
+    "description": "「イヌのしっぽがみどり！ぼくのせなかもみどりだ！」🐱\n秋の公園でピクニック。すると急にマックスとイヌと小鳥にみどりのしましまが。アヒルの池のせい？かわいてしまう前に、マックスが調べます。好奇心ねこマックス 第41話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "이번 가을, 맥스가 왜 초록색이 될까? 🍂",
+    "description": "\"강아지 꼬리가 초록색이야! 이제 내 등도 초록색이야!\" 🐱\n공원에서 가을 소풍을 했는데, 갑자기 맥스와 강아지와 새에게 초록 줄무늬가 생겼어요. 오리 연못 때문일까요? 마르기 전에 맥스가 조사해요. 호기심 고양이 맥스, 41화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Warum wird Max diesen Herbst GRÜN? 🍂",
+    "description": "„Hunds Schwanz ist grün! Und jetzt auch mein Rücken!“ 🐱\nEin Herbstpicknick im Park, und plötzlich haben Max, Hund und Vogel grüne Streifen. Ist es der Ententeich? Max ermittelt, bevor es trocknet. Max die neugierige Katze, Folge 41.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 19,
+   "dur": 20,
+   "top": "WE'RE TURNING GREEN!",
+   "title": "Why Is Everyone Turning Green? 🍂 #shorts",
+   "description": "Is it the duck pond? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "autumn",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Todos se están volviendo verdes! 🍂 #shorts",
+     "description": "¿Es el estanque de los patos? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Todo mundo está ficando verde! 🍂 #shorts",
+     "description": "Será o lago dos patos? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الجميع يتحولون إلى الأخضر! 🍂 #shorts",
+     "description": "هل هي بركة البط؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Tout le monde devient vert ! 🍂 #shorts",
+     "description": "C'est la mare aux canards ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "みんながみどりになっていく！🍂 #shorts",
+     "description": "アヒルの池のせい？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "모두 초록색이 되고 있어요! 🍂 #shorts",
+     "description": "오리 연못 때문일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Alle werden grün! 🍂 #shorts",
+     "description": "Ist es der Ententeich? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

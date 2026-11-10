@@ -1,0 +1,1172 @@
+{
+ "id": "20261110-3-sticky-paws-present",
+ "plot": "On Polly's birthday Grandma takes her for a walk and Max has fifteen minutes to secretly wrap a round blue teacup, but the paper springs off the round cup and the tape sticks to his paw, whiskers and Dog's nose; Max puts the cup in Dog's empty cookie box, but tapes his own tail to it, Dog pulls him free and the paper rips, so the present ends up a crumpled tape ball he hides behind the sofa, until Pickles finds it and rips it happily and Polly says neat presents are over in a second for Pickles but this one is his favorite kind, the box kept the cup safe, and next morning in the park Dog's tail is green.",
+ "script": {
+  "title": "Sticky Paws Present",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "polly": {
+    "name": "Polly",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.55,
+     0.85
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -10,
+     12
+    ]
+   },
+   "pickles": {
+    "name": "Pickles",
+    "voice": "am_onyx",
+    "speed": 1.15,
+    "pitch": 4,
+    "color": [
+     0.15,
+     0.75,
+     0.3
+    ],
+    "kind": "bird",
+    "size": 1.3,
+    "home": [
+     7,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "box",
+    "type": "box",
+    "color": "yellow",
+    "at": [
+     1.0,
+     7.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "yellow",
+    "at": [
+     -6.0,
+     7.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Get off! Get OFF my paw, sticky tape!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:6,8"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! Now the tape is stuck on MY nose!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter:right"
+     ],
+     [
+      "dog",
+      "to:2,7"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "WRAP IT BEFORE THEY'RE BACK!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Ten minutes earlier, on Polly's birthday morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "polly",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Happy birthday, Polly! Let's take a little walk in the park.",
+    "cam": "two:grandma,polly",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma winks at Max and points to the kitchen table.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Paper with yellow stars. Sticky tape. Red ribbon. And a teacup.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A round blue teacup, with a little bird painted on it.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you wrap Polly's present while we're out. Secret mission!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Easy! I'm a cat. Cats are amazing with paper.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pickles hops over and tears a corner off the paper. Rrrip!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "enter"
+     ],
+     [
+      "pickles",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Not yet, Pickles! You have to wait for the party!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "turn:pickles"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Wait for the party! Squawk! Wait for the party!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Polly, Grandma and Pickles go out of the door.",
+    "cam": "wide",
+    "do": [
+     [
+      "polly",
+      "to:-14,15"
+     ],
+     [
+      "grandma",
+      "to:-12,16"
+     ],
+     [
+      "pickles",
+      "to:-13,17"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "We'll be back in fifteen minutes, dears!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'll watch the street from the window. I'm the lookout!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter"
+     ],
+     [
+      "bird",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And I'll hold the corners. Paper is sneaky.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "to:2,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step one. Max cuts the paper with his claws.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Snip, snip, zig, zag. The paper looks like a lightning bolt.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's... a fancy shape. Very modern.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step two. Max wraps the paper around the round teacup.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He lets go. Boing! The paper jumps right off again.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Round things don't like paper, Max. Paper likes flat things.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'll use more tape. LOTS of tape!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Rrrrip! The tape sticks to his paw. He shakes it off.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now it's on his whiskers. He shakes again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the tape flies right onto Dog's nose.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hey! My nose can't smell anything! Is this a game?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No! It's a disaster! The cup isn't wrapped at all!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! I can see them at the park gate!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "They're turning around! Only ten minutes left!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ten minutes? Polly will see a teacup in a paper mess!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks around the room for an idea. Fast.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next to the sofa is Dog's empty cookie box.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A box! A box is square! Square things love paper!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That's my cookie box. But it's empty. I checked. Twice.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the teacup in the box. It fits just right.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse holds the corners. Max folds the paper. It stays!",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's working! Now one strip of tape... and one more...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And one more. And one more. And one more.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max? Where is your tail?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's tail is taped to the box. So are his paws.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Help! I wrapped myself into the present!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry! I'll pull you out. One, two, three!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog pulls. Max pops free. And the paper rips in half. Rrrrip!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-1,6"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "They're at the garden gate! They're coming in!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-4,10"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No time for new paper! What do we do?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max quickly sticks the torn paper back on. Tape, tape, tape.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now the present looks like a crumpled, crunchy paper ball.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "box",
+      "hide"
+     ],
+     [
+      "gift",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's the worst present in the whole world.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I can't give her this. I'll hide it behind the sofa.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,6"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The door opens. Polly, Grandma and Pickles come in.",
+    "cam": "wide",
+    "do": [
+     [
+      "polly",
+      "to:-8,10"
+     ],
+     [
+      "grandma",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "What a lovely walk! Oh, I smell sticky tape!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pickles stops. He sniffs. Then he flies straight behind the sofa.",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No, Pickles! Not that one! It's a mess!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Paper! Paper! Party! Squawk!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ],
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pickles rips the paper. Rrrip! He tosses it high. Rrrip!",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ],
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He rips, and rips, and rips, and he doesn't stop.",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. He's ruining it even more.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Polly claps her hands and laughs.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Look at him! I've never seen Pickles so happy!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Every birthday, Pickles opens my presents for me.",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Neat ones are over in one second. Rip, done!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "But this one? This one he can rip all morning!",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So my messy wrapping is... his favorite kind?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pickles",
+    "say": "Favorite kind! Favorite kind! Rrrip!",
+    "cam": "close:pickles",
+    "do": [
+     [
+      "pickles",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under all the paper, there's the box. And inside, the teacup.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And look, not one crack! The box kept it safe.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "A teacup with a little bird on it! Thank you, Max!",
+    "cam": "two:polly,max",
+    "do": [
+     [
+      "polly",
+      "laugh"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pickles throws the paper bits up high, like birthday snow.",
+    "cam": "wide",
+    "do": [
+     [
+      "pickles",
+      "jump"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Paper snow! And my nose can smell again! Cookies!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Best wrapping ever. Two presents in one!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A present doesn't need to be perfect. Just from your heart.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The next morning, in the park, Max looks at his friend.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog? Why is your tail... GREEN?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Wrap a Gift With Sticky Paws? 🎁",
+  "description": "\"I'm a cat. Cats are amazing with paper. I think.\" 🐱\nIt's Polly's birthday and Max has a secret mission: wrap her present before everyone gets back from the walk. But the sticky tape has other plans. Max the Curious Cat, Ep 40.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "gift wrapping",
+   "birthday present",
+   "sticky tape",
+   "cat vs tape",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "birthday"
+  ],
+  "thumb_text": "TAPED?!",
+  "thumb_beat": 42,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max envolver un regalo con patas pegajosas? 🎁",
+    "description": "\"Soy un gato. Los gatos somos geniales con el papel. Creo.\" 🐱\nEs el cumpleaños de Polly y Max tiene una misión secreta: envolver su regalo antes de que vuelvan del paseo. Pero la cinta adhesiva tiene otros planes. Max el Gato Curioso, Ep 40.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max consegue embrulhar um presente com patas grudentas? 🎁",
+    "description": "\"Eu sou um gato. Gatos são ótimos com papel. Eu acho.\" 🐱\nÉ aniversário da Polly e Max tem uma missão secreta: embrulhar o presente antes de todos voltarem do passeio. Mas a fita adesiva tem outros planos. Max, o Gato Curioso, Ep 40.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس تغليف هدية بمخالب لاصقة؟ 🎁",
+    "description": "\"أنا قط. القطط ماهرة جدًا مع الورق. على ما أظن.\" 🐱\nإنه عيد ميلاد بولي، ولدى ماكس مهمة سرية: أن يغلّف هديتها قبل أن يعودوا من النزهة. لكن الشريط اللاصق له خطط أخرى. ماكس القط الفضولي، الحلقة 40.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max peut-il emballer un cadeau avec des pattes collantes ? 🎁",
+    "description": "« Je suis un chat. Les chats sont doués avec le papier. Je crois. » 🐱\nC'est l'anniversaire de Polly et Max a une mission secrète : emballer son cadeau avant le retour de la promenade. Mais le ruban adhésif a d'autres plans. Max le Chat Curieux, Ép 40.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "ベタベタの手でプレゼントをつつめる？🎁",
+    "description": "「ぼくはネコ。ネコは紙あそびの天才さ。たぶんね。」🐱\nきょうはポリーのたんじょうび。マックスのひみつのミッションは、みんなが散歩から帰るまでにプレゼントをつつむこと。でもセロハンテープがじゃまをする。好奇心ねこマックス 第40話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "끈적한 발로 선물을 포장할 수 있을까? 🎁",
+    "description": "\"난 고양이야. 고양이는 종이를 정말 잘 다뤄. 아마도.\" 🐱\n오늘은 폴리의 생일, 맥스의 비밀 임무는 모두가 산책에서 돌아오기 전에 선물을 포장하는 것. 그런데 테이프가 말을 안 들어요. 호기심 고양이 맥스, 40화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Kann Max mit Klebepfoten ein Geschenk einpacken? 🎁",
+    "description": "„Ich bin eine Katze. Katzen können super mit Papier. Glaube ich.“ 🐱\nPolly hat Geburtstag, und Max hat eine geheime Mission: ihr Geschenk einpacken, bevor alle vom Spaziergang zurück sind. Aber das Klebeband hat andere Pläne. Max die neugierige Katze, Folge 40.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 38,
+   "dur": 18,
+   "top": "ONE MORE STRIP...",
+   "title": "Max Taped Himself to the Present! 😹 #shorts",
+   "description": "One more strip of tape... and one more... Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "sticky tape"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max se envolvió a sí mismo! 😹 #shorts",
+     "description": "Un trozo de cinta más… y otro… Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max se embrulhou junto com o presente! 😹 #shorts",
+     "description": "Mais um pedaço de fita… e mais um… Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس غلّف نفسه داخل الهدية! 😹 #shorts",
+     "description": "قطعة شريط أخرى… وأخرى… الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max s'est emballé avec le cadeau ! 😹 #shorts",
+     "description": "Encore un bout de ruban… et encore un… Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスが自分までつつんじゃった！😹 #shorts",
+     "description": "テープをもう1まい…もう1まい…本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 자기까지 포장해 버렸어요! 😹 #shorts",
+     "description": "테이프 한 줄 더… 또 한 줄… 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max hat sich selbst eingepackt! 😹 #shorts",
+     "description": "Noch ein Streifen Klebeband… und noch einer… Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
