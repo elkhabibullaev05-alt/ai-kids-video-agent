@@ -1,0 +1,161 @@
+{
+ "title": "Lucy's $3,900 Paycheck Has a $600 Leak",
+ "hook": "$3,900 in. $600 vanishing.",
+ "header": "Lucy · $3,900 take-home",
+ "character": "Lucy",
+ "amount": "$3,900",
+ "accent": "green",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$600 a month leaks out of Lucy's $3,900 paycheck.",
+   "visual": {
+    "type": "big_number",
+    "value": 600,
+    "from": 0,
+    "label": "monthly leak",
+    "sub": "from $3,900 take-home",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Rent takes $1,500. Car, groceries and bills take most of the rest.",
+   "visual": {
+    "type": "stack",
+    "title": "Where $3,900 goes",
+    "total": 3900,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1500
+     },
+     {
+      "label": "Car + insurance",
+      "value": 560
+     },
+     {
+      "label": "Groceries",
+      "value": 420
+     },
+     {
+      "label": "Bills + loan",
+      "value": 480
+     },
+     {
+      "label": "The leak",
+      "value": 600,
+      "hi": true
+     },
+     {
+      "label": "Saved",
+      "value": 340
+     }
+    ]
+   }
+  },
+  {
+   "say": "The leak? $280 of takeout, $220 of online orders, $100 of forgotten subscriptions.",
+   "visual": {
+    "type": "bars",
+    "title": "The $600 leak",
+    "items": [
+     {
+      "label": "Takeout",
+      "value": 280,
+      "hi": true
+     },
+     {
+      "label": "Online orders",
+      "value": 220
+     },
+     {
+      "label": "Subscriptions",
+      "value": 100
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's $7,200 a year, gone without a plan.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$600 × 12 months",
+     "= $7,200 a year"
+    ]
+   }
+  },
+  {
+   "say": "So Lucy set three small caps, not a strict budget.",
+   "visual": {
+    "type": "statement",
+    "text": "Three caps. No strict budget.",
+    "icon": "shield"
+   }
+  },
+  {
+   "say": "Takeout down to $120, one online order day a week, two subscriptions cut.",
+   "visual": {
+    "type": "checklist",
+    "title": "Lucy's caps",
+    "items": [
+     {
+      "text": "Takeout: $280 → $120",
+      "ok": true
+     },
+     {
+      "text": "Orders: one day a week, $100",
+      "ok": true
+     },
+     {
+      "text": "Subscriptions: $100 → $40",
+      "ok": true
+     },
+     {
+      "text": "Never eat out again",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Her savings double, from about $340 to $680 a month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 340,
+     "sub": "saved a month"
+    },
+    "right": {
+     "label": "After caps",
+     "value": 680,
+     "sub": "saved a month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "Which leak would you cap first? Subscribe so you don't make this mistake on your next paycheck, because right now it's $3,900 in, $600 vanishing.",
+   "visual": {
+    "type": "question",
+    "text": "Which leak would you cap first?"
+   }
+  }
+ ],
+ "question": "Which leak would you cap first: takeout, online orders or subscriptions?",
+ "description": "Lucy takes home about $3,900 a month, and roughly $600 of it leaks out on takeout, online orders and forgotten subscriptions. Three small caps cut the leak by about $340, doubling her monthly savings to roughly $680. Numbers are rounded US estimates.",
+ "tags": [
+  "paycheck breakdown",
+  "budget breakdown",
+  "where does my money go",
+  "how to save money",
+  "spending leaks",
+  "monthly budget",
+  "budgeting for beginners"
+ ],
+ "hashtags": [
+  "#paycheck",
+  "#budget"
+ ]
+}

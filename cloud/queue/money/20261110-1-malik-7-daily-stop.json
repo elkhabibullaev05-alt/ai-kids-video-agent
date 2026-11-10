@@ -1,0 +1,127 @@
+{
+ "title": "Malik Finally Said No to the $7 Daily Stop",
+ "hook": "$7 a day. $1,820 a year.",
+ "header": "Malik · $7 every workday",
+ "character": "Malik",
+ "amount": "$7",
+ "accent": "orange",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$1,820 a year. That's Malik's quick morning stop.",
+   "visual": {
+    "type": "big_number",
+    "value": 1820,
+    "from": 0,
+    "label": "his morning stop, yearly",
+    "icon": "cup"
+   }
+  },
+  {
+   "say": "Every workday, an energy drink for about $4 and a snack for $3.",
+   "visual": {
+    "type": "stack",
+    "title": "One $7 stop",
+    "total": 7,
+    "items": [
+     {
+      "label": "Energy drink",
+      "value": 4,
+      "hi": true
+     },
+     {
+      "label": "Snack",
+      "value": 3
+     }
+    ]
+   }
+  },
+  {
+   "say": "$7, times 5 days, times 52 weeks. That's $1,820.",
+   "visual": {
+    "type": "math",
+    "title": "The real cost",
+    "rows": [
+     "$7 × 5 days",
+     "× 52 weeks",
+     "= $1,820 a year"
+    ]
+   }
+  },
+  {
+   "say": "Over five years, roughly $9,100 at the counter.",
+   "visual": {
+    "type": "line",
+    "label": "Spent at the counter",
+    "points": [
+     0,
+     1820,
+     3640,
+     5460,
+     7280,
+     9100
+    ],
+    "start_label": "Today",
+    "end_label": "Year 5"
+   }
+  },
+  {
+   "say": "One Monday, he finally said no, and stocked up at the grocery store instead.",
+   "visual": {
+    "type": "statement",
+    "text": "He finally said no.",
+    "sub": "and stocked up instead",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "Store-bought, the same drink and snack cost about $1.50 a day, or $390 a year.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Daily stop",
+     "value": 1820,
+     "sub": "a year",
+     "hi": true
+    },
+    "right": {
+     "label": "Stocked at home",
+     "value": 390,
+     "sub": "a year"
+    }
+   }
+  },
+  {
+   "say": "That's about $1,430 a year back, roughly $120 a month.",
+   "visual": {
+    "type": "big_number",
+    "value": 1430,
+    "label": "kept each year",
+    "sub": "about $120 a month",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "What's your daily stop? Subscribe so you don't make this mistake on your next paycheck, because $7 a day is $1,820 a year.",
+   "visual": {
+    "type": "question",
+    "text": "What's your daily $7 stop?"
+   }
+  }
+ ],
+ "question": "What's your daily stop, and what does it cost you?",
+ "description": "Malik spent about $7 every workday on an energy drink and a snack. That's about $1,820 a year and roughly $9,100 over five years. Stocking up at the grocery store cut it to about $1.50 a day, keeping roughly $1,430 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "small habits cost",
+  "how to save money",
+  "daily spending",
+  "latte factor",
+  "save money on food",
+  "frugal tips",
+  "budgeting tips"
+ ],
+ "hashtags": [
+  "#savingmoney",
+  "#frugal"
+ ]
+}

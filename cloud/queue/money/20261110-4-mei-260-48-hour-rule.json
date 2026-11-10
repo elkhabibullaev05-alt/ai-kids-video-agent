@@ -1,0 +1,149 @@
+{
+ "title": "Mei's 48-Hour Rule Kept $2,040 This Year",
+ "hook": "$260 a month. Gone on impulse.",
+ "header": "Mei · $260/mo impulse buys",
+ "character": "Mei",
+ "amount": "$260",
+ "accent": "teal",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$260 a month, gone on little impulse buys.",
+   "visual": {
+    "type": "big_number",
+    "value": 260,
+    "from": 0,
+    "suffix": "/mo",
+    "label": "impulse buys",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "Clothes $90, home stuff $80, skincare $50, gadgets $40.",
+   "visual": {
+    "type": "bars",
+    "title": "Mei's impulse month",
+    "items": [
+     {
+      "label": "Clothes",
+      "value": 90,
+      "hi": true
+     },
+     {
+      "label": "Home stuff",
+      "value": 80
+     },
+     {
+      "label": "Skincare",
+      "value": 50
+     },
+     {
+      "label": "Gadgets",
+      "value": 40
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's about $3,120 a year, on things she barely remembers.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$260 × 12 months",
+     "= $3,120 a year"
+    ]
+   }
+  },
+  {
+   "say": "So she tried one rule: anything over $20 waits 48 hours in the cart.",
+   "visual": {
+    "type": "statement",
+    "text": "Wait 48 hours.",
+    "sub": "for anything over $20",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "She also unsubscribed from sale emails. Still wanted it two days later? She bought it.",
+   "visual": {
+    "type": "checklist",
+    "title": "The 48-hour rule",
+    "items": [
+     {
+      "text": "Over $20? It waits in the cart",
+      "ok": true
+     },
+     {
+      "text": "Unsubscribe from sale emails",
+      "ok": true
+     },
+     {
+      "text": "Still want it in 48h? Buy it",
+      "ok": true
+     },
+     {
+      "text": "Buy it at midnight",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Most carts got deleted. Her spending fell to about $90 a month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 260,
+     "sub": "a month",
+     "hi": true
+    },
+    "right": {
+     "label": "With the rule",
+     "value": 90,
+     "sub": "a month"
+    }
+   }
+  },
+  {
+   "say": "That's $170 a month, roughly $2,040 kept in a year.",
+   "visual": {
+    "type": "line",
+    "label": "Kept with the rule",
+    "points": [
+     0,
+     340,
+     680,
+     1020,
+     1360,
+     1700,
+     2040
+    ],
+    "start_label": "Month 0",
+    "end_label": "Month 12"
+   }
+  },
+  {
+   "say": "What was your last impulse buy? Subscribe so you don't make this mistake on your next paycheck, because right now it's $260 a month, gone on impulse.",
+   "visual": {
+    "type": "question",
+    "text": "What was your last impulse buy?"
+   }
+  }
+ ],
+ "question": "What was your last impulse buy, and do you still use it?",
+ "description": "Mei spent about $260 a month on small impulse buys, roughly $3,120 a year. One rule, waiting 48 hours on anything over $20, cut it to about $90 a month and kept roughly $2,040 in a year. Numbers are rounded US estimates.",
+ "tags": [
+  "48 hour rule",
+  "impulse buying",
+  "stop impulse spending",
+  "how to save money",
+  "shopping habits",
+  "no spend tips",
+  "budgeting tips"
+ ],
+ "hashtags": [
+  "#impulsebuying",
+  "#savingmoney"
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "title": "Jenna, 30: The $12,000 Wedding on a Card",
+ "hook": "$12,000 wedding. $24,000 paid.",
+ "header": "Jenna · $12,000 at 24% APR",
+ "character": "Jenna",
+ "amount": "$12,000",
+ "accent": "red",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "About $24,000. That's what Jenna's $12,000 wedding really costs.",
+   "visual": {
+    "type": "big_number",
+    "value": 24400,
+    "from": 0,
+    "label": "total she'll pay",
+    "sub": "for a $12,000 wedding",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "It all went on a card at about 24%. That's roughly $240 of interest a month.",
+   "visual": {
+    "type": "math",
+    "title": "Month one",
+    "rows": [
+     "$12,000 × 24%",
+     "÷ 12 months",
+     "= $240 interest"
+    ]
+   }
+  },
+  {
+   "say": "She pays $300, so only about $60 touches the balance.",
+   "visual": {
+    "type": "stack",
+    "title": "Where her $300 goes",
+    "total": 300,
+    "items": [
+     {
+      "label": "Interest",
+      "value": 240,
+      "hi": true
+     },
+     {
+      "label": "Actual debt",
+      "value": 60
+     }
+    ]
+   }
+  },
+  {
+   "say": "At that pace, she's paying for almost 7 years.",
+   "visual": {
+    "type": "line",
+    "label": "Balance at $300 a month",
+    "points": [
+     12000,
+     11195,
+     10175,
+     8880,
+     7239,
+     5157,
+     2517,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 7"
+   }
+  },
+  {
+   "say": "Now add $150 a month to the payment.",
+   "visual": {
+    "type": "statement",
+    "text": "Same card. $450 a month.",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "Debt free in about 3 years, and interest drops from $12,400 to around $5,300.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$300 a month",
+     "value": 12400,
+     "sub": "interest, ~7 years",
+     "hi": true
+    },
+    "right": {
+     "label": "$450 a month",
+     "value": 5300,
+     "sub": "interest, ~3 years"
+    }
+   }
+  },
+  {
+   "say": "Cooking in twice a week, two fewer subscriptions and selling the decor covers it.",
+   "visual": {
+    "type": "checklist",
+    "title": "Finding $150",
+    "items": [
+     {
+      "text": "Cook in twice a week: $80",
+      "ok": true
+     },
+     {
+      "text": "Drop 2 subscriptions: $30",
+      "ok": true
+     },
+     {
+      "text": "Sell wedding decor: $40",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Would you put a wedding on a card? Subscribe so you don't make this mistake on your next paycheck, before a $12,000 wedding becomes $24,000 paid.",
+   "visual": {
+    "type": "question",
+    "text": "Would you put a wedding on a card?"
+   }
+  }
+ ],
+ "question": "Would you put a wedding on a credit card, or wait and save?",
+ "description": "Jenna put a $12,000 wedding on a card at roughly 24% APR and pays $300 a month. That takes almost 7 years and about $24,400 in total. Paying $450 a month cuts it to about 3 years and saves roughly $7,000 in interest. Estimates assume a fixed 24% APR and no new charges.",
+ "tags": [
+  "wedding cost",
+  "wedding debt",
+  "credit card debt",
+  "credit card interest",
+  "pay off debt",
+  "APR explained",
+  "debt free"
+ ],
+ "hashtags": [
+  "#weddingbudget",
+  "#debtfree"
+ ]
+}
