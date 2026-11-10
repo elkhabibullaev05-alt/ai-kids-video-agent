@@ -18,7 +18,7 @@ def _venc():
     # 2026-11-10: libx264 in WSL was ~0.2x realtime (CPU shared with channel makers) -> use the laptop's NVIDIA
     # encoder (WSL exposes it via /usr/lib/wsl/lib) when it works; fall back to libx264.
     common = ["-pix_fmt", "yuv420p", "-r", "60", "-g", "120", "-video_track_timescale", "15360"]
-    nv = ["-c:v", "h264_nvenc", "-preset", "p5", "-tune", "hq", "-rc", "vbr", "-cq", "21", "-b:v", "0", "-profile:v", "high"]
+    nv = ["-c:v", "h264_nvenc", "-preset", "p6", "-tune", "hq", "-rc", "vbr", "-cq", "18", "-b:v", "0", "-spatial-aq", "1", "-profile:v", "high"]
     t = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=s=1920x1080:r=60:d=1",
                         "-pix_fmt", "yuv420p", "-c:v", "h264_nvenc", "-f", "null", "-"], capture_output=True, text=True)
     if t.returncode == 0 and not os.environ.get("COD_CPU"):
@@ -79,16 +79,14 @@ def segment(src, a, b, out, events=(), title=None, fade=True):
         ["-filter_complex", fc, "-map", "[v]", "-map", "[a]"] + VENC + AENC + ["-shortest", out])
 
 def meme(src, t, text, out, w=1920, h=1080, dur=1.6, fsize=None):
-    """Freeze frame at t: punch zoom + shake + desaturate + big text + boom."""
+    """Freeze frame at t: still image (no zoom/shake) + desaturate + big text + boom."""
     png = out + ".png"
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.3f}", "-i", src, "-frames:v", "1", png])
-    n = int(dur * 60)
-    vf = (f"scale={w*2}:{h*2},zoompan=z='min(1+0.9*on/18,1.45)':d={n}:"
-          f"x='iw/2-(iw/zoom/2)+18*sin(on*1.7)*exp(-on/25)':y='ih/2-(ih/zoom/2)+14*cos(on*2.1)*exp(-on/25)':s={w}x{h}:fps=60,"
-          f"eq=saturation=0.35:contrast=1.25,vignette=PI/4,"
+    # 2026-11-11 owner: no shaking/zoom at all -> clean still freeze + text + boom
+    vf = ("eq=saturation=0.45:contrast=1.15,"
           + dtext(text, fsize or fit(text, w * 0.9, int(h * 0.15)), "(h-text_h)/2", None, None, "white", 12)
           + f",fade=t=out:st={dur-0.15:.2f}:d=0.15")
-    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", png,
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-loop", "1", "-framerate", "60", "-t", f"{dur}", "-i", png,
          "-f", "lavfi", "-t", f"{dur}", "-i", f"aevalsrc='{BOOM}':s=48000:d={dur},aformat=channel_layouts=stereo",
          "-vf", vf, "-map", "0:v", "-map", "1:a"] + VENC + AENC + ["-t", f"{dur}", out])
     os.remove(png)
@@ -133,10 +131,10 @@ def short(job, m, s, k, tmp, outdir):
     a, b = s["a"], s["b"]; d = b - a
     # 2026-11-11 owner: style like the most-viewed CoD Shorts -> full-screen vertical crop (crosshair centred),
     # big hook caption first 3 s, small channel tag after, ends on a meme freeze (loops back cleanly)
-    vf = ("[0:v]crop=640:1080:640:0,scale=1080:1920,eq=saturation=1.15:contrast=1.08,"
-          + dtext(s["hook"], fit(s["hook"], 1000, 96), "300", 0, 3.0, "white", 9) + ","
-          + dtext(s["hook"], fit(s["hook"], 1000, 60), "170", 3.0, d + 1, "white", 6) + ","
-          + dtext(s.get("bottom", m["title"]), 54, "1640", None, None, "#FFD200", 6)
+    # 2026-11-11 owner: "maksimal Full HD" -> centre 1080x1080 at native pixels (no upscaling), blurred fill
+    vf = ("[0:v]split[x][y];[x]crop=1080:1080:420:0,scale=1080:1920:flags=lanczos,boxblur=22:2,eq=brightness=-0.22[bg];[y]crop=1080:1080:420:0[fg];[bg][fg]overlay=0:420,"
+          + dtext(s["hook"], fit(s["hook"], 1000, 92), "190", None, None, "white", 9) + ","
+          + dtext(s.get("bottom", m["title"]), 58, "1600", None, None, "#FFD200", 6)
           + f",fade=t=in:st=0:d=0.15[v]")
     p1 = os.path.join(tmp, f"{m['id']}_short{k}_a.mp4")
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
@@ -146,12 +144,12 @@ def short(job, m, s, k, tmp, outdir):
         p2 = os.path.join(tmp, f"{m['id']}_short{k}_m.mp4")
         # vertical meme from the last moment of the clip
         meme_v = p2 + ".h.mp4"
-        meme(src, s.get("meme_t", b - 0.3), s["meme"], meme_v, dur=1.3, fsize=fit(s["meme"], 560, 110))
+        meme(src, s.get("meme_t", b - 0.3), s["meme"], meme_v, dur=1.3, fsize=fit(s["meme"], 950, 140))
         run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", meme_v, "-filter_complex",
-             "[0:v]crop=640:1080:640:0,scale=1080:1920[v]",
+             "[0:v]split[x][y];[x]crop=1080:1080:420:0,scale=1080:1920:flags=lanczos,boxblur=22:2,eq=brightness=-0.22[bg];[y]crop=1080:1080:420:0[fg];[bg][fg]overlay=0:420[v]",
              "-map", "[v]", "-map", "0:a"] + VENC + AENC + [p2])
         os.remove(meme_v); parts.append(p2)
-    out = os.path.join(outdir, f"{m['file']}_short{k}.mp4")
+    out = os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4")
     concat(parts, out)
     for p in parts: os.remove(p)
     log(m["id"], f"SHORTS {k} TAYYOR:", out)
@@ -170,7 +168,7 @@ def main():
             if not os.path.exists(os.path.join(outdir, f"{m['file']}.mp4")):
                 long_video(job, m, tmp, outdir)
             for k, s in enumerate(m.get("shorts", []), 1):
-                if not os.path.exists(os.path.join(outdir, f"{m['file']}_short{k}.mp4")):
+                if not os.path.exists(os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4")):
                     short(job, m, s, k, tmp, outdir)
         except Exception as e:
             log(m["id"], "XATO:", repr(e)); err += 1
