@@ -1,0 +1,968 @@
+{
+ "id": "20261110-3-mias-first-tooth-gone",
+ "plot": "At sunset Mia's first tooth is lost somewhere in the kitchen hours before the tooth fairy comes; Zeek's Plan Grid finds only a sugar cube, Bup only an old fry under the fridge, and the trail leads to the dark window corner where Crispy sleeps — the twist: lonely Crispy had it all day, thinking it was a little white stone that stayed white beside him; he gives it up, Pim calls Mia on the walkie to look on the windowsill, Mia leaves Crispy a white garden pebble 'For Crispy' — and then whispers that fourteen guests come for Thanksgiving and Uncle Gus eats all the bread.",
+ "script": {
+  "title": "Mia's First Tooth Is Gone",
+  "set": {
+   "place": "kitchen",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "cube",
+    "type": "box",
+    "color": [
+     0.98,
+     0.98,
+     0.98
+    ],
+    "on": null,
+    "at": [
+     -5,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "tooth",
+    "type": "ball",
+    "color": [
+     1.0,
+     1.0,
+     0.97
+    ],
+    "on": null,
+    "at": [
+     9,
+     10,
+     0
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "walkie",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     -4,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "pebble",
+    "type": "ball",
+    "color": [
+     0.93,
+     0.93,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     8,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "The tooth fairy comes tonight, and Mia's first tooth is gone!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we find it before bedtime. Where could it fall?",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunset. Mia lost it here this morning, in the stormy dark.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now she's sitting on the stairs, crying. Bedtime is at eight.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "FIND THE TOOTH!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls in late from the window corner. Slowly. Quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:9,9"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy, what's that behind you? Something white?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Nothing. A pebble. It's mine. Let's look for the tooth.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A baby tooth is tiny, white and hard. Like a rice grain.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plan Grid! Every tile, row by row. Nobody skips one.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros spread out across the kitchen floor like a search party.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "F-found it! Small! White! Hard! I'm a hero!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone runs over. It is a sugar cube.",
+    "cam": "prop:cube",
+    "do": [
+     [
+      "cube",
+      "show"
+     ],
+     [
+      "cube",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Pim. That's a sugar cube.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's a v-very convincing sugar cube.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Six o'clock. Bup crawls under the fridge with a teaspoon.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-9,14"
+     ]
+    ]
+   },
+   {
+    "text": "UNDER THE FRIDGE?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dust bunnies. One grape. A button. A very, very old fry.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "No tooth. But I met the fry. We're friends now.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly digs through the rice jar. Zeek checks the sink drain.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:6,13"
+     ],
+     [
+      "zeek",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One hour left. Without the tooth, Mia thinks the fairy skipped her.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Her very first tooth. She's been wiggling it for weeks.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy says nothing. He keeps rolling away from the others.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:10,8"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Logic. Breakfast was in the dark. Where was it darkest?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "The window corner. Behind the plant. Nobody ever goes there.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone turns. The window corner is where Crispy sleeps.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I didn't take anything. I found a pebble. That's all.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy. Sweetie. Show us the pebble. Right now.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls aside. There it is. Small, white and shiny.",
+    "cam": "prop:tooth",
+    "do": [
+     [
+      "tooth",
+      "show"
+     ],
+     [
+      "tooth",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "THE TOOTH!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That's not a pebble, Crispy. That's Mia's tooth!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Crispy! You h-had it the whole time!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I didn't know. I thought it was a little white stone.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It sat beside me all day. And it stayed white.",
+    "cam": "two:crispy,bup",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Everything near me turns black. This didn't. I liked that.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitchen goes quiet. Nobody is angry anymore.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You thought you'd finally found a friend that stays?",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:7,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Something like that. Silly, for a burnt rock.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Not silly at all. But it's Mia's, and she's waiting.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Seven forty. Mia's footsteps creak on the stairs. Twenty minutes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Her pillow's upstairs. We can never reach Mia's room in time.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The walkie-talkie! Mia still has the other one!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim jumps on the big button. Crackle. Crackle.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "show"
+     ],
+     [
+      "walkie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "B-bread box to Mia. Look on the windowsill. Over.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy pushes the tooth into the moonlight. One last look.",
+    "cam": "prop:tooth",
+    "do": [
+     [
+      "tooth",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Goodbye, little stone. You were a good one.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia runs in. She sees it shining on the sill.",
+    "cam": "wide",
+    "do": [
+     [
+      "tooth",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She squeezes it in her fist and races upstairs to bed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "tooth",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "text": "FOUND!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You gave it back, Crispy. That's what friends do.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At midnight, something new appears on the windowsill.",
+    "cam": "wide",
+    "do": [
+     [
+      "pebble",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A smooth white pebble from the garden. And a note: For Crispy.",
+    "cam": "prop:pebble",
+    "do": [
+     [
+      "pebble",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "For me? A white stone that stays white? Mine?",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Mia heard everything. The walkie was still switched on!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the walkie crackles once more. Mia is whispering.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thanksgiving's Thursday. Fourteen guests. And Uncle Gus eats all the bread.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "All the bread? Like... ALL the bread?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "UNCLE GUS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Mia's First Tooth Is Gone 🦷 (Ep 26)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Everything near me turns black. That little white thing didn't.\" — Crispy\nMia lost her very first tooth somewhere in the kitchen, and the tooth fairy comes tonight. The Dough Bros search every tile before bedtime — but someone isn't telling them everything.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "tooth fairy",
+   "first tooth",
+   "lost tooth",
+   "crispy",
+   "friendship",
+   "autumn",
+   "funny animation"
+  ],
+  "thumb_text": "WHAT'S THAT?!",
+  "thumb_beat": 7,
+  "localizations": {
+   "es": {
+    "title": "Se perdió el primer diente de Mia 🦷 (Ep 26)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todo lo que está cerca de mí se vuelve negro. Esa cosita blanca no.\" — Crispy\nMia perdió su primer diente en algún lugar de la cocina, y el Ratoncito Pérez viene esta noche. Los Dough Bros buscan baldosa por baldosa antes de dormir… pero alguien no les cuenta todo.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O primeiro dente da Mia sumiu 🦷 (Ep 26)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Tudo perto de mim fica preto. Aquela coisinha branca não ficou.\" — Crispy\nA Mia perdeu o primeiro dente em algum lugar da cozinha, e a Fada do Dente vem hoje à noite. Os Dough Bros procuram em cada azulejo antes da hora de dormir — mas alguém não está contando tudo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "سن ميا الأولى اختفت 🦷 (Ep 26)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"كل شيء قربي يصير أسود. تلك الحبة البيضاء الصغيرة لم تتغير.\" — كريسبي\nفقدت ميا أول سن لها في مكان ما في المطبخ، وجنية الأسنان تأتي الليلة. يبحث Dough Bros في كل بلاطة قبل النوم — لكن أحدهم لا يخبرهم بكل شيء.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "La première dent de Mia a disparu 🦷 (Ep 26)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Tout ce qui est près de moi devient noir. Ce petit truc blanc, non.\" — Crispy\nMia a perdu sa toute première dent quelque part dans la cuisine, et la petite souris passe ce soir. Les Dough Bros fouillent chaque carreau avant le coucher… mais quelqu'un ne leur dit pas tout.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアの初めての乳歯が消えた 🦷 (Ep 26)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「ぼくのそばにある物は全部黒くなる。あの小さな白いのは、ならなかった。」— クリスピー\nミアの初めての乳歯がキッチンのどこかで行方不明。今夜は歯の妖精が来る日。ドウ・ブロスは寝る時間までにタイルを一枚ずつ探すけど…だれかが何かをかくしている。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아의 첫 젖니가 사라졌다 🦷 (Ep 26)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려 주세요.\n\"내 곁에 있는 건 다 까맣게 돼. 그 작고 하얀 건 안 그랬어.\" — 크리스피\n미아가 부엌 어딘가에서 첫 젖니를 잃어버렸고, 오늘 밤 이빨 요정이 온다. Dough Bros는 잠들기 전까지 타일 하나하나를 뒤지지만… 누군가 다 말하지 않고 있다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mias erster Zahn ist weg 🦷 (Ep 26)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alles in meiner Nähe wird schwarz. Das kleine weiße Ding nicht.\" — Crispy\nMia hat ihren allerersten Zahn irgendwo in der Küche verloren, und heute Nacht kommt die Zahnfee. Die Dough Bros suchen jede Fliese ab – aber einer erzählt nicht alles.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 16,
+   "dur": 22,
+   "top": "WOULD YOU CRAWL IN?",
+   "title": "Would YOU Crawl Under This Fridge? 🦷 (Ep 26) #shorts",
+   "description": "A lost tooth, one teaspoon, and the dark under the fridge. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "tooth fairy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ te meterías debajo de esta nevera? 🦷 (Ep 26) #shorts",
+     "description": "Un diente perdido, una cucharita y la oscuridad bajo la nevera. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ se enfiaria debaixo desta geladeira? 🦷 (Ep 26) #shorts",
+     "description": "Um dente perdido, uma colherzinha e o escuro debaixo da geladeira. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستزحف تحت هذه الثلاجة؟ 🦷 (Ep 26) #shorts",
+     "description": "سن مفقودة، ملعقة صغيرة، وظلام تحت الثلاجة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU ramperais sous ce frigo ? 🦷 (Ep 26) #shorts",
+     "description": "Une dent perdue, une petite cuillère et le noir sous le frigo. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこの冷蔵庫の下にもぐれる？ 🦷 (Ep 26) #shorts",
+     "description": "なくした乳歯、ティースプーン1本、冷蔵庫の下の暗やみ。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 냉장고 밑으로 기어 들어갈래? 🦷 (Ep 26) #shorts",
+     "description": "잃어버린 이빨, 티스푼 하나, 그리고 냉장고 밑의 어둠. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU unter diesen Kühlschrank kriechen? 🦷 (Ep 26) #shorts",
+     "description": "Ein verlorener Zahn, ein Teelöffel und das Dunkel unter dem Kühlschrank. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

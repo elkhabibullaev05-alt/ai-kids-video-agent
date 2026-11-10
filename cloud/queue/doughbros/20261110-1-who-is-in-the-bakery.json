@@ -1,0 +1,1019 @@
+{
+ "id": "20261110-1-who-is-in-the-bakery",
+ "plot": "On the first frost night the Dough Bros cross the icy garden to the front fence to see who is inside Walter's bakery, closed for fifty years; Lolly slides into the leaves, the porch light freezes them, Zeek's glasses-telescope fogs until he wipes it on Bup's crust, and the 'burglar' turns out to be old Walter himself, sweeping and setting two cups out with a sign for Rosie; scared Pim climbs the feeder pole and shakes the wind chime so Grandma wakes and runs over — then the radio warns of an all-day power cut tomorrow, with the Thanksgiving turkey in the freezer.",
+ "script": {
+  "title": "First Frost: Who's in the Closed Bakery?",
+  "set": {
+   "place": "garden",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tube",
+    "type": "box",
+    "color": [
+     0.8,
+     0.62,
+     0.4
+    ],
+    "on": null,
+    "at": [
+     2,
+     9,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.85,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     0,
+     15,
+     0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": [
+     0.97,
+     0.96,
+     0.92
+    ],
+    "on": null,
+    "at": [
+     2,
+     15,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "chime",
+    "type": "star",
+    "color": [
+     0.8,
+     0.82,
+     0.86
+    ],
+    "on": null,
+    "at": [
+     -6,
+     13,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "A light! In Walter's bakery! It's been dark for fifty years!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then who walks into a dead bakery at midnight? A burglar?",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight. The first frost of November. The whole house is asleep.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across Maple Street, one yellow window glows in the old bakery.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "WHO'S IN THE BAKERY?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "From the kitchen we see nothing. We need the front fence.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "The fence? That's the whole frozen garden away!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then we cross it. Quietly. Frost cracks like glass.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Dough Bros slip out under the kitchen door into the cold.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek drags a paper towel tube behind him through the grass.",
+    "cam": "prop:tube",
+    "do": [
+     [
+      "tube",
+      "show"
+     ],
+     [
+      "tube",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My telescope. Two lenses from my old glasses. Pure genius.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly steps onto one frosty leaf. And she keeps on going.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wheee! No! No no no! I can't stop! Somebody grab me!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She slides across the whole lawn, straight into a pile of leaves.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:9,12"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY DOWN!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I'm fine. I meant to do that. Nobody laugh. Nobody.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Halfway across, a small sensor on the porch blinks red.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click. The porch light floods the whole garden white.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "FREEZE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nobody move. That light only sees things that move.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I c-can't stop shaking! I'm a bean! Beans shake!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then shake behind me, Pim. I'm the darkest thing out here.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-1,13"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "If that light wakes Dad, we never find out who's inside!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They reach the front fence. Frost sparkles on every bar.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:0,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The cold fogs both lenses. Everything goes milky white.",
+    "cam": "prop:tube",
+    "do": [
+     [
+      "tube",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fog! My genius telescope is now a genius cloud!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Wipe it on my crust. Stale bread is great for wiping.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek rubs the lens on Bup's crust. Squeak. Squeak. Squeak.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "tube",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Just so you know, that is my face.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Clear glass at last. The bakery window jumps up close.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A man. Very old. A long brown coat. A wooden cane.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A s-slow burglar? Those are the worst. They never leave.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we warn the house. The wind chime! Somebody ring it!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The chime hangs on the bird feeder pole. High above them.",
+    "cam": "prop:chime",
+    "do": [
+     [
+      "chime",
+      "show"
+     ],
+     [
+      "chime",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup, wait! Look at what he's doing first.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-1,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The old man isn't grabbing anything. He's sweeping the floor.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he sets two cups on the windowsill. Not one. Two.",
+    "cam": "wide",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "TWO CUPS?",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Burglars don't sweep. And they don't bring an extra cup.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "He's taping a paper to the glass. Big letters. Reading.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Shaky letters: ROSIE. THE DOOR IS OPEN. W.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "show"
+     ],
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "W? Walter! The baker! He came back for her!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "And Grandma's asleep! If she misses tonight, it could be too late!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The chime. Somebody has to climb that icy feeder pole.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, everyone looks at the smallest, shakiest bro.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-me? I shake. I shake all the time. At everything.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Exactly, Pim. Tonight, shaking is the whole job.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim climbs the icy pole. His legs tremble the whole way up.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the top he wraps himself around the chime. And shakes.",
+    "cam": "prop:chime",
+    "do": [
+     [
+      "chime",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ting-a-ling-a-ling! The loudest chime on all of Maple Street.",
+    "cam": "prop:chime",
+    "do": [
+     [
+      "chime",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "RING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Upstairs, Grandma's window lights up. A face. A gasp.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A minute later: slippers, a coat, and a little gold key.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I d-did it! My shaking finally helped somebody!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Across the street, two old friends hug in the yellow window.",
+    "cam": "wide",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Fifty years. And one tiny bean rang the bell.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back inside, Dad's forgotten radio crackles on the counter.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Storm warning. Power cut tomorrow on Maple Street. All day long.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "No power means no freezer. And the Thanksgiving turkey's in there!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "POWER CUT!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "First Frost: Who's in the Closed Bakery? ❄️ (Ep 24)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I shake at everything. Tonight that was finally useful.\" — Pim\nA yellow light glows inside a bakery that has been closed for fifty years. On the first frost night, the Dough Bros cross the frozen garden to see who is in there.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "first frost",
+   "autumn",
+   "november",
+   "mystery",
+   "old bakery",
+   "pim",
+   "funny animation"
+  ],
+  "thumb_text": "WHO'S IN THERE?",
+  "thumb_beat": 21,
+  "localizations": {
+   "es": {
+    "title": "Primera helada: ¿quién está en la panadería cerrada? ❄️ (Ep 24)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Tiemblo por todo. Esta noche por fin sirvió de algo.\" — Pim\nUna luz amarilla brilla en una panadería cerrada hace cincuenta años. En la noche de la primera helada, los Dough Bros cruzan el jardín helado para ver quién está dentro.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Primeira geada: quem está na padaria fechada? ❄️ (Ep 24)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu tremo por tudo. Hoje à noite isso finalmente ajudou.\" — Pim\nUma luz amarela brilha numa padaria fechada há cinquenta anos. Na noite da primeira geada, os Dough Bros atravessam o jardim congelado para ver quem está lá dentro.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "أول صقيع: من داخل المخبز المغلق؟ ❄️ (Ep 24)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أنا أرتجف من كل شيء. الليلة أخيرًا كان لذلك فائدة.\" — بيم\nضوء أصفر يلمع داخل مخبز مغلق منذ خمسين عامًا. في ليلة أول صقيع، يعبر Dough Bros الحديقة المتجمدة ليروا من بالداخل.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Premier gel : qui est dans la boulangerie fermée ? ❄️ (Ep 24)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Je tremble pour tout. Ce soir, ça a enfin servi.\" — Pim\nUne lumière jaune brille dans une boulangerie fermée depuis cinquante ans. La nuit du premier gel, les Dough Bros traversent le jardin gelé pour voir qui est à l'intérieur.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "初霜の夜：閉店したパン屋にいるのは誰？ ❄️ (Ep 24)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「ぼくは何にでもふるえる。今夜やっと役に立った。」— ピム\n50年閉まったままのパン屋に、黄色い明かりがともっている。初霜の夜、ドウ・ブロスは凍った庭をわたって、中にいるのが誰か確かめに行く。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "첫서리: 문 닫은 빵집 안에 누가 있지? ❄️ (Ep 24)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려 주세요.\n\"난 뭐든지 무서워서 떨어. 오늘 밤엔 그게 드디어 쓸모 있었어.\" — 핌\n50년 동안 문을 닫은 빵집에 노란 불빛이 켜졌다. 첫서리가 내린 밤, Dough Bros는 얼어붙은 정원을 건너 안에 누가 있는지 보러 간다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Erster Frost: Wer ist in der alten Bäckerei? ❄️ (Ep 24)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich zittere bei allem. Heute Nacht hat es endlich geholfen.\" — Pim\nIn einer Bäckerei, die seit fünfzig Jahren geschlossen ist, brennt gelbes Licht. In der ersten Frostnacht schleichen die Dough Bros durch den gefrorenen Garten, um nachzusehen, wer drin ist.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 22,
+   "top": "WOULD YOU CROSS IT?",
+   "title": "Would YOU Cross This Frozen Garden? ❄️ (Ep 24) #shorts",
+   "description": "Midnight, first frost, and every leaf is ice. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "first frost"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ cruzarías este jardín helado? ❄️ (Ep 24) #shorts",
+     "description": "Medianoche, primera helada, y cada hoja es hielo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ atravessaria este jardim congelado? ❄️ (Ep 24) #shorts",
+     "description": "Meia-noite, primeira geada, e cada folha virou gelo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستعبر هذه الحديقة المتجمدة؟ ❄️ (Ep 24) #shorts",
+     "description": "منتصف الليل، أول صقيع، وكل ورقة صارت جليدًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU traverserais ce jardin gelé ? ❄️ (Ep 24) #shorts",
+     "description": "Minuit, premier gel, et chaque feuille est de la glace. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこの凍った庭をわたれる？ ❄️ (Ep 24) #shorts",
+     "description": "真夜中、初霜。葉っぱは全部こおってる。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 얼어붙은 정원을 건널래? ❄️ (Ep 24) #shorts",
+     "description": "자정, 첫서리, 나뭇잎이 전부 얼음이다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen gefrorenen Garten durchqueren? ❄️ (Ep 24) #shorts",
+     "description": "Mitternacht, erster Frost, jedes Blatt ist Eis. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 17,
+   "dur": 22,
+   "top": "THE LIGHT SAW US",
+   "title": "The Porch Light Caught Us 😳 (Ep 24) #shorts",
+   "description": "Halfway across the garden, the porch light clicks on. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "porch light",
+    "freeze"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La luz del porche nos pilló 😳 (Ep 24) #shorts",
+     "description": "A mitad del jardín, se enciende la luz del porche. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A luz da varanda pegou a gente 😳 (Ep 24) #shorts",
+     "description": "No meio do jardim, a luz da varanda acende. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ضوء الشرفة كشفنا 😳 (Ep 24) #shorts",
+     "description": "في منتصف الحديقة، يضيء ضوء الشرفة فجأة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La lampe du porche nous a vus 😳 (Ep 24) #shorts",
+     "description": "Au milieu du jardin, la lampe du porche s'allume. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "玄関のライトに見つかった 😳 (Ep 24) #shorts",
+     "description": "庭の真ん中で、玄関のライトがパッとついた。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "현관 불빛에 들켰다 😳 (Ep 24) #shorts",
+     "description": "정원 한가운데서 현관 불이 탁 켜졌다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Das Verandalicht hat uns erwischt 😳 (Ep 24) #shorts",
+     "description": "Mitten im Garten geht das Verandalicht an. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
