@@ -184,7 +184,7 @@ def short(job, m, s, k, tmp, outdir):
     grade + big spaced title, (2) black 'card' layout: headline sentence on top, native gameplay window under it,
     the joke is the clip itself (no overlay memes), (3) clean native-resolution crop. Max Full HD, nothing shakes."""
     src = m.get("src", job["src"])
-    final = os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4"); out = final + ".part.mp4"
+    final = os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4"); out = final + ".part.mp4"
     if s.get("type") == "cine":
         a, b = s["a"], s["b"]; n = s.get("shots", 8); L = s.get("shot_len", 3.6)
         mus = music_for(job, s, n * L + 2)
@@ -253,7 +253,7 @@ def main():
             if not os.path.exists(os.path.join(outdir, f"{m['file']}.mp4")):
                 long_video(job, m, tmp, outdir)
             for k, s in enumerate(m.get("shorts", []), 1):
-                if not os.path.exists(os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4")):
+                if not os.path.exists(os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4")):
                     short(job, m, s, k, tmp, outdir)
         except Exception as e:
             log(m["id"], "XATO:", repr(e)); err += 1
