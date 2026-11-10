@@ -77,6 +77,16 @@ start_pool() {  # $1 = max parallel, rest = channels of this pool
 }
 mk=""; d3=""
 for ch in $CHS; do case " $MAKERS " in *" $ch "*) mk="$mk $ch";; *) d3="$d3 $ch";; esac; done
+# 2026-11-10 owner: CoD gameplay editor (1 long video + 3 Shorts per mission). Runs once per job file,
+# resumes if interrupted (finished files are skipped). Output + progress: Videos\MW4\tayyor\holat.txt
+if [ -f cloud/cod/job.json ]; then
+  J=$(md5sum cloud/cod/job.json | cut -c1-12); mkdir -p /root/kanal/cod
+  if [ ! -f /root/kanal/cod/done_$J ]; then
+    ( flock -n 9 || exit 0
+      nice -n 5 timeout 8h python3 cloud/cod/cod_edit.py cloud/cod/job.json >> /root/kanal/cod/edit.log 2>&1 && touch /root/kanal/cod/done_$J
+    ) 9>/tmp/kanal-cod.lock &
+  fi
+fi
 start_pool $PARMK $mk
 start_pool $PAR3D $d3
 wait
