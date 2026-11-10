@@ -126,6 +126,38 @@ def long_video(job, m, tmp, outdir):
     for p in parts: os.remove(p)
     log(m["id"], "UZUN VIDEO TAYYOR:", out)
 
+# 2026-11-11 owner: Shorts edited to copyright-safe YouTube Audio Library music (no attribution needed),
+# cuts placed on the music's beat grid.
+try:
+    import numpy as np
+except ImportError:
+    subprocess.run("pip install --break-system-packages -q numpy", shell=True); import numpy as np
+def beat_grid(path, sr=11025, hop=256):
+    raw = subprocess.run(["ffmpeg","-v","error","-i",path,"-ac","1","-ar",str(sr),"-f","s16le","-"],capture_output=True).stdout
+    x = np.frombuffer(raw, np.int16).astype(np.float32)/32768
+    n = len(x)//hop; fr = x[:n*hop].reshape(n,hop)
+    e = np.log1p(100*np.sqrt((fr**2).mean(1)))
+    on = np.maximum(np.diff(e, prepend=e[0]), 0); on -= on.mean()
+    fps = sr/hop
+    ac = np.correlate(on, on, "full")[len(on)-1:]
+    lags = np.arange(len(ac)); bpm = 60*fps/np.maximum(lags,1)
+    ok = (bpm>=75)&(bpm<=165); L = lags[ok][np.argmax(ac[ok])]
+    period = L/fps
+    ph = max(range(int(L)), key=lambda p: on[p::int(L)].sum())
+    energy = np.sqrt((fr**2).mean(1))
+    return 60/period, period, ph/fps, energy, fps
+def loud_start(path, dur, period, phase, energy, fps):
+    w = int(dur*fps); cs = np.cumsum(np.r_[0,energy]); best=max(range(0,len(energy)-w, int(fps)), key=lambda i: cs[i+w]-cs[i]) if len(energy)>w else 0
+    t = best/fps; k = round((t-phase)/period); return max(phase + k*period, 0)
+
+def music_for(job, s, dur):
+    """-> (path, start_offset, beat_period) or None"""
+    if not s.get("music"): return None
+    path = os.path.join(job.get("music_dir", ""), s["music"])
+    if not os.path.exists(path): log("musiqa topilmadi:", path); return None
+    bpm, per, ph, en, fps = beat_grid(path)
+    return path, loud_start(path, dur, per, ph, en, fps), per
+
 def thin_font():
     for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
               "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"]:
@@ -155,6 +187,9 @@ def short(job, m, s, k, tmp, outdir):
     final = os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4"); out = final + ".part.mp4"
     if s.get("type") == "cine":
         a, b = s["a"], s["b"]; n = s.get("shots", 8); L = s.get("shot_len", 3.6)
+        mus = music_for(job, s, n * L + 2)
+        if mus:  # snap shot length to a whole number of beats (cuts land on the beat)
+            L = max(2, round(L / mus[2])) * mus[2]
         step = max((b - a - L) / max(n - 1, 1), L)
         starts = [a + i * step for i in range(n) if a + i * step + L <= b]
         title = "  ".join(" ".join(w) for w in s["title"].split())
@@ -172,17 +207,35 @@ def short(job, m, s, k, tmp, outdir):
                f"x=(w-text_w)/2:y=470:alpha='min(1,t/0.8)',"
                + dtext(s.get("sub", "CALL OF DUTY: MODERN WARFARE 4"), 34, "1330", None, None, "#BBBBBB", 0)
                + "[v]")
-        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
-             "-filter_complex", ";".join(fc) + ";" + cat + ";" + lay, "-map", "[v]", "-map", "[ca]"] + VENC + AENC
+        total = len(starts) * L
+        amap = "[ca]"; extra = []
+        if mus:
+            extra = ["-ss", f"{mus[1]:.3f}", "-i", mus[0]]
+            lay += (f";[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={total-1.2:.2f}:d=1.2,volume=1.0[m];"
+                    f"[ca]volume=0.30[g];[m][g]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[mix]")
+            amap = "[mix]"
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src] + extra +
+            ["-filter_complex", ";".join(fc) + ";" + cat + ";" + lay, "-map", "[v]", "-map", amap] + VENC + AENC
             + ["-movflags", "+faststart", out])
     else:
         a, b = s["a"], s["b"]
+        mus = music_for(job, s, b - a)
+        if mus:
+            bar = 4 * mus[2]; b = a + max(1, int((b - a) / bar)) * bar
         # card: black 1080x1920, headline at top, 1080x1080 native-pixel gameplay window (no upscaling)
         vf = ("[0:v]crop=1080:1080:420:0,pad=1080:1920:0:560:black," + headline(s["hook"], 300)
               + ",fade=t=in:st=0:d=0.12[v]")
-        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
-             "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11"]
-            + VENC + AENC + ["-movflags", "+faststart", out])
+        d = b - a
+        if mus:
+            vf += (f";[1:a]atrim=0:{d:.3f},asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.3,afade=t=out:st={d-1:.2f}:d=1,volume=0.55[m];"
+                   f"[0:a]volume=1.0[g];[g][m]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[mix]")
+            run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
+                 "-ss", f"{mus[1]:.3f}", "-i", mus[0], "-filter_complex", vf, "-map", "[v]", "-map", "[mix]"]
+                + VENC + AENC + ["-movflags", "+faststart", out])
+        else:
+            run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
+                 "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11"]
+                + VENC + AENC + ["-movflags", "+faststart", out])
     os.replace(out, final)
     log(m["id"], f"SHORTS {k} TAYYOR:", final)
 
