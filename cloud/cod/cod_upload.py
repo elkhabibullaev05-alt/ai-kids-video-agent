@@ -4,6 +4,7 @@ milanamalina62, own Cloud project mw4-uploader). English titles/tags for US/EU (
 scheduled for US prime time. Per day: 1 long mission video + 3 Shorts (6 uploads/day max by API quota).
 State: /root/kanal/cod/uploaded.json. Progress for Claude: Videos\\MW4\\tayyor\\yuklash.txt"""
 import json, os, sys, subprocess, glob, datetime as dt
+import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import youtube_up as Y
 
@@ -43,6 +44,40 @@ def thumb(m, n):
                     "-q:v", "2", out], check=True)
     return out
 
+def cold_open(m):
+    """2026-11-11 retention: open the long video on its loudest action moment (8 s teaser), then the mission.
+    Built on the WSL disk (E:) because C: is nearly full. Returns the path to upload."""
+    src_long = os.path.join(OUT, m["file"] + ".mp4"); os.makedirs(os.path.join(HOME, "up"), exist_ok=True)
+    final = os.path.join(HOME, "up", m["file"] + "_co.mp4")
+    if os.path.exists(final): return final
+    try:
+        best, bt = -1, None
+        for a, b in m["keep"]:
+            if b - a < 20: continue
+            au = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", JOB["src"], "-vn", "-ac", "1",
+                                 "-ar", "4000", "-f", "s16le", "-"], capture_output=True).stdout
+            x = np.frombuffer(au, np.int16).astype(np.float32) / 32768
+            n = len(x) // 4000
+            if n < 12: continue
+            r = np.sqrt((x[:n*4000].reshape(n, 4000) ** 2).mean(1))
+            w = np.convolve(r, np.ones(8), "valid"); i = int(np.argmax(w[2:-2])) + 2
+            if w[i] > best: best, bt = w[i], a + i
+        if bt is None: return src_long
+        tz = os.path.join(HOME, "up", m["file"] + "_teaser.mp4")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(bt), "-t", "8", "-i", JOB["src"], "-vf",
+                        "fade=t=out:st=7.7:d=0.3", "-af", "afade=t=out:st=7.6:d=0.4",
+                        "-c:v", "h264_nvenc", "-preset", "p6", "-rc", "vbr", "-cq", "18", "-b:v", "0", "-profile:v", "high",
+                        "-pix_fmt", "yuv420p", "-r", "60", "-g", "120", "-video_track_timescale", "15360",
+                        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", tz], check=True)
+        lst = tz + ".txt"; open(lst, "w").write(f"file '{tz}'\nfile '{src_long}'\n")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c:v", "copy", "-c:a", "aac",
+                        "-b:a", "192k", "-movflags", "+faststart", final + ".part.mp4"], check=True)
+        os.replace(final + ".part.mp4", final); os.remove(tz); os.remove(lst)
+        log(m["id"], f"cold open qo'shildi ({bt:.0f}s dagi eng shiddatli joy)")
+        return final
+    except Exception as e:
+        log(m["id"], "cold open xato, asl video yuklanadi:", e); return src_long
+
 def plan():
     items = []
     for n, m in enumerate(JOB["missions"], 1):
@@ -50,10 +85,10 @@ def plan():
         items.append(dict(key=f"{m['id']}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
                           title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Part {n} - Mission {n}{part} [1080p 60FPS] No Commentary"))
         for k, s in enumerate(m.get("shorts", []), 1):
-            hook = s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
+            t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
             items.append(dict(key=f"{m['id']}_short{k}", kind="short", m=m, n=n,
                               path=os.path.join(OUT, f"{m['file']}_{JOB.get('short_tag', 'shortHD')}{k}.mp4"),
-                              title=(hook[:85] + " #shorts")))
+                              title=(t[:88] + " #shorts")))
     # one long then its 3 Shorts, mission by mission
     return items
 
@@ -79,14 +114,25 @@ def main():
         if not os.path.exists(it["path"]): continue
         now = dt.datetime.now(dt.timezone.utc); t = next_slot(it["kind"], st["slots"], now)
         th = thumb(it["m"], it["n"]) if it["kind"] == "long" else None
+        path = cold_open(it["m"]) if it["kind"] == "long" else it["path"]
         tags = TAGS + ([f"mw4 mission {it['n']}"] if it["kind"] == "long" else ["shorts", "mw4 shorts"])
         try:
-            vid = Y.upload(yt, it["path"], it["title"], DESC, tags, t.isoformat().replace("+00:00", "Z"), kids=False,
+            vid = Y.upload(yt, path, it["title"], DESC, tags, t.isoformat().replace("+00:00", "Z"), kids=False,
                            category="20", thumb=th)
         except Y.Quota as e:
             log("kunlik YouTube limiti tugadi, ertaga davom etadi:", e); break
         st["done"][it["key"]] = {"id": vid, "kind": it["kind"], "day": today, "at": t.isoformat(), "title": it["title"]}
         st["slots"].append(t.isoformat()); cnt[it["kind"]] += 1
+        if path.startswith(os.path.join(HOME, "up")):
+            try: os.remove(path)
+            except OSError: pass
+        try:  # engagement question as the first comment (comments + replies feed recommendations)
+            q = ("Which MW4 mission was the hardest for you? 👇" if it["kind"] == "long"
+                 else "Would you play this mission again? 🔥 Full mission on the channel!")
+            yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment":
+                                       {"snippet": {"textOriginal": q}}}}).execute()
+        except Exception as e:
+            log("izoh yozilmadi:", str(e)[:120])
         json.dump(st, open(STATE, "w"), indent=1)
         log(f"YUKLANDI {it['key']} -> https://youtu.be/{vid} | chiqadi {t:%Y-%m-%d %H:%M} UTC | {it['title']}")
     log(f"bugun: {cnt['long']} uzun + {cnt['short']} Shorts; jami yuklangan {len(st['done'])}/{len(plan())}")

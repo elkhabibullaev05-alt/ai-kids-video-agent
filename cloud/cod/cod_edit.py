@@ -158,6 +158,31 @@ def music_for(job, s, dur):
     bpm, per, ph, en, fps = beat_grid(path)
     return path, loud_start(path, dur, per, ph, en, fps), per
 
+def activity(src, a, b):
+    """2026-11-11 retention: per-second score (frame motion + loudness) for src[a:b] -> list of floats."""
+    a = max(0, a); d = b - a
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{a:.2f}", "-t", f"{d:.2f}", "-i", src, "-vf",
+                          "fps=4,scale=96:54,format=gray", "-f", "rawvideo", "-"], capture_output=True).stdout
+    fr = np.frombuffer(raw, np.uint8).reshape(-1, 54, 96).astype(np.float32)
+    mo = np.r_[0, np.abs(np.diff(fr, axis=0)).mean((1, 2))] if len(fr) > 1 else np.zeros(1)
+    au = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{a:.2f}", "-t", f"{d:.2f}", "-i", src, "-vn", "-ac", "1",
+                         "-ar", "8000", "-f", "s16le", "-"], capture_output=True).stdout
+    x = np.frombuffer(au, np.int16).astype(np.float32) / 32768
+    n = int(d)
+    m1 = np.array([mo[i*4:(i+1)*4].mean() if len(mo[i*4:(i+1)*4]) else 0 for i in range(n)])
+    l1 = np.array([np.sqrt((x[i*8000:(i+1)*8000] ** 2).mean() + 1e-9) for i in range(n)])
+    z = lambda v: (v - v.mean()) / (v.std() + 1e-6)
+    return list(z(m1) + z(l1))
+
+def best_window(src, a, b, length, pad=15):
+    """Best continuous `length` seconds inside [a-pad, b+pad] by activity (start on action = fewer swipes)."""
+    lo, hi = max(0, a - pad), b + pad
+    sc = activity(src, lo, hi)
+    L = int(round(length))
+    if len(sc) <= L: return a
+    cs = np.cumsum(np.r_[0, sc]); best = max(range(len(sc) - L + 1), key=lambda i: cs[i + L] - cs[i] + 1.5 * sum(sc[i:i+3]))
+    return lo + best
+
 def thin_font():
     for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
               "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"]:
@@ -192,39 +217,53 @@ def short(job, m, s, k, tmp, outdir):
             L = max(2, round(L / mus[2])) * mus[2]
         step = max((b - a - L) / max(n - 1, 1), L)
         starts = [a + i * step for i in range(n) if a + i * step + L <= b]
+        try:  # 2026-11-11 retention: open on the most intense shot, then the story in order
+            scs = [sum(activity(src, t, t + L)) for t in starts]
+            top = int(np.argmax(scs)); starts = [starts[top]] + starts[:top] + starts[top + 1:]
+        except Exception as e:
+            log("activity xato:", e)
         title = "  ".join(" ".join(w) for w in s["title"].split())
         grade = "eq=contrast=1.12:saturation=0.78:gamma=0.95,colorbalance=rs=-0.05:bs=0.06:rh=0.04:bh=-0.03"
-        N = len(starts)
-        fc = ["[0:v]split=%d%s" % (N, "".join(f"[s{i}]" for i in range(N))), "[0:a]asplit=%d%s" % (N, "".join(f"[t{i}]" for i in range(N)))]
+        # 2026-11-11: shots rendered one by one (hook shot first is out of time order -> split/trim overflowed)
+        shots = []
         for i, t in enumerate(starts):
-            o = t - a
-            fc.append(f"[s{i}]trim={o:.3f}:{o+L:.3f},setpts=PTS-STARTPTS,fade=t=in:st=0:d=0.12,fade=t=out:st={L-0.12:.2f}:d=0.12[v{i}];"
-                      f"[t{i}]atrim={o:.3f}:{o+L:.3f},asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.08,afade=t=out:st={L-0.1:.2f}:d=0.1[a{i}]")
-        cat = "".join(f"[v{i}][a{i}]" for i in range(len(starts))) + f"concat=n={len(starts)}:v=1:a=1[cv][ca]"
+            sp = os.path.join(tmp, f"{m['id']}_c{k}_{i}.mp4")
+            vfi = ("fade=t=in:st=0:d=0.12," if i else "") + f"fade=t=out:st={L-0.12:.2f}:d=0.12"
+            run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.3f}", "-t", f"{L:.3f}", "-i", src,
+                 "-vf", vfi, "-af", f"afade=t=out:st={L-0.1:.2f}:d=0.1"] + VENC + AENC + [sp])
+            shots.append(sp)
+        lst = os.path.join(tmp, f"{m['id']}_c{k}.txt")
+        open(lst, "w").write("".join(f"file '{x}'\n" for x in shots))
+        fc = []
+        cat = ""
         tf = thin_font()
-        lay = (f"[cv]scale=1080:608:flags=lanczos,{grade},pad=1080:1920:0:656:black,"
+        lay = (f"[0:v]scale=1080:608:flags=lanczos,{grade},pad=1080:1920:0:656:black,"
                f"drawtext=fontfile='{tf}':text='{esc(title)}':fontsize={fit(title, 1000, 84)}:fontcolor=white:"
-               f"x=(w-text_w)/2:y=470:alpha='min(1,t/0.8)',"
+               f"x=(w-text_w)/2:y=470,"
                + dtext(s.get("sub", "CALL OF DUTY: MODERN WARFARE 4"), 34, "1330", None, None, "#BBBBBB", 0)
                + "[v]")
         total = len(starts) * L
-        amap = "[ca]"; extra = []
+        amap = "0:a"; extra = []
         if mus:
             extra = ["-ss", f"{mus[1]:.3f}", "-i", mus[0]]
             lay += (f";[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={total-1.2:.2f}:d=1.2,volume=1.0[m];"
-                    f"[ca]volume=0.30[g];[m][g]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[mix]")
+                    f"[0:a]volume=0.30[g];[m][g]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11[mix]")
             amap = "[mix]"
-        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src] + extra +
-            ["-filter_complex", ";".join(fc) + ";" + cat + ";" + lay, "-map", "[v]", "-map", amap] + VENC + AENC
-            + ["-movflags", "+faststart", out])
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst] + extra +
+            ["-filter_complex", lay, "-map", "[v]", "-map", amap] + VENC + AENC + ["-movflags", "+faststart", out])
+        for x in shots + [lst]: os.remove(x)
     else:
         a, b = s["a"], s["b"]
+        want = min(b - a, s.get("len", 26))
+        try:
+            a = best_window(src, a, b, want); b = a + want
+        except Exception as e:
+            log("best_window xato:", e)
         mus = music_for(job, s, b - a)
         if mus:
             bar = 4 * mus[2]; b = a + max(1, int((b - a) / bar)) * bar
         # card: black 1080x1920, headline at top, 1080x1080 native-pixel gameplay window (no upscaling)
-        vf = ("[0:v]crop=1080:1080:420:0,pad=1080:1920:0:560:black," + headline(s["hook"], 300)
-              + ",fade=t=in:st=0:d=0.12[v]")
+        vf = ("[0:v]crop=1080:1080:420:0,pad=1080:1920:0:560:black," + headline(s["hook"], 300) + "[v]")
         d = b - a
         if mus:
             vf += (f";[1:a]atrim=0:{d:.3f},asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.3,afade=t=out:st={d-1:.2f}:d=1,volume=0.55[m];"
