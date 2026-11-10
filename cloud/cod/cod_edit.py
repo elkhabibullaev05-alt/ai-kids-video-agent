@@ -91,14 +91,14 @@ def meme(src, t, text, out, w=1920, h=1080, dur=1.6, fsize=None):
          "-vf", vf, "-map", "0:v", "-map", "1:a"] + VENC + AENC + ["-t", f"{dur}", out])
     os.remove(png)
 
-def concat(parts, out, loud=True):
-    lst = out + ".txt"
+def concat(parts, final, loud=True):
+    out = final + ".part.mp4"; lst = out + ".txt"
     with open(lst, "w") as f:
         for p in parts: f.write(f"file '{p}'\n")
     af = ["-af", "loudnorm=I=-14:TP=-1.5:LRA=11"] if loud else []
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst,
          "-c:v", "copy"] + af + AENC + ["-movflags", "+faststart", out])
-    os.remove(lst)
+    os.remove(lst); os.replace(out, final)
 
 def thumb(src, t, big, small, out):
     vf = ("scale=1280:720,eq=saturation=1.35:contrast=1.15," + dtext(big, 130, "h-text_h-150", None, None, "white", 10)
@@ -126,33 +126,65 @@ def long_video(job, m, tmp, outdir):
     for p in parts: os.remove(p)
     log(m["id"], "UZUN VIDEO TAYYOR:", out)
 
+def thin_font():
+    for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+              "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"]:
+        if os.path.exists(p): return p
+    return FONT
+
+def wrap(text, per_line):
+    words, lines, cur = text.split(), [], ""
+    for w in words:
+        if cur and len(cur) + 1 + len(w) > per_line: lines.append(cur); cur = w
+        else: cur = (cur + " " + w).strip()
+    if cur: lines.append(cur)
+    return lines
+
+def headline(text, y0, size=58):
+    """White bold sentence headline, wrapped, left-aligned like the owner's reference Shorts."""
+    out = []
+    for i, ln in enumerate(wrap(text, int(980 / (0.62 * size)))[:3]):
+        out.append(dtext(ln, size, str(y0 + i * int(size * 1.25)), None, None, "white", 0, x="50"))
+    return ",".join(out)
+
 def short(job, m, s, k, tmp, outdir):
+    """2026-11-11 owner sent 3 reference reels (Instagram): (1) cinematic story edit of cutscenes with film
+    grade + big spaced title, (2) black 'card' layout: headline sentence on top, native gameplay window under it,
+    the joke is the clip itself (no overlay memes), (3) clean native-resolution crop. Max Full HD, nothing shakes."""
     src = m.get("src", job["src"])
-    a, b = s["a"], s["b"]; d = b - a
-    # 2026-11-11 owner: style like the most-viewed CoD Shorts -> full-screen vertical crop (crosshair centred),
-    # big hook caption first 3 s, small channel tag after, ends on a meme freeze (loops back cleanly)
-    # 2026-11-11 owner: "maksimal Full HD" -> centre 1080x1080 at native pixels (no upscaling), blurred fill
-    vf = ("[0:v]split[x][y];[x]crop=1080:1080:420:0,scale=1080:1920:flags=lanczos,boxblur=22:2,eq=brightness=-0.22[bg];[y]crop=1080:1080:420:0[fg];[bg][fg]overlay=0:420,"
-          + dtext(s["hook"], fit(s["hook"], 1000, 92), "190", None, None, "white", 9) + ","
-          + dtext(s.get("bottom", m["title"]), 58, "1600", None, None, "#FFD200", 6)
-          + f",fade=t=in:st=0:d=0.15[v]")
-    p1 = os.path.join(tmp, f"{m['id']}_short{k}_a.mp4")
-    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
-         "-filter_complex", vf, "-map", "[v]", "-map", "0:a"] + VENC + AENC + [p1])
-    parts = [p1]
-    if s.get("meme"):
-        p2 = os.path.join(tmp, f"{m['id']}_short{k}_m.mp4")
-        # vertical meme from the last moment of the clip
-        meme_v = p2 + ".h.mp4"
-        meme(src, s.get("meme_t", b - 0.3), s["meme"], meme_v, dur=1.3, fsize=fit(s["meme"], 950, 140))
-        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", meme_v, "-filter_complex",
-             "[0:v]split[x][y];[x]crop=1080:1080:420:0,scale=1080:1920:flags=lanczos,boxblur=22:2,eq=brightness=-0.22[bg];[y]crop=1080:1080:420:0[fg];[bg][fg]overlay=0:420[v]",
-             "-map", "[v]", "-map", "0:a"] + VENC + AENC + [p2])
-        os.remove(meme_v); parts.append(p2)
-    out = os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4")
-    concat(parts, out)
-    for p in parts: os.remove(p)
-    log(m["id"], f"SHORTS {k} TAYYOR:", out)
+    final = os.path.join(outdir, f"{m['file']}_shortHD{k}.mp4"); out = final + ".part.mp4"
+    if s.get("type") == "cine":
+        a, b = s["a"], s["b"]; n = s.get("shots", 8); L = s.get("shot_len", 3.6)
+        step = max((b - a - L) / max(n - 1, 1), L)
+        starts = [a + i * step for i in range(n) if a + i * step + L <= b]
+        title = "  ".join(" ".join(w) for w in s["title"].split())
+        grade = "eq=contrast=1.12:saturation=0.78:gamma=0.95,colorbalance=rs=-0.05:bs=0.06:rh=0.04:bh=-0.03"
+        N = len(starts)
+        fc = ["[0:v]split=%d%s" % (N, "".join(f"[s{i}]" for i in range(N))), "[0:a]asplit=%d%s" % (N, "".join(f"[t{i}]" for i in range(N)))]
+        for i, t in enumerate(starts):
+            o = t - a
+            fc.append(f"[s{i}]trim={o:.3f}:{o+L:.3f},setpts=PTS-STARTPTS,fade=t=in:st=0:d=0.12,fade=t=out:st={L-0.12:.2f}:d=0.12[v{i}];"
+                      f"[t{i}]atrim={o:.3f}:{o+L:.3f},asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.08,afade=t=out:st={L-0.1:.2f}:d=0.1[a{i}]")
+        cat = "".join(f"[v{i}][a{i}]" for i in range(len(starts))) + f"concat=n={len(starts)}:v=1:a=1[cv][ca]"
+        tf = thin_font()
+        lay = (f"[cv]scale=1080:608:flags=lanczos,{grade},pad=1080:1920:0:656:black,"
+               f"drawtext=fontfile='{tf}':text='{esc(title)}':fontsize={fit(title, 1000, 84)}:fontcolor=white:"
+               f"x=(w-text_w)/2:y=470:alpha='min(1,t/0.8)',"
+               + dtext(s.get("sub", "CALL OF DUTY: MODERN WARFARE 4"), 34, "1330", None, None, "#BBBBBB", 0)
+               + "[v]")
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
+             "-filter_complex", ";".join(fc) + ";" + cat + ";" + lay, "-map", "[v]", "-map", "[ca]"] + VENC + AENC
+            + ["-movflags", "+faststart", out])
+    else:
+        a, b = s["a"], s["b"]
+        # card: black 1080x1920, headline at top, 1080x1080 native-pixel gameplay window (no upscaling)
+        vf = ("[0:v]crop=1080:1080:420:0,pad=1080:1920:0:560:black," + headline(s["hook"], 300)
+              + ",fade=t=in:st=0:d=0.12[v]")
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
+             "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11"]
+            + VENC + AENC + ["-movflags", "+faststart", out])
+    os.replace(out, final)
+    log(m["id"], f"SHORTS {k} TAYYOR:", final)
 
 def main():
     global LOG
