@@ -63,7 +63,9 @@ def files(kind):
             pass
     seen, res = set(), []
     for t in out:
-        bad = ("map", "radar", "us rain", "precip", "forecast", "satellite", "animation", "chart", "graph", "simulation", "storm surge")
+        bad = ("map", "radar", "us rain", "precip", "forecast", "satellite", "animation", "chart", "graph", "simulation", "storm surge",
+               # 2026-11-10 watchdog: "Heavy Rain" is a video game — its trailers matched "rain" (and the file was broken)
+               "heavy rain ten years", "episode", "trailer", "gameplay", "game", "playstation", "ps3", "ps4")
         if t not in seen and "rain" in t.lower() and not any(b in t.lower() for b in bad):
             seen.add(t); res.append(t)
     return res
@@ -92,10 +94,24 @@ def pick(kind):
             if kind == "audio" and f["dur"] and f["dur"] < 20:
                 continue
             dst = os.path.join(CACHE, re.sub(r"[^\w.-]", "_", f["title"].split(":", 1)[1]))
-            if not os.path.exists(dst):
-                req = urllib.request.Request(f["url"], headers=UA)
-                with urllib.request.urlopen(req, timeout=300) as r, open(dst, "wb") as o:
-                    o.write(r.read())
+            try:
+                if not os.path.exists(dst):
+                    req = urllib.request.Request(f["url"], headers=UA)
+                    with urllib.request.urlopen(req, timeout=300) as r, open(dst + ".part", "wb") as o:
+                        o.write(r.read())
+                    os.replace(dst + ".part", dst)
+                # 2026-11-10 watchdog: a broken/partial cached file ("EBML header parsing failed") failed every run —
+                # check it plays; if not, delete it, never pick it again and try the next candidate
+                sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst, timeout=120)
+            except Exception as e:
+                print("skip broken file:", f["title"], str(e)[:200], flush=True)
+                for x in (dst, dst + ".part"):
+                    try:
+                        os.remove(x)
+                    except OSError:
+                        pass
+                used[kind].append(f["title"])
+                continue
             f["path"] = dst
             return f
     raise RuntimeError(f"no free-licence rain {kind} found on Commons")

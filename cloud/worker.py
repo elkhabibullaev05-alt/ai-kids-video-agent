@@ -17,6 +17,7 @@ import json
 import os
 import re
 import shutil
+import signal
 import socket
 import subprocess
 socket.setdefaulttimeout(300)  # 2026-11-06: a dead connection must fail (and retry next run), never hang a worker for hours
@@ -49,7 +50,26 @@ def log(*a):
 
 def sh(cmd, cwd=None, check=True, timeout=None):
     log("$", " ".join(str(c) for c in cmd)[:220])
-    p = subprocess.run([str(c) for c in cmd], cwd=cwd or ROOT, capture_output=True, text=True, timeout=timeout)
+    # 2026-11-10 watchdog: Funny Rank + Bolt hung for hours on the browser-handoff "git push" — subprocess.run's
+    # timeout killed only git, its git-remote-https child kept the output pipe open, so the run never returned and
+    # held the channel's lock (no video for ~24 h). Own process group + kill the whole group on timeout, and never
+    # let git wait for a username/password prompt.
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never")
+    pr = subprocess.Popen([str(c) for c in cmd], cwd=cwd or ROOT, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                          text=True, env=env, start_new_session=True)
+    try:
+        out, err = pr.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(pr.pid, signal.SIGKILL)
+        except OSError:
+            pass
+        try:
+            out, err = pr.communicate(timeout=30)
+        except Exception:
+            out, err = "", ""
+        raise RuntimeError(f"{os.path.basename(str(cmd[1] if len(cmd) > 1 else cmd[0]))} timed out after {timeout} s")
+    p = subprocess.CompletedProcess(pr.args, pr.returncode, out, err)
     if check and p.returncode:
         raise RuntimeError(f"{os.path.basename(str(cmd[1] if len(cmd) > 1 else cmd[0]))} failed: {(p.stderr or p.stdout)[-800:]}")
     return p
@@ -266,7 +286,9 @@ def browser_handoff(st):
             sh(["git", "checkout", "-q", "--orphan", branch], cwd=tmp)
             sh(["git", "add", "."], cwd=tmp)
             sh(["git", "-c", "user.name=Claude", "-c", "user.email=noreply@anthropic.com", "commit", "-qm", "upload " + slug], cwd=tmp)
-            sh(["git", "push", "-q", "-f", REPO, branch], cwd=tmp, timeout=3600)
+            # same remote (and credentials) the worker already pushes main with; bare URL only as a fallback
+            url = (git("remote", "get-url", "origin", check=False).stdout or "").strip() or REPO
+            sh(["git", "push", "-q", "-f", url, branch], cwd=tmp, timeout=1800)
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
         man = {"ch": CH, "channel_id": CFG["id"], "job": it["job"], "kind": it["kind"], "title": it["title"],
