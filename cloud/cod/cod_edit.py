@@ -14,8 +14,18 @@ def font():
     return glob.glob("/usr/share/fonts/**/*.ttf", recursive=True)[0]
 
 FONT = font()
-VENC = ["-c:v", "libx264", "-preset", os.environ.get("COD_PRESET", "veryfast"), "-crf", "20", "-pix_fmt", "yuv420p",
-        "-r", "60", "-g", "120", "-video_track_timescale", "15360"]
+def _venc():
+    # 2026-11-10: libx264 in WSL was ~0.2x realtime (CPU shared with channel makers) -> use the laptop's NVIDIA
+    # encoder (WSL exposes it via /usr/lib/wsl/lib) when it works; fall back to libx264.
+    common = ["-pix_fmt", "yuv420p", "-r", "60", "-g", "120", "-video_track_timescale", "15360"]
+    nv = ["-c:v", "h264_nvenc", "-preset", "p5", "-tune", "hq", "-rc", "vbr", "-cq", "21", "-b:v", "0", "-profile:v", "high"]
+    t = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=s=1920x1080:r=60:d=1",
+                        "-pix_fmt", "yuv420p", "-c:v", "h264_nvenc", "-f", "null", "-"], capture_output=True, text=True)
+    if t.returncode == 0 and not os.environ.get("COD_CPU"):
+        return nv + common, "h264_nvenc"
+    return ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20"] + common, "libx264 (" + t.stderr.strip()[-200:] + ")"
+
+VENC, VENC_NAME = _venc()
 AENC = ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
 BOOM = "0.85*sin(2*PI*(45+140*exp(-11*t))*t)*exp(-2.6*t)+0.3*(random(0)*2-1)*exp(-20*t)"
 LOG = None
@@ -31,6 +41,9 @@ def run(cmd):
     if r.returncode:
         log("FFMPEG XATO:", " ".join(cmd)[:400], r.stderr[-1500:])
         raise RuntimeError("ffmpeg failed")
+
+def fit(text, maxw, maxfs):  # DejaVu Sans Bold ~0.72 em per char
+    return int(min(maxfs, maxw / (0.72 * max(len(text), 1))))
 
 def esc(t):  # drawtext text escaping
     return t.replace("\\", "\\\\").replace(":", "\\:").replace("'", "’").replace("%", "\\%")
@@ -65,7 +78,7 @@ def segment(src, a, b, out, events=(), title=None, fade=True):
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"] + inputs +
         ["-filter_complex", fc, "-map", "[v]", "-map", "[a]"] + VENC + AENC + ["-shortest", out])
 
-def meme(src, t, text, out, w=1920, h=1080, dur=1.6):
+def meme(src, t, text, out, w=1920, h=1080, dur=1.6, fsize=None):
     """Freeze frame at t: punch zoom + shake + desaturate + big text + boom."""
     png = out + ".png"
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.3f}", "-i", src, "-frames:v", "1", png])
@@ -73,7 +86,7 @@ def meme(src, t, text, out, w=1920, h=1080, dur=1.6):
     vf = (f"scale={w*2}:{h*2},zoompan=z='min(1+0.9*on/18,1.45)':d={n}:"
           f"x='iw/2-(iw/zoom/2)+18*sin(on*1.7)*exp(-on/25)':y='ih/2-(ih/zoom/2)+14*cos(on*2.1)*exp(-on/25)':s={w}x{h}:fps=60,"
           f"eq=saturation=0.35:contrast=1.25,vignette=PI/4,"
-          + dtext(text, int(h * 0.15), "(h-text_h)/2", None, None, "white", 12)
+          + dtext(text, fsize or fit(text, w * 0.9, int(h * 0.15)), "(h-text_h)/2", None, None, "white", 12)
           + f",fade=t=out:st={dur-0.15:.2f}:d=0.15")
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", png,
          "-f", "lavfi", "-t", f"{dur}", "-i", f"aevalsrc='{BOOM}':s=48000:d={dur},aformat=channel_layouts=stereo",
@@ -118,12 +131,13 @@ def long_video(job, m, tmp, outdir):
 def short(job, m, s, k, tmp, outdir):
     src = m.get("src", job["src"])
     a, b = s["a"], s["b"]; d = b - a
-    vf = ("[0:v]split[x][y];"
-          "[x]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:2,eq=brightness=-0.18[bg];"
-          "[y]crop=864:1080:528:0,scale=1080:1350[fg];"
-          "[bg][fg]overlay=0:285," + dtext(s["hook"], 76, "120", None, None, "white", 7)
-          + "," + dtext(s.get("bottom", m["title"]), 60, "1700", None, None, "#FFD200", 6)
-          + f",fade=t=in:st=0:d=0.2[v]")
+    # 2026-11-11 owner: style like the most-viewed CoD Shorts -> full-screen vertical crop (crosshair centred),
+    # big hook caption first 3 s, small channel tag after, ends on a meme freeze (loops back cleanly)
+    vf = ("[0:v]crop=640:1080:640:0,scale=1080:1920,eq=saturation=1.15:contrast=1.08,"
+          + dtext(s["hook"], fit(s["hook"], 1000, 96), "300", 0, 3.0, "white", 9) + ","
+          + dtext(s["hook"], fit(s["hook"], 1000, 60), "170", 3.0, d + 1, "white", 6) + ","
+          + dtext(s.get("bottom", m["title"]), 54, "1640", None, None, "#FFD200", 6)
+          + f",fade=t=in:st=0:d=0.15[v]")
     p1 = os.path.join(tmp, f"{m['id']}_short{k}_a.mp4")
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src,
          "-filter_complex", vf, "-map", "[v]", "-map", "0:a"] + VENC + AENC + [p1])
@@ -132,10 +146,9 @@ def short(job, m, s, k, tmp, outdir):
         p2 = os.path.join(tmp, f"{m['id']}_short{k}_m.mp4")
         # vertical meme from the last moment of the clip
         meme_v = p2 + ".h.mp4"
-        meme(src, s.get("meme_t", b - 0.3), s["meme"], meme_v, dur=1.3)
+        meme(src, s.get("meme_t", b - 0.3), s["meme"], meme_v, dur=1.3, fsize=fit(s["meme"], 560, 110))
         run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", meme_v, "-filter_complex",
-             "[0:v]split[x][y];[x]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:2[bg];"
-             "[y]crop=864:1080:528:0,scale=1080:1350[fg];[bg][fg]overlay=0:285[v]",
+             "[0:v]crop=640:1080:640:0,scale=1080:1920[v]",
              "-map", "[v]", "-map", "0:a"] + VENC + AENC + [p2])
         os.remove(meme_v); parts.append(p2)
     out = os.path.join(outdir, f"{m['file']}_short{k}.mp4")
@@ -149,7 +162,7 @@ def main():
     outdir = job["out"]; os.makedirs(outdir, exist_ok=True)
     tmp = job.get("tmp", os.path.join(outdir, "_tmp")); os.makedirs(tmp, exist_ok=True)
     LOG = os.path.join(outdir, "holat.txt")
-    log("BOSHLANDI. font:", FONT, "ffmpeg:", shutil.which("ffmpeg"))
+    log("BOSHLANDI. encoder:", VENC_NAME, "font:", FONT, "ffmpeg:", shutil.which("ffmpeg"))
     only = os.environ.get("COD_ONLY"); err = 0
     for m in job["missions"]:
         if only and m["id"] != only: continue
