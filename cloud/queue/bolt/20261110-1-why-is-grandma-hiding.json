@@ -1,0 +1,1384 @@
+{
+ "id": "20261110-1-why-is-grandma-hiding",
+ "plot": "Pip's Grandma Rosa visits Wheelburg for the first time, but the moment she sees Grumpy she zooms behind Benny's bakery and won't come out; everyone thinks Grumpy's big hook scared her, until Bolt reads her dropped note card ('Grumpy: tell him a joke') and learns she hid because she knows no jokes; Grumpy, who doesn't tell jokes either, quietly parks beside her to watch the leaves, they both laugh, and Rosa asks to see the old race track 'by the big oak' where she once raced — but Wheelburg has no race track.",
+ "script": {
+  "title": "Why Is Pip's Grandma Hiding?!",
+  "description": "Grandma Rosa came to meet Pip's friends. Then she saw Grumpy and hid. Inspector Bolt #29",
+  "set": {
+   "place": "Bakery Lane outside Benny's bakery and Pip's house, a sunny autumn afternoon with falling leaves until sunset",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "rosa": {
+    "name": "Grandma Rosa",
+    "voice": "bf_isabella",
+    "speed": 0.92,
+    "pitch": 1,
+    "color": [
+     0.72,
+     0.56,
+     0.86
+    ],
+    "kind": "car",
+    "size": 0.8,
+    "hat": false,
+    "home": [
+     12.0,
+     13.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "card",
+    "type": "box",
+    "color": "white",
+    "at": [
+     13.5,
+     19.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "pie",
+    "type": "cake",
+    "color": "orange",
+    "at": [
+     1.0,
+     11.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "rosa",
+    "say": "Oh dear, oh dear! Not now! I'm not ready!",
+    "cam": "wide",
+    "do": [
+     [
+      "rosa",
+      "to:14,20"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA IS HIDING!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-6,12"
+     ],
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "Grandma, wait! Why are you hiding from my friends?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:8,15"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "She looked at me. Then she ran. That's a first.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter:right"
+     ],
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a sunny autumn afternoon on Bakery Lane. Leaves were falling.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Pip's grandma had come to Wheelburg for the very first time.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "She drove all the way from the seaside! Just for you!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And I baked a welcome pie! Pumpkin, with extra cinnamon!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ],
+     [
+      "pie",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So where is she? I want to show her my zoom!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "She was right here. Reading her little card. Like always.",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A little card, Pip?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma writes notes for everything. Shopping, birthdays, even hellos.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just a minute before, Grandma Rosa had rolled up, smiling.",
+    "cam": "wide",
+    "do": [
+     [
+      "rosa",
+      "to:12,13"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Hello, Bolt dear! Procedure! There, I said it right.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Very good, madam. Procedure, indeed.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "And you must be Turbo. Fast! Fast, fast, fast!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "She knows me! I'm famous at the seaside!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "And Bertha, the loudest, kindest bus. Hello, sweetie!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "HELLO, ROSA! Oops. Was that too loud?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a grey tow truck rolled slowly around the corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:4,15"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Oh! The big grey one. Grumpy. Oh, oh dear!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Grandma Rosa zoomed behind the bakery. Just like that.",
+    "cam": "overhead",
+    "do": [
+     [
+      "rosa",
+      "to:14,20"
+     ]
+    ]
+   },
+   {
+    "text": "SHE RAN FROM GRUMPY!",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grumpy",
+    "say": "It's the hook. Grandmas don't like big hooks.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Or your face, Grumpy. It's a very... serious face.",
+    "cam": "two:turbo,grumpy",
+    "do": [
+     [
+      "turbo",
+      "to:1,14"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "This is my happy face.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, Grumpy. Don't be sad. We'll fix this!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But Grandma only stays until tomorrow at sunset!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "If she hides, she'll never meet my best friends!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we need the facts. Procedure, everyone.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled quietly toward the bakery corner.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:11,17"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Madam Rosa? It's only Bolt. May we talk?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:rosa"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Not yet, dear! I'm... I'm reading! Give me one minute!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Something white fluttered down from behind the wall.",
+    "cam": "overhead",
+    "do": [
+     [
+      "card",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "A LITTLE CARD!",
+    "hold": 1.0,
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Her note card. She dropped it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Read it! Read it! What does it say?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:9,15"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bolt, say Procedure. Turbo, say fast. Bertha, say hello.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Aww! She practised a word for each of us!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And Grumpy? What's the word for Grumpy?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "There's a leaf stuck on that part. And a little smudge.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "It says, Grumpy, hide. I knew it.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy turned to go home, very slowly.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tell Rosa I'm sorry. I'll park far away.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No, Grumpy! Please don't go! Wait!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-1,13"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I have an idea! We give Grumpy a happy disguise!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "We could put my pie on his hook! Pies are friendly!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "No pie on the hook.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Then smile! Show your teeth, Grumpy. Like this! Cheese!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:3,15"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Trucks don't have teeth, Turbo.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wait. A detective doesn't guess. A detective cleans the clue.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt blew the leaf away. Whoosh.",
+    "cam": "prop:card",
+    "do": [
+     [
+      "card",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy. Tell him a joke.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "TELL A JOKE?!",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "Grandma has to tell GRUMPY a joke? Ha!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The sun is going down! The pie is getting cold!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Oh no. I know why she's hiding now.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I told her Grumpy never laughs. Not even once.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma doesn't know ANY jokes. She always forgets the end!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "She wasn't scared of Grumpy. She was scared of getting it wrong.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "She was scared... for me? To make me laugh?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy rolled slowly to the bakery corner. Very gently.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:13,17"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Rosa. I don't know any jokes either.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "turn:rosa"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "You don't?",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "to:13,19"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Not one. I just like to sit. And watch leaves.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Oh! I like that too. At the seaside, I watch waves.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "I'm sorry I ran, Grumpy. My wheels just went whoosh.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Mine do that at parties. I park behind the cake.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Behind the cake! Oh, that is a very good spot.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So the two of them parked side by side. Quiet. Watching.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "to:12,16"
+     ],
+     [
+      "rosa",
+      "to:14,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed closer to see. Too fast.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:10,14"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Whoa, whoa! Brakes! Brakes!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A big red leaf landed right on his nose.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Who turned off the lights? I can't see!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Hee hee hee! Oh my!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Heh. Heh heh.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY LAUGHED!",
+    "hold": 1.0,
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "Grandma! You did it! You made Grumpy laugh!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "No, dear. The leaf did. We just watched it together.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma and Grumpy are friends now! Real leaf friends!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You don't need perfect words. You just need to be there.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then everyone shared Bertha's pumpkin pie as the sun went down.",
+    "cam": "wide",
+    "do": [
+     [
+      "pie",
+      "show"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Still warm! A tiny bit!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Pip, dear, tomorrow I want to see the race track.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "The round one, by the big oak. I won my first race!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma, you were a RACER?!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Number seven! The fastest purple car on the whole coast!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Wait! There's no race track in Wheelburg! Not one!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "No race track? But it was right here. I'm sure of it.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "WHERE DID IT GO?",
+    "hold": 1.0,
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:rosa"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Pip's Grandma Hiding?! 🍂 (Ep 29)",
+  "description": "\"I wanted to meet Grumpy so much. So why did my wheels run away?\" — Grandma Rosa\nPip's grandma visits Wheelburg for the first time on a sunny autumn day, but the moment she sees Grumpy she hides behind the bakery. Is it his big hook? Inspector Bolt finds a little note card with the real reason. Inspector Bolt #29\n\n#series #3DAnimation #InspectorBolt #autumn",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn cartoon",
+   "grandma",
+   "meeting grandma",
+   "grumpy the tow truck",
+   "pip the little car",
+   "being shy",
+   "friendship"
+  ],
+  "thumb_text": "WHY IS SHE HIDING?",
+  "thumb_beat": 27,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué se esconde la abuela de Pip? 🍂 (Ep 29)",
+    "description": "\"Tenía tantas ganas de conocer a Grumpy. ¿Por qué mis ruedas salieron corriendo?\" — Abuela Rosa\nLa abuela de Pip visita Wheelburg por primera vez en un soleado día de otoño, pero al ver a Grumpy se esconde detrás de la panadería. ¿Será su gran gancho? El Inspector Bolt encuentra una tarjetita con la verdadera razón. Inspector Bolt #29\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Por que a vovó da Pip está se escondendo? 🍂 (Ep 29)",
+    "description": "\"Eu queria tanto conhecer o Grumpy. Por que minhas rodas fugiram?\" — Vovó Rosa\nA avó da Pip visita Wheelburg pela primeira vez num dia ensolarado de outono, mas quando vê o Grumpy se esconde atrás da padaria. Será o gancho grande dele? O Inspetor Bolt encontra um cartãozinho com o verdadeiro motivo. Inspetor Bolt #29\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "لماذا تختبئ جدة بيب؟! 🍂 (حلقة 29)",
+    "description": "\"كنت أريد أن ألتقي بغرامبي كثيرًا. فلماذا هربت عجلاتي؟\" — الجدة روزا\nتزور جدة بيب مدينة ويلبرغ لأول مرة في يوم خريفي مشمس، لكنها عندما ترى غرامبي تختبئ خلف المخبز. هل هو خطافه الكبير؟ المفتش بولت يجد بطاقة صغيرة فيها السبب الحقيقي. المفتش بولت #29\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Pourquoi la mamie de Pip se cache ?! 🍂 (Ép 29)",
+    "description": "\"Je voulais tant rencontrer Grumpy. Alors pourquoi mes roues se sont enfuies ?\" — Mamie Rosa\nLa grand-mère de Pip visite Wheelburg pour la première fois par une belle journée d'automne, mais dès qu'elle voit Grumpy, elle se cache derrière la boulangerie. Est-ce son gros crochet ? L'inspecteur Bolt trouve une petite carte avec la vraie raison. Inspecteur Bolt #29\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "ピップのおばあちゃん、なぜかくれるの!?🍂(第29話)",
+    "description": "「グランピーに会いたかったのに、どうしてタイヤがにげちゃったの?」— ローザおばあちゃん\nよく晴れた秋の日、ピップのおばあちゃんがはじめてホイールバーグにやってきた。でもグランピーを見たとたん、パン屋のうらにかくれてしまう。大きなフックのせい?ボルトが小さなメモカードで本当のりゆうを見つける。インスペクター・ボルト #29\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "핍의 할머니는 왜 숨었을까?! 🍂 (29화)",
+    "description": "\"그럼피를 정말 만나고 싶었는데, 왜 내 바퀴가 도망쳤을까?\" — 로사 할머니\n화창한 가을날 핍의 할머니가 처음으로 휠버그에 왔어요. 그런데 그럼피를 보자마자 빵집 뒤로 숨어 버렸어요. 커다란 고리 때문일까요? 볼트 경감이 작은 메모 카드에서 진짜 이유를 찾아요. 인스펙터 볼트 #29\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Warum versteckt sich Pips Oma?! 🍂 (Folge 29)",
+    "description": "\"Ich wollte Grumpy so gern kennenlernen. Warum sind meine Räder weggelaufen?\" — Oma Rosa\nPips Oma besucht Wheelburg zum ersten Mal an einem sonnigen Herbsttag, doch als sie Grumpy sieht, versteckt sie sich hinter der Bäckerei. Ist es sein großer Haken? Inspektor Bolt findet ein kleines Notizkärtchen mit dem wahren Grund. Inspector Bolt #29\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "WHY IS SHE HIDING?",
+   "title": "Grandma Saw Grumpy and RAN! 🍂 (Ep 29) #shorts",
+   "description": "Pip's grandma hides the second she sees Grumpy. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "grandma"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La abuela vio a Grumpy y salió corriendo! 🍂 (Ep 29) #shorts",
+     "description": "La abuela de Pip se esconde en cuanto ve a Grumpy. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A vovó viu o Grumpy e FUGIU! 🍂 (Ep 29) #shorts",
+     "description": "A avó da Pip se esconde assim que vê o Grumpy. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "رأت الجدة غرامبي وهربت! 🍂 (حلقة 29) #shorts",
+     "description": "جدة بيب تختبئ لحظة رؤيتها غرامبي. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Mamie a vu Grumpy et s'est ENFUIE ! 🍂 (Ép 29) #shorts",
+     "description": "La mamie de Pip se cache dès qu'elle voit Grumpy. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "おばあちゃん、グランピーを見てにげた!🍂(第29話)#shorts",
+     "description": "ピップのおばあちゃんはグランピーを見たとたんにかくれた。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "할머니가 그럼피를 보고 도망쳤어요! 🍂 (29화) #shorts",
+     "description": "핍의 할머니는 그럼피를 보자마자 숨어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Oma sah Grumpy und RANNTE weg! 🍂 (Folge 29) #shorts",
+     "description": "Pips Oma versteckt sich, sobald sie Grumpy sieht. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 33,
+   "dur": 24,
+   "top": "WHAT DOES IT SAY?",
+   "title": "Grandma Dropped a Secret Note Card! 🍂 (Ep 29) #shorts",
+   "description": "What did Grandma write about Grumpy? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La abuela dejó caer una tarjeta secreta! 🍂 (Ep 29) #shorts",
+     "description": "¿Qué escribió la abuela sobre Grumpy? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A vovó deixou cair um cartão secreto! 🍂 (Ep 29) #shorts",
+     "description": "O que a vovó escreveu sobre o Grumpy? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الجدة أسقطت بطاقة سرية! 🍂 (حلقة 29) #shorts",
+     "description": "ماذا كتبت الجدة عن غرامبي؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Mamie a fait tomber une carte secrète ! 🍂 (Ép 29) #shorts",
+     "description": "Qu'a écrit Mamie sur Grumpy ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "おばあちゃんがひみつのメモをおとした!🍂(第29話)#shorts",
+     "description": "グランピーのことを何て書いたの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "할머니가 비밀 메모 카드를 떨어뜨렸어요! 🍂 (29화) #shorts",
+     "description": "할머니는 그럼피에 대해 뭐라고 썼을까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Oma hat eine geheime Notizkarte verloren! 🍂 (Folge 29) #shorts",
+     "description": "Was hat Oma über Grumpy geschrieben? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 70,
+   "dur": 22,
+   "top": "CAN HE LAUGH?",
+   "title": "Can Anyone Make Grumpy Laugh? 🍂 (Ep 29) #shorts",
+   "description": "Grumpy never laughs. Not even once. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Alguien puede hacer reír a Grumpy? 🍂 (Ep 29) #shorts",
+     "description": "Grumpy nunca se ríe. Ni una vez. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Alguém consegue fazer o Grumpy rir? 🍂 (Ep 29) #shorts",
+     "description": "O Grumpy nunca ri. Nem uma vez. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل يستطيع أحد أن يُضحك غرامبي؟ 🍂 (حلقة 29) #shorts",
+     "description": "غرامبي لا يضحك أبدًا. ولا مرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelqu'un peut-il faire rire Grumpy ? 🍂 (Ép 29) #shorts",
+     "description": "Grumpy ne rit jamais. Pas une seule fois. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピーをわらわせられる?🍂(第29話)#shorts",
+     "description": "グランピーは一度もわらったことがない。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 그럼피를 웃게 할 수 있을까? 🍂 (29화) #shorts",
+     "description": "그럼피는 한 번도 웃은 적이 없어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Kann irgendwer Grumpy zum Lachen bringen? 🍂 (Folge 29) #shorts",
+     "description": "Grumpy lacht nie. Kein einziges Mal. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

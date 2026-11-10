@@ -1,0 +1,1332 @@
+{
+ "id": "20261111-1-can-turbo-sit-still",
+ "plot": "With a flat tyre and the new one only arriving at sunset, Turbo must stay all day in Bolt's warm garage while it rains; he tries once to sneak out and flops, so Bolt gives him a sitting-still case — find where the drip in the garage comes from before the puddle reaches Bolt's case notebook; Turbo listens and watches, works out the drip gets faster with the rain, and finds a red race-track leaf in the puddle: the drainpipe is blocked by the leaves Grumpy dumped there yesterday; Grumpy clears it, Dot the tyre van brings the new tyre at sunset, and Bertha splashes in with a new problem — her giant pumpkin won't fit through her door.",
+ "script": {
+  "title": "Can Turbo Sit Still Until Sunset?",
+  "description": "A flat tyre, a rainy day and one drip that nobody can find. Inspector Bolt #31",
+  "set": {
+   "place": "Bolt's warm garage on Gear Street with its big window, a rainy autumn day from morning until sunset",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "dot": {
+    "name": "Dot",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 1,
+    "color": [
+     0.15,
+     0.7,
+     0.45
+    ],
+    "kind": "truck",
+    "size": 0.9,
+    "hat": false,
+    "home": [
+     13.0,
+     17.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "notes",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     9.0,
+     7.5,
+     0.3
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "tyre",
+    "type": "wheel",
+    "color": "black",
+    "at": [
+     12.0,
+     15.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Bump, flop! Bump, flop! Bolt! Help! My tyre is flat!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter:left"
+     ],
+     [
+      "turbo",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "text": "NO ZOOMING ALL DAY?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:3,12"
+     ],
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Easy, Turbo. Come inside. Out of the rain.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "enter:right"
+     ],
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a rainy autumn morning in Wheelburg. Drip, drop, drip.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Yesterday, Turbo raced on sharp old stones. Now his tyre was flat.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I called Dot, the tyre van. New tyre at sunset.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sunset?! That's a whole day! What do I do all day?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "You stay here, in my garage. No rolling on that tyre.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "If you drive on it, your wheel could get hurt, Turbo.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And Bolt, all yesterday's leaves? I put them by your garage.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Up the side. By the drainpipe. Out of the way.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Thank you, Grumpy. Very tidy.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy and Pip drove off. Turbo was alone with Bolt.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "exit"
+     ],
+     [
+      "pip",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "One minute. I sat still for one whole minute.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "That was eleven seconds, Turbo.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay. I'll count raindrops. One, two, three... boring!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Waiting is hard for everyone, Turbo. Even for detectives.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I can't do it! My wheels feel all wiggly!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo tried to roll quietly to the door. Very, very slowly.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-6,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flop! Flop! Floppity flop!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "SNEAKY TURBO!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo. Back you come. Gently.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry. I'm just no good at waiting.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:3,12"
+     ],
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Drip. Drip. Plop.",
+    "cam": "wide",
+    "do": [
+     [
+      "notes",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. Did you hear that, Turbo?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A drip! Inside the garage! Where is it coming from?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A little puddle was creeping across the floor. Toward Bolt's blue notebook.",
+    "cam": "prop:notes",
+    "do": [
+     [
+      "notes",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THE NOTEBOOK!",
+    "hold": 1.0,
+    "cam": "prop:notes",
+    "do": [
+     [
+      "notes",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "My case notebook! Every case I ever solved is in there!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll find the drip! I'll zoom around and look everywhere!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "No zooming. Here is your case, Detective Turbo.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Find the drip. But your wheels must not move. Not once.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Solve a case without moving? Is that even allowed?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's the hardest kind. Use your ears and your eyes.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay. Detective Turbo is on the case. Wheels... frozen!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Turbo sat very still. And he listened.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Drip... drip... drip. It's not coming from the door.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And not from your hat hook, Bolt. Your hat is dry.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "turn:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good. What else do you notice?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "The puddle starts under the big window. Not in the middle.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Outside, the rain got harder. Whoosh. Whoosh.",
+    "cam": "overhead",
+    "do": [
+     [
+      "notes",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Listen! Now it goes drip-drip-drip-drip! Faster!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "When the rain is fast, the drip is fast!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Excellent, Detective. The drip follows the rain.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the puddle kept creeping. Closer and closer to the notebook.",
+    "cam": "prop:notes",
+    "do": [
+     [
+      "notes",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Only a little bit more, and my notebook gets soaked!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Keep thinking, Turbo. I trust your eyes.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Don't move, don't move, don't move. Think, Turbo!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Something red was floating in the puddle. Round and round.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A leaf! A red leaf! Inside the garage!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "A LEAF INSIDE?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bolt",
+    "say": "Leaves don't grow in garages. So how did it get in?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It came with the water. Under the big window.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Wait. What did Grumpy say this morning?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "By the drainpipe! The leaves are in the drainpipe!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So the rain can't go down the pipe.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So it spills over and comes in at the window! Case closed!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "CASE CLOSED!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Detective Turbo solved it. And his wheels never moved.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt called Grumpy. He came back through the rain.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My leaves did that? Sorry, Bolt.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It's okay, Grumpy! Your leaves gave me my first case!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy reached up with his hook. Scrape, scrape. Pull!",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "to:12,18"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! A big wet ball of leaves fell out of the pipe.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Gurgle, gurgle. Now the rain goes down. Where it belongs.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The drip stopped. My notebook is dry. Every page.",
+    "cam": "prop:notes",
+    "do": [
+     [
+      "notes",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I sat still, Bolt. Did you see? Almost the whole day!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When your wheels must stop, your brain can still race.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At sunset, the rain stopped. And a green van rolled in.",
+    "cam": "wide",
+    "do": [
+     [
+      "dot",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "dot",
+    "say": "Hello, hello! Dot's Tyres! One shiny new tyre for Turbo!",
+    "cam": "close:dot",
+    "do": [
+     [
+      "dot",
+      "happy"
+     ],
+     [
+      "tyre",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "My tyre! My beautiful round tyre! I missed you!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dot",
+    "say": "You didn't even meet it yet, sweetie.",
+    "cam": "close:dot",
+    "do": [
+     [
+      "dot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop, click, done. Turbo had four good wheels again.",
+    "cam": "prop:tyre",
+    "do": [
+     [
+      "tyre",
+      "give:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "dot",
+    "say": "Now go easy on those old white stones, okay?",
+    "cam": "close:dot",
+    "do": [
+     [
+      "dot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I promise! Around them, not over them!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Zoom time! Wait. Can I tell you about my case first?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dot",
+    "say": "A car who wants to talk before zooming? That's new!",
+    "cam": "close:dot",
+    "do": [
+     [
+      "dot",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Pip zoomed in, splashing through the puddles.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo! You've got a new tyre! Hooray!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Pip! I solved a case! Sitting still! Ask Bolt!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "You? Sitting still? Is that true, Bolt?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every word of it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And right behind her came Big Bertha. Very upset.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt! It's my pumpkin! My giant pumpkin for the Harvest Fair!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "It grew SO big, it won't fit out of my depot door!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK PUMPKIN?!",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Turbo Sit Still Until Sunset? 🌧️ (Ep 31)",
+  "description": "\"I'm the fastest car in Wheelburg. Sitting still is the hardest thing I've ever done.\" — Turbo\nTurbo has a flat tyre and must wait in Bolt's garage all rainy day. Then a drip starts, and a puddle creeps toward Bolt's case notebook. Can Turbo solve it without moving his wheels? Inspector Bolt #31\n\n#series #3DAnimation #InspectorBolt #rainyday",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "rainy day",
+   "autumn cartoon",
+   "flat tyre",
+   "turbo the race car",
+   "patience",
+   "waiting",
+   "detective for kids"
+  ],
+  "thumb_text": "ALL DAY?!",
+  "thumb_beat": 6,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Turbo quedarse quieto hasta el atardecer? 🌧️ (Ep 31)",
+    "description": "\"Soy el coche más rápido de Wheelburg. Quedarme quieto es lo más difícil que he hecho.\" — Turbo\nTurbo tiene una rueda pinchada y debe esperar todo el día de lluvia en el garaje de Bolt. Entonces empieza una gotera y un charco avanza hacia el cuaderno de casos de Bolt. ¿Podrá Turbo resolverlo sin mover las ruedas? Inspector Bolt #31\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "O Turbo consegue ficar parado até o pôr do sol? 🌧️ (Ep 31)",
+    "description": "\"Sou o carro mais rápido de Wheelburg. Ficar parado é a coisa mais difícil que já fiz.\" — Turbo\nO Turbo está com um pneu furado e precisa esperar o dia todo de chuva na garagem do Bolt. Então começa uma goteira, e uma poça avança até o caderno de casos do Bolt. O Turbo consegue resolver sem mexer as rodas? Inspetor Bolt #31\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "هل يستطيع توربو أن يبقى ساكنًا حتى الغروب؟ 🌧️ (حلقة 31)",
+    "description": "\"أنا أسرع سيارة في ويلبرغ. البقاء ساكنًا أصعب شيء فعلته.\" — توربو\nإطار توربو مثقوب، وعليه أن ينتظر طوال اليوم الممطر في مرأب بولت. ثم يبدأ تنقيط، وتزحف بركة نحو دفتر قضايا بولت. هل يستطيع توربو حل اللغز دون أن يحرك عجلاته؟ المفتش بولت #31\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Turbo peut-il rester immobile jusqu'au soir ? 🌧️ (Ép 31)",
+    "description": "\"Je suis la voiture la plus rapide de Wheelburg. Rester immobile, c'est le plus dur que j'aie jamais fait.\" — Turbo\nTurbo a un pneu crevé et doit attendre toute la journée de pluie dans le garage de Bolt. Puis une goutte commence à tomber et une flaque avance vers le carnet d'enquêtes de Bolt. Turbo peut-il résoudre l'énigme sans bouger ses roues ? Inspecteur Bolt #31\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "ターボ、夕方までじっとできる?🌧️(第31話)",
+    "description": "「ホイールバーグでいちばん速いぼくにとって、じっとするのがいちばんむずかしい。」— ターボ\nパンクしたターボは、雨の一日ずっとボルトのガレージで待つことに。そこへ雨もりがはじまり、水たまりがボルトの事件ノートに近づく。ターボはタイヤを動かさずになぞをとけるかな?インスペクター・ボルト #31\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "터보는 해 질 때까지 가만히 있을 수 있을까? 🌧️ (31화)",
+    "description": "\"난 휠버그에서 제일 빠른 차야. 가만히 있는 게 제일 어려워.\" — 터보\n타이어가 펑크 난 터보는 비 오는 하루 종일 볼트의 차고에서 기다려야 해요. 그때 물이 똑똑 떨어지고, 물웅덩이가 볼트의 사건 노트 쪽으로 다가와요. 터보는 바퀴를 움직이지 않고 해결할 수 있을까요? 인스펙터 볼트 #31\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Kann Turbo bis Sonnenuntergang stillhalten? 🌧️ (Folge 31)",
+    "description": "\"Ich bin das schnellste Auto in Wheelburg. Stillsitzen ist das Schwerste, was ich je gemacht habe.\" — Turbo\nTurbo hat einen Platten und muss den ganzen Regentag in Bolts Garage warten. Dann beginnt es zu tropfen, und eine Pfütze kriecht auf Bolts Fallbuch zu. Kann Turbo das Rätsel lösen, ohne seine Räder zu bewegen? Inspector Bolt #31\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "NO ZOOMING ALL DAY?!",
+   "title": "Turbo Has a Flat Tyre! Now What? 🌧️ (Ep 31) #shorts",
+   "description": "The fastest car in town must wait all day. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "flat tyre"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo tiene una rueda pinchada! ¿Y ahora qué? 🌧️ (Ep 31) #shorts",
+     "description": "El coche más rápido debe esperar todo el día. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Turbo furou o pneu! E agora? 🌧️ (Ep 31) #shorts",
+     "description": "O carro mais rápido precisa esperar o dia todo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "إطار توربو مثقوب! ماذا الآن؟ 🌧️ (حلقة 31) #shorts",
+     "description": "أسرع سيارة في المدينة عليها الانتظار طوال اليوم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo a un pneu crevé ! Et maintenant ? 🌧️ (Ép 31) #shorts",
+     "description": "La voiture la plus rapide doit attendre toute la journée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボがパンク!どうする?🌧️(第31話)#shorts",
+     "description": "町いちばん速い車が、一日じゅう待つことに。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보 타이어가 펑크 났어요! 이제 어쩌지? 🌧️ (31화) #shorts",
+     "description": "가장 빠른 차가 하루 종일 기다려야 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo hat einen Platten! Was jetzt? 🌧️ (Folge 31) #shorts",
+     "description": "Das schnellste Auto der Stadt muss den ganzen Tag warten. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 23,
+   "dur": 24,
+   "top": "WHERE IS THE DRIP?",
+   "title": "A Drip Inside Bolt's Garage! Where From? 🌧️ (Ep 31) #shorts",
+   "description": "And the puddle is creeping toward the notebook. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Una gotera en el garaje de Bolt! ¿De dónde? 🌧️ (Ep 31) #shorts",
+     "description": "Y el charco avanza hacia el cuaderno. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma goteira na garagem do Bolt! De onde? 🌧️ (Ep 31) #shorts",
+     "description": "E a poça avança até o caderno. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "تنقيط داخل مرأب بولت! من أين؟ 🌧️ (حلقة 31) #shorts",
+     "description": "والبركة تزحف نحو الدفتر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une fuite dans le garage de Bolt ! D'où vient-elle ? 🌧️ (Ép 31) #shorts",
+     "description": "Et la flaque avance vers le carnet. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ボルトのガレージで雨もり!どこから?🌧️(第31話)#shorts",
+     "description": "水たまりがノートに近づいてくる。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "볼트의 차고에 물이 새요! 어디서? 🌧️ (31화) #shorts",
+     "description": "물웅덩이가 노트 쪽으로 다가와요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Es tropft in Bolts Garage! Aber woher? 🌧️ (Folge 31) #shorts",
+     "description": "Und die Pfütze kriecht auf das Notizbuch zu. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 82,
+   "dur": 20,
+   "top": "TOO BIG?!",
+   "title": "Bertha's Pumpkin Is TOO Big for the Door! 🎃 (Ep 31) #shorts",
+   "description": "The Harvest Fair is tomorrow! Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "pumpkin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La calabaza de Bertha no cabe por la puerta! 🎃 (Ep 31) #shorts",
+     "description": "¡La feria de la cosecha es mañana! La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A abóbora da Bertha não passa pela porta! 🎃 (Ep 31) #shorts",
+     "description": "A Feira da Colheita é amanhã! A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "يقطينة بيرثا أكبر من الباب! 🎃 (حلقة 31) #shorts",
+     "description": "مهرجان الحصاد غدًا! الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La citrouille de Bertha est TROP grosse pour la porte ! 🎃 (Ép 31) #shorts",
+     "description": "La fête des récoltes, c'est demain ! La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサのかぼちゃ、ドアより大きい!🎃(第31話)#shorts",
+     "description": "しゅうかくまつりはあした!つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사의 호박이 문보다 커요! 🎃 (31화) #shorts",
+     "description": "추수 축제는 내일이에요! 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Berthas Kürbis ist ZU groß für die Tür! 🎃 (Folge 31) #shorts",
+     "description": "Das Erntefest ist morgen! Nächster Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1297 @@
+{
+ "id": "20261110-2-where-did-the-track-go",
+ "plot": "On her last afternoon in Wheelburg, Grandma Rosa wants one lap on the round race track by the big oak where she won race number seven, but nobody has ever seen a track; Turbo searches the town and blows the park's leaves everywhere, then Bolt notices her old trophy says 'Oak Ring' and the park's round walking path is called the Doughnut Path — the old track is still there under Grumpy's autumn leaf piles; the whole town sweeps it together, Rosa wins one last lap because Turbo stops to wave, and as she drives home at sunset, Turbo's tyre goes flat.",
+ "script": {
+  "title": "Where Did Grandma's Race Track Go?",
+  "description": "Grandma Rosa won her first race in Wheelburg. Now the track is gone. Inspector Bolt #30",
+  "set": {
+   "place": "Wheelburg Park by the big old oak and its round leafy path, Grandma Rosa's last afternoon until sunset",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "rosa": {
+    "name": "Grandma Rosa",
+    "voice": "bf_isabella",
+    "speed": 0.92,
+    "pitch": 1,
+    "color": [
+     0.72,
+     0.56,
+     0.86
+    ],
+    "kind": "car",
+    "size": 0.8,
+    "hat": false,
+    "home": [
+     12.0,
+     13.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     11.0,
+     12.0,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Race track! Where are you? Come out, race track!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter:left"
+     ],
+     [
+      "turbo",
+      "to:10,17"
+     ]
+    ]
+   },
+   {
+    "text": "THE TRACK IS GONE!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-8,12"
+     ],
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "I looked everywhere! The school, the bakery, the car wash!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "But it was here. By the big oak. I'm sure of it.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "enter:right"
+     ],
+     [
+      "rosa",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Grandma Rosa's last afternoon in Wheelburg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At sunset she would drive home to the seaside.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma just wants one lap. One lap on her old track.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Race number seven. My very first win. Right here, under the oak.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "The track was round, like a big doughnut. Sandy and bumpy.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Like the Doughnut Path? Where Grumpy rakes the leaves?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "enter:right"
+     ],
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's just a path. For walking. And for my leaves.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A path is not a track! Tracks have lines and finishes!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hmm. Madam Rosa, what do you remember from that day?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "They gave me a little gold cup. I keep it always.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She showed them a tiny golden trophy with a seven on it.",
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "RACE NUMBER SEVEN!",
+    "hold": 1.0,
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Grandma, you carried it all the way here?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Of course, dear. It's my lucky cup.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay! New plan! I'll find the track at top speed!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed across the park. Around and around the oak.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-10,18"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Leaves flew up everywhere. Red, yellow and brown.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:10,8"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My leaves. My neat leaf piles.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I raked those all morning. Every single one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry, Grumpy! But look! Still no track! Only more leaves!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo, you made a leaf storm! I can't see my wheels!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I just wanted to help Grandma. I always go too fast.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Oh, Turbo dear. I went too fast too, when I was young.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The sun is going down. Grandma leaves in one hour!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "If we don't find it, she'll never race here again!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "ONE HOUR LEFT!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "Let us not rush. Let us look at the clue we have.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt looked closely at the little gold trophy.",
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "There are tiny words under the seven. Oak Ring.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Oak Ring! Yes! That's what we called it!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oak Ring? Nobody in Wheelburg calls anything that.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Names change, Bertha. Places often stay.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy. Your Doughnut Path. What is under the leaves?",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Sand. Bumps. Old white stones. Very annoying for raking.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And where do you put all the leaves each autumn?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "On the path. In a big ring. Around the oak.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE TRACK IS HIDING!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "The Doughnut Path IS the race track?!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It was never gone! It was just sleeping under leaves!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "But look at all those leaves. And the sun is so low.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The sun is touching the hills! We need everyone, right now!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everyone lined up, side by side, like a big broom.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-6,10"
+     ],
+     [
+      "grumpy",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Push together. Nice and steady. Nobody zooms.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Nobody zooms? Not even a tiny zoom?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Not even a tiny zoom.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They rolled forward together. Swish, swish, swish.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "to:4,10"
+     ],
+     [
+      "bertha",
+      "to:-1,10"
+     ],
+     [
+      "bolt",
+      "to:9,10"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Leaves on my roof! Leaves in my windows! I'm a leaf bus!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy, your hook is full of leaves! You look like a tree!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I am a tree now. A grumpy tree.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And under the leaves, old white lines began to appear.",
+    "cam": "wide",
+    "do": [
+     [
+      "fx",
+      "tracks:pip-rosa"
+     ]
+    ]
+   },
+   {
+    "text": "THE OLD LINES!",
+    "hold": 1.0,
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "rosa",
+    "say": "There it is. My Oak Ring. Just like I remember.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma, look! The finish line is still there!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Some old things aren't gone. They're just waiting under the leaves.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "One lap! Grandma Rosa versus Turbo! Pretty please?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Oh, you're on, young car!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "to:-2,9"
+     ],
+     [
+      "rosa",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ready, steady, go! They raced around the big old oak.",
+    "cam": "wide",
+    "do": [
+     [
+      "rosa",
+      "to:-12,16"
+     ],
+     [
+      "turbo",
+      "to:-10,18"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Look at me! Look how fast I am! Hello, everyone!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo turned to wave at his friends. Again. And again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:8,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Grandma Rosa just kept going. Steady. Never stopping.",
+    "cam": "wide",
+    "do": [
+     [
+      "rosa",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA WINS!",
+    "hold": 1.0,
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "What? How? I'm the fastest car in Wheelburg!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Fast is good, dear. But you have to keep looking ahead.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Race number eight! Grandma won again!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay, okay. You are the real champion, Grandma Rosa.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Heh. Good race. Bad for my leaves.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then it was time for Grandma Rosa to drive home.",
+    "cam": "wide",
+    "do": [
+     [
+      "rosa",
+      "to:12,13"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Do you really have to go? We just found your track!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "I'll come back in spring, sweetie. For race number nine.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Pip, dear, keep this. For your first race one day.",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She gave Pip the little gold trophy.",
+    "cam": "prop:trophy",
+    "do": [
+     [
+      "trophy",
+      "give:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I'll keep it safe, Grandma. I promise. Always.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "rosa",
+    "say": "Bye-bye, Wheelburg! Bye-bye, my Oak Ring!",
+    "cam": "close:rosa",
+    "do": [
+     [
+      "rosa",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The friends watched her purple lights go over the hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Okay! Now I'll practise! Around the track, ten times!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He zoomed off toward the old white stones. Bump, bump, bump.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-8,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pfffffft.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT WAS THAT?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "My front tyre. It's flat. Totally flat.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Old white stones. Sharp ones. I told you.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A new tyre can't come until tomorrow, Turbo.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Tomorrow? A whole day without zooming? I can't!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Where Did Grandma's Race Track Go? 🍂 (Ep 30)",
+  "description": "\"I won my very first race right here. So where did my track go?\" — Grandma Rosa\nOn her last autumn afternoon in Wheelburg, Pip's grandma wants one lap on her old race track by the big oak, but nobody has ever seen it. Turbo searches at top speed while Inspector Bolt reads one tiny clue on her old gold trophy. Inspector Bolt #30\n\n#series #3DAnimation #InspectorBolt #autumn",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn leaves",
+   "race track",
+   "race cars for kids",
+   "grandma",
+   "turbo the race car",
+   "teamwork",
+   "fall cartoon"
+  ],
+  "thumb_text": "TRACK GONE?!",
+  "thumb_beat": 11,
+  "localizations": {
+   "es": {
+    "title": "¿Dónde está la pista de carreras de la abuela? 🍂 (Ep 30)",
+    "description": "\"Gané mi primera carrera justo aquí. ¿Dónde está mi pista?\" — Abuela Rosa\nEn su última tarde de otoño en Wheelburg, la abuela de Pip quiere dar una vuelta en su vieja pista junto al gran roble, pero nadie la ha visto nunca. Turbo la busca a toda velocidad y el Inspector Bolt lee una pequeña pista en su viejo trofeo dorado. Inspector Bolt #30\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Cadê a pista de corrida da vovó? 🍂 (Ep 30)",
+    "description": "\"Ganhei minha primeira corrida bem aqui. Cadê a minha pista?\" — Vovó Rosa\nNa última tarde de outono em Wheelburg, a avó da Pip quer dar uma volta na velha pista perto do grande carvalho, mas ninguém nunca a viu. O Turbo procura a toda velocidade e o Inspetor Bolt lê uma pista minúscula no velho troféu dourado dela. Inspetor Bolt #30\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "أين ذهب مضمار سباق الجدة؟ 🍂 (حلقة 30)",
+    "description": "\"فزت بأول سباق لي هنا بالضبط. فأين ذهب مضماري؟\" — الجدة روزا\nفي آخر عصر خريفي لها في ويلبرغ، تريد جدة بيب لفة واحدة على مضمارها القديم قرب شجرة البلوط الكبيرة، لكن لم يره أحد من قبل. توربو يبحث بأقصى سرعة، والمفتش بولت يقرأ دليلًا صغيرًا على كأسها الذهبية القديمة. المفتش بولت #30\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Où est passée la piste de course de Mamie ? 🍂 (Ép 30)",
+    "description": "\"J'ai gagné ma toute première course ici. Où est passée ma piste ?\" — Mamie Rosa\nPour son dernier après-midi d'automne à Wheelburg, la mamie de Pip veut faire un tour sur sa vieille piste près du grand chêne, mais personne ne l'a jamais vue. Turbo la cherche à toute vitesse et l'inspecteur Bolt lit un minuscule indice sur son vieux trophée doré. Inspecteur Bolt #30\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "おばあちゃんのレース場はどこへ?🍂(第30話)",
+    "description": "「はじめてのレースで勝ったのはここなのに、コースはどこ?」— ローザおばあちゃん\nホイールバーグでの最後の秋の午後、ピップのおばあちゃんは大きなかしの木のそばの古いコースを一周したい。でもだれも見たことがない。ターボは全速力でさがし、ボルトは古い金のトロフィーの小さな手がかりを読む。インスペクター・ボルト #30\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "할머니의 경주 트랙은 어디로 갔을까? 🍂 (30화)",
+    "description": "\"바로 여기서 첫 경주에서 이겼는데, 내 트랙은 어디 갔지?\" — 로사 할머니\n휠버그에서의 마지막 가을 오후, 핍의 할머니는 큰 참나무 옆 옛 트랙을 한 바퀴 돌고 싶어요. 하지만 아무도 본 적이 없어요. 터보는 전속력으로 찾고, 볼트 경감은 낡은 금 트로피에서 작은 단서를 읽어요. 인스펙터 볼트 #30\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Wo ist Omas Rennstrecke hin? 🍂 (Folge 30)",
+    "description": "\"Genau hier habe ich mein erstes Rennen gewonnen. Wo ist meine Strecke?\" — Oma Rosa\nAn ihrem letzten Herbstnachmittag in Wheelburg möchte Pips Oma eine Runde auf ihrer alten Rennstrecke bei der großen Eiche fahren, aber niemand hat sie je gesehen. Turbo sucht mit Vollgas, und Inspektor Bolt liest einen winzigen Hinweis auf ihrem alten goldenen Pokal. Inspector Bolt #30\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "WHERE IS THE TRACK?",
+   "title": "Turbo Can't Find Grandma's Race Track! 🍂 (Ep 30) #shorts",
+   "description": "Grandma wants one last lap. But where is the track? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "race track"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo no encuentra la pista de la abuela! 🍂 (Ep 30) #shorts",
+     "description": "La abuela quiere una última vuelta. ¿Pero dónde está la pista? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Turbo não acha a pista da vovó! 🍂 (Ep 30) #shorts",
+     "description": "A vovó quer uma última volta. Mas cadê a pista? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو لا يجد مضمار الجدة! 🍂 (حلقة 30) #shorts",
+     "description": "الجدة تريد لفة أخيرة. لكن أين المضمار؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo ne trouve pas la piste de Mamie ! 🍂 (Ép 30) #shorts",
+     "description": "Mamie veut un dernier tour. Mais où est la piste ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボ、おばあちゃんのコースが見つからない!🍂(第30話)#shorts",
+     "description": "おばあちゃんは最後の一周がしたい。でもコースはどこ?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보가 할머니의 트랙을 못 찾아요! 🍂 (30화) #shorts",
+     "description": "할머니는 마지막 한 바퀴를 원해요. 그런데 트랙은 어디에? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo findet Omas Rennstrecke nicht! 🍂 (Folge 30) #shorts",
+     "description": "Oma will eine letzte Runde. Aber wo ist die Strecke? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 78,
+   "dur": 22,
+   "top": "WHAT WAS THAT?!",
+   "title": "Pfffft! What Just Happened to Turbo? 🍂 (Ep 30) #shorts",
+   "description": "A whole day without zooming? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "flat tyre"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pfffft! ¿Qué le pasó a Turbo? 🍂 (Ep 30) #shorts",
+     "description": "¿Un día entero sin correr? La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Pfffft! O que aconteceu com o Turbo? 🍂 (Ep 30) #shorts",
+     "description": "Um dia inteiro sem correr? A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بففففت! ماذا حدث لتوربو؟ 🍂 (حلقة 30) #shorts",
+     "description": "يوم كامل بلا سرعة؟ الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pfffft ! Qu'est-il arrivé à Turbo ? 🍂 (Ép 30) #shorts",
+     "description": "Une journée entière sans foncer ? La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "プシュー!ターボに何がおきた?🍂(第30話)#shorts",
+     "description": "まる一日、走れないの?つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "푸슈슉! 터보에게 무슨 일이? 🍂 (30화) #shorts",
+     "description": "하루 종일 못 달린다고? 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pfffft! Was ist mit Turbo passiert? 🍂 (Folge 30) #shorts",
+     "description": "Einen ganzen Tag ohne Flitzen? Nächster Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

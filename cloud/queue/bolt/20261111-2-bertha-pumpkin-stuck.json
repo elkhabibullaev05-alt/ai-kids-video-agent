@@ -1,0 +1,1343 @@
+{
+ "id": "20261111-2-bertha-pumpkin-stuck",
+ "plot": "On Harvest Fair morning Big Bertha's giant pumpkin, grown by her warm depot window, is stuck in the depot door two hours before Hal judges the pumpkins at noon; Turbo's big push only makes it wobble, so Bolt and Pip measure door and pumpkin with Grumpy's tow rope and find it isn't too big at all — it's the wrong way round, wide but short, like the trophy Pip had to turn to fit on her shelf; they turn it, it slides out, rolls away down Gear Street, stops gently against Hal's apple truck, wins the blue ribbon, and a letter from Grandma Rosa says she's coming back with a friend who wants to race Turbo.",
+ "script": {
+  "title": "Bertha's Giant Pumpkin Is Stuck!",
+  "description": "The Harvest Fair is at noon. Bertha's pumpkin won't come out of the door. Inspector Bolt #32",
+  "set": {
+   "place": "Bertha's bus depot on Gear Street and the hill road down to the Harvest Fair in the town square, a sunny autumn morning until noon",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     15.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "pumpkin",
+    "type": "ball",
+    "color": "orange",
+    "at": [
+     -9.0,
+     13.5,
+     1.0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "ribbon",
+    "type": "star",
+    "color": "blue",
+    "at": [
+     11.0,
+     12.0,
+     1.2
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "letter",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -14.0,
+     9.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Push, Bertha, push! The pumpkin is stuck in the door!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "to:-12,11"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK PUMPKIN!",
+    "hold": 1.0,
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "bertha",
+      "to:-9,16"
+     ],
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "It went IN as a tiny seed! Why won't it come OUT?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Harvest Fair morning in Wheelburg. Sunny and crisp.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ],
+     [
+      "turbo",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha's pumpkin grew all summer by her warm depot window.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hal judges the pumpkins at noon! That's only two hours!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "If it stays stuck, I can't even enter the fair!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Calm down, Bertha. Procedure. First, we look.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Bolt said Procedure! Now it's serious!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Like Grandma's gold trophy! It didn't fit on my shelf.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And how did you fix it, Pip?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "turn:pip"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I don't remember! I just wiggled it. And then it fit!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The pumpkin sat in the doorway. Big, round and very, very stuck.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Easy! I have a brand new tyre! I'll push it out!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Gently, Turbo. Pumpkins crack.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Gentle is my middle name! Here I go! Hnnnngh!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-7,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The pumpkin wobbled. Creak. Creak. Crrreak.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S CRACKING?!",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Stop, stop, stop! My baby pumpkin!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Sorry! That was the door creaking. I think.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-3,12"
+     ],
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "We take the door off. With my hook.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Take off my door? But it's a lovely door!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "It is a very lovely door. Fine. The door stays.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Ninety minutes left! And the fair is down the hill!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nobody pushes. Nobody pulls. Nobody takes off doors.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Guessing is quick. Measuring is better. Let us measure.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Grumpy, may I borrow your tow rope?",
+    "cam": "two:bolt,grumpy",
+    "do": [
+     [
+      "bolt",
+      "turn:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "My rope. For measuring. That's a first.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "First, Bolt measured the door. From the bottom to the top.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-6,12"
+     ],
+     [
+      "grumpy",
+      "to:-4,15"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The door is very tall. Tall enough for Bertha herself.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Pip held the rope across the door. From side to side.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-11,12"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But it's very skinny. Skinny like me!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll measure the pumpkin! It's three Turbos wide! Maybe four!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo, you're not a ruler, sweetie!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'm a very fast ruler.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A very wiggly ruler, too!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt measured the pumpkin. Side to side. Then top to bottom.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wide. Very wide. But not very tall.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Like a pancake. A fat pancake.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The clock on the town hall says eleven! One hour left!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "ONE HOUR LEFT!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bertha",
+    "say": "Maybe it's just too big. Maybe I grew it too big.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I gave it water every day. And I sang it songs.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That's why it's so big. Too much singing.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait. Tall door. Skinny door. Wide pumpkin. Short pumpkin.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I remember now! I turned my trophy on its side!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Exactly, Pip. The pumpkin isn't too big.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's just the wrong way round.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WRONG WAY ROUND!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "The wrong way round? My pumpkin is lying down?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Like a sleepy bus. Let's stand it up.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll be super gentle this time. Gentle is my REAL middle name.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy held the rope. Turbo held the bottom. Very gently.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:-7,15"
+     ],
+     [
+      "turbo",
+      "to:-11,15"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Slow. Slow. A little more. Stop.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the pumpkin rolled up onto its side. Tall and thin.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then it slid through the door. Like it was easy. Swoosh.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pumpkin",
+      "to:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "It's OUT! My pumpkin is out! Hooray!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turn it, don't push it!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip's rule. Turn it, don't push it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Gear Street goes downhill. And pumpkins are round.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S ROLLING AWAY!",
+    "hold": 1.0,
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Come back, pumpkin! Come back!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I'll get ahead of it! Eyes ahead, like Grandma said!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:6,10"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed past it and stopped by Hal's apple truck.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:10,12"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Whoa! Is that a pumpkin or a moon?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "enter:right"
+     ],
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It's Bertha's! Don't eat it! It's for the fair!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bonk. The pumpkin rolled gently into Turbo's bumper. And stopped.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "to:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Caught it! With my new tyre! And no zooming into things!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Only three apples fell off. And they look happy.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo! You caught my pumpkin! You looked ahead!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grandma Rosa taught me. Eyes ahead, not on me!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone rushed down the hill. Just in time for noon.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:4,13"
+     ],
+     [
+      "pip",
+      "to:0,10"
+     ],
+     [
+      "bolt",
+      "to:7,8"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Welcome to the Harvest Fair! Now, the biggest pumpkin is...",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Big Bertha's! The biggest pumpkin Wheelburg ever saw!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ],
+     [
+      "ribbon",
+      "show"
+     ]
+    ]
+   },
+   {
+    "text": "BLUE RIBBON!",
+    "hold": 1.0,
+    "cam": "prop:ribbon",
+    "do": [
+     [
+      "ribbon",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "We did it! All of us! Thank you, friends!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And my door plan was very nearly needed.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And Pip, you remembered your trophy trick!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grandma will be so proud! I can't wait to tell her!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When something won't fit, try it another way round.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the mail van dropped a letter for Pip. With purple ink.",
+    "cam": "wide",
+    "do": [
+     [
+      "letter",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It's from Grandma Rosa! Bolt, read it, please!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Dear Pip. I'm coming back next week. For race number nine.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And I'm bringing a friend. She wants to race Turbo.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Race ME? Who is she? Is she fast? How fast?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It says, she has never lost a race. Not once.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Heh. Turbo, maybe you should practise. Around the stones.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS SHE?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:turbo"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Bertha's Giant Pumpkin Is Stuck! 🎃 (Ep 32)",
+  "description": "\"I grew it from one tiny seed. Now it won't come out of my door!\" — Big Bertha\nIt's Harvest Fair morning, and Bertha's giant pumpkin is stuck in her depot door just two hours before the judging. Pushing makes it creak, so Inspector Bolt gets out a rope and starts measuring. Inspector Bolt #32\n\n#series #3DAnimation #InspectorBolt #harvest",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn cartoon",
+   "pumpkin",
+   "harvest fair",
+   "giant pumpkin",
+   "big bertha the bus",
+   "problem solving",
+   "fall cartoon"
+  ],
+  "thumb_text": "IT WON'T FIT!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¡La calabaza gigante de Bertha se atascó! 🎃 (Ep 32)",
+    "description": "\"La cultivé de una semillita. ¡Y ahora no sale por mi puerta!\" — Gran Bertha\nEs la mañana de la feria de la cosecha y la calabaza gigante de Bertha está atascada en la puerta de su cochera, a solo dos horas del concurso. Empujar la hace crujir, así que el Inspector Bolt saca una cuerda y empieza a medir. Inspector Bolt #32\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "A abóbora gigante da Bertha ficou presa! 🎃 (Ep 32)",
+    "description": "\"Eu plantei de uma sementinha. Agora ela não sai pela minha porta!\" — Grande Bertha\nÉ manhã da Feira da Colheita, e a abóbora gigante da Bertha está presa na porta da garagem, a só duas horas do julgamento. Empurrar faz ela ranger, então o Inspetor Bolt pega uma corda e começa a medir. Inspetor Bolt #32\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "يقطينة بيرثا العملاقة عالقة! 🎃 (حلقة 32)",
+    "description": "\"زرعتها من بذرة صغيرة. والآن لا تخرج من بابي!\" — بيرثا الكبيرة\nإنه صباح مهرجان الحصاد، ويقطينة بيرثا العملاقة عالقة في باب مرآبها قبل التحكيم بساعتين فقط. الدفع يجعلها تصدر صريرًا، فيُخرج المفتش بولت حبلًا ويبدأ بالقياس. المفتش بولت #32\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "La citrouille géante de Bertha est coincée ! 🎃 (Ép 32)",
+    "description": "\"Je l'ai fait pousser d'une toute petite graine. Et maintenant elle ne sort plus par ma porte !\" — Grosse Bertha\nC'est le matin de la fête des récoltes, et la citrouille géante de Bertha est coincée dans la porte de son dépôt, deux heures avant le concours. Pousser la fait craquer, alors l'inspecteur Bolt sort une corde et commence à mesurer. Inspecteur Bolt #32\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "バーサの大きなかぼちゃがつっかえた!🎃(第32話)",
+    "description": "「小さなたねから育てたのに、ドアから出てこないの!」— ビッグ・バーサ\nしゅうかくまつりの朝。バーサの大きなかぼちゃが車庫のドアにつっかえた。しんさまであと2時間。おすとミシミシいうので、ボルトはロープを出して長さをはかりはじめる。インスペクター・ボルト #32\n\n#シリーズ #3Dアニメ #インスペクターボルト"
+   },
+   "ko": {
+    "title": "버사의 거대한 호박이 문에 끼었어요! 🎃 (32화)",
+    "description": "\"작은 씨앗 하나로 키웠는데, 이제 문으로 안 나와!\" — 빅 버사\n추수 축제 날 아침, 심사 두 시간 전인데 버사의 거대한 호박이 차고 문에 꽉 끼었어요. 밀면 삐걱거려서, 볼트 경감은 밧줄을 꺼내 재기 시작해요. 인스펙터 볼트 #32\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Berthas Riesenkürbis steckt fest! 🎃 (Folge 32)",
+    "description": "\"Ich habe ihn aus einem winzigen Samen gezogen. Jetzt kommt er nicht aus meiner Tür!\" — Große Bertha\nEs ist der Morgen des Erntefests, und Berthas Riesenkürbis steckt zwei Stunden vor der Bewertung in ihrer Depottür fest. Schieben lässt ihn knarren, also holt Inspektor Bolt ein Seil und fängt an zu messen. Inspector Bolt #32\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "IT WON'T FIT!",
+   "title": "A Giant Pumpkin Stuck in the Door! 🎃 (Ep 32) #shorts",
+   "description": "Two hours to the Harvest Fair, and it won't come out. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "pumpkin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Una calabaza gigante atascada en la puerta! 🎃 (Ep 32) #shorts",
+     "description": "Faltan dos horas para la feria y no sale. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma abóbora gigante presa na porta! 🎃 (Ep 32) #shorts",
+     "description": "Faltam duas horas para a feira e ela não sai. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "يقطينة عملاقة عالقة في الباب! 🎃 (حلقة 32) #shorts",
+     "description": "ساعتان على مهرجان الحصاد، وهي لا تخرج. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une citrouille géante coincée dans la porte ! 🎃 (Ép 32) #shorts",
+     "description": "Plus que deux heures avant la fête, et elle ne sort pas. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "大きなかぼちゃがドアにつっかえた!🎃(第32話)#shorts",
+     "description": "おまつりまであと2時間なのに出てこない。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "거대한 호박이 문에 끼었어요! 🎃 (32화) #shorts",
+     "description": "축제까지 두 시간, 그런데 안 나와요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Riesenkürbis steckt in der Tür fest! 🎃 (Folge 32) #shorts",
+     "description": "Zwei Stunden bis zum Erntefest, und er kommt nicht raus. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 80,
+   "dur": 22,
+   "top": "WHO IS SHE?!",
+   "title": "Someone Wants to Race Turbo! Who? 🏁 (Ep 32) #shorts",
+   "description": "She has never lost a race. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "race"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Alguien quiere competir con Turbo! ¿Quién? 🏁 (Ep 32) #shorts",
+     "description": "Nunca ha perdido una carrera. La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Alguém quer apostar corrida com o Turbo! Quem? 🏁 (Ep 32) #shorts",
+     "description": "Ela nunca perdeu uma corrida. A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أحدهم يريد مسابقة توربو! من هو؟ 🏁 (حلقة 32) #shorts",
+     "description": "لم تخسر أي سباق أبدًا. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelqu'un veut défier Turbo ! Qui ? 🏁 (Ép 32) #shorts",
+     "description": "Elle n'a jamais perdu une course. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボとレースしたいのはだれ?🏁(第32話)#shorts",
+     "description": "一度もまけたことがないらしい。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "누군가 터보와 경주하고 싶대요! 누구? 🏁 (32화) #shorts",
+     "description": "한 번도 진 적이 없대요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Jemand will gegen Turbo fahren! Wer? 🏁 (Folge 32) #shorts",
+     "description": "Sie hat noch nie ein Rennen verloren. Nächster Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
