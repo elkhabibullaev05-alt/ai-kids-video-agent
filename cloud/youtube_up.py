@@ -82,6 +82,7 @@ def _reason(e):
 # kids (made-for-kids) channels are never cross-promoted, and no channel is promoted to kids.
 CROSS = {
     "UCOJQ4gIRQMlbdr4weDxiVmQ": ("MW4 Campaign HD", "gaming"),
+    "UCeRqasjadAXp1aEseC9rw-A": ("MW4 Shorts Daily", "gaming"),
     "UChKpt9p1vDhAlnWuMMKHUgQ": ("Funny Rank Daily", "gaming"),
     "UCyAwBREYT8kQ_3tYLb4CMKg": ("Money Story Daily", "adult"),
     "UCbWs87aJxQxohE0M2MaO7GQ": ("Wild Sketchbook", "adult"),

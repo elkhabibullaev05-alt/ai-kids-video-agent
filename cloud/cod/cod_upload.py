@@ -8,14 +8,17 @@ import numpy as np
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import youtube_up as Y
 
-HOME = "/root/kanal/cod"; TOKEN = os.path.join(HOME, "token.json"); STATE = os.path.join(HOME, "uploaded.json")
+CH2 = os.environ.get("COD_CH") == "2"   # 2026-11-11 owner: 2nd, Shorts-only channel MW4 Shorts Daily (@MW4ShortsDaily)
+HOME = "/root/kanal/cod2" if CH2 else "/root/kanal/cod"; TOKEN = os.path.join(HOME, "token.json"); STATE = os.path.join(HOME, "uploaded.json")
+MAIN_ID, CH2_ID = "UCOJQ4gIRQMlbdr4weDxiVmQ", "UCeRqasjadAXp1aEseC9rw-A"
 JOB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "job.json")))
 OUT = JOB["out"]
 if not os.path.isdir(OUT) or not glob.glob(os.path.join(OUT, "*.mp4")):
     OUT = JOB.get("out_fallback", OUT) if os.path.isdir(JOB.get("out_fallback", "")) else OUT
-os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash.txt")
+os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash2.txt" if CH2 else "yuklash.txt")
 PER_DAY = {"long": 2, "short": 6}   # 2026-11-11 owner: 2 long + 6 Shorts a day (API quota ~6/day -> rest rolls to next day until a 2nd project is added)
-SLOTS = {"long": [23, 2], "short": [13, 15, 17, 19, 21, 1]}   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
+SLOTS = {"long": [23, 2], "short": [13, 15, 17, 19, 21, 1]}
+if CH2: SLOTS = {"long": [], "short": [14, 16, 18, 20, 22, 0]}   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
         "cod mw4", "call of duty 2026", "fps", "gaming"]
@@ -88,7 +91,44 @@ def cold_open(m):
     except Exception as e:
         log(m["id"], "cold open xato, asl video yuklanadi:", e); return src_long
 
+# 2026-11-11 owner: viewers in the US/EU + Japan/Korea -> title translations (YouTube shows them by viewer language)
+LOC = {
+ "Wait For It...": {"ja": "最後まで見て…", "ko": "끝까지 봐…", "de": "Warte ab...", "es": "Espera...", "fr": "Attends..."},
+ "This Got Intense FAST": {"ja": "一瞬で激戦に", "ko": "순식간에 격전", "de": "Das wurde SCHNELL heftig", "es": "Esto se puso intenso RÁPIDO", "fr": "Ça devient intense TRÈS vite"},
+ "MW4 Graphics Are UNREAL": {"ja": "MW4のグラフィックがヤバい", "ko": "MW4 그래픽 미쳤다", "de": "MW4 Grafik ist UNREAL", "es": "Los gráficos de MW4 son IRREALES", "fr": "Les graphismes de MW4 sont IRRÉELS"},
+ "No Way This Is In COD": {"ja": "これがCODだなんて", "ko": "이게 콜옵이라고?", "de": "Das ist wirklich in COD?!", "es": "No puede ser que esto esté en COD", "fr": "Impossible que ce soit dans COD"},
+ "The Craziest Moment In MW4": {"ja": "MW4で一番ヤバい瞬間", "ko": "MW4 최고의 순간", "de": "Der krasseste Moment in MW4", "es": "El momento más loco de MW4", "fr": "Le moment le plus fou de MW4"},
+}
+def localize(title):
+    for en, tr in LOC.items():
+        if title.lower().startswith(en.lower()[:18]):
+            return {lang: {"title": (t + " | Call of Duty MW4 #shorts")[:100], "description": DESC} for lang, t in tr.items()}
+    return None
+
+def plan2():
+    """Shorts-only channel: its own B-set Shorts (other moments than the main channel), each pointing to the full mission."""
+    items = []
+    for n, m in enumerate(JOB["missions"], 1):
+        for k, s in enumerate(m.get("shorts_b", []), 1):
+            t = s.get("yt_title") or s.get("hook")
+            items.append(dict(key=f"{m['id']}_b{k}", kind="short", m=m, n=n, path=os.path.join(OUT, f"{m['file']}_B{k}.mp4"),
+                              title=(t[:68] + " #mw4 #modernwarfare4 #cod"), loc=localize(t)))
+    return items
+
+def desc2(m, n):
+    try:
+        st1 = json.load(open("/root/kanal/cod/uploaded.json"))
+        lk = st1["done"].get(f"{m['id']}{JOB.get('key_ver', '')}_long", {}).get("id")
+    except Exception:
+        lk = None
+    full = f"https://youtu.be/{lk}" if lk else f"https://www.youtube.com/channel/{MAIN_ID}"
+    return (f"\u25b6 FULL MISSION (Part {n}) in 1080p 60FPS: {full}\n"
+            f"\u25b6 Every MW4 mission, no commentary: https://www.youtube.com/channel/{MAIN_ID}\n\n"
+            "Best Call of Duty: Modern Warfare 4 campaign moments every day. Subscribe!\n\n"
+            "#CallOfDuty #ModernWarfare4 #MW4 #MW4Campaign #Shorts #Gaming")
+
 def plan():
+    if CH2: return plan2()
     items = []
     for n, m in enumerate(JOB["missions"], 1):
         name = m.get("name", f"Mission {n}")  # 2026-11-11: theRadBrad-style title (most-viewed MW4 walkthrough)
@@ -119,9 +159,9 @@ def main():
     for v in st["done"].values():
         if v.get("day") == today: cnt[v["kind"]] += 1
     yt = Y.client(TOKEN)
-    if Y.my_channel_id(yt) != "UCOJQ4gIRQMlbdr4weDxiVmQ": log("XATO: token boshqa kanalniki"); return
+    if Y.my_channel_id(yt) != (CH2_ID if CH2 else MAIN_ID): log("XATO: token boshqa kanalniki"); return
     # 2026-11-11 owner: first-session videos must not come out -> private + schedule cancelled (not deleted)
-    for vid in JOB.get("cancel_ids", []):
+    for vid in ([] if CH2 else JOB.get("cancel_ids", [])):
         if vid in st.setdefault("cancelled", []): continue
         try:
             r = Y.make_private(yt, vid); st["cancelled"].append(vid); log("yopildi (chiqmaydi):", vid, r)
@@ -129,7 +169,7 @@ def main():
             log("yopib bo'lmadi:", vid, str(e)[:120])
     # also anything else uploaded from the first session (m1..m4 keys, e.g. an upload that was still running)
     for key, v in st["done"].items():
-        if key.split("_")[0] in JOB.get("cancel_missions", []) and v["id"] not in st["cancelled"]:
+        if not CH2 and key.split("_")[0] in JOB.get("cancel_missions", []) and v["id"] not in st["cancelled"]:
             try:
                 r = Y.make_private(yt, v["id"]); st["cancelled"].append(v["id"]); log("yopildi (chiqmaydi):", key, v["id"], r)
             except Exception as e:
@@ -158,8 +198,10 @@ def main():
         path = cold_open(it["m"]) if it["kind"] == "long" else it["path"]
         tags = TAGS + ([f"mw4 mission {it['n']}"] if it["kind"] == "long" else ["shorts", "mw4 shorts"])
         try:
-            vid = Y.upload(yt, path, it["title"], DESC, tags, t.isoformat().replace("+00:00", "Z"), kids=False,
-                           category="20", thumb=th)
+            d0 = desc2(it["m"], it["n"]) if CH2 else DESC
+            loc = {lg: dict(v, description=d0) for lg, v in (it.get("loc") or {}).items()} or None
+            vid = Y.upload(yt, path, it["title"], d0, tags, t.isoformat().replace("+00:00", "Z"), kids=False,
+                           category="20", thumb=th, localizations=loc)
         except Y.Quota as e:
             log("kunlik YouTube limiti tugadi, ertaga davom etadi:", e); break
         st["done"][it["key"]] = {"id": vid, "kind": it["kind"], "day": today, "at": t.isoformat(), "title": it["title"]}

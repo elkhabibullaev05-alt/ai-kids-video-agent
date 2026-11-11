@@ -91,6 +91,10 @@ fi
 if [ -s /root/kanal/cod/token.json ] && [ -f cloud/cod/cod_upload.py ]; then
   ( flock -n 8 || exit 0; timeout 14h python3 cloud/cod/cod_upload.py >> /root/kanal/cod/upload.log 2>&1 ) 8>/tmp/kanal-codup.lock &
 fi
+# 2026-11-11 owner: 2nd, Shorts-only channel MW4 Shorts Daily (its own B-set Shorts, each linking to the full mission)
+if [ -s /root/kanal/cod2/token.json ] && [ -f cloud/cod/cod_upload.py ]; then
+  ( flock -n 7 || exit 0; COD_CH=2 timeout 6h python3 cloud/cod/cod_upload.py >> /root/kanal/cod2/upload.log 2>&1 ) 7>/tmp/kanal-codup2.lock &
+fi
 start_pool $PARMK $mk
 start_pool $PAR3D $d3
 wait
