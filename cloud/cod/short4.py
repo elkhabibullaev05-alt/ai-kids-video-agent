@@ -18,6 +18,19 @@ sp = json.load(open(sys.argv[1]))
 src, T, out = sp["src"], float(sp["t"]), sp["out"]
 PRE, POST = float(sp.get("pre", 9)), float(sp.get("post", 8))
 tmp = out + "_tmp"; os.makedirs(tmp, exist_ok=True)
+# 2026-11-12 review of V1: 8 s of looking at bodies on the ground after the fight -> boring tail.
+# With the gunfire map (cod_action.py) start on the first shots before the peak and stop 1.5 s after the last one.
+if sp.get("action") and os.path.exists(sp["action"]):
+    sh = json.load(open(sp["action"]))["shots_per_s"]; t0 = int(T)
+    c = lambda i: sum(sh[max(0, i):i + 2]) if 0 <= i < len(sh) else 0
+    st = next((i for i in range(t0 - 8, t0 - 1) if c(i) >= 2), t0 - 4)
+    en = t0
+    for i in range(t0, min(len(sh), t0 + 14)):
+        if sh[i] > 0: en = i
+        elif i - en > 3: break
+    PRE = max(3.0, min(8.0, T - st + 0.3))
+    POST = max(5.0, min(12.0, en - T + 1.5))
+    print(f"oyna: {PRE:.1f}s oldin, {POST:.1f}s keyin (otishma xaritasidan)", flush=True)
 
 def run(c):
     r = subprocess.run(c, capture_output=True, text=True)
