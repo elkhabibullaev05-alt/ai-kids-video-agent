@@ -1,0 +1,927 @@
+{
+ "id": "20261111-3-mia-bike-no-wheels",
+ "plot": "On Wednesday at sunset Mia must ride her bike without training wheels for Uncle Gus tomorrow, but she keeps crashing into the leaf pile; Zeek's Plan Speed makes crash ten, Bup and Crispy's secret training wheel is refused by Mia, and Lolly's cheer squad makes her turn her head and crash again — the twist: scared Pim, who said at the start she keeps looking at the pedals, remembers his own climb up the bench and tells her over the walkie to look at the gate, not her feet; she rides to the gate on the last try before dark — then whispers that she put Thanksgiving cards in every mailbox on Maple Street and forty-one people said yes.",
+ "script": {
+  "title": "Can Mia Ride Before Uncle Gus Sees?",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bike",
+    "type": "box",
+    "color": [
+     0.9,
+     0.12,
+     0.15
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "leaves",
+    "type": "box",
+    "color": [
+     0.92,
+     0.48,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     7,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "wheel",
+    "type": "wheel",
+    "color": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     -7,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "walkie",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     -4,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Mia crashed into the leaf pile again! That's crash number nine!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Is she okay? Is the bike okay? Am I okay?",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Leaves fly everywhere. A red bike on its side. No training wheels.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ],
+     [
+      "bike",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "CRASH NUMBER NINE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wednesday, sunset. Tomorrow at noon, Mia shows Uncle Gus her bike.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-3,10"
+     ],
+     [
+      "zeek",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She told Gus she can ride without the little wheels. She can't.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Not yet. We have one evening. That's plenty for science.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Guys, she looks at the pedals the whole time. Every time.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pim, pedals are very important. Now listen. Plan Speed!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A bike stays up when it moves fast. Faster equals balance.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim whispers it into the walkie. Go faster, Mia. Over.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia pushes off. Fast. Faster. Wobble. Wobble. Wobble.",
+    "cam": "wide",
+    "do": [
+     [
+      "bike",
+      "bounce"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crash number ten. Straight into the leaves. Again.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hm. My numbers were perfect. The bike was not.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Is she crying? If she's crying, Lolly gets very upset.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia isn't crying. She just sits in the leaves, very quiet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dad calls. Bike in the garage at six. Thirty minutes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THIRTY MINUTES!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay, team, here's the plan. We put the little wheels back.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup and Crispy roll a training wheel across the grass, huffing.",
+    "cam": "wide",
+    "do": [
+     [
+      "wheel",
+      "show"
+     ],
+     [
+      "crispy",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "She won't notice. Little wheels are... little.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia notices. She carries the wheel back to the porch.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "No. I want to do it for real, she says.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "No to the easy way. I respect that. I hate it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then she needs cheering! A loud, happy cheer squad!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly leads the cheer from behind the flowerpot. Go, Mia, go!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia turns her head to see who's cheering. Wobble. Crash eleven.",
+    "cam": "prop:leaves",
+    "do": [
+     [
+      "leaves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh no. The cheering made it worse. Sorry! Sorry, sweetie!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Maybe it's okay not to learn it today. Nobody learns everything.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun sinks behind the fence. One last try before dark.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If she falls one more time, she'll quit. I know that face.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "LAST TRY!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim is staring at the bench. The bench he climbed on Sunday.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "On the bench, when I looked down, my legs went wobbly.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "When I looked at Bup, I made it. Every time.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pim... that's actually how balance works. You look where you go.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She keeps looking at her feet! That's the whole problem!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim. You noticed that first. Tell her. You tell her.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim runs to the walkie and jumps on the button.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Mia. It's Pim. Don't look at your feet. Look at the gate.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Look where you want to go. Your feet will follow. Over.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Silence. Then Mia climbs on. She looks up. Only at the gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pim"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One pedal. Two pedals. Wobble. Then no wobble at all.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bike",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Past the flowerpot. Past the bench. All the way to the gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "bike",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S RIDING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She did it! No little wheels! Pim, you did it!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I did? The scared bean did? I need to sit down.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Pim the coach. Now I really have seen everything.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia rides one more lap and rings her bell at the flowerpot.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Look where you want to go. Not at what scares you.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the walkie crackles. Mia is whispering again.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thanks, Pim. Um, one more thing. I made Thanksgiving cards.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One for every mailbox on Maple Street. Forty-one people said yes.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Forty-one. Mom cooked for fourteen. That's... a lot of hungry.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "41 GUESTS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Mia Ride Before Uncle Gus Sees? 🚲 (Ep 29)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"When I looked down, my legs went wobbly. When I looked at Bup, I made it.\" — Pim\nMia promised Uncle Gus she can ride without training wheels — she can't. One autumn evening, eleven crashes into the leaf pile, and the bros' best plans keep failing, until the most scared bean notices what everyone missed.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "thanksgiving",
+   "learning to ride a bike",
+   "training wheels",
+   "autumn",
+   "pim",
+   "mia",
+   "funny animation"
+  ],
+  "thumb_text": "NOT AGAIN!",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "¿Podrá Mia andar en bici antes de que la vea Gus? 🚲 (Ep 29)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Cuando miré abajo, me temblaron las piernas. Cuando miré a Bup, lo logré.\" — Pim\nMia le prometió al tío Gus que sabe andar sin rueditas… y no sabe. Una tarde de otoño, once choques contra las hojas y los planes de los bros fallan, hasta que el frijol más miedoso nota lo que nadie vio.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "A Mia vai pedalar antes do tio Gus ver? 🚲 (Ep 29)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Quando olhei para baixo, minhas pernas tremeram. Quando olhei para o Bup, consegui.\" — Pim\nA Mia prometeu ao tio Gus que sabe andar sem rodinhas — e não sabe. Uma tarde de outono, onze tombos nas folhas e os planos dos bros falham, até o feijão mais medroso perceber o que ninguém viu.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "هل تركب ميا الدراجة قبل أن يراها العم غاس؟ 🚲 (Ep 29)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"عندما نظرت إلى الأسفل ارتجفت ساقاي. وعندما نظرت إلى باب نجحت.\" — بيم\nوعدت ميا العم غاس بأنها تركب الدراجة بلا عجلات مساعدة — لكنها لا تستطيع. مساء خريفي، أحد عشر سقوطًا في كومة الأوراق، وخطط الإخوة تفشل، حتى تلاحظ أخوف حبة فاصولياء ما فات الجميع.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Mia saura-t-elle rouler avant qu'oncle Gus voie ? 🚲 (Ep 29)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Quand je regardais en bas, mes jambes tremblaient. Quand je regardais Bup, j'y arrivais.\" — Pim\nMia a promis à oncle Gus qu'elle roule sans petites roues… c'est faux. Un soir d'automne, onze chutes dans les feuilles et les plans des bros échouent, jusqu'à ce que le haricot le plus peureux remarque ce que tout le monde a raté.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアはガスおじさんに見せる前に自転車に乗れる？ 🚲 (Ep 29)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「下を見たら足がふるえた。バップを見たら、できたんだ。」— ピム\n補助輪なしで乗れるとガスおじさんに約束したミア。でも本当は乗れない。秋の夕方、落ち葉の山に11回激突。仲間の作戦は全部失敗——いちばん怖がりの豆が、みんなの見落としに気づくまで。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아는 거스 삼촌이 보기 전에 자전거를 탈 수 있을까? 🚲 (Ep 29)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려 주세요.\n\"아래를 보면 다리가 후들거렸어. 법을 보면 해냈어.\" — 핌\n미아는 보조 바퀴 없이 탈 수 있다고 거스 삼촌에게 약속했지만, 사실 못 탄다. 가을 저녁, 낙엽 더미에 열한 번 쿵. 친구들의 작전은 계속 실패하는데, 제일 겁 많은 콩이 모두가 놓친 걸 알아챈다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Kann Mia fahren, bevor Onkel Gus es sieht? 🚲 (Ep 29)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Wenn ich runtergeschaut hab, wurden meine Beine wackelig. Wenn ich Bup angeschaut hab, hab ich's geschafft.\" — Pim\nMia hat Onkel Gus versprochen, dass sie ohne Stützräder fahren kann – kann sie nicht. Ein Herbstabend, elf Stürze ins Laub, und alle Pläne scheitern, bis die ängstlichste Bohne merkt, was alle übersehen haben.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 20,
+   "dur": 20,
+   "top": "WOULD YOU PUT IT BACK?",
+   "title": "Would YOU Put This Wheel Back? 🚲 (Ep 29) #shorts",
+   "description": "Thirty minutes of daylight, ten crashes, one secret training wheel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "bike"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ volverías a poner esta ruedita? 🚲 (Ep 29) #shorts",
+     "description": "Treinta minutos de luz, diez choques y una ruedita secreta. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ colocaria esta rodinha de volta? 🚲 (Ep 29) #shorts",
+     "description": "Trinta minutos de luz, dez tombos e uma rodinha secreta. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستعيد تركيب هذه العجلة؟ 🚲 (Ep 29) #shorts",
+     "description": "ثلاثون دقيقة من الضوء، عشرة سقوطات، وعجلة مساعدة سرية. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU remettrais cette petite roue ? 🚲 (Ep 29) #shorts",
+     "description": "Trente minutes de jour, dix chutes et une petite roue secrète. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミならこの補助輪をもどす？ 🚲 (Ep 29) #shorts",
+     "description": "日没まで30分、転んだ回数10回、そしてこっそり補助輪。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 보조 바퀴를 다시 달래? 🚲 (Ep 29) #shorts",
+     "description": "해 질 때까지 30분, 넘어진 횟수 10번, 그리고 몰래 가져온 보조 바퀴. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU dieses Stützrad wieder dranmachen? 🚲 (Ep 29) #shorts",
+     "description": "Dreißig Minuten Tageslicht, zehn Stürze und ein heimliches Stützrad. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

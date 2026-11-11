@@ -1,0 +1,961 @@
+{
+ "id": "20261111-4-41-guests-food-for-14",
+ "plot": "On Thanksgiving Thursday at one o'clock the bros learn Mia invited all of Maple Street — forty-one guests for food made for fourteen; Crispy sees the neighbors carrying big pots (planted) but Bup thinks they're taking food home, Plan Inventory finds only four more dinners, Mom nearly cancels, and the bros' wobbly tower brings down Walter's box of fifty paper plates — the twist: at 4:15 the doorbell rings early and every neighbor arrives with a dish, because Rosie started the Maple Street everyone-brings-one-dish dinner in 1976; Mia thanks the bros for the plates — and at the toast Uncle Gus lifts Bup and winks right at him.",
+ "script": {
+  "title": "41 Guests Coming, Food for 14!",
+  "set": {
+   "place": "pantry",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "plates",
+    "type": "box",
+    "color": [
+     0.96,
+     0.94,
+     0.88
+    ],
+    "on": null,
+    "at": [
+     3,
+     14,
+     1.5
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "cans",
+    "type": "box",
+    "color": [
+     0.7,
+     0.72,
+     0.75
+    ],
+    "on": null,
+    "at": [
+     -5,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "pot",
+    "type": "ball",
+    "color": [
+     0.85,
+     0.35,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     8,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "rolls",
+    "type": "box",
+    "color": [
+     0.8,
+     0.6,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     9,
+     13,
+     0
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Forty-one guests are coming! Mom cooked for fourteen!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Dinner is at five. That's four hours to find twenty-seven dinners.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "text": "41 GUESTS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thanksgiving Thursday. One o'clock. The pantry shelves look like a market.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-4,11"
+     ],
+     [
+      "lolly",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom just found Mia's card list. She sat down on the stairs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia only wanted the whole street to feel invited. That's sweet.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Sweet and v-very hungry. Forty-one hungry people!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Strange. From the window I see the neighbors carrying big pots.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:7,9"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "June has one. Old Walter has a basket. They're all carrying something.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "They're taking food to their own families. Nobody else can help us.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then we count what we have. Plan Inventory!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros push every can to the front. Beans. Corn. Peas.",
+    "cam": "wide",
+    "do": [
+     [
+      "cans",
+      "show"
+     ],
+     [
+      "pim",
+      "to:-5,12"
+     ],
+     [
+      "zeek",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Three cans of beans, one corn, half a box of crackers.",
+    "cam": "prop:cans",
+    "do": [
+     [
+      "cans",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That feeds... four more people. Plus one very small cousin.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "So thirty-seven people eat crackers. One cracker each. Maybe.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two o'clock. Mom is on the phone. She might cancel dinner.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CANCEL THANKSGIVING?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No! Mia will think she ruined everything. She'll never invite anyone again.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay, team. We can't make food. What else do forty-one people need?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plates! Mom only has sixteen plates! I counted them last week.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Up on the top shelf sits a dusty box. Paper plates. Fifty.",
+    "cam": "prop:plates",
+    "do": [
+     [
+      "plates",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Walter left that box. From the bakery days. Nobody can reach it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we climb. A tower of bros. I'm the bottom. Of course.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup at the bottom. Zeek on Bup. Lolly. Then Pim.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:2,12"
+     ],
+     [
+      "lolly",
+      "to:2,12"
+     ],
+     [
+      "pim",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why am I always on top? Why is it always the bean?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Because you are the lightest, sweetie. And the bravest now.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hurry, Pim. My crust is cracking. Gently, please.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim pushes. The box slides. Then the whole tower wobbles.",
+    "cam": "overhead",
+    "do": [
+     [
+      "plates",
+      "spin"
+     ],
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The box falls. Fifty paper plates rain down like snowflakes.",
+    "cam": "wide",
+    "do": [
+     [
+      "plates",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "PLATE STORM!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Fifty plates! Enough for everybody! And they're even orange!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Plates solved. Food not. A plate with no food is a circle.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom finds the plates. She smiles a tiny bit. Then sighs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Four fifteen. Ding-dong. The doorbell. The first guests are early.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THEY'RE HERE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Too early! The crackers aren't ready! Nothing is ready!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everyone to the pantry door. We need to see this.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom opens the door. June holds a giant pot of chili.",
+    "cam": "prop:pot",
+    "do": [
+     [
+      "pot",
+      "show"
+     ],
+     [
+      "pot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind her, old Walter, with a basket of warm rolls.",
+    "cam": "prop:rolls",
+    "do": [
+     [
+      "rolls",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind him, the whole street. Pies. Salads. Corn. A huge ham.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The pots. They weren't taking food home. They were bringing it here.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "June laughs. Rosie started this in nineteen seventy-six, she says.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The Maple Street dinner. Everybody brings one dish. Always.",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Forty-one guests. Forty-one dishes. The math was never the problem.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia didn't ruin Thanksgiving. She brought it back.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia runs to the pantry. Thank you for the plates, she whispers.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "HAPPY THANKSGIVING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm so happy I could faint. Actually, I think I will.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nobody can feed a whole street. But a whole street can.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the long table, Uncle Gus stands up to make a toast.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He reaches into the bread basket. And he lifts up Bup.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To the bread that went to the lake! He winks at Bup.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "HE KNOWS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "41 Guests Coming, Food for 14! 🦃 (Ep 30)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"We can't make food. So what else do forty-one people need?\" — Bup\nMia invited the whole of Maple Street to Thanksgiving, Mom cooked for fourteen, and dinner is at five. The Dough Bros count every can in the pantry and build a tower to the top shelf — but the answer is already walking down the street.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "thanksgiving",
+   "thanksgiving dinner",
+   "neighbors",
+   "potluck",
+   "bup",
+   "zeek",
+   "funny animation"
+  ],
+  "thumb_text": "41 GUESTS?!",
+  "thumb_beat": 10,
+  "localizations": {
+   "es": {
+    "title": "¡41 invitados y comida para 14! 🦃 (Ep 30)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"No podemos hacer comida. ¿Qué más necesitan cuarenta y una personas?\" — Bup\nMia invitó a toda la calle Maple a Acción de Gracias, mamá cocinó para catorce y la cena es a las cinco. Los Dough Bros cuentan cada lata de la despensa y hacen una torre hasta el estante de arriba… pero la respuesta ya viene caminando por la calle.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "41 convidados e comida para 14! 🦃 (Ep 30)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"A gente não sabe fazer comida. Do que mais quarenta e uma pessoas precisam?\" — Bup\nA Mia convidou a Rua Maple inteira para o Dia de Ação de Graças, a mamãe cozinhou para catorze e o jantar é às cinco. Os Dough Bros contam cada lata da despensa e fazem uma torre até a prateleira de cima — mas a resposta já vem descendo a rua.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "41 ضيفًا قادمون والطعام يكفي 14! 🦃 (Ep 30)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لا نستطيع صنع الطعام. فماذا يحتاج واحد وأربعون شخصًا غير ذلك؟\" — باب\nدعت ميا شارع ميبل كله إلى عيد الشكر، وطبخت أمي لأربعة عشر شخصًا، والعشاء في الخامسة. يعدّ Dough Bros كل علبة في المخزن ويبنون برجًا إلى الرف العلوي — لكن الحل يمشي بالفعل في الشارع.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "41 invités, à manger pour 14 ! 🦃 (Ep 30)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"On ne sait pas cuisiner. Alors de quoi d'autre ont besoin quarante et une personnes ?\" — Bup\nMia a invité toute la rue Maple pour Thanksgiving, maman a cuisiné pour quatorze et le dîner est à cinq heures. Les Dough Bros comptent chaque boîte du garde-manger et grimpent en tour jusqu'à l'étagère du haut… mais la réponse remonte déjà la rue.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "お客さん41人、料理は14人分！ 🦃 (Ep 30)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「料理は作れない。じゃあ41人に、ほかに何が必要？」— バップ\nミアがメープル通りのみんなを感謝祭に招待。でもママの料理は14人分、夕食は5時。ドウ・ブロスは食料庫の缶を数え、上の棚までタワーを組む——でも答えは、もう通りを歩いてきていた。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "손님 41명, 음식은 14인분! 🦃 (Ep 30)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려 주세요.\n\"우린 요리를 못 해. 그럼 41명에게 또 뭐가 필요하지?\" — 법\n미아가 메이플 거리 전체를 추수감사절에 초대했는데, 엄마는 14인분만 요리했고 저녁은 5시. Dough Bros는 식료품실의 통조림을 세고 맨 위 선반까지 탑을 쌓는다 — 하지만 답은 이미 거리를 걸어오고 있었다.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "41 Gäste, Essen für 14! 🦃 (Ep 30)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Kochen können wir nicht. Was brauchen einundvierzig Leute sonst noch?\" — Bup\nMia hat die ganze Maple Street zu Thanksgiving eingeladen, Mama hat für vierzehn gekocht, und um fünf gibt's Essen. Die Dough Bros zählen jede Dose in der Speisekammer und bauen einen Turm zum obersten Regal – doch die Antwort kommt schon die Straße herunter.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 21,
+   "dur": 22,
+   "top": "WOULD YOU PULL IT?",
+   "title": "Would YOU Pull This Box Down? 📦 (Ep 30) #shorts",
+   "description": "Top shelf, one dusty box, four bros stacked in a wobbly tower. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "thanksgiving"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ bajarías esta caja polvorienta? 📦 (Ep 30) #shorts",
+     "description": "El estante de arriba, una caja con polvo y cuatro bros en una torre que tiembla. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ puxaria esta caixa empoeirada? 📦 (Ep 30) #shorts",
+     "description": "Prateleira de cima, uma caixa empoeirada e quatro bros numa torre bamba. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستسحب هذا الصندوق المغبر؟ 📦 (Ep 30) #shorts",
+     "description": "الرف العلوي، صندوق مغبر، وأربعة إخوة في برج يتمايل. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU tirerais cette vieille boîte ? 📦 (Ep 30) #shorts",
+     "description": "L'étagère du haut, une boîte poussiéreuse et quatre bros en tour qui vacille. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのほこりだらけの箱を引っぱれる？ 📦 (Ep 30) #shorts",
+     "description": "いちばん上の棚、ほこりだらけの箱、グラグラの4段タワー。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 먼지 상자를 끌어내릴래? 📦 (Ep 30) #shorts",
+     "description": "맨 위 선반, 먼지 쌓인 상자 하나, 흔들리는 4단 탑. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diese staubige Kiste runterziehen? 📦 (Ep 30) #shorts",
+     "description": "Oberstes Regal, eine staubige Kiste und vier Bros in einem wackeligen Turm. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 34,
+   "dur": 20,
+   "top": "THEY'RE EARLY!",
+   "title": "The Doorbell Rang Way Too Early 😳 (Ep 30) #shorts",
+   "description": "Forty-one guests, crackers for four — and the doorbell rings. Next part on the channel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "thanksgiving"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El timbre sonó demasiado pronto 😳 (Ep 30) #shorts",
+     "description": "Cuarenta y un invitados, galletas para cuatro… y suena el timbre. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A campainha tocou cedo demais 😳 (Ep 30) #shorts",
+     "description": "Quarenta e um convidados, biscoitos para quatro — e a campainha toca. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "رنّ الجرس مبكرًا جدًا 😳 (Ep 30) #shorts",
+     "description": "واحد وأربعون ضيفًا، وبسكويت يكفي أربعة… ثم يرنّ الجرس. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La sonnette a sonné bien trop tôt 😳 (Ep 30) #shorts",
+     "description": "Quarante et un invités, des crackers pour quatre… et ça sonne. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "チャイムが早すぎる 😳 (Ep 30) #shorts",
+     "description": "お客さん41人、クラッカーは4人分——そこへチャイムが。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "초인종이 너무 일찍 울렸다 😳 (Ep 30) #shorts",
+     "description": "손님 41명, 크래커는 4인분… 그때 초인종이 울린다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Es klingelt viel zu früh 😳 (Ep 30) #shorts",
+     "description": "Einundvierzig Gäste, Cracker für vier – und es klingelt. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,976 @@
+{
+ "id": "20261111-2-face-on-moms-pumpkin",
+ "plot": "On Monday morning Mom finds a black face drawn on her Thanksgiving pumpkin and blames Mia, and everyone looks at sooty Crispy; Detective Zeek proves Mia has no black crayon and Crispy's soot smears while the lines don't, but the tiny numbers along the smile lead to the twist — the detective did it: Zeek's black fingertips (planted early) came from measuring the pumpkin for the window with a burnt matchstick in the dark; he confesses over the walkie, Mia reads the numbers to Mom, it fits the window exactly and Mia is praised — then Uncle Gus says Mia must ride her bike without training wheels on Thursday, and she can't.",
+ "script": {
+  "title": "Who Drew a Face on Mom's Pumpkin?",
+  "set": {
+   "place": "kitchen",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "pumpkin",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.5,
+     0.08
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "crayons",
+    "type": "box",
+    "color": [
+     0.95,
+     0.3,
+     0.6
+    ],
+    "on": null,
+    "at": [
+     -5,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "napkin",
+    "type": "box",
+    "color": [
+     0.98,
+     0.98,
+     0.98
+    ],
+    "on": null,
+    "at": [
+     4,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "match",
+    "type": "box",
+    "color": [
+     0.08,
+     0.06,
+     0.05
+    ],
+    "on": null,
+    "at": [
+     7,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.2
+   },
+   {
+    "id": "walkie",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     -4,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "Mom found a black face on her Thanksgiving pumpkin!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "And she thinks Mia did it. No parade for Mia!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "text": "WHO DID THIS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday morning. The big pumpkin sits on the counter, ready for Thursday.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two black circles for eyes. One long, curvy line for a smile.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "B-black lines. Black like... soot.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Slowly, everyone turns to look at Crispy.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Of course. Something turns black. It must be the burnt one.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Nobody is guilty without evidence. Detective Zeek takes the case!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek, why are your fingertips black?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Pencil dust. I was up late with my measuring tape.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Clue one: the lines are perfectly neat. Way too neat for crayons.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "zeek",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mia's crayons are all bright anyway. She has no black one.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's true. Forty crayons in the pencil case. Not a single black.",
+    "cam": "prop:crayons",
+    "do": [
+     [
+      "crayons",
+      "show"
+     ],
+     [
+      "crayons",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "NOT MIA!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then we tell Mom. Somehow. Before Mia loses the parade.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At nine, Mia must say sorry. For something she didn't do.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "And if it wasn't Mia, who's left? Me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then we test you. Science clears names, Crispy.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek lays a white paper napkin on the floor. Test number one.",
+    "cam": "wide",
+    "do": [
+     [
+      "napkin",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy, roll across it. Slowly. Like you would on a pumpkin.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "crispy",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls. The napkin turns black. Smudgy. Messy. Everywhere.",
+    "cam": "prop:napkin",
+    "do": [
+     [
+      "napkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Smudges! Crispy's soot smears. The pumpkin lines don't smear at all.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "So Crispy's innocent? Hooray! Wait. Then who is guilty?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Innocent. Nobody has ever said that word about me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitchen clock ticks. Eight forty. Twenty minutes left.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Maybe a burglar? A pumpkin burglar with a marker?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "A burglar who breaks in to draw a smile? Cutest burglar ever.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Clue two. Look closer. Tiny numbers along the smile.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Very small. Very neat. Thirty-one. Fifteen and a half. Ninety-seven.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Who writes math on a pumpkin? That's so w-weird.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone looks at the one bro who writes math on everything.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "text": "ZEEK?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "No. Impossible. I would remember. I have a perfect memory.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek looks at his black fingertips. Then at a burnt matchstick.",
+    "cam": "prop:match",
+    "do": [
+     [
+      "match",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Oh no. Last night. The lights were off. I was measuring.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Mom asked if the pumpkin fits in the window. I checked.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "With a burnt matchstick as my pencil. In the dark.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The eyes mark the width. The smile is my measuring curve.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Zeek. You let Crispy take the blame. For ten whole minutes.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Ten minutes is nothing. I'm used to it. Go fix it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Eight fifty-five. Footsteps. Mia comes down the stairs, head low.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Five minutes, Zeek! Mia is saying sorry for your math!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then I say sorry first. The walkie! Quick!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek jumps on the walkie button with both feet.",
+    "cam": "prop:walkie",
+    "do": [
+     [
+      "walkie",
+      "show"
+     ],
+     [
+      "walkie",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Mia, it was me. Tell Mom to read the numbers. Over.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia turns the pumpkin around and reads the tiny numbers to Mom.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumpkin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thirty-one wide. The window is thirty-two. It fits. Exactly.",
+    "cam": "prop:pumpkin",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom blinks. You measured it for me? That's my smart girl.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A friend helped, Mia says. She winks at the bread box.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S FREE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Crispy, I'm sorry. Next time I suspect myself first.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Next time, use a pencil. Leave the burning to me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom puts the pumpkin in the window. She keeps the smile.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumpkin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Owning up is the hardest math there is. You solved it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Uncle Gus pokes his head in, grinning.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia! Thursday you show me your bike. No training wheels!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia goes pale. Into the walkie she whispers: I can't.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SHE CAN'T RIDE?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Drew a Face on Mom's Pumpkin? 🎃 (Ep 28)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Something turns black, so it must be the burnt one. Of course.\" — Crispy\nMom's Thanksgiving pumpkin has a face drawn on it, Mia is about to lose the parade, and everyone looks at Crispy. Detective Zeek has twenty minutes to find the real artist — before nine o'clock.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "thanksgiving",
+   "pumpkin",
+   "mystery",
+   "zeek",
+   "crispy",
+   "blamed",
+   "funny animation"
+  ],
+  "thumb_text": "WHO DREW IT?",
+  "thumb_beat": 34,
+  "localizations": {
+   "es": {
+    "title": "¿Quién dibujó una cara en la calabaza de mamá? 🎃 (Ep 28)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Algo se vuelve negro, así que fue el quemado. Claro.\" — Crispy\nLa calabaza de Acción de Gracias de mamá tiene una cara dibujada, Mia está a punto de perderse el desfile y todos miran a Crispy. El detective Zeek tiene veinte minutos para encontrar al verdadero artista.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Quem desenhou um rosto na abóbora da mamãe? 🎃 (Ep 28)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Algo fica preto, então foi o queimado. Claro.\" — Crispy\nA abóbora de Ação de Graças da mamãe apareceu com um rosto desenhado, a Mia vai perder o desfile e todo mundo olha para o Crispy. O detetive Zeek tem vinte minutos para achar o verdadeiro artista.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "من رسم وجهًا على يقطينة أمي؟ 🎃 (Ep 28)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"شيء صار أسود، إذن الفاعل هو المحروق. طبعًا.\" — كريسبي\nيقطينة عيد الشكر لدى أمي عليها وجه مرسوم، وميا على وشك أن تُحرم من الاستعراض، والجميع ينظر إلى كريسبي. أمام المحقق زيك عشرون دقيقة ليجد الرسام الحقيقي.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Qui a dessiné un visage sur la citrouille ? 🎃 (Ep 28)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Quelque chose devient noir, donc c'est le brûlé. Évidemment.\" — Crispy\nLa citrouille de Thanksgiving de maman a un visage dessiné, Mia va être privée de défilé et tout le monde regarde Crispy. Le détective Zeek a vingt minutes pour trouver le vrai artiste.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ママのかぼちゃに顔を描いたのはだれ？ 🎃 (Ep 28)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「何かが黒くなったら、焦げたやつのせい。そりゃそうだ。」— クリスピー\n感謝祭用のママのかぼちゃに顔が描かれていた。ミアはパレードを見られなくなりそうで、みんなはクリスピーを見る。名探偵ジークに残された時間は20分。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "엄마의 호박에 얼굴을 그린 건 누구? 🎃 (Ep 28)",
+    "description": "다음 편에서 무슨 일이 일어날 것 같나요? 댓글로 알려 주세요.\n\"뭔가 까매지면 탄 녀석 짓이지. 당연히.\" — 크리스피\n엄마의 추수감사절 호박에 얼굴이 그려져 있고, 미아는 퍼레이드를 못 보게 생겼고, 모두가 크리스피를 본다. 탐정 지크에게 남은 시간은 20분.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Wer hat Mamas Kürbis ein Gesicht gemalt? 🎃 (Ep 28)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Etwas wird schwarz, also war's der Verbrannte. Natürlich.\" — Crispy\nMamas Thanksgiving-Kürbis hat ein aufgemaltes Gesicht, Mia darf die Parade nicht sehen, und alle schauen Crispy an. Detektiv Zeek hat zwanzig Minuten, um den wahren Künstler zu finden.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 4,
+   "dur": 20,
+   "top": "WOULD YOU TOUCH IT?",
+   "title": "Would YOU Touch This Pumpkin? 🎃 (Ep 28) #shorts",
+   "description": "Someone drew on Mom's Thanksgiving pumpkin — and the burnt one gets blamed. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "pumpkin"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ tocarías esta calabaza? 🎃 (Ep 28) #shorts",
+     "description": "Alguien dibujó en la calabaza de mamá… y culpan al quemado. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ tocaria nesta abóbora? 🎃 (Ep 28) #shorts",
+     "description": "Alguém desenhou na abóbora da mamãe — e a culpa cai no queimado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستلمس هذه اليقطينة؟ 🎃 (Ep 28) #shorts",
+     "description": "أحدهم رسم على يقطينة أمي… واللوم يقع على المحروق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU toucherais cette citrouille ? 🎃 (Ep 28) #shorts",
+     "description": "Quelqu'un a dessiné sur la citrouille de maman… et c'est le brûlé qu'on accuse. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのかぼちゃにさわれる？ 🎃 (Ep 28) #shorts",
+     "description": "ママのかぼちゃにだれかが落書き…疑われたのは焦げたあいつ。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 호박을 만질래? 🎃 (Ep 28) #shorts",
+     "description": "누군가 엄마의 호박에 그림을 그렸고… 탄 녀석이 의심받는다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen Kürbis anfassen? 🎃 (Ep 28) #shorts",
+     "description": "Jemand hat Mamas Kürbis bemalt – und der Verbrannte wird beschuldigt. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
