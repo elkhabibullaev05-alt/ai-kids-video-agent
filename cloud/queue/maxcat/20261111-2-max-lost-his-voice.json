@@ -1,0 +1,1176 @@
+{
+ "id": "20261111-2-max-lost-his-voice",
+ "plot": "On his first sign-reading walk Max shouts every sign until his voice is gone, and at sunset only he knows the big park gate is about to lock; his charades only start a dance party, so he kicks Dog's ball to make everyone run to the gate, finds it already locked, and then remembers the 'small gate, always open' sign by the pond and rolls the ball there.",
+ "script": {
+  "title": "Max Lost His Voice!",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "sign",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -9.0,
+     15.0,
+     0.8
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     6.0,
+     12.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Mew... mew? MEW! Oh no... where is my big voice?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max lost his voice! And the park gate locks at sunset!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,11"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "NO VOICE. GATE LOCKS SOON!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "This morning, Max went on his very first sign-reading walk.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Read the signs with me, Max. Nice and slowly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "STOP! That one says STOP! I can read it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max didn't read the signs. He shouted every single one.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "DUCKS CROSSING! KEEP OFF THE FLOWERS! NO BIKES!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Inside voice, dear. Voices get tired, just like legs.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "MY VOICE IS NEVER TIRED! LOOK, A BIG ONE!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The big sign sits right by the tall iron gate.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "PARK... CLOSES... AT... SUNSET! I read a long one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog drops his red ball. It rolls down the hill.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "ball",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And everybody runs after it. Dog, Bird, Max... even Grandma!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "to:8,13"
+     ],
+     [
+      "bird",
+      "to:8,14"
+     ],
+     [
+      "max",
+      "to:7,12"
+     ],
+     [
+      "grandma",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ha! Nobody can stay still when that ball rolls!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball stops by a tiny green gate near the duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Look! A tiny gate! I can fly right through it!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:11,15"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "SMALL GATE! ALWAYS OPEN! I can read that one too!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They play all afternoon. And Max shouts every sign he sees.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back to now. The sun is low and orange.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-1,8"
+     ],
+     [
+      "grandma",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma, Dog and Bird are far away, watching the ducks.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:9,14"
+     ],
+     [
+      "dog",
+      "to:7,13"
+     ],
+     [
+      "bird",
+      "to:8,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max can't talk. But we can hear what he thinks.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The big gate locks at sunset. And nobody else knows!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, the park keeper walks to the big gate. Jingle, jingle.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I have to tell them. Without one single word!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs all the way to the pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max! You came back! Come and watch the ducks!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max waves his paws. He points up at the orange sky.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he points far away, at the big gate. Point, point!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ooh, a guessing game! Is it a bird? A plane?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pretends to turn a big key. Click, click.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A key... a door... a sandwich! You're hungry!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "No, no! He's dancing! Max is doing the sunset dance!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:7,14"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And now everybody is dancing. Everybody except Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ],
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No! Not a dance! The gate! The GATE!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pulls Grandma's coat, very gently. Tug, tug.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:8,13"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Not now, sweetheart. Look how pretty the sunset is.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma sits down on the grass to watch the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Sunset picnic! Does anybody have a sandwich? No? Okay.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:9,13"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If that gate locks, we'll be stuck here all night!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No dinner. No warm bed. Just cold, wet grass.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun touches the tops of the trees. Jingle, jingle.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Max sees something red in the grass. Dog's ball.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This morning, the ball rolled... and everybody ran after it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I don't need words. I need the ball!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max kicks the ball. Hard. It flies across the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "to:dog"
+     ],
+     [
+      "max",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "BALL! My ball! Wait for me, ball!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-3,13"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Dog is running! I'm racing Dog! Wheee!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-4,14"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh my! Wait for me, everyone!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max kicks again. And again. Toward the big iron gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,14"
+     ],
+     [
+      "dog",
+      "to:-7,15"
+     ],
+     [
+      "bird",
+      "to:-8,16"
+     ],
+     [
+      "grandma",
+      "to:-6,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Faster, faster... and then everyone stops.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE GATE IS LOCKED!",
+    "cam": "prop:sign",
+    "hold": 1.2,
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "It's locked! The keeper already went home!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Locked in the park? With the ducks? All night?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. And it's getting so dark and chilly.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Think, Max, think. What other signs did you read?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "SMALL GATE... ALWAYS OPEN! The tiny gate by the pond!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the tiny gate is all the way back across the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the sun is almost gone. Only a thin orange line.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts the ball down. He looks at Dog. Dog's tail wags.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Kick! The ball rolls all the way back down the hill.",
+    "cam": "wide",
+    "do": [
+     [
+      "ball",
+      "to:bird"
+     ],
+     [
+      "max",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Again? Best game EVER!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:10,14"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone runs after it. Right to the tiny green gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "to:11,15"
+     ],
+     [
+      "grandma",
+      "to:9,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma puts on her glasses. She keeps them on a string now.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Small gate. Always open. Max, you clever, clever cat!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click. The tiny gate swings open. Everyone goes through.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "We're out! We're going home!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But how did you know, Max? You can't even talk!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max points at his mouth. Then at every sign on the way.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You shouted all day... and saved us without one word.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At home, Grandma makes warm honey milk for Max's sore throat.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A big voice is great. But an inside voice lasts all day.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow, the garden is full of leaves. Who will help me rake?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me! I mean... me. Very quietly.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Lost His Voice Before the Gate Locks! 🍂",
+  "description": "\"I read every sign today. Now I can't say a single word.\" 🐱\nMax shouted every sign on his first sign-reading walk, and now only he knows the park gate locks at sunset. How do you warn everyone with no voice at all? Max the Curious Cat, Ep 42.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "lost voice",
+   "park",
+   "autumn sunset",
+   "reading signs",
+   "inside voice",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "autumn"
+  ],
+  "thumb_text": "NO VOICE?!",
+  "thumb_beat": 22,
+  "localizations": {
+   "es": {
+    "title": "¡Max perdió la voz antes de que cierren! 🍂",
+    "description": "\"Hoy leí todos los letreros. Ahora no puedo decir ni una palabra.\" 🐱\nMax gritó cada letrero en su primer paseo de lectura, y ahora solo él sabe que la puerta del parque se cierra al atardecer. ¿Cómo avisar a todos sin voz? Max el Gato Curioso, Ep. 42.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max perdeu a voz antes do portão fechar! 🍂",
+    "description": "\"Li todas as placas hoje. Agora não consigo dizer nem uma palavra.\" 🐱\nMax gritou cada placa no seu primeiro passeio de leitura, e agora só ele sabe que o portão do parque fecha ao pôr do sol. Como avisar todo mundo sem voz? Max, o Gato Curioso, Ep. 42.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "ماكس فقد صوته قبل أن يُغلق الباب! 🍂",
+    "description": "\"قرأت كل اللافتات اليوم. والآن لا أستطيع قول كلمة واحدة.\" 🐱\nصرخ ماكس بكل لافتة في أول نزهة لقراءة اللافتات، والآن هو وحده يعرف أن باب الحديقة يُغلق عند الغروب. كيف ينبّه الجميع بلا صوت؟ ماكس القط الفضولي، الحلقة 42.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max a perdu sa voix avant la fermeture ! 🍂",
+    "description": "« J'ai lu tous les panneaux aujourd'hui. Maintenant, je ne peux plus dire un mot. » 🐱\nMax a crié chaque panneau pendant sa première balade de lecture, et lui seul sait que le portail du parc ferme au coucher du soleil. Comment prévenir tout le monde sans voix ? Max le Chat Curieux, Ép. 42.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "門がしまる前にマックスの声が出ない！🍂",
+    "description": "「きょうは看板をぜんぶ読んだよ。でも、もうひとことも話せないんだ。」🐱\nはじめての看板よみ散歩で、マックスは看板をぜんぶ大声で読みました。夕日で公園の門がしまることを知っているのはマックスだけ。声なしでどうやってみんなに知らせる？好奇心ねこマックス 第42話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "문이 잠기기 전에 맥스 목소리가 사라졌어요! 🍂",
+    "description": "\"오늘 표지판을 전부 읽었어. 이제 한마디도 못 하겠어.\" 🐱\n맥스는 첫 표지판 읽기 산책에서 모든 표지판을 소리쳐 읽었어요. 해 질 녘에 공원 문이 잠긴다는 걸 아는 건 맥스뿐! 목소리 없이 어떻게 알릴까요? 호기심 많은 고양이 맥스 42화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Max hat keine Stimme – und das Tor schließt! 🍂",
+    "description": "„Ich habe heute jedes Schild gelesen. Jetzt kann ich kein Wort mehr sagen.“ 🐱\nMax hat auf seinem ersten Schilder-Spaziergang jedes Schild laut gerufen, und nur er weiß: Das Parktor schließt bei Sonnenuntergang. Wie warnt man alle ohne Stimme? Max die neugierige Katze, Folge 42.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "MAX LOST HIS VOICE!",
+   "title": "Max Can't Say a Single Word! 🍂 #shorts",
+   "description": "The gate locks at sunset... Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "lost voice",
+    "park"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Max no puede decir ni una palabra! 🍂 #shorts",
+     "description": "La puerta se cierra al atardecer... Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max não consegue dizer nem uma palavra! 🍂 #shorts",
+     "description": "O portão fecha ao pôr do sol... Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس لا يستطيع قول كلمة واحدة! 🍂 #shorts",
+     "description": "الباب يُغلق عند الغروب... الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max ne peut plus dire un mot ! 🍂 #shorts",
+     "description": "Le portail ferme au coucher du soleil... Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス、ひとことも話せない！🍂 #shorts",
+     "description": "夕日で門がしまっちゃう…本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 한마디도 못 해요! 🍂 #shorts",
+     "description": "해 질 녘에 문이 잠겨요... 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max kann kein einziges Wort sagen! 🍂 #shorts",
+     "description": "Das Tor schließt bei Sonnenuntergang... Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 27,
+   "dur": 20,
+   "top": "GUESS WHAT MAX MEANS!",
+   "title": "Is It a Bird? A Sandwich? Guess, Dog! 😹 #shorts",
+   "description": "Max can't talk, and Dog keeps guessing wrong. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "charades",
+    "funny dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Un pájaro? ¿Un sándwich? ¡Adivina, Perro! 😹 #shorts",
+     "description": "Max no puede hablar y Perro no adivina. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um pássaro? Um sanduíche? Adivinha, Cão! 😹 #shorts",
+     "description": "Max não pode falar e o Cão erra tudo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "طائر؟ شطيرة؟ خمّن يا كلب! 😹 #shorts",
+     "description": "ماكس لا يستطيع الكلام، والكلب يخمّن خطأ. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un oiseau ? Un sandwich ? Devine, Chien ! 😹 #shorts",
+     "description": "Max ne peut pas parler, et Chien se trompe. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "鳥？サンドイッチ？あててよ、イヌ！😹 #shorts",
+     "description": "話せないマックスに、イヌはまちがってばかり。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "새? 샌드위치? 맞혀 봐, 강아지! 😹 #shorts",
+     "description": "말 못 하는 맥스, 계속 틀리는 강아지. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Vogel? Ein Sandwich? Rate mal, Hund! 😹 #shorts",
+     "description": "Max kann nicht reden, und Hund rät falsch. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

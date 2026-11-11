@@ -1,0 +1,1096 @@
+{
+ "id": "20261112-1-yarn-all-over-house",
+ "plot": "While Grandma naps before sunset tea, Max taps her blue yarn ball and chases it all over the house; pulling it back only knots the chairs, until he stumbles backwards and finds that walking his chase route in reverse undoes the yarn, but winding the last bit shrinks Grandma's half-knitted hat, which becomes Mouse's tiny winter hat when Max tells the truth.",
+ "script": {
+  "title": "Roll It Back Before Grandma Wakes",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "yarn",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     -5.0,
+     8.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "hat",
+    "type": "cone",
+    "color": "blue",
+    "at": [
+     -6.0,
+     8.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Oh no, oh no! The blue yarn is all over the house!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Under the sofa! Round the chair! Round the lamp! Everywhere!",
+    "cam": "wide",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,10"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "ROLL IT BACK BEFORE SHE WAKES!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "One hour earlier. Grandma sits in her chair by the window.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look, Max. My new winter hat. Soft and blue.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "hat",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The hat is only half done. Two blue needles stick out.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And a fat blue yarn ball sits in her basket.",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Careful, dear. The yarn is still joined to my hat.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm just looking, Grandma. Only looking. With my eyes.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max only looking at a ball? That never happens!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,11"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun is warm. The chair is soft. Grandma yawns.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I'll just rest my eyes. Wake me up for tea at sunset.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Grandma falls fast asleep. Shhh.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max looks at the yarn ball. It's round. It's fluffy.",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Just one tiny tap. Nobody will ever know.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tap! The ball rolls off the basket and across the rug.",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Come back, little ball! I'm a tiger! Rrrr!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball bumps the sofa and bounces away. Boing!",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max chases it under the sofa. Round the big chair.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:5,11"
+     ],
+     [
+      "yarn",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Round the lamp, under the table, and down the hall.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:8,14"
+     ],
+     [
+      "yarn",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! What are you doing? You're making a spider web!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "mouse",
+      "to:3,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stops. He looks back. Blue yarn is everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh. Oh no. Did I do all that? In one minute?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back to now. The sun is sinking. Tea time is close.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:2,8"
+     ],
+     [
+      "bird",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "When the sun goes down, Grandma wakes up for tea.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If she sees this, her new hat is ruined!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then roll it up! Quick! Pull the ball back!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max finds the ball by the front door. He pulls. Hard.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:9,13"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The yarn goes tight. Tighter. TWANG!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The chairs slide together. The lamp wobbles. Wobble, wobble.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Stop! Stop pulling! It's making a knot!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A big knot. Round the chair legs. Three times!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:5,9"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Pulling makes it worse. And Grandma might wake up!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma snuffles in her sleep. Max and Bird freeze. Shhh.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Phew. Still asleep. But hurry, the sky is turning pink!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max steps back. Then he trips on the yarn... backwards.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He stumbles back around the chair. The way he came.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the yarn loop slides right off the chair leg. Loose!",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait! Going backwards undoes it! The way I came!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll go the same way I ran. But all backwards!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Backwards round the chair. Then the lamp. Then the table!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:6,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks backwards round the lamp. Wind, wind, wind.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:7,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird carries the yarn over the top of the bookshelf.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:8,15"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'll do under the sofa! I'm the only one small enough!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:4,11"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse crawls under the sofa and pushes the yarn out.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "There's a lost sock under here too! And a dusty cookie!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball gets bigger. And the house gets tidier.",
+    "cam": "prop:yarn",
+    "do": [
+     [
+      "yarn",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The table is free! The rug is free! You're doing it, Max!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the sun is low. Grandma moves in her chair. Mmm.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She's waking up! Only the last bit is left. Hurry!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max winds faster. The yarn leads all the way to Grandma's lap.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wind, wind, wind. Max doesn't stop.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And in Grandma's lap, the blue hat starts to get smaller.",
+    "cam": "prop:hat",
+    "do": [
+     [
+      "hat",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THE HAT IS SHRINKING!",
+    "cam": "prop:hat",
+    "hold": 1.2,
+    "do": [
+     [
+      "hat",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "Max! Stop winding! You're undoing Grandma's hat!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The yarn is joined to her hat! She told me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stops. But the hat is now tiny. Teeny tiny.",
+    "cam": "prop:hat",
+    "do": [
+     [
+      "hat",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It's so small. It would only fit... me.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma opens her eyes. She sees the giant yarn ball.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And she sees the teeny tiny hat.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, I'm sorry. I tapped the ball. Then I chased it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I rolled it all back up. But your hat got small.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Max. Thank you for telling me the truth.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma picks up the tiny hat. She smiles. Then she laughs.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well! This is the perfect size for somebody.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She puts the tiny blue hat right on Mouse's head.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "hat",
+      "to:mouse"
+     ],
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A winter hat! For me! I'm the warmest mouse in town!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody laughs. Even Max. Even Grandma, until she snorts.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Mouse has a hat, and Max has the biggest yarn ball ever!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now you can hold the yarn while I knit my hat again.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll hold it very still. No tapping. Promise.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When you make a mess, say sorry, then help fix it.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma? Tomorrow, can I learn to knit too? With my paws?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "With your paws? Oh, this I have to see!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Roll It Back Before Grandma Wakes Up! 🧶",
+  "description": "\"It was only one tiny tap. Now the yarn is everywhere!\" 🐱\nGrandma naps before tea, and Max chases her blue yarn ball all over the house. Can he roll it all back before the sun goes down and she wakes up? Max the Curious Cat, Ep 44.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "yarn ball",
+   "cat and yarn",
+   "knitting",
+   "grandma",
+   "tidy up",
+   "autumn evening",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "ONE TINY TAP!",
+  "thumb_beat": 25,
+  "localizations": {
+   "es": {
+    "title": "¡Enróllalo antes de que la abuela despierte! 🧶",
+    "description": "\"Fue un toquecito nada más. ¡Y ahora hay lana por todas partes!\" 🐱\nLa abuela duerme la siesta antes del té, y Max persigue su ovillo azul por toda la casa. ¿Podrá enrollarlo todo antes de que se ponga el sol y ella despierte? Max el Gato Curioso, Ep. 44.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Enrola tudo antes da vovó acordar! 🧶",
+    "description": "\"Foi só um toquinho. Agora tem lã por todo lado!\" 🐱\nA vovó cochila antes do chá, e Max persegue o novelo azul pela casa inteira. Será que ele consegue enrolar tudo antes do sol se pôr e ela acordar? Max, o Gato Curioso, Ep. 44.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "لُفّ الخيط قبل أن تستيقظ الجدة! 🧶",
+    "description": "\"كانت لمسة صغيرة فقط. والآن الصوف في كل مكان!\" 🐱\nالجدة تأخذ قيلولة قبل الشاي، وماكس يطارد كرة الصوف الزرقاء في كل البيت. هل يستطيع لفّها كلها قبل غروب الشمس واستيقاظها؟ ماكس القط الفضولي، الحلقة 44.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Tout rembobiner avant que Mamie se réveille ! 🧶",
+    "description": "« Juste une toute petite tape. Et maintenant, il y a de la laine partout ! » 🐱\nMamie fait la sieste avant le thé, et Max poursuit sa pelote bleue dans toute la maison. Pourra-t-il tout rembobiner avant le coucher du soleil et son réveil ? Max le Chat Curieux, Ép. 44.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "おばあちゃんが起きる前に毛糸をまきもどせ！🧶",
+    "description": "「ちょっとさわっただけなのに。毛糸が家じゅうに！」🐱\nお茶の前におばあちゃんはおひるね。マックスは青い毛糸玉を家じゅう追いかけてしまいます。日がしずんでおばあちゃんが起きる前に、ぜんぶまきもどせる？好奇心ねこマックス 第44話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "할머니가 깨기 전에 털실을 감아라! 🧶",
+    "description": "\"딱 한 번 톡 건드렸을 뿐인데. 털실이 온 집에 다 퍼졌어!\" 🐱\n할머니가 차 마시기 전에 낮잠을 자는 동안, 맥스는 파란 털실 뭉치를 쫓아 온 집을 뛰어다녀요. 해가 지고 할머니가 깨기 전에 다 감을 수 있을까요? 호기심 많은 고양이 맥스 44화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Aufwickeln, bevor Oma aufwacht! 🧶",
+    "description": "„Es war nur ein winziger Stups. Jetzt ist die Wolle überall!“ 🐱\nOma macht vor dem Tee ein Nickerchen, und Max jagt ihr blaues Wollknäuel durchs ganze Haus. Schafft er es, alles aufzuwickeln, bevor die Sonne untergeht und sie aufwacht? Max die neugierige Katze, Folge 44.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 20,
+   "top": "JUST ONE TINY TAP...",
+   "title": "Never Give a Cat a Ball of Yarn! 🧶 #shorts",
+   "description": "One tap... and the whole house is blue. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "yarn ball",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Nunca le des un ovillo a un gato! 🧶 #shorts",
+     "description": "Un toquecito... y toda la casa es azul. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Nunca dê um novelo para um gato! 🧶 #shorts",
+     "description": "Um toquinho... e a casa toda fica azul. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لا تعطِ القط كرة صوف أبدًا! 🧶 #shorts",
+     "description": "لمسة واحدة... والبيت كله أزرق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ne donnez jamais une pelote à un chat ! 🧶 #shorts",
+     "description": "Une tape... et toute la maison est bleue. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ねこに毛糸玉をあげちゃダメ！🧶 #shorts",
+     "description": "ちょっとさわったら…家じゅう青い毛糸！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "고양이에게 털실 뭉치는 절대 안 돼요! 🧶 #shorts",
+     "description": "톡 한 번에... 온 집이 파래졌어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Gib einer Katze niemals ein Wollknäuel! 🧶 #shorts",
+     "description": "Ein Stups... und das ganze Haus ist blau. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1135 @@
+{
+ "id": "20261111-3-one-thousand-leaves",
+ "plot": "On a windy autumn morning Max promises Grandma a clear garden path before Polly comes for tea at sunset, but every leaf he rakes blows back; Dog points out that the wind always rolls his ball to the fence corner, so Max rakes with the wind, and when the 1,000-leaf pile blocks the flower beds Grandma reveals the leaves are meant to go on the beds as a winter blanket.",
+ "script": {
+  "title": "1,000 Leaves and One Rake",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "polly": {
+    "name": "Polly",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.55,
+     0.85
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -10,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     4.0,
+     9.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "pile",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -8.0,
+     13.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 1.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Whoosh! The leaves are flying back onto the path!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I raked that spot! Now it's covered again!",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "enter:right"
+     ],
+     [
+      "mouse",
+      "to:3,6"
+     ],
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "1,000 LEAVES. ONE RAKE!",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a windy autumn morning. Max's voice is back again.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-5,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Polly comes for tea at sunset. I need a clear path.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Leave it to me, Grandma! I'll rake every single leaf!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Thank you, dear. But don't throw the leaves away.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The garden needs them. You'll see why later.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma goes inside to bake her apple cake.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The garden needs leaves? What for? Leaves are just... leaves.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs out of the house with his red ball.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He drops it on the grass. Bounce, bounce.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The wind gives it a push. Roll, roll, roll.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "All the way to the corner by the old wooden fence.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "to:-9,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Again? My ball always ends up in that corner! Always!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-7,13"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay, team. Mouse counts. I rake. Dog... stays out of the way.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm very good at staying out of the way. Mostly.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max rakes the path. Scritch, scratch. Scritch, scratch.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One leaf, two leaves, three... ten... fifty...",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes a big pile toward the garden gate.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then... WHOOSH! A big gust of wind!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The leaves fly back, right over Max's head, onto the path.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! Come back! I just raked you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,8"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Now there are MORE leaves! And one is on your nose!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'll rake faster. Faster than the wind!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Faster than the wind? Nobody is faster than the wind!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Watch me, Mouse. I'm the fastest raker in the world!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:4,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max rakes so fast his tail spins like a fan.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,8"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But every time he rakes forward, the wind blows them back.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is like running on the spot! I'm getting nowhere!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "The sun is already high. Polly comes at sunset!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And Grandma wants a clear path. I promised her!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max flops down on the leaves. Tired. Crunch.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Are you sleeping in the leaves? Can I sleep there too?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm not sleeping, Dog. I'm losing. The wind is winning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dog's ball rolls past his nose again. Toward the fence.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "show"
+     ],
+     [
+      "ball",
+      "to:-9,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "See? The wind always takes it to that corner. Every time!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-7,13"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why rake against the wind, Max? Let the wind carry them!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog... that's... a really, really good idea!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I have one good idea every week. That was it.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max stops raking toward the gate. He rakes toward the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just a little push... and the wind does the rest.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Look! They're rolling all by themselves! Like Dog's ball!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-3,10"
+     ],
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Leaves dance across the garden into the corner.",
+    "cam": "prop:pile",
+    "do": [
+     [
+      "pile",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Two hundred... five hundred... eight hundred...",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The path is clear! Look, Mouse, I can see the stones!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grey stones, brown stones, and one stone shaped like a cookie!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the corner pile grows. And grows. And GROWS.",
+    "cam": "prop:pile",
+    "do": [
+     [
+      "pile",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Nine hundred ninety-nine... ONE THOUSAND leaves!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now the pile is bigger than Dog. Bigger than Grandma!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Uh-oh. It's right in front of Grandma's flower beds!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "And the sun is going down! Polly will be here soon!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We can't throw them away. Grandma said so. What do we do?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The back door opens. Grandma comes out with her apple cake.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-5,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My goodness! What a lovely, enormous pile!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sorry, Grandma. It's in front of your flowers.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "In front of them? No, dear. The leaves go ON them!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "LEAVES GO ON THE FLOWERS?",
+    "cam": "close:max",
+    "hold": 1.2,
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Leaves are a warm blanket for the garden in winter.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "They keep the roots cozy. And bugs sleep under them.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So that's why you said the garden needs them!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A leaf blanket! Can I have one too, for my bed?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everybody tucks the garden in for winter.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,11"
+     ],
+     [
+      "dog",
+      "to:-6,12"
+     ],
+     [
+      "mouse",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max scoops. Dog carries. Mouse pats every leaf flat.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Good night, flowers! Sleep tight under your leaf blanket!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And one small pile is left over. Just the right size.",
+    "cam": "prop:pile",
+    "do": [
+     [
+      "pile",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That one is for jumping. On the count of three!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just then, the gate creaks. Polly arrives for tea.",
+    "cam": "wide",
+    "do": [
+     [
+      "polly",
+      "enter:right"
+     ],
+     [
+      "polly",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "polly",
+    "say": "Oh, how lovely! Is that a leaf pile? May I jump too?",
+    "cam": "close:polly",
+    "do": [
+     [
+      "polly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One... two... THREE!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody jumps. Crunch! Leaves fly everywhere. Even onto the path.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no... the path! Ah, never mind. Wind, it's your turn!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When something is hard, look for a helper. Even the wind.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow I'll start knitting my new winter hat. Blue yarn!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Yarn? A soft, round, rolling ball of yarn?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max. Don't you even think about it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "1,000 Autumn Leaves and Only ONE Rake! 🍂",
+  "description": "\"Every leaf I rake, the wind blows right back. Every single one!\" 🐱\nPolly comes for tea at sunset, and Max promised Grandma a clear garden path. But the autumn wind has other plans, and Grandma says the leaves must not be thrown away. Max the Curious Cat, Ep 43.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "autumn leaves",
+   "raking leaves",
+   "windy day",
+   "garden",
+   "leaf pile",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat",
+   "autumn"
+  ],
+  "thumb_text": "WIND WINS?",
+  "thumb_beat": 29,
+  "localizations": {
+   "es": {
+    "title": "¡1.000 hojas de otoño y un solo rastrillo! 🍂",
+    "description": "\"Cada hoja que rastrillo, el viento la trae de vuelta. ¡Todas!\" 🐱\nPolly viene a tomar el té al atardecer, y Max prometió a la abuela un camino limpio. Pero el viento de otoño tiene otros planes, y la abuela dice que las hojas no se tiran. Max el Gato Curioso, Ep. 43.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "1.000 folhas de outono e só UM ancinho! 🍂",
+    "description": "\"Cada folha que eu junto, o vento traz de volta. Todas!\" 🐱\nPolly vem para o chá ao pôr do sol, e Max prometeu à vovó um caminho limpo. Mas o vento de outono tem outros planos, e a vovó diz que as folhas não podem ir para o lixo. Max, o Gato Curioso, Ep. 43.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "1000 ورقة خريف ومِدَمّة واحدة فقط! 🍂",
+    "description": "\"كل ورقة أجمعها، تعيدها الريح. كل واحدة!\" 🐱\nبولي ستأتي لشرب الشاي عند الغروب، ووعد ماكس جدته بممر نظيف. لكن ريح الخريف لها رأي آخر، والجدة تقول إن الأوراق لا تُرمى. ماكس القط الفضولي، الحلقة 43.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "1 000 feuilles d'automne et UN seul râteau ! 🍂",
+    "description": "« Chaque feuille que je ratisse, le vent la ramène. Toutes ! » 🐱\nPolly vient prendre le thé au coucher du soleil, et Max a promis à Mamie une allée propre. Mais le vent d'automne n'est pas d'accord, et Mamie dit qu'il ne faut pas jeter les feuilles. Max le Chat Curieux, Ép. 43.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "秋の落ち葉1000まい、くまではひとつだけ！🍂",
+    "description": "「かき集めても、風がぜんぶもどしちゃう。ぜんぶだよ！」🐱\n夕方にポリーがお茶に来るので、マックスはおばあちゃんに道をきれいにすると約束。でも秋の風はいじわる。しかもおばあちゃんは「葉っぱはすてないで」と言うのです。好奇心ねこマックス 第43話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "가을 낙엽 1,000장, 갈퀴는 딱 하나! 🍂",
+    "description": "\"내가 모은 낙엽을 바람이 다 다시 날려 버려. 전부 다!\" 🐱\n해 질 녘에 폴리가 차를 마시러 와요. 맥스는 할머니께 길을 깨끗이 치우겠다고 약속했지만, 가을바람은 생각이 달라요. 게다가 할머니는 낙엽을 버리면 안 된대요. 호기심 많은 고양이 맥스 43화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "1.000 Herbstblätter und nur EIN Rechen! 🍂",
+    "description": "„Jedes Blatt, das ich reche, weht der Wind zurück. Jedes einzelne!“ 🐱\nPolly kommt bei Sonnenuntergang zum Tee, und Max hat Oma einen sauberen Weg versprochen. Doch der Herbstwind hat andere Pläne, und Oma sagt, die Blätter dürfen nicht weg. Max die neugierige Katze, Folge 43.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 19,
+   "dur": 20,
+   "top": "THE WIND IS WINNING!",
+   "title": "Max vs the Autumn Wind... WHOOSH! 🍂 #shorts",
+   "description": "Every leaf flies right back. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "autumn leaves",
+    "windy day"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max contra el viento de otoño... ¡FIUU! 🍂 #shorts",
+     "description": "Cada hoja vuelve volando. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Max contra o vento de outono... VUUSH! 🍂 #shorts",
+     "description": "Cada folha volta voando. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس ضد ريح الخريف... ووووش! 🍂 #shorts",
+     "description": "كل ورقة تطير عائدة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max contre le vent d'automne... WOUSH ! 🍂 #shorts",
+     "description": "Chaque feuille revient en volant. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックス対秋の風…ビューン！🍂 #shorts",
+     "description": "落ち葉がぜんぶもどってくる。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스 대 가을바람... 휘이잉! 🍂 #shorts",
+     "description": "낙엽이 전부 다시 날아와요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Max gegen den Herbstwind... WUSCH! 🍂 #shorts",
+     "description": "Jedes Blatt fliegt zurück. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
