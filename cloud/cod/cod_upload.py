@@ -49,7 +49,7 @@ def thumb(m, n):
           f"drawbox=x=36:y=34:w=170:h=78:color=0xD81E1E@1:t=fill,"
           f"drawtext=fontfile='{F}':text='MW4':fontsize=62:fontcolor=white:x=36+(170-text_w)/2:y=44,"
           f"drawtext=fontfile='{F}':text='PART {n}':fontsize=200:fontcolor=white:borderw=14:bordercolor=black:x=48:y=h-text_h-40")
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(m["thumb_t"]), "-i", JOB["src"], "-frames:v", "1", "-vf", vf,
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(m["thumb_t"]), "-i", m.get("src", JOB["src"]), "-frames:v", "1", "-vf", vf,
                     "-q:v", "2", out], check=True)
     return out
 
@@ -63,7 +63,7 @@ def cold_open(m):
         best, bt = -1, m.get("teaser_t")  # 2026-11-11: hand-picked moment; scanning audio over /mnt/e took >10 min
         for a, b in ([] if bt is not None else m["keep"]):
             if b - a < 20: continue
-            au = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", JOB["src"], "-vn", "-ac", "1",
+            au = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", m.get("src", JOB["src"]), "-vn", "-ac", "1",
                                  "-ar", "4000", "-f", "s16le", "-"], capture_output=True).stdout
             x = np.frombuffer(au, np.int16).astype(np.float32) / 32768
             n = len(x) // 4000
@@ -73,7 +73,7 @@ def cold_open(m):
             if w[i] > best: best, bt = w[i], a + i
         if bt is None: return src_long
         tz = os.path.join(HOME, "up", m["file"] + "_teaser.mp4")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(bt), "-t", "8", "-i", JOB["src"], "-vf",
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(bt), "-t", "8", "-i", m.get("src", JOB["src"]), "-vf",
                         "fade=t=out:st=7.7:d=0.3", "-af", "afade=t=out:st=7.6:d=0.4",
                         "-c:v", "h264_nvenc", "-preset", "p6", "-rc", "vbr", "-cq", "18", "-b:v", "0", "-profile:v", "high",
                         "-pix_fmt", "yuv420p", "-r", "60", "-g", "120", "-video_track_timescale", "15360",
