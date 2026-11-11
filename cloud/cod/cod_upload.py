@@ -17,8 +17,8 @@ if not os.path.isdir(OUT) or not glob.glob(os.path.join(OUT, "*.mp4")):
     OUT = JOB.get("out_fallback", OUT) if os.path.isdir(JOB.get("out_fallback", "")) else OUT
 os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash2.txt" if CH2 else "yuklash.txt")
 PER_DAY = {"long": 2, "short": 6}   # 2026-11-11 owner: 2 long + 6 Shorts a day (API quota ~6/day -> rest rolls to next day until a 2nd project is added)
-SLOTS = {"long": [23, 2], "short": [13, 15, 17, 19, 21, 1]}
-if CH2: SLOTS = {"long": [], "short": [14, 16, 18, 20, 22, 0]}   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
+SLOTS = {"long": [23, 2], "short": [1, 2, 3, 12, 13, 14]}   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
+if CH2: SLOTS = {"long": [], "short": [4, 5, 6, 15, 16, 17]}   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
         "cod mw4", "call of duty 2026", "fps", "gaming"]
@@ -105,6 +105,25 @@ def localize(title):
             return {lang: {"title": (t + " | Call of Duty MW4 #shorts")[:100], "description": DESC} for lang, t in tr.items()}
     return None
 
+def v4_ok():
+    """2026-11-12 owner: a Short goes up only after Claude watched it and approved it (cloud/cod/v4_ok.json)."""
+    try:
+        return set(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "v4_ok.json"))))
+    except Exception:
+        return set()
+
+def v4_items(main):
+    ok, items = v4_ok(), []
+    for n, m in enumerate(JOB["missions"], 1):
+        for k, s in enumerate(m.get("shorts4", []), 1):
+            if (s.get("ch", 1) == 1) != main or f"{m['file']}_V{k}" not in ok: continue
+            t = s.get("yt_title") or s["hook"].title()
+            it = dict(key=(f"{m['id']}v4_short{k}" if main else f"{m['id']}_v4b{k}"), kind="short", m=m, n=n, v4=True,
+                      path=os.path.join(OUT, "v4", f"{m['file']}_V{k}.mp4"), title=(t[:68] + " #mw4 #modernwarfare4 #cod"))
+            if not main: it["loc"] = localize(t)
+            items.append(it)
+    return items
+
 def plan2():
     """Shorts-only channel: its own B-set Shorts (other moments than the main channel), each pointing to the full mission.
     Keys in cloud/cod/browser_done.json were already uploaded through Studio in the browser (owner 2026-11-11) -> skip."""
@@ -112,7 +131,7 @@ def plan2():
         bd = set(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "browser_done.json"))))
     except Exception:
         bd = set()
-    items = []
+    items = v4_items(False)
     for n, m in enumerate(JOB["missions"], 1):
         for k, s in enumerate(m.get("shorts_b", []), 1):
             t = s.get("yt_title") or s.get("hook")
@@ -135,7 +154,7 @@ def desc2(m, n):
 
 def plan():
     if CH2: return plan2()
-    items = []
+    items = v4_items(True)
     for n, m in enumerate(JOB["missions"], 1):
         name = m.get("name", f"Mission {n}")  # 2026-11-11: theRadBrad-style title (most-viewed MW4 walkthrough)
         long_it = dict(key=f"{m['id']}{JOB.get('key_ver', '')}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
@@ -180,6 +199,27 @@ def main():
                 r = Y.make_private(yt, v["id"]); st["cancelled"].append(v["id"]); log("yopildi (chiqmaydi):", key, v["id"], r)
             except Exception as e:
                 log("yopib bo'lmadi:", key, str(e)[:120])
+    if JOB.get("hide_v3_shorts"):
+        ids = [(k, v["id"]) for k, v in st["done"].items() if v["kind"] == "short" and "v4" not in k]
+        if CH2:  # Shorts-only channel: also the 6 uploaded through Studio in the browser (not in our state)
+            try:
+                up = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+                keep = {v["id"] for k, v in st["done"].items() if "v4" in k}; tok = None
+                while True:
+                    r = yt.playlistItems().list(part="contentDetails", playlistId=up, maxResults=50, pageToken=tok).execute()
+                    ids += [("studio", x["contentDetails"]["videoId"]) for x in r.get("items", [])
+                            if x["contentDetails"]["videoId"] not in keep]
+                    tok = r.get("nextPageToken")
+                    if not tok: break
+            except Exception as e:
+                log("kanal videolari ro'yxati olinmadi:", str(e)[:120])
+        seen = set(); ids = [x for x in ids if not (x[1] in seen or seen.add(x[1]))]
+        for key, vid in ids:
+            if vid in st.setdefault("cancelled", []): continue
+            try:
+                r = Y.make_private(yt, vid); st["cancelled"].append(vid); log("eski Short yashirildi:", key, vid, r)
+            except Exception as e:
+                log("eski Short yashirilmadi:", key, vid, str(e)[:120])
     json.dump(st, open(STATE, "w"), indent=1)
     if not JOB.get("upload_enabled", True):
         log("yuklash vaqtincha o'chiq (yangi montaj tayyorlanmoqda)"); return
@@ -199,7 +239,7 @@ def main():
     for it in plan():
         if it["key"] in st["done"] or cnt[it["kind"]] >= PER_DAY[it["kind"]]: continue
         if not os.path.exists(it["path"]): continue
-        if it["kind"] == "short" and JOB.get("shorts_paused"): continue   # 2026-11-11 owner: old Shorts style rejected -> wait for v4
+        if it["kind"] == "short" and JOB.get("shorts_paused") and not it.get("v4"): continue   # 2026-11-11 owner: old Shorts style rejected -> wait for v4
         now = dt.datetime.now(dt.timezone.utc); t = next_slot(it["kind"], st["slots"], now)
         th = thumb(it["m"], it["n"]) if it["kind"] == "long" else None
         path = cold_open(it["m"]) if it["kind"] == "long" else it["path"]

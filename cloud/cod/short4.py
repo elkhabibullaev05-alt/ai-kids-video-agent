@@ -48,15 +48,15 @@ def find_cursor():
     if len(xs) < 15 or len(xs) > 900: return None
     x0, y0, x1, y1 = xs.min() + 840, ys.min() + 420, xs.max() + 840, ys.max() + 420
     return max(1, x0 - 4), max(1, y0 - 4), min(40, x1 - x0 + 9), min(48, y1 - y0 + 9)
-cur = find_cursor() or (950, 532, 24, 32)
+cur = find_cursor()   # None -> nothing static found, leave the picture untouched
 print("cursor box:", cur, flush=True)
 
 # ---- 2) cut the moment, clean it, stabilise it
 a = max(0.0, T - PRE); dur = PRE + POST
 clip = os.path.join(tmp, "clip.mov"); trf = os.path.join(tmp, "t.trf"); stab = os.path.join(tmp, "stab.mov")
-x, y, w, h = cur
+dl = f"delogo=x={cur[0]}:y={cur[1]}:w={cur[2]}:h={cur[3]}" if cur else "null"
 run(["ffmpeg", "-y", "-v", "error", "-ss", f"{a:.3f}", "-t", f"{dur:.3f}", "-i", src, "-vf",
-     f"delogo=x={x}:y={y}:w={w}:h={h}", "-af", "aresample=48000"] + venc(14) + ["-c:a", "pcm_s16le", clip])
+     dl, "-af", "aresample=48000"] + venc(14) + ["-c:a", "pcm_s16le", clip])
 run(["ffmpeg", "-y", "-v", "error", "-i", clip, "-vf", f"vidstabdetect=shakiness=7:accuracy=15:result={trf}", "-f", "null", "-"])
 GRADE = ("hqdn3d=1.5:1.5:3:3,"
          "curves=all='0/0 0.05/0.09 0.25/0.34 0.5/0.6 0.8/0.86 1/1',"

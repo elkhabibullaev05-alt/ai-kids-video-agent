@@ -451,6 +451,22 @@ def main():
                     hype_short(jb, m, dict(s, _peak=k + 5), k, tmp, outdir)
         except Exception as e:
             log(m["id"], "XATO:", repr(e)); err += 1
+    # 2026-11-12 v4 Shorts (short4.py): one stabilised action moment, cursor removed, speed ramp on the music drop
+    v4 = os.path.join(outdir, "v4"); os.makedirs(v4, exist_ok=True)
+    for m in job["missions"]:
+        for k, s in enumerate(m.get("shorts4", []), 1):
+            dst = os.path.join(v4, f"{m['file']}_V{k}.mp4")
+            if os.path.exists(dst): continue
+            spec = dict(s, src=m.get("src", job["src"]), out=dst, music_dir=job.get("music_dir", ""))
+            sj = os.path.join(tmp, f"v4_{m['id']}_{k}.json"); json.dump(spec, open(sj, "w"))
+            r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "short4.py"), sj],
+                               capture_output=True, text=True)
+            log(m["id"], f"V4 SHORT {k}:", "TAYYOR" if r.returncode == 0 else "XATO " + r.stderr[-600:])
+            if r.returncode: err += 1
+    kf = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korish.py")
+    vids = [f for f in sorted(os.listdir(v4)) if f.endswith(".mp4") and not os.path.exists(os.path.join(v4, f[:-4] + "_baho.txt"))]
+    if vids:
+        subprocess.run([sys.executable, kf] + [os.path.join(v4, f) for f in vids], capture_output=True, text=True)
     log("HAMMASI TUGADI" if not err else f"TUGADI, {err} ta xato bilan")
     sys.exit(1 if err else 0)
 
