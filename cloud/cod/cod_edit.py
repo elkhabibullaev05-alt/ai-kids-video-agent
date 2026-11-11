@@ -362,7 +362,7 @@ def hype_short(job, m, s, k, tmp, outdir):
     try:
         pk = mission_peaks(src, m, L)
         if pk:
-            hook = pk[(k - 1) % len(pk)]
+            hook = pk[s.get('_peak', k - 1) % len(pk)]
             starts = [hook] + [t for t in starts[1:] if abs(t - hook) > L][:n - 1]
     except Exception as e:
         log("hook tanlash xato:", e)
@@ -444,6 +444,11 @@ def main():
             for k, s in enumerate(m.get("shorts", []), 1):
                 if not os.path.exists(os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4")):
                     (hype_short if job.get("style") == "hype" else short)(job, m, s, k, tmp, outdir)
+            # 2026-11-11 owner: second, Shorts-only channel (MW4 Shorts Daily) gets its OWN Shorts from other moments
+            jb = dict(job, short_tag="B")
+            for k, s in enumerate(m.get("shorts_b", []), 1):
+                if not os.path.exists(os.path.join(outdir, f"{m['file']}_B{k}.mp4")):
+                    hype_short(jb, m, dict(s, _peak=k + 5), k, tmp, outdir)
         except Exception as e:
             log(m["id"], "XATO:", repr(e)); err += 1
     log("HAMMASI TUGADI" if not err else f"TUGADI, {err} ta xato bilan")
