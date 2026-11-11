@@ -58,10 +58,10 @@ def segment(src, a, b, out, events=(), title=None, fade=True):
     """Encode src[a:b] to out. events: [[abs_time, text], ...] -> pop text + boom inside the segment."""
     d = b - a
     vf = []
-    if fade: vf += [f"fade=t=in:st=0:d=0.25", f"fade=t=out:st={max(d-0.25,0):.2f}:d=0.25"]
+    if fade is True: vf += [f"fade=t=in:st=0:d=0.25", f"fade=t=out:st={max(d-0.25,0):.2f}:d=0.25"]
     if title:
-        vf += [dtext(title[0], 120, "(h/2)-150", 0.3, 4.3, "white", 10),
-               dtext(title[1], 64, "(h/2)", 0.6, 4.3, "#FFD200", 6)]
+        vf += [atext(title[0], 170, "(h/2)-190", "white", 9, start=0.3, end=4.3),
+               atext(title[1], 76, "(h/2)+10", "#FFD200", 6, start=0.6, end=4.3)]
     inputs = ["-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-i", src]
     amix = ""
     ev = [(t - a, txt) for t, txt in events if a <= t < b - 1.3]
@@ -69,7 +69,8 @@ def segment(src, a, b, out, events=(), title=None, fade=True):
         vf.append(dtext(txt, 130, "h*0.18", o, o + 1.3, "#FFD200", 10))
         inputs += ["-f", "lavfi", "-i", f"aevalsrc='{BOOM}':s=48000:d=1.6,aformat=channel_layouts=stereo,volume=0.7,adelay={int(o*1000)}|{int(o*1000)}"]
     fc = f"[0:v]{','.join(vf) if vf else 'null'}[v]"
-    af = f"afade=t=in:st=0:d=0.2,afade=t=out:st={max(d-0.25,0):.2f}:d=0.25" if fade else "anull"
+    af = (f"afade=t=in:st=0:d=0.2,afade=t=out:st={max(d-0.25,0):.2f}:d=0.25" if fade is True else
+          f"afade=t=in:st=0:d=0.04,afade=t=out:st={max(d-0.05,0):.2f}:d=0.05")  # v2 hard cut: no click
     if ev:
         fc += (";[0:a]aresample=48000,aformat=channel_layouts=stereo[a0];[a0]" + "".join(f"[{i+1}:a]" for i in range(len(ev)))
                + f"amix=inputs={len(ev)+1}:normalize=0:duration=first,{af}[a]")
@@ -108,11 +109,16 @@ def thumb(src, t, big, small, out):
 
 def long_video(job, m, tmp, outdir):
     src = m.get("src", job["src"])
-    keep = m["keep"]; memes = {round(float(k)): v for k, v in m.get("memes", {}).items()}
+    keep = m["keep"]
+    if job.get("tighten"):
+        before = sum(b - a for a, b in keep); keep = tighten(src, keep)
+        log(m["id"], f"bo'sh joylar qirqildi: {before/60:.1f} -> {sum(b - a for a, b in keep)/60:.1f} daqiqa")
+    memes = {round(float(k)): v for k, v in m.get("memes", {}).items()}
     parts = []
     for i, (a, b) in enumerate(keep):
         p = os.path.join(tmp, f"{m['id']}_s{i:02d}.mp4")
-        segment(src, a, b, p, m.get("events", []), title=(m["title"], m["subtitle"]) if i == 0 else None)
+        segment(src, a, b, p, m.get("events", []), title=(m["title"], m["subtitle"]) if i == 0 else None,
+                fade=(True if not job.get("tighten") else "a"))
         parts.append(p)
         # meme for a death/fail that happens right after this kept piece
         for mt, txt in memes.items():
@@ -281,6 +287,101 @@ def short(job, m, s, k, tmp, outdir):
     os.replace(out, final)
     log(m["id"], f"SHORTS {k} TAYYOR:", final)
 
+# ---------------------------------------------------------------------------------------------------------------
+# 2026-11-11 v2 (owner: "zerikarli, sekin" + didn't like the text and the music; long videos boring too)
+ANTON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "Anton-Regular.ttf")
+def atext(text, size, y, color="white", border=7, x="(w-text_w)/2", start=None, end=None):
+    """Anton (condensed heavy display font, the look of top gaming Shorts/thumbnails)."""
+    f = ANTON if os.path.exists(ANTON) else FONT
+    st = (f"drawtext=fontfile='{f}':text='{esc(text)}':fontsize={size}:fontcolor={color}:borderw={border}:"
+          f"bordercolor=black:x={x}:y={y}")
+    if start is not None: st += f":enable='between(t,{start:.2f},{end:.2f})'"
+    return st
+
+def pick_shots(src, a, b, L, n, pad=20):
+    """n non-overlapping L-second shots with the most action inside [a-pad, b+pad]; best first, rest in story order."""
+    lo, hi = max(0, a - pad), b + pad
+    sc = np.array(activity(src, lo, hi)); W = max(1, int(round(L)))
+    if len(sc) <= W: return [lo]
+    win = np.convolve(sc, np.ones(W), "valid")
+    taken, out = np.zeros(len(win), bool), []
+    for i in np.argsort(-win):
+        if len(out) >= n: break
+        if taken[max(0, i - W):i + W].any(): continue
+        out.append(int(i)); taken[i] = True
+    best = out[0]; rest = sorted(out[1:])
+    return [lo + t for t in [best] + rest]
+
+def hype_short(job, m, s, k, tmp, outdir):
+    """Fast montage Short: 1.5-2 s shots cut on the beat of an energetic track, the most intense moment first,
+    blurred gameplay fills the 9:16 frame behind a native 1080x1080 window, big Anton headline on top."""
+    src = m.get("src", job["src"])
+    final = os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4"); out = final + ".part.mp4"
+    target = s.get("len", 21.0)
+    mus = music_for(job, s, target + 2)
+    L = 1.8
+    if mus:  # whole beats, ~1.4-2.2 s per shot
+        per = mus[2]; nb = max(1, round(L / per)); L = nb * per
+        while L < 1.35: L += per
+        while L > 2.3 and nb > 1: nb -= 1; L = nb * per
+    n = max(8, int(target / L))
+    starts = pick_shots(src, s["a"], s["b"], L, n)
+    shots = []
+    for i, t in enumerate(starts):
+        sp = os.path.join(tmp, f"{m['id']}_h{k}_{i}.mp4")
+        vf = "fade=t=in:st=0:d=0.10:color=white" if i else "null"   # tiny white flash on every cut
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.3f}", "-t", f"{L:.3f}", "-i", src,
+             "-vf", vf, "-af", f"afade=t=in:st=0:d=0.03,afade=t=out:st={L-0.05:.3f}:d=0.05"] + VENC + AENC + [sp])
+        shots.append(sp)
+    lst = os.path.join(tmp, f"{m['id']}_h{k}.txt"); open(lst, "w").write("".join(f"file '{x}'\n" for x in shots))
+    total = len(shots) * L
+    head = (s.get("hook") or s.get("title") or "").upper()
+    size = 92; lines = wrap(head, int(1000 / (0.42 * size)))
+    if len(lines) > 3: size = 74; lines = wrap(head, int(1000 / (0.42 * size)))[:4]
+    y0 = 520 - len(lines) * int(size * 1.12)
+    txt = ",".join(atext(ln, size, str(y0 + i * int(size * 1.12)), "#FFD200" if i == len(lines) - 1 else "white")
+                   for i, ln in enumerate(lines))
+    fc = ("[0:v]split=2[a][b];"
+          "[a]scale=-2:1920,crop=1080:1920,boxblur=30:3,eq=brightness=-0.22:saturation=1.2[bg];"
+          "[b]crop=1080:1080:420:0,eq=contrast=1.08:saturation=1.18[fg];"
+          "[bg][fg]overlay=0:600," + txt + ","
+          + atext(f"MW4  PART {m.get('part', '')}".strip(), 54, "1730", "white", 5) +
+          f",fade=t=out:st={total-0.3:.2f}:d=0.3[v]")
+    extra, amap = [], "0:a"
+    if mus:
+        extra = ["-ss", f"{mus[1]:.3f}", "-i", mus[0]]
+        fc += (f";[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,afade=t=out:st={total-1:.2f}:d=1,volume=0.9[m];"
+               f"[0:a]volume=0.55[g];[m][g]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-13:TP=-1.2:LRA=9[mix]")
+        amap = "[mix]"
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst] + extra +
+        ["-filter_complex", fc, "-map", "[v]", "-map", amap] + VENC + AENC + ["-t", f"{total:.3f}", "-movflags", "+faststart", out])
+    for x in shots + [lst]: os.remove(x)
+    os.replace(out, final)
+    log(m["id"], f"SHORTS {k} TAYYOR (v2):", final, f"{len(shots)} kadr x {L:.2f}s")
+
+def tighten(src, keep, gap=8, edge=1.5):
+    """Long videos v2: drop stretches with no action and no sound (walking/waiting/quiet loading) longer than `gap` s,
+    keeping `edge` s on both sides so cuts stay smooth. Dialogue/cutscenes are loud -> kept."""
+    out = []
+    for a, b in keep:
+        if b - a < gap * 2: out.append([a, b]); continue
+        sc = np.array(activity(src, a, b))
+        dead = sc < -0.9
+        i, cur = 0, a
+        while i < len(dead):
+            if dead[i]:
+                j = i
+                while j < len(dead) and dead[j]: j += 1
+                if j - i >= gap:
+                    s0, s1 = a + i + edge, a + j - edge
+                    if s0 - cur > 1: out.append([cur, s0])
+                    cur = s1
+                i = j
+            else:
+                i += 1
+        if b - cur > 1: out.append([cur, b])
+    return out
+
 def main():
     global LOG
     job = json.load(open(sys.argv[1]))
@@ -301,7 +402,7 @@ def main():
                 long_video(job, m, tmp, outdir)
             for k, s in enumerate(m.get("shorts", []), 1):
                 if not os.path.exists(os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4")):
-                    short(job, m, s, k, tmp, outdir)
+                    (hype_short if job.get("style") == "hype" else short)(job, m, s, k, tmp, outdir)
         except Exception as e:
             log(m["id"], "XATO:", repr(e)); err += 1
     log("HAMMASI TUGADI" if not err else f"TUGADI, {err} ta xato bilan")

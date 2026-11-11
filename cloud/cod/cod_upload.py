@@ -28,6 +28,8 @@ def log(*a):
     print(s, flush=True); open(LOG, "a").write(s + "\n")
 
 def font():
+    a = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "Anton-Regular.ttf")  # v2 thumbnails
+    if os.path.exists(a): return a
     for p in ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]:
         if os.path.exists(p): return p
     return glob.glob("/usr/share/fonts/**/*.ttf", recursive=True)[0]
@@ -90,11 +92,11 @@ def plan():
     items = []
     for n, m in enumerate(JOB["missions"], 1):
         name = m.get("name", f"Mission {n}")  # 2026-11-11: theRadBrad-style title (most-viewed MW4 walkthrough)
-        long_it = dict(key=f"{m['id']}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
+        long_it = dict(key=f"{m['id']}{JOB.get('key_ver', '')}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
                        title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part {n} - {name} (1080p 60FPS)"[:100])
         for k, s in enumerate(m.get("shorts", []), 1):
             t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
-            items.append(dict(key=f"{m['id']}_short{k}", kind="short", m=m, n=n,
+            items.append(dict(key=f"{m['id']}{JOB.get('key_ver', '')}_short{k}", kind="short", m=m, n=n,
                               path=os.path.join(OUT, f"{m['file']}_{JOB.get('short_tag', 'shortHD')}{k}.mp4"),
                               title=(t[:88] + " #shorts")))
         items.append(long_it)  # 2026-11-11: Shorts first (small files pass a slow hotspot quickly), then the long video
