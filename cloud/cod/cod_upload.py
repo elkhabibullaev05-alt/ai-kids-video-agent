@@ -38,7 +38,7 @@ def thumb(m, n):
     out = os.path.join(OUT, f"{m['file']}_thumb_v3.jpg")
     if os.path.exists(out): return out
     F = font()
-    vf = (f"crop=iw*0.78:ih*0.78:iw*0.11:ih*0.08,scale=1280:720:flags=lanczos,"
+    vf = (f"crop=iw*0.70:ih*0.70:iw*0.15:ih*0.13,scale=1280:720:flags=lanczos,"
           f"eq=saturation=1.35:contrast=1.2:brightness=0.02,unsharp=5:5:0.8,vignette=PI/5,"
           f"drawbox=x=0:y=500:w=1280:h=220:color=black@0.35:t=fill,"
           f"drawbox=x=36:y=34:w=170:h=78:color=0xD81E1E@1:t=fill,"
