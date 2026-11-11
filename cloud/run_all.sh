@@ -89,7 +89,7 @@ if [ -f cloud/cod/job.json ]; then
 fi
 # 2026-11-11 owner: upload the edited MW4 videos to MW4 Campaign HD (own Cloud project), 1 long + 3 Shorts a day
 if [ -s /root/kanal/cod/token.json ] && [ -f cloud/cod/cod_upload.py ]; then
-  ( flock -n 8 || exit 0; timeout 6h python3 cloud/cod/cod_upload.py >> /root/kanal/cod/upload.log 2>&1 ) 8>/tmp/kanal-codup.lock &
+  ( flock -n 8 || exit 0; timeout 14h python3 cloud/cod/cod_upload.py >> /root/kanal/cod/upload.log 2>&1 ) 8>/tmp/kanal-codup.lock &
 fi
 start_pool $PARMK $mk
 start_pool $PAR3D $d3

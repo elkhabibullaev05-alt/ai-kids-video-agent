@@ -74,7 +74,11 @@ def cold_open(m):
                         "-pix_fmt", "yuv420p", "-r", "60", "-g", "120", "-video_track_timescale", "15360",
                         "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", tz], check=True)
         lst = tz + ".txt"; open(lst, "w").write(f"file '{tz}'\nfile '{src_long}'\n")
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c:v", "copy", "-c:a", "aac",
+        # 2026-11-11: the laptop is often on a phone hotspot -> 25-28 Mbps masters (3-7.5 GB) took hours to upload.
+        # Upload copy at YouTube's recommended 1080p60 rate (12 Mbps); YouTube re-encodes anyway. Masters stay on E:.
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lst,
+                        "-c:v", "h264_nvenc", "-preset", "p6", "-tune", "hq", "-rc", "vbr", "-b:v", "12M", "-maxrate", "16M",
+                        "-bufsize", "24M", "-spatial-aq", "1", "-profile:v", "high", "-pix_fmt", "yuv420p", "-c:a", "aac",
                         "-b:a", "192k", "-movflags", "+faststart", final + ".part.mp4"], check=True)
         os.replace(final + ".part.mp4", final); os.remove(tz); os.remove(lst)
         log(m["id"], f"cold open qo'shildi ({bt:.0f}s dagi eng shiddatli joy)")
