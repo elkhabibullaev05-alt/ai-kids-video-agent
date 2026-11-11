@@ -457,6 +457,8 @@ def main():
     log("BOSHLANDI. encoder:", VENC_NAME, "font:", FONT, "ffmpeg:", shutil.which("ffmpeg"))
     only = os.environ.get("COD_ONLY"); err = 0
     err += v4_shorts(job, outdir, tmp)   # Shorts first: they are what the owner is waiting for
+    if os.environ.get("COD_V4_ONLY"):
+        log("V4 SHORTS TUGADI" if not err else f"V4: {err} ta xato"); sys.exit(1 if err else 0)
     for m in job["missions"]:
         if only and m["id"] != only: continue
         try:
