@@ -55,8 +55,8 @@ def cold_open(m):
     final = os.path.join(HOME, "up", m["file"] + "_co.mp4")
     if os.path.exists(final): return final
     try:
-        best, bt = -1, None
-        for a, b in m["keep"]:
+        best, bt = -1, m.get("teaser_t")  # 2026-11-11: hand-picked moment; scanning audio over /mnt/e took >10 min
+        for a, b in ([] if bt is not None else m["keep"]):
             if b - a < 20: continue
             au = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", JOB["src"], "-vn", "-ac", "1",
                                  "-ar", "4000", "-f", "s16le", "-"], capture_output=True).stdout
@@ -90,13 +90,14 @@ def plan():
     items = []
     for n, m in enumerate(JOB["missions"], 1):
         name = m.get("name", f"Mission {n}")  # 2026-11-11: theRadBrad-style title (most-viewed MW4 walkthrough)
-        items.append(dict(key=f"{m['id']}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
-                          title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part {n} - {name} (1080p 60FPS)"[:100]))
+        long_it = dict(key=f"{m['id']}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
+                       title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part {n} - {name} (1080p 60FPS)"[:100])
         for k, s in enumerate(m.get("shorts", []), 1):
             t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
             items.append(dict(key=f"{m['id']}_short{k}", kind="short", m=m, n=n,
                               path=os.path.join(OUT, f"{m['file']}_{JOB.get('short_tag', 'shortHD')}{k}.mp4"),
                               title=(t[:88] + " #shorts")))
+        items.append(long_it)  # 2026-11-11: Shorts first (small files pass a slow hotspot quickly), then the long video
     # one long then its 3 Shorts, mission by mission
     return items
 
