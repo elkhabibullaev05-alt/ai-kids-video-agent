@@ -464,7 +464,8 @@ def produce(job, jf):
     tl = json.load(open(os.path.join(d, "timeline.json")))
     status("render", job=jid, seconds=tl["duration"])
     rng = ["--range", "1-24"] if QUICK else []
-    blender(["--tl", os.path.join(d, "timeline.json"), "--out", os.path.join(d, "frames"), "--res", "854", "--samples", "2", *rng])
+    # 2026-11-11 owner: Full HD quality on every channel -> 1280 px EEVEE frames (was 854) upscaled to 1920x1080
+    blender(["--tl", os.path.join(d, "timeline.json"), "--out", os.path.join(d, "frames"), "--res", str(CFG.get("render_res", 1280)), "--samples", "2", *rng])
     status("assemble", job=jid)
     sh([PY, os.path.join(ENG, "soundtrack.py"), d])
     long_mp4 = os.path.join(d, "long.mp4")
