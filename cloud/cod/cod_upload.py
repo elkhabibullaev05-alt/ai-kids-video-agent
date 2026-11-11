@@ -199,6 +199,7 @@ def main():
     for it in plan():
         if it["key"] in st["done"] or cnt[it["kind"]] >= PER_DAY[it["kind"]]: continue
         if not os.path.exists(it["path"]): continue
+        if it["kind"] == "short" and JOB.get("shorts_paused"): continue   # 2026-11-11 owner: old Shorts style rejected -> wait for v4
         now = dt.datetime.now(dt.timezone.utc); t = next_slot(it["kind"], st["slots"], now)
         th = thumb(it["m"], it["n"]) if it["kind"] == "long" else None
         path = cold_open(it["m"]) if it["kind"] == "long" else it["path"]
