@@ -10,7 +10,10 @@ import youtube_up as Y
 
 HOME = "/root/kanal/cod"; TOKEN = os.path.join(HOME, "token.json"); STATE = os.path.join(HOME, "uploaded.json")
 JOB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "job.json")))
-OUT = JOB["out"]; LOG = os.path.join(OUT, "yuklash.txt")
+OUT = JOB["out"]
+if not os.path.isdir(OUT) or not glob.glob(os.path.join(OUT, "*.mp4")):
+    OUT = JOB.get("out_fallback", OUT) if os.path.isdir(JOB.get("out_fallback", "")) else OUT
+os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash.txt")
 PER_DAY = {"long": 2, "short": 6}   # 2026-11-11 owner: 2 long + 6 Shorts a day (API quota ~6/day -> rest rolls to next day until a 2nd project is added)
 SLOTS = {"long": [23, 2], "short": [13, 15, 17, 19, 21, 1]}   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
@@ -30,16 +33,17 @@ def font():
     return glob.glob("/usr/share/fonts/**/*.ttf", recursive=True)[0]
 
 def thumb(m, n):
-    """1280x720 thumbnail: graded frame, big yellow MISSION N, red MW4 tag (style of top CoD walkthrough channels)."""
-    out = os.path.join(OUT, f"{m['file']}_thumb_v2.jpg")
+    """2026-11-11 owner: thumbnail like the top MW4 walkthroughs (theRadBrad 5.3M, GameRiot): close-up character
+    face from a cutscene filling the frame, huge white 'PART N' with a heavy black outline bottom-left, tiny red MW4 tag."""
+    out = os.path.join(OUT, f"{m['file']}_thumb_v3.jpg")
     if os.path.exists(out): return out
     F = font()
-    vf = (f"scale=1280:720,eq=saturation=1.3:contrast=1.15:brightness=0.03,"
-          f"drawbox=x=0:y=470:w=1280:h=250:color=black@0.55:t=fill,"
-          f"drawbox=x=40:y=40:w=230:h=110:color=0xD81E1E@1:t=fill,"
-          f"drawtext=fontfile='{F}':text='MW4':fontsize=86:fontcolor=white:x=40+(230-text_w)/2:y=52,"
-          f"drawtext=fontfile='{F}':text='MISSION {n}':fontsize=150:fontcolor=0xFFD200:borderw=8:bordercolor=black:x=(w-text_w)/2:y=505,"
-          f"drawtext=fontfile='{F}':text='NO COMMENTARY':fontsize=40:fontcolor=white:x=(w-text_w)/2:y=670")
+    vf = (f"crop=iw*0.78:ih*0.78:iw*0.11:ih*0.08,scale=1280:720:flags=lanczos,"
+          f"eq=saturation=1.35:contrast=1.2:brightness=0.02,unsharp=5:5:0.8,vignette=PI/5,"
+          f"drawbox=x=0:y=500:w=1280:h=220:color=black@0.35:t=fill,"
+          f"drawbox=x=36:y=34:w=170:h=78:color=0xD81E1E@1:t=fill,"
+          f"drawtext=fontfile='{F}':text='MW4':fontsize=62:fontcolor=white:x=36+(170-text_w)/2:y=44,"
+          f"drawtext=fontfile='{F}':text='PART {n}':fontsize=200:fontcolor=white:borderw=14:bordercolor=black:x=48:y=h-text_h-40")
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(m["thumb_t"]), "-i", JOB["src"], "-frames:v", "1", "-vf", vf,
                     "-q:v", "2", out], check=True)
     return out
@@ -81,9 +85,9 @@ def cold_open(m):
 def plan():
     items = []
     for n, m in enumerate(JOB["missions"], 1):
-        part = " Finale" if n == 1 else ""
+        name = m.get("name", f"Mission {n}")  # 2026-11-11: theRadBrad-style title (most-viewed MW4 walkthrough)
         items.append(dict(key=f"{m['id']}_long", kind="long", path=os.path.join(OUT, m["file"] + ".mp4"), m=m, n=n,
-                          title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Part {n} - Mission {n}{part} [1080p 60FPS] No Commentary"))
+                          title=f"CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part {n} - {name} (1080p 60FPS)"[:100]))
         for k, s in enumerate(m.get("shorts", []), 1):
             t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
             items.append(dict(key=f"{m['id']}_short{k}", kind="short", m=m, n=n,

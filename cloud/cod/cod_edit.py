@@ -281,7 +281,12 @@ def short(job, m, s, k, tmp, outdir):
 def main():
     global LOG
     job = json.load(open(sys.argv[1]))
-    outdir = job["out"]; os.makedirs(outdir, exist_ok=True)
+    outdir = job["out"]
+    try:  # 2026-11-11: session-2 outputs go to E: (C: has ~19 GB, the 4 long videos need more)
+        os.makedirs(outdir, exist_ok=True)
+        if shutil.disk_usage(outdir).free < 25e9: raise OSError("E: da joy kam")
+    except OSError:
+        outdir = job.get("out_fallback", outdir); os.makedirs(outdir, exist_ok=True)
     tmp = job.get("tmp", os.path.join(outdir, "_tmp")); os.makedirs(tmp, exist_ok=True)
     LOG = os.path.join(outdir, "holat.txt")
     log("BOSHLANDI. encoder:", VENC_NAME, "font:", FONT, "ffmpeg:", shutil.which("ffmpeg"))
