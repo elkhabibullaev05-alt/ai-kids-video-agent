@@ -120,6 +120,13 @@ def main():
             r = Y.make_private(yt, vid); st["cancelled"].append(vid); log("yopildi (chiqmaydi):", vid, r)
         except Exception as e:
             log("yopib bo'lmadi:", vid, str(e)[:120])
+    # also anything else uploaded from the first session (m1..m4 keys, e.g. an upload that was still running)
+    for key, v in st["done"].items():
+        if key.split("_")[0] in JOB.get("cancel_missions", []) and v["id"] not in st["cancelled"]:
+            try:
+                r = Y.make_private(yt, v["id"]); st["cancelled"].append(v["id"]); log("yopildi (chiqmaydi):", key, v["id"], r)
+            except Exception as e:
+                log("yopib bo'lmadi:", key, str(e)[:120])
     json.dump(st, open(STATE, "w"), indent=1)
     if not JOB.get("upload_enabled", True):
         log("yuklash vaqtincha o'chiq (yangi montaj tayyorlanmoqda)"); return
