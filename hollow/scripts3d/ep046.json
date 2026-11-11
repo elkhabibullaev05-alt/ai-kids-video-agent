@@ -1,0 +1,1300 @@
+{
+ "title": "Who Moved the Coffins in the Sealed Vault?",
+ "description": "A recorded legend from Barbados: the moving coffins of the Chase Vault, Christ Church, 1812-1820. What do you think happens next? Tell me in the comments.",
+ "lead_in": 0.0,
+ "set": {
+  "place": "graveyard",
+  "fog": 0.05,
+  "eyes": 0,
+  "moonlight": 16
+ },
+ "chars": {
+  "narr": {
+   "name": "Narrator",
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": -1
+  },
+  "worker": {
+   "name": "A workman",
+   "voice": "am_michael",
+   "speed": 1.02,
+   "pitch": 0,
+   "color": [
+    0.42,
+    0.28,
+    0.16
+   ],
+   "kind": "human",
+   "size": 0.86,
+   "home": [
+    -3.6,
+    7.6
+   ]
+  },
+  "comber": {
+   "name": "Lord Combermere",
+   "voice": "bm_lewis",
+   "speed": 0.96,
+   "pitch": -1,
+   "color": [
+    0.45,
+    0.08,
+    0.08
+   ],
+   "kind": "human",
+   "size": 0.9,
+   "home": [
+    -30,
+    32
+   ]
+  },
+  "lucas": {
+   "name": "Nathan Lucas",
+   "voice": "bm_daniel",
+   "speed": 0.97,
+   "pitch": -1,
+   "color": [
+    0.15,
+    0.17,
+    0.22
+   ],
+   "kind": "human",
+   "size": 0.88,
+   "home": [
+    -34,
+    34
+   ]
+  },
+  "boy": {
+   "name": "A boy",
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 1,
+   "color": [
+    0.25,
+    0.32,
+    0.45
+   ],
+   "kind": "human",
+   "size": 0.66,
+   "home": [
+    -38,
+    40
+   ]
+  }
+ },
+ "props": [
+  {
+   "type": "box",
+   "id": "vault",
+   "color": [
+    0.22,
+    0.21,
+    0.2
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 2.2,
+   "at": [
+    6.4,
+    16.0,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "door",
+   "color": [
+    0.32,
+    0.31,
+    0.29
+   ],
+   "glow": 0,
+   "visible": true,
+   "scale": 1.1,
+   "at": [
+    5.8,
+    13.2,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "c1",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.6,
+   "at": [
+    0.4,
+    11.6,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "c2",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    1.4,
+    11.6,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "c3",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    2.4,
+    11.6,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "c4",
+   "color": [
+    0.24,
+    0.25,
+    0.27
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.75,
+   "at": [
+    3.6,
+    11.6,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "s1",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.6,
+   "at": [
+    0.0,
+    10.6,
+    0.9
+   ]
+  },
+  {
+   "type": "box",
+   "id": "s2",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    2.9,
+    12.6,
+    1.1
+   ]
+  },
+  {
+   "type": "box",
+   "id": "s3",
+   "color": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    1.6,
+    10.2,
+    0
+   ]
+  },
+  {
+   "type": "box",
+   "id": "s4",
+   "color": [
+    0.24,
+    0.25,
+    0.27
+   ],
+   "glow": 0,
+   "visible": false,
+   "scale": 0.75,
+   "at": [
+    4.4,
+    10.8,
+    0.7
+   ]
+  },
+  {
+   "type": "box",
+   "id": "sand",
+   "color": [
+    0.85,
+    0.78,
+    0.6
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.45,
+   "at": [
+    1.8,
+    9.6,
+    0
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "seal",
+   "color": [
+    0.75,
+    0.08,
+    0.06
+   ],
+   "glow": 3,
+   "visible": false,
+   "scale": 0.22,
+   "at": [
+    -0.6,
+    11.8,
+    1.2
+   ]
+  },
+  {
+   "type": "cone",
+   "id": "lamp",
+   "color": [
+    1.0,
+    0.8,
+    0.4
+   ],
+   "glow": 5,
+   "visible": true,
+   "scale": 0.3,
+   "at": [
+    -2.4,
+    9.0,
+    1.2
+   ]
+  },
+  {
+   "type": "box",
+   "id": "paper",
+   "color": [
+    0.85,
+    0.83,
+    0.75
+   ],
+   "glow": 1,
+   "visible": false,
+   "scale": 0.5,
+   "at": [
+    0.8,
+    9.4,
+    1.3
+   ]
+  },
+  {
+   "type": "ball",
+   "id": "moon",
+   "color": [
+    0.8,
+    0.85,
+    1.0
+   ],
+   "glow": 4,
+   "visible": true,
+   "scale": 1.6,
+   "at": [
+    10,
+    40,
+    14
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "who": "narr",
+   "say": "The vault was sealed shut. Nobody went in. So who moved the coffins?",
+   "cam": "prop:s4",
+   "do": [
+    [
+     "c1",
+     "hide"
+    ],
+    [
+     "c2",
+     "hide"
+    ],
+    [
+     "c3",
+     "hide"
+    ],
+    [
+     "c4",
+     "hide"
+    ],
+    [
+     "s1",
+     "show"
+    ],
+    [
+     "s2",
+     "show"
+    ],
+    [
+     "s3",
+     "show"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s4",
+     "shake"
+    ],
+    [
+     "vault",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "WHO MOVED THE COFFINS?"
+  },
+  {
+   "who": "worker",
+   "say": "Sir! The coffins! They're thrown all over the vault!",
+   "cam": "close:worker",
+   "do": [
+    [
+     "worker",
+     "eyes_big"
+    ],
+    [
+     "s1",
+     "spin"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THROWN ALL OVER"
+  },
+  {
+   "who": "narr",
+   "say": "This story was first printed in eighteen thirty-three. Barbados, in the Caribbean.",
+   "cam": "wide",
+   "do": [
+    [
+     "s2",
+     "bounce"
+    ],
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "BARBADOS"
+  },
+  {
+   "who": "narr",
+   "say": "Subscribe so you don't miss the next true story.",
+   "cam": "prop:lamp",
+   "do": [
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "SUBSCRIBE"
+  },
+  {
+   "who": "narr",
+   "say": "In the churchyard of Christ Church, near Oistins, stood a stone family vault.",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "vault",
+     "bounce"
+    ],
+    [
+     "s1",
+     "hide"
+    ],
+    [
+     "s2",
+     "hide"
+    ],
+    [
+     "s3",
+     "hide"
+    ],
+    [
+     "s4",
+     "hide"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "A STONE VAULT"
+  },
+  {
+   "who": "narr",
+   "say": "Half under the ground, it was closed by a huge slab of stone.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "A GIANT STONE DOOR"
+  },
+  {
+   "who": "narr",
+   "say": "In eighteen-oh-seven, a woman named Thomasina Goddard was laid to rest inside.",
+   "cam": "prop:c2",
+   "do": [
+    [
+     "c1",
+     "show"
+    ],
+    [
+     "c1",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "1807"
+  },
+  {
+   "who": "narr",
+   "say": "Then two young girls of the Chase family. Mary Ann, and later her sister Dorcas.",
+   "cam": "prop:c4",
+   "do": [
+    [
+     "c2",
+     "show"
+    ],
+    [
+     "c3",
+     "show"
+    ],
+    [
+     "c3",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "THE CHASE FAMILY"
+  },
+  {
+   "who": "narr",
+   "say": "In late eighteen twelve, the vault was opened for their father, Thomas Chase.",
+   "cam": "wide",
+   "do": [
+    [
+     "door",
+     "shake"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "LATE 1812"
+  },
+  {
+   "who": "worker",
+   "say": "Heave! Push the slab! Bring the lamp in here!",
+   "cam": "close:worker",
+   "do": [
+    [
+     "worker",
+     "turn:front"
+    ],
+    [
+     "door",
+     "shake"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "OPEN THE VAULT"
+  },
+  {
+   "who": "narr",
+   "say": "The men raised their lamps, and froze. Something was very wrong.",
+   "cam": "close:worker",
+   "do": [
+    [
+     "worker",
+     "eyes_big"
+    ],
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SOMETHING WAS WRONG"
+  },
+  {
+   "who": "narr",
+   "say": "The coffins had left their places. One stood on its end. One lay upside down.",
+   "cam": "prop:s2",
+   "do": [
+    [
+     "c1",
+     "hide"
+    ],
+    [
+     "c2",
+     "hide"
+    ],
+    [
+     "c3",
+     "hide"
+    ],
+    [
+     "c4",
+     "hide"
+    ],
+    [
+     "s1",
+     "show"
+    ],
+    [
+     "s2",
+     "show"
+    ],
+    [
+     "s3",
+     "show"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s2",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THEY HAD MOVED"
+  },
+  {
+   "who": "worker",
+   "say": "Who did this? The door was shut tight! Nobody could get in!",
+   "cam": "close:worker",
+   "do": [
+    [
+     "worker",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NOBODY COULD GET IN"
+  },
+  {
+   "who": "narr",
+   "say": "Nothing was stolen. So the men set the coffins back in a row, and sealed the door.",
+   "cam": "prop:c2",
+   "do": [
+    [
+     "c1",
+     "show"
+    ],
+    [
+     "c2",
+     "show"
+    ],
+    [
+     "c3",
+     "show"
+    ],
+    [
+     "c4",
+     "show"
+    ],
+    [
+     "s1",
+     "hide"
+    ],
+    [
+     "s2",
+     "hide"
+    ],
+    [
+     "s3",
+     "hide"
+    ],
+    [
+     "s4",
+     "hide"
+    ],
+    [
+     "worker",
+     "to_home"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "PUT BACK IN A ROW"
+  },
+  {
+   "who": "narr",
+   "say": "The story says Thomas Chase's coffin was lined with lead. It took eight men to lift.",
+   "cam": "prop:c4",
+   "do": [
+    [
+     "c4",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "8 MEN TO LIFT IT"
+  },
+  {
+   "who": "narr",
+   "say": "In eighteen sixteen, the vault was opened for a baby boy. Again, the coffins had moved.",
+   "cam": "prop:s4",
+   "do": [
+    [
+     "c1",
+     "hide"
+    ],
+    [
+     "c2",
+     "hide"
+    ],
+    [
+     "c3",
+     "hide"
+    ],
+    [
+     "c4",
+     "hide"
+    ],
+    [
+     "s1",
+     "show"
+    ],
+    [
+     "s2",
+     "show"
+    ],
+    [
+     "s3",
+     "show"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s4",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "1816: MOVED AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "Weeks later it was opened once more. Again, everything was thrown about.",
+   "cam": "wide",
+   "do": [
+    [
+     "s1",
+     "spin"
+    ],
+    [
+     "vault",
+     "shake"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "AND AGAIN"
+  },
+  {
+   "who": "worker",
+   "say": "I'm not going in there again. Not for any money!",
+   "cam": "close:worker",
+   "do": [
+    [
+     "c1",
+     "show"
+    ],
+    [
+     "c2",
+     "show"
+    ],
+    [
+     "c3",
+     "show"
+    ],
+    [
+     "c4",
+     "show"
+    ],
+    [
+     "s1",
+     "hide"
+    ],
+    [
+     "s2",
+     "hide"
+    ],
+    [
+     "s3",
+     "hide"
+    ],
+    [
+     "s4",
+     "hide"
+    ],
+    [
+     "worker",
+     "shake"
+    ],
+    [
+     "worker",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "NOT AGAIN"
+  },
+  {
+   "who": "narr",
+   "say": "In eighteen nineteen, it was opened for Thomasina Clarke. The coffins had moved again.",
+   "cam": "prop:s3",
+   "do": [
+    [
+     "c1",
+     "hide"
+    ],
+    [
+     "c2",
+     "hide"
+    ],
+    [
+     "c3",
+     "hide"
+    ],
+    [
+     "c4",
+     "hide"
+    ],
+    [
+     "s1",
+     "show"
+    ],
+    [
+     "s2",
+     "show"
+    ],
+    [
+     "s3",
+     "show"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s3",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "1819"
+  },
+  {
+   "who": "narr",
+   "say": "Then the governor of Barbados came himself. Lord Combermere wanted the truth.",
+   "cam": "close:comber",
+   "do": [
+    [
+     "comber",
+     "to:-3.4,7.8,0"
+    ],
+    [
+     "comber",
+     "turn:front"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "THE GOVERNOR CAME"
+  },
+  {
+   "who": "comber",
+   "say": "Tap every wall. Search the floor. There must be a secret way in.",
+   "cam": "close:comber",
+   "do": [
+    [
+     "comber",
+     "shake"
+    ],
+    [
+     "vault",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "A SECRET WAY IN?"
+  },
+  {
+   "who": "narr",
+   "say": "They found no tunnel. No crack. No hidden door. The walls were solid stone.",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "c1",
+     "show"
+    ],
+    [
+     "c2",
+     "show"
+    ],
+    [
+     "c3",
+     "show"
+    ],
+    [
+     "c4",
+     "show"
+    ],
+    [
+     "s1",
+     "hide"
+    ],
+    [
+     "s2",
+     "hide"
+    ],
+    [
+     "s3",
+     "hide"
+    ],
+    [
+     "s4",
+     "hide"
+    ],
+    [
+     "vault",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NO WAY IN"
+  },
+  {
+   "who": "comber",
+   "say": "Spread fine sand on the floor. Any footprint will show.",
+   "cam": "close:comber",
+   "do": [
+    [
+     "sand",
+     "show"
+    ],
+    [
+     "sand",
+     "bounce"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "SAND ON THE FLOOR"
+  },
+  {
+   "who": "narr",
+   "say": "Then they cemented the door shut, and pressed their own seals into the wet cement.",
+   "cam": "prop:seal",
+   "do": [
+    [
+     "seal",
+     "show"
+    ],
+    [
+     "seal",
+     "bounce"
+    ]
+   ],
+   "sfx": "crunch",
+   "text": "SEALED SHUT"
+  },
+  {
+   "who": "comber",
+   "say": "Now nobody goes in, and nobody comes out. We shall see.",
+   "cam": "close:comber",
+   "do": [
+    [
+     "comber",
+     "turn:front"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WE SHALL SEE"
+  },
+  {
+   "who": "narr",
+   "say": "Months passed. In April eighteen twenty, the governor ordered the vault opened.",
+   "cam": "wide",
+   "do": [
+    [
+     "comber",
+     "to_home"
+    ],
+    [
+     "door",
+     "shake"
+    ]
+   ],
+   "sfx": "horn",
+   "text": "APRIL 1820"
+  },
+  {
+   "who": "narr",
+   "say": "The seals were not broken. The cement had not been touched.",
+   "cam": "prop:seal",
+   "do": [
+    [
+     "seal",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "SEALS NOT BROKEN"
+  },
+  {
+   "who": "worker",
+   "say": "Look at the sand! There's not one footprint! Not one!",
+   "cam": "close:worker",
+   "do": [
+    [
+     "worker",
+     "turn:front"
+    ],
+    [
+     "worker",
+     "eyes_big"
+    ],
+    [
+     "sand",
+     "bounce"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NO FOOTPRINTS"
+  },
+  {
+   "who": "narr",
+   "say": "But the heavy coffins had been thrown about the vault, once again.",
+   "cam": "prop:s4",
+   "do": [
+    [
+     "c1",
+     "hide"
+    ],
+    [
+     "c2",
+     "hide"
+    ],
+    [
+     "c3",
+     "hide"
+    ],
+    [
+     "c4",
+     "hide"
+    ],
+    [
+     "s1",
+     "show"
+    ],
+    [
+     "s2",
+     "show"
+    ],
+    [
+     "s3",
+     "show"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s4",
+     "shake"
+    ],
+    [
+     "s2",
+     "spin"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "THROWN ABOUT AGAIN"
+  },
+  {
+   "who": "lucas",
+   "say": "I was there. I saw it with my own eyes. Nobody could have done it.",
+   "cam": "close:lucas",
+   "do": [
+    [
+     "lucas",
+     "to:-3.4,7.8,0"
+    ],
+    [
+     "lucas",
+     "turn:front"
+    ],
+    [
+     "worker",
+     "to_home"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "I SAW IT"
+  },
+  {
+   "who": "narr",
+   "say": "Would YOU spend one night alone inside the Chase vault?",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "lamp",
+     "bounce"
+    ],
+    [
+     "lucas",
+     "to_home"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "WOULD YOU GO IN?"
+  },
+  {
+   "who": "narr",
+   "say": "The coffins were taken out and buried apart. The vault was left empty.",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "s1",
+     "hide"
+    ],
+    [
+     "s2",
+     "hide"
+    ],
+    [
+     "s3",
+     "hide"
+    ],
+    [
+     "s4",
+     "hide"
+    ],
+    [
+     "sand",
+     "hide"
+    ],
+    [
+     "seal",
+     "hide"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "LEFT EMPTY"
+  },
+  {
+   "who": "narr",
+   "say": "But here is the strangest part.",
+   "cam": "wide",
+   "do": [
+    [
+     "moon",
+     "bounce"
+    ]
+   ],
+   "sfx": "suspicious",
+   "text": "THE STRANGEST PART"
+  },
+  {
+   "who": "narr",
+   "say": "No newspaper of the time wrote about moving coffins. The first account came years later.",
+   "cam": "prop:paper",
+   "do": [
+    [
+     "paper",
+     "show"
+    ],
+    [
+     "paper",
+     "spin"
+    ]
+   ],
+   "sfx": "whoosh",
+   "text": "NO REPORT AT THE TIME"
+  },
+  {
+   "who": "narr",
+   "say": "Some say flood water moved them. Some say it never happened. Nobody knows.",
+   "cam": "wide",
+   "do": [
+    [
+     "paper",
+     "hide"
+    ],
+    [
+     "vault",
+     "bounce"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "NOBODY KNOWS"
+  },
+  {
+   "who": "narr",
+   "say": "The empty vault is still there today, in the churchyard near the sea.",
+   "cam": "prop:vault",
+   "do": [
+    [
+     "door",
+     "bounce"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "STILL THERE TODAY"
+  },
+  {
+   "who": "narr",
+   "say": "So remember the rule of the Chase vault. If the coffins move, never go inside.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "NEVER GO INSIDE"
+  },
+  {
+   "who": "narr",
+   "say": "Tonight, a boy sneaks into the churchyard to see the old vault for himself.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "to:-3.4,7.8,0"
+    ],
+    [
+     "boy",
+     "turn:front"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "TONIGHT..."
+  },
+  {
+   "who": "boy",
+   "say": "Ha. It's just an empty room. There's nothing in here at all.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "happy"
+    ],
+    [
+     "lamp",
+     "bounce"
+    ]
+   ],
+   "sfx": "pop",
+   "text": "JUST AN EMPTY ROOM"
+  },
+  {
+   "who": "narr",
+   "say": "Then, behind him, the heavy stone door begins to slide shut.",
+   "cam": "prop:door",
+   "do": [
+    [
+     "door",
+     "shake"
+    ],
+    [
+     "vault",
+     "shake"
+    ]
+   ],
+   "sfx": "rumble",
+   "text": "THE DOOR IS CLOSING"
+  },
+  {
+   "who": "narr",
+   "say": "And from the dark corner comes a slow scrape. Something heavy is moving.",
+   "cam": "close:boy",
+   "do": [
+    [
+     "boy",
+     "eyes_big"
+    ],
+    [
+     "s4",
+     "show"
+    ],
+    [
+     "s4",
+     "shake"
+    ]
+   ],
+   "sfx": "alarm",
+   "text": "SOMETHING IS MOVING"
+  },
+  {
+   "who": "narr",
+   "say": "What do you think happens next? Tell me in the comments.",
+   "cam": "prop:s4",
+   "do": [
+    [
+     "boy",
+     "shake"
+    ],
+    [
+     "s4",
+     "spin"
+    ]
+   ],
+   "sfx": "dun",
+   "text": "WHAT HAPPENS NEXT?"
+  }
+ ]
+}
