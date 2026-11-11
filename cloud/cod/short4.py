@@ -17,6 +17,17 @@ FONT = os.path.join(HERE, "fonts", "Anton-Regular.ttf")
 sp = json.load(open(sys.argv[1]))
 src, T, out = sp["src"], float(sp["t"]), sp["out"]
 PRE, POST = float(sp.get("pre", 9)), float(sp.get("post", 8))
+# 2026-11-12: two editor runs (worker + manual) rendered the same Short into one tmp dir -> one lock per output
+import time
+lk = out + ".lock"
+if os.path.exists(out):
+    print("bor, o'tkazildi", flush=True); sys.exit(0)
+try:
+    if os.path.exists(lk) and time.time() - os.path.getmtime(lk) > 1800: os.remove(lk)
+    os.close(os.open(lk, os.O_CREAT | os.O_EXCL))
+except FileExistsError:
+    print("boshqa jarayon yasayapti, o'tkazildi", flush=True); sys.exit(0)
+import atexit; atexit.register(lambda: os.path.exists(lk) and os.remove(lk))
 tmp = out + "_tmp"; os.makedirs(tmp, exist_ok=True)
 # 2026-11-12 review of V1: 8 s of looking at bodies on the ground after the fight -> boring tail.
 # With the gunfire map (cod_action.py) start on the first shots before the peak and stop 1.5 s after the last one.
