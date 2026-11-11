@@ -98,7 +98,7 @@ def plan():
             t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
             items.append(dict(key=f"{m['id']}{JOB.get('key_ver', '')}_short{k}", kind="short", m=m, n=n,
                               path=os.path.join(OUT, f"{m['file']}_{JOB.get('short_tag', 'shortHD')}{k}.mp4"),
-                              title=(t[:88] + " #shorts")))
+                              title=(t[:68] + " #mw4 #modernwarfare4 #cod")))  # 2026-11-11 vidIQ: viral MW4 Shorts all carry these hashtags
         items.append(long_it)  # 2026-11-11: Shorts first (small files pass a slow hotspot quickly), then the long video
     # one long then its 3 Shorts, mission by mission
     return items
