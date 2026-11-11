@@ -62,7 +62,7 @@ for ch, key in MAP.items():
             status, text = "warn", "Internet uzilib qoldi — keyingi aylanishda o'zi qayta urinadi."
         else:
             status, text = "bad", "Xato: " + e[:160]
-    elif age_h > 3:
+    elif age_h > 6 and stage != "idle":  # REVIEW.md: older than 6 h and not idle = down/stuck
         status, text = "bad", f"Ishchi {int(age_h)} soatdan beri jim — noutbuk o'chiq yoki uxlayaptimi?"
     elif stage in ("quota_wait", "queue_empty", "net_wait", "rejected", "browser_wait"):
         status, text = "warn", UZ.get(stage, stage)
