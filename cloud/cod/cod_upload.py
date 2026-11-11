@@ -41,7 +41,7 @@ def thumb(m, n):
     if os.path.exists(out): return out
     F = font()
     vf = (f"crop=iw*0.70:ih*0.70:iw*0.15:ih*0.13,scale=1280:720:flags=lanczos,"
-          f"eq=saturation=1.35:contrast=1.2:brightness=0.02,unsharp=5:5:0.8,vignette=PI/5,"
+          f"eq=gamma=1.18:saturation=1.4:contrast=1.15:brightness=0.02,unsharp=5:5:0.9,vignette=PI/5,"
           f"drawbox=x=0:y=500:w=1280:h=220:color=black@0.35:t=fill,"
           f"drawbox=x=36:y=34:w=170:h=78:color=0xD81E1E@1:t=fill,"
           f"drawtext=fontfile='{F}':text='MW4':fontsize=62:fontcolor=white:x=36+(170-text_w)/2:y=44,"

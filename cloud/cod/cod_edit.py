@@ -54,10 +54,13 @@ def dtext(text, size, y, start=None, end=None, color="white", border=8, x="(w-te
     if start is not None: s += f":enable='between(t,{start:.2f},{end:.2f})'"
     return s
 
+# 2026-11-11 owner: "hamma detallar ko'rinsin, ranglar yorqin" -> lift shadows, vivid colour, light sharpening
+GRADE_ON = False
+GRADE = "curves=all='0/0 0.06/0.11 0.2/0.31 0.5/0.62 1/1',eq=saturation=1.35:contrast=1.04,unsharp=5:5:0.6:5:5:0.0"
 def segment(src, a, b, out, events=(), title=None, fade=True):
     """Encode src[a:b] to out. events: [[abs_time, text], ...] -> pop text + boom inside the segment."""
     d = b - a
-    vf = []
+    vf = [GRADE] if GRADE_ON else []
     if fade is True: vf += [f"fade=t=in:st=0:d=0.25", f"fade=t=out:st={max(d-0.25,0):.2f}:d=0.25"]
     if title:
         vf += [atext(title[0], 170, "(h/2)-190", "white", 9, start=0.3, end=4.3),
@@ -343,7 +346,7 @@ def hype_short(job, m, s, k, tmp, outdir):
                    for i, ln in enumerate(lines))
     fc = ("[0:v]split=2[a][b];"
           "[a]scale=-2:1920,crop=1080:1920,boxblur=30:3,eq=brightness=-0.22:saturation=1.2[bg];"
-          "[b]crop=1080:1080:420:0,eq=contrast=1.08:saturation=1.18[fg];"
+          "[b]crop=1080:1080:420:0," + (GRADE if GRADE_ON else "eq=contrast=1.08:saturation=1.18") + "[fg];"
           "[bg][fg]overlay=0:600," + txt + ","
           + atext(f"MW4  PART {m.get('part', '')}".strip(), 54, "1730", "white", 5) +
           f",fade=t=out:st={total-0.3:.2f}:d=0.3[v]")
@@ -385,6 +388,7 @@ def tighten(src, keep, gap=8, edge=1.5):
 def main():
     global LOG
     job = json.load(open(sys.argv[1]))
+    global GRADE_ON; GRADE_ON = bool(job.get("grade"))
     outdir = job["out"]
     try:  # 2026-11-11: session-2 outputs go to E: (C: has ~19 GB, the 4 long videos need more)
         os.makedirs(outdir, exist_ok=True)
