@@ -1,0 +1,157 @@
+{
+ "title": "Nina Finally Tracked Her $4,700 Paycheck",
+ "hook": "$4,700 in. $75 left.",
+ "header": "Nina · $4,700 take-home",
+ "character": "Nina",
+ "amount": "$4,700",
+ "accent": "green",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$75 left, out of $4,700. Every single month.",
+   "visual": {
+    "type": "big_number",
+    "value": 75,
+    "from": 4700,
+    "label": "left at month-end",
+    "sub": "out of $4,700",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "So Nina finally tracked every dollar for 30 days.",
+   "visual": {
+    "type": "statement",
+    "text": "30 days. Every dollar.",
+    "sub": "she finally checked",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "The basics: rent, car, groceries, bills. About $3,000.",
+   "visual": {
+    "type": "stack",
+    "title": "The basics",
+    "total": 3000,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1650
+     },
+     {
+      "label": "Car",
+      "value": 520
+     },
+     {
+      "label": "Groceries",
+      "value": 450
+     },
+     {
+      "label": "Bills",
+      "value": 380
+     }
+    ]
+   }
+  },
+  {
+   "say": "Then the surprise: $520 on takeout and $410 on online orders.",
+   "visual": {
+    "type": "bars",
+    "title": "Where the rest went",
+    "items": [
+     {
+      "label": "Takeout",
+      "value": 520,
+      "hi": true
+     },
+     {
+      "label": "Online orders",
+      "value": 410,
+      "hi": true
+     },
+     {
+      "label": "Student loan",
+      "value": 250
+     },
+     {
+      "label": "Fun and subs",
+      "value": 445
+     }
+    ]
+   }
+  },
+  {
+   "say": "Her fix: cap takeout at $250 and online orders at $200.",
+   "visual": {
+    "type": "checklist",
+    "title": "Nina's two caps",
+    "items": [
+     {
+      "text": "Takeout: $250 a month",
+      "ok": true
+     },
+     {
+      "text": "Online orders: $200 a month",
+      "ok": true
+     },
+     {
+      "text": "Everything else stays",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Together, that frees up about $480, every single month.",
+   "visual": {
+    "type": "math",
+    "title": "Her new month",
+    "rows": [
+     "$270 less takeout",
+     "+ $210 fewer orders",
+     "= $480 a month"
+    ]
+   }
+  },
+  {
+   "say": "In one year, that's about $5,760 saved, without touching rent or groceries.",
+   "visual": {
+    "type": "line",
+    "label": "Saved with two caps",
+    "points": [
+     0,
+     960,
+     1920,
+     2880,
+     3840,
+     4800,
+     5760
+    ],
+    "start_label": "Month 0",
+    "end_label": "Month 12"
+   }
+  },
+  {
+   "say": "Which cap would you start with? Subscribe so you don't make this mistake on your next paycheck, because right now, it's $4,700 in and $75 left.",
+   "visual": {
+    "type": "question",
+    "text": "Which cap would you start with?"
+   }
+  }
+ ],
+ "question": "Which would you cap first: takeout or online orders?",
+ "description": "Nina takes home about $4,700 a month and was left with roughly $75. Tracking every dollar for 30 days showed $520 on takeout and $410 on online orders. Two simple caps free about $480 a month, or roughly $5,760 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "paycheck breakdown",
+  "budget breakdown",
+  "where does my money go",
+  "track spending",
+  "how to save money",
+  "budgeting tips",
+  "spending habits"
+ ],
+ "hashtags": [
+  "#paycheck",
+  "#budgeting"
+ ]
+}

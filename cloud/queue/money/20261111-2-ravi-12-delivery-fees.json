@@ -1,0 +1,132 @@
+{
+ "title": "Ravi's $12 Delivery Fees Cost $1,250 a Year",
+ "hook": "$12 extra. Twice a week.",
+ "header": "Ravi · 2 delivery orders a week",
+ "character": "Ravi",
+ "amount": "$12",
+ "accent": "gold",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$1,250 a year. Not on food. On delivery extras.",
+   "visual": {
+    "type": "big_number",
+    "value": 1250,
+    "from": 0,
+    "label": "delivery extras, yearly",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "Ravi orders dinner twice a week. Each order has about $12 of extras.",
+   "visual": {
+    "type": "stack",
+    "title": "Extras on one order",
+    "total": 12,
+    "items": [
+     {
+      "label": "Service fee",
+      "value": 4
+     },
+     {
+      "label": "Delivery fee",
+      "value": 3
+     },
+     {
+      "label": "Tip",
+      "value": 5,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "$12, times 2 orders, times 52 weeks.",
+   "visual": {
+    "type": "math",
+    "title": "The real cost",
+    "rows": [
+     "$12 × 2 orders",
+     "× 52 weeks",
+     "= $1,248 a year"
+    ]
+   }
+  },
+  {
+   "say": "And that's before menu prices, which are often a little higher in the app.",
+   "visual": {
+    "type": "statement",
+    "text": "Plus higher app prices",
+    "sub": "on many menus",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "Over 3 years, the extras alone come to about $3,750. That's a nice weekend trip, every year.",
+   "visual": {
+    "type": "line",
+    "label": "Extras paid, 3 years",
+    "points": [
+     0,
+     625,
+     1250,
+     1875,
+     2500,
+     3125,
+     3750
+    ],
+    "start_label": "Today",
+    "end_label": "Year 3"
+   }
+  },
+  {
+   "say": "His fix: pick up one order a week. Same food, half the extras.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "2 deliveries",
+     "value": 1250,
+     "sub": "a year",
+     "hi": true
+    },
+    "right": {
+     "label": "1 pickup, 1 delivery",
+     "value": 625,
+     "sub": "a year"
+    }
+   }
+  },
+  {
+   "say": "That's about $625 a year back, for a 10-minute drive to the restaurant.",
+   "visual": {
+    "type": "big_number",
+    "value": 625,
+    "label": "kept each year",
+    "sub": "about $52 a month",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "How many delivery orders a week? Subscribe so you don't make this mistake on your next paycheck, because $12 extra, twice a week, is $1,250 a year.",
+   "visual": {
+    "type": "question",
+    "text": "How many deliveries do you order a week?"
+   }
+  }
+ ],
+ "question": "How many delivery orders do you place in a typical week?",
+ "description": "Ravi orders dinner delivery twice a week, and each order carries about $12 in fees and tip. That's roughly $1,250 a year before any menu markup. Picking up one order a week keeps about $625 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "food delivery cost",
+  "delivery fees",
+  "how to save money",
+  "small habits cost",
+  "save money on food",
+  "budgeting tips",
+  "spending habits"
+ ],
+ "hashtags": [
+  "#savingmoney",
+  "#fooddelivery"
+ ]
+}

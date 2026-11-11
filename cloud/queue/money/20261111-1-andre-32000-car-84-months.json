@@ -1,0 +1,139 @@
+{
+ "title": "Andre, 31: The 84-Month Car Loan Trap",
+ "hook": "$32,000 car. $11,250 interest.",
+ "header": "Andre · $32,000 at 9% APR",
+ "character": "Andre",
+ "amount": "$32,000",
+ "accent": "red",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$11,250. That's the interest on Andre's new car.",
+   "visual": {
+    "type": "big_number",
+    "value": 11250,
+    "from": 0,
+    "label": "interest on one car",
+    "icon": "car"
+   }
+  },
+  {
+   "say": "He borrowed $32,000 at about 9%, and picked 84 months.",
+   "visual": {
+    "type": "statement",
+    "text": "$32,000 over 7 years",
+    "sub": "about 9% APR",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "Why? The payment looked small. About $515 a month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "84 months",
+     "value": 515,
+     "sub": "a month",
+     "hi": true
+    },
+    "right": {
+     "label": "60 months",
+     "value": 664,
+     "sub": "a month"
+    }
+   }
+  },
+  {
+   "say": "But after 3 years, he still owes roughly $20,700.",
+   "visual": {
+    "type": "line",
+    "label": "Loan balance, 84 months",
+    "points": [
+     32000,
+     28560,
+     24800,
+     20690,
+     16190,
+     11270,
+     5890,
+     0
+    ],
+    "start_label": "Today",
+    "end_label": "Year 7"
+   }
+  },
+  {
+   "say": "Over 7 years, he pays back about $43,250 in total.",
+   "visual": {
+    "type": "math",
+    "title": "84-month loan",
+    "rows": [
+     "$515 × 84 months",
+     "= about $43,250",
+     "$11,250 is interest"
+    ]
+   }
+  },
+  {
+   "say": "On 60 months, interest drops to about $7,850. That's $3,400 kept.",
+   "visual": {
+    "type": "bars",
+    "title": "Interest paid",
+    "items": [
+     {
+      "label": "84 months",
+      "value": 11250,
+      "hi": true
+     },
+     {
+      "label": "60 months",
+      "value": 7850
+     }
+    ]
+   }
+  },
+  {
+   "say": "The fix: a cheaper car, a bigger down payment, or a shorter loan.",
+   "visual": {
+    "type": "checklist",
+    "title": "Before you sign",
+    "items": [
+     {
+      "text": "Look at total cost, not monthly",
+      "ok": true
+     },
+     {
+      "text": "Aim for 60 months or less",
+      "ok": true
+     },
+     {
+      "text": "Put more money down",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "How long is your car loan? Subscribe so you don't make this mistake on your next paycheck, because $32,000 can cost $11,250 in interest.",
+   "visual": {
+    "type": "question",
+    "text": "How long is your car loan?"
+   }
+  }
+ ],
+ "question": "How many months is your car loan? Be honest.",
+ "description": "Andre, 31, financed a $32,000 car at about 9% APR over 84 months. The roughly $515 payment looks easy, but he pays about $11,250 in interest — around $3,400 more than on a 60-month loan. Numbers are rounded US estimates and assume a fixed rate.",
+ "tags": [
+  "car loan",
+  "84 month car loan",
+  "auto loan interest",
+  "car payment",
+  "total cost of a car",
+  "buying a car",
+  "debt"
+ ],
+ "hashtags": [
+  "#carloan",
+  "#carbuying"
+ ]
+}

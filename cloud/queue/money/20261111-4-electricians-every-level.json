@@ -1,0 +1,186 @@
+{
+ "title": "Electricians at Every Level: $48k vs $70k vs $95k",
+ "hook": "Same trade. $250 vs $1,100.",
+ "header": "Electricians · 3 pay levels",
+ "character": "Electricians",
+ "amount": "$48k",
+ "accent": "blue",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Same trade, but one electrician saves $250 a month, and one saves $1,100.",
+   "visual": {
+    "type": "big_number",
+    "value": 1100,
+    "from": 250,
+    "label": "saved each month",
+    "sub": "same trade, 3 levels",
+    "icon": "bolt"
+   }
+  },
+  {
+   "say": "That's take-home on $48k, $70k and $95k a year, after taxes.",
+   "visual": {
+    "type": "bars",
+    "title": "Monthly take-home",
+    "items": [
+     {
+      "label": "Apprentice $48k",
+      "value": 3250
+     },
+     {
+      "label": "Journeyman $70k",
+      "value": 4500
+     },
+     {
+      "label": "Master $95k",
+      "value": 5900,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The apprentice: rent $1,250, car $400, food and bills $1,350. About $250 left.",
+   "visual": {
+    "type": "stack",
+    "title": "$48k · $3,250 a month",
+    "total": 3250,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1250
+     },
+     {
+      "label": "Car",
+      "value": 400
+     },
+     {
+      "label": "Food and bills",
+      "value": 1350
+     },
+     {
+      "label": "Saved",
+      "value": 250,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The journeyman pays more for everything, and still keeps about $650.",
+   "visual": {
+    "type": "stack",
+    "title": "$70k · $4,500 a month",
+    "total": 4500,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1650
+     },
+     {
+      "label": "Car",
+      "value": 550
+     },
+     {
+      "label": "Food and bills",
+      "value": 1650
+     },
+     {
+      "label": "Saved",
+      "value": 650,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The master: bigger rent, bigger truck, and about $1,100 saved.",
+   "visual": {
+    "type": "stack",
+    "title": "$95k · $5,900 a month",
+    "total": 5900,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 2100
+     },
+     {
+      "label": "Truck",
+      "value": 750
+     },
+     {
+      "label": "Food and bills",
+      "value": 1950
+     },
+     {
+      "label": "Saved",
+      "value": 1100,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Look at the gap: rent and the vehicle grow with every raise.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Rent + car, $48k",
+     "value": 1650,
+     "sub": "a month"
+    },
+    "right": {
+     "label": "Rent + car, $95k",
+     "value": 2850,
+     "sub": "a month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "Keep life costs flat after a raise, and most of it becomes savings.",
+   "visual": {
+    "type": "checklist",
+    "title": "Every level",
+    "items": [
+     {
+      "text": "Save part of every raise",
+      "ok": true
+     },
+     {
+      "text": "Keep the car a few more years",
+      "ok": true
+     },
+     {
+      "text": "Upgrade rent last",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Which level are you at? Follow for Every Level, twice a week, because same trade can mean $250 or $1,100.",
+   "visual": {
+    "type": "question",
+    "text": "Which level are you at?",
+    "cta": "Follow for Every Level, twice a week"
+   }
+  }
+ ],
+ "question": "Which level are you at right now, and how much do you keep each month?",
+ "description": "Three electricians at about $48k, $70k and $95k a year: where each monthly take-home goes and how much is left. Rent and the vehicle grow with every raise, so savings range from about $250 to $1,100 a month. Numbers are rounded US estimates for a single filer; real pay and costs vary by city.",
+ "tags": [
+  "electrician salary",
+  "salary breakdown",
+  "every level",
+  "paycheck breakdown",
+  "trade jobs pay",
+  "how much electricians make",
+  "budget breakdown"
+ ],
+ "hashtags": [
+  "#electrician",
+  "#salary"
+ ]
+}

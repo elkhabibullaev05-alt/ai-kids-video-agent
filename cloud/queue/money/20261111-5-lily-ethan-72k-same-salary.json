@@ -1,0 +1,160 @@
+{
+ "title": "Same $72k Salary: One Saved $9,000, One Saved $0",
+ "hook": "Same $72k. $9,000 vs $0.",
+ "header": "Lily vs Ethan · $72k each",
+ "character": "Lily",
+ "amount": "$72k",
+ "accent": "teal",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$9,000 versus zero. Same $72k salary, one year.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Lily",
+     "value": 9000,
+     "sub": "saved this year",
+     "hi": true
+    },
+    "right": {
+     "label": "Ethan",
+     "value": 0,
+     "sub": "saved this year"
+    }
+   }
+  },
+  {
+   "say": "Lily and Ethan both take home about $4,600 a month.",
+   "visual": {
+    "type": "big_number",
+    "value": 4600,
+    "from": 0,
+    "label": "take-home each",
+    "sub": "$72k a year",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Ethan pays bills first, and saves whatever is left. Usually, nothing.",
+   "visual": {
+    "type": "stack",
+    "title": "Ethan's month",
+    "total": 4600,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1700
+     },
+     {
+      "label": "Car",
+      "value": 550
+     },
+     {
+      "label": "Bills and food",
+      "value": 1150
+     },
+     {
+      "label": "Fun and extras",
+      "value": 1200,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Lily does it the other way. She moves $750 to savings the day she gets paid.",
+   "visual": {
+    "type": "statement",
+    "text": "$750 out on payday",
+    "sub": "before any bill",
+    "icon": "piggy"
+   }
+  },
+  {
+   "say": "Then she lives on the rest, about $3,850.",
+   "visual": {
+    "type": "stack",
+    "title": "Lily's month",
+    "total": 4600,
+    "items": [
+     {
+      "label": "Saved first",
+      "value": 750,
+      "hi": true
+     },
+     {
+      "label": "Rent",
+      "value": 1600
+     },
+     {
+      "label": "Car",
+      "value": 500
+     },
+     {
+      "label": "Bills and food",
+      "value": 1150
+     },
+     {
+      "label": "Fun",
+      "value": 600
+     }
+    ]
+   }
+  },
+  {
+   "say": "$750 a month, times 12. That's $9,000 in one year.",
+   "visual": {
+    "type": "counter",
+    "from": 750,
+    "to": 9000,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Lily's savings"
+   }
+  },
+  {
+   "say": "Same pay, same city. The only real difference is which comes first: the bills, or the savings.",
+   "visual": {
+    "type": "checklist",
+    "title": "Lily's rules",
+    "items": [
+     {
+      "text": "Save on payday, not month-end",
+      "ok": true
+     },
+     {
+      "text": "Automatic transfer",
+      "ok": true
+     },
+     {
+      "text": "Spend what is left",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Are you a Lily or an Ethan? Subscribe so you don't make this mistake on your next paycheck, because same $72k can mean $9,000, or zero.",
+   "visual": {
+    "type": "question",
+    "text": "Are you a Lily or an Ethan?"
+   }
+  }
+ ],
+ "question": "Are you a Lily or an Ethan right now?",
+ "description": "Lily and Ethan both earn about $72k and take home roughly $4,600 a month. Ethan saves whatever is left (usually nothing); Lily moves $750 to savings on payday and ends the year with about $9,000. Numbers are rounded US estimates.",
+ "tags": [
+  "same salary",
+  "pay yourself first",
+  "how to save money",
+  "saving money",
+  "budgeting tips",
+  "automatic savings",
+  "paycheck"
+ ],
+ "hashtags": [
+  "#savingmoney",
+  "#payyourselffirst"
+ ]
+}

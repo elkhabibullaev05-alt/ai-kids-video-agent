@@ -1,0 +1,134 @@
+{
+ "title": "Zoe, 26: $900 of Gifts Paid Off in 2029",
+ "hook": "$900 of gifts. Paid off 2029.",
+ "header": "Zoe · $900 at 24% APR",
+ "character": "Zoe",
+ "amount": "$900",
+ "accent": "purple",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Paid off in 2029. That's Zoe's holiday shopping.",
+   "visual": {
+    "type": "statement",
+    "text": "Paid off in 2029",
+    "sub": "this year's gifts",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "She put $900 of gifts on a card at about 24% APR.",
+   "visual": {
+    "type": "big_number",
+    "value": 900,
+    "from": 0,
+    "label": "gifts on her card",
+    "sub": "about 24% APR",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "She pays $40 a month. Sounds fine, right?",
+   "visual": {
+    "type": "stack",
+    "title": "Her first $40 payment",
+    "total": 40,
+    "items": [
+     {
+      "label": "Interest",
+      "value": 18,
+      "hi": true
+     },
+     {
+      "label": "Actual gifts",
+      "value": 22
+     }
+    ]
+   }
+  },
+  {
+   "say": "At that pace, it takes about 31 months to clear.",
+   "visual": {
+    "type": "line",
+    "label": "Balance at $40 a month",
+    "points": [
+     900,
+     786,
+     659,
+     520,
+     365,
+     195,
+     0
+    ],
+    "start_label": "Dec 2026",
+    "end_label": "Mid 2029"
+   }
+  },
+  {
+   "say": "Those gifts end up costing about $1,210, with $310 of interest.",
+   "visual": {
+    "type": "math",
+    "title": "The real price",
+    "rows": [
+     "$900 of gifts",
+     "+ about $310 interest",
+     "= about $1,210"
+    ]
+   }
+  },
+  {
+   "say": "Next year, she tries a gift fund instead. $75 a month, starting January.",
+   "visual": {
+    "type": "counter",
+    "from": 75,
+    "to": 900,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Gift fund"
+   }
+  },
+  {
+   "say": "By December, $900 is waiting. No card, no interest.",
+   "visual": {
+    "type": "checklist",
+    "title": "Gift fund plan",
+    "items": [
+     {
+      "text": "$75 a month from January",
+      "ok": true
+     },
+     {
+      "text": "Pay cash in December",
+      "ok": true
+     },
+     {
+      "text": "Card interest: $0",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Will you shop on a card this year? Subscribe so you don't make this mistake on your next paycheck, because $900 of gifts can be paid off in 2029.",
+   "visual": {
+    "type": "question",
+    "text": "Card or cash for gifts this year?"
+   }
+  }
+ ],
+ "question": "Are you paying for holiday gifts with cash or a card this year?",
+ "description": "Zoe, 26, put about $900 of holiday gifts on a card at roughly 24% APR and pays $40 a month. That takes about 31 months and around $310 in interest. A $75-a-month gift fund starting in January covers the same $900 with no interest. Numbers are rounded US estimates assuming a fixed APR and no new charges.",
+ "tags": [
+  "holiday spending",
+  "credit card interest",
+  "holiday budget",
+  "christmas gifts budget",
+  "sinking fund",
+  "credit card debt",
+  "save for christmas"
+ ],
+ "hashtags": [
+  "#holidaybudget",
+  "#creditcarddebt"
+ ]
+}
