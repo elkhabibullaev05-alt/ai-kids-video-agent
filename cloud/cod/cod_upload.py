@@ -106,11 +106,17 @@ def localize(title):
     return None
 
 def plan2():
-    """Shorts-only channel: its own B-set Shorts (other moments than the main channel), each pointing to the full mission."""
+    """Shorts-only channel: its own B-set Shorts (other moments than the main channel), each pointing to the full mission.
+    Keys in cloud/cod/browser_done.json were already uploaded through Studio in the browser (owner 2026-11-11) -> skip."""
+    try:
+        bd = set(json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "browser_done.json"))))
+    except Exception:
+        bd = set()
     items = []
     for n, m in enumerate(JOB["missions"], 1):
         for k, s in enumerate(m.get("shorts_b", []), 1):
             t = s.get("yt_title") or s.get("hook")
+            if f"{m['id']}_b{k}" in bd: continue
             items.append(dict(key=f"{m['id']}_b{k}", kind="short", m=m, n=n, path=os.path.join(OUT, f"{m['file']}_B{k}.mp4"),
                               title=(t[:68] + " #mw4 #modernwarfare4 #cod"), loc=localize(t)))
     return items
