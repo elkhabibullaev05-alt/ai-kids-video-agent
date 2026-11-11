@@ -1,0 +1,1117 @@
+{
+ "id": "20261111-1-strasbourg-dancing-plague",
+ "plot": "Odo and Mothwick follow the true Strasbourg dancing plague of July 1518: Frau Troffea dances for days without music, strangers join, doctors prescribe more dancing and the council hires musicians and builds a stage; the twist is that the 'cure' spread it, because frightened people believed in Saint Vitus' curse, and it ends only when music is banned and the dancers are taken to the shrine at Saverne.",
+ "script": {
+  "title": "Who Made Strasbourg Dance?",
+  "lead_in": 0,
+  "set": {
+   "place": "village",
+   "fog": 0.025,
+   "eyes": 0,
+   "moonlight": 20
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "troffea": {
+    "name": "Frau Troffea",
+    "voice": "af_nicole",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.5,
+     0.18,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     30
+    ]
+   },
+   "husband": {
+    "name": "Her Husband",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.22,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -34,
+     32
+    ]
+   },
+   "d1": {
+    "name": "Dancer",
+    "voice": "af_sarah",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.4,
+     0.32,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     30,
+     32
+    ]
+   },
+   "d2": {
+    "name": "Dancer",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.3,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     34,
+     34
+    ]
+   },
+   "d3": {
+    "name": "Dancer",
+    "voice": "af_sky",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.45,
+     0.4,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -38,
+     38
+    ]
+   },
+   "d4": {
+    "name": "Dancer",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.2,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     38,
+     38
+    ]
+   },
+   "doctor": {
+    "name": "Town Physician",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     40,
+     36
+    ]
+   },
+   "councillor": {
+    "name": "City Councillor",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.1,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     42,
+     40
+    ]
+   },
+   "piper": {
+    "name": "Piper",
+    "voice": "am_puck",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.35,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     44,
+     42
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "fountain",
+    "type": "tube",
+    "color": [
+     0.5,
+     0.5,
+     0.52
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 0.8,
+    "at": [
+     6,
+     15,
+     0
+    ]
+   },
+   {
+    "id": "stage",
+    "type": "box",
+    "color": [
+     0.45,
+     0.3,
+     0.16
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.4,
+    "at": [
+     5,
+     14,
+     0
+    ]
+   },
+   {
+    "id": "drum",
+    "type": "tube",
+    "color": [
+     0.5,
+     0.14,
+     0.1
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     3.5,
+     12.5,
+     0.8
+    ]
+   },
+   {
+    "id": "chronicle",
+    "type": "box",
+    "color": [
+     0.86,
+     0.82,
+     0.7
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.2,
+     9.6,
+     1.5
+    ]
+   },
+   {
+    "id": "cart",
+    "type": "box",
+    "color": [
+     0.32,
+     0.22,
+     0.13
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.1,
+    "at": [
+     -6,
+     14,
+     0
+    ]
+   },
+   {
+    "id": "shoes",
+    "type": "box",
+    "color": [
+     0.8,
+     0.08,
+     0.08
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     1.4,
+     9.4,
+     0.4
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1518, Strasbourg. One woman stepped into the street and began to dance.",
+    "cam": "wide",
+    "do": [
+     [
+      "troffea",
+      "to:-2,12,0"
+     ],
+     [
+      "troffea",
+      "spin"
+     ]
+    ],
+    "text": "SHE COULD NOT STOP",
+    "sfx": "alarm"
+   },
+   {
+    "who": "odo",
+    "say": "Dance? In the middle of the street? Why didn't she stop?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "WHY NOT STOP?"
+   },
+   {
+    "who": "narr",
+    "say": "Her name was Frau Troffea. It was mid July, and very hot.",
+    "cam": "close:troffea",
+    "do": [
+     [
+      "troffea",
+      "turn:front"
+     ],
+     [
+      "troffea",
+      "bounce"
+     ]
+    ],
+    "text": "FRAU TROFFEA"
+   },
+   {
+    "who": "moth",
+    "say": "This one is true, Odo. The city wrote everything down.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:1,6,1.5"
+     ],
+     [
+      "chronicle",
+      "show"
+     ]
+    ],
+    "text": "A TRUE STORY"
+   },
+   {
+    "who": "narr",
+    "say": "Her husband begged her to stop. She danced until she fell.",
+    "cam": "wide",
+    "do": [
+     [
+      "husband",
+      "to:-4,12,0"
+     ],
+     [
+      "troffea",
+      "shake"
+     ]
+    ],
+    "text": "SHE DANCED TILL SHE FELL"
+   },
+   {
+    "who": "narr",
+    "say": "She slept a little, woke up, and started dancing again.",
+    "cam": "close:troffea",
+    "do": [
+     [
+      "troffea",
+      "sleep"
+     ],
+     [
+      "troffea",
+      "jump"
+     ]
+    ],
+    "text": "AGAIN"
+   },
+   {
+    "who": "odo",
+    "say": "Maybe she just loved music? Was someone playing for her?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WAS THERE MUSIC?"
+   },
+   {
+    "who": "narr",
+    "say": "No. There was no music at all. Only her feet on stone.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "bounce"
+     ]
+    ],
+    "text": "NO MUSIC",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "She danced for about six days. Then strangers joined her.",
+    "cam": "wide",
+    "do": [
+     [
+      "d1",
+      "to:0,13,0"
+     ],
+     [
+      "d2",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "STRANGERS JOINED"
+   },
+   {
+    "who": "moth",
+    "say": "Remember the word strangers, Odo. Nobody had asked them.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "NOBODY ASKED THEM"
+   },
+   {
+    "who": "narr",
+    "say": "Within a week, more than thirty people were dancing in Strasbourg.",
+    "cam": "overhead",
+    "do": [
+     [
+      "d1",
+      "spin"
+     ],
+     [
+      "d2",
+      "spin"
+     ],
+     [
+      "troffea",
+      "spin"
+     ]
+    ],
+    "text": "30+ DANCERS"
+   },
+   {
+    "who": "odo",
+    "say": "Thirty people dancing without music? That's not a party.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "NOT A PARTY"
+   },
+   {
+    "who": "narr",
+    "say": "Their feet bled through their shoes. They cried for help, still dancing.",
+    "cam": "close:d1",
+    "do": [
+     [
+      "d1",
+      "sad"
+     ],
+     [
+      "d1",
+      "bounce"
+     ]
+    ],
+    "text": "THEY CRIED FOR HELP"
+   },
+   {
+    "who": "narr",
+    "say": "Doctors were called. Their answer was very strange.",
+    "cam": "wide",
+    "do": [
+     [
+      "doctor",
+      "enter:right"
+     ],
+     [
+      "doctor",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "THE DOCTORS CAME"
+   },
+   {
+    "who": "doctor",
+    "say": "This is hot blood. The cure is simple. More dancing.",
+    "cam": "close:doctor",
+    "do": [
+     [
+      "doctor",
+      "turn:front"
+     ]
+    ],
+    "text": "THE CURE: MORE DANCING"
+   },
+   {
+    "who": "moth",
+    "say": "More dancing? Odo, they wanted to dance the sickness out.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ]
+    ],
+    "text": "DANCE IT OUT?"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for a new true story every day. Now it gets worse.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "bounce"
+     ]
+    ],
+    "text": "IT GETS WORSE"
+   },
+   {
+    "who": "narr",
+    "say": "The city council agreed with the doctors. They built a wooden stage.",
+    "cam": "prop:stage",
+    "do": [
+     [
+      "stage",
+      "show"
+     ],
+     [
+      "councillor",
+      "to:5,13,0"
+     ]
+    ],
+    "text": "THEY BUILT A STAGE"
+   },
+   {
+    "who": "councillor",
+    "say": "Hire musicians. Hire strong men to hold them up. Keep them moving.",
+    "cam": "close:councillor",
+    "do": [
+     [
+      "councillor",
+      "turn:front"
+     ],
+     [
+      "drum",
+      "show"
+     ]
+    ],
+    "text": "HIRE MUSICIANS"
+   },
+   {
+    "who": "narr",
+    "say": "Drums and pipes played day and night in the guild halls.",
+    "cam": "prop:drum",
+    "do": [
+     [
+      "drum",
+      "bounce"
+     ],
+     [
+      "piper",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "DRUMS DAY AND NIGHT",
+    "sfx": "horn"
+   },
+   {
+    "who": "odo",
+    "say": "Wait. Music made it better, right? Please say it worked.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ],
+     [
+      "odo",
+      "to:-1,7,0"
+     ]
+    ],
+    "text": "DID IT WORK?"
+   },
+   {
+    "who": "narr",
+    "say": "It did not. When people saw the music, they joined in.",
+    "cam": "wide",
+    "do": [
+     [
+      "d3",
+      "enter:left"
+     ],
+     [
+      "d3",
+      "to:-3,13,0"
+     ],
+     [
+      "d4",
+      "enter:right"
+     ]
+    ],
+    "text": "MORE JOINED"
+   },
+   {
+    "who": "narr",
+    "say": "One chronicle says up to four hundred people danced that summer.",
+    "cam": "overhead",
+    "do": [
+     [
+      "d1",
+      "spin"
+     ],
+     [
+      "d3",
+      "spin"
+     ],
+     [
+      "d4",
+      "spin"
+     ]
+    ],
+    "text": "UP TO 400",
+    "sfx": "alarm"
+   },
+   {
+    "who": "moth",
+    "say": "The cure was the thing spreading it. The music called them.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ],
+     [
+      "moth",
+      "to:0,6,1.8"
+     ]
+    ],
+    "text": "THE CURE SPREAD IT"
+   },
+   {
+    "who": "narr",
+    "say": "Some dancers collapsed in the heat. Chronicles say some never got up.",
+    "cam": "close:d4",
+    "do": [
+     [
+      "d4",
+      "sad"
+     ],
+     [
+      "d4",
+      "sleep"
+     ]
+    ],
+    "text": "SOME NEVER GOT UP"
+   },
+   {
+    "who": "odo",
+    "say": "Then why didn't they just tie them to their beds?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHY NOT STOP THEM?"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody knew what it was. So the council changed its mind.",
+    "cam": "close:councillor",
+    "do": [
+     [
+      "councillor",
+      "shake"
+     ]
+    ],
+    "text": "THEY CHANGED THEIR MINDS"
+   },
+   {
+    "who": "councillor",
+    "say": "No more music. No drums in the city. The stage comes down.",
+    "cam": "prop:stage",
+    "do": [
+     [
+      "stage",
+      "hide"
+     ],
+     [
+      "drum",
+      "hide"
+     ]
+    ],
+    "text": "MUSIC BANNED"
+   },
+   {
+    "who": "narr",
+    "say": "Gambling and loud music were banned in Strasbourg for weeks.",
+    "cam": "wide",
+    "do": [
+     [
+      "piper",
+      "exit:right"
+     ]
+    ],
+    "text": "SILENCE"
+   },
+   {
+    "who": "odo",
+    "say": "So the street went quiet. Did the dancing stop too?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:0,8,0"
+     ]
+    ],
+    "text": "DID IT STOP?"
+   },
+   {
+    "who": "narr",
+    "say": "Slowly. Wagons took the dancers to a shrine in the hills.",
+    "cam": "wide",
+    "do": [
+     [
+      "cart",
+      "show"
+     ],
+     [
+      "cart",
+      "to:6,16,0"
+     ]
+    ],
+    "text": "TO THE SHRINE"
+   },
+   {
+    "who": "narr",
+    "say": "The shrine of Saint Vitus, at Saverne. They were given red shoes.",
+    "cam": "prop:shoes",
+    "do": [
+     [
+      "shoes",
+      "show"
+     ],
+     [
+      "shoes",
+      "bounce"
+     ]
+    ],
+    "text": "RED SHOES"
+   },
+   {
+    "who": "moth",
+    "say": "Red shoes, a prayer, and quiet. By September it was over.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "happy"
+     ]
+    ],
+    "text": "OVER BY SEPTEMBER"
+   },
+   {
+    "who": "odo",
+    "say": "But what was it? A curse? Something in the bread?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHAT WAS IT?"
+   },
+   {
+    "who": "narr",
+    "say": "Here is the strangest part. Look back at the strangers.",
+    "cam": "wide",
+    "do": [
+     [
+      "d1",
+      "to:0,13,0"
+     ],
+     [
+      "d2",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "REMEMBER THE STRANGERS",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Strasbourg had years of famine, cold winters and new sickness.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "bounce"
+     ]
+    ],
+    "text": "FAMINE. FEAR."
+   },
+   {
+    "who": "narr",
+    "say": "People believed Saint Vitus could curse sinners with a dance.",
+    "cam": "close:troffea",
+    "do": [
+     [
+      "troffea",
+      "turn:front"
+     ]
+    ],
+    "text": "THEY BELIEVED IN THE CURSE"
+   },
+   {
+    "who": "moth",
+    "say": "So when they saw one dancer, frightened people feared it was them next.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "AM I NEXT?"
+   },
+   {
+    "who": "narr",
+    "say": "Historian John Waller calls it mass psychogenic illness. Fear that spreads.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "chronicle",
+      "show"
+     ]
+    ],
+    "text": "FEAR THAT SPREADS"
+   },
+   {
+    "who": "odo",
+    "say": "So the music didn't cure them. It told everyone the curse was real.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "THE MUSIC PROVED IT"
+   },
+   {
+    "who": "narr",
+    "say": "Doctors and councillors wrote it all down. Their notes still survive.",
+    "cam": "prop:chronicle",
+    "do": [
+     [
+      "chronicle",
+      "bounce"
+     ]
+    ],
+    "text": "THE NOTES SURVIVE"
+   },
+   {
+    "who": "moth",
+    "say": "And Frau Troffea? Nobody wrote down what happened to her.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "sad"
+     ]
+    ],
+    "text": "WHAT HAPPENED TO HER?"
+   },
+   {
+    "who": "odo",
+    "say": "I'm not tapping my foot, Mothwick. That's just the wind.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1,6,0"
+     ],
+     [
+      "odo",
+      "bounce"
+     ]
+    ],
+    "text": "JUST THE WIND"
+   },
+   {
+    "who": "narr",
+    "say": "If this one got you, the Christmas ghost army of Edgehill is next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "NEXT: EDGEHILL"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Summer 1518: A Town That Couldn't Stop Dancing | True Story",
+  "description": "Previous true story: https://youtu.be/1ntmNRGVkKg\nHave you heard a story like this one? Tell me in the comments.\n\n\"She danced for six days. Then the city tried to help, and made it worse.\" — Odo\n\nA true story from Strasbourg, July 1518: Frau Troffea started dancing in the street and could not stop. Within weeks dozens joined her. Doctors prescribed more dancing, the council hired musicians and built a stage, and the crowd grew. Only when music was banned and the dancers were taken to the shrine of Saint Vitus did it end.\n\nSources:\nhttps://en.wikipedia.org/wiki/Dancing_plague_of_1518\nhttps://www.britannica.com/event/dancing-plague-of-1518\n\n#truestory #scarystories #3DAnimation #Odo #strasbourg",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Strasbourg",
+   "1518",
+   "dancing plague",
+   "dancing mania",
+   "Frau Troffea",
+   "Saint Vitus",
+   "summer true story",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "NO MUSIC",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "Verano 1518: el pueblo que no podía dejar de bailar",
+    "description": "Historia real anterior: https://youtu.be/1ntmNRGVkKg\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\nEstrasburgo, julio de 1518: Frau Troffea empezó a bailar en la calle sin música y no pudo parar. Decenas se unieron. Los médicos recetaron más baile y la ciudad contrató músicos… y empeoró."
+   },
+   "pt": {
+    "title": "Verão 1518: a cidade que não parava de dançar",
+    "description": "História real anterior: https://youtu.be/1ntmNRGVkKg\nVocê já ouviu uma história como esta? Conte nos comentários.\n\nEstrasburgo, julho de 1518: Frau Troffea começou a dançar na rua sem música e não conseguiu parar. Dezenas se juntaram. Os médicos receitaram mais dança e a cidade contratou músicos… e piorou."
+   },
+   "ar": {
+    "title": "صيف 1518: مدينة لم تستطع التوقف عن الرقص",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/1ntmNRGVkKg\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\nستراسبورغ، يوليو 1518: بدأت فراو تروفيا ترقص في الشارع بلا موسيقى ولم تستطع التوقف. انضم إليها العشرات. وصف الأطباء مزيدًا من الرقص واستأجرت المدينة موسيقيين… فازداد الأمر سوءًا."
+   },
+   "fr": {
+    "title": "Été 1518 : la ville qui ne pouvait plus s'arrêter de danser",
+    "description": "Histoire vraie précédente: https://youtu.be/1ntmNRGVkKg\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\nStrasbourg, juillet 1518 : Frau Troffea se met à danser dans la rue sans musique et ne peut plus s'arrêter. Des dizaines la rejoignent. Les médecins prescrivent plus de danse, la ville engage des musiciens… et tout empire."
+   },
+   "ja": {
+    "title": "1518年夏:踊りが止まらなくなった町",
+    "description": "前回の実話: https://youtu.be/1ntmNRGVkKg\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n1518年7月、ストラスブール。フラウ・トロフェアは音楽もなく通りで踊り始め、止まれなくなった。何十人もが加わった。医者は「もっと踊れ」と言い、町は楽士を雇った…そして悪化した。"
+   },
+   "ko": {
+    "title": "1518년 여름: 춤을 멈추지 못한 도시",
+    "description": "이전 실화: https://youtu.be/1ntmNRGVkKg\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n1518년 7월 스트라스부르. 트로페아 부인은 음악도 없이 거리에서 춤추기 시작해 멈추지 못했다. 수십 명이 합류했다. 의사들은 더 춤추라 했고 도시는 악사를 고용했다… 그리고 더 나빠졌다."
+   },
+   "de": {
+    "title": "Sommer 1518: Die Stadt, die nicht aufhören konnte zu tanzen",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/1ntmNRGVkKg\nKennst du eine Geschichte wie diese? Schreib es in die Kommentare.\n\nStraßburg, Juli 1518: Frau Troffea begann ohne Musik auf der Straße zu tanzen und konnte nicht aufhören. Dutzende schlossen sich an. Ärzte verordneten mehr Tanz, die Stadt heuerte Musiker an … und es wurde schlimmer."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "SHE COULDN'T STOP",
+   "title": "1518: she danced for 6 days with no music 💃 #shorts",
+   "description": "Strasbourg, July 1518. One woman danced in the street and could not stop.",
+   "tags": [
+    "shorts",
+    "true story",
+    "Strasbourg",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "1518: bailó 6 días sin música 💃 #shorts",
+     "description": "Estrasburgo, julio de 1518. Una mujer bailó en la calle y no pudo parar. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "1518: ela dançou 6 dias sem música 💃 #shorts",
+     "description": "Estrasburgo, julho de 1518. Uma mulher dançou na rua e não conseguiu parar. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "1518: رقصت 6 أيام بلا موسيقى 💃 #shorts",
+     "description": "ستراسبورغ، يوليو 1518. امرأة رقصت في الشارع ولم تستطع التوقف. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "1518 : elle a dansé 6 jours sans musique 💃 #shorts",
+     "description": "Strasbourg, juillet 1518. Une femme a dansé dans la rue sans pouvoir s'arrêter. Histoire complète: {LONG_URL}"
+    },
+    "ja": {
+     "title": "1518年:音楽なしで6日間踊り続けた女 💃 #shorts",
+     "description": "1518年7月ストラスブール。ひとりの女が通りで踊り出し、止まれなくなった。 本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1518년: 음악 없이 6일 동안 춤춘 여자 💃 #shorts",
+     "description": "1518년 7월 스트라스부르. 한 여자가 거리에서 춤추기 시작해 멈추지 못했다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "1518: Sie tanzte 6 Tage ohne Musik 💃 #shorts",
+     "description": "Straßburg, Juli 1518. Eine Frau tanzte auf der Straße und konnte nicht aufhören. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 17,
+   "dur": 24,
+   "top": "THE CURE: MORE MUSIC",
+   "title": "The city's cure for the dancers? More music 🥁 #shorts",
+   "description": "Strasbourg built a stage and hired drummers for the dancers. Then more people joined.",
+   "tags": [
+    "shorts",
+    "true story",
+    "dancing plague",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿La cura para los bailarines? Más música 🥁 #shorts",
+     "description": "Estrasburgo construyó un escenario y contrató tambores. Entonces se unieron más. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A cura para os dançarinos? Mais música 🥁 #shorts",
+     "description": "Estrasburgo construiu um palco e contratou tambores. Então mais gente se juntou. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "علاج الراقصين؟ مزيد من الموسيقى 🥁 #shorts",
+     "description": "بنت ستراسبورغ منصة واستأجرت طبّالين. ثم انضم المزيد. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le remède pour les danseurs ? Plus de musique 🥁 #shorts",
+     "description": "Strasbourg a construit une scène et engagé des tambours. Puis d'autres ont rejoint la danse. Histoire complète: {LONG_URL}"
+    },
+    "ja": {
+     "title": "踊る人々への治療法は…もっと音楽 🥁 #shorts",
+     "description": "町は舞台を作り太鼓叩きを雇った。すると踊る人はさらに増えた。 本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "춤추는 사람들의 치료법? 더 많은 음악 🥁 #shorts",
+     "description": "도시는 무대를 짓고 북 치는 사람을 고용했다. 그러자 더 많은 사람이 합류했다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Heilung für die Tänzer? Mehr Musik 🥁 #shorts",
+     "description": "Straßburg baute eine Bühne und heuerte Trommler an. Dann kamen noch mehr dazu. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

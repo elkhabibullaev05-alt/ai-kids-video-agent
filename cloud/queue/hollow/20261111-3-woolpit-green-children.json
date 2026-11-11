@@ -1,0 +1,948 @@
+{
+ "id": "20261111-3-woolpit-green-children",
+ "plot": "Odo and Mothwick follow the medieval record of the Green Children of Woolpit: reapers find a green-skinned brother and sister by the wolf pits who speak an unknown language and eat only raw beans; the boy dies, the girl Agnes loses her green colour and describes a sunless twilight land; the twist (clue planted early: they were starving) is that they were probably lost Flemish orphans turned green by hunger, and Agnes lives on and marries.",
+ "script": {
+  "title": "Who Were the Green Children?",
+  "lead_in": 0,
+  "set": {
+   "place": "clearing",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 18
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "boy": {
+    "name": "Green Boy",
+    "voice": "am_puck",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.2,
+     0.45,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -30,
+     30
+    ]
+   },
+   "girl": {
+    "name": "Agnes",
+    "voice": "af_sky",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.5,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -32,
+     32
+    ]
+   },
+   "reaper": {
+    "name": "Reaper",
+    "voice": "am_onyx",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.4,
+     0.32,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     36,
+     34
+    ]
+   },
+   "calne": {
+    "name": "Sir Richard de Calne",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.12,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     40,
+     38
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.86,
+     0.82,
+     0.7
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.2,
+     9.6,
+     1.5
+    ]
+   },
+   {
+    "id": "bread",
+    "type": "box",
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     4.5,
+     13.5,
+     0.8
+    ]
+   },
+   {
+    "id": "beans",
+    "type": "cone",
+    "color": [
+     0.3,
+     0.6,
+     0.25
+    ],
+    "glow": 0.2,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     5,
+     13,
+     0.4
+    ]
+   },
+   {
+    "id": "bell",
+    "type": "cone",
+    "color": [
+     0.75,
+     0.6,
+     0.25
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     -5,
+     16,
+     3
+    ]
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": [
+     0.4,
+     0.3,
+     0.2
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     6,
+     15,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1150s, Woolpit, England. Two children climbed out of a wolf pit. Green.",
+    "cam": "wide",
+    "do": [
+     [
+      "boy",
+      "to:-2,12,0"
+     ],
+     [
+      "girl",
+      "to:-0.5,12.4,0"
+     ]
+    ],
+    "text": "THE GREEN CHILDREN",
+    "sfx": "alarm"
+   },
+   {
+    "who": "odo",
+    "say": "Green? Like moss green? Mothwick, children aren't green.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "GREEN SKIN?"
+   },
+   {
+    "who": "narr",
+    "say": "Harvest time. Reapers in the field saw them by the wolf pits.",
+    "cam": "wide",
+    "do": [
+     [
+      "reaper",
+      "enter:right"
+     ],
+     [
+      "reaper",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "HARVEST TIME"
+   },
+   {
+    "who": "moth",
+    "say": "Two old monks wrote this down, Odo. Separately. It is history.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:1,6,1.5"
+     ],
+     [
+      "book",
+      "show"
+     ]
+    ],
+    "text": "TWO CHRONICLES"
+   },
+   {
+    "who": "narr",
+    "say": "A brother and a sister. Their skin was green all over.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "turn:front"
+     ],
+     [
+      "girl",
+      "eyes_big"
+     ]
+    ],
+    "text": "GREEN ALL OVER"
+   },
+   {
+    "who": "narr",
+    "say": "Their clothes were made of a cloth nobody had seen before.",
+    "cam": "close:boy",
+    "do": [
+     [
+      "boy",
+      "turn:front"
+     ],
+     [
+      "boy",
+      "shake"
+     ]
+    ],
+    "text": "STRANGE CLOTHES"
+   },
+   {
+    "who": "reaper",
+    "say": "Where are you from? Who is your father? Can you hear me?",
+    "cam": "close:reaper",
+    "do": [
+     [
+      "reaper",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "WHERE ARE YOU FROM?"
+   },
+   {
+    "who": "narr",
+    "say": "They answered in a language no one in Suffolk knew.",
+    "cam": "two:boy,girl",
+    "do": [
+     [
+      "boy",
+      "shake"
+     ],
+     [
+      "girl",
+      "shake"
+     ]
+    ],
+    "text": "AN UNKNOWN LANGUAGE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "odo",
+    "say": "Maybe they were just lost? Somebody must have missed them.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "JUST LOST?"
+   },
+   {
+    "who": "narr",
+    "say": "The reapers took them to the house of Sir Richard de Calne.",
+    "cam": "wide",
+    "do": [
+     [
+      "calne",
+      "enter:right"
+     ],
+     [
+      "calne",
+      "to:5,14,0"
+     ]
+    ],
+    "text": "SIR RICHARD DE CALNE"
+   },
+   {
+    "who": "calne",
+    "say": "Bring them bread. Meat. Milk. They must be starving.",
+    "cam": "close:calne",
+    "do": [
+     [
+      "calne",
+      "turn:front"
+     ],
+     [
+      "bread",
+      "show"
+     ]
+    ],
+    "text": "FEED THEM"
+   },
+   {
+    "who": "narr",
+    "say": "They would not eat. Not bread, not meat. For days.",
+    "cam": "prop:bread",
+    "do": [
+     [
+      "bread",
+      "bounce"
+     ],
+     [
+      "boy",
+      "sad"
+     ]
+    ],
+    "text": "THEY WOULD NOT EAT"
+   },
+   {
+    "who": "calne",
+    "say": "Not even honey? Children, please. You will not last a week.",
+    "cam": "close:calne",
+    "do": [
+     [
+      "calne",
+      "shake"
+     ]
+    ],
+    "text": "PLEASE EAT"
+   },
+   {
+    "who": "moth",
+    "say": "Remember this, Odo. Starving. For days. Before they were found too.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "REMEMBER: STARVING"
+   },
+   {
+    "who": "narr",
+    "say": "Then they saw raw beans still on the stalks, and grabbed them.",
+    "cam": "prop:beans",
+    "do": [
+     [
+      "beans",
+      "show"
+     ],
+     [
+      "girl",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "RAW BEANS",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "For months, they ate nothing but beans.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "bounce"
+     ]
+    ],
+    "text": "ONLY BEANS"
+   },
+   {
+    "who": "odo",
+    "say": "Beans? That's the strangest food to choose. Why beans?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:0,8,0"
+     ],
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHY BEANS?"
+   },
+   {
+    "who": "narr",
+    "say": "The boy grew weaker and weaker. Soon after he was baptised, he died.",
+    "cam": "close:boy",
+    "do": [
+     [
+      "boy",
+      "sad"
+     ],
+     [
+      "boy",
+      "sleep"
+     ]
+    ],
+    "text": "THE BOY DIED"
+   },
+   {
+    "who": "moth",
+    "say": "But the girl lived. And here is where it gets stranger.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:0,6,1.8"
+     ]
+    ],
+    "text": "THE GIRL LIVED"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for a new true story every day. Now, her answer.",
+    "cam": "wide",
+    "do": [
+     [
+      "odo",
+      "bounce"
+     ]
+    ],
+    "text": "HER ANSWER"
+   },
+   {
+    "who": "narr",
+    "say": "Slowly she ate other food. And her skin lost its green.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "turn:front"
+     ],
+     [
+      "girl",
+      "happy"
+     ]
+    ],
+    "text": "THE GREEN FADED"
+   },
+   {
+    "who": "narr",
+    "say": "She learned English. She was named Agnes. Then they asked her.",
+    "cam": "wide",
+    "do": [
+     [
+      "calne",
+      "to:3,13,0"
+     ],
+     [
+      "girl",
+      "turn:front"
+     ]
+    ],
+    "text": "THEY ASKED HER"
+   },
+   {
+    "who": "girl",
+    "say": "In our land, the sun never rises. It is always twilight.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "eyes_big"
+     ]
+    ],
+    "text": "ALWAYS TWILIGHT"
+   },
+   {
+    "who": "girl",
+    "say": "Everyone there is green. Across a wide river, we saw a bright land.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "EVERYONE IS GREEN"
+   },
+   {
+    "who": "girl",
+    "say": "We followed our father's cattle into a cave. We heard bells.",
+    "cam": "prop:bell",
+    "do": [
+     [
+      "bell",
+      "show"
+     ],
+     [
+      "bell",
+      "bounce"
+     ]
+    ],
+    "text": "WE HEARD BELLS",
+    "sfx": "horn"
+   },
+   {
+    "who": "girl",
+    "say": "We walked toward the bells. Then we were in your field.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "shake"
+     ]
+    ],
+    "text": "THEN WE WERE HERE"
+   },
+   {
+    "who": "odo",
+    "say": "A land with no sun? Mothwick, she came from underground?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ],
+     [
+      "odo",
+      "jump"
+     ]
+    ],
+    "text": "FROM UNDERGROUND?"
+   },
+   {
+    "who": "moth",
+    "say": "That's what people believed for eight hundred years.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "800 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "William of Newburgh and Ralph of Coggeshall both wrote it down.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "TWO MONKS, ONE STORY"
+   },
+   {
+    "who": "narr",
+    "say": "Ralph said Sir Richard himself told him, many times.",
+    "cam": "close:calne",
+    "do": [
+     [
+      "calne",
+      "turn:front"
+     ]
+    ],
+    "text": "TOLD MANY TIMES"
+   },
+   {
+    "who": "odo",
+    "say": "So who were they really? Please don't say fairies.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHO WERE THEY?"
+   },
+   {
+    "who": "narr",
+    "say": "Here is one answer historians give. Remember the starving.",
+    "cam": "wide",
+    "do": [
+     [
+      "boy",
+      "to:-1,13,0"
+     ],
+     [
+      "girl",
+      "to:0,13,0"
+     ]
+    ],
+    "text": "REMEMBER THE STARVING",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "England was at war with itself. Flemish families were driven out.",
+    "cam": "wide",
+    "do": [
+     [
+      "reaper",
+      "shake"
+     ]
+    ],
+    "text": "A WAR AT HOME"
+   },
+   {
+    "who": "narr",
+    "say": "Near Woolpit was Fordham St Martin, a village with a river.",
+    "cam": "overhead",
+    "do": [
+     [
+      "boy",
+      "to:-4,15,0"
+     ]
+    ],
+    "text": "A VILLAGE ACROSS A RIVER"
+   },
+   {
+    "who": "moth",
+    "say": "Flemish children would speak a language nobody here knew.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "FLEMISH?"
+   },
+   {
+    "who": "narr",
+    "say": "Lost in thick forest, they might never see open sun.",
+    "cam": "wide",
+    "do": [
+     [
+      "girl",
+      "to:-3,14,0"
+     ]
+    ],
+    "text": "NO SUN IN THE FOREST"
+   },
+   {
+    "who": "narr",
+    "say": "And starving children can turn a sickly green. It's called chlorosis.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "sad"
+     ]
+    ],
+    "text": "GREEN FROM HUNGER"
+   },
+   {
+    "who": "odo",
+    "say": "So the green wasn't magic. It was hunger. That's worse.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "IT WAS HUNGER"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody can prove it. The church bells of Bury may have led them.",
+    "cam": "prop:bell",
+    "do": [
+     [
+      "bell",
+      "bounce"
+     ]
+    ],
+    "text": "THE BELLS OF BURY?"
+   },
+   {
+    "who": "narr",
+    "say": "Agnes worked in Sir Richard's house for many years.",
+    "cam": "close:girl",
+    "do": [
+     [
+      "girl",
+      "happy"
+     ],
+     [
+      "girl",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "AGNES STAYED"
+   },
+   {
+    "who": "moth",
+    "say": "Ralph says she married a man at King's Lynn.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "happy"
+     ]
+    ],
+    "text": "SHE MARRIED"
+   },
+   {
+    "who": "narr",
+    "say": "Today the village sign of Woolpit shows the two green children.",
+    "cam": "wide",
+    "do": [
+     [
+      "sign",
+      "show"
+     ],
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "text": "THE VILLAGE SIGN"
+   },
+   {
+    "who": "odo",
+    "say": "I'm eating all my supper tonight. Even the beans.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1,6,0"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "EVEN THE BEANS"
+   },
+   {
+    "who": "narr",
+    "say": "If this one got you, the Christmas ghost army of Edgehill is next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "NEXT: EDGEHILL"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Legend of Woolpit: 2 Green Children Appeared | True Story",
+  "description": "Previous true story: https://youtu.be/1ntmNRGVkKg\nHave you heard a story like this one? Tell me in the comments.\n\n\"They wouldn't eat bread. Only raw beans. And their skin was green.\" — Odo\n\nA true record from 12th-century Suffolk: at harvest time, reapers in Woolpit found a brother and sister with green skin by the wolf pits, speaking an unknown language and refusing all food but raw beans. The boy died; the girl, Agnes, lost her green colour, learned English and told of a twilight land. Two medieval chroniclers, William of Newburgh and Ralph of Coggeshall, wrote it down.\n\nSources:\nhttps://en.wikipedia.org/wiki/Green_children_of_Woolpit\nhttps://www.historic-uk.com/HistoryUK/HistoryofEngland/The-Green-Children-of-Woolpit/\n\n#truestory #scarystories #3DAnimation #Odo #woolpit",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Woolpit",
+   "Suffolk",
+   "Green Children of Woolpit",
+   "medieval legend",
+   "12th century",
+   "William of Newburgh",
+   "harvest true story",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "WHY GREEN?",
+  "thumb_beat": 4,
+  "localizations": {
+   "es": {
+    "title": "La leyenda de Woolpit: aparecieron 2 niños verdes",
+    "description": "Historia real anterior: https://youtu.be/1ntmNRGVkKg\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\nSuffolk, siglo XII: unos segadores hallaron a dos hermanos de piel verde junto a las trampas para lobos. Hablaban una lengua desconocida y solo comían habas crudas."
+   },
+   "pt": {
+    "title": "A lenda de Woolpit: 2 crianças verdes apareceram",
+    "description": "História real anterior: https://youtu.be/1ntmNRGVkKg\nVocê já ouviu uma história como esta? Conte nos comentários.\n\nSuffolk, século XII: ceifeiros encontraram dois irmãos de pele verde junto às covas de lobos. Falavam uma língua desconhecida e só comiam favas cruas."
+   },
+   "ar": {
+    "title": "أسطورة وولبيت: ظهر طفلان أخضران",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/1ntmNRGVkKg\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\nسوفولك، القرن الثاني عشر: وجد حصادون أخًا وأختًا بجلد أخضر قرب حفر الذئاب. كانا يتكلمان لغة مجهولة ولا يأكلان إلا الفول النيء."
+   },
+   "fr": {
+    "title": "La légende de Woolpit : 2 enfants verts sont apparus",
+    "description": "Histoire vraie précédente: https://youtu.be/1ntmNRGVkKg\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\nSuffolk, XIIe siècle : des moissonneurs trouvent un frère et une sœur à la peau verte près des fosses à loups. Ils parlent une langue inconnue et ne mangent que des fèves crues."
+   },
+   "ja": {
+    "title": "ウールピットの伝説:緑の子ども2人が現れた",
+    "description": "前回の実話: https://youtu.be/1ntmNRGVkKg\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n12世紀サフォーク。刈り手たちはオオカミ穴のそばで緑の肌の兄妹を見つけた。知らない言葉を話し、生の豆しか食べなかった。"
+   },
+   "ko": {
+    "title": "울핏의 전설: 초록 아이 두 명이 나타났다",
+    "description": "이전 실화: https://youtu.be/1ntmNRGVkKg\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n12세기 서퍽. 추수꾼들이 늑대 함정 옆에서 초록 피부의 남매를 발견했다. 아무도 모르는 말을 했고 날콩만 먹었다."
+   },
+   "de": {
+    "title": "Die Legende von Woolpit: 2 grüne Kinder tauchten auf",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/1ntmNRGVkKg\nKennst du eine Geschichte wie diese? Schreib es in die Kommentare.\n\nSuffolk, 12. Jahrhundert: Schnitter fanden bei den Wolfsgruben zwei Geschwister mit grüner Haut. Sie sprachen eine unbekannte Sprache und aßen nur rohe Bohnen."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "WHY WERE THEY GREEN?",
+   "title": "Two green children climbed out of a wolf pit 🟢 #shorts",
+   "description": "Woolpit, England, 12th century. Reapers found two children with green skin.",
+   "tags": [
+    "shorts",
+    "true story",
+    "Woolpit",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Dos niños verdes salieron de una trampa para lobos 🟢 #shorts",
+     "description": "Woolpit, Inglaterra, siglo XII. Unos segadores hallaron a dos niños de piel verde. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Duas crianças verdes saíram de uma cova de lobos 🟢 #shorts",
+     "description": "Woolpit, Inglaterra, século XII. Ceifeiros acharam duas crianças de pele verde. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "طفلان أخضران خرجا من حفرة ذئاب 🟢 #shorts",
+     "description": "وولبيت، إنجلترا، القرن الثاني عشر. وجد حصادون طفلين بجلد أخضر. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Deux enfants verts sortis d'une fosse à loups 🟢 #shorts",
+     "description": "Woolpit, Angleterre, XIIe siècle. Des moissonneurs trouvent deux enfants à la peau verte. Histoire complète: {LONG_URL}"
+    },
+    "ja": {
+     "title": "オオカミ穴から緑の子ども2人が出てきた 🟢 #shorts",
+     "description": "12世紀イングランド、ウールピット。刈り手たちが緑の肌の子ども2人を見つけた。 本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "늑대 함정에서 초록 아이 둘이 기어 나왔다 🟢 #shorts",
+     "description": "12세기 잉글랜드 울핏. 추수꾼들이 초록 피부의 아이 둘을 발견했다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zwei grüne Kinder kletterten aus einer Wolfsgrube 🟢 #shorts",
+     "description": "Woolpit, England, 12. Jahrhundert. Schnitter fanden zwei Kinder mit grüner Haut. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
