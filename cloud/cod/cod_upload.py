@@ -109,6 +109,19 @@ def main():
         if v.get("day") == today: cnt[v["kind"]] += 1
     yt = Y.client(TOKEN)
     if Y.my_channel_id(yt) != "UCOJQ4gIRQMlbdr4weDxiVmQ": log("XATO: token boshqa kanalniki"); return
+    # 2026-11-11: post the engagement question once a video is public
+    now0 = dt.datetime.now(dt.timezone.utc)
+    for key, v in st["done"].items():
+        if v.get("commented") or dt.datetime.fromisoformat(v["at"]) > now0: continue
+        q = ("Which MW4 mission was the hardest for you? 👇" if v["kind"] == "long"
+             else "Would you play this mission again? 🔥 Full mission on the channel!")
+        try:
+            yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": v["id"], "topLevelComment":
+                                       {"snippet": {"textOriginal": q}}}}).execute()
+            v["commented"] = True; log("izoh yozildi:", key)
+        except Exception as e:
+            log("izoh hali yozilmadi:", key, str(e)[:100])
+    json.dump(st, open(STATE, "w"), indent=1)
     for it in plan():
         if it["key"] in st["done"] or cnt[it["kind"]] >= PER_DAY[it["kind"]]: continue
         if not os.path.exists(it["path"]): continue
@@ -126,13 +139,7 @@ def main():
         if path.startswith(os.path.join(HOME, "up")):
             try: os.remove(path)
             except OSError: pass
-        try:  # engagement question as the first comment (comments + replies feed recommendations)
-            q = ("Which MW4 mission was the hardest for you? 👇" if it["kind"] == "long"
-                 else "Would you play this mission again? 🔥 Full mission on the channel!")
-            yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": vid, "topLevelComment":
-                                       {"snippet": {"textOriginal": q}}}}).execute()
-        except Exception as e:
-            log("izoh yozilmadi:", str(e)[:120])
+        # engagement comment is posted after the video goes public (scheduled/private videos refuse comments: 403)
         json.dump(st, open(STATE, "w"), indent=1)
         log(f"YUKLANDI {it['key']} -> https://youtu.be/{vid} | chiqadi {t:%Y-%m-%d %H:%M} UTC | {it['title']}")
     log(f"bugun: {cnt['long']} uzun + {cnt['short']} Shorts; jami yuklangan {len(st['done'])}/{len(plan())}")
