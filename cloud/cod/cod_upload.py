@@ -169,6 +169,26 @@ def main():
             except OSError: pass
         # engagement comment is posted after the video goes public (scheduled/private videos refuse comments: 403)
         json.dump(st, open(STATE, "w"), indent=1)
+        if it["kind"] == "long":  # 2026-11-11 owner: link this mission's Shorts to the full video
+            pre = it["key"][:-len("_long")]
+            for k2, v2 in st["done"].items():
+                if k2.startswith(pre + "_short") and not v2.get("linked"):
+                    try:
+                        Y.set_description(yt, v2["id"], f"Full mission (Part {it['n']}): https://youtu.be/{vid}\n\n" + DESC
+                                          + Y.cross_footer(yt, False))
+                        v2["linked"] = vid
+                    except Exception as e:
+                        log("Shorts ga havola qo'yilmadi:", k2, str(e)[:100])
+            json.dump(st, open(STATE, "w"), indent=1)
+        else:  # the long video may already be up: link straight away
+            lk = st["done"].get(it["key"].split("_short")[0] + "_long")
+            if lk:
+                try:
+                    Y.set_description(yt, vid, f"Full mission (Part {it['n']}): https://youtu.be/{lk['id']}\n\n" + DESC
+                                      + Y.cross_footer(yt, False))
+                    st["done"][it["key"]]["linked"] = lk["id"]; json.dump(st, open(STATE, "w"), indent=1)
+                except Exception as e:
+                    log("Shorts ga havola qo'yilmadi:", it["key"], str(e)[:100])
         log(f"YUKLANDI {it['key']} -> https://youtu.be/{vid} | chiqadi {t:%Y-%m-%d %H:%M} UTC | {it['title']}")
     log(f"bugun: {cnt['long']} uzun + {cnt['short']} Shorts; jami yuklangan {len(st['done'])}/{len(plan())}")
 

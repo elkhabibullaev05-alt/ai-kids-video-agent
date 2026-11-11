@@ -78,8 +78,38 @@ def _reason(e):
         return str(e)
 
 
+# 2026-11-11 owner: link the channels to each other. Only channels with a matching adult audience are grouped;
+# kids (made-for-kids) channels are never cross-promoted, and no channel is promoted to kids.
+CROSS = {
+    "UCOJQ4gIRQMlbdr4weDxiVmQ": ("MW4 Campaign HD", "gaming"),
+    "UChKpt9p1vDhAlnWuMMKHUgQ": ("Funny Rank Daily", "gaming"),
+    "UCyAwBREYT8kQ_3tYLb4CMKg": ("Money Story Daily", "adult"),
+    "UCbWs87aJxQxohE0M2MaO7GQ": ("Wild Sketchbook", "adult"),
+    "UCmDhWfz5KM_sVy58F8i6dEQ": ("Calm Rain for Sleep", "adult"),
+}
+_CID = {}
+
+def cross_footer(yt, kids):
+    if kids:
+        return ""
+    try:
+        if id(yt) not in _CID:
+            _CID[id(yt)] = my_channel_id(yt)
+        me = _CID[id(yt)]
+    except Exception:
+        return ""
+    if me not in CROSS:
+        return ""
+    grp = CROSS[me][1]
+    others = [(n, c) for c, (n, g) in CROSS.items() if g == grp and c != me]
+    if not others:
+        return ""
+    return "\n\nMore from our channels:\n" + "\n".join(f"\u25b6 {n}: https://www.youtube.com/channel/{c}" for n, c in others)
+
+
 def upload(yt, path, title, description, tags, publish_at, kids, category="1", localizations=None, thumb=None, synthetic=False):
     """Upload as private + scheduled (publish_at = RFC3339 UTC). Returns the video id."""
+    description = description + cross_footer(yt, kids)
     body = {
         "snippet": {"title": title[:100], "description": description[:4900], "tags": tags[:30], "categoryId": category,
                     "defaultLanguage": "en", "defaultAudioLanguage": "en"},
@@ -139,3 +169,15 @@ def upload(yt, path, title, description, tags, publish_at, kids, category="1", l
             pass  # unverified channel / Shorts: no custom thumbnails
     time.sleep(2)
     return vid
+
+
+def set_description(yt, vid, description):
+    """2026-11-11: update a video's description (e.g. add the full-mission link to a Short once the long is up)."""
+    r = yt.videos().list(part="snippet", id=vid).execute()
+    if not r.get("items"):
+        return "gone"
+    sn = r["items"][0]["snippet"]
+    body = {"id": vid, "snippet": {"title": sn["title"], "categoryId": sn["categoryId"], "description": description[:4900],
+                                   "tags": sn.get("tags", []), "defaultLanguage": sn.get("defaultLanguage", "en")}}
+    yt.videos().update(part="snippet", body=body).execute()
+    return "ok"
