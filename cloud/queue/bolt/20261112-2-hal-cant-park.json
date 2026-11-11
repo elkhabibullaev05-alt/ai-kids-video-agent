@@ -1,0 +1,1388 @@
+{
+ "id": "20261112-2-hal-cant-park",
+ "plot": "On Hal's first Monday as the library truck he must park on busy Main Street before story time at three, but every try ends with a jump and a bonk while Turbo honks his 'cheering honks', Bertha's thirty kids blow toy horns and Hal hides behind the bakery to give up; there Bolt and Pip see him park perfectly when nobody is watching (as Pip saw at the orchard at sunrise), and when Turbo's practice honks make his wheels jump again Bolt realises the problem is not Hal but the honking; Turbo says sorry, the town cheers silently with blinking lights, Hal parks like a ribbon and reads the first story, then a purple tractor rolls in asking for Turbo, a week early.",
+ "script": {
+  "title": "100 Honks and Hal Still Can't Park!",
+  "description": "Hal's first day as the library truck: he must park on Main Street before story time. Inspector Bolt #34",
+  "set": {
+   "place": "Wheelburg Main Street outside the little library and the back yard of Benny's bakery, a sunny Monday from late morning until three o'clock",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     15.0
+    ]
+   },
+   "page": {
+    "name": "Mrs. Page",
+    "voice": "bf_emma",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.1,
+     0.55,
+     0.6
+    ],
+    "kind": "car",
+    "size": 1.05,
+    "hat": false,
+    "home": [
+     14.0,
+     8.0
+    ]
+   },
+   "clem": {
+    "name": "Clementine",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.5,
+     0.2,
+     0.65
+    ],
+    "kind": "truck",
+    "size": 1.1,
+    "hat": false,
+    "home": [
+     -14.0,
+     19.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "cone1",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     7.5,
+     13.5,
+     0.3
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "cone2",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     11.5,
+     10.0,
+     0.3
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "books",
+    "type": "box",
+    "color": "blue",
+    "on": "hal",
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "crate1",
+    "type": "box",
+    "color": [
+     0.55,
+     0.33,
+     0.12
+    ],
+    "at": [
+     15.5,
+     17.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "hal",
+    "say": "Back... back... oh no! Too far again!",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:10,13"
+     ],
+     [
+      "turbo",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "text": "HONK! HONK! HONK!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:4,11"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "hal",
+    "say": "I can't park with everyone watching! And the books are late!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:12,15"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "page",
+    "say": "Story time starts at three, Hal. Can you park by then?",
+    "cam": "close:page",
+    "do": [
+     [
+      "page",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was Monday morning. Hal's very first day as the library truck.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Main Street was very busy. And very, very loud.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Come on, Hal! Honk honk! That means GO!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Turbo. That honk sounded like a goose in a hurry.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "It's a cheering honk! My best one! Honk honk honk!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Thanks, Turbo. I think.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hal, the space is between those two cones. Take your time.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal backed up. Beep. Beep. Beep.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hal",
+      "to:9,13"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "You can do it, Hal! Honk! HONK!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal's wheels jumped. He bumped a cone. Bonk.",
+    "cam": "prop:cone1",
+    "do": [
+     [
+      "cone1",
+      "bounce"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "See? I'm a terrible parker. The worst in Wheelburg.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But Hal! At sunrise I saw a big green truck.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "At the orchard. Parked between two apple trees. Perfectly!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Oh. That was... nothing. Just some old truck.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "page",
+    "say": "Hal, if the books aren't in by three, I need another driver.",
+    "cam": "close:page",
+    "do": [
+     [
+      "page",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "ANOTHER DRIVER?!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "hal",
+    "say": "Another driver? But I love books. I read every night!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Don't worry! I'll show you. Zoom in fast, stop fast!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed into the space. Screech! Perfect. Everyone honked.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Ta-da! See? Easy peasy! Now you, Hal!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:4,11"
+     ],
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Turbo is small. Hal is long. Like a sandwich and a sausage.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hal is the sausage!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal tried again. All the cars on Main Street stopped to watch.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:11,12"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Honk honk! You've got this, Hal! HONK!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal's wheels jumped again. Bonk. The other cone.",
+    "cam": "prop:cone2",
+    "do": [
+     [
+      "cone2",
+      "bounce"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Sorry, Mrs. Page. Maybe I'm just too big for this town.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "page",
+    "say": "It's two o'clock, Hal. One hour left. The children are waiting.",
+    "cam": "close:page",
+    "do": [
+     [
+      "page",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bertha came back. With thirty kids for story time!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-4,15"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Look, kids! Hal is parking! Everybody cheer!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thirty kids cheered. And thirty kids honked their toy horns.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Thirty more watching? Oh no. Oh no, no, no.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hal. I can tow you in. One minute. Done.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:5,15"
+     ],
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Thank you, Grumpy. But I want to do it myself.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I understand. Nobody could stop me on my day off either.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Hal tried one more time. Everyone held their breath.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hal",
+      "to:10,12"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "This is it! The big one! HONK HONK HONK!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal's wheels jumped. Straight up. He nearly hit the library!",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:12,16"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NEARLY HIT THE LIBRARY!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "page",
+    "say": "Oh dear! My books! My lovely books!",
+    "cam": "close:page",
+    "do": [
+     [
+      "books",
+      "bounce"
+     ],
+     [
+      "page",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "That's it. I'm not a library truck. I'm an apple truck.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal drove off and hid behind Benny's bakery. All alone.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:14,19"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt, he's giving up! And the kids are waiting!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Pip. Come with me. And this time, no honking at all.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:7,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt and Pip crept round the bakery. Quiet as two mice.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:9,18"
+     ],
+     [
+      "pip",
+      "to:10,15"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Shh! Look! What is Hal doing back there?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal was all alone. Nobody watching. Nobody honking.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Just for practice. Back... a little left... and stop.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:13,18"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Hal slid between two bread crates. Perfectly. Like a ribbon.",
+    "cam": "prop:crate1",
+    "do": [
+     [
+      "crate1",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "PERFECT PARKING?!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! He CAN park! Just like at the orchard!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then why can't he park on Main Street?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Back on Main Street, the honking started again. Turbo was practising.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:3,10"
+     ],
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Honk honk! Cheering practice! For when Hal comes back!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "page",
+    "say": "Ten minutes to story time! Where is Hal?",
+    "cam": "close:page",
+    "do": [
+     [
+      "page",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind the bakery, Hal heard the honks. And his wheels jumped.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Honk, then jump. Every single time. Pip, do you see it?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Hal isn't a bad parker. The honks make him jumpy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Exactly. The problem isn't Hal. The problem is us.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE HONKS DID IT!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Bolt and Pip raced back to Main Street.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:6,10"
+     ],
+     [
+      "pip",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Everyone! Please! No more honking!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "But honking is cheering! Isn't it?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Not for Hal. Honks make his wheels jump. Bonk!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh. My cheering honks made it harder?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Hal rolled back slowly. He had heard everything.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:12,15"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hal, I'm sorry. I wanted to help. I was too loud.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "You were cheering for me? That's kind, Turbo. Thank you.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "New plan. Silent cheering. My speciality.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Kids! Toy horns away! Wave your wheels instead!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And I'll blink my lights. Blink blink means GO, Hal!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Main Street went quiet. Not one honk. Only one little bird.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Back... a little left... and stop.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Hal slid between the cones. Perfect. Like a ribbon.",
+    "cam": "prop:cone1",
+    "do": [
+     [
+      "cone1",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "PERFECT PARK!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Everyone blinked their lights and waved their wheels. Very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "page",
+    "say": "Just in time! Story time can start!",
+    "cam": "close:page",
+    "do": [
+     [
+      "books",
+      "give:page"
+     ],
+     [
+      "page",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Mrs. Page, may I read the very first story?",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "When a friend is learning, cheer quietly. Give them room.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Silent cheering. Best kind of cheering.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a long purple tractor rolled slowly into Main Street.",
+    "cam": "wide",
+    "do": [
+     [
+      "clem",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Hello, Wheelburg! Which one of you is Turbo?",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "You're Grandma Rosa's racer?! But you're a week early!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S HERE EARLY!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:clem"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "100 Honks and Hal Still Can't Park! 🚚 (Ep 34)",
+  "description": "\"I can park. Really, I can. Just... not when the whole street is watching.\" — Hal\nIt's Hal's first day as Wheelburg's library truck, and he has to park on busy Main Street before story time at three. Every try ends in a bonk. Can Inspector Bolt find out why? Inspector Bolt #34\n\n#series #3DAnimation #InspectorBolt #autumn",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "learning to park",
+   "parking cartoon",
+   "truck cartoon",
+   "library",
+   "patience for kids",
+   "cars mystery",
+   "autumn cartoon"
+  ],
+  "thumb_text": "EVERYONE'S WATCHING!",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "¡100 bocinazos y Hal sigue sin estacionar! 🚚 (Ep 34)",
+    "description": "\"Sé estacionar. De verdad. Solo que... no cuando toda la calle me mira.\" — Hal\nEs el primer día de Hal como camión de la biblioteca y debe estacionar en la concurrida calle Mayor antes de la hora del cuento, a las tres. Cada intento termina en un ¡bonk! ¿Descubrirá el Inspector Bolt por qué? Inspector Bolt #34\n\n#serie #Animación3D #InspectorBolt #otoño"
+   },
+   "pt": {
+    "title": "100 buzinadas e o Hal ainda não estaciona! 🚚 (Ep 34)",
+    "description": "\"Eu sei estacionar. Sério. Só não... quando a rua inteira está olhando.\" — Hal\nÉ o primeiro dia do Hal como caminhão da biblioteca, e ele precisa estacionar na movimentada Rua Principal antes da hora da história, às três. Toda tentativa termina num bonk! O Inspetor Bolt vai descobrir por quê? Inspector Bolt #34\n\n#série #Animação3D #InspectorBolt #outono"
+   },
+   "ar": {
+    "title": "100 زمور وهال ما زال لا يستطيع الركن! 🚚 (حلقة 34)",
+    "description": "\"أستطيع الركن، حقًا. لكن... ليس حين ينظر إليّ الشارع كله.\" — هال\nإنه اليوم الأول لهال كشاحنة المكتبة، وعليه أن يركن في الشارع الرئيسي المزدحم قبل وقت القصة في الثالثة. كل محاولة تنتهي بـ\"بونك\"! هل يكتشف المفتش بولت السبب؟ Inspector Bolt #34\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt #الخريف"
+   },
+   "fr": {
+    "title": "100 coups de klaxon et Hal ne sait toujours pas se garer ! 🚚 (Ép 34)",
+    "description": "« Je sais me garer. Vraiment. Mais pas quand toute la rue me regarde. » — Hal\nC'est le premier jour de Hal comme camion de la bibliothèque, et il doit se garer dans la grande rue avant l'heure du conte, à trois heures. Chaque essai finit par un bonk ! L'inspecteur Bolt va-t-il trouver pourquoi ? Inspector Bolt #34\n\n#série #Animation3D #InspectorBolt #automne"
+   },
+   "ja": {
+    "title": "クラクション100回、ハルはまだ駐車できない!🚚(第34話)",
+    "description": "「駐車はできるんだ、本当に。ただ…通りのみんなが見ていると無理なんだ。」— ハル\n図書館トラックとしての初日、ハルは3時のおはなし会までににぎやかな大通りに駐車しなければならない。でも毎回「ボン!」。ボルト警部は理由を見つけられるかな? Inspector Bolt #34\n\n#シリーズ #3Dアニメ #InspectorBolt #秋"
+   },
+   "ko": {
+    "title": "경적 100번, 할은 아직도 주차를 못 해요! 🚚 (34화)",
+    "description": "\"나 주차할 줄 알아. 정말이야. 다만… 온 거리가 쳐다볼 때만 빼고.\" — 할\n도서관 트럭으로서 할의 첫날, 세 시 동화 시간 전에 붐비는 큰길에 주차해야 해요. 그런데 할 때마다 '쿵!' 볼트 경위는 그 이유를 찾을 수 있을까요? Inspector Bolt #34\n\n#시리즈 #3D애니메이션 #InspectorBolt #가을"
+   },
+   "de": {
+    "title": "100 Mal Hupen und Hal kann nicht einparken! 🚚 (Folge 34)",
+    "description": "„Ich kann einparken. Wirklich. Nur nicht, wenn die ganze Straße zuschaut.“ — Hal\nEs ist Hals erster Tag als Büchereilaster, und er muss vor der Vorlesestunde um drei auf der vollen Hauptstraße einparken. Jeder Versuch endet mit einem Bonk! Findet Inspektor Bolt heraus, warum? Inspector Bolt #34\n\n#Serie #3DAnimation #InspectorBolt #Herbst"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "HONK! HONK! BONK!",
+   "title": "Hal Can't Park on Main Street! 🚚 (Ep 34) #shorts",
+   "description": "Story time is at three, and the books are still in the truck. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "parking"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Hal no puede estacionar en la calle Mayor! 🚚 (Ep 34) #shorts",
+     "description": "El cuento es a las tres y los libros siguen en el camión. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Hal não consegue estacionar na Rua Principal! 🚚 (Ep 34) #shorts",
+     "description": "A hora da história é às três e os livros ainda estão no caminhão. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هال لا يستطيع الركن في الشارع الرئيسي! 🚚 (حلقة 34) #shorts",
+     "description": "وقت القصة في الثالثة والكتب ما زالت في الشاحنة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Hal n'arrive pas à se garer dans la grande rue ! 🚚 (Ép 34) #shorts",
+     "description": "Le conte est à trois heures et les livres sont toujours dans le camion. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ハルが大通りに駐車できない!🚚(第34話)#shorts",
+     "description": "おはなし会は3時なのに、本はまだトラックの中。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "할이 큰길에 주차를 못 해요! 🚚 (34화) #shorts",
+     "description": "동화 시간은 세 시인데 책은 아직 트럭에 있어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hal kann auf der Hauptstraße nicht einparken! 🚚 (Folge 34) #shorts",
+     "description": "Um drei ist Vorlesestunde, und die Bücher sind noch im Laster. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 83,
+   "dur": 20,
+   "top": "SHE'S HERE?!",
+   "title": "A Purple Tractor Wants to Race Turbo! 🏁 (Ep 34) #shorts",
+   "description": "She was supposed to come next week. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "race"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Un tractor morado quiere correr contra Turbo! 🏁 (Ep 34) #shorts",
+     "description": "Debía llegar la próxima semana. Próxima parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um trator roxo quer correr contra o Turbo! 🏁 (Ep 34) #shorts",
+     "description": "Ela só devia chegar semana que vem. Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "جرار بنفسجي يريد مسابقة توربو! 🏁 (حلقة 34) #shorts",
+     "description": "كان يُفترض أن تصل الأسبوع القادم. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un tracteur violet veut faire la course avec Turbo ! 🏁 (Ép 34) #shorts",
+     "description": "Elle devait arriver la semaine prochaine. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "むらさきのトラクターがターボと競争したい!🏁(第34話)#shorts",
+     "description": "来るのは来週のはずだったのに。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "보라색 트랙터가 터보와 경주하고 싶대요! 🏁 (34화) #shorts",
+     "description": "다음 주에 오기로 했는데. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein lila Traktor will gegen Turbo fahren! 🏁 (Folge 34) #shorts",
+     "description": "Sie sollte erst nächste Woche kommen. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

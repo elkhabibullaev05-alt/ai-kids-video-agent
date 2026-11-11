@@ -1,0 +1,1368 @@
+{
+ "id": "20261112-1-who-does-grumpys-job",
+ "plot": "On Grumpy's first day off in twenty years, tucked under Bertha's blanket while Bolt promises to do his jobs, someone keeps doing every tow job first (Hal's spilled apple crates, cones round a puddle, the park's leaves); Turbo is cleared because he has no hook, Bertha swears Grumpy never left, but hook marks lead to the depot's open back window, the 'Grumpy' under the blanket is a pile of tyres, and the squeak of his old hook (planted at breakfast) gives him away: he doesn't know how to rest, so the friends teach him cloud-watching by the leaf pile; then Hal says he got the library job but can't park when people watch.",
+ "script": {
+  "title": "Who Is Doing Grumpy's Job?",
+  "description": "Grumpy has his first day off in twenty years, but someone keeps doing all his jobs. Inspector Bolt #33",
+  "set": {
+   "place": "Wheelburg town road, Bakery Lane, Bertha's bus depot and Wheelburg Park, a sunny autumn Saturday from breakfast until late afternoon",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "hal": {
+    "name": "Hal",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.55,
+     0.2
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     15.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "crates",
+    "type": "box",
+    "color": [
+     0.55,
+     0.33,
+     0.12
+    ],
+    "at": [
+     9.5,
+     13.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "cone",
+    "type": "cone",
+    "color": "orange",
+    "at": [
+     -9.0,
+     6.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 1.0
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Bolt, hurry! Hal's apple crates fell all over the road!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "bolt",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "text": "WHO DID GRUMPY'S JOB?",
+    "hold": 1.0,
+    "cam": "prop:crates",
+    "do": [
+     [
+      "bolt",
+      "to:8,11"
+     ],
+     [
+      "crates",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "They're already stacked. Neatly. But Grumpy has the day off!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I went to get help. Somebody stacked them in two minutes!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "enter:right"
+     ],
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Who helps like that? Only Grumpy helps like that!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a sunny autumn Saturday. Let's go back to breakfast.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Lap fifty! That mystery racer never lost a race. Neither will I!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo trained all week for the racer from Grandma Rosa's letter.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But at the school crossing, somebody was very, very tired.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Yaaawn. I'm not tired. My hook is tired.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His old tow hook gave a tiny squeak. Eeek.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "jump"
+     ],
+     [
+      "bertha",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! When did you last have a day off?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Day off. Hmm. Nineteen... no. Twenty years ago.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "TWENTY YEARS?! Today you rest. Doctor Bertha's orders!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "But who tows the cars? Who puts out the cones?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I will. Just for today. Procedure.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Rest. How do you even do that?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha took Grumpy to her depot. With her softest blanket.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-9,16"
+     ],
+     [
+      "grumpy",
+      "to:-6,17"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Close your eyes. Think of clouds. I'll sit by the door.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Fine. I'm resting. I'm resting very hard. Is it done yet?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Not yet, sweetie. Resting takes all day.",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now, back on the road, Bolt studied the neat crates.",
+    "cam": "prop:crates",
+    "do": [
+     [
+      "grumpy",
+      "exit"
+     ],
+     [
+      "crates",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Someone strong. Someone careful. Someone who helps without a word.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Thank you, mystery helper! Wherever you are!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Wait. Did you hear that? A tiny squeak!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Turbo zoomed in. Vroom! Nobody could hear a thing.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Does somebody need help? I'm fast! I'm here! Lap fifty-one!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Oh! And there's a big puddle on Bakery Lane. With cones!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Cones? I didn't put any cones there.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "ANOTHER SECRET HELP!",
+    "hold": 1.0,
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-8,10"
+     ],
+     [
+      "pip",
+      "to:-12,9"
+     ],
+     [
+      "turbo",
+      "to:-4,9"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Three orange cones stood round the puddle. In a perfect circle.",
+    "cam": "prop:cone",
+    "do": [
+     [
+      "cone",
+      "show"
+     ],
+     [
+      "cone",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Now kids can splash around it, not into it! So clever!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Strong. Careful. And now, very neat.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I promised Grumpy I'd do his jobs. Someone keeps beating me!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And if Grumpy finds out, he'll jump out of bed!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then we solve this before he does. Quietly.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo, you're everywhere today. Was it you?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "turn:turbo"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me? Look at me. No hook! I can't carry cones!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "True. Our helper lifts heavy things. Our helper has a hook.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "I have a winch. But I was with you all morning!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "to:3,14"
+     ],
+     [
+      "hal",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then who else has a hook? Only Grumpy!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone hurried to Bertha's depot. Without one single honk.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-5,13"
+     ],
+     [
+      "pip",
+      "to:-11,12"
+     ],
+     [
+      "turbo",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Shhh! He's sleeping. I've watched this door all morning.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the blanket was a big grey shape. Very, very still.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "See? Not one wiggle. He's resting like a champion.",
+    "cam": "two:bertha,bolt",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then it isn't Grumpy. Hmm. Now I'm really puzzled.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "THEN WHO IS IT?!",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Then a shout came from the park. Leaves everywhere!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ],
+     [
+      "turbo",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Finally! A job for me! Leaves are my speciality.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt zoomed to the park as fast as he could.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:6,10"
+     ],
+     [
+      "pip",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the leaves were already raked. Into one giant pile.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Done. Again! I didn't even get to rake one leaf!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Wow. That's the neatest leaf pile I've ever seen!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! Look at the ground! Little marks, like a dragged hook!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The little hook marks went all the way across the park.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fx",
+      "tracks:pip-bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "They lead back to Bertha's depot. To the back of it.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt and Pip crept round to the back. Very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-12,17"
+     ],
+     [
+      "pip",
+      "to:-14,14"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The back window is open! Wide open!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, may we look under the blanket? Very gently.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Gently, please. He needs his rest.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt lifted the blanket. Under it was a pile of old tyres!",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "GRUMPY IS GONE!",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "Tyres?! I watched the front door! He used the back window!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, behind them, came a tiny squeak. Eeek. Eeek.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Oh. Hello. I was... resting. Very fast resting.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Grumpy! YOU were the mystery helper?!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "The apples, the cones, the leaves! It was you!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Your old hook gave you away. Eeek. Every time.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I tried to rest. I lay there. And lay there.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "If I'm not helping, I'm just a grey truck in a blanket.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, Grumpy. You're our friend. Even when you do nothing.",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "to:-6,15"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Resting is easy! I'll show you. It's my best thing!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everyone drove to the park, beside the giant leaf pile.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:0,12"
+     ],
+     [
+      "pip",
+      "to:-4,10"
+     ],
+     [
+      "bertha",
+      "to:-8,14"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Now look up. What does that cloud look like?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "A race car! A really fast one!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "That one looks like a tow hook. A sleepy one.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And for the first time in twenty years, Grumpy yawned and smiled.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Even helpers need rest. Tired helpers can't help anyone.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Tomorrow I rest again. Maybe. Probably.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Hal rolled up, very excited. And a little worried.",
+    "cam": "wide",
+    "do": [
+     [
+      "hal",
+      "to:5,14"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Good news! I got the job delivering library books!",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "But I have to park on Main Street. In front of everyone.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Why is that bad, Hal?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "hal",
+    "say": "Because when people watch... I can't park at all.",
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "HAL CAN'T PARK?!",
+    "hold": 1.0,
+    "cam": "close:hal",
+    "do": [
+     [
+      "hal",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:hal"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Is Doing Grumpy's Job? 🍂 (Ep 33)",
+  "description": "\"Twenty years without one day off. Resting? I don't even know how.\" — Grumpy\nIt's a sunny autumn Saturday and Grumpy finally has a day off, but every time Inspector Bolt arrives to help, the job is already done. Who is Wheelburg's secret helper? Inspector Bolt #33\n\n#series #3DAnimation #InspectorBolt #autumn",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn cartoon",
+   "grumpy the tow truck",
+   "tow truck cartoon",
+   "day off",
+   "mystery for kids",
+   "cars mystery",
+   "fall cartoon"
+  ],
+  "thumb_text": "HIS DAY OFF?!",
+  "thumb_beat": 16,
+  "localizations": {
+   "es": {
+    "title": "¿Quién está haciendo el trabajo de Grumpy? 🍂 (Ep 33)",
+    "description": "\"Veinte años sin un solo día libre. ¿Descansar? Ni sé cómo se hace.\" — Grumpy\nEs un sábado soleado de otoño y Grumpy por fin tiene el día libre, pero cada vez que el Inspector Bolt llega a ayudar, el trabajo ya está hecho. ¿Quién es el ayudante secreto de Wheelburg? Inspector Bolt #33\n\n#serie #Animación3D #InspectorBolt #otoño"
+   },
+   "pt": {
+    "title": "Quem está fazendo o trabalho do Grumpy? 🍂 (Ep 33)",
+    "description": "\"Vinte anos sem um único dia de folga. Descansar? Eu nem sei como.\" — Grumpy\nÉ um sábado ensolarado de outono e o Grumpy finalmente tem folga, mas sempre que o Inspetor Bolt chega para ajudar, o trabalho já está feito. Quem é o ajudante secreto de Wheelburg? Inspector Bolt #33\n\n#série #Animação3D #InspectorBolt #outono"
+   },
+   "ar": {
+    "title": "من يقوم بعمل غرامبي؟ 🍂 (حلقة 33)",
+    "description": "\"عشرون عامًا بلا يوم راحة واحد. الراحة؟ لا أعرف حتى كيف.\" — غرامبي\nإنه يوم سبت خريفي مشمس، وأخيرًا حصل غرامبي على يوم راحة، لكن كلما وصل المفتش بولت للمساعدة يجد العمل قد أُنجز. من هو المساعد السري في ويلبرغ؟ Inspector Bolt #33\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt #الخريف"
+   },
+   "fr": {
+    "title": "Qui fait le travail de Grumpy ? 🍂 (Ép 33)",
+    "description": "« Vingt ans sans un seul jour de repos. Me reposer ? Je ne sais même pas comment. » — Grumpy\nC'est un samedi d'automne ensoleillé et Grumpy a enfin un jour de congé, mais chaque fois que l'inspecteur Bolt arrive pour aider, le travail est déjà fait. Qui est l'aide secrète de Wheelburg ? Inspector Bolt #33\n\n#série #Animation3D #InspectorBolt #automne"
+   },
+   "ja": {
+    "title": "グランピーの仕事をしているのはだれ?🍂(第33話)",
+    "description": "「20年間、一日も休んでいない。休むって、どうやるんだ?」— グランピー\n秋の晴れた土曜日、グランピーはやっとお休み。でもボルト警部が手伝いに行くと、仕事はいつももう終わっている。ウィールバーグのひみつのお手伝いさんはだれ? Inspector Bolt #33\n\n#シリーズ #3Dアニメ #InspectorBolt #秋"
+   },
+   "ko": {
+    "title": "누가 그럼피의 일을 하고 있을까? 🍂 (33화)",
+    "description": "\"20년 동안 하루도 쉰 적이 없어. 쉬는 법? 난 몰라.\" — 그럼피\n화창한 가을 토요일, 그럼피가 드디어 쉬는 날! 그런데 볼트 경위가 도우러 갈 때마다 일이 벌써 끝나 있어요. 휠버그의 비밀 도우미는 누구일까요? Inspector Bolt #33\n\n#시리즈 #3D애니메이션 #InspectorBolt #가을"
+   },
+   "de": {
+    "title": "Wer macht Grumpys Arbeit? 🍂 (Folge 33)",
+    "description": "„Zwanzig Jahre ohne einen freien Tag. Ausruhen? Ich weiß nicht mal, wie das geht.“ — Grumpy\nEs ist ein sonniger Herbstsamstag und Grumpy hat endlich frei, aber jedes Mal, wenn Inspektor Bolt helfen will, ist die Arbeit schon erledigt. Wer ist Wheelburgs geheimer Helfer? Inspector Bolt #33\n\n#Serie #3DAnimation #InspectorBolt #Herbst"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "WHO DID THIS?!",
+   "title": "Who Stacked Hal's Apples So Fast? 🍎 (Ep 33) #shorts",
+   "description": "Grumpy has the day off, so who is doing his jobs? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién apiló las manzanas de Hal tan rápido? 🍎 (Ep 33) #shorts",
+     "description": "Grumpy tiene el día libre, ¿quién hace su trabajo? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem empilhou as maçãs do Hal tão rápido? 🍎 (Ep 33) #shorts",
+     "description": "O Grumpy está de folga, então quem faz o trabalho dele? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من رتّب تفاح هال بهذه السرعة؟ 🍎 (حلقة 33) #shorts",
+     "description": "غرامبي في يوم راحة، فمن يقوم بعمله؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a empilé les pommes de Hal si vite ? 🍎 (Ép 33) #shorts",
+     "description": "Grumpy est en congé, alors qui fait son travail ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ハルのりんごをすぐに積んだのはだれ?🍎(第33話)#shorts",
+     "description": "グランピーはお休みなのに、だれが仕事をしているの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "누가 할의 사과를 이렇게 빨리 쌓았을까? 🍎 (33화) #shorts",
+     "description": "그럼피는 쉬는 날인데, 누가 일을 하는 걸까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer hat Hals Äpfel so schnell gestapelt? 🍎 (Folge 33) #shorts",
+     "description": "Grumpy hat frei – wer macht dann seine Arbeit? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 57,
+   "dur": 22,
+   "top": "WHERE IS GRUMPY?",
+   "title": "Grumpy Vanished From His Bed! 😮 (Ep 33) #shorts",
+   "description": "Under the blanket: just old tyres. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "grumpy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Grumpy desapareció de su cama! 😮 (Ep 33) #shorts",
+     "description": "Bajo la manta: solo llantas viejas. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Grumpy sumiu da cama! 😮 (Ep 33) #shorts",
+     "description": "Debaixo do cobertor: só pneus velhos. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "اختفى غرامبي من سريره! 😮 (حلقة 33) #shorts",
+     "description": "تحت البطانية: إطارات قديمة فقط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Grumpy a disparu de son lit ! 😮 (Ép 33) #shorts",
+     "description": "Sous la couverture : de vieux pneus. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グランピーがベッドから消えた!😮(第33話)#shorts",
+     "description": "毛布の下には古いタイヤだけ。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "그럼피가 침대에서 사라졌어요! 😮 (33화) #shorts",
+     "description": "담요 아래엔 낡은 타이어뿐. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Grumpy ist aus seinem Bett verschwunden! 😮 (Folge 33) #shorts",
+     "description": "Unter der Decke: nur alte Reifen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 80,
+   "dur": 20,
+   "top": "HAL CAN'T PARK?!",
+   "title": "Hal Can't Park When People Watch! 🚚 (Ep 33) #shorts",
+   "description": "His first library day is Monday. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "hal"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Hal no puede estacionar si lo miran! 🚚 (Ep 33) #shorts",
+     "description": "Su primer día en la biblioteca es el lunes. Próxima parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Hal não consegue estacionar se olham! 🚚 (Ep 33) #shorts",
+     "description": "O primeiro dia na biblioteca é segunda. Próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هال لا يستطيع الركن حين ينظر إليه الجميع! 🚚 (حلقة 33) #shorts",
+     "description": "يومه الأول في المكتبة يوم الاثنين. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Hal ne sait pas se garer quand on le regarde ! 🚚 (Ép 33) #shorts",
+     "description": "Son premier jour à la bibliothèque, c'est lundi. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "みんなが見ているとハルは駐車できない!🚚(第33話)#shorts",
+     "description": "図書館の初仕事は月曜日。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "모두가 보면 할은 주차를 못 해요! 🚚 (33화) #shorts",
+     "description": "도서관 첫 출근은 월요일. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hal kann nicht einparken, wenn alle zusehen! 🚚 (Folge 33) #shorts",
+     "description": "Sein erster Bücherei-Tag ist Montag. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
