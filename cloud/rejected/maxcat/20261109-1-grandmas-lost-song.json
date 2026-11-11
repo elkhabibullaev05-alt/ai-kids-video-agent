@@ -1,0 +1,1224 @@
+{
+ "id": "20261109-1-grandmas-lost-song",
+ "plot": "Grandma promised to sing her mother's lullaby to Luna, who can't sleep in her new bed, but she has forgotten how it ends; Max's loud plinking on the old piano fails, then he finds Grandma's childhood number paper inside the piano and plays the start, but the ending is torn off, until Dog, who howls at every song and heard this one every night as a puppy, keeps howling past the torn edge and sings the missing ending, so that night Max plays, Grandma sings, Dog howls the last note and Luna falls asleep.",
+ "script": {
+  "title": "Who Remembers the End of Grandma's Song?",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "piano",
+    "type": "box",
+    "color": "white",
+    "at": [
+     -4.0,
+     4.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "paper",
+    "type": "box",
+    "color": "yellow",
+    "at": [
+     -2.5,
+     3.2,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "phone",
+    "type": "box",
+    "color": "red",
+    "at": [
+     -7.5,
+     6.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Awoooo! Awoooo! Awooooooo!",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Stop! That's not singing! That's a fire truck!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "enter"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Shh, you two. I'm trying to remember my song!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "GRANDMA FORGOT HER SONG!",
+    "cam": "close:grandma",
+    "hold": 1.2,
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "This morning, Luna's mom called Grandma on the phone.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "enter"
+     ],
+     [
+      "phone",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Luna can't fall asleep in her new bed.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "When I was little, my mama sang me a sleepy song.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I promised to sing it to Luna on the phone tonight.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But I only remember the start. La la la, la la...",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And then what?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And then... nothing. The end is gone.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A lost song? Don't worry, Grandma! I'll sniff it out!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Dog, you can't sniff a song. Songs don't smell.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Everything smells. This song smells like cookies.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I sang it to Dog every night when he was a puppy.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I don't remember being tiny. I only remember snacks.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Don't worry, Grandma. I'll find the end. I'll play it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the corner stands Grandma's little old piano.",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Music lives in this thing. I'll try every key!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,5.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks across the keys. Plink! Plonk! Bonk!",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Awoooo!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Every time I play, you howl!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I can't help it. The piano tickles my ears.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps on the high keys, the low keys, all the keys.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "BONG! The loudest sound in the whole house.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "That was not a sleepy song. That was a wake-up song.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Thank you, Max. But that won't help Luna sleep.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Maybe I wrote it down once. But where?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bedtime is only a few hours away. I have to find it!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hops down. The piano lid creaks open a little.",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey, there's something inside! An old yellow paper!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "paper",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the paper are numbers, in a child's wobbly writing.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's my writing! From when I was a little girl!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ],
+     [
+      "grandma",
+      "to:-2,6"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You were a little girl? With tiny glasses?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tiny glasses and two very long braids.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My mama put a number on each piano key for me.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "There's a tiny number on every key! One, two, three!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "mouse",
+      "to:-4.5,5"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the numbers on the paper are the song!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts a paw on each number, one by one.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3.5,5.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Three, three, five. Three, three, five. Plink, plink, plonk.",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's it! That's how it starts!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I can almost hear my mama singing it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Awoo... awoo... awooo...",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next is six, five, four. And then...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max turns the paper over. The bottom corner is torn away.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "THE END IS MISSING!",
+    "cam": "prop:paper",
+    "hold": 1.2,
+    "do": [
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "No! The last numbers are gone!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Luna calls after dinner. Without an ending, she can't sleep.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'll guess. Six, five, four... nine?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ],
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plonk! It sounds like a goose stepping on a squeaky toy.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Not nine. Definitely not nine.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Seven? Two? Eight? None of them sound sleepy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ],
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm a cat. Cats don't know piano numbers!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Dog sits up very straight. His ears go up.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Play it again, Max. All of it. From the start.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Three, three, five...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Awooo, awooo, awooo... AWOOO... awooo...",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The paper stops. But Dog's howl keeps going. Down, down, down.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's it! That's the end! It goes down, like falling asleep!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ],
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! You remember Grandma's song!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My ears remember being tiny. Even if I don't!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I sang it to you every night, didn't I?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:dog"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Howl it one more time, Dog. I'll find the keys!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3.5,5.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog howls. Max follows. Four, three, two... one.",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The last note is soft and low. Like a big yawn.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'm sleepy already. And it's only lunchtime!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Quick, Grandma! Write the end on the paper!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Write my howl too. Awoooo, with five O's!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Four, three, two, one. Now it can never get lost again.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "paper",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, the phone rings. Grandma sits by the piano.",
+    "cam": "wide",
+    "do": [
+     [
+      "phone",
+      "bounce"
+     ],
+     [
+      "grandma",
+      "to:-2,6"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hello, Luna. Close your eyes. This is my mama's song.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, in her new bed, Luna listens.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max plays. Grandma sings. And Dog howls the very last note.",
+    "cam": "prop:piano",
+    "do": [
+     [
+      "piano",
+      "bounce"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Softly. Very softly. Awoooo.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Shh. She's asleep. Luna is fast asleep.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We did it. Shh... we did it, Dog.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best howl of my whole life.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When you forget something, friends can help you remember.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, will you teach me another song tomorrow?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Maybe, Max. But first, look out the window.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Big white flakes. The biggest snowstorm of the year is coming.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Remembers the End of Grandma's Song? 🎶🐶",
+  "description": "\"Grandma always remembers everything. But today she forgot her song.\" 🐱\nLuna can't sleep in her new bed, and Grandma promised to sing her mama's old lullaby tonight, but the ending is gone. Max searches the old piano, and the answer comes from someone nobody expected. Max the Curious Cat, Ep 35.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "lullaby",
+   "grandma",
+   "piano",
+   "lost song",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny dog",
+   "music for kids"
+  ],
+  "thumb_text": "SONG IS GONE!",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "¿Quién recuerda el final de la canción de la abuela? 🎶🐶",
+    "description": "\"La abuela siempre lo recuerda todo. Pero hoy olvidó su canción.\" 🐱\nLuna no puede dormir en su cama nueva y la abuela prometió cantarle esta noche la vieja canción de cuna de su mamá, pero el final se perdió. Max busca en el viejo piano, y la respuesta llega de quien nadie esperaba. Max el Gato Curioso, Ep 35.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Quem lembra o fim da música da vovó? 🎶🐶",
+    "description": "\"A vovó sempre lembra de tudo. Mas hoje ela esqueceu a música dela.\" 🐱\nLuna não consegue dormir na cama nova, e a vovó prometeu cantar hoje a velha canção de ninar da mãe dela, mas o final sumiu. Max procura no velho piano, e a resposta vem de quem ninguém esperava. Max, o Gato Curioso, Ep 35.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "من يتذكر نهاية أغنية الجدة؟ 🎶🐶",
+    "description": "\"الجدة تتذكر كل شيء دائمًا. لكنها اليوم نسيت أغنيتها.\" 🐱\nلونا لا تستطيع النوم في سريرها الجديد، ووعدت الجدة أن تغني لها الليلة تهويدة أمها القديمة، لكن النهاية ضاعت. يبحث ماكس في البيانو القديم، ويأتي الجواب ممن لم يتوقعه أحد. ماكس القط الفضولي، الحلقة 35.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Qui se souvient de la fin de la chanson de Mamie ? 🎶🐶",
+    "description": "« Mamie se souvient toujours de tout. Mais aujourd'hui, elle a oublié sa chanson. » 🐱\nLuna n'arrive pas à dormir dans son nouveau lit, et Mamie a promis de lui chanter ce soir la vieille berceuse de sa maman, mais la fin a disparu. Max fouille le vieux piano, et la réponse vient de quelqu'un d'inattendu. Max le Chat Curieux, Ép 35.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "おばあちゃんの歌のおわりをおぼえているのはだれ？🎶🐶",
+    "description": "「おばあちゃんはなんでもおぼえているのに、今日は歌をわすれちゃった。」🐱\n新しいベッドでねむれないルナのために、おばあちゃんは今夜、お母さんの子守歌を歌うと約束した。でも歌のおわりが思い出せない。マックスは古いピアノをしらべるけど、答えは思いがけないところから…。好奇心いっぱいのネコ マックス 第35話。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "할머니 노래의 끝을 기억하는 건 누구? 🎶🐶",
+    "description": "\"할머니는 뭐든 다 기억하는데, 오늘은 노래를 잊어버렸어.\" 🐱\n루나가 새 침대에서 잠을 못 자서, 할머니는 오늘 밤 엄마가 불러 주던 자장가를 불러 주기로 약속했어요. 그런데 노래의 끝이 생각나지 않아요. 맥스는 낡은 피아노를 뒤지고, 답은 아무도 예상 못 한 친구에게서 나와요. 호기심 많은 고양이 맥스 35화.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Wer kennt das Ende von Omas Lied? 🎶🐶",
+    "description": "„Oma weiß sonst immer alles. Aber heute hat sie ihr Lied vergessen.\" 🐱\nLuna kann in ihrem neuen Bett nicht einschlafen, und Oma hat versprochen, ihr heute Abend das alte Schlaflied ihrer Mama vorzusingen, doch das Ende ist weg. Max durchsucht das alte Klavier, und die Antwort kommt von jemandem, mit dem keiner gerechnet hat. Max, die neugierige Katze, Folge 35.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 18,
+   "top": "AWOOOO! 🎶",
+   "title": "Dog Tries to Sing... AWOOO! 🐶🎶 (Ep 35) #shorts",
+   "description": "Is that a song or a fire truck? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny dog",
+    "singing"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Perro intenta cantar... ¡AUUUU! 🐶🎶 (Ep 35) #shorts",
+     "description": "¿Es una canción o un camión de bomberos? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro tenta cantar... AUUUU! 🐶🎶 (Ep 35) #shorts",
+     "description": "É uma música ou um caminhão de bombeiros? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب يحاول الغناء... عووووو! 🐶🎶 (الحلقة 35) #shorts",
+     "description": "هل هذه أغنية أم سيارة إطفاء؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien essaie de chanter... AOUUUH ! 🐶🎶 (Ép 35) #shorts",
+     "description": "C'est une chanson ou un camion de pompiers ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌが歌ってみたら…アオーン！🐶🎶（第35話）#shorts",
+     "description": "これは歌？それとも消防車？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 노래를 부르면... 아우우! 🐶🎶 (35화) #shorts",
+     "description": "노래일까요, 소방차일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund versucht zu singen... AUUUU! 🐶🎶 (Folge 35) #shorts",
+     "description": "Ist das ein Lied oder ein Feuerwehrauto? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 44,
+   "dur": 22,
+   "top": "THE END IS MISSING! 🎹",
+   "title": "Grandma's Song Has No Ending! 🎹😿 (Ep 35) #shorts",
+   "description": "An old paper, a torn corner and bedtime coming soon. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "funny cat",
+    "piano"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡La canción de la abuela no tiene final! 🎹😿 (Ep 35) #shorts",
+     "description": "Un papel viejo, una esquina rota y poco tiempo antes de dormir. Sigue en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A música da vovó não tem fim! 🎹😿 (Ep 35) #shorts",
+     "description": "Um papel velho, um canto rasgado e pouco tempo até a hora de dormir. Continua no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أغنية الجدة بلا نهاية! 🎹😿 (الحلقة 35) #shorts",
+     "description": "ورقة قديمة وزاوية ممزقة ووقت قليل قبل النوم. التكملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La chanson de Mamie n'a pas de fin ! 🎹😿 (Ép 35) #shorts",
+     "description": "Un vieux papier, un coin déchiré et peu de temps avant le dodo. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "おばあちゃんの歌におわりがない！🎹😿（第35話）#shorts",
+     "description": "古い紙、やぶれた角、そしてねる時間まであとすこし。続きはチャンネルで：{LONG_URL}"
+    },
+    "ko": {
+     "title": "할머니 노래에 끝이 없어요! 🎹😿 (35화) #shorts",
+     "description": "낡은 종이, 찢어진 귀퉁이, 그리고 잘 시간까지 얼마 남지 않았어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Omas Lied hat kein Ende! 🎹😿 (Folge 35) #shorts",
+     "description": "Ein altes Papier, eine abgerissene Ecke und bald ist Schlafenszeit. Weiter auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
