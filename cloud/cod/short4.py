@@ -60,7 +60,7 @@ run(["ffmpeg", "-y", "-v", "error", "-ss", f"{a:.3f}", "-t", f"{dur:.3f}", "-i",
 run(["ffmpeg", "-y", "-v", "error", "-i", clip, "-vf", f"vidstabdetect=shakiness=7:accuracy=15:result={trf}", "-f", "null", "-"])
 GRADE = ("hqdn3d=1.5:1.5:3:3,"
          "curves=all='0/0 0.05/0.09 0.25/0.34 0.5/0.6 0.8/0.86 1/1',"
-         "eq=saturation=1.22:contrast=1.06,unsharp=5:5:0.85:5:5:0")
+         "eq=saturation=1.22:contrast=1.06,unsharp=5:5:0.6:5:5:0")
 run(["ffmpeg", "-y", "-v", "error", "-i", clip, "-vf",
      f"vidstabtransform=input={trf}:smoothing=40:optzoom=0:zoom=7:interpol=bicubic,{GRADE}",
      "-c:a", "copy"] + venc(14) + [stab])
@@ -119,7 +119,7 @@ for wd in words:
     else: cur_l = (cur_l + " " + wd).strip()
 lines.append(cur_l); lines = lines[:3]
 fs = 84 if len(lines) <= 2 else 70; lh = int(fs * 1.18)
-card_h = len(lines) * lh + 70; card_y = 470 - 30 - card_h
+card_h = len(lines) * lh + 70; card_y = 150
 txt = [f"drawbox=x=50:y={card_y}:w=980:h={card_h}:color=white@1:t=fill"]
 for i, ln in enumerate(lines):
     yy = card_y + 38 + i * lh
@@ -139,12 +139,13 @@ for i, ln in enumerate(lines):
     else:
         txt.append(f"drawtext=fontfile='{FONT}':text='{esc(ln)}':fontsize={fs}:fontcolor=black:x=(w-text_w)/2:y={yy}")
 foot = esc(sp.get("tag", "FULL MISSION ON THE CHANNEL"))
-fc = ("[0:v]split[s1][s2];[s1]crop=1200:1080:360:0,scale=1080:972:flags=lanczos,setsar=1[v0];"
+VY = card_y + card_h + 30
+fc = ("[0:v]split[s1][s2];[s1]crop=960:1080:480:0,scale=1080:1215:flags=lanczos,unsharp=3:3:0.35,setsar=1[v0];"
       "[s2]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:4,"
       "eq=brightness=-0.32:saturation=0.8[bg];"
-      "[bg][v0]overlay=0:500," + ",".join(txt) + ","
-      f"drawbox=x=0:y=1472:w=1080:h=6:color=0xE0201B@1:t=fill,"
-      f"drawtext=fontfile='{FONT}':text='{foot}':fontsize=46:fontcolor=white:x=(w-text_w)/2:y=1500,"
+      f"[bg][v0]overlay=0:{VY}," + ",".join(txt) + ","
+      f"drawbox=x=0:y={VY+1215}:w=1080:h=6:color=0xE0201B@1:t=fill,"
+      f"drawtext=fontfile='{FONT}':text='{foot}':fontsize=46:fontcolor=white:x=(w-text_w)/2:y={VY+1215+28},"
       f"fade=t=in:st=0:d=0.15,fade=t=out:st={total-0.35:.2f}:d=0.35[v]")
 cmd = ["ffmpeg", "-y", "-v", "error", "-i", body]
 if mus:
