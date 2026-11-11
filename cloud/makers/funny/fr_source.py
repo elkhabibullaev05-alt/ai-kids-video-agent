@@ -130,7 +130,7 @@ def download(vid, dst_dir, log=print):
     if os.path.exists(out) and os.path.getsize(out) > 50000:
         return out
     cmd = ytdlp_cmd() + _js_runtime_args() + [
-        "-f", "bv*[height<=720][ext=mp4]+ba[ext=m4a]/b[height<=720][ext=mp4]/bv*[height<=720]+ba/b[height<=720]/b",
+        "-f", "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080][ext=mp4]/bv*[height<=1080]+ba/b[height<=1080]/b",  # 2026-11-11 owner: Full HD sources (was 720p, upscaled)
         "--merge-output-format", "mp4", "--no-playlist", "--max-filesize", "300M", "--no-part",
         "--socket-timeout", "30", "--retries", "3", "-q", "--no-warnings", "-o", out,
         "https://www.youtube.com/watch?v=" + vid]
