@@ -200,7 +200,10 @@ def wrap(text, per_line):
 def headline(text, y0, size=58):
     """White bold sentence headline, wrapped, left-aligned like the owner's reference Shorts."""
     out = []
-    for i, ln in enumerate(wrap(text, int(980 / (0.62 * size)))[:3]):
+    lines = wrap(text, int(980 / (0.62 * size)))
+    if len(lines) > 3:  # 2026-11-11: never cut the sentence -> smaller font, up to 4 lines
+        size = 48; lines = wrap(text, int(980 / (0.62 * size)))[:4]
+    for i, ln in enumerate(lines):
         out.append(dtext(ln, size, str(y0 + i * int(size * 1.25)), None, None, "white", 0, x="50"))
     return ",".join(out)
 
