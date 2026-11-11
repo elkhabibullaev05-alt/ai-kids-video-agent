@@ -315,6 +315,36 @@ def pick_shots(src, a, b, L, n, pad=20):
     best = out[0]; rest = sorted(out[1:])
     return [lo + t for t in [best] + rest]
 
+_PEAKS = {}
+def mission_peaks(src, m, L, want=12):
+    """2026-11-11 baho: R1 opened on a talking close-up (loud dialogue scored high) -> 74%. The hook shot now comes
+    from the most intense moments of the WHOLE mission (motion counted double), a different one for every Short."""
+    key = (m["id"], round(L, 2))
+    if key in _PEAKS: return _PEAKS[key]
+    cands = []
+    for a, b in m["keep"]:
+        if b - a < L + 2: continue
+        lo = a
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{a:.2f}", "-t", f"{b-a:.2f}", "-i", src, "-vf",
+                              "fps=4,scale=96:54,format=gray", "-f", "rawvideo", "-"], capture_output=True).stdout
+        fr = np.frombuffer(raw, np.uint8).reshape(-1, 54, 96).astype(np.float32)
+        if len(fr) < 8: continue
+        mo = np.r_[0, np.abs(np.diff(fr, axis=0)).mean((1, 2))]
+        au = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{a:.2f}", "-t", f"{b-a:.2f}", "-i", src, "-vn", "-ac", "1",
+                             "-ar", "8000", "-f", "s16le", "-"], capture_output=True).stdout
+        x = np.frombuffer(au, np.int16).astype(np.float32) / 32768
+        n = min(len(mo) // 4, len(x) // 8000)
+        m1 = mo[:n*4].reshape(n, 4).mean(1); l1 = np.sqrt((x[:n*8000].reshape(n, 8000) ** 2).mean(1) + 1e-9)
+        # peaky sound (gunfire/explosions) beats steady dialogue: use the per-second max-minus-mean of loudness
+        for i in range(max(0, n - int(L))):
+            cands.append((2 * m1[i:i+int(L)+1].mean() + 40 * l1[i:i+int(L)+1].max(), lo + i))
+    cands.sort(reverse=True); out = []
+    for sc, t in cands:
+        if all(abs(t - u) > 12 for u in out): out.append(t)
+        if len(out) >= want: break
+    _PEAKS[key] = out
+    return out
+
 def hype_short(job, m, s, k, tmp, outdir):
     """Fast montage Short: 1.5-2 s shots cut on the beat of an energetic track, the most intense moment first,
     blurred gameplay fills the 9:16 frame behind a native 1080x1080 window, big Anton headline on top."""
@@ -329,6 +359,13 @@ def hype_short(job, m, s, k, tmp, outdir):
         while L > 2.3 and nb > 1: nb -= 1; L = nb * per
     n = max(8, int(target / L))
     starts = pick_shots(src, s["a"], s["b"], L, n)
+    try:
+        pk = mission_peaks(src, m, L)
+        if pk:
+            hook = pk[(k - 1) % len(pk)]
+            starts = [hook] + [t for t in starts[1:] if abs(t - hook) > L][:n - 1]
+    except Exception as e:
+        log("hook tanlash xato:", e)
     shots = []
     for i, t in enumerate(starts):
         sp = os.path.join(tmp, f"{m['id']}_h{k}_{i}.mp4")
