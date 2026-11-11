@@ -434,7 +434,7 @@ def v4_shorts(job, outdir, tmp):
             sj = os.path.join(tmp, f"v4_{m['id']}_{k}.json"); json.dump(spec, open(sj, "w"))
             r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "short4.py"), sj],
                                capture_output=True, text=True)
-            log(m["id"], f"V4 SHORT {k}:", "TAYYOR" if r.returncode == 0 else "XATO " + r.stderr[-600:])
+            log(m["id"], f"V4 SHORT {k}:", "TAYYOR" if r.returncode == 0 else "XATO " + r.stderr[-1800:])
             if r.returncode: err += 1
     kf = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korish.py")
     vids = [f for f in sorted(os.listdir(v4)) if f.endswith(".mp4") and not os.path.exists(os.path.join(v4, f[:-4] + "_baho.txt"))]
