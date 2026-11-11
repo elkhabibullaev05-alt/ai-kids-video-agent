@@ -109,6 +109,16 @@ def main():
         if v.get("day") == today: cnt[v["kind"]] += 1
     yt = Y.client(TOKEN)
     if Y.my_channel_id(yt) != "UCOJQ4gIRQMlbdr4weDxiVmQ": log("XATO: token boshqa kanalniki"); return
+    # 2026-11-11 owner: first-session videos must not come out -> private + schedule cancelled (not deleted)
+    for vid in JOB.get("cancel_ids", []):
+        if vid in st.setdefault("cancelled", []): continue
+        try:
+            r = Y.make_private(yt, vid); st["cancelled"].append(vid); log("yopildi (chiqmaydi):", vid, r)
+        except Exception as e:
+            log("yopib bo'lmadi:", vid, str(e)[:120])
+    json.dump(st, open(STATE, "w"), indent=1)
+    if not JOB.get("upload_enabled", True):
+        log("yuklash vaqtincha o'chiq (yangi montaj tayyorlanmoqda)"); return
     # 2026-11-11: post the engagement question once a video is public
     now0 = dt.datetime.now(dt.timezone.utc)
     for key, v in st["done"].items():
