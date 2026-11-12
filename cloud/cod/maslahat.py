@@ -3,7 +3,7 @@
 Sends every question file in cloud/cod/savollar/*.txt that has no answer yet to Gemini (text only, the
 watch-skill engine) and writes <name>_javob.txt next to it in OUT/gemini/. Claude reads the answers and edits.
 Key: Documents\\kanal_tokenlar\\gemini.txt (owner's; never printed)."""
-import os, sys, glob, json
+import os, sys, glob, json, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "tools", "watch", "scripts"))
 import gemini                                   # noqa: E402
@@ -19,15 +19,20 @@ def main(outdir):
         dst = os.path.join(outdir, os.path.basename(q)[:-4] + "_javob.txt")
         if os.path.exists(dst): continue
         payload = {"model": model, "input": [{"type": "text", "text": open(q).read()}]}
-        try:
-            _, _, body = gemini._call("POST", gemini.INTERACTIONS, key, data=json.dumps(payload).encode(),
-                                      headers={"Content-Type": "application/json"}, timeout=600)
-            data = json.loads(body)
-            txt = "\n".join(p["text"] for st in data.get("steps", []) if st.get("type") == "model_output"
-                            for p in st.get("content", []) if p.get("type") == "text")
-            txt = txt or body.decode("utf-8", "replace")[:4000]
-        except BaseException as e:
-            txt = "XATO: " + str(e)[:800]
+        txt = ""
+        for attempt in range(4):   # 503 "high demand" happens -> back off and retry
+            try:
+                _, _, body = gemini._call("POST", gemini.INTERACTIONS, key, data=json.dumps(payload).encode(),
+                                          headers={"Content-Type": "application/json"}, timeout=600)
+                data = json.loads(body)
+                txt = "\n".join(p["text"] for st in data.get("steps", []) if st.get("type") == "model_output"
+                                for p in st.get("content", []) if p.get("type") == "text")
+                if txt: break
+            except BaseException as e:
+                print("urinish", attempt + 1, str(e)[:200].replace(key, "***"))
+            time.sleep(90 * (attempt + 1))
+        if not txt:
+            print("javob olinmadi, keyingi safar:", q); continue
         open(dst, "w").write(txt.replace(key, "***"))
         print("javob:", dst)
 
