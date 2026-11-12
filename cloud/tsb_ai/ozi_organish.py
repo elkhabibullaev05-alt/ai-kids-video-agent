@@ -1,7 +1,7 @@
 """TSB AI - O'ZI O'RGANISH (reinforcement learning, PPO). Odam o'ynab bermaydi: agent shaxsiy serverdagi
 mashq qo'g'irchoqlarini (dummy) urib, sinab-xato bilan o'rganadi.
 Mukofot ekrandan o'qiladi:  + ultimate chizig'i to'lsa (= zarba tegdi),  - o'z hayot chizig'i kamaysa.
-F8 = boshlash / pauza, F10 = saqlab chiqish. Birinchi F8 da roi.json bo'lmasa kalibr.png saqlaydi (Claude chiziqlarni belgilaydi).
+Roblox oynasi oldinda bo'lsa o'zi boshlaydi; F8 = pauza, F10 = saqlab chiqish. roi.json bo'lmasa kalibr.png saqlaydi (Claude belgilaydi).
 usage: ozi_organish.py [soat]   (standart 5.2 soat)"""
 import os, sys, time, json, csv, collections
 import numpy as np, torch, torch.nn as nn
@@ -99,20 +99,22 @@ def main(hours=5.2):
     def save():
         torch.save({"sd": net.state_dict(), "opt": opt.state_dict(), "steps": steps}, ck_f)
 
-    print("Tayyor. TSB shaxsiy serverida dummy yoniga boring, F8 bosing. F10 = saqlab chiqish.")
+    print("Tayyor. Roblox'da TSB oynasi oldinga chiqishi bilan agent O'ZI boshlaydi. F8 = pauza, F10 = saqlab chiqish.")
+    on = True; kalibr_done = os.path.exists(roi_f)
     while time.time() < t_end:
         t0 = time.perf_counter()
         if down(VK_F10): break
-        if edge(VK_F8):
-            if not os.path.exists(roi_f):
-                h = roblox_hwnd()
-                if h:
-                    import mss, cv2
-                    l, t, r, b = client_box(h)
-                    img = np.asarray(mss.mss().grab({"left": l, "top": t, "width": r - l, "height": b - t}))[:, :, :3]
-                    cv2.imwrite(os.path.join(HERE, "kalibr.png"), img)
+        if not os.path.exists(roi_f):                       # birinchi marta: ekran rasmi, Claude chiziqlarni belgilaydi
+            if not kalibr_done and roblox_active():
+                time.sleep(3); h = roblox_hwnd()
+                import mss, cv2
+                l, t, r, b = client_box(h)
+                img = np.asarray(mss.mss().grab({"left": l, "top": t, "width": r - l, "height": b - t}))[:, :, :3]
+                cv2.imwrite(os.path.join(HERE, "kalibr.png"), img); kalibr_done = True
                 winsound.Beep(800, 120); winsound.Beep(800, 120)
-                print("kalibr.png saqlandi. Claude'ga ayting - u hayot va ultimate chiziqlarini belgilaydi."); continue
+                print("kalibr.png saqlandi - Claude chiziqlarni belgilashini kutyapman...")
+            time.sleep(1); continue
+        if edge(VK_F8):
             on = not on; winsound.Beep(1500 if on else 400, 150); print("O'RGANYAPTI" if on else "pauza")
             if not on: set_keys(set())
         if not on or not roblox_active():
