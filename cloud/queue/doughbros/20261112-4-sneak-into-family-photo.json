@@ -1,0 +1,984 @@
+{
+ "id": "20261112-4-sneak-into-family-photo",
+ "plot": "On Sunday the family takes ten timer photos for the holiday card in the garden, and Bup wants the Dough Bros in the picture for the first time ever; the bros climb from behind Mr. Pot's petunias to the bench, the garden chair and Mom's sweater while sneezes, shut eyes and wind ruin the clicks and flash-shy Crispy freezes at every flash, until with one click left Mia's face falls — the twist: the bread basket she carried out at the start sits empty front and center, she had put them in the photo all along and they climbed out of it; they dive back in, Crispy faces the flash, photo ten is perfect — then Mia whispers over the walkie that a kitten is crying under the porch.",
+ "script": {
+  "title": "Can 5 Bros Sneak Into the Family Photo?",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     -9,
+     13
+    ],
+    "brows": 18
+   }
+  },
+  "props": [
+   {
+    "id": "camera",
+    "type": "box",
+    "color": [
+     0.05,
+     0.05,
+     0.06
+    ],
+    "on": null,
+    "at": [
+     8,
+     7,
+     1.2
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.62,
+     0.42,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     -4,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "The camera's clicking, and we're not in a single picture!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:-2,10"
+     ],
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Can five bros sneak into the family photo before the last click?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "text": "SAY CHEESE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunday afternoon. Warm sun, last leaves, the whole family in matching sweaters.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-5,11"
+     ],
+     [
+      "lolly",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad set the camera on the wall. Ten clicks. Someone always blinks.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia carried our basket out to the blanket. A picnic, I guess.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros hopped out and hid behind Mr. Pot's petunias.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:-7,11"
+     ],
+     [
+      "crispy",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Five crumbs in my flowers. Wonderful. Just wonderful.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flash! Click one. Crispy jumps behind the flowerpot.",
+    "cam": "overhead",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ],
+     [
+      "crispy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "That light. It flashes like fire. I don't do well with fire.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Every year, a family photo. Every year, no bread in it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Not this year. This year the Dough Bros are on the card.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Click four just went. Six clicks left. Move fast.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup leads them along the fence toward the family bench.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:3,12"
+     ],
+     [
+      "zeek",
+      "to:4,12"
+     ],
+     [
+      "pim",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click. Dad sneezes. Click. Grandma's eyes are shut.",
+    "cam": "overhead",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "We're too small! We're behind a leaf! We look like bugs!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then we go higher. The garden chair right behind Mom.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They climb the chair leg. Pim slips. Lolly grabs his bandage.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm fine! Totally fine! Beans bounce! Mostly!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click. Mom's elbow, half of Dad, and a flying leaf.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Three clicks left. We're running out of photo!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Every flash, my embers jump. I can't climb toward that light.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then don't look at the light. Look at me. Climb.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup pushes Crispy up the chair leg. Crispy is heavy. Very heavy.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "crispy",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'm charcoal, Bup. I'm basically a tiny brick.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flash. Crispy freezes. Click. The wind blows Mia's hair over every face.",
+    "cam": "overhead",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ],
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Two left! Two! I can't count past two when I'm scared!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We made the chair, but Mom's big hair is in the way!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then over her shoulder. Onto the sweater. Go, go, go!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:7,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly's icing sticks to the wool. Bup's crust catches a loose thread.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I'm glued to a sweater. This is not my best angle.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Click nine. Just a sweater with a cookie on it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "One click left. One. And we're still not in it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia looks down at the picnic blanket. Her smile drops.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Wait. Why is Mia sad? It's a happy photo.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In front of Mia sits the bread basket. Front and center. Empty.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "basket",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The basket! She put it there for the photo. For us!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We were in the picture all along. And we climbed out!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WE WERE IN IT?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Dad's walking back to the camera! Back to the basket! Now!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five bros slide down, roll across the blanket, and dive in.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-4,14"
+     ],
+     [
+      "pim",
+      "to:-3,14"
+     ],
+     [
+      "lolly",
+      "to:-5,14"
+     ],
+     [
+      "zeek",
+      "to:-4,15"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The flash is right there. Front row. Facing it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-3,13"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Look at Mia, not the light. She's the warm one.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia sees five little faces pop up. Biggest grin all day.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flash. Click. The tenth photo.",
+    "cam": "prop:camera",
+    "do": [
+     [
+      "camera",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "PHOTO TEN!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I didn't flinch. First flash of my life, and I didn't flinch.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Was I smiling? I think my face was screaming.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, your face always screams. It's your style.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad checks the screen. Every eye is open. For once.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Next year, put the petunias in the picture. Just saying.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That evening, Mia's walkie crackles from her bedroom.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Something tiny is crying under the porch, she whispers. A kitten.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A kitten? Kittens chase small things. We are small things!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "A KITTEN?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Can 5 Bros Sneak Into the Family Photo? 📸 (Ep 34)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Every year a family photo. Every year, no bread in it.\" — Bup\nTen timer clicks for the holiday card, and the Dough Bros want in for the first time ever. Between sneezes, wind, a sweater and a flash that scares Crispy, they're running out of clicks fast.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "family photo",
+   "holiday card",
+   "bup",
+   "crispy",
+   "mr pot",
+   "funny animation"
+  ],
+  "thumb_text": "NOT IN THE PHOTO?!",
+  "thumb_beat": 11,
+  "localizations": {
+   "es": {
+    "title": "¿Pueden 5 bros colarse en la foto familiar? 📸 (Ep 34)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Cada año, una foto familiar. Cada año, sin pan.\" — Bup\nDiez clics con temporizador para la tarjeta navideña, y los Dough Bros quieren salir por primera vez. Entre estornudos, viento, un suéter y un flash que asusta a Crispy, se les acaban los clics.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "5 bros conseguem entrar na foto da família? 📸 (Ep 34)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Todo ano uma foto de família. Todo ano, nenhum pão nela.\" — Bup\nDez cliques no temporizador para o cartão de fim de ano, e os Dough Bros querem aparecer pela primeira vez. Entre espirros, vento, um suéter e um flash que assusta o Crispy, os cliques estão acabando.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "هل يتسلل 5 إخوة إلى صورة العائلة؟ 📸 (Ep 34)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"كل عام صورة عائلية. وكل عام لا خبز فيها.\" — باب\nعشر لقطات بالمؤقت لبطاقة الأعياد، وDough Bros يريدون الظهور لأول مرة. بين العطس والريح وكنزة صوفية وفلاش يخيف كريسبي، اللقطات تنفد بسرعة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "5 bros peuvent-ils se glisser dans la photo de famille ? 📸 (Ep 34)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Chaque année une photo de famille. Chaque année, pas de pain dedans.\" — Bup\nDix déclenchements au retardateur pour la carte des fêtes, et les Dough Bros veulent y être pour la première fois. Entre éternuements, vent, un pull et un flash qui effraie Crispy, les photos filent.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "5人のブロスは家族写真に忍び込める？ 📸 (Ep 34)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「毎年家族写真。毎年パンは写ってない。」— バップ\nホリデーカード用にタイマーで10枚。ドウ・ブロスは初めて写真に写りたい。くしゃみ、風、セーター、そしてクリスピーが怖がるフラッシュ——残りの枚数はどんどん減っていく。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "5형제는 가족사진에 몰래 들어갈 수 있을까? 📸 (Ep 34)",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"매년 가족사진. 매년 빵은 없어.\" — 밥\n연말 카드용 타이머 사진 10장. 도우 브로스는 처음으로 사진에 나오고 싶어요. 재채기, 바람, 스웨터, 그리고 크리스피를 놀라게 하는 플래시 사이에서 남은 컷이 줄어들어요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Schaffen es 5 Bros aufs Familienfoto? 📸 (Ep 34)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Jedes Jahr ein Familienfoto. Jedes Jahr ohne Brot.\" — Bup\nZehn Selbstauslöser-Klicks für die Weihnachtskarte, und die Dough Bros wollen zum ersten Mal mit drauf. Zwischen Niesen, Wind, einem Pullover und einem Blitz, der Crispy erschreckt, gehen die Klicks schnell aus.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 20,
+   "top": "WOULD YOU SMILE?",
+   "title": "Would YOU Smile at This Camera Flash? 📸 (Ep 34) #shorts",
+   "description": "The family photo has started, the flash goes off, and Crispy hides. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "family photo"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ sonreirías a este flash? 📸 (Ep 34) #shorts",
+     "description": "Empieza la foto familiar, salta el flash y Crispy se esconde. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ sorriria para este flash? 📸 (Ep 34) #shorts",
+     "description": "A foto de família começou, o flash dispara e o Crispy se esconde. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستبتسم لفلاش هذه الكاميرا؟ 📸 (Ep 34) #shorts",
+     "description": "بدأت صورة العائلة، انطلق الفلاش، واختبأ كريسبي. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU sourirais à ce flash ? 📸 (Ep 34) #shorts",
+     "description": "La photo de famille commence, le flash part et Crispy se cache. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのフラッシュに笑顔を向けられる？ 📸 (Ep 34) #shorts",
+     "description": "家族写真が始まり、フラッシュが光って、クリスピーは隠れる。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 플래시 앞에서 웃을 수 있어? 📸 (Ep 34) #shorts",
+     "description": "가족사진이 시작되고 플래시가 터지자 크리스피가 숨어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU in diesen Blitz lächeln? 📸 (Ep 34) #shorts",
+     "description": "Das Familienfoto beginnt, der Blitz geht los und Crispy versteckt sich. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 32,
+   "dur": 20,
+   "top": "ONE CLICK LEFT!",
+   "title": "One Click Left and We're Not in It 😳 (Ep 34) #shorts",
+   "description": "Nine photos gone, a cookie stuck to a sweater, and one click to go. Next part on the channel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "family photo"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Queda un clic y no salimos 😳 (Ep 34) #shorts",
+     "description": "Nueve fotos, una galleta pegada a un suéter y un solo clic más. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Falta um clique e não estamos na foto 😳 (Ep 34) #shorts",
+     "description": "Nove fotos, um biscoito grudado num suéter e só mais um clique. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بقيت لقطة واحدة ولسنا في الصورة 😳 (Ep 34) #shorts",
+     "description": "تسع صور، بسكويتة ملتصقة بكنزة، ولقطة واحدة أخيرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Plus qu'un clic et on n'y est pas 😳 (Ep 34) #shorts",
+     "description": "Neuf photos, un biscuit collé à un pull et un dernier clic. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "残り1枚、まだ写ってない 😳 (Ep 34) #shorts",
+     "description": "9枚終わって、クッキーはセーターにくっついたまま。残りあと1枚。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "한 컷 남았는데 우린 아직 없어 😳 (Ep 34) #shorts",
+     "description": "아홉 장이 지나가고, 쿠키는 스웨터에 붙었고, 남은 건 한 컷. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Noch ein Klick und wir sind nicht drauf 😳 (Ep 34) #shorts",
+     "description": "Neun Fotos, ein Keks klebt am Pullover und nur noch ein Klick. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

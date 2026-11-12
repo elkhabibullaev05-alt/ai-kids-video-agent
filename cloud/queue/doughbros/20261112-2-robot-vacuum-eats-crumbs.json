@@ -1,0 +1,928 @@
+{
+ "id": "20261112-2-robot-vacuum-eats-crumbs",
+ "plot": "At 2 a.m. Mom's new robot vacuum starts its first night shift while Zeek is on the floor measuring it, the other bros slide down the dish towel to help and get cut off from their only way back up, Pim's slipper hide and angry Lolly's charge both get bumped, and Crispy steps in front to be eaten first — the twist: the robot backs away from him, because (as Zeek noticed at the black doormat at the start) its floor sensors read black as a hole; Crispy leads the bros like ducklings back to the towel, glad for once that something runs from him — then in the morning Mia's science-fair volcano won't erupt.",
+ "script": {
+  "title": "Mom's New Robot Vacuum Eats Crumbs",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "robot",
+    "type": "ball",
+    "color": [
+     0.2,
+     0.2,
+     0.23
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "mat",
+    "type": "box",
+    "color": [
+     0.03,
+     0.03,
+     0.03
+    ],
+    "on": null,
+    "at": [
+     -9,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "towel",
+    "type": "box",
+    "color": [
+     0.9,
+     0.9,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     -7,
+     7,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "zeek",
+    "say": "It's awake! The robot is awake, and it's rolling at me!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,10"
+     ],
+     [
+      "robot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Two a.m., right on time. Zeek, run to my corner!",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "text": "ROBOT ON THE LOOSE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Last night Mom unboxed it. A round robot vacuum. It eats crumbs.",
+    "cam": "prop:robot",
+    "do": [
+     [
+      "robot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the counter, Bup, Pim and Lolly wake in the basket.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-6,8"
+     ],
+     [
+      "lolly",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I only came down to measure it. Thirty centimeters of pure hunger.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Strange data, though. It backed away from the black doormat. Twice.",
+    "cam": "prop:mat",
+    "do": [
+     [
+      "mat",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot turns. It rolls straight at Zeek. Bump. Spin. Again.",
+    "cam": "wide",
+    "do": [
+     [
+      "robot",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Stay close to me. Things usually run away from me anyway.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hang on, you two! We're coming down the towel!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They slide down the towel. Now all five are on the floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-2,9"
+     ],
+     [
+      "lolly",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Why did we come DOWN? Down is where the robot lives!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Because family comes down. Now hush. It's listening.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot hums. It rolls a slow circle around the kitchen.",
+    "cam": "overhead",
+    "do": [
+     [
+      "robot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "It can't see us. It bumps, turns, and tries a new direction.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "We wait till it turns away. Then we run for it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "They run. The robot turns. It cuts them off from the towel.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ],
+     [
+      "robot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "CUT OFF!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It cleans for an hour. One bump, and we're inside it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm hiding in Dad's slipper. Slippers are safe. Slippers are life.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-8,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim dives into Dad's slipper. The robot bumps the slipper. Pim screams.",
+    "cam": "wide",
+    "do": [
+     [
+      "robot",
+      "bounce"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It knocked! It knocked on my slipper!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Oh, that is IT. Nobody knocks on my brother's slipper!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly marches at it. It bumps her. She spins like a coin.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "spin"
+     ],
+     [
+      "robot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Its brushes pull in anything small. Crumbs. Raisins. Cookies. Beans.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then everyone behind me. If it eats anything, it eats the rock.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy stands alone in the middle. The robot rolls at him.",
+    "cam": "overhead",
+    "do": [
+     [
+      "robot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Crispy, move! Please move! I'll miss your spooky voice!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot reaches Crispy. It stops. Beep. Then it backs away.",
+    "cam": "wide",
+    "do": [
+     [
+      "robot",
+      "bounce"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT BACKED OFF?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It ran from me. Even robots run from me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Half an hour left. The robot circles back and parks there.",
+    "cam": "overhead",
+    "do": [
+     [
+      "robot",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It's guarding our only way up! We'll be down here till morning!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And at seven, Dad walks in barefoot. Right through here.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Wait. Zeek. You said it backed away from the doormat.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Twice! The doormat is black. And you are... very black.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Robots have eyes underneath. Black looks like a hole. Stairs!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So it's not scared of me. It thinks I'm a hole.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY IS A HOLE?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "You're not scary, Crispy. You're a very useful hole.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Everyone. Line up behind me. Close. Like ducklings.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy walks first. Then Bup, Zeek, Lolly, and Pim in his slipper.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-1,11"
+     ],
+     [
+      "zeek",
+      "to:0,11"
+     ],
+     [
+      "lolly",
+      "to:1,11"
+     ],
+     [
+      "pim",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The robot rolls at them. It sees Crispy. Beep. It backs away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "robot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step by step, they reach the towel. One by one, they climb.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-6,8"
+     ],
+     [
+      "zeek",
+      "to:-5,8"
+     ],
+     [
+      "lolly",
+      "to:-4,8"
+     ],
+     [
+      "pim",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I'll go last. Holes always go last.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy climbs. The robot bumps the towel. Then it rolls home.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:-6,7"
+     ],
+     [
+      "robot",
+      "home"
+     ]
+    ]
+   },
+   {
+    "text": "SAFE!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "For years things ran from me, and it hurt. Tonight it helped.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Tomorrow I'm drawing a black line around the bread basket.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the morning, Mia drags a heavy clay volcano onto the table.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The school science fair is Friday. And her volcano won't erupt.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A volcano? In our kitchen? Who allowed this?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "A VOLCANO?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Mom's New Robot Vacuum Eats Crumbs 🤖 (Ep 32)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Things always run away from me. Tonight, for once, it helped.\" — Crispy\nAt two a.m. Mom's new robot vacuum starts its first night shift — and five little crumbs are stuck on the kitchen floor between it and their only way back up.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "robot vacuum",
+   "kitchen at night",
+   "crispy",
+   "zeek",
+   "funny animation",
+   "night chase"
+  ],
+  "thumb_text": "WE'RE CRUMBS!",
+  "thumb_beat": 6,
+  "localizations": {
+   "es": {
+    "title": "La aspiradora robot de mamá come migas 🤖 (Ep 32)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Todo huye de mí. Esta noche, por una vez, sirvió de algo.\" — Crispy\nA las dos de la mañana, la nueva aspiradora robot empieza su primer turno… y cinco miguitas están atrapadas en el suelo, entre ella y su única forma de volver arriba.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O aspirador robô da mamãe come migalhas 🤖 (Ep 32)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Tudo sempre foge de mim. Hoje, pela primeira vez, isso ajudou.\" — Crispy\nÀs duas da manhã, o novo aspirador robô começa seu primeiro turno — e cinco migalhinhas estão presas no chão da cozinha, entre ele e o único caminho de volta para cima.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "مكنسة أمي الروبوت تأكل الفتات 🤖 (Ep 32)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"كل شيء يهرب مني دائمًا. الليلة، ولأول مرة، كان ذلك مفيدًا.\" — كريسبي\nفي الثانية فجرًا تبدأ مكنسة أمي الروبوت الجديدة نوبتها الأولى… وخمس فتات صغيرة عالقة على أرض المطبخ بينها وبين طريقها الوحيد للصعود.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Le robot aspirateur de maman mange les miettes 🤖 (Ep 32)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Tout le monde me fuit. Ce soir, pour une fois, ça a servi.\" — Crispy\nÀ deux heures du matin, le nouveau robot aspirateur de maman commence sa première nuit… et cinq petites miettes sont coincées sur le carrelage, entre lui et leur seul chemin pour remonter.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ママの新しいロボット掃除機はパンくずを食べる 🤖 (Ep 32)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「みんないつも僕から逃げる。でも今夜は、それが役に立った。」— クリスピー\n午前2時、ママの新しいロボット掃除機が初めての夜勤スタート。そして床には、帰り道をふさがれた5つの小さなパンくずが…。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "엄마의 새 로봇청소기는 부스러기를 먹어요 🤖 (Ep 32)",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"다들 늘 나를 피해 도망쳐. 오늘 밤엔 처음으로 그게 도움이 됐어.\" — 크리스피\n새벽 2시, 엄마의 새 로봇청소기가 첫 야간 근무를 시작해요. 그리고 다섯 개의 작은 부스러기가 위로 돌아갈 유일한 길 앞에서 갇혀 버렸어요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mamas neuer Saugroboter frisst Krümel 🤖 (Ep 32)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Alles läuft vor mir weg. Heute Nacht hat das zum ersten Mal geholfen.\" — Crispy\nUm zwei Uhr nachts startet Mamas neuer Saugroboter seine erste Nachtschicht – und fünf kleine Krümel sitzen auf dem Küchenboden fest, zwischen ihm und ihrem einzigen Weg nach oben.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 27,
+   "dur": 22,
+   "top": "WOULD YOU STAND HERE?",
+   "title": "Would YOU Stand in Front of This Robot? 🤖 (Ep 32) #shorts",
+   "description": "Crispy steps in front of the robot vacuum. It rolls straight at him. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "robot vacuum"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ te pondrías delante de este robot? 🤖 (Ep 32) #shorts",
+     "description": "Crispy se pone delante de la aspiradora robot. Y viene directo hacia él. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ ficaria na frente deste robô? 🤖 (Ep 32) #shorts",
+     "description": "Crispy fica na frente do aspirador robô. Ele vem direto para cima dele. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستقف أمام هذا الروبوت؟ 🤖 (Ep 32) #shorts",
+     "description": "يقف كريسبي أمام المكنسة الروبوت… وهي تتجه نحوه مباشرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU te mettrais devant ce robot ? 🤖 (Ep 32) #shorts",
+     "description": "Crispy se plante devant le robot aspirateur. Il fonce droit sur lui. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのロボットの前に立てる？ 🤖 (Ep 32) #shorts",
+     "description": "クリスピーがロボット掃除機の前に立つ。ロボットはまっすぐ向かってくる。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 로봇 앞에 설 수 있어? 🤖 (Ep 32) #shorts",
+     "description": "크리스피가 로봇청소기 앞을 막아서요. 로봇은 곧장 그에게 굴러와요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU dich vor diesen Roboter stellen? 🤖 (Ep 32) #shorts",
+     "description": "Crispy stellt sich vor den Saugroboter. Er rollt direkt auf ihn zu. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

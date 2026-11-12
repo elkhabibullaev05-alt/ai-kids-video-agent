@@ -1,0 +1,974 @@
+{
+ "id": "20261112-1-ants-marching-at-lolly",
+ "plot": "The morning after Thanksgiving a line of ants marches through the pantry and keeps chasing Lolly wherever she runs, and Mom books the bug man to spray the bros' home on Monday; sealing the sugar jar, Crispy's heat, Pim's chalk line and Zeek's vinegar scrub all fail, until Bup spots the tiny pink spots on the shelf — the twist: the ants follow Lolly's own icing drips (she apologised for them at the start), so she walks a sweet trail out under the back door to the garden stump while Pim and Bup wipe the shelf; the bug man finds zero ants — then Mom unboxes a robot vacuum that eats crumbs every night at 2 a.m.",
+ "script": {
+  "title": "Ants Are Marching at Lolly",
+  "set": {
+   "place": "pantry",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "ants",
+    "type": "box",
+    "color": [
+     0.18,
+     0.1,
+     0.06
+    ],
+    "on": null,
+    "at": [
+     -3,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "drops",
+    "type": "star",
+    "color": "pink",
+    "on": null,
+    "at": [
+     1,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "sugar",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     6,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "cloth",
+    "type": "box",
+    "color": "blue",
+    "on": null,
+    "at": [
+     2,
+     11,
+     0
+    ],
+    "visible": false,
+    "scale": 0.45
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Ants! A whole line of ants is marching right at me!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:4,10"
+     ],
+     [
+      "ants",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Forget Uncle Gus's wink. Why are the ants chasing Lolly?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "text": "ANT ATTACK?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The morning after Thanksgiving. Uncle Gus winked at everyone. Even the gravy.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-4,11"
+     ],
+     [
+      "zeek",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the pantry has a bigger problem now. Ants.",
+    "cam": "prop:ants",
+    "do": [
+     [
+      "ants",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Six legs each. Times a hundred. That is way too many legs!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Sorry about the pink spots, everyone. The oven made my icing drippy.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom comes in for coffee. She sees three ants on the counter.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She grabs the phone. Monday morning, the bug man sprays the pantry.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SPRAY OUR HOME?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bug spray and bread don't mix. We'd have to hide for days.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then the ants leave before Monday. They want sugar. Easy.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros push the sugar jar lid down. Tight. Sealed.",
+    "cam": "prop:sugar",
+    "do": [
+     [
+      "sugar",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ten minutes later, the ants march right past the sugar jar.",
+    "cam": "wide",
+    "do": [
+     [
+      "ants",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And straight toward me again! What did I ever do to them?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly runs left. The ant line turns left.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly runs right. The ant line turns right.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lolly",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "They like you, Lolly. Maybe they just want a hug.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I am a polite cookie. But I do NOT hug ants!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Monday is two days away. If they stay, we lose our shelf.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Ants hate heat. Let me stand in their way.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy glows. The ants just walk around him. Like water around stone.",
+    "cam": "wide",
+    "do": [
+     [
+      "ants",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "A stone in a river. Nobody ever stops for the stone.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ants follow smells. Something in here smells delicious to them.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Saturday night. Pim draws a chalk line across the shelf.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pim",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ants stop. Sniff. Then walk right over it.",
+    "cam": "prop:ants",
+    "do": [
+     [
+      "ants",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Vinegar, then. Ants hate vinegar. I'll scrub the whole sugar shelf.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek scrubs with a bottle cap of vinegar. The shelf shines.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ants turn. And march toward Lolly. Again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ants",
+      "spin"
+     ],
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunday afternoon. Mom tapes a note to the pantry door.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "BUG MAN: MONDAY 8 A.M.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "One night left. If the ants are still here, the spray comes.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Maybe I should go. If I leave, maybe the ants leave too.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nobody goes anywhere. Hold still, Lolly. Let me look.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup kneels. A tiny pink spot on the shelf. Then another.",
+    "cam": "prop:drops",
+    "do": [
+     [
+      "drops",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Lolly. Your drips. The ants are walking on your icing drips!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "HER ICING?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My drips? I'm a walking ant road?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ants follow scent trails. You leave a sweet trail everywhere!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then don't fight the trail. Move it.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Outside. Where ants belong. The old stump by the fence.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight. Lolly walks slowly to the back door. Drip. Drip. Drip.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:-8,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind her, the ant line follows. Under the door. Into the garden.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ants",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Come on, little ones. This way. Big stump. Lots of leaves.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside, Pim and Bup wipe every pink spot with a damp cloth.",
+    "cam": "wide",
+    "do": [
+     [
+      "cloth",
+      "show"
+     ],
+     [
+      "pim",
+      "to:2,11"
+     ],
+     [
+      "bup",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Scrub, scrub. No road back. Sorry, ants. Nothing personal.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday, eight a.m. The bug man opens the pantry. He looks around.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Not one ant. He shrugs. Mom shrugs. He drives away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "ZERO ANTS!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I was the problem all along. And I never even noticed.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You were also the fix. Same drips. Better direction.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "From now on, Lolly sleeps on a napkin. That's science.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, Mom opens a big new box on the kitchen floor.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A round robot vacuum. It eats crumbs. Every night at two a.m.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Crumbs? But... we are crumbs.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT EATS CRUMBS?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Ants Are Marching Straight at Lolly! 🐜 (Ep 31)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I'm a polite cookie. But I do NOT hug ants.\" — Lolly\nThe morning after Thanksgiving, a line of ants marches through the pantry — and it follows Lolly everywhere she runs. Mom has booked the bug man for Monday, and the Dough Bros have one weekend to find out why.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "ants",
+   "ants in the kitchen",
+   "pantry",
+   "lolly",
+   "bup",
+   "funny animation",
+   "thanksgiving leftovers"
+  ],
+  "thumb_text": "WHY ME?!",
+  "thumb_beat": 19,
+  "localizations": {
+   "es": {
+    "title": "¡Las hormigas van directo a Lolly! 🐜 (Ep 31)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Soy una galleta educada. Pero NO abrazo hormigas.\" — Lolly\nLa mañana después de Acción de Gracias, una fila de hormigas cruza la despensa… y sigue a Lolly a donde corra. Mamá llamó al fumigador para el lunes y los Dough Bros tienen un fin de semana para descubrir por qué.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "As formigas estão marchando até a Lolly! 🐜 (Ep 31)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Sou um biscoito educado. Mas NÃO abraço formigas.\" — Lolly\nNa manhã depois do Dia de Ação de Graças, uma fila de formigas atravessa a despensa — e segue a Lolly para onde ela corre. A mamãe chamou o dedetizador para segunda, e os Dough Bros têm um fim de semana para descobrir o porquê.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "النمل يزحف مباشرة نحو لولي! 🐜 (Ep 31)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أنا بسكويتة مهذبة. لكني لا أعانق النمل!\" — لولي\nفي صباح ما بعد عيد الشكر، يعبر طابور من النمل المخزن… ويلحق لولي أينما ركضت. حجزت أمي عامل مكافحة الحشرات يوم الإثنين، وأمام Dough Bros عطلة نهاية أسبوع واحدة لمعرفة السبب.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Les fourmis marchent droit sur Lolly ! 🐜 (Ep 31)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Je suis un biscuit poli. Mais je ne fais PAS de câlins aux fourmis.\" — Lolly\nLe lendemain de Thanksgiving, une file de fourmis traverse le garde-manger… et suit Lolly partout où elle court. Maman a appelé le désinsectiseur pour lundi, et les Dough Bros ont un week-end pour comprendre pourquoi.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "アリの行列がロリーに一直線！ 🐜 (Ep 31)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「私は礼儀正しいクッキー。でもアリとハグは絶対イヤ！」— ロリー\n感謝祭の翌朝、食料庫にアリの行列が。しかもロリーが走るところへどこまでもついてくる。ママは月曜に害虫駆除を予約。ドウ・ブロスに残された週末で、理由を見つけられるか？\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "개미들이 롤리에게 곧장 행진해요! 🐜 (Ep 31)",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"난 예의 바른 쿠키야. 하지만 개미랑은 절대 안 안아!\" — 롤리\n추수감사절 다음 날 아침, 개미 행렬이 식료품 창고를 가로지르고… 롤리가 가는 곳마다 따라와요. 엄마는 월요일에 해충 방제를 예약했고, 도우 브로스에게 남은 건 주말 하루뿐이에요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Die Ameisen marschieren direkt auf Lolly zu! 🐜 (Ep 31)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich bin ein höflicher Keks. Aber Ameisen umarme ich NICHT.\" — Lolly\nAm Morgen nach Thanksgiving zieht eine Ameisenstraße durch die Speisekammer – und folgt Lolly, wohin sie auch rennt. Mama hat den Kammerjäger für Montag bestellt, und die Dough Bros haben ein Wochenende, um herauszufinden, warum.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 22,
+   "top": "WOULD YOU FOLLOW IT?",
+   "title": "Would YOU Follow This Ant Trail? 🐜 (Ep 31) #shorts",
+   "description": "The ants walk right past the sugar — and turn toward Lolly. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "ants"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ seguirías este camino de hormigas? 🐜 (Ep 31) #shorts",
+     "description": "Las hormigas pasan junto al azúcar… y giran hacia Lolly. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ seguiria esta trilha de formigas? 🐜 (Ep 31) #shorts",
+     "description": "As formigas passam reto pelo açúcar — e viram na direção da Lolly. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستتبع طريق النمل هذا؟ 🐜 (Ep 31) #shorts",
+     "description": "يمر النمل بجانب السكر… ثم يستدير نحو لولي. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU suivrais cette file de fourmis ? 🐜 (Ep 31) #shorts",
+     "description": "Les fourmis passent à côté du sucre… et tournent vers Lolly. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこのアリの行列についていける？ 🐜 (Ep 31) #shorts",
+     "description": "アリは砂糖を素通りして…ロリーの方へ曲がった。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 개미 행렬을 따라갈래? 🐜 (Ep 31) #shorts",
+     "description": "개미들이 설탕을 그냥 지나쳐서… 롤리 쪽으로 방향을 틀어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU dieser Ameisenstraße folgen? 🐜 (Ep 31) #shorts",
+     "description": "Die Ameisen laufen am Zucker vorbei – und biegen zu Lolly ab. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 30,
+   "dur": 20,
+   "top": "ONE NIGHT LEFT!",
+   "title": "One Night Before the Bug Man Comes 😳 (Ep 31) #shorts",
+   "description": "The note is on the door and the ants are still here. Next part on the channel. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "ants"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Una noche antes de que llegue el fumigador 😳 (Ep 31) #shorts",
+     "description": "La nota está en la puerta y las hormigas siguen aquí. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma noite antes do dedetizador chegar 😳 (Ep 31) #shorts",
+     "description": "O bilhete está na porta e as formigas continuam aqui. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ليلة واحدة قبل وصول عامل الحشرات 😳 (Ep 31) #shorts",
+     "description": "الورقة على الباب والنمل ما زال هنا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une nuit avant l'arrivée du désinsectiseur 😳 (Ep 31) #shorts",
+     "description": "Le mot est sur la porte et les fourmis sont toujours là. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "害虫駆除まであと一晩 😳 (Ep 31) #shorts",
+     "description": "ドアにはメモ、アリはまだいる。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "해충 방제까지 단 하룻밤 😳 (Ep 31) #shorts",
+     "description": "문에는 쪽지, 개미는 아직 그대로예요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Nacht, bevor der Kammerjäger kommt 😳 (Ep 31) #shorts",
+     "description": "Der Zettel hängt an der Tür und die Ameisen sind immer noch da. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

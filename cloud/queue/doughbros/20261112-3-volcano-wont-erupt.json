@@ -1,0 +1,934 @@
+{
+ "id": "20261112-3-volcano-wont-erupt",
+ "plot": "Two days before the science fair Mia's clay volcano won't erupt and she wants to stay home; Zeek blames the vinegar (Bup's sniff says it's sour) and then the clay (Crispy dries it), Bup's shaking and Pim's pep talk do nothing, until Lolly tastes the powder — the twist: it's powdered sugar, because helpful Pim filled the jar from the big white bag (he bragged about it at the start); the bros push the real orange baking-soda box next to the volcano, Mia figures it out, the eruption foams over everyone and she wins a blue ribbon — then Dad announces the holiday-card family photo on Sunday, and Bup wonders if 'everybody' means them too.",
+ "script": {
+  "title": "Why Won't Mia's Volcano Erupt?",
+  "set": {
+   "place": "table",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "volcano",
+    "type": "cone",
+    "color": [
+     0.55,
+     0.35,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     0,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 1.4
+   },
+   {
+    "id": "jar",
+    "type": "box",
+    "color": "white",
+    "on": null,
+    "at": [
+     5,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.5
+   },
+   {
+    "id": "soda",
+    "type": "box",
+    "color": "orange",
+    "on": null,
+    "at": [
+     -7,
+     14,
+     0
+    ],
+    "visible": false,
+    "scale": 0.55
+   },
+   {
+    "id": "foam",
+    "type": "ball",
+    "color": "white",
+    "on": null,
+    "at": [
+     0,
+     13,
+     1.5
+    ],
+    "visible": false,
+    "scale": 1.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "She poured the vinegar and... nothing! Not even one bubble!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "to:-2,11"
+     ],
+     [
+      "volcano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Why won't Mia's volcano erupt? The science fair is Friday!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "text": "NO ERUPTION!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Wednesday afternoon. Mia's clay volcano sits on the kitchen table.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:4,12"
+     ],
+     [
+      "bup",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia tried three times. Then she went upstairs and shut her door.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And I helped, you know! I filled her powder jar this morning!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "From the big white bag on the bottom shelf. All by myself!",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "A volcano! Finally, real science in this kitchen!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Baking soda plus vinegar makes gas. Gas makes foam. Foam goes up.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then why didn't it go up, professor?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Simple. Bad vinegar. Old vinegar loses its sour.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup sniffs the vinegar bottle. His eyes water. His crust curls.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:5,12"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Not old. Very, very sour. My nose is still crying.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then it's the clay. Wet clay soaks up the bubbles.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy warms the clay all over. It dries hard. Still no bubbles.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:1,12"
+     ],
+     [
+      "volcano",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Dry as a desert. And not a single fizz.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia said if it fails, she won't go to the fair.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'LL STAY HOME?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we shake it. Real volcanoes shake. I've seen pictures.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup hugs the volcano and shakes. The whole table wobbles. Nothing.",
+    "cam": "prop:volcano",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ],
+     [
+      "volcano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Maybe it's shy. Maybe it needs a little pep talk.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Hey, volcano. You can do this. Erupt. Please. For Mia.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The volcano says nothing. Volcanoes rarely do.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I don't understand. My science never fails. Except... often.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thursday. Mia comes down with her poster. Her eyes are red.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She whispers into the walkie. Maybe I'm just bad at science.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "No. That girl is not bad at science. I won't allow it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Tomorrow morning that volcano goes to school. Tonight it erupts.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Let's test every part. Vinegar, fine. Clay, fine. That leaves the powder.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly walks to the powder jar. She dips one point in. Tastes.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:5,12"
+     ],
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Wait. This is sweet. Soft, sweet, and melty.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I'm a cookie. I know this taste. That's powdered sugar!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "POWDERED SUGAR?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The big white bag... Oh no. I filled her jar with sugar.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I only wanted to help. And I broke her volcano.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "You helped with the wrong bag. That's not breaking. That's Wednesday.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Every bag in this house is white. Nobody could tell.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Real baking soda comes in the orange box. Behind the flour!",
+    "cam": "prop:soda",
+    "do": [
+     [
+      "soda",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thursday night. Five bros push an orange box across the counter.",
+    "cam": "wide",
+    "do": [
+     [
+      "soda",
+      "bounce"
+     ],
+     [
+      "bup",
+      "to:-6,13"
+     ],
+     [
+      "pim",
+      "to:-5,13"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Let me push the hardest. It was my mess. It's my push.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia comes down for water. She sees the orange box. She stops.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She reads the box. Looks at her jar. Licks a finger.",
+    "cam": "wide",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's working it out. Smart girl.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia pours in the soda. Then the vinegar. One second. Two.",
+    "cam": "prop:volcano",
+    "do": [
+     [
+      "volcano",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! Foam pours out. Over the table. Over every bro.",
+    "cam": "wide",
+    "do": [
+     [
+      "foam",
+      "show"
+     ],
+     [
+      "foam",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "ERUPTION!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm covered in volcano! Is this how I go? Foamy?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Science! Real science! It works when you use the right bag!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And Pim's sugar isn't wasted. It's going on Mia's pancakes.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Friday. Mia wins a blue ribbon. She tapes it to our basket.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "My first ribbon. Well, Mia's. But I touched it.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Dad walks in with a camera and a tripod.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Family photo for the holiday card. Sunday, in the garden. Everybody smiles.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Everybody? Does everybody mean us too?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "PHOTO DAY!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Won't Mia's Volcano Erupt? 🌋 (Ep 33)",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I only wanted to help. And I broke her volcano.\" — Pim\nTwo days before the science fair, Mia's clay volcano won't even fizz, and she's ready to stay home. The Dough Bros test the vinegar, the clay and their patience — until Lolly tastes the powder.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "science fair",
+   "volcano",
+   "baking soda volcano",
+   "pim",
+   "lolly",
+   "funny animation"
+  ],
+  "thumb_text": "WHY NO BOOM?!",
+  "thumb_beat": 27,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué no hace erupción el volcán de Mia? 🌋 (Ep 33)",
+    "description": "¿Qué crees que pasa en la siguiente parte? Cuéntamelo en los comentarios.\n\"Solo quería ayudar. Y rompí su volcán.\" — Pim\nFaltan dos días para la feria de ciencias y el volcán de arcilla de Mia no burbujea nada. Los Dough Bros prueban el vinagre, la arcilla y su paciencia… hasta que Lolly prueba el polvo.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Por que o vulcão da Mia não entra em erupção? 🌋 (Ep 33)",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu só queria ajudar. E estraguei o vulcão dela.\" — Pim\nFaltam dois dias para a feira de ciências e o vulcão de argila da Mia nem borbulha. Os Dough Bros testam o vinagre, a argila e a paciência — até a Lolly provar o pó.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا لا ينفجر بركان ميا؟ 🌋 (Ep 33)",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أردت فقط أن أساعد… فخرّبت بركانها.\" — بيم\nقبل معرض العلوم بيومين، بركان ميا الطيني لا يفور أبدًا. يختبر Dough Bros الخل والطين وصبرهم… حتى تتذوق لولي المسحوق.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi le volcan de Mia n'entre pas en éruption ? 🌋 (Ep 33)",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"Je voulais juste aider. Et j'ai cassé son volcan.\" — Pim\nÀ deux jours de l'expo-sciences, le volcan en argile de Mia ne fait même pas une bulle. Les Dough Bros testent le vinaigre, l'argile et leur patience… jusqu'à ce que Lolly goûte la poudre.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアの火山はなぜ噴火しないの？ 🌋 (Ep 33)",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「ただ手伝いたかっただけなのに。ミアの火山をダメにしちゃった。」— ピム\n科学フェアまであと2日。ミアの粘土の火山は泡ひとつ出ない。ドウ・ブロスは酢、粘土、そして自分たちの忍耐を試す——ロリーが粉をなめるまでは。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아의 화산은 왜 폭발하지 않을까? 🌋 (Ep 33)",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"그냥 돕고 싶었어. 근데 미아 화산을 망쳐 버렸어.\" — 핌\n과학 박람회 이틀 전, 미아의 점토 화산은 거품 하나 안 나요. 도우 브로스는 식초와 점토, 그리고 인내심을 시험하는데… 롤리가 가루를 맛보기 전까지는요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Warum bricht Mias Vulkan nicht aus? 🌋 (Ep 33)",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich wollte doch nur helfen. Und jetzt ist ihr Vulkan kaputt.\" — Pim\nZwei Tage vor dem Wissenschaftstag sprudelt Mias Tonvulkan kein bisschen. Die Dough Bros testen den Essig, den Ton und ihre Geduld – bis Lolly das Pulver probiert.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 19,
+   "dur": 22,
+   "top": "WOULD YOU SHAKE IT?",
+   "title": "Would YOU Shake This Clay Volcano? 🌋 (Ep 33) #shorts",
+   "description": "No fizz, no foam, two days to the science fair — so Bup hugs the volcano and shakes. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "would you",
+    "volcano"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ sacudirías este volcán de arcilla? 🌋 (Ep 33) #shorts",
+     "description": "Sin burbujas, sin espuma, a dos días de la feria… así que Bup abraza el volcán y lo sacude. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ chacoalharia este vulcão de argila? 🌋 (Ep 33) #shorts",
+     "description": "Sem bolhas, sem espuma, dois dias para a feira — então o Bup abraça o vulcão e chacoalha. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستهز هذا البركان الطيني؟ 🌋 (Ep 33) #shorts",
+     "description": "لا فقاعات ولا رغوة، ويومان على المعرض… فيعانق باب البركان ويهزه. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU secouerais ce volcan en argile ? 🌋 (Ep 33) #shorts",
+     "description": "Pas de bulles, pas de mousse, deux jours avant l'expo… alors Bup serre le volcan et le secoue. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこの粘土の火山をゆすれる？ 🌋 (Ep 33) #shorts",
+     "description": "泡も出ない、フェアまであと2日。バップは火山に抱きついてゆさぶる。 本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 점토 화산을 흔들어 볼래? 🌋 (Ep 33) #shorts",
+     "description": "거품도 없고, 박람회는 이틀 남았어요. 그래서 밥은 화산을 껴안고 흔들어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen Tonvulkan schütteln? 🌋 (Ep 33) #shorts",
+     "description": "Kein Sprudeln, kein Schaum, noch zwei Tage – also umarmt Bup den Vulkan und schüttelt. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
