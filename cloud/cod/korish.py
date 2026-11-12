@@ -26,10 +26,15 @@ def main():
         print("gemini.txt yo'q: Documents\\kanal_tokenlar\\gemini.txt ga kalit qo'yilishi kerak"); return 2
     for v in sys.argv[1:]:
         out = os.path.splitext(v)[0] + "_baho.txt"
+        # 2026-11-12: 40 MB uploads over the home link (shared with YouTube uploads) took forever -> send a small proxy
+        px = "/tmp/korish_" + os.path.basename(v)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", v, "-vf", "scale=-2:960,fps=30", "-c:v", "libx264", "-preset", "veryfast",
+                        "-crf", "28", "-c:a", "aac", "-b:a", "128k", px], timeout=600)
+        src = px if os.path.exists(px) else v
         for attempt in range(6):   # 2026-11-12: "HTTP 503 high demand" on gemini-3.7-flash -> rotate models + back off
             env["WATCH_GEMINI_MODEL"] = MODELS[attempt % len(MODELS)]
-            r = subprocess.run([sys.executable, WATCH, v, "--engine", "gemini", "--question", Q],
-                               capture_output=True, text=True, env=env, timeout=900)
+            r = subprocess.run([sys.executable, WATCH, src, "--engine", "gemini", "--question", Q],
+                               capture_output=True, text=True, env=env, timeout=420)
             txt = r.stdout if r.returncode == 0 else (r.stdout + "\n" + r.stderr[-2000:])
             if "(failed)" not in txt and r.returncode == 0:
                 break
@@ -42,6 +47,7 @@ def main():
             print("baho olinmadi (keyingi safar qayta):", v); continue
         open(out, "w").write(txt.replace(env["GEMINI_API_KEY"], "***"))
         print("baho yozildi:", out)
+        if src != v: os.remove(src)
 
 if __name__ == "__main__":
     sys.exit(main())

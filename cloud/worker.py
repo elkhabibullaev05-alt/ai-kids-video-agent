@@ -424,6 +424,11 @@ def gemini_note(path, title, kind):
     if not kf:
         return None
     env = dict(os.environ, GEMINI_API_KEY=open(kf[0]).read().strip())
+    # small proxy so the upload to Google is quick on the home link (longs: 480p, Shorts: 960p tall)
+    px = os.path.join("/tmp", "gem_" + CH + "_" + os.path.basename(path))
+    sh(["ffmpeg", "-y", "-v", "error", "-i", path, "-vf", "scale=-2:" + ("960" if kind == "short" else "480") + ",fps=24",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "30", "-c:a", "aac", "-b:a", "96k", px], check=False, timeout=1800)
+    path = px if os.path.exists(px) else path
     try:
         for mdl in ("gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash"):   # 503 high demand -> next model
             env["WATCH_GEMINI_MODEL"] = mdl
@@ -432,6 +437,8 @@ def gemini_note(path, title, kind):
             txt = (p.stdout or "").replace(env["GEMINI_API_KEY"], "***")
             if "(failed)" not in txt:
                 break
+        if path.startswith("/tmp/gem_"):
+            os.remove(path)
     except Exception as e:
         return {"error": str(e)[:200]}
     if "(failed)" in txt:   # e.g. HTTP 503 high demand: keep going, note it
