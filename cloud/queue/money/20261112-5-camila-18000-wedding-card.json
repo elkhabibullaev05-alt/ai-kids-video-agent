@@ -1,0 +1,156 @@
+{
+ "title": "Camila, 30: The $18,000 Wedding That Cost $36,600",
+ "hook": "$18,000 wedding. $36,600 paid.",
+ "header": "Camila · $18,000 at 24% APR",
+ "character": "Camila",
+ "amount": "$18,000",
+ "accent": "orange",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "An $18,000 wedding that ends up costing about $36,600. That's Camila's.",
+   "visual": {
+    "type": "big_number",
+    "value": 36600,
+    "from": 18000,
+    "label": "what the wedding really costs",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "She put the whole wedding on credit cards, at about 24% APR.",
+   "visual": {
+    "type": "bars",
+    "title": "On the cards",
+    "items": [
+     {
+      "label": "Venue + food",
+      "value": 10500,
+      "hi": true
+     },
+     {
+      "label": "Dress + suit",
+      "value": 2500
+     },
+     {
+      "label": "Photos",
+      "value": 3000
+     },
+     {
+      "label": "Flowers + music",
+      "value": 2000
+     }
+    ]
+   }
+  },
+  {
+   "say": "Her first month's interest alone is about $360.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$18,000 × 24%",
+     "÷ 12 months",
+     "= $360 interest"
+    ]
+   }
+  },
+  {
+   "say": "She pays $450 a month. Only about $90 of it touches the debt.",
+   "visual": {
+    "type": "stack",
+    "title": "Her first $450",
+    "total": 450,
+    "items": [
+     {
+      "label": "Interest",
+      "value": 360,
+      "hi": true
+     },
+     {
+      "label": "Actual wedding",
+      "value": 90
+     }
+    ]
+   }
+  },
+  {
+   "say": "At $450, it takes almost 7 years to pay off.",
+   "visual": {
+    "type": "line",
+    "label": "Balance at $450 a month",
+    "points": [
+     18000,
+     16793,
+     15262,
+     13321,
+     10858,
+     7735,
+     3775,
+     0
+    ],
+    "start_label": "Wedding day",
+    "end_label": "Year 7"
+   }
+  },
+  {
+   "say": "Push it to $750 a month, and it's gone in under 3 years.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$450 a month",
+     "value": 18600,
+     "sub": "interest, ~7 years",
+     "hi": true
+    },
+    "right": {
+     "label": "$750 a month",
+     "value": 6800,
+     "sub": "interest, ~3 years"
+    }
+   }
+  },
+  {
+   "say": "That's about $11,800 of interest she never pays.",
+   "visual": {
+    "type": "checklist",
+    "title": "Finding $300 a month",
+    "items": [
+     {
+      "text": "Pause 2 subscriptions: $30",
+      "ok": true
+     },
+     {
+      "text": "Cook 3 more dinners a week: $150",
+      "ok": true
+     },
+     {
+      "text": "Sell wedding decor: $120 a month",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Would you put a wedding on a card? Subscribe so you don't make this mistake on your next paycheck, because an $18,000 wedding can cost $36,600.",
+   "visual": {
+    "type": "question",
+    "text": "Would you put a wedding on a card?"
+   }
+  }
+ ],
+ "question": "Would you ever put a wedding on a credit card, or save up first?",
+ "description": "Camila, 30, put an $18,000 wedding on credit cards at about 24% APR and pays $450 a month. That takes almost 7 years and roughly $36,600 in total. Paying $750 a month clears it in under 3 years and saves around $11,800 in interest. Numbers are rounded US estimates assuming a fixed APR and no new charges.",
+ "tags": [
+  "wedding debt",
+  "wedding budget",
+  "credit card debt",
+  "credit card interest",
+  "pay off debt",
+  "cost of a wedding",
+  "debt payoff"
+ ],
+ "hashtags": [
+  "#weddingbudget",
+  "#creditcarddebt"
+ ]
+}

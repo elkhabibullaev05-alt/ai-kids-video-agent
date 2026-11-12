@@ -1,0 +1,158 @@
+{
+ "title": "Where Yusuf's $3,300 Paycheck Really Goes",
+ "hook": "$3,300 in. $170 left.",
+ "header": "Yusuf · $3,300 take-home",
+ "character": "Yusuf",
+ "amount": "$3,300",
+ "accent": "purple",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$3,300 in, and only $170 left. That's Yusuf, every month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Paycheck",
+     "value": 3300,
+     "sub": "take-home"
+    },
+    "right": {
+     "label": "Left over",
+     "value": 170,
+     "sub": "end of month",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "Rent is the biggest bill: about $1,350.",
+   "visual": {
+    "type": "big_number",
+    "value": 1350,
+    "from": 0,
+    "label": "rent",
+    "sub": "41% of his pay",
+    "icon": "house"
+   }
+  },
+  {
+   "say": "Then the car and insurance, groceries and bills. Here's every dollar.",
+   "visual": {
+    "type": "stack",
+    "title": "Yusuf's $3,300",
+    "total": 3300,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1350
+     },
+     {
+      "label": "Car + insurance",
+      "value": 640
+     },
+     {
+      "label": "Groceries",
+      "value": 420
+     },
+     {
+      "label": "Bills",
+      "value": 270
+     },
+     {
+      "label": "Eating out",
+      "value": 450,
+      "hi": true
+     },
+     {
+      "label": "Left",
+      "value": 170
+     }
+    ]
+   }
+  },
+  {
+   "say": "The leak is eating out. About 15 meals, at $30 each.",
+   "visual": {
+    "type": "math",
+    "title": "The leak",
+    "rows": [
+     "15 meals a month",
+     "× $30",
+     "= $450"
+    ]
+   }
+  },
+  {
+   "say": "He keeps 7 meals out and cooks the rest. That's $210 instead of $450.",
+   "visual": {
+    "type": "checklist",
+    "title": "Yusuf's fix",
+    "items": [
+     {
+      "text": "7 meals out a month",
+      "ok": true
+     },
+     {
+      "text": "Cook big on Sunday",
+      "ok": true
+     },
+     {
+      "text": "Delivery on weeknights",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "Now he keeps about $410 a month, not $170.",
+   "visual": {
+    "type": "bars",
+    "title": "Left each month",
+    "items": [
+     {
+      "label": "Before",
+      "value": 170
+     },
+     {
+      "label": "After",
+      "value": 410,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Over a year, that's almost $5,000 of breathing room.",
+   "visual": {
+    "type": "counter",
+    "from": 410,
+    "to": 4920,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Kept this year"
+   }
+  },
+  {
+   "say": "Which leak would you cut first? Subscribe so you don't make this mistake on your next paycheck, because right now, it's $3,300 in, $170 left.",
+   "visual": {
+    "type": "question",
+    "text": "Which leak would you cut first?"
+   }
+  }
+ ],
+ "question": "Which leak would you cut first: eating out, the car or subscriptions?",
+ "description": "Yusuf takes home about $3,300 a month and keeps only $170. Rent, the car and bills take most of it, but eating out about 15 times a month adds roughly $450. Cutting to 7 meals out keeps about $410 a month, close to $5,000 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "paycheck breakdown",
+  "budget breakdown",
+  "where does my money go",
+  "eating out cost",
+  "how to save money",
+  "budgeting tips",
+  "monthly budget"
+ ],
+ "hashtags": [
+  "#paycheck",
+  "#budgeting"
+ ]
+}

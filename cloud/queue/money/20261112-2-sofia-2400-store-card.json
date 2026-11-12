@@ -1,0 +1,123 @@
+{
+ "title": "Sofia, 24: The '0% Interest' Laptop That Cost $472",
+ "hook": "0% interest. Then $472.",
+ "header": "Sofia · $2,400 at 0% for 1 yr",
+ "character": "Sofia",
+ "amount": "$2,400",
+ "accent": "red",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "$472 of interest, on a 0% deal. That's Sofia's new laptop.",
+   "visual": {
+    "type": "big_number",
+    "value": 472,
+    "from": 0,
+    "label": "surprise interest",
+    "sub": "on a '0%' deal",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "She bought a $2,400 laptop on a store card. No interest for 12 months.",
+   "visual": {
+    "type": "big_number",
+    "value": 2400,
+    "from": 0,
+    "label": "laptop on a store card",
+    "sub": "0% for 12 months",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "She paid $150 a month. Felt safe.",
+   "visual": {
+    "type": "counter",
+    "from": 150,
+    "to": 1800,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Paid so far"
+   }
+  },
+  {
+   "say": "But $150 times 12 is only $1,800. $600 was still left on day 366.",
+   "visual": {
+    "type": "math",
+    "title": "The gap",
+    "rows": [
+     "$150 × 12 months",
+     "= $1,800 paid",
+     "$2,400 − $1,800 = $600 left"
+    ]
+   }
+  },
+  {
+   "say": "That's the catch: deferred interest. Miss the deadline, and the whole year's interest lands at once.",
+   "visual": {
+    "type": "statement",
+    "text": "Deferred, not free",
+    "sub": "about 30% APR, backdated",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "At about 30% APR, that's roughly $472, added in one bill.",
+   "visual": {
+    "type": "stack",
+    "title": "Her next bill",
+    "total": 1072,
+    "items": [
+     {
+      "label": "Leftover laptop",
+      "value": 600
+     },
+     {
+      "label": "Back interest",
+      "value": 472,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "The fix was just $50 more a month. $200 times 12 clears it in time.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$150 a month",
+     "value": 472,
+     "sub": "interest",
+     "hi": true
+    },
+    "right": {
+     "label": "$200 a month",
+     "value": 0,
+     "sub": "interest"
+    }
+   }
+  },
+  {
+   "say": "Got a 0% deal? Divide the price by the months. Subscribe so you don't make this mistake on your next paycheck, because 0% interest can turn into $472.",
+   "visual": {
+    "type": "question",
+    "text": "Ever been hit by deferred interest?"
+   }
+  }
+ ],
+ "question": "Have you ever had a '0% interest' deal turn into a surprise bill?",
+ "description": "Sofia, 24, put a $2,400 laptop on a store card with 0% interest for 12 months and paid $150 a month. That left $600 at the deadline, and deferred interest at about 30% APR added roughly $472 at once. Paying $200 a month would have cleared it with no interest. Numbers are rounded US estimates; deferred-interest terms vary by card.",
+ "tags": [
+  "deferred interest",
+  "0% financing",
+  "store credit card",
+  "credit card interest",
+  "buy now pay later",
+  "debt trap",
+  "money mistakes"
+ ],
+ "hashtags": [
+  "#creditcard",
+  "#moneymistakes"
+ ]
+}

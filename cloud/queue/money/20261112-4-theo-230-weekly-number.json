@@ -1,0 +1,149 @@
+{
+ "title": "The $230-a-Week Rule That Fixed Theo's Budget",
+ "hook": "$4,000 paycheck. Broke by day 20.",
+ "header": "Theo · $4,000 take-home",
+ "character": "Theo",
+ "amount": "$230",
+ "accent": "green",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Theo takes home $4,000 a month, and runs out by day 20.",
+   "visual": {
+    "type": "big_number",
+    "value": 4000,
+    "from": 0,
+    "label": "take-home a month",
+    "sub": "empty by day 20",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "Bills, savings and spending all come out of one account. So he never knows what's safe to spend.",
+   "visual": {
+    "type": "statement",
+    "text": "One account. No number.",
+    "icon": "card"
+   }
+  },
+  {
+   "say": "So he splits it. Fixed bills first: about $2,400 on autopay.",
+   "visual": {
+    "type": "stack",
+    "title": "Theo's $4,000",
+    "total": 4000,
+    "items": [
+     {
+      "label": "Rent",
+      "value": 1500
+     },
+     {
+      "label": "Car + insurance",
+      "value": 600
+     },
+     {
+      "label": "Phone + utilities",
+      "value": 300
+     },
+     {
+      "label": "Savings",
+      "value": 600,
+      "hi": true
+     },
+     {
+      "label": "Everyday money",
+      "value": 1000
+     }
+    ]
+   }
+  },
+  {
+   "say": "Then $600 to savings, the day he gets paid.",
+   "visual": {
+    "type": "counter",
+    "from": 600,
+    "to": 7200,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Savings"
+   }
+  },
+  {
+   "say": "What's left is $1,000 a month, about $230 a week.",
+   "visual": {
+    "type": "math",
+    "title": "His weekly number",
+    "rows": [
+     "$1,000 × 12 months",
+     "÷ 52 weeks",
+     "= about $230 a week"
+    ]
+   }
+  },
+  {
+   "say": "Groceries, gas, fun, all from that $230. When it's gone, the week is done.",
+   "visual": {
+    "type": "bars",
+    "title": "One week of $230",
+    "items": [
+     {
+      "label": "Groceries",
+      "value": 100
+     },
+     {
+      "label": "Gas",
+      "value": 50
+     },
+     {
+      "label": "Fun",
+      "value": 60,
+      "hi": true
+     },
+     {
+      "label": "Buffer",
+      "value": 20
+     }
+    ]
+   }
+  },
+  {
+   "say": "Same paycheck. Now about $7,200 saved in a year.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 0,
+     "sub": "saved a year"
+    },
+    "right": {
+     "label": "Weekly number",
+     "value": 7200,
+     "sub": "saved a year",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "What would your weekly number be? Subscribe so you don't make this mistake on your next paycheck, because $4,000 shouldn't mean broke by day 20.",
+   "visual": {
+    "type": "question",
+    "text": "What's your weekly number?"
+   }
+  }
+ ],
+ "question": "Take your everyday money and divide it by weeks: what's your weekly number?",
+ "description": "Theo takes home about $4,000 a month and used to run out by day 20. He put about $2,400 of fixed bills on autopay, moved $600 to savings on payday and spends from a weekly number of about $230. That's roughly $7,200 saved in a year on the same pay. Numbers are rounded US estimates.",
+ "tags": [
+  "weekly budget",
+  "budgeting for beginners",
+  "how to budget",
+  "paycheck to paycheck",
+  "how to save money",
+  "spending plan",
+  "budget system"
+ ],
+ "hashtags": [
+  "#budgeting",
+  "#savingmoney"
+ ]
+}

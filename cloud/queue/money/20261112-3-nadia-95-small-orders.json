@@ -1,0 +1,138 @@
+{
+ "title": "Nadia Finally Checked Where $4,940 a Year Went",
+ "hook": "$95 a week. Gone.",
+ "header": "Nadia · small online orders",
+ "character": "Nadia",
+ "amount": "$95",
+ "accent": "gold",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$4,940 a year, in little boxes. Nadia finally checked her orders.",
+   "visual": {
+    "type": "big_number",
+    "value": 4940,
+    "from": 0,
+    "label": "small orders a year",
+    "icon": "cart"
+   }
+  },
+  {
+   "say": "No big buys. Just about $95 a week, a few small orders at a time.",
+   "visual": {
+    "type": "bars",
+    "title": "One normal week",
+    "items": [
+     {
+      "label": "Phone case",
+      "value": 18
+     },
+     {
+      "label": "Snacks",
+      "value": 22
+     },
+     {
+      "label": "Home decor",
+      "value": 25
+     },
+     {
+      "label": "Little gadget",
+      "value": 30,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "$95 a week, times 52 weeks. That's about $4,940.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$95 a week",
+     "× 52 weeks",
+     "= $4,940 a year"
+    ]
+   }
+  },
+  {
+   "say": "Half of it, she couldn't even remember buying.",
+   "visual": {
+    "type": "statement",
+    "text": "Half: already forgotten",
+    "sub": "from her own order list",
+    "icon": "phone"
+   }
+  },
+  {
+   "say": "So she set one rule: a $40 weekly cap, and one order day, Sunday.",
+   "visual": {
+    "type": "checklist",
+    "title": "Nadia's new rules",
+    "items": [
+     {
+      "text": "$40 a week, max",
+      "ok": true
+     },
+     {
+      "text": "Order only on Sunday",
+      "ok": true
+     },
+     {
+      "text": "One-click buying",
+      "ok": false
+     }
+    ]
+   }
+  },
+  {
+   "say": "$95 down to $40 keeps about $55 a week.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Before",
+     "value": 95,
+     "sub": "a week"
+    },
+    "right": {
+     "label": "With the cap",
+     "value": 40,
+     "sub": "a week",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "By the end of the year, that's roughly $2,860 still in her account.",
+   "visual": {
+    "type": "counter",
+    "from": 238,
+    "to": 2860,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Kept with the cap"
+   }
+  },
+  {
+   "say": "How much did you order last month? Subscribe so you don't make this mistake on your next paycheck, because right now, it's $95 a week, gone.",
+   "visual": {
+    "type": "question",
+    "text": "What did you order last month?"
+   }
+  }
+ ],
+ "question": "Check your order history: how much did small orders cost you last month?",
+ "description": "Nadia never made big purchases, but small online orders added up to about $95 a week, or roughly $4,940 a year. A $40 weekly cap and one order day keep about $2,860 a year. Numbers are rounded US estimates.",
+ "tags": [
+  "impulse buying",
+  "online shopping habit",
+  "how to save money",
+  "small purchases add up",
+  "spending habits",
+  "budgeting tips",
+  "stop impulse spending"
+ ],
+ "hashtags": [
+  "#impulsebuying",
+  "#savingmoney"
+ ]
+}
