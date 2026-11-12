@@ -15,7 +15,7 @@ Q = ("You are a harsh YouTube Shorts viewer and editor. Watch AND listen to this
      "any clash? 6) Text: readable, good hook? 7) Pacing and ending. 8) Score 1-10 and the 3 most important fixes. "
      "Compare with the most viral Call of Duty Shorts.")
 
-MODELS = ["gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"]
+MODELS = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"]  # 2026-11-13: 2.5 = 404, flash-lite = no video
 
 
 def local_check(v):
@@ -43,12 +43,16 @@ def main():
         env["GEMINI_API_KEY"] = open(KEYF[0]).read().strip()
     if not env.get("GEMINI_API_KEY"):
         print("gemini.txt yo'q: Documents\\kanal_tokenlar\\gemini.txt ga kalit qo'yilishi kerak"); return 2
+    quota = False   # 2026-11-13: free tier = 20 Gemini video reviews/day; on HTTP 429 stop asking (each try cost ~1 min and
+                    # 25 unreviewed Shorts x 6 tries blocked the whole MW4 editor for 2+ hours) - local check still runs
     for v in sys.argv[1:]:
         out = os.path.splitext(v)[0] + "_baho.txt"
         if not os.path.exists(os.path.splitext(v)[0] + "_mahalliy.txt"):
             try: print("mahalliy:", local_check(v))
             except Exception as e: print("mahalliy tekshiruv xato:", e)
         # 2026-11-12: 40 MB uploads over the home link (shared with YouTube uploads) took forever -> send a small proxy
+        if quota:
+            continue
         px = "/tmp/korish_" + os.path.basename(v)
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", v, "-vf", "scale=-2:960,fps=30", "-c:v", "libx264", "-preset", "veryfast",
                         "-crf", "28", "-c:a", "aac", "-b:a", "128k", px], timeout=600)
@@ -64,6 +68,8 @@ def main():
             open(os.path.join(os.path.dirname(v), "korish_xato.txt"), "a").write(
                 f"{time.strftime('%H:%M')} {os.path.basename(v)} {env['WATCH_GEMINI_MODEL']}: "
                 + " | ".join(err).replace(env["GEMINI_API_KEY"], "***")[:400] + "\n")
+            if "429" in txt or "quota" in txt.lower():
+                quota = True; break
             time.sleep(20 if 'not found' in txt.lower() or '404' in txt else 60)
         if "(failed)" in txt or r.returncode:
             print("baho olinmadi (keyingi safar qayta):", v); continue
