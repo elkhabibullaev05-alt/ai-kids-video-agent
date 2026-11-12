@@ -1,0 +1,1303 @@
+{
+ "id": "20261114-1-who-moved-bus-stop",
+ "plot": "One bright autumn morning Big Bertha keeps driving past her bus stop and says the stop, the school and the bakery all moved in the night; Turbo is cleared (too slow from slow-race practice to be sneaky), Bolt and Pip find the stop's bolts rusty and the grass unsquashed, and when Bertha says good morning to a trash bin and reads BAKERY as 'BUNNY SHOP', Pip remembers she called Bolt a mailbox last night, and Bolt reveals nothing moved: far things look blurry to Bertha; she is embarrassed, but Grumpy shows his own reading glasses, Doctor Dottie fits Bertha with glasses for far away, and she sees every autumn leaf; then she spots a little car with a red scarf on the hill, waving at Bolt.",
+ "script": {
+  "title": "Someone Moved Bertha's Bus Stop!",
+  "description": "Big Bertha says her bus stop moved in the night. Inspector Bolt finds out what really changed. Inspector Bolt #37",
+  "set": {
+   "place": "Wheelburg school road with the yellow bus stop post by the school gate, Bakery Lane and Doctor Dottie's clinic by the park, a bright autumn morning",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "dottie": {
+    "name": "Doctor Dottie",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 1,
+    "color": [
+     0.95,
+     0.95,
+     0.97
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     12.0,
+     11.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "stop",
+    "type": "cone",
+    "color": "yellow",
+    "at": [
+     9.5,
+     13.0,
+     0.3
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "bin",
+    "type": "box",
+    "color": [
+     0.45,
+     0.47,
+     0.5
+    ],
+    "at": [
+     -8.0,
+     12.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "case",
+    "type": "box",
+    "color": "blue",
+    "on": "grumpy",
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "bertha",
+    "say": "Where is my bus stop?! It was right here yesterday!",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "enter:left"
+     ],
+     [
+      "pip",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hold on, everybody! Big Bertha will find it!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:8,15"
+     ],
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bertha, wait! You just drove past it! Again!",
+    "cam": "two:bertha,pip",
+    "do": [
+     [
+      "pip",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "text": "THE BUS STOP MOVED?!",
+    "hold": 1.0,
+    "cam": "prop:stop",
+    "do": [
+     [
+      "stop",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "It was a bright autumn morning, the day after the squirrel mystery.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Big Bertha said half of Wheelburg had moved in the night.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:5,16"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good morning, Bertha. A bus stop that moves? Tell me more.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "The stop! The school! The bakery! Everything moved, Bolt!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nothing moved. I'd know. Moving things is my job.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Then why can't I find them? I drive here every day!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure. We start where the stop always was.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bolt",
+      "to:7,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And there by the school gate stood the yellow bus stop post.",
+    "cam": "prop:stop",
+    "do": [
+     [
+      "stop",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It's here, Bertha! Right here! Look!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "That? Sweetie, that's not my stop. That's a lamppost.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "It's yellow. It says BUS STOP. It's your stop.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:2,14"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Then somebody moved it back! While we weren't looking! Sneaky!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:6,17"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Did somebody say SNEAKY? Agent Turbo, reporting for duty!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Turbo! Was it you? You love a funny trick!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:4,15"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Not me! I was doing slow practice all morning. Look!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo rolled by. So slowly that a leaf landed on his roof.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "He's telling the truth. Nobody could be that slow and sneaky.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Let's look at the ground. Clues don't move.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:8,11"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The post's bolts are old and rusty. Nobody has touched them.",
+    "cam": "prop:stop",
+    "do": [
+     [
+      "stop",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And the grass around it isn't squashed at all!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "So this post has not moved. Not for years.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "But it looked SO different! It was all fuzzy and far!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "If I can't find my stop, the kids can't find me!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha felt worried. And a little bit embarrassed.",
+    "cam": "two:bertha,pip",
+    "do": [
+     [
+      "pip",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Come on, team. Let's check the bakery. Maybe that moved too.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:-6,16"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everyone drove down Bakery Lane together.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:-2,10"
+     ],
+     [
+      "pip",
+      "to:-6,9"
+     ],
+     [
+      "turbo",
+      "to:-10,12"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Good morning, Grumpy! Lovely day!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm behind you, Bertha. That's a trash bin.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-3,15"
+     ]
+    ]
+   },
+   {
+    "text": "A TRASH BIN?!",
+    "hold": 1.0,
+    "cam": "prop:bin",
+    "do": [
+     [
+      "bin",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "Ha! Bertha said good morning to a trash bin!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "It's grey and square! Just like Grumpy! Easy mistake!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I am not square.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt, last night she called you a mailbox too.",
+    "cam": "two:pip,bolt",
+    "do": [
+     [
+      "pip",
+      "to:-5,8"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Interesting. A mailbox. A lamppost. And now a trash bin.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt, please. Who is moving my town around?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, can you read Benny's sign for me? From right there?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Of course! It says... BUNNY SHOP.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "BUNNY SHOP?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "pip",
+    "say": "Bertha, it says BAKERY. In great big letters!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bakery? But it looks all blurry from here.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled close to Bertha. And Bertha leaned in very close to him.",
+    "cam": "two:bolt,bertha",
+    "do": [
+     [
+      "bolt",
+      "to:-6,14"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh! There you are, Bolt. You're so sharp up close!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nobody moved the town, Bertha. The town is right where it was.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's your eyes. Far things look blurry to you now.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-5,13"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S BERTHA'S EYES!",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bertha",
+    "say": "My eyes? No, no. Big buses have perfect eyes!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "What will the kids think? A school bus who can't see?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Uh oh. If Bertha can't see, who drives the kids?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Bertha. I have something to show you.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-7,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy opened his little side box. Inside was a pair of glasses.",
+    "cam": "prop:case",
+    "do": [
+     [
+      "case",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Reading glasses. Ten years now. Small words go fuzzy for me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy wears GLASSES? I never knew that!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nobody asked. They help me read my tow list.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And nobody laughed at you?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Turbo laughed once. Then he needed a tow.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "That's true. He towed me anyway. Very kindly.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Bertha, let's see Doctor Dottie. She checks eyes too.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So everyone drove to Doctor Dottie's clinic by the park.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:6,14"
+     ],
+     [
+      "dottie",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Hello, Bertha! Read the letters on my chart, please.",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "to:11,11"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Big A. Then... a B? Or a bunny?",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Just as I thought. You need glasses for far away.",
+    "cam": "close:dottie",
+    "do": [
+     [
+      "dottie",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dottie",
+    "say": "Lots of grown-ups do. And lots of kids too!",
+    "cam": "two:dottie,bertha",
+    "do": [
+     [
+      "dottie",
+      "to:9,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Doctor Dottie fitted two big round glasses on Bertha's front.",
+    "cam": "overhead",
+    "do": [
+     [
+      "case",
+      "give:bertha"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh. Oh my. OH MY!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I can see every leaf! Red ones! Gold ones! Tiny ones!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And there's my bus stop! It never moved at all!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:8,15"
+     ],
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bertha, you look so smart in glasses!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Like a professor bus! Professor Bertha!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Professor Bertha. I like that. Kids, all aboard!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ],
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember, everyone: needing help to see is nothing to hide.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "And glasses look good on everyone. Even trash bins.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bertha drove the kids to school. Straight to the stop. First try.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:8,14"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "First try! Ha! Thank you, Doctor Dottie! Thank you, Grumpy!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bertha looked far away, up the hill road. And she stopped.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "to:6,17"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt? There's a little car up on the hill. It's waving at you.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "At me? Who would wave at me from up there?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "I can see it so clearly now. It has a red scarf!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS ON THE HILL?",
+    "hold": 1.0,
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Someone Moved Bertha's Bus Stop! 🚌 (Ep 37)",
+  "description": "\"I drive past my own bus stop every day. How can I not find it anymore?\" — Big Bertha\nOne bright autumn morning Big Bertha says the bus stop, the school and the bakery have all moved in the night. Inspector Bolt checks every clue and finds out what really changed. Inspector Bolt #37\n\n#series #3DAnimation #InspectorBolt",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "school bus cartoon",
+   "big bertha",
+   "glasses for kids",
+   "first glasses",
+   "autumn cartoon",
+   "mystery for kids",
+   "cars mystery"
+  ],
+  "thumb_text": "IT MOVED?!",
+  "thumb_beat": 7,
+  "localizations": {
+   "es": {
+    "title": "¡Alguien movió la parada de Bertha! 🚌 (Ep 37)",
+    "description": "\"Paso por mi parada todos los días. ¿Cómo es que ya no la encuentro?\" — Big Bertha\nUna clara mañana de otoño, Big Bertha dice que la parada, la escuela y la panadería se movieron durante la noche. El Inspector Bolt revisa cada pista y descubre qué cambió de verdad. Inspector Bolt #37\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Alguém mudou o ponto de ônibus da Bertha! 🚌 (Ep 37)",
+    "description": "\"Eu passo pelo meu ponto todos os dias. Como não consigo mais encontrá-lo?\" — Big Bertha\nNuma manhã clara de outono, a Big Bertha diz que o ponto, a escola e a padaria mudaram de lugar durante a noite. O Inspetor Bolt verifica cada pista e descobre o que realmente mudou. Inspector Bolt #37\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "أحدهم نقل موقف حافلة بيرثا! 🚌 (حلقة 37)",
+    "description": "\"أمرّ بموقفي كل يوم. كيف لا أستطيع أن أجده الآن؟\" — بيغ بيرثا\nفي صباح خريفي مشرق تقول بيغ بيرثا إن الموقف والمدرسة والمخبز انتقلت كلها في الليل. يفحص المفتش بولت كل دليل ويكتشف ما الذي تغيّر حقًا. Inspector Bolt #37\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Quelqu'un a déplacé l'arrêt de Bertha ! 🚌 (Ép 37)",
+    "description": "« Je passe devant mon arrêt tous les jours. Comment se fait-il que je ne le trouve plus ? » — Big Bertha\nUn matin d'automne lumineux, Big Bertha dit que l'arrêt de bus, l'école et la boulangerie ont bougé pendant la nuit. L'inspecteur Bolt vérifie chaque indice et découvre ce qui a vraiment changé. Inspector Bolt #37\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "だれかがバーサのバス停を動かした!🚌(第37話)",
+    "description": "「毎日とおっているバス停なのに、どうして見つからないの?」— ビッグ・バーサ\n晴れた秋の朝、ビッグ・バーサは、バス停も学校もパン屋さんも夜のうちに動いたと言う。ボルト警部が手がかりをひとつずつ調べ、本当に変わったものを見つける。Inspector Bolt #37\n\n#シリーズ #3Dアニメ #InspectorBolt"
+   },
+   "ko": {
+    "title": "누가 버사의 버스 정류장을 옮겼어요! 🚌 (37화)",
+    "description": "\"매일 지나가는 내 정류장인데, 왜 이제 못 찾겠지?\" — 빅 버사\n맑은 가을 아침, 빅 버사는 버스 정류장도 학교도 빵집도 밤새 옮겨졌다고 말해요. 볼트 경감이 단서를 하나하나 살펴보고 진짜로 바뀐 게 뭔지 알아내요. Inspector Bolt #37\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Jemand hat Berthas Bushaltestelle versetzt! 🚌 (Folge 37)",
+    "description": "„Ich fahre jeden Tag an meiner Haltestelle vorbei. Warum finde ich sie nicht mehr?“ — Big Bertha\nAn einem hellen Herbstmorgen sagt Big Bertha, dass die Haltestelle, die Schule und die Bäckerei über Nacht umgezogen sind. Inspector Bolt prüft jede Spur und findet heraus, was sich wirklich verändert hat. Inspector Bolt #37\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "WHERE DID IT GO?!",
+   "title": "Bertha Can't Find Her Own Bus Stop! 🚌 (Ep 37) #shorts",
+   "description": "Big Bertha says the bus stop moved in the night. Did it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "school bus"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Bertha no encuentra su propia parada! 🚌 (Ep 37) #shorts",
+     "description": "Big Bertha dice que la parada se movió de noche. ¿Será verdad? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Bertha não acha o próprio ponto de ônibus! 🚌 (Ep 37) #shorts",
+     "description": "A Big Bertha diz que o ponto mudou de lugar à noite. Será? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيرثا لا تجد موقفها! 🚌 (حلقة 37) #shorts",
+     "description": "تقول بيغ بيرثا إن الموقف انتقل في الليل. هل هذا صحيح؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bertha ne trouve plus son propre arrêt ! 🚌 (Ép 37) #shorts",
+     "description": "Big Bertha dit que l'arrêt a bougé pendant la nuit. Vraiment ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサが自分のバス停を見つけられない!🚌(第37話)#shorts",
+     "description": "ビッグ・バーサは、バス停が夜のうちに動いたと言う。本当?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사가 자기 정류장을 못 찾아요! 🚌 (37화) #shorts",
+     "description": "빅 버사는 정류장이 밤사이 옮겨졌대요. 정말일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bertha findet ihre eigene Haltestelle nicht! 🚌 (Folge 37) #shorts",
+     "description": "Big Bertha sagt, die Haltestelle ist über Nacht umgezogen. Stimmt das? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 30,
+   "dur": 22,
+   "top": "GOOD MORNING... BIN?",
+   "title": "Bertha Says Hi to a Trash Bin! 😂 (Ep 37) #shorts",
+   "description": "First a lamppost, now a trash bin. What is going on? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "funny"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Bertha saluda a un cubo de basura! 😂 (Ep 37) #shorts",
+     "description": "Primero una farola, ahora un cubo de basura. ¿Qué pasa? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Bertha dá bom-dia para uma lixeira! 😂 (Ep 37) #shorts",
+     "description": "Primeiro um poste, agora uma lixeira. O que está acontecendo? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيرثا تلقي التحية على سلة مهملات! 😂 (حلقة 37) #shorts",
+     "description": "أولًا عمود إنارة، والآن سلة مهملات. ماذا يحدث؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bertha dit bonjour à une poubelle ! 😂 (Ép 37) #shorts",
+     "description": "D'abord un lampadaire, maintenant une poubelle. Que se passe-t-il ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バーサがゴミ箱にあいさつ!😂(第37話)#shorts",
+     "description": "さいしょは街灯、こんどはゴミ箱。どうしたの?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "버사가 쓰레기통에게 인사해요! 😂 (37화) #shorts",
+     "description": "처음엔 가로등, 이번엔 쓰레기통. 무슨 일일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bertha grüßt einen Mülleimer! 😂 (Folge 37) #shorts",
+     "description": "Erst eine Laterne, jetzt ein Mülleimer. Was ist da los? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 77,
+   "dur": 18,
+   "top": "WHO IS UP THERE?",
+   "title": "A Car on the Hill Is Waving at Bolt! 👀 (Ep 37) #shorts",
+   "description": "A little car with a red scarf waves at Bolt. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Un coche en la colina saluda a Bolt! 👀 (Ep 37) #shorts",
+     "description": "Un cochecito con bufanda roja saluda a Bolt. La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um carro no morro está acenando para o Bolt! 👀 (Ep 37) #shorts",
+     "description": "Um carrinho de cachecol vermelho acena para o Bolt. A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "سيارة على التل تلوّح لبولت! 👀 (حلقة 37) #shorts",
+     "description": "سيارة صغيرة بوشاح أحمر تلوّح لبولت. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une voiture sur la colline fait signe à Bolt ! 👀 (Ép 37) #shorts",
+     "description": "Une petite voiture avec une écharpe rouge fait signe à Bolt. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "丘の上の車がボルトに手をふってる!👀(第37話)#shorts",
+     "description": "赤いマフラーの小さな車がボルトに手をふる。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "언덕 위 자동차가 볼트에게 손을 흔들어요! 👀 (37화) #shorts",
+     "description": "빨간 목도리를 한 작은 자동차가 볼트에게 손을 흔들어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Auto auf dem Hügel winkt Bolt zu! 👀 (Folge 37) #shorts",
+     "description": "Ein kleines Auto mit rotem Schal winkt Bolt zu. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

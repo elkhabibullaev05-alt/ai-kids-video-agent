@@ -1,0 +1,1270 @@
+{
+ "id": "20261113-2-who-knocks-on-pips-roof",
+ "plot": "On a windy autumn night something knocks on Pip's roof at nine every night and nobody is ever there, with a mess of shells by her door each morning (planted early); night-shift Grumpy suspects Turbo, who rolls past at nine doing slow-race practice, but the knock comes while Turbo stands in front of them, so Grumpy lifts Pip on his hook to see the gutter full of walnuts from the tree across the lane; in the dark they spot a squirrel storing food for winter, and Pip and Grumpy move all forty-two walnuts into his old toolbox by the tree; then before sunrise Bertha honks that someone moved her bus stop and the whole school.",
+ "script": {
+  "title": "Who Knocks on Pip's Roof Every Night?",
+  "description": "Something knocks on Pip's roof every night, and nobody is there. Inspector Bolt #36",
+  "set": {
+   "place": "Bakery Lane outside Pip's little house, across from the big walnut tree behind Benny's bakery, a windy autumn night until just before sunrise",
+   "press": false,
+   "podium": false,
+   "time": "night"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "nuts",
+    "type": "ball",
+    "color": [
+     0.45,
+     0.28,
+     0.12
+    ],
+    "at": [
+     -15.5,
+     9.5,
+     2.2
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": "red",
+    "at": [
+     9.0,
+     18.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "pip",
+    "say": "Knock, knock, knock! Grumpy, it's happening again! Hurry!",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ],
+     [
+      "grumpy",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "text": "KNOCK! KNOCK! KNOCK!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-12,9"
+     ],
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grumpy",
+    "say": "I'm here. I see your roof. And I see... nobody.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "grumpy",
+      "to:-10,13"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Every night at nine. And nobody is ever there!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was a windy autumn night on Bakery Lane.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy was on night shift, so Pip had asked him to stay close.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-9,14"
+     ],
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Night shift is usually quiet. I like quiet.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Well, my roof doesn't!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Good evening. Pip told me about the knocking. Fascinating.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Tell me everything, Pip. Even the tiny things.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "pip",
+      "to:-13,8"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "First it knocks. Then it rolls. Then it stops.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And every morning, there's a mess of shells by my door!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Shells? Shells from what?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "I don't know! I sweep them away before breakfast.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Knocks, rolling and shells. But nobody to be seen. Hmm.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I've towed lots of things. Never a mystery knock.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-8,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, from down the lane, came a very slow... rumble.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Slow... slow... night practice! Never stop, Turbo!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Aha. A car rolling past at nine o'clock.",
+    "cam": "two:grumpy,turbo",
+    "do": [
+     [
+      "grumpy",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Every night since Clementine came! Slow-race training!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Turbo! Is it YOU knocking on my roof?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Me? I can't even reach your roof! It's way up there!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hmm. Suspicious. Stay right where you are, show-off.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And just then, with Turbo standing right in front of them...",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   },
+   {
+    "text": "KNOCK! KNOCK! ROLL...",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "turbo",
+    "say": "See? Not me! I didn't move one single wheel!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo is cleared. Our knocker is still out there.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-8,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "If we don't find it, I'll never sleep again! Never ever!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "What is all this noise? Some of us sleep at night!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Sorry, Bertha! My roof is knocking again!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Roofs don't knock, sweetie. Something knocks ON them.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:-4,16"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Oh, good evening, Bolt. Wait. Sorry. That's a mailbox.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "I'm over here, Bertha.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Enough talking. We need to see the top of that roof.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-13,12"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But I'm too small. And it's so high up!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "You're small. I have a hook. Hop on, Pip.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "pip",
+      "to:-12,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy had lifted cars all his life. But never this gently.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Higher... higher... I can see the gutter!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Grumpy, it's full! Round, brown, bumpy things!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT'S IN THE GUTTER?!",
+    "hold": 1.0,
+    "cam": "prop:nuts",
+    "do": [
+     [
+      "nuts",
+      "show"
+     ],
+     [
+      "nuts",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "grumpy",
+    "say": "Bumpy balls on a roof? That is not normal.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Are they eggs? Are they giant dinosaur eggs?!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Not in Wheelburg, Turbo. Procedure: look closer.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-10,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "They're walnuts! Dozens and dozens of walnuts!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "nuts",
+      "spin"
+     ],
+     [
+      "pip",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Walnuts? But there's no walnut tree by your house, Pip.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Then who is putting walnuts on Pip's roof?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A bird? But birds sleep at night, don't they?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The only walnut tree is behind Benny's bakery. Across the lane.",
+    "cam": "two:bolt,pip",
+    "do": [
+     [
+      "bolt",
+      "to:-8,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone looked at the dark tree. Then back at the roof.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bolt"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Somebody carries walnuts all the way over here? Every night?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And drops them. Knock, knock, roll!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And the shells by your door each morning? That's breakfast.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Breakfast for WHO? Bolt, tell us before I zoom!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Shh. Lights off, everyone. If we scare it, it won't come back.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-7,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So the friends switched off their lights. And waited. Very quietly.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-14,9"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Waiting is so hard. Slow practice. Slow practice...",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then a tiny grey tail ran along the edge of the roof.",
+    "cam": "prop:nuts",
+    "do": [
+     [
+      "nuts",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "A SQUIRREL!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "pip",
+    "say": "A squirrel! With a walnut in her mouth!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "She is hiding food for winter. Your gutter is her pantry.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "A nine o'clock delivery, every night. She works harder than me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "She wasn't trying to scare me. She was getting ready!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Just like me with my big winter blanket, sweetie.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "But a gutter is a terrible pantry! Everything rolls!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And when it rains, her walnuts will wash away. All of them!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Then let's give her a better pantry.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-10,12"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I have my old toolbox. Dry. Strong. No knocking.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "box",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grumpy put the box on the old stump, right by the walnut tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "grumpy",
+      "to:8,16"
+     ],
+     [
+      "box",
+      "give:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Up on his hook, Pip moved the walnuts. One by one.",
+    "cam": "two:grumpy,pip",
+    "do": [
+     [
+      "pip",
+      "to:7,15"
+     ],
+     [
+      "nuts",
+      "give:grumpy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Forty-two walnuts! Here's your new home, Mrs. Squirrel!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Do you think she'll find them?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:4,12"
+     ],
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The tiny tail ran down the tree. Sniffed the box. And hopped in.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "She likes it! HOORAY! Oh. Too loud. Sorry.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Shh. Night shift voice, Bertha.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "She's like Clementine! Slow, steady, and never stops working!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "No more knocking. I can finally sleep!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And no more sweeping shells before breakfast, sweetie.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember: a strange noise isn't scary once you know who's there.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Goodnight, Pip. Goodnight, squirrel. Goodnight, toolbox.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:0,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And for the first time in a week, Bakery Lane was quiet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But just before sunrise, Bertha came honking down the lane.",
+    "cam": "wide",
+    "do": [
+     [
+      "bertha",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt! Somebody moved my bus stop! And the whole school too!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The school? Bertha, a school can't move.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Then why did I drive right past it three times?!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE SCHOOL MOVED?!",
+    "hold": 1.0,
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:bertha"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Knocks on Pip's Roof Every Night? 🌰 (Ep 36)",
+  "description": "\"Knock, knock, knock. Every night at nine. And every time I look, nobody is there.\" — Pip\nOn a windy autumn night Pip asks Grumpy and Inspector Bolt to find out what keeps knocking on her roof. Turbo is not the knocker, so what is in the gutter? Inspector Bolt #36\n\n#series #3DAnimation #InspectorBolt",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn cartoon",
+   "squirrel",
+   "walnuts",
+   "bedtime mystery",
+   "pip the little car",
+   "mystery for kids",
+   "cars mystery"
+  ],
+  "thumb_text": "WHO'S KNOCKING?",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "¿Quién toca el techo de Pip cada noche? 🌰 (Ep 36)",
+    "description": "\"Toc, toc, toc. Cada noche a las nueve. Y cada vez que miro, no hay nadie.\" — Pip\nEn una noche ventosa de otoño, Pip pide a Grumpy y al Inspector Bolt que descubran qué toca su techo. Turbo no es, entonces, ¿qué hay en la canaleta? Inspector Bolt #36\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Quem bate no teto da Pip toda noite? 🌰 (Ep 36)",
+    "description": "\"Toc, toc, toc. Toda noite às nove. E sempre que eu olho, não há ninguém.\" — Pip\nNuma noite de outono com vento, a Pip pede ao Grumpy e ao Inspetor Bolt que descubram o que bate no teto dela. Não é o Turbo, então o que há na calha? Inspector Bolt #36\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "من يطرق سقف بيب كل ليلة؟ 🌰 (حلقة 36)",
+    "description": "\"طق، طق، طق. كل ليلة في التاسعة. وكلما نظرت، لا أحد هناك.\" — بيب\nفي ليلة خريفية عاصفة تطلب بيب من غرامبي والمفتش بولت معرفة ما الذي يطرق سقفها. ليس توربو، فماذا يوجد في المزراب؟ Inspector Bolt #36\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Qui frappe sur le toit de Pip chaque nuit ? 🌰 (Ép 36)",
+    "description": "« Toc, toc, toc. Chaque nuit à neuf heures. Et quand je regarde, il n'y a personne. » — Pip\nPar une nuit d'automne venteuse, Pip demande à Grumpy et à l'inspecteur Bolt ce qui frappe sur son toit. Ce n'est pas Turbo, alors qu'y a-t-il dans la gouttière ? Inspector Bolt #36\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "毎晩ピップの屋根をたたくのはだれ?🌰(第36話)",
+    "description": "「コン、コン、コン。毎晩9時。見に行くと、いつもだれもいないの。」— ピップ\n風の強い秋の夜、ピップはグランピーとボルト警部に、屋根をたたくものの正体をさがしてもらう。ターボじゃない。じゃあ、雨どいには何が?Inspector Bolt #36\n\n#シリーズ #3Dアニメ #InspectorBolt"
+   },
+   "ko": {
+    "title": "매일 밤 핍의 지붕을 두드리는 건 누구? 🌰 (36화)",
+    "description": "\"똑, 똑, 똑. 매일 밤 아홉 시. 그런데 볼 때마다 아무도 없어.\" — 핍\n바람 부는 가을밤, 핍은 그럼피와 볼트 경감에게 지붕을 두드리는 게 뭔지 찾아 달라고 해요. 터보는 아니래요. 그럼 빗물받이엔 뭐가 있을까요? Inspector Bolt #36\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Wer klopft jede Nacht auf Pips Dach? 🌰 (Folge 36)",
+    "description": "„Klopf, klopf, klopf. Jede Nacht um neun. Und immer, wenn ich schaue, ist niemand da.“ — Pip\nIn einer windigen Herbstnacht bittet Pip Grumpy und Inspector Bolt herauszufinden, was auf ihr Dach klopft. Turbo ist es nicht – was liegt also in der Regenrinne? Inspector Bolt #36\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "NOBODY IS THERE!",
+   "title": "Knock, Knock... But Nobody's There! 🌙 (Ep 36) #shorts",
+   "description": "Every night at nine something knocks on Pip's roof. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Toc, toc... ¡pero no hay nadie! 🌙 (Ep 36) #shorts",
+     "description": "Cada noche a las nueve algo toca el techo de Pip. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Toc, toc... mas não há ninguém! 🌙 (Ep 36) #shorts",
+     "description": "Toda noite às nove algo bate no teto da Pip. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "طق، طق... لكن لا أحد هناك! 🌙 (حلقة 36) #shorts",
+     "description": "كل ليلة في التاسعة يطرق شيء سقف بيب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Toc, toc... mais il n'y a personne ! 🌙 (Ép 36) #shorts",
+     "description": "Chaque nuit à neuf heures, quelque chose frappe sur le toit de Pip. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "コン、コン…でもだれもいない!🌙(第36話)#shorts",
+     "description": "毎晩9時、ピップの屋根を何かがたたく。本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "똑, 똑... 그런데 아무도 없어! 🌙 (36화) #shorts",
+     "description": "매일 밤 아홉 시, 무언가 핍의 지붕을 두드려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Klopf, klopf... aber niemand ist da! 🌙 (Folge 36) #shorts",
+     "description": "Jede Nacht um neun klopft etwas auf Pips Dach. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 37,
+   "dur": 20,
+   "top": "WHAT'S IN THERE?!",
+   "title": "Pip Finds Something in the Gutter! 😮 (Ep 36) #shorts",
+   "description": "Round, brown, bumpy things on Pip's roof. Who put them there? Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Pip encuentra algo en la canaleta! 😮 (Ep 36) #shorts",
+     "description": "Cosas redondas, marrones y con bultos en el techo de Pip. ¿Quién las puso? Episodio completo en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Pip encontra algo na calha! 😮 (Ep 36) #shorts",
+     "description": "Coisas redondas, marrons e cheias de calombos no teto da Pip. Quem as colocou? Episódio completo no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "بيب تجد شيئًا في المزراب! 😮 (حلقة 36) #shorts",
+     "description": "أشياء مستديرة بنية ومتعرّجة على سقف بيب. من وضعها هناك؟ الحلقة كاملة على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pip trouve quelque chose dans la gouttière ! 😮 (Ép 36) #shorts",
+     "description": "Des choses rondes, brunes et bosselées sur le toit de Pip. Qui les a mises là ? Épisode complet sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ピップが雨どいで何かを見つけた!😮(第36話)#shorts",
+     "description": "ピップの屋根に、まるくて茶色いでこぼこのもの。だれが置いたの?本編はチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "핍이 빗물받이에서 뭔가를 찾았어요! 😮 (36화) #shorts",
+     "description": "핍의 지붕 위 동글동글 갈색 울퉁불퉁한 것들. 누가 놓았을까요? 전체 에피소드는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Pip findet etwas in der Regenrinne! 😮 (Folge 36) #shorts",
+     "description": "Runde, braune, holprige Dinger auf Pips Dach. Wer hat sie dorthin gelegt? Ganze Folge auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

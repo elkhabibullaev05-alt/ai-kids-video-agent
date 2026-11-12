@@ -1,0 +1,1363 @@
+{
+ "id": "20261113-1-tractor-never-lost",
+ "plot": "The morning after Clementine the purple tractor arrives a week early with eight gold stars, Turbo can't believe a slow tractor has never lost a race; Clementine only says 'fast has nothing to do with it', her one lap leaves a single unbroken track between the white lines while Turbo's lap skids and stops, Turbo spies her 'slower, never stop' lesson and makes Pip zoom out of the lines, and Bolt, remembering Grandma Rosa's 'steady, never stopping', realises race nine is a slow race where the last car wins; Turbo learns to drive slowly and loses the practice race happily, then Pip says something knocks on her roof every night and nobody is there.",
+ "script": {
+  "title": "A Tractor Who Never Lost a Race?!",
+  "description": "Clementine the tractor has never lost a race. Inspector Bolt finds out how. Inspector Bolt #35",
+  "set": {
+   "place": "the Wheelburg school sports field with its white-lined track and the yard behind the school, a windy autumn morning until evening",
+   "press": false,
+   "podium": false,
+   "time": "day"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "clem": {
+    "name": "Clementine",
+    "voice": "af_sarah",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.5,
+     0.2,
+     0.65
+    ],
+    "kind": "truck",
+    "size": 1.1,
+    "hat": false,
+    "home": [
+     -14.0,
+     19.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "stars",
+    "type": "star",
+    "color": "gold",
+    "on": "clem",
+    "visible": true,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "turbo",
+    "say": "Lap ninety-nine! Watch me, Clementine! Zoom, zoom, zoom!",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "enter:left"
+     ],
+     [
+      "clem",
+      "to:-10,16"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Very fast, dear. But you would still lose race number nine.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "to:-11,14"
+     ],
+     [
+      "clem",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "LOSE?! To a tractor? You're slower than a snail!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:0,12"
+     ],
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "A TRACTOR NEVER LOST?!",
+    "hold": 1.0,
+    "cam": "prop:stars",
+    "do": [
+     [
+      "stars",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It was the morning after Clementine rolled into Wheelburg. A week early.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bertha",
+      "enter"
+     ],
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She carried eight gold stars. One for every race she ever drove.",
+    "cam": "prop:stars",
+    "do": [
+     [
+      "stars",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Eight races and eight wins? You never lost, Clementine?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-12,10"
+     ],
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Never once, little one. Your Grandma Rosa lost to me twice!",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "But how? I'm the fastest car in all of Wheelburg!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "That's the secret, dear. Fast has nothing to do with it.",
+    "cam": "two:clem,turbo",
+    "do": [
+     [
+      "clem",
+      "to:-8,13"
+     ],
+     [
+      "clem",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Nothing to do with it? Racing is ALL about fast!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "A real mystery, then. How does a tractor win every race?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Easy. Everybody else fell asleep waiting for her.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Grumpy! Be nice! She's our guest!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:-7,16"
+     ],
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "I won't tell my secret. A racer never does.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "But my tracks will tell you, Inspector. Watch me closely.",
+    "cam": "two:bolt,clem",
+    "do": [
+     [
+      "clem",
+      "to:-6,12"
+     ],
+     [
+      "bolt",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Clementine drove one lap of the school field. Very... very... slowly.",
+    "cam": "wide",
+    "do": [
+     [
+      "clem",
+      "to:6,17"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Is she even moving? I can't tell!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "She's moving, Turbo. Like the little hand on a clock.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Look! She never stopped. Not even once!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Interesting. And she stayed between the two white lines.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Boring! My turn! Now watch a REAL lap!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:10,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed so fast that he cut the corner across the grass.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-8,8"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "ZOOOOM! SKIIID!",
+    "hold": 1.0,
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:3,12"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "turbo",
+    "say": "Done! Forty seconds flat! Beat THAT, Clementine!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Lovely, dear. But in race nine, you would be out.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "OUT?! I came first! Bolt, that's not fair!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Procedure, Turbo. First, we read the tracks.",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "bolt",
+      "to:0,10"
+     ],
+     [
+      "fx",
+      "tracks:clem-turbo"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two lines of tracks went all the way round the field.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Clementine's tracks are one long line. No gaps at all.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-3,8"
+     ],
+     [
+      "pip",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "And Turbo's tracks jump, skid and stop. Three times.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Those are my cool stopping skids! Everybody loves them!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "The grass doesn't.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "If I can't work this out, I'll lose race nine!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "And Grandma Rosa is coming all this way to watch you.",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "to:-6,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Turbo did what any racer would do. He spied.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:12,18"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Shh. Agent Turbo is on the case. Very sneaky.",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:11,16"
+     ],
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind the school, Clementine was giving a lesson. To Pip!",
+    "cam": "two:clem,pip",
+    "do": [
+     [
+      "clem",
+      "to:-12,12"
+     ],
+     [
+      "pip",
+      "to:-9,10"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Slower, Pip. Even slower. But never stop.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Slower? This is so hard! My wheels want to zoom!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "She's teaching Pip to be SLOW? That must be a trick!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Don't listen, Pip! Real racers go FAST!",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip zoomed. Pip wobbled. And Pip rolled right over the white line.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:-4,6"
+     ],
+     [
+      "pip",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Oops! Clementine, I'm out now, aren't I?",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Out of the lines means out of the race, little one.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "to:-10,10"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Out? For going fast? This race is upside down!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "An upside-down race. Finally, a race I'd like.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Wait. Say that again, Turbo. Upside down.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:-2,9"
+     ],
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt rolled slowly along Clementine's long, unbroken track.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bolt",
+      "to:4,14"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "No stops. Inside the lines. And never, ever in a hurry.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Turbo, what did Grandma Rosa's letter say about her old race?",
+    "cam": "two:bolt,turbo",
+    "do": [
+     [
+      "turbo",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Steady. Never stopping. I thought it meant a really long race!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Bolt, you have your thinking face on! Tell us!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "It's not a long race. It's a SLOW race.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "A SLOW RACE?!",
+    "hold": 1.0,
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "bolt",
+    "say": "The LAST car across the line wins. But you may never stop.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Stop once, or leave the lines, and you're out.",
+    "cam": "two:bolt,clem",
+    "do": [
+     [
+      "clem",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Right you are, Inspector. Nine races, and I'm always the slowest!",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "So my zooms, my skids, my cool corners...",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Would get you out in three seconds.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I trained a whole week the wrong way! Race nine is ruined!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Not ruined, Turbo! We can both learn it. Together!",
+    "cam": "two:pip,turbo",
+    "do": [
+     [
+      "pip",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Lesson one, dear. Feel every little bump in the grass.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "to:-2,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Turbo tried to drive slowly. For the very first time.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:0,16"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Slow... slow... oh, my engine is so bored!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He stopped. He wobbled. His wheel nearly touched the line.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to:-3,18"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Breathe, Turbo! Look at the leaves, not at the finish!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Leaves. Okay. One red leaf. One yellow leaf...",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And slowly, slowly, Turbo began to smile.",
+    "cam": "two:turbo,pip",
+    "do": [
+     [
+      "turbo",
+      "to:-6,17"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Hey! Going slow, I can see everything! Birds! The bakery!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Practice race! Turbo, Clementine and me! Last one wins!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Ready... steady... slowly!",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Three racers crawled toward the finish. Nobody made a sound.",
+    "cam": "wide",
+    "do": [
+     [
+      "clem",
+      "to:-4,8"
+     ],
+     [
+      "turbo",
+      "to:0,8"
+     ],
+     [
+      "pip",
+      "to:4,8"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "This is the most exciting thing I have ever watched.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pip crossed first. Then Turbo. Then, last of all, Clementine.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:4,4"
+     ],
+     [
+      "turbo",
+      "to:0,4"
+     ],
+     [
+      "clem",
+      "to:-4,5"
+     ]
+    ]
+   },
+   {
+    "who": "clem",
+    "say": "Nine races, still never lost! But you did well, dear.",
+    "cam": "close:clem",
+    "do": [
+     [
+      "clem",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "I lost slowly. Best losing ever!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Wheelburg's slowest racers! Hooray!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Remember, everyone: never judge a racer by its wheels.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Or a tractor by its speed!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But that evening, Pip rolled up to Bolt very quietly.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "to:4,10"
+     ],
+     [
+      "bolt",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt, something knocks on my roof. Every night. Knock, knock, knock.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Every night? And who is knocking, Pip?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "That's the thing. Nobody is ever there!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "WHO IS KNOCKING?!",
+    "hold": 1.0,
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "shake"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:pip"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "A Tractor Who Never Lost a Race?! 🚜 (Ep 35)",
+  "description": "\"I trained a whole week to be the fastest. Nobody told me fast was the wrong idea!\" — Turbo\nClementine the slow purple tractor has won eight races and never lost one. How? Inspector Bolt reads the tracks on the school field and finds the surprising answer. Inspector Bolt #35\n\n#series #3DAnimation #InspectorBolt",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "tractor cartoon",
+   "slow race",
+   "race cartoon for kids",
+   "turbo the race car",
+   "autumn cartoon",
+   "mystery for kids",
+   "cars mystery"
+  ],
+  "thumb_text": "BEATEN BY A TRACTOR?!",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "¿Una tractora que nunca perdió una carrera?! 🚜 (Ep 35)",
+    "description": "\"Entrené toda una semana para ser el más rápido. ¡Nadie me dijo que ir rápido era la idea equivocada!\" — Turbo\nClementine, la lenta tractora morada, ha ganado ocho carreras y nunca ha perdido. ¿Cómo? El Inspector Bolt lee las huellas en el campo de la escuela y descubre la sorprendente respuesta. Inspector Bolt #35\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "Um trator que nunca perdeu uma corrida?! 🚜 (Ep 35)",
+    "description": "\"Treinei uma semana inteira para ser o mais rápido. Ninguém me disse que rapidez era a ideia errada!\" — Turbo\nClementine, o trator roxo e lento, venceu oito corridas e nunca perdeu nenhuma. Como? O Inspetor Bolt lê as marcas no campo da escola e descobre a resposta surpreendente. Inspector Bolt #35\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "جرّار لم يخسر أي سباق أبدًا؟! 🚜 (حلقة 35)",
+    "description": "\"تدرّبت أسبوعًا كاملًا لأكون الأسرع. لم يخبرني أحد أن السرعة هي الفكرة الخاطئة!\" — توربو\nكليمنتين، الجرّار البنفسجي البطيء، فازت بثمانية سباقات ولم تخسر أبدًا. كيف؟ يقرأ المفتش بولت الآثار في ملعب المدرسة ويكتشف الجواب المدهش. Inspector Bolt #35\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "Un tracteur qui n'a jamais perdu une course ?! 🚜 (Ép 35)",
+    "description": "« Je me suis entraîné toute la semaine pour être le plus rapide. Personne ne m'a dit que la vitesse était la mauvaise idée ! » — Turbo\nClementine, le lent tracteur violet, a gagné huit courses sans jamais perdre. Comment ? L'inspecteur Bolt lit les traces sur le terrain de l'école et trouve la réponse surprenante. Inspector Bolt #35\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "一度もレースに負けないトラクター?!🚜(第35話)",
+    "description": "「一週間、いちばん速くなるために練習したのに。速さがまちがいだなんて、だれも教えてくれなかった!」— ターボ\nゆっくり走るむらさきのトラクター、クレメンタインは8回のレースで一度も負けたことがない。どうして?ボルト警部が学校のグラウンドのタイヤのあとを読み、おどろきの答えを見つける。Inspector Bolt #35\n\n#シリーズ #3Dアニメ #InspectorBolt"
+   },
+   "ko": {
+    "title": "한 번도 경주에서 진 적 없는 트랙터?! 🚜 (35화)",
+    "description": "\"가장 빨라지려고 일주일 내내 연습했어. 빠른 게 틀린 거라고 아무도 말 안 해줬다고!\" — 터보\n느릿느릿 보라색 트랙터 클레멘타인은 여덟 번의 경주에서 한 번도 지지 않았어요. 어떻게 그럴까요? 볼트 경감이 학교 운동장의 바퀴 자국을 읽고 놀라운 답을 찾아내요. Inspector Bolt #35\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Ein Traktor, der nie ein Rennen verlor?! 🚜 (Folge 35)",
+    "description": "„Ich habe eine ganze Woche trainiert, um der Schnellste zu sein. Niemand hat mir gesagt, dass schnell die falsche Idee ist!“ — Turbo\nClementine, der langsame lila Traktor, hat acht Rennen gewonnen und nie verloren. Wie? Inspector Bolt liest die Spuren auf dem Schulplatz und findet die überraschende Antwort. Inspector Bolt #35\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "LOSE TO A TRACTOR?!",
+   "title": "Turbo vs a Tractor Who Never Lost! 🚜 (Ep 35) #shorts",
+   "description": "Clementine has never lost a race. How? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "tractor"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Turbo contra una tractora que nunca perdió! 🚜 (Ep 35) #shorts",
+     "description": "Clementine nunca ha perdido una carrera. ¿Cómo? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Turbo contra um trator que nunca perdeu! 🚜 (Ep 35) #shorts",
+     "description": "Clementine nunca perdeu uma corrida. Como? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "توربو ضد جرّار لم يخسر أبدًا! 🚜 (حلقة 35) #shorts",
+     "description": "كليمنتين لم تخسر أي سباق. كيف؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Turbo contre un tracteur jamais battu ! 🚜 (Ép 35) #shorts",
+     "description": "Clementine n'a jamais perdu une course. Comment ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ターボ vs 負けなしのトラクター!🚜(第35話)#shorts",
+     "description": "クレメンタインは一度も負けたことがない。どうして?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "터보 vs 한 번도 안 진 트랙터! 🚜 (35화) #shorts",
+     "description": "클레멘타인은 경주에서 진 적이 없어요. 어떻게? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Turbo gegen einen Traktor, der nie verlor! 🚜 (Folge 35) #shorts",
+     "description": "Clementine hat noch nie ein Rennen verloren. Wie? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 40,
+   "dur": 22,
+   "top": "WHY IS PIP OUT?!",
+   "title": "Out of the Race for Going Too Fast?! 😮 (Ep 35) #shorts",
+   "description": "Pip zooms and she's out. What kind of race is this? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "race"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Fuera de la carrera por ir demasiado rápido?! 😮 (Ep 35) #shorts",
+     "description": "Pip acelera y queda fuera. ¿Qué clase de carrera es esta? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Fora da corrida por ir rápido demais?! 😮 (Ep 35) #shorts",
+     "description": "A Pip acelera e está fora. Que corrida é essa? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "خارج السباق لأنها أسرعت كثيرًا؟! 😮 (حلقة 35) #shorts",
+     "description": "بيب تسرع فتخرج من السباق. أي سباق هذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Éliminée pour être allée trop vite ?! 😮 (Ép 35) #shorts",
+     "description": "Pip fonce et elle est éliminée. C'est quelle course ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "速すぎてレースから失格?!😮(第35話)#shorts",
+     "description": "ピップが走ったら失格に。これはどんなレース?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "너무 빨라서 경주에서 탈락?! 😮 (35화) #shorts",
+     "description": "핍이 쌩 달리자 탈락! 이건 무슨 경주일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Raus aus dem Rennen, weil zu schnell?! 😮 (Folge 35) #shorts",
+     "description": "Pip rast los und ist raus. Was ist das für ein Rennen? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 81,
+   "dur": 18,
+   "top": "WHO IS KNOCKING?",
+   "title": "Something Knocks on Pip's Roof at Night 🌙 (Ep 35) #shorts",
+   "description": "Knock, knock, knock, and nobody is there. Next part on the channel: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Algo toca el techo de Pip de noche 🌙 (Ep 35) #shorts",
+     "description": "Toc, toc, toc, y no hay nadie. La siguiente parte en el canal: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Algo bate no teto da Pip à noite 🌙 (Ep 35) #shorts",
+     "description": "Toc, toc, toc, e não há ninguém. A próxima parte no canal: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شيء يطرق سقف بيب في الليل 🌙 (حلقة 35) #shorts",
+     "description": "طق، طق، طق، ولا أحد هناك. الجزء التالي على القناة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelque chose frappe sur le toit de Pip la nuit 🌙 (Ép 35) #shorts",
+     "description": "Toc, toc, toc, et il n'y a personne. La suite sur la chaîne : {LONG_URL}"
+    },
+    "ja": {
+     "title": "夜、ピップの屋根をたたくのはだれ?🌙(第35話)#shorts",
+     "description": "コン、コン、コン。でもだれもいない。つづきはチャンネルで:{LONG_URL}"
+    },
+    "ko": {
+     "title": "밤마다 핍의 지붕을 두드리는 소리 🌙 (35화) #shorts",
+     "description": "똑, 똑, 똑, 그런데 아무도 없어요. 다음 이야기는 채널에서: {LONG_URL}"
+    },
+    "de": {
+     "title": "Nachts klopft etwas auf Pips Dach 🌙 (Folge 35) #shorts",
+     "description": "Klopf, klopf, klopf, und niemand ist da. Der nächste Teil auf dem Kanal: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
