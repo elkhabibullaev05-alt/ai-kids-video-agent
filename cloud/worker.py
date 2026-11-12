@@ -430,7 +430,7 @@ def gemini_note(path, title, kind):
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "30", "-c:a", "aac", "-b:a", "96k", px], check=False, timeout=1800)
     path = px if os.path.exists(px) else path
     try:
-        for mdl in ("gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash"):   # 503 high demand -> next model
+        for mdl in ("gemini-3.7-flash", "gemini-3.1-flash-lite", "gemini-3.5-flash"):   # 503 high demand -> next model
             env["WATCH_GEMINI_MODEL"] = mdl
             p = subprocess.run([PY, os.path.join(ROOT, "cloud", "tools", "watch", "scripts", "watch.py"), path, "--engine", "gemini",
                                 "--question", GEM_Q.format(kind=kind, title=title)], capture_output=True, text=True, env=env, timeout=900)

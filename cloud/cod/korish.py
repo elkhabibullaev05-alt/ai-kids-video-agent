@@ -15,7 +15,7 @@ Q = ("You are a harsh YouTube Shorts viewer and editor. Watch AND listen to this
      "any clash? 6) Text: readable, good hook? 7) Pacing and ending. 8) Score 1-10 and the 3 most important fixes. "
      "Compare with the most viral Call of Duty Shorts.")
 
-MODELS = ["gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.7-flash-lite"]
+MODELS = ["gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"]
 
 
 def main():

@@ -20,7 +20,7 @@ def main(outdir):
         if os.path.exists(dst): continue
         txt = ""
         for attempt in range(6):   # 503 "high demand" happens -> other model, back off, retry
-            payload = {"model": [model, "gemini-3.5-flash", "gemini-2.5-flash"][attempt % 3],
+            payload = {"model": [model, "gemini-3.1-flash-lite", "gemini-3.5-flash"][attempt % 3],
                        "input": [{"type": "text", "text": open(q).read()}]}
             try:
                 _, _, body = gemini._call("POST", gemini.INTERACTIONS, key, data=json.dumps(payload).encode(),
