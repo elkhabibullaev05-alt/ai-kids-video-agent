@@ -33,6 +33,10 @@ def main():
             txt = r.stdout if r.returncode == 0 else (r.stdout + "\n" + r.stderr[-2000:])
             if "(failed)" not in txt and r.returncode == 0:
                 break
+            err = [l for l in txt.splitlines() if "Detail" in l or "error" in l.lower()][:2]
+            open(os.path.join(os.path.dirname(v), "korish_xato.txt"), "a").write(
+                f"{time.strftime('%H:%M')} {os.path.basename(v)} {env['WATCH_GEMINI_MODEL']}: "
+                + " | ".join(err).replace(env["GEMINI_API_KEY"], "***")[:400] + "\n")
             time.sleep(20 if 'not found' in txt.lower() or '404' in txt else 60)
         if "(failed)" in txt or r.returncode:
             print("baho olinmadi (keyingi safar qayta):", v); continue
