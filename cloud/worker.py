@@ -320,6 +320,9 @@ def do_uploads(st):
         if it["kind"] == "short" and (res.get("long") or {}).get("publish_at"):
             after = dt.datetime.fromisoformat(res["long"]["publish_at"].replace("Z", "+00:00")) + dt.timedelta(minutes=20)
         when = free_slot(st, it["kind"], after)
+        if "gemini" not in it and os.path.exists(it["file"]) and not it.get("loop_seconds"):
+            it["gemini"] = gemini_note(it["file"], it["title"], it["kind"]); save_state(st)   # maker channels too (2026-11-12)
+            log("gemini", it["kind"], (it["gemini"] or {}).get("score"))
         if it.get("loop_seconds") and os.path.exists(it["file"]) and os.path.getsize(it["file"]) > 3e9:
             # 2026-10-26: a 9 GB stream-copied 3 h loop timed out on the home connection → rebuild it at ~1.8 Mbit/s
             src = it.get("src") or os.path.join(ROOT, "cloud", "ready", CH, os.path.basename(it["file"]).rsplit("_", 1)[0] + ".mp4")
@@ -351,7 +354,7 @@ def do_uploads(st):
         it.pop("_rotated", None)
         log("uploaded", it["kind"], vid, when, it["title"])
         st["taken"].append({"t": when, "kind": it["kind"]})
-        entry = {"video": vid, "publish_at": when, "title": it["title"], "ball": it.get("ball")}
+        entry = {"video": vid, "publish_at": when, "title": it["title"], "ball": it.get("ball"), "gemini": it.get("gemini")}
         if it["kind"] == "long":
             res["long"] = entry
         else:
@@ -406,6 +409,30 @@ def rek(path, title, kind):
         return r["ball"], "; ".join(r.get("muammo", [])[:3])
     except Exception:
         return 0, (p.stderr or "rek_ball error")[-300:]
+
+
+GEM_Q = ("You are a harsh YouTube viewer and editor for a {kind} video titled '{title}'. Watch AND listen to the whole "
+         "video. First line exactly 'SCORE: N/10'. Then 'FIXES:' and the 3 most important concrete fixes (with MM:SS) that "
+         "would make it get millions of views: hook in the first 2 s, pacing, picture, sound/music, text, ending.")
+
+
+def gemini_note(path, title, kind):
+    """2026-11-12 owner: every channel works together with Gemini. Google's video model watches the finished file with
+    sound (MIT watch skill, cloud/tools/watch) and gives a score + fixes; stored in results/<CH>/*.json for Claude.
+    Advisory only (never blocks an upload); silently skipped when the owner's key file is missing."""
+    kf = glob.glob("/mnt/c/Users/*/Documents/kanal_tokenlar/gemini.txt")
+    if not kf:
+        return None
+    env = dict(os.environ, GEMINI_API_KEY=open(kf[0]).read().strip())
+    try:
+        p = subprocess.run([PY, os.path.join(ROOT, "cloud", "tools", "watch", "scripts", "watch.py"), path, "--engine", "gemini",
+                            "--question", GEM_Q.format(kind=kind, title=title)], capture_output=True, text=True, env=env, timeout=900)
+        txt = (p.stdout or "").replace(env["GEMINI_API_KEY"], "***")
+    except Exception as e:
+        return {"error": str(e)[:200]}
+    m = re.search(r"SCORE:\s*(\d+(?:\.\d+)?)\s*/\s*10", txt)
+    fx = txt.split("FIXES:", 1)[1].strip()[:900] if "FIXES:" in txt else txt[-900:]
+    return {"score": float(m.group(1)) if m else None, "fixes": fx}
 
 
 def blender(args):
@@ -488,8 +515,10 @@ def produce(job, jf):
         return None, f"long rek-ball {ball}: {why}"
     L = job["long"]
     L["title"] = studio_title(L["title"])
+    gem = gemini_note(long_mp4, L["title"], "long")
+    log("gemini long", (gem or {}).get("score"))
     items.append(dict(job=jid, kind="long", file=long_mp4, title=L["title"], description=L["description"], tags=L.get("tags", []),
-                      localizations=L.get("localizations"), thumb=thumb, ball=ball))
+                      localizations=L.get("localizations"), thumb=thumb, ball=ball, gemini=gem))
     for n, s in enumerate(job.get("shorts", []), 1):
         b = beats[min(s.get("beat", 0), len(beats) - 1)]
         start = max(0.0, b["start"] - 0.3)
@@ -511,7 +540,7 @@ def produce(job, jf):
         if sb < GATE and not QUICK:
             continue
         items.append(dict(job=jid, kind="short", file=out, title=studio_title(s["title"]), description=s["description"], tags=s.get("tags", []),
-                          localizations=s.get("localizations"), ball=sb))
+                          localizations=s.get("localizations"), ball=sb, gemini=gemini_note(out, s["title"], "short")))
     return items, None
 
 
