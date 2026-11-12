@@ -79,8 +79,10 @@ print("cursor box:", cur, flush=True)
 a = max(0.0, T - PRE); dur = PRE + POST
 clip = os.path.join(tmp, "clip.mov"); trf = os.path.join(tmp, "t.trf"); stab = os.path.join(tmp, "stab.mov")
 dl = f"delogo=x={cur[0]}:y={cur[1]}:w={cur[2]}:h={cur[3]}" if cur else "null"
+# 2026-11-12: game played in a window -> OBS frame has the window title bar + Windows taskbar; cut them off first
+vf0 = dl + ("," + sp["src_crop"] + ",scale=1920:1080:flags=lanczos" if sp.get("src_crop") else "")
 run(["ffmpeg", "-y", "-v", "error", "-ss", f"{a:.3f}", "-t", f"{dur:.3f}", "-i", src, "-vf",
-     dl, "-af", "aresample=48000"] + venc(14) + ["-c:a", "pcm_s16le", clip])
+     vf0, "-af", "aresample=48000"] + venc(14) + ["-c:a", "pcm_s16le", clip])
 run(["ffmpeg", "-y", "-v", "error", "-i", clip, "-vf", f"vidstabdetect=shakiness=7:accuracy=15:result={trf}", "-f", "null", "-"])
 GRADE = ("hqdn3d=1.5:1.5:3:3,"
          "curves=all='0/0 0.05/0.09 0.25/0.34 0.5/0.6 0.8/0.86 1/1',"

@@ -466,7 +466,7 @@ def main():
     for m in job["missions"]:
         if only and m["id"] != only: continue
         try:
-            if not os.path.exists(os.path.join(outdir, f"{m['file']}.mp4")):
+            if not m.get("no_long") and not os.path.exists(os.path.join(outdir, f"{m['file']}.mp4")):
                 long_video(job, m, tmp, outdir)
             for k, s in enumerate([] if job.get("shorts_paused") else m.get("shorts", []), 1):
                 if not os.path.exists(os.path.join(outdir, f"{m['file']}_{job.get('short_tag', 'shortHD')}{k}.mp4")):
