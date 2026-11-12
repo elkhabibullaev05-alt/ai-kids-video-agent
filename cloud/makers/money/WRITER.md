@@ -10,6 +10,9 @@ final message is in Uzbek. Scripts and videos are English.
 1. `git pull`.
 2. Read **every** file in `cloud/done/money/` and `cloud/queue/money/` (titles, `character`, `amount`, topic), the
    last 3 days of `cloud/rejected/money/*.reason.json` (never repeat what failed), and `cloud/results/money/status.json`.
+   **Also read `cloud/AVOID.md` → `## money`** (review 2026-11-12: this step was missing, so 4 days of daily-review bans —
+   credit-card interest, loan term, 'small habit × a year', paycheck-leak — kept coming back). Before saving each job,
+   check its title/hook against every rule there; a job that breaks one goes nowhere.
 3. Keep **6** scripts waiting (two days): write `6 − (files in cloud/queue/money/*.json)`, at most 6 per run,
    normally 3.
 4. Save each as `cloud/queue/money/<YYYYMMDD>-<n>-<slug>.json` (YYYYMMDD = today, n = 1,2,3…; sorted name = render order).
