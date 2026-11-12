@@ -18,9 +18,10 @@ def main(outdir):
     for q in sorted(glob.glob(os.path.join(HERE, "savollar", "*.txt"))):
         dst = os.path.join(outdir, os.path.basename(q)[:-4] + "_javob.txt")
         if os.path.exists(dst): continue
-        payload = {"model": model, "input": [{"type": "text", "text": open(q).read()}]}
         txt = ""
-        for attempt in range(4):   # 503 "high demand" happens -> back off and retry
+        for attempt in range(6):   # 503 "high demand" happens -> other model, back off, retry
+            payload = {"model": [model, "gemini-3.5-flash", "gemini-2.5-flash"][attempt % 3],
+                       "input": [{"type": "text", "text": open(q).read()}]}
             try:
                 _, _, body = gemini._call("POST", gemini.INTERACTIONS, key, data=json.dumps(payload).encode(),
                                           headers={"Content-Type": "application/json"}, timeout=600)
@@ -30,7 +31,7 @@ def main(outdir):
                 if txt: break
             except BaseException as e:
                 print("urinish", attempt + 1, str(e)[:200].replace(key, "***"))
-            time.sleep(90 * (attempt + 1))
+            time.sleep(45)
         if not txt:
             print("javob olinmadi, keyingi safar:", q); continue
         open(dst, "w").write(txt.replace(key, "***"))
