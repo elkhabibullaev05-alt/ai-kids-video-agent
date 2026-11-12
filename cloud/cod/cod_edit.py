@@ -440,6 +440,9 @@ def v4_shorts(job, outdir, tmp):
     vids = [f for f in sorted(os.listdir(v4)) if f.endswith(".mp4") and not os.path.exists(os.path.join(v4, f[:-4] + "_baho.txt"))]
     if vids:
         subprocess.run([sys.executable, kf] + [os.path.join(v4, f) for f in vids], capture_output=True, text=True)
+    # 2026-11-12 owner: work together with Gemini - ask it editing questions (cloud/cod/savollar/*.txt -> OUT/gemini/)
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "maslahat.py"),
+                    os.path.join(outdir, "gemini")], capture_output=True, text=True, timeout=1800)
     return err
 
 def main():
