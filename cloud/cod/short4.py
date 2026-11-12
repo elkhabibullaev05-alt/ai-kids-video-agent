@@ -171,15 +171,42 @@ fc = ("[0:v]split[s1][s2];[s1]crop=960:1080:480:0,scale=1080:1215:flags=lanczos,
       f"drawbox=x=0:y={VY+1215}:w=1080:h=6:color=0xE0201B@1:t=fill,"
       f"drawtext=fontfile='{FONT}':text='{foot}':fontsize=46:fontcolor=white:x=(w-text_w)/2:y={VY+1215+28},"
       f"fade=t=in:st=0:d=0.15,fade=t=out:st={total-0.35:.2f}:d=0.35[v]")
-cmd = ["ffmpeg", "-y", "-v", "error", "-i", body]
-if mus:
-    off, bpm = mus
-    cmd += ["-ss", f"{off:.3f}", "-i", mp]
-    fc += (f";[0:a]volume=1.0,highpass=f=40[g];[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,"
-           f"afade=t=in:st=0:d=0.4,afade=t=out:st={total-1.2:.2f}:d=1.2,volume=0.42[m];"
-           f"[g][m]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.2:LRA=9[a]")
+V5 = sp.get("style") == "v5"
+if V5:
+    # 2026-11-12 Gemini (asked "how do COD Shorts reach millions"): no card/frame - full-bleed 9:16 crop kept a bit right
+    # of centre (gun + target), hook in yellow with a thick black outline at 13 % height, one punchy word popping on the hit,
+    # no fade to black (the end loops into the start), self-made riser + sub boom on the slow-motion hit, music louder.
+    def yl(i, ln, fs2):
+        return (f"drawtext=fontfile='{FONT}':text='{esc(ln)}':fontsize={fs2}:fontcolor=0xFFE600:borderw=7:bordercolor=black:"
+                f"x=(w-text_w)/2:y={int(1920*0.12) + i*int(fs2*1.12)}")
+    fs2 = 92 if len(lines) <= 2 else 76
+    pop = esc((sp.get("pop") or "NO MERCY").upper())
+    fc = ("[0:v]crop=ih*9/16:ih:(iw-ow)*0.55:0,scale=1080:1920:flags=lanczos,unsharp=5:5:0.55,setsar=1,"
+          + ",".join(yl(i, ln, fs2) for i, ln in enumerate(lines[:2])) + ","
+          f"drawtext=fontfile='{FONT}':text='{pop}':fontcolor=white:borderw=8:bordercolor=0xE0201B:x=(w-text_w)/2:y=h*0.60:"
+          f"fontsize='110+40*max(0,1-(t-{HIT:.2f})*6)':enable='between(t,{HIT:.2f},{HIT+1.1:.2f})',"
+          f"eq=brightness='if(lt(t,0.12),0.18,0)':eval=frame[v]")
+    sfx = (f"aevalsrc='0.35*sin(2*PI*(300+3000*(t/0.4)^2)*t)*(t/0.4)':d=0.4,aformat=channel_layouts=stereo,adelay={max(0,int((HIT-0.4)*1000))}|{max(0,int((HIT-0.4)*1000))}[rs];"
+           f"aevalsrc='0.9*sin(2*PI*52*t)*exp(-3.5*t)':d=1.2,aformat=channel_layouts=stereo,adelay={int(HIT*1000)}|{int(HIT*1000)}[bm];")
+    cmd = ["ffmpeg", "-y", "-v", "error", "-i", body]
+    if mus:
+        off, bpm = mus
+        cmd += ["-ss", f"{off:.3f}", "-i", mp]
+        fc += (f";{sfx}[0:a]volume=0.95,highpass=f=40[g];[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,"
+               f"afade=t=in:st=0:d=0.08,afade=t=out:st={total-0.12:.2f}:d=0.12,volume=0.68[m];"
+               f"[g][m][rs][bm]amix=inputs=4:normalize=0:duration=first,loudnorm=I=-13:TP=-1.0:LRA=8[a]")
+    else:
+        fc += f";{sfx}[0:a][rs][bm]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-13:TP=-1.0:LRA=8[a]"
 else:
-    fc += ";[0:a]loudnorm=I=-14:TP=-1.2:LRA=9[a]"
+    cmd = ["ffmpeg", "-y", "-v", "error", "-i", body]
+    if mus:
+        off, bpm = mus
+        cmd += ["-ss", f"{off:.3f}", "-i", mp]
+        fc += (f";[0:a]volume=1.0,highpass=f=40[g];[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,"
+               f"afade=t=in:st=0:d=0.4,afade=t=out:st={total-1.2:.2f}:d=1.2,volume=0.42[m];"
+               f"[g][m]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.2:LRA=9[a]")
+    else:
+        fc += ";[0:a]loudnorm=I=-14:TP=-1.2:LRA=9[a]"
 cmd += ["-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", "60"] + venc(17) + \
        ["-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-t", f"{total:.3f}", "-movflags", "+faststart", out + ".part.mp4"]
 run(cmd)
