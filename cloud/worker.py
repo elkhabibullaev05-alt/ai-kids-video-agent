@@ -425,9 +425,13 @@ def gemini_note(path, title, kind):
         return None
     env = dict(os.environ, GEMINI_API_KEY=open(kf[0]).read().strip())
     try:
-        p = subprocess.run([PY, os.path.join(ROOT, "cloud", "tools", "watch", "scripts", "watch.py"), path, "--engine", "gemini",
-                            "--question", GEM_Q.format(kind=kind, title=title)], capture_output=True, text=True, env=env, timeout=900)
-        txt = (p.stdout or "").replace(env["GEMINI_API_KEY"], "***")
+        for mdl in ("gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash"):   # 503 high demand -> next model
+            env["WATCH_GEMINI_MODEL"] = mdl
+            p = subprocess.run([PY, os.path.join(ROOT, "cloud", "tools", "watch", "scripts", "watch.py"), path, "--engine", "gemini",
+                                "--question", GEM_Q.format(kind=kind, title=title)], capture_output=True, text=True, env=env, timeout=900)
+            txt = (p.stdout or "").replace(env["GEMINI_API_KEY"], "***")
+            if "(failed)" not in txt:
+                break
     except Exception as e:
         return {"error": str(e)[:200]}
     if "(failed)" in txt:   # e.g. HTTP 503 high demand: keep going, note it
