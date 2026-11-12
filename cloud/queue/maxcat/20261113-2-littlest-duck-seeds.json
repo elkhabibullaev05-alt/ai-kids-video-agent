@@ -1,0 +1,1149 @@
+{
+ "id": "20261113-2-littlest-duck-seeds",
+ "plot": "At the park duck pond on an autumn evening Max wants to feed shy little duckling Peep, but greedy, fast Honk gobbles every seed and Max's long throw only sends Honk flying after it; Dog spots that Honk chases every splash and lures him away with ball splashes, yet Peep carries the seeds into the reeds instead of eating, and the twist is three tiny siblings in a nest, so with the bag empty Grandma's planted 'I always bring two of everything' second bag feeds everyone, Honk included, and the ducklings parade behind Max.",
+ "script": {
+  "title": "The Littlest Duck Gets No Food",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "peep": {
+    "name": "Peep",
+    "voice": "af_nicole",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     1.0,
+     0.85,
+     0.2
+    ],
+    "kind": "bird",
+    "size": 0.6,
+    "home": [
+     2,
+     9
+    ]
+   },
+   "honk": {
+    "name": "Honk",
+    "voice": "am_eric",
+    "speed": 1.1,
+    "pitch": -1,
+    "color": [
+     0.97,
+     0.97,
+     0.95
+    ],
+    "kind": "bird",
+    "size": 1.3,
+    "home": [
+     5,
+     11
+    ]
+   },
+   "chick1": {
+    "name": "Ducklings",
+    "voice": "af_sarah",
+    "speed": 1.2,
+    "pitch": 6,
+    "color": [
+     1.0,
+     0.9,
+     0.35
+    ],
+    "kind": "bird",
+    "size": 0.45,
+    "home": [
+     5,
+     11
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bag",
+    "type": "box",
+    "color": [
+     0.85,
+     0.75,
+     0.5
+    ],
+    "at": [
+     -5.0,
+     8.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "bag2",
+    "type": "box",
+    "color": [
+     0.85,
+     0.75,
+     0.5
+    ],
+    "at": [
+     -6.0,
+     8.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     6.5,
+     12.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Here, little duck! This seed is for you! Catch!",
+    "cam": "two:max,peep",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "peep",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Whoosh! The big white duck zooms across the pond and gobbles it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "honk",
+      "enter:right"
+     ],
+     [
+      "honk",
+      "to:1,9"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE LITTLEST DUCK GETS NOTHING!",
+    "cam": "close:peep",
+    "hold": 1.2,
+    "do": [
+     [
+      "peep",
+      "sad"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a golden autumn evening at the park duck pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-6,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Here's a little bag of duck seeds, Max. Not bread. Seeds.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "bag",
+      "show"
+     ],
+     [
+      "bag",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Bread makes ducks' tummies sore. Seeds keep them strong.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I always bring two of everything. Just in case.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Seeds! I'm going to feed the tiniest duck. The yellow one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The tiniest duck is Peep. She's small, fluffy and very shy.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "peep",
+    "say": "Peep. Peep peep. Um, hello, cat.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, Peep! I'm Max. I have seeds. Lots of seeds!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "peep",
+    "say": "Seeds? For me? Nobody ever saves seeds for me.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Peep keeps looking back at the tall reeds by the water.",
+    "cam": "two:max,peep",
+    "do": [
+     [
+      "peep",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why does she keep looking at the reeds? Is there a frog?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:4,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Maybe she likes reeds. Okay, Peep! Seed coming! Ready?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:peep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max throws one seed. It lands right next to Peep.",
+    "cam": "two:max,peep",
+    "do": [
+     [
+      "bag",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "HONK! HONK!",
+    "cam": "close:honk",
+    "hold": 1.0,
+    "do": [
+     [
+      "honk",
+      "to:2,9"
+     ],
+     [
+      "honk",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But big Honk gets there first. Gulp. Gone.",
+    "cam": "two:honk,peep",
+    "do": [
+     [
+      "honk",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Honk! Thank you, cat! Delicious! More, please! Honk!",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That was for Peep! But Honk is just so hungry.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And so fast! Like a feather rocket!",
+    "cam": "two:max,honk"
+   },
+   {
+    "who": "max",
+    "say": "I know! I'll throw it really, really far.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Honk can't swim that far. Nobody can!",
+    "cam": "two:max,peep"
+   },
+   {
+    "who": "narr",
+    "say": "Max spins his paw like a windmill.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "bag",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And he throws as hard as he can.",
+    "cam": "close:max"
+   },
+   {
+    "who": "narr",
+    "say": "The seed flies over Peep. Over the pond.",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Honk flies right after it, flap, flap, flap.",
+    "cam": "wide"
+   },
+   {
+    "who": "honk",
+    "say": "Honk! A flying snack! I love flying snacks!",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wow. That duck can fly AND swim. Not fair!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Peep still has nothing. And the bag is getting light.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Only a few seeds left!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Peep needs to eat before the sun goes down!",
+    "cam": "close:max"
+   },
+   {
+    "who": "dog",
+    "say": "Max, look. Every time something splashes, Honk swims to it.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Honk thinks every splash is food. I'm VERY good at splashing.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, that's brilliant! You splash over there, I feed Peep here!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs to the far side of the pond with his ball.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,12"
+     ],
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One, two, three... SPLASH!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Honk! Big snack! Biggest snack ever! Coming!",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Go, Dog! Throw it far! The biggest splash ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Honk paddles away as fast as he can. The plan is working!",
+    "cam": "wide",
+    "do": [
+     [
+      "honk",
+      "to:7,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now, Peep! Quick! This one is just for you.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,8"
+     ],
+     [
+      "bag",
+      "to:peep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Peep picks up the seeds in her beak.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But she doesn't eat them. Not even one.",
+    "cam": "close:peep"
+   },
+   {
+    "who": "narr",
+    "say": "She waddles away... straight into the tall reeds.",
+    "cam": "two:max,peep",
+    "do": [
+     [
+      "peep",
+      "to:4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Peep? Where are you going? Don't you like them?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max tiptoes after her and peeks behind the reeds.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "There, in a little nest, sit three more tiny ducklings!",
+    "cam": "wide",
+    "do": [
+     [
+      "chick1",
+      "enter:right"
+     ],
+     [
+      "chick1",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shhh. Tiptoe, tiptoe. What is behind these reeds?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "peep",
+    "say": "My brothers and sisters. They are too small to swim out yet.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You weren't hungry for you. You were feeding your family!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:peep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One, two, three! Three more baby ducks!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "peep",
+    "say": "Shhh. They are sleepy, but they are very hungry.",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But four ducklings need lots of seeds! And my bag is empty!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ],
+     [
+      "bag",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun is low. And Honk is swimming back.",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Honk? That splash was just a ball. Where's the snack?",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! Did you really bring two of everything?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Two of everything, dear. Here's the second bag of seeds.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "bag2",
+      "show"
+     ],
+     [
+      "bag2",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hooray! Enough for Peep, three ducklings, and even Honk!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Honk, you get some too! But you have to wait your turn.",
+    "cam": "two:max,honk",
+    "do": [
+     [
+      "max",
+      "turn:honk"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Wait? Honk is not good at waiting. But okay. Honk.",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Honk... honk... Okay. Honk can wait. A little.",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max puts a little pile by the nest, and one for Honk.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Peep and the three ducklings eat and eat. Peep peep peep!",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "happy"
+     ],
+     [
+      "chick1",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And I got the ball back! Splash team for the win!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,8"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Good waiting, Honk! Here's your pile. All for you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:honk"
+     ]
+    ]
+   },
+   {
+    "who": "honk",
+    "say": "Honk! Best cat in the park! Honk honk!",
+    "cam": "close:honk",
+    "do": [
+     [
+      "honk",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then something funny happens. The ducklings line up behind Max.",
+    "cam": "wide",
+    "do": [
+     [
+      "chick1",
+      "to:2,9"
+     ],
+     [
+      "peep",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why are they following me? I'm not a duck! I'm a cat!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,8"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You fed them, Max. Now you're their favorite.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max walks along the pond, and a duck parade waddles behind.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,8"
+     ],
+     [
+      "peep",
+      "to:-1,9"
+     ],
+     [
+      "chick1",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Left, right, left, right! Quack! I mean... meow!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Make sure everyone gets some. The smallest ones too.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I be in the parade too? I'll walk at the back!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,8"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I come back with more seeds. Two bags, like Grandma!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "peep",
+    "say": "Peep peep! See you tomorrow, Duck Cat!",
+    "cam": "close:peep",
+    "do": [
+     [
+      "peep",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Littlest Duck Gets NO Food! 🦆",
+  "description": "\"I only wanted to give one seed to the smallest duck. Why is that so hard?\" 🐱\nAt the park pond on an autumn evening, Max tries to feed shy little Peep, but big hungry Honk grabs every seed first. And why does Peep keep running into the reeds? Max the Curious Cat, Ep 48.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "feeding ducks",
+   "duck pond",
+   "ducklings",
+   "sharing",
+   "park",
+   "autumn evening",
+   "kindness",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "NOT FOR YOU!",
+  "thumb_beat": 31,
+  "localizations": {
+   "es": {
+    "title": "¡El patito más pequeño se queda sin comida! 🦆",
+    "description": "\"Solo quería darle una semilla al pato más pequeño. ¿Por qué es tan difícil?\" 🐱\nEn el estanque del parque, una tarde de otoño, Max intenta alimentar a la tímida Pío, pero el gran y hambriento Honk se lleva cada semilla. ¿Y por qué Pío corre siempre hacia los juncos? Max el Gato Curioso, Ep. 48.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "O patinho menor fica SEM comida! 🦆",
+    "description": "\"Eu só queria dar uma semente para o menor patinho. Por que é tão difícil?\" 🐱\nNo lago do parque, numa tarde de outono, Max tenta alimentar a tímida Piu, mas o grandão faminto Honk pega todas as sementes primeiro. E por que a Piu vive correndo para os juncos? Max, o Gato Curioso, Ep. 48.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "أصغر بطة لا تحصل على أي طعام! 🦆",
+    "description": "\"أردت فقط أن أعطي بذرة واحدة لأصغر بطة. لماذا هذا صعب جدًا؟\" 🐱\nعند بركة الحديقة في مساء خريفي، يحاول ماكس إطعام البطة الخجولة بيب، لكن البط الكبير الجائع هونك يخطف كل بذرة أولًا. ولماذا تركض بيب دائمًا نحو القصب؟ ماكس القط الفضولي، الحلقة 48.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Le plus petit canard n'a RIEN à manger ! 🦆",
+    "description": "\"Je voulais juste donner une graine au plus petit canard. Pourquoi c'est si dur ?\" 🐱\nAu bord de la mare du parc, un soir d'automne, Max veut nourrir la timide Piou, mais le grand Honk affamé attrape chaque graine en premier. Et pourquoi Piou file-t-elle toujours dans les roseaux ? Max le Chat Curieux, ép. 48.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "いちばん小さいアヒルだけ、ごはんがない！🦆",
+    "description": "「いちばん小さいアヒルに種をひとつあげたいだけなのに、どうしてこんなにむずかしいの？」🐱\n秋の夕方、公園の池でマックスははずかしがりやのピープにえさをあげたいのに、大きくて食いしんぼうのホンクがぜんぶ先に食べちゃう。それにピープはどうしていつも草むらへ走っていくの？好奇心いっぱいのねこマックス 第48話\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "제일 작은 오리만 먹이를 못 먹어요! 🦆",
+    "description": "\"제일 작은 오리에게 씨앗 하나 주고 싶었을 뿐인데, 왜 이렇게 어려워?\" 🐱\n가을 저녁 공원 연못에서 맥스는 수줍은 아기 오리 피프에게 먹이를 주려 하지만, 크고 배고픈 홍크가 씨앗을 전부 먼저 먹어 버려요. 그리고 피프는 왜 자꾸 갈대숲으로 달려갈까요? 호기심 많은 고양이 맥스 48화\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Das kleinste Entlein bekommt NICHTS! 🦆",
+    "description": "\"Ich wollte dem kleinsten Entlein nur einen Samen geben. Warum ist das so schwer?\" 🐱\nAm Ententeich im Park, an einem Herbstabend, will Max die schüchterne Piep füttern, doch der große, hungrige Honk schnappt sich jeden Samen zuerst. Und warum läuft Piep immer wieder ins Schilf? Max, die neugierige Katze, Folge 48.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 15,
+   "dur": 20,
+   "top": "THIS ONE IS FOR PEEP...",
+   "title": "The Fastest Duck in the Whole Park! 🦆 #shorts",
+   "description": "Max throws a seed for little Peep... HONK! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "ducks",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El pato más rápido de todo el parque! 🦆 #shorts",
+     "description": "Max lanza una semilla para la pequeña Pío... ¡HONK! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O pato mais rápido do parque inteiro! 🦆 #shorts",
+     "description": "Max joga uma semente para a pequena Piu... HONK! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أسرع بطة في الحديقة كلها! 🦆 #shorts",
+     "description": "يرمي ماكس بذرة للصغيرة بيب... هونك! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le canard le plus rapide du parc ! 🦆 #shorts",
+     "description": "Max lance une graine pour la petite Piou... HONK ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "公園でいちばん速いアヒル！🦆 #shorts",
+     "description": "マックスが小さなピープに種を投げたら…ホンク！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "공원에서 제일 빠른 오리! 🦆 #shorts",
+     "description": "맥스가 꼬마 피프에게 씨앗을 던졌는데... 홍크! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die schnellste Ente im ganzen Park! 🦆 #shorts",
+     "description": "Max wirft einen Samen für die kleine Piep... HONK! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1036 @@
+{
+ "id": "20261112-3-island-cat-tide",
+ "plot": "On a windy autumn beach day Max walks sideways with Pinch the crab on a big rock and forgets to watch the water until the sea surrounds him; one jump to a slippery rock only wets his front paws, so he stays put and sends Bird for help, dips his scarf and finds the water is very shallow, and the twist is that 'Super Dog' can't swim because the sea only reaches his ankles while Grandma (planted: tall rain boots, 'flat like a plate') strolls over, and Dog carries Max back as a dry 'dog boat'.",
+ "script": {
+  "title": "Stuck on a Rock as the Sea Comes In",
+  "set": {
+   "place": "beach",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "pinch": {
+    "name": "Pinch",
+    "voice": "af_nicole",
+    "speed": 1.15,
+    "pitch": 4,
+    "color": [
+     0.9,
+     0.22,
+     0.15
+    ],
+    "kind": "mouse",
+    "size": 0.7,
+    "home": [
+     2,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "rock",
+    "type": "box",
+    "color": [
+     0.45,
+     0.43,
+     0.42
+    ],
+    "at": [
+     0.0,
+     13.5,
+     0.4
+    ],
+    "visible": true,
+    "scale": 1.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Bird! Water all around my rock! Where did the sand go?",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:0,12"
+     ],
+     [
+      "bird",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My paws can't get wet! Cats and water? No, no, no!",
+    "cam": "close:max",
+    "do": [
+     [
+      "bird",
+      "to:2,13"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "STUCK AS THE SEA COMES IN!",
+    "cam": "prop:rock",
+    "hold": 1.2,
+    "do": [
+     [
+      "rock",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Twenty minutes earlier. A cool, windy autumn day at the beach.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma sits on her blanket in her tall green rain boots.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The sea comes in slowly here.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The sand is flat, like a big plate.",
+    "cam": "close:grandma"
+   },
+   {
+    "who": "grandma",
+    "say": "So stay close, Max. And keep an eye on the water.",
+    "cam": "two:max,grandma"
+   },
+   {
+    "who": "max",
+    "say": "I will! I'm only going to the big rock.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Just for one little look. Back in a minute!",
+    "cam": "close:max"
+   },
+   {
+    "who": "bird",
+    "say": "There's a tiny crab on the big rock! Come and see!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:1,13"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks across the wet sand to the big rock.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Behind him, the waves are still far away.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "On top sits a tiny red crab. Her name is Pinch.",
+    "cam": "close:pinch",
+    "do": [
+     [
+      "pinch",
+      "enter:right"
+     ],
+     [
+      "pinch",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "pinch",
+    "say": "Hello, big cat. Walk sideways, like me. It's much more fun.",
+    "cam": "close:pinch",
+    "do": [
+     [
+      "pinch",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Sideways? Okay! Step, step, step... I'm a crab cat!",
+    "cam": "two:max,pinch",
+    "do": [
+     [
+      "max",
+      "to:-1,12"
+     ],
+     [
+      "max",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ha! Max the sideways cat! Do it again!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Step, step, step. Click, click, click. I'm the best crab ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,12"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks sideways, back and forth, for a long, long time.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-1,12"
+     ],
+     [
+      "max",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And nobody watches the water. Not even once.",
+    "cam": "prop:rock",
+    "do": [
+     [
+      "rock",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Swish. Swish. The waves come in and fill the sand.",
+    "cam": "wide",
+    "do": [
+     [
+      "pinch",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. Why are my toes cold? Why is the sand shiny?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Water! Water on the left! Water on the right! Everywhere!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Your rock is an island now! A tiny cat island!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:2,14"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I have to get back to Grandma before the water gets higher!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A little rock sticks out of the water near the big one.",
+    "cam": "prop:rock",
+    "do": [
+     [
+      "rock",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll jump to that little rock. Then I'll run! Easy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "text": "ONE... TWO... JUMP!",
+    "cam": "two:max,bird",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps. But the little rock is slippery and green.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,10"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His front paws go splash, right into the cold sea.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cold! Wet! Yuck! Back, back, back!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,12"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max scrambles back up the big rock. His paws drip.",
+    "cam": "prop:rock",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The water is coming up! My rock is getting smaller!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Don't move, Max! I'll fly and get help. Fast as I can!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-4,8"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now Max is all alone on the rock. Well, nearly alone.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pinch",
+    "say": "Why are you so scared, big cat? I'm not scared at all.",
+    "cam": "close:pinch",
+    "do": [
+     [
+      "pinch",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You're a crab! You like water!",
+    "cam": "two:max,pinch",
+    "do": [
+     [
+      "max",
+      "turn:pinch"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm a cat! I'm a dry cat! Dry!",
+    "cam": "two:max,pinch"
+   },
+   {
+    "who": "pinch",
+    "say": "Look down. I walk to my home on the bottom every day.",
+    "cam": "close:pinch",
+    "do": [
+     [
+      "pinch",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max dips the end of his long red scarf into the water.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He pulls it up. Only the very tip is wet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Huh? The sea is only as deep as a mouse?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Is that right? It looks so big!",
+    "cam": "close:max"
+   },
+   {
+    "who": "narr",
+    "say": "But the sea makes a big wave noise, and Max isn't sure.",
+    "cam": "wide",
+    "do": [
+     [
+      "rock",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, across the beach, comes a very loud splash.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Max! Super Dog is coming to rescue you!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,10"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs into the sea, ready to swim like a hero.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the water only comes up to Dog's ankles.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you're walking in the sea! Like a dog on stilts!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Huh? I can't swim. It's too shallow to swim. I'm just... walking.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And behind Dog walks Grandma, in her tall green rain boots.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Splish, splosh. Remember, Max? Flat like a plate.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Flat like a plate! So I was never really on an island?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No, dear. But you were right to stay on the rock.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And you were right to send Bird for help.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:1,13"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Fastest help in the whole beach! Did you see me fly?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But I still don't want wet paws. Not one more drop.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then climb on my back! I'm a dog boat! All aboard!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:0,11"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs onto Dog's back and holds on with all four paws.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Goodbye, Pinch! Thank you for the sideways lesson!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:pinch"
+     ]
+    ]
+   },
+   {
+    "who": "pinch",
+    "say": "Next time, big cat, watch the water and the sand.",
+    "cam": "close:pinch",
+    "do": [
+     [
+      "pinch",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Splish, splosh, splish. The dog boat walks back to the blanket.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-4,8"
+     ],
+     [
+      "max",
+      "to:-4,8"
+     ],
+     [
+      "grandma",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Captain Dog says: dry cat delivered! Toot toot!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps down onto the dry, warm blanket.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-5,7"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Not a single wet toe. Well, maybe two.",
+    "cam": "two:max,grandma"
+   },
+   {
+    "who": "max",
+    "say": "Grandma, I promise. Next time I watch the water, not my feet.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's my clever cat. Now, who wants a warm towel cuddle?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the beach, always keep an eye on the sea.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And if you're stuck, call for help.",
+    "cam": "wide"
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I'm teaching Grandma to walk sideways like a crab!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "In my rain boots? Oh dear. Sideways it is!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Stuck on a Rock as the Sea Comes In! 🌊",
+  "description": "\"I only looked at a crab for one minute. Now there's water everywhere!\" 🐱\nOn a windy autumn day at the beach, Max is so busy walking sideways with Pinch the crab that the sea sneaks in all around his rock. How will a cat who hates wet paws get back to Grandma? Max the Curious Cat, Ep 46.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "beach",
+   "tide",
+   "sea",
+   "crab",
+   "beach safety",
+   "autumn beach",
+   "wet paws",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "WATER EVERYWHERE!",
+  "thumb_beat": 21,
+  "localizations": {
+   "es": {
+    "title": "¡Atrapado en una roca mientras sube el mar! 🌊",
+    "description": "\"Solo miré un cangrejo un minuto. ¡Y ahora hay agua por todas partes!\" 🐱\nEn un día de otoño con viento en la playa, Max está tan ocupado caminando de lado con Pinzas el cangrejo que el mar rodea su roca. ¿Cómo volverá con la abuela un gato que odia mojarse las patas? Max el Gato Curioso, Ep. 46.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Preso numa pedra com o mar subindo! 🌊",
+    "description": "\"Eu só olhei um caranguejo por um minuto. Agora tem água por todo lado!\" 🐱\nNum dia de outono com vento na praia, Max está tão ocupado andando de lado com a caranguejinha Pinça que o mar cerca a pedra dele. Como um gato que odeia patas molhadas vai voltar para a vovó? Max, o Gato Curioso, Ep. 46.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "عالق على صخرة والبحر يقترب! 🌊",
+    "description": "\"نظرت إلى سلطعون دقيقة واحدة فقط. والآن الماء في كل مكان!\" 🐱\nفي يوم خريفي عاصف على الشاطئ، ينشغل ماكس بالمشي جانبيًا مع السلطعونة بِنش حتى يحيط البحر بصخرته. كيف سيعود قطّ يكره الأقدام المبللة إلى الجدة؟ ماكس القط الفضولي، الحلقة 46.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Coincé sur un rocher, la mer monte ! 🌊",
+    "description": "\"J'ai juste regardé un crabe une minute. Maintenant il y a de l'eau partout !\" 🐱\nPar une journée d'automne venteuse à la plage, Max est si occupé à marcher de côté avec Pince la crabe que la mer entoure son rocher. Comment un chat qui déteste les pattes mouillées va-t-il rejoindre Mamie ? Max le Chat Curieux, ép. 46.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "海がきた！岩の上から出られない！🌊",
+    "description": "「カニを1分見てただけなのに、まわりが水だらけ！」🐱\n風の強い秋の海で、マックスはカニのピンチと横歩きに夢中。気づくと岩のまわりは海に。足がぬれるのが大きらいなねこは、おばあちゃんのところへ帰れるかな？好奇心いっぱいのねこマックス 第46話\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "바닷물이 차올라 바위에 갇혔어요! 🌊",
+    "description": "\"게를 딱 1분 봤을 뿐인데, 사방이 물이야!\" 🐱\n바람 부는 가을 바닷가, 맥스는 꼬마 게 핀치와 옆걸음 놀이에 푹 빠졌다가 바위가 바닷물에 둘러싸인 걸 알게 돼요. 발 젖는 게 싫은 고양이는 할머니에게 어떻게 돌아갈까요? 호기심 많은 고양이 맥스 46화\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Auf dem Felsen gefangen – das Meer kommt! 🌊",
+    "description": "\"Ich habe nur eine Minute eine Krabbe angeschaut. Jetzt ist überall Wasser!\" 🐱\nAn einem windigen Herbsttag am Strand läuft Max so lange seitwärts mit Krabbe Zwick, dass das Meer seinen Felsen umringt. Wie kommt eine Katze, die nasse Pfoten hasst, zurück zu Oma? Max, die neugierige Katze, Folge 46.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 20,
+   "dur": 22,
+   "top": "WHERE DID THE SAND GO?",
+   "title": "Cat on a Tiny Island! 🌊 #shorts",
+   "description": "The sea came in and Max is stuck on a rock! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "beach",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Un gato en una islita! 🌊 #shorts",
+     "description": "¡El mar subió y Max quedó atrapado en una roca! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Gato numa ilha pequenininha! 🌊 #shorts",
+     "description": "O mar subiu e o Max ficou preso numa pedra! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قطّ على جزيرة صغيرة! 🌊 #shorts",
+     "description": "جاء البحر وعلق ماكس على صخرة! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un chat sur une toute petite île ! 🌊 #shorts",
+     "description": "La mer est montée et Max est coincé sur un rocher ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ねこが小さな島に！🌊 #shorts",
+     "description": "海がきて、マックスが岩から出られない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "작은 섬에 갇힌 고양이! 🌊 #shorts",
+     "description": "바닷물이 차올라 맥스가 바위에 갇혔어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Katze auf einer winzigen Insel! 🌊 #shorts",
+     "description": "Das Meer kam und Max sitzt auf einem Felsen fest! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

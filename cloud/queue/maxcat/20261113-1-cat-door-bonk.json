@@ -1,0 +1,1150 @@
+{
+ "id": "20261113-1-cat-door-bonk",
+ "plot": "Grandma fits a new cat door so Max can go out alone in winter, but its flap bonks his nose every time he pushes slowly and stops; Dog's demo gets him stuck half in, half out, and Max nearly gives up and misses the afternoon leaf chase, until Mouse's toss sends his red ball rolling through the flap and Max chases it straight outside without stopping, discovering Grandma's planted rule ('it opens for anyone who doesn't stop'), and he becomes a proud in-and-out door expert.",
+ "script": {
+  "title": "Max vs the New Cat Door",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "flap",
+    "type": "box",
+    "color": [
+     0.75,
+     0.9,
+     1.0
+    ],
+    "at": [
+     -6.5,
+     13.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "ball",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     -3.0,
+     8.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Bonk! Ow! The new door hit me right on the nose!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:-6,12"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's not a door! That's a nose-bonker!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "WILL MAX EVER GO THROUGH?",
+    "cam": "prop:flap",
+    "hold": 1.2,
+    "do": [
+     [
+      "flap",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a chilly autumn morning in Grandma's kitchen.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma has a brand new present for Max. A cat door!",
+    "cam": "prop:flap",
+    "do": [
+     [
+      "flap",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Winter is coming, Max. Now you can go out by yourself.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No more waiting by the big door.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No more cold paws while I find my slippers.",
+    "cam": "two:max,grandma"
+   },
+   {
+    "who": "grandma",
+    "say": "The trick is easy. It opens for anyone who doesn't stop.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Doesn't stop? But I like stopping. Stopping is my favorite thing.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits in front of the little door. He looks at it.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's a square of see-through plastic. It swings a little.",
+    "cam": "prop:flap",
+    "do": [
+     [
+      "flap",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Meow. Meeeow. Grandma, please open the big door for me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You have your own door now, dear. Try it!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes the flap with one paw. Very, very slowly.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The flap swings out... then swings back. Bonk!",
+    "cam": "prop:flap",
+    "do": [
+     [
+      "flap",
+      "spin"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It bonked me again! It's a biting door!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm not going in there! Never, ever!",
+    "cam": "close:max"
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Max. I'll show you how. Watch a pro!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts his big head through the little door.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His shoulders go through. Then his tummy... stops.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Um. I'm in the garden and the house at the same time.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My front is cold. My back is warm. My tail is confused.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Dog is stuck in the cat door! Wiggle, Dog, wiggle!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:-2,12"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Pull, Bird! I'll hold your tail, you hold my tail!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-5,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But nobody needs to pull. Dog just has to back up.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog wiggles backwards. Pop! He's out again, back in the house.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-3,10"
+     ],
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay. That door is a cat door. Not a dog door.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Good to know. Very, very good to know.",
+    "cam": "close:dog"
+   },
+   {
+    "who": "max",
+    "say": "See? Even Dog can't do it. I'll just stay inside forever.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Then who will chase the leaves with Bird this afternoon?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Leaf chasing? Today? I can't miss leaf chasing!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The big leaf pile by the fence! The crunchy one!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The crunchy one? That's the best one!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max has to learn the door before the leaf chase starts!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Plan: I stand very still and push it with my ear.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max pushes with his ear. The flap tickles his whiskers.",
+    "cam": "prop:flap",
+    "do": [
+     [
+      "flap",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hee hee! Stop tickling! No, stop! Okay, I'm stopping.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ],
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And every time he stops, the flap swings back. Bonk.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Leaf chase starts soon! The best leaves are falling now!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-1,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits down. His tail goes flat on the floor.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Maybe I'm a cat who just isn't good at doors.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse rolls Max's favorite toy past him. A little red ball.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:-3,8"
+     ],
+     [
+      "ball",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Cheer up, Max. Want to play catch? Here, catch!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "ball",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball bounces off Max's nose and rolls to the cat door.",
+    "cam": "prop:ball",
+    "do": [
+     [
+      "ball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max chases it. He runs. He doesn't think. He doesn't stop.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ],
+     [
+      "ball",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOSH! FLAP-FLAP!",
+    "cam": "prop:flap",
+    "hold": 1.0,
+    "do": [
+     [
+      "flap",
+      "spin"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The ball rolls through the flap, and so does Max!",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I got the ball! Wait. Why is it so cold?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why is there grass under my paws?",
+    "cam": "close:max"
+   },
+   {
+    "who": "bird",
+    "say": "Max! You're outside! You went right through the door!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-6,14"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I did? I didn't even see the door.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I only saw the ball! Just the ball!",
+    "cam": "close:max"
+   },
+   {
+    "who": "grandma",
+    "say": "That's the secret, Max. Don't stop in the middle. Just keep going.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It opens for anyone who doesn't stop! Grandma said it this morning!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now Max wants to try again. On purpose this time.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Back inside. Head down. Walk. Don't stop. Don't stop!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flap! Max is back in the kitchen.",
+    "cam": "prop:flap",
+    "do": [
+     [
+      "flap",
+      "bounce"
+     ],
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The flap lies on his back like a soft blanket.",
+    "cam": "prop:flap"
+   },
+   {
+    "who": "max",
+    "say": "In! Now out! Now in! Now out! I'm a door expert!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Slow down! You're making me dizzy, door expert!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Flap, flap, flap. Max goes in and out ten times.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,14"
+     ],
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, I'm sorry it's a cat door. You can't come through.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That's okay. I have a door too. The big one. With Grandma.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Leaf chase time! Everybody out! Cat door or big door!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs through his door. Grandma opens the big one for Dog.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,14"
+     ],
+     [
+      "dog",
+      "to:-6,14"
+     ],
+     [
+      "mouse",
+      "to:-5,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Mouse? Mouse rides through on Max's tail.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "New things feel strange at first. Then you try once more!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, catch that big orange one! It's spinning!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-6,15"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Got it! And I came out all by myself!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "When something new feels scary, take a breath and try again.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, I'm teaching Mouse to use her own tiny door!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "My own door? Can mine be a red one?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The New Cat Door Keeps Bonking Max! 🚪",
+  "description": "\"Grandma says it's a door. I say it's a nose-bonker.\" 🐱\nWinter is coming, and Grandma gives Max his very own cat door, but every slow push ends in a BONK. Dog tries to help and gets stuck halfway! Can Max learn the door before the afternoon leaf chase? Max the Curious Cat, Ep 47.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "cat door",
+   "cat flap",
+   "new things",
+   "trying again",
+   "dog stuck",
+   "autumn morning",
+   "grandma",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "BONK!",
+  "thumb_beat": 16,
+  "localizations": {
+   "es": {
+    "title": "¡La nueva gatera no deja de golpear a Max! 🚪",
+    "description": "\"La abuela dice que es una puerta. Yo digo que es un golpea-narices.\" 🐱\nLlega el invierno y la abuela le regala a Max su propia gatera, pero cada empujón lento termina en un ¡BONK! ¡Perro intenta ayudar y se queda atascado a la mitad! ¿Aprenderá Max a usarla antes de la carrera de hojas de la tarde? Max el Gato Curioso, Ep. 47.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "A portinha nova não para de bater no Max! 🚪",
+    "description": "\"A vovó diz que é uma porta. Eu digo que é um bate-nariz.\" 🐱\nO inverno está chegando e a vovó dá ao Max a sua própria portinha de gato, mas cada empurrão devagar termina num BONK! O Cachorro tenta ajudar e fica entalado no meio! Será que o Max aprende antes da caça às folhas da tarde? Max, o Gato Curioso, Ep. 47.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "باب القطط الجديد يضرب ماكس كل مرة! 🚪",
+    "description": "\"الجدة تقول إنه باب. وأنا أقول إنه ضارب أنوف.\" 🐱\nالشتاء قادم، والجدة تهدي ماكس بابًا خاصًا للقطط، لكن كل دفعة بطيئة تنتهي بـ بونك! يحاول الكلب المساعدة فيعلق في المنتصف! هل يتعلم ماكس الباب قبل مطاردة الأوراق بعد الظهر؟ ماكس القط الفضولي، الحلقة 47.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "La nouvelle chatière cogne Max sans arrêt ! 🚪",
+    "description": "\"Mamie dit que c'est une porte. Moi je dis que c'est un cogne-nez.\" 🐱\nL'hiver arrive et Mamie offre à Max sa propre chatière, mais chaque poussée lente finit en BONK ! Chien veut aider et reste coincé à moitié ! Max apprendra-t-il la porte avant la chasse aux feuilles de l'après-midi ? Max le Chat Curieux, ép. 47.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "新しいねこドアがマックスの鼻をゴツン！🚪",
+    "description": "「おばあちゃんはドアだって言うけど、これは鼻ゴツン機だよ！」🐱\nもうすぐ冬。おばあちゃんがマックス専用のねこドアをつけてくれたけど、ゆっくり押すたびにゴツン！手伝おうとしたイヌは途中でつっかえちゃった！午後の落ち葉おいかけっこまでに、マックスはドアを通れるかな？好奇心いっぱいのねこマックス 第47話\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "새 고양이 문이 자꾸 맥스 코를 쿵! 🚪",
+    "description": "\"할머니는 문이래요. 내가 보기엔 코 때리는 기계예요.\" 🐱\n겨울이 다가오자 할머니가 맥스만의 고양이 문을 달아 주었지만, 천천히 밀 때마다 쿵! 도와주려던 강아지는 중간에 끼어 버렸어요! 맥스는 오후 낙엽 잡기 전에 문을 통과할 수 있을까요? 호기심 많은 고양이 맥스 47화\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Die neue Katzenklappe haut Max immer! 🚪",
+    "description": "\"Oma sagt, das ist eine Tür. Ich sage, das ist ein Nasenhauer.\" 🐱\nDer Winter kommt, und Oma schenkt Max seine eigene Katzenklappe, doch jeder langsame Schubs endet mit BONK! Hund will helfen und bleibt in der Mitte stecken! Lernt Max die Klappe vor der Blätterjagd am Nachmittag? Max, die neugierige Katze, Folge 47.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 18,
+   "dur": 20,
+   "top": "WATCH A PRO...",
+   "title": "Dog Got Stuck in the CAT Door! 🐶 #shorts",
+   "description": "Dog wanted to show Max how... and now he's half outside! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "cat door",
+    "funny dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Perro se atascó en la gatera! 🐶 #shorts",
+     "description": "Perro quería enseñarle a Max... ¡y ahora está medio afuera! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Cachorro entalou na portinha de gato! 🐶 #shorts",
+     "description": "O Cachorro queria mostrar ao Max... e agora está meio lá fora! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب علق في باب القطط! 🐶 #shorts",
+     "description": "أراد الكلب أن يُري ماكس الطريقة... والآن نصفه في الخارج! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chien est coincé dans la chatière ! 🐶 #shorts",
+     "description": "Chien voulait montrer à Max... et le voilà à moitié dehors ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌがねこドアにつっかえた！🐶 #shorts",
+     "description": "お手本を見せるはずが…半分だけ外に！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 고양이 문에 끼었어요! 🐶 #shorts",
+     "description": "맥스에게 보여 주려다... 반만 밖으로 나갔어요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Hund steckt in der Katzenklappe fest! 🐶 #shorts",
+     "description": "Hund wollte es Max zeigen... und ist jetzt halb draußen! Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 0,
+   "dur": 18,
+   "top": "BONK!",
+   "title": "When the Door Bonks Back 😹 #shorts",
+   "description": "Max's new door has a mind of its own! Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "cat door",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Cuando la puerta te devuelve el golpe 😹 #shorts",
+     "description": "¡La nueva puerta de Max hace lo que quiere! Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quando a porta bate de volta 😹 #shorts",
+     "description": "A porta nova do Max faz o que quer! Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "عندما يرد الباب الضربة 😹 #shorts",
+     "description": "باب ماكس الجديد يفعل ما يشاء! الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quand la porte te cogne en retour 😹 #shorts",
+     "description": "La nouvelle porte de Max n'en fait qu'à sa tête ! Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ドアにゴツンされたねこ 😹 #shorts",
+     "description": "マックスの新しいドアは言うことをきかない！本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "문이 쿵 하고 되받아칠 때 😹 #shorts",
+     "description": "맥스의 새 문은 제멋대로예요! 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wenn die Tür zurückhaut 😹 #shorts",
+     "description": "Max' neue Tür macht, was sie will! Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

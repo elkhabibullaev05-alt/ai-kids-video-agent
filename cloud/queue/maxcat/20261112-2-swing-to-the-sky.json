@@ -1,0 +1,1152 @@
+{
+ "id": "20261112-2-swing-to-the-sky",
+ "plot": "On a windy autumn evening Max wants to swing so high on Grandma's old tree swing that his paw touches the last red leaves, but Dog's one giant push only spins him into the apple basket; Dog, who has watched the kids every day, teaches the 'kick to the sky, tuck to the ground' rhythm, then admits he has never been on a swing himself, so Max teaches big Dog to swing on his tummy and taps the last red leaf at sunset.",
+ "script": {
+  "title": "Can Max Touch the Sky on a Swing?",
+  "set": {
+   "place": "garden",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "swing",
+    "type": "box",
+    "color": [
+     0.55,
+     0.35,
+     0.18
+    ],
+    "at": [
+     3.0,
+     9.0,
+     0.9
+    ],
+    "visible": true,
+    "scale": 0.55
+   },
+   {
+    "id": "leaf",
+    "type": "star",
+    "color": "red",
+    "at": [
+     3.0,
+     11.0,
+     6.0
+    ],
+    "visible": true,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "The old swing is free! Today my paws touch those red leaves!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:2,8"
+     ],
+     [
+      "dog",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Up, up, up to the very top branch! Watch me!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "CAN MAX TOUCH THE SKY?",
+    "cam": "prop:leaf",
+    "hold": 1.2,
+    "do": [
+     [
+      "leaf",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a windy autumn evening in Grandma's garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "grandma",
+      "to:-5,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's old wooden swing hangs from the apple tree.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "swing",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I swung on that swing when I was a little girl.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I kicked so high, my shoes touched the leaves.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I can too! Cats are the best jumpers ever!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'll sit right here and watch. I'm a watching dog.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:5,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sits by this swing every single day.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But he never, ever gets on it.",
+    "cam": "close:dog"
+   },
+   {
+    "who": "narr",
+    "say": "Max hops onto the seat. He wiggles. He wobbles.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Go, swing! Go up! Why aren't we going anywhere?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The swing does not go up. It only turns a tiny bit.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "swing",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Is your swing asleep, Max? It's hardly moving!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:2,11"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It needs a push. A really, really big push!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "A big push? I'm the best big pusher in town!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs back. Then he runs forward, super fast.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:7,11"
+     ],
+     [
+      "dog",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOOSH!",
+    "cam": "prop:swing",
+    "hold": 1.0,
+    "do": [
+     [
+      "swing",
+      "spin"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm spinning! The tree is spinning! The whole garden is spinning!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The swing twists round and round, and Max flies off.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-3,7"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plop! Right into Grandma's basket of red apples.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I didn't touch the sky. I touched an apple. With my nose.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, you have an apple on your head! Like a hat!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-1,9"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Very funny, Bird. Very, very funny.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ha! Apple-nose Max! The flying apple cat!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "A swing doesn't go up from one big push, dear.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then how? The sun is going down behind the house!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I don't swing high now, the red leaves fall tonight!",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The wind blows. One red leaf already floats down.",
+    "cam": "prop:leaf",
+    "do": [
+     [
+      "leaf",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait. I know how! I've watched the kids a hundred times!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,9"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "They all say the same thing. Kick to the sky!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then tuck to the ground! Kick, tuck! Kick, tuck!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Kick to the sky, tuck to the ground? That's a song!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max sits on the swing again. He holds on tight.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Going forward, legs out. Kick to the sky!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Going back, legs in. Tuck to the ground!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The swing goes a little bit. Then a little more.",
+    "cam": "wide",
+    "do": [
+     [
+      "swing",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "It's moving! It's really moving! Higher, Max!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:3,12"
+     ],
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Max is excited. He kicks at the wrong time.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oops! Kick, kick, tuck, kick? I lost the song!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The swing slows down. Max's paws drag in the dirt.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "swing",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Slow down your song. Swing first, then kick. Listen to it.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Swish forward, kick. Swish back, tuck. Swish, kick. Swish, tuck.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "HIGHER... HIGHER!",
+    "cam": "prop:swing",
+    "hold": 1.1,
+    "do": [
+     [
+      "swing",
+      "bounce"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look at him go! That's just how I did it!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you're the best teacher in the whole world!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now you show me! How high do you go?",
+    "cam": "close:max"
+   },
+   {
+    "who": "narr",
+    "say": "Dog's ears go flat. His tail stops wagging.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Um. I've never been on a swing. Not even once.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Never? But you know the whole kick-tuck song!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:2,8"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I only watched. Watching is easy. Swinging is scary-wobbly.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So that's why Dog always sat next to the swing.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next to it. Never on it.",
+    "cam": "wide"
+   },
+   {
+    "who": "max",
+    "say": "Then I'll teach you! Teachers can learn too, right Grandma?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Everyone can learn. Even big dogs. Even old grandmas.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog puts his front paws on the seat. It wobbles away.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ],
+     [
+      "swing",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Whoa! It's running away from me! Come back, swing!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sits on it, but he's too big for the seat.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He slides right off the back. Bump!",
+    "cam": "close:dog"
+   },
+   {
+    "who": "bird",
+    "say": "Dog is too big to sit! What now?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:2,11"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Try lying on your tummy! Like a dog on a sofa!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog lies on the swing, tummy down. His legs hang down.",
+    "cam": "prop:swing",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now walk back, lift your paws, and swish! Kick, tuck!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Swish! Kick! Tuck! I'm doing it! I'm really swinging!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "swing",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sun sinks. Only one red leaf is left on the branch.",
+    "cam": "prop:leaf",
+    "do": [
+     [
+      "leaf",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My turn! Last chance! Swish, kick! Swish, tuck!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "text": "HIGHER THAN EVER!",
+    "cam": "prop:swing",
+    "hold": 1.0,
+    "do": [
+     [
+      "swing",
+      "bounce"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max goes up, up, up, higher than ever before.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And his paw taps the very last red leaf.",
+    "cam": "close:max"
+   },
+   {
+    "who": "narr",
+    "say": "The leaf twirls down and lands right on Grandma's hat.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "leaf",
+      "bounce"
+     ],
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I touched the sky! Well, the top of the sky!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And I swung! On my tummy! Best day ever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "You learn by trying again, and teaching a friend is fun too.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow, Dog and I try the big slide in the park. Together!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "On my tummy?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Can Max Swing All the Way to the Sky? 🍂",
+  "description": "\"One big push and I'll touch the sky. How hard can it be?\" 🐱\nOn a windy autumn evening Max wants to reach the last red leaves from Grandma's old swing, but he can't make it go. Dog knows the secret song… and Dog has a secret of his own. Max the Curious Cat, Ep 45.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "learn to swing",
+   "swing",
+   "autumn",
+   "red leaves",
+   "dog and cat",
+   "grandma",
+   "learning new things",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "IT WON'T MOVE!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¿Puede Max columpiarse hasta el cielo? 🍂",
+    "description": "\"Un gran empujón y tocaré el cielo. ¿Qué tan difícil puede ser?\" 🐱\nEn una tarde de otoño con viento, Max quiere alcanzar las últimas hojas rojas desde el viejo columpio de la abuela, pero no logra moverlo. Perro conoce la canción secreta… y también tiene su propio secreto. Max el Gato Curioso, Ep. 45.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Max consegue balançar até o céu? 🍂",
+    "description": "\"Um empurrão bem forte e eu toco o céu. Que difícil pode ser?\" 🐱\nNuma tarde de outono com vento, Max quer alcançar as últimas folhas vermelhas no velho balanço da vovó, mas ele não sai do lugar. O Cachorro sabe a música secreta… e também tem um segredo. Max, o Gato Curioso, Ep. 45.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "هل يستطيع ماكس أن يتأرجح حتى السماء؟ 🍂",
+    "description": "\"دفعة واحدة كبيرة وألمس السماء. ما الصعب في ذلك؟\" 🐱\nفي مساء خريفي عاصف، يريد ماكس أن يصل إلى آخر الأوراق الحمراء من أرجوحة الجدة القديمة، لكنه لا يستطيع تحريكها. الكلب يعرف الأغنية السرية… ولديه سرّ خاص به أيضًا. ماكس القط الفضولي، الحلقة 45.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Max peut-il se balancer jusqu'au ciel ? 🍂",
+    "description": "\"Une grosse poussée et je touche le ciel. Ça ne doit pas être si dur !\" 🐱\nPar une soirée d'automne venteuse, Max veut atteindre les dernières feuilles rouges depuis la vieille balançoire de Mamie, mais elle ne bouge pas. Chien connaît la chanson secrète… et il cache aussi un secret. Max le Chat Curieux, ép. 45.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "マックス、ブランコで空までとどく？🍂",
+    "description": "「おもいきり押してもらえば、空にさわれるよね！」🐱\n風の強い秋の夕方、マックスはおばあちゃんの古いブランコで最後の赤い葉っぱにさわりたいのに、ブランコが動きません。イヌはひみつの歌を知っている…そしてイヌにもひみつがあるのです。好奇心いっぱいのねこマックス 第45話\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "맥스, 그네 타고 하늘까지 닿을까? 🍂",
+    "description": "\"한 번만 세게 밀면 하늘에 닿을 거야. 어렵지 않겠지?\" 🐱\n바람 부는 가을 저녁, 맥스는 할머니의 오래된 그네를 타고 마지막 빨간 잎에 닿고 싶지만 그네가 움직이지 않아요. 강아지는 비밀 노래를 알고 있어요… 그리고 강아지에게도 비밀이 있답니다. 호기심 많은 고양이 맥스 45화\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Schaukelt Max bis zum Himmel? 🍂",
+    "description": "\"Ein großer Schubs und ich berühre den Himmel. Wie schwer kann das sein?\" 🐱\nAn einem windigen Herbstabend will Max von Omas alter Schaukel die letzten roten Blätter erreichen, aber sie bewegt sich nicht. Hund kennt das geheime Lied… und hat selbst ein Geheimnis. Max, die neugierige Katze, Folge 45.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 15,
+   "dur": 20,
+   "top": "ONE BIG PUSH...",
+   "title": "Never Push a Cat on a Swing! 😹 #shorts",
+   "description": "One giant push... and where does Max land? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "swing",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Nunca empujes a un gato en el columpio! 😹 #shorts",
+     "description": "Un empujón gigante... ¿y dónde cae Max? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Nunca empurre um gato no balanço! 😹 #shorts",
+     "description": "Um empurrão gigante... e onde o Max vai parar? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لا تدفع القط على الأرجوحة أبدًا! 😹 #shorts",
+     "description": "دفعة عملاقة... وأين سيقع ماكس؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ne poussez jamais un chat sur une balançoire ! 😹 #shorts",
+     "description": "Une poussée géante... et où atterrit Max ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ねこのブランコを押しちゃダメ！😹 #shorts",
+     "description": "おもいきり押したら…マックスはどこへ？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "고양이 그네는 세게 밀면 안 돼요! 😹 #shorts",
+     "description": "엄청 세게 밀었더니... 맥스는 어디로? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Schubs niemals eine Katze auf der Schaukel! 😹 #shorts",
+     "description": "Ein Riesenschubs... und wo landet Max? Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 46,
+   "dur": 20,
+   "top": "DOG'S BIG SECRET...",
+   "title": "The Dog Who Never Swung 🐶 #shorts",
+   "description": "Dog taught Max everything... but why won't he get on? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "dog cartoon",
+    "swing"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El perro que nunca se columpió 🐶 #shorts",
+     "description": "Perro le enseñó todo a Max... ¿pero por qué no se sube? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O cachorro que nunca balançou 🐶 #shorts",
+     "description": "O Cachorro ensinou tudo ao Max... mas por que ele não sobe? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب الذي لم يتأرجح أبدًا 🐶 #shorts",
+     "description": "علّم الكلب ماكس كل شيء... فلماذا لا يركب هو؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le chien qui n'a jamais fait de balançoire 🐶 #shorts",
+     "description": "Chien a tout appris à Max... mais pourquoi ne monte-t-il pas ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ブランコにのったことがないイヌ 🐶 #shorts",
+     "description": "マックスに全部教えたイヌ…でもなぜ自分はのらないの？本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "그네를 한 번도 안 타 본 강아지 🐶 #shorts",
+     "description": "맥스에게 다 가르쳐 준 강아지... 그런데 왜 자기는 안 탈까? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Hund, der nie geschaukelt hat 🐶 #shorts",
+     "description": "Hund hat Max alles beigebracht... doch warum steigt er nicht auf? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
