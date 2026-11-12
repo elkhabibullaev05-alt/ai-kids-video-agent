@@ -18,6 +18,25 @@ Q = ("You are a harsh YouTube Shorts viewer and editor. Watch AND listen to this
 MODELS = ["gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash", "gemini-3.1-flash-lite"]
 
 
+def local_check(v):
+    """2026-11-12 owner: use BOTH ways every time. Local half: loudness, dead air, black frames, length + a 1 fps
+    contact sheet (<video>_sheet.jpg) that Claude looks at; written to <video>_mahalliy.txt."""
+    import json as _j
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", v, "-af", "ebur128", "-vf", "blackdetect=d=0.4:pix_th=0.08",
+                        "-f", "null", "-"], capture_output=True, text=True, timeout=600).stderr
+    lufs = (r.split("Integrated loudness:")[-1].split("LUFS")[0].split("I:")[-1].strip() if "Integrated loudness" in r else "?")
+    black = r.count("black_start")
+    dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", v],
+                         capture_output=True, text=True).stdout.strip()
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", v, "-vf", "fps=1,scale=216:384,tile=8x2", "-frames:v", "1", "-q:v", "4",
+                    os.path.splitext(v)[0] + "_sheet.jpg"], timeout=300)
+    rep = {"lufs": lufs, "qora_joylar": black, "uzunlik_s": dur,
+           "ogohlantirish": [w for w, c in (("ovoz past", lufs != "?" and float(lufs) < -18), ("qora kadr bor", black > 0),
+                                            ("juda uzun Short", dur and float(dur) > 45)) if c]}
+    open(os.path.splitext(v)[0] + "_mahalliy.txt", "w").write(_j.dumps(rep, ensure_ascii=False, indent=1))
+    return rep
+
+
 def main():
     env = dict(os.environ)
     if KEYF:
@@ -26,6 +45,9 @@ def main():
         print("gemini.txt yo'q: Documents\\kanal_tokenlar\\gemini.txt ga kalit qo'yilishi kerak"); return 2
     for v in sys.argv[1:]:
         out = os.path.splitext(v)[0] + "_baho.txt"
+        if not os.path.exists(os.path.splitext(v)[0] + "_mahalliy.txt"):
+            try: print("mahalliy:", local_check(v))
+            except Exception as e: print("mahalliy tekshiruv xato:", e)
         # 2026-11-12: 40 MB uploads over the home link (shared with YouTube uploads) took forever -> send a small proxy
         px = "/tmp/korish_" + os.path.basename(v)
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", v, "-vf", "scale=-2:960,fps=30", "-c:v", "libx264", "-preset", "veryfast",

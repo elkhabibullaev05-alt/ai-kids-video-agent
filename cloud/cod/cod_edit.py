@@ -437,7 +437,8 @@ def v4_shorts(job, outdir, tmp):
             log(m["id"], f"V4 SHORT {k}:", "TAYYOR" if r.returncode == 0 else "XATO " + r.stderr[-1800:])
             if r.returncode: err += 1
     kf = os.path.join(os.path.dirname(os.path.abspath(__file__)), "korish.py")
-    vids = [f for f in sorted(os.listdir(v4)) if f.endswith(".mp4") and not os.path.exists(os.path.join(v4, f[:-4] + "_baho.txt"))]
+    vids = [f for f in sorted(os.listdir(v4)) if f.endswith(".mp4") and not (os.path.exists(os.path.join(v4, f[:-4] + "_baho.txt"))
+                                                                      and os.path.exists(os.path.join(v4, f[:-4] + "_mahalliy.txt")))]
     if vids:
         subprocess.run([sys.executable, kf] + [os.path.join(v4, f) for f in vids], capture_output=True, text=True)
     # 2026-11-12 owner: work together with Gemini - ask it editing questions (cloud/cod/savollar/*.txt -> OUT/gemini/)
