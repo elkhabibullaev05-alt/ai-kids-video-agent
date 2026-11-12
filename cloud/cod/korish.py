@@ -4,7 +4,7 @@
 watches the whole clip with sound and answers a strict viewer-style rubric. Report -> <video>_baho.txt (Claude reads it).
 The owner's free key lives in Documents\\kanal_tokenlar\\gemini.txt (owner puts it there; never printed or logged).
 usage: korish.py VIDEO [VIDEO...]"""
-import os, sys, subprocess, glob
+import os, sys, subprocess, glob, time
 
 KEYF = glob.glob("/mnt/c/Users/*/Documents/kanal_tokenlar/gemini.txt")
 WATCH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "tools", "watch", "scripts", "watch.py")
@@ -23,9 +23,15 @@ def main():
         print("gemini.txt yo'q: Documents\\kanal_tokenlar\\gemini.txt ga kalit qo'yilishi kerak"); return 2
     for v in sys.argv[1:]:
         out = os.path.splitext(v)[0] + "_baho.txt"
-        r = subprocess.run([sys.executable, WATCH, v, "--engine", "gemini", "--question", Q],
-                           capture_output=True, text=True, env=env, timeout=900)
-        txt = r.stdout if r.returncode == 0 else (r.stdout + "\n" + r.stderr[-2000:])
+        for attempt in range(4):   # 2026-11-12: first run got "HTTP 503 high demand" on every video -> retry with backoff
+            r = subprocess.run([sys.executable, WATCH, v, "--engine", "gemini", "--question", Q],
+                               capture_output=True, text=True, env=env, timeout=900)
+            txt = r.stdout if r.returncode == 0 else (r.stdout + "\n" + r.stderr[-2000:])
+            if "(failed)" not in txt and r.returncode == 0:
+                break
+            time.sleep(90 * (attempt + 1))
+        if "(failed)" in txt or r.returncode:
+            print("baho olinmadi (keyingi safar qayta):", v); continue
         open(out, "w").write(txt.replace(env["GEMINI_API_KEY"], "***"))
         print("baho yozildi:", out)
 

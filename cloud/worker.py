@@ -430,6 +430,8 @@ def gemini_note(path, title, kind):
         txt = (p.stdout or "").replace(env["GEMINI_API_KEY"], "***")
     except Exception as e:
         return {"error": str(e)[:200]}
+    if "(failed)" in txt:   # e.g. HTTP 503 high demand: keep going, note it
+        return {"error": "gemini band (503), keyingi videoda qayta"}
     m = re.search(r"SCORE:\s*(\d+(?:\.\d+)?)\s*/\s*10", txt)
     fx = txt.split("FIXES:", 1)[1].strip()[:900] if "FIXES:" in txt else txt[-900:]
     return {"score": float(m.group(1)) if m else None, "fixes": fx}
