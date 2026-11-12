@@ -57,7 +57,7 @@ The owner's reference reels (Pommi, 3D character series, 8K–63K likes each) wo
 - Each video = one episode that continues yesterday's: open on the consequence of the last cliffhanger, end on a new cliffhanger ("…without knowing what it's for").
 - Real, relatable emotions as the hook: being blamed for trying to help, a plan falling apart, being left out, a small win. Show the feeling on the character's face in the first 3 s.
 - Description first line = one short emotional line in the character's voice ("I don't need credit for trying to help. But being blamed for it? That gets to me."), then 1–2 lines of plot, then hashtags incl. #series #3DAnimation and the character's name.
-- Shorts from the long episode keep the episode number at the END of the title ("… (Ep 12)"), so people binge the series.
+- 2026-11-13: NO episode number in any title, long or Short, on every channel (live check: "(Ep N)" Shorts got 0-16 views). The worker strips it too.
 - Everything else above (real-life places, kids flags, retention, look-alike rules) still applies.
 
 ## Bolt, Hollowmere, Dough Bros — Pommi-style serial (owner, 2026-10-26, from today)
