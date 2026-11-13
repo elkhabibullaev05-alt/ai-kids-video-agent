@@ -161,6 +161,28 @@ END_LINES = [("#1 OR #2?", "Number one or two? Comment!"), ("AGREE?", "Do you ag
              ("YOUR #1?", "What's your number one? Comment!")]
 
 
+# 2026-11-13 owner: the "Money Story" channel becomes a ranked funny-PHYSICS channel (same engine, own theme list)
+PHYSICS_THEMES = [
+    ("Physics Fails", "physics fail funny", ["physics", "fail"]),
+    ("Gravity Fails", "gravity fail funny", ["gravity", "fall", "drop"]),
+    ("Domino Chain Reactions", "domino chain reaction", ["domino", "dominoes", "chain"]),
+    ("Rube Goldberg Machines", "rube goldberg machine", ["rube", "goldberg", "machine"]),
+    ("Balance Fails", "balance fail funny", ["balance", "balancing"]),
+    ("Slingshot Fails", "slingshot fail funny", ["slingshot"]),
+    ("Water Physics Moments", "water physics slow motion", ["water", "splash", "slow"]),
+    ("Slow Motion Physics", "slow motion physics experiment", ["slow motion", "slowmo", "slow-mo"]),
+    ("Science Experiment Fails", "science experiment fail funny", ["experiment", "science"]),
+    ("Catapult Fails", "catapult fail funny", ["catapult", "trebuchet"]),
+    ("Bouncy Ball Physics", "bouncy ball physics", ["ball", "bounce", "bouncy"]),
+    ("Seesaw Fails", "seesaw fail funny", ["seesaw", "see-saw"]),
+    ("Ramp Jump Fails", "ramp jump fail funny", ["ramp", "jump"]),
+    ("Magnet Experiments", "magnet experiment satisfying", ["magnet", "magnetic"]),
+    ("Pendulum Physics", "pendulum physics experiment", ["pendulum", "swing"]),
+    ("Egg Drop Experiments", "egg drop experiment", ["egg", "drop"]),
+]
+if os.environ.get("FR_THEMES") == "physics":
+    THEMES = PHYSICS_THEMES
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 

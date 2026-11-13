@@ -569,7 +569,19 @@ def small_thumb(src, dst):
 def unpublish_wrong():
     """channels.json "unpublish": [video ids] → make them private (e.g. kids videos that landed on a teen channel, 2026-10-29).
     Done ids are kept in results/<CH>/unpublished.json. Needs a token with youtube.force-ssl (cloud/auth.py since 2026-10-29)."""
-    ids = CFG.get("unpublish") or []
+    ids = list(CFG.get("unpublish") or [])
+    cut = CFG.get("unpublish_before")  # 2026-11-13 owner: "hide the old videos" when a channel is repurposed
+    if cut:
+        try:
+            y = yt(); up = "UU" + CFG["id"][2:]
+            req = y.playlistItems().list(part="contentDetails", playlistId=up, maxResults=50)
+            while req is not None:
+                r = req.execute()
+                ids += [i["contentDetails"]["videoId"] for i in r.get("items", [])
+                        if i["contentDetails"].get("videoPublishedAt", "9") < cut]
+                req = y.playlistItems().list_next(req, r)
+        except Exception as e:
+            log("unpublish_before list failed:", str(e)[:160])
     if not ids:
         return
     import youtube_up

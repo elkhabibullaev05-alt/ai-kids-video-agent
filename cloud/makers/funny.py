@@ -29,7 +29,8 @@ import fr_render as R  # noqa: E402
 
 PER_RUN = 3
 RUN_BUDGET_S = 100 * 60
-HASHTAGS = "#shorts #funny #fails #ranking #funnyvideos"
+HASHTAGS = os.environ.get("FR_TAGS", "#shorts #funny #fails #ranking #funnyvideos")
+BRAND = os.environ.get("FR_BRAND", "Funny Rank Daily")
 
 
 LOGF = None  # 2026-11-09: live progress file (HOME/maker.log) — the worker only sees stdout after the run ends
@@ -53,7 +54,7 @@ def description(sc, clips, theme_name):
     for r, c in zip((5, 4, 3, 2, 1), clips):
         lines.append(f"#{r} {c['title']} — {c['channel']} — https://youtu.be/{c['id']}")
     lines += ["", "All clips are used under the Creative Commons Attribution license (CC BY 3.0); "
-              "thank you to every creator above. Edited, ranked and narrated by Funny Rank Daily.", "",
+              "thank you to every creator above. Edited, ranked and narrated by " + BRAND + ".", "",
               HASHTAGS + " #" + TH.slug(theme_name).replace("-", "")]
     return "\n".join(lines)
 
