@@ -1,8 +1,9 @@
 {
  "channel": "money",
  "host": "KOMPUTER",
- "time": "2026-11-13T16:16:39+00:00",
- "stage": "render",
+ "time": "2026-11-13T16:20:32+00:00",
+ "stage": "error",
  "queue": 6,
- "pending": 0
+ "pending": 0,
+ "error": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/google/oauth2/_client.py\", line 198, in _token_endpoint_request_no_throw\n    response = request(\n               ^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/google/auth/transport/requests.py\", line 280, in __call__\n    raise new_exc from caught_exc\ngoogle.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Read timed out. (read timeout=120)\npool 0/12: long later\n"
 }
