@@ -1,0 +1,142 @@
+{
+ "title": "$22 an Hour vs a $48k Salary: Who Earns More?",
+ "hook": "$48k salary. $18 an hour.",
+ "header": "Jade · two job offers",
+ "character": "Jade",
+ "amount": "$22",
+ "accent": "blue",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Jade's $48,000 salary really paid about $18 an hour.",
+   "visual": {
+    "type": "big_number",
+    "value": 18.46,
+    "label": "real hourly pay",
+    "sub": "on a $48k salary",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "She had two offers: $22 an hour, or $48,000 a year. The salary sounded bigger.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Hourly offer",
+     "value": 22,
+     "sub": "per hour"
+    },
+    "right": {
+     "label": "Salary offer",
+     "value": 48000,
+     "sub": "per year",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "But the salary job expected about 50 hours a week, with no overtime.",
+   "visual": {
+    "type": "math",
+    "title": "The salary job",
+    "rows": [
+     "$48,000 ÷ 52 weeks",
+     "÷ 50 hours",
+     "= about $18.46 an hour"
+    ]
+   }
+  },
+  {
+   "say": "The hourly job: 40 hours at $22, plus about 4 hours of overtime at $33.",
+   "visual": {
+    "type": "stack",
+    "title": "Hourly job, per year",
+    "total": 52624,
+    "items": [
+     {
+      "label": "Base 40 hrs",
+      "value": 45760
+     },
+     {
+      "label": "Overtime 4 hrs",
+      "value": 6864,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's roughly $52,600 a year, working 6 fewer hours every week.",
+   "visual": {
+    "type": "bars",
+    "title": "Yearly pay",
+    "items": [
+     {
+      "label": "Hourly job",
+      "value": 52624,
+      "hi": true
+     },
+     {
+      "label": "Salary job",
+      "value": 48000
+     }
+    ]
+   }
+  },
+  {
+   "say": "Benefits matter too, so she compared the whole offer, not one number.",
+   "visual": {
+    "type": "checklist",
+    "title": "Compare offers",
+    "items": [
+     {
+      "text": "Real hours per week",
+      "ok": true
+     },
+     {
+      "text": "Overtime rules",
+      "ok": true
+     },
+     {
+      "text": "Health plan cost",
+      "ok": true
+     },
+     {
+      "text": "Retirement match",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Divide by your real hours, and the bigger number isn't always bigger.",
+   "visual": {
+    "type": "statement",
+    "text": "Divide by real hours.",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "What's your real hourly pay? Subscribe so you don't make this mistake on your next paycheck, because a $48k salary can mean $18 an hour.",
+   "visual": {
+    "type": "question",
+    "text": "What's your real hourly pay?"
+   }
+  }
+ ],
+ "question": "Divide your pay by the hours you really work: what's your real hourly rate?",
+ "description": "Jade compared $22 an hour with a $48,000 salary. The salary job expected about 50 hours a week with no overtime, roughly $18.46 an hour, while the hourly job with about 4 overtime hours paid around $52,600. Benefits matter too. Numbers are rounded US estimates.",
+ "tags": [
+  "hourly vs salary",
+  "job offer comparison",
+  "real hourly wage",
+  "overtime pay",
+  "salary negotiation",
+  "how much do I really make",
+  "career money tips"
+ ],
+ "hashtags": [
+  "#salary",
+  "#careeradvice"
+ ]
+}

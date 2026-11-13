@@ -1,0 +1,138 @@
+{
+ "title": "Kayla, 25: Skipping $15 Insurance Cost $4,800",
+ "hook": "Saved $180. Lost $4,800.",
+ "header": "Kayla · no renters insurance",
+ "character": "Kayla",
+ "amount": "$4,800",
+ "accent": "orange",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "$4,800 of Kayla's stuff was ruined, and none of it was covered.",
+   "visual": {
+    "type": "big_number",
+    "value": 4800,
+    "label": "replaced out of pocket",
+    "sub": "no renters insurance",
+    "icon": "house"
+   }
+  },
+  {
+   "say": "A pipe burst upstairs. Her landlord's policy covers the building, not her things.",
+   "visual": {
+    "type": "statement",
+    "text": "Building covered. Her stuff? No.",
+    "icon": "shield"
+   }
+  },
+  {
+   "say": "Laptop, bed, couch, clothes. It adds up fast.",
+   "visual": {
+    "type": "bars",
+    "title": "What she replaced",
+    "items": [
+     {
+      "label": "Laptop",
+      "value": 1200
+     },
+     {
+      "label": "Bed + mattress",
+      "value": 1400,
+      "hi": true
+     },
+     {
+      "label": "Couch",
+      "value": 1000
+     },
+     {
+      "label": "Clothes + rest",
+      "value": 1200
+     }
+    ]
+   }
+  },
+  {
+   "say": "Renters insurance often costs around $15 a month. About $180 a year.",
+   "visual": {
+    "type": "math",
+    "title": "The cost she skipped",
+    "rows": [
+     "About $15 a month",
+     "× 12 months",
+     "= about $180 a year"
+    ]
+   }
+  },
+  {
+   "say": "With a $500 deductible, she'd have paid about $500, not $4,800.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "No policy",
+     "value": 4800,
+     "sub": "she paid all of it",
+     "hi": true
+    },
+    "right": {
+     "label": "With a policy",
+     "value": 500,
+     "sub": "the deductible"
+    }
+   }
+  },
+  {
+   "say": "That's 26 years of premiums at that price, gone in one afternoon.",
+   "visual": {
+    "type": "counter",
+    "from": 180,
+    "to": 4680,
+    "steps": 12,
+    "unit": "Year",
+    "label": "Years of premiums"
+   }
+  },
+  {
+   "say": "Before signing a lease, she now checks three things.",
+   "visual": {
+    "type": "checklist",
+    "title": "Renter's check",
+    "items": [
+     {
+      "text": "Get a renters quote",
+      "ok": true
+     },
+     {
+      "text": "Pick a deductible you can pay",
+      "ok": true
+     },
+     {
+      "text": "List what you own",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Is your stuff covered right now? Subscribe so you don't make this mistake on your next paycheck, because she saved $180, and lost $4,800.",
+   "visual": {
+    "type": "question",
+    "text": "Is your stuff covered right now?"
+   }
+  }
+ ],
+ "question": "Do you have renters insurance, or are you skipping it too?",
+ "description": "Kayla skipped renters insurance to save about $15 a month. When a pipe burst upstairs she replaced about $4,800 of her things herself, since the landlord's policy covers the building, not tenants' belongings. Prices and deductibles vary; numbers are rounded US estimates.",
+ "tags": [
+  "renters insurance",
+  "is renters insurance worth it",
+  "insurance explained",
+  "first apartment tips",
+  "deductible explained",
+  "money mistakes",
+  "personal finance"
+ ],
+ "hashtags": [
+  "#rentersinsurance",
+  "#moneytips"
+ ]
+}

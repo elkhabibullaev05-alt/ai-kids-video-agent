@@ -1,0 +1,141 @@
+{
+ "title": "What a $5,000 Raise Really Adds per Paycheck",
+ "hook": "$5,000 raise. $126 a paycheck.",
+ "header": "Darius · $5,000 raise",
+ "character": "Darius",
+ "amount": "$5,000",
+ "accent": "green",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "A $5,000 raise added only about $126 to Darius's paycheck.",
+   "visual": {
+    "type": "big_number",
+    "value": 126,
+    "from": 5000,
+    "label": "extra per paycheck",
+    "sub": "from a $5,000 raise",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "He's in the 22% bracket, so taxes take a real bite first.",
+   "visual": {
+    "type": "stack",
+    "title": "Where the $5,000 goes",
+    "total": 5000,
+    "items": [
+     {
+      "label": "Federal tax",
+      "value": 1100
+     },
+     {
+      "label": "Social Sec + Medicare",
+      "value": 383
+     },
+     {
+      "label": "State tax",
+      "value": 250
+     },
+     {
+      "label": "Take-home",
+      "value": 3267,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "That leaves roughly $3,270 a year, split over 26 paychecks.",
+   "visual": {
+    "type": "math",
+    "title": "His real raise",
+    "rows": [
+     "$5,000 − about $1,730 tax",
+     "= about $3,270 a year",
+     "÷ 26 paychecks = $126"
+    ]
+   }
+  },
+  {
+   "say": "And $126 disappears fast if nothing has a job.",
+   "visual": {
+    "type": "statement",
+    "text": "$126 with no plan",
+    "sub": "gone by Friday",
+    "icon": "coin"
+   }
+  },
+  {
+   "say": "So Darius splits it before it ever hits checking. Half to savings, half to spend.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "To savings",
+     "value": 63,
+     "sub": "per paycheck",
+     "hi": true
+    },
+    "right": {
+     "label": "To spend",
+     "value": 63,
+     "sub": "per paycheck"
+    }
+   }
+  },
+  {
+   "say": "That's about $1,640 saved in the first year, without feeling poorer.",
+   "visual": {
+    "type": "counter",
+    "from": 63,
+    "to": 1638,
+    "steps": 12,
+    "unit": "Month",
+    "label": "Saved from the raise"
+   }
+  },
+  {
+   "say": "His checklist: know the net number, automate the split, enjoy the rest.",
+   "visual": {
+    "type": "checklist",
+    "title": "Raise plan",
+    "items": [
+     {
+      "text": "Find the after-tax number",
+      "ok": true
+     },
+     {
+      "text": "Auto-move half to savings",
+      "ok": true
+     },
+     {
+      "text": "Spend the other half guilt-free",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Do you know your raise after tax? Subscribe so you don't make this mistake on your next paycheck, because a $5,000 raise can mean $126 a paycheck.",
+   "visual": {
+    "type": "question",
+    "text": "Do you know your raise after tax?"
+   }
+  }
+ ],
+ "question": "Do you know what your last raise added after tax?",
+ "description": "Darius got a $5,000 raise, but after federal tax at 22%, Social Security, Medicare and state tax it adds only about $126 per paycheck. He splits it before it hits checking and saves roughly $1,640 in the first year. Numbers are rounded US estimates and tax depends on your situation.",
+ "tags": [
+  "raise after taxes",
+  "how much is my raise",
+  "salary increase",
+  "take home pay",
+  "how to save money",
+  "paycheck breakdown",
+  "budgeting tips"
+ ],
+ "hashtags": [
+  "#raise",
+  "#savingmoney"
+ ]
+}

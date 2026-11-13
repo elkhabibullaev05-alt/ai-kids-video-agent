@@ -1,0 +1,130 @@
+{
+ "title": "Same $200 a Month, 10 Years Apart: $281,000 Gap",
+ "hook": "Same $200. $281,000 apart.",
+ "header": "Mia 25 · Luis 35",
+ "character": "Mia",
+ "amount": "$200",
+ "accent": "purple",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Mia and Luis both invest $200 a month. At 65, they're about $281,000 apart.",
+   "visual": {
+    "type": "big_number",
+    "value": 281000,
+    "label": "the gap at 65",
+    "sub": "same $200 a month",
+    "icon": "chart"
+   }
+  },
+  {
+   "say": "The only difference? Mia started at 25. Luis started at 35.",
+   "visual": {
+    "type": "statement",
+    "text": "Same amount. Different start.",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "Mia puts in about $96,000 total. Luis puts in $72,000.",
+   "visual": {
+    "type": "math",
+    "title": "What they put in",
+    "rows": [
+     "Mia: $200 × 480 months",
+     "= $96,000",
+     "Luis: $200 × 360 = $72,000"
+    ]
+   }
+  },
+  {
+   "say": "Say it earns roughly 7% a year in an index fund. Not guaranteed, just an example.",
+   "visual": {
+    "type": "big_number",
+    "value": 7,
+    "prefix": "",
+    "suffix": "%",
+    "label": "example yearly growth",
+    "sub": "not guaranteed",
+    "icon": "chart"
+   }
+  },
+  {
+   "say": "Mia's money grows slowly, then much faster in the last decades.",
+   "visual": {
+    "type": "line",
+    "label": "Mia's account",
+    "points": [
+     0,
+     14319,
+     34617,
+     63392,
+     104185,
+     162014,
+     243994,
+     360211,
+     524963
+    ],
+    "start_label": "Age 25",
+    "end_label": "Age 65"
+   }
+  },
+  {
+   "say": "At 65, Mia has about $525,000. Luis has about $244,000.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Mia, from 25",
+     "value": 525000,
+     "sub": "put in $96,000",
+     "hi": true
+    },
+    "right": {
+     "label": "Luis, from 35",
+     "value": 244000,
+     "sub": "put in $72,000"
+    }
+   }
+  },
+  {
+   "say": "Only $24,000 more from Mia. Most of the gap is time doing the work.",
+   "visual": {
+    "type": "bars",
+    "title": "Where the gap comes from",
+    "items": [
+     {
+      "label": "Extra deposits",
+      "value": 24000
+     },
+     {
+      "label": "Extra growth",
+      "value": 257000,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "When did you start? Subscribe so you don't make this mistake on your next paycheck, because it's the same $200, and $281,000 apart.",
+   "visual": {
+    "type": "question",
+    "text": "How old were you when you started?"
+   }
+  }
+ ],
+ "question": "How old were you when you started investing, or are you starting now?",
+ "description": "Mia and Luis each invest $200 a month, but Mia starts at 25 and Luis at 35. If the money earned roughly 7% a year (an example, not a guarantee), Mia would have about $525,000 at 65 and Luis about $244,000. Most of the gap comes from time, not deposits. Numbers are rounded estimates for general education.",
+ "tags": [
+  "compound interest",
+  "investing for beginners",
+  "start investing early",
+  "index fund",
+  "retirement savings",
+  "time in the market",
+  "how compound interest works"
+ ],
+ "hashtags": [
+  "#investing",
+  "#compoundinterest"
+ ]
+}

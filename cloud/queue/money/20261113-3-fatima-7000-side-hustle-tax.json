@@ -1,0 +1,144 @@
+{
+ "title": "Fatima's $7,000 Side Hustle Had a $1,800 Surprise",
+ "hook": "$7,000 earned. $1,800 owed.",
+ "header": "Fatima · weekend tutoring",
+ "character": "Fatima",
+ "amount": "$7,000",
+ "accent": "gold",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Fatima owed about $1,800 in tax on a $7,000 side hustle.",
+   "visual": {
+    "type": "big_number",
+    "value": 1800,
+    "label": "tax bill in April",
+    "sub": "on $7,000 of tutoring",
+    "icon": "calendar"
+   }
+  },
+  {
+   "say": "She tutors on weekends. No employer, so nothing was withheld.",
+   "visual": {
+    "type": "statement",
+    "text": "No paycheck. No withholding.",
+    "icon": "cap"
+   }
+  },
+  {
+   "say": "Self-employment tax alone was roughly $990. That's Social Security and Medicare.",
+   "visual": {
+    "type": "math",
+    "title": "Self-employment tax",
+    "rows": [
+     "$7,000 × 92.35%",
+     "× 15.3%",
+     "= about $990"
+    ]
+   }
+  },
+  {
+   "say": "Then regular income tax, at her 12% bracket, added about $780.",
+   "visual": {
+    "type": "stack",
+    "title": "Her $7,000",
+    "total": 7000,
+    "items": [
+     {
+      "label": "Self-employment tax",
+      "value": 990,
+      "hi": true
+     },
+     {
+      "label": "Income tax",
+      "value": 780,
+      "hi": true
+     },
+     {
+      "label": "She keeps",
+      "value": 5230
+     }
+    ]
+   }
+  },
+  {
+   "say": "So she now moves 25% of every payment into a separate account.",
+   "visual": {
+    "type": "bars",
+    "title": "Every $100 she earns",
+    "items": [
+     {
+      "label": "Tax account",
+      "value": 25,
+      "hi": true
+     },
+     {
+      "label": "Spending",
+      "value": 75
+     }
+    ]
+   }
+  },
+  {
+   "say": "By spring, the bill is already sitting there.",
+   "visual": {
+    "type": "line",
+    "label": "Tax account",
+    "points": [
+     0,
+     290,
+     580,
+     870,
+     1170,
+     1460,
+     1750
+    ],
+    "start_label": "January",
+    "end_label": "Tax time"
+   }
+  },
+  {
+   "say": "Her rule: set aside a quarter, track costs, and look into quarterly payments.",
+   "visual": {
+    "type": "checklist",
+    "title": "Side hustle rules",
+    "items": [
+     {
+      "text": "25% of each payment to tax",
+      "ok": true
+     },
+     {
+      "text": "Track supplies and mileage",
+      "ok": true
+     },
+     {
+      "text": "Learn about quarterly payments",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Do you save for tax on side income? Subscribe so you don't make this mistake on your next paycheck, because $7,000 earned can mean $1,800 owed.",
+   "visual": {
+    "type": "question",
+    "text": "Do you save for side-hustle tax?"
+   }
+  }
+ ],
+ "question": "Do you set money aside for tax on side income?",
+ "description": "Fatima earned about $7,000 tutoring on weekends with nothing withheld. Self-employment tax was roughly $990 and income tax at a 12% bracket about $780, so she owed around $1,800. Now she moves 25% of every payment to a separate account. Rough US estimates for general education; tax depends on your situation.",
+ "tags": [
+  "side hustle taxes",
+  "self employment tax",
+  "1099 taxes",
+  "freelancer taxes",
+  "side hustle",
+  "tax season",
+  "how to save for taxes"
+ ],
+ "hashtags": [
+  "#sidehustle",
+  "#taxes"
+ ]
+}
