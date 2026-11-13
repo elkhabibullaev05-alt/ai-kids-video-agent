@@ -1,0 +1,1098 @@
+{
+ "id": "20261113-2-iron-mask-velvet",
+ "plot": "Odo and Mothwick follow the true case of the Man in the Iron Mask: a prisoner arrested in July 1669 and named 'Eustache Dauger' is kept masked by the same jailer, Saint-Mars, for 34 years until he dies in the Bastille on 19 November 1703 and is buried as 'Marchioly'; Voltaire and Dumas turn him into the king's iron-masked brother or twin, but the twist is that the jailers' own records describe a black velvet mask and call him only a valet, who had once served the fallen minister Fouquet.",
+ "script": {
+  "title": "Who Was Behind the Iron Mask?",
+  "lead_in": 0,
+  "set": {
+   "place": "chapel",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 20
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "coach": {
+    "name": "Prison Coach",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.12,
+     0.1,
+     0.08
+    ],
+    "kind": "coach",
+    "size": 1.0,
+    "home": [
+     -34,
+     30
+    ]
+   },
+   "prisoner": {
+    "name": "The Masked Prisoner",
+    "voice": "am_onyx",
+    "speed": 0.98,
+    "pitch": -2,
+    "color": [
+     0.1,
+     0.1,
+     0.12
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -36,
+     32
+    ]
+   },
+   "stmars": {
+    "name": "Saint-Mars",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.12,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     38,
+     34
+    ]
+   },
+   "junca": {
+    "name": "Du Junca",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.25,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     40,
+     36
+    ]
+   },
+   "voltaire": {
+    "name": "Voltaire",
+    "voice": "am_eric",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.5,
+     0.42,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -40,
+     38
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "torch",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.6,
+     0.2
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -9,
+     12,
+     2.0
+    ]
+   },
+   {
+    "id": "gate",
+    "type": "box",
+    "color": [
+     0.16,
+     0.15,
+     0.14
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 2.6,
+    "at": [
+     6,
+     18,
+     0
+    ]
+   },
+   {
+    "id": "gatelight",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.55,
+     0.2
+    ],
+    "glow": 2.0,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     6,
+     16.3,
+     3.2
+    ]
+   },
+   {
+    "id": "letter",
+    "type": "box",
+    "color": [
+     0.88,
+     0.84,
+     0.7
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.2,
+     9.6,
+     1.5
+    ]
+   },
+   {
+    "id": "journal",
+    "type": "box",
+    "color": [
+     0.5,
+     0.2,
+     0.15
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     -1,
+     12.6,
+     1.4
+    ]
+   },
+   {
+    "id": "velvet",
+    "type": "box",
+    "color": [
+     0.05,
+     0.05,
+     0.06
+    ],
+    "glow": 0.0,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     1.0,
+     9.8,
+     1.6
+    ]
+   },
+   {
+    "id": "grave",
+    "type": "box",
+    "color": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.0,
+    "at": [
+     -5,
+     15,
+     0
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.8,
+     0.7,
+     0.5
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.4,
+     9.4,
+     1.4
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1703, Paris. A prisoner died in the Bastille. Nobody knew his face.",
+    "cam": "wide",
+    "do": [
+     [
+      "coach",
+      "to:-2,13,0"
+     ],
+     [
+      "torch",
+      "drift:-2,11.5,2"
+     ]
+    ],
+    "text": "NOBODY KNEW HIS FACE",
+    "sfx": "alarm"
+   },
+   {
+    "who": "odo",
+    "say": "Nobody? Not even his guards? Mothwick, somebody must have known.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "WHO WAS HE?"
+   },
+   {
+    "who": "narr",
+    "say": "For thirty-four years, a mask hid his face from the world.",
+    "cam": "close:prisoner",
+    "do": [
+     [
+      "prisoner",
+      "to:-1,11.5,0"
+     ],
+     [
+      "prisoner",
+      "turn:front"
+     ]
+    ],
+    "text": "34 YEARS MASKED"
+   },
+   {
+    "who": "moth",
+    "say": "This one is true, Odo. The jailers' letters still exist.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:1,6,1.5"
+     ],
+     [
+      "letter",
+      "show"
+     ]
+    ],
+    "text": "A TRUE STORY"
+   },
+   {
+    "who": "narr",
+    "say": "July 1669. A man was arrested near Calais, on the king's orders.",
+    "cam": "wide",
+    "do": [
+     [
+      "stmars",
+      "enter:right"
+     ],
+     [
+      "stmars",
+      "to:2,13,0"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "ARRESTED, 1669"
+   },
+   {
+    "who": "narr",
+    "say": "The minister's letter gave his name as Eustache Dauger.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "EUSTACHE DAUGER"
+   },
+   {
+    "who": "odo",
+    "say": "So they knew his name! Then the mystery is solved.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "jump"
+     ]
+    ],
+    "text": "SOLVED?"
+   },
+   {
+    "who": "moth",
+    "say": "A name, Odo. Not who he was, or what he knew.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "WHAT DID HE KNOW?"
+   },
+   {
+    "who": "stmars",
+    "say": "I am Saint-Mars, his jailer. Only I may speak with him.",
+    "cam": "close:stmars",
+    "do": [
+     [
+      "stmars",
+      "turn:front"
+     ]
+    ],
+    "text": "THE JAILER"
+   },
+   {
+    "who": "narr",
+    "say": "The orders were strict. He could speak only of his daily needs.",
+    "cam": "wide",
+    "do": [
+     [
+      "stmars",
+      "to:0,13.5,0"
+     ],
+     [
+      "prisoner",
+      "sad"
+     ]
+    ],
+    "text": "ONLY HIS NEEDS"
+   },
+   {
+    "who": "narr",
+    "say": "If he said anything else, he was to be killed.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "OR DIE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "odo",
+    "say": "Killed for talking? What could a prisoner know?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "FOR TALKING?"
+   },
+   {
+    "who": "narr",
+    "say": "At Pignerol, in the Alps, he was made a servant.",
+    "cam": "overhead",
+    "do": [
+     [
+      "prisoner",
+      "to:2,12.5,0"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "PIGNEROL, THE ALPS"
+   },
+   {
+    "who": "narr",
+    "say": "He waited on another prisoner there, a fallen minister, Nicolas Fouquet.",
+    "cam": "close:prisoner",
+    "do": [
+     [
+      "prisoner",
+      "turn:front"
+     ]
+    ],
+    "text": "SERVANT TO FOUQUET"
+   },
+   {
+    "who": "moth",
+    "say": "Remember that, Odo. A servant, in a room full of secrets.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "REMEMBER THAT"
+   },
+   {
+    "who": "narr",
+    "say": "Saint-Mars moved from prison to prison. The prisoner always went with him.",
+    "cam": "wide",
+    "do": [
+     [
+      "coach",
+      "to:3,14,0"
+     ],
+     [
+      "stmars",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "PRISON TO PRISON"
+   },
+   {
+    "who": "odo",
+    "say": "A prisoner who follows his jailer? Like a shadow.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1.5,7,0"
+     ]
+    ],
+    "text": "LIKE A SHADOW"
+   },
+   {
+    "who": "narr",
+    "say": "Pignerol. Then Exilles. Then an island off the coast near Cannes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "gate",
+      "bounce"
+     ]
+    ],
+    "text": "EXILLES, THEN AN ISLAND"
+   },
+   {
+    "who": "odo",
+    "say": "Always the same jailer? For almost thirty years?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE SAME JAILER"
+   },
+   {
+    "who": "narr",
+    "say": "September 1698. Saint-Mars became governor of the Bastille, in Paris.",
+    "cam": "wide",
+    "do": [
+     [
+      "gatelight",
+      "show"
+     ],
+     [
+      "coach",
+      "to:5,15,0"
+     ]
+    ],
+    "text": "THE BASTILLE, 1698"
+   },
+   {
+    "who": "narr",
+    "say": "An officer, Etienne du Junca, kept a register as they arrived.",
+    "cam": "close:junca",
+    "do": [
+     [
+      "junca",
+      "enter:right"
+     ],
+     [
+      "junca",
+      "to:3,12.5,0"
+     ],
+     [
+      "journal",
+      "show"
+     ]
+    ],
+    "text": "DU JUNCA'S REGISTER"
+   },
+   {
+    "who": "junca",
+    "say": "An old prisoner, always masked, whose name is not spoken.",
+    "cam": "close:junca",
+    "do": [
+     [
+      "junca",
+      "turn:front"
+     ]
+    ],
+    "text": "NAME NOT SPOKEN"
+   },
+   {
+    "who": "narr",
+    "say": "Remember one small word in that register. Velvet.",
+    "cam": "prop:velvet",
+    "do": [
+     [
+      "velvet",
+      "show"
+     ],
+     [
+      "velvet",
+      "bounce"
+     ]
+    ],
+    "text": "ONE WORD: VELVET",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "odo",
+    "say": "Velvet? Why would one word matter, Mothwick?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "WHY VELVET?"
+   },
+   {
+    "who": "narr",
+    "say": "On the nineteenth of November, 1703, he felt unwell after mass.",
+    "cam": "close:prisoner",
+    "do": [
+     [
+      "prisoner",
+      "sad"
+     ],
+     [
+      "velvet",
+      "hide"
+     ]
+    ],
+    "text": "19 NOVEMBER 1703"
+   },
+   {
+    "who": "narr",
+    "say": "He died that same evening, without any serious illness.",
+    "cam": "wide",
+    "do": [
+     [
+      "torch",
+      "drift:-4,12,1.2"
+     ]
+    ],
+    "text": "DIED THAT EVENING"
+   },
+   {
+    "who": "narr",
+    "say": "Next day he was buried under a false name: Marchioly.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "prisoner",
+      "to_home"
+     ]
+    ],
+    "text": "BURIED AS MARCHIOLY"
+   },
+   {
+    "who": "moth",
+    "say": "Even his grave, Odo, got a name that was not his.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "sad"
+     ]
+    ],
+    "text": "NOT HIS NAME"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for a new true story every day. Now the strangest part.",
+    "cam": "overhead",
+    "do": [
+     [
+      "odo",
+      "bounce"
+     ]
+    ],
+    "text": "THE STRANGEST PART"
+   },
+   {
+    "who": "narr",
+    "say": "In 1717, a young writer called Voltaire was locked in the Bastille.",
+    "cam": "close:voltaire",
+    "do": [
+     [
+      "voltaire",
+      "enter:left"
+     ],
+     [
+      "voltaire",
+      "to:-3,12.5,0"
+     ]
+    ],
+    "text": "VOLTAIRE, 1717"
+   },
+   {
+    "who": "voltaire",
+    "say": "A masked prisoner, for a lifetime? I must know who he was.",
+    "cam": "close:voltaire",
+    "do": [
+     [
+      "voltaire",
+      "turn:front"
+     ]
+    ],
+    "text": "I MUST KNOW"
+   },
+   {
+    "who": "narr",
+    "say": "Later Voltaire wrote that the mask was iron, and the man royal.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "show"
+     ],
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "THE IRON MASK"
+   },
+   {
+    "who": "odo",
+    "say": "An iron mask for thirty-four years? That's horrible!",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "AN IRON MASK?"
+   },
+   {
+    "who": "narr",
+    "say": "Voltaire guessed he was the king's secret elder brother.",
+    "cam": "wide",
+    "do": [
+     [
+      "voltaire",
+      "to:-1,13,0"
+     ]
+    ],
+    "text": "THE KING'S BROTHER?"
+   },
+   {
+    "who": "odo",
+    "say": "The king's own brother, locked away in iron?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE KING'S BROTHER"
+   },
+   {
+    "who": "narr",
+    "say": "In 1850, Alexandre Dumas made him the king's identical twin.",
+    "cam": "prop:book",
+    "do": [
+     [
+      "book",
+      "bounce"
+     ]
+    ],
+    "text": "THE KING'S TWIN?"
+   },
+   {
+    "who": "moth",
+    "say": "Its last part became famous as The Man in the Iron Mask.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "THE NOVEL"
+   },
+   {
+    "who": "odo",
+    "say": "A secret twin! That's why they hid his face!",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "to:-1,7,0"
+     ],
+     [
+      "odo",
+      "jump"
+     ]
+    ],
+    "text": "A SECRET TWIN!"
+   },
+   {
+    "who": "moth",
+    "say": "Think, Odo. Remember the word in the register.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "REMEMBER?"
+   },
+   {
+    "who": "odo",
+    "say": "Velvet. Du Junca wrote velvet. Not iron.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ],
+     [
+      "odo",
+      "turn:front"
+     ]
+    ],
+    "text": "VELVET, NOT IRON"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. His death entry speaks of a mask of black velvet.",
+    "cam": "prop:velvet",
+    "do": [
+     [
+      "velvet",
+      "show"
+     ],
+     [
+      "velvet",
+      "bounce"
+     ]
+    ],
+    "text": "BLACK VELVET",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "The iron came from a legend. The twin came from a novel.",
+    "cam": "wide",
+    "do": [
+     [
+      "junca",
+      "to:4,14,0"
+     ]
+    ],
+    "text": "LEGEND AND NOVEL"
+   },
+   {
+    "who": "narr",
+    "say": "And the minister's letter called Dauger only a valet. A servant.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "velvet",
+      "hide"
+     ]
+    ],
+    "text": "ONLY A VALET"
+   },
+   {
+    "who": "odo",
+    "say": "A servant? Then why hide a servant for thirty-four years?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "WHY A SERVANT?"
+   },
+   {
+    "who": "moth",
+    "say": "The servant of Fouquet, Odo. He may have heard too much.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:0,6,1.8"
+     ]
+    ],
+    "text": "HE HEARD TOO MUCH?"
+   },
+   {
+    "who": "narr",
+    "say": "Many historians think so. Nobody has ever proven it.",
+    "cam": "wide",
+    "do": [
+     [
+      "letter",
+      "hide"
+     ],
+     [
+      "gatelight",
+      "bounce"
+     ]
+    ],
+    "text": "NEVER PROVEN"
+   },
+   {
+    "who": "narr",
+    "say": "Only his jailer knew for sure. And Saint-Mars never told.",
+    "cam": "close:stmars",
+    "do": [
+     [
+      "stmars",
+      "turn:front"
+     ],
+     [
+      "stmars",
+      "sad"
+     ]
+    ],
+    "text": "HE NEVER TOLD"
+   },
+   {
+    "who": "odo",
+    "say": "The man in the iron mask wore velvet, and kept his secret.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1,6,0"
+     ],
+     [
+      "odo",
+      "sad"
+     ]
+    ],
+    "text": "HE KEPT HIS SECRET"
+   },
+   {
+    "who": "narr",
+    "say": "If this one got you, the Strasbourg dancing plague story is next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "NEXT: STRASBOURG"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "1703: Who Was Behind the Iron Mask? | True Story Animated",
+  "description": "Previous true story: https://youtu.be/gNRPXe-J4dU\nHave you heard a story like this one? Tell me in the comments.\n\n\"He wore that mask for thirty-four years, and kept his secret.\" — Odo\n\nA true story from the Bastille, Paris: on 19 November 1703 a prisoner died who had been kept masked since 1669, always guarded by the same jailer, Saint-Mars, and was buried under a false name, 'Marchioly'. Voltaire said the mask was iron and the man royal; Alexandre Dumas made him the king's twin. But the prison's own register speaks of a mask of black velvet, and the minister's letter calls him only a valet.\n\nSources:\nhttps://en.wikipedia.org/wiki/Man_in_the_Iron_Mask\nhttps://www.historytoday.com/archive/months-past/death-man-iron-mask\nhttps://www.britannica.com/print/article/294481\n\n#truestory #scarystories #3DAnimation #Odo #ironmask",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Man in the Iron Mask",
+   "Bastille",
+   "Paris",
+   "1703",
+   "1669",
+   "Eustache Dauger",
+   "Saint-Mars",
+   "Voltaire",
+   "November true story",
+   "unsolved mystery",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "34 YEARS HIDDEN",
+  "thumb_beat": 13,
+  "localizations": {
+   "es": {
+    "title": "1703: ¿Quién estaba tras la máscara de hierro? | Historia real",
+    "description": "Historia real anterior: https://youtu.be/gNRPXe-J4dU\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\nLa Bastilla, 19 de noviembre de 1703: muere un preso enmascarado desde 1669 y lo entierran con un nombre falso. Voltaire dijo que la máscara era de hierro. El registro de la prisión dice otra cosa."
+   },
+   "pt": {
+    "title": "1703: Quem estava atrás da máscara de ferro? | História real",
+    "description": "História real anterior: https://youtu.be/gNRPXe-J4dU\nVocê já ouviu uma história como esta? Conte nos comentários.\n\nBastilha, 19 de novembro de 1703: morre um prisioneiro mascarado desde 1669 e é enterrado com um nome falso. Voltaire disse que a máscara era de ferro. O registro da prisão diz outra coisa."
+   },
+   "ar": {
+    "title": "1703: من كان خلف القناع الحديدي؟ | قصة حقيقية",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/gNRPXe-J4dU\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\nالباستيل، 19 نوفمبر 1703: مات سجين مقنّع منذ 1669 ودُفن باسم مزيف. قال فولتير إن القناع كان من حديد، لكن سجل السجن يقول شيئًا آخر."
+   },
+   "fr": {
+    "title": "1703 : Qui se cachait sous le masque de fer ? | Histoire vraie",
+    "description": "Histoire vraie précédente : https://youtu.be/gNRPXe-J4dU\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\nLa Bastille, 19 novembre 1703 : meurt un prisonnier masqué depuis 1669, enterré sous un faux nom. Voltaire parle d'un masque de fer. Le registre de la prison dit autre chose."
+   },
+   "ja": {
+    "title": "1703年:鉄仮面の男は誰だったのか?|実話アニメ",
+    "description": "前回の実話: https://youtu.be/gNRPXe-J4dU\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n1703年11月19日、バスティーユ。1669年から仮面をつけられた囚人が死に、偽名で葬られた。ヴォルテールは鉄の仮面だと書いたが、牢獄の記録は違うことを語っている。"
+   },
+   "ko": {
+    "title": "1703년: 철가면 뒤의 남자는 누구였나? | 실화 애니메이션",
+    "description": "이전 실화: https://youtu.be/gNRPXe-J4dU\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n1703년 11월 19일 바스티유. 1669년부터 가면을 쓴 죄수가 죽고 가짜 이름으로 묻혔다. 볼테르는 철가면이라고 썼지만, 감옥 기록은 다른 이야기를 한다."
+   },
+   "de": {
+    "title": "1703: Wer steckte hinter der eisernen Maske? | Wahre Geschichte",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/gNRPXe-J4dU\nKennst du eine Geschichte wie diese? Schreib es in die Kommentare.\n\nBastille, 19. November 1703: Ein seit 1669 maskierter Gefangener stirbt und wird unter falschem Namen begraben. Voltaire sprach von einer Eisenmaske. Das Gefängnisregister sagt etwas anderes."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 22,
+   "top": "SPEAK AND DIE",
+   "title": "1669: if he spoke, he would be killed 🎭 #shorts",
+   "description": "A masked prisoner, one jailer, 34 years. What did he know? Full true story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Man in the Iron Mask",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "1669: si hablaba, lo matarían 🎭 #shorts",
+     "description": "Un preso enmascarado, un carcelero, 34 años. ¿Qué sabía? Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "1669: se falasse, seria morto 🎭 #shorts",
+     "description": "Um prisioneiro mascarado, um carcereiro, 34 anos. O que ele sabia? História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "1669: إن تكلّم، سيُقتل 🎭 #shorts",
+     "description": "سجين مقنّع، سجّان واحد، 34 عامًا. ماذا كان يعرف؟ القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "1669 : s'il parlait, il serait tué 🎭 #shorts",
+     "description": "Un prisonnier masqué, un geôlier, 34 ans. Que savait-il ? Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "1669年:話せば殺される囚人 🎭 #shorts",
+     "description": "仮面の囚人、ひとりの看守、34年。彼は何を知っていたのか? 本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1669년: 말하면 죽는 죄수 🎭 #shorts",
+     "description": "가면을 쓴 죄수, 한 명의 간수, 34년. 그는 무엇을 알았을까? 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "1669: Sprach er, sollte er sterben 🎭 #shorts",
+     "description": "Ein maskierter Gefangener, ein Wärter, 34 Jahre. Was wusste er? Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

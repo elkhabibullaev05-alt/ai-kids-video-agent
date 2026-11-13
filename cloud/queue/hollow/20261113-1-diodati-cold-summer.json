@@ -1,0 +1,1173 @@
+{
+ "id": "20261113-1-diodati-cold-summer",
+ "plot": "Odo and Mothwick follow the true story of 1816, the 'year without a summer': snow falls in Vermont in June, rain traps Lord Byron's guests at the Villa Diodati on Lake Geneva, Byron sets a ghost-story contest and 18-year-old Mary Godwin, stuck for days, sees Frankenstein's creature in a waking dream; the twist is that the cold summer itself was caused by the eruption of Mount Tambora in Indonesia a year earlier.",
+ "script": {
+  "title": "The Cold Summer That Made a Monster",
+  "lead_in": 0,
+  "set": {
+   "place": "swamp",
+   "fog": 0.035,
+   "eyes": 0,
+   "moonlight": 22
+  },
+  "chars": {
+   "odo": {
+    "name": "Odo",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.32,
+     0.2,
+     0.12
+    ],
+    "kind": "odo",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "moth": {
+    "name": "Mothwick",
+    "voice": "bf_isabella",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.9,
+     0.9,
+     0.8
+    ],
+    "kind": "moth",
+    "size": 0.55,
+    "home": [
+     0.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   },
+   "mary": {
+    "name": "Mary Godwin",
+    "voice": "bf_emma",
+    "speed": 0.98,
+    "pitch": 0,
+    "color": [
+     0.75,
+     0.72,
+     0.68
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -30,
+     30
+    ]
+   },
+   "byron": {
+    "name": "Lord Byron",
+    "voice": "bm_fable",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.18,
+     0.14,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     36,
+     34
+    ]
+   },
+   "percy": {
+    "name": "Percy Shelley",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.32,
+     0.4
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -36,
+     36
+    ]
+   },
+   "polidori": {
+    "name": "John Polidori",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.22,
+     0.2,
+     0.16
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     40,
+     38
+    ]
+   },
+   "farmer": {
+    "name": "Vermont Farmer",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.42,
+     0.3,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     42,
+     34
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "villa",
+    "type": "box",
+    "color": [
+     0.2,
+     0.18,
+     0.16
+    ],
+    "glow": 0,
+    "visible": true,
+    "scale": 2.4,
+    "at": [
+     -7,
+     18,
+     0
+    ]
+   },
+   {
+    "id": "window",
+    "type": "box",
+    "color": [
+     1.0,
+     0.65,
+     0.25
+    ],
+    "glow": 3.0,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     -7,
+     16.4,
+     2.2
+    ]
+   },
+   {
+    "id": "candle",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.7,
+     0.3
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.25,
+    "at": [
+     -8,
+     12,
+     1.4
+    ]
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.86,
+     0.82,
+     0.7
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1.2,
+     9.6,
+     1.5
+    ]
+   },
+   {
+    "id": "sun",
+    "type": "ball",
+    "color": [
+     0.9,
+     0.3,
+     0.15
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 1.1,
+    "at": [
+     8,
+     24,
+     9
+    ]
+   },
+   {
+    "id": "snow",
+    "type": "ball",
+    "color": [
+     0.95,
+     0.95,
+     1.0
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     5,
+     14,
+     4
+    ]
+   },
+   {
+    "id": "figure",
+    "type": "tube",
+    "color": [
+     0.55,
+     0.62,
+     0.45
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 1.2,
+    "at": [
+     3,
+     13,
+     0.5
+    ]
+   },
+   {
+    "id": "manuscript",
+    "type": "box",
+    "color": [
+     0.9,
+     0.86,
+     0.72
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     -1,
+     12.6,
+     1.4
+    ]
+   },
+   {
+    "id": "volcano",
+    "type": "cone",
+    "color": [
+     1.0,
+     0.45,
+     0.12
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 3.0,
+    "at": [
+     9,
+     26,
+     0
+    ]
+   },
+   {
+    "id": "ash",
+    "type": "ball",
+    "color": [
+     0.25,
+     0.22,
+     0.22
+    ],
+    "glow": 0,
+    "visible": false,
+    "scale": 1.6,
+    "at": [
+     9,
+     26,
+     5
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1816, Lake Geneva. Summer never came, and a monster was born.",
+    "cam": "wide",
+    "do": [
+     [
+      "mary",
+      "to:-2,12,0"
+     ],
+     [
+      "candle",
+      "drift:-2,11.6,1.4"
+     ]
+    ],
+    "text": "SUMMER NEVER CAME",
+    "sfx": "alarm"
+   },
+   {
+    "who": "odo",
+    "say": "A monster? Born in summer? Mothwick, monsters aren't born.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "enter:left"
+     ],
+     [
+      "moth",
+      "enter:left"
+     ]
+    ],
+    "text": "WHAT MONSTER?"
+   },
+   {
+    "who": "narr",
+    "say": "Her name was Mary. She was eighteen, and she could not sleep.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "to:-1.5,11.5,0"
+     ],
+     [
+      "mary",
+      "turn:front"
+     ]
+    ],
+    "text": "MARY, AGE 18"
+   },
+   {
+    "who": "moth",
+    "say": "This one is true, Odo. She wrote it all down herself.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:1,6,1.5"
+     ],
+     [
+      "book",
+      "show"
+     ]
+    ],
+    "text": "A TRUE STORY"
+   },
+   {
+    "who": "narr",
+    "say": "That June, rain fell almost every day. The sky stayed grey.",
+    "cam": "wide",
+    "do": [
+     [
+      "window",
+      "show"
+     ],
+     [
+      "villa",
+      "bounce"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "RAIN EVERY DAY"
+   },
+   {
+    "who": "narr",
+    "say": "When the sun did show, it looked dim and strangely red.",
+    "cam": "prop:sun",
+    "do": [
+     [
+      "sun",
+      "show"
+     ],
+     [
+      "sun",
+      "drift:8,24,6"
+     ]
+    ],
+    "text": "A RED SUN"
+   },
+   {
+    "who": "odo",
+    "say": "A red sun in June? That's not a normal summer.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOT NORMAL"
+   },
+   {
+    "who": "narr",
+    "say": "Across the ocean, in Vermont, snow fell in early June.",
+    "cam": "overhead",
+    "do": [
+     [
+      "farmer",
+      "enter:right"
+     ],
+     [
+      "snow",
+      "show"
+     ],
+     [
+      "snow",
+      "drift:4,13,1"
+     ]
+    ],
+    "text": "SNOW IN JUNE"
+   },
+   {
+    "who": "farmer",
+    "say": "My corn froze in the field. In June, I tell you.",
+    "cam": "close:farmer",
+    "do": [
+     [
+      "farmer",
+      "turn:front"
+     ],
+     [
+      "farmer",
+      "shake"
+     ]
+    ],
+    "text": "MY CORN FROZE"
+   },
+   {
+    "who": "narr",
+    "say": "Frost came back in July, and again in August.",
+    "cam": "wide",
+    "do": [
+     [
+      "farmer",
+      "to:5,14,0"
+     ],
+     [
+      "snow",
+      "bounce"
+     ]
+    ],
+    "text": "FROST IN AUGUST"
+   },
+   {
+    "who": "narr",
+    "say": "New Englanders called it Eighteen Hundred and Froze to Death.",
+    "cam": "prop:snow",
+    "do": [
+     [
+      "snow",
+      "bounce"
+     ]
+    ],
+    "text": "FROZE TO DEATH",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "moth",
+    "say": "In Europe the harvests failed. Bread ran short. People went hungry.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "sad"
+     ]
+    ],
+    "text": "BREAD RAN SHORT"
+   },
+   {
+    "who": "odo",
+    "say": "But why? Why did a whole summer just disappear?",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ],
+     [
+      "farmer",
+      "to_home"
+     ]
+    ],
+    "text": "WHY?"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody knew. By the lake, Lord Byron had rented the Villa Diodati.",
+    "cam": "wide",
+    "do": [
+     [
+      "byron",
+      "enter:right"
+     ],
+     [
+      "byron",
+      "to:-4,13,0"
+     ],
+     [
+      "snow",
+      "hide"
+     ]
+    ],
+    "text": "VILLA DIODATI"
+   },
+   {
+    "who": "narr",
+    "say": "Mary, her future husband Percy Shelley, and Doctor John Polidori came.",
+    "cam": "overhead",
+    "do": [
+     [
+      "percy",
+      "enter:left"
+     ],
+     [
+      "percy",
+      "to:-5.5,12.5,0"
+     ],
+     [
+      "polidori",
+      "enter:right"
+     ],
+     [
+      "polidori",
+      "to:-2.5,13.5,0"
+     ]
+    ],
+    "text": "THE GUESTS"
+   },
+   {
+    "who": "mary",
+    "say": "It proved a wet, ungenial summer. Rain kept us inside for days.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "to:-3,12,0"
+     ],
+     [
+      "mary",
+      "sad"
+     ]
+    ],
+    "text": "TRAPPED INSIDE"
+   },
+   {
+    "who": "narr",
+    "say": "By candlelight, they read a book of German ghost stories aloud.",
+    "cam": "prop:candle",
+    "do": [
+     [
+      "candle",
+      "bounce"
+     ],
+     [
+      "book",
+      "show"
+     ]
+    ],
+    "text": "GHOST STORIES"
+   },
+   {
+    "who": "byron",
+    "say": "We will each write a ghost story. Every one of us.",
+    "cam": "close:byron",
+    "do": [
+     [
+      "byron",
+      "turn:front"
+     ],
+     [
+      "byron",
+      "jump"
+     ]
+    ],
+    "text": "WRITE A GHOST STORY"
+   },
+   {
+    "who": "odo",
+    "say": "A ghost story contest, in a storm? I would hide.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1,7,0"
+     ]
+    ],
+    "text": "A CONTEST"
+   },
+   {
+    "who": "narr",
+    "say": "Byron began one. Polidori began one. Percy began one.",
+    "cam": "wide",
+    "do": [
+     [
+      "polidori",
+      "to:-1.5,13,0"
+     ],
+     [
+      "percy",
+      "spin"
+     ],
+     [
+      "book",
+      "hide"
+     ]
+    ],
+    "text": "EVERYONE WROTE"
+   },
+   {
+    "who": "mary",
+    "say": "Every morning they asked if I had a story. I had nothing.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "turn:front"
+     ],
+     [
+      "mary",
+      "sad"
+     ]
+    ],
+    "text": "I HAD NOTHING"
+   },
+   {
+    "who": "moth",
+    "say": "Days passed, Odo. She was sure she would fail.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "DAYS PASSED"
+   },
+   {
+    "who": "narr",
+    "say": "One night, the men talked late about the spark of life.",
+    "cam": "two:byron,percy",
+    "do": [
+     [
+      "byron",
+      "to:-4.5,12.8,0"
+     ],
+     [
+      "percy",
+      "turn:byron"
+     ]
+    ],
+    "text": "THE SPARK OF LIFE"
+   },
+   {
+    "who": "narr",
+    "say": "Scientists had made dead frogs' legs twitch with electricity.",
+    "cam": "prop:candle",
+    "do": [
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "ELECTRICITY",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "odo",
+    "say": "Frogs? Mothwick, I don't like where this is going.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "shake"
+     ]
+    ],
+    "text": "OH NO"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for a new true story every day. Now the strangest night.",
+    "cam": "overhead",
+    "do": [
+     [
+      "candle",
+      "drift:-6,13,1.4"
+     ]
+    ],
+    "text": "THE STRANGEST NIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Mary went to bed long after midnight. She could not sleep.",
+    "cam": "wide",
+    "do": [
+     [
+      "mary",
+      "to:-6,14,0"
+     ],
+     [
+      "window",
+      "bounce"
+     ]
+    ],
+    "text": "AFTER MIDNIGHT"
+   },
+   {
+    "who": "mary",
+    "say": "With my eyes shut, I saw a pale student kneeling.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "turn:front"
+     ],
+     [
+      "mary",
+      "eyes_big"
+     ]
+    ],
+    "text": "A PALE STUDENT"
+   },
+   {
+    "who": "mary",
+    "say": "Beside him lay a thing he had put together.",
+    "cam": "prop:figure",
+    "do": [
+     [
+      "figure",
+      "show"
+     ]
+    ],
+    "text": "THE THING HE MADE"
+   },
+   {
+    "who": "narr",
+    "say": "Then the thing opened its yellow, watery eyes.",
+    "cam": "prop:figure",
+    "do": [
+     [
+      "figure",
+      "bounce"
+     ]
+    ],
+    "text": "IT OPENED ITS EYES",
+    "sfx": "alarm"
+   },
+   {
+    "who": "mary",
+    "say": "I opened my own eyes in terror. And then I knew.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "shake"
+     ]
+    ],
+    "text": "THEN I KNEW"
+   },
+   {
+    "who": "moth",
+    "say": "The next morning she told them: I have found my story.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "happy"
+     ],
+     [
+      "figure",
+      "hide"
+     ]
+    ],
+    "text": "I FOUND IT"
+   },
+   {
+    "who": "narr",
+    "say": "It became Frankenstein, published in London in January 1818.",
+    "cam": "wide",
+    "do": [
+     [
+      "manuscript",
+      "show"
+     ],
+     [
+      "manuscript",
+      "drift:0,12,2"
+     ]
+    ],
+    "text": "FRANKENSTEIN, 1818"
+   },
+   {
+    "who": "moth",
+    "say": "Eighteen years old, Odo, and she changed horror stories forever.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "SHE WAS 18"
+   },
+   {
+    "who": "odo",
+    "say": "So the storm made the story. But what made the storm?",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "to:-1.5,7,0"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "WHAT MADE THE STORM?"
+   },
+   {
+    "who": "narr",
+    "say": "That July, Byron wrote a black poem. He called it Darkness.",
+    "cam": "overhead",
+    "do": [
+     [
+      "sun",
+      "hide"
+     ],
+     [
+      "manuscript",
+      "hide"
+     ]
+    ],
+    "text": "DARKNESS"
+   },
+   {
+    "who": "byron",
+    "say": "I had a dream, which was not all a dream.",
+    "cam": "close:byron",
+    "do": [
+     [
+      "byron",
+      "turn:front"
+     ],
+     [
+      "byron",
+      "sad"
+     ]
+    ],
+    "text": "NOT ALL A DREAM"
+   },
+   {
+    "who": "narr",
+    "say": "Polidori finished The Vampyre, one of the first vampire stories in English.",
+    "cam": "close:polidori",
+    "do": [
+     [
+      "polidori",
+      "turn:front"
+     ],
+     [
+      "polidori",
+      "to:-0.5,13,0"
+     ]
+    ],
+    "text": "THE VAMPYRE"
+   },
+   {
+    "who": "moth",
+    "say": "One cold summer, Odo. Two monsters. And still nobody knew why.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "STILL NO ANSWER"
+   },
+   {
+    "who": "narr",
+    "say": "The answer was a year old, and half a world away.",
+    "cam": "prop:volcano",
+    "do": [
+     [
+      "volcano",
+      "show"
+     ],
+     [
+      "volcano",
+      "bounce"
+     ]
+    ],
+    "text": "HALF A WORLD AWAY",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "April 1815. Mount Tambora, in today's Indonesia, exploded.",
+    "cam": "wide",
+    "do": [
+     [
+      "ash",
+      "show"
+     ],
+     [
+      "ash",
+      "drift:4,24,12"
+     ]
+    ],
+    "text": "TAMBORA, 1815"
+   },
+   {
+    "who": "narr",
+    "say": "The biggest eruption in recorded history threw ash high into the sky.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ash",
+      "drift:-4,22,16"
+     ],
+     [
+      "volcano",
+      "bounce"
+     ]
+    ],
+    "text": "BIGGEST ERUPTION EVER RECORDED"
+   },
+   {
+    "who": "moth",
+    "say": "That fine haze spread around the whole planet, Odo.",
+    "cam": "close:moth",
+    "do": [
+     [
+      "moth",
+      "to:0,6,1.8"
+     ]
+    ],
+    "text": "AROUND THE PLANET"
+   },
+   {
+    "who": "odo",
+    "say": "So it dimmed the sunlight. That's why the sun looked red!",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "odo",
+      "eyes_big"
+     ]
+    ],
+    "text": "IT DIMMED THE SUN"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. Scientists linked the lost summer to Tambora about a century later.",
+    "cam": "wide",
+    "do": [
+     [
+      "sun",
+      "show"
+     ],
+     [
+      "sun",
+      "bounce"
+     ]
+    ],
+    "text": "LINKED A CENTURY LATER"
+   },
+   {
+    "who": "narr",
+    "say": "Mary never knew that a volcano helped wake her monster.",
+    "cam": "close:mary",
+    "do": [
+     [
+      "mary",
+      "turn:front"
+     ],
+     [
+      "mary",
+      "sad"
+     ]
+    ],
+    "text": "SHE NEVER KNEW"
+   },
+   {
+    "who": "odo",
+    "say": "A mountain blew up, and a monster woke up in Geneva.",
+    "cam": "close:odo",
+    "do": [
+     [
+      "odo",
+      "to:-1,6,0"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "A MOUNTAIN MADE A MONSTER"
+   },
+   {
+    "who": "narr",
+    "say": "If this one got you, the Tunguska sky blast story is next.",
+    "cam": "wide",
+    "do": [
+     [
+      "moth",
+      "jump"
+     ],
+     [
+      "odo",
+      "happy"
+     ]
+    ],
+    "text": "NEXT: TUNGUSKA"
+   },
+   {
+    "who": "narr",
+    "say": "Have you heard a story like this one? Tell me in the comments.",
+    "cam": "two:odo,moth",
+    "do": [
+     [
+      "odo",
+      "turn:front"
+     ],
+     [
+      "moth",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "1816: A Cold Summer Made a Monster | True Story Animated",
+  "description": "Previous true story: https://youtu.be/mDtBUZwlwHU\nHave you heard a story like this one? Tell me in the comments.\n\n\"A mountain blew up, and a monster woke up in Geneva.\" — Odo\n\nA true story from 1816, the year without a summer: snow fell in Vermont in June, and endless rain trapped Lord Byron, Percy Shelley, John Polidori and 18-year-old Mary Godwin at the Villa Diodati on Lake Geneva. Byron dared them each to write a ghost story, and one sleepless night Mary saw the creature that became Frankenstein. Nobody then knew why the summer had vanished: the eruption of Mount Tambora, a year earlier and half a world away.\n\nSources:\nhttps://en.wikipedia.org/wiki/Year_Without_a_Summer\nhttps://en.wikipedia.org/wiki/Villa_Diodati\nhttps://about.jstor.org/blog/frankenstein-the-vampyre-and-the-spirit-of-the-humanities-echoes-from-the-summer-of-1816\n\n#truestory #scarystories #3DAnimation #Odo #frankenstein",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Lake Geneva",
+   "Villa Diodati",
+   "1816",
+   "year without a summer",
+   "Frankenstein",
+   "Mary Shelley",
+   "Lord Byron",
+   "Mount Tambora",
+   "cold summer true story",
+   "winter true story",
+   "true story",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "BORN FROM COLD",
+  "thumb_beat": 27,
+  "localizations": {
+   "es": {
+    "title": "1816: un verano frío creó un monstruo | Historia real",
+    "description": "Historia real anterior: https://youtu.be/mDtBUZwlwHU\n¿Has oído una historia como esta? Cuéntamelo en los comentarios.\n\n1816, el año sin verano: nevó en Vermont en junio y la lluvia encerró a Byron, Shelley, Polidori y Mary, de 18 años, en la Villa Diodati. De un concurso de historias de fantasmas nació Frankenstein. La causa del frío: el volcán Tambora."
+   },
+   "pt": {
+    "title": "1816: um verão frio criou um monstro | História real",
+    "description": "História real anterior: https://youtu.be/mDtBUZwlwHU\nVocê já ouviu uma história como esta? Conte nos comentários.\n\n1816, o ano sem verão: nevou em Vermont em junho e a chuva prendeu Byron, Shelley, Polidori e Mary, de 18 anos, na Villa Diodati. De um desafio de histórias de fantasmas nasceu Frankenstein. A causa do frio: o vulcão Tambora."
+   },
+   "ar": {
+    "title": "برد 1816: الصيف الذي صنع وحشًا | قصة حقيقية",
+    "description": "القصة الحقيقية السابقة: https://youtu.be/mDtBUZwlwHU\nهل سمعت قصة مثل هذه؟ أخبرني في التعليقات.\n\n1816، العام بلا صيف: تساقط الثلج في فيرمونت في يونيو، وحبس المطر بايرون وشيلي وبوليدوري وماري ذات الثمانية عشر عامًا في فيلا ديوداتي. من تحدي قصص الأشباح وُلد فرانكنشتاين. وسبب البرد: بركان تامبورا."
+   },
+   "fr": {
+    "title": "1816 : un été glacial créa un monstre | Histoire vraie",
+    "description": "Histoire vraie précédente : https://youtu.be/mDtBUZwlwHU\nAvez-vous déjà entendu une histoire comme celle-ci ? Dites-le-moi en commentaire.\n\n1816, l'année sans été : il neige au Vermont en juin et la pluie enferme Byron, Shelley, Polidori et Mary, 18 ans, à la Villa Diodati. D'un concours d'histoires de fantômes naît Frankenstein. La cause du froid : le volcan Tambora."
+   },
+   "ja": {
+    "title": "1816年の寒さ:怪物を生んだ夏|実話アニメ",
+    "description": "前回の実話: https://youtu.be/mDtBUZwlwHU\nこんな話を聞いたことはありますか?コメントで教えてください。\n\n1816年「夏のない年」。6月のバーモントに雪が降り、雨がバイロン、シェリー、ポリドリ、18歳のメアリーをディオダティ荘に閉じ込めた。怪談の競作からフランケンシュタインが生まれた。寒さの原因はタンボラ火山だった。"
+   },
+   "ko": {
+    "title": "1816년의 추위: 괴물을 만든 여름 | 실화 애니메이션",
+    "description": "이전 실화: https://youtu.be/mDtBUZwlwHU\n이런 이야기를 들어본 적 있나요? 댓글로 알려주세요.\n\n1816년, 여름이 없던 해. 6월 버몬트에 눈이 내렸고 비가 바이런, 셸리, 폴리도리, 18살 메리를 디오다티 별장에 가뒀다. 유령 이야기 내기에서 프랑켄슈타인이 태어났다. 추위의 원인은 탐보라 화산이었다."
+   },
+   "de": {
+    "title": "1816: Ein kalter Sommer schuf ein Monster | Wahre Geschichte",
+    "description": "Vorherige wahre Geschichte: https://youtu.be/mDtBUZwlwHU\nKennst du eine Geschichte wie diese? Schreib es in die Kommentare.\n\n1816, das Jahr ohne Sommer: Im Juni schneite es in Vermont, und Regen sperrte Byron, Shelley, Polidori und die 18-jährige Mary in der Villa Diodati ein. Aus einem Gespenstergeschichten-Wettstreit entstand Frankenstein. Die Ursache der Kälte: der Vulkan Tambora."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 7,
+   "dur": 24,
+   "top": "SNOW IN JUNE",
+   "title": "June 1816: it snowed. Nobody knew why ❄️ #shorts",
+   "description": "Vermont, June 1816. Corn froze in the fields, and summer never came. Full true story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "year without a summer",
+    "true scary stories"
+   ],
+   "localizations": {
+    "es": {
+     "title": "1816: nevó en junio y nadie sabía por qué ❄️ #shorts",
+     "description": "Vermont, junio de 1816. El maíz se heló y el verano nunca llegó. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "1816: nevou em junho e ninguém sabia por quê ❄️ #shorts",
+     "description": "Vermont, junho de 1816. O milho congelou e o verão nunca chegou. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "1816: تساقط الثلج في يونيو ولم يعرف أحد السبب ❄️ #shorts",
+     "description": "فيرمونت، يونيو 1816. تجمّد الذرة في الحقول ولم يأتِ الصيف أبدًا. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "1816 : il a neigé en juin, personne ne savait pourquoi ❄️ #shorts",
+     "description": "Vermont, juin 1816. Le maïs a gelé et l'été n'est jamais venu. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "1816年:6月に雪が降った。誰も理由を知らなかった ❄️ #shorts",
+     "description": "1816年6月バーモント。畑のトウモロコシが凍り、夏は来なかった。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "1816년: 6월에 눈이 내렸다. 아무도 이유를 몰랐다 ❄️ #shorts",
+     "description": "1816년 6월 버몬트. 밭의 옥수수가 얼고 여름은 오지 않았다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "1816: Schnee im Juni – niemand wusste warum ❄️ #shorts",
+     "description": "Vermont, Juni 1816. Der Mais erfror, und der Sommer kam nie. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
