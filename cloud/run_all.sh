@@ -87,6 +87,11 @@ if [ -f cloud/cod/job.json ]; then
     ) 9>/tmp/kanal-cod.lock &
   fi
 fi
+# 2026-11-13 owner: games he plays are recorded by Documents\avto_yozish\game_rec.py -> auto Shorts here (not uploaded
+# until Claude approves them in cloud/cod/v4_ok.json)
+if ls /mnt/c/Users/*/Documents/kanal_navbat/gameplay/*.json >/dev/null 2>&1; then
+  ( flock -n 6 || exit 0; nice -n 6 timeout 6h python3 cloud/cod/auto_gameplay.py >> /root/kanal/cod/auto.log 2>&1 ) 6>/tmp/kanal-auto.lock &
+fi
 # 2026-11-11 owner: upload the edited MW4 videos to MW4 Campaign HD (own Cloud project), 1 long + 3 Shorts a day
 if [ -s /root/kanal/cod/token.json ] && [ -f cloud/cod/cod_upload.py ]; then
   ( flock -n 8 || exit 0; timeout 14h python3 cloud/cod/cod_upload.py >> /root/kanal/cod/upload.log 2>&1 ) 8>/tmp/kanal-codup.lock &

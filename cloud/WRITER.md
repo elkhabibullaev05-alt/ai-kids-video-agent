@@ -170,3 +170,10 @@ Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those
 - **bolt** (since 18 Oct: 2,797 impressions, CTR 1.36 %, avg view 0:15 = 7 %, 0 subs): second 1 = the problem on screen (Pip stuck, the splash), the stakes said in the first 5 s, no title card; thumbnail = one big Bolt face + one clear problem object. Studio also says post less — owner decides.
 - **doughbros** (Analytics only, no Ask Studio: 147.8K impressions, CTR 2.0 %, avg view 0:34; Shorts 9.9K views, +21 subs): keep the "Would YOU…?" Shorts; long opens on the object + problem in second 1.
 - **hollow**: see ask_studio_2026-11-07.md — hook in 5 s, end with a line pointing to another story ("If this one got you, the Bluff Creek footprints story is next on the channel").
+
+## 2026-11-13 growth research (metricool data 2026, vc.ru) — applies to every channel
+- ~60% of organic views come from the Shorts feed; small channels (2K-10K subs) grow fastest through Shorts.
+- Average view duration dropped hard this year (Shorts ~2/3): open on the payoff, never an intro/name/title card.
+- Long videos: 2-4 a week is the sweet spot; more than 7 a week lowers total views.
+- Titles < 60 chars, main idea + number first; thumbnail 1280x720, one focal point, 2-3 big words; use Studio's A/B test (3 titles/thumbs).
+- One niche per channel; playlists + end screens + series keep sessions going.
