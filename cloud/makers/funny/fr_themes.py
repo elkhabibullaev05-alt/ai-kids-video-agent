@@ -219,6 +219,14 @@ def make_title(name, titles, rng=random):
         fp = FAIL_PATTERNS[:]
         rng.shuffle(fp)
         pats = fp[:2] + pats
+    # 2026-11-13 review: "X Fails That Went Horribly Wrong 💀" 4x in two days → least-used template among recent titles first
+    recent = [_norm(t) for t in titles[:12] + titles[-12:]]
+
+    def _uses(p):
+        a, _, b = p.partition("{n}")
+        a, b = _norm(a), _norm(b)
+        return sum(1 for t in recent if (not a or t.startswith(a)) and (not b or t.endswith(b)))
+    pats.sort(key=_uses)
     for p in pats:
         t = p.format(n=name)
         if len(t) <= 50 and _norm(t) not in used:
