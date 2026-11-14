@@ -5,7 +5,7 @@ Chrome authuser indexes were checked on 2026-11-06. If a channel has moved, re-c
 | key | name | Studio channel id | authuser | agent / guidance files | notes |
 |---|---|---|---|---|---|
 | roblox | Roblox Top 10 Daily | UCVqJ3Zvk_qPnZDyE5d1bppw | 0 | cloud/makers/roblox.py (+roblox/) | teen/adult only, never kids |
-| sleep | Calm Rain for Sleep | UCmDhWfz5KM_sVy58F8i6dEQ | 0 | cloud/makers/sleep.py | real rain only (Wikimedia Commons, credited), NO AI video |
+| sleep | Calm Rain for Sleep | UCmDhWfz5KM_sVy58F8i6dEQ | 0 | cloud/makers/sleep.py | 2026-11-14: one cozy animated illustrated rain scene matching the title (drawn by the maker, no stock/watermarks); real rain sound (Commons, credited) matched to the scene |
 | max | Max the Curious Cat | UCxHeOROSVQQSZv7zeMaF4Vw | 1 | maxcat/ + cloud/WRITER.md | Made for Kids |
 | ufc | Wild Sketchbook (animals) | UCbWs87aJxQxohE0M2MaO7GQ | 1 | cloud/makers/ufc.py + cloud/ink/WRITER_INK.md | no fight footage; free-licence images only |
 | seoul | Seoul Night Remix | UCEgWmdwz8gvTmqtDgFMut-A | 2 | seoul/ | Suno Pro songs only; AI backgrounds marked altered/synthetic |
