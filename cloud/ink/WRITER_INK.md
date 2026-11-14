@@ -1,4 +1,18 @@
-# Ink explainer writer — animals channel (Fight Stats Daily → animal channel)
+# Ink writer — Wild Sketchbook
+
+> **OWNER FORMAT 2026-11-14 — "Survival: Day 1 to Day 100" (overrides every older format, topic and length rule below; the JSON format, image, honesty and check.py rules still apply).**
+> Proof: DoodleSurvivals (opened 14 Oct 2026, 7 videos) — "Zombie Outbreak Survival: Trapped In a Farm Day 1 To Day 100" 1.4M views.
+> - **One long story per day**, English, **12:00–14:40** (channel is NOT phone-verified → hard max 14:50; 20 min only after the owner verifies). = **1,900–2,250 words** in `scenes`, 90–140 scenes. One Short per script as before.
+> - **First person ("I")** — the narrator lives through it. Title: `I Survived 100 Days <situation>` or `<Situation> Survival: Day 1 to Day 100` (zombie farm, stranded in the desert, ice age, alone on an island, animal world; animal angles welcome: "I Survived 100 Days as a Wolf"). Every title a new situation — never repeat one from `cloud/ink/animals/`.
+> - **0 s = the most dangerous moment** (hook ≤ 5 words, first sentence ≤ 14 words, in the middle of the action), then jump back: "Day 1." and tell it in order to **Day 100** at the end.
+> - **Big on-screen day counters:** put `"num": "DAY 1"`, `"num": "DAY 37"` … `"num": "DAY 100"` on the first scene of each day block (the renderer stamps it top-left). 12–20 day blocks per video.
+> - **A new danger or twist every 1–2 minutes** (≈ every 200–300 words): storm, injury scare, food runs out, a stranger, an animal, the shelter fails. Escalate to the end; Day 100 = rescue/escape/new beginning + a one-line lesson + a comment question.
+> - Each story fully its own — no template sentences reused between scripts (YouTube "inauthentic content" rule). Survival facts (water, fire, cold, animal behaviour) must still be real and sourced in `sources`; the story itself is clearly fiction ("what if"). No gore, no animal cruelty, no harmful how-to.
+> - Visuals: the existing ink/2D sketch style; change `img` often so the picture changes every 3–5 s (10+ different Wikipedia images: "Barn", "Desert", "Wolf", "Snow", "Campfire", "Island"…).
+> - Short: the 0-s danger moment as a 45–59 s loop ending "full story on my channel".
+> - The old animal fact-explainer queue is stopped: scripts 021–024 were moved to `cloud/hold/ufc_old_explainers/` (not deleted). Number new scripts from 025.
+
+## Older rules (still valid where the 2026-11-14 format does not override them)
 
 Each run writes **one** new script to `cloud/ink/animals/NNN-slug.json` (next free number) and pushes it to `main`.
 The PC agent (`ufctube`) downloads it within 3 hours. From each script it renders one long video (1920x1080, ink/sketch style) and one Short (1080x1920 with word-by-word captions).

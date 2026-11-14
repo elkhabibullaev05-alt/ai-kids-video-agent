@@ -45,7 +45,7 @@ CAP_Y = 1110                 # captions (bottom 20% and right edge stay clear)
 TOP_Y = 190                  # hook / labels below the header strip
 MAX_LONG = 14 * 60 + 40
 MAX_SHORT = 58.5
-CTA_LINE = "Want one animal secret every day? Subscribe to the Wild Sketchbook."
+CTA_LINE = "Want a new 100-day survival story every day? Subscribe to the Wild Sketchbook."  # 2026-11-14 owner: Survival Day 1 to Day 100 format
 
 
 def log(*a):
@@ -282,7 +282,7 @@ def subscribe_panel(repo, work):
         d.ellipse((290, 290, 650, 650), outline=art.INK, width=6)
         t = art.text_layer("Wild Sketchbook", "hand", 900, 140, 120, fill=art.INK, stroke=(255, 250, 235), sw=3, max_lines=1)
         im.alpha_composite(t, (720, 280))
-        t2 = art.text_layer("one animal secret a day", "hand", 900, 90, 70, fill=(90, 70, 55), stroke=(255, 250, 235), sw=2,
+        t2 = art.text_layer("a new survival story every day", "hand", 900, 90, 70, fill=(90, 70, 55), stroke=(255, 250, 235), sw=2,
                             max_lines=1)
         im.alpha_composite(t2, (730, 420))
         bx, by, bw, bh = 760, 560, 560, 140
@@ -428,7 +428,7 @@ def make_long(sc, photos, metas, a, work, out_dir, pack):
             ovs.append(dict(png=save_png(lb, work, f"lab{i}"), x=(LW - lb.width) // 2, y=LH - lb.height - 70,
                             t0=0.25, t1=dur + 1, fade_in=0.2))
         if i == mid:
-            c = art.text_layer("Subscribe for one animal secret a day", "hand", 760, 100, 56, fill=(255, 255, 255),
+            c = art.text_layer("Subscribe for a new survival story every day", "hand", 760, 100, 56, fill=(255, 255, 255),
                                stroke=(0, 0, 0), sw=4, bg=(204, 0, 0, 230), pad=20, max_lines=1)
             ovs.append(dict(png=save_png(c, work, f"cta{i}"), x=LW - c.width - 40, y=40, t0=0.3, t1=min(dur, 5.0),
                             fade_in=0.2, fade_out=0.3))
@@ -447,7 +447,7 @@ def make_long(sc, photos, metas, a, work, out_dir, pack):
     th_text = " ".join(th_text.split()[:4])
     art.thumbnail(th_src, th_text, os.path.join(out_dir, f"{pack}-0-long.jpg"))
     desc = build_desc(sc.get("description", ""), sc, credits([u for u in used if u], metas),
-                      "Subscribe for one animal secret a day — this is the Wild Sketchbook.")
+                      "Subscribe for a new survival story every day — this is the Wild Sketchbook.")
     meta = {"file": f"{pack}-0-long.mp4", "kind": "long", "title": sc["title"][:100], "description": desc,
             "tags": tags_of(sc), "thumb": f"{pack}-0-long.jpg", "pack": pack}
     json.dump(meta, open(os.path.join(out_dir, f"{pack}-0-long.json"), "w"), ensure_ascii=False, indent=1)
@@ -622,7 +622,7 @@ def extra_shorts(sc, used, n=2):
             s.pop("hook", None)
             s.pop("num", None)
         desc = (f"{lab or hook} - one moment from today's Wild Sketchbook video. " if (lab or hook) else "") + \
-            "Subscribe for one animal secret a day."
+            "Subscribe for a new survival story every day."
         out.append({"title": title, "header": sc["short"].get("header") or topic, "description": desc, "scenes": sec})
     return out
 

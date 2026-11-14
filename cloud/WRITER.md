@@ -177,3 +177,12 @@ Only 5 of the last 23 Dough Bros Shorts used the "Would YOU…?" form, yet those
 - Long videos: 2-4 a week is the sweet spot; more than 7 a week lowers total views.
 - Titles < 60 chars, main idea + number first; thumbnail 1280x720, one focal point, 2-3 big words; use Studio's A/B test (3 titles/thumbs).
 - One niche per channel; playlists + end screens + series keep sessions going.
+
+## hollow — first-person format 2026-11-14 (owner — overrides every older hollow title/format/length rule)
+Hollowmere Tales median was 9 views. Proof: FablePop "150 years ago, people destroyed me because I was smart. Then I was reborn in the modern world!" 5.5M — opens at 0 s on a dramatic line ("So, this is how I die").
+- **First person, "fell into / reborn into history":** the hero (a modern teen/young adult, our own 3D cast) wakes up inside a real historical event or mystery and lives through it. Title: `I Woke Up in <year/event>…` or `I Lived Through <real historical mystery> — Here's What Really Happened` (≤ 60 chars, no episode number; the "| True Story Animated" tail is dropped for this format).
+- **Length 12:00–14:30** (`seconds` 720–870 in channels.json; channel NOT phone-verified → hard max 14:50; 15–25 min only after the owner verifies). Count 2.0 words/s → **1,450–1,700 spoken words**. English.
+- **Beat 0 = the most dramatic moment with dialogue** ("So, this is how I die."), no title card, no intro; then flash back ("Three days earlier…") and tell it in order.
+- Real historical facts stay true (research 2–4 sources, keep them in the description "Sources:"); the hero is shown from inside the event but never changes recorded history. A twist or new danger every 2–3 minutes. The end: what really happened (the historical truth) + a one-line lesson + a comment question.
+- Thumbnail (`thumb_beat`): the hero's face close-up with a strong emotion; `thumb_text` 2–4 big words.
+- Shorts: cut the 0-s dramatic moment as Short 1 (loop to the start), "Full story on the channel" at the end.

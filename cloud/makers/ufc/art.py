@@ -242,9 +242,14 @@ def badge_layer(num, size=230):
         d.ellipse((o + rng.randint(-3, 3), o + rng.randint(-3, 3), size - o + rng.randint(-3, 3), size - o + rng.randint(-3, 3)),
                   outline=RED + (255,), width=7)
     d.ellipse((24, 24, size - 24, size - 24), fill=RED + (235,))
-    f = font("marker", int(size * 0.42))
+    fs = int(size * 0.42)
+    f = font("marker", fs)
     tw = d.textlength(num, font=f)
-    d.text(((size - tw) / 2, size * 0.24), num, font=f, fill=(255, 248, 230, 255), stroke_width=2, stroke_fill=INK + (255,))
+    while tw > size * 0.74 and fs > 20:  # 2026-11-14: "DAY 37" / "DAY 100" counters must fit the stamp
+        fs -= 4
+        f = font("marker", fs)
+        tw = d.textlength(num, font=f)
+    d.text(((size - tw) / 2, (size - fs * 1.2) / 2), num, font=f, fill=(255, 248, 230, 255), stroke_width=2, stroke_fill=INK + (255,))
     return im.rotate(rng.uniform(-12, 12), resample=Image.BICUBIC, expand=True)
 
 
