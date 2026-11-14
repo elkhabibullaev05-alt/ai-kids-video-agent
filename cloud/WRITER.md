@@ -186,3 +186,13 @@ Hollowmere Tales median was 9 views. Proof: FablePop "150 years ago, people dest
 - Real historical facts stay true (research 2–4 sources, keep them in the description "Sources:"); the hero is shown from inside the event but never changes recorded history. A twist or new danger every 2–3 minutes. The end: what really happened (the historical truth) + a one-line lesson + a comment question.
 - Thumbnail (`thumb_beat`): the hero's face close-up with a strong emotion; `thumb_text` 2–4 big words.
 - Shorts: cut the 0-s dramatic moment as Short 1 (loop to the start), "Full story on the channel" at the end.
+
+## hollow — Ask Studio 2026-11-14 (owner; applies together with "first-person format 2026-11-14", newer wins)
+Studio: CTR 1.04 % (norm 4–8 %), 87 % swipe away the Shorts, long videos average under 25 s watched.
+1. **No character greeting/argument opening.** Mothwick and Odo's intro chat is removed. 0–3 s: one strange true fact as the first spoken line ("In June 1816, Vermont woke up under six inches of snow."); 3–15 s: the mystery/question; the cast appears only after 15–30 s.
+2. **Titles:** no "(Ep N)", no "| True Story Animated" (the worker also strips both). Danger/question first: "Why Snow Fell in June 1816". ≤ 60 chars.
+3. **Topics:** strange historical events and folk legends that have a clear rule or a visual puzzle (best: "Why Can't He Cross This Bridge?" 615 views, "Who left these tracks on the roof?" 475). No general date/documentary overviews.
+4. **Thumbnail:** one high-contrast centre subject (silhouette or artefact), `thumb_text` 2–4 words that do NOT repeat the title.
+5. **No "subscribe" line in the middle** (drop the Narrator subscribe line after the hook); one subscribe/comment ask only at the very end.
+6. **Length:** long 8:00–12:00 first person (`seconds` 480–720 → ~960–1,440 spoken words); Shorts 20–30 s, built to loop (last line leads back into the first).
+7. **Schedule:** Shorts 3–4 a week, long 1–2 a week (channels.json `slot_weekdays`: Shorts Mon/Wed/Fri/Sun, longs Tue/Sat). Write at most 2 long jobs per week into `cloud/queue/hollow/`.

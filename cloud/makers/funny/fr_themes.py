@@ -154,31 +154,75 @@ REACTIONS = {
         ("UNBEATABLE", "Unbeatable. Watch it again.")],
 }
 NUM_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}
-HOOKS = ["Wait for number one!", "Number one is insane!", "Don't skip number one!", "Watch till number one!"]
-HOOK_TEXT = {"Wait for number one!": "WAIT FOR #1", "Number one is insane!": "#1 IS INSANE",
-             "Don't skip number one!": "DON'T SKIP #1", "Watch till number one!": "WATCH TILL #1"}
+# 2026-11-14 owner (Ask Studio): frame 1 = the shock moment + a QUESTION, no "Top 5" countdown screen
+HOOKS = ["Can you spot the mistake before it happens?", "Wait for number one!", "Guess what goes wrong!",
+         "This was a terrible idea."]
+HOOK_TEXT = {"Can you spot the mistake before it happens?": "SPOT THE MISTAKE?", "Wait for number one!": "WAIT FOR #1",
+             "Guess what goes wrong!": "WHAT GOES WRONG?", "This was a terrible idea.": "TERRIBLE IDEA..."}
+PHYSICS_HOOKS = ["Why did this fail? Physics explains.", "Can you guess the physics before it fails?",
+                 "Which law of physics wins here?"]
+PHYSICS_HOOK_TEXT = {"Why did this fail? Physics explains.": "WHY DID IT FAIL?",
+                     "Can you guess the physics before it fails?": "GUESS THE PHYSICS",
+                     "Which law of physics wins here?": "WHICH LAW WINS?"}
+PHYSICS_END = [("WHICH LAW?", "Which law won? Comment!"), ("YOUR #1?", "What's your number one? Comment!")]
+
+# 2026-11-14 owner: every clip gets our OWN spoken commentary (predict what happens + funny reaction + the cause),
+# not just "Number five!" — clips without original commentary count as reused content. Short lines (<= ~7 words)
+# keep the Short at 15-22 s.
+COMMENT_PREDICT = ["Watch the back foot.", "Way too confident.", "Look at that speed.", "Wait for the landing.",
+                   "This will not end well.", "Spot the mistake?", "Here it comes.", "He has no plan.",
+                   "Nobody checked the ground.", "Too much speed. Watch."]
+COMMENT_REACT = ["Gravity always wins.", "Zero grip, full send.", "The landing had other plans.",
+                 "Momentum said no.", "Instant regret.", "That face says everything.", "Physics did not agree.",
+                 "Full speed, no brakes.", "He trusted that? Brave."]
+PHYSICS_PREDICT = ["Watch the center of gravity.", "Speed in, zero friction.", "Look where the weight is.",
+                   "Watch the pivot point.", "Too much speed. Watch.", "Wet surface. Here it goes."]
+PHYSICS_CAUSE = ["Inertia: the body keeps going.", "Weight past the base. Over.", "Low friction. Feet gone.",
+                 "Momentum beats balance.", "Equal and opposite reaction.", "Gravity pulls, nothing pushes back.",
+                 "Torque wins. Down it goes.", "Speed doubled, impact quadrupled.", "No grip, no stop."]
 END_LINES = [("#1 OR #2?", "Number one or two? Comment!"), ("AGREE?", "Do you agree? Comment!"),
              ("YOUR #1?", "What's your number one? Comment!")]
 
+
+# 2026-11-14 owner (Ask Studio): animal clips (parrot, goat, horse) kept only 19-29 % of viewers, dynamic risky
+# action (trampoline, water slide, boat/car, extreme sport, DIY) kept 58-60 % -> no animal themes from now on.
+ANIMAL_WORDS = ["puppy", "kitten", "cat", "dog", "goat", "parrot", "duck", "chicken", "cow", "pig", "sheep",
+                "hamster", "bunny", "squirrel", "raccoon", "penguin", "husky", "llama", "owl", "seagull", "horse",
+                "pet", "baby", "toddler"]
+THEMES = [t for t in THEMES if not any(re.search(r"\b" + a + r"s?\b", t[0].lower()) for a in ANIMAL_WORDS)]
+THEMES += [
+    ("Jet Ski Fails", "jet ski fail funny", ["jet ski", "jetski", "waverunner"]),
+    ("Boat Launch Fails", "boat ramp launch fail funny", ["boat", "ramp", "launch", "trailer"]),
+    ("Wakeboard Fails", "wakeboard fail funny", ["wakeboard", "wakeboarding"]),
+    ("BMX Fails", "bmx fail funny", ["bmx"]),
+    ("Parkour Fails", "parkour fail funny", ["parkour", "freerunning"]),
+    ("Dirt Bike Fails", "dirt bike fail funny", ["dirt bike", "dirtbike", "motocross"]),
+    ("Car Stuck Fails", "car stuck mud snow fail funny", ["car", "truck", "stuck"]),
+    ("Ladder Fails", "ladder fail funny diy", ["ladder"]),
+    ("Tubing Fails", "tubing fail funny", ["tubing", "tube"]),
+    ("Cliff Jump Fails", "cliff jumping fail funny", ["cliff", "jump", "jumping"]),
+]
 
 # 2026-11-13 owner: the "Money Story" channel becomes a ranked funny-PHYSICS channel (same engine, own theme list)
 PHYSICS_THEMES = [
     ("Physics Fails", "physics fail funny", ["physics", "fail"]),
     ("Gravity Fails", "gravity fail funny", ["gravity", "fall", "drop"]),
-    ("Domino Chain Reactions", "domino chain reaction", ["domino", "dominoes", "chain"]),
-    ("Rube Goldberg Machines", "rube goldberg machine", ["rube", "goldberg", "machine"]),
     ("Balance Fails", "balance fail funny", ["balance", "balancing"]),
     ("Slingshot Fails", "slingshot fail funny", ["slingshot"]),
-    ("Water Physics Moments", "water physics slow motion", ["water", "splash", "slow"]),
-    ("Slow Motion Physics", "slow motion physics experiment", ["slow motion", "slowmo", "slow-mo"]),
-    ("Science Experiment Fails", "science experiment fail funny", ["experiment", "science"]),
     ("Catapult Fails", "catapult fail funny", ["catapult", "trebuchet"]),
-    ("Bouncy Ball Physics", "bouncy ball physics", ["ball", "bounce", "bouncy"]),
     ("Seesaw Fails", "seesaw fail funny", ["seesaw", "see-saw"]),
     ("Ramp Jump Fails", "ramp jump fail funny", ["ramp", "jump"]),
-    ("Magnet Experiments", "magnet experiment satisfying", ["magnet", "magnetic"]),
-    ("Pendulum Physics", "pendulum physics experiment", ["pendulum", "swing"]),
-    ("Egg Drop Experiments", "egg drop experiment", ["egg", "drop"]),
+    ("Science Experiment Fails", "science experiment fail funny", ["experiment", "science"]),
+    # 2026-11-14 owner: dynamic topics only (falls, jumps, cars, water); calm experiments (magnets, pendulum,
+    # dominoes, egg drop) dropped
+    ("Slip And Fall Physics", "slip and fall fail funny", ["slip", "slipping", "fall"]),
+    ("Water Splash Fails", "water splash fail funny", ["water", "splash", "lake", "river"]),
+    ("Bike Jump Fails", "bike jump fail funny", ["bike", "jump"]),
+    ("RC Car Jump Fails", "rc car jump fail", ["rc", "car", "jump"]),
+    ("Car Mud Fails", "car stuck in mud fail", ["car", "truck", "mud"]),
+    ("Rope Swing Physics", "rope swing fail funny", ["rope", "swing"]),
+    ("Dock Jump Fails", "dock jump fail funny", ["dock", "jump", "lake"]),
+    ("Ski Jump Fails", "ski jump fail funny", ["ski", "jump"]),
 ]
 if os.environ.get("FR_THEMES") == "physics":
     THEMES = PHYSICS_THEMES
@@ -262,16 +306,20 @@ def make_title(name, titles, rng=random):
 
 
 def script(rng=random):
-    hook = rng.choice(HOOKS)
-    end = rng.choice(END_LINES)
+    physics = os.environ.get("FR_THEMES") == "physics"
+    hook = rng.choice(PHYSICS_HOOKS if physics else HOOKS)
+    hook_text = (PHYSICS_HOOK_TEXT if physics else HOOK_TEXT)[hook]
+    end = rng.choice(PHYSICS_END if physics else END_LINES)
+    pred = rng.sample(PHYSICS_PREDICT if physics else COMMENT_PREDICT, 3)
+    cause = rng.sample(PHYSICS_CAUSE if physics else COMMENT_REACT, 2)
     ranks = {}
     for r in range(5, 0, -1):
-        tag, line = rng.choice(REACTIONS[r])
-        # 2026-11-07: voice only names the rank — the clip's own audio/laughs carry it (competitor format);
-        # the reaction line stays on screen as our commentary caption.
-        spoken = f"Number {NUM_WORDS[r]}!" if r > 1 else "And number one!"
-        ranks[r] = {"tag": tag, "line": line, "say": spoken}
-    return {"hook": hook, "hook_text": HOOK_TEXT[hook], "end_text": end[0], "end_say": end[1], "ranks": ranks}
+        tag, _ = rng.choice(REACTIONS[r])
+        # 2026-11-14 owner: own commentary on every clip — #5-#3 predict what is coming, #2/#1 react + say why
+        line = pred[5 - r] if r >= 3 else cause[2 - r]
+        num = NUM_WORDS[r].capitalize() if r > 1 else "Number one"
+        ranks[r] = {"tag": tag, "line": line, "say": f"{num}. {line}"}
+    return {"hook": hook, "hook_text": hook_text, "end_text": end[0], "end_say": end[1], "ranks": ranks}
 
 
 def clip_ok(title, desc, kws):

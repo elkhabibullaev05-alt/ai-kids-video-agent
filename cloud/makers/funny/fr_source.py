@@ -24,16 +24,28 @@ def _dur(iso):
     return h * 3600 + mi * 60 + s
 
 
-def load_used(home):
+def _load_one(home):
     try:
         return set(json.load(open(os.path.join(home, "used_sources.json"))))
     except Exception:
         return set()
 
 
+def load_used(home):
+    """Clips already used. 2026-11-14 owner: Funny Rank (funny) and Physics Rank (money) run the same engine on
+    the same laptop (~/kanal/<ch>) and must never share a clip -> also read the sibling channel's list."""
+    used = _load_one(home)
+    base = os.path.dirname(os.path.abspath(home))
+    for ch in ("funny", "money"):
+        sib = os.path.join(base, ch)
+        if os.path.abspath(sib) != os.path.abspath(home):
+            used |= _load_one(sib)
+    return used
+
+
 def save_used(home, used_ids):
     p = os.path.join(home, "used_sources.json")
-    old = list(load_used(home))
+    old = list(_load_one(home))
     allv = old + [x for x in used_ids if x not in old]
     json.dump(allv[-5000:], open(p + ".tmp", "w"))
     os.replace(p + ".tmp", p)

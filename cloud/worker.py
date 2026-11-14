@@ -237,7 +237,13 @@ def free_slot(st, kind, after=None):
         if t >= after and iso not in used:
             return iso
     day = after.date()
+    # 2026-11-14 owner (Hollowmere): weekly plan, e.g. "slot_weekdays": {"short": [0, 2, 4, 6], "long": [1, 5]}
+    # (Python weekday, 0 = Monday). A kind without a list keeps every day.
+    wd = CFG.get("slot_weekdays", {}).get(kind)
     for _ in range(30):
+        if wd is not None and day.weekday() not in wd:
+            day += dt.timedelta(days=1)
+            continue
         for hm in sorted(CFG["slots"][kind]):
             h, m = map(int, hm.split(":"))
             t = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=dt.timezone.utc)
@@ -402,7 +408,10 @@ def studio_title(t):
     # 2026-11-13 owner-approved review: Dough Bros / Inspector Bolt Shorts with "(Ep 25)" got 0-16 views -> all channels
     if not t:
         return t
-    return re.sub(r"\s*\((?:Ep|EP|Episode)\.?\s*\d+\)", "", t).strip()
+    t = re.sub(r"\s*\((?:Ep|EP|Episode)\.?\s*\d+\)", "", t)
+    # 2026-11-14 owner (Hollowmere Ask Studio): no "| True Story Animated" / "| Creepy Story Animated" tail
+    t = re.sub(r"\s*\|\s*(?:True|Creepy)\s+Stor(?:y|ies)\s+Animated\s*$", "", t, flags=re.I)
+    return t.strip()
 
 
 def rek(path, title, kind):

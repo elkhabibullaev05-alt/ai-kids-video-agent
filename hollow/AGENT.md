@@ -2,6 +2,8 @@
 
 > **Owner format 2026-11-14 (overrides everything below):** first-person "I woke up in <year/event>" historical stories, 12:00–14:30 long (channel not phone-verified: max 14:50), 0 s = dramatic dialogue moment, real facts kept, twist every 2–3 min, ending = historical truth + lesson. Full rules: `cloud/WRITER.md` → "hollow — first-person format 2026-11-14".
 
+> **Owner rule 2026-11-14 (newest, overrides all older lines below):** follow `cloud/WRITER.md` sections "hollow — first-person format 2026-11-14" and "hollow — Ask Studio 2026-11-14": fact hook at 0 s, cast only after 15–30 s, no mid-video subscribe line, no "(Ep N)"/"| True Story Animated" in titles, long 8–12 min, Shorts 20–30 s loop, Shorts 3–4/week + long 1–2/week.
+
 > **Owner rule 2026-10-26 (overrides older lines below):** follow `cloud/WRITER.md` sections "Real-life stories", "Serial format like @d.pommikox.world" and "Bolt, Hollowmere, Dough Bros — Pommi-style serial": numbered continuing serial, forest/village/market-feel places, Shorts cut from the long, Narrator subscribe line after the hook and "What do you think happens in the next part? Tell me in the comments." at the end.
 
 

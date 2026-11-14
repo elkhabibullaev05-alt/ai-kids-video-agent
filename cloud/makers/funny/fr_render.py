@@ -138,10 +138,25 @@ def _ctext(d, y, text, f, fill, stroke, sfill=(0, 0, 0)):
     d.text(((W - tw) / 2, y), text, font=f, fill=fill, stroke_width=stroke, stroke_fill=sfill)
 
 
-def overlay(path, theme_name, color, sc, rank=None, caption=None, big=None, revealed=()):
-    """Transparent 1080x1920 PNG. rank = current #N (badge + highlighted row); big = hook/end text."""
+def overlay(path, theme_name, color, sc, rank=None, caption=None, big=None, revealed=(), bare=False):
+    """Transparent 1080x1920 PNG. rank = current #N (badge + highlighted row); big = hook/end text.
+    bare=True (2026-11-14 owner: frame 1 is the shock moment + a question, no "RANKING / Top 5" title card or
+    empty 1-5 countdown list): only the big text."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
+    if bare:
+        if big:
+            words, rows = big.split(), []
+            for w_ in words:  # long questions wrap on two-three lines
+                if rows and len(rows[-1]) + len(w_) < 12:
+                    rows[-1] += " " + w_
+                else:
+                    rows.append(w_)
+            for j, ln in enumerate(rows[:3]):
+                fbig = _fit(d, ln, W - 80, 150, 70, 12)
+                _ctext(d, 560 + j * 170, ln, fbig, YELLOW, 12)
+        im.save(path)
+        return path
     # banner
     d.rounded_rectangle((28, 112, W - 28, 300), radius=34, fill=color + (240,), outline=(255, 255, 255, 255), width=6)
     f1 = font(46)
@@ -180,7 +195,7 @@ def overlay(path, theme_name, color, sc, rank=None, caption=None, big=None, reve
 
 
 # ------------------------------------------------------------------ audio
-def tts(lines, voice="am_puck", speed=1.15):
+def tts(lines, voice="am_puck", speed=1.08):
     from kokoro_onnx import Kokoro
     from scipy.signal import resample_poly
     k = Kokoro(os.path.join(KD, "kokoro.onnx"), os.path.join(KD, "voices.bin"))
@@ -324,7 +339,7 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
     color = rng.choice(PALETTE)
     voice = rng.choice(["am_puck", "am_puck", "am_adam", "am_eric"])
     lines = [sc["hook"]] + [sc["ranks"][r]["say"] for r in (5, 4, 3, 2, 1)] + [sc["end_say"]]
-    vo = tts(lines, voice=voice, speed=1.15)
+    vo = tts(lines, voice=voice, speed=1.08)  # 2026-11-14 owner: natural, lively voice (was 1.15, rushed)
     hook_v, rank_v, end_v = vo[0], vo[1:6], vo[6]
     sec = lambda a: len(a) / SR  # noqa
     RS = 0.5  # replay speed
@@ -339,14 +354,15 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
     parts.append({"style": "intro", "clip": clips[4], "len": intro_len, "speed": RS,
                   "start": rep_src(one, intro_len), "voice": [(hook_v, 0.0)]})
     revealed = []
-    ov_intro = overlay(os.path.join(work, "ov_intro.png"), theme_name, color, sc, big=sc["hook_text"])
+    ov_intro = overlay(os.path.join(work, "ov_intro.png"), theme_name, color, sc, big=sc["hook_text"], bare=True)
     parts[0]["ov"] = ov_intro
     for i, r in enumerate((5, 4, 3, 2, 1)):
         c = clips[i]
         m = c["m"]
         # 2026-11-07 Ask Studio (Funny): 31-s Shorts hold 52 %; the 18-s one held 60 % stayed / 65-74 % viewed →
         # aim ~20-22 s: shorter #5-#3 shots and a slow-mo replay only for #1 (it also makes the loop).
-        main_len = max(4.6 if r == 1 else (3.6 if r == 2 else 3.0), sec(rank_v[i]) + 0.6)
+        # 2026-11-14 owner: 15-22 s total with spoken commentary on every clip -> shots sized to the line
+        main_len = max(4.2 if r == 1 else (3.2 if r == 2 else 2.8), sec(rank_v[i]) + 0.35)
         main_len = min(main_len, m["dur"] - 0.1)
         # main shot ends ~0.3 s after the peak, so the replay right after it shows the payoff again
         st = max(0.0, min(m["peak"] + 0.3 - main_len, m["dur"] - main_len - 0.05))
@@ -370,6 +386,16 @@ def render_short(clips, theme_name, sc, out_mp4, work, seed=0, log=print):
             parts.append(rp)
         revealed.append(r)
     total = sum(p["len"] for p in parts)
+    if total > 22.0:  # 2026-11-14 owner: 15-22 s -> trim the main shots (never below the spoken line)
+        over = total - 22.0
+        for p, v in sorted(((p, p["voice"][0][0]) for p in parts if p["style"] == "main"), key=lambda x: -x[0]["len"]):
+            cut = min(over, max(0.0, p["len"] - (sec(v) + 0.25)))
+            p["len"] -= cut
+            p["start"] += cut  # keep the end of the shot (the payoff) in place
+            over -= cut
+            if over <= 0:
+                break
+        total = sum(p["len"] for p in parts)
     log(f"timeline {total:.1f}s in {len(parts)} shots, voice {voice}")
     files = []
     for k, p in enumerate(parts):
