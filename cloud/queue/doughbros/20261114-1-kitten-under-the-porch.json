@@ -1,0 +1,913 @@
+{
+ "id": "20261114-1-kitten-under-the-porch",
+ "plot": "The morning after Mia hears a kitten under the porch, Dad plans to pull up the boards at noon and the only gap is one bean wide; Bup's crust lure gets a paw halfway out and then the crying grows, scared Pim goes in, gets hissed at and runs, Crispy tells him a hiss can just mean 'I'm scared too', and on his second trip Pim finds the twist — the kitten isn't shy, its paw is caught in Grandma's strawberry net lost in a spring storm (mentioned at the start, and Zeek noticed it always cries from the same spot); Pim pushes the loop off a nail, the kitten runs into Mia's arms — then Mom makes it a bed in the bros' own bread basket.",
+ "script": {
+  "title": "A Kitten Is Crying Under Our Porch",
+  "set": {
+   "place": "garden",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "porch",
+    "type": "box",
+    "color": [
+     0.45,
+     0.3,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     -8,
+     16,
+     0
+    ],
+    "visible": true,
+    "scale": 2.2
+   },
+   {
+    "id": "kitten",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.55,
+     0.58
+    ],
+    "on": null,
+    "at": [
+     -6.5,
+     14.3,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "It cried all night! The kitten is still under the porch!",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "to:-3,11"
+     ],
+     [
+      "porch",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Dad pulls up the porch at noon. Can we save it first?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "text": "SAVE IT BY NOON!",
+    "cam": "prop:porch",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "porch",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-4,10"
+     ],
+     [
+      "lolly",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Saturday morning. Warm sun, crunchy leaves, and one tiny cry.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia found a grey kitten last night. Thin, scared, and hiding deep.",
+    "cam": "prop:porch",
+    "do": [
+     [
+      "porch",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Mia left a saucer of milk by the steps. Still full.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the porch, Grandma is grumbling again about her lost strawberry net.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A spring storm blew it away. Nobody ever found it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Odd. The crying always comes from the exact same spot.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Shy cats hide, Zeek. It comes out when it gets hungry.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Or it is waiting for someone brave enough to go in.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone looks at the porch. Then at the gap in the boards.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The gap is very small. Exactly one bean wide.",
+    "cam": "prop:porch",
+    "do": [
+     [
+      "porch",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "No. No, no, no. Kittens chase small, wiggly things!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And I am the smallest, wiggliest thing in this garden!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, it's crying for help. Not for breakfast.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hold on. Let me try first. Crumbs always work on me.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup rolls in a piece of his own crust.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Here, little kitty. It's stale, but it's from the heart.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A tiny grey paw slides out of the dark and reaches.",
+    "cam": "prop:porch",
+    "do": [
+     [
+      "porch",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the paw stops. Halfway. And the crying gets louder.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "It wants the crumb! So why won't it come and get it?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Same spot. Again. That is not a coincidence.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ten o'clock. Dad carries a crowbar out of the shed.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:-4,13"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Two hours. Then the boards come up, and that kitten panics.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "If it panics, it runs deeper. Under the whole house.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Okay. Fine. I'm going in. Somebody hold my bandage.",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "to:-6,13"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Holding it. Go, Pim. We're right outside the gap.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim squeezes through the boards. Dust. Cobwebs. Old leaves.",
+    "cam": "prop:porch",
+    "do": [
+     [
+      "pim",
+      "to:-7,14.5"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's so dark in here. Something is breathing. Hello?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two huge green eyes open right in front of him.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kitten",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitten hisses. Pim shoots back out like a cork.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-5,11"
+     ],
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It hissed! It looked right at me and hissed!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Everything hisses at me. Doesn't mean they hate me.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Sometimes it just means, I'm scared too.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Eleven thirty. Dad pulls on his work gloves.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Thirty minutes, Pim! After that it's boards and noise!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Fine. Second time. Shaking twice as much. Going in.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-7,14.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "This time, Pim crawls slowly. He hums. The kitten listens.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitten pulls toward him. Then it jerks back. And cries.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Wait. Its back paw. There's green string around it!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S NOT HIDING!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Green string? Same spot every time? It's not shy. It's stuck!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Green net. Grandma's strawberry net! The storm blew it under here!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The net's loop is caught on an old nail in the boards.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Don't untie it, Pim. Just push the loop off the nail.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim pushes with his whole bean body. The loop slides.",
+    "cam": "prop:porch",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Come on, nail! I'm a bean! I'm stronger than I look!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pop. The loop flies off. The paw is free.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kitten",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitten bolts out of the gap, straight into Mia's arms.",
+    "cam": "wide",
+    "do": [
+     [
+      "kitten",
+      "vanish"
+     ],
+     [
+      "pim",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "text": "FREE!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad drops the crowbar. Nobody has to pull up anything.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, you went in twice. Twice! I'm so proud I could crumble.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "My knees are jelly. Do beans have knees? They're jelly.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That night, Mom makes the kitten a bed. A soft basket.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "That basket. That is our basket. That's where we sleep.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "SHE TOOK OUR BED?!",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "A Kitten Is Crying Under Our Porch 🐾",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Kittens chase small things. And I'm the smallest thing in this garden.\" — Pim\nA grey kitten has cried under the porch all night, and at noon Dad pulls up the boards. The only gap is exactly one bean wide.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "kitten",
+   "kitten under porch",
+   "rescue",
+   "pim",
+   "animated comedy",
+   "funny animation"
+  ],
+  "thumb_text": "ONLY PIM FITS?!",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "Un gatito llora bajo nuestro porche 🐾",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Los gatitos persiguen cosas pequeñas. Y yo soy lo más pequeño de este jardín.\" — Pim\nUn gatito gris ha llorado toda la noche bajo el porche, y a mediodía papá levantará las tablas. El único hueco mide exactamente un frijol.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Um gatinho chora debaixo da nossa varanda 🐾",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Gatinhos caçam coisas pequenas. E eu sou a coisa mais pequena deste jardim.\" — Pim\nUm gatinho cinza chorou a noite toda debaixo da varanda, e ao meio-dia o pai vai arrancar as tábuas. A única fresta tem exatamente a largura de um feijão.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "قطة صغيرة تبكي تحت شرفتنا 🐾",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"القطط الصغيرة تطارد الأشياء الصغيرة. وأنا أصغر شيء في هذه الحديقة.\" — بيم\nقطة رمادية صغيرة بكت طوال الليل تحت الشرفة، وعند الظهر سيقتلع أبي الألواح. الفتحة الوحيدة بعرض حبة فاصولياء تماماً.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Un chaton pleure sous notre porche 🐾",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n« Les chatons chassent les petites choses. Et je suis la plus petite chose du jardin. » — Pim\nUn chaton gris a pleuré toute la nuit sous le porche, et à midi papa arrache les planches. La seule fente fait exactement la largeur d'un haricot.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ポーチの下で子猫が泣いている 🐾",
+    "description": "次のパートで何が起きると思う？コメントで教えてね。\n「子猫は小さいものを追いかける。そしてボクはこの庭でいちばん小さい。」— ピム\n灰色の子猫がひと晩じゅうポーチの下で泣いていて、正午にはパパが板をはがす。すき間はちょうど豆ひとつぶん。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "우리 집 현관 밑에서 새끼 고양이가 울어요 🐾",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려줘.\n\"새끼 고양이는 작은 걸 쫓아다녀. 그리고 이 정원에서 제일 작은 건 나야.\" — 핌\n회색 새끼 고양이가 밤새 현관 밑에서 울었고, 정오에 아빠가 판자를 뜯어낸대. 틈은 딱 콩 하나 크기.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Ein Kätzchen weint unter unserer Veranda 🐾",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Kätzchen jagen kleine Dinge. Und ich bin das Kleinste in diesem Garten.\" — Pim\nEin graues Kätzchen hat die ganze Nacht unter der Veranda geweint, und mittags reißt Papa die Bretter heraus. Der einzige Spalt ist genau eine Bohne breit.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 25,
+   "top": "ONE BEAN WIDE",
+   "title": "Only the Scared Bean Fits In There 😳 #shorts",
+   "description": "Pim is the only one small enough to fit under the porch. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "kitten",
+    "pim"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Solo cabe el frijol más miedoso 😳 #shorts",
+     "description": "Pim es el único lo bastante pequeño para entrar bajo el porche. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Só o feijão mais medroso cabe ali 😳 #shorts",
+     "description": "O Pim é o único pequeno o bastante para entrar debaixo da varanda. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لا يدخل هناك إلا أكثر حبة فاصولياء خوفاً 😳 #shorts",
+     "description": "بيم هو الوحيد الصغير بما يكفي ليدخل تحت الشرفة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Seul le haricot le plus peureux passe 😳 #shorts",
+     "description": "Pim est le seul assez petit pour passer sous le porche. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "入れるのはいちばん怖がりの豆だけ 😳 #shorts",
+     "description": "ポーチの下に入れるほど小さいのはピムだけ。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "제일 겁 많은 콩만 들어갈 수 있어 😳 #shorts",
+     "description": "현관 밑에 들어갈 만큼 작은 건 핌뿐이에요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Nur die ängstlichste Bohne passt da rein 😳 #shorts",
+     "description": "Nur Pim ist klein genug, um unter die Veranda zu passen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
