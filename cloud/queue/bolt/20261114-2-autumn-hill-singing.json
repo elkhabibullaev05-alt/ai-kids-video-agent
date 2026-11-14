@@ -1,0 +1,1205 @@
+{
+ "id": "20261114-2-autumn-hill-singing",
+ "plot": "The afternoon after Bertha's new glasses, the little car on the hill is Bolt's niece Nell, who says the hill top 'sings hooo' by itself; Bolt brushes it off as the wind and Nell feels nobody listens to small cars, but she and Pip notice the sound only comes when leaves fly sideways (Grumpy mentioned early he dropped Benny's old bottles up there), Turbo's zooming wind makes it sing two notes, and when the wind stops Bolt finally listens and asks what is new on the hill: Grumpy's crate of empty milk bottles, which whistle like a flute in the wind; Bolt says sorry, gives Nell his hat as 'Detective Nell', the hill plays a sunset song, and Nell's mum brings news they might move to Wheelburg.",
+ "script": {
+  "title": "The Autumn Hill Is Singing!",
+  "description": "Bolt's niece Nell hears Wheelburg Hill sing. Inspector Bolt #38",
+  "set": {
+   "place": "the top of Wheelburg Hill with the old wooden fence, a bench and the view over town, a breezy autumn afternoon until sunset",
+   "press": false,
+   "podium": false,
+   "time": "sunset"
+  },
+  "chars": {
+   "bolt": {
+    "name": "Inspector Bolt",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.08,
+     0.22,
+     0.62
+    ],
+    "kind": "car",
+    "size": 1.0,
+    "hat": true,
+    "home": [
+     6.0,
+     9.0
+    ]
+   },
+   "bertha": {
+    "name": "Big Bertha",
+    "voice": "af_bella",
+    "speed": 1.05,
+    "pitch": -1,
+    "color": [
+     0.98,
+     0.78,
+     0.05
+    ],
+    "kind": "bus",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -9.0,
+     18.0
+    ]
+   },
+   "turbo": {
+    "name": "Turbo",
+    "voice": "am_puck",
+    "speed": 1.2,
+    "pitch": 1,
+    "color": [
+     0.92,
+     0.1,
+     0.08
+    ],
+    "kind": "car",
+    "size": 0.95,
+    "hat": false,
+    "home": [
+     3.0,
+     12.0
+    ]
+   },
+   "grumpy": {
+    "name": "Grumpy",
+    "voice": "am_onyx",
+    "speed": 0.9,
+    "pitch": -2,
+    "color": [
+     0.5,
+     0.52,
+     0.55
+    ],
+    "kind": "truck",
+    "size": 1.0,
+    "hat": false,
+    "home": [
+     -1.0,
+     15.5
+    ]
+   },
+   "pip": {
+    "name": "Pip",
+    "voice": "af_sky",
+    "speed": 1.05,
+    "pitch": 4,
+    "color": [
+     0.98,
+     0.45,
+     0.7
+    ],
+    "kind": "small",
+    "size": 0.65,
+    "hat": false,
+    "home": [
+     -15.5,
+     8.0
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "nell": {
+    "name": "Nell",
+    "voice": "bf_emma",
+    "speed": 1.08,
+    "pitch": 3,
+    "color": [
+     0.2,
+     0.7,
+     0.95
+    ],
+    "kind": "small",
+    "size": 0.6,
+    "hat": false,
+    "home": [
+     11.0,
+     15.0
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "crate",
+    "type": "box",
+    "color": "brown",
+    "at": [
+     -6.0,
+     17.0,
+     0.5
+    ],
+    "visible": true,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "nell",
+    "say": "Uncle Bolt! Uncle Bolt! Come quick! The hill is singing!",
+    "cam": "wide",
+    "do": [
+     [
+      "nell",
+      "enter:right"
+     ],
+     [
+      "bolt",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Up there, by the old fence! It goes hooo, all by itself!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "to:8,12"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nell?! My little niece? What are you doing in Wheelburg?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:5,10"
+     ],
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "THE HILL IS SINGING?!",
+    "hold": 1.0,
+    "cam": "overhead",
+    "sfx": "suspicious",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It was the afternoon after Bertha got her new glasses.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "nell",
+      "to:9,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The car on the hill was Nell. Bolt's niece, visiting.",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Mum's buying buns at Benny's bakery. I drove up for the view!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Then, hooo! A big sound! And nobody was there!",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "nell",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Hills don't sing, Nell. It's just the wind. Let's get a bun.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "But I heard it! I'm being a detective. Like you.",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bolt smiled. But he wasn't really listening.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "bolt",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "text": "HOOOOOO...",
+    "hold": 1.0,
+    "cam": "wide",
+    "sfx": "suspicious",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Now THAT... is not only the wind.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Bolt! Did you hear that? The whole hill went hooo!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "I heard it first! I'm Nell. I'm a detective.",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "to:8,11"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "A detective? Me too! Well, a helper. I'm Pip!",
+    "cam": "two:pip,nell",
+    "do": [
+     [
+      "pip",
+      "to:4,9"
+     ],
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two small cars. One big mystery. Friends in one second.",
+    "cam": "overhead",
+    "do": [
+     [
+      "nell",
+      "to:6,8"
+     ],
+     [
+      "pip",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Careful, you two. Sounds can travel from far away.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Then let's find where it comes from! Engines off. Ears on!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everyone turned off their engines. The hill went very, very quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "bolt",
+      "to:3,13"
+     ],
+     [
+      "pip",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Why is everybody so quiet up here? Is it nap time?",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Shh, Grumpy! We're listening to the hill!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Hm. I was up here this morning. Dropped off Benny's old bottles.",
+    "cam": "two:grumpy,bolt",
+    "do": [
+     [
+      "grumpy",
+      "to:-3,16"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Nothing sang for me. Nothing ever sings for me.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Look! Look at the leaves! They're flying sideways!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "to:7,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A puff of wind blew across the hill top. Red leaves flew.",
+    "cam": "wide",
+    "do": [
+     [
+      "pip",
+      "spin"
+     ],
+     [
+      "nell",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "text": "HOOOOOO!",
+    "hold": 1.0,
+    "cam": "overhead",
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "See? Wind, then hooo. No wind, no hooo!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The sound only comes with the wind. That's a real clue.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "A real clue? From me?",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "From you. But wind needs something to sing through.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "bolt",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Pip, if we solve this, Uncle Bolt will take me seriously!",
+    "cam": "two:nell,pip",
+    "do": [
+     [
+      "nell",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Then let's follow the hooo! Small cars are good listeners!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Hello up there! I saw you all the way from town!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "enter:left"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "New glasses! I can see every car on this hill!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Hello, Big Bertha! Did you hear the hill sing?",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "to:0,13"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "Sing? Oh! I thought that was Grumpy humming.",
+    "cam": "two:bertha,grumpy",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I don't hum. I have never hummed.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Whoa! Everyone's up here? Is there a race? Can I come?",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "enter:right"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "No race. A mystery! The hill sings when the wind blows!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "Wind? I can MAKE wind! Watch this!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "to:-6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Turbo zoomed round and round the hill top. Leaves flew everywhere.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:10,17"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "HOOO-HEEE-HOOO!",
+    "hold": 1.0,
+    "cam": "overhead",
+    "sfx": "alarm",
+    "do": [
+     [
+      "turbo",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "It sang louder! And it sang two songs at once!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Two notes. One high, one low. So it's not one thing.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Many little things... singing together!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The two small detectives rolled slowly along the old wooden fence.",
+    "cam": "two:nell,pip",
+    "do": [
+     [
+      "nell",
+      "to:-2,14"
+     ],
+     [
+      "pip",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "It's louder here. Much louder. Right by the bench!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "But there's nothing here. Only leaves and an old crate.",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "to:-5,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the wind stopped. And the hill went quiet again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "turbo",
+      "to_home"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "No! If the wind stops, we lose our only clue!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "And everyone will say we made it up!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "This time, Bolt rolled over. And this time, he listened.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "bolt",
+      "to:0,14"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nell, what is up here today that wasn't here yesterday?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "I wasn't here yesterday, Uncle Bolt. I only came today!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "I was. Only one new thing up here. My crate.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "to:-4,17"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Nobody had looked at the old crate at all. Not even Bolt.",
+    "cam": "prop:crate",
+    "do": [
+     [
+      "crate",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Grumpy, what's inside your crate?",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "to:-3,13"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "Benny's old milk bottles. Empty. For the glass truck.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Empty bottles! Uncle Bolt, I know! I KNOW!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S THE BOTTLES!",
+    "hold": 1.0,
+    "cam": "prop:crate",
+    "sfx": "alarm",
+    "do": [
+     [
+      "crate",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "When you blow over a bottle, it goes hooo! Like a flute!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "That's true. Wind over an empty bottle top makes a sound.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pip",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Big bottles sing low. Small bottles sing high.",
+    "cam": "prop:crate",
+    "do": [
+     [
+      "crate",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "The wind blew. The bottles sang. And the hill got the blame.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grumpy",
+    "say": "So something did sing for me after all. Huh.",
+    "cam": "close:grumpy",
+    "do": [
+     [
+      "grumpy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "turbo",
+    "say": "And my zooming made it sing louder! I'm a wind maker!",
+    "cam": "close:turbo",
+    "do": [
+     [
+      "turbo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bertha",
+    "say": "No singing hill. Just a singing crate. How lovely!",
+    "cam": "close:bertha",
+    "do": [
+     [
+      "bertha",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Nell, I'm sorry. I said hills don't sing. I didn't listen.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "bolt",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "That's okay, Uncle Bolt. You listened in the end.",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Small detectives ask big questions. They always deserve an answer.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Bolt did something he never does. He gave Nell his hat.",
+    "cam": "two:bolt,nell",
+    "do": [
+     [
+      "bolt",
+      "hat_give:nell"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Detective Nell. Case closed. Just for today.",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Detective Nell! Pip, did you hear that?!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ],
+     [
+      "nell",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "pip",
+    "say": "Can we play the bottles? Turbo, make more wind!",
+    "cam": "close:pip",
+    "do": [
+     [
+      "pip",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Turbo zoomed past the crate, again and again.",
+    "cam": "wide",
+    "do": [
+     [
+      "turbo",
+      "to:-8,12"
+     ],
+     [
+      "turbo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "HOOO-HEEE-HOOO!",
+    "hold": 1.0,
+    "cam": "prop:crate",
+    "sfx": "alarm",
+    "do": [
+     [
+      "crate",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And the whole hill sang a sunset song for Nell.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Nell's mum drove up with warm buns. And big news.",
+    "cam": "two:nell,bolt",
+    "do": [
+     [
+      "nell",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "nell",
+    "say": "Uncle Bolt... Mum says we might come to live in Wheelburg!",
+    "cam": "close:nell",
+    "do": [
+     [
+      "nell",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bolt",
+    "say": "Live here? In Wheelburg? Next to me?",
+    "cam": "close:bolt",
+    "do": [
+     [
+      "bolt",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "IS NELL MOVING HERE?",
+    "hold": 1.0,
+    "cam": "close:nell",
+    "sfx": "suspicious",
+    "do": [
+     [
+      "nell",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think Bolt will find next time? We'll find out in the next episode!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:nell"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "The Autumn Hill Is Singing! 🍂",
+  "description": "\"I'm small, but I heard it first. I just wanted someone to listen.\" — Nell\nBolt's little niece Nell hears Wheelburg Hill sing all by itself. Who is singing up there? Inspector Bolt learns to listen to the smallest detective. Inspector Bolt #38\n\n#series #3DAnimation #InspectorBolt",
+  "tags": [
+   "inspector bolt",
+   "cartoon cars",
+   "car cartoons for kids",
+   "kids cartoon",
+   "3d animation",
+   "series",
+   "stories for kids",
+   "wheelburg",
+   "autumn cartoon",
+   "autumn story for kids",
+   "wind sounds",
+   "listening",
+   "niece",
+   "mystery for kids",
+   "cars mystery"
+  ],
+  "thumb_text": "WHO'S SINGING?!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¡La colina de otoño está cantando! 🍂",
+    "description": "\"Soy pequeña, pero lo oí primero. Solo quería que alguien me escuchara.\" — Nell\nLa sobrina de Bolt, Nell, oye cantar la colina de Wheelburg. ¿Quién canta allá arriba? El Inspector Bolt aprende a escuchar a la detective más pequeña. Inspector Bolt #38\n\n#serie #Animación3D #InspectorBolt"
+   },
+   "pt": {
+    "title": "A colina de outono está cantando! 🍂",
+    "description": "\"Eu sou pequena, mas ouvi primeiro. Só queria que alguém me escutasse.\" — Nell\nNell, a sobrinha do Bolt, ouve a colina de Wheelburg cantar. Quem canta lá em cima? O Inspetor Bolt aprende a escutar a menor detetive. Inspector Bolt #38\n\n#série #Animação3D #InspectorBolt"
+   },
+   "ar": {
+    "title": "تلة الخريف تغني! 🍂",
+    "description": "\"أنا صغيرة، لكني سمعته أولاً. أردت فقط أن يستمع إليّ أحد.\" — نيل\nنيل، ابنة أخت بولت، تسمع تلة ويلبورغ تغني. من يغني هناك؟ المفتش بولت يتعلم أن يستمع إلى أصغر محققة. Inspector Bolt #38\n\n#مسلسل #رسوم_ثلاثية_الأبعاد #InspectorBolt"
+   },
+   "fr": {
+    "title": "La colline d'automne chante ! 🍂",
+    "description": "\"Je suis petite, mais je l'ai entendu en premier. Je voulais juste qu'on m'écoute.\" — Nell\nNell, la nièce de Bolt, entend chanter la colline de Wheelburg. Qui chante là-haut ? L'inspecteur Bolt apprend à écouter la plus petite détective. Inspector Bolt #38\n\n#série #Animation3D #InspectorBolt"
+   },
+   "ja": {
+    "title": "秋の丘がうたっている!🍂",
+    "description": "「わたしは小さいけど、さいしょに聞いたのはわたし。ただ、だれかに聞いてほしかったの。」— ネル\nボルトのめいっ子ネルが、ウィールバーグの丘がうたうのを聞いた。丘の上でうたっているのはだれ?ボルト警部は、いちばん小さな探偵の声に耳をかたむけることを学ぶ。Inspector Bolt #38\n\n#シリーズ #3Dアニメ #InspectorBolt"
+   },
+   "ko": {
+    "title": "가을 언덕이 노래해요! 🍂",
+    "description": "\"난 작지만, 제일 먼저 들었어요. 누가 내 말을 들어 주길 바랐을 뿐이에요.\" — 넬\n볼트의 조카 넬이 윌버그 언덕이 노래하는 소리를 들어요. 언덕 위에서 누가 노래할까요? 볼트 경감은 가장 작은 탐정의 말에 귀 기울이는 법을 배워요. Inspector Bolt #38\n\n#시리즈 #3D애니메이션 #InspectorBolt"
+   },
+   "de": {
+    "title": "Der Herbsthügel singt! 🍂",
+    "description": "\"Ich bin klein, aber ich habe es zuerst gehört. Ich wollte nur, dass mir jemand zuhört.\" — Nell\nBolts Nichte Nell hört den Hügel von Wheelburg singen. Wer singt da oben? Inspektor Bolt lernt, der kleinsten Detektivin zuzuhören. Inspector Bolt #38\n\n#Serie #3DAnimation #InspectorBolt"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "CAN A HILL SING?!",
+   "title": "Wait... This Hill Is SINGING?! 🍂 #shorts",
+   "description": "Nell hears the hill sing, and nobody is there. What is it? Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "inspector bolt",
+    "kids cartoon",
+    "cartoon cars",
+    "autumn"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Espera... ¿esta colina está CANTANDO? 🍂 #shorts",
+     "description": "Nell oye cantar la colina y nadie está ahí. ¿Qué es? Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Espera... essa colina está CANTANDO? 🍂 #shorts",
+     "description": "Nell ouve a colina cantar e não tem ninguém lá. O que é? Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لحظة... هل هذه التلة تغني؟ 🍂 #shorts",
+     "description": "نيل تسمع التلة تغني ولا أحد هناك. ما هذا؟ الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Attends... cette colline CHANTE ? 🍂 #shorts",
+     "description": "Nell entend la colline chanter et il n'y a personne. Qu'est-ce que c'est ? Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "まって…この丘、うたってる?🍂 #shorts",
+     "description": "ネルは丘がうたうのを聞いた。でもだれもいない。なんの音?本編:{LONG_URL}"
+    },
+    "ko": {
+     "title": "잠깐… 이 언덕이 노래해요? 🍂 #shorts",
+     "description": "넬이 언덕의 노래를 들었는데 아무도 없어요. 무슨 소리일까요? 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Moment... singt dieser Hügel etwa? 🍂 #shorts",
+     "description": "Nell hört den Hügel singen, aber niemand ist da. Was ist das? Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
