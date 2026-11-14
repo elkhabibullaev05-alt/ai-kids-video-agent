@@ -213,8 +213,10 @@ def sync_from_youtube(st):
             pa = v["status"].get("publishAt")
             if pa and pa > NOW.isoformat():
                 dur = v["contentDetails"].get("duration", "")
-                m = re.match(r"PT(?:(\d+)M)?(?:(\d+)S)?", dur)
-                secs = (int(m.group(1) or 0) * 60 + int(m.group(2) or 0)) if m else 999
+                # 2026-11-14 review: hours were missing ("PT3H" -> 0 s -> "short"), so 3-hour sleep videos never counted
+                # as longs ahead and the sleep maker kept making one every ~2 h (13 days of longs scheduled)
+                m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", dur)
+                secs = (int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)) if m else 999
                 taken.append({"t": pa.replace(".000Z", "Z"), "kind": "short" if secs <= 60 else "long"})
     keep = [x for x in st["taken"] if x["t"] > NOW.isoformat()]
     seen = {x["t"] for x in taken}

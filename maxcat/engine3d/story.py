@@ -321,6 +321,30 @@ def at(c, t):
     sc.frame_set(F(t)); return C[c]["root"].matrix_world.translation.copy()
 
 
+def clear_view(c, tm, loc, tgt, side):
+    """2026-11-14 review: in a close-up another character stood between the camera and the hero (cat-door-bonk
+    thumb showed Grandma, Max hidden). If someone blocks the line of sight, slide/raise the camera until it is clear."""
+    others = [(o, at(o, tm)) for o in C if o != c]
+
+    def blocked(l):
+        a, b = Vector((l.x, l.y)), Vector((tgt.x, tgt.y)); ab = b - a; n2 = ab.length_squared or 1e-6
+        for o, q in others:
+            q2 = Vector((q.x, q.y)); u = (q2 - a).dot(ab) / n2
+            if 0.05 < u < 0.95 and (a + ab * u - q2).length < max(C[o]["W"], C[o]["L"]) / 2 + 0.3 \
+                    and l.z + (tgt.z - l.z) * u < q.z + C[o]["H"] + 0.2:
+                return True
+        return False
+    if not blocked(loc):
+        return loc
+    rel = loc - tgt  # orbit the camera around the hero's face, small angles first, then a little higher
+    for deg, dz in ((30, 0), (-30, 0), (55, 0), (-55, 0), (80, 0.5), (-80, 0.5), (30, 2.5), (-30, 2.5)):
+        a_ = math.radians(deg); ca, sa = math.cos(a_), math.sin(a_)
+        l2 = tgt + Vector((rel.x * ca - rel.y * sa, rel.x * sa + rel.y * ca, rel.z + dz))
+        if not blocked(l2):
+            return l2
+    return loc
+
+
 def shot(name, t, t_end):
     tm = min(t + 1.6, (t + t_end) / 2)
     if name == "wide":
@@ -342,6 +366,10 @@ def shot(name, t, t_end):
         fwd, side = Vector((math.sin(rz), -math.cos(rz), 0)), Vector((math.cos(rz), math.sin(rz), 0))
         d_ = L / 2 + 4.0 + C[c]["H"] * 1.2
         loc, tgt, lens = p + fwd * d_ + side * 0.8 + Vector((0, 0, 1.2 + C[c]["H"] * 0.5)), p + fwd * (L / 2) + Vector((0, 0, C[c]["H"] * 0.55)), 35
+        try:
+            loc = clear_view(c, tm, loc, tgt, side)
+        except Exception as e:  # never let the occlusion check break a render
+            print("CLEAR VIEW SKIPPED", e)
     q = (tgt - loc).to_track_quat("-Z", "Y").to_euler()
     for path, val in (("location", loc), ("rotation_euler", q)):
         setattr(cam, path, val); cam.keyframe_insert(path, frame=max(1, F(t)))
