@@ -16,15 +16,17 @@ OUT = JOB["out"]
 if not os.path.isdir(OUT) or not glob.glob(os.path.join(OUT, "*.mp4")):
     OUT = JOB.get("out_fallback", OUT) if os.path.isdir(JOB.get("out_fallback", "")) else OUT
 os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash2.txt" if CH2 else "yuklash.txt")
-PER_DAY = {"long": 2, "short": 6}   # 2026-11-11 owner: 2 long + 6 Shorts a day (API quota ~6/day -> rest rolls to next day until a 2nd project is added)
-SLOTS = {"long": [23, 2], "short": [1, 2, 3, 12, 13, 14]}   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
-if CH2: SLOTS = {"long": [], "short": [4, 5, 6, 15, 16, 17]}   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
+PER_DAY = {"long": 2, "short": 3}   # 2026-11-14 owner (MW4 rules): 2-3 Shorts a day, 4-6 h apart
+SLOTS = {"long": [23, 2], "short": [4, 9, 14]}   # 2026-11-14 owner: 5 h apart (Osh 09/14/19), never several in one hour   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
+if CH2: SLOTS = {"long": [], "short": [5, 10, 15]}   # 2026-11-14: 5 h apart   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
         "cod mw4", "call of duty 2026", "fps", "gaming"]
 DESC = ("Call of Duty: Modern Warfare 4 campaign gameplay in 1080p 60FPS. No commentary, full cinematic experience.\n\n"
         "Subscribe for every MW4 mission and the best moments as Shorts.\n\n"
         "#CallOfDuty #ModernWarfare4 #MW4 #MW4Campaign #NoCommentary #Gaming")
+
+DESC_SHORT = DESC.rsplit("\n\n", 1)[0] + "\n\n#mw4 #callofduty"   # 2026-11-14 owner: Shorts hashtags only these two
 
 def log(*a):
     s = dt.datetime.now().strftime("%m-%d %H:%M ") + " ".join(map(str, a))
@@ -102,7 +104,7 @@ LOC = {
 def localize(title):
     for en, tr in LOC.items():
         if title.lower().startswith(en.lower()[:18]):
-            return {lang: {"title": (t + " | Call of Duty MW4 #shorts")[:100], "description": DESC} for lang, t in tr.items()}
+            return {lang: {"title": (t + " #mw4 #callofduty")[:100], "description": DESC} for lang, t in tr.items()}
     return None
 
 def v4_ok():
@@ -119,7 +121,7 @@ def v4_items(main):
             if (s.get("ch", 1) == 1) != main or f"{m['file']}_V{k}" not in ok: continue
             t = s.get("yt_title") or s["hook"].title()
             it = dict(key=(f"{m['id']}v4_short{k}" if main else f"{m['id']}_v4b{k}"), kind="short", m=m, n=n, v4=True,
-                      path=os.path.join(OUT, "v4", f"{m['file']}_V{k}.mp4"), title=(t[:68] + " #mw4 #modernwarfare4 #cod"))
+                      path=os.path.join(OUT, "v4", f"{m['file']}_V{k}.mp4"), title=(t[:80] + " #mw4 #callofduty"))
             if not main: it["loc"] = localize(t)
             items.append(it)
     return items
@@ -137,7 +139,7 @@ def plan2():
             t = s.get("yt_title") or s.get("hook")
             if f"{m['id']}_b{k}" in bd: continue
             items.append(dict(key=f"{m['id']}_b{k}", kind="short", m=m, n=n, path=os.path.join(OUT, f"{m['file']}_B{k}.mp4"),
-                              title=(t[:68] + " #mw4 #modernwarfare4 #cod"), loc=localize(t)))
+                              title=(t[:80] + " #mw4 #callofduty"), loc=localize(t)))
     return items
 
 def desc2(m, n):
@@ -150,7 +152,7 @@ def desc2(m, n):
     return (f"\u25b6 FULL MISSION (Part {n}) in 1080p 60FPS: {full}\n"
             f"\u25b6 Every MW4 mission, no commentary: https://www.youtube.com/channel/{MAIN_ID}\n\n"
             "Best Call of Duty: Modern Warfare 4 campaign moments every day. Subscribe!\n\n"
-            "#CallOfDuty #ModernWarfare4 #MW4 #MW4Campaign #Shorts #Gaming")
+            "#mw4 #callofduty")   # 2026-11-14 owner: Shorts hashtags only these two
 
 def plan():
     if CH2: return plan2()
@@ -163,7 +165,7 @@ def plan():
             t = s.get("yt_title") or s.get("hook") or f"{s.get('title', '').title()} - Call of Duty Modern Warfare 4"
             items.append(dict(key=f"{m['id']}{JOB.get('key_ver', '')}_short{k}", kind="short", m=m, n=n,
                               path=os.path.join(OUT, f"{m['file']}_{JOB.get('short_tag', 'shortHD')}{k}.mp4"),
-                              title=(t[:68] + " #mw4 #modernwarfare4 #cod")))  # 2026-11-11 vidIQ: viral MW4 Shorts all carry these hashtags
+                              title=(t[:80] + " #mw4 #callofduty")))  # 2026-11-11 vidIQ: viral MW4 Shorts all carry these hashtags
         items.append(long_it)  # 2026-11-11: Shorts first (small files pass a slow hotspot quickly), then the long video
     # one long then its 3 Shorts, mission by mission
     return items
@@ -239,19 +241,27 @@ def main():
     for it in plan():
         if it["key"] in st["done"] or cnt[it["kind"]] >= PER_DAY[it["kind"]]: continue
         if not os.path.exists(it["path"]): continue
+        # 2026-11-14 owner (MW4 rules): a title is never repeated and one cut is never re-uploaded under another name
+        if it["kind"] == "short":
+            bare = lambda x: x.split(" #")[0].strip().lower()
+            if any(bare(v.get("title", "")) == bare(it["title"]) for v in st["done"].values()):
+                log("nom takrorlanadi, o'tkazildi (yangi nom kerak):", it["key"], it["title"]); continue
+            if any(v.get("src") == os.path.basename(it["path"]) for v in st["done"].values()):
+                log("bu kesma allaqachon yuklangan, o'tkazildi:", it["key"]); continue
         if it["kind"] == "short" and JOB.get("shorts_paused") and not it.get("v4"): continue   # 2026-11-11 owner: old Shorts style rejected -> wait for v4
         now = dt.datetime.now(dt.timezone.utc); t = next_slot(it["kind"], st["slots"], now)
         th = thumb(it["m"], it["n"]) if it["kind"] == "long" else None
         path = cold_open(it["m"]) if it["kind"] == "long" else it["path"]
         tags = TAGS + ([f"mw4 mission {it['n']}"] if it["kind"] == "long" else ["shorts", "mw4 shorts"])
         try:
-            d0 = desc2(it["m"], it["n"]) if CH2 else DESC
+            d0 = desc2(it["m"], it["n"]) if CH2 else (DESC_SHORT if it["kind"] == "short" else DESC)
             loc = {lg: dict(v, description=d0) for lg, v in (it.get("loc") or {}).items()} or None
             vid = Y.upload(yt, path, it["title"], d0, tags, t.isoformat().replace("+00:00", "Z"), kids=False,
                            category="20", thumb=th, localizations=loc)
         except Y.Quota as e:
             log("kunlik YouTube limiti tugadi, ertaga davom etadi:", e); break
-        st["done"][it["key"]] = {"id": vid, "kind": it["kind"], "day": today, "at": t.isoformat(), "title": it["title"]}
+        st["done"][it["key"]] = {"id": vid, "kind": it["kind"], "day": today, "at": t.isoformat(), "title": it["title"],
+                               "src": os.path.basename(it["path"])}
         st["slots"].append(t.isoformat()); cnt[it["kind"]] += 1
         if path.startswith(os.path.join(HOME, "up")):
             try: os.remove(path)

@@ -39,9 +39,12 @@ if sp.get("action") and os.path.exists(sp["action"]):
     for i in range(t0, min(len(sh), t0 + 14)):
         if sh[i] > 0: en = i
         elif i - en > 3: break
-    PRE = max(3.0, min(8.0, T - st + 0.3))
+    PRE = max(3.0, min(8.0, T - st))        # 2026-11-14 owner: first frame = shots already flying (no run-up)
     POST = max(5.0, min(12.0, en - T + 1.5))
     print(f"oyna: {PRE:.1f}s oldin, {POST:.1f}s keyin (otishma xaritasidan)", flush=True)
+# 2026-11-14 owner (MW4 rules): Shorts 9-15 s. Final length = PRE + POST + 1.5 (slow-motion second) -> PRE+POST in 7.5..13.5
+if PRE + POST > 13.5: POST = max(4.0, 13.5 - PRE); PRE = min(PRE, 13.5 - POST)
+if PRE + POST < 7.5: POST = 7.5 - PRE
 
 def run(c):
     r = subprocess.run(c, capture_output=True, text=True)
@@ -172,7 +175,7 @@ fc = ("[0:v]split[s1][s2];[s1]crop=960:1080:480:0,scale=1080:1215:flags=lanczos,
       f"[bg][v0]overlay=0:{VY}," + ",".join(txt) + ","
       f"drawbox=x=0:y={VY+1215}:w=1080:h=6:color=0xE0201B@1:t=fill,"
       f"drawtext=fontfile='{FONT}':text='{foot}':fontsize=46:fontcolor=white:x=(w-text_w)/2:y={VY+1215+28},"
-      f"fade=t=in:st=0:d=0.15,fade=t=out:st={total-0.35:.2f}:d=0.35[v]")
+      "null[v]")   # 2026-11-14 owner: no fade from/to black -> starts on action and loops into its start
 V5 = sp.get("style") == "v5"
 if V5:
     # 2026-11-12 Gemini (asked "how do COD Shorts reach millions"): no card/frame - full-bleed 9:16 crop kept a bit right
@@ -205,7 +208,7 @@ else:
         off, bpm = mus
         cmd += ["-ss", f"{off:.3f}", "-i", mp]
         fc += (f";[0:a]volume=1.0,highpass=f=40[g];[1:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,"
-               f"afade=t=in:st=0:d=0.4,afade=t=out:st={total-1.2:.2f}:d=1.2,volume=0.42[m];"
+               f"afade=t=in:st=0:d=0.05,afade=t=out:st={total-0.15:.2f}:d=0.15,volume=0.42[m];"   # sound from frame 0, loop-friendly
                f"[g][m]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-14:TP=-1.2:LRA=9[a]")
     else:
         fc += ";[0:a]loudnorm=I=-14:TP=-1.2:LRA=9[a]"

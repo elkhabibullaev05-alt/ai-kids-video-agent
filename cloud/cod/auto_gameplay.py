@@ -48,8 +48,9 @@ def main():
                 dst = os.path.join(OUT, f"{stem}_V{k}.mp4")
                 if os.path.exists(dst): continue
                 h, red, pop = HOOKS[game][(k - 1) % len(HOOKS[game])]
-                sp = dict(t=t, style="v5", pre=3.4, post=2.5, hook=h, red=red, pop=pop, src=src, out=dst, music_dir=MUSIC,
-                          music=random.choice(music) if music else "", yt_title=f"{h} #{'cod' if game == 'cod' else 'roblox'} #shorts")
+                sp = dict(t=t, style="v5", pre=3.4, post=5.5, action=act,   # 2026-11-14 owner: 9-15 s, start on the shots
+                          hook=h, red=red, pop=pop, src=src, out=dst, music_dir=MUSIC,
+                          music=random.choice(music) if music else "", yt_title=f"{h} " + ('#mw4 #callofduty' if game == 'cod' else '#roblox #shorts'))
                 if windowed(src, t): sp["src_crop"] = "crop=1714:964:103:40"
                 sj = f"/tmp/auto_{stem}_{k}.json"; json.dump(sp, open(sj, "w"))
                 r = subprocess.run([sys.executable, os.path.join(HERE, "short4.py"), sj], capture_output=True, text=True)
