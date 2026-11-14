@@ -122,7 +122,7 @@ def build_timeline(script, work):
     t = 0.0
     scenes = []
     for i, sc in enumerate(script["scenes"]):
-        a = tts(sc["say"], voice, speed, work)
+        a = tts(sc["say"], sc.get("voice", voice), float(sc.get("speed", speed)), work)  # per-scene voice (What If: other characters)
         d = len(a) / SR
         dur = d + float(sc.get("hold", GAP))
         caps = []

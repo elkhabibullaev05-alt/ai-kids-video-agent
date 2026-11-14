@@ -15,7 +15,7 @@ Write scripts with a `scripts/_build_epNNN.py` (helpers G/P/T/sc — copy `_buil
 
 ## Scene
 `{"say": "one or two sentences (≤ 30 words)", "items": [...], "chapter": "Part 2: ...", "bg": "paper|yellow|sky|...", "cam": {"from": [cx, cy, zoom], "to": [cx, cy, zoom]}, "ground": true, "hold": 0.28}`
-Every scene gets a new picture. A new item should appear every 2–4 seconds (`at`).
+Optional per-scene `"voice"` (and `"speed"`) overrides the top-level narrator voice — use it for other characters' lines in What If episodes (e.g. narrator `am_michael`; others `af_bella`, `af_nicole`, `am_adam`, `bf_emma`, `bm_george`). Every scene gets a new picture. A new item should appear every 2–4 seconds (`at`).
 
 ## Items (positions in 1920x1080; ground line y = 900–905)
 | item | example |

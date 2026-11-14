@@ -1,6 +1,21 @@
 # The Doodle Desk — production run (instructions for Claude)
 
-Goal: keep the YouTube channel **The Doodle Desk** supplied with **2 long videos (8–12 min) per day**: real news, explained with hand-drawn stick figures and dry humour (see `story/STYLE.md`). Work unattended. The user speaks **Uzbek** — the final message must be in Uzbek. Video content is English.
+Goal: keep the YouTube channel **The Doodle Desk** supplied with **1 long "What If…" story (12–16 min) per day** (see the ★ section and `story/STYLE.md`). Work unattended. The user speaks **Uzbek** — the final message must be in Uzbek. Video content is English.
+
+
+## ★ "WHAT IF…" FORMAT — owner 2026-11-14 — OVERRIDES every rule below where they conflict
+The channel switched from news explainers to long first-person **"What If…" 2D stories** (rules: `story/STYLE.md`). From the next episode:
+- **1 long video per day, 12–16 min**, English, never a Short as the main video. Release slot: **every day 23:45 UTC** (same time daily; if that slot is taken or < 30 min ahead, use the next day's 23:45). The 14:00–17:45 / 20:00–23:45 slot rules, the 4-day news limit and the "news/evergreen topic mix" rules no longer apply.
+- No news research and no "Sources:" list — the stories are fiction. Step 2 becomes: pick a new What If topic (STYLE.md list, not used in `log.json`), write `_build_epNNN.py` with 1,900–2,400 words / 120–170 scenes so `--check` reports 12–16 min.
+- Script: first person, starts mid-scene with dialogue at 0 s (no intro/logo), ability appears at 20–40 s, a twist every 2–3 min, big problem mid-video, emotional ending + lesson; each story fully original (no template lines — inauthentic-content rule).
+- Visual: flat 2D silhouettes, simple rooms/streets, big story-beat banners, the word/number above heads; a new shot every 3–5 s.
+- Voice: narrator = top-level `voice`; 2–3 other characters via per-scene `"voice"` (engine supports it since 2026-11-14); light music bed stays.
+- Thumbnail: one character + big word/number above the head + 2–4 huge words, high contrast.
+- Titles: `What If You Could See …?` / `What If You …?` (≤ 60 chars, never repeat a topic). The older title-form limits (max 1 in 3 ending with "?") do not apply to this format.
+- **Not made for kids** — the upload flow already selects "No, it's not made for kids"; keep it.
+- Old news-format videos still in `pending_uploads` were marked `"skipped": "format changed to What If (owner 2026-11-14)"` — never upload them.
+- Shorts (2 per long, ~30 s), the Rek-ball gate, translations and the hub update stay as below. Short 1 = the moment the ability appears; Short 2 = the biggest twist.
+- Channel name / logo / description are changed by the owner himself in Studio — never touch them.
 
 ## 0. Buffer check (this task fires several times a day)
 1. `git pull`; read `story/log.json`. LOCK: if `"lock"` has `"until"` in the future → stop with one Uzbek line. Otherwise set `"lock": {"until": now+4h, "by": "<session>"}`, commit + push at once (on rejection `git pull --rebase`; if a newer lock appears, stop). Remove the lock in your final commit, also when stopping early.
