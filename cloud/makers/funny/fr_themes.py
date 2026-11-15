@@ -261,7 +261,21 @@ def pick_themes(titles, home, n, rng=random, skip=()):
         rest = [t for t in THEMES if t not in ok and t[0] not in skip]
         rest.sort(key=lambda t: (_norm(t[0]) in recent, hist.get(t[0], "")))
         ok += rest
-    return ok
+    # 2026-11-15 review: Physics Rank ran Ramp Jump, Bike Jump, RC Car Jump, Ski Jump in 3 days (one look).
+    # Keep the order above, but move a theme that shares a key word ("jump", "car", "water"...) with the
+    # newest titles or with a theme already picked in this run behind the others. Nothing is dropped.
+    gen = {"fails", "fail", "physics", "funny", "the", "and", "of", "moments", "best"}
+    kw = lambda s: {w.rstrip("s") for w in _norm(s).split() if w not in gen}
+    seen = set()
+    for t in titles[:5] + titles[-5:]:
+        seen |= kw(t)
+    out, left = [], list(ok)
+    while left:
+        i = next((j for j, t in enumerate(left) if not (kw(t[0]) & seen)), 0)
+        t = left.pop(i)
+        out.append(t)
+        seen |= kw(t[0])
+    return out
 
 
 # 2026-11-07 competitors (fail channels at 250k-1M views/week): the title names the OUTCOME/feeling, not "Ranking …".

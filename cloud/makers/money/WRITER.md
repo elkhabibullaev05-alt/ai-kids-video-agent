@@ -1,3 +1,9 @@
+> **STOP (review 2026-11-15): this channel is no longer Money Story.** Since 2026-11-13 the owner turned it into
+> **Physics Rank Daily** (`cloud/makers/physics.py` makes the Shorts by itself, see `cloud/channels.json` → `money`).
+> Do **not** write any money scripts — anything put in `cloud/queue/money/` is never used (the 6 jobs of 2026-11-15 and
+> earlier ones were moved to `cloud/hold/money/`). If you were started to write money scripts: end the run and
+> tell the owner in Uzbek that the money writer task can be switched off.
+
 # Money Story Daily — daily script writer (Claude)
 
 Channel `money` = **Money Story Daily** (UCyAwBREYT8kQ_3tYLb4CMKg). English, adult audience (18+, *not* made for kids),

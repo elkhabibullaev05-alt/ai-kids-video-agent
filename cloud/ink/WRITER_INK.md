@@ -139,3 +139,5 @@ Optional `label` (2–5 words) is handwritten under the picture in the long vide
 
 ## Safety notes 2026-11-07
 - No restrictions on any video. Risk o'rta only for sameness: Shorts titles "The #1 Secret: X | Topic" repeat — every Short title must be a different sentence shape (repetitive-content rule).
+
+- 2026-11-15 review (`025-100-days-polar-bear`, Gemini 3/10): `img` "Blizzard" gave a snowy **city street with parked cars** in an Arctic story, and "Polar bear" was used in 34 of ~100 scenes (the same still picture for 20-60 s). Rules: never a weather/abstract article whose lead photo is a city or people (Blizzard, Storm, Snow, Rain, Wind, Hunger, Night); one `img` at most 4 scenes in a row and at most ~15% of all scenes; use specific animals, places, plants, objects instead.

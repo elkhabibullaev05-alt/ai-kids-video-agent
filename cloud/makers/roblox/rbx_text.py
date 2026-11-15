@@ -28,7 +28,22 @@ class Titles:
         c = [t for t in cands if self.ok(t, limit)]
         if not c:
             return None
-        return self.take(rng.choice(c))
+        # 2026-11-15 review: 'Guess Today's #1 Roblox Game (N Players)' 5x and 'X vs Y — Who Wins Right Now?' 3x —
+        # exact-title check let the same template through with new numbers/names. Prefer the template used least.
+        def keys(t):
+            w = [x for x in norm(t).split() if x != "shorts" and not any(ch.isdigit() for ch in x)]
+            return ["A " + " ".join(w[:2]), "Z " + " ".join(w[-3:])]
+        if not hasattr(self, "_tpl"):
+            self._tpl = {}
+            for u in self.used:
+                for k in keys(u):
+                    self._tpl[k] = self._tpl.get(k, 0) + 1
+        score = lambda t: sum(self._tpl.get(k, 0) for k in keys(t))
+        best = min(score(t) for t in c)
+        t = self.take(rng.choice([t for t in c if score(t) == best]))
+        for k in keys(t):
+            self._tpl[k] = self._tpl.get(k, 0) + 1
+        return t
 
     def recent_mentions(self, name):
         return self.used_raw.count(norm(name))
