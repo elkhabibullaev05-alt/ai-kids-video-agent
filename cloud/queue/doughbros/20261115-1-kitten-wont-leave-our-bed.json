@@ -1,0 +1,995 @@
+{
+ "id": "20261115-1-kitten-wont-leave-our-bed",
+ "plot": "The night after the rescue, the kitten Button sleeps in the Dough Bros' own bread basket and jealous Bup wants her gone, especially when Mom says she goes to a farm on Monday if she cries all night again; Lolly lures her with a sock into a cozy shoebox, but she cries louder than ever and Dad's footsteps head for the stairs — the twist: Zeek's note that she went silent at 2 a.m. last night (exactly when the bros lay down beside her, said at the start) means she wasn't crying for the basket but for them, her new littermates; jealous Bup climbs in first, all five sleep in a pile, Button stays — then Mia brings in a lamppost poster: LOST, grey kitten, answers to Smoke.",
+ "script": {
+  "title": "Why Won't the Kitten Leave Our Bed?",
+  "set": {
+   "place": "kitchen",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "basket",
+    "type": "box",
+    "color": [
+     0.78,
+     0.6,
+     0.35
+    ],
+    "on": null,
+    "at": [
+     -3,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "kitten",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.55,
+     0.58
+    ],
+    "on": null,
+    "at": [
+     -3,
+     12,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "sock",
+    "type": "box",
+    "color": [
+     0.92,
+     0.92,
+     0.95
+    ],
+    "on": null,
+    "at": [
+     7,
+     9,
+     0
+    ],
+    "visible": true,
+    "scale": 0.25
+   },
+   {
+    "id": "shoebox",
+    "type": "box",
+    "color": [
+     0.6,
+     0.4,
+     0.25
+    ],
+    "on": null,
+    "at": [
+     6,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Hey! That's my pillow! A kitten just kicked me out of bed!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:-6,9"
+     ],
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Our basket, Bup. Our bed. And she's snoring in it!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "text": "KICKED OUT!",
+    "cam": "prop:basket",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-4,8"
+     ],
+     [
+      "zeek",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Midnight in the kitchen. The kitten Pim saved now has a name.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:4,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia named her Button. And Mom gave her the bros' bread basket.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "kitten",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mia said goodnight to Button. Three times. She forgot us.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She didn't forget us. She just didn't look at us.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Can we sleep on the towel? Far, far away from claws?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-5,7"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Data first. Last night Button cried for three straight hours.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then at two a.m., total silence. I wrote it down.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Two a.m. That's when we lay down on the towel beside her.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Who cares when she stopped crying? She's sleeping in our bed!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup marches up to the basket. Button opens one sleepy eye.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "bup",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Polite first. Excuse me, miss. You're lying on our blanket.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Button yawns. Then she stretches all four paws. Even wider.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I said, EXCUSE ME!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Upstairs, a door clicks. Mom's slippers shuffle down the stairs.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ],
+     [
+      "pim",
+      "to:-6,7"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bros freeze like crumbs. Mom peeks into the basket.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She whispers into her phone to Dad, who is still in bed.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "If she cries all night again, she goes to a farm Monday.",
+    "cam": "prop:basket",
+    "do": [
+     [
+      "kitten",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE FARM?!",
+    "cam": "two:pim,bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The farm? She's a baby! She can't live on a farm!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Or maybe that fixes everything. She goes. We get our bed.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup! Tell me you don't mean that.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Maybe I do. A little. Mia was ours first.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom goes back up. The kitchen is dark and quiet again.",
+    "cam": "wide",
+    "do": [
+     [
+      "crispy",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly drags one of Dad's old socks from the laundry pile.",
+    "cam": "prop:sock",
+    "do": [
+     [
+      "lolly",
+      "to:6,9"
+     ],
+     [
+      "sock",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "We move her gently, to a cozy shoebox. Everybody wins.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Shoebox. Soft lining. Right beside the warm fridge. Acceptable.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly wiggles the sock. Button's eyes go huge. She pounces!",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ],
+     [
+      "lolly",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sock, kitten, sock, kitten, all the way across the floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:5,11"
+     ],
+     [
+      "kitten",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Into the shoebox. Button sniffs the sock. Lolly tiptoes back.",
+    "cam": "prop:shoebox",
+    "do": [
+     [
+      "shoebox",
+      "bounce"
+     ],
+     [
+      "lolly",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It worked? It worked! And nobody got scratched!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five seconds later, the crying starts. Loud. Louder than ever.",
+    "cam": "prop:shoebox",
+    "do": [
+     [
+      "shoebox",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "That is not a sleepy cry. That is a lonely one.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Upstairs, Dad's bed creaks. Heavy footsteps head for the stairs.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ],
+     [
+      "pim",
+      "to:-5,8"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "If Dad hears this, Button leaves on Monday. Somebody think!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DAD'S COMING!",
+    "cam": "two:zeek,lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Wait. Zeek. Say the two a.m. thing again.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She cried for hours. Then silence at two. So what?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So at two, all five of us lay right next to her.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "She wasn't crying for the basket. She was crying for us.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Kittens sleep in a pile with their brothers and sisters.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She lost hers out there. So she picked the next best family.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WE'RE HER FAMILY?!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup runs to the shoebox and climbs right in beside Button.",
+    "cam": "prop:shoebox",
+    "do": [
+     [
+      "bup",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay, okay. I'm here. Big brother's here. Shh.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The crying stops. Button curls around Bup like a warm scarf.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the stairs, Dad stops. Listens. Nothing. He goes back to bed.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Can I come in too? If nobody has their claws out?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One by one, all five climb into the box. Even Crispy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lolly",
+      "to:6,12"
+     ],
+     [
+      "zeek",
+      "to:7,13"
+     ],
+     [
+      "crispy",
+      "to:5,14"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "She's purring. Something is purring at me. That's new.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunday morning. Mia finds one kitten and five bros, fast asleep.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom texts Dad. Slept all night. Button stays. Mia squeals.",
+    "cam": "prop:shoebox",
+    "do": [
+     [
+      "shoebox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup, yesterday you wanted her gone. And she chose you.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mia was ours first. Now we're Button's first. Fair's fair.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia runs in from the street, holding a crumpled paper.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A poster from the lamppost. Lost: grey kitten. Answers to Smoke.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kitten",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "SHE HAS AN OWNER?!",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Won't the Kitten Leave Our Bed? 😾",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Mia was ours first. Now a kitten sleeps in our bed.\" — Bup\nThe kitten Button now sleeps in the Dough Bros' bread basket, and if she cries one more night, she goes to a farm on Monday.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "kitten",
+   "kitten in our bed",
+   "jealous",
+   "bup",
+   "animated comedy",
+   "funny animation",
+   "cozy night"
+  ],
+  "thumb_text": "KICKED OUT?!",
+  "thumb_beat": 12,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué la gatita no deja nuestra cama? 😾",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Mia era nuestra primero. Ahora una gatita duerme en nuestra cama.\" — Bup\nLa gatita Button duerme en la cesta de pan de los Dough Bros, y si llora otra noche, el lunes se va a una granja.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Por que a gatinha não sai da nossa cama? 😾",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"A Mia era nossa primeiro. Agora uma gatinha dorme na nossa cama.\" — Bup\nA gatinha Button dorme no cesto de pão dos Dough Bros, e se chorar mais uma noite, segunda-feira ela vai para uma fazenda.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا لا تترك القطة سريرنا؟ 😾",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"ميا كانت لنا أولاً. والآن قطة صغيرة تنام في سريرنا.\" — باب\nالقطة بوتون تنام في سلة الخبز الخاصة بـ Dough Bros، وإذا بكت ليلة أخرى ستذهب إلى مزرعة يوم الاثنين.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi la chatonne ne quitte pas notre lit ? 😾",
+    "description": "Selon toi, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Mia était à nous d'abord. Maintenant une chatonne dort dans notre lit.\" — Bup\nLa chatonne Button dort dans la corbeille à pain des Dough Bros, et si elle pleure encore une nuit, elle part à la ferme lundi.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "子猫がぼくらのベッドからどかない！😾",
+    "description": "次はどうなると思う？コメントで教えてね。\n「ミアは先にぼくらの家族だったのに。今は子猫がぼくらのベッドで寝てる。」— バップ\n子猫のボタンがドウ・ブロスのパンかごで眠っている。もう一晩泣いたら、月曜日に農場へ行くことに。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "왜 새끼 고양이가 우리 침대를 안 떠날까? 😾",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"미아는 원래 우리 거였어. 이젠 새끼 고양이가 우리 침대에서 자.\" — 법\n새끼 고양이 버튼이 도우 브로스의 빵 바구니에서 자고 있어요. 하룻밤만 더 울면 월요일에 농장으로 가요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Warum verlässt das Kätzchen unser Bett nicht? 😾",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Mia gehörte zuerst uns. Jetzt schläft ein Kätzchen in unserem Bett.\" — Bup\nDas Kätzchen Button schläft im Brotkorb der Dough Bros, und wenn es noch eine Nacht weint, kommt es am Montag auf einen Bauernhof.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "KICKED OUT OF BED",
+   "title": "A Kitten Kicked Us Out of Our Own Bed 😾 #shorts",
+   "description": "A kitten sleeps in the Dough Bros' bed and won't move. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "kitten",
+    "bup"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Una gatita nos echó de nuestra propia cama 😾 #shorts",
+     "description": "Una gatita duerme en la cama de los Dough Bros y no piensa moverse. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma gatinha nos expulsou da nossa própria cama 😾 #shorts",
+     "description": "Uma gatinha dorme na cama dos Dough Bros e não quer sair. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قطة صغيرة طردتنا من سريرنا 😾 #shorts",
+     "description": "قطة صغيرة تنام في سرير Dough Bros ولا تريد أن تتحرك. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une chatonne nous a virés de notre lit 😾 #shorts",
+     "description": "Une chatonne dort dans le lit des Dough Bros et ne bouge plus. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "子猫にベッドを取られた！😾 #shorts",
+     "description": "子猫がドウ・ブロスのベッドで寝て、どこうとしない。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "새끼 고양이가 우리를 침대에서 쫓아냈어 😾 #shorts",
+     "description": "새끼 고양이가 도우 브로스의 침대에서 자고 꿈쩍도 안 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Kätzchen hat uns aus dem Bett geworfen 😾 #shorts",
+     "description": "Ein Kätzchen schläft im Bett der Dough Bros und rührt sich nicht. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
