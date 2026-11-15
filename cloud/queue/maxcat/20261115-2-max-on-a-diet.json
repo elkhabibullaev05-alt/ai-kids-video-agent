@@ -1,0 +1,1105 @@
+{
+ "id": "20261115-2-max-on-a-diet",
+ "plot": "The vet orders Max to lose two pounds by a sunset weigh-in, so Dog coaches him through a park workout, but Max cheats at every gag (shortcut lap, 'nap' stretch, buying contraband cheese from Mouse with Dog's belly rub, losing the salad to Bird) and weighs exactly the same, while Dog, who did all the work, is the one who lost two pounds.",
+ "script": {
+  "title": "Max Goes on a Diet",
+  "set": {
+   "place": "park",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "scale",
+    "type": "box",
+    "color": [
+     0.85,
+     0.85,
+     0.9
+    ],
+    "at": [
+     0.0,
+     10.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "salad",
+    "type": "ball",
+    "color": "green",
+    "at": [
+     -5.0,
+     9.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "cheese",
+    "type": "box",
+    "color": [
+     1.0,
+     0.85,
+     0.2
+    ],
+    "at": [
+     -1.0,
+     7.5,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Jog, Max! Jog! The vet said two pounds by sunset!",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:0,10"
+     ],
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I am jogging. On the inside.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-5,8"
+     ],
+     [
+      "dog",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My legs are resting. My heart is running a marathon.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,8"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "text": "VET SAYS: LOSE 2 POUNDS",
+    "cam": "prop:scale",
+    "hold": 1.2,
+    "do": [
+     [
+      "scale",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "dog",
+    "say": "One lap around the whole park. Ready? Go!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog runs the entire lap. Max strolls off somewhere else.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:9,17"
+     ],
+     [
+      "max",
+      "to:-7,13"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Done! Huff... huff... Wait. Where's Max?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I've been here for ages. Where have YOU been?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,8"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You walked straight across the grass!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's called strategy. Look it up.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay. Stretching. Copy exactly what I do.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Stretching. Got it. Watch this.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max. That's just lying down.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's a very advanced stretch. It's called the nap.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Push-ups! Down, up, down, up! Give me ten, Max!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Down. Got it. I'm a natural at down.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Great! And now... up?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nobody said anything about up. I only signed up for down.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max stays down for eleven minutes. Dog does all ten push-ups alone.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Diet dinner time, Max! A lovely green salad!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:right"
+     ],
+     [
+      "grandma",
+      "to:-6,10"
+     ],
+     [
+      "salad",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's not dinner. That's what dinner eats.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ooh! Salad! Is anybody eating that? No? Mine!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:-4,11"
+     ],
+     [
+      "salad",
+      "give:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey! That's my diet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Relax. Look, you lost a whole salad already.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "salad",
+      "vanish"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well... that technically counts.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Psst. Big guy. Cheese. No questions asked.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:-1,7"
+     ],
+     [
+      "cheese",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "How much? Name your price.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "One belly rub. From the dog.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Absolutely not. I'm not part of this.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. Roll over. Do it for the team.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog rolls over. Max gets the cheese. Grandma sees everything.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "cheese",
+      "give:max"
+     ],
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Pleasure doing business. Same bench tomorrow.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "New rule. Ten thousand steps before sunset. I'm counting.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ten thousand? Easy. Dog, stand still for a second.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max climbs onto Dog's back. Dog walks. Max counts.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,14"
+     ],
+     [
+      "max",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nine hundred and one. Nine hundred and two. I'm exhausted.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Those are MY steps! You're just a very heavy hat!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Yoga time! Breathe in. Breathe out. Now balance on one leg.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One leg? I have four. I'll use all of them. Lying down.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "That's not a pose, Max. You're just asleep again.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's the dead cat pose. It's very advanced.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Weigh-in at sunset. Two pounds, Max, or no treats till spring.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No treats till spring? Fine. Cardio. Watch me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max does one jumping jack. Exactly one.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's my cardio for the year. I need water.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then the wind changes. Someone is grilling sausages by the pond.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:10,16"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Look at him go! That's the fastest he has ever run!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I didn't run. The sausages pulled me. That's science.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "If we tie a sausage to a stick, you lose ten pounds.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:8,15"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "New plan. I hide the cheese in a bush. For later.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-9,15"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max hides the cheese. Then he forgets which bush.",
+    "cam": "prop:cheese",
+    "do": [
+     [
+      "cheese",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This park has two hundred bushes!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Two hundred and one. You're sitting in one.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-7,14"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "SUNSET WEIGH-IN",
+    "cam": "prop:scale",
+    "hold": 1.2,
+    "do": [
+     [
+      "scale",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Up you go, Max. Moment of truth.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max steps on the scale. One paw stays on Dog's head.",
+    "cam": "prop:scale",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ],
+     [
+      "dog",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why is your paw on my head?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Support. It's called emotional support.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Same weight. Not one ounce less. Not one.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "But wait. Dog, hop on. Oh my. Dog lost two pounds!",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I ran every lap. I rolled over for cheese. Obviously.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "So the vet's diet worked perfectly. Just on the wrong animal.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the diet worked. I just put it on Dog.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Crackers tomorrow, big guy. Same bench.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. Warm up. You're on my diet again tomorrow.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "flat_roof"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Went on a Diet… Wait for the End 💀",
+  "description": "\"I am jogging. On the inside.\" 🐱\nThe vet wants two pounds gone by sunset. Dog becomes the world's most patient personal trainer, Max finds a shortcut for every exercise, and Mouse runs a cheese business behind the bench. The weigh-in does not go the way anyone expects.\nWho in your house would cheat on this diet? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog",
+  "tags": [
+   "funny cat",
+   "cat diet",
+   "fat cat",
+   "cat and dog",
+   "dog personal trainer",
+   "funny animals",
+   "cat comedy",
+   "3d animation",
+   "animated comedy",
+   "diet humor",
+   "gym humor",
+   "max the curious cat",
+   "pet comedy",
+   "lazy cat"
+  ],
+  "thumb_text": "NOT DINNER",
+  "thumb_beat": 20,
+  "localizations": {
+   "es": {
+    "title": "Max se puso a dieta… espera al final 💀",
+    "description": "\"Estoy corriendo. Por dentro.\" 🐱\nEl veterinario quiere dos libras menos antes del atardecer. Perro se convierte en el entrenador más paciente del mundo, Max encuentra un atajo para cada ejercicio y Ratón tiene un negocio de queso detrás del banco. El pesaje no sale como nadie espera.\n¿Quién en tu casa haría trampa en esta dieta? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "pt": {
+    "title": "Max entrou de dieta… espere pelo final 💀",
+    "description": "\"Estou correndo. Por dentro.\" 🐱\nO veterinário quer um quilo a menos até o pôr do sol. O Cachorro vira o personal trainer mais paciente do mundo, o Max acha um atalho para cada exercício e o Rato tem um negócio de queijo atrás do banco. A pesagem não sai como ninguém espera.\nQuem na sua casa trapacearia nessa dieta? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ar": {
+    "title": "ماكس بدأ حمية… انتظر النهاية 💀",
+    "description": "\"أنا أركض. من الداخل.\" 🐱\nالطبيب البيطري يريد خسارة رطلين قبل الغروب. يصبح الكلب أكثر مدرب صبرًا في العالم، ويجد ماكس طريقًا مختصرًا لكل تمرين، والفأر يدير تجارة جبن خلف المقعد. الوزن النهائي لا يسير كما يتوقع أحد.\nمن في بيتك سيغش في هذه الحمية؟ 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "fr": {
+    "title": "Max s'est mis au régime… attends la fin 💀",
+    "description": "\"Je fais du jogging. À l'intérieur.\" 🐱\nLe vétérinaire veut un kilo de moins avant le coucher du soleil. Chien devient le coach le plus patient du monde, Max trouve un raccourci pour chaque exercice et Souris tient un commerce de fromage derrière le banc. La pesée ne se passe pas comme prévu.\nQui chez toi tricherait à ce régime ? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ja": {
+    "title": "マックスがダイエット…最後まで見て 💀",
+    "description": "「走ってるよ。心の中で。」🐱\n獣医さんの指示は夕方までに1キロ減量。イヌは世界一がまん強いトレーナーになり、マックスはどの運動にも近道を見つけ、ネズミはベンチの裏でチーズ商売。最後の体重測定は誰の予想とも違う結果に。\nあなたの家でこのダイエットをズルしそうなのは誰？👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ko": {
+    "title": "맥스가 다이어트를 시작했다… 끝까지 봐 💀",
+    "description": "\"나 지금 뛰고 있어. 마음속으로.\" 🐱\n수의사는 해 질 때까지 1킬로 감량을 원해요. 강아지는 세상에서 제일 참을성 있는 트레이너가 되고, 맥스는 모든 운동에 지름길을 찾고, 생쥐는 벤치 뒤에서 치즈 장사를 해요. 마지막 몸무게 측정은 아무도 예상 못 한 결과!\n집에서 이 다이어트를 몰래 어길 사람은 누구? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "de": {
+    "title": "Max macht Diät… warte aufs Ende 💀",
+    "description": "\"Ich jogge. Innerlich.\" 🐱\nDer Tierarzt will bis Sonnenuntergang ein Kilo weniger. Hund wird zum geduldigsten Personal Trainer der Welt, Max findet für jede Übung eine Abkürzung, und Maus betreibt hinter der Bank einen Käsehandel. Das Wiegen läuft ganz anders als erwartet.\nWer bei dir zu Hause würde bei dieser Diät schummeln? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 4,
+   "dur": 18,
+   "top": "ONE LAP. GO!",
+   "title": "When the Lazy Cat Wins the Race 😭 #shorts",
+   "description": "It's not cheating, it's strategy. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "lazy cat",
+    "cat and dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Cuando el gato perezoso gana la carrera 😭 #shorts",
+     "description": "No es trampa, es estrategia. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quando o gato preguiçoso vence a corrida 😭 #shorts",
+     "description": "Não é trapaça, é estratégia. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "عندما يفوز القط الكسول بالسباق 😭 #shorts",
+     "description": "ليس غشًا، إنها استراتيجية. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quand le chat paresseux gagne la course 😭 #shorts",
+     "description": "Ce n'est pas tricher, c'est de la stratégie. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "なまけネコがレースに勝つとき 😭 #shorts",
+     "description": "ズルじゃない、作戦です。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "게으른 고양이가 경주에서 이길 때 😭 #shorts",
+     "description": "반칙이 아니라 전략이야. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wenn die faule Katze das Rennen gewinnt 😭 #shorts",
+     "description": "Das ist kein Schummeln, das ist Strategie. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 19,
+   "dur": 18,
+   "top": "DIET DINNER TIME",
+   "title": "Who Told Max Salad Was Dinner? 💀 #shorts",
+   "description": "He lost a whole salad. Technically. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat diet",
+    "funny animals"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Quién le dijo a Max que la ensalada es cena? 💀 #shorts",
+     "description": "Perdió una ensalada entera. Técnicamente. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Quem disse ao Max que salada é jantar? 💀 #shorts",
+     "description": "Ele perdeu uma salada inteira. Tecnicamente. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "من قال لماكس إن السلطة عشاء؟ 💀 #shorts",
+     "description": "لقد خسر سلطة كاملة. تقنيًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Qui a dit à Max qu'une salade, c'est un dîner ? 💀 #shorts",
+     "description": "Il a perdu une salade entière. Techniquement. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "サラダが晩ごはんって誰が言った？💀 #shorts",
+     "description": "サラダまるごと減った。理屈の上では。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "샐러드가 저녁이라고 누가 그랬어? 💀 #shorts",
+     "description": "샐러드 하나를 통째로 뺐어. 이론상으로는. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wer hat Max gesagt, Salat sei Abendessen? 💀 #shorts",
+     "description": "Er hat einen ganzen Salat verloren. Technisch gesehen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

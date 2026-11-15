@@ -1,0 +1,1019 @@
+{
+ "id": "20261115-1-max-works-from-home",
+ "plot": "On a Monday of working from home, Grandma's video calls are wrecked one gag at a time by Max (keyboard spam, tail on camera, closing the laptop with his belly) and Dog (eaten sandwich, barking at the delivery), but the boss loves it and invites 'Gary' the tail back, and Max discovers he accidentally accepted a 6 a.m. meeting as 'K'.",
+ "script": {
+  "title": "Max Works From Home",
+  "set": {
+   "place": "house",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "laptop",
+    "type": "box",
+    "color": [
+     0.55,
+     0.57,
+     0.62
+    ],
+    "at": [
+     -4.5,
+     11.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "bedbox",
+    "type": "box",
+    "color": [
+     0.72,
+     0.55,
+     0.35
+    ],
+    "at": [
+     3.0,
+     12.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "lunch",
+    "type": "cake",
+    "color": [
+     0.95,
+     0.8,
+     0.5
+    ],
+    "at": [
+     0.5,
+     9.5,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "grandma",
+    "say": "Sorry, everyone, the cat is... Max! Off the keyboard!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:-4,10"
+     ],
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Too late. I typed forty K's and pressed send.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ],
+     [
+      "grandma",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And everybody replied. I think I'm the boss now.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,8"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "MONDAY. 9:01 AM.",
+    "cam": "prop:laptop",
+    "hold": 1.2,
+    "do": [
+     [
+      "laptop",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "The real boss just wrote back. 'Who is K?'",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Meeting number two. Grandma is sure she's muted.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Honestly? This whole meeting could have been an email.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Uh... why is the little microphone green?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Green means muted. Right? Right, Dog?",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Green means everybody heard. Especially the email part.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "SHE WAS NOT MUTED",
+    "cam": "prop:laptop",
+    "hold": 1.0,
+    "do": [
+     [
+      "laptop",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Coffee break. Grandma bought Max a very fancy new bed.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:1,10"
+     ],
+     [
+      "bedbox",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Memory foam, Max. Heated. It cost a fortune.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Lovely. I'll sleep in the cardboard box it came in.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,12"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That bed cost more than my food for a month.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then you sleep in it. I have standards.",
+    "cam": "prop:bedbox",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Back on camera. Nobody touches my sandwich. Nobody.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ],
+     [
+      "lunch",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog looks at the sandwich. The sandwich looks at Dog.",
+    "cam": "prop:lunch",
+    "do": [
+     [
+      "dog",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "text": "THREE MINUTES LATER",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "lunch",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Okay, who ate my lunch?",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It was Max. He planned everything. I only chewed.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I was on the keyboard. I have an alibi. It's typed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ding dong. A delivery, right in the middle of the call.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Intruder! Intruder! Woof! Woof! Woof!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Dog, it's a parcel! It's literally my printer ink!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I protected us from the ink. You're welcome.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The ink was for the report. The report is due today.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps on the desk. There's a pen. Of course there is.",
+    "cam": "prop:laptop",
+    "do": [
+     [
+      "max",
+      "to:-3,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nice pen. Very important pen. Would be a shame if...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max. Look at me. Don't you dare. Don't you even think it.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max keeps eye contact. The pen slowly goes off the edge.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oops. Gravity. I don't make the rules.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Camera off. Finally. I can eat a cookie in peace.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Small question. Why is your face on the big screen?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I sat on a button. Now everyone is watching you chew.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Every single person in this company has seen me eat a cookie.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I have the rest of the cookie, though?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Last call today. The big one. One more mess and I'm done.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-4,10"
+     ],
+     [
+      "max",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll sit behind the laptop. Very quietly. Like a professional.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Why is everyone laughing at my sales chart?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max's tail is on camera. Swish. Swish.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fifty people are watching my tail. This is my moment.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "They gave it a name in the chat. It's Gary.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Hello! Hello! Nice window! Nice cat!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ek-ek-ek-ek! Let me at the bird!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No, sir, the internet is fine. That's the cat.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Bye! Same time tomorrow!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "There's another dog in the meeting! On the screen! Hello, friend!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-3,11"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's my boss's dog. Please don't bark at my boss's dog.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Woof! He barked first! Okay, maybe I barked first.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Two dogs barking at each other through a screen. Peak teamwork.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max finds the warmest spot in the house. The laptop.",
+    "cam": "prop:laptop",
+    "do": [
+     [
+      "max",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Warm. Flat. Humming. Perfect. I'm lying down right here.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "CALL ENDED",
+    "cam": "prop:laptop",
+    "hold": 1.0,
+    "do": [
+     [
+      "laptop",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Max! You closed the laptop with your belly!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shortest meeting in history. You're welcome.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Wait. A message from the boss. Here we go.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "'Best call of the year. Same time tomorrow. Bring Gary.'",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Gary got invited. I ate a sandwich and got nothing.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then one more alert. Tomorrow, six a.m. Accepted by... K.",
+    "cam": "prop:laptop",
+    "do": [
+     [
+      "laptop",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no. I really am the boss now.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Six a.m., boss. Don't be late.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ],
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Told Max He Could Work From Home? 😭",
+  "description": "\"I typed forty K's and pressed send. I think I'm the boss now.\" 🐱\nOne Monday of working from home with a cat on the keyboard, a dog who eats your lunch, a mute button that isn't, and a tail that steals the meeting. Every gag is its own little disaster, and the ending is the worst one.\nWhat's the funniest thing your pet did during a video call? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "work from home",
+   "work from home with pets",
+   "cat on keyboard",
+   "video call fail",
+   "funny animals",
+   "cat comedy",
+   "3d animation",
+   "animated comedy",
+   "monday meeting",
+   "office humor",
+   "max the curious cat",
+   "pet comedy"
+  ],
+  "thumb_text": "WHO IS K?",
+  "thumb_beat": 60,
+  "localizations": {
+   "es": {
+    "title": "¿Quién dejó a Max trabajar desde casa? 😭",
+    "description": "\"Escribí cuarenta K y le di a enviar. Creo que ahora soy el jefe.\" 🐱\nUn lunes de teletrabajo con un gato en el teclado, un perro que se come tu almuerzo, un botón de silencio que no silencia y una cola que se roba la reunión. Cada gag es un pequeño desastre, y el final es el peor.\n¿Qué es lo más gracioso que hizo tu mascota en una videollamada? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "pt": {
+    "title": "Quem deixou o Max trabalhar de casa? 😭",
+    "description": "\"Digitei quarenta K e apertei enviar. Acho que agora sou o chefe.\" 🐱\nUma segunda-feira de home office com um gato no teclado, um cachorro que come seu almoço, um botão de mudo que não funciona e um rabo que rouba a reunião. Cada piada é um pequeno desastre, e o final é o pior.\nQual foi a coisa mais engraçada que seu pet fez numa videochamada? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "ar": {
+    "title": "من سمح لماكس بالعمل من المنزل؟ 😭",
+    "description": "\"كتبت أربعين حرف K وضغطت إرسال. أظن أنني المدير الآن.\" 🐱\nيوم اثنين من العمل من المنزل مع قط على لوحة المفاتيح، وكلب يأكل غداءك، وزر كتم لا يكتم، وذيل يسرق الاجتماع. كل موقف كارثة صغيرة، والنهاية هي الأسوأ.\nما أطرف شيء فعله حيوانك الأليف أثناء مكالمة فيديو؟ 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "fr": {
+    "title": "Qui a dit à Max qu'il pouvait télétravailler ? 😭",
+    "description": "\"J'ai tapé quarante K et j'ai appuyé sur envoyer. Je crois que je suis le patron maintenant.\" 🐱\nUn lundi de télétravail avec un chat sur le clavier, un chien qui mange ton déjeuner, un bouton muet qui ne l'est pas et une queue qui vole la réunion. Chaque gag est une petite catastrophe, et la fin est la pire.\nQuelle est la chose la plus drôle que ton animal a faite pendant un appel vidéo ? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "ja": {
+    "title": "マックスに在宅勤務を許したのは誰？😭",
+    "description": "「Kを40個打って送信しちゃった。たぶん今はボクが上司。」🐱\nキーボードに乗るネコ、ランチを食べるイヌ、ミュートにならないミュートボタン、会議を乗っ取るしっぽ。在宅勤務の月曜日はギャグの連続、そしてラストが一番ひどい。\nビデオ通話中にペットがやった一番おもしろいことは？👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "ko": {
+    "title": "누가 맥스한테 재택근무를 허락했어? 😭",
+    "description": "\"K를 마흔 개 치고 전송을 눌렀어. 이제 내가 사장인 것 같아.\" 🐱\n키보드 위의 고양이, 점심을 먹어버린 강아지, 음소거가 안 되는 음소거 버튼, 회의를 훔친 꼬리까지. 재택근무 월요일은 하나하나가 작은 재앙이고, 엔딩이 제일 심해요.\n영상 통화 중에 반려동물이 한 가장 웃긴 일은? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   },
+   "de": {
+    "title": "Wer hat Max erlaubt, im Homeoffice zu arbeiten? 😭",
+    "description": "\"Ich habe vierzig K getippt und auf Senden gedrückt. Ich glaube, ich bin jetzt der Chef.\" 🐱\nEin Montag im Homeoffice mit einer Katze auf der Tastatur, einem Hund, der dein Mittagessen frisst, einer Stummtaste, die nicht stumm ist, und einem Schwanz, der das Meeting stiehlt. Jeder Gag ist ein kleines Desaster, und das Ende ist das schlimmste.\nWas war das Lustigste, das dein Haustier in einem Videocall gemacht hat? 👇\n#MaxTheCuriousCat #WorkFromHome #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 18,
+   "top": "SHE THOUGHT SHE WAS MUTED",
+   "title": "She Thought She Was Muted 💀 #shorts",
+   "description": "Never trust the green microphone. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "video call fail",
+    "work from home"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Creía que estaba en silencio 💀 #shorts",
+     "description": "Nunca confíes en el micrófono verde. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ela achou que estava no mudo 💀 #shorts",
+     "description": "Nunca confie no microfone verde. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ظنّت أن الميكروفون مكتوم 💀 #shorts",
+     "description": "لا تثق أبدًا بالميكروفون الأخضر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Elle se croyait en sourdine 💀 #shorts",
+     "description": "Ne fais jamais confiance au micro vert. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ミュートだと思ってた 💀 #shorts",
+     "description": "緑のマイクは信じちゃダメ。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "음소거인 줄 알았는데 💀 #shorts",
+     "description": "초록색 마이크는 절대 믿지 마세요. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Sie dachte, sie sei stumm 💀 #shorts",
+     "description": "Trau niemals dem grünen Mikrofon. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 16,
+   "dur": 17,
+   "top": "WHO ATE THE SANDWICH?",
+   "title": "The Dog Has an Alibi… Kind Of 😭 #shorts",
+   "description": "Nobody touches the sandwich. Nobody. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny dog",
+    "cat and dog",
+    "pet comedy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El perro tiene coartada… más o menos 😭 #shorts",
+     "description": "Nadie toca el sándwich. Nadie. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O cachorro tem um álibi… mais ou menos 😭 #shorts",
+     "description": "Ninguém toca no sanduíche. Ninguém. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب لديه حجة غياب… تقريبًا 😭 #shorts",
+     "description": "لا أحد يلمس الشطيرة. لا أحد. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le chien a un alibi… en quelque sorte 😭 #shorts",
+     "description": "Personne ne touche au sandwich. Personne. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イヌにはアリバイが…一応ある 😭 #shorts",
+     "description": "サンドイッチには誰も触らないこと。誰も。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지에게 알리바이가… 있긴 해 😭 #shorts",
+     "description": "아무도 샌드위치 건드리지 마. 아무도. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Hund hat ein Alibi… irgendwie 😭 #shorts",
+     "description": "Niemand fasst das Sandwich an. Niemand. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
