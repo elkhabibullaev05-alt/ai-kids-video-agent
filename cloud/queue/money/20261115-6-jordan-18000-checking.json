@@ -1,0 +1,138 @@
+{
+ "title": "Jordan's $18,000 Is Quietly Shrinking",
+ "hook": "$18,000 earning $0.",
+ "header": "Jordan · $18,000 in checking",
+ "character": "Jordan",
+ "amount": "$18,000",
+ "accent": "teal",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Jordan's $18,000 earns $0 in checking, and loses about $540 of buying power a year.",
+   "visual": {
+    "type": "big_number",
+    "value": 540,
+    "label": "buying power lost a year",
+    "sub": "at about 3% inflation",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "He's 31, and that money has sat there for three years, just in case.",
+   "visual": {
+    "type": "statement",
+    "text": "Three years. Just in case.",
+    "sub": "Jordan, 31",
+    "icon": "wallet"
+   }
+  },
+  {
+   "say": "His bills are about $3,000 a month, so three months is $9,000.",
+   "visual": {
+    "type": "stack",
+    "title": "Splitting his $18,000",
+    "total": 18000,
+    "items": [
+     {
+      "label": "Emergency fund",
+      "value": 9000
+     },
+     {
+      "label": "Long-term money",
+      "value": 9000,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "In a savings account paying around 4%, that half earns about $360 a year.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "Checking",
+     "value": 0,
+     "sub": "per year"
+    },
+    "right": {
+     "label": "Savings at ~4%",
+     "value": 360,
+     "sub": "per year",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "The other $9,000, he won't need for ten years.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$18,000 total",
+     "− $9,000 emergency fund",
+     "= $9,000 long-term"
+    ]
+   }
+  },
+  {
+   "say": "If a broad index fund earned roughly 7% a year, not guaranteed, it could reach about $17,700.",
+   "visual": {
+    "type": "line",
+    "label": "$9,000 at roughly 7%",
+    "points": [
+     9000,
+     10304,
+     11797,
+     13507,
+     15464,
+     17704
+    ],
+    "start_label": "Today",
+    "end_label": "Year 10"
+   }
+  },
+  {
+   "say": "His plan: keep three months safe, set a date to invest the rest, and check once a year.",
+   "visual": {
+    "type": "checklist",
+    "title": "Jordan's plan",
+    "items": [
+     {
+      "text": "3 months of bills in savings",
+      "ok": true
+     },
+     {
+      "text": "Long-term money invested",
+      "ok": true
+     },
+     {
+      "text": "Review once a year",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "How much sits in your checking? Subscribe, so your savings aren't $18,000 earning $0.",
+   "visual": {
+    "type": "question",
+    "text": "How much sits in your checking?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "How much of your savings is sitting in checking?",
+ "description": "Jordan, 31, keeps $18,000 in checking at 0%. With inflation around 3%, it loses roughly $540 of buying power a year. Keeping $9,000 as an emergency fund at around 4% and investing the rest long-term could look very different in 10 years — if markets returned roughly 7%, which is not guaranteed. Rounded US estimates; general education only.",
+ "tags": [
+  "emergency fund",
+  "high yield savings",
+  "inflation explained",
+  "cash in checking",
+  "investing for beginners",
+  "where to keep savings",
+  "money tips"
+ ],
+ "hashtags": [
+  "#emergencyfund",
+  "#inflation"
+ ]
+}

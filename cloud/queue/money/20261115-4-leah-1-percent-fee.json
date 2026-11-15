@@ -1,0 +1,140 @@
+{
+ "title": "Leah, 30: The 1% Fee That Could Cost $77,000",
+ "hook": "1% fee. $77,000 gone.",
+ "header": "Leah · $400 a month",
+ "character": "Leah",
+ "amount": "1%",
+ "accent": "purple",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "A 1% yearly fee could cost Leah about $77,000 over 30 years.",
+   "visual": {
+    "type": "big_number",
+    "value": 77000,
+    "label": "lost to fees",
+    "sub": "over 30 years",
+    "icon": "fire"
+   }
+  },
+  {
+   "say": "She's 30 and invests $400 a month. The fund charges 1% a year.",
+   "visual": {
+    "type": "statement",
+    "text": "$400 a month. 1% a year.",
+    "sub": "Leah, 30",
+    "icon": "chart"
+   }
+  },
+  {
+   "say": "One percent sounds tiny, but it's charged on her whole balance, every year.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$100,000 balance",
+     "× 1% fee",
+     "= $1,000 a year"
+    ]
+   }
+  },
+  {
+   "say": "Say the market earned roughly 7% a year. Not guaranteed, just an example.",
+   "visual": {
+    "type": "bars",
+    "title": "Her yearly return",
+    "suffix": "%",
+    "prefix": "",
+    "items": [
+     {
+      "label": "Market, roughly",
+      "value": 7
+     },
+     {
+      "label": "After 1% fee",
+      "value": 6,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Over 30 years, the gap between those two keeps getting wider.",
+   "visual": {
+    "type": "line",
+    "label": "Gap from the 1% fee",
+    "points": [
+     0,
+     655,
+     3302,
+     9361,
+     21043,
+     41749,
+     76662
+    ],
+    "start_label": "Today",
+    "end_label": "Year 30"
+   }
+  },
+  {
+   "say": "At 6%, she'd have about $402,000. At 6.9%, about $478,000.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "1% fee",
+     "value": 402000,
+     "sub": "after 30 years",
+     "hi": true
+    },
+    "right": {
+     "label": "0.1% fee",
+     "value": 478000,
+     "sub": "after 30 years"
+    }
+   }
+  },
+  {
+   "say": "Her fix: find the expense ratio, compare low-cost funds, and check it once a year.",
+   "visual": {
+    "type": "checklist",
+    "title": "Leah's fee check",
+    "items": [
+     {
+      "text": "Find the expense ratio",
+      "ok": true
+     },
+     {
+      "text": "Compare low-cost options",
+      "ok": true
+     },
+     {
+      "text": "Check fees once a year",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Do you know your fund's fee? Subscribe, before a 1% fee and $77,000 are gone.",
+   "visual": {
+    "type": "question",
+    "text": "Do you know your fund's fee?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "Do you know the expense ratio on your investments?",
+ "description": "Leah, 30, invests $400 a month in a fund that charges 1% a year. If the market returned roughly 7% (not guaranteed), that fee could leave her about $77,000 behind a 0.1% fund after 30 years. Example math only with rounded US estimates — real returns vary and can be negative.",
+ "tags": [
+  "investment fees",
+  "expense ratio",
+  "1 percent fee",
+  "index fund fees",
+  "investing for beginners",
+  "compound interest",
+  "retirement savings"
+ ],
+ "hashtags": [
+  "#investing",
+  "#compoundinterest"
+ ]
+}

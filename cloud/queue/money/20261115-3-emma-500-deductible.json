@@ -1,0 +1,139 @@
+{
+ "title": "Emma's $500 Deductible Costs Her $300 a Year",
+ "hook": "$300 a year. For what?",
+ "header": "Emma · $500 deductible",
+ "character": "Emma",
+ "amount": "$500",
+ "accent": "blue",
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "say": "Emma pays about $300 a year extra, just for a lower car insurance deductible.",
+   "visual": {
+    "type": "big_number",
+    "value": 300,
+    "suffix": "/yr",
+    "label": "extra she pays",
+    "icon": "shield"
+   }
+  },
+  {
+   "say": "Her policy costs $190 a month, with a $500 deductible.",
+   "visual": {
+    "type": "statement",
+    "text": "$190 a month. $500 deductible.",
+    "icon": "car"
+   }
+  },
+  {
+   "say": "Her quote with a $1,000 deductible? About $165 a month.",
+   "visual": {
+    "type": "versus",
+    "left": {
+     "label": "$500 deductible",
+     "value": 190,
+     "sub": "per month",
+     "hi": true
+    },
+    "right": {
+     "label": "$1,000 deductible",
+     "value": 165,
+     "sub": "per month"
+    }
+   }
+  },
+  {
+   "say": "That's $25 a month, or about $300 a year.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "$190 − $165 = $25",
+     "× 12 months",
+     "= about $300 a year"
+    ]
+   }
+  },
+  {
+   "say": "The catch: if she ever files a claim, she pays $500 more herself.",
+   "visual": {
+    "type": "bars",
+    "title": "If she files a claim",
+    "items": [
+     {
+      "label": "Old deductible",
+      "value": 500
+     },
+     {
+      "label": "New deductible",
+      "value": 1000,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "With no claims, the savings cover that $500 gap in about 20 months.",
+   "visual": {
+    "type": "line",
+    "label": "Premium saved vs $500 risk",
+    "points": [
+     0,
+     75,
+     150,
+     225,
+     300,
+     375,
+     450,
+     525,
+     600
+    ],
+    "start_label": "Today",
+    "end_label": "Month 24"
+   }
+  },
+  {
+   "say": "Her rule: only raise it once $1,000 sits in savings, and compare quotes every year.",
+   "visual": {
+    "type": "checklist",
+    "title": "Before raising it",
+    "items": [
+     {
+      "text": "$1,000 saved for the deductible",
+      "ok": true
+     },
+     {
+      "text": "Compare quotes every year",
+      "ok": true
+     },
+     {
+      "text": "Ask what each option costs",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "What's your deductible? Subscribe, so a low one doesn't cost you $300 a year, for what?",
+   "visual": {
+    "type": "question",
+    "text": "What's your car insurance deductible?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "What's your car insurance deductible — and do you know what it costs you?",
+ "description": "Emma pays $190 a month for car insurance with a $500 deductible; a $1,000 deductible would cost about $165. That's roughly $300 a year, which covers the extra $500 risk in about 20 months without a claim — but only makes sense with $1,000 saved. Premiums vary a lot by insurer, state and driving record; numbers are rounded US estimates.",
+ "tags": [
+  "car insurance",
+  "insurance deductible",
+  "how to lower car insurance",
+  "deductible explained",
+  "save on insurance",
+  "car insurance tips",
+  "personal finance"
+ ],
+ "hashtags": [
+  "#carinsurance",
+  "#savingmoney"
+ ]
+}

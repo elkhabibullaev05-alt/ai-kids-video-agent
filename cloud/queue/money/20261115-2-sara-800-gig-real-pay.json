@@ -1,0 +1,150 @@
+{
+ "title": "Sara Finally Checked What Her $800 Gig Pays",
+ "hook": "$20 an hour? Really $11.",
+ "header": "Sara · $800 a month gig",
+ "character": "Sara",
+ "amount": "$800",
+ "accent": "orange",
+ "voice": "af_bella",
+ "scenes": [
+  {
+   "say": "Sara thought her weekend driving gig paid $20 an hour. It's closer to $11.",
+   "visual": {
+    "type": "versus",
+    "prefix": "$",
+    "left": {
+     "label": "What she thought",
+     "value": 20,
+     "sub": "per hour"
+    },
+    "right": {
+     "label": "What she keeps",
+     "value": 11,
+     "sub": "per hour",
+     "hi": true
+    }
+   }
+  },
+  {
+   "say": "She drives about 40 hours a month and earns around $800.",
+   "visual": {
+    "type": "big_number",
+    "value": 800,
+    "suffix": "/mo",
+    "label": "gig income",
+    "sub": "about 40 hours",
+    "icon": "car"
+   }
+  },
+  {
+   "say": "So she finally did the math. That's about 1,000 miles, and gas and wear cost roughly $220.",
+   "visual": {
+    "type": "math",
+    "rows": [
+     "1,000 miles a month",
+     "× about 22¢ a mile",
+     "= about $220"
+    ]
+   }
+  },
+  {
+   "say": "Nobody withholds tax on gig money, so she sets aside about 25%.",
+   "visual": {
+    "type": "statement",
+    "text": "Nobody withholds her tax",
+    "sub": "she sets aside about 25%",
+    "icon": "shield"
+   }
+  },
+  {
+   "say": "Out of $800, she really keeps about $435.",
+   "visual": {
+    "type": "stack",
+    "title": "Where her $800 goes",
+    "total": 800,
+    "items": [
+     {
+      "label": "Car costs",
+      "value": 220
+     },
+     {
+      "label": "Tax set-aside",
+      "value": 145
+     },
+     {
+      "label": "She keeps",
+      "value": 435,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "That's $20 an hour, down to $14.50, then about $11.",
+   "visual": {
+    "type": "bars",
+    "title": "Her pay per hour",
+    "prefix": "$",
+    "items": [
+     {
+      "label": "She thought",
+      "value": 20
+     },
+     {
+      "label": "After car costs",
+      "value": 14.5
+     },
+     {
+      "label": "After tax set-aside",
+      "value": 11,
+      "hi": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Her fix: log every mile, skip long low-paying trips, and move 25% aside every week.",
+   "visual": {
+    "type": "checklist",
+    "title": "Sara's new rules",
+    "items": [
+     {
+      "text": "Log every mile",
+      "ok": true
+     },
+     {
+      "text": "Skip long low-paying trips",
+      "ok": true
+     },
+     {
+      "text": "Move 25% aside weekly",
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "say": "Do you know your real hourly pay? Subscribe, before $20 an hour quietly turns into $11.",
+   "visual": {
+    "type": "question",
+    "text": "Do you know your real hourly pay?",
+    "cta": "Subscribe for daily money math"
+   }
+  }
+ ],
+ "question": "Do you know your real hourly pay after costs?",
+ "description": "Sara earns about $800 a month from a weekend driving gig and thought it paid $20 an hour. After roughly $220 of gas and car wear and about 25% set aside for taxes, she keeps about $435 — closer to $11 an hour. All numbers are rounded US estimates; tax set-asides vary by situation.",
+ "tags": [
+  "side hustle",
+  "gig work",
+  "side hustle taxes",
+  "delivery driver pay",
+  "real hourly wage",
+  "self employment tax",
+  "extra income"
+ ],
+ "hashtags": [
+  "#sidehustle",
+  "#gigwork"
+ ]
+}
