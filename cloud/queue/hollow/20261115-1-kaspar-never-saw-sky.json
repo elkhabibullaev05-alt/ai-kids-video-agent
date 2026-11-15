@@ -1,0 +1,2182 @@
+{
+ "id": "20261115-1-kaspar-never-saw-sky",
+ "plot": "First person: a modern teen, Rowan, wakes up in Nuremberg on 26 May 1828 and witnesses the true arrival of Kaspar Hauser, a boy who says he grew up in a dark cell with wooden horses and an unseen keeper and carries a letter saying 'keep him, or hang him'; after the 1829 hooded attack and the fatal 1833 stabbing with a mirror-writing note, the twist is the handwriting doubt and the 2024 DNA that ruled out the stolen-prince theory, leaving his keeper unknown.",
+ "script": {
+  "title": "The Boy Who Never Saw the Sky",
+  "lead_in": 0,
+  "set": {
+   "place": "village",
+   "fog": 0.02,
+   "eyes": 0,
+   "moonlight": 28
+  },
+  "chars": {
+   "me": {
+    "name": "Rowan",
+    "voice": "am_liam",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.35,
+     0.55
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "kaspar": {
+    "name": "Kaspar Hauser",
+    "voice": "am_puck",
+    "speed": 0.9,
+    "pitch": 0,
+    "color": [
+     0.55,
+     0.45,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     2,
+     12
+    ]
+   },
+   "weick": {
+    "name": "Weickmann the Shoemaker",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.25,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     6,
+     13
+    ]
+   },
+   "wess": {
+    "name": "Captain von Wessenig",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.15,
+     0.2,
+     0.45
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -7,
+     14
+    ]
+   },
+   "hiltel": {
+    "name": "Andreas Hiltel",
+    "voice": "am_onyx",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.25,
+     0.22
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     7,
+     15
+    ]
+   },
+   "daumer": {
+    "name": "Georg Daumer",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.3,
+     0.38
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lantern",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.35
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -4,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "letter",
+    "type": "box",
+    "color": [
+     0.92,
+     0.88,
+     0.75
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1,
+     10,
+     1.6
+    ]
+   },
+   {
+    "id": "tower",
+    "type": "box",
+    "color": [
+     0.22,
+     0.2,
+     0.19
+    ],
+    "glow": 0.0,
+    "visible": false,
+    "scale": 2.6,
+    "at": [
+     8,
+     20,
+     0
+    ]
+   },
+   {
+    "id": "cellwin",
+    "type": "box",
+    "color": [
+     1.0,
+     0.7,
+     0.3
+    ],
+    "glow": 3.0,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     8,
+     17.3,
+     3.4
+    ]
+   },
+   {
+    "id": "bread",
+    "type": "box",
+    "color": [
+     0.7,
+     0.5,
+     0.25
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     0,
+     10.5,
+     1.2
+    ]
+   },
+   {
+    "id": "horse",
+    "type": "cone",
+    "color": [
+     0.6,
+     0.4,
+     0.2
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     -1,
+     10.5,
+     0.4
+    ]
+   },
+   {
+    "id": "candle",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.7,
+     0.3
+    ],
+    "glow": 2.5,
+    "visible": false,
+    "scale": 0.22,
+    "at": [
+     -2,
+     11,
+     1.4
+    ]
+   },
+   {
+    "id": "blade",
+    "type": "cone",
+    "color": [
+     0.8,
+     0.8,
+     0.85
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     3,
+     12,
+     1.8
+    ]
+   },
+   {
+    "id": "purse",
+    "type": "ball",
+    "color": [
+     0.45,
+     0.15,
+     0.2
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     2,
+     11,
+     0.4
+    ]
+   },
+   {
+    "id": "note",
+    "type": "box",
+    "color": [
+     0.95,
+     0.92,
+     0.8
+    ],
+    "glow": 1.5,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     2,
+     11,
+     1.4
+    ]
+   },
+   {
+    "id": "helix",
+    "type": "star",
+    "color": [
+     0.4,
+     0.8,
+     1.0
+    ],
+    "glow": 2.0,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     0,
+     12,
+     3
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "me",
+    "say": "Nuremberg, 1828. A boy walked in who had never seen the sky.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "enter:left"
+     ],
+     [
+      "lantern",
+      "drift:-2,9,1.8"
+     ]
+    ],
+    "text": "HE NEVER SAW THE SKY",
+    "sfx": "alarm"
+   },
+   {
+    "who": "kaspar",
+    "say": "Horse. Horse. I want to be a rider, like my father.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "enter:right"
+     ],
+     [
+      "lantern",
+      "drift:0,10,1.8"
+     ]
+    ],
+    "text": "'LIKE MY FATHER'"
+   },
+   {
+    "who": "me",
+    "say": "He couldn't answer one question. Not his age. Not his home.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "me",
+      "to:-1,10,0"
+     ],
+     [
+      "kaspar",
+      "turn:me"
+     ]
+    ],
+    "text": "WHO IS HE?"
+   },
+   {
+    "who": "me",
+    "say": "Someone had kept him in the dark for most of his life.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "KEPT IN THE DARK"
+   },
+   {
+    "who": "me",
+    "say": "Who did that to a child? And why let him go now?",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "WHY NOW?",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "I should explain how I got there. Ten minutes earlier, I was asleep.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-4,8,0"
+     ],
+     [
+      "kaspar",
+      "exit"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "TEN MINUTES EARLIER"
+   },
+   {
+    "who": "me",
+    "say": "My own bed, my own room, a normal Sunday night in 2026.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sleep"
+     ]
+    ],
+    "text": "2026"
+   },
+   {
+    "who": "me",
+    "say": "Then cobblestones under my back, church bells, and the smell of horses.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "jump"
+     ],
+     [
+      "lantern",
+      "drift:-4,9,2"
+     ]
+    ],
+    "text": "CHURCH BELLS"
+   },
+   {
+    "who": "narr",
+    "say": "Whit Monday, the twenty-sixth of May, 1828. Late afternoon.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ]
+    ],
+    "text": "26 MAY 1828"
+   },
+   {
+    "who": "me",
+    "say": "I was lying on a square called the Unschlittplatz. Nobody noticed me.",
+    "cam": "two:me,weick",
+    "do": [
+     [
+      "weick",
+      "enter:right"
+     ],
+     [
+      "me",
+      "to:-2,9,0"
+     ]
+    ],
+    "text": "UNSCHLITTPLATZ"
+   },
+   {
+    "who": "me",
+    "say": "Everyone was off for the holiday. The streets were half empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "weick",
+      "to:4,13,0"
+     ],
+     [
+      "me",
+      "turn:weick"
+     ]
+    ],
+    "text": "A HOLIDAY"
+   },
+   {
+    "who": "me",
+    "say": "Then I saw him. A boy about my age, walking wrong.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ],
+     [
+      "kaspar",
+      "enter:right"
+     ]
+    ],
+    "text": "WALKING WRONG"
+   },
+   {
+    "who": "me",
+    "say": "He swayed like every step hurt. Like he had never used his legs.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "to:3,12,0"
+     ],
+     [
+      "kaspar",
+      "shake"
+     ]
+    ],
+    "text": "EVERY STEP HURT"
+   },
+   {
+    "who": "me",
+    "say": "Peasant clothes. Big boots. A red scarf around his neck.",
+    "cam": "two:kaspar,weick",
+    "do": [
+     [
+      "kaspar",
+      "turn:front"
+     ],
+     [
+      "weick",
+      "turn:kaspar"
+     ]
+    ],
+    "text": "RED SCARF"
+   },
+   {
+    "who": "me",
+    "say": "In his hand was a letter. He held it out to a stranger.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "kaspar",
+      "to:4,12.5,0"
+     ]
+    ],
+    "text": "A LETTER"
+   },
+   {
+    "who": "weick",
+    "say": "For the captain of the cavalry? I'll take you there, lad.",
+    "cam": "close:weick",
+    "do": [
+     [
+      "weick",
+      "turn:front"
+     ],
+     [
+      "weick",
+      "happy"
+     ]
+    ],
+    "text": "TO THE CAPTAIN"
+   },
+   {
+    "who": "me",
+    "say": "That stranger was a shoemaker named Weickmann. The records still name him.",
+    "cam": "wide",
+    "do": [
+     [
+      "weick",
+      "to:-3,14,0"
+     ],
+     [
+      "kaspar",
+      "to:-1,13,0"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "THE SHOEMAKER"
+   },
+   {
+    "who": "me",
+    "say": "I followed them. I couldn't stop myself.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-4,11,0"
+     ],
+     [
+      "lantern",
+      "drift:-4,11.5,2"
+     ]
+    ],
+    "text": "I FOLLOWED"
+   },
+   {
+    "who": "me",
+    "say": "The letter was for Captain von Wessenig, of the sixth cavalry regiment.",
+    "cam": "two:wess,kaspar",
+    "do": [
+     [
+      "wess",
+      "enter:left"
+     ],
+     [
+      "kaspar",
+      "turn:wess"
+     ]
+    ],
+    "text": "CAPTAIN VON WESSENIG"
+   },
+   {
+    "who": "wess",
+    "say": "Who are you, boy? Where are you from?",
+    "cam": "close:wess",
+    "do": [
+     [
+      "wess",
+      "to:-5,13,0"
+     ],
+     [
+      "wess",
+      "turn:kaspar"
+     ]
+    ],
+    "text": "WHO ARE YOU?"
+   },
+   {
+    "who": "kaspar",
+    "say": "Don't know. Don't know.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sad"
+     ]
+    ],
+    "text": "'DON'T KNOW'"
+   },
+   {
+    "who": "me",
+    "say": "That was nearly all he could say. Don't know, and horse.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "me",
+      "to:-2,11,0"
+     ],
+     [
+      "kaspar",
+      "shake"
+     ]
+    ],
+    "text": "ALL HE COULD SAY"
+   },
+   {
+    "who": "me",
+    "say": "The captain opened the letter. I read it over his shoulder.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "spin"
+     ]
+    ],
+    "text": "THE LETTER"
+   },
+   {
+    "who": "narr",
+    "say": "From the Bavarian border. The place is unnamed. 1828.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "'THE PLACE IS UNNAMED'",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "The writer said he got the boy as a baby, in 1812.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "SINCE 1812"
+   },
+   {
+    "who": "me",
+    "say": "He said he never let him take one step out of his house.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:-1,10,0"
+     ],
+     [
+      "wess",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "NOT ONE STEP OUTSIDE"
+   },
+   {
+    "who": "me",
+    "say": "Then the last line. I read it twice to be sure.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "THE LAST LINE"
+   },
+   {
+    "who": "narr",
+    "say": "If you do not want to keep him, kill him, or hang him.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "bounce"
+     ],
+     [
+      "lantern",
+      "drift:1,10,2"
+     ]
+    ],
+    "text": "'OR HANG HIM'",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "Hang him. That was the plan for this boy, written down.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "WRITTEN DOWN"
+   },
+   {
+    "who": "wess",
+    "say": "I cannot keep a boy like this. Take him to the police.",
+    "cam": "two:wess,kaspar",
+    "do": [
+     [
+      "wess",
+      "turn:front"
+     ],
+     [
+      "wess",
+      "exit"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "TO THE POLICE"
+   },
+   {
+    "who": "me",
+    "say": "At the police station, they gave him a pen as a test.",
+    "cam": "wide",
+    "do": [
+     [
+      "kaspar",
+      "to:1,11,0"
+     ],
+     [
+      "me",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "A TEST"
+   },
+   {
+    "who": "me",
+    "say": "He couldn't tell them his age. But he could write.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "turn:front"
+     ]
+    ],
+    "text": "HE COULD WRITE"
+   },
+   {
+    "who": "me",
+    "say": "Slowly, letter by letter, he wrote two words. Kaspar Hauser.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "KASPAR HAUSER"
+   },
+   {
+    "who": "me",
+    "say": "He wrote his own name, and didn't seem to know what it meant.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "me",
+      "to:-1,11,0"
+     ],
+     [
+      "kaspar",
+      "sad"
+     ]
+    ],
+    "text": "HIS OWN NAME?"
+   },
+   {
+    "who": "me",
+    "say": "The police decided he was a vagrant. So they locked him up.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kaspar",
+      "to:7,17,0"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "LOCKED UP"
+   },
+   {
+    "who": "me",
+    "say": "In a tower of Nuremberg Castle, called Luginsland.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ],
+     [
+      "cellwin",
+      "show"
+     ]
+    ],
+    "text": "LUGINSLAND TOWER"
+   },
+   {
+    "who": "hiltel",
+    "say": "I'm the jailer here. Hiltel. The boy is in my care.",
+    "cam": "close:hiltel",
+    "do": [
+     [
+      "hiltel",
+      "enter:right"
+     ],
+     [
+      "hiltel",
+      "turn:front"
+     ]
+    ],
+    "text": "THE JAILER"
+   },
+   {
+    "who": "me",
+    "say": "Andreas Hiltel. He watched Kaspar day and night for two months.",
+    "cam": "two:hiltel,me",
+    "do": [
+     [
+      "me",
+      "to:3,13,0"
+     ],
+     [
+      "hiltel",
+      "turn:me"
+     ]
+    ],
+    "text": "TWO MONTHS"
+   },
+   {
+    "who": "me",
+    "say": "I watched with him. And the boy did strange things.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:4,14,0"
+     ],
+     [
+      "lantern",
+      "drift:4,14,2"
+     ]
+    ],
+    "text": "STRANGE THINGS"
+   },
+   {
+    "who": "me",
+    "say": "He would eat only dry bread and drink only water.",
+    "cam": "prop:bread",
+    "do": [
+     [
+      "bread",
+      "show"
+     ],
+     [
+      "bread",
+      "bounce"
+     ]
+    ],
+    "text": "ONLY BREAD AND WATER"
+   },
+   {
+    "who": "hiltel",
+    "say": "Meat makes him sick. Beer makes him sick. Even the smell.",
+    "cam": "close:hiltel",
+    "do": [
+     [
+      "hiltel",
+      "shake"
+     ]
+    ],
+    "text": "EVEN THE SMELL"
+   },
+   {
+    "who": "me",
+    "say": "Candlelight fascinated him. He reached right into the flame.",
+    "cam": "prop:candle",
+    "do": [
+     [
+      "candle",
+      "show"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "HE TOUCHED THE FLAME"
+   },
+   {
+    "who": "me",
+    "say": "He had never been burned before. He had never seen fire.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "to:6,15,0"
+     ],
+     [
+      "kaspar",
+      "eyes_big"
+     ]
+    ],
+    "text": "NEVER SEEN FIRE"
+   },
+   {
+    "who": "me",
+    "say": "And the people. Crowds came to the tower just to stare at him.",
+    "cam": "wide",
+    "do": [
+     [
+      "weick",
+      "enter:left"
+     ],
+     [
+      "weick",
+      "to:3,15,0"
+     ],
+     [
+      "candle",
+      "hide"
+     ]
+    ],
+    "text": "PEOPLE CAME TO STARE"
+   },
+   {
+    "who": "me",
+    "say": "I hated that part. He was a person, not a show.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "NOT A SHOW"
+   },
+   {
+    "who": "me",
+    "say": "Then he began to talk. And what he said froze me.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "kaspar",
+      "turn:me"
+     ],
+     [
+      "weick",
+      "exit"
+     ]
+    ],
+    "text": "THEN HE TALKED"
+   },
+   {
+    "who": "kaspar",
+    "say": "Small room. Dark. Always dark. I sat on straw.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sad"
+     ],
+     [
+      "cellwin",
+      "bounce"
+     ]
+    ],
+    "text": "ALWAYS DARK",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "He said he lived in a tiny cell for as long as he remembered.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ]
+    ],
+    "text": "A TINY CELL"
+   },
+   {
+    "who": "me",
+    "say": "He couldn't stand up. He never saw another face.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "NEVER SAW A FACE"
+   },
+   {
+    "who": "kaspar",
+    "say": "Two horses. Wood. A dog. Wood. I played with them.",
+    "cam": "prop:horse",
+    "do": [
+     [
+      "horse",
+      "show"
+     ],
+     [
+      "horse",
+      "spin"
+     ]
+    ],
+    "text": "WOODEN HORSES"
+   },
+   {
+    "who": "me",
+    "say": "Wooden toy horses. His only friends in the whole world.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "me",
+      "to:5,14,0"
+     ],
+     [
+      "kaspar",
+      "happy"
+     ]
+    ],
+    "text": "HIS ONLY FRIENDS"
+   },
+   {
+    "who": "me",
+    "say": "Every morning, bread and water were there. He never saw who left them.",
+    "cam": "prop:bread",
+    "do": [
+     [
+      "bread",
+      "bounce"
+     ],
+     [
+      "horse",
+      "hide"
+     ]
+    ],
+    "text": "WHO LEFT THE BREAD?"
+   },
+   {
+    "who": "kaspar",
+    "say": "Sometimes the water tasted bitter. Then I slept and slept.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sleep"
+     ]
+    ],
+    "text": "BITTER WATER"
+   },
+   {
+    "who": "me",
+    "say": "When he woke, his straw was fresh. His hair and nails were cut.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:4,13,0"
+     ],
+     [
+      "lantern",
+      "drift:4,13,2"
+     ]
+    ],
+    "text": "HIS HAIR WAS CUT"
+   },
+   {
+    "who": "me",
+    "say": "Someone drugged him, so he would never see them. For years.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "FOR YEARS"
+   },
+   {
+    "who": "me",
+    "say": "This was the rule of his life. Never see the keeper.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kaspar",
+      "to:6,15,0"
+     ],
+     [
+      "bread",
+      "hide"
+     ]
+    ],
+    "text": "NEVER SEE THE KEEPER"
+   },
+   {
+    "who": "kaspar",
+    "say": "At the end, a man came. He taught me to stand.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "turn:front"
+     ]
+    ],
+    "text": "A MAN CAME"
+   },
+   {
+    "who": "me",
+    "say": "The man taught him to walk, and to write one name.",
+    "cam": "two:kaspar,me",
+    "do": [
+     [
+      "me",
+      "to:3,13,0"
+     ],
+     [
+      "kaspar",
+      "jump"
+     ]
+    ],
+    "text": "ONE NAME"
+   },
+   {
+    "who": "me",
+    "say": "And to repeat one sentence. A rider, like my father.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "ONE SENTENCE"
+   },
+   {
+    "who": "me",
+    "say": "Then the man walked him to Nuremberg and disappeared.",
+    "cam": "wide",
+    "do": [
+     [
+      "kaspar",
+      "to:2,12,0"
+     ],
+     [
+      "cellwin",
+      "hide"
+     ]
+    ],
+    "text": "THEN HE VANISHED"
+   },
+   {
+    "who": "me",
+    "say": "The city asked the public for help. Find the crime. Find the keeper.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ]
+    ],
+    "text": "FIND THE KEEPER"
+   },
+   {
+    "who": "narr",
+    "say": "Later the King of Bavaria offered ten thousand guilders for the truth.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lantern",
+      "drift:0,12,3"
+     ]
+    ],
+    "text": "10,000 GUILDERS",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "Nobody ever claimed it. Not one guilder.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "NOBODY CLAIMED IT"
+   },
+   {
+    "who": "me",
+    "say": "In July, a teacher named Georg Daumer took him home.",
+    "cam": "two:daumer,kaspar",
+    "do": [
+     [
+      "daumer",
+      "enter:left"
+     ],
+     [
+      "kaspar",
+      "turn:daumer"
+     ]
+    ],
+    "text": "THE TEACHER"
+   },
+   {
+    "who": "daumer",
+    "say": "He will learn to read, to draw, to live. I promise.",
+    "cam": "close:daumer",
+    "do": [
+     [
+      "daumer",
+      "to:-4,12,0"
+     ],
+     [
+      "daumer",
+      "happy"
+     ]
+    ],
+    "text": "I PROMISE"
+   },
+   {
+    "who": "me",
+    "say": "And he did learn. Fast. Faster than anyone expected.",
+    "cam": "wide",
+    "do": [
+     [
+      "kaspar",
+      "to:-1,12,0"
+     ],
+     [
+      "me",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "HE LEARNED FAST"
+   },
+   {
+    "who": "me",
+    "say": "He learned to draw, to ride, to write whole letters.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "happy"
+     ],
+     [
+      "kaspar",
+      "spin"
+     ]
+    ],
+    "text": "HE LEARNED TO DRAW"
+   },
+   {
+    "who": "me",
+    "say": "I started to think this story could end well.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "happy"
+     ]
+    ],
+    "text": "A HAPPY ENDING?"
+   },
+   {
+    "who": "me",
+    "say": "Then rumours started. The worst kind. The royal kind.",
+    "cam": "two:me,daumer",
+    "do": [
+     [
+      "daumer",
+      "turn:me"
+     ],
+     [
+      "lantern",
+      "drift:-3,11,2"
+     ]
+    ],
+    "text": "THE ROYAL KIND"
+   },
+   {
+    "who": "me",
+    "say": "People whispered he was a stolen prince. From the House of Baden.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "A STOLEN PRINCE?"
+   },
+   {
+    "who": "me",
+    "say": "Swapped as a baby, so another branch of the family could rule.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "SWAPPED AS A BABY"
+   },
+   {
+    "who": "me",
+    "say": "If that was true, someone powerful wanted him silent.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sad"
+     ]
+    ],
+    "text": "SOMEONE POWERFUL"
+   },
+   {
+    "who": "narr",
+    "say": "Seventeenth of October, 1829. Daumer's house.",
+    "cam": "wide",
+    "do": [
+     [
+      "daumer",
+      "exit"
+     ],
+     [
+      "candle",
+      "show"
+     ]
+    ],
+    "text": "17 OCTOBER 1829"
+   },
+   {
+    "who": "me",
+    "say": "I heard a crash. Then nothing. Then running feet.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "to:-1,12,0"
+     ],
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "RUNNING FEET",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "We found him in the cellar. Blood ran down his forehead.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "to:1,11,0"
+     ],
+     [
+      "kaspar",
+      "squash"
+     ]
+    ],
+    "text": "BLOOD ON HIS FOREHEAD"
+   },
+   {
+    "who": "kaspar",
+    "say": "A man. A hood. Black. He hit me.",
+    "cam": "two:kaspar,me",
+    "do": [
+     [
+      "kaspar",
+      "shake"
+     ],
+     [
+      "me",
+      "turn:kaspar"
+     ]
+    ],
+    "text": "A HOODED MAN"
+   },
+   {
+    "who": "kaspar",
+    "say": "He said, you still have to die before you leave Nuremberg.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "eyes_big"
+     ]
+    ],
+    "text": "'YOU STILL HAVE TO DIE'",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "He said he knew that voice. The man who brought him.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "HE KNEW THAT VOICE"
+   },
+   {
+    "who": "me",
+    "say": "The keeper had come back. That's what Kaspar believed.",
+    "cam": "prop:blade",
+    "do": [
+     [
+      "blade",
+      "show"
+     ],
+     [
+      "blade",
+      "spin"
+     ]
+    ],
+    "text": "THE KEEPER CAME BACK"
+   },
+   {
+    "who": "me",
+    "say": "The police found no man, no weapon, no trace.",
+    "cam": "wide",
+    "do": [
+     [
+      "blade",
+      "hide"
+     ],
+     [
+      "wess",
+      "enter:left"
+     ],
+     [
+      "wess",
+      "to:-5,13,0"
+     ]
+    ],
+    "text": "NO TRACE"
+   },
+   {
+    "who": "me",
+    "say": "From then on, two soldiers guarded him day and night.",
+    "cam": "overhead",
+    "do": [
+     [
+      "wess",
+      "to:0,14,0"
+     ],
+     [
+      "candle",
+      "hide"
+     ]
+    ],
+    "text": "TWO GUARDS"
+   },
+   {
+    "who": "me",
+    "say": "And I had a terrible feeling. This was only the first try.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "ONLY THE FIRST TRY"
+   },
+   {
+    "who": "me",
+    "say": "In 1831, an English lord, Stanhope, became his guardian.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "wess",
+      "exit"
+     ],
+     [
+      "kaspar",
+      "turn:me"
+     ]
+    ],
+    "text": "AN ENGLISH LORD"
+   },
+   {
+    "who": "me",
+    "say": "He sent Kaspar to the town of Ansbach, to work as a clerk.",
+    "cam": "wide",
+    "do": [
+     [
+      "kaspar",
+      "to:3,13,0"
+     ],
+     [
+      "me",
+      "to:0,11,0"
+     ]
+    ],
+    "text": "ANSBACH"
+   },
+   {
+    "who": "me",
+    "say": "People slowly forgot him. Kaspar didn't forget. He was waiting.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "turn:front"
+     ]
+    ],
+    "text": "WAITING"
+   },
+   {
+    "who": "narr",
+    "say": "The fourteenth of December, 1833. About five in the evening.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "cellwin",
+      "show"
+     ],
+     [
+      "tower",
+      "bounce"
+     ]
+    ],
+    "text": "14 DECEMBER 1833"
+   },
+   {
+    "who": "me",
+    "say": "He came running into the house, holding his side.",
+    "cam": "two:kaspar,me",
+    "do": [
+     [
+      "kaspar",
+      "to:-1,11,0"
+     ],
+     [
+      "me",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "HE CAME RUNNING",
+    "sfx": "alarm"
+   },
+   {
+    "who": "kaspar",
+    "say": "Court Garden. A man. He said he knew my mother.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "shake"
+     ]
+    ],
+    "text": "'HE KNEW MY MOTHER'"
+   },
+   {
+    "who": "kaspar",
+    "say": "He gave me a purse. Then he stabbed me.",
+    "cam": "prop:purse",
+    "do": [
+     [
+      "purse",
+      "show"
+     ],
+     [
+      "purse",
+      "bounce"
+     ]
+    ],
+    "text": "A PURSE"
+   },
+   {
+    "who": "me",
+    "say": "Someone had used his greatest wish as bait. His own mother.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "THE BAIT"
+   },
+   {
+    "who": "me",
+    "say": "They ran to the garden and found the purse he dropped.",
+    "cam": "wide",
+    "do": [
+     [
+      "purse",
+      "drift:1,12,0.5"
+     ],
+     [
+      "lantern",
+      "drift:1,12,2"
+     ]
+    ],
+    "text": "THEY FOUND THE PURSE"
+   },
+   {
+    "who": "me",
+    "say": "Inside was a small note. Written backwards. Mirror writing.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "show"
+     ],
+     [
+      "note",
+      "spin"
+     ]
+    ],
+    "text": "MIRROR WRITING",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "I held it up to a mirror, and my hands were shaking.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "to:0,11,0"
+     ],
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "MY HANDS SHOOK"
+   },
+   {
+    "who": "narr",
+    "say": "I come from the Bavarian border. My name is M. L. O.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "bounce"
+     ]
+    ],
+    "text": "'M. L. O.'"
+   },
+   {
+    "who": "me",
+    "say": "The same border as the first letter. Five years later.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sad"
+     ],
+     [
+      "purse",
+      "hide"
+     ]
+    ],
+    "text": "THE SAME BORDER"
+   },
+   {
+    "who": "me",
+    "say": "Kaspar kept mumbling about writing with a pencil. Nobody understood.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "sleep"
+     ]
+    ],
+    "text": "WRITING WITH A PENCIL"
+   },
+   {
+    "who": "narr",
+    "say": "Kaspar Hauser died on the seventeenth of December, 1833.",
+    "cam": "wide",
+    "do": [
+     [
+      "kaspar",
+      "sleep"
+     ],
+     [
+      "note",
+      "hide"
+     ]
+    ],
+    "text": "17 DECEMBER 1833"
+   },
+   {
+    "who": "me",
+    "say": "He was about twenty-one. I never even said goodbye properly.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "ABOUT 21"
+   },
+   {
+    "who": "me",
+    "say": "And here is the part that still keeps me awake.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-1,10,0"
+     ],
+     [
+      "lantern",
+      "drift:-1,10,2"
+     ]
+    ],
+    "text": "THE TWIST"
+   },
+   {
+    "who": "me",
+    "say": "The doctors argued. Some thought the wound could be self-made.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "SELF-MADE?"
+   },
+   {
+    "who": "me",
+    "say": "Remember the first letter? Experts later compared the handwriting.",
+    "cam": "prop:letter",
+    "do": [
+     [
+      "letter",
+      "show"
+     ],
+     [
+      "letter",
+      "bounce"
+     ]
+    ],
+    "text": "THE HANDWRITING"
+   },
+   {
+    "who": "me",
+    "say": "Many concluded both letters were written by the same person.",
+    "cam": "two:me,daumer",
+    "do": [
+     [
+      "daumer",
+      "enter:left"
+     ],
+     [
+      "daumer",
+      "turn:me"
+     ]
+    ],
+    "text": "THE SAME HAND"
+   },
+   {
+    "who": "daumer",
+    "say": "Some say that hand was Kaspar's own. I never believed it.",
+    "cam": "close:daumer",
+    "do": [
+     [
+      "daumer",
+      "shake"
+     ]
+    ],
+    "text": "KASPAR'S OWN HAND?"
+   },
+   {
+    "who": "me",
+    "say": "So was he a stolen prince? Or a boy who invented himself?",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "daumer",
+      "exit"
+     ],
+     [
+      "letter",
+      "hide"
+     ]
+    ],
+    "text": "PRINCE OR INVENTION?"
+   },
+   {
+    "who": "me",
+    "say": "I woke up back in my bed. And I went looking for answers.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "sleep"
+     ],
+     [
+      "lantern",
+      "drift:-3,8,1.5"
+     ]
+    ],
+    "text": "BACK IN MY BED"
+   },
+   {
+    "who": "me",
+    "say": "In 2024, three labs tested hair and blood linked to Kaspar.",
+    "cam": "prop:helix",
+    "do": [
+     [
+      "helix",
+      "show"
+     ],
+     [
+      "helix",
+      "spin"
+     ]
+    ],
+    "text": "2024 DNA TEST"
+   },
+   {
+    "who": "me",
+    "say": "The samples matched each other. So they really were his.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "THEY WERE HIS"
+   },
+   {
+    "who": "me",
+    "say": "And they did not match the royal House of Baden.",
+    "cam": "prop:helix",
+    "do": [
+     [
+      "helix",
+      "bounce"
+     ]
+    ],
+    "text": "NOT A PRINCE",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "No stolen prince. That theory died, almost two hundred years later.",
+    "cam": "two:me,kaspar",
+    "do": [
+     [
+      "kaspar",
+      "enter:right"
+     ],
+     [
+      "kaspar",
+      "turn:me"
+     ],
+     [
+      "helix",
+      "hide"
+     ]
+    ],
+    "text": "THE THEORY DIED"
+   },
+   {
+    "who": "me",
+    "say": "But the real questions are still open today.",
+    "cam": "close:kaspar",
+    "do": [
+     [
+      "kaspar",
+      "turn:front"
+     ],
+     [
+      "kaspar",
+      "sad"
+     ]
+    ],
+    "text": "STILL OPEN"
+   },
+   {
+    "who": "me",
+    "say": "Who kept him? Where was that dark room? Who held the knife?",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:-1,10,0"
+     ],
+     [
+      "kaspar",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "WHO KEPT HIM?"
+   },
+   {
+    "who": "me",
+    "say": "Nobody knows. His real name is still a mystery.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "NOBODY KNOWS"
+   },
+   {
+    "who": "me",
+    "say": "His grave in Ansbach calls him the riddle of his time.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ],
+     [
+      "cellwin",
+      "bounce"
+     ]
+    ],
+    "text": "THE RIDDLE OF HIS TIME"
+   },
+   {
+    "who": "me",
+    "say": "What I learned: a child can vanish even in a crowded city.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "WHAT I LEARNED"
+   },
+   {
+    "who": "kaspar",
+    "say": "Horse. Horse. I want to be a rider, like my father.",
+    "cam": "two:kaspar,me",
+    "do": [
+     [
+      "kaspar",
+      "happy"
+     ],
+     [
+      "lantern",
+      "drift:0,10,2"
+     ]
+    ],
+    "text": "'LIKE MY FATHER'"
+   },
+   {
+    "who": "me",
+    "say": "Who do you think kept Kaspar in the dark? Tell me below.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "happy"
+     ]
+    ],
+    "text": "WHO KEPT HIM?"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for the next true story. Have you heard one like this?",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "jump"
+     ],
+     [
+      "kaspar",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "I Woke Up in 1828. This Boy Had Never Seen the Sky",
+  "description": "Who do you think kept Kaspar Hauser in the dark? Tell me in the comments.\nPrevious true story: https://youtu.be/RU6HcfLCx8w\n\n\"He wrote his own name, and didn't seem to know what it meant.\"\n\nI woke up in Nuremberg on Whit Monday, 26 May 1828, and watched a boy of about 16 stumble into the square with a letter that said: keep him, or hang him. He could say only 'don't know' and 'I want to be a rider like my father'. He said he had spent his life in a dark cell with wooden horses, bread and water, and a keeper he never saw. A hooded attack in 1829, a fatal stabbing in Ansbach in December 1833, a note in mirror writing - and a 2024 DNA study that finally killed the 'stolen prince' theory. Who kept him is still unknown.\n\nSources:\nhttps://en.wikipedia.org/wiki/Kaspar_Hauser\nhttps://www.britannica.com/biography/Kaspar-hauser\nhttps://www.cell.com/iscience/fulltext/S2589-0042(24)01764-4\nhttps://de.wikisource.org/wiki/ADB:Hauser,_Kaspar\n\n#truestory #kasparhauser #3DAnimation #unsolvedmystery #history",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Kaspar Hauser",
+   "Nuremberg",
+   "1828",
+   "Ansbach",
+   "unsolved mystery",
+   "I woke up in history",
+   "true story animated",
+   "history mystery",
+   "feral child",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "WHO KEPT HIM?",
+  "thumb_beat": 3,
+  "localizations": {
+   "es": {
+    "title": "Desperté en 1828. Este chico nunca había visto el cielo",
+    "description": "¿Quién crees que mantuvo a Kaspar Hauser en la oscuridad? Cuéntamelo en los comentarios.\n\nNúremberg, 26 de mayo de 1828: un chico de unos 16 años llega con una carta que dice «quédatelo o ahórcalo». Vivió en una celda oscura con caballos de madera, pan y agua. En 1833 lo apuñalan en Ansbach; una nota en escritura de espejo. En 2024 el ADN descartó que fuera un príncipe. Quién lo encerró sigue sin saberse."
+   },
+   "pt": {
+    "title": "Acordei em 1828. Este garoto nunca tinha visto o céu",
+    "description": "Quem você acha que manteve Kaspar Hauser no escuro? Conte nos comentários.\n\nNuremberg, 26 de maio de 1828: um garoto de uns 16 anos chega com uma carta que diz «fique com ele ou enforque-o». Viveu numa cela escura com cavalos de madeira, pão e água. Em 1833 é esfaqueado em Ansbach; um bilhete em escrita espelhada. Em 2024 o DNA descartou que fosse um príncipe. Quem o prendeu continua um mistério."
+   },
+   "ar": {
+    "title": "استيقظت في عام 1828. هذا الفتى لم يرَ السماء قط",
+    "description": "من برأيك أبقى كاسبار هاوزر في الظلام؟ أخبرني في التعليقات.\n\nنورنبرغ، 26 مايو 1828: فتى في نحو السادسة عشرة يصل ومعه رسالة تقول «احتفظ به أو اشنقه». عاش في زنزانة مظلمة مع أحصنة خشبية وخبز وماء. في 1833 طُعن في أنسباخ، ووُجدت ورقة بكتابة معكوسة. وفي 2024 نفى الحمض النووي أنه أمير. ومن سجنه ما زال مجهولًا."
+   },
+   "fr": {
+    "title": "Je me suis réveillé en 1828. Ce garçon n'avait jamais vu le ciel",
+    "description": "Qui, selon vous, a gardé Kaspar Hauser dans le noir ? Dites-le-moi en commentaire.\n\nNuremberg, 26 mai 1828 : un garçon d'environ 16 ans arrive avec une lettre disant « gardez-le ou pendez-le ». Il a vécu dans une cellule noire avec des chevaux de bois, du pain et de l'eau. En 1833, il est poignardé à Ansbach ; un billet en écriture miroir. En 2024, l'ADN a écarté la thèse du prince. Son geôlier reste inconnu."
+   },
+   "ja": {
+    "title": "1828年で目覚めた。この少年は空を見たことがなかった",
+    "description": "カスパー・ハウザーを暗闇に閉じ込めたのは誰だと思いますか?コメントで教えてください。\n\n1828年5月26日ニュルンベルク。16歳ほどの少年が「預かるか、吊るせ」と書かれた手紙を持って現れた。木の馬とパンと水だけの暗い部屋で育ったという。1833年アンスバッハで刺され、鏡文字のメモが残された。2024年のDNA鑑定で「王子説」は否定。誰が閉じ込めたのかは今も謎だ。"
+   },
+   "ko": {
+    "title": "1828년에 깨어났다. 이 소년은 하늘을 본 적이 없었다",
+    "description": "카스파 하우저를 어둠 속에 가둔 사람은 누구일까요? 댓글로 알려주세요.\n\n1828년 5월 26일 뉘른베르크. 열여섯 살쯤 된 소년이 '맡아 주든지 목매달라'는 편지를 들고 나타났다. 나무 말과 빵과 물뿐인 어두운 방에서 자랐다고 했다. 1833년 안스바흐에서 칼에 찔렸고, 거울 글씨 쪽지가 남았다. 2024년 DNA 검사로 '왕자설'은 무너졌다. 누가 가뒀는지는 아직 모른다."
+   },
+   "de": {
+    "title": "Ich erwachte 1828. Dieser Junge sah nie den Himmel",
+    "description": "Wer hat Kaspar Hauser deiner Meinung nach im Dunkeln gehalten? Schreib es in die Kommentare.\n\nNürnberg, Pfingstmontag, 26. Mai 1828: Ein etwa 16-jähriger Junge taucht mit einem Brief auf: behalten oder aufhängen. Er lebte in einem dunklen Verlies mit Holzpferden, Brot und Wasser. 1833 wird er in Ansbach erstochen; ein Zettel in Spiegelschrift. 2024 widerlegte die DNA die Prinzentheorie. Wer ihn gefangen hielt, ist bis heute unbekannt."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "NEVER SAW THE SKY",
+   "title": "He never saw the sky. Then he walked in 🌑 #shorts",
+   "description": "Nuremberg, 1828: a boy arrives with a letter that says 'keep him, or hang him'. Full true story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Kaspar Hauser",
+    "true scary stories",
+    "history mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nunca había visto el cielo. Y entró 🌑 #shorts",
+     "description": "Núremberg, 1828: un chico llega con una carta: «quédatelo o ahórcalo». Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Nunca tinha visto o céu. E entrou 🌑 #shorts",
+     "description": "Nuremberg, 1828: um garoto chega com uma carta: «fique com ele ou enforque-o». História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يرَ السماء قط، ثم دخل المدينة 🌑 #shorts",
+     "description": "نورنبرغ، 1828: فتى يصل برسالة تقول «احتفظ به أو اشنقه». القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il n'avait jamais vu le ciel. Puis il entra 🌑 #shorts",
+     "description": "Nuremberg, 1828 : un garçon arrive avec une lettre : « gardez-le ou pendez-le ». Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "空を見たことのない少年が町に来た 🌑 #shorts",
+     "description": "1828年ニュルンベルク。少年の手紙には「預かるか、吊るせ」。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "하늘을 본 적 없는 소년이 걸어 들어왔다 🌑 #shorts",
+     "description": "1828년 뉘른베르크. 소년의 편지: '맡든지 목매달라'. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er sah nie den Himmel. Dann kam er 🌑 #shorts",
+     "description": "Nürnberg, 1828: Ein Junge kommt mit einem Brief: behalten oder aufhängen. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

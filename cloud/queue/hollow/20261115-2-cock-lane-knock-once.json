@@ -1,0 +1,2116 @@
+{
+ "id": "20261115-2-cock-lane-knock-once",
+ "plot": "First person: a modern teen, Nell, wakes up in Cock Lane, London, in January 1762 and sits in the paid seances of 'Scratching Fanny', a ghost that answers by the rule 'one knock yes, two knocks no' around 12-year-old Elizabeth Parsons and accuses William Kent of poisoning; Samuel Johnson's committee waits at the bed and at Fanny's coffin in St John's vault and hears nothing, and the twist is the maids seeing Elizabeth hide a small wooden board after her father is threatened with Newgate; Parsons is convicted and Kent cleared.",
+ "script": {
+  "title": "One Knock for Yes",
+  "lead_in": 0,
+  "set": {
+   "place": "chapel",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 22
+  },
+  "chars": {
+   "me": {
+    "name": "Nell",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.2,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "eliza": {
+    "name": "Elizabeth Parsons",
+    "voice": "af_sky",
+    "speed": 0.95,
+    "pitch": 1,
+    "color": [
+     0.8,
+     0.78,
+     0.72
+    ],
+    "kind": "human",
+    "size": 0.7,
+    "home": [
+     2,
+     13
+    ]
+   },
+   "parsons": {
+    "name": "Richard Parsons",
+    "voice": "am_echo",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.22,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     5,
+     12
+    ]
+   },
+   "moore": {
+    "name": "Reverend John Moore",
+    "voice": "bm_fable",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "kent": {
+    "name": "William Kent",
+    "voice": "am_adam",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.3,
+     0.45
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -7,
+     11
+    ]
+   },
+   "johnson": {
+    "name": "Samuel Johnson",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.4,
+     0.3,
+     0.22
+    ],
+    "kind": "human",
+    "size": 1.0,
+    "home": [
+     6,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.9,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "candle",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.7,
+     0.3
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.25,
+    "at": [
+     -4,
+     8.5,
+     1.5
+    ]
+   },
+   {
+    "id": "bed",
+    "type": "box",
+    "color": [
+     0.5,
+     0.45,
+     0.4
+    ],
+    "glow": 0.0,
+    "visible": false,
+    "scale": 1.4,
+    "at": [
+     2,
+     14,
+     0.4
+    ]
+   },
+   {
+    "id": "coin",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.8,
+     0.2
+    ],
+    "glow": 1.5,
+    "visible": false,
+    "scale": 0.2,
+    "at": [
+     0,
+     10,
+     1.4
+    ]
+   },
+   {
+    "id": "paper",
+    "type": "box",
+    "color": [
+     0.92,
+     0.88,
+     0.75
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1,
+     10,
+     1.6
+    ]
+   },
+   {
+    "id": "coffin",
+    "type": "box",
+    "color": [
+     0.25,
+     0.18,
+     0.12
+    ],
+    "glow": 0.0,
+    "visible": false,
+    "scale": 1.3,
+    "at": [
+     0,
+     15,
+     0.4
+    ]
+   },
+   {
+    "id": "vaultlamp",
+    "type": "ball",
+    "color": [
+     0.9,
+     0.85,
+     0.6
+    ],
+    "glow": 2.0,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     -1,
+     14,
+     2.4
+    ]
+   },
+   {
+    "id": "board",
+    "type": "box",
+    "color": [
+     0.55,
+     0.4,
+     0.25
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     2,
+     13,
+     1.2
+    ]
+   },
+   {
+    "id": "pillory",
+    "type": "cone",
+    "color": [
+     0.4,
+     0.3,
+     0.2
+    ],
+    "glow": 0.0,
+    "visible": false,
+    "scale": 1.2,
+    "at": [
+     5,
+     16,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "me",
+    "say": "London, 1762. Thousands paid to talk with a ghost that knocked.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "enter:left"
+     ],
+     [
+      "candle",
+      "drift:-2,9,1.6"
+     ]
+    ],
+    "text": "A GHOST THAT KNOCKED",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "And tonight it was going to answer my question. Knock once for yes.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "to:-1,10,0"
+     ],
+     [
+      "candle",
+      "drift:-1,10.5,1.6"
+     ]
+    ],
+    "text": "KNOCK ONCE FOR YES"
+   },
+   {
+    "who": "parsons",
+    "say": "Ask your question, miss. Fanny is listening.",
+    "cam": "two:parsons,me",
+    "do": [
+     [
+      "parsons",
+      "enter:right"
+     ],
+     [
+      "me",
+      "turn:parsons"
+     ]
+    ],
+    "text": "FANNY IS LISTENING"
+   },
+   {
+    "who": "me",
+    "say": "Is anyone in this room lying? The room went silent.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "IS ANYONE LYING?",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "Then, from the bed of a twelve-year-old girl. Knock.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "enter:right"
+     ],
+     [
+      "eliza",
+      "turn:front"
+     ]
+    ],
+    "text": "KNOCK."
+   },
+   {
+    "who": "me",
+    "say": "Let me go back. Three days earlier, I woke up somewhere impossible.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-4,9,0"
+     ],
+     [
+      "parsons",
+      "exit"
+     ],
+     [
+      "eliza",
+      "exit"
+     ]
+    ],
+    "text": "THREE DAYS EARLIER"
+   },
+   {
+    "who": "me",
+    "say": "Cold mud, horses, shouting, and a church bell I didn't know.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "jump"
+     ],
+     [
+      "candle",
+      "drift:-4,9.5,2"
+     ]
+    ],
+    "text": "WHERE AM I?"
+   },
+   {
+    "who": "me",
+    "say": "My phone was gone. My shoes were gone. I was wearing a wool dress.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ],
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "A WOOL DRESS"
+   },
+   {
+    "who": "narr",
+    "say": "January 1762. Cock Lane, near Smithfield Market, London.",
+    "cam": "prop:candle",
+    "do": [
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "COCK LANE, 1762"
+   },
+   {
+    "who": "me",
+    "say": "The street was so packed with people that carriages couldn't pass.",
+    "cam": "two:me,moore",
+    "do": [
+     [
+      "moore",
+      "enter:left"
+     ],
+     [
+      "me",
+      "turn:moore"
+     ]
+    ],
+    "text": "THE STREET WAS PACKED"
+   },
+   {
+    "who": "me",
+    "say": "Everyone was waiting outside one narrow house. Mister Parsons's house.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:-2,11,0"
+     ],
+     [
+      "moore",
+      "to:-5,12,0"
+     ]
+    ],
+    "text": "ONE NARROW HOUSE"
+   },
+   {
+    "who": "moore",
+    "say": "The spirit of a poor dead woman speaks here. Come and hear.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "turn:front"
+     ],
+     [
+      "moore",
+      "happy"
+     ]
+    ],
+    "text": "COME AND HEAR"
+   },
+   {
+    "who": "me",
+    "say": "That was John Moore, a Methodist preacher. He believed every word.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "THE PREACHER"
+   },
+   {
+    "who": "me",
+    "say": "And the man at the door was taking money to let people in.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "spin"
+     ]
+    ],
+    "text": "PAY TO ENTER"
+   },
+   {
+    "who": "parsons",
+    "say": "One at a time. The room is small and the spirit is shy.",
+    "cam": "close:parsons",
+    "do": [
+     [
+      "parsons",
+      "enter:right"
+     ],
+     [
+      "parsons",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "THE SPIRIT IS SHY"
+   },
+   {
+    "who": "me",
+    "say": "Richard Parsons, the parish clerk. The owner of the haunted house.",
+    "cam": "two:parsons,me",
+    "do": [
+     [
+      "me",
+      "to:0,11,0"
+     ],
+     [
+      "parsons",
+      "turn:me"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "THE OWNER"
+   },
+   {
+    "who": "me",
+    "say": "I paid. I had no idea where the coin in my pocket came from.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ],
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "bounce"
+     ]
+    ],
+    "text": "I PAID"
+   },
+   {
+    "who": "me",
+    "say": "Upstairs was one tiny room, lit by a single tallow candle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:1,12,0"
+     ],
+     [
+      "candle",
+      "drift:1,12.5,1.8"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "ONE CANDLE"
+   },
+   {
+    "who": "me",
+    "say": "It was hot, and it stank. Dozens of people squeezed inside.",
+    "cam": "wide",
+    "do": [
+     [
+      "moore",
+      "to:-2,13,0"
+     ],
+     [
+      "parsons",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "DOZENS INSIDE"
+   },
+   {
+    "who": "me",
+    "say": "In the middle was a bed. And in the bed, a little girl.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "show"
+     ],
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "A LITTLE GIRL"
+   },
+   {
+    "who": "eliza",
+    "say": "She's here. She's scratching. Can you hear her?",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "enter:right"
+     ],
+     [
+      "eliza",
+      "eyes_big"
+     ]
+    ],
+    "text": "CAN YOU HEAR HER?"
+   },
+   {
+    "who": "me",
+    "say": "Elizabeth Parsons. The clerk's daughter. Twelve years old.",
+    "cam": "two:me,eliza",
+    "do": [
+     [
+      "me",
+      "to:0,12,0"
+     ],
+     [
+      "eliza",
+      "turn:me"
+     ]
+    ],
+    "text": "ELIZABETH, AGE 12"
+   },
+   {
+    "who": "me",
+    "say": "Then I heard it. A scratching, like a cat on a cane chair.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "SCRATCHING",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "The crowd had a name for the ghost. Scratching Fanny.",
+    "cam": "wide",
+    "do": [
+     [
+      "moore",
+      "spin"
+     ],
+     [
+      "parsons",
+      "jump"
+     ]
+    ],
+    "text": "SCRATCHING FANNY"
+   },
+   {
+    "who": "me",
+    "say": "Then Moore explained the rule. Every visitor had to follow it.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "to:-1,13,0"
+     ],
+     [
+      "moore",
+      "turn:front"
+     ]
+    ],
+    "text": "THE RULE"
+   },
+   {
+    "who": "moore",
+    "say": "Ask only yes or no. One knock means yes. Two knocks mean no.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "happy"
+     ]
+    ],
+    "text": "1 KNOCK YES, 2 KNOCKS NO",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "That was the whole trick of talking to the dead. One or two.",
+    "cam": "two:me,moore",
+    "do": [
+     [
+      "me",
+      "turn:moore"
+     ],
+     [
+      "candle",
+      "drift:0,12,2"
+     ]
+    ],
+    "text": "ONE OR TWO"
+   },
+   {
+    "who": "me",
+    "say": "Simple. Too simple. Anyone could make a knock. Couldn't they?",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "TOO SIMPLE?"
+   },
+   {
+    "who": "moore",
+    "say": "Are you the spirit of Fanny Lynes? Knock once.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "sleep"
+     ],
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "ARE YOU FANNY?"
+   },
+   {
+    "who": "narr",
+    "say": "Knock.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "KNOCK.",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "The crowd gasped. A woman behind me started praying.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ],
+    "text": "THE CROWD GASPED"
+   },
+   {
+    "who": "me",
+    "say": "Fanny Lynes was real. She died two years before, in February 1760.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "SHE DIED IN 1760"
+   },
+   {
+    "who": "me",
+    "say": "Her doctors said smallpox. She was buried in a church vault in Clerkenwell.",
+    "cam": "prop:coffin",
+    "do": [
+     [
+      "coffin",
+      "show"
+     ],
+     [
+      "coffin",
+      "bounce"
+     ]
+    ],
+    "text": "BURIED IN A VAULT"
+   },
+   {
+    "who": "me",
+    "say": "Then Moore asked the question that changed everything.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "turn:front"
+     ]
+    ],
+    "text": "THE BIG QUESTION"
+   },
+   {
+    "who": "moore",
+    "say": "Were you murdered? Was it poison?",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "shake"
+     ],
+     [
+      "coffin",
+      "hide"
+     ]
+    ],
+    "text": "WAS IT POISON?"
+   },
+   {
+    "who": "narr",
+    "say": "Knock.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "KNOCK.",
+    "sfx": "alarm"
+   },
+   {
+    "who": "moore",
+    "say": "Did William Kent poison you? With arsenic?",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "eyes_big"
+     ]
+    ],
+    "text": "WILLIAM KENT?"
+   },
+   {
+    "who": "narr",
+    "say": "Knock.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "KNOCK.",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "Just like that, a ghost had accused a living man of murder.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "A MURDER ACCUSATION"
+   },
+   {
+    "who": "me",
+    "say": "And if London believed it, William Kent could hang.",
+    "cam": "wide",
+    "do": [
+     [
+      "kent",
+      "enter:left"
+     ],
+     [
+      "kent",
+      "to:-5,11,0"
+     ]
+    ],
+    "text": "KENT COULD HANG"
+   },
+   {
+    "who": "me",
+    "say": "I found him the next day, outside, trying to talk to anyone.",
+    "cam": "two:me,kent",
+    "do": [
+     [
+      "me",
+      "to:-3,10,0"
+     ],
+     [
+      "kent",
+      "turn:me"
+     ]
+    ],
+    "text": "THE NEXT DAY"
+   },
+   {
+    "who": "kent",
+    "say": "I loved her. I nursed her. The doctors saw the smallpox.",
+    "cam": "close:kent",
+    "do": [
+     [
+      "kent",
+      "sad"
+     ]
+    ],
+    "text": "I NURSED HER"
+   },
+   {
+    "who": "me",
+    "say": "Kent had lived with Fanny in that same house, as lodgers.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:kent"
+     ]
+    ],
+    "text": "THEY LIVED THERE"
+   },
+   {
+    "who": "me",
+    "say": "And Kent had lent Parsons twelve guineas. Parsons never paid it back.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "bounce"
+     ]
+    ],
+    "text": "TWELVE GUINEAS"
+   },
+   {
+    "who": "kent",
+    "say": "I took him to court. Now his house says I'm a murderer.",
+    "cam": "close:kent",
+    "do": [
+     [
+      "kent",
+      "shake"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "NOW I'M A MURDERER"
+   },
+   {
+    "who": "me",
+    "say": "Wait. The ghost appeared right after Kent sued him?",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "RIGHT AFTER THE LAWSUIT?"
+   },
+   {
+    "who": "me",
+    "say": "I filed that away. And the knocking only came near Elizabeth.",
+    "cam": "wide",
+    "do": [
+     [
+      "kent",
+      "exit"
+     ],
+     [
+      "me",
+      "to:0,11,0"
+     ]
+    ],
+    "text": "ONLY NEAR ELIZABETH"
+   },
+   {
+    "who": "me",
+    "say": "Never in the empty room. Only when the girl was in bed.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "ONLY IN HER BED"
+   },
+   {
+    "who": "me",
+    "say": "A ghost that only works near one child. Remember that rule too.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "ONE CHILD ONLY"
+   },
+   {
+    "who": "me",
+    "say": "Over the next weeks, all of London came to Cock Lane.",
+    "cam": "overhead",
+    "do": [
+     [
+      "moore",
+      "enter:left"
+     ],
+     [
+      "moore",
+      "to:-3,13,0"
+     ],
+     [
+      "parsons",
+      "enter:right"
+     ]
+    ],
+    "text": "ALL OF LONDON CAME"
+   },
+   {
+    "who": "me",
+    "say": "Even the Duke of York squeezed into that hot little room.",
+    "cam": "close:parsons",
+    "do": [
+     [
+      "parsons",
+      "happy"
+     ],
+     [
+      "parsons",
+      "jump"
+     ]
+    ],
+    "text": "THE DUKE OF YORK"
+   },
+   {
+    "who": "me",
+    "say": "The writer Horace Walpole came. He stayed until past one in the morning.",
+    "cam": "wide",
+    "do": [
+     [
+      "moore",
+      "spin"
+     ],
+     [
+      "candle",
+      "drift:2,13,2"
+     ]
+    ],
+    "text": "HORACE WALPOLE"
+   },
+   {
+    "who": "me",
+    "say": "Walpole wrote that the ghost was not expected until seven.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "laugh"
+     ]
+    ],
+    "text": "NOT UNTIL SEVEN"
+   },
+   {
+    "who": "me",
+    "say": "Like it had a schedule. Like a show. I didn't laugh.",
+    "cam": "two:me,parsons",
+    "do": [
+     [
+      "me",
+      "turn:parsons"
+     ],
+     [
+      "parsons",
+      "turn:me"
+     ]
+    ],
+    "text": "LIKE A SHOW"
+   },
+   {
+    "who": "me",
+    "say": "Taverns nearby were making a fortune. Everyone made money from Fanny.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "spin"
+     ]
+    ],
+    "text": "A FORTUNE"
+   },
+   {
+    "who": "me",
+    "say": "Everyone except William Kent, who might hang for it.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "EXCEPT KENT"
+   },
+   {
+    "who": "me",
+    "say": "And Elizabeth, who looked more tired every single night.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "enter:right"
+     ],
+     [
+      "eliza",
+      "sad"
+     ]
+    ],
+    "text": "MORE TIRED EVERY NIGHT"
+   },
+   {
+    "who": "eliza",
+    "say": "I want to sleep. Please, just let me sleep.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "sleep"
+     ]
+    ],
+    "text": "LET ME SLEEP"
+   },
+   {
+    "who": "me",
+    "say": "Nobody listened to her. They were all listening for knocks.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:eliza"
+     ]
+    ],
+    "text": "NOBODY LISTENED"
+   },
+   {
+    "who": "narr",
+    "say": "The Lord Mayor of London ordered a proper investigation.",
+    "cam": "overhead",
+    "do": [
+     [
+      "parsons",
+      "exit"
+     ],
+     [
+      "moore",
+      "exit"
+     ],
+     [
+      "candle",
+      "drift:0,12,2.2"
+     ]
+    ],
+    "text": "AN INVESTIGATION"
+   },
+   {
+    "who": "me",
+    "say": "And look who they picked. Doctor Samuel Johnson.",
+    "cam": "two:johnson,me",
+    "do": [
+     [
+      "johnson",
+      "enter:right"
+     ],
+     [
+      "johnson",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "SAMUEL JOHNSON"
+   },
+   {
+    "who": "me",
+    "say": "The man who wrote the famous dictionary. Huge, scruffy, brilliant.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:front"
+     ],
+     [
+      "johnson",
+      "laugh"
+     ]
+    ],
+    "text": "THE DICTIONARY MAN"
+   },
+   {
+    "who": "johnson",
+    "say": "If there is a spirit here, it will speak to all of us.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:eliza"
+     ]
+    ],
+    "text": "SPEAK TO ALL OF US"
+   },
+   {
+    "who": "narr",
+    "say": "The first of February, 1762. The house of a clergyman, Clerkenwell.",
+    "cam": "wide",
+    "do": [
+     [
+      "eliza",
+      "to:2,13,0"
+     ],
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "1 FEBRUARY 1762"
+   },
+   {
+    "who": "me",
+    "say": "Ladies put Elizabeth to bed at ten. They checked everything.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ],
+     [
+      "eliza",
+      "sleep"
+     ]
+    ],
+    "text": "THEY CHECKED EVERYTHING"
+   },
+   {
+    "who": "me",
+    "say": "Just after eleven, we all went into her bedroom.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:0,12,0"
+     ],
+     [
+      "johnson",
+      "to:3,13,0"
+     ]
+    ],
+    "text": "AFTER ELEVEN"
+   },
+   {
+    "who": "johnson",
+    "say": "Spirit, show yourself. Knock, if you are present.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "eyes_big"
+     ]
+    ],
+    "text": "KNOCK IF YOU'RE HERE"
+   },
+   {
+    "who": "me",
+    "say": "We waited. I counted my heartbeats. Ten. Twenty. Thirty.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "WE WAITED",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "Nothing. Not one knock. Not one scratch.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "spin"
+     ]
+    ],
+    "text": "NOTHING"
+   },
+   {
+    "who": "eliza",
+    "say": "I can feel her. Like a mouse, on my back.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "shake"
+     ]
+    ],
+    "text": "LIKE A MOUSE"
+   },
+   {
+    "who": "me",
+    "say": "But nobody heard anything. Not one of us.",
+    "cam": "two:me,johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:me"
+     ],
+     [
+      "me",
+      "turn:johnson"
+     ]
+    ],
+    "text": "NOBODY HEARD IT"
+   },
+   {
+    "who": "me",
+    "say": "Then someone remembered the ghost's own promise.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE GHOST'S PROMISE"
+   },
+   {
+    "who": "me",
+    "say": "Fanny had promised to knock on her own coffin, in the vault.",
+    "cam": "prop:coffin",
+    "do": [
+     [
+      "coffin",
+      "show"
+     ],
+     [
+      "coffin",
+      "bounce"
+     ]
+    ],
+    "text": "SHE'D KNOCK ON HER COFFIN",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "If she knocked down there, Kent was finished.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:front"
+     ]
+    ],
+    "text": "KENT WAS FINISHED"
+   },
+   {
+    "who": "me",
+    "say": "So, after midnight, we walked to the church of Saint John.",
+    "cam": "wide",
+    "do": [
+     [
+      "johnson",
+      "to:0,15,0"
+     ],
+     [
+      "me",
+      "to:-2,14,0"
+     ],
+     [
+      "vaultlamp",
+      "show"
+     ]
+    ],
+    "text": "SAINT JOHN'S, MIDNIGHT"
+   },
+   {
+    "who": "me",
+    "say": "Down the stone steps, into the crypt, past the dead.",
+    "cam": "overhead",
+    "do": [
+     [
+      "me",
+      "to:-1,15,0"
+     ],
+     [
+      "candle",
+      "drift:-1,15,2"
+     ]
+    ],
+    "text": "INTO THE CRYPT"
+   },
+   {
+    "who": "me",
+    "say": "Fanny's coffin lay in the dark. The candle shook in my hand.",
+    "cam": "prop:coffin",
+    "do": [
+     [
+      "coffin",
+      "bounce"
+     ],
+     [
+      "vaultlamp",
+      "bounce"
+     ]
+    ],
+    "text": "FANNY'S COFFIN"
+   },
+   {
+    "who": "johnson",
+    "say": "Spirit. We are at your coffin. Knock, as you promised.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:front"
+     ],
+     [
+      "johnson",
+      "sad"
+     ]
+    ],
+    "text": "KNOCK, AS YOU PROMISED"
+   },
+   {
+    "who": "me",
+    "say": "I was sure it would come. My whole body waited for it.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ]
+    ],
+    "text": "I WAS SURE"
+   },
+   {
+    "who": "narr",
+    "say": "Silence.",
+    "cam": "prop:coffin",
+    "do": [
+     [
+      "vaultlamp",
+      "spin"
+     ]
+    ],
+    "text": "SILENCE"
+   },
+   {
+    "who": "me",
+    "say": "Total silence. The ghost had broken its own promise.",
+    "cam": "two:me,johnson",
+    "do": [
+     [
+      "johnson",
+      "turn:me"
+     ]
+    ],
+    "text": "THE PROMISE BROKE"
+   },
+   {
+    "who": "johnson",
+    "say": "The child has some art of making a particular noise.",
+    "cam": "close:johnson",
+    "do": [
+     [
+      "johnson",
+      "happy"
+     ]
+    ],
+    "text": "SOME ART OF NOISE"
+   },
+   {
+    "who": "me",
+    "say": "Johnson's report said there was no higher cause at all.",
+    "cam": "wide",
+    "do": [
+     [
+      "johnson",
+      "exit"
+     ],
+     [
+      "vaultlamp",
+      "hide"
+     ],
+     [
+      "coffin",
+      "hide"
+     ]
+    ],
+    "text": "NO HIGHER CAUSE"
+   },
+   {
+    "who": "me",
+    "say": "But Parsons's friends had an answer. They always had an answer.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "THEY HAD AN ANSWER"
+   },
+   {
+    "who": "parsons",
+    "say": "Kent must have moved the body. That's why she couldn't knock!",
+    "cam": "close:parsons",
+    "do": [
+     [
+      "parsons",
+      "enter:right"
+     ],
+     [
+      "parsons",
+      "shake"
+     ]
+    ],
+    "text": "HE MOVED THE BODY?"
+   },
+   {
+    "who": "me",
+    "say": "So Kent went into that vault himself, with the undertaker.",
+    "cam": "prop:coffin",
+    "do": [
+     [
+      "kent",
+      "enter:left"
+     ],
+     [
+      "coffin",
+      "show"
+     ]
+    ],
+    "text": "KENT WENT DOWN"
+   },
+   {
+    "who": "me",
+    "say": "They opened the lid. Fanny was there. She had never been moved.",
+    "cam": "close:kent",
+    "do": [
+     [
+      "kent",
+      "sad"
+     ],
+     [
+      "coffin",
+      "bounce"
+     ]
+    ],
+    "text": "SHE WAS THERE"
+   },
+   {
+    "who": "me",
+    "say": "And then came the night I still can't forget.",
+    "cam": "overhead",
+    "do": [
+     [
+      "kent",
+      "exit"
+     ],
+     [
+      "coffin",
+      "hide"
+     ],
+     [
+      "candle",
+      "drift:2,13,2"
+     ]
+    ],
+    "text": "THE LAST NIGHT"
+   },
+   {
+    "who": "me",
+    "say": "They moved Elizabeth to another house, to test her again.",
+    "cam": "two:me,eliza",
+    "do": [
+     [
+      "eliza",
+      "to:2,13,0"
+     ],
+     [
+      "me",
+      "to:0,12,0"
+     ]
+    ],
+    "text": "ANOTHER HOUSE"
+   },
+   {
+    "who": "me",
+    "say": "And they told her something cruel. A threat.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "A THREAT"
+   },
+   {
+    "who": "narr",
+    "say": "No knocks tonight, child, and your father goes to Newgate.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "shake"
+     ]
+    ],
+    "text": "OR YOUR FATHER GOES TO PRISON",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "Newgate Prison. Her own father. Because of her.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "NEWGATE PRISON"
+   },
+   {
+    "who": "me",
+    "say": "That night, two maids watched her through a gap in the door.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "to:-1,11,0"
+     ],
+     [
+      "candle",
+      "bounce"
+     ]
+    ],
+    "text": "THE MAIDS WATCHED"
+   },
+   {
+    "who": "me",
+    "say": "They saw her take something and hide it in her clothes.",
+    "cam": "prop:board",
+    "do": [
+     [
+      "board",
+      "show"
+     ],
+     [
+      "board",
+      "bounce"
+     ]
+    ],
+    "text": "SHE HID SOMETHING"
+   },
+   {
+    "who": "me",
+    "say": "A small piece of wood. A board, about six inches long.",
+    "cam": "prop:board",
+    "do": [
+     [
+      "board",
+      "spin"
+     ]
+    ],
+    "text": "A PIECE OF WOOD",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "me",
+    "say": "Later that night, the knocks came. Right on time.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "turn:front"
+     ],
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "RIGHT ON TIME"
+   },
+   {
+    "who": "me",
+    "say": "And they came from the board. There was no Fanny. There never was.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "shake"
+     ],
+     [
+      "board",
+      "bounce"
+     ]
+    ],
+    "text": "THERE NEVER WAS",
+    "sfx": "alarm"
+   },
+   {
+    "who": "me",
+    "say": "The ghost was a frightened girl, tapping wood in the dark.",
+    "cam": "two:me,eliza",
+    "do": [
+     [
+      "eliza",
+      "sad"
+     ],
+     [
+      "me",
+      "turn:eliza"
+     ]
+    ],
+    "text": "A FRIGHTENED GIRL"
+   },
+   {
+    "who": "me",
+    "say": "Remember what I asked her? Is anyone in this room lying?",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ]
+    ],
+    "text": "IS ANYONE LYING?"
+   },
+   {
+    "who": "me",
+    "say": "She answered yes. One knock. It was the truest knock of all.",
+    "cam": "prop:bed",
+    "do": [
+     [
+      "bed",
+      "bounce"
+     ],
+     [
+      "board",
+      "hide"
+     ]
+    ],
+    "text": "THE TRUEST KNOCK"
+   },
+   {
+    "who": "me",
+    "say": "I blinked, and I was back in my own bed, in 2026.",
+    "cam": "wide",
+    "do": [
+     [
+      "me",
+      "sleep"
+     ],
+     [
+      "candle",
+      "drift:-3,9,1.5"
+     ]
+    ],
+    "text": "BACK IN 2026"
+   },
+   {
+    "who": "me",
+    "say": "I looked up how it ended. All of it is in the records.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "eyes_big"
+     ]
+    ],
+    "text": "IN THE RECORDS"
+   },
+   {
+    "who": "narr",
+    "say": "July 1762. Parsons, his wife and their helper were convicted of conspiracy.",
+    "cam": "prop:paper",
+    "do": [
+     [
+      "paper",
+      "show"
+     ],
+     [
+      "paper",
+      "bounce"
+     ]
+    ],
+    "text": "CONVICTED, 1762"
+   },
+   {
+    "who": "me",
+    "say": "Parsons got two years in prison and three turns in the pillory.",
+    "cam": "prop:pillory",
+    "do": [
+     [
+      "pillory",
+      "show"
+     ],
+     [
+      "pillory",
+      "bounce"
+     ]
+    ],
+    "text": "THE PILLORY"
+   },
+   {
+    "who": "me",
+    "say": "And the crowd didn't throw rotten food at him. They collected money for him.",
+    "cam": "wide",
+    "do": [
+     [
+      "parsons",
+      "enter:right"
+     ],
+     [
+      "parsons",
+      "to:4,15,0"
+     ],
+     [
+      "paper",
+      "hide"
+     ]
+    ],
+    "text": "THEY PAID FOR HIM"
+   },
+   {
+    "who": "me",
+    "say": "Even after the trick was exposed, some people still wanted to believe.",
+    "cam": "close:parsons",
+    "do": [
+     [
+      "parsons",
+      "sad"
+     ]
+    ],
+    "text": "STILL BELIEVED"
+   },
+   {
+    "who": "me",
+    "say": "Elizabeth grew up, married, and lived until 1807. She never explained it.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "turn:front"
+     ],
+     [
+      "eliza",
+      "sad"
+     ]
+    ],
+    "text": "SHE NEVER EXPLAINED"
+   },
+   {
+    "who": "me",
+    "say": "Preacher Moore and a tradesman agreed to pay Kent compensation.",
+    "cam": "two:kent,me",
+    "do": [
+     [
+      "kent",
+      "enter:left"
+     ],
+     [
+      "kent",
+      "turn:me"
+     ]
+    ],
+    "text": "KENT WAS PAID"
+   },
+   {
+    "who": "me",
+    "say": "William Kent's name was cleared. He never poisoned anyone.",
+    "cam": "close:kent",
+    "do": [
+     [
+      "kent",
+      "happy"
+     ]
+    ],
+    "text": "KENT WAS INNOCENT"
+   },
+   {
+    "who": "me",
+    "say": "Hogarth drew it. Dickens mentioned it. London never forgot Scratching Fanny.",
+    "cam": "wide",
+    "do": [
+     [
+      "kent",
+      "to:-4,12,0"
+     ],
+     [
+      "candle",
+      "drift:-3,12,2"
+     ]
+    ],
+    "text": "DICKENS AND HOGARTH"
+   },
+   {
+    "who": "me",
+    "say": "Many believed Elizabeth made the noises under pressure from her father.",
+    "cam": "close:eliza",
+    "do": [
+     [
+      "eliza",
+      "sad"
+     ],
+     [
+      "pillory",
+      "hide"
+     ]
+    ],
+    "text": "UNDER PRESSURE"
+   },
+   {
+    "who": "me",
+    "say": "She was just a child. The adults built the ghost around her.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "sad"
+     ]
+    ],
+    "text": "JUST A CHILD"
+   },
+   {
+    "who": "me",
+    "say": "What I learned: when people pay to believe, they hear what they paid for.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:me"
+     ]
+    ],
+    "text": "WHAT I LEARNED"
+   },
+   {
+    "who": "me",
+    "say": "Would you have heard the knock? Tell me in the comments.",
+    "cam": "close:me",
+    "do": [
+     [
+      "me",
+      "turn:front"
+     ],
+     [
+      "me",
+      "happy"
+     ]
+    ],
+    "text": "WOULD YOU HEAR IT?"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for the next true story. Knock once if you will.",
+    "cam": "two:me,eliza",
+    "do": [
+     [
+      "me",
+      "jump"
+     ],
+     [
+      "eliza",
+      "happy"
+     ],
+     [
+      "bed",
+      "bounce"
+     ]
+    ],
+    "text": "KNOCK ONCE"
+   }
+  ]
+ },
+ "long": {
+  "title": "I Lived Through the Cock Lane Ghost: One Knock Means Yes",
+  "description": "Would you have heard the knock? Tell me in the comments.\nPrevious true story: https://youtu.be/RU6HcfLCx8w\n\n\"One knock means yes. Two knocks mean no.\"\n\nI woke up in Cock Lane, London, in January 1762, where crowds paid to talk with 'Scratching Fanny', a ghost that knocked around the bed of 12-year-old Elizabeth Parsons and accused William Kent of poisoning Fanny Lynes with arsenic. Samuel Johnson's committee waited at her bedside and in the vault of St John's, Clerkenwell, where the ghost had promised to knock on its own coffin. Silence. Then the maids saw what Elizabeth hid in her clothes.\n\nSources:\nhttps://en.wikipedia.org/wiki/Cock_Lane_ghost\nhttps://en.wikisource.org/wiki/Dictionary_of_National_Biography,_1885-1900/Parsons,_Elizabeth_(1749-1807)\nhttps://www.drjohnsonshouse.org/post/the-cock-lane-ghost\nhttps://psi-encyclopedia.spr.ac.uk/articles/cock-lane-ghost\n\n#truestory #cocklaneghost #3DAnimation #london #history",
+  "tags": [
+   "true scary stories",
+   "true horror stories animated",
+   "scary stories animated",
+   "creepy true story",
+   "horror story",
+   "Cock Lane ghost",
+   "Scratching Fanny",
+   "London",
+   "1762",
+   "Samuel Johnson",
+   "Clerkenwell",
+   "ghost hoax",
+   "I lived through history",
+   "true story animated",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "WHO'S KNOCKING?",
+  "thumb_beat": 71,
+  "localizations": {
+   "es": {
+    "title": "Viví el fantasma de Cock Lane: un golpe significa sí",
+    "description": "¿Habrías oído el golpe? Cuéntamelo en los comentarios.\n\nLondres, enero de 1762: multitudes pagaban por hablar con «Fanny la que araña», un fantasma que golpeaba junto a la cama de Elizabeth Parsons, de 12 años, y acusaba a William Kent de envenenamiento. Samuel Johnson esperó en el dormitorio y en la cripta de St John's. Silencio. Luego las criadas vieron lo que ella escondía."
+   },
+   "pt": {
+    "title": "Vivi o fantasma de Cock Lane: uma batida quer dizer sim",
+    "description": "Você teria ouvido a batida? Conte nos comentários.\n\nLondres, janeiro de 1762: multidões pagavam para falar com «Fanny que arranha», um fantasma que batia junto à cama de Elizabeth Parsons, de 12 anos, e acusava William Kent de envenenamento. Samuel Johnson esperou no quarto e na cripta de St John's. Silêncio. Então as criadas viram o que ela escondia."
+   },
+   "ar": {
+    "title": "عشت شبح كوك لين: طرقة واحدة تعني نعم",
+    "description": "هل كنت ستسمع الطرقة؟ أخبرني في التعليقات.\n\nلندن، يناير 1762: دفعت الحشود المال للحديث مع «فاني الخادشة»، شبح يطرق قرب سرير إليزابيث بارسونز ذات الاثني عشر عامًا ويتهم ويليام كينت بالتسميم. انتظر صموئيل جونسون في غرفتها وفي سرداب كنيسة القديس يوحنا. صمت. ثم رأت الخادمتان ما أخفته."
+   },
+   "fr": {
+    "title": "J'ai vécu le fantôme de Cock Lane : un coup veut dire oui",
+    "description": "Auriez-vous entendu le coup ? Dites-le-moi en commentaire.\n\nLondres, janvier 1762 : les foules paient pour parler à « Fanny qui gratte », un fantôme qui frappe près du lit d'Elizabeth Parsons, 12 ans, et accuse William Kent d'empoisonnement. Samuel Johnson attend dans sa chambre et dans la crypte de St John's. Silence. Puis les servantes voient ce qu'elle cache."
+   },
+   "ja": {
+    "title": "コックレーンの幽霊を体験:ノック1回は「はい」",
+    "description": "あなたにはノックが聞こえたと思いますか?コメントで教えてください。\n\n1762年1月ロンドン。群衆はお金を払い「引っかくファニー」と話した。12歳のエリザベスのベッドのそばでノックし、ウィリアム・ケントを毒殺犯だと告げる幽霊だ。サミュエル・ジョンソンは寝室と聖ヨハネ教会の地下墓所で待った。沈黙。そして女中たちが彼女の隠した物を見た。"
+   },
+   "ko": {
+    "title": "코크 레인 유령을 겪었다: 한 번 두드리면 '예'",
+    "description": "당신이라면 그 노크를 들었을까요? 댓글로 알려주세요.\n\n1762년 1월 런던. 군중은 돈을 내고 '긁는 패니'와 대화했다. 열두 살 엘리자베스의 침대 곁에서 두드리며 윌리엄 켄트를 독살범으로 지목한 유령이었다. 새뮤얼 존슨은 침실과 성 요한 교회 지하 납골당에서 기다렸다. 침묵. 그리고 하녀들이 그녀가 숨긴 것을 보았다."
+   },
+   "de": {
+    "title": "Ich erlebte den Geist von Cock Lane: Einmal Klopfen heißt Ja",
+    "description": "Hättest du das Klopfen gehört? Schreib es in die Kommentare.\n\nLondon, Januar 1762: Menschenmengen zahlen, um mit der „kratzenden Fanny“ zu sprechen, einem Geist, der am Bett der 12-jährigen Elizabeth Parsons klopft und William Kent des Giftmords beschuldigt. Samuel Johnson wartet am Bett und in der Gruft von St John's. Stille. Dann sehen die Mägde, was sie versteckt."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 27,
+   "top": "KNOCK ONCE FOR YES",
+   "title": "I asked the ghost: is anyone lying? 🕯️ #shorts",
+   "description": "London, 1762: one knock means yes, two mean no. Then it answered. Full true story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "true story",
+    "Cock Lane ghost",
+    "true scary stories",
+    "history mystery"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pregunté al fantasma: ¿alguien miente? 🕯️ #shorts",
+     "description": "Londres, 1762: un golpe es sí, dos son no. Y respondió. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Perguntei ao fantasma: alguém mente? 🕯️ #shorts",
+     "description": "Londres, 1762: uma batida é sim, duas são não. E ele respondeu. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "سألت الشبح: هل يكذب أحد هنا؟ 🕯️ #shorts",
+     "description": "لندن، 1762: طرقة تعني نعم، وطرقتان لا. ثم أجاب. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "J'ai demandé au fantôme : qui ment ? 🕯️ #shorts",
+     "description": "Londres, 1762 : un coup pour oui, deux pour non. Et il a répondu. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "幽霊に聞いた:この中に嘘つきは? 🕯️ #shorts",
+     "description": "1762年ロンドン。ノック1回は「はい」、2回は「いいえ」。そして答えた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "유령에게 물었다: 거짓말쟁이가 있나? 🕯️ #shorts",
+     "description": "1762년 런던. 한 번은 '예', 두 번은 '아니요'. 그리고 대답이 왔다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ich fragte den Geist: Lügt hier jemand? 🕯️ #shorts",
+     "description": "London, 1762: einmal Klopfen heißt Ja, zweimal Nein. Dann kam die Antwort. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
