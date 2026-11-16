@@ -1,0 +1,1045 @@
+{
+ "id": "20261116-1-someone-looking-for-our-kitten",
+ "plot": "At Sunday lunch Mia brings home a lamppost poster of a lost grey kitten called Smoke with Button's bent ear, and Mom will call the number after lunch; Bup's one try to hide the poster ends with him splashing into Grandma's French-toast egg bowl and nearly getting fried, the number is already on the fridge whiteboard, and then — the twist — Lolly drying the eggy poster finds its date, April third (it looked sun-faded at the start and the vet said Button is six weeks old), so Smoke is a grown cat: not Button but Button's mother; Mrs. Hale lets Button stay, then says she is bringing Smoke tomorrow — a cat who steals bread from every kitchen.",
+ "script": {
+  "title": "Someone Is Looking for Our Kitten",
+  "set": {
+   "place": "table",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "poster",
+    "type": "box",
+    "color": [
+     0.95,
+     0.93,
+     0.85
+    ],
+    "on": null,
+    "at": [
+     0,
+     11,
+     0
+    ],
+    "visible": true,
+    "scale": 0.4
+   },
+   {
+    "id": "kitten",
+    "type": "ball",
+    "color": [
+     0.55,
+     0.55,
+     0.58
+    ],
+    "on": null,
+    "at": [
+     -6,
+     12,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "bowl",
+    "type": "box",
+    "color": [
+     0.98,
+     0.85,
+     0.35
+    ],
+    "on": null,
+    "at": [
+     5,
+     13,
+     0
+    ],
+    "visible": true,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "pim",
+    "say": "Lost kitten? No, no, no! Button is not lost. She's ours!",
+    "cam": "two:pim,lolly",
+    "do": [
+     [
+      "pim",
+      "to:-2,9"
+     ],
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, breathe. It's a poster. Mia tore it off the lamppost.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "text": "SOMEONE WANTS HER BACK",
+    "cam": "prop:poster",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "poster",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-5,8"
+     ],
+     [
+      "zeek",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Sunday noon at the kitchen table. Grandma is making French toast.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:5,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the bread basket, Button the kitten is just waking up.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia stands by the table, the poster shaking in her hands.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom reads it twice. Then she says: we call after lunch.",
+    "cam": "prop:poster",
+    "do": [
+     [
+      "poster",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "After lunch? That's one hour! I found her! I pulled her out!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,10"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You did, little bean. You were brave under that porch.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Facts. Lost grey kitten. Answers to Smoke. Phone number at the bottom.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:pim"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Then we test it. Button or Smoke. Which name does she answer?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup cups his crusty hands. Smoke! Button doesn't even blink.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He tries again. Button! She yawns and licks her paw.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "She's a baby, Bup. She answers to tuna. That's it.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "This paper is so faded, though. Like icing left in the sun.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Irrelevant. Also, the vet said Button is only six weeks old.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The kitten in the photo has one bent ear. Just like Button.",
+    "cam": "prop:poster",
+    "do": [
+     [
+      "poster",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "SAME BENT EAR!",
+    "cam": "close:pim",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's her. It's really her. Someone is going to take her away.",
+    "cam": "two:pim,crispy",
+    "do": [
+     [
+      "pim",
+      "sad"
+     ],
+     [
+      "crispy",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One phone call after lunch, and Button could be gone forever.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Not if there's no poster. No poster, no number, no call.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup grabs the poster and sprints across the table.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:3,12"
+     ],
+     [
+      "poster",
+      "to:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup, stop! That poster belongs to a little girl!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup doesn't stop. He doesn't see Grandma's big bowl of eggs.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bup",
+      "to:5,13"
+     ]
+    ]
+   },
+   {
+    "text": "SPLASH!",
+    "cam": "prop:bowl",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ],
+     [
+      "bowl",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup pops up dripping yellow. Egg, milk, and a pinch of sugar.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Why is it warm in here? Why do I smell like breakfast?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma turns around with her frying pan. She sees a perfect slice.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ],
+     [
+      "crispy",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Bup. You are stale bread soaked in egg. You are French toast.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "text": "BUP IS FRENCH TOAST!",
+    "cam": "two:bup,crispy",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma's fork comes down. Lolly yanks Bup out by his crust.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:4,12"
+     ],
+     [
+      "bup",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The fork hits an empty bowl. Grandma blinks. Then she shrugs.",
+    "cam": "prop:bowl",
+    "do": [
+     [
+      "bowl",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Never. Ever. Steal. Again. Do you hear me?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Yes, ma'am. Sorry, ma'am. I smell delicious, ma'am.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The poster is soaked too. The phone number is one yellow blur.",
+    "cam": "prop:poster",
+    "do": [
+     [
+      "poster",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "The number's gone? Then nobody can call! She stays!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "happy"
+     ],
+     [
+      "pim",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Mom already copied the number onto the fridge whiteboard.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "text": "THE NUMBER IS SAVED",
+    "cam": "two:pim,zeek",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Ten minutes of lunch left. Then Mom calls. Then it's over.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I pulled you out for a home. Now you'll lose it.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,12"
+     ],
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly peels the wet poster off the table to dry it.",
+    "cam": "prop:poster",
+    "do": [
+     [
+      "lolly",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the egg, the top corner shows a tiny date. April third.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "poster",
+      "bounce"
+     ],
+     [
+      "zeek",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "April. Pim, this poster has been out there since April.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "April to November. Seven months. My calculations say...",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Smoke is a grown cat by now. Button is six weeks.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "SHE'S NOT SMOKE!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Same grey fur. Same bent ear. Seven months apart.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Smoke isn't Button. Smoke is Button's mother.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Her mom? Button has a mom? And her mom got lost too?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lunch ends. Mom dials the number from the whiteboard.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "An old lady answers. Mrs. Hale, from two streets over.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Smoke came home in summer. Then she had kittens.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One grey girl with a bent ear wandered off in the storm.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mrs. Hale laughs. If she picked your family, then she's yours.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-5,12"
+     ]
+    ]
+   },
+   {
+    "text": "BUTTON STAYS!",
+    "cam": "two:pim,bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She stays! And she has a mom! Everybody has somebody!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Great. Can somebody help me? The egg is drying. I'm crunchy.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ],
+     [
+      "lolly",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mrs. Hale says one more thing. She's bringing Smoke tomorrow.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "To meet her baby. And Smoke steals bread from every kitchen.",
+    "cam": "prop:kitten",
+    "do": [
+     [
+      "kitten",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "A BREAD THIEF?!",
+    "cam": "close:bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Someone Is Looking for Our Kitten 😿",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I pulled her out from under that porch. Now someone wants her back?\" — Pim\nMia finds a lost-kitten poster that looks just like Button, Mom will call the number after lunch, and Bup's plan to hide it ends in Grandma's egg bowl.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "kitten",
+   "lost kitten poster",
+   "french toast",
+   "pim",
+   "bup",
+   "animated comedy",
+   "funny animation",
+   "sunday lunch"
+  ],
+  "thumb_text": "NOT OURS?!",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "Alguien está buscando a nuestra gatita 😿",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"La saqué de debajo de ese porche. ¿Y ahora alguien la quiere de vuelta?\" — Pim\nMia encuentra un cartel de gatita perdida igual a Button, mamá llamará después del almuerzo, y el plan de Bup para esconderlo termina en el bol de huevos de la abuela.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "Alguém está procurando a nossa gatinha 😿",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu a tirei de baixo daquela varanda. E agora alguém quer ela de volta?\" — Pim\nA Mia acha um cartaz de gatinha perdida igualzinha à Button, a mãe vai ligar depois do almoço, e o plano do Bup de esconder o cartaz termina na tigela de ovos da vovó.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "شخص ما يبحث عن قطتنا الصغيرة 😿",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أنا أخرجتها من تحت تلك الشرفة. والآن شخص ما يريد استعادتها؟\" — بيم\nتجد ميا ملصقًا لقطة مفقودة تشبه بوتون تمامًا، وستتصل أمها بعد الغداء، وخطة باب لإخفائه تنتهي في وعاء بيض الجدة.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Quelqu'un cherche notre chatonne 😿",
+    "description": "Selon toi, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"Je l'ai sortie de sous ce porche. Et maintenant quelqu'un veut la récupérer ?\" — Pim\nMia trouve une affiche de chatonne perdue qui ressemble à Button, Maman appellera après le déjeuner, et le plan de Bup pour la cacher finit dans le bol d'œufs de Mamie.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "誰かがぼくらの子猫をさがしてる 😿",
+    "description": "次はどうなると思う？コメントで教えてね。\n「ポーチの下からぼくが助けたのに。今さら返してって？」— ピム\nミアが見つけた迷子猫のポスターはボタンにそっくり。ママは昼ごはんのあとに電話するつもり。ポスターを隠そうとしたバップは、おばあちゃんの卵のボウルに落ちてしまう。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "누군가 우리 새끼 고양이를 찾고 있어 😿",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려주세요.\n\"내가 현관 밑에서 꺼내 줬는데. 이제 누가 돌려달래?\" — 핌\n미아가 버튼과 똑같이 생긴 잃어버린 고양이 포스터를 찾아오고, 엄마는 점심 후에 전화하기로 해요. 포스터를 숨기려던 법의 계획은 할머니의 달걀 그릇에서 끝나요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Jemand sucht unser Kätzchen 😿",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ich habe sie unter der Veranda rausgeholt. Und jetzt will sie jemand zurück?\" — Pim\nMia findet ein Vermisst-Plakat, das genau wie Button aussieht, Mama ruft nach dem Mittagessen an, und Bups Plan, es zu verstecken, endet in Omas Eierschüssel.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 25,
+   "dur": 24,
+   "top": "BUP BECAME FRENCH TOAST",
+   "title": "Bup Went to the Egg Bowl… and Became French Toast! 😂 #shorts",
+   "description": "Bup runs off with a poster and lands in Grandma's egg bowl. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "french toast",
+    "bup",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Bup se fue al bol de huevos… ¡y se volvió tostada francesa! 😂 #shorts",
+     "description": "Bup huye con un cartel y cae en el bol de la abuela. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Bup foi para a tigela de ovos… e virou rabanada! 😂 #shorts",
+     "description": "Bup foge com um cartaz e cai na tigela da vovó. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "باب ذهب إلى وعاء البيض… وأصبح توست فرنسي! 😂 #shorts",
+     "description": "باب يهرب بملصق ويسقط في وعاء الجدة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Bup est allé dans le bol d'œufs… et il est devenu pain perdu ! 😂 #shorts",
+     "description": "Bup s'enfuit avec une affiche et tombe dans le bol de Mamie. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バップが卵のボウルへ…フレンチトーストになった！😂 #shorts",
+     "description": "ポスターを持って逃げたバップが、おばあちゃんのボウルにドボン。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "법이 달걀 그릇에 갔다가… 프렌치토스트가 됐어! 😂 #shorts",
+     "description": "포스터를 들고 도망치던 법이 할머니의 그릇에 풍덩. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Bup ging in die Eierschüssel… und wurde French Toast! 😂 #shorts",
+     "description": "Bup rennt mit einem Plakat davon und landet in Omas Schüssel. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "SOMEONE WANTS HER BACK",
+   "title": "Someone Wants Our Kitten Back 😿 #shorts",
+   "description": "A lost-kitten poster that looks exactly like Button. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "kitten",
+    "pim",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Alguien quiere recuperar a nuestra gatita 😿 #shorts",
+     "description": "Un cartel de gatita perdida igual a Button. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Alguém quer a nossa gatinha de volta 😿 #shorts",
+     "description": "Um cartaz de gatinha perdida igual à Button. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "شخص ما يريد استعادة قطتنا 😿 #shorts",
+     "description": "ملصق قطة مفقودة تشبه بوتون. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Quelqu'un veut récupérer notre chatonne 😿 #shorts",
+     "description": "Une affiche de chatonne perdue qui ressemble à Button. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "誰かがぼくらの子猫を取り戻したいって 😿 #shorts",
+     "description": "ボタンにそっくりな迷子猫のポスター。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "누군가 우리 고양이를 돌려받고 싶대 😿 #shorts",
+     "description": "버튼과 똑같은 잃어버린 고양이 포스터. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Jemand will unser Kätzchen zurück 😿 #shorts",
+     "description": "Ein Vermisst-Plakat, das genau wie Button aussieht. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
