@@ -1,11 +1,9 @@
-=== kanal holati 2026-11-16 13:29 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-16 14:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
-unmerged cloud/worker.py -> auto-resolved (copy: cloud/worker.py.conflict_202611161629)
-warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
-branch: ## main...origin/main [ahead 2]
-local commits not on GitHub: 2
-pull: Created autostash: 818f073
-pull: Applied autostash.
+branch: ## main...origin/main
+local commits not on GitHub: 0
+pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
+pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
 disk free: 907G
@@ -14,16 +12,16 @@ disk free: 907G
     11-16 09:30:01 $ git pull -q --rebase --autostash
     11-16 10:50:11 $ git pull -q --rebase --autostash
     11-16 12:51:13 $ git pull -q --rebase --autostash
---- doughbros: 2026-11-16T10:10:30+00:00 idle 
-    11-16 07:30:01 $ git pull -q --rebase --autostash
+--- doughbros: 2026-11-16T13:30:28+00:00 idle 
     11-16 08:50:03 $ git pull -q --rebase --autostash
     11-16 10:10:21 $ git pull -q --rebase --autostash
     11-16 11:41:08 $ git pull -q --rebase --autostash
---- hollow: 2026-11-16T12:31:22+00:00 queue_empty 
-    11-16 12:31:32 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
-    11-16 12:31:32 $ git diff --cached --quiet
-    11-16 12:31:32 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] queue empty
-    11-16 12:31:32 $ git push -q origin HEAD:main
+    11-16 13:30:07 $ git pull -q --rebase --autostash
+--- hollow: 2026-11-16T13:50:34+00:00 queue_empty 
+    11-16 13:50:35 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
+    11-16 13:50:35 $ git diff --cached --quiet
+    11-16 13:50:35 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] queue empty
+    11-16 13:50:35 $ git push -q origin HEAD:main
 --- bolt: 2026-11-16T13:11:54+00:00 idle 
     11-16 08:30:04 $ git pull -q --rebase --autostash
     11-16 09:50:03 $ git pull -q --rebase --autostash
@@ -56,46 +54,26 @@ disk free: 907G
     maker: 11-14 23:24:11 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
     maker: 11-14 23:24:11 made funny-20261114-bike-jump-fails-6888 | Ranking Top 5 Bike Jump Fails 😂 | {'duration': 19.88, 'voice': 'am_puck', 'shots': 7, 'render_s': 955, 'rek': 96}
     maker: 11-14 23:24:11 done: 3 Short(s); API calls: search 5, list 5
---- ufc: 2026-11-16T12:51:56+00:00 idle 
-    11-16 12:52:02 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
-    11-16 12:52:02 $ git diff --cached --quiet
-    11-16 12:52:02 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
-    11-16 12:52:02 $ git push -q origin HEAD:main
---- sleep: 2026-11-16T13:24:47+00:00 render 
-    11-16 13:25:06 $ git push -q origin HEAD:main
-    11-16 13:25:09 $ git pull -q --rebase
-    11-16 13:25:09 push failed (will retry next run)
-    11-16 13:25:09 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/sleep.py --out /root/kanal/sleep/made --home /root/kanal/sleep --repo /opt/kanal/repo --titles /root/kanal/sleep/titles.json --need-long 0 --need-short 1
---- doodle: 2026-11-16T13:11:53+00:00 queue_empty 
-    11-16 13:12:18 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
-    11-16 13:12:18 $ git diff --cached --quiet
-    11-16 13:12:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] queue empty
-    11-16 13:12:18 $ git push -q origin HEAD:main
---- milo: 2026-11-16T13:12:18+00:00 queue_empty 
-    11-16 13:12:49 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-16 13:12:49 $ git diff --cached --quiet
-    11-16 13:12:49 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] queue empty
-    11-16 13:12:49 $ git push -q origin HEAD:main
+--- ufc: 2026-11-16T13:50:31+00:00 idle 
+    11-16 13:50:31 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
+    11-16 13:50:31 $ git diff --cached --quiet
+    11-16 13:50:31 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
+    11-16 13:50:31 $ git push -q origin HEAD:main
+--- sleep: 2026-11-16T13:53:21+00:00 ok 
+    11-16 13:53:21 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-16 13:53:21 $ git diff --cached --quiet
+    11-16 13:53:21 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] done
+    11-16 13:53:21 $ git push -q origin HEAD:main
+--- doodle: 2026-11-16T13:30:16+00:00 queue_empty 
+    11-16 13:30:16 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
+    11-16 13:30:16 $ git diff --cached --quiet
+    11-16 13:30:16 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] queue empty
+    11-16 13:30:16 $ git push -q origin HEAD:main
+--- milo: 2026-11-16T13:50:15+00:00 queue_empty 
+    11-16 13:50:25 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-16 13:50:25 $ git diff --cached --quiet
+    11-16 13:50:25 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] queue empty
+    11-16 13:50:25 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-        671    3388 flock -n /tmp/kanal-sleep.lock timeout -k 60 5h python3 cloud/worker.py sleep
-        673    3388 timeout -k 60 5h python3 cloud/worker.py sleep
-        674    3388 python3 cloud/worker.py sleep
-       3642     266 /usr/bin/python3 /opt/kanal/repo/cloud/makers/sleep.py --out /root/kanal/sleep/made --home /root/kanal/sleep --repo /opt/kanal/repo --titles /ro
-       3982      13 ffmpeg -y -v error -f rawvideo -pix_fmt rgb24 -s 1080x1920 -r 30 -i - -c:v libx264 -preset medium -crf 21 -pix_fmt yuv420p /root/kanal/sleep/sle
 --- held channel locks:
-    /tmp/kanal-bolt.lock free
-    /tmp/kanal-codup.lock free
-    /tmp/kanal-codup2.lock free
-    /tmp/kanal-doodle.lock free
-    /tmp/kanal-doughbros.lock free
-    /tmp/kanal-funny.lock free
-    /tmp/kanal-git.lock free
-    /tmp/kanal-hollow.lock free
-    /tmp/kanal-maxcat.lock free
-    /tmp/kanal-milo.lock free
-    /tmp/kanal-money.lock free
-    /tmp/kanal-roblox.lock free
-    /tmp/kanal-sleep.lock HELD
-    /tmp/kanal-ufc.lock free
-    /tmp/kanal-yt.lock free
