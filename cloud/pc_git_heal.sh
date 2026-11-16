@@ -61,6 +61,15 @@ for ch in maxcat doughbros hollow bolt roblox funny money ufc sleep doodle milo;
   [ -f /root/kanal/$ch/maker.log ] && tail -6 /root/kanal/$ch/maker.log | cut -c1-220 | sed 's/^/    maker: /'
 done
 echo "--- stale locks (run_all.sh unstick_locks):"; tail -5 /root/kanal/stale_lock.log 2>/dev/null | sed "s/^/    /"
+# 2026-11-16 watchdog: funny/money/roblox silent since 15 Nov 17:50 UTC and Documents is not always connected to the
+# cloud watchdog -> also show running workers + held locks, and push this report to GitHub (cloud/results/pc_holat.txt).
+echo "--- running workers (pid, seconds, cmd):"; ps -eo pid,etimes,args 2>/dev/null | grep -E "worker\.py|makers/|yt-dlp|ffmpeg" | grep -v grep | cut -c1-160 | head -20 | sed 's/^/    /'
+echo "--- held channel locks:"; for lf in /tmp/kanal-*.lock; do [ -e "$lf" ] && { flock -n "$lf" -c true 2>/dev/null && echo "    $lf free" || echo "    $lf HELD"; }; done
 } > /tmp/kanal_holat.txt 2>&1
 [ -n "$OUT" ] && cp -f /tmp/kanal_holat.txt "$OUT"
+if [ "$(cat /root/kanal/.holat_push 2>/dev/null)" != "$(date -u +%F%H)" ]; then  # at most once an hour
+  cp -f /tmp/kanal_holat.txt cloud/results/pc_holat.txt && git add cloud/results/pc_holat.txt && \
+    git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm "[pc] holat" 2>/dev/null && \
+    GIT_TERMINAL_PROMPT=0 timeout 90 git push -q origin HEAD:main 2>/dev/null && date -u +%F%H > /root/kanal/.holat_push
+fi
 exit 0

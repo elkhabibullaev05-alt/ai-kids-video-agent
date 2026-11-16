@@ -328,8 +328,15 @@ def do_uploads(st):
         if it["kind"] == "short" and (res.get("long") or {}).get("publish_at"):
             after = dt.datetime.fromisoformat(res["long"]["publish_at"].replace("Z", "+00:00")) + dt.timedelta(minutes=20)
         when = free_slot(st, it["kind"], after)
-        if "gemini" not in it and os.path.exists(it["file"]) and not it.get("loop_seconds"):
-            it["gemini"] = gemini_note(it["file"], it["title"], it["kind"]); save_state(st)   # maker channels too (2026-11-12)
+        if "gemini" not in it and os.path.exists(it["file"]) and not it.get("loop_seconds") and not CFG.get("no_rek"):
+            # 2026-11-16 watchdog: Calm Rain's multi-hour long hit the 1800 s proxy-ffmpeg timeout here, the exception
+            # failed the whole upload (status error "-y timed out after 1800 s", 16 Nov slot missed). Gemini is
+            # advisory only: never let it block an upload, and skip no_rek (hours-long rain) channels.
+            try:
+                it["gemini"] = gemini_note(it["file"], it["title"], it["kind"])
+            except Exception as e:
+                it["gemini"] = {"error": str(e)[:200]}
+            save_state(st)   # maker channels too (2026-11-12)
             log("gemini", it["kind"], (it["gemini"] or {}).get("score"))
         if it.get("loop_seconds") and os.path.exists(it["file"]) and os.path.getsize(it["file"]) > 3e9:
             # 2026-10-26: a 9 GB stream-copied 3 h loop timed out on the home connection → rebuild it at ~1.8 Mbit/s
