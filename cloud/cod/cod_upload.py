@@ -16,9 +16,12 @@ OUT = JOB["out"]
 if not os.path.isdir(OUT) or not glob.glob(os.path.join(OUT, "*.mp4")):
     OUT = JOB.get("out_fallback", OUT) if os.path.isdir(JOB.get("out_fallback", "")) else OUT
 os.makedirs(OUT, exist_ok=True); LOG = os.path.join(OUT, "yuklash2.txt" if CH2 else "yuklash.txt")
-PER_DAY = {"long": 2, "short": 3}   # 2026-11-14 owner (MW4 rules): 2-3 Shorts a day, 4-6 h apart
-SLOTS = {"long": [23, 2], "short": [4, 9, 14]}   # 2026-11-14 owner: 5 h apart (Osh 09/14/19), never several in one hour   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
-if CH2: SLOTS = {"long": [], "short": [5, 10, 15]}   # 2026-11-14: 5 h apart   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
+PER_DAY = {"long": 2, "short": 6}   # 2026-11-15 owner: 6 Shorts a day on each MW4 channel (12 total)
+#   # 2026-11-14 owner (MW4 rules): 2-3 Shorts a day, 4-6 h apart
+SLOTS = {"long": [23, 2], "short": [4, 9, 14, 18, 21, 0]}   # 2026-11-15 owner: 3 in the Tashkent day + 3 at night = US daytime/evening
+#   # 2026-11-14 owner: 5 h apart (Osh 09/14/19), never several in one hour   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
+if CH2: SLOTS = {"long": [], "short": [5, 10, 15, 19, 22, 1]}; PER_DAY = {"long": 0, "short": 6}   # 2026-11-15 owner: 6 Shorts a day = 3 in the Tashkent day (10/15/20) + 3 after midnight Tashkent, when the US audience is active (UTC 19/22/01 = 14/17/20 ET)
+#   # 2026-11-14: 5 h apart   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
         "cod mw4", "call of duty 2026", "fps", "gaming"]
@@ -134,6 +137,18 @@ def plan2():
     except Exception:
         bd = set()
     items = v4_items(False)
+    # 2026-11-15 owner: Shorts cut automatically from new recordings (E:\\MW4_tayyor\\auto) go to this channel
+    # only after Claude watched them: name in v4_ok.json + its own unique title in auto_titles.json
+    try:
+        at = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "auto_titles.json")))
+    except Exception:
+        at = {}
+    ok = v4_ok(); m0 = JOB["missions"][-1]
+    for stem, t in at.items():
+        pth = os.path.join("/mnt/e/MW4_tayyor/auto", stem + ".mp4")
+        if stem in ok and os.path.exists(pth):
+            items.append(dict(key="auto_" + stem, kind="short", m=m0, n=len(JOB["missions"]), v4=True, path=pth,
+                              title=(t[:80] + " #mw4 #callofduty"), loc=None))
     for n, m in enumerate(JOB["missions"], 1):
         for k, s in enumerate(m.get("shorts_b", []), 1):
             t = s.get("yt_title") or s.get("hook")
@@ -202,11 +217,11 @@ def main():
             except Exception as e:
                 log("yopib bo'lmadi:", key, str(e)[:120])
     if JOB.get("hide_v3_shorts"):
-        ids = [(k, v["id"]) for k, v in st["done"].items() if v["kind"] == "short" and "v4" not in k]
+        ids = [(k, v["id"]) for k, v in st["done"].items() if v["kind"] == "short" and "v4" not in k and not k.startswith("auto_")]
         if CH2:  # Shorts-only channel: also the 6 uploaded through Studio in the browser (not in our state)
             try:
                 up = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
-                keep = {v["id"] for k, v in st["done"].items() if "v4" in k}; tok = None
+                keep = {v["id"] for k, v in st["done"].items() if "v4" in k or k.startswith("auto_")}; tok = None
                 while True:
                     r = yt.playlistItems().list(part="contentDetails", playlistId=up, maxResults=50, pageToken=tok).execute()
                     ids += [("studio", x["contentDetails"]["videoId"]) for x in r.get("items", [])

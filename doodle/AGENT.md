@@ -1,5 +1,12 @@
 # The Doodle Desk — production run (instructions for Claude)
 
+## ★★ 2026-11-15 owner — PRODUCTION MOVED TO THE LAPTOP. A cloud/browser run of this file must STOP at once.
+Since 2026-11-15 the channel is made and uploaded by the laptop pipeline (cloud/run_all.sh → worker.py doodle →
+cloud/makers/doodle.py, API upload with the channel's own token). Scripts are written daily by the local task
+'doodle-yozuvchi' (Documents\kanal_navbat\doodle → cloud/queue/doodle). If you are a cloud or browser run reading
+this file: do NOT make, schedule or upload any Doodle video (it would duplicate the laptop's uploads) — end with
+one Uzbek line: "Doodle Desk endi kompyuterda yasaladi, bulut ishi to'xtatildi".
+
 Goal: keep the YouTube channel **The Doodle Desk** supplied with **1 long "What If…" story (12–16 min) per day** (see the ★ section and `story/STYLE.md`). Work unattended. The user speaks **Uzbek** — the final message must be in Uzbek. Video content is English.
 
 

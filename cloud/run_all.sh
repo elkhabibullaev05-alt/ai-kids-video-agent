@@ -37,7 +37,7 @@ if /mnt/c/Windows/System32/tasklist.exe /NH 2>/dev/null | grep -qiE '^(cod\.exe|
   PAR=1; echo "$(date -u) game running -> PAR=1" >> /root/kanal/game.log
 fi
 TOK=$(ls -d /mnt/c/Users/*/Documents/kanal_tokenlar 2>/dev/null | head -1)
-CHS="maxcat doughbros hollow bolt roblox funny money ufc sleep"  # 2026-11-06 owner: grind paused for now (no token, not needed yet); funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
+CHS="maxcat doughbros hollow bolt roblox funny money ufc sleep doodle milo"  # 2026-11-15 owner: Doodle Desk joins the laptop pipeline (maker, own token)  # 2026-11-06 owner: grind paused for now (no token, not needed yet); funny money ufc sleep + roblox rebuilt as makers (cloud/makers/) after the old laptop died.
 # 2026-10-27: sleep (Calm Rain) removed — owner wants it back to its own real-rain agent (sleeptube), no AI videos
 # 2026-11-05: stories Claude writes on the PC (Documents\kanal_navbat\<ch>\*.json) go into the queue
 NAV=$(ls -d /mnt/c/Users/*/Documents/kanal_navbat 2>/dev/null | head -1)
@@ -54,8 +54,9 @@ if [ -n "$NAV" ] && ls "$NAV"/*/*.json >/dev/null 2>&1; then
 fi
 # 2026-11-09: two separate slot pools. Before, the 3D Blender channels (hours per episode) held all 3 slots and the
 # light ffmpeg "maker" channels (funny = 12 Shorts/day, money, ufc, sleep, roblox) waited for hours -> Funny Rank starved.
-MAKERS="funny money ufc sleep roblox"
-PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-5}  # 2026-11-09: all 5 light makers at once — idle ones exit in seconds; with 2 slots Funny waited behind idle channels
+MAKERS="funny money ufc sleep roblox doodle milo"
+TOP="funny money roblox"  # 2026-11-15 owner: top channels by views get the light slots first (MW4 has its own uploader below)
+PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-6}  # 2026-11-09: all 5 light makers at once — idle ones exit in seconds; with 2 slots Funny waited behind idle channels
 [ "$PAR" = "1" ] && { PAR3D=1; PARMK=3; }   # a game is running: one 3D render, light makers still run
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
@@ -65,6 +66,8 @@ start_pool() {  # $1 = max parallel, rest = channels of this pool
   local max=$1; shift; local running=0 ch order
   for ch in "$@"; do flock -n /tmp/kanal-$ch.lock -c true || running=$((running+1)); done
   order=$(for ch in "$@"; do echo "$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0) $ch"; done | sort -n | awk '{print $2}')
+  # 2026-11-15 owner ("ko'proq ber"): the channels that get views start first when slots are short
+  order="$(for ch in $TOP; do case " $order " in *" $ch "*) echo $ch;; esac; done) $(for ch in $order; do case " $TOP " in *" $ch "*) ;; *) echo $ch;; esac; done)"
   for ch in $order; do
     [ $running -ge $max ] && break
     if flock -n /tmp/kanal-$ch.lock -c true; then

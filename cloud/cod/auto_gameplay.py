@@ -42,7 +42,7 @@ def main():
             ad = os.path.join(OUT, stem + "_aksiya"); act = os.path.join(ad, "action.json")
             if not os.path.exists(act):
                 subprocess.run([sys.executable, os.path.join(HERE, "cod_action.py"), src, ad], timeout=4 * 3600)
-            a = json.load(open(act)); peaks = a.get("peaks", [])[:6]
+            a = json.load(open(act)); peaks = a.get("peaks", [])[:int(job.get("n", 6))]
             music = sorted(f for f in os.listdir(MUSIC) if f.endswith(".mp3")) if os.path.isdir(MUSIC) else []
             for k, t in enumerate(peaks, 1):
                 dst = os.path.join(OUT, f"{stem}_V{k}.mp4")

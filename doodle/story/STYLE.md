@@ -30,3 +30,6 @@ Audience: teens and young adults. **Not made for kids** (upload flag stays "No, 
 
 ## Thumbnail
 One character + a big word/number above their head + 2–4 huge words of text; high contrast (dark bg + bright text or yellow bg + black text). Text adds to the title, never repeats it.
+
+
+## 2026-11-15 owner — viral research (NEWEST): length 8–12 min (not 12–16): 1,150–1,700 words, 80–130 scenes. Title "What If You <one rule>?" under 8 words; the rule fires in the first 10 s; chapters escalate in time (Day 1 → Year 1 → Year 100…), each a new problem; 3–5 checked facts + 1 emotional/romantic twist; every story ends differently. Doodle = only "What If You…" (no "100 days" — that is Milo's).

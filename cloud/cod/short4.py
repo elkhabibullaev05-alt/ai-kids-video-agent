@@ -34,12 +34,16 @@ tmp = out + "_tmp"; os.makedirs(tmp, exist_ok=True)
 if sp.get("action") and os.path.exists(sp["action"]):
     sh = json.load(open(sp["action"]))["shots_per_s"]; t0 = int(T)
     c = lambda i: sum(sh[max(0, i):i + 2]) if 0 <= i < len(sh) else 0
-    st = next((i for i in range(t0 - 8, t0 - 1) if c(i) >= 2), t0 - 4)
+    st = next((i for i in range(t0 - 8, t0 + 1) if c(i) >= 2), t0 - 1)   # 2026-11-15: no shots before the peak -> start 1 s before it
     en = t0
     for i in range(t0, min(len(sh), t0 + 14)):
         if sh[i] > 0: en = i
         elif i - en > 3: break
-    PRE = max(3.0, min(8.0, T - st))        # 2026-11-14 owner: first frame = shots already flying (no run-up)
+    # 2026-11-15 owner review: 8 of 10 Shorts opened on a wall/crates/empty snow because PRE was forced to >= 3 s.
+    # First frame = shots already flying: start at most 0.6 s before the first shots.
+    # 2026-11-15 second review: PRE up to 6 s made every Short open on walking/walls (best score 80).
+    # Shorts viewers swipe in 1-2 s -> at most 2 s before the kill, so frame 1 already has the target.
+    PRE = max(1.2, min(2.0, T - st + 0.6))
     POST = max(5.0, min(12.0, en - T + 1.5))
     print(f"oyna: {PRE:.1f}s oldin, {POST:.1f}s keyin (otishma xaritasidan)", flush=True)
 # 2026-11-14 owner (MW4 rules): Shorts 9-15 s. Final length = PRE + POST + 1.5 (slow-motion second) -> PRE+POST in 7.5..13.5

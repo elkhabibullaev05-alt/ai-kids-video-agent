@@ -101,17 +101,18 @@
   "id": "UCxHeOROSVQQSZv7zeMaF4Vw",
   "dir": "maxcat",
   "engine": "maxcat/engine3d",
-  "kids": true,
-  "category": "1",
+  "kids": false,
+  "category": "23",
   "per_day": {
-   "long": 0,
-   "short": 0
+   "long": 1,
+   "short": 2
   },
   "slots": {
    "long": [
     "17:45"
    ],
    "short": [
+    "14:45",
     "19:45"
    ]
   },
@@ -121,11 +122,15 @@
   ],
   "thumb_color": "ffd21e",
   "note_2026_11_13": "owner approved: dead channel cut from {'long': 3, 'short': 4} to quality-first {'long': 1, 'short': 1}",
-  "paused_per_day": {
-   "long": 1,
-   "short": 1
+  "note_2026_11_14_pause": "owner 2026-11-14: new videos paused (median 0-1 views). Already scheduled videos still publish; queued jobs kept in cloud/queue. To resume: copy paused_per_day back into per_day.",
+  "slot_weekdays": {
+   "long": [
+    0,
+    2,
+    4
+   ]
   },
-  "note_2026_11_14_pause": "owner 2026-11-14: new videos paused (median 0-1 views). Already scheduled videos still publish; queued jobs kept in cloud/queue. To resume: copy paused_per_day back into per_day."
+  "note_2026_11_15x": "owner approved: Max moves from Made-for-Kids to general-audience cat+dog comedy (adult/family humor). New videos only; old kids videos stay Made for Kids. Old kids scripts moved to cloud/rejected/maxcat."
  },
  "roblox": {
   "name": "Roblox Top 10 Daily",
@@ -136,15 +141,17 @@
   "category": "20",
   "per_day": {
    "long": 1,
-   "short": 2
+   "short": 4
   },
   "slots": {
    "long": [
     "09:45"
    ],
    "short": [
+    "00:45",
+    "12:45",
     "15:15",
-    "00:45"
+    "20:45"
    ]
   },
   "seconds": [
@@ -154,7 +161,8 @@
   "thumb_color": "3cc8ff",
   "note": "2026-10-29 owner: no kids (Blocky Quest) videos on this channel ever again; teen/adult Roblox news only (robloxtube agent on the PC).",
   "maker": "cloud/makers/roblox.py",
-  "note2": "2026-11-06 owner: rebuild the lost robloxtube PC agent here — Roblox Top 10 news/rankings for teens/adults, never kids content."
+  "note2": "2026-11-06 owner: rebuild the lost robloxtube PC agent here — Roblox Top 10 news/rankings for teens/adults, never kids content.",
+  "note_2026_11_15p": "owner: top channel -> 2 -> 4 Shorts/day (Shorts get 250-950 views, long ones ~0)"
  },
  "sleep": {
   "name": "Calm Rain for Sleep",
@@ -223,7 +231,7 @@
   "category": "23",
   "per_day": {
    "long": 0,
-   "short": 14
+   "short": 10
   },
   "slots": {
    "long": [
@@ -231,19 +239,15 @@
    ],
    "short": [
     "00:15",
-    "01:45",
-    "03:15",
-    "04:45",
-    "06:15",
+    "02:45",
+    "05:15",
     "07:45",
-    "09:15",
-    "10:45",
-    "12:15",
-    "13:45",
+    "10:15",
+    "12:45",
     "15:15",
-    "16:45",
-    "18:15",
-    "19:45"
+    "17:45",
+    "20:15",
+    "22:45"
    ]
   },
   "seconds": [
@@ -260,7 +264,8 @@
     "2026-11-09T19:00:00Z",
     "2026-11-09T20:30:00Z"
    ]
-  }
+  },
+  "note_2026_11_15p": "owner: max effort on top channels; YouTube refused uploads (uploadLimitExceeded) after ~10/day at 14 slots -> 10 Shorts/day so the daily limit is not hit (raise after phone verification)"
  },
  "money": {
   "name": "Physics Rank Daily",
@@ -272,16 +277,18 @@
   "category": "28",
   "per_day": {
    "long": 1,
-   "short": 3
+   "short": 5
   },
   "slots": {
    "long": [
     "18:15"
    ],
    "short": [
-    "13:15",
+    "12:15",
+    "14:15",
     "16:15",
-    "19:15"
+    "20:15",
+    "22:15"
    ]
   },
   "seconds": [
@@ -293,7 +300,8 @@
   "note_2026_11_13b": "owner: channel repurposed to ranked funny physics Shorts (funny engine, physics themes); old money videos to be hidden",
   "unpublish_before": "2026-11-13T10:00:00Z",
   "description": "Physics Rank Daily — the funniest physics fails, chain reactions and science moments, ranked from #5 to #1. New ranked Shorts every day. All clips are Creative Commons (CC BY) and credited in each description. Subscribe for daily physics chaos!",
-  "note_2026_11_13c": "owner 'ha': 2 long 8+ min Top-12 compilations a week (Tue/Fri) built from pooled Shorts (makers/physics.py)"
+  "note_2026_11_13c": "owner 'ha': 2 long 8+ min Top-12 compilations a week (Tue/Fri) built from pooled Shorts (makers/physics.py)",
+  "note_2026_11_15p": "owner: top channel -> 3 -> 5 Shorts/day"
  },
  "ufc": {
   "name": "Wild Sketchbook",
@@ -322,5 +330,69 @@
   "thumb_color": "f5a623",
   "note_2026_11_13": "owner approved: dead channel cut from {'long': 1, 'short': 3} to quality-first {'long': 0, 'short': 1}",
   "note_2026_11_14": "owner: format -> 'Survival: Day 1 to Day 100' first-person 2D ink stories, 1 long/day 12-14:40 (channel not phone-verified: max 14:50; 20 min needs verification). Old fact-explainer scripts 021-024 moved to cloud/hold/ufc_old_explainers/."
+ },
+ "doodle": {
+  "name": "The Doodle Desk",
+  "id": "UCQrteikptRbmzuR8kYD0q8g",
+  "dir": "doodle",
+  "engine": "none",
+  "maker": "cloud/makers/doodle.py",
+  "kids": false,
+  "category": "24",
+  "per_day": {
+   "long": 1,
+   "short": 2
+  },
+  "seconds": [
+   720,
+   960
+  ],
+  "slots": {
+   "long": [
+    "23:45"
+   ],
+   "short": [
+    "13:15",
+    "18:15"
+   ]
+  },
+  "thumb_color": "ffd400",
+  "note_2026_11_15": "owner: Doodle Desk moved from the browser-upload cloud routine (stopped 9 Nov) to the laptop maker pipeline: 1 'What If...' 2D story (12-16 min) + 2 Shorts a day, API upload with token_doodle.json. Scripts come from the local 'doodle-yozuvchi' task via kanal_navbat/doodle."
+ },
+ "milo": {
+  "name": "Milo Survives",
+  "id": "UCiaE4voy2yYUHOTDr2wfC5A",
+  "dir": "milo",
+  "engine": "none",
+  "maker": "cloud/makers/milo.py",
+  "kids": false,
+  "category": "24",
+  "per_day": {
+   "long": 1,
+   "short": 2
+  },
+  "seconds": [
+   420,
+   600
+  ],
+  "slots": {
+   "long": [
+    "21:45"
+   ],
+   "short": [
+    "13:45",
+    "18:15"
+   ]
+  },
+  "slot_weekdays": {
+   "long": [
+    0,
+    2,
+    4,
+    6
+   ]
+  },
+  "thumb_color": "ffd400",
+  "note_2026_11_15": "owner: channel silent since 9 Nov (cloud browser routine stopped) -> laptop maker like Doodle; scripts from local task 'milo-yozuvchi'; long every 2 days + 2 Shorts (milo/AGENT.md)"
  }
 }
