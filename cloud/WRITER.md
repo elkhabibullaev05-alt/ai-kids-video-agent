@@ -200,6 +200,7 @@ Studio: CTR 1.04 % (norm 4–8 %), 87 % swipe away the Shorts, long videos avera
 
 ## hollow — viral format 2026-11-15 (owner: "million ko'rish oladigan formatga o'tkaz"; NEWEST, overrides the 2026-11-14 first-person rule)
 Source: cloud/growth/viral_2026-11-15.md. Drop "I woke up in…". Titles: "What Was Life REALLY Like in <place>, <year>?", "Your Life at Every Rank of <group> (<year>)", "Why You Wouldn't Survive a <job> in <city>, <year>" (≤ 60 chars, year in the title). Talk to the viewer ("you"); 8–12 chapters, each answers one daily-life question (food, cold, sleep, work, danger); the strange/gothic mystery goes in the LAST chapter, not the title. Length 12:00–14:30 (channel not phone-verified: hard max 14:50) → 1,450–1,700 spoken words. Real facts, "Sources:" in the description. Thumbnail: one 3D character, cold/fear on the face, ≤ 3 words + the year. Short: "The dark origin of <everyday thing>" 30–45 s, the object visible in the first second.
+- **Measured 2026-11-16 (daily review):** the hollow voice speaks ~2.9 words/s, not 2.0 — `kaspar-never-saw-sky` had 1,242 spoken `say` words and rendered 7:10, under the 8:00 minimum (`seconds` 480 in channels.json); queued `cock-lane-knock-once` has 1,184. Count only `say` text (not on-screen `text`): **≥ 1,450 `say` words for 8:20+, ~2,100–2,500 for 12:00–14:30** (never past 14:50).
 
 
 ## doughbros — viral format 2026-11-15 (owner; newest)
