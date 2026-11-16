@@ -1,0 +1,1105 @@
+{
+ "id": "20261116-1-cat-tree-vs-box",
+ "plot": "Grandma's expensive new cat tree arrives in the garden, but Max moves into the cardboard box instead; Dog, Bird and Mouse's cousins take over the tree, and when Grandma finally lures Max out to return the tree before the 5 o'clock deadline, she sits in the box to guard it, finds it too cozy to leave, and misses the refund.",
+ "script": {
+  "title": "Cat Tree vs Box",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "parcel",
+    "type": "box",
+    "color": [
+     0.72,
+     0.52,
+     0.3
+    ],
+    "at": [
+     0.0,
+     9.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "tree",
+    "type": "cone",
+    "color": [
+     0.85,
+     0.75,
+     0.6
+    ],
+    "at": [
+     4.0,
+     12.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 1.4
+   },
+   {
+    "id": "shoebox",
+    "type": "box",
+    "color": [
+     0.95,
+     0.3,
+     0.3
+    ],
+    "at": [
+     -4.0,
+     7.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "treat",
+    "type": "ball",
+    "color": "gold",
+    "at": [
+     4.0,
+     12.0,
+     1.6
+    ],
+    "visible": false,
+    "scale": 0.2
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Grandma! Come quick! The package is meowing!",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:-1,10"
+     ],
+     [
+      "parcel",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max! That box had a two-hundred-dollar cat tree in it!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:right"
+     ],
+     [
+      "grandma",
+      "to:-4,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Had. Now it's my apartment. No pets allowed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "How did you even get inside? It was taped shut!",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A cat never reveals his secrets. Also, the tape was cheap.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "$200 CAT TREE",
+    "cam": "prop:parcel",
+    "hold": 1.2,
+    "do": [
+     [
+      "parcel",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "grandma",
+    "say": "Fine. I'll build it out here. Instructions, step one...",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-2,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Step one. Remove cat from box. Oh, very funny.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Step two says: good luck. That's the whole step.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,11"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Step three: give up. I'll wait. I have nowhere to be.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Who writes these instructions? A cat?",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma builds for forty minutes. Max supervises with his eyes closed.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:3,12"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ta-da! Five floors! A hammock! A real scratching post!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "tree",
+      "show"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wow. Gorgeous. Anyway.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look, Max. It even has a tiny ladder!",
+    "cam": "prop:tree",
+    "do": [
+     [
+      "tree",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I don't do ladders. I do boxes.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0.5,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max walks right past it and climbs back into the box.",
+    "cam": "prop:tree",
+    "do": [
+     [
+      "max",
+      "to:0,9.2"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I read reviews for three weeks! Three weeks, Max!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Did any review mention the box? Because the box is five stars.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Okay. One salmon treat on the very top floor.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "treat",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Free snacks on floor five? Don't mind if I do!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,13"
+     ],
+     [
+      "treat",
+      "give:bird"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That was for the cat!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then he should have taken the elevator. Bye!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "treat",
+      "vanish"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait. If Max doesn't want it, can I try it?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog climbs the cat tree. All the way to floor two.",
+    "cam": "prop:tree",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Look at me. I'm a cat now. I'm judging all of you.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You're sitting on it like a chicken on an egg.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Listen, both of you. The shop takes returns until five o'clock.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No original box, no refund. And Max is in the original box.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I guess we're keeping the tree. Tragic.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Fine. You like boxes? Here's a nicer one. Shoes, size seven.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "shoebox",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grandma, that box is the size of his head.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max leaves the big box at once. He has a new challenge.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If it fits, I sit. If it doesn't fit, I sit harder.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Half of Max fits in the shoebox. The other half disagrees.",
+    "cam": "prop:shoebox",
+    "do": [
+     [
+      "shoebox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now! Dog, grab the big box while he's busy!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Got it! Got it! I don't have hands! I don't have it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:0,9"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nice try. That box still smells like me. It's legally mine.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Excuse me. Is the hammock on floor three taken?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It's a cat tree, not a hotel.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Great. My cousins are coming. All thirty-one of them.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "By two o'clock, floor three is fully booked.",
+    "cam": "prop:tree",
+    "do": [
+     [
+      "tree",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm the landlord now. Floor two. Strictly no cats.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It's four thirty. Thirty minutes. Two hundred dollars, Max!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ],
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You keep saying that number like I know what money is.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Last trick. The treat bag. Every cat on earth comes running.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma shakes the bag. Max is out in half a second.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Half a second. I timed it. New world record.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm only here for the treats. This changes nothing.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Ha! Got you! And now nobody gets this box. Watch.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma sits inside the box to guard it. Just for a second.",
+    "cam": "prop:parcel",
+    "do": [
+     [
+      "grandma",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh. Oh no. It's warm. It's quiet. Why is it so cozy?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Did Grandma just turn into a cat? Floor five is open, then!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I told you. Try it once and you'll never leave.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Shh. I'm not leaving. I'm guarding. With my eyes closed.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grandma! It's four fifty-five! The return!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,10"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Five more minutes. Tell the shop I'm busy.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "5:00 - NO REFUND",
+    "cam": "prop:tree",
+    "hold": 1.2,
+    "do": [
+     [
+      "tree",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "She missed the return. For a box. And she calls ME dramatic.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Rent is due on Friday, landlord.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Thirty-two cousins now, by the way. Hector just arrived.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I don't even know what rent is.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Two hundred dollars, and the best part was free.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Welcome to being a cat, Grandma. Now scoot over.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "max",
+      "to:0,9.4"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next time, Grandma orders a new fridge. Nobody asks about the fridge.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "$200 Cat Tree vs One Free Box 📦",
+  "description": "\"Had. Now it's my apartment. No pets allowed.\"\nGrandma spent three weeks reading reviews for the perfect cat tree. Max took one look at it and moved into the cardboard box. The shop takes returns until five o'clock, and the box is not for sale.\nWho in your house would rather sit in the box? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog",
+  "tags": [
+   "funny cat",
+   "cat tree",
+   "cat in a box",
+   "if it fits i sits",
+   "cat and dog",
+   "funny animals",
+   "cat comedy",
+   "3d animation",
+   "animated comedy",
+   "pet humor",
+   "cardboard box cat",
+   "max the curious cat",
+   "online shopping humor",
+   "lazy cat"
+  ],
+  "thumb_text": "$200 FOR THIS?",
+  "thumb_beat": 18,
+  "localizations": {
+   "es": {
+    "title": "Árbol para gatos de $200 vs una caja gratis 📦",
+    "description": "\"Era. Ahora es mi apartamento. No se admiten mascotas.\"\nLa abuela leyó reseñas durante tres semanas para el árbol perfecto. Max lo miró una vez y se mudó a la caja de cartón. La tienda acepta devoluciones hasta las cinco, y la caja no se vende.\n¿Quién en tu casa preferiría sentarse en la caja? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "pt": {
+    "title": "Arranhador de $200 vs uma caixa grátis 📦",
+    "description": "\"Era. Agora é meu apartamento. Proibido animais.\"\nA vovó passou três semanas lendo avaliações do arranhador perfeito. O Max olhou uma vez e se mudou para a caixa de papelão. A loja aceita devoluções até as cinco, e a caixa não está à venda.\nQuem na sua casa prefere sentar na caixa? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ar": {
+    "title": "شجرة قطط بـ200$ ضد صندوق مجاني 📦",
+    "description": "\"كانت. الآن هي شقتي. ممنوع الحيوانات الأليفة.\"\nقضت الجدة ثلاثة أسابيع تقرأ التقييمات لاختيار شجرة القطط المثالية. نظر إليها ماكس مرة واحدة وانتقل إلى الصندوق الكرتوني. المتجر يقبل الإرجاع حتى الساعة الخامسة، والصندوق ليس للبيع.\nمن في بيتك يفضّل الجلوس في الصندوق؟ 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "fr": {
+    "title": "Arbre à chat à 200 $ vs une boîte gratuite 📦",
+    "description": "\"C'était. Maintenant, c'est mon appartement. Animaux interdits.\"\nMamie a lu des avis pendant trois semaines pour trouver l'arbre à chat parfait. Max l'a regardé une fois et s'est installé dans le carton. Le magasin accepte les retours jusqu'à 17 h, et le carton n'est pas à vendre.\nQui chez toi préférerait s'asseoir dans la boîte ? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ja": {
+    "title": "2万円のキャットタワー vs タダの箱 📦",
+    "description": "「元はね。今はボクの部屋。ペット禁止。」\nおばあちゃんは3週間レビューを読んで完璧なキャットタワーを選んだ。マックスはひと目見て、段ボール箱に引っ越した。返品は5時まで。でも箱は譲れない。\nあなたの家で箱に入りたがるのは誰？👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "ko": {
+    "title": "200달러 캣타워 vs 공짜 상자 📦",
+    "description": "\"그랬었지. 이제 여긴 내 집이야. 반려동물 금지.\"\n할머니는 3주 동안 리뷰를 읽고 완벽한 캣타워를 골랐어요. 맥스는 한 번 보더니 종이 상자로 이사했죠. 반품은 5시까지, 그런데 상자는 절대 못 내줘요.\n집에서 상자에 앉고 싶어 할 사람은 누구? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   },
+   "de": {
+    "title": "200-$-Kratzbaum vs ein Gratis-Karton 📦",
+    "description": "\"War. Jetzt ist es meine Wohnung. Haustiere verboten.\"\nOma hat drei Wochen lang Bewertungen für den perfekten Kratzbaum gelesen. Max hat ihn einmal angesehen und ist in den Karton gezogen. Rückgabe nur bis 17 Uhr, und der Karton ist unverkäuflich.\nWer bei dir zu Hause sitzt lieber im Karton? 👇\n#MaxTheCuriousCat #FunnyCat #CatAndDog"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 12,
+   "dur": 18,
+   "top": "5 FLOORS. TA-DA!",
+   "title": "She Read Reviews for 3 Weeks 😭 #shorts",
+   "description": "Five floors, a hammock, a scratching post… and a box. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat tree",
+    "cat in a box"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Leyó reseñas durante 3 semanas 😭 #shorts",
+     "description": "Cinco pisos, una hamaca, un rascador… y una caja. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ela leu avaliações por 3 semanas 😭 #shorts",
+     "description": "Cinco andares, uma rede, um arranhador… e uma caixa. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قرأت التقييمات 3 أسابيع 😭 #shorts",
+     "description": "خمسة طوابق، أرجوحة، عمود خدش… وصندوق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Elle a lu des avis pendant 3 semaines 😭 #shorts",
+     "description": "Cinq étages, un hamac, un griffoir… et un carton. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "3週間レビューを読んだのに 😭 #shorts",
+     "description": "5階建て、ハンモック、爪とぎ…そして箱。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "3주 동안 리뷰를 읽었는데 😭 #shorts",
+     "description": "5층, 해먹, 스크래처… 그리고 상자. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Sie las 3 Wochen lang Bewertungen 😭 #shorts",
+     "description": "Fünf Etagen, eine Hängematte, ein Kratzpfosten… und ein Karton. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 30,
+   "dur": 20,
+   "top": "SIZE SEVEN SHOEBOX",
+   "title": "If It Fits, I Sit. If Not, I Sit Harder 💀 #shorts",
+   "description": "Half of Max fits. The other half disagrees. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "if it fits i sits",
+    "cat in a box"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Si cabe, me siento. Si no, más fuerte 💀 #shorts",
+     "description": "Media Max cabe. La otra mitad no está de acuerdo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Se cabe, eu sento. Se não, sento mais forte 💀 #shorts",
+     "description": "Metade do Max cabe. A outra metade discorda. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "إن اتسع جلست، وإن لم يتسع جلست أقوى 💀 #shorts",
+     "description": "نصف ماكس دخل. النصف الآخر غير موافق. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Si ça rentre, je m'assois. Sinon, plus fort 💀 #shorts",
+     "description": "La moitié de Max rentre. L'autre moitié n'est pas d'accord. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "入れば座る。入らなくても座る 💀 #shorts",
+     "description": "マックスの半分は入った。残り半分は反対中。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "맞으면 앉는다. 안 맞으면 더 세게 앉는다 💀 #shorts",
+     "description": "맥스 반은 들어갔어요. 나머지 반은 반대 중. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Passt es, sitz ich. Passt es nicht, sitz ich fester 💀 #shorts",
+     "description": "Die Hälfte von Max passt rein. Die andere Hälfte ist dagegen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
