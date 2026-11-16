@@ -1,12 +1,12 @@
-=== kanal holati 2026-11-16 19:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-16 20:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
-branch: ## main...origin/main [ahead 1]
-local commits not on GitHub: 1
+branch: ## main...origin/main
+local commits not on GitHub: 0
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 904G
+disk free: 903G
 --- maxcat: 2026-11-16T18:12:06+00:00 render 
     11-16 18:10:20 $ git push -q origin HEAD:main
     11-16 18:10:25 $ /usr/bin/python3 /opt/kanal/repo/maxcat/engine_v2/voices.py /root/kanal/maxcat/work/20261116-2-all-nighter/script.json /root/kanal/maxcat/work/20261116-2-all-nighter 12
@@ -27,15 +27,15 @@ disk free: 904G
     11-16 14:30:19 $ git pull -q --rebase --autostash
     11-16 15:50:12 $ git pull -q --rebase --autostash
     11-16 17:10:05 $ git pull -q --rebase --autostash
---- roblox: 2026-11-16T18:50:12+00:00 idle 
-    11-16 18:50:12 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-16 18:50:12 $ git diff --cached --quiet
-    11-16 18:50:12 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-16 18:50:12 $ git push -q origin HEAD:main
---- funny: 2026-11-16T18:50:34+00:00 error no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {
-    11-16 18:50:34 $ git diff --cached --quiet
-    11-16 18:50:34 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] error
-    11-16 18:50:34 $ git push -q origin HEAD:main
+--- roblox: 2026-11-16T19:50:12+00:00 idle 
+    11-16 19:50:16 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-16 19:50:16 $ git diff --cached --quiet
+    11-16 19:50:16 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-16 19:50:16 $ git push -q origin HEAD:main
+--- funny: 2026-11-16T19:50:25+00:00 error no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {
+    11-16 19:50:25 $ git diff --cached --quiet
+    11-16 19:50:25 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] error
+    11-16 19:50:25 $ git push -q origin HEAD:main
     no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant',; /root/kanal/bolt/token.json: other channe
     maker: 11-15 01:47:39 21 CC BY candidates (searches so far 6)
     maker: 11-15 01:49:03 timeline 19.5s in 7 shots, voice am_eric
@@ -43,11 +43,11 @@ disk free: 904G
     maker: 11-15 01:49:35 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
     maker: 11-15 01:49:35 made funny-20261115-bike-fails-6536 | Worst Day Ever? Bike Fails 💀 | {'duration': 19.5, 'voice': 'am_eric', 'shots': 7, 'render_s': 35, 'rek': 96}
     maker: 11-15 01:49:35 done: 3 Short(s); API calls: search 6, list 6
---- money: 2026-11-16T19:07:34+00:00 upload 
-    11-16 19:09:42 $ git diff --cached --quiet
-    11-16 19:09:42 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] funny-20261116-rope-swing-physics-3845 uploaded
-    11-16 19:09:42 $ git push -q origin HEAD:main
-    11-16 19:09:46 $ ffmpeg -y -v error -i /root/kanal/money/ready/funny-20261116-slip-and-fall-physics-1688.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_money_funny-20261116-s
+--- money: 2026-11-16T19:50:12+00:00 queue_empty 
+    11-16 19:50:12 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-16 19:50:12 $ git diff --cached --quiet
+    11-16 19:50:12 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-16 19:50:12 $ git push -q origin HEAD:main
     maker: 11-16 21:27:53 yt-dlp timeout sEtSc_rn8SA
     maker: 11-16 21:31:40 timeline 20.1s in 7 shots, voice am_adam
     maker: 11-16 22:07:28 rendered /root/kanal/money/made/funny-20261116-rope-swing-physics-3845.mp4 in 2177s
@@ -76,13 +76,9 @@ disk free: 904G
     11-16 15:30:33 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-        723    4669 flock -n /tmp/kanal-money.lock timeout -k 60 5h python3 cloud/worker.py money
-        725    4669 timeout -k 60 5h python3 cloud/worker.py money
-        726    4669 python3 cloud/worker.py money
-      14857    3534 flock -n /tmp/kanal-maxcat.lock timeout -k 60 5h python3 cloud/worker.py maxcat
-      14859    3534 timeout -k 60 5h python3 cloud/worker.py maxcat
-      14860    3534 python3 cloud/worker.py maxcat
-      38561       3 ffmpeg -y -v error -i /root/kanal/money/ready/funny-20261116-slip-and-fall-physics-1688.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfas
+      14857    7135 flock -n /tmp/kanal-maxcat.lock timeout -k 60 5h python3 cloud/worker.py maxcat
+      14859    7135 timeout -k 60 5h python3 cloud/worker.py maxcat
+      14860    7135 python3 cloud/worker.py maxcat
 --- held channel locks:
     /tmp/kanal-bolt.lock free
     /tmp/kanal-codup.lock free
@@ -94,7 +90,7 @@ disk free: 904G
     /tmp/kanal-hollow.lock free
     /tmp/kanal-maxcat.lock HELD
     /tmp/kanal-milo.lock free
-    /tmp/kanal-money.lock HELD
+    /tmp/kanal-money.lock free
     /tmp/kanal-roblox.lock free
     /tmp/kanal-sleep.lock free
     /tmp/kanal-ufc.lock free
