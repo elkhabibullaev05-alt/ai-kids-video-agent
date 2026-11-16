@@ -83,9 +83,13 @@ unstick_locks
 start_pool() {  # $1 = max parallel, rest = channels of this pool
   local max=$1; shift; local running=0 ch order
   for ch in "$@"; do flock -n /tmp/kanal-$ch.lock -c true || running=$((running+1)); done
-  order=$(for ch in "$@"; do echo "$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0) $ch"; done | sort -n | awk '{print $2}')
+  order=$(for ch in "$@"; do echo "$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0) $ch"; done | sort -n | awk '{print $2}' | tr '\n' ' ')
+  # 2026-11-16 watchdog: ROOT CAUSE of funny/money/roblox silent since 15 Nov 17:50 UTC — $order was newline-separated,
+  # so the TOP reorder below (case " $order " in *" $ch "*) never matched and dropped all 3 TOP channels from the pool.
+  # tr '\n' ' ' keeps them; the guard re-adds any channel that still goes missing.
   # 2026-11-15 owner ("ko'proq ber"): the channels that get views start first when slots are short
   order="$(for ch in $TOP; do case " $order " in *" $ch "*) echo $ch;; esac; done) $(for ch in $order; do case " $TOP " in *" $ch "*) ;; *) echo $ch;; esac; done)"
+  for ch in "$@"; do case " $(echo $order) " in *" $ch "*) ;; *) order="$order $ch";; esac; done
   for ch in $order; do
     [ $running -ge $max ] && break
     if flock -n /tmp/kanal-$ch.lock -c true; then
