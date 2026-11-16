@@ -1,0 +1,2675 @@
+{
+ "id": "ta_korean_war",
+ "format": "tinpot_atlas_v2",
+ "title": "The Korean War Explained in 9 Minutes",
+ "series": "Wars in Minutes",
+ "voice": "am_michael",
+ "speed": 1.1,
+ "seed": 11,
+ "summary": "In 1945, two young American colonels got about thirty minutes to split Korea in half. Five years later North Korea invaded across that line, the United States and the United Nations jumped in, and China followed. Seoul changed hands four times in nine months, and by 1953 the border was back almost exactly where the pencil line had been.\n\nThis map-based explainer walks through the Korean War step by step: the 38th parallel, the Pusan Perimeter, the Inchon landing, the Chosin Reservoir, MacArthur's firing, two years of truce talks, and what the war cost. #KoreanWar #History #Maps",
+ "tags": [
+  "korean war",
+  "korean war explained",
+  "38th parallel",
+  "inchon landing",
+  "pusan perimeter",
+  "chosin reservoir",
+  "macarthur",
+  "truman",
+  "korean demilitarized zone",
+  "korean war map",
+  "cold war history",
+  "map history"
+ ],
+ "sources": [
+  "Allan R. Millett, The War for Korea, 1945-1950 and The War for Korea, 1950-1951 (University Press of Kansas, 2005 and 2010)",
+  "David Halberstam, The Coldest Winter: America and the Korean War (Hyperion, 2007)",
+  "Max Hastings, The Korean War (Simon & Schuster, 1987)",
+  "Bruce Cumings, The Korean War: A History (Modern Library, 2010)",
+  "National Park Service, Korean War Veterans Memorial: Korean War overview (nps.gov/kowa)",
+  "U.S. Army Center of Military History, The United States Army in the Korean War series (history.army.mil)"
+ ],
+ "caveats": [
+  "Casualty figures are estimates. U.S. dead (36,574 in the theater) is the Defense Department count; South Korean, Chinese and North Korean figures vary widely between sources, and Chinese and North Korean numbers are disputed.",
+  "Civilian death estimates range from about two million to three million.",
+  "Maps are simplified and redrawn for this video; borders, front lines and the Pusan Perimeter are approximate."
+ ],
+ "review": {
+  "sources_read_by": "TODO (human): read the listed sources and sign here with name + date",
+  "fact_check": "TODO (human): check every number and date in the script against the sources; first-pass check by the drafting AI is NOT a sign-off",
+  "map_check": "TODO (human): compare mapcheck_*.png (korea_1950) with a U.S. Army CMH Korean War map and sign here",
+  "angle": "Cold open: two officers, thirty minutes, one line that barely moved in three years. The line returns in chapter 9."
+ },
+ "sides": {
+  "NK": {
+   "name": "North Korea",
+   "color": "#b8473a"
+  },
+  "UN": {
+   "name": "South Korea",
+   "color": "#4f79a6"
+  },
+  "CN": {
+   "name": "China",
+   "color": "#d08a1e"
+  },
+  "USSR": {
+   "name": "Soviet Union",
+   "color": "#7d6b8f"
+  }
+ },
+ "cast": {
+  "truman": {
+   "side": "UN",
+   "hat": "none",
+   "prop": "glasses",
+   "name": "Truman",
+   "expr": "neutral"
+  },
+  "macarthur": {
+   "side": "UN",
+   "hat": "peaked",
+   "prop": "pipe",
+   "name": "MacArthur",
+   "expr": "smug"
+  },
+  "ridgway": {
+   "side": "UN",
+   "hat": "helmet",
+   "prop": "medal",
+   "name": "Ridgway",
+   "expr": "neutral"
+  },
+  "pyongyang": {
+   "side": "NK",
+   "hat": "peaked",
+   "prop": "medal",
+   "name": "Pyongyang",
+   "expr": "neutral"
+  },
+  "moscow": {
+   "side": "USSR",
+   "hat": "ushanka",
+   "prop": "mustache",
+   "name": "Moscow",
+   "expr": "neutral"
+  }
+ },
+ "geo": {
+  "base": "korea_1950"
+ },
+ "thumbnail": {
+  "view": "korea",
+  "beat": "c4b2",
+  "text": "PENCIL LINE",
+  "arrows": [
+   {
+    "arrow": [
+     "Pyongyang",
+     "Pusan"
+    ],
+    "side": "NK",
+    "size": 4
+   },
+   {
+    "arrow": [
+     "Inchon",
+     "Pyongyang"
+    ],
+    "side": "UN",
+    "size": 3
+   }
+  ],
+  "char": {
+   "id": "macarthur",
+   "expr": "smug",
+   "pose": "point"
+  }
+ },
+ "shorts": [
+  {
+   "beats": "c4b0:c4b4",
+   "hook": "Why was Inchon the worst place to land?",
+   "title": "The Worst Place to Land an Army",
+   "outro": "Full war on the channel"
+  },
+  {
+   "beats": "c1b0:c1b5",
+   "hook": "Who drew the line that split Korea?",
+   "title": "30 Minutes to Split a Country",
+   "outro": "Full war on the channel"
+  }
+ ],
+ "chapters": [
+  {
+   "cold_open": true,
+   "music": "tense",
+   "beats": [
+    {
+     "say": "Two American officers drew the line that split Korea in about half an hour. Then the whole world fought over it for three years, and the line barely moved.",
+     "date": "1945 to 1953",
+     "cam": "peninsula",
+     "cam_dur": 0.01,
+     "hold": 0.15,
+     "do": [
+      {
+       "ask": "How far did it move?",
+       "at": 0.0,
+       "keep": 1
+      },
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 3.0
+      },
+      {
+       "arrow": [
+        "Pyongyang",
+        "Pusan"
+       ],
+       "side": "NK",
+       "size": 3.5,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "label": "June 1950",
+       "at": 0.0
+      },
+      {
+       "arrow": [
+        "Pusan",
+        "Hyesan"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "label": "Oct 1950",
+       "at": 0.4
+      },
+      {
+       "arrow": [
+        "Sinuiju",
+        "Seoul"
+       ],
+       "side": "CN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "label": "Dec 1950",
+       "bend": -0.2,
+       "at": 0.8
+      },
+      {
+       "pulse": "Seoul",
+       "side": "NK",
+       "at": 0.0
+      },
+      {
+       "counter": 30,
+       "label": "minutes to draw it",
+       "from": 0,
+       "hold": 3.0,
+       "tween": 0.6,
+       "side": "UN",
+       "at": 0.6
+      },
+      {
+       "counter": 3,
+       "label": "years of war",
+       "from": 0,
+       "hold": 2.8,
+       "tween": 0.5,
+       "side": "NK",
+       "at": 1.5
+      },
+      {
+       "pulse": "Pyongyang",
+       "side": "NK",
+       "at": 4.4
+      },
+      {
+       "pulse": "Pusan",
+       "side": "UN",
+       "at": 6.0
+      },
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38",
+       "label": "38th parallel",
+       "on": "barely",
+       "dur": 1.2
+      }
+     ]
+    },
+    {
+     "say": "That's the Korean War. It pulled in the United States, China, and more than a dozen other countries. And it never officially ended.",
+     "hold": 0.15,
+     "do": [
+      {
+       "cam": "peninsula",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "pulse": "Panmunjom",
+       "side": "UN",
+       "at": 0.4
+      },
+      {
+       "stamp": "No peace treaty",
+       "hold": 2.4,
+       "side": "NK",
+       "on": "never"
+      },
+      {
+       "place": "Seoul",
+       "capital": true,
+       "at": 4.5
+      }
+     ]
+    },
+    {
+     "say": "The whole peninsula is about the size of Utah. Let's see how a place that small ended up dragging in the whole world.",
+     "hold": 0.2,
+     "do": [
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "counter": 85000,
+       "label": "square miles, same as Utah",
+       "from": 0,
+       "hold": 2.8,
+       "tween": 0.9,
+       "side": "UN",
+       "on": "Utah"
+      },
+      {
+       "place": "Pyongyang",
+       "capital": true,
+       "at": 0.3
+      },
+      {
+       "pulse": "Pusan",
+       "side": "UN",
+       "at": 4.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1945",
+   "title": "Thirty Minutes, One Map",
+   "music": "cold",
+   "beats": [
+    {
+     "say": "Korea had been ruled by Japan for 35 years. When Japan lost World War Two in August 1945, someone had to take its surrender there.",
+     "date": "Aug 1945",
+     "day": null,
+     "cam": "east_asia",
+     "cam_dur": 2.0,
+     "do": [
+      {
+       "cam": "east_asia",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "fill": "KOR_S",
+       "side": "JPN",
+       "at": 0.3
+      },
+      {
+       "fill": "KOR_FALL",
+       "side": "JPN",
+       "at": 0.3
+      },
+      {
+       "fill": "SEOUL_ZONE",
+       "side": "JPN",
+       "at": 0.3
+      },
+      {
+       "fill": "NK_MAIN",
+       "side": "JPN",
+       "at": 0.3
+      },
+      {
+       "fill": "NK_FAR",
+       "side": "JPN",
+       "at": 0.3
+      },
+      {
+       "pulse": "Seoul",
+       "on": "ruled"
+      },
+      {
+       "pulse": "Fukuoka",
+       "on": "lost"
+      },
+      {
+       "cam": {
+        "box": [
+         119.08,
+         32.37,
+         134.92,
+         45.13
+        ]
+       },
+       "at": 7.46,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Soviet troops were already pushing in from the north. The nearest American troops were hundreds of miles away.",
+     "do": [
+      {
+       "arrow": [
+        "Vladivostok",
+        "Chongjin"
+       ],
+       "side": "USSR",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "label": "Soviet army",
+       "on": "Soviet"
+      },
+      {
+       "arrow": [
+        [
+         128.8,
+         31.9
+        ],
+        "Pusan"
+       ],
+       "side": "UN",
+       "size": 2,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "label": "U.S. troops",
+       "bend": 0.1,
+       "on": "nearest"
+      },
+      {
+       "cam": "peninsula",
+       "at": 0.2,
+       "dur": 2.0
+      }
+     ]
+    },
+    {
+     "say": "So on August 10, two young colonels got about thirty minutes to find a dividing line. One of them was Dean Rusk, who later became Secretary of State.",
+     "do": [
+      {
+       "ask": "Where do you cut a country?",
+       "at": 0.2,
+       "keep": 0
+      },
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "pulse": "Seoul",
+       "on": "colonels"
+      },
+      {
+       "place": "Seoul",
+       "capital": true,
+       "on": "thirty"
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 6.32,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "They had no time to study the land. They picked the 38th parallel, a straight line across the middle. It kept the capital, Seoul, on the American side.",
+     "do": [
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38b",
+       "label": "38th parallel",
+       "on": "38th",
+       "dur": 1.4
+      },
+      {
+       "place": "Seoul",
+       "capital": true,
+       "on": "Seoul"
+      },
+      {
+       "cartographer": "erase",
+       "line": "Pencil, ruler, done.",
+       "on": "straight"
+      }
+     ]
+    },
+    {
+     "say": "It was quick, and it was simple. And nobody asked a single Korean.",
+     "do": [
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 1.8
+      },
+      {
+       "stamp": "Nobody asked",
+       "hold": 2.2,
+       "on": "nobody"
+      },
+      {
+       "pulse": "Pyongyang",
+       "at": 0.4
+      }
+     ]
+    },
+    {
+     "say": "The Soviets agreed to the line. Over the next three years, the two halves grew apart, and each government said it ruled the whole country.",
+     "date": "1948",
+     "do": [
+      {
+       "take": "NK_MAIN",
+       "side": "USSR",
+       "from": "Pyongyang",
+       "dur": 1.2,
+       "at": 0.2
+      },
+      {
+       "take": "NK_FAR",
+       "side": "USSR",
+       "from": "Pyongyang",
+       "dur": 1.2,
+       "at": 0.2
+      },
+      {
+       "take": "KOR_S",
+       "side": "UN",
+       "from": "Seoul",
+       "dur": 1.2,
+       "at": 0.9
+      },
+      {
+       "take": "KOR_FALL",
+       "side": "UN",
+       "from": "Seoul",
+       "dur": 1.2,
+       "at": 0.9
+      },
+      {
+       "take": "SEOUL_ZONE",
+       "side": "UN",
+       "from": "Seoul",
+       "dur": 1.2,
+       "at": 0.9
+      },
+      {
+       "take": "NK_MAIN",
+       "side": "NK",
+       "from": "Pyongyang",
+       "dur": 1.0,
+       "on": "grew"
+      },
+      {
+       "take": "NK_FAR",
+       "side": "NK",
+       "from": "Pyongyang",
+       "dur": 1.0,
+       "on": "grew"
+      },
+      {
+       "char": "pyongyang",
+       "line": "I rule it all.",
+       "expr": "smug",
+       "pose": "point",
+       "pos": "right",
+       "on": "each"
+      },
+      {
+       "pulse": "Seoul",
+       "side": "UN",
+       "on": "whole"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1950",
+   "title": "A Sunday Surprise",
+   "music": "tense",
+   "beats": [
+    {
+     "say": "Before dawn on Sunday, June 25, 1950, North Korean guns opened up along the 38th parallel. Then the tanks rolled south.",
+     "date": "Jun 25, 1950",
+     "cam": "seoul",
+     "cam_dur": 2.0,
+     "do": [
+      {
+       "cam": "seoul",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "pulse": "Kaesong",
+       "side": "NK",
+       "at": 0.3
+      },
+      {
+       "arrow": [
+        "Kaesong",
+        "Seoul"
+       ],
+       "side": "NK",
+       "size": 4,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "on": "tanks"
+      },
+      {
+       "arrow": [
+        "Cheorwon",
+        "Chuncheon"
+       ],
+       "side": "NK",
+       "size": 2.5,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "at": 2.6
+      },
+      {
+       "arrow": [
+        "Wonsan",
+        "Gangneung"
+       ],
+       "side": "NK",
+       "size": 2,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "at": 4.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.52,
+         36.54,
+         128.78,
+         38.66
+        ]
+       },
+       "at": 6.35,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "About 150 Soviet-built T-34 tanks led the way. South Korea had no tanks of its own.",
+     "do": [
+      {
+       "counter": 150,
+       "label": "T-34 tanks",
+       "from": 0,
+       "hold": 2.6,
+       "tween": 0.7,
+       "side": "NK",
+       "on": "150"
+      },
+      {
+       "pulse": "Seoul",
+       "side": "NK",
+       "at": 3.4
+      },
+      {
+       "char": "pyongyang",
+       "line": "Surprise!",
+       "expr": "smug",
+       "pose": "wave",
+       "pos": "right",
+       "at": 0.6
+      }
+     ]
+    },
+    {
+     "say": "Seoul sits only about 30 miles from the border, like Dallas to Fort Worth. It fell in three days.",
+     "date": "Jun 28, 1950",
+     "do": [
+      {
+       "cam": "seoul",
+       "at": 0.0,
+       "dur": 1.6
+      },
+      {
+       "counter": 30,
+       "label": "miles to the border",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.6,
+       "side": "UN",
+       "on": "30"
+      },
+      {
+       "take": "SEOUL_ZONE",
+       "side": "NK",
+       "from": "Kaesong",
+       "dur": 2.0,
+       "on": "fell"
+      },
+      {
+       "take": "KOR_FALL",
+       "side": "NK",
+       "from": "Kaesong",
+       "dur": 2.0,
+       "on": "fell"
+      },
+      {
+       "stamp": "Seoul falls",
+       "hold": 1.8,
+       "side": "NK",
+       "on": "three"
+      }
+     ]
+    },
+    {
+     "say": "The United Nations Security Council told North Korea to stop. The Soviet Union could have vetoed that. But it was boycotting the council, so nobody was in the chair.",
+     "do": [
+      {
+       "cam": "peninsula",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "stamp": "Empty chair",
+       "hold": 2.4,
+       "side": "USSR",
+       "on": "boycotting"
+      },
+      {
+       "char": "moscow",
+       "line": "Wait. We're not there?",
+       "expr": "shocked",
+       "pose": "panic",
+       "pos": "left",
+       "on": "boycotting"
+      },
+      {
+       "pulse": "Vladivostok",
+       "side": "USSR",
+       "at": 0.5
+      },
+      {
+       "cam": {
+        "box": [
+         122.69,
+         33.63,
+         132.81,
+         42.87
+        ]
+       },
+       "at": 4.02,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Truman called it a police action, and Congress never declared war. That's one reason it's often called the Forgotten War.",
+     "do": [
+      {
+       "char": "truman",
+       "line": "Just a police action.",
+       "expr": "smug",
+       "pose": "shrug",
+       "pos": "left",
+       "on": "police"
+      },
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "stamp": "The Forgotten War",
+       "hold": 2.4,
+       "side": "UN",
+       "on": "Forgotten"
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 3.77,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1950",
+   "title": "Back Against the Sea",
+   "music": "march",
+   "beats": [
+    {
+     "say": "The first Americans to fight were a small group called Task Force Smith. About 540 soldiers dug in near Osan on July 5 and tried to stop a column of tanks.",
+     "date": "Jul 5, 1950",
+     "do": [
+      {
+       "cam": "seoul",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "unit": "tfs",
+       "side": "UN",
+       "at": "Osan",
+       "kind": "inf",
+       "label": "Task Force Smith"
+      },
+      {
+       "counter": 540,
+       "label": "soldiers",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.6,
+       "side": "UN",
+       "on": "540"
+      },
+      {
+       "arrow": [
+        "Seoul",
+        "Osan"
+       ],
+       "side": "NK",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "on": "tanks"
+      },
+      {
+       "cam": {
+        "box": [
+         125.52,
+         36.54,
+         128.78,
+         38.66
+        ]
+       },
+       "at": 3.43,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         36.4,
+         129.0,
+         38.8
+        ]
+       },
+       "at": 8.39,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Their shells barely scratched the tanks. They held for a few hours and then had to run. The North Koreans kept rolling south.",
+     "do": [
+      {
+       "remove": "tfs",
+       "on": "run"
+      },
+      {
+       "cam": "south",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "arrow": [
+        "Osan",
+        "Taejon"
+       ],
+       "side": "NK",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "on": "barely"
+      },
+      {
+       "arrow": [
+        "Taejon",
+        "Taegu"
+       ],
+       "side": "NK",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "on": "rolling"
+      },
+      {
+       "pulse": "Taejon",
+       "side": "NK",
+       "at": 0.3
+      }
+     ]
+    },
+    {
+     "say": "By early August, UN forces were crammed into a corner of the southeast, with the sea at their backs. It was called the Pusan Perimeter.",
+     "date": "Aug 1950",
+     "do": [
+      {
+       "take": "KOR_FALL",
+       "side": "NK",
+       "from": "Taejon",
+       "dur": 2.6,
+       "at": 0.2
+      },
+      {
+       "take": "SEOUL_ZONE",
+       "side": "NK",
+       "from": "Seoul",
+       "dur": 1.0,
+       "at": 0.2
+      },
+      {
+       "cam": "pusan",
+       "at": 1.2,
+       "dur": 2.2
+      },
+      {
+       "place": "Pusan",
+       "on": "Pusan"
+      },
+      {
+       "pulse": "Pusan",
+       "side": "UN",
+       "on": "sea"
+      }
+     ]
+    },
+    {
+     "say": "The U.S. Eighth Army commander, General Walton Walker, ordered his men to stand and fight. Reserves raced from one weak spot to another by truck and train.",
+     "do": [
+      {
+       "arrow": [
+        "Pusan",
+        "Waegwan"
+       ],
+       "side": "UN",
+       "size": 2.5,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "label": "Reserves",
+       "on": "Reserves"
+      },
+      {
+       "pulse": "Waegwan",
+       "side": "NK",
+       "on": "weak"
+      },
+      {
+       "place": "Taegu",
+       "at": 0.4
+      },
+      {
+       "pulse": "Masan",
+       "side": "NK",
+       "at": 7.0
+      },
+      {
+       "cam": {
+        "box": [
+         126.82,
+         34.17,
+         129.98,
+         36.63
+        ]
+       },
+       "at": 3.14,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "For six weeks, they held a box in the corner of Korea, with the Nakdong River in front and the sea behind. If they lost, the war was over.",
+     "date": "Sep 1950",
+     "do": [
+      {
+       "counter": 6,
+       "label": "weeks",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.5,
+       "side": "UN",
+       "on": "six"
+      },
+      {
+       "arrow": [
+        "Taegu",
+        "Pusan"
+       ],
+       "side": "NK",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "label": "North Korean push",
+       "on": "river"
+      },
+      {
+       "stamp": "Hold!",
+       "hold": 2.0,
+       "side": "UN",
+       "on": "lost"
+      },
+      {
+       "cam": {
+        "box": [
+         126.82,
+         34.17,
+         129.98,
+         36.63
+        ]
+       },
+       "at": 2.37,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1950",
+   "title": "The Thirty-Foot Gamble",
+   "music": "tense",
+   "beats": [
+    {
+     "say": "General Douglas MacArthur had a risky plan. Land troops on the west coast, at Inchon, far behind the North Korean army.",
+     "date": "Sep 1950",
+     "do": [
+      {
+       "cam": "inchon",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "char": "macarthur",
+       "line": "Trust me.",
+       "expr": "smug",
+       "pose": "point",
+       "pos": "left",
+       "on": "plan"
+      },
+      {
+       "arrow": [
+        [
+         124.2,
+         36.2
+        ],
+        "Inchon"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "label": "Landing",
+       "on": "Land"
+      },
+      {
+       "pulse": "Inchon",
+       "side": "UN",
+       "at": 0.3
+      },
+      {
+       "cam": {
+        "box": [
+         125.51,
+         36.41,
+         128.59,
+         38.09
+        ]
+       },
+       "at": 5.87,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Inchon was a terrible place for a landing. It has some of the biggest tides in the world, up to about 30 feet. Ships could only get in at high tide, and only for a few hours.",
+     "do": [
+      {
+       "counter": 30,
+       "label": "feet of tide",
+       "from": 0,
+       "hold": 2.5,
+       "tween": 0.7,
+       "side": "UN",
+       "on": "30"
+      },
+      {
+       "place": "Inchon",
+       "at": 0.3
+      },
+      {
+       "cam": "inchon",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "pulse": "Inchon",
+       "side": "UN",
+       "at": 7.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.51,
+         36.41,
+         128.59,
+         38.09
+        ]
+       },
+       "at": 3.45,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         36.3,
+         128.8,
+         38.2
+        ]
+       },
+       "at": 9.3,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Many officers thought it would fail. But on September 15, 1950, Marines hit the beach, and the North Koreans were caught almost completely by surprise.",
+     "date": "Sep 15, 1950",
+     "do": [
+      {
+       "arrow": [
+        "Inchon",
+        "Seoul"
+       ],
+       "side": "UN",
+       "size": 4,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "on": "Marines"
+      },
+      {
+       "stamp": "Surprise",
+       "hold": 2.0,
+       "side": "UN",
+       "on": "surprise"
+      },
+      {
+       "pulse": "Inchon",
+       "side": "UN",
+       "at": 0.3
+      },
+      {
+       "cam": {
+        "box": [
+         125.51,
+         36.41,
+         128.59,
+         38.09
+        ]
+       },
+       "at": 2.47,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         36.3,
+         128.8,
+         38.2
+        ]
+       },
+       "at": 7.46,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "It worked. Within two weeks, American and South Korean troops took Seoul back. At the same time, the army in the Pusan corner broke out and charged north.",
+     "date": "Sep 28, 1950",
+     "do": [
+      {
+       "take": "SEOUL_ZONE",
+       "side": "UN",
+       "from": "Inchon",
+       "dur": 1.6,
+       "on": "Seoul"
+      },
+      {
+       "take": "KOR_FALL",
+       "side": "UN",
+       "from": "Inchon",
+       "dur": 2.6,
+       "on": "Seoul"
+      },
+      {
+       "arrow": [
+        "Pusan",
+        "Suwon"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.6,
+       "label": "Breakout",
+       "on": "broke"
+      },
+      {
+       "cam": "south",
+       "at": 0.0,
+       "dur": 2.4
+      },
+      {
+       "cam": {
+        "box": [
+         124.6,
+         33.52,
+         130.4,
+         38.28
+        ]
+       },
+       "at": 2.17,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "In a few weeks, the North Korean army went from winning the war to falling apart. Many of its soldiers were cut off behind the lines.",
+     "do": [
+      {
+       "char": "pyongyang",
+       "line": "That's not ideal.",
+       "expr": "shocked",
+       "pose": "panic",
+       "pos": "right",
+       "at": 0.4
+      },
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "pulse": "Seoul",
+       "side": "UN",
+       "at": 4.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1950",
+   "title": "The Christmas Plan",
+   "music": "march",
+   "beats": [
+    {
+     "say": "On October 1, South Korean troops crossed the 38th parallel going north. The goal was no longer to push North Korea back. It was to finish it.",
+     "date": "Oct 1, 1950",
+     "do": [
+      {
+       "cam": "north",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "arrow": [
+        "Gangneung",
+        "Wonsan"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "label": "South Korea",
+       "on": "South"
+      },
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38c",
+       "label": "38th parallel",
+       "at": 0.3,
+       "dur": 1.0
+      },
+      {
+       "pulse": "Wonsan",
+       "side": "UN",
+       "at": 6.5
+      },
+      {
+       "cam": {
+        "box": [
+         124.26,
+         37.74,
+         130.94,
+         42.66
+        ]
+       },
+       "at": 3.73,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "On October 15, Truman flew to Wake Island to meet MacArthur. He asked whether China might join the war. MacArthur said the chance was very small.",
+     "date": "Oct 15, 1950",
+     "do": [
+      {
+       "char": "truman",
+       "line": "Will China jump in?",
+       "expr": "worried",
+       "pose": "think",
+       "pos": "left",
+       "on": "asked"
+      },
+      {
+       "char": "macarthur",
+       "line": "Very unlikely.",
+       "expr": "smug",
+       "pose": "shrug",
+       "pos": "right",
+       "on": "said"
+      },
+      {
+       "cam": "peninsula",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "pulse": "Mukden",
+       "side": "CN",
+       "on": "China"
+      },
+      {
+       "cam": {
+        "box": [
+         122.69,
+         33.63,
+         132.81,
+         42.87
+        ]
+       },
+       "at": 2.18,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Pyongyang fell on October 19. UN troops raced north toward the Yalu River, the border with China. Some of them got there.",
+     "date": "Oct 19, 1950",
+     "do": [
+      {
+       "cam": "yalu",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "take": "NK_MAIN",
+       "side": "UN",
+       "from": "Seoul",
+       "dur": 3.0,
+       "on": "fell"
+      },
+      {
+       "arrow": [
+        "Pyongyang",
+        "Sinuiju"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "on": "raced"
+      },
+      {
+       "place": "Pyongyang",
+       "capital": true,
+       "at": 0.3
+      },
+      {
+       "pulse": "Hyesan",
+       "side": "UN",
+       "on": "Some"
+      }
+     ]
+    },
+    {
+     "say": "In late November, MacArthur announced a final push, and reporters said it might end the war by Christmas. His intelligence officers kept saying China wouldn't send a big army.",
+     "date": "Nov 24, 1950",
+     "do": [
+      {
+       "char": "macarthur",
+       "line": "Pack for Christmas.",
+       "expr": "smug",
+       "pose": "point",
+       "pos": "left",
+       "at": 0.5
+      },
+      {
+       "arrow": [
+        "Sinuiju",
+        "Hyesan"
+       ],
+       "side": "UN",
+       "size": 2,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "at": 0.2
+      },
+      {
+       "cam": "north",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "pulse": "Sinuiju",
+       "side": "UN",
+       "at": 7.0
+      },
+      {
+       "cam": {
+        "box": [
+         124.26,
+         37.74,
+         130.94,
+         42.66
+        ]
+       },
+       "at": 3.75,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.8,
+         37.4,
+         131.4,
+         43.0
+        ]
+       },
+       "at": 9.27,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1950",
+   "title": "Uninvited Guests",
+   "music": "cold",
+   "beats": [
+    {
+     "say": "But China had already sent its army. Starting on October 19, Chinese soldiers crossed the Yalu by night. In the mountains, they hid by day and marched at dusk.",
+     "date": "Oct 19, 1950",
+     "do": [
+      {
+       "ask": "Where did they come from?",
+       "at": 0.2,
+       "keep": 0
+      },
+      {
+       "cam": "yalu",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "arrow": [
+        "Mukden",
+        "Sinuiju"
+       ],
+       "side": "CN",
+       "size": 4,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.4,
+       "label": "Chinese army",
+       "at": 0.3
+      },
+      {
+       "arrow": [
+        "Hyesan",
+        "Chosin Reservoir"
+       ],
+       "side": "CN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "at": 3.5
+      },
+      {
+       "pulse": "Hyesan",
+       "side": "CN",
+       "at": 5.8
+      },
+      {
+       "cam": {
+        "box": [
+         123.82,
+         38.84,
+         129.98,
+         42.36
+        ]
+       },
+       "at": 8.36,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "On November 25, they hit the Americans and South Koreans with a huge surprise attack. In the west, the UN lines folded, and the whole army fell back.",
+     "date": "Nov 25, 1950",
+     "do": [
+      {
+       "arrow": [
+        "Chongchon River",
+        "Pyongyang"
+       ],
+       "side": "CN",
+       "size": 4,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "label": "Chinese attack",
+       "on": "hit"
+      },
+      {
+       "take": "NK_MAIN",
+       "side": "NK",
+       "from": "Chongchon River",
+       "dur": 3.0,
+       "on": "fell"
+      },
+      {
+       "pulse": "Chongchon River",
+       "side": "CN",
+       "at": 0.3
+      },
+      {
+       "cam": {
+        "box": [
+         123.82,
+         38.84,
+         129.98,
+         42.36
+        ]
+       },
+       "at": 4.26,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.4,
+         38.6,
+         130.4,
+         42.6
+        ]
+       },
+       "at": 7.04,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "In the east, about 30,000 Americans, British, and South Korean troops were cut off around the Chosin Reservoir. They were outnumbered about four to one, and it was as cold as 30 below zero.",
+     "date": "Nov 27, 1950",
+     "do": [
+      {
+       "cam": "chosin",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "unit": "u1",
+       "side": "UN",
+       "at": "Chosin Reservoir",
+       "kind": "inf",
+       "label": "UN troops"
+      },
+      {
+       "arrow": [
+        [
+         129.5,
+         41.4
+        ],
+        "Chosin Reservoir"
+       ],
+       "side": "CN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "at": 0.5
+      },
+      {
+       "arrow": [
+        [
+         125.8,
+         40.6
+        ],
+        "Chosin Reservoir"
+       ],
+       "side": "CN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.0,
+       "at": 1.0
+      },
+      {
+       "counter": 30,
+       "label": "degrees below zero",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.5,
+       "side": "UN",
+       "on": "30 below"
+      },
+      {
+       "cam": {
+        "box": [
+         125.58,
+         39.08,
+         129.72,
+         41.72
+        ]
+       },
+       "at": 4.53,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         38.9,
+         130.0,
+         41.9
+        ]
+       },
+       "at": 8.01,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "The Marines fought their way out, about 70 miles to the sea, through snow and roadblocks. They came out carrying their wounded.",
+     "do": [
+      {
+       "arrow": [
+        "Chosin Reservoir",
+        "Hungnam"
+       ],
+       "side": "UN",
+       "size": 3,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.6,
+       "label": "70 miles",
+       "on": "70"
+      },
+      {
+       "move": "u1",
+       "to": "Hungnam",
+       "dur": 3.5,
+       "at": 1.0
+      },
+      {
+       "pulse": "Hungnam",
+       "side": "UN",
+       "at": 7.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.58,
+         39.08,
+         129.72,
+         41.72
+        ]
+       },
+       "at": 4.69,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "In December, ships took about 100,000 soldiers and about 100,000 Korean refugees out of Hungnam. One cargo ship, the Meredith Victory, carried about 14,000 people in one trip.",
+     "date": "Dec 1950",
+     "do": [
+      {
+       "unit": "s1",
+       "side": "UN",
+       "at": "Hungnam",
+       "kind": "ship",
+       "label": "Meredith Victory",
+       "on": "ships"
+      },
+      {
+       "counter": 100000,
+       "label": "soldiers",
+       "from": 0,
+       "hold": 2.6,
+       "tween": 0.6,
+       "side": "UN",
+       "on": "100,000 soldiers"
+      },
+      {
+       "counter": 100000,
+       "label": "refugees",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.6,
+       "side": "NK",
+       "on": "100,000 Korean"
+      },
+      {
+       "move": "s1",
+       "to": [
+        130.8,
+        37.4
+       ],
+       "dur": 3.0,
+       "on": "cargo"
+      },
+      {
+       "cam": {
+        "box": [
+         125.58,
+         39.08,
+         129.72,
+         41.72
+        ]
+       },
+       "at": 10.99,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1951",
+   "title": "The Yo-Yo Year",
+   "music": "march",
+   "beats": [
+    {
+     "say": "On New Year's Eve, the Chinese struck again. Seoul fell for the second time on January 4, 1951, and the UN army was pushed back below it.",
+     "date": "Jan 4, 1951",
+     "do": [
+      {
+       "cam": "seoul",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "arrow": [
+        "Kaesong",
+        "Seoul"
+       ],
+       "side": "CN",
+       "size": 4,
+       "keep": 1,
+       "names": "none",
+       "dur": 1.2,
+       "label": "Chinese offensive",
+       "on": "struck"
+      },
+      {
+       "take": "SEOUL_ZONE",
+       "side": "NK",
+       "from": "Kaesong",
+       "dur": 2.0,
+       "on": "Seoul"
+      },
+      {
+       "stamp": "Seoul falls again",
+       "hold": 2.0,
+       "side": "NK",
+       "on": "second"
+      },
+      {
+       "cam": {
+        "box": [
+         125.52,
+         36.54,
+         128.78,
+         38.66
+        ]
+       },
+       "at": 7.67,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Then a new commander arrived, General Matthew Ridgway. He didn't want to hold ground at any price. He told his troops to make the enemy pay for every mile.",
+     "do": [
+      {
+       "char": "ridgway",
+       "line": "Make them pay.",
+       "expr": "angry",
+       "pose": "point",
+       "pos": "left",
+       "on": "told"
+      },
+      {
+       "cam": "south",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "pulse": "Osan",
+       "side": "UN",
+       "at": 0.4
+      },
+      {
+       "cam": {
+        "box": [
+         124.6,
+         33.52,
+         130.4,
+         38.28
+        ]
+       },
+       "at": 3.24,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "By March, the UN army was moving north again. Seoul changed hands for the fourth time on March 15, 1951. In nine months, the capital had been captured four times.",
+     "date": "Mar 15, 1951",
+     "do": [
+      {
+       "take": "SEOUL_ZONE",
+       "side": "UN",
+       "from": "Osan",
+       "dur": 2.2,
+       "on": "Seoul"
+      },
+      {
+       "cam": "seoul",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "counter": 4,
+       "label": "times Seoul changed hands",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.5,
+       "side": "UN",
+       "on": "fourth"
+      },
+      {
+       "cam": {
+        "box": [
+         125.52,
+         36.54,
+         128.78,
+         38.66
+        ]
+       },
+       "at": 9.36,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "In April, Truman fired MacArthur. The general had been arguing in public with the president about how far to take the war, and Truman decided only one of them could be in charge.",
+     "date": "Apr 11, 1951",
+     "do": [
+      {
+       "char": "truman",
+       "line": "Time to go home.",
+       "expr": "angry",
+       "pose": "point",
+       "pos": "left",
+       "on": "fired"
+      },
+      {
+       "char": "macarthur",
+       "line": "Wait, what?",
+       "expr": "shocked",
+       "pose": "panic",
+       "pos": "right",
+       "on": "arguing"
+      },
+      {
+       "stamp": "Fired",
+       "hold": 2.0,
+       "side": "UN",
+       "on": "decided"
+      },
+      {
+       "cam": "peninsula",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "cam": {
+        "box": [
+         122.69,
+         33.63,
+         132.81,
+         42.87
+        ]
+       },
+       "at": 6.04,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "MacArthur came home to big parades and a speech to Congress. But Truman's advisers stuck to the plan: keep the war limited, and don't start World War Three.",
+     "do": [
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "pulse": "Seoul",
+       "side": "UN",
+       "at": 0.5
+      },
+      {
+       "stamp": "Limited war",
+       "hold": 2.2,
+       "side": "UN",
+       "on": "limited"
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 3.88,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1951",
+   "title": "Talking While Fighting",
+   "music": "somber",
+   "beats": [
+    {
+     "say": "By summer, the front had settled near the 38th parallel. Both sides were tired, and neither could win cheaply. So they agreed to talk.",
+     "date": "Jul 1951",
+     "do": [
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "front": [
+        [
+         126.7,
+         37.78
+        ],
+        [
+         127.0,
+         37.95
+        ],
+        [
+         127.3,
+         38.15
+        ],
+        [
+         127.9,
+         38.3
+        ],
+        [
+         128.4,
+         38.62
+        ]
+       ],
+       "id": "front",
+       "side": "UN",
+       "teeth": 1,
+       "on": "front"
+      },
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38d",
+       "label": "38th parallel",
+       "on": "38th",
+       "dur": 1.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 5.59,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "The talks started on July 10, 1951, in Kaesong, and later moved to a tent village at Panmunjom. Everyone expected a deal in a few weeks. It took two years.",
+     "date": "Jul 10, 1951",
+     "do": [
+      {
+       "place": "Kaesong",
+       "on": "Kaesong"
+      },
+      {
+       "place": "Panmunjom",
+       "on": "Panmunjom"
+      },
+      {
+       "counter": 2,
+       "label": "years of talks",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.5,
+       "side": "UN",
+       "on": "two years"
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 8.58,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Why so long? Mostly one issue. Many prisoners did not want to go home, and the communist side said they had to. The UN side refused to force them.",
+     "do": [
+      {
+       "ask": "Send prisoners home?",
+       "at": 0.2,
+       "keep": 0
+      },
+      {
+       "stamp": "Prisoners",
+       "hold": 2.4,
+       "on": "prisoners"
+      },
+      {
+       "char": "pyongyang",
+       "line": "Make them come back.",
+       "expr": "angry",
+       "pose": "point",
+       "pos": "right",
+       "on": "communist"
+      },
+      {
+       "pulse": "Panmunjom",
+       "at": 7.5
+      }
+     ]
+    },
+    {
+     "say": "Meanwhile, soldiers kept dying over hills with names like Heartbreak Ridge and Pork Chop Hill. Men fought for months over land that barely moved on the map.",
+     "date": "1952",
+     "do": [
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "place": "Heartbreak Ridge",
+       "on": "Heartbreak"
+      },
+      {
+       "place": "Pork Chop Hill",
+       "on": "Pork"
+      },
+      {
+       "pulse": "Cheorwon",
+       "at": 6.5
+      }
+     ]
+    },
+    {
+     "say": "Both sides dug in with trenches and bunkers. It started to look like World War One, with jets fighting overhead.",
+     "do": [
+      {
+       "front": [
+        [
+         126.7,
+         37.8
+        ],
+        [
+         127.0,
+         37.95
+        ],
+        [
+         127.3,
+         38.18
+        ],
+        [
+         127.9,
+         38.33
+        ],
+        [
+         128.4,
+         38.64
+        ]
+       ],
+       "id": "front",
+       "side": "UN",
+       "teeth": 1,
+       "at": 0.3,
+       "dur": 1.2
+      },
+      {
+       "pulse": "Heartbreak Ridge",
+       "side": "NK",
+       "at": 3.0
+      },
+      {
+       "unit": "jet",
+       "side": "UN",
+       "at": "Chongchon River",
+       "kind": "plane",
+       "label": "Jets"
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 5.26,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1953",
+   "title": "Back to the Line",
+   "music": "somber",
+   "beats": [
+    {
+     "say": "The deal finally came on July 27, 1953. It was a ceasefire, signed in a hut at Panmunjom. No peace treaty. Just an agreement to stop shooting.",
+     "date": "Jul 27, 1953",
+     "do": [
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "stamp": "Ceasefire",
+       "hold": 2.4,
+       "side": "UN",
+       "on": "ceasefire"
+      },
+      {
+       "place": "Panmunjom",
+       "at": 0.3
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 6.48,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         37.1,
+         129.4,
+         38.9
+        ]
+       },
+       "at": 9.05,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "The new line followed the front where the armies stood. It ran a little north of the old line in the east, and a little south of it in the west. Almost exactly where it started.",
+     "do": [
+      {
+       "line": [
+        [
+         126.7,
+         37.77
+        ],
+        [
+         127.0,
+         37.95
+        ],
+        [
+         127.3,
+         38.15
+        ],
+        [
+         127.9,
+         38.3
+        ],
+        [
+         128.4,
+         38.62
+        ]
+       ],
+       "id": "dmz",
+       "side": "NK",
+       "label": "DMZ",
+       "on": "new line"
+      },
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38e",
+       "label": "38th parallel",
+       "on": "old line",
+       "dur": 1.2
+      },
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 2.63,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         125.3,
+         37.1,
+         129.4,
+         38.9
+        ]
+       },
+       "at": 7.91,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "That border is still there. It's called the DMZ, the Demilitarized Zone, about 155 miles long and 2.5 miles wide. It's one of the most heavily armed borders on Earth.",
+     "do": [
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.2
+      },
+      {
+       "counter": 155,
+       "label": "miles long",
+       "from": 0,
+       "hold": 2.8,
+       "tween": 0.6,
+       "side": "NK",
+       "on": "155"
+      },
+      {
+       "counter": 2.5,
+       "label": "miles wide",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.5,
+       "side": "UN",
+       "fmt": "{:.1f}",
+       "on": "2.5"
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 3.09,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.5,
+         33.2,
+         131.5,
+         42.9
+        ]
+       },
+       "at": 10.49,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Remember the pencil line from the start? After three years and millions of lives, the border ended up almost in the same place. The only thing that changed was the cost.",
+     "do": [
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38f",
+       "label": "38th parallel",
+       "on": "pencil",
+       "dur": 1.2
+      },
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "cartographer": "erase",
+       "line": "Same line. Different bill.",
+       "on": "changed"
+      },
+      {
+       "pulse": "Seoul",
+       "side": "UN",
+       "at": 0.5
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 3.34,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.5,
+         33.2,
+         131.5,
+         42.9
+        ]
+       },
+       "at": 5.87,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "year": "1953",
+   "title": "The Bill",
+   "music": "somber",
+   "beats": [
+    {
+     "say": "More than 36,000 Americans died in Korea. That's about as many people as fill Fenway Park on a sold-out night. South Korea lost more than 130,000 soldiers, and the estimates for China and North Korea are higher, though they're disputed.",
+     "date": "1950 to 1953",
+     "do": [
+      {
+       "cam": "peninsula",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "chart": {
+        "title": "Military dead (estimates)",
+        "values": [
+         36574,
+         137000,
+         183000,
+         215000
+        ],
+        "labels": [
+         "USA",
+         "S. Korea",
+         "China",
+         "N. Korea"
+        ],
+        "sides": [
+         "UN",
+         "UN",
+         "CN",
+         "NK"
+        ],
+        "note": "China and North Korea figures are disputed"
+       },
+       "at": 1.5,
+       "hold": 9.0
+      },
+      {
+       "cam": {
+        "box": [
+         122.69,
+         33.63,
+         132.81,
+         42.87
+        ]
+       },
+       "at": 4.62,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         122.0,
+         33.0,
+         133.5,
+         43.5
+        ]
+       },
+       "at": 7.75,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.15,
+         34.05,
+         132.35,
+         42.45
+        ]
+       },
+       "at": 10.87,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         122.69,
+         33.63,
+         132.81,
+         42.87
+        ]
+       },
+       "at": 13.99,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "Millions of Korean civilians died too. Estimates run from about two million to three million, and nobody knows the exact number.",
+     "do": [
+      {
+       "cam": "korea",
+       "at": 0.0,
+       "dur": 2.0
+      },
+      {
+       "pulse": "Seoul",
+       "side": "UN",
+       "at": 0.4
+      },
+      {
+       "pulse": "Pyongyang",
+       "side": "NK",
+       "at": 4.2
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 6.38,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "So who won? Nobody, really. South Korea survived and grew rich. North Korea stayed under one family for three generations. And the two Koreas are still technically at war.",
+     "do": [
+      {
+       "ask": "So who won?",
+       "at": 0.2,
+       "keep": 0
+      },
+      {
+       "stamp": "Technically still at war",
+       "hold": 2.6,
+       "on": "technically"
+      },
+      {
+       "pulse": "Panmunjom",
+       "at": 0.4
+      },
+      {
+       "cam": {
+        "box": [
+         123.98,
+         33.78,
+         131.02,
+         42.32
+        ]
+       },
+       "at": 3.71,
+       "dur": 2.6
+      },
+      {
+       "cam": {
+        "box": [
+         123.5,
+         33.2,
+         131.5,
+         42.9
+        ]
+       },
+       "at": 7.02,
+       "dur": 2.6
+      }
+     ]
+    },
+    {
+     "say": "The line a few officers drew in thirty minutes still splits a country of more than 75 million people. Was there a moment this could have stopped sooner? Tell me which one in the comments.",
+     "hold": 1.0,
+     "do": [
+      {
+       "line": [
+        [
+         123.5,
+         38.0
+        ],
+        [
+         131.5,
+         38.0
+        ]
+       ],
+       "id": "p38g",
+       "label": "38th parallel",
+       "at": 0.3,
+       "dur": 1.2
+      },
+      {
+       "cam": "dmz",
+       "at": 0.0,
+       "dur": 2.4
+      },
+      {
+       "counter": 75,
+       "label": "million people, one line",
+       "from": 0,
+       "hold": 2.4,
+       "tween": 0.6,
+       "side": "UN",
+       "suffix": "+",
+       "on": "75"
+      },
+      {
+       "pulse": "Panmunjom",
+       "at": 8.0
+      },
+      {
+       "cam": {
+        "box": [
+         125.55,
+         37.21,
+         129.15,
+         38.79
+        ]
+       },
+       "at": 2.63,
+       "dur": 2.6
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "variation": {
+  "music": {
+   "mood": "march",
+   "style": "pulse",
+   "seed": 58
+  },
+  "palette": "olive",
+  "opening_shot": "map_zoom",
+  "camera_set": "glide",
+  "transitions": "drop",
+  "caption_style": "box"
+ }
+}

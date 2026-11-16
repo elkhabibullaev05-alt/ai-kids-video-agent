@@ -1,0 +1,1029 @@
+{
+ "id": "20261116-2-all-nighter",
+ "plot": "You decide to stay up all night. Cortez cancels the sleep shift, and Addy (adenosine) piles into the brain's slow-down chairs while coffee only blocks them. Gus gets flooded by ghrelin, the brain's night cleanup crew never shows, Beat nods off mid-call, reaction time slides to drunk-driving levels, cortisol fakes a second wind, and only sleep finally clears Addy out. Tease: your first gym day in a year.",
+ "variation": {
+  "music": "lofi_keys",
+  "palette": "night_shift",
+  "opening_shot": "high_angle",
+  "camera_set": "handheld",
+  "transitions": "flash",
+  "caption_style": "speaker_color"
+ },
+ "script": {
+  "title": "Inside You When You Pull an All-Nighter",
+  "seed": 47,
+  "ride_speed": 0.022,
+  "clock": "11:00",
+  "episode": {
+   "action": "pull an all-nighter",
+   "guest": "Addy (adenosine, sleep pressure)",
+   "system": "nervous + endocrine + digestive"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.2,
+     0.45,
+     0.8
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "am_michael",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "liv": {
+    "name": "Liv",
+    "organ": "liver",
+    "voice": "af_sarah",
+    "speed": 0.96
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "am_adam",
+    "speed": 1.0
+   },
+   "addy": {
+    "name": "Addy",
+    "organ": "guest",
+    "voice": "am_echo",
+    "speed": 1.04,
+    "guest": {
+     "shape": "molecule",
+     "color": [
+      0.55,
+      0.4,
+      0.85
+     ],
+     "color2": [
+      0.9,
+      0.85,
+      1.0
+     ],
+     "accessory": "hat",
+     "tag": "ADDY"
+    }
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_onyx",
+    "speed": 1.0
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Inside You When You Pull an All-Nighter",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "tired"
+     ]
+    ],
+    "mood": "tense"
+   },
+   {
+    "who": "cortez",
+    "say": "Code red! He's staying up ALL night. The sleep shift is canceled!",
+    "emotion": "panic",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "gus"
+    ],
+    "cam": "close:cortez",
+    "chapter": "1. Sleep Shift Canceled",
+    "counter": "11 PM",
+    "alarm": true,
+    "mood": "chase",
+    "gap": 0.2
+   },
+   {
+    "who": "beat",
+    "say": "Canceled?! My nightly blood pressure break was on the schedule!",
+    "emotion": "shock",
+    "cam": "close:beat",
+    "label": "Blood pressure: usually dips 10 to 20% in sleep",
+    "label_on": "beat"
+   },
+   {
+    "who": "gus",
+    "say": "So the kitchen stays open? Perfect. I never close anyway.",
+    "emotion": "deadpan",
+    "cam": "close:gus",
+    "mood": "office"
+   },
+   {
+    "who": "liv",
+    "say": "Night shift? Finally, company. I brought snacks. Healthy ones.",
+    "emotion": "happy",
+    "cam": "close:liv",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "liv"
+    ]
+   },
+   {
+    "who": "neff",
+    "say": "I'll file this under bad ideas. Tonight's total: many.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Boss, I have forty calls waiting, and every one says tired.",
+    "emotion": "panic",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Here's the plan. We follow one troublemaker until sunrise.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "addy",
+    "say": "Hi! I'm Addy. Short for adenosine. Think of me as brain-work leftovers.",
+    "emotion": "happy",
+    "cast": [
+     "cortez",
+     "addy",
+     "neff",
+     "beat"
+    ],
+    "cam": "two:addy,cortez",
+    "do": [
+     [
+      "addy",
+      "enter"
+     ]
+    ],
+    "label": "Adenosine: builds up while you're awake",
+    "label_on": "addy"
+   },
+   {
+    "who": "addy",
+    "say": "Cells burn fuel called ATP. I'm what gets left behind.",
+    "emotion": "deadpan",
+    "cam": "close:addy",
+    "label": "ATP: the fuel your cells burn",
+    "label_on": "addy"
+   },
+   {
+    "who": "cortez",
+    "say": "Every awake hour, more Addys show up. We call that sleep pressure.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "counter": "SLEEP PRESSURE: LOW"
+   },
+   {
+    "who": "addy",
+    "say": "And I'm just getting started! Wait until you meet my cousins!",
+    "emotion": "excited",
+    "cam": "close:addy",
+    "do": [
+     [
+      "addy",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Midnight. Report. Why do my neurons feel like wet laundry?",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "chapter": "2. Midnight: The Sleepy Chairs",
+    "counter": "12 AM",
+    "mood": "tense",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "How many chairs are taken? Give me a number.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "addy",
+    "say": "A third, maybe? It's early. I'm still stretching.",
+    "emotion": "happy",
+    "cam": "close:addy"
+   },
+   {
+    "who": "addy",
+    "say": "Sorry, boss. My cousins and I are sitting in the slow-down chairs.",
+    "emotion": "deadpan",
+    "cam": "close:addy",
+    "label": "Adenosine receptors: chairs that slow neurons down",
+    "label_on": "addy"
+   },
+   {
+    "who": "cortez",
+    "say": "Get out of those chairs! Feeling sleepy is... denied!",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "SLEEPY: DENIED",
+    "memo": "WE ARE SLEEPY",
+    "gap": 0.3
+   },
+   {
+    "who": "addy",
+    "say": "Cute stamp. The chairs are still taken.",
+    "emotion": "deadpan",
+    "cam": "two:addy,cortez",
+    "counter": "SLEEP PRESSURE: RISING"
+   },
+   {
+    "who": "beat",
+    "say": "Why is everybody yelling? I'm on hold with the lungs here!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Fine. Send in the coffee. Quick!",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Quick note. Coffee doesn't remove Addy. It just blocks the chairs.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Caffeine: blocks adenosine receptors",
+    "label_on": "neff"
+   },
+   {
+    "who": "addy",
+    "say": "So I'm still here. I'm just standing in the hallway.",
+    "emotion": "deadpan",
+    "cam": "close:addy"
+   },
+   {
+    "who": "cortez",
+    "say": "Fine. That buys us a little time. Next problem!",
+    "emotion": "tired",
+    "cam": "wide"
+   },
+   {
+    "who": "beat",
+    "say": "Splash his face with cold water! That'll fix everything!",
+    "emotion": "excited",
+    "cam": "close:beat"
+   },
+   {
+    "who": "addy",
+    "say": "Brrr. Rude. Anyway, I'm still here. Hi again.",
+    "emotion": "deadpan",
+    "cam": "close:addy"
+   },
+   {
+    "who": "cortez",
+    "say": "Turn up the screen. Bright light will keep him awake!",
+    "emotion": "excited",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Bright screens tell your body clock it's still daytime.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Melatonin: the body's 'it's dark' signal",
+    "label_on": "neff"
+   },
+   {
+    "who": "addy",
+    "say": "Perfect. Daytime at midnight. I love this job.",
+    "emotion": "happy",
+    "cam": "close:addy"
+   },
+   {
+    "who": "gus",
+    "say": "Alarm! Study says short sleep boosts my hunger hormone almost thirty percent!",
+    "emotion": "panic",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "neff"
+    ],
+    "cam": "close:gus",
+    "chapter": "3. 1 AM: The Snack Alarm",
+    "counter": "1 AM",
+    "mood": "chase",
+    "label": "Ghrelin: the hormone that says eat",
+    "label_on": "gus",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "And leptin, the I'm-full memo, dropped about eighteen percent.",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "label": "Leptin: the hormone that says full",
+    "label_on": "gus"
+   },
+   {
+    "who": "gus",
+    "say": "So now the brain wants chips, cookies, and a drive-thru.",
+    "emotion": "excited",
+    "cam": "two:gus,neff",
+    "do": [
+     [
+      "gus",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "neff",
+    "say": "I'm filing every receipt. They all say, bad idea.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "mood": "office"
+   },
+   {
+    "who": "gus",
+    "say": "Bad ideas taste AMAZING at two in the morning.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "counter": "2 AM"
+   },
+   {
+    "who": "gus",
+    "say": "Cereal at two AM. It's breakfast's cousin, called regret.",
+    "emotion": "sad",
+    "cam": "close:gus"
+   },
+   {
+    "who": "neff",
+    "say": "Also, tired bodies handle sugar slower. I'm keeping notes.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "gus",
+    "say": "Notes don't fill a plate, pal. Burrito order, coming right up!",
+    "emotion": "excited",
+    "cam": "close:gus"
+   },
+   {
+    "who": "neff",
+    "say": "A burrito at two AM is not a choice. It's a symptom.",
+    "emotion": "deadpan",
+    "cam": "two:gus,neff"
+   },
+   {
+    "who": "gus",
+    "say": "Great. Notes. Pass the chips.",
+    "emotion": "happy",
+    "cam": "two:gus,neff",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Hey, who's on cleanup tonight? My office is a mess.",
+    "emotion": "angry",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "addy",
+     "beat",
+     "neff"
+    ],
+    "cam": "close:cortez",
+    "chapter": "4. 2 AM: Where's the Cleaning Crew",
+    "mood": "tense"
+   },
+   {
+    "who": "narr",
+    "say": "While you sleep, brain fluid flushes waste out from between your cells.",
+    "cam": "high",
+    "label": "Glymphatic system: the brain's night cleanup crew",
+    "label_on": "cortez"
+   },
+   {
+    "who": "cortez",
+    "say": "That crew only works the sleep shift. They're not coming.",
+    "emotion": "sad",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Can we hire a night crew? Somebody with a mop?",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "The crew clocks in when we're asleep. That's the whole deal.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "addy",
+    "say": "Don't worry. I brought friends. Lots of friends.",
+    "emotion": "happy",
+    "cam": "close:addy",
+    "do": [
+     [
+      "addy",
+      "wave"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In mice, gaps between brain cells grew about sixty percent in sleep.",
+    "cam": "wide"
+   },
+   {
+    "who": "cortez",
+    "say": "So awake means the trash stays? Terrible office policy!",
+    "emotion": "shock",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Boss, I've got a fun idea. Could we take a nap?",
+    "emotion": "whisper",
+    "cam": "close:beat"
+   },
+   {
+    "who": "beat",
+    "say": "I tried counting sheep. They all asked for overtime.",
+    "emotion": "sad",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Denied! Sleep is for people with weekends.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "NAP: DENIED",
+    "memo": "NAP REQUEST"
+   },
+   {
+    "who": "addy",
+    "say": "I'll just sit here and pile up. No rush.",
+    "emotion": "deadpan",
+    "cam": "close:addy",
+    "counter": "SLEEP PRESSURE: HIGH"
+   },
+   {
+    "who": "addy",
+    "say": "Road trip! Next stop, the front office, where decisions get made.",
+    "emotion": "excited",
+    "set": "vessel",
+    "cast": [
+     "addy",
+     "beat"
+    ],
+    "cam": "ride",
+    "chapter": "5. 3 AM: The Reaction Test",
+    "counter": "3 AM",
+    "mood": "chase",
+    "gap": 0.2
+   },
+   {
+    "who": "beat",
+    "say": "Hurry! I can't keep this pace. No nighttime break for me!",
+    "emotion": "panic",
+    "cam": "ride",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ],
+    "label": "Heart rate: usually slows during sleep",
+    "label_on": "beat"
+   },
+   {
+    "who": "addy",
+    "say": "Sorry, Beat. I'm just a passenger. A very heavy passenger.",
+    "emotion": "deadpan",
+    "cam": "pov"
+   },
+   {
+    "who": "cortez",
+    "say": "Beat, pick up line one. Beat? Hello? Anybody?",
+    "emotion": "tired",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "cam": "two:cortez,beat",
+    "mood": "tense"
+   },
+   {
+    "who": "beat",
+    "say": "Huh? Oh! Sorry. The phone rang... a while ago.",
+    "emotion": "tired",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Beat, one more time. Pick up the phone. Right now.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Sorry, who is this? ...Oh. Hi, boss. Where am I?",
+    "emotion": "tired",
+    "cam": "close:beat",
+    "gap": 0.6
+   },
+   {
+    "who": "cortez",
+    "say": "Fine, I'll read the memo. Why is the memo upside down?",
+    "emotion": "tired",
+    "cam": "prop:memo"
+   },
+   {
+    "who": "neff",
+    "say": "The memo is fine, boss. You're the one upside down.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "narr",
+    "say": "Attention lapses like this get more common the longer you stay awake.",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "That's a microsleep. The brain checks out for a few seconds.",
+    "cam": "wide",
+    "label": "Microsleep: seconds when the brain checks out",
+    "label_on": "cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Now picture him driving. On the interstate. At seventy miles an hour.",
+    "emotion": "shock",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Don't say that! Give me the reaction time report!",
+    "emotion": "panic",
+    "cam": "close:cortez",
+    "alarm": true
+   },
+   {
+    "who": "narr",
+    "say": "After 24 awake hours, you score like a point one blood alcohol.",
+    "cam": "high",
+    "label": "Reaction time: slows after long wakefulness",
+    "label_on": "neff"
+   },
+   {
+    "who": "narr",
+    "say": "The legal driving limit in most states is point oh eight.",
+    "cam": "wide"
+   },
+   {
+    "who": "cortez",
+    "say": "So I'm a tipsy manager. That explains my memos.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "gap": 0.4
+   },
+   {
+    "who": "neff",
+    "say": "It's four AM. Body temperature just hit its lowest point.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "chapter": "6. 4 AM: The Coldest Hour",
+    "counter": "4 AM",
+    "mood": "calm",
+    "label": "Core temperature: lowest in the early morning",
+    "label_on": "neff"
+   },
+   {
+    "who": "beat",
+    "say": "Anybody else cold? I'm wearing a headset, not a jacket.",
+    "emotion": "sad",
+    "cam": "close:beat"
+   },
+   {
+    "who": "liv",
+    "say": "I have a clock too. Snacks at three AM confuse it.",
+    "emotion": "deadpan",
+    "set": "liver",
+    "cast": [
+     "liv",
+     "addy"
+    ],
+    "cam": "close:liv",
+    "label": "Circadian clock: tells organs when to work",
+    "label_on": "liv"
+   },
+   {
+    "who": "addy",
+    "say": "Cold, hungry, and tired. Honestly, my best night yet.",
+    "emotion": "happy",
+    "cam": "two:liv,addy"
+   },
+   {
+    "who": "liv",
+    "say": "Look, I work nights. But even I'd call this a lot.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "addy",
+    "say": "Come on, Liv. Stay. Let's watch the sun come up together.",
+    "emotion": "happy",
+    "cam": "two:liv,addy"
+   },
+   {
+    "who": "liv",
+    "say": "Sure. I'll bring the lamp. You bring the bad decisions.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "Can I borrow a blanket? Any blanket. A memo works.",
+    "emotion": "sad",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "addy"
+    ],
+    "cam": "close:beat",
+    "chapter": "7. 4:30 AM: Mood Swings",
+    "counter": "4:30 AM",
+    "mood": "office"
+   },
+   {
+    "who": "cortez",
+    "say": "Memos aren't blankets. Somebody dropped a spoon and I want to cry.",
+    "emotion": "sad",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Same! Also, I'm laughing. I don't know why!",
+    "emotion": "excited",
+    "cam": "close:beat"
+   },
+   {
+    "who": "narr",
+    "say": "One scan study found the emotion alarm reacted sixty percent more.",
+    "cam": "wide",
+    "label": "Amygdala: the brain's emotion alarm bell",
+    "label_on": "cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Great. So everything is either hilarious or a tragedy.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Incoming: cortisol. The body's built-in morning alarm clock.",
+    "emotion": "deadpan",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "addy"
+    ],
+    "cam": "close:neff",
+    "chapter": "8. 5 AM: The Second Wind",
+    "counter": "5 AM",
+    "mood": "tense",
+    "label": "Cortisol: stress hormone that climbs before dawn",
+    "label_on": "neff"
+   },
+   {
+    "who": "beat",
+    "say": "Why does cortisol always show up with a megaphone?",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "alarm": true
+   },
+   {
+    "who": "cortez",
+    "say": "Fine. New memo. Feeling awake is... approved!",
+    "emotion": "excited",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "AWAKE: APPROVED",
+    "memo": "WE ARE AWAKE"
+   },
+   {
+    "who": "beat",
+    "say": "Oh wow. I feel great! Is this a second wind?",
+    "emotion": "happy",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Everybody back to work! We're basically a morning team now!",
+    "emotion": "excited",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "narr",
+    "say": "Your body clock sends a daytime signal. Alertness bounces back a little.",
+    "cam": "wide"
+   },
+   {
+    "who": "addy",
+    "say": "Don't get excited. I'm still here, and I brought my cousins.",
+    "emotion": "deadpan",
+    "cam": "close:addy"
+   },
+   {
+    "who": "narr",
+    "say": "Morning light also tells your body clock the day has started.",
+    "cam": "high"
+   },
+   {
+    "who": "cortez",
+    "say": "Then why does everyone still feel like cold oatmeal?",
+    "emotion": "sad",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "addy",
+    "say": "Because the chairs are still full, boss. I'm good at my job.",
+    "emotion": "happy",
+    "cam": "close:addy"
+   },
+   {
+    "who": "cortez",
+    "say": "So all that yelling and stamping did nothing?",
+    "emotion": "sad",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Correct. And this sunrise meeting could have been an email.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "narr",
+    "say": "Only real sleep clears adenosine out. Coffee just hides him.",
+    "cam": "high"
+   },
+   {
+    "who": "cortez",
+    "say": "Six AM! Addy count is off the charts! Everybody brace!",
+    "emotion": "panic",
+    "cam": "close:cortez",
+    "chapter": "9. 6 AM: Final Warning",
+    "counter": "6 AM",
+    "mood": "chase",
+    "alarm": true
+   },
+   {
+    "who": "addy",
+    "say": "I brought everyone. Even my second cousins twice removed.",
+    "emotion": "excited",
+    "cam": "close:addy",
+    "counter": "SLEEP PRESSURE: MAX"
+   },
+   {
+    "who": "neff",
+    "say": "Great. Now the chairs are full, and the aisles too.",
+    "emotion": "deadpan",
+    "cam": "two:neff,addy"
+   },
+   {
+    "who": "cortez",
+    "say": "Focus, people! Sunrise is in one hour. Somebody make coffee!",
+    "emotion": "panic",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "gus",
+    "say": "Coffee? We're out of coffee. We're out of everything!",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "gus"
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "Please, just sleep soon. The kitchen has nothing left to give.",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "gus",
+     "addy"
+    ]
+   },
+   {
+    "who": "beat",
+    "say": "My blood pressure never took its break. I'm exhausted.",
+    "emotion": "tired",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Everybody listen up. Final memo of the night.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "mood": "resolve"
+   },
+   {
+    "who": "cortez",
+    "say": "Tonight, we sleep. Early. No excuses, no extra episodes.",
+    "emotion": "happy",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "SLEEP: APPROVED",
+    "memo": "TONIGHT: SLEEP",
+    "counter": ""
+   },
+   {
+    "who": "addy",
+    "say": "Aw. I get cleared out? Tell the chairs I'll miss them.",
+    "emotion": "sad",
+    "cam": "close:addy",
+    "do": [
+     [
+      "addy",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "During sleep, adenosine levels drop. That's why a full night resets you.",
+    "cam": "wide"
+   },
+   {
+    "who": "neff",
+    "say": "Final tally: six stamps, one microsleep, zero rest. Filed.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "From now on, the sleep shift starts at ten sharp.",
+    "emotion": "happy",
+    "cam": "close:cortez",
+    "gap": 0.4
+   },
+   {
+    "who": "gus",
+    "say": "Next time: your first gym day in a year. Warn the legs.",
+    "emotion": "sad",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "cam": "close:gus",
+    "counter": "",
+    "gap": 0.3
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Sleep clears adenosine, your sleep signal.",
+      "Awake 24 hours acts like a 0.10 BAC."
+     ],
+     "source": "StatPearls (NCBI); Dawson & Reid 1997; Spiegel 2004; Xie 2013"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 4.5
+   }
+  ],
+  "variation": {
+   "music": "lofi_keys",
+   "palette": "night_shift",
+   "opening_shot": "high_angle",
+   "camera_set": "handheld",
+   "transitions": "flash",
+   "caption_style": "speaker_color"
+  }
+ },
+ "long": {
+  "title": "Inside You When You Pull an All-Nighter",
+  "description": "It's 11 PM and you said one more episode. Cortez cancels the sleep shift, Addy the sleepy molecule moves into the brain, and every organ pays for it by sunrise.\nA funny, body-accurate night inside you: adenosine, the brain's missing cleanup crew, hunger hormones, microsleeps and a very fake second wind.\n\n{CHAPTERS}\n\nReal body notes (sources): StatPearls, Physiology of Sleep and Caffeine (NCBI Bookshelf); Spiegel et al., Annals of Internal Medicine, 2004 (ghrelin and leptin after short sleep); Xie et al., Science, 2013 (brain cleanup during sleep, in mice); Yoo et al., Current Biology, 2007 (emotion alarm after lost sleep); Dawson and Reid, Nature, 1997 (24 hours awake vs. blood alcohol); NIH NIGMS, Circadian Rhythms; American Heart Association (nighttime blood pressure dip).\nEntertainment and general education, not medical advice. Original characters, animated in Blender.\n#AllNighter #HumanBody #SleepScience",
+  "tags": [
+   "all nighter",
+   "what happens when you stay up all night",
+   "sleep deprivation",
+   "adenosine",
+   "glymphatic system",
+   "ghrelin and leptin",
+   "microsleep",
+   "human body animation",
+   "staying up all night",
+   "sleep science explained"
+  ],
+  "thumb_text": "UP ALL NIGHT?!",
+  "thumb_beat": 1
+ },
+ "shorts": [
+  {
+   "beat": 15,
+   "dur": 24,
+   "top": "COFFEE DOESN'T FIX IT",
+   "title": "Coffee Doesn't Clear Sleepiness. It Hides It #shorts",
+   "description": "Addy is still standing in the hallway. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "caffeine",
+    "adenosine",
+    "why am i sleepy"
+   ]
+  },
+  {
+   "beat": 53,
+   "dur": 27,
+   "top": "WHERE AM I?!",
+   "title": "Your Brain Takes Micro-Naps When You Stay Up #shorts",
+   "description": "Beat just fell asleep mid-call. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "microsleep",
+    "sleep deprivation",
+    "human body"
+   ]
+  }
+ ]
+}

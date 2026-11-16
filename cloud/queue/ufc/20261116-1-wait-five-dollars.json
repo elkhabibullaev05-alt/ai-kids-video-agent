@@ -1,0 +1,3069 @@
+{
+ "format": "whatif_v2",
+ "id": "20261116-1-wait-five-dollars",
+ "title": "What If Anyone Who Made You Wait Owed You $5 a Minute?",
+ "description_hook": "Getting paid for every minute you wait sounds amazing, until you count who has been waiting on you.",
+ "comment_question": "Who has been waiting on you the longest? Tell us in the comments.",
+ "pair_note": "",
+ "next_rule": "Every promise you make is a loan",
+ "signoff": "Would you keep a rule that bills you too?",
+ "narrator": "am_michael",
+ "speed": 1.0,
+ "cast": {
+  "roommate": {
+   "name": "Marcus",
+   "voice": "am_adam"
+  },
+  "liaison": {
+   "name": "Agent Reyes",
+   "voice": "af_nicole"
+  },
+  "scientist": {
+   "name": "Dr. Patel",
+   "voice": "af_heart"
+  },
+  "boss": {
+   "name": "Your boss",
+   "voice": "am_onyx"
+  },
+  "mom": {
+   "name": "Mom",
+   "voice": "af_sky"
+  }
+ },
+ "moods": [
+  "calm",
+  "comic",
+  "tense",
+  "wonder",
+  "dark",
+  "triumph"
+ ],
+ "hook_title": {
+  "text": "Paid to wait",
+  "sub": "who pays?"
+ },
+ "variation": {
+  "music": {
+   "track": "slow-gridlock-52",
+   "tempo": 1.06,
+   "key": 7
+  },
+  "palette": "newsprint_red",
+  "light": "overcast",
+  "opening_shot": "wide",
+  "camera_set": "all",
+  "transitions": [
+   "cut",
+   "slide_up",
+   "fade",
+   "ink_reveal"
+  ],
+  "caption_style": {
+   "long": "none",
+   "short": "pop"
+  }
+ },
+ "tags": [
+  "what if",
+  "what if you got paid to wait",
+  "doctor waiting room",
+  "DMV line",
+  "flight delay refund",
+  "animated story",
+  "money story",
+  "what would happen if",
+  "call your mom",
+  "time is money",
+  "ink animation",
+  "story time animated"
+ ],
+ "hashtags": [
+  "#whatif",
+  "#animation",
+  "#story"
+ ],
+ "sources": [
+  "U.S. Department of Transportation: a domestic flight that arrives 3 or more hours late entitles you to a refund if you decline rebooking, but there is no federal cash compensation for the wait - transportation.gov/individuals/aviation-consumer-protection/refunds",
+  "U.S. Department of Labor: the federal minimum wage is $7.25 an hour - dol.gov/agencies/whd/minimum-wage"
+ ],
+ "thumb": {
+  "pose": "celebrate",
+  "expr": "smug",
+  "element": "counter",
+  "hud": "$285",
+  "text": "47 MIN LATE"
+ },
+ "chapters": [
+  {
+   "title": "Midnight",
+   "mood": "calm",
+   "beats": [
+    {
+     "say": "Anyone who makes you wait owes you five dollars a minute. It starts tonight, at midnight.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.35,
+         "prop": "cup",
+         "expr": "neutral"
+        }
+       ],
+       "w": 0.3
+      },
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "confused"
+        }
+       ],
+       "w": 0.35,
+       "hud": {
+        "counters": [
+         {
+          "label": "Balance",
+          "prefix": "$",
+          "derive": {
+           "from": "Net minutes",
+           "x": 5
+          }
+         },
+         {
+          "label": "Net minutes",
+          "value": 1
+         }
+        ]
+       }
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "Update installed. Delay: 1 minute. +$5.00",
+       "sub": "BANK ALERT",
+       "w": 0.35
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 0
+       }
+      ],
+      "clock": "HOUR 00"
+     }
+    },
+    {
+     "say": "No judge. No paperwork. The money just moves from their bank to yours, one minute at a time.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5,
+         "expr": "confused"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "walk",
+         "x": 0.2,
+         "move": [
+          0.15,
+          0.45
+         ]
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You test it the cheap way. You text your roommate Marcus that you're starving, and he says he'll be right there.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.62,
+         "face": -1,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "Starving. Come eat? Marcus: Be right there!",
+       "sub": "NEW MESSAGE"
+      }
+     ]
+    },
+    {
+     "say": "Marcus is not right there. Nine minutes later, your phone buzzes. Forty-five dollars, from Marcus, with a note. It says, okay, not funny.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "run",
+         "x": 0.3,
+         "move": [
+          0.1,
+          0.4
+         ]
+        },
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.7,
+         "face": -1,
+         "expr": "smug",
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "+$45.00 From: Marcus Note: okay, not funny",
+       "sub": "BANK ALERT",
+       "hud": {
+        "counters": [
+         {
+          "label": "Balance",
+          "prefix": "$",
+          "derive": {
+           "from": "Net minutes",
+           "x": 5
+          }
+         },
+         {
+          "label": "Net minutes",
+          "value": 10
+         }
+        ]
+       }
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Within the hour, you learn the first thing about being owed money. You become a very patient person. You start looking for lines the way other people look for parking.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.3,
+         "move": [
+          0.2,
+          0.6
+         ],
+         "expr": "determined"
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Rule one. The clock starts when they miss the time they promised. Not when you get bored.",
+     "shots": [
+      {
+       "type": "rule",
+       "rule": {
+        "n": 1,
+        "text": "The clock starts when they miss their promise"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "shrug",
+         "x": 0.35
+        },
+        {
+         "who": "you",
+         "pose": "point",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Rule two. Every minute counts, and every minute costs five dollars. That's three hundred dollars an hour. The federal minimum wage is seven dollars and twenty-five cents.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "value": 300,
+        "from": 0,
+        "label": "dollars an hour"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "rule",
+       "rule": {
+        "n": 2,
+        "text": "Five dollars. Every minute. No limit."
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You go to bed rich in theory, and a little scared. Tomorrow at two o'clock, you have a doctor's appointment.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "bedroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4,
+         "expr": "worried"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "bedroom",
+       "cast": [
+        {
+         "who": "you",
+         "on": "bed",
+         "expr": "worried"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Right With You",
+   "mood": "comic",
+   "beats": [
+    {
+     "say": "At two o'clock sharp, you check in at the front desk. The receptionist smiles and says the doctor will be right with you.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "clock",
+       "text": "",
+       "sweep": 40
+      },
+      {
+       "type": "wide",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.3,
+         "expr": "neutral"
+        },
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.72,
+         "face": -1
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 10
+       }
+      ],
+      "clock": "HOUR 14"
+     }
+    },
+    {
+     "say": "Right with you is a medical term. It means forty-seven minutes.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.55,
+         "expr": "sleepy",
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.5
+        }
+       ],
+       "camera": "push"
+      }
+     ]
+    },
+    {
+     "say": "The waiting room has a magazine from two thousand eleven. You read the whole thing. Every article is paid.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "prop": "cup",
+         "expr": "happy"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.6,
+         "expr": "smug",
+         "noseat": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Forty-seven minutes. Two hundred thirty-five dollars. You have never loved a waiting room more. That puts you at two hundred eighty-five.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "Balance",
+        "from": 0,
+        "label": "one waiting room"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 57
+       }
+      ]
+     }
+    },
+    {
+     "say": "I'm so sorry for the wait. Wait. Why did my bank just text me?",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "scientist",
+         "pose": "talk",
+         "x": 0.6,
+         "face": -1
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.25,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "scientist",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ],
+       "focus": "scientist"
+      }
+     ],
+     "speaker": "scientist"
+    },
+    {
+     "say": "You walk out with a prescription and two hundred eighty-five dollars. Nobody has ever left a doctor's office this happy.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.3,
+         "move": [
+          0.1,
+          0.8
+         ],
+         "expr": "happy"
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Saturday. The cable company promised someone between eight and noon. You wait by the door in your pajamas, like a dog.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.3,
+         "expr": "sleepy",
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5,
+         "expr": "confused"
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 57
+       }
+      ],
+      "clock": "DAY 3"
+     }
+    },
+    {
+     "say": "The installer shows up at one-twenty. He apologizes eleven times. Then he gets a text from his bank, and apologizes twelve.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "shocked",
+         "x": 0.35,
+         "expr": "worried"
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "Transfer sent: $400.00 To: you Reason: 80 minutes late",
+       "sub": "FIRST BANK"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 137
+       }
+      ]
+     }
+    },
+    {
+     "say": "The cable company has an executive in a boardroom on Monday. He stares at a spreadsheet. One customer. One Saturday. Four hundred dollars. He asks if that's legal.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "boss",
+         "pose": "point",
+         "x": 0.35
+        },
+        {
+         "who": "extra",
+         "pose": "shrug",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "boss",
+         "pose": "panic",
+         "x": 0.5
+        }
+       ],
+       "focus": "boss"
+      }
+     ]
+    },
+    {
+     "say": "That night you order a pizza that's guaranteed in thirty minutes. It takes fifty. You tip the driver twenty dollars, which is nice, considering he pays you one hundred.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4
+        },
+        {
+         "who": "extra",
+         "pose": "shrug",
+         "x": 0.72,
+         "face": -1,
+         "prop": "briefcase"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 157
+       }
+      ]
+     }
+    },
+    {
+     "say": "By Sunday night, you have made seven hundred eighty-five dollars doing the one thing you were already doing all day, every day: waiting.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "Balance",
+        "from": 0,
+        "label": "for waiting"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shrug",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.5,
+         "expr": "smug",
+         "noseat": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Longest Lines",
+   "mood": "tense",
+   "beats": [
+    {
+     "say": "Week one. You get brave. You go where waiting lives. The DMV.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.2,
+         "move": [
+          0.1,
+          0.5
+         ],
+         "expr": "determined"
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4,
+         "expr": "determined"
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 157
+       }
+      ],
+      "clock": "WEEK 1"
+     }
+    },
+    {
+     "say": "Your number is B one fourteen. They're serving B sixty-two. You sit down, open a book, and start getting paid.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "screen",
+       "text": "NOW SERVING B62",
+       "sub": "YOUR NUMBER: B114"
+      },
+      {
+       "type": "wide",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.6,
+         "expr": "happy",
+         "noseat": false
+        },
+        {
+         "who": "extra",
+         "pose": "slump",
+         "x": 0.3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Eighty-seven minutes later, you're done. The money comes out of the branch manager, who is having a very bad Tuesday.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.35
+        },
+        {
+         "who": "liaison",
+         "pose": "panic",
+         "x": 0.72,
+         "face": -1
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "boss",
+         "pose": "slump",
+         "x": 0.5
+        }
+       ],
+       "focus": "boss"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 244
+       }
+      ]
+     }
+    },
+    {
+     "say": "A man behind you in line asks why you look so happy. You say you're in no hurry. He says that's the strangest thing anyone has said all day.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.35,
+         "expr": "happy"
+        },
+        {
+         "who": "extra",
+         "pose": "shrug",
+         "x": 0.7,
+         "face": -1,
+         "expr": "confused"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "think",
+         "x": 0.5
+        }
+       ],
+       "focus": "extra"
+      }
+     ]
+    },
+    {
+     "say": "Your phone company puts you on hold. Twenty-five minutes of the same song. A hundred twenty-five dollars. You ask them to play it again.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.5,
+         "prop": "phone",
+         "expr": "happy",
+         "noseat": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then the airport. Your flight is delayed four hours, which makes this the best day of your life. And here comes a real fact.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "tv",
+       "text": "FLIGHT 1182 DELAYED 4 HOURS",
+       "sub": "DEPARTURES"
+      },
+      {
+       "type": "wide",
+       "setting": "city",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.3,
+         "move": [
+          0.2,
+          0.7
+         ],
+         "prop": "briefcase"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The government says that when a domestic flight arrives three hours late, the airline has to refund your ticket. It does not have to pay you for the wait. The rule does.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "city",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "point",
+         "x": 0.5,
+         "expr": "determined"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "letter",
+       "text": "After 3 hours late: full refund. Cash for the wait: not required.",
+       "sub": "U.S. DEPT. OF TRANSPORTATION"
+      }
+     ]
+    },
+    {
+     "say": "Two hundred forty minutes. Twelve hundred dollars, on top of the refund, and you didn't even have to stay awake.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "Balance",
+        "from": 0,
+        "label": "four hours"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "city",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.5,
+         "expr": "sleepy",
+         "noseat": false
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 484
+       }
+      ]
+     }
+    },
+    {
+     "say": "Our meeting ran twenty-two minutes over. I'm told I owe you a hundred and ten dollars.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "boss",
+         "pose": "talk",
+         "x": 0.6,
+         "face": -1
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.3,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      }
+     ],
+     "speaker": "boss"
+    },
+    {
+     "say": "People start to notice. Not that you're rich. That everyone who ever kept you waiting is a little poorer.",
+     "shots": [
+      {
+       "type": "crowd",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5
+        }
+       ],
+       "count": 18,
+       "crowd_expr": "worried"
+      },
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.3,
+         "expr": "worried"
+        },
+        {
+         "who": "extra",
+         "pose": "point",
+         "x": 0.7,
+         "face": -1,
+         "expr": "angry"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Week two, you get greedy. You stand in the longest lines you can find. Costco on a Saturday. The post office. A Super Bowl parking lot.",
+     "shots": [
+      {
+       "type": "timeskip",
+       "steps": [
+        "WEEK 2",
+        "WEEK 3",
+        "WEEK 4"
+       ],
+       "text": "every line gets shorter",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "store",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4,
+         "expr": "determined"
+        },
+        {
+         "who": "extra",
+         "pose": "stand",
+         "x": 0.65,
+         "face": -1
+        },
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.8,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "At Costco, you stand at the sample table for forty minutes. A man explains that the samples are not dinner. You tell him it's the best job you've ever had.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "store",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.35,
+         "prop": "cup",
+         "expr": "happy"
+        },
+        {
+         "who": "extra",
+         "pose": "point",
+         "x": 0.7,
+         "face": -1,
+         "expr": "angry"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "store",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Week three. Your mother texts you. Call me this weekend? You type, will do, and put the phone face down. You have a rule to farm.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "Mom: Call me this weekend? You: will do",
+       "sub": "NEW MESSAGE"
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "prop": "phone",
+         "expr": "smug"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Math",
+   "mood": "wonder",
+   "beats": [
+    {
+     "say": "But the lines are getting shorter, and you're not the only one who noticed. Doctors stop double-booking. The cable company shrinks its window to fifteen minutes. Somewhere, a pizza driver is sprinting.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "run",
+         "x": 0.3,
+         "move": [
+          0.1,
+          0.8
+         ],
+         "prop": "briefcase"
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.8,
+         "face": -1,
+         "expr": "worried"
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shrug",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The news calls it the Punctuality Boom. Trains leave early. A man in Ohio apologizes to his own watch.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "newspaper",
+       "text": "THE PUNCTUALITY BOOM",
+       "sub": "Nation arrives early, confused"
+      },
+      {
+       "type": "wide",
+       "setting": "newsroom",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.35
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.72,
+         "face": -1,
+         "expr": "worried"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Which is great for everyone, and terrible for you. The better the world gets at being on time, the less you earn.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.6,
+         "expr": "sad",
+         "noseat": false
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 484
+       }
+      ],
+      "clock": "MONTH 1"
+     }
+    },
+    {
+     "say": "Your landlord, who ignored your leaky faucet for three weeks, finds a plumber in forty minutes. The plumber arrives early. He is shaking.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "panic",
+         "x": 0.3,
+         "prop": "briefcase"
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Here's your month. Week one, two thousand four hundred twenty dollars. Week two, three thousand one hundred. Week three, nineteen hundred. Week four, six hundred.",
+     "shots": [
+      {
+       "type": "chart",
+       "chart": {
+        "title": "Money from waiting, per week",
+        "values": [
+         2420,
+         3100,
+         1900,
+         600
+        ],
+        "xlabels": [
+         "Week 1",
+         "Week 2",
+         "Week 3",
+         "Week 4"
+        ],
+        "end_label": "$600"
+       }
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Eight thousand and twenty dollars, for being annoyed on schedule.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "Balance",
+        "from": 0,
+        "label": "one month of waiting"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shrug",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 1604
+       }
+      ]
+     }
+    },
+    {
+     "say": "Marcus finds the loophole in a day. The rule only counts promises, so he stops making them. I'll be there when I'm there. The rule shrugs. You are, for the first time, furious about a man's honesty.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "shrug",
+         "x": 0.35
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1,
+         "expr": "angry"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "talk",
+         "x": 0.5
+        }
+       ],
+       "focus": "roommate"
+      }
+     ]
+    },
+    {
+     "say": "Your friend says he's five minutes away. He's not. He loses twenty-five dollars before he reaches the corner, and he runs the rest.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "park",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.3,
+         "face": 1
+        },
+        {
+         "who": "extra",
+         "pose": "run",
+         "x": 0.8,
+         "move": [
+          0.9,
+          0.55
+         ],
+         "face": -1
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "park",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "wave",
+         "x": 0.4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You buy Marcus dinner with the money. He arrives eight minutes early, sweating, holding a gift card. You have created a monster, and he is extremely well mannered.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "wave",
+         "x": 0.3,
+         "expr": "worried"
+        },
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "shrug",
+         "x": 0.5
+        }
+       ],
+       "focus": "roommate"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Fine Print",
+   "mood": "dark",
+   "beats": [
+    {
+     "say": "Month two. Agent Reyes from the Treasury Department is on your porch. She has been waiting eleven minutes, because you were in the shower.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "stand",
+         "x": 0.6,
+         "face": -1,
+         "prop": "briefcase"
+        },
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.25
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "angry"
+        }
+       ],
+       "focus": "liaison"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 1604
+       }
+      ],
+      "clock": "MONTH 2"
+     }
+    },
+    {
+     "say": "I don't want to be rude. But under the rule, you owe me fifty-five dollars.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "point",
+         "x": 0.65,
+         "face": -1
+        },
+        {
+         "who": "you",
+         "pose": "cower",
+         "x": 0.3
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "panic",
+         "x": 0.5
+        }
+       ],
+       "camera": "shake"
+      }
+     ],
+     "speaker": "liaison"
+    },
+    {
+     "say": "That is when you read the fine print for the first time. The rule never said it only works for you.",
+     "shots": [
+      {
+       "type": "rule",
+       "rule": {
+        "n": 3,
+        "text": "It works both ways"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5,
+         "expr": "worried"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You pay her. She leaves. It feels strangely like paying a toll on a road you actually use.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.3,
+         "prop": "money"
+        },
+        {
+         "who": "liaison",
+         "pose": "walk",
+         "x": 0.6,
+         "move": [
+          0.6,
+          0.9
+         ],
+         "face": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The Treasury has been counting. Nine million dollars moved in thirty days, and most of it came from people who said five minutes.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "talk",
+         "x": 0.4
+        },
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.7,
+         "face": -1,
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "point",
+         "x": 0.3
+        },
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Agent Reyes explains it slowly, the way people explain things to a toddler or a lottery winner. The rule is not magic money. It is a bill that goes both ways, and it has been running on you the whole time.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "determined"
+        }
+       ],
+       "focus": "liaison"
+      },
+      {
+       "type": "medium",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "cower",
+         "x": 0.3,
+         "expr": "worried"
+        },
+        {
+         "who": "liaison",
+         "pose": "point",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then the bank sends a letter. It says, pending withdrawal, three hundred two thousand, four hundred dollars. To: Mom.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "letter",
+       "text": "Pending withdrawal: $302,400. Recipient: Mom.",
+       "sub": "FIRST BANK"
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You call the bank. They put you on hold, which pays you, which is the only reason you stay calm.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "worried"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "panic",
+         "x": 0.4,
+         "prop": "phone"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Six weeks ago, you told your mother you'd call her this weekend. You didn't. The rule has been counting ever since.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "talk",
+         "x": 0.35
+        },
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "sad"
+        }
+       ]
+      }
+     ],
+     "speaker": "liaison"
+    },
+    {
+     "say": "Forty-two days is sixty thousand, four hundred eighty minutes. Times five dollars. That is three hundred two thousand, four hundred dollars.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "You owe Mom",
+        "from": 0,
+        "label": "what you owe Mom"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.2
+        }
+       ]
+      },
+      {
+       "type": "chart",
+       "chart": {
+        "title": "Minutes since you promised to call",
+        "values": [
+         0,
+         15000,
+         30000,
+         45000,
+         60480
+        ],
+        "xlabels": [
+         "Day 0",
+         "Day 10",
+         "Day 21",
+         "Day 31",
+         "Day 42"
+        ],
+        "end_label": "60,480"
+       }
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 60480
+       }
+      ],
+      "clock": "MONTH 2"
+     }
+    },
+    {
+     "say": "You have eight thousand dollars. The rule has no payment plan, and no grace period. And it keeps counting, five dollars for every minute you don't call.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "panic",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "cower",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You spend three minutes thinking about it. That is fifteen more dollars. You stop thinking.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5,
+         "expr": "worried"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "clock",
+       "text": "",
+       "sweep": 3,
+       "time": "9:00"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 60483
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Hello",
+   "mood": "triumph",
+   "beats": [
+    {
+     "say": "So you do the one thing that stops the clock. You pick up the phone, and you call her.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "determined"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.45,
+         "face": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Hello? Oh, honey. Is everything okay?",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ],
+       "focus": "extra"
+      },
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "worried"
+        }
+       ]
+      }
+     ],
+     "speaker": "mom"
+    },
+    {
+     "say": "The counter freezes at three hundred two thousand, four hundred fifteen dollars. It is the longest you have ever held your breath.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "shocked"
+        }
+       ]
+      },
+      {
+       "type": "number",
+       "number": {
+        "hud": "You owe Mom",
+        "from": 0,
+        "prefix": "$",
+        "label": "frozen"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You say you're sorry. She says there's nothing to be sorry about. She wasn't counting. The rule was.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "sad"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ],
+       "focus": "extra"
+      }
+     ]
+    },
+    {
+     "say": "Tell me everything. Start with breakfast.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "wave",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.5,
+         "prop": "phone",
+         "expr": "happy",
+         "noseat": false
+        }
+       ]
+      }
+     ],
+     "speaker": "mom"
+    },
+    {
+     "say": "You talk for an hour. Somewhere in the middle, you stop looking at the number, and just talk.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "talk",
+         "x": 0.4,
+         "prop": "phone"
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "By morning, three hundred two thousand dollars is sitting in your mother's account. By noon, it's back in yours, with a note. It says, don't be late on Sunday.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "+$302,415.00 From: Mom Note: don't be late on Sunday",
+       "sub": "BANK ALERT"
+      },
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 0
+       }
+      ]
+     }
+    },
+    {
+     "say": "Your boss calls, too. He tells you to take the afternoon and call back whenever. It is the nicest thing he has ever said to you, and he says it very carefully.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "boss",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "worried"
+        }
+       ],
+       "focus": "boss"
+      },
+      {
+       "type": "medium",
+       "setting": "office",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4,
+         "prop": "phone",
+         "expr": "smug"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "A year later, the world runs on time. Doctors keep their promises. Cable guys call ahead. Nobody earns a dollar from waiting anymore.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "city",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "walk",
+         "x": 0.3,
+         "move": [
+          0.2,
+          0.8
+         ],
+         "expr": "happy"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "walk",
+         "x": 0.3,
+         "move": [
+          0.1,
+          0.6
+         ]
+        },
+        {
+         "who": "extra",
+         "pose": "walk",
+         "x": 0.7,
+         "move": [
+          0.9,
+          0.5
+         ]
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 0
+       }
+      ],
+      "clock": "YEAR 1"
+     }
+    },
+    {
+     "say": "Except from one person. Your mother is always ten minutes late for Sunday dinner. She calls it a family tradition. You call it fifty dollars.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "wave",
+         "x": 0.35,
+         "face": 1
+        },
+        {
+         "who": "you",
+         "pose": "point",
+         "x": 0.7,
+         "face": -1,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "+$50.00 From: Mom Memo: worth the wait",
+       "sub": "BANK ALERT"
+      }
+     ]
+    },
+    {
+     "say": "Months later, you catch yourself at a red light, stuck in traffic, angry at nobody. You laugh. Waiting turns out to be something you spend, not something you earn.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "street",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ]
+      },
+      {
+       "type": "wide",
+       "setting": "city",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4,
+         "expr": "happy"
+        },
+        {
+         "who": "extra",
+         "pose": "stand",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You still have the rule. You also have a standing call every Sunday, and you have never once been late.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.5,
+         "prop": "phone",
+         "expr": "happy",
+         "noseat": false
+        }
+       ]
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "title": "Everyone Who Keeps You Waiting Pays $5 a Minute #whatif",
+   "description": "Doctors, cable guys, airlines: all of them owe you five dollars a minute. What could go wrong?",
+   "hook_title": {
+    "text": "Wait pay",
+    "sub": "five dollars a minute"
+   },
+   "variation": {
+    "caption_style": {
+     "short": "pop"
+    },
+    "transitions": [
+     "cut",
+     "slide_left",
+     "fade"
+    ]
+   },
+   "end_line": "The full story is on the channel.",
+   "beats": [
+    {
+     "say": "Anyone who makes you wait owes you five dollars a minute.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "smug"
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "phone",
+       "text": "+$5.00 Delay: 1 minute",
+       "sub": "BANK ALERT"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 1
+       }
+      ],
+      "clock": "HOUR 00"
+     }
+    },
+    {
+     "say": "Your roommate says he'll be right there. Nine minutes later, you're forty-five dollars richer.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "roommate",
+         "pose": "run",
+         "x": 0.3,
+         "move": [
+          0.1,
+          0.4
+         ]
+        },
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.7,
+         "face": -1,
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 10
+       }
+      ],
+      "clock": "HOUR 09"
+     }
+    },
+    {
+     "say": "The doctor keeps you waiting forty-seven minutes. Two hundred thirty-five dollars.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "hospital",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "sit",
+         "x": 0.55,
+         "expr": "smug",
+         "noseat": false
+        }
+       ]
+      },
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "Balance",
+        "from": 0,
+        "label": "one waiting room"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "celebrate",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 57
+       }
+      ],
+      "clock": "HOUR 14"
+     }
+    },
+    {
+     "say": "The cable guy is eighty minutes late. Four hundred dollars. The airline delays you four hours. Twelve hundred more.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.4
+        }
+       ]
+      },
+      {
+       "type": "prop",
+       "prop": "tv",
+       "text": "DELAYED 4 HOURS",
+       "sub": "DEPARTURES"
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 484
+       }
+      ],
+      "clock": "WEEK 1"
+     }
+    },
+    {
+     "say": "By the end of the month, the world gets so punctual that you've made eight thousand and twenty dollars.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shrug",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "Balance",
+        "prefix": "$",
+        "derive": {
+         "from": "Net minutes",
+         "x": 5
+        }
+       },
+       {
+        "label": "Net minutes",
+        "value": 1604
+       }
+      ],
+      "clock": "MONTH 1"
+     }
+    },
+    {
+     "say": "Then a letter from your bank. Pending withdrawal, three hundred two thousand, four hundred dollars.",
+     "shots": [
+      {
+       "type": "prop",
+       "prop": "letter",
+       "text": "Pending withdrawal: $302,400.",
+       "sub": "FIRST BANK"
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 60480
+       }
+      ],
+      "clock": "MONTH 2"
+     }
+    },
+    {
+     "say": "To: Mom. Because the rule works both ways. And she has been waiting on you for six weeks.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ],
+       "focus": "extra"
+      }
+     ]
+    },
+    {
+     "say": "You have never been so rich, and so late.",
+     "shots": [
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "panic",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "You Told Mom You'd Call. Now You Owe $302,400 #whatif",
+   "description": "Six weeks. Sixty thousand minutes. One missed phone call.",
+   "hook_title": {
+    "text": "Call mom",
+    "sub": "it costs more"
+   },
+   "variation": {
+    "caption_style": {
+     "short": "box"
+    },
+    "transitions": [
+     "fade",
+     "cut"
+    ]
+   },
+   "end_line": "The full story is on the channel.",
+   "beats": [
+    {
+     "say": "You promised your mom a phone call this weekend. That was six weeks ago.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "stand",
+         "x": 0.5,
+         "expr": "sad"
+        }
+       ]
+      }
+     ],
+     "hud": {
+      "counters": [
+       {
+        "label": "You owe Mom",
+        "prefix": "$",
+        "derive": {
+         "from": "Minutes late",
+         "x": 5
+        }
+       },
+       {
+        "label": "Minutes late",
+        "value": 60480
+       }
+      ],
+      "clock": "DAY 42"
+     }
+    },
+    {
+     "say": "In a world where waiting costs five dollars a minute, six weeks is sixty thousand, four hundred eighty minutes.",
+     "shots": [
+      {
+       "type": "chart",
+       "chart": {
+        "title": "Minutes you kept her waiting",
+        "values": [
+         0,
+         15000,
+         30000,
+         45000,
+         60480
+        ],
+        "xlabels": [
+         "",
+         "",
+         "",
+         "",
+         "42 days"
+        ],
+        "end_label": "60,480"
+       }
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "That's three hundred two thousand, four hundred dollars. You have eight thousand.",
+     "shots": [
+      {
+       "type": "number",
+       "number": {
+        "prefix": "$",
+        "hud": "You owe Mom",
+        "from": 0,
+        "label": "you owe Mom"
+       },
+       "cast": [
+        {
+         "who": "you",
+         "pose": "panic",
+         "x": 0.5
+        }
+       ]
+      },
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "cower",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "An agent from the Treasury says there is no payment plan, and the clock is still running.",
+     "shots": [
+      {
+       "type": "medium",
+       "setting": "boardroom",
+       "cast": [
+        {
+         "who": "liaison",
+         "pose": "talk",
+         "x": 0.4
+        },
+        {
+         "who": "you",
+         "pose": "slump",
+         "x": 0.7,
+         "face": -1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "You do the only thing that stops it. You pick up the phone.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "phone",
+         "x": 0.5,
+         "expr": "determined"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "She answers on the second ring. And she says the words that change everything.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "kitchen",
+       "cast": [
+        {
+         "who": "extra",
+         "pose": "talk",
+         "x": 0.5,
+         "expr": "happy"
+        }
+       ],
+       "focus": "extra"
+      },
+      {
+       "type": "wide",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "shocked",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "say": "But you'll have to watch the full story to hear them.",
+     "shots": [
+      {
+       "type": "close",
+       "setting": "livingroom",
+       "cast": [
+        {
+         "who": "you",
+         "pose": "think",
+         "x": 0.5
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
