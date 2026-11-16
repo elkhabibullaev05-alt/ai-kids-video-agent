@@ -55,11 +55,12 @@ else echo "PUSH: XATO"; sed 's/^/  /' /tmp/kp.err | head -5
   timeout 25 ssh -i /root/.ssh/kanal_deploy -o IdentitiesOnly=yes -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new -p 443 -T git@ssh.github.com 2>&1 | head -2 | sed 's/^/  ssh test: /'
 fi
 echo "disk free: $(df -h / | awk 'NR==2{print $4}')"
-for ch in maxcat doughbros hollow bolt roblox funny money ufc sleep; do
+for ch in maxcat doughbros hollow bolt roblox funny money ufc sleep doodle milo; do
   echo "--- $ch: $(python3 -c "import json;d=json.load(open('cloud/results/$ch/status.json'));print(d.get('time'),d.get('stage'),d.get('error','')[:150])" 2>/dev/null)"
   tail -4 /root/kanal/$ch/worker.log 2>/dev/null | cut -c1-220 | sed 's/^/    /'
   [ -f /root/kanal/$ch/maker.log ] && tail -6 /root/kanal/$ch/maker.log | cut -c1-220 | sed 's/^/    maker: /'
 done
+echo "--- stale locks (run_all.sh unstick_locks):"; tail -5 /root/kanal/stale_lock.log 2>/dev/null | sed "s/^/    /"
 } > /tmp/kanal_holat.txt 2>&1
 [ -n "$OUT" ] && cp -f /tmp/kanal_holat.txt "$OUT"
 exit 0

@@ -62,6 +62,24 @@ for ch in $CHS; do
   mkdir -p /root/kanal/$ch
   [ -n "$TOK" ] && [ -s "$TOK/token_$ch.json" ] && cp -f "$TOK/token_$ch.json" /root/kanal/$ch/token.json
 done
+# 2026-11-16 watchdog: funny, money and roblox stopped reporting at 17:50 UTC on 15 Nov while the other makers kept
+# running every 20 min -> their channel locks stayed held for 13 h (a leftover child process kept the lock file open
+# after "timeout 5h" ended the worker), so start_pool counted them as "running" and never started them again.
+# A real run lasts at most 5 h: if a lock is still held 6 h after that channel's last start, kill whatever holds it.
+unstick_locks() {
+  local ch lf st pid
+  for ch in $CHS; do
+    lf=/tmp/kanal-$ch.lock; [ -e "$lf" ] || continue
+    flock -n "$lf" -c true && continue                      # free -> nothing to do
+    st=$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0)
+    [ $(( $(date +%s) - st )) -lt 21600 ] && continue       # started < 6 h ago -> a real run
+    for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+      ls -l /proc/$pid/fd 2>/dev/null | grep -q -- "$lf" && { echo "$(date -u) $ch: stale lock held by $pid ($(tr '\0' ' ' < /proc/$pid/cmdline 2>/dev/null | cut -c1-120)) -> kill" >> /root/kanal/stale_lock.log; kill -9 $pid 2>/dev/null; }
+    done
+    rm -f "$lf"
+  done
+}
+unstick_locks
 start_pool() {  # $1 = max parallel, rest = channels of this pool
   local max=$1; shift; local running=0 ch order
   for ch in "$@"; do flock -n /tmp/kanal-$ch.lock -c true || running=$((running+1)); done
