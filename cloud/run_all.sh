@@ -44,6 +44,7 @@ NAV=$(ls -d /mnt/c/Users/*/Documents/kanal_navbat 2>/dev/null | head -1)
 if [ -n "$NAV" ] && ls "$NAV"/*/*.json >/dev/null 2>&1; then
   ( flock 9
     for f in "$NAV"/*/*.json; do
+      case "$f" in */gameplay/*) continue;; esac  # 2026-11-17: gameplay jobs belong to auto_gameplay.py, not the story queue
       ch=$(basename "$(dirname "$f")"); mkdir -p cloud/queue/$ch
       python3 -c "import json,sys;json.load(open(sys.argv[1]))" "$f" && mv -f "$f" cloud/queue/$ch/ || mv -f "$f" "$f.bad"
     done
