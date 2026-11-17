@@ -1,48 +1,56 @@
-=== kanal holati 2026-11-17 09:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-17 12:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
-PUSH: OK
+PUSH: XATO
+  warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
+  Connection reset by 140.82.121.36 port 443
+  fatal: Could not read from remote repository.
+  
+  Please make sure you have the correct access rights
+deploy key exists: yes
+public key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPdtchBSyQ2/ZXrolQdHNp7RwMKeDpWA+BqrRuJKtxiP kanal-all@KOMPUTER
+  ssh test: Hi elkhabibullaev05-alt/ai-kids-video-agent! You've successfully authenticated, but GitHub does not provide shell access.
 disk free: 903G
---- maxcat: 2026-11-17T07:30:14+00:00 idle 
-    11-17 03:30:13 $ git pull -q --rebase --autostash
+--- maxcat: 2026-11-17T09:50:10+00:00 idle 
     11-17 04:50:10 $ git pull -q --rebase --autostash
     11-17 06:10:15 $ git pull -q --rebase --autostash
     11-17 07:30:07 $ git pull -q --rebase --autostash
---- doughbros: 2026-11-17T06:50:18+00:00 idle 
-    11-17 02:50:11 $ git pull -q --rebase --autostash
+    11-17 09:50:01 $ git pull -q --rebase --autostash
+--- doughbros: 2026-11-17T09:10:42+00:00 idle 
     11-17 04:10:14 $ git pull -q --rebase --autostash
     11-17 05:30:12 $ git pull -q --rebase --autostash
     11-17 06:50:12 $ git pull -q --rebase --autostash
---- hollow: 2026-11-17T07:10:31+00:00 idle 
-    11-17 03:10:14 $ git pull -q --rebase --autostash
+    11-17 09:10:29 $ git pull -q --rebase --autostash
+--- hollow: 2026-11-17T09:30:32+00:00 idle 
     11-17 04:30:10 $ git pull -q --rebase --autostash
     11-17 05:50:12 $ git pull -q --rebase --autostash
     11-17 07:10:25 $ git pull -q --rebase --autostash
+    11-17 09:30:07 $ git pull -q --rebase --autostash
 --- bolt: 2026-11-17T07:50:05+00:00 idle 
     11-17 03:50:06 $ git pull -q --rebase --autostash
     11-17 05:10:22 $ git pull -q --rebase --autostash
     11-17 06:30:11 $ git pull -q --rebase --autostash
     11-17 07:49:58 $ git pull -q --rebase --autostash
---- roblox: 2026-11-17T06:50:13+00:00 idle 
-    11-17 06:50:13 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-17 06:50:13 $ git diff --cached --quiet
-    11-17 06:50:13 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-17 06:50:13 $ git push -q origin HEAD:main
---- funny: 2026-11-17T07:55:13+00:00 upload 
-    11-17 07:59:00 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] funny-20261117-ice-slip-fails-1236 uploaded
-    11-17 07:59:00 $ git push -q origin HEAD:main
-    11-17 07:59:03 $ ffmpeg -y -v error -i /root/kanal/funny/ready/funny-20261117-parkour-fails-2057.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_funny_funny-20261117-parkour-f
-    11-17 08:00:40 gemini short None
-    maker: 11-17 10:52:00 yt-dlp timeout MvJp6dwCYnI
-    maker: 11-17 10:54:31 timeline 19.5s in 7 shots, voice am_puck
-    maker: 11-17 10:55:07 rendered /root/kanal/funny/made/funny-20261117-parkour-fails-2057.mp4 in 43s
-    maker: 11-17 10:55:08 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
-    maker: 11-17 10:55:08 made funny-20261117-parkour-fails-2057 | Ranking Crazy Parkour Fails 😂 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 43, 'rek': 96}
-    maker: 11-17 10:55:08 done: 3 Short(s); API calls: search 3, list 4
+--- roblox: 2026-11-17T09:10:16+00:00 idle 
+    11-17 09:10:16 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-17 09:10:16 $ git diff --cached --quiet
+    11-17 09:10:16 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-17 09:10:16 $ git push -q origin HEAD:main
+--- funny: 2026-11-17T09:45:59+00:00 upload 
+    11-17 09:45:59 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] 3 video(s) made
+    11-17 09:45:59 $ git push -q origin HEAD:main
+    11-17 09:46:04 $ ffmpeg -y -v error -i /root/kanal/funny/ready/funny-20261117-bmx-fails-8080.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_funny_funny-20261117-bmx-fails-808
+    11-17 09:47:30 gemini short None
+    maker: 11-17 12:38:25 5 CC BY candidates (searches so far 5)
+    maker: 11-17 12:45:15 timeline 19.5s in 7 shots, voice am_adam
+    maker: 11-17 12:45:52 rendered /root/kanal/funny/made/funny-20261117-car-stuck-fails-8700.mp4 in 43s
+    maker: 11-17 12:45:54 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
+    maker: 11-17 12:45:54 made funny-20261117-car-stuck-fails-8700 | Ranking Car Stuck Fails From Bad to WORST 💀 | {'duration': 19.5, 'voice': 'am_adam', 'shots': 7, 'render_s': 43, 'rek': 96}
+    maker: 11-17 12:45:54 done: 3 Short(s); API calls: search 5, list 5
 --- money: 2026-11-17T07:54:43+00:00 queue_empty 
     11-17 07:54:43 $ git add -A -- /opt/kanal/repo/cloud/results/money
     11-17 07:54:43 $ git diff --cached --quiet
@@ -54,26 +62,26 @@ disk free: 903G
     maker: 11-16 23:45:58 rek-ball 91 {'hook': 25, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
     maker: 11-16 23:45:58 made funny-20261116-science-experiment-fails-1622 | Ranking Crazy Science Experiment Fails 😂 | {'duration': 19.91, 'voice': 'am_puck', 'shots': 7, 'render_s': 317, 'rek': 91}
     maker: 11-16 23:45:58 done: 2 Short(s); API calls: search 8, list 7
---- ufc: 2026-11-17T07:35:01+00:00 upload 
-    11-17 07:35:01 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] 1 video(s) made
+--- ufc: 2026-11-17T09:10:16+00:00 sync 
     11-17 07:35:01 $ git push -q origin HEAD:main
     11-17 07:35:04 $ ffmpeg -y -v error -i /root/kanal/ufc/ready/20261116-1-wait-five-dollars-0-long.mp4 -vf scale=-2:480,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_ufc_20261116-1-wait-five-dolla
     11-17 07:53:58 gemini long None
---- sleep: 2026-11-17T07:17:10+00:00 ok 
-    11-17 07:17:10 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
-    11-17 07:17:10 $ git diff --cached --quiet
-    11-17 07:17:11 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] done
-    11-17 07:17:11 $ git push -q origin HEAD:main
---- doodle: 2026-11-17T07:36:27+00:00 upload 
-    11-17 07:36:27 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] 4 video(s) made
+    11-17 09:10:14 $ git pull -q --rebase --autostash
+--- sleep: 2026-11-17T09:30:07+00:00 idle 
+    11-17 09:30:18 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-17 09:30:18 $ git diff --cached --quiet
+    11-17 09:30:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
+    11-17 09:30:18 $ git push -q origin HEAD:main
+--- doodle: 2026-11-17T09:10:21+00:00 sync 
     11-17 07:36:27 $ git push -q origin HEAD:main
     11-17 07:36:30 $ ffmpeg -y -v error -i /root/kanal/doodle/ready/ta_korean_war.mp4 -vf scale=-2:480,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_doodle_ta_korean_war.mp4
     11-17 07:47:12 gemini long None
---- milo: 2026-11-17T07:10:25+00:00 queue_empty 
-    11-17 07:10:26 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-17 07:10:26 $ git diff --cached --quiet
-    11-17 07:10:26 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] queue empty
-    11-17 07:10:26 $ git push -q origin HEAD:main
+    11-17 09:10:20 $ git pull -q --rebase --autostash
+--- milo: 2026-11-17T09:50:01+00:00 queue_empty 
+    11-17 09:50:02 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-17 09:50:02 $ git diff --cached --quiet
+    11-17 09:50:02 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] queue empty
+    11-17 09:50:02 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
 --- held channel locks:
