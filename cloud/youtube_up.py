@@ -11,6 +11,12 @@ from googleapiclient.http import MediaFileUpload
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly"]
 
+# 2026-11-17 watchdog: doodle + ufc long uploads went silent right after "gemini long" (07:47/07:53 UTC) and never
+# logged "uploaded" — httplib2 sockets have no timeout, so a stalled TCP write on the home link hangs next_chunk()
+# forever (until run_all's 5 h kill) and blocks the worker slot. With a default timeout the stall raises
+# socket.timeout (an OSError), and upload() below resumes the same resumable session from the last chunk.
+socket.setdefaulttimeout(300)
+
 
 def online(timeout=8):
     """True when the internet (YouTube's API host) answers. Used to pause instead of failing when the link drops."""
