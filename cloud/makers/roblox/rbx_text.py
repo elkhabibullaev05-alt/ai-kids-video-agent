@@ -15,6 +15,13 @@ class Titles:
     def __init__(self, used):
         self.used = {norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in used or []}
         self.used_raw = " || ".join(sorted(self.used))
+        # newest last (worker appends titles in upload order); used for 'not again this week' checks
+        self.recent = [norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in (used or [])][-14:]
+
+    def recently(self, words, n=14):
+        """2026-11-17 review: True if any of the last n titles contains these words (as whole words)."""
+        w = " " + norm(words) + " "
+        return any(w in " " + u + " " for u in self.recent[-n:])
 
     def ok(self, t, limit=60):
         return t and len(t) <= limit and norm(t) not in self.used
@@ -202,6 +209,11 @@ def long_titles(top, mode, titles, rng):
         # 2026-11-08 competitors: discovery framing ("I FOUND THE HIDDEN SECRET…" 545k in 1 day) — only for a real climber
         if g["prev_rank"] - g["rank"] >= 5:  # honest only for a big jump
             angles.append(f"{g['clean']} Came Out of NOWHERE to #{g['rank']} on Roblox..")
+    # 2026-11-17 review: 'Steal An Egg Is Still #1' led the long title again a day after the 11-16 AVOID rule
+    # ('lead with a game not named in the last 5 titles'). Drop titles naming #1 when it was in the last 5 titles.
+    if titles.recently(a, 5):
+        angles = [x for x in angles if norm(a) not in norm(x)] or angles
+        c = [x for x in c if norm(a) not in norm(x)] or c
     t = titles.pick(angles, rng) or titles.pick(c, rng)
     k = 2
     while not t:

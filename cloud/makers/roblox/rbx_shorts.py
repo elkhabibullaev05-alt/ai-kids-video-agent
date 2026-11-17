@@ -426,6 +426,11 @@ class Card:
 
 def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_michael", workers=None):
     t0 = time.time()
+    # 2026-11-17 review: 'Guess Today's #1 Roblox Game' and 'X vs Y — Who Wins' kept coming back (AVOID.md 11-13..11-15
+    # said once a week). Skip these formats while one is among the last 14 titles (~2-3 days of uploads).
+    sig = {"guess": "guess", "versus": "vs"}.get(fmt_name)
+    if sig and titles.recently(sig):
+        return None
     r = FORMATS[fmt_name](games, titles, rng, back)
     if not r:
         return None

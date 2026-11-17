@@ -275,7 +275,11 @@ def pick_themes(titles, home, n, rng=random, skip=()):
         t = left.pop(i)
         out.append(t)
         seen |= kw(t[0])
-    return out
+    # 2026-11-17 review: Physics Rank made 'Science Experiment Fails' and 'Physics Fails' twice on 11-16 — with 16
+    # themes every theme is inside the 12-day window, and a theme made earlier the same day is not yet in the
+    # uploaded titles, so the fallback sort put it first again. Themes made in the last 2 days always go last.
+    two = (dt.date.today() - dt.timedelta(days=1)).isoformat()
+    return [t for t in out if hist.get(t[0], "") < two] + [t for t in out if hist.get(t[0], "") >= two]
 
 
 # 2026-11-07 competitors (fail channels at 250k-1M views/week): the title names the OUTCOME/feeling, not "Ranking …".
