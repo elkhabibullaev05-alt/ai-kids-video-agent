@@ -211,6 +211,7 @@ def main():
         log(f"{len(cands)} CC BY candidates (searches so far {finder.searches})")
         if len(cands) < 5:
             why["few_cc"] += 1
+            TH.mark_dry(args.home, theme[0])
             continue
         work = tempfile.mkdtemp(prefix="funny_", dir=cache)
         got = []

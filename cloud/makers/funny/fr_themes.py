@@ -223,6 +223,24 @@ PHYSICS_THEMES = [
     ("Rope Swing Physics", "rope swing fail funny", ["rope", "swing"]),
     ("Dock Jump Fails", "dock jump fail funny", ["dock", "jump", "lake"]),
     ("Ski Jump Fails", "ski jump fail funny", ["ski", "jump"]),
+    # 2026-11-18: the 16 themes above ran dry (every run 18:30-21:50 UTC 11-17: "themes with <5 CC clips 4",
+    # 0 Shorts). More dynamic, physics-explainable themes that Funny Rank does not use (clips are never shared).
+    ("Backflip Fails", "backflip fail funny", ["backflip", "flip"]),
+    ("Wheelie Fails", "wheelie fail funny", ["wheelie"]),
+    ("Tug Of War Fails", "tug of war fail funny", ["tug of war", "tug-of-war"]),
+    ("Drift Fails", "drift fail funny", ["drift", "drifting"]),
+    ("Ice Driving Fails", "car ice slide fail", ["ice", "icy", "car", "slide"]),
+    ("Wave Wipeouts", "wave wipeout funny", ["wave", "wipeout"]),
+    ("Tire Swing Fails", "tire swing fail funny", ["tire", "tyre", "swing"]),
+    ("Trick Shot Fails", "trick shot fail funny", ["trick shot", "trickshot"]),
+    ("Box Jump Fails", "box jump fail funny", ["box jump", "box"]),
+    ("Shopping Cart Fails", "shopping cart fail funny", ["shopping cart", "cart", "trolley"]),
+    ("Tree Cutting Fails", "tree falling fail funny", ["tree", "chainsaw", "timber"]),
+    ("Office Chair Fails", "office chair fail funny", ["chair"]),
+    ("Model Rocket Fails", "model rocket launch fail", ["rocket"]),
+    ("Pole Vault Fails", "pole vault fail funny", ["pole vault", "vault"]),
+    ("Long Jump Fails", "long jump fail funny", ["long jump", "jump"]),
+    ("Motorcycle Fails", "motorcycle fail funny", ["motorcycle", "motorbike", "moto"]),
 ]
 if os.environ.get("FR_THEMES") == "physics":
     THEMES = PHYSICS_THEMES
@@ -249,11 +267,31 @@ def save_hist(home, hist):
     os.replace(p + ".tmp", p)
 
 
+def load_dry(home):
+    try:
+        return json.load(open(os.path.join(home, "funny_dry_themes.json")))
+    except Exception:
+        return {}
+
+
+def mark_dry(home, name):
+    d = load_dry(home)
+    d[name] = dt.date.today().isoformat()
+    p = os.path.join(home, "funny_dry_themes.json")
+    json.dump(d, open(p + ".tmp", "w"), indent=1)
+    os.replace(p + ".tmp", p)
+
+
 def pick_themes(titles, home, n, rng=random, skip=()):
     """Themes not in the last ~30 titles and not used in the last 12 days (oldest-used first)."""
     recent = " | ".join(_norm(t) for t in titles[:30] + titles[-30:])
     hist = load_hist(home)
     cut = (dt.date.today() - dt.timedelta(days=12)).isoformat()
+    # 2026-11-18: a theme that just returned <5 CC BY clips is skipped for 5 days (it was re-searched every 20 min
+    # and burned the 100-searches/day limit with no Short made)
+    dry = load_dry(home)
+    dcut = (dt.date.today() - dt.timedelta(days=5)).isoformat()
+    skip = set(skip) | {k for k, v in dry.items() if v >= dcut}
     ok = [t for t in THEMES if _norm(t[0]) not in recent and hist.get(t[0], "") < cut and t[0] not in skip]
     rng.shuffle(ok)
     ok.sort(key=lambda t: hist.get(t[0], ""))  # never-used first, shuffle within ties
