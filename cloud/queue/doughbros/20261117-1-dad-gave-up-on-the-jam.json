@@ -1,0 +1,1046 @@
+{
+ "id": "20261117-1-dad-gave-up-on-the-jam",
+ "plot": "Saturday noon in the pantry, an hour before apple picking, Dad can't open Mia's new strawberry jam and settles for plain sandwiches, so Lolly rallies the Dough Bros; Bup's one big twist fails while ignored Pim keeps mentioning the lid's 'shiny skirt', and with the car horn honking Zeek realises it's a plastic safety seal Dad never peeled — Lolly cuts it with her star point, the lid pops, Lolly slips into the jam and becomes a jam cookie, Dad thinks he loosened it himself, apple day is saved, and Mia asks if the shiny star cookie can come apple picking too.",
+ "script": {
+  "title": "Dad Gave Up on the Jam Jar",
+  "set": {
+   "place": "pantry",
+   "time": "day"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "jar",
+    "type": "box",
+    "color": [
+     0.85,
+     0.12,
+     0.18
+    ],
+    "on": null,
+    "at": [
+     2,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "band",
+    "type": "wheel",
+    "color": [
+     0.92,
+     0.92,
+     0.97
+    ],
+    "on": null,
+    "at": [
+     2,
+     14,
+     1.2
+    ],
+    "visible": true,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Dad gave up on the jam? Then we open it. Right now!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:1,10"
+     ],
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-m-me? Open a jar? Dad has hands. We have crumbs!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-1,10"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "THE JAR WON'T OPEN",
+    "cam": "prop:jar",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "to:-3,9"
+     ],
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "zeek",
+      "to:3,9"
+     ],
+     [
+      "crispy",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Saturday noon, in the pantry. Apple picking starts at one o'clock.",
+    "cam": "overhead",
+    "do": [
+     [
+      "bup",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the shelf sits Mia's strawberry jam. She picked it herself.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She even drew a little heart on the label.",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad twisted that lid until his face went red. Nothing.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "crispy",
+      "to:5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then he sighed. Plain bread sandwiches today. Mia's smile just dropped.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Plain bread? On apple day? Not on my shelf. Never.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team, here's the plan. I'm the biggest. I twist.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations say Dad equals about forty Bups. Just saying.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "W-wait. Why is the lid wearing a shiny little skirt?",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "to:0,12"
+     ],
+     [
+      "band",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Decoration, Pim. Irrelevant. Focus on the grip.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup hugs the lid. He pulls. He grunts. His crust creaks.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "bup",
+      "to:2,13"
+     ],
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "CRRRACK!",
+    "cam": "close:bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The lid doesn't move. Bup slides down the glass like soft butter.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:1,12"
+     ],
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm fine. Totally fine. Did somebody just move the floor?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Outside, Dad loads the car. The trunk slams. Thump.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Ten minutes. Then that jar stays shut until next weekend.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then Mia eats plain bread on her favorite day. Think, everyone.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From the hallway, a tiny voice. Daddy, is my jam open yet?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "MIA IS ASKING",
+    "cam": "close:pim",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "She sounds so hopeful. I can't hear that again. My bean hurts.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-1,12"
+     ],
+     [
+      "pim",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Science time. Air pushes the lid down. That is why it sticks.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Break the seal, and the lid gives up. That's the rule.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then where is the seal, genius? I see glass. I see metal.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim crawls all the way around the jar. Slowly. Squinting.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "pim",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Th-the skirt again. It's plastic. It wraps the lid like a belt.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "band",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, sweetie, nobody wants to hear about the skirt right now.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Beep beep! Dad's car horn. He's coming back for the sandwiches.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "jump"
+     ],
+     [
+      "crispy",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "text": "TWO MINUTES LEFT",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Two minutes and we lose apple day. Somebody say something smart!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Wait. Plastic belt. Tiny dotted line. Pim, say that again.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "It's a s-skirt. With little holes. Like a tear here line.",
+    "cam": "two:pim,zeek",
+    "do": [
+     [
+      "pim",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "That's a safety seal! Dad never took it off!",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "DAD NEVER PEELED IT",
+    "cam": "prop:jar",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "So the strongest dad in the house was fighting plastic.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plastic can't be twisted open. It has to be cut. But how?",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Excuse me. I am a star. Stars have points.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly presses her sharpest point into the dotted line. Rrrrip.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "band",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The plastic belt falls off and spins down to the floor.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "band",
+      "vanish"
+     ],
+     [
+      "zeek",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I said skirt! I said skirt twice! Nobody listens to the bean!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team. One twist. On three. One, two...",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:2,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup twists. The lid turns like it was waiting all morning.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "POP!",
+    "cam": "prop:jar",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ],
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The smell of strawberries fills the whole pantry. Everyone cheers.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly leans over the rim to see. Her icing slips. Splorch.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:3,13"
+     ],
+     [
+      "lolly",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY FELL IN!",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She comes up red, shiny, and dripping. A star cookie with jam.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Lolly. You are a cookie filled with jam. You're dessert now.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:lolly"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Strawberry jam cookie. Bakery style. I have never looked better.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ],
+     [
+      "lolly",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Footsteps! The bros dive behind the cereal box just in time.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-4,9"
+     ],
+     [
+      "pim",
+      "to:-2,9"
+     ],
+     [
+      "zeek",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad picks up the jar. The lid spins off in his hand.",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Huh, he says. Guess I loosened it after all.",
+    "cam": "two:bup,pim",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia runs in, squealing. Jam sandwiches! Apple day is saved!",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Note for the record. The bean solved it. I just explained it.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I solved it? Me? I'm writing that on my bandage.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia spots a shiny star cookie on the shelf. With jam.",
+    "cam": "two:lolly,crispy",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Daddy, she whispers, can the star cookie come apple picking too?",
+    "cam": "prop:jar",
+    "do": [
+     [
+      "jar",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY'S GOING ON A TRIP?!",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Dad Gave Up on the Jam Jar. We Didn't 🍓",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Nobody listens to the bean. Until the bean is right.\" — Pim\nDad gave up on Mia's strawberry jam an hour before apple picking, so the Dough Bros try to open the jar themselves — and one of them comes out as dessert.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "jam jar",
+   "jar won't open",
+   "stuck lid",
+   "strawberry jam",
+   "lolly",
+   "pim",
+   "animated comedy",
+   "funny animation",
+   "apple picking",
+   "autumn"
+  ],
+  "thumb_text": "IT WON'T OPEN!",
+  "thumb_beat": 9,
+  "localizations": {
+   "es": {
+    "title": "Papá se rindió con el frasco de mermelada. Nosotros no 🍓",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Nadie escucha al frijol. Hasta que el frijol tiene razón.\" — Pim\nPapá se rindió con la mermelada de fresa de Mia justo antes de ir a recoger manzanas, así que los Dough Bros intentan abrir el frasco ellos mismos… y uno termina convertido en postre.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "O papai desistiu do pote de geleia. Nós não 🍓",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Ninguém escuta o feijão. Até o feijão estar certo.\" — Pim\nO papai desistiu da geleia de morango da Mia logo antes de colher maçãs, então os Dough Bros tentam abrir o pote sozinhos… e um deles sai de lá virando sobremesa.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "أبي استسلم أمام برطمان المربى. نحن لا 🍓",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لا أحد يستمع إلى حبة الفاصولياء. حتى تكون على حق.\" — بيم\nاستسلم أبي أمام مربى الفراولة الخاص بميا قبل رحلة قطف التفاح، فيحاول Dough Bros فتح البرطمان بأنفسهم… ويخرج أحدهم منه وقد صار حلوى.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Papa a abandonné le pot de confiture. Pas nous 🍓",
+    "description": "Selon toi, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n« Personne n'écoute le haricot. Jusqu'à ce que le haricot ait raison. » — Pim\nPapa abandonne la confiture de fraise de Mia juste avant la cueillette des pommes, alors les Dough Bros essaient d'ouvrir le pot eux-mêmes… et l'un d'eux en ressort transformé en dessert.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "パパがあきらめたジャムのびん。ぼくらはあきらめない 🍓",
+    "description": "次はどうなると思う？コメントで教えてね。\n「だれも豆の話を聞かない。豆が正しいときまでは。」— ピム\nりんご狩りの直前、パパはミアのいちごジャムのふたをあきらめた。ドウ・ブロスは自分たちでびんを開けようとするけど…ひとりがデザートになってしまう。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "아빠가 포기한 잼 병, 우리는 포기 안 해 🍓",
+    "description": "다음 편에서는 무슨 일이 생길까요? 댓글로 알려 주세요.\n\"아무도 콩 말을 안 들어. 콩이 맞을 때까지는.\" — 핌\n사과 따러 가기 직전, 아빠는 미아의 딸기잼 뚜껑을 포기했어요. 도우 브로스가 직접 병을 열어 보려는데… 한 명이 디저트가 되어 버려요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Papa gab beim Marmeladenglas auf. Wir nicht 🍓",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Keiner hört auf die Bohne. Bis die Bohne recht hat.“ — Pim\nKurz vor dem Äpfelpflücken gibt Papa bei Mias Erdbeermarmelade auf, also versuchen die Dough Bros, das Glas selbst zu öffnen … und einer von ihnen wird dabei zum Dessert.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 47,
+   "dur": 22,
+   "top": "LOLLY BECAME A JAM COOKIE",
+   "title": "Lolly Went Into the Jam Jar… and Became a Jam Cookie! 😂 #shorts",
+   "description": "Lolly leans over the open jar and… splorch. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "jam cookie",
+    "lolly",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Lolly se fue al frasco de mermelada… ¡y se volvió galleta rellena! 😂 #shorts",
+     "description": "Lolly se asoma al frasco y… splorch. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Lolly foi até o pote de geleia… e virou biscoito recheado! 😂 #shorts",
+     "description": "Lolly se inclina sobre o pote e… splorch. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لولي ذهبت إلى برطمان المربى… وأصبحت كعكة محشوة! 😂 #shorts",
+     "description": "لولي تنحني فوق البرطمان و… بلوب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Lolly est allée dans le pot de confiture… et elle est devenue un biscuit fourré ! 😂 #shorts",
+     "description": "Lolly se penche sur le pot et… splorch. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ロリーがジャムのびんへ…ジャムクッキーになった！😂 #shorts",
+     "description": "びんをのぞきこんだロリーが…ベチャッ。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "롤리가 잼 병에 갔다가… 잼 쿠키가 됐어! 😂 #shorts",
+     "description": "병을 들여다보던 롤리가… 철퍽. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Lolly ging ins Marmeladenglas… und wurde ein Marmeladenkeks! 😂 #shorts",
+     "description": "Lolly beugt sich übers Glas und… platsch. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 0,
+   "dur": 22,
+   "top": "DAD COULDN'T OPEN IT",
+   "title": "Dad Couldn't Open It. Can 5 Crumbs? 🍓 #shorts",
+   "description": "Mia's favorite jam won't open and time is running out. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "jam jar",
+    "pim",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Papá no pudo abrirlo. ¿Podrán cinco migajas? 🍓 #shorts",
+     "description": "La mermelada favorita de Mia no se abre y faltan minutos. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O papai não abriu. Cinco migalhas conseguem? 🍓 #shorts",
+     "description": "A geleia favorita da Mia não abre e faltam minutos. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أبي لم يستطع فتحه. هل تستطيع خمس فتات؟ 🍓 #shorts",
+     "description": "مربى ميا المفضل لا ينفتح والوقت ينفد. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Papa n'a pas pu l'ouvrir. Cinq miettes y arriveront ? 🍓 #shorts",
+     "description": "La confiture préférée de Mia ne s'ouvre pas et le temps presse. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "パパでも開かない。小さな5人ならどう？🍓 #shorts",
+     "description": "ミアの大好きなジャムが開かない。時間がない。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "아빠도 못 연 병, 부스러기 다섯이 열 수 있을까? 🍓 #shorts",
+     "description": "미아가 제일 좋아하는 잼이 안 열려요. 시간이 없어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Papa schaffte es nicht. Schaffen es fünf Krümel? 🍓 #shorts",
+     "description": "Mias Lieblingsmarmelade geht nicht auf, und die Zeit läuft. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
