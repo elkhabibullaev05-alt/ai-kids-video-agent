@@ -1,0 +1,1198 @@
+{
+ "id": "20261117-1-max-5am-routine",
+ "plot": "On a cold autumn morning Max tries a 7-step 5 A.M. routine from a video (alarm, cold plunge, run, yoga, meditation, green smoothie, gratitude journal) and fails every step in its own gag, while Dog, who swore he was 'just standing near it', secretly does every step perfectly; Max falls asleep on the yoga mat at 6:31, Grandma finds a glowing new morning-person Dog, and Dog has moved tomorrow's alarm to 4 A.M.",
+ "script": {
+  "title": "Max's 5 A.M. Routine",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "clock",
+    "type": "box",
+    "color": [
+     0.9,
+     0.2,
+     0.2
+    ],
+    "at": [
+     -3.5,
+     9.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.4
+   },
+   {
+    "id": "tub",
+    "type": "box",
+    "color": [
+     0.3,
+     0.6,
+     0.95
+    ],
+    "at": [
+     5.0,
+     12.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.9
+   },
+   {
+    "id": "mat",
+    "type": "box",
+    "color": [
+     0.6,
+     0.3,
+     0.75
+    ],
+    "at": [
+     0.5,
+     10.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.7
+   },
+   {
+    "id": "blender",
+    "type": "box",
+    "color": [
+     0.35,
+     0.8,
+     0.35
+    ],
+    "at": [
+     -4.5,
+     12.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "book",
+    "type": "box",
+    "color": [
+     0.95,
+     0.95,
+     0.9
+    ],
+    "at": [
+     -1.0,
+     10.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Five A.M.! Day one of my brand new life! Move, Dog!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:-2,7"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's dark. The birds aren't even up. Why are we up?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:2,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A video said winners wake at five. Seven steps. Then I win.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "THE 5 A.M. ROUTINE: 7 STEPS",
+    "cam": "prop:clock",
+    "hold": 1.2,
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Can a cat who sleeps sixteen hours a day finish all seven?",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm not doing it. I'm just standing near it. Supportively.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step one. The alarm. He set it himself last night.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Who set that thing? Who would do this to me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You did. You were very excited about it. You sang.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Past me is a monster. Present me is going back to bed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He slaps the alarm. It rings again. Snooze is not a step.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ],
+     [
+      "clock",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fine! I'm up! I'm a winner! Where's my towel?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Your towel is on the clothesline. You hung it there at midnight.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "text": "STEP TWO: COLD PLUNGE",
+    "cam": "prop:tub",
+    "hold": 1.0,
+    "do": [
+     [
+      "tub",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cold water wakes up your brain. I'll start with one toe.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One toe touches the water.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Aaah! It's wet! Nobody told me it would be wet!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's a bath, Max. Wet is kind of the whole idea.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog, who is not doing the routine, jumps in head first.",
+    "cam": "prop:tub",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Whoa. Okay. I feel amazing. I can see colours.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That doesn't count. You weren't even on the list.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "text": "STEP THREE: MORNING RUN",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "to:-6,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One lap of the garden. Easy. I'm a natural athlete.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-5,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max runs to the very first bush. Then lies down behind it.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-7,15"
+     ],
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog jogs past. Then past again. Then past again.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:-8,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Water break. I'm hydrating. With my eyes closed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, I already did three laps. The grass is wet from me.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-6,14"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Three steps done. Four to go. And it's only five forty!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step four. Yoga. Max has stretched every single day of his life.",
+    "cam": "prop:mat",
+    "do": [
+     [
+      "mat",
+      "show"
+     ],
+     [
+      "max",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Downward dog? Please. I invented downward cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Excuse me. Downward dog is literally named after me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A leaf falls from the tree. Max forgets that yoga exists.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:3,12"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Leaf! Leaf! I've got it! I've got... the mat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "mat",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Rolled up in a yoga mat. Very calming. Very peaceful.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is a real pose. It's called the burrito.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "text": "STEP FIVE: CLEAR YOUR MIND",
+    "cam": "prop:mat",
+    "hold": 1.0,
+    "do": [
+     [
+      "mat",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Eyes closed. Breathe in. Think about absolutely nothing.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ],
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside Max's head: fish. Fish. Bigger fish. A fish in a hat.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Morning! Morning! Lovely morning! Who wants a little song?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, I'm meditating. Please sing somewhere far away. Like Spain.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Must... not... pounce. I am a calm, peaceful cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Your tail is pouncing. The rest of you looks calm, though.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Meditation lasted nine seconds. A new personal record.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ],
+     [
+      "bird",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "text": "STEP SIX: GREEN SMOOTHIE",
+    "cam": "prop:blender",
+    "hold": 1.0,
+    "do": [
+     [
+      "blender",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Kale, spinach, and one sardine for flavour. Now press the button.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The blender turns on. The loudest thing Max has ever heard.",
+    "cam": "prop:blender",
+    "do": [
+     [
+      "blender",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's alive! It roars! Save yourselves! Women and kittens first!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-8,14"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's a blender, Max. It's literally making your breakfast.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog takes one polite sip. Then the whole jug.",
+    "cam": "prop:blender",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "blender",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Kale? Kale is incredible. Why did nobody tell me about kale?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That smoothie was mine. I was going to almost drink it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I quit now, I woke up at five for nothing!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "STEP SEVEN: GRATITUDE JOURNAL",
+    "cam": "prop:book",
+    "hold": 1.0,
+    "do": [
+     [
+      "book",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Write three things you're thankful for. Number one. Naps.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Number two. Also naps. Number three. A nap, but longer.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "My list says: kale, cold baths, and running in the dark.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And number four: you. Sometimes. When you share the sofa.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait. You took the cold bath. You ran. You drank the smoothie.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. Did you secretly do my whole routine?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I wasn't doing it. I was just doing it near you.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog has finished all seven steps. Max has finished one alarm.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fine. I'll do the yoga again. Properly. Starting right... now.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max lies down on the mat for one second of resting pose.",
+    "cam": "prop:mat",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "text": "6:31 A.M.",
+    "cam": "wide",
+    "hold": 1.0,
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max is asleep. Dog does push-ups. The sun isn't even up yet.",
+    "cam": "overhead",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Good morning, boys! Why is my yoga mat out here?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you look exhausted. And Dog, you look... glowing?",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I've changed, Grandma. I'm a morning person now. I love kale.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Who are you, and what have you done with my dog?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma gives Dog a medal. Max gets a blanket. Both are happy.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "He stole my new life. I want it back. After lunch.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Same time tomorrow, partner? I moved the alarm to four.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Four?! There's a four in the morning too?!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tomorrow, four A.M. Somebody please hide that alarm.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Woke Up at 5 A.M. On Purpose?! 😵",
+  "description": "\"Past me set a 5 A.M. alarm. Past me is a monster.\" 🐱\nMax tries the famous 7-step morning routine on a cold autumn morning: alarm, cold plunge, a run, yoga, meditation, a green smoothie and a gratitude journal. Dog says he's not doing it. Dog is very much doing it.\nWhich step would break YOU first? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "5am morning routine",
+   "morning routine",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "productivity",
+   "cold plunge",
+   "green smoothie",
+   "max the curious cat",
+   "pet comedy",
+   "autumn morning"
+  ],
+  "thumb_text": "5 A.M. FAIL",
+  "thumb_beat": 58,
+  "localizations": {
+   "es": {
+    "title": "¿Max se despertó a las 5 a. m. a propósito?! 😵",
+    "description": "\"El yo del pasado puso una alarma a las 5. El yo del pasado es un monstruo.\" 🐱\nMax prueba la famosa rutina matutina de 7 pasos en una fría mañana de otoño: alarma, baño helado, carrera, yoga, meditación, batido verde y diario de gratitud. Dog dice que él no la hace. Dog la está haciendo por completo.\n¿Qué paso te rompería a TI primero? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "pt": {
+    "title": "Max acordou às 5 da manhã de propósito?! 😵",
+    "description": "\"O eu do passado colocou um alarme às 5. O eu do passado é um monstro.\" 🐱\nMax tenta a famosa rotina matinal de 7 passos numa manhã fria de outono: alarme, banho gelado, corrida, ioga, meditação, vitamina verde e diário de gratidão. Dog diz que não está fazendo. Dog está fazendo tudo.\nQual passo quebraria VOCÊ primeiro? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "ar": {
+    "title": "ماكس استيقظ في الخامسة فجرًا عمدًا؟! 😵",
+    "description": "\"أنا في الماضي ضبطت المنبّه على الخامسة. أنا في الماضي وحش.\" 🐱\nيجرّب ماكس روتين الصباح الشهير ذا الخطوات السبع في صباح خريفي بارد: المنبّه، والحمام البارد، والركض، واليوغا، والتأمل، والعصير الأخضر، ودفتر الامتنان. دوغ يقول إنه لا يشارك. لكن دوغ يشارك في كل شيء.\nأي خطوة ستهزمك أنت أولًا؟ 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "fr": {
+    "title": "Max s'est levé à 5 h exprès ?! 😵",
+    "description": "« Le moi d'hier a mis un réveil à 5 h. Le moi d'hier est un monstre. » 🐱\nMax tente la fameuse routine matinale en 7 étapes par un froid matin d'automne : réveil, bain glacé, course, yoga, méditation, smoothie vert et journal de gratitude. Dog dit qu'il ne la fait pas. Dog la fait entièrement.\nQuelle étape te ferait craquer en premier ? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "ja": {
+    "title": "マックスがわざと朝5時に起きた？！😵",
+    "description": "「昨日の自分が朝5時にアラームをセットした。昨日の自分はモンスターだ」🐱\n寒い秋の朝、マックスは話題の7ステップ朝ルーティンに挑戦：アラーム、冷水浴、ランニング、ヨガ、瞑想、グリーンスムージー、感謝日記。ドッグは「やってない」と言う。でも全部やっている。\nあなたが最初に挫折するのはどのステップ？👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "ko": {
+    "title": "맥스가 일부러 새벽 5시에 일어났다고?! 😵",
+    "description": "\"과거의 내가 새벽 5시 알람을 맞췄다. 과거의 나는 괴물이다.\" 🐱\n추운 가을 아침, 맥스는 유명한 7단계 아침 루틴에 도전한다: 알람, 냉수욕, 달리기, 요가, 명상, 그린 스무디, 감사 일기. 도그는 자기는 안 한다고 한다. 도그는 전부 하고 있다.\n당신은 어느 단계에서 먼저 무너질까요? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   },
+   "de": {
+    "title": "Max ist absichtlich um 5 Uhr aufgestanden?! 😵",
+    "description": "„Mein früheres Ich hat den Wecker auf 5 Uhr gestellt. Mein früheres Ich ist ein Monster.“ 🐱\nMax probiert an einem kalten Herbstmorgen die berühmte 7-Schritte-Morgenroutine: Wecker, Eisbad, Laufen, Yoga, Meditation, grüner Smoothie und Dankbarkeitstagebuch. Dog sagt, er macht nicht mit. Dog macht komplett mit.\nWelcher Schritt würde DICH zuerst schaffen? 👇\n#MaxTheCuriousCat #MorningRoutine #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 17,
+   "top": "ONE TOE. THAT'S IT.",
+   "title": "A Cat Tries a Cold Plunge 😵 #shorts",
+   "description": "Nobody told him it would be wet. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cold plunge",
+    "morning routine"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Un gato prueba el baño helado 😵 #shorts",
+     "description": "Nadie le dijo que estaría mojado. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um gato tenta o banho gelado 😵 #shorts",
+     "description": "Ninguém avisou que ia estar molhado. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قطّ يجرّب الحمام البارد 😵 #shorts",
+     "description": "لم يخبره أحد أنه سيكون مبلّلًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un chat tente le bain glacé 😵 #shorts",
+     "description": "Personne ne lui avait dit que ce serait mouillé. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "猫が冷水浴に挑戦 😵 #shorts",
+     "description": "濡れるなんて誰も言ってなかった。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "고양이의 냉수욕 도전 😵 #shorts",
+     "description": "젖는다고 아무도 말 안 해줬다. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Katze probiert das Eisbad 😵 #shorts",
+     "description": "Niemand hat ihm gesagt, dass es nass ist. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 43,
+   "dur": 18,
+   "top": "PRESS THE BUTTON...",
+   "title": "He Was Not Ready for the Blender 💀 #shorts",
+   "description": "Kale, spinach, one sardine… and pure panic. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat vs blender",
+    "cat and dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "No estaba listo para la licuadora 💀 #shorts",
+     "description": "Kale, espinaca, una sardina… y puro pánico. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele não estava pronto para o liquidificador 💀 #shorts",
+     "description": "Couve, espinafre, uma sardinha… e puro pânico. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يكن مستعدًا للخلّاط 💀 #shorts",
+     "description": "كرنب وسبانخ وسردينة واحدة… وذعر خالص. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Il n'était pas prêt pour le mixeur 💀 #shorts",
+     "description": "Chou kale, épinards, une sardine… et la panique totale. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ミキサーの心の準備ができてなかった 💀 #shorts",
+     "description": "ケール、ほうれん草、イワシ1匹…そして大パニック。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "믹서기를 감당할 준비가 안 됐다 💀 #shorts",
+     "description": "케일, 시금치, 정어리 한 마리… 그리고 대혼란. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Er war nicht bereit für den Mixer 💀 #shorts",
+     "description": "Grünkohl, Spinat, eine Sardine … und pure Panik. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1176 @@
+{
+ "id": "20261117-2-max-first-date",
+ "plot": "Max asks Cleo, the black cat next door, out for a noon date in the park and wants Dog far away, but each gag goes wrong (pickup lines on a bush, a bench with no back, a bitten flower vs Dog's great stick, small talk, a one-crumb café, Dog's howled love song, waiting for a sunset at 12:30, a song fee on the bill); the twist planted at the start is that Dog 'fixed' the invitation by signing it 'Love, Dog' with his paw, so Cleo leaves to chase things with Dog and Max is left with the bill, until Cleo's sister asks if 'the orange one' is single.",
+ "script": {
+  "title": "Max's First Date",
+  "set": {
+   "place": "park",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "cleo": {
+    "name": "Cleo",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 1,
+    "color": [
+     0.22,
+     0.22,
+     0.28
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     8,
+     12
+    ]
+   }
+  },
+  "props": [
+   {
+    "id": "flower",
+    "type": "star",
+    "color": [
+     0.95,
+     0.25,
+     0.35
+    ],
+    "at": [
+     -1.5,
+     7.5,
+     0.3
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "bench",
+    "type": "box",
+    "color": [
+     0.55,
+     0.35,
+     0.2
+    ],
+    "at": [
+     0.5,
+     12.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.8
+   },
+   {
+    "id": "picnic",
+    "type": "cake",
+    "color": [
+     0.9,
+     0.75,
+     0.5
+    ],
+    "at": [
+     0.5,
+     10.0,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "bill",
+    "type": "box",
+    "color": [
+     0.95,
+     0.95,
+     0.9
+    ],
+    "at": [
+     1.5,
+     10.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "note",
+    "type": "box",
+    "color": [
+     1.0,
+     0.9,
+     0.95
+    ],
+    "at": [
+     2.5,
+     11.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.35
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "She said yes! Cleo from next door said yes!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:-2,7"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait up! A date? Like a real date? With a cat?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Noon. The park bench. And you stay far, far away.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,7"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "FIRST DATE. 11:52 A.M.",
+    "cam": "prop:flower",
+    "hold": 1.2,
+    "do": [
+     [
+      "flower",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Can Max survive one single date without Dog ruining it?",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Relax. I fixed your invitation note. Added a personal touch.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You touched my note? What did you... no time. Later.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Eight minutes to go. Max practises his lines on a bush.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hi. Are you a sardine? Because I can't stop thinking about sardines.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "The bush is not impressed. Try something simple. Like 'nice fur'.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Nice fur. Do you come here often? I do. I live here.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Give up, Max. That bush has been married for years.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:-4,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, whose side are you on? I'm under a lot of pressure.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "turn:bird"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step two. Look cool on the bench. Lean back. Relaxed.",
+    "cam": "prop:bench",
+    "do": [
+     [
+      "max",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Casual. Mysterious. A cat with a past.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The bench has no back.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I meant to do that. That was a stretch. A cool stretch.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That was the coolest fall I've ever seen. Ten out of ten.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Hi, Max! Oh, this park is so pretty at noon.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "enter:right"
+     ],
+     [
+      "cleo",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max waves. Cleo waves back. Max waves even harder.",
+    "cam": "two:max,cleo",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "And hi, Dog! I'm so glad you're here too!",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She was waving at you. Why is she waving at you?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "People like me. I'm a very waveable dog.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cleo, I brought you a flower. Picked it from Grandma's garden.",
+    "cam": "two:max,cleo",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ],
+     [
+      "flower",
+      "give:cleo"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Aww. And it only has one little bite in it.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's a design feature. Very modern. Very artistic.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I brought her a stick. A really, really good stick.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,12"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Oh! That is a good stick. That's a great stick.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Small talk. Max has prepared exactly zero topics.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So. Naps. Do you like naps? I like naps.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "I like adventures. Running, climbing, chasing things.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Do you like climbing trees, Max?",
+    "cam": "two:max,cleo",
+    "do": [
+     [
+      "cleo",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Love it. Coming back down is the part I skip.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me too. I chase my dinner bowl. Every day. Twice.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I chase everything! Balls, cars, my own tail. Watch this!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Ha! You're so funny, Dog.",
+    "cam": "two:cleo,dog",
+    "do": [
+     [
+      "cleo",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Twenty minutes in, and my only rival is my roommate.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Welcome to Café Bench. Today's special is one crumb.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We'll take two crumbs, please. It's a special day.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Sir, we have one crumb. Yesterday it was a whole muffin.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Would you like the crumb toasted or untoasted, sir?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Surprise me. I'm a cat of mystery.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The crumb arrives. Then a little blue blur.",
+    "cam": "prop:picnic",
+    "do": [
+     [
+      "picnic",
+      "show"
+     ],
+     [
+      "bird",
+      "to:0,10"
+     ],
+     [
+      "picnic",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Sorry! Reflex! Crumbs are my whole personality.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, I need romantic music. Something soft. Something classy.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog howls. Softly. Classily. For three whole minutes.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Ahwoooo! That was a love song. In dog.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "That was beautiful. Can you do one more?",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One more song and I'm the third wheel on my own date!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:2,10"
+     ],
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Cleo, let's sit right here and watch the sunset together.",
+    "cam": "two:max,cleo",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Max, it's twelve thirty. In the afternoon.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then we wait. I'm very patient. I've got all day.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Max, we can't sit on a bench for five hours.",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Watch me. I'm a professional at sitting. It's my best sport.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "text": "SUNSET IN: 5 HOURS",
+    "cam": "prop:bench",
+    "hold": 1.0,
+    "do": [
+     [
+      "bench",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Your bill, sir. One crumb, two waters, and a song fee.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:1,10"
+     ],
+     [
+      "bill",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A song fee? I didn't sing! And cats don't have pockets!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then you'll be washing dishes. All afternoon. Both of them.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Max, this was sweet. But when does the real date start?",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The real date? This is the real date. I'm the date.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "Your note said 'Love, Dog.' With a big muddy paw print.",
+    "cam": "two:max,cleo",
+    "do": [
+     [
+      "note",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max reads the note. His words. And at the bottom, a paw.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. You signed my love note with your name?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You said add a personal touch! My paw is very personal.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "cleo",
+    "say": "So Dog is my date? Great! Dog, let's go chase something!",
+    "cam": "close:cleo",
+    "do": [
+     [
+      "cleo",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, buddy, you're the best wingman ever. Seriously.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And off they go. Running, chasing, howling. Very romantic.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "exit"
+     ],
+     [
+      "cleo",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I planned this date for three days and I got the bill.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Cash or crumbs, sir? We also accept dishwashing.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, wait! Cleo's sister just asked. Is the orange one single?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Her sister? Bird, get me a pen. Keep Dog away from it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next time, Max writes the note himself. Dog already found the pen.",
+    "cam": "prop:note",
+    "do": [
+     [
+      "note",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Asked the Cat Next Door Out… 😭",
+  "description": "\"I planned this date for three days… and I got the bill.\" 🐱\nMax finally asks Cleo from next door out for a noon date in the park. Dog promised to help. Cheesy lines, a bench with no back, a flower with a bite in it, a crumb café and a sunset at 12:30 — and the note Max didn't read twice.\nWhat's the worst thing that ever happened on YOUR first date? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "first date",
+   "first date fail",
+   "wingman",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "dating humor",
+   "max the curious cat",
+   "pet comedy",
+   "park date"
+  ],
+  "thumb_text": "WRONG DATE?!",
+  "thumb_beat": 59,
+  "localizations": {
+   "es": {
+    "title": "Max invitó a salir a la gata de al lado… 😭",
+    "description": "\"Planeé esta cita durante tres días… y me tocó pagar la cuenta.\" 🐱\nMax por fin invita a Cleo, la vecina, a una cita al mediodía en el parque. Dog prometió ayudar. Frases cursis, un banco sin respaldo, una flor mordida, un café de una miga, un atardecer a las 12:30… y la nota que Max no leyó dos veces.\n¿Qué es lo peor que te pasó en TU primera cita? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "pt": {
+    "title": "Max chamou a gata vizinha para sair… 😭",
+    "description": "\"Planejei esse encontro por três dias… e fiquei com a conta.\" 🐱\nMax finalmente chama Cleo, a vizinha, para um encontro ao meio-dia no parque. Dog prometeu ajudar. Cantadas bregas, um banco sem encosto, uma flor mordida, um café de uma migalha, um pôr do sol às 12h30… e o bilhete que Max não leu duas vezes.\nQual foi a pior coisa no SEU primeiro encontro? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "ar": {
+    "title": "ماكس دعا قطة الجيران إلى موعد… 😭",
+    "description": "\"خطّطت لهذا الموعد ثلاثة أيام… وانتهى بي الأمر أدفع الفاتورة.\" 🐱\nأخيرًا يدعو ماكس كليو، قطة الجيران، إلى موعد ظهرًا في الحديقة. وعد دوغ بالمساعدة. عبارات غزل سخيفة، ومقعد بلا ظهر، ووردة مقضومة، ومقهى بفتاتة واحدة، وغروب في الثانية عشرة والنصف… والرسالة التي لم يقرأها ماكس مرتين.\nما أسوأ ما حدث في موعدك الأول؟ 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "fr": {
+    "title": "Max a invité la chatte d'à côté… 😭",
+    "description": "« J'ai préparé ce rendez-vous pendant trois jours… et c'est moi qui paie l'addition. » 🐱\nMax invite enfin Cleo, la voisine, à un rendez-vous à midi au parc. Dog a promis d'aider. Phrases de drague ringardes, un banc sans dossier, une fleur croquée, un café à une miette, un coucher de soleil à 12 h 30… et le mot que Max n'a pas relu.\nQuel est le pire moment de TON premier rendez-vous ? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "ja": {
+    "title": "マックス、隣の猫をデートに誘う… 😭",
+    "description": "「3日かけて計画したデート…残ったのは請求書だけ」🐱\nマックスはついに隣の猫クレオを昼の公園デートに誘う。ドッグは手伝うと約束した。寒い口説き文句、背もたれのないベンチ、かじられた花、パンくず1個のカフェ、12時半の夕焼け待ち…そしてマックスが読み返さなかった手紙。\nあなたの初デートで一番の失敗は？👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "ko": {
+    "title": "맥스가 옆집 고양이에게 데이트 신청을… 😭",
+    "description": "\"3일 동안 준비한 데이트… 남은 건 계산서뿐.\" 🐱\n맥스가 드디어 옆집 고양이 클레오에게 정오의 공원 데이트를 신청한다. 도그는 돕겠다고 약속했다. 오글거리는 멘트, 등받이 없는 벤치, 한 입 베어 문 꽃, 빵부스러기 하나뿐인 카페, 12시 30분의 노을 기다리기… 그리고 맥스가 다시 읽지 않은 쪽지.\n당신의 첫 데이트 최악의 순간은? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   },
+   "de": {
+    "title": "Max hat die Katze von nebenan eingeladen … 😭",
+    "description": "„Drei Tage habe ich dieses Date geplant … und am Ende hatte ich die Rechnung.“ 🐱\nMax lädt endlich Cleo von nebenan zu einem Mittagsdate im Park ein. Dog hat versprochen zu helfen. Kitschige Sprüche, eine Bank ohne Lehne, eine angeknabberte Blume, ein Café mit einem Krümel, ein Sonnenuntergang um 12:30 … und der Zettel, den Max nicht zweimal gelesen hat.\nWas war das Schlimmste bei DEINEM ersten Date? 👇\n#MaxTheCuriousCat #FirstDate #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 13,
+   "dur": 15,
+   "top": "LOOK COOL. LEAN BACK.",
+   "title": "The Bench Had No Back 💀 #shorts",
+   "description": "Casual. Mysterious. On the ground. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "first date",
+    "cat fail"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El banco no tenía respaldo 💀 #shorts",
+     "description": "Casual. Misterioso. En el suelo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O banco não tinha encosto 💀 #shorts",
+     "description": "Casual. Misterioso. No chão. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "المقعد كان بلا ظهر 💀 #shorts",
+     "description": "هادئ. غامض. على الأرض. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le banc n'avait pas de dossier 💀 #shorts",
+     "description": "Décontracté. Mystérieux. Par terre. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ベンチに背もたれがなかった 💀 #shorts",
+     "description": "クールに。ミステリアスに。地面に。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "벤치에 등받이가 없었다 💀 #shorts",
+     "description": "여유롭게. 신비롭게. 바닥에. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Bank hatte keine Lehne 💀 #shorts",
+     "description": "Lässig. Geheimnisvoll. Am Boden. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 49,
+   "dur": 17,
+   "top": "IT'S 12:30 PM",
+   "title": "Let's Watch the Sunset… at Noon 😭 #shorts",
+   "description": "He's very patient. He's got all day. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "first date",
+    "cat and dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Veamos el atardecer… al mediodía 😭 #shorts",
+     "description": "Es muy paciente. Tiene todo el día. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Vamos ver o pôr do sol… ao meio-dia 😭 #shorts",
+     "description": "Ele é muito paciente. Tem o dia todo. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لنشاهد الغروب… عند الظهر 😭 #shorts",
+     "description": "إنه صبور جدًا. لديه اليوم كله. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Regardons le coucher de soleil… à midi 😭 #shorts",
+     "description": "Il est très patient. Il a toute la journée. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "夕焼けを見よう…お昼に 😭 #shorts",
+     "description": "彼はとても我慢強い。一日中ひまだ。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "같이 노을 보자… 정오에 😭 #shorts",
+     "description": "그는 아주 인내심이 강하다. 하루 종일 시간이 있다. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Lass uns den Sonnenuntergang sehen … mittags 😭 #shorts",
+     "description": "Er ist sehr geduldig. Er hat den ganzen Tag. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
