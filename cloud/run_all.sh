@@ -57,7 +57,7 @@ fi
 MAKERS="funny money ufc sleep roblox doodle milo"
 TOP="funny money roblox"  # 2026-11-15 owner: top channels by views get the light slots first (MW4 has its own uploader below)
 PAR3D=${KANAL_PAR3D:-2}; PARMK=${KANAL_PARMK:-6}  # 2026-11-09: all 5 light makers at once — idle ones exit in seconds; with 2 slots Funny waited behind idle channels
-[ "$PAR" = "1" ] && { PAR3D=1; PARMK=3; }   # a game is running: one 3D render, light makers still run
+[ "$PAR" = "1" ] && { PAR3D=1; PARMK=4; }  # 2026-11-17: 3 -> 4 (TOP alone filled 3; light ffmpeg makers)   # a game is running: one 3D render, light makers still run
 for ch in $CHS; do
   mkdir -p /root/kanal/$ch
   [ -n "$TOK" ] && [ -s "$TOK/token_$ch.json" ] && cp -f "$TOK/token_$ch.json" /root/kanal/$ch/token.json
@@ -89,6 +89,12 @@ start_pool() {  # $1 = max parallel, rest = channels of this pool
   # tr '\n' ' ' keeps them; the guard re-adds any channel that still goes missing.
   # 2026-11-15 owner ("ko'proq ber"): the channels that get views start first when slots are short
   order="$(for ch in $TOP; do case " $order " in *" $ch "*) echo $ch;; esac; done) $(for ch in $order; do case " $TOP " in *" $ch "*) ;; *) echo $ch;; esac; done)"
+  # 2026-11-17 watchdog: ufc, sleep, doodle and milo got NO run from 16 Nov 15:30 UTC (15+ h, Doodle/Milo/Wild Sketchbook
+  # schedules emptied) — in game mode PARMK=3 and the 3 TOP channels took every slot every 20 min. Any channel whose
+  # last start is > 2 h old now goes first (oldest first), so TOP-first can never starve the others again.
+  now=$(date +%s)
+  starved=$(for ch in $order; do st=$(cat /root/kanal/$ch/.last_start 2>/dev/null || echo 0); [ $((now-st)) -gt 7200 ] && echo "$st $ch"; done | sort -n | awk '{print $2}' | tr '\n' ' ')
+  order="$starved $(for ch in $order; do case " $starved " in *" $ch "*) ;; *) echo $ch;; esac; done | tr '\n' ' ')"
   for ch in "$@"; do case " $(echo $order) " in *" $ch "*) ;; *) order="$order $ch";; esac; done
   for ch in $order; do
     [ $running -ge $max ] && break
