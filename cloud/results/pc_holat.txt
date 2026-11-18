@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-18 08:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-18 09:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -6,7 +6,7 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 894G
+disk free: 890G
 --- maxcat: 2026-11-18T07:10:22+00:00 idle 
     11-18 00:50:17 $ git pull -q --rebase --autostash
     11-18 02:10:21 $ git pull -q --rebase --autostash
@@ -17,37 +17,37 @@ disk free: 894G
     11-18 06:47:57 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] 20261116-1-someone-looking-for-our-kitten done
     11-18 06:47:57 $ git push -q origin HEAD:main
     11-18 07:50:15 $ git pull -q --rebase --autostash
---- hollow: 2026-11-18T06:50:22+00:00 queue_empty 
-    11-18 06:50:24 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
-    11-18 06:50:24 $ git diff --cached --quiet
-    11-18 06:50:24 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] queue empty
-    11-18 06:50:24 $ git push -q origin HEAD:main
+--- hollow: 2026-11-18T08:14:22+00:00 render 
+    11-18 08:10:26 $ git push -q origin HEAD:main
+    11-18 08:10:30 $ /usr/bin/python3 /opt/kanal/repo/hollow/engine3d/voices.py /root/kanal/hollow/work/20261118-1-pompeii-last-morning/script.json /root/kanal/hollow/work/20261118-1-pompeii-last-morning 12
+    11-18 08:14:22 TOTAL 1012.8 s
+    11-18 08:14:22 $ /opt/bl/blender-4.2.3-linux-x64/blender -b --factory-startup --python-exit-code 1 -P /opt/kanal/repo/hollow/engine3d/story.py -- --tl /root/kanal/hollow/work/20261118-1-pompeii-last-morning/timeline.json
 --- bolt: 2026-11-18T07:30:20+00:00 idle 
     11-18 01:10:22 $ git pull -q --rebase --autostash
     11-18 02:30:19 $ git pull -q --rebase --autostash
     11-18 03:50:11 $ git pull -q --rebase --autostash
     11-18 07:30:16 $ git pull -q --rebase --autostash
---- roblox: 2026-11-18T07:50:06+00:00 idle 
-    11-18 07:50:10 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-18 07:50:10 $ git diff --cached --quiet
-    11-18 07:50:10 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-18 07:50:10 $ git push -q origin HEAD:main
---- funny: 2026-11-18T08:05:03+00:00 render 
-    11-18 08:05:03 $ git diff --cached --quiet
-    11-18 08:05:03 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] making
-    11-18 08:05:03 $ git push -q origin HEAD:main
-    11-18 08:05:06 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /root/kanal/funny/titles.json --need-long 0 --need-short 1
-    maker: 11-18 11:08:41 timeline 19.5s in 7 shots, voice am_puck
-    maker: 11-18 11:09:04 rendered /root/kanal/funny/made/funny-20261118-cliff-jump-fails-9312.mp4 in 27s
-    maker: 11-18 11:09:05 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
-    maker: 11-18 11:09:05 made funny-20261118-cliff-jump-fails-9312 | Ranking The FUNNIEST Cliff Jump Fails 😂 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 27, 'rek': 96}
-    maker: 11-18 11:09:05 theme: Boat Launch Fails
-    maker: 11-18 11:09:06 8 CC BY candidates (searches so far 6)
---- money: 2026-11-18T07:50:06+00:00 queue_empty 
-    11-18 07:50:06 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-18 07:50:06 $ git diff --cached --quiet
-    11-18 07:50:06 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-18 07:50:06 $ git push -q origin HEAD:main
+--- roblox: 2026-11-18T08:50:03+00:00 idle 
+    11-18 08:50:05 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-18 08:50:05 $ git diff --cached --quiet
+    11-18 08:50:05 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-18 08:50:05 $ git push -q origin HEAD:main
+--- funny: 2026-11-18T08:30:00+00:00 render 
+    11-18 08:30:01 $ git diff --cached --quiet
+    11-18 08:30:01 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] making
+    11-18 08:30:01 $ git push -q origin HEAD:main
+    11-18 08:30:04 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /root/kanal/funny/titles.json --need-long 0 --need-short 1
+    maker: 11-18 11:35:20 yt-dlp failed 0GYYgCCakVg from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https
+    maker: 
+    maker: 11-18 11:38:39 not enough downloads for Volleyball Fails
+    maker: 11-18 11:38:39 theme: Yoga Fails
+    maker: 11-18 11:38:41 20 CC BY candidates (searches so far 5)
+    maker: 11-18 12:01:08 yt-dlp timeout wdVcwVyp_HA
+--- money: 2026-11-18T08:50:00+00:00 queue_empty 
+    11-18 08:50:00 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-18 08:50:00 $ git diff --cached --quiet
+    11-18 08:50:00 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-18 08:50:00 $ git push -q origin HEAD:main
     maker: 
     maker: 11-17 22:57:51 timeline 20.1s in 7 shots, voice am_eric
     maker: 11-17 22:58:07 rendered /root/kanal/money/made/funny-20261117-backflip-fails-5465.mp4 in 20s
@@ -59,29 +59,34 @@ disk free: 894G
     11-18 07:50:15 $ git diff --cached --quiet
     11-18 07:50:15 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
     11-18 07:50:15 $ git push -q origin HEAD:main
---- sleep: 2026-11-18T07:10:17+00:00 idle 
-    11-18 07:10:18 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
-    11-18 07:10:18 $ git diff --cached --quiet
-    11-18 07:10:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
-    11-18 07:10:18 $ git push -q origin HEAD:main
---- doodle: 2026-11-18T06:49:59+00:00 idle 
-    11-18 06:49:59 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
-    11-18 06:49:59 $ git diff --cached --quiet
-    11-18 06:49:59 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
-    11-18 06:49:59 $ git push -q origin HEAD:main
---- milo: 2026-11-18T07:30:20+00:00 queue_empty 
-    11-18 07:30:20 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-18 07:30:20 $ git diff --cached --quiet
-    11-18 07:30:20 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] queue empty
-    11-18 07:30:20 $ git push -q origin HEAD:main
+--- sleep: 2026-11-18T08:30:17+00:00 idle 
+    11-18 08:30:17 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-18 08:30:17 $ git diff --cached --quiet
+    11-18 08:30:17 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
+    11-18 08:30:17 $ git push -q origin HEAD:main
+--- doodle: 2026-11-18T08:10:14+00:00 idle 
+    11-18 08:10:18 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
+    11-18 08:10:18 $ git diff --cached --quiet
+    11-18 08:10:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
+    11-18 08:10:18 $ git push -q origin HEAD:main
+--- milo: 2026-11-18T09:08:02+00:00 upload 
+    11-18 09:08:02 $ git diff --cached --quiet
+    11-18 09:08:02 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] 3 video(s) made
+    11-18 09:08:02 $ git push -q origin HEAD:main
+    11-18 09:08:06 $ ffmpeg -y -v error -i /root/kanal/milo/ready/ep007.mp4 -vf scale=-2:480,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_milo_ep007.mp4
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-     324998    1146 flock -n /tmp/kanal-funny.lock timeout -k 60 5h python3 cloud/worker.py funny
-     325000    1146 timeout -k 60 5h python3 cloud/worker.py funny
-     325001    1146 python3 cloud/worker.py funny
-     329779     271 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /ro
-     343798      20 ffmpeg -v error -ss 62809.11 -i /mnt/e/2026-11-15 18-35-07.mp4 -frames:v 1 -vf crop=240:240:840:420,format=gray -f rawvideo -
-     343803      15 /usr/bin/python3 /usr/local/bin/yt-dlp --js-runtimes node:/usr/local/bin/node -f bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080][ext=mp4]
+     344468    3425 flock -n /tmp/kanal-hollow.lock timeout -k 60 5h python3 cloud/worker.py hollow
+     344470    3425 timeout -k 60 5h python3 cloud/worker.py hollow
+     344471    3425 python3 cloud/worker.py hollow
+     361624    2300 flock -n /tmp/kanal-funny.lock timeout -k 60 5h python3 cloud/worker.py funny
+     361626    2300 timeout -k 60 5h python3 cloud/worker.py funny
+     361627    2300 python3 cloud/worker.py funny
+     361681    2290 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /ro
+     404722    1149 flock -n /tmp/kanal-milo.lock timeout -k 60 5h python3 cloud/worker.py milo
+     404724    1149 timeout -k 60 5h python3 cloud/worker.py milo
+     404725    1149 python3 cloud/worker.py milo
+     646335     323 /usr/bin/python3 /usr/local/bin/yt-dlp --js-runtimes node:/usr/local/bin/node -f bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080][ext=mp4]
 --- held channel locks:
     /tmp/kanal-auto.lock HELD
     /tmp/kanal-bolt.lock free
@@ -91,9 +96,9 @@ disk free: 894G
     /tmp/kanal-doughbros.lock free
     /tmp/kanal-funny.lock HELD
     /tmp/kanal-git.lock free
-    /tmp/kanal-hollow.lock free
+    /tmp/kanal-hollow.lock HELD
     /tmp/kanal-maxcat.lock free
-    /tmp/kanal-milo.lock free
+    /tmp/kanal-milo.lock HELD
     /tmp/kanal-money.lock free
     /tmp/kanal-roblox.lock free
     /tmp/kanal-sleep.lock free
