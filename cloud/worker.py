@@ -225,6 +225,40 @@ def sync_from_youtube(st):
                 m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", dur)
                 secs = (int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)) if m else 999
                 taken.append({"t": pa.replace(".000Z", "Z"), "kind": "short" if secs <= 60 else "long"})
+    # 2026-11-18 15:xx watchdog: our OWN scheduled ids (results/<CH>/*.json) past publishAt were "unavailable" on
+    # YouTube (ufc/hollow/dough/max/sleep/milo) while overdue.json stayed empty -> they are no longer in the uploads
+    # playlist. Check them by id (read-only) and record status or "gone" so the cause is visible.
+    try:
+        lo = (NOW - dt.timedelta(hours=72)).isoformat()
+        mine = {}
+        for f in glob.glob(os.path.join(RES, "*.json")):
+            try:
+                d = json.load(open(f))
+            except Exception:
+                continue
+            if not isinstance(d, dict):
+                continue
+            its = ([d["long"]] if isinstance(d.get("long"), dict) else []) + [s for s in (d.get("shorts") or []) if isinstance(s, dict)]
+            for it in its:
+                pa, vid = it.get("publish_at") or "", it.get("video")
+                if vid and pa and lo < pa.replace("Z", "+00:00") < NOW.isoformat():
+                    mine[vid] = pa
+        ids_m = list(mine)
+        seen = set()
+        for i in range(0, len(ids_m), 50):
+            for v in y.videos().list(part="status", id=",".join(ids_m[i:i + 50])).execute().get("items", []):
+                seen.add(v["id"])
+                s = v["status"]
+                if s.get("privacyStatus") != "public" or s.get("uploadStatus") not in (None, "processed"):
+                    overdue[v["id"]] = {k: s.get(k) for k in ("publishAt", "uploadStatus", "rejectionReason",
+                                                              "failureReason", "privacyStatus", "embeddable")}
+                    overdue[v["id"]]["planned"] = mine[v["id"]]
+        for vid in ids_m:
+            if vid not in seen:
+                overdue[vid] = {"gone": True, "planned": mine[vid],
+                                "note": "not returned by videos.list: deleted/removed by YouTube or other channel"}
+    except Exception as e:
+        log("own scheduled check failed:", str(e)[:160])
     try:
         json.dump({"checked": NOW.isoformat(timespec="minutes"), "videos": overdue},
                   open(os.path.join(RES, "overdue.json"), "w"), indent=1)
