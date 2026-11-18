@@ -1,0 +1,1034 @@
+{
+ "id": "20261118-1-nine-burned-marshmallows",
+ "plot": "Saturday night in the backyard after apple picking, Mia has burned nine marshmallows at Dad's fire pit and says she'll quit after one more; Pim notices Dad holds his low over the edge but is ignored, Bup's one try to blow out a burning one makes it worse, then fire-shy Crispy steps out of the dark — flames burn, coals cook — and glows his ember eyes over the red coals so Mia holds her last marshmallow there; it turns perfect gold, Zeek climbs on the cracker to measure it and gets squished into a s'more, and June calls over the fence that someone just bought the old bakery.",
+ "script": {
+  "title": "Mia Burned 9 Marshmallows in a Row",
+  "set": {
+   "place": "garden",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "pit",
+    "type": "wheel",
+    "color": [
+     0.36,
+     0.34,
+     0.33
+    ],
+    "on": null,
+    "at": [
+     1,
+     15,
+     0.5
+    ],
+    "visible": true,
+    "scale": 1.5
+   },
+   {
+    "id": "flame",
+    "type": "cone",
+    "color": "orange",
+    "on": null,
+    "at": [
+     1,
+     15,
+     0.4
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "mallow",
+    "type": "ball",
+    "color": "white",
+    "on": null,
+    "at": [
+     3,
+     13.5,
+     2.6
+    ],
+    "visible": true,
+    "scale": 0.45
+   },
+   {
+    "id": "cracker",
+    "type": "box",
+    "color": [
+     0.82,
+     0.6,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     -3,
+     12.5,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "lolly",
+    "say": "Fire! Mia's marshmallow is on fire again! Run, everybody!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:-1,10"
+     ],
+     [
+      "mallow",
+      "bounce"
+     ],
+     [
+      "bup",
+      "to:-3,10"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "F-f-fire? Nope! Beans and fire do not mix!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-6,9"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "NINE BURNED IN A ROW",
+    "cam": "prop:mallow",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "zeek",
+      "to:2,9"
+     ],
+     [
+      "mallow",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:9,9"
+     ],
+     [
+      "zeek",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Saturday night, in the backyard. The family is back from apple picking.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And yes. Lolly went too, riding in Mia's jacket pocket.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "I picked an apple. Well, I sat on one. Same thing.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:0,10"
+     ],
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now Dad has lit the little fire pit. It's s'mores night.",
+    "cam": "prop:pit",
+    "do": [
+     [
+      "flame",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dad's marshmallow comes out golden brown. Every single time.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia's go black. Nine of them. Crunchy, smoky, ruined.",
+    "cam": "prop:mallow",
+    "do": [
+     [
+      "mallow",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "W-wait. Dad holds his low, by the edge. Not the middle.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Irrelevant, Pim. My calculations say it is the stick.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Far away, in the dark grass, Crispy hasn't moved one inch.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I don't do fire. Fire did me. Long ago.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia drops her stick and sits down on the grass.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "sad"
+     ],
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "I'm just bad at marshmallows, she says. One more. Then I quit.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "ONE MARSHMALLOW LEFT",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "One left. If it burns, Mia quits forever. Not tonight.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Okay team, here's the move. When it catches, I blow it out.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bup, you are bread. Your lungs are mostly holes.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia pushes the last marshmallow right into the tall yellow flames.",
+    "cam": "prop:pit",
+    "do": [
+     [
+      "flame",
+      "bounce"
+     ],
+     [
+      "mallow",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "WHOOSH!",
+    "cam": "prop:mallow",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "mallow",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup jumps up on the stones and blows. Hard. Fffffff!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,13"
+     ],
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The flame on the marshmallow only grows bigger.",
+    "cam": "prop:mallow",
+    "do": [
+     [
+      "mallow",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A burning blob drips off and lands right next to Pim.",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "to:-4,10"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Th-that's it. I'm moving to the freezer. Goodbye forever.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia blows the flame out herself. It's only half black. She sighs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mallow",
+      "home"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She's got one more try before Mom calls everyone in. That's it.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Last chance, team. If this one burns, Mia never tries again.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Then somebody say something smart. Anybody. Please.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And out of the dark grass, slowly, comes Crispy.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:5,11"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY IS COMING?!",
+    "cam": "two:lolly,bup",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The flames don't cook anything. They just burn. I know.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "The coals cook. Low. Red. Quiet. Pim said it first.",
+    "cam": "two:crispy,pim",
+    "do": [
+     [
+      "crispy",
+      "to:3,12"
+     ],
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I did? By the edge! Over the red bits! I said that!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "pim",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Correction. The stick was fine. The bean was right. Again.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "But how do we tell Mia where to hold it?",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Easy. I glow. She'll follow the glow.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy walks to the very edge of the pit. Into the heat.",
+    "cam": "prop:pit",
+    "do": [
+     [
+      "crispy",
+      "to:2,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "His ember eyes light up, bright orange, above the quiet coals.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia looks up. Huh. A glowing little rock. Right there, she whispers.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She holds the last marshmallow low, just over Crispy's glow.",
+    "cam": "prop:mallow",
+    "do": [
+     [
+      "mallow",
+      "to:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Don't. Rush. Turn it slowly. Like a sunset.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "mallow",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One minute. It puffs up. It turns golden. Not one black spot.",
+    "cam": "prop:mallow",
+    "do": [
+     [
+      "mallow",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "PERFECT GOLD!",
+    "cam": "prop:mallow",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia jumps so high her hat falls off. I did it!",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Team, we did it. Well, Crispy did. Okay, Pim did. Fine.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Zeek climbs onto the cracker to measure that perfect golden color.",
+    "cam": "prop:cracker",
+    "do": [
+     [
+      "cracker",
+      "appear"
+     ],
+     [
+      "zeek",
+      "to:-3,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "My calculations say this is the best marshmallow in history.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia drops the marshmallow on the cracker. Right on top of Zeek.",
+    "cam": "prop:cracker",
+    "do": [
+     [
+      "mallow",
+      "bounce"
+     ],
+     [
+      "cracker",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then she presses the second cracker down. Squish.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "ZEEK IS A S'MORE!",
+    "cam": "prop:cracker",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "I'm sticky. I'm warm. I am a dessert. This was not calculated.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mia laughs so hard she lets him slide out, gooey and grinning.",
+    "cam": "two:zeek,lolly",
+    "do": [
+     [
+      "zeek",
+      "to:-1,11"
+     ],
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Welcome to the burnt club, genius. It's warm here.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, over the fence, a voice. It's June, the neighbor.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ],
+     [
+      "lolly",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The old bakery on our street, she calls. Somebody bought it today.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "text": "WHO BOUGHT THE BAKERY?!",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Mia Burned 9 Marshmallows in a Row 🔥",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I don't do fire. Fire did me.\" — Crispy\nMia has burned nine marshmallows in a row and is about to quit, so the Dough Bros hunt for the answer — and the one who knows it is the bro most afraid of fire.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "marshmallow",
+   "s'mores",
+   "burned marshmallow",
+   "fire pit",
+   "campfire",
+   "crispy",
+   "zeek",
+   "animated comedy",
+   "funny animation",
+   "autumn night"
+  ],
+  "thumb_text": "IT'S ON FIRE!",
+  "thumb_beat": 17,
+  "localizations": {
+   "es": {
+    "title": "Mia quemó 9 malvaviscos seguidos 🔥",
+    "description": "¿Qué crees que pasará en la próxima parte? Cuéntamelo en los comentarios.\n\"Yo no hago fuego. El fuego me hizo a mí.\" — Crispy\nMia ha quemado nueve malvaviscos seguidos y está a punto de rendirse, así que los Dough Bros buscan la respuesta… y la tiene el que más le teme al fuego.\n#serie #Animación3D #DoughBros"
+   },
+   "pt": {
+    "title": "A Mia queimou 9 marshmallows seguidos 🔥",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu não mexo com fogo. O fogo mexeu comigo.\" — Crispy\nA Mia queimou nove marshmallows seguidos e está prestes a desistir, então os Dough Bros procuram a resposta… e quem a tem é justamente quem mais tem medo do fogo.\n#série #Animação3D #DoughBros"
+   },
+   "ar": {
+    "title": "ميا أحرقت 9 حبات مارشميلو متتالية 🔥",
+    "description": "ماذا تظن أنه سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أنا لا أقترب من النار. النار هي التي صنعتني.\" — كريسبي\nأحرقت ميا تسع حبات مارشميلو متتالية وكادت تستسلم، فيبحث Dough Bros عن الحل… والحل عند أكثرهم خوفًا من النار.\n#مسلسل #رسوم_ثلاثية_الأبعاد #DoughBros"
+   },
+   "fr": {
+    "title": "Mia a brûlé 9 guimauves d'affilée 🔥",
+    "description": "Selon toi, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n« Le feu, très peu pour moi. C'est lui qui m'a fait. » — Crispy\nMia a brûlé neuf guimauves d'affilée et veut tout abandonner, alors les Dough Bros cherchent la solution… et c'est celui qui a le plus peur du feu qui la connaît.\n#série #Animation3D #DoughBros"
+   },
+   "ja": {
+    "title": "ミアがマシュマロを9個連続でこがした 🔥",
+    "description": "次はどうなると思う？コメントで教えてね。\n「おれは火とは関わらない。火がおれをこうしたんだ。」— クリスピー\nミアはマシュマロを9個続けてこがして、もうやめようとしている。ドウ・ブロスは答えをさがすけど…知っていたのは、いちばん火がこわい仲間だった。\n#シリーズ #3Dアニメ #DoughBros"
+   },
+   "ko": {
+    "title": "미아가 마시멜로를 9개 연속 태웠어 🔥",
+    "description": "다음 편에서는 무슨 일이 생길까요? 댓글로 알려 주세요.\n\"난 불이랑 안 놀아. 불이 날 이렇게 만들었거든.\" — 크리스피\n미아가 마시멜로를 아홉 개나 연속으로 태우고 포기하려 해요. 도우 브로스가 답을 찾는데… 답을 아는 건 불을 제일 무서워하는 친구였어요.\n#시리즈 #3D애니메이션 #DoughBros"
+   },
+   "de": {
+    "title": "Mia hat 9 Marshmallows hintereinander verbrannt 🔥",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Ich mach kein Feuer. Das Feuer hat mich gemacht.“ — Crispy\nMia hat neun Marshmallows hintereinander verbrannt und will aufgeben, also suchen die Dough Bros die Lösung … und ausgerechnet der mit der größten Angst vor Feuer kennt sie.\n#Serie #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 47,
+   "dur": 22,
+   "top": "ZEEK BECAME A S'MORE",
+   "title": "Zeek Measured the Marshmallow… Now He's a S'more 😂 #shorts",
+   "description": "Zeek climbs onto the cracker to measure the perfect marshmallow and… squish. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "s'mores",
+    "zeek",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Zeek midió el malvavisco… ¡y ahora es un s'more! 😂 #shorts",
+     "description": "Zeek sube a la galleta para medir el malvavisco perfecto y… squish. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Zeek mediu o marshmallow… e agora é um s'more! 😂 #shorts",
+     "description": "Zeek sobe no biscoito para medir o marshmallow perfeito e… squish. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "زيك قاس المارشميلو… والآن صار سمور! 😂 #shorts",
+     "description": "يصعد زيك على البسكويت ليقيس المارشميلو المثالي و… سكويش. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Zeek a mesuré la guimauve… et c'est devenu un s'more ! 😂 #shorts",
+     "description": "Zeek grimpe sur le biscuit pour mesurer la guimauve parfaite et… squish. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ジークがマシュマロをはかったら…スモアになった！😂 #shorts",
+     "description": "完ぺきなマシュマロをはかろうとクラッカーにのったジークが…ムギュッ。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "지크가 마시멜로를 재다가… 스모어가 됐어! 😂 #shorts",
+     "description": "완벽한 마시멜로를 재려고 크래커에 올라간 지크가… 꾹. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Zeek hat den Marshmallow vermessen… jetzt ist er ein S'more! 😂 #shorts",
+     "description": "Zeek klettert auf den Keks, um den perfekten Marshmallow zu messen, und… quetsch. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 0,
+   "dur": 20,
+   "top": "9 BURNED. 1 LEFT.",
+   "title": "Nine Burned Marshmallows. One Left 🔥 #shorts",
+   "description": "If this one burns too, Mia quits forever. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "marshmallow",
+    "fire pit",
+    "series"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nueve malvaviscos quemados. Queda uno 🔥 #shorts",
+     "description": "Si este también se quema, Mia lo deja para siempre. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Nove marshmallows queimados. Sobrou um 🔥 #shorts",
+     "description": "Se este também queimar, a Mia desiste para sempre. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "تسع حبات محروقة. بقيت واحدة 🔥 #shorts",
+     "description": "إذا احترقت هذه أيضًا، ستستسلم ميا للأبد. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Neuf guimauves brûlées. Il en reste une 🔥 #shorts",
+     "description": "Si celle-ci brûle aussi, Mia abandonne pour toujours. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "こげたマシュマロ9個。のこりは1個 🔥 #shorts",
+     "description": "これもこげたら、ミアはもう二度とやらない。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "탄 마시멜로 아홉 개. 남은 건 하나 🔥 #shorts",
+     "description": "이것마저 타면 미아는 영원히 포기해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Neun verbrannte Marshmallows. Einer ist übrig 🔥 #shorts",
+     "description": "Wenn der auch verbrennt, gibt Mia für immer auf. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
