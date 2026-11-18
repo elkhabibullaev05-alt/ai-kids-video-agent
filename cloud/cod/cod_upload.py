@@ -20,7 +20,7 @@ PER_DAY = {"long": 2, "short": 6}   # 2026-11-15 owner: 6 Shorts a day on each M
 #   # 2026-11-14 owner (MW4 rules): 2-3 Shorts a day, 4-6 h apart
 SLOTS = {"long": [23, 2], "short": [15, 17, 19, 21, 23, 1]}   # 2026-11-18 owner: all Shorts at US prime time = 10am-8pm ET, 2 h apart   # 2026-11-15 owner: 3 in the Tashkent day + 3 at night = US daytime/evening
 #   # 2026-11-14 owner: 5 h apart (Osh 09/14/19), never several in one hour   # 2026-11-12 owner: Shorts out in the morning and evening (Osh 07-09 & 18-20 = US evening & morning)
-if CH2: SLOTS = {"long": [], "short": [16, 18, 20, 22, 0, 2]}   # 2026-11-18 owner: US prime time 11am-9pm ET, 1 h after the main channel; PER_DAY = {"long": 0, "short": 6}   # 2026-11-15 owner: 6 Shorts a day = 3 in the Tashkent day (10/15/20) + 3 after midnight Tashkent, when the US audience is active (UTC 19/22/01 = 14/17/20 ET)
+if CH2: SLOTS = {"long": [], "short": [16, 18, 20, 22, 0, 2]}; PER_DAY = {"long": 0, "short": 6}   # 2026-11-18 owner: US prime time 11am-9pm ET, 1 h after the main channel
 #   # 2026-11-14: 5 h apart   # one hour after the main channel's Shorts   # UTC; long = 18:00 & 21:00 US Eastern, Shorts spread 08:00-20:00 ET
 TAGS = ["call of duty", "modern warfare 4", "mw4", "mw4 campaign", "call of duty modern warfare 4", "mw4 gameplay",
         "mw4 walkthrough", "no commentary", "full game", "campaign walkthrough", "cinematic", "1080p 60fps",
