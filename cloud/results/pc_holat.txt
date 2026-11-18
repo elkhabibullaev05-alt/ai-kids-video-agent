@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-18 13:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-18 14:10 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -6,17 +6,17 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 882G
+disk free: 878G
 --- maxcat: 2026-11-18T12:27:57+00:00 idle 
     11-18 02:10:21 $ git pull -q --rebase --autostash
     11-18 03:30:11 $ git pull -q --rebase --autostash
     11-18 07:10:17 $ git pull -q --rebase --autostash
     11-18 12:27:52 $ git pull -q --rebase --autostash
---- doughbros: 2026-11-18T12:51:35+00:00 render 
-    11-18 12:50:37 $ git push -q origin HEAD:main
-    11-18 12:50:40 $ /usr/bin/python3 /opt/kanal/repo/doughbros/engine3d/voices.py /root/kanal/doughbros/work/20261117-1-dad-gave-up-on-the-jam/script.json /root/kanal/doughbros/work/20261117-1-dad-gave-up-on-the-jam 12
-    11-18 12:51:35 TOTAL 242.9 s
-    11-18 12:51:35 $ /opt/bl/blender-4.2.3-linux-x64/blender -b --factory-startup --python-exit-code 1 -P /opt/kanal/repo/doughbros/engine3d/story.py -- --tl /root/kanal/doughbros/work/20261117-1-dad-gave-up-on-the-jam/timel
+--- doughbros: 2026-11-18T14:03:54+00:00 upload 
+    11-18 14:03:54 $ git add -A -- /opt/kanal/repo/cloud/results/doughbros
+    11-18 14:03:54 $ git diff --cached --quiet
+    11-18 14:03:54 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] 20261117-1-dad-gave-up-on-the-jam rendered
+    11-18 14:03:54 $ git push -q origin HEAD:main
 --- hollow: 2026-11-18T08:14:22+00:00 render 
     11-18 08:10:26 $ git push -q origin HEAD:main
     11-18 08:10:30 $ /usr/bin/python3 /opt/kanal/repo/hollow/engine3d/voices.py /root/kanal/hollow/work/20261118-1-pompeii-last-morning/script.json /root/kanal/hollow/work/20261118-1-pompeii-last-morning 12
@@ -27,48 +27,48 @@ disk free: 882G
     11-18 03:50:11 $ git pull -q --rebase --autostash
     11-18 07:30:16 $ git pull -q --rebase --autostash
     11-18 12:30:17 $ git pull -q --rebase --autostash
---- roblox: 2026-11-18T12:50:27+00:00 idle 
-    11-18 12:50:33 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-18 12:50:33 $ git diff --cached --quiet
-    11-18 12:50:33 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-18 12:50:33 $ git push -q origin HEAD:main
---- funny: 2026-11-18T12:50:13+00:00 quota_wait 
-    11-18 12:50:13 $ git add -A -- /opt/kanal/repo/cloud/results/funny
-    11-18 12:50:13 $ git diff --cached --quiet
-    11-18 12:50:13 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] quota wait
-    11-18 12:50:13 $ git push -q origin HEAD:main
+--- roblox: 2026-11-18T13:50:22+00:00 idle 
+    11-18 13:50:25 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-18 13:50:25 $ git diff --cached --quiet
+    11-18 13:50:25 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-18 13:50:25 $ git push -q origin HEAD:main
+--- funny: 2026-11-18T13:50:12+00:00 quota_wait 
+    11-18 13:50:12 $ git add -A -- /opt/kanal/repo/cloud/results/funny
+    11-18 13:50:12 $ git diff --cached --quiet
+    11-18 13:50:12 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] quota wait
+    11-18 13:50:12 $ git push -q origin HEAD:main
     maker: 
     maker: 11-18 14:41:54 timeline 19.5s in 7 shots, voice am_puck
     maker: 11-18 14:49:34 rendered /root/kanal/funny/made/funny-20261118-dance-fails-2086.mp4 in 472s
     maker: 11-18 14:49:38 rek-ball 100 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
     maker: 11-18 14:49:38 made funny-20261118-dance-fails-2086 | Top 5 Dance Fails… #1 Hurts 💀 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 472, 'rek': 100}
     maker: 11-18 14:49:38 done: 3 Short(s); API calls: search 3, list 4
---- money: 2026-11-18T12:50:26+00:00 queue_empty 
-    11-18 12:50:29 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-18 12:50:29 $ git diff --cached --quiet
-    11-18 12:50:29 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-18 12:50:29 $ git push -q origin HEAD:main
+--- money: 2026-11-18T13:50:25+00:00 queue_empty 
+    11-18 13:50:28 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-18 13:50:28 $ git diff --cached --quiet
+    11-18 13:50:28 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-18 13:50:28 $ git push -q origin HEAD:main
     maker: 11-18 15:31:10 10 CC BY candidates (searches so far 4)
     maker: 11-18 15:33:36 timeline 19.5s in 7 shots, voice am_puck
     maker: 11-18 15:33:53 rendered /root/kanal/money/made/funny-20261118-wave-wipeouts-5201.mp4 in 22s
     maker: 11-18 15:33:54 rek-ball 95 {'hook': 25, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
     maker: 11-18 15:33:54 made funny-20261118-wave-wipeouts-5201 | Ranking The Silliest Wave Wipeouts 🤯 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 22, 'rek': 95}
     maker: 11-18 15:33:54 done: 3 Short(s); API calls: search 4, list 5
---- ufc: 2026-11-18T11:50:12+00:00 idle 
-    11-18 11:50:14 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
-    11-18 11:50:14 $ git diff --cached --quiet
-    11-18 11:50:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
-    11-18 11:50:14 $ git push -q origin HEAD:main
+--- ufc: 2026-11-18T13:10:23+00:00 idle 
+    11-18 13:10:28 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
+    11-18 13:10:28 $ git diff --cached --quiet
+    11-18 13:10:28 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
+    11-18 13:10:28 $ git push -q origin HEAD:main
 --- sleep: 2026-11-18T12:30:18+00:00 idle 
     11-18 12:30:18 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
     11-18 12:30:18 $ git diff --cached --quiet
     11-18 12:30:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
     11-18 12:30:18 $ git push -q origin HEAD:main
---- doodle: 2026-11-18T12:27:53+00:00 idle 
-    11-18 12:27:56 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
-    11-18 12:27:56 $ git diff --cached --quiet
-    11-18 12:27:56 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
-    11-18 12:27:56 $ git push -q origin HEAD:main
+--- doodle: 2026-11-18T13:53:08+00:00 upload 
+    11-18 14:04:35 $ ffmpeg -y -v error -i /root/kanal/doodle/ready/ep026_s1.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_doodle_ep026_s1.mp4
+    11-18 14:08:39 gemini short None
+    11-18 14:09:57 uploaded short wk5BN8ILwPg 2026-11-22T13:15:00Z I Fell Asleep at 24 and Woke Up at 14 #shorts
+    11-18 14:09:57 $ ffmpeg -y -v error -i /root/kanal/doodle/ready/ep026_s2.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_doodle_ep026_s2.mp4
 --- milo: 2026-11-18T12:50:36+00:00 idle 
     11-18 12:50:40 $ git add -A -- /opt/kanal/repo/cloud/results/milo
     11-18 12:50:40 $ git diff --cached --quiet
@@ -76,14 +76,17 @@ disk free: 882G
     11-18 12:50:41 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-        924    1080 flock -n /tmp/kanal-doughbros.lock timeout -k 60 5h python3 cloud/worker.py doughbros
-        926    1080 timeout -k 60 5h python3 cloud/worker.py doughbros
-        927    1080 python3 cloud/worker.py doughbros
+        924    4447 flock -n /tmp/kanal-doughbros.lock timeout -k 60 5h python3 cloud/worker.py doughbros
+        926    4447 timeout -k 60 5h python3 cloud/worker.py doughbros
+        927    4447 python3 cloud/worker.py doughbros
+       2516    2274 flock -n /tmp/kanal-doodle.lock timeout -k 60 5h python3 cloud/worker.py doodle
+       2518    2274 timeout -k 60 5h python3 cloud/worker.py doodle
+       2519    2274 python3 cloud/worker.py doodle
 --- held channel locks:
     /tmp/kanal-bolt.lock free
     /tmp/kanal-codup.lock free
     /tmp/kanal-codup2.lock free
-    /tmp/kanal-doodle.lock free
+    /tmp/kanal-doodle.lock HELD
     /tmp/kanal-doughbros.lock HELD
     /tmp/kanal-funny.lock free
     /tmp/kanal-git.lock free
