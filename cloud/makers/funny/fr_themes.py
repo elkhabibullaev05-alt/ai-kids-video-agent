@@ -282,6 +282,9 @@ def mark_dry(home, name):
     os.replace(p + ".tmp", p)
 
 
+WINNERS = {"Fishing Fails", "Sledding Fails", "Wedding Fails", "Bike Fails"}
+
+
 def pick_themes(titles, home, n, rng=random, skip=()):
     """Themes not in the last ~30 titles and not used in the last 12 days (oldest-used first)."""
     recent = " | ".join(_norm(t) for t in titles[:30] + titles[-30:])
@@ -292,9 +295,13 @@ def pick_themes(titles, home, n, rng=random, skip=()):
     dry = load_dry(home)
     dcut = (dt.date.today() - dt.timedelta(days=5)).isoformat()
     skip = set(skip) | {k for k, v in dry.items() if v >= dcut}
-    ok = [t for t in THEMES if _norm(t[0]) not in recent and hist.get(t[0], "") < cut and t[0] not in skip]
+    # 2026-11-18 owner + Studio data: the channel's top Shorts were Fishing (2463), Sledding (1839), Wedding (963) and
+    # Bike (916) fails — these come back after 6 days instead of 12 and go first. Same number of Shorts per day.
+    wcut = (dt.date.today() - dt.timedelta(days=6)).isoformat()
+    ok = [t for t in THEMES if _norm(t[0]) not in recent and t[0] not in skip
+          and hist.get(t[0], "") < (wcut if t[0] in WINNERS else cut)]
     rng.shuffle(ok)
-    ok.sort(key=lambda t: hist.get(t[0], ""))  # never-used first, shuffle within ties
+    ok.sort(key=lambda t: (t[0] not in WINNERS, hist.get(t[0], "")))  # winners, then never-used first
     if len(ok) < n:  # almost everything used lately → add least recently used themes not in recent titles first
         rest = [t for t in THEMES if t not in ok and t[0] not in skip]
         rest.sort(key=lambda t: (_norm(t[0]) in recent, hist.get(t[0], "")))

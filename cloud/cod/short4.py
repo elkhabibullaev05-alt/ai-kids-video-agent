@@ -146,6 +146,8 @@ print("music:", mp, mus, flush=True)
 # ---- 5) layout 1080x1920: header card, crisp 4:3.6 window, footer
 def esc(t): return t.replace("\\", "\\\\").replace(":", "\\:").replace("'", "’").replace("%", "\\%")
 hook = sp["hook"].upper(); red = (sp.get("red") or "").upper()
+# 2026-11-18: hooks carry emojis for the YouTube title; the card font has no emoji glyphs (would draw boxes)
+hook = " ".join("".join(c for c in hook if ord(c) < 0x2000).split())
 words = hook.split(); lines, cur_l = [], ""
 for wd in words:
     if len(cur_l) + len(wd) + 1 > 17 and cur_l: lines.append(cur_l); cur_l = wd

@@ -145,8 +145,10 @@ def fmt_climber(games, titles, rng, back):
 
 
 def fmt_losers(games, titles, rng, back):
-    if not back:
+    # one 'losers' Short per pack: a second one would show the same 3 games (near-duplicate content)
+    if not back or getattr(titles, "_losers_done", False):
         return None
+    titles._losers_done = True
     pool = [g for g in games[:30] if g.get("d_play") is not None and g["d_play"] < 0 and (g.get("playing") or 0) > 3000]
     if len(pool) < 3:
         return None
@@ -155,10 +157,14 @@ def fmt_losers(games, titles, rng, back):
              f"{lo[0]['clean']} Lost {short_num(-lo[0]['d_play'])} Players?! #shorts",
              "3 Roblox Games Players Are Leaving Right Now #shorts",
              f"Is {lo[0]['clean']} Dying? Lost {short_num(-lo[0]['d_play'])} Players #shorts"]
-    # 2026-11-18 review: 'Is Steal An Egg Dying? Lost 704K / 389K Players' went out 2 days apart — one 'Dying?' per ~3 days
-    if titles.recently("dying"):
-        cands = [c for c in cands if "Dying?" not in c]
-    title = titles.pick(cands, rng)
+    # 2026-11-18 owner+Studio data: 'Is Murder Mystery 2 Dying?' 1256 views vs 200-380 for every other Short format,
+    # so the 'Dying?' angle is the default here. Only block it when the SAME game had a 'Dying?' title recently
+    # (AVOID.md 11-18: Steal An Egg twice in 2 days).
+    dying = f"Is {lo[0]['clean']} Dying? Lost {short_num(-lo[0]['d_play'])} Players #shorts"
+    if not titles.recently(lo[0]['clean'] + " dying", n=30) and titles.ok(dying):
+        title = titles.take(dying)
+    else:
+        title = titles.pick([c for c in cands if "Dying?" not in c], rng)
     if not title:
         return None
     cards = [dict(say="These three Roblox games lost the most players since yesterday.", head="LOSING PLAYERS?!",
@@ -260,8 +266,10 @@ def extra_cards(g, rng):
 
 FORMATS = {"visits": fmt_visits, "players": fmt_players, "climber": fmt_climber, "losers": fmt_losers,
            "guess": fmt_guess, "versus": fmt_versus}
-ROTATION = ["visits", "climber", "guess", "players", "losers", "versus", "visits", "guess", "climber", "players",
-            "versus", "losers"]
+# 2026-11-18 owner+Studio data: 'losers' (Dying?) Shorts get ~4x the views of the rest; 'guess' and 'versus' are the
+# weakest. Same number of Shorts per day — only the mix changes: losers 4/12 (was 2/12), guess+versus 2/12 (was 4/12).
+ROTATION = ["losers", "climber", "visits", "losers", "players", "guess", "losers", "climber", "visits", "losers",
+            "players", "versus"]
 
 
 # ---------------------------------------------------------------- render

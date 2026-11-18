@@ -9,9 +9,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 Q = glob.glob("/mnt/c/Users/*/Documents/kanal_navbat/gameplay")
 OUT = "/mnt/e/MW4_tayyor/auto"
 MUSIC = "/mnt/c/Users/1/Videos/MW4/musiqa"
-HOOKS = {"cod": [("He never saw it coming", "NEVER", "BOOM"), ("This fight got crazy", "CRAZY", "NO WAY"),
-                 ("Wait for the last shot", "LAST", "LOCKED"), ("He was waiting for me", "WAITING", "BRUH"),
-                 ("Clutch or kicked", "CLUTCH", "CLUTCH"), ("Never peek this corner", "NEVER", "NOPE")],
+# 2026-11-18 owner + Studio data (MW4 Shorts Daily): first-person story hooks won — 'The Patrol Sent A Dog After Me...'
+# 3512, 'This Got Intense FAST' 2388, 'They Never Knew Where I Was' 2331 vs ~1500 for generic ones. Story-first hooks.
+HOOKS = {"cod": [("They sent a dog after me... 💀", "DOG", "RUN"), ("This got intense FAST", "FAST", "NO WAY"),
+                 ("They never knew where I was 🎯", "NEVER", "GHOST"), ("I was outnumbered 1 vs 5... 💀", "OUTNUMBERED", "CLUTCH"),
+                 ("He heard me reload... 😬", "HEARD", "BRUH"), ("The whole squad rushed me", "SQUAD", "BOOM"),
+                 ("I shouldn't have survived this 💀", "SURVIVED", "HOW?"), ("Last bullet. Last chance. 🎯", "LAST", "LOCKED")],
          "roblox": [("This combo is unfair", "UNFAIR", "COMBO"), ("He didn't see that coming", "COMING", "BOOM"),
                     ("Strongest Battlegrounds chaos", "CHAOS", "CHAOS"), ("Wait for the ending", "ENDING", "NO WAY"),
                     ("1v1 gone wrong", "WRONG", "BRUH"), ("This guy is cracked", "CRACKED", "CRACKED")]}
