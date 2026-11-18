@@ -144,6 +144,14 @@ def plan2():
     except Exception:
         at = {}
     ok = v4_ok(); m0 = JOB["missions"][-1]
+    # 2026-11-18 owner: clips Claude watched in chat and approved, with their titles (new file -> no merge conflict
+    # with the PC's local v4_ok.json / auto_titles.json)
+    try:
+        ex = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "auto_ok_extra.json")))
+    except Exception:
+        ex = {}
+    for stem, t in ex.items():
+        at.setdefault(stem, t); ok.add(stem)
     for stem, t in at.items():
         pth = os.path.join("/mnt/e/MW4_tayyor/auto", stem + ".mp4")
         if stem in ok and os.path.exists(pth):
