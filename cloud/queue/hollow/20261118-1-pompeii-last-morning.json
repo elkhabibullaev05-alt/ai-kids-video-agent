@@ -1,0 +1,3670 @@
+{
+ "id": "20261118-1-pompeii-last-morning",
+ "plot": "Second person, viral 'What Was Life REALLY Like' format: you live in Pompeii in 79 AD; ten chapters answer daily-life questions (home, street food and garum, water and toilets, fuller's urine laundry and Vespasian's tax, the amphitheatre and the AD 59 riot, wall graffiti, the chained guard dog, health and teeth, cool autumn nights), then the eruption, Pliny the Elder's real rescue and death at Stabiae and the next-morning surge; the gothic last chapter is the hollows in the ash (Fiorelli's casts) and the 2018 charcoal note that moves the date from August to about 24 October.",
+ "script": {
+  "title": "Life in Pompeii, 79 AD",
+  "lead_in": 0,
+  "set": {
+   "place": "village",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 30
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_bella",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.55,
+     0.2,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "baker": {
+    "name": "The Baker",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.6,
+     0.45,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "cook": {
+    "name": "The Cook",
+    "voice": "af_nicole",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.45,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "fuller": {
+    "name": "The Fuller",
+    "voice": "am_onyx",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.3,
+     0.3,
+     0.42
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     6,
+     14
+    ]
+   },
+   "pliny": {
+    "name": "Pliny the Elder",
+    "voice": "bm_lewis",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.45,
+     0.15,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     4,
+     13
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.35
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "mountain",
+    "type": "cone",
+    "color": [
+     0.2,
+     0.24,
+     0.16
+    ],
+    "glow": 0.0,
+    "visible": true,
+    "scale": 4.0,
+    "at": [
+     4,
+     26,
+     0
+    ]
+   },
+   {
+    "id": "plume",
+    "type": "ball",
+    "color": [
+     0.5,
+     0.47,
+     0.44
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 3.0,
+    "at": [
+     4,
+     26,
+     9
+    ]
+   },
+   {
+    "id": "ember",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.45,
+     0.15
+    ],
+    "glow": 3.0,
+    "visible": false,
+    "scale": 0.25,
+    "at": [
+     5,
+     24,
+     6
+    ]
+   },
+   {
+    "id": "pumice",
+    "type": "ball",
+    "color": [
+     0.62,
+     0.6,
+     0.56
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     0,
+     10,
+     6
+    ]
+   },
+   {
+    "id": "loaf",
+    "type": "ball",
+    "color": [
+     0.72,
+     0.5,
+     0.25
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     1,
+     10.5,
+     1.2
+    ]
+   },
+   {
+    "id": "pot",
+    "type": "cone",
+    "color": [
+     0.65,
+     0.35,
+     0.2
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.45,
+    "at": [
+     -4,
+     12,
+     0.8
+    ]
+   },
+   {
+    "id": "fruit",
+    "type": "ball",
+    "color": [
+     0.78,
+     0.12,
+     0.15
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     -1,
+     10.5,
+     1.2
+    ]
+   },
+   {
+    "id": "brazier",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.5,
+     0.2
+    ],
+    "glow": 2.5,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     -5,
+     11,
+     0.6
+    ]
+   },
+   {
+    "id": "wall",
+    "type": "box",
+    "color": [
+     0.78,
+     0.55,
+     0.4
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 2.0,
+    "at": [
+     -8,
+     16,
+     0
+    ]
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": [
+     0.85,
+     0.85,
+     0.8
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     -2,
+     11,
+     1.4
+    ]
+   },
+   {
+    "id": "fountain",
+    "type": "box",
+    "color": [
+     0.45,
+     0.6,
+     0.75
+    ],
+    "glow": 1.0,
+    "visible": false,
+    "scale": 0.7,
+    "at": [
+     2,
+     12,
+     0.4
+    ]
+   },
+   {
+    "id": "arena",
+    "type": "box",
+    "color": [
+     0.55,
+     0.5,
+     0.42
+    ],
+    "glow": 0.2,
+    "visible": false,
+    "scale": 2.6,
+    "at": [
+     -8,
+     22,
+     0
+    ]
+   },
+   {
+    "id": "coin",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.85,
+     0.3
+    ],
+    "glow": 2.0,
+    "visible": false,
+    "scale": 0.2,
+    "at": [
+     0,
+     10,
+     1.5
+    ]
+   },
+   {
+    "id": "tools",
+    "type": "cone",
+    "color": [
+     0.8,
+     0.8,
+     0.85
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     1,
+     11,
+     1.4
+    ]
+   },
+   {
+    "id": "ship",
+    "type": "box",
+    "color": [
+     0.38,
+     0.24,
+     0.13
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 1.5,
+    "at": [
+     -6,
+     20,
+     0
+    ]
+   },
+   {
+    "id": "pillow",
+    "type": "box",
+    "color": [
+     0.93,
+     0.9,
+     0.85
+    ],
+    "glow": 0.6,
+    "visible": false,
+    "scale": 0.4,
+    "at": [
+     3,
+     12,
+     2.4
+    ]
+   },
+   {
+    "id": "cast",
+    "type": "box",
+    "color": [
+     0.9,
+     0.88,
+     0.82
+    ],
+    "glow": 0.7,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     0,
+     12,
+     0.5
+    ]
+   },
+   {
+    "id": "scrawl",
+    "type": "box",
+    "color": [
+     0.88,
+     0.82,
+     0.7
+    ],
+    "glow": 1.3,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     0,
+     12,
+     2
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Pompeii, 79 AD. You have one day left, and nobody knows.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "lamp",
+      "drift:4,12,1.8"
+     ],
+     [
+      "ember",
+      "show"
+     ]
+    ],
+    "text": "ONE DAY LEFT",
+    "sfx": "alarm"
+   },
+   {
+    "who": "baker",
+    "say": "Fresh bread! Hot from the oven! Get it before it's gone!",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "enter:right"
+     ],
+     [
+      "loaf",
+      "show"
+     ],
+     [
+      "ember",
+      "drift:2,14,4"
+     ]
+    ],
+    "text": "BEFORE IT'S GONE"
+   },
+   {
+    "who": "narr",
+    "say": "You cross a stone street toward the smell of bread.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:2,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,9,1.8"
+     ]
+    ],
+    "text": "YOU LIVE HERE"
+   },
+   {
+    "who": "narr",
+    "say": "Behind the town, a green mountain is quietly waking up.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ],
+     [
+      "ember",
+      "drift:4,22,6"
+     ]
+    ],
+    "text": "THE MOUNTAIN",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "So what was life really like here, before the end?",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "WHAT WAS LIFE LIKE?"
+   },
+   {
+    "who": "narr",
+    "say": "Your home, your food, your job, your fun. And your last morning.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "loaf",
+      "hide"
+     ],
+     [
+      "ember",
+      "hide"
+     ]
+    ],
+    "text": "YOUR LAST MORNING"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Where do you live?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ],
+     [
+      "wall",
+      "show"
+     ]
+    ],
+    "text": "1. YOUR HOME"
+   },
+   {
+    "who": "narr",
+    "say": "About eleven thousand people live in Pompeii, on the Bay of Naples.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "ABOUT 11,000 PEOPLE"
+   },
+   {
+    "who": "narr",
+    "say": "If you're rich, you live in a house built around a courtyard.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "IF YOU'RE RICH"
+   },
+   {
+    "who": "narr",
+    "say": "Painted walls. A garden. A pool that catches rainwater from the roof.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "PAINTED WALLS"
+   },
+   {
+    "who": "narr",
+    "say": "The front hall is called the atrium. It's where guests wait.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "THE ATRIUM"
+   },
+   {
+    "who": "narr",
+    "say": "Each morning, poorer men line up there to ask for favours.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "enter:right"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "ASKING FOR FAVOURS"
+   },
+   {
+    "who": "narr",
+    "say": "Your house has almost no windows facing the street.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "to:-4,12,0"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "NO WINDOWS"
+   },
+   {
+    "who": "narr",
+    "say": "The street is loud, dirty and full of strangers. Keep it out.",
+    "cam": "wide",
+    "do": [
+     [
+      "baker",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "KEEP IT OUT"
+   },
+   {
+    "who": "narr",
+    "say": "But you probably aren't rich. Most people aren't.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "YOU'RE NOT RICH"
+   },
+   {
+    "who": "narr",
+    "say": "So you rent one or two rooms above a shop.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "ONE ROOM"
+   },
+   {
+    "who": "narr",
+    "say": "No kitchen. No running water. Maybe one small window.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "NO KITCHEN"
+   },
+   {
+    "who": "you",
+    "say": "Wait. No kitchen? Then where do I eat?",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "turn:baker"
+     ]
+    ],
+    "text": "WHERE DO I EAT?"
+   },
+   {
+    "who": "narr",
+    "say": "Rich families eat dinner lying on couches, three to a couch.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:0,11,0"
+     ]
+    ],
+    "text": "DINNER ON COUCHES"
+   },
+   {
+    "who": "baker",
+    "say": "Same place as everyone. Out on the street!",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "laugh"
+     ]
+    ],
+    "text": "OUT ON THE STREET"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. What do you eat?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "cook",
+      "enter:left"
+     ]
+    ],
+    "text": "2. YOUR FOOD"
+   },
+   {
+    "who": "narr",
+    "say": "Your day starts with bread. Pompeii has dozens of bakeries.",
+    "cam": "prop:loaf",
+    "do": [
+     [
+      "loaf",
+      "show"
+     ],
+     [
+      "loaf",
+      "bounce"
+     ]
+    ],
+    "text": "DOZENS OF BAKERIES"
+   },
+   {
+    "who": "baker",
+    "say": "Round loaf, cut into eight. Tear off a piece and go.",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "happy"
+     ],
+     [
+      "loaf",
+      "give:you"
+     ]
+    ],
+    "text": "CUT INTO EIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Archaeologists found eighty-one of these loaves in one bakery oven.",
+    "cam": "prop:loaf",
+    "do": [
+     [
+      "loaf",
+      "spin"
+     ]
+    ],
+    "text": "81 LOAVES"
+   },
+   {
+    "who": "narr",
+    "say": "They had turned to black charcoal. Still in their eight pieces.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "STILL IN THE OVEN"
+   },
+   {
+    "who": "narr",
+    "say": "Someone put them in to bake, and never came back.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "sad"
+     ],
+     [
+      "loaf",
+      "hide"
+     ]
+    ],
+    "text": "NEVER CAME BACK",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "For lunch, you go to a street counter. A Roman fast-food bar.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-4,12,0"
+     ],
+     [
+      "pot",
+      "show"
+     ]
+    ],
+    "text": "ROMAN FAST FOOD"
+   },
+   {
+    "who": "cook",
+    "say": "Lentils, sausage, hot wine! Sit or stand, your choice!",
+    "cam": "close:cook",
+    "do": [
+     [
+      "cook",
+      "happy"
+     ],
+     [
+      "pot",
+      "bounce"
+     ]
+    ],
+    "text": "HOT WINE!"
+   },
+   {
+    "who": "narr",
+    "say": "Big clay pots are sunk into the counter to keep food warm.",
+    "cam": "prop:pot",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ]
+    ],
+    "text": "CLAY POTS"
+   },
+   {
+    "who": "narr",
+    "say": "In 2020, diggers opened one of these bars. Fully painted.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "FOUND IN 2020"
+   },
+   {
+    "who": "narr",
+    "say": "Inside the pots were traces of duck, pig, goat, fish and snails.",
+    "cam": "prop:pot",
+    "do": [
+     [
+      "pot",
+      "bounce"
+     ]
+    ],
+    "text": "DUCK. SNAILS."
+   },
+   {
+    "who": "narr",
+    "say": "And a painted dog on a leash, right on the counter.",
+    "cam": "two:you,cook",
+    "do": [
+     [
+      "cook",
+      "turn:you"
+     ],
+     [
+      "you",
+      "to:-3,12,0"
+     ]
+    ],
+    "text": "A PAINTED DOG"
+   },
+   {
+    "who": "narr",
+    "say": "One bar wall even lists the wine prices.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "THE WINE PRICES"
+   },
+   {
+    "who": "narr",
+    "say": "One coin, wine. Two, the best. Four, the famous Falernian.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "spin"
+     ]
+    ],
+    "text": "1, 2 OR 4 COINS"
+   },
+   {
+    "who": "narr",
+    "say": "And on almost everything, you pour garum.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "GARUM"
+   },
+   {
+    "who": "cook",
+    "say": "Fish sauce! Fish guts, salted and left in the sun for weeks.",
+    "cam": "close:cook",
+    "do": [
+     [
+      "cook",
+      "laugh"
+     ]
+    ],
+    "text": "LEFT IN THE SUN"
+   },
+   {
+    "who": "you",
+    "say": "That's disgusting. Can I have some more?",
+    "cam": "two:you,cook",
+    "do": [
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "MORE PLEASE"
+   },
+   {
+    "who": "narr",
+    "say": "One rich man in Pompeii got rich selling exactly that sauce.",
+    "cam": "wide",
+    "do": [
+     [
+      "coin",
+      "bounce"
+     ],
+     [
+      "cook",
+      "to:-6,14,0"
+     ]
+    ],
+    "text": "RICH FROM FISH SAUCE"
+   },
+   {
+    "who": "narr",
+    "say": "His house floor shows garum jars, made in mosaic.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "JARS IN MOSAIC"
+   },
+   {
+    "who": "narr",
+    "say": "And the fruit stalls today? Pomegranates. Chestnuts. Walnuts.",
+    "cam": "prop:fruit",
+    "do": [
+     [
+      "fruit",
+      "show"
+     ],
+     [
+      "fruit",
+      "bounce"
+     ]
+    ],
+    "text": "POMEGRANATES",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Remember those. They matter at the very end.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "pot",
+      "hide"
+     ]
+    ],
+    "text": "REMEMBER THEM"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. Where do you get water? And where's the toilet?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:1,11,0"
+     ],
+     [
+      "fruit",
+      "hide"
+     ],
+     [
+      "fountain",
+      "show"
+     ]
+    ],
+    "text": "3. WATER"
+   },
+   {
+    "who": "narr",
+    "say": "An aqueduct brings fresh mountain water all the way to town.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "bounce"
+     ]
+    ],
+    "text": "THE AQUEDUCT"
+   },
+   {
+    "who": "narr",
+    "say": "It flows through lead pipes to fountains on the street corners.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "to:2,12,0"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "LEAD PIPES"
+   },
+   {
+    "who": "narr",
+    "say": "There are about forty of them. You carry water home in jars.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "spin"
+     ]
+    ],
+    "text": "ABOUT 40 FOUNTAINS"
+   },
+   {
+    "who": "narr",
+    "say": "The water never stops. It runs day and night, into the street.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "IT NEVER STOPS"
+   },
+   {
+    "who": "narr",
+    "say": "Look down. The streets have big stepping stones across them.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ]
+    ],
+    "text": "STEPPING STONES"
+   },
+   {
+    "who": "narr",
+    "say": "Because the street carries rainwater, mud and worse. Much worse.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "MUCH WORSE"
+   },
+   {
+    "who": "narr",
+    "say": "Cart wheels wore deep grooves into the stone, still there today.",
+    "cam": "wide",
+    "do": [
+     [
+      "baker",
+      "to:5,13,0"
+     ],
+     [
+      "fountain",
+      "hide"
+     ]
+    ],
+    "text": "DEEP GROOVES"
+   },
+   {
+    "who": "narr",
+    "say": "Your toilet? In many houses, it's in the kitchen. By the stove.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "NEXT TO THE STOVE"
+   },
+   {
+    "who": "you",
+    "say": "Next to the food? Who thought that was a good idea?",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "turn:baker"
+     ]
+    ],
+    "text": "WHO DID THIS?"
+   },
+   {
+    "who": "baker",
+    "say": "The drain is there. Makes sense to me!",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "laugh"
+     ]
+    ],
+    "text": "MAKES SENSE TO ME"
+   },
+   {
+    "who": "narr",
+    "say": "Or a public toilet. A long stone bench. No walls. No privacy.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "NO WALLS"
+   },
+   {
+    "who": "narr",
+    "say": "Then you go to the baths. Almost everyone does, every afternoon.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,11,2"
+     ]
+    ],
+    "text": "THE BATHS"
+   },
+   {
+    "who": "narr",
+    "say": "Warm room, hot room, cold pool. For one small coin.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "bounce"
+     ]
+    ],
+    "text": "ONE SMALL COIN"
+   },
+   {
+    "who": "narr",
+    "say": "The Stabian Baths are the oldest in town. They still stand.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "STILL STANDING"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. What's your job?",
+    "cam": "wide",
+    "do": [
+     [
+      "fuller",
+      "enter:right"
+     ],
+     [
+      "you",
+      "to:1,11,0"
+     ]
+    ],
+    "text": "4. YOUR JOB"
+   },
+   {
+    "who": "narr",
+    "say": "Many people in Pompeii are enslaved. They do the hardest work.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE HARDEST WORK"
+   },
+   {
+    "who": "narr",
+    "say": "Free people run shops, bakeries, bars, and workshops.",
+    "cam": "two:you,fuller",
+    "do": [
+     [
+      "fuller",
+      "turn:you"
+     ]
+    ],
+    "text": "SHOPS AND WORKSHOPS"
+   },
+   {
+    "who": "narr",
+    "say": "Shops open straight onto the street. At night, wooden shutters slide shut.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:3,12,2"
+     ]
+    ],
+    "text": "WOODEN SHUTTERS"
+   },
+   {
+    "who": "fuller",
+    "say": "You want work? I clean clothes. Grab a pot.",
+    "cam": "close:fuller",
+    "do": [
+     [
+      "fuller",
+      "happy"
+     ],
+     [
+      "pot",
+      "show"
+     ]
+    ],
+    "text": "GRAB A POT"
+   },
+   {
+    "who": "narr",
+    "say": "He's a fuller. A laundry worker. And his secret soap?",
+    "cam": "prop:pot",
+    "do": [
+     [
+      "pot",
+      "bounce"
+     ]
+    ],
+    "text": "HIS SECRET SOAP?"
+   },
+   {
+    "who": "narr",
+    "say": "Urine. Pots stand on street corners for people to fill.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "URINE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "fuller",
+    "say": "It lifts out grease and stains. Best cleaner there is!",
+    "cam": "close:fuller",
+    "do": [
+     [
+      "fuller",
+      "laugh"
+     ]
+    ],
+    "text": "BEST CLEANER"
+   },
+   {
+    "who": "narr",
+    "say": "You stomp on wet clothes in a tub, all day. Barefoot.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "fuller",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "ALL DAY. BAREFOOT."
+   },
+   {
+    "who": "narr",
+    "say": "Rome even taxed urine. The emperor Vespasian brought in that tax.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "spin"
+     ]
+    ],
+    "text": "A URINE TAX"
+   },
+   {
+    "who": "narr",
+    "say": "His son complained. Vespasian held up a coin. Does it stink?",
+    "cam": "two:you,fuller",
+    "do": [
+     [
+      "fuller",
+      "turn:you"
+     ],
+     [
+      "pot",
+      "hide"
+     ]
+    ],
+    "text": "DOES IT STINK?"
+   },
+   {
+    "who": "narr",
+    "say": "Money doesn't stink. People still say that today.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "laugh"
+     ],
+     [
+      "coin",
+      "hide"
+     ]
+    ],
+    "text": "MONEY DOESN'T STINK"
+   },
+   {
+    "who": "narr",
+    "say": "Vespasian died in June of 79. His son Titus now rules.",
+    "cam": "overhead",
+    "do": [
+     [
+      "fuller",
+      "to:6,15,0"
+     ]
+    ],
+    "text": "TITUS RULES"
+   },
+   {
+    "who": "narr",
+    "say": "Titus has no idea what's about to happen on his watch.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "NO IDEA"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. What do you do for fun?",
+    "cam": "wide",
+    "do": [
+     [
+      "arena",
+      "show"
+     ],
+     [
+      "you",
+      "to:-4,13,0"
+     ]
+    ],
+    "text": "5. YOUR FUN"
+   },
+   {
+    "who": "narr",
+    "say": "You go to the amphitheatre. Pompeii's is the oldest stone one left.",
+    "cam": "prop:arena",
+    "do": [
+     [
+      "arena",
+      "bounce"
+     ]
+    ],
+    "text": "THE OLDEST ARENA"
+   },
+   {
+    "who": "narr",
+    "say": "Around twenty thousand seats. Bigger than the whole town's population.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "20,000 SEATS"
+   },
+   {
+    "who": "narr",
+    "say": "People come from nearby towns to watch gladiators fight.",
+    "cam": "two:you,fuller",
+    "do": [
+     [
+      "fuller",
+      "enter:right"
+     ],
+     [
+      "fuller",
+      "turn:you"
+     ]
+    ],
+    "text": "GLADIATORS"
+   },
+   {
+    "who": "fuller",
+    "say": "Just don't sit near the fans from Nuceria.",
+    "cam": "close:fuller",
+    "do": [
+     [
+      "fuller",
+      "shake"
+     ]
+    ],
+    "text": "NOT NEAR NUCERIA"
+   },
+   {
+    "who": "narr",
+    "say": "Gladiators are celebrities. Fans scratch their names into the walls.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "show"
+     ],
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "CELEBRITIES"
+   },
+   {
+    "who": "narr",
+    "say": "One wall calls a gladiator named Celadus the heartthrob of the girls.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "laugh"
+     ]
+    ],
+    "text": "THE HEARTTHROB"
+   },
+   {
+    "who": "narr",
+    "say": "Pompeii also has two theatres, for plays, music and comedy.",
+    "cam": "two:you,fuller",
+    "do": [
+     [
+      "fuller",
+      "to:4,14,0"
+     ]
+    ],
+    "text": "TWO THEATRES"
+   },
+   {
+    "who": "narr",
+    "say": "Twenty years ago, a fight in the stands became a riot.",
+    "cam": "prop:arena",
+    "do": [
+     [
+      "arena",
+      "spin"
+     ]
+    ],
+    "text": "A REAL RIOT",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Rome was so angry, it banned games here for ten years.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "BANNED FOR 10 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Someone even painted the riot on a wall, like a news photo.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "PAINTED ON A WALL"
+   },
+   {
+    "who": "narr",
+    "say": "And the walls talk. There is writing everywhere in Pompeii.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-6,15,0"
+     ],
+     [
+      "arena",
+      "hide"
+     ]
+    ],
+    "text": "THE WALLS TALK"
+   },
+   {
+    "who": "narr",
+    "say": "Election posters in big red letters. Vote for this man!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "VOTE FOR HIM!"
+   },
+   {
+    "who": "narr",
+    "say": "Love notes. Insults. Sums of money. Who owes who.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "spin"
+     ]
+    ],
+    "text": "WHO OWES WHO"
+   },
+   {
+    "who": "narr",
+    "say": "One person scratched a joke that appears again and again.",
+    "cam": "two:you,fuller",
+    "do": [
+     [
+      "you",
+      "to:-4,13,0"
+     ]
+    ],
+    "text": "A JOKE"
+   },
+   {
+    "who": "narr",
+    "say": "Wall, I'm amazed you haven't collapsed, holding up all this boring writing.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "'WALL, I'M AMAZED'"
+   },
+   {
+    "who": "you",
+    "say": "Two thousand years old, and it's still funny.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "laugh"
+     ]
+    ],
+    "text": "STILL FUNNY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. Who are your gods?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ],
+     [
+      "brazier",
+      "show"
+     ]
+    ],
+    "text": "6. YOUR GODS"
+   },
+   {
+    "who": "narr",
+    "say": "Every home has a small shrine, painted on the wall.",
+    "cam": "prop:brazier",
+    "do": [
+     [
+      "brazier",
+      "bounce"
+     ]
+    ],
+    "text": "A HOME SHRINE"
+   },
+   {
+    "who": "narr",
+    "say": "Painted snakes guard it. Snakes here mean luck and protection.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "LUCKY SNAKES"
+   },
+   {
+    "who": "narr",
+    "say": "Every day, your family leaves a little food or wine there.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "enter:right"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "FOOD FOR THE GODS"
+   },
+   {
+    "who": "narr",
+    "say": "In town there are temples to Jupiter, Apollo, Venus, and Isis.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "MANY TEMPLES"
+   },
+   {
+    "who": "narr",
+    "say": "Isis was an Egyptian goddess. Her temple was rebuilt after the earthquake.",
+    "cam": "wide",
+    "do": [
+     [
+      "baker",
+      "to:4,13,0"
+     ],
+     [
+      "brazier",
+      "hide"
+     ]
+    ],
+    "text": "AN EGYPTIAN GODDESS"
+   },
+   {
+    "who": "narr",
+    "say": "An inscription says a six-year-old boy paid to rebuild it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "A SIX-YEAR-OLD?"
+   },
+   {
+    "who": "narr",
+    "say": "Really, his rich father paid. It bought the family power.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "to:1,11,0"
+     ]
+    ],
+    "text": "HIS FATHER PAID"
+   },
+   {
+    "who": "narr",
+    "say": "Because in Pompeii, power means elections. Every single year.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "ELECTIONS EVERY YEAR"
+   },
+   {
+    "who": "narr",
+    "say": "But only free men can vote. Women can't. Enslaved people can't.",
+    "cam": "wide",
+    "do": [
+     [
+      "baker",
+      "exit"
+     ],
+     [
+      "you",
+      "to:-1,10,0"
+     ]
+    ],
+    "text": "ONLY FREE MEN"
+   },
+   {
+    "who": "narr",
+    "say": "Women still paint posters, though. Backing the man they want to win.",
+    "cam": "prop:wall",
+    "do": [
+     [
+      "wall",
+      "bounce"
+     ]
+    ],
+    "text": "WOMEN PAINT POSTERS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. How safe are you?",
+    "cam": "wide",
+    "do": [
+     [
+      "sign",
+      "show"
+     ],
+     [
+      "you",
+      "to:-1,10,0"
+     ],
+     [
+      "fuller",
+      "exit"
+     ]
+    ],
+    "text": "7. YOUR SAFETY"
+   },
+   {
+    "who": "narr",
+    "say": "At one front door, a black mosaic dog. Cave canem.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "text": "CAVE CANEM",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It means beware of the dog. Homes still use those words today.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "BEWARE OF THE DOG"
+   },
+   {
+    "who": "narr",
+    "say": "Guard dogs were real. Chained by the front door, day and night.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "enter:right"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "CHAINED BY THE DOOR"
+   },
+   {
+    "who": "narr",
+    "say": "In 1874, diggers found one of those dogs. Still on its chain.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ],
+    "text": "STILL ON ITS CHAIN",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Its owners had fled. Nobody came back to unclip it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NOBODY UNCLIPPED IT"
+   },
+   {
+    "who": "narr",
+    "say": "So the next time you see beware of the dog, remember Pompeii.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ],
+    "text": "REMEMBER POMPEII"
+   },
+   {
+    "who": "narr",
+    "say": "And thieves? Rich homes had strongboxes bolted to the floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:2,11,0"
+     ],
+     [
+      "sign",
+      "hide"
+     ]
+    ],
+    "text": "STRONGBOXES"
+   },
+   {
+    "who": "narr",
+    "say": "At night the streets are pitch black. You carry an oil lamp.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.6"
+     ]
+    ],
+    "text": "PITCH BLACK"
+   },
+   {
+    "who": "narr",
+    "say": "But the real danger is under your feet.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "UNDER YOUR FEET"
+   },
+   {
+    "who": "narr",
+    "say": "Seventeen years ago, a huge earthquake wrecked this town.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "THE EARTHQUAKE OF 62"
+   },
+   {
+    "who": "narr",
+    "say": "They're still repairing it. Scaffolding, cracked walls, half-built temples.",
+    "cam": "wide",
+    "do": [
+     [
+      "baker",
+      "to:4,13,0"
+     ],
+     [
+      "wall",
+      "show"
+     ]
+    ],
+    "text": "STILL REPAIRING"
+   },
+   {
+    "who": "narr",
+    "say": "And for days now, the ground has been shivering again.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE GROUND SHIVERS"
+   },
+   {
+    "who": "baker",
+    "say": "Little shakes. That's Campania. You get used to them.",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "laugh"
+     ]
+    ],
+    "text": "YOU GET USED TO IT"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody here knows Vesuvius is a volcano. It's covered in vineyards.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ],
+     [
+      "wall",
+      "hide"
+     ]
+    ],
+    "text": "COVERED IN VINES"
+   },
+   {
+    "who": "narr",
+    "say": "One painting shows the wine god standing in front of it. Smiling.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "to:1,11,0"
+     ]
+    ],
+    "text": "THE WINE GOD"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. What if you get sick?",
+    "cam": "wide",
+    "do": [
+     [
+      "tools",
+      "show"
+     ],
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "8. YOUR HEALTH"
+   },
+   {
+    "who": "narr",
+    "say": "You visit a doctor. One house here had dozens of surgical tools.",
+    "cam": "prop:tools",
+    "do": [
+     [
+      "tools",
+      "bounce"
+     ]
+    ],
+    "text": "DOZENS OF TOOLS"
+   },
+   {
+    "who": "narr",
+    "say": "Probes, hooks, forceps. Some look almost like the ones used today.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "ALMOST MODERN"
+   },
+   {
+    "who": "narr",
+    "say": "No painkillers like ours. Maybe some wine first. And luck.",
+    "cam": "prop:tools",
+    "do": [
+     [
+      "tools",
+      "spin"
+     ]
+    ],
+    "text": "AND LUCK"
+   },
+   {
+    "who": "narr",
+    "say": "But here's a surprise. Your teeth are probably great.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "happy"
+     ],
+     [
+      "tools",
+      "hide"
+     ]
+    ],
+    "text": "GREAT TEETH"
+   },
+   {
+    "who": "narr",
+    "say": "Scans of victims found healthy teeth. Their food had very little sugar.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "LITTLE SUGAR"
+   },
+   {
+    "who": "narr",
+    "say": "Bread, beans, fruit, fish. A diet many doctors would like today.",
+    "cam": "prop:loaf",
+    "do": [
+     [
+      "loaf",
+      "show"
+     ],
+     [
+      "loaf",
+      "bounce"
+     ]
+    ],
+    "text": "A GOOD DIET"
+   },
+   {
+    "who": "narr",
+    "say": "Still, life is short. Many children don't live to grow up.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ],
+     [
+      "loaf",
+      "hide"
+     ]
+    ],
+    "text": "LIFE IS SHORT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. Are you warm when you sleep?",
+    "cam": "wide",
+    "do": [
+     [
+      "brazier",
+      "show"
+     ],
+     [
+      "you",
+      "to:-5,11,0"
+     ],
+     [
+      "loaf",
+      "hide"
+     ]
+    ],
+    "text": "9. YOUR NIGHTS"
+   },
+   {
+    "who": "narr",
+    "say": "This morning is cool. People wear wool cloaks.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "WOOL CLOAKS"
+   },
+   {
+    "who": "narr",
+    "say": "At home, you warm your hands over a brazier of glowing coals.",
+    "cam": "prop:brazier",
+    "do": [
+     [
+      "brazier",
+      "bounce"
+     ]
+    ],
+    "text": "GLOWING COALS"
+   },
+   {
+    "who": "narr",
+    "say": "Your bedroom is tiny and dark. A bed, a lamp, a chest.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-5,11,1.2"
+     ]
+    ],
+    "text": "TINY AND DARK"
+   },
+   {
+    "who": "narr",
+    "say": "Outside, carts rattle past on the stones before sunrise.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "to:2,12,0"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "CARTS BEFORE DAWN"
+   },
+   {
+    "who": "narr",
+    "say": "Inns near the town gates rent beds to travellers and their mules.",
+    "cam": "overhead",
+    "do": [
+     [
+      "baker",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "INNS AND MULES"
+   },
+   {
+    "who": "narr",
+    "say": "It's noisy, it's crowded, and it smells. And you love it here.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "YOU LOVE IT HERE"
+   },
+   {
+    "who": "narr",
+    "say": "And remember the fruit? Pomegranates, chestnuts. Cool mornings. Braziers.",
+    "cam": "prop:fruit",
+    "do": [
+     [
+      "fruit",
+      "show"
+     ],
+     [
+      "fruit",
+      "spin"
+     ]
+    ],
+    "text": "REMEMBER?",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Does that sound like the middle of summer to you?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "brazier",
+      "hide"
+     ],
+     [
+      "fruit",
+      "hide"
+     ]
+    ],
+    "text": "SUMMER?"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. Your last day.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "lamp",
+      "drift:0,10,2"
+     ]
+    ],
+    "text": "10. THE LAST DAY"
+   },
+   {
+    "who": "baker",
+    "say": "Ovens are full. Market's busy. A good day!",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "happy"
+     ],
+     [
+      "loaf",
+      "show"
+     ]
+    ],
+    "text": "A GOOD DAY"
+   },
+   {
+    "who": "narr",
+    "say": "You wake up, grab bread, and fill your jar at the fountain.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "fountain",
+      "show"
+     ]
+    ],
+    "text": "A NORMAL MORNING"
+   },
+   {
+    "who": "narr",
+    "say": "The fruit sellers shout. A cart rattles past. A dog barks.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "bounce"
+     ],
+     [
+      "fountain",
+      "hide"
+     ]
+    ],
+    "text": "A DOG BARKS"
+   },
+   {
+    "who": "narr",
+    "say": "The ground shivers again. A little stronger this time.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "shake"
+     ],
+     [
+      "baker",
+      "shake"
+     ]
+    ],
+    "text": "A LITTLE STRONGER",
+    "sfx": "alarm"
+   },
+   {
+    "who": "baker",
+    "say": "There it goes again. Pass me that tray.",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "laugh"
+     ]
+    ],
+    "text": "THERE IT GOES AGAIN"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody leaves. Why would they? It's just another busy morning.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WHY WOULD THEY?"
+   },
+   {
+    "who": "narr",
+    "say": "Around one in the afternoon, the sky tears open.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "plume",
+      "show"
+     ],
+     [
+      "ember",
+      "show"
+     ],
+     [
+      "ember",
+      "drift:3,18,7"
+     ]
+    ],
+    "text": "1 PM",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "The top of Vesuvius blows apart. A grey column shoots upward.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE SKY TEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Over thirty kilometres high. Higher than any cloud you've seen.",
+    "cam": "prop:plume",
+    "do": [
+     [
+      "plume",
+      "bounce"
+     ],
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "30+ KM HIGH"
+   },
+   {
+    "who": "narr",
+    "say": "Across the bay, a teenager named Pliny watches it rise.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-4,12,3"
+     ],
+     [
+      "loaf",
+      "hide"
+     ]
+    ],
+    "text": "PLINY, AGE 17"
+   },
+   {
+    "who": "narr",
+    "say": "He later writes that it looked like a giant pine tree.",
+    "cam": "prop:plume",
+    "do": [
+     [
+      "plume",
+      "spin"
+     ]
+    ],
+    "text": "LIKE A PINE TREE"
+   },
+   {
+    "who": "baker",
+    "say": "What is that? Is the mountain on fire?",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "eyes_big"
+     ]
+    ],
+    "text": "IS IT ON FIRE?"
+   },
+   {
+    "who": "narr",
+    "say": "The wind carries the cloud straight over Pompeii. The sun goes out.",
+    "cam": "wide",
+    "do": [
+     [
+      "pumice",
+      "show"
+     ],
+     [
+      "pumice",
+      "drift:0,10,0.3"
+     ]
+    ],
+    "text": "THE SUN GOES OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Then it starts raining stones. Light, grey, full of holes. Pumice.",
+    "cam": "prop:pumice",
+    "do": [
+     [
+      "pumice",
+      "bounce"
+     ]
+    ],
+    "text": "RAINING STONES",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "They pile up fast. About fifteen centimetres every hour.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "15 CM AN HOUR"
+   },
+   {
+    "who": "baker",
+    "say": "Inside! Everyone, under a roof! Now!",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "shake"
+     ]
+    ],
+    "text": "UNDER A ROOF!"
+   },
+   {
+    "who": "narr",
+    "say": "But roofs weren't built for that weight. Some start to give way.",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "you",
+      "to:-3,10,0"
+     ],
+     [
+      "baker",
+      "turn:you"
+     ]
+    ],
+    "text": "ROOFS GIVE WAY"
+   },
+   {
+    "who": "narr",
+    "say": "So what do you do? Hide inside, or run?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "HIDE OR RUN?"
+   },
+   {
+    "who": "narr",
+    "say": "Most people run. Experts think most of Pompeii got out in time.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "exit"
+     ],
+     [
+      "baker",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:6,12,2"
+     ]
+    ],
+    "text": "MOST GOT OUT"
+   },
+   {
+    "who": "baker",
+    "say": "My ovens are full. I'm not leaving my bread.",
+    "cam": "close:baker",
+    "do": [
+     [
+      "baker",
+      "sad"
+     ]
+    ],
+    "text": "MY BREAD"
+   },
+   {
+    "who": "narr",
+    "say": "Some stay. To guard their homes. Or because they can't leave.",
+    "cam": "prop:loaf",
+    "do": [
+     [
+      "loaf",
+      "show"
+     ],
+     [
+      "loaf",
+      "bounce"
+     ]
+    ],
+    "text": "SOME STAY"
+   },
+   {
+    "who": "narr",
+    "say": "Five kilometres south, in Stabiae, warships arrive in the dark.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "show"
+     ],
+     [
+      "ship",
+      "bounce"
+     ],
+     [
+      "loaf",
+      "hide"
+     ]
+    ],
+    "text": "WARSHIPS"
+   },
+   {
+    "who": "narr",
+    "say": "The admiral of the Roman fleet has come himself. Pliny the Elder.",
+    "cam": "close:pliny",
+    "do": [
+     [
+      "pliny",
+      "enter:left"
+     ]
+    ],
+    "text": "PLINY THE ELDER"
+   },
+   {
+    "who": "narr",
+    "say": "He came to study the cloud. Then a friend begged for rescue.",
+    "cam": "two:pliny,baker",
+    "do": [
+     [
+      "pliny",
+      "turn:front"
+     ],
+     [
+      "baker",
+      "exit"
+     ]
+    ],
+    "text": "A RESCUE"
+   },
+   {
+    "who": "narr",
+    "say": "His helmsman wanted to turn back. Pliny refused.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "spin"
+     ]
+    ],
+    "text": "TURN BACK?"
+   },
+   {
+    "who": "pliny",
+    "say": "Fortune favours the brave. Steer for Pomponianus.",
+    "cam": "close:pliny",
+    "do": [
+     [
+      "pliny",
+      "turn:front"
+     ]
+    ],
+    "text": "'FORTUNE FAVOURS THE BRAVE'",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "At his friend's villa, he took a bath and ate dinner.",
+    "cam": "wide",
+    "do": [
+     [
+      "pliny",
+      "to:-1,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-1,12,2"
+     ]
+    ],
+    "text": "A BATH. DINNER."
+   },
+   {
+    "who": "narr",
+    "say": "Calmly. On purpose. So everyone else would stop panicking.",
+    "cam": "close:pliny",
+    "do": [
+     [
+      "pliny",
+      "happy"
+     ]
+    ],
+    "text": "ON PURPOSE"
+   },
+   {
+    "who": "narr",
+    "say": "The mountain glowed with fire. He said it was burning farmhouses.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "ember",
+      "show"
+     ],
+     [
+      "ember",
+      "drift:4,22,6"
+     ]
+    ],
+    "text": "BURNING FARMHOUSES"
+   },
+   {
+    "who": "narr",
+    "say": "Then he went to bed, and snored loudly enough to hear outside.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pliny",
+      "sleep"
+     ]
+    ],
+    "text": "HE SNORED"
+   },
+   {
+    "who": "narr",
+    "say": "By night, ash and stones nearly blocked his bedroom door.",
+    "cam": "prop:pumice",
+    "do": [
+     [
+      "pumice",
+      "show"
+     ],
+     [
+      "pumice",
+      "spin"
+     ]
+    ],
+    "text": "THE DOOR WAS BLOCKED"
+   },
+   {
+    "who": "narr",
+    "say": "They woke him. The house shook. Inside or out?",
+    "cam": "close:pliny",
+    "do": [
+     [
+      "pliny",
+      "shake"
+     ]
+    ],
+    "text": "INSIDE OR OUT?",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "They went out, with pillows tied to their heads against the stones.",
+    "cam": "prop:pillow",
+    "do": [
+     [
+      "pillow",
+      "show"
+     ],
+     [
+      "pillow",
+      "bounce"
+     ]
+    ],
+    "text": "PILLOWS ON THEIR HEADS"
+   },
+   {
+    "who": "narr",
+    "say": "Morning came. But it was darker than any night.",
+    "cam": "wide",
+    "do": [
+     [
+      "pillow",
+      "hide"
+     ],
+     [
+      "lamp",
+      "drift:-2,9,1"
+     ]
+    ],
+    "text": "DARKER THAN NIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "On the shore, the sea was too wild to escape.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "NO WAY OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Pliny lay down, asking for cold water. Then a smell of sulphur.",
+    "cam": "close:pliny",
+    "do": [
+     [
+      "pliny",
+      "sad"
+     ]
+    ],
+    "text": "SULPHUR"
+   },
+   {
+    "who": "narr",
+    "say": "He stood up, leaning on two men, and collapsed.",
+    "cam": "two:pliny,you",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "pliny",
+      "sleep"
+     ]
+    ],
+    "text": "HE COLLAPSED"
+   },
+   {
+    "who": "narr",
+    "say": "His nephew believed the fumes choked him. He was fifty-five.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ],
+     [
+      "ship",
+      "hide"
+     ]
+    ],
+    "text": "AGE 55"
+   },
+   {
+    "who": "narr",
+    "say": "Days later, his body was found unhurt. As if he were asleep.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pliny",
+      "exit"
+     ]
+    ],
+    "text": "AS IF ASLEEP"
+   },
+   {
+    "who": "narr",
+    "say": "And back in Pompeii, the worst had not even started.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE WORST WAS NEXT"
+   },
+   {
+    "who": "narr",
+    "say": "Many who hid indoors had lived through the whole night of stones.",
+    "cam": "prop:pumice",
+    "do": [
+     [
+      "pumice",
+      "bounce"
+     ]
+    ],
+    "text": "THEY LIVED THROUGH IT"
+   },
+   {
+    "who": "narr",
+    "say": "Then, early next morning, the giant column of smoke collapsed.",
+    "cam": "prop:plume",
+    "do": [
+     [
+      "plume",
+      "bounce"
+     ]
+    ],
+    "text": "THE COLUMN FELL",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "A cloud of burning gas and ash raced down the mountain.",
+    "cam": "wide",
+    "do": [
+     [
+      "ember",
+      "drift:-4,9,1"
+     ],
+     [
+      "plume",
+      "drift:0,14,3"
+     ]
+    ],
+    "text": "BURNING CLOUD"
+   },
+   {
+    "who": "narr",
+    "say": "Faster than a car. Nobody can outrun it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "FASTER THAN A CAR"
+   },
+   {
+    "who": "narr",
+    "say": "Scientists call it a pyroclastic surge. It reached Pompeii in minutes.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "IN MINUTES"
+   },
+   {
+    "who": "narr",
+    "say": "Everyone still in town was gone in moments.",
+    "cam": "overhead",
+    "do": [
+     [
+      "pumice",
+      "hide"
+     ],
+     [
+      "ember",
+      "hide"
+     ]
+    ],
+    "text": "GONE IN MOMENTS"
+   },
+   {
+    "who": "narr",
+    "say": "Then the ash kept falling, until the town disappeared.",
+    "cam": "wide",
+    "do": [
+     [
+      "plume",
+      "hide"
+     ],
+     [
+      "lamp",
+      "drift:0,9,0.5"
+     ]
+    ],
+    "text": "THE TOWN DISAPPEARED"
+   },
+   {
+    "who": "narr",
+    "say": "Along the coast, the town of Herculaneum was buried even deeper.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "show"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "HERCULANEUM"
+   },
+   {
+    "who": "narr",
+    "say": "In some places, under twenty metres of volcanic rock.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "20 METRES DEEP"
+   },
+   {
+    "who": "narr",
+    "say": "In its boathouses by the beach, about three hundred people waited.",
+    "cam": "wide",
+    "do": [
+     [
+      "lamp",
+      "drift:-6,18,0.5"
+     ],
+     [
+      "ship",
+      "drift:-4,18,0"
+     ]
+    ],
+    "text": "THEY WAITED"
+   },
+   {
+    "who": "narr",
+    "say": "Waiting for boats that never came. Diggers found them in the 1980s.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "spin"
+     ]
+    ],
+    "text": "BOATS NEVER CAME"
+   },
+   {
+    "who": "narr",
+    "say": "Families, close together, still facing the sea.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ],
+     [
+      "ship",
+      "hide"
+     ]
+    ],
+    "text": "FACING THE SEA"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. The town under the ash.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "11. UNDER THE ASH"
+   },
+   {
+    "who": "narr",
+    "say": "Pompeii stayed buried for almost seventeen hundred years.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "1,700 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Farmers planted vines on top of it. Nobody knew.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "NOBODY KNEW"
+   },
+   {
+    "who": "narr",
+    "say": "Diggers found it again in 1748. Then came the strangest discovery.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:0,11,0"
+     ]
+    ],
+    "text": "1748"
+   },
+   {
+    "who": "narr",
+    "say": "In the hardened ash, they kept finding empty spaces.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "show"
+     ]
+    ],
+    "text": "EMPTY SPACES",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Hollows. And the hollows had shapes.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THEY HAD SHAPES"
+   },
+   {
+    "who": "narr",
+    "say": "Shapes of people. Of hands. Of folds in a cloak.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "bounce"
+     ]
+    ],
+    "text": "SHAPES OF PEOPLE"
+   },
+   {
+    "who": "narr",
+    "say": "The ash had hardened around the victims. Over time, they were gone.",
+    "cam": "wide",
+    "do": [
+     [
+      "lamp",
+      "drift:0,12,1"
+     ]
+    ],
+    "text": "ONLY THE SHAPE LEFT"
+   },
+   {
+    "who": "narr",
+    "say": "Only the shape of their last moment stayed behind.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THEIR LAST MOMENT"
+   },
+   {
+    "who": "narr",
+    "say": "In 1863, an archaeologist named Giuseppe Fiorelli had an idea.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cast",
+      "spin"
+     ]
+    ],
+    "text": "1863"
+   },
+   {
+    "who": "narr",
+    "say": "He poured liquid plaster into the hollows and waited.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "bounce"
+     ]
+    ],
+    "text": "LIQUID PLASTER"
+   },
+   {
+    "who": "narr",
+    "say": "When it set, they dug it out. Pompeii's people came back.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THEY CAME BACK",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "You can still stand next to them today.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "STILL THERE TODAY"
+   },
+   {
+    "who": "narr",
+    "say": "Some are curled up. Some cover their faces. Some hold each other.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "HOLDING EACH OTHER"
+   },
+   {
+    "who": "narr",
+    "say": "In 2024, DNA tests surprised everyone about who some of them were.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cast",
+      "bounce"
+     ]
+    ],
+    "text": "2024 DNA"
+   },
+   {
+    "who": "narr",
+    "say": "A famous 'mother and child' pair included an unrelated adult man.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "spin"
+     ]
+    ],
+    "text": "NOT WHO WE THOUGHT"
+   },
+   {
+    "who": "narr",
+    "say": "The stories we told about them were our stories, not theirs.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "OUR STORIES"
+   },
+   {
+    "who": "narr",
+    "say": "More than eleven hundred victims have been found at Pompeii so far.",
+    "cam": "prop:cast",
+    "do": [
+     [
+      "cast",
+      "spin"
+     ]
+    ],
+    "text": "1,100+ FOUND"
+   },
+   {
+    "who": "narr",
+    "say": "But one mystery stayed hidden for almost two thousand years.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "cast",
+      "hide"
+     ]
+    ],
+    "text": "ONE MORE MYSTERY"
+   },
+   {
+    "who": "narr",
+    "say": "The date. Every textbook said the twenty-fourth of August.",
+    "cam": "prop:scrawl",
+    "do": [
+     [
+      "scrawl",
+      "show"
+     ]
+    ],
+    "text": "24 AUGUST?"
+   },
+   {
+    "who": "narr",
+    "say": "That date comes from Pliny's letters, copied by hand for centuries.",
+    "cam": "overhead",
+    "do": [
+     [
+      "scrawl",
+      "bounce"
+     ]
+    ],
+    "text": "COPIED BY HAND"
+   },
+   {
+    "who": "narr",
+    "say": "But remember the market? Pomegranates. Chestnuts. Walnuts.",
+    "cam": "prop:fruit",
+    "do": [
+     [
+      "fruit",
+      "show"
+     ],
+     [
+      "fruit",
+      "bounce"
+     ],
+     [
+      "scrawl",
+      "hide"
+     ]
+    ],
+    "text": "REMEMBER?"
+   },
+   {
+    "who": "narr",
+    "say": "Wool cloaks. Braziers burning. New wine already sealed in jars.",
+    "cam": "wide",
+    "do": [
+     [
+      "brazier",
+      "show"
+     ],
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "AUTUMN, NOT SUMMER"
+   },
+   {
+    "who": "narr",
+    "say": "That's autumn, not August. Archaeologists noticed it too.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "fruit",
+      "hide"
+     ]
+    ],
+    "text": "THAT'S AUTUMN"
+   },
+   {
+    "who": "narr",
+    "say": "Then, in 2018, they found writing on a wall. In charcoal.",
+    "cam": "prop:scrawl",
+    "do": [
+     [
+      "scrawl",
+      "show"
+     ],
+     [
+      "brazier",
+      "hide"
+     ]
+    ],
+    "text": "2018",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "In a house being repaired, someone had scribbled a date.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:0,11,0"
+     ]
+    ],
+    "text": "A SCRIBBLED DATE"
+   },
+   {
+    "who": "narr",
+    "say": "The sixteenth day before the Kalends of November.",
+    "cam": "prop:scrawl",
+    "do": [
+     [
+      "scrawl",
+      "bounce"
+     ]
+    ],
+    "text": "XVI K NOV"
+   },
+   {
+    "who": "narr",
+    "say": "In our calendar, that's the seventeenth of October.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "17 OCTOBER"
+   },
+   {
+    "who": "narr",
+    "say": "Charcoal fades fast. So it was likely written that same year.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ]
+    ],
+    "text": "THAT SAME YEAR"
+   },
+   {
+    "who": "narr",
+    "say": "Many historians now place the eruption around the twenty-fourth of October.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ],
+     [
+      "scrawl",
+      "hide"
+     ]
+    ],
+    "text": "24 OCTOBER 79?"
+   },
+   {
+    "who": "narr",
+    "say": "One copying slip may have moved the date by two months.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "TWO MONTHS OFF"
+   },
+   {
+    "who": "narr",
+    "say": "And the clue was sitting in a fruit basket the whole time.",
+    "cam": "prop:fruit",
+    "do": [
+     [
+      "fruit",
+      "show"
+     ],
+     [
+      "fruit",
+      "spin"
+     ]
+    ],
+    "text": "THE FRUIT BASKET"
+   },
+   {
+    "who": "narr",
+    "say": "So, could you have lived here? Fresh bread, hot baths, loud arenas?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,2"
+     ],
+     [
+      "fruit",
+      "hide"
+     ]
+    ],
+    "text": "COULD YOU LIVE HERE?"
+   },
+   {
+    "who": "narr",
+    "say": "The ground warned them for days. Listen to the small warnings.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "LISTEN TO WARNINGS"
+   },
+   {
+    "who": "baker",
+    "say": "Fresh bread! Hot from the oven! Get it before it's gone!",
+    "cam": "two:you,baker",
+    "do": [
+     [
+      "baker",
+      "enter:right"
+     ],
+     [
+      "loaf",
+      "show"
+     ]
+    ],
+    "text": "BEFORE IT'S GONE"
+   },
+   {
+    "who": "narr",
+    "say": "Would you run that morning, or stay home? Tell me below.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "RUN OR STAY?"
+   },
+   {
+    "who": "narr",
+    "say": "Subscribe for more true history. Have you heard a story like this?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "baker",
+      "spin"
+     ]
+    ],
+    "text": "HEARD ONE LIKE THIS?"
+   }
+  ]
+ },
+ "long": {
+  "title": "What Was Life REALLY Like in Pompeii, 79 AD?",
+  "description": "Would you have run that morning, or stayed with your home? Tell me in the comments.\nPrevious true story: https://youtu.be/gNlnRF0JtHY\n\nYour home, your food, your job, your fun, and your last day in Pompeii, 79 AD. Street-food bars with duck and snails, fish sauce on everything, laundry washed in urine, a 20,000-seat arena, a guard dog still on its chain, and a mountain nobody knew was a volcano. Then the eruption, Pliny the Elder's rescue at Stabiae, the hollows in the ash, and a 2018 charcoal note that suggests the date in your textbook is two months off.\n\nSources:\nPliny the Younger, Letters 6.16 and 6.20 (to Tacitus)\nhttps://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79_AD\nhttps://www.britannica.com/place/Pompeii\nhttps://archaeology.org/news/2018/10/16/181016-pompeii-date-inscription/\n\n#history #pompeii #3DAnimation #truestory #ancientrome",
+  "tags": [
+   "what was life really like",
+   "life in ancient rome",
+   "pompeii",
+   "pompeii 79 ad",
+   "vesuvius",
+   "ancient history",
+   "true scary stories",
+   "creepy true story",
+   "history documentary animated",
+   "Pliny the Elder",
+   "Stabiae",
+   "pompeii eruption date",
+   "daily life in pompeii",
+   "history mystery",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "LAST DAY, 79 AD",
+  "localizations": {
+   "es": {
+    "title": "¿Cómo era REALMENTE la vida en Pompeya en el 79 d. C.?",
+    "description": "¿Habrías huido esa mañana o te habrías quedado en casa? Cuéntamelo en los comentarios.\n\nTu casa, tu comida, tu trabajo, tu diversión y tu último día en Pompeya, año 79: bares callejeros con pato y caracoles, salsa de pescado en todo, ropa lavada con orina, un anfiteatro de 20.000 asientos, un perro guardián aún encadenado y una montaña que nadie sabía que era un volcán. Luego la erupción, el rescate de Plinio el Viejo, los huecos en la ceniza y una nota a carboncillo de 2018 que cambia la fecha."
+   },
+   "pt": {
+    "title": "Como era REALMENTE a vida em Pompeia em 79 d.C.?",
+    "description": "Você teria fugido naquela manhã ou ficado em casa? Conte nos comentários.\n\nSua casa, sua comida, seu trabalho, sua diversão e seu último dia em Pompeia, ano 79: bares de rua com pato e caracóis, molho de peixe em tudo, roupa lavada com urina, uma arena de 20 mil lugares, um cão de guarda ainda acorrentado e uma montanha que ninguém sabia ser um vulcão. Depois a erupção, o resgate de Plínio, o Velho, os vazios nas cinzas e uma inscrição a carvão de 2018 que muda a data."
+   },
+   "ar": {
+    "title": "كيف كانت الحياة حقًا في بومبي عام 79م؟",
+    "description": "هل كنت ستهرب ذلك الصباح أم تبقى في بيتك؟ أخبرني في التعليقات.\n\nبيتك وطعامك وعملك ولهوك ويومك الأخير في بومبي عام 79: حانات شارع تقدّم البط والحلزون، صلصة السمك على كل شيء، ملابس تُغسل بالبول، مدرج يتسع لعشرين ألفًا، كلب حراسة ما زال مقيّدًا، وجبل لم يعرف أحد أنه بركان. ثم الثوران، ومحاولة إنقاذ بلينيوس الأكبر، والفراغات في الرماد، وكتابة بالفحم من 2018 تغيّر التاريخ."
+   },
+   "fr": {
+    "title": "À quoi ressemblait VRAIMENT la vie à Pompéi en 79 ?",
+    "description": "Auriez-vous fui ce matin-là ou seriez-vous resté chez vous ? Dites-le-moi en commentaire.\n\nVotre maison, vos repas, votre travail, vos loisirs et votre dernier jour à Pompéi, en 79 : des comptoirs de rue avec canard et escargots, de la sauce de poisson partout, du linge lavé à l'urine, une arène de 20 000 places, un chien de garde encore enchaîné et une montagne que personne ne savait volcan. Puis l'éruption, le sauvetage de Pline l'Ancien, les creux dans la cendre et une inscription au charbon de 2018 qui change la date."
+   },
+   "ja": {
+    "title": "西暦79年ポンペイの暮らしは本当はどうだった?",
+    "description": "あの朝、あなたなら逃げた?それとも家に残った?コメントで教えてください。\n\n西暦79年ポンペイでのあなたの家、食事、仕事、娯楽、そして最後の一日。アヒルやカタツムリを出す屋台、何にでもかける魚醤、尿で洗う洗濯、2万席の円形闘技場、鎖につながれたままの番犬、そして誰も火山だと知らなかった山。噴火、大プリニウスの救助、灰の中の空洞、そして日付を覆す2018年の木炭の落書き。"
+   },
+   "ko": {
+    "title": "서기 79년 폼페이의 삶은 정말 어땠을까?",
+    "description": "그날 아침 당신이라면 도망쳤을까요, 집에 남았을까요? 댓글로 알려주세요.\n\n서기 79년 폼페이에서의 집, 음식, 일, 놀이, 그리고 마지막 하루. 오리와 달팽이를 파는 길거리 가게, 모든 음식에 뿌리는 생선 소스, 소변으로 하는 빨래, 2만 석 원형경기장, 아직 사슬에 묶인 경비견, 아무도 화산인 줄 몰랐던 산. 그리고 분화, 대 플리니우스의 구조, 화산재 속 빈 공간, 날짜를 뒤집은 2018년 숯 낙서."
+   },
+   "de": {
+    "title": "Wie war das Leben in Pompeji 79 n. Chr. WIRKLICH?",
+    "description": "Wärst du an diesem Morgen geflohen oder zu Hause geblieben? Schreib es in die Kommentare.\n\nDein Zuhause, dein Essen, deine Arbeit, dein Vergnügen und dein letzter Tag in Pompeji, 79 n. Chr.: Straßenimbisse mit Ente und Schnecken, Fischsoße auf allem, Wäsche mit Urin gewaschen, eine Arena mit 20.000 Plätzen, ein Wachhund noch an der Kette und ein Berg, den niemand für einen Vulkan hielt. Dann der Ausbruch, Plinius' Rettungsfahrt, die Hohlräume in der Asche und eine Kohleinschrift von 2018, die das Datum verschiebt."
+   }
+  },
+  "thumb_beat": 139
+ },
+ "shorts": [
+  {
+   "beat": 21,
+   "dur": 30,
+   "top": "2,000-YEAR-OLD BREAD",
+   "title": "The dark origin of this 2,000-year-old bread 🍞 #shorts",
+   "description": "Pompeii, 79 AD: 81 loaves went into one oven and never came out. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "pompeii",
+    "ancient bread",
+    "roman food",
+    "history",
+    "dark history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El oscuro origen de este pan de 2.000 años 🍞 #shorts",
+     "description": "Pompeya, año 79: 81 panes entraron a un horno y nunca salieron. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A origem sombria deste pão de 2.000 anos 🍞 #shorts",
+     "description": "Pompeia, ano 79: 81 pães entraram num forno e nunca saíram. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الأصل المظلم لهذا الخبز ذي الألفي عام 🍞 #shorts",
+     "description": "بومبي، عام 79: دخل 81 رغيفًا فرنًا واحدًا ولم تخرج أبدًا. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "L'origine sombre de ce pain vieux de 2 000 ans 🍞 #shorts",
+     "description": "Pompéi, an 79 : 81 pains sont entrés dans un four et n'en sont jamais sortis. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "2000年前のパンの暗い起源 🍞 #shorts",
+     "description": "西暦79年ポンペイ。81個のパンがかまどに入れられ、二度と出されなかった。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "2,000년 된 빵의 어두운 기원 🍞 #shorts",
+     "description": "서기 79년 폼페이. 빵 81개가 화덕에 들어가 다시는 나오지 못했다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der dunkle Ursprung dieses 2.000 Jahre alten Brots 🍞 #shorts",
+     "description": "Pompeji, 79 n. Chr.: 81 Brote kamen in einen Ofen und nie wieder heraus. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 99,
+   "dur": 30,
+   "top": "BEWARE OF THE DOG",
+   "title": "The dark origin of 'Beware of the Dog' 🐕 #shorts",
+   "description": "Pompeii, 79 AD: the dog by the door was chained day and night. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "pompeii",
+    "beware of the dog",
+    "cave canem",
+    "history",
+    "dark history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "El oscuro origen de «Cuidado con el perro» 🐕 #shorts",
+     "description": "Pompeya, año 79: el perro de la puerta estaba encadenado día y noche. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A origem sombria de «Cuidado com o cão» 🐕 #shorts",
+     "description": "Pompeia, ano 79: o cão da porta ficava acorrentado dia e noite. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الأصل المظلم لعبارة «احذر الكلب» 🐕 #shorts",
+     "description": "بومبي، عام 79: كان كلب الباب مقيّدًا ليلًا ونهارًا. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "L'origine sombre de « Attention au chien » 🐕 #shorts",
+     "description": "Pompéi, an 79 : le chien de la porte était enchaîné jour et nuit. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "「猛犬注意」の暗い起源 🐕 #shorts",
+     "description": "西暦79年ポンペイ。玄関の犬は昼も夜も鎖につながれていた。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "'개 조심' 문구의 어두운 기원 🐕 #shorts",
+     "description": "서기 79년 폼페이. 문 앞의 개는 밤낮으로 사슬에 묶여 있었다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der dunkle Ursprung von „Vorsicht, Hund“ 🐕 #shorts",
+     "description": "Pompeji, 79 n. Chr.: Der Hund an der Tür war Tag und Nacht angekettet. Ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
