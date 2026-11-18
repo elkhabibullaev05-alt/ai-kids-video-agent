@@ -1,0 +1,2403 @@
+{
+ "id": "20261118-2-oregon-trail-no-survive",
+ "plot": "Second person, 'Why You Wouldn't Survive' format: you walk the Oregon Trail in 1850; twelve chapters answer daily-life questions (cost of the outfit, the wagon, food and buffalo chips, a typical day, sleep and water, river crossings, cholera, accidents, deadlines and the Donner party, the things you throw out, graves dug in the road), and the last chapter is the true grave of Rebecca Winters (died of cholera August 15, 1852), marked by an iron wagon rim, found by railroad surveyors in 1899 and moved in the 1990s.",
+ "script": {
+  "title": "Oregon Trail, 1850",
+  "lead_in": 0,
+  "set": {
+   "place": "moor",
+   "fog": 0.03,
+   "eyes": 0,
+   "moonlight": 26
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_bella",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.55,
+     0.2,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "master": {
+    "name": "The Wagon Master",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.45,
+     0.32,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "ma": {
+    "name": "Mom",
+    "voice": "af_sarah",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.35,
+     0.45,
+     0.35
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "ferryman": {
+    "name": "The Ferryman",
+    "voice": "am_onyx",
+    "speed": 0.95,
+    "pitch": -2,
+    "color": [
+     0.25,
+     0.3,
+     0.4
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     6,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.35
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "wheel",
+    "type": "wheel",
+    "color": [
+     0.45,
+     0.3,
+     0.15
+    ],
+    "glow": 0.4,
+    "visible": true,
+    "scale": 1.2,
+    "at": [
+     0,
+     12,
+     1.2
+    ]
+   },
+   {
+    "id": "wagon",
+    "type": "box",
+    "color": [
+     0.8,
+     0.75,
+     0.65
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 2.2,
+    "at": [
+     0,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "ox",
+    "type": "cone",
+    "color": [
+     0.4,
+     0.28,
+     0.2
+    ],
+    "glow": 0.2,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     6,
+     18,
+     0
+    ]
+   },
+   {
+    "id": "sack",
+    "type": "ball",
+    "color": [
+     0.85,
+     0.8,
+     0.7
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     -2,
+     10.5,
+     0.6
+    ]
+   },
+   {
+    "id": "brazier",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.5,
+     0.2
+    ],
+    "glow": 2.5,
+    "visible": false,
+    "scale": 0.3,
+    "at": [
+     -5,
+     11,
+     0.6
+    ]
+   },
+   {
+    "id": "fountain",
+    "type": "box",
+    "color": [
+     0.45,
+     0.6,
+     0.75
+    ],
+    "glow": 1.0,
+    "visible": false,
+    "scale": 0.7,
+    "at": [
+     2,
+     12,
+     0.4
+    ]
+   },
+   {
+    "id": "river",
+    "type": "box",
+    "color": [
+     0.3,
+     0.45,
+     0.7
+    ],
+    "glow": 1.0,
+    "visible": false,
+    "scale": 2.4,
+    "at": [
+     -6,
+     20,
+     0
+    ]
+   },
+   {
+    "id": "mountain",
+    "type": "cone",
+    "color": [
+     0.3,
+     0.3,
+     0.34
+    ],
+    "glow": 0.0,
+    "visible": true,
+    "scale": 4.0,
+    "at": [
+     4,
+     28,
+     0
+    ]
+   },
+   {
+    "id": "grave",
+    "type": "box",
+    "color": [
+     0.3,
+     0.25,
+     0.2
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     0,
+     12,
+     0
+    ]
+   },
+   {
+    "id": "tire",
+    "type": "wheel",
+    "color": [
+     0.55,
+     0.55,
+     0.6
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 1.0,
+    "at": [
+     0,
+     13,
+     0.6
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "1850. Two thousand miles of wagon road. About one in ten people who started it never finished.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "1 IN 10",
+    "sfx": "alarm"
+   },
+   {
+    "who": "master",
+    "say": "Wagons roll! Anyone not hitched by seven gets left behind!",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "master",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "WAGONS ROLL"
+   },
+   {
+    "who": "you",
+    "say": "Wait for me! I only just found my shoes!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "WAIT FOR ME"
+   },
+   {
+    "who": "narr",
+    "say": "This is the Oregon Trail. You are about to walk it.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "show"
+     ],
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "YOU'RE ON THE TRAIL"
+   },
+   {
+    "who": "narr",
+    "say": "Why would you not survive it? Let's go through your life, one question at a time.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "master",
+      "to:4,13,0"
+     ]
+    ],
+    "text": "WOULD YOU SURVIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "Food. Sleep. Water. Rivers. And the one thing that killed more people than anything else.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "5 QUESTIONS"
+   },
+   {
+    "who": "narr",
+    "say": "And at the very end, a grave that nobody can explain.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE LAST GRAVE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why would anyone leave?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ],
+     [
+      "master",
+      "happy"
+     ]
+    ],
+    "text": "1. WHY LEAVE?"
+   },
+   {
+    "who": "narr",
+    "say": "Between 1840 and 1860, somewhere around four hundred thousand people made this trip.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "400,000 PEOPLE"
+   },
+   {
+    "who": "narr",
+    "say": "Free land. That's the promise. In Oregon, a married couple could claim six hundred and forty acres.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "FREE LAND"
+   },
+   {
+    "who": "narr",
+    "say": "That's about five hundred football fields. For free.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "laugh"
+     ],
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "500 FOOTBALL FIELDS"
+   },
+   {
+    "who": "narr",
+    "say": "But first, you have to buy your outfit. That means the wagon, the animals and a year of supplies.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ]
+    ],
+    "text": "THE OUTFIT"
+   },
+   {
+    "who": "narr",
+    "say": "In 1850, that cost about eight hundred to twelve hundred dollars.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "$800 TO $1,200"
+   },
+   {
+    "who": "narr",
+    "say": "For many workers back then, that was more than a whole year of pay.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "A YEAR OF PAY"
+   },
+   {
+    "who": "narr",
+    "say": "So you sell the farm. You sell the furniture. And you start walking.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-4,10,1.8"
+     ]
+    ],
+    "text": "SELL EVERYTHING"
+   },
+   {
+    "who": "narr",
+    "say": "Mom isn't sure about this. Neither are the oxen.",
+    "cam": "wide",
+    "do": [
+     [
+      "ma",
+      "enter:left"
+     ],
+     [
+      "ox",
+      "show"
+     ]
+    ],
+    "text": "NOBODY IS SURE"
+   },
+   {
+    "who": "ma",
+    "say": "We sold the house for a trail of dust. I hope you're right.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "turn:front"
+     ],
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "I HOPE YOU'RE RIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. Your wagon.",
+    "cam": "overhead",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ],
+     [
+      "you",
+      "to:-2,12,0"
+     ]
+    ],
+    "text": "2. YOUR WAGON"
+   },
+   {
+    "who": "narr",
+    "say": "In the movies, they ride in it. In real life, almost nobody does.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ]
+    ],
+    "text": "NOBODY RIDES"
+   },
+   {
+    "who": "narr",
+    "say": "The wagon has no springs. Every rock on the road goes straight through your spine.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "NO SPRINGS"
+   },
+   {
+    "who": "narr",
+    "say": "It's a little longer than the bed of a pickup truck. And about four feet wide.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "turn:you"
+     ]
+    ],
+    "text": "PICKUP-SIZED"
+   },
+   {
+    "who": "narr",
+    "say": "Everything you own has to fit in there. Food, tools, clothes, and the kids' toys.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ],
+     [
+      "sack",
+      "show"
+     ]
+    ],
+    "text": "EVERYTHING YOU OWN"
+   },
+   {
+    "who": "narr",
+    "say": "Oxen pull it. Oxen are slow, but they're tough. They can eat the prairie grass and keep going.",
+    "cam": "close:ox",
+    "do": [
+     [
+      "ox",
+      "bounce"
+     ]
+    ],
+    "text": "OXEN, NOT HORSES"
+   },
+   {
+    "who": "narr",
+    "say": "So you walk. Beside the wagon, for the whole way. Even the kids.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:3,11,0"
+     ],
+     [
+      "ma",
+      "to:-3,13,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "YOU WALK"
+   },
+   {
+    "who": "you",
+    "say": "Two thousand miles. In these shoes. This is fine.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "IN THESE SHOES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. What do you eat?",
+    "cam": "wide",
+    "do": [
+     [
+      "sack",
+      "bounce"
+     ],
+     [
+      "brazier",
+      "show"
+     ]
+    ],
+    "text": "3. WHAT DO YOU EAT?"
+   },
+   {
+    "who": "narr",
+    "say": "Guidebooks told each adult to pack about two hundred pounds of flour.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "200 POUNDS OF FLOUR"
+   },
+   {
+    "who": "narr",
+    "say": "Add about seventy-five pounds of bacon, plus beans, rice, dried fruit, sugar, and coffee.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "happy"
+     ]
+    ],
+    "text": "BACON, BEANS, COFFEE"
+   },
+   {
+    "who": "narr",
+    "say": "That's not a lot of variety. You'll eat bread, bacon and beans, again and again.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "you",
+      "sad"
+     ],
+     [
+      "ma",
+      "laugh"
+     ]
+    ],
+    "text": "AGAIN AND AGAIN"
+   },
+   {
+    "who": "narr",
+    "say": "If you're lucky, a hunter shoots a buffalo. If you're not, you cook what you can find.",
+    "cam": "prop:brazier",
+    "do": [
+     [
+      "brazier",
+      "bounce"
+     ]
+    ],
+    "text": "BUFFALO OR BUST"
+   },
+   {
+    "who": "narr",
+    "say": "In desperate times, people ate prairie dogs. And snakes.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "SNAKES?"
+   },
+   {
+    "who": "narr",
+    "say": "And what do you burn for your fire? There are almost no trees on the plains.",
+    "cam": "wide",
+    "do": [
+     [
+      "ma",
+      "to:-6,12,0"
+     ]
+    ],
+    "text": "NO TREES"
+   },
+   {
+    "who": "narr",
+    "say": "You burn dried buffalo droppings. They called them buffalo chips.",
+    "cam": "prop:brazier",
+    "do": [
+     [
+      "brazier",
+      "spin"
+     ]
+    ],
+    "text": "BUFFALO CHIPS"
+   },
+   {
+    "who": "ma",
+    "say": "Don't make that face. You'll be cooking with them too.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "laugh"
+     ]
+    ],
+    "text": "YOU'LL COOK WITH THEM"
+   },
+   {
+    "who": "narr",
+    "say": "The good news is, the grass was free. The bad news is, so was the dust.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE DUST"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. A day on the trail.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ],
+     [
+      "master",
+      "to:2,13,0"
+     ]
+    ],
+    "text": "4. A TYPICAL DAY"
+   },
+   {
+    "who": "narr",
+    "say": "Four in the morning. The wagon leader fires a rifle. Time to get up.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "jump"
+     ]
+    ],
+    "text": "4 AM",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "By five, breakfast is cooking. The men and boys round up the animals.",
+    "cam": "two:ma,you",
+    "do": [
+     [
+      "ma",
+      "to:-4,12,0"
+     ]
+    ],
+    "text": "5 AM: BREAKFAST"
+   },
+   {
+    "who": "narr",
+    "say": "At seven, the wagon master yells it. Wagons roll!",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "7 AM: WAGONS ROLL"
+   },
+   {
+    "who": "narr",
+    "say": "And then you walk. About twelve to fifteen miles, every single day.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:4,10,1.8"
+     ]
+    ],
+    "text": "12 TO 15 MILES"
+   },
+   {
+    "who": "narr",
+    "say": "Fifteen miles is about two hundred and twenty football fields. And you do it again tomorrow.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "220 FOOTBALL FIELDS"
+   },
+   {
+    "who": "narr",
+    "say": "You stop for an hour at noon. They called it nooning. Then you walk some more.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "happy"
+     ]
+    ],
+    "text": "NOONING"
+   },
+   {
+    "who": "narr",
+    "say": "Kids have daily chores too. One of them is collecting buffalo chips. Hold your nose.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE KIDS' CHORE"
+   },
+   {
+    "who": "narr",
+    "say": "Dust gets in your teeth, your eyes, your bread, and your hair. It never leaves.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "laugh"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "DUST IN EVERYTHING"
+   },
+   {
+    "who": "narr",
+    "say": "Around six, the wagons form a circle. That's not for fighting. It's a pen for the animals.",
+    "cam": "overhead",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ],
+     [
+      "ox",
+      "bounce"
+     ]
+    ],
+    "text": "THE CIRCLE"
+   },
+   {
+    "who": "narr",
+    "say": "Some nights, someone pulls out a fiddle. People sing and dance in the dust. It's the best part of the day.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "happy"
+     ],
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "A FIDDLE AT NIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Then you cook, you eat, you fall asleep. And at four, the rifle fires again.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ]
+    ],
+    "text": "AGAIN AT 4 AM"
+   },
+   {
+    "who": "narr",
+    "say": "A trip like this took four to six months. Think about that. Half a year of walking.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "laugh"
+     ]
+    ],
+    "text": "4 TO 6 MONTHS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. Where do you sleep? And where do you drink?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-5,12,0"
+     ]
+    ],
+    "text": "5. SLEEP AND WATER"
+   },
+   {
+    "who": "narr",
+    "say": "You sleep in a tent, or under the wagon, or on the ground. No bed. No door.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "you",
+      "turn:ma"
+     ]
+    ],
+    "text": "NO BED, NO DOOR"
+   },
+   {
+    "who": "narr",
+    "say": "Prairie storms hit fast. Hail. Lightning. Wind that rips a tent right off the ground.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "PRAIRIE STORMS"
+   },
+   {
+    "who": "narr",
+    "say": "And the water? Camps were picked by where water and grass were.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "show"
+     ],
+     [
+      "fountain",
+      "bounce"
+     ]
+    ],
+    "text": "WHERE'S THE WATER?"
+   },
+   {
+    "who": "narr",
+    "say": "Sometimes the water is clean. Sometimes it's a muddy pond where a hundred oxen just drank.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "A MUDDY POND"
+   },
+   {
+    "who": "narr",
+    "say": "In dry summers, the water holes dried up. The animals died. Families went thirsty.",
+    "cam": "wide",
+    "do": [
+     [
+      "fountain",
+      "hide"
+     ],
+     [
+      "ox",
+      "sad"
+     ]
+    ],
+    "text": "DRY SUMMERS"
+   },
+   {
+    "who": "narr",
+    "say": "And a bathroom? There isn't one. The whole prairie is the bathroom, and you hope for a bush.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "NO BATHROOM"
+   },
+   {
+    "who": "narr",
+    "say": "Your wagon cover is canvas coated with oil. It blocks some rain. Not all of it. And it flaps all night long.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "A FLAPPING ROOF"
+   },
+   {
+    "who": "you",
+    "say": "Is it safe to drink this? Anyone? Hello?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "IS IT SAFE?"
+   },
+   {
+    "who": "narr",
+    "say": "Remember that question. It matters later.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "show"
+     ]
+    ],
+    "text": "REMEMBER THAT",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. The rivers.",
+    "cam": "overhead",
+    "do": [
+     [
+      "river",
+      "show"
+     ],
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "6. THE RIVERS"
+   },
+   {
+    "who": "narr",
+    "say": "The trail crosses the Platte, the Snake, the Green, and dozens more.",
+    "cam": "prop:river",
+    "do": [
+     [
+      "river",
+      "bounce"
+     ]
+    ],
+    "text": "DOZENS OF RIVERS"
+   },
+   {
+    "who": "narr",
+    "say": "There are no bridges. You float the wagon across, or you pay a ferry.",
+    "cam": "two:you,ferryman",
+    "do": [
+     [
+      "ferryman",
+      "enter:right"
+     ],
+     [
+      "you",
+      "turn:ferryman"
+     ]
+    ],
+    "text": "NO BRIDGES"
+   },
+   {
+    "who": "ferryman",
+    "say": "Three dollars a wagon. Cash. No swimming for free.",
+    "cam": "close:ferryman",
+    "do": [
+     [
+      "ferryman",
+      "turn:front"
+     ]
+    ],
+    "text": "THREE DOLLARS"
+   },
+   {
+    "who": "narr",
+    "say": "Three dollars in 1850 was a lot, so many families tried to cross on their own.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "TRY IT YOURSELF?"
+   },
+   {
+    "who": "narr",
+    "say": "They took off the wheels. They sealed the wagon box with tar. And they floated it.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "FLOATING WAGONS"
+   },
+   {
+    "who": "narr",
+    "say": "A strong current can flip a wagon like a toy. And people don't swim in wool clothes.",
+    "cam": "wide",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ]
+    ],
+    "text": "WOOL AND WATER"
+   },
+   {
+    "who": "narr",
+    "say": "Drowning was one of the main killers on the trail.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "DROWNING",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "And the rivers were the part that people wrote home about.",
+    "cam": "two:you,ferryman",
+    "do": [
+     [
+      "ferryman",
+      "to:6,15,0"
+     ]
+    ],
+    "text": "THE PART THEY WROTE ABOUT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. The thing that really kills you.",
+    "cam": "overhead",
+    "do": [
+     [
+      "river",
+      "hide"
+     ],
+     [
+      "you",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "7. THE REAL KILLER",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "People feared attacks. They feared snakes. They feared starving.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "turn:you"
+     ]
+    ],
+    "text": "WHAT THEY FEARED"
+   },
+   {
+    "who": "narr",
+    "say": "But the number one killer, by a wide margin, was disease.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "DISEASE"
+   },
+   {
+    "who": "narr",
+    "say": "And the worst of all was cholera.",
+    "cam": "prop:fountain",
+    "do": [
+     [
+      "fountain",
+      "bounce"
+     ]
+    ],
+    "text": "CHOLERA",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Cholera comes from dirty water. Remember that muddy pond?",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "shake"
+     ]
+    ],
+    "text": "DIRTY WATER"
+   },
+   {
+    "who": "narr",
+    "say": "It hit hardest in the years when the most wagons went west, like 1849 and 1852.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "1849 AND 1852"
+   },
+   {
+    "who": "narr",
+    "say": "A hundred wagon trains used the same river bank. The same camps. The same water.",
+    "cam": "wide",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ]
+    ],
+    "text": "THE SAME WATER"
+   },
+   {
+    "who": "narr",
+    "say": "You'd feel fine at breakfast. A slight fever in the morning.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "FINE AT BREAKFAST"
+   },
+   {
+    "who": "narr",
+    "say": "By noon, you can't stand up. By evening, you could be gone.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ]
+    ],
+    "text": "GONE BY EVENING",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "People often died within twelve hours of the first symptoms.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "12 HOURS"
+   },
+   {
+    "who": "narr",
+    "say": "Doctors back then had camphor and laudanum. Those only dulled the pain.",
+    "cam": "two:ma,you",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "NO CURE"
+   },
+   {
+    "who": "narr",
+    "say": "Over the years, up to thirty thousand people may have died from disease on the trail.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "sad"
+     ]
+    ],
+    "text": "30,000 DEAD"
+   },
+   {
+    "who": "narr",
+    "say": "The Park Service says that works out to ten to fifteen deaths for every mile.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,12,0"
+     ]
+    ],
+    "text": "10 TO 15 PER MILE"
+   },
+   {
+    "who": "narr",
+    "say": "Every mile. For two thousand miles.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "EVERY MILE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "master",
+    "say": "Keep walking. We can't stop. Stopping is worse.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "KEEP WALKING"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. Accidents.",
+    "cam": "wide",
+    "do": [
+     [
+      "ma",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "8. ACCIDENTS"
+   },
+   {
+    "who": "narr",
+    "say": "After disease, accidents were the second biggest killer.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "ACCIDENT #2"
+   },
+   {
+    "who": "narr",
+    "say": "Children fell off wagons and under the wheels. A wagon can weigh a ton or more.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "UNDER THE WHEELS"
+   },
+   {
+    "who": "narr",
+    "say": "Guns went off by accident. Everyone carried one, and nobody had safety training.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "LOADED GUNS"
+   },
+   {
+    "who": "narr",
+    "say": "Oxen stampeded. Wagons rolled down steep hills. Ropes snapped.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "shake"
+     ]
+    ],
+    "text": "STAMPEDE"
+   },
+   {
+    "who": "narr",
+    "say": "In fact, a long, steep hill meant tying a rope to the back of the wagon. And hoping.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "spin"
+     ]
+    ],
+    "text": "STEEP HILLS"
+   },
+   {
+    "who": "narr",
+    "say": "The trail was a hundred small ways to die. Every day. For months.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "100 WAYS TO DIE"
+   },
+   {
+    "who": "narr",
+    "say": "What about the attacks you heard about?",
+    "cam": "wide",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ]
+    ],
+    "text": "WHAT ABOUT ATTACKS?"
+   },
+   {
+    "who": "narr",
+    "say": "Historians say Native Americans killed about four hundred emigrants before 1860.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "ABOUT 400"
+   },
+   {
+    "who": "narr",
+    "say": "Compare that to thousands from cholera. The movies got that part backward.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "you",
+      "turn:master"
+     ]
+    ],
+    "text": "THE MOVIES GOT IT WRONG"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. The deadlines.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "master",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "9. THE DEADLINES"
+   },
+   {
+    "who": "narr",
+    "say": "You can't take your time. There's a clock, and it's the weather.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "happy"
+     ]
+    ],
+    "text": "THE CLOCK"
+   },
+   {
+    "who": "narr",
+    "say": "Leave in mid-April or May, when the grass is green enough for your animals.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "LEAVE IN SPRING"
+   },
+   {
+    "who": "narr",
+    "say": "Reach Fort Kearny, in Nebraska, by about May fifteenth.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ]
+    ],
+    "text": "MAY 15: NEBRASKA"
+   },
+   {
+    "who": "narr",
+    "say": "Reach Fort Laramie, in Wyoming, by mid June.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "MID JUNE: WYOMING"
+   },
+   {
+    "who": "narr",
+    "say": "And be at South Pass, in the mountains, by the Fourth of July.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "JULY 4: SOUTH PASS"
+   },
+   {
+    "who": "narr",
+    "say": "On the way, you pass a huge rock in Wyoming. Travelers carved their names into it. People called it the Register of the Desert.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "THE REGISTER OF THE DESERT"
+   },
+   {
+    "who": "narr",
+    "say": "If you're late, the mountain snow comes before you get through.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "sad"
+     ]
+    ],
+    "text": "THE SNOW COMES",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "The Donner party learned that in 1846. They got stuck in deep snow in the Sierra Nevada.",
+    "cam": "prop:mountain",
+    "do": [
+     [
+      "mountain",
+      "bounce"
+     ]
+    ],
+    "text": "THE DONNER PARTY"
+   },
+   {
+    "who": "narr",
+    "say": "Many of them did not make it out. You do not want to be late.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "DON'T BE LATE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. What you leave behind.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-4,12,0"
+     ]
+    ],
+    "text": "10. LEAVING THINGS"
+   },
+   {
+    "who": "narr",
+    "say": "Your oxen are tired. The hills get steeper. The wagon is too heavy.",
+    "cam": "prop:wagon",
+    "do": [
+     [
+      "wagon",
+      "bounce"
+     ]
+    ],
+    "text": "TOO HEAVY"
+   },
+   {
+    "who": "narr",
+    "say": "So you start throwing things out. First the extra tools. Then the heavy stove.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "sack",
+      "hide"
+     ],
+     [
+      "ma",
+      "turn:you"
+     ]
+    ],
+    "text": "THROW IT OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Then the trunk of your grandmother's dishes. Then the rocking chair.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "GRANDMA'S DISHES"
+   },
+   {
+    "who": "ma",
+    "say": "My mother carried that chair across an ocean. I can't leave it.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "shake"
+     ]
+    ],
+    "text": "I CAN'T LEAVE IT"
+   },
+   {
+    "who": "you",
+    "say": "Mom. The oxen can't pull it. We have to.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WE HAVE TO"
+   },
+   {
+    "who": "narr",
+    "say": "The trail itself was littered with abandoned furniture. Stoves. Chests. Barrels. Pianos.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ma",
+      "to:-6,12,0"
+     ]
+    ],
+    "text": "A ROAD OF FURNITURE"
+   },
+   {
+    "who": "narr",
+    "say": "The people ahead of you left a trail of everything they loved.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "EVERYTHING THEY LOVED"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. When someone dies.",
+    "cam": "wide",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "11. WHEN SOMEONE DIES",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "You can't stop the whole train for a funeral. Not for long. The deadline won't wait.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "THE DEADLINE WON'T WAIT"
+   },
+   {
+    "who": "narr",
+    "say": "So you dig the grave fast. Often, you dig it right in the trail.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "A GRAVE IN THE ROAD"
+   },
+   {
+    "who": "narr",
+    "say": "Why? Because then the whole wagon train drives over the dirt.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ]
+    ],
+    "text": "WHY IN THE ROAD?"
+   },
+   {
+    "who": "narr",
+    "say": "It packs the ground down. Wolves can't smell where the body is.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "SO WOLVES CAN'T FIND IT",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "So most graves had no marker at all. That was on purpose.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "NO MARKER, ON PURPOSE"
+   },
+   {
+    "who": "narr",
+    "say": "The Park Service calls the trail the nation's longest graveyard.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grave",
+      "spin"
+     ]
+    ],
+    "text": "THE LONGEST GRAVEYARD"
+   },
+   {
+    "who": "narr",
+    "say": "Estimates say there were at least twenty thousand graves. Almost none are marked.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "20,000 GRAVES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter twelve. The last grave.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grave",
+      "hide"
+     ],
+     [
+      "you",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "12. THE ONE MARKED GRAVE",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "August fifteenth, 1852. A Mormon wagon train is crossing Nebraska. Cholera is in camp.",
+    "cam": "wide",
+    "do": [
+     [
+      "tire",
+      "show"
+     ],
+     [
+      "lamp",
+      "drift:-3,9,1.6"
+     ]
+    ],
+    "text": "AUGUST 15, 1852"
+   },
+   {
+    "who": "narr",
+    "say": "A woman named Rebecca Winters helps care for the sick. Then she gets sick too.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "REBECCA WINTERS"
+   },
+   {
+    "who": "narr",
+    "say": "She dies that same day. She was about fifty years old.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SHE WAS ABOUT 50"
+   },
+   {
+    "who": "narr",
+    "say": "Her family is heading for the Salt Lake Valley, to build a new home there.",
+    "cam": "two:you,ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "A NEW HOME"
+   },
+   {
+    "who": "narr",
+    "say": "Her husband Hiram and a friend named William Reynolds go to bury her.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ]
+    ],
+    "text": "HIRAM AND WILLIAM"
+   },
+   {
+    "who": "narr",
+    "say": "They do something different. They do not bury her in the road.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "turn:front"
+     ]
+    ],
+    "text": "NOT IN THE ROAD",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "They dig a very deep grave away from the trail. They line it with wooden planks.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "A DEEP GRAVE"
+   },
+   {
+    "who": "narr",
+    "say": "They wrap her in blankets. They cover her with more planks. They can't stand the thought of dirt touching her.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NO DIRT ON HER"
+   },
+   {
+    "who": "narr",
+    "say": "Then William finds an iron wheel rim from a wagon. At night, by candlelight, he chisels her name into it.",
+    "cam": "prop:tire",
+    "do": [
+     [
+      "tire",
+      "bounce"
+     ],
+     [
+      "tire",
+      "spin"
+     ]
+    ],
+    "text": "THE IRON WHEEL RIM"
+   },
+   {
+    "who": "narr",
+    "say": "Rebecca Winters, age fifty. The rim is bent into an oval, and it's pushed into the ground.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "sad"
+     ]
+    ],
+    "text": "REBECCA WINTERS, AGE 50"
+   },
+   {
+    "who": "narr",
+    "say": "Then the wagon train rolls on. They have to. They have a deadline.",
+    "cam": "wide",
+    "do": [
+     [
+      "master",
+      "to:6,14,0"
+     ],
+     [
+      "you",
+      "to:3,11,0"
+     ]
+    ],
+    "text": "THEY ROLL ON"
+   },
+   {
+    "who": "narr",
+    "say": "Her family kept walking. They reached the Salt Lake Valley that October.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "sad"
+     ]
+    ],
+    "text": "THEY KEPT WALKING"
+   },
+   {
+    "who": "narr",
+    "say": "For years, her marker is one of the only ones along the whole trail.",
+    "cam": "prop:tire",
+    "do": [
+     [
+      "tire",
+      "bounce"
+     ]
+    ],
+    "text": "THE ONLY MARKER"
+   },
+   {
+    "who": "narr",
+    "say": "Travelers stop there. They look at the iron rim. They think about what's ahead.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "WHAT'S AHEAD"
+   },
+   {
+    "who": "narr",
+    "say": "Then the railroad comes in 1869. The trail empties out. And Rebecca is forgotten.",
+    "cam": "overhead",
+    "do": [
+     [
+      "tire",
+      "hide"
+     ],
+     [
+      "grave",
+      "hide"
+     ]
+    ],
+    "text": "FORGOTTEN"
+   },
+   {
+    "who": "narr",
+    "say": "In 1899, railroad surveyors are walking the land in Nebraska.",
+    "cam": "wide",
+    "do": [
+     [
+      "tire",
+      "show"
+     ]
+    ],
+    "text": "1899"
+   },
+   {
+    "who": "narr",
+    "say": "And they find an iron wheel rim in the grass. It's still standing. It still has her name on it.",
+    "cam": "prop:tire",
+    "do": [
+     [
+      "tire",
+      "bounce"
+     ]
+    ],
+    "text": "STILL STANDING",
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Forty-seven years of prairie fires, blizzards and storms. And that rim never fell.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "47 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "The planned railroad line would have gone straight over her grave.",
+    "cam": "overhead",
+    "do": [
+     [
+      "tire",
+      "bounce"
+     ]
+    ],
+    "text": "STRAIGHT OVER HER GRAVE"
+   },
+   {
+    "who": "narr",
+    "say": "A local landowner fought hard to protect it. The railroad ended up laying track just a few feet away.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "turn:you"
+     ]
+    ],
+    "text": "A FEW FEET AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Whether the railroad truly changed its route is still debated. The tracks were still only about six feet from the grave.",
+    "cam": "close:master",
+    "do": [
+     [
+      "master",
+      "shake"
+     ]
+    ],
+    "text": "ABOUT SIX FEET"
+   },
+   {
+    "who": "narr",
+    "say": "In the 1990s, the railroad moved her grave. About nine hundred feet east, to a quiet park.",
+    "cam": "wide",
+    "do": [
+     [
+      "grave",
+      "show"
+     ]
+    ],
+    "text": "MOVED 900 FEET"
+   },
+   {
+    "who": "narr",
+    "say": "They kept the original iron rim. You can still see it today, in Nebraska.",
+    "cam": "prop:tire",
+    "do": [
+     [
+      "tire",
+      "bounce"
+     ]
+    ],
+    "text": "SEE IT TODAY"
+   },
+   {
+    "who": "narr",
+    "say": "Out of twenty thousand graves, this is one of the very few you can still find.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "1 OUT OF 20,000"
+   },
+   {
+    "who": "narr",
+    "say": "Why this one? Because two people refused to bury her the way everyone else did.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "happy"
+     ]
+    ],
+    "text": "WHY HER?"
+   },
+   {
+    "who": "narr",
+    "say": "So, would you have survived the Oregon Trail?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "WOULD YOU SURVIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "Most people who went made it. But about one in ten did not.",
+    "cam": "two:you,master",
+    "do": [
+     [
+      "master",
+      "happy"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "9 OUT OF 10 MADE IT"
+   },
+   {
+    "who": "narr",
+    "say": "And they weren't killed by outlaws. They were killed by water, by accidents, and by time.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:3,11,0"
+     ]
+    ],
+    "text": "WATER, ACCIDENTS, TIME"
+   },
+   {
+    "who": "narr",
+    "say": "The lesson is simple. Nobody on that trail was braver than the people who stopped to say a name.",
+    "cam": "close:ma",
+    "do": [
+     [
+      "ma",
+      "turn:front"
+     ]
+    ],
+    "text": "SAY THE NAME"
+   },
+   {
+    "who": "narr",
+    "say": "Would you have kept walking? Or would you have stopped? Tell me in the comments, and subscribe for more true history.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "ma",
+      "happy"
+     ]
+    ],
+    "text": "TELL ME IN THE COMMENTS"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why You Wouldn't Survive the Oregon Trail, 1850 🐂",
+  "description": "Would you have kept walking, or stopped? Tell me in the comments.\n\nYour food, your wagon, your water, the river crossings, and the sickness that killed more people than anything else: what the Oregon Trail was really like in 1850. About one in ten emigrants never finished the 2,000-mile walk. Then the strange last chapter: out of some 20,000 trail graves, one is still marked by an iron wagon rim, and it was almost lost under a railroad.\n\nSources:\nhttps://www.nps.gov/articles/000/death-on-trails.htm\nhttps://www.nps.gov/articles/000/traveling-emigrant-trails.htm\nhttps://www.nps.gov/people/rebecca-winters.htm\nhttps://www.oregonencyclopedia.org/articles/oregon_trail\nhttps://www.oregonpioneers.com/FoodChoices.htm\n\n#oregontrail #truestory #history",
+  "tags": [
+   "oregon trail",
+   "oregon trail 1850",
+   "life on the oregon trail",
+   "why you wouldn't survive",
+   "covered wagon",
+   "pioneer life",
+   "cholera on the oregon trail",
+   "oregon trail graves",
+   "rebecca winters grave",
+   "wagon train",
+   "american history",
+   "true story animated",
+   "history mystery",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "1 IN 10 DIED",
+  "thumb_beat": 80,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué no sobrevivirías al Camino de Oregón en 1850? 🐂",
+    "description": "¿Habrías seguido caminando o te habrías detenido? Cuéntamelo en los comentarios.\n\nTu comida, tu carreta, el agua, los ríos y la enfermedad que mató a más gente: cómo era realmente el Camino de Oregón en 1850. Uno de cada diez emigrantes no terminó la caminata de 2.000 millas... y al final, una tumba que sigue marcada con un aro de hierro."
+   },
+   "pt": {
+    "title": "Por que você não sobreviveria à Trilha do Oregon em 1850? 🐂",
+    "description": "Você teria continuado andando ou teria parado? Conte nos comentários.\n\nSua comida, sua carroça, a água, os rios e a doença que mais matou: como era de verdade a Trilha do Oregon em 1850. Um em cada dez emigrantes não terminou a caminhada. E no fim, um túmulo ainda marcado por um aro de ferro."
+   },
+   "ar": {
+    "title": "لماذا لن تنجو من درب أوريغون عام 1850؟ 🐂",
+    "description": "هل كنت ستواصل السير أم ستتوقف؟ أخبرني في التعليقات.\n\nطعامك وعربتك والماء والأنهار والمرض الذي قتل أكثر من أي شيء آخر: كيف كان درب أوريغون حقًا عام 1850. واحد من كل عشرة مهاجرين لم يُكمل الرحلة. وفي النهاية قبر ما زال معلّمًا بطوق حديدي."
+   },
+   "fr": {
+    "title": "Pourquoi vous ne survivriez pas à la piste de l'Oregon en 1850 🐂",
+    "description": "Auriez-vous continué à marcher, ou vous seriez-vous arrêté ? Dites-le-moi en commentaire.\n\nVotre nourriture, votre chariot, l'eau, les rivières et la maladie qui a tué le plus de monde : la vraie vie sur la piste de l'Oregon en 1850. Un émigrant sur dix n'est jamais arrivé. Et à la fin, une tombe encore marquée par un cercle de fer."
+   },
+   "ja": {
+    "title": "1850年のオレゴン街道で、あなたが生き残れない理由 🐂",
+    "description": "あなたなら歩き続けましたか？それとも立ち止まりましたか？コメントで教えてください。\n\n食べ物、幌馬車、水、川渡り、そして最も多くの命を奪った病気。1850年のオレゴン街道の本当の暮らし。移民の10人に1人は旅を終えられませんでした。そして最後に、鉄の輪で今も印がついた1つの墓の話。"
+   },
+   "ko": {
+    "title": "1850년 오리건 트레일에서 당신이 살아남지 못하는 이유 🐂",
+    "description": "계속 걸었을까요, 아니면 멈췄을까요? 댓글로 알려 주세요.\n\n음식, 마차, 물, 강 건너기, 그리고 가장 많은 목숨을 앗아간 병: 1850년 오리건 트레일의 진짜 모습. 이주민 열 명 중 한 명은 끝까지 가지 못했습니다. 그리고 마지막에, 쇠바퀴 테로 지금도 표시된 무덤 하나."
+   },
+   "de": {
+    "title": "Warum du den Oregon Trail 1850 nicht überlebt hättest 🐂",
+    "description": "Wärst du weitergelaufen oder stehen geblieben? Schreib es in die Kommentare.\n\nDein Essen, dein Planwagen, das Wasser, die Flüsse und die Krankheit, die die meisten Menschen tötete: wie der Oregon Trail 1850 wirklich war. Jeder zehnte Auswanderer kam nie an. Und am Ende ein Grab, das noch heute von einem Eisenreifen markiert wird."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 112,
+   "dur": 26,
+   "top": "BURIED IN THE ROAD",
+   "title": "Why they buried the dead IN the road 💀 #shorts",
+   "description": "On the Oregon Trail, graves were dug right in the road, then the whole wagon train drove over them. Here's why. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "oregon trail",
+    "pioneer graves",
+    "dark history",
+    "wagon train"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Por qué enterraban a los muertos EN el camino 💀 #shorts",
+     "description": "En el Camino de Oregón las tumbas se cavaban en el propio camino. ¿Por qué? {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que enterravam os mortos NA estrada 💀 #shorts",
+     "description": "Na Trilha do Oregon, as covas eram feitas na própria estrada. Por quê? {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا دفنوا الموتى في الطريق نفسه 💀 #shorts",
+     "description": "على درب أوريغون كانت القبور تُحفر في الطريق نفسه. لماذا؟ {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi on enterrait les morts DANS la route 💀 #shorts",
+     "description": "Sur la piste de l'Oregon, on creusait les tombes en pleine piste. Pourquoi ? {LONG_URL}"
+    },
+    "ja": {
+     "title": "なぜ死者を道の「真ん中」に埋めたのか 💀 #shorts",
+     "description": "オレゴン街道では、墓は道の真ん中に掘られました。その理由とは？ {LONG_URL}"
+    },
+    "ko": {
+     "title": "왜 죽은 이를 길 한가운데 묻었을까 💀 #shorts",
+     "description": "오리건 트레일에서는 길 한가운데에 무덤을 팠습니다. 이유는? {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum man die Toten MITTEN auf dem Weg begrub 💀 #shorts",
+     "description": "Auf dem Oregon Trail grub man Gräber mitten im Weg. Warum? {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 74,
+   "dur": 26,
+   "top": "DEAD BY SUPPER",
+   "title": "Fine at breakfast. Dead by supper. 😨 #shorts",
+   "description": "Cholera on the Oregon Trail could kill a healthy person in about twelve hours. The cause was the water. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "cholera",
+    "oregon trail",
+    "pioneer life",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Sano en el desayuno. Muerto a la cena. 😨 #shorts",
+     "description": "El cólera en el Camino de Oregón podía matar en unas doce horas. {LONG_URL}"
+    },
+    "pt": {
+     "title": "Bem no café da manhã. Morto no jantar. 😨 #shorts",
+     "description": "A cólera na Trilha do Oregon podia matar em cerca de doze horas. {LONG_URL}"
+    },
+    "ar": {
+     "title": "بخير في الإفطار. ميت قبل العشاء. 😨 #shorts",
+     "description": "الكوليرا على درب أوريغون كانت تقتل في نحو اثنتي عشرة ساعة. {LONG_URL}"
+    },
+    "fr": {
+     "title": "En forme au petit-déjeuner. Mort avant le dîner. 😨 #shorts",
+     "description": "Le choléra sur la piste de l'Oregon pouvait tuer en douze heures. {LONG_URL}"
+    },
+    "ja": {
+     "title": "朝は元気、夕食前には死んでいた 😨 #shorts",
+     "description": "オレゴン街道のコレラは、約12時間で命を奪うことがありました。 {LONG_URL}"
+    },
+    "ko": {
+     "title": "아침엔 멀쩡, 저녁엔 사망 😨 #shorts",
+     "description": "오리건 트레일의 콜레라는 약 12시간 만에 목숨을 앗아갈 수 있었습니다. {LONG_URL}"
+    },
+    "de": {
+     "title": "Zum Frühstück gesund. Zum Abendessen tot. 😨 #shorts",
+     "description": "Cholera auf dem Oregon Trail konnte in etwa zwölf Stunden töten. {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "slow prairie fiddle + low drone, major-minor mix (not the detective-minor pluck of the last 5)",
+  "palette": "dusty amber dawn fading to violet dusk, warm campfire lights",
+  "opening_shot": "macro close-up of a wagon wheel rim (prop:wheel)",
+  "camera_set": "close-heavy with overhead map-style cuts; one wide only at chapter 10, 12",
+  "transitions": "hard cuts, slow push-in, short fade at the grave chapter",
+  "caption_style": "chalk-white block caps, chapter number first"
+ }
+}
