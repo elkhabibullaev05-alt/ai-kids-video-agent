@@ -266,6 +266,29 @@ def sync_from_youtube(st):
             log("OVERDUE (still private after publishAt):", json.dumps(overdue)[:600])
     except Exception as e:
         log("overdue.json write failed:", e)
+    # 2026-11-18 18:xx watchdog: scheduled (private) videos are often NOT returned by the uploads playlist, so
+    # "taken" missed them and the phantom-slot cleanup below dropped their reservations -> double booking
+    # (doughbros: 2 videos at 18 Nov 19:45, 19 Nov 18:15, 20 Nov 18:15) and empty days in between.
+    # Our own results/<CH>/*.json are written only after a successful upload, so their future publish_at
+    # values are real reservations: add them to "taken".
+    try:
+        have = {x["t"] for x in taken}
+        for f in glob.glob(os.path.join(RES, "*.json")):
+            try:
+                d = json.load(open(f))
+            except Exception:
+                continue
+            if not isinstance(d, dict):
+                continue
+            its = ([("long", d["long"])] if isinstance(d.get("long"), dict) else []) + \
+                  [("short", s) for s in (d.get("shorts") or []) if isinstance(s, dict)]
+            for kind, it in its:
+                pa = (it.get("publish_at") or "").replace(".000Z", "Z")
+                if it.get("video") and pa and pa.replace("Z", "+00:00") > NOW.isoformat() and pa not in have:
+                    taken.append({"t": pa, "kind": kind})
+                    have.add(pa)
+    except Exception as e:
+        log("own results reservations skipped:", e)
     keep = [x for x in st["taken"] if x["t"] > NOW.isoformat()]
     # 2026-11-18 watchdog: Doodle got NO video 17-19 Nov — new uploads were pushed to 19/20 Nov because local
     # st["taken"] still held future slots that YouTube does not have (phantom reservations). A local-only slot is
