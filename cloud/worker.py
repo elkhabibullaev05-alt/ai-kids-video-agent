@@ -207,10 +207,17 @@ def sync_from_youtube(st):
         req = y.playlistItems().list_next(req, r)
         if not req:
             break
-    taken = []
+    taken, overdue = [], {}
     for i in range(0, len(ids), 50):
         for v in y.videos().list(part="status,contentDetails", id=",".join(ids[i:i + 50])).execute().get("items", []):
             pa = v["status"].get("publishAt")
+            # 2026-11-18 watchdog: scheduled videos on max/ufc/dough/hollow/sleep/milo/bolt stayed PRIVATE after their
+            # publishAt (RSS + watch page = "private video"). Record why (uploadStatus / rejection / failure) so the
+            # watchdog and the owner can see it; read-only, nothing on YouTube is changed here.
+            if pa and pa < NOW.isoformat() and v["status"].get("privacyStatus") == "private":
+                s = v["status"]
+                overdue[v["id"]] = {k: s.get(k) for k in ("publishAt", "uploadStatus", "rejectionReason",
+                                                          "failureReason", "privacyStatus", "license", "embeddable")}
             if pa and pa > NOW.isoformat():
                 dur = v["contentDetails"].get("duration", "")
                 # 2026-11-14 review: hours were missing ("PT3H" -> 0 s -> "short"), so 3-hour sleep videos never counted
@@ -218,6 +225,13 @@ def sync_from_youtube(st):
                 m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", dur)
                 secs = (int(m.group(1) or 0) * 3600 + int(m.group(2) or 0) * 60 + int(m.group(3) or 0)) if m else 999
                 taken.append({"t": pa.replace(".000Z", "Z"), "kind": "short" if secs <= 60 else "long"})
+    try:
+        json.dump({"checked": NOW.isoformat(timespec="minutes"), "videos": overdue},
+                  open(os.path.join(RES, "overdue.json"), "w"), indent=1)
+        if overdue:
+            log("OVERDUE (still private after publishAt):", json.dumps(overdue)[:600])
+    except Exception as e:
+        log("overdue.json write failed:", e)
     keep = [x for x in st["taken"] if x["t"] > NOW.isoformat()]
     seen = {x["t"] for x in taken}
     st["taken"] = taken + [x for x in keep if x["t"] not in seen]
