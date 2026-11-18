@@ -233,6 +233,19 @@ def sync_from_youtube(st):
     except Exception as e:
         log("overdue.json write failed:", e)
     keep = [x for x in st["taken"] if x["t"] > NOW.isoformat()]
+    # 2026-11-18 watchdog: Doodle got NO video 17-19 Nov — new uploads were pushed to 19/20 Nov because local
+    # st["taken"] still held future slots that YouTube does not have (phantom reservations). A local-only slot is
+    # kept only while a browser-upload manifest for it still waits in cloud/browser_queue/<CH>/.
+    try:
+        bq_t = set()
+        for mf in glob.glob(os.path.join(ROOT, "cloud", "browser_queue", CH, "*.json")):
+            bq_t.add(json.load(open(mf)).get("publish_at"))
+        dropped = [x for x in keep if x["t"] not in {y["t"] for y in taken} and x["t"] not in bq_t]
+        if dropped:
+            log("dropped phantom slot reservations (not on YouTube, not in browser_queue):", dropped[:10])
+        keep = [x for x in keep if x not in dropped]
+    except Exception as e:
+        log("phantom-slot check skipped:", e)
     seen = {x["t"] for x in taken}
     st["taken"] = taken + [x for x in keep if x["t"] not in seen]
     st["titles"] = titles
@@ -701,7 +714,16 @@ def run_maker(st):
     Every file passes the rek-ball gate (>= 85) before it joins the upload list. Two days of slots stay filled."""
     pd = CFG["per_day"]
     want_s, want_l = pd.get("short", 0) * 2, pd.get("long", 0) * 2
-    if len(st["pending"]) > 2 or (ahead(st, "short") >= want_s and ahead(st, "long") >= want_l):
+
+    def gap(kind):  # 2026-11-18 watchdog: enough "ahead" in total, but nothing in the next 26 h -> make one now
+        if not pd.get(kind, 0):
+            return False
+        now = dt.datetime.now(dt.timezone.utc)
+        soon = (now + dt.timedelta(hours=26)).isoformat()
+        return not any(x["kind"] == kind and now.isoformat() < x["t"] <= soon for x in st["taken"])
+    need_l = ahead(st, "long") < want_l or gap("long")
+    need_s = ahead(st, "short") < want_s or gap("short")
+    if len(st["pending"]) > 2 or not (need_l or need_s):
         status("idle", ahead=ahead(st, "short") + ahead(st, "long")); push("idle", [RES]); return
     out = os.path.join(HOME, "made")
     os.makedirs(out, exist_ok=True)
@@ -710,7 +732,7 @@ def run_maker(st):
         json.dump(st.get("titles", []), open(tf, "w"))
         status("render"); push("making", [RES])
         p = sh([PY, os.path.join(ROOT, CFG["maker"]), "--out", out, "--home", HOME, "--repo", ROOT, "--titles", tf,
-                "--need-long", str(int(ahead(st, "long") < want_l)), "--need-short", str(int(ahead(st, "short") < want_s))],
+                "--need-long", str(int(need_l)), "--need-short", str(int(need_s))],
                check=False, timeout=5 * 3600)
         log((p.stdout or "")[-1500:])
         if p.returncode == 3:  # maker: nothing to make right now (e.g. no new script in the queue)
