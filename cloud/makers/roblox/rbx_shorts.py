@@ -151,10 +151,14 @@ def fmt_losers(games, titles, rng, back):
     if len(pool) < 3:
         return None
     lo = sorted(pool, key=lambda g: g["d_play"])[:3]
-    title = titles.pick(["These 3 Roblox Games Lost the Most Players Today #shorts",
-                         f"{lo[0]['clean']} Lost {short_num(-lo[0]['d_play'])} Players?! #shorts",
-                         "3 Roblox Games Players Are Leaving Right Now #shorts",
-                         f"Is {lo[0]['clean']} Dying? Lost {short_num(-lo[0]['d_play'])} Players #shorts"], rng)
+    cands = ["These 3 Roblox Games Lost the Most Players Today #shorts",
+             f"{lo[0]['clean']} Lost {short_num(-lo[0]['d_play'])} Players?! #shorts",
+             "3 Roblox Games Players Are Leaving Right Now #shorts",
+             f"Is {lo[0]['clean']} Dying? Lost {short_num(-lo[0]['d_play'])} Players #shorts"]
+    # 2026-11-18 review: 'Is Steal An Egg Dying? Lost 704K / 389K Players' went out 2 days apart — one 'Dying?' per ~3 days
+    if titles.recently("dying"):
+        cands = [c for c in cands if "Dying?" not in c]
+    title = titles.pick(cands, rng)
     if not title:
         return None
     cards = [dict(say="These three Roblox games lost the most players since yesterday.", head="LOSING PLAYERS?!",

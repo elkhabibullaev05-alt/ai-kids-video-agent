@@ -15,13 +15,15 @@ class Titles:
     def __init__(self, used):
         self.used = {norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in used or []}
         self.used_raw = " || ".join(sorted(self.used))
-        # newest last (worker appends titles in upload order); used for 'not again this week' checks
-        self.recent = [norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in (used or [])][-14:]
+        # 2026-11-18 review: the worker passes the channel's uploads playlist, which is NEWEST FIRST, so the old
+        # '[-14:]' looked at the 14 oldest titles and the 11-17 'not again soon' checks never fired (MM2 vs RIVALS
+        # and 'Is Steal An Egg Dying?' repeated 2 days apart). Newest first here; used for 'not again this week'.
+        self.recent = [norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in (used or [])][:14]
 
     def recently(self, words, n=14):
         """2026-11-17 review: True if any of the last n titles contains these words (as whole words)."""
         w = " " + norm(words) + " "
-        return any(w in " " + u + " " for u in self.recent[-n:])
+        return any(w in " " + u + " " for u in self.recent[:n])
 
     def ok(self, t, limit=60):
         return t and len(t) <= limit and norm(t) not in self.used
