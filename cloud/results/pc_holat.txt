@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-18 17:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-18 18:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -6,7 +6,7 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 877G
+disk free: 891G
 --- maxcat: 2026-11-18T12:27:57+00:00 idle 
     11-18 02:10:21 $ git pull -q --rebase --autostash
     11-18 03:30:11 $ git pull -q --rebase --autostash
@@ -17,50 +17,50 @@ disk free: 877G
     11-18 14:15:14 $ git diff --cached --quiet
     11-18 14:15:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] 20261117-1-dad-gave-up-on-the-jam done
     11-18 14:15:14 $ git push -q origin HEAD:main
---- hollow: 2026-11-18T15:30:36+00:00 upload 
-    11-18 15:30:36 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] 20261118-1-pompeii-last-morning rendered
-    11-18 15:30:36 $ git push -q origin HEAD:main
-    upload chunk network error 1/30, retry in 20 s: The write operation timed out
-    upload chunk network error 1/30, retry in 20 s: The write operation timed out
+--- hollow: 2026-11-18T17:50:57+00:00 ok 
+    11-18 17:50:57 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
+    11-18 17:50:57 $ git diff --cached --quiet
+    11-18 17:50:57 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] 20261118-1-pompeii-last-morning done
+    11-18 17:50:57 $ git push -q origin HEAD:main
 --- bolt: 2026-11-18T12:30:22+00:00 idle 
     11-18 02:30:19 $ git pull -q --rebase --autostash
     11-18 03:50:11 $ git pull -q --rebase --autostash
     11-18 07:30:16 $ git pull -q --rebase --autostash
     11-18 12:30:17 $ git pull -q --rebase --autostash
---- roblox: 2026-11-18T16:50:10+00:00 idle 
-    11-18 16:50:11 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-18 16:50:11 $ git diff --cached --quiet
-    11-18 16:50:11 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-18 16:50:11 $ git push -q origin HEAD:main
---- funny: 2026-11-18T16:49:59+00:00 quota_wait 
-    11-18 16:49:59 $ git add -A -- /opt/kanal/repo/cloud/results/funny
-    11-18 16:49:59 $ git diff --cached --quiet
-    11-18 16:49:59 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] quota wait
-    11-18 16:49:59 $ git push -q origin HEAD:main
+--- roblox: 2026-11-18T17:10:23+00:00 idle 
+    11-18 17:10:23 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-18 17:10:23 $ git diff --cached --quiet
+    11-18 17:10:23 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-18 17:10:23 $ git push -q origin HEAD:main
+--- funny: 2026-11-18T17:50:05+00:00 quota_wait 
+    11-18 17:50:05 $ git add -A -- /opt/kanal/repo/cloud/results/funny
+    11-18 17:50:05 $ git diff --cached --quiet
+    11-18 17:50:05 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] quota wait
+    11-18 17:50:05 $ git push -q origin HEAD:main
     maker: 
     maker: 11-18 14:41:54 timeline 19.5s in 7 shots, voice am_puck
     maker: 11-18 14:49:34 rendered /root/kanal/funny/made/funny-20261118-dance-fails-2086.mp4 in 472s
     maker: 11-18 14:49:38 rek-ball 100 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
     maker: 11-18 14:49:38 made funny-20261118-dance-fails-2086 | Top 5 Dance Fails… #1 Hurts 💀 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 472, 'rek': 100}
     maker: 11-18 14:49:38 done: 3 Short(s); API calls: search 3, list 4
---- money: 2026-11-18T16:50:08+00:00 queue_empty 
-    11-18 16:50:08 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-18 16:50:08 $ git diff --cached --quiet
-    11-18 16:50:08 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-18 16:50:08 $ git push -q origin HEAD:main
+--- money: 2026-11-18T17:30:11+00:00 queue_empty 
+    11-18 17:30:11 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-18 17:30:11 $ git diff --cached --quiet
+    11-18 17:30:11 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-18 17:30:11 $ git push -q origin HEAD:main
     maker: 11-18 15:31:10 10 CC BY candidates (searches so far 4)
     maker: 11-18 15:33:36 timeline 19.5s in 7 shots, voice am_puck
     maker: 11-18 15:33:53 rendered /root/kanal/money/made/funny-20261118-wave-wipeouts-5201.mp4 in 22s
     maker: 11-18 15:33:54 rek-ball 95 {'hook': 25, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
     maker: 11-18 15:33:54 made funny-20261118-wave-wipeouts-5201 | Ranking The Silliest Wave Wipeouts 🤯 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 22, 'rek': 95}
     maker: 11-18 15:33:54 done: 3 Short(s); API calls: search 4, list 5
---- ufc: 2026-11-18T15:30:14+00:00 idle 
-    11-18 15:30:14 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
-    11-18 15:30:14 $ git diff --cached --quiet
-    11-18 15:30:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
-    11-18 15:30:14 $ git push -q origin HEAD:main
+--- ufc: 2026-11-18T17:49:58+00:00 idle 
+    11-18 17:49:58 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
+    11-18 17:49:58 $ git diff --cached --quiet
+    11-18 17:49:58 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
+    11-18 17:49:58 $ git push -q origin HEAD:main
 --- sleep: 2026-11-18T14:34:26+00:00 upload 
-    upload chunk network error 1/30, retry in 20 s: The write operation timed out
+    upload chunk network error 1/30, retry in 20 s: EOF occurred in violation of protocol (_ssl.c:2417)
     upload chunk network error 1/30, retry in 20 s: EOF occurred in violation of protocol (_ssl.c:2417)
     upload chunk network error 1/30, retry in 20 s: EOF occurred in violation of protocol (_ssl.c:2417)
     upload chunk network error 1/30, retry in 20 s: EOF occurred in violation of protocol (_ssl.c:2417)
@@ -69,19 +69,16 @@ disk free: 877G
     11-18 16:10:55 $ git diff --cached --quiet
     11-18 16:10:55 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] queue empty
     11-18 16:10:55 $ git push -q origin HEAD:main
---- milo: 2026-11-18T16:10:20+00:00 error Unable to find the server at youtube.googleapis.com
-    11-18 16:10:20 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-18 16:10:20 $ git diff --cached --quiet
-    11-18 16:10:20 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] error
-    11-18 16:10:20 $ git push -q origin HEAD:main
+--- milo: 2026-11-18T17:50:18+00:00 idle 
+    11-18 17:50:18 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-18 17:50:18 $ git diff --cached --quiet
+    11-18 17:50:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
+    11-18 17:50:18 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-        816    9951 flock -n /tmp/kanal-sleep.lock timeout -k 60 5h python3 cloud/worker.py sleep
-        818    9951 timeout -k 60 5h python3 cloud/worker.py sleep
-        819    9951 python3 cloud/worker.py sleep
-        871    9946 flock -n /tmp/kanal-hollow.lock timeout -k 60 5h python3 cloud/worker.py hollow
-        873    9946 timeout -k 60 5h python3 cloud/worker.py hollow
-        874    9946 python3 cloud/worker.py hollow
+        816   13735 flock -n /tmp/kanal-sleep.lock timeout -k 60 5h python3 cloud/worker.py sleep
+        818   13735 timeout -k 60 5h python3 cloud/worker.py sleep
+        819   13735 python3 cloud/worker.py sleep
 --- held channel locks:
     /tmp/kanal-bolt.lock free
     /tmp/kanal-codup.lock free
@@ -90,7 +87,7 @@ disk free: 877G
     /tmp/kanal-doughbros.lock free
     /tmp/kanal-funny.lock free
     /tmp/kanal-git.lock free
-    /tmp/kanal-hollow.lock HELD
+    /tmp/kanal-hollow.lock free
     /tmp/kanal-maxcat.lock free
     /tmp/kanal-milo.lock free
     /tmp/kanal-money.lock free
