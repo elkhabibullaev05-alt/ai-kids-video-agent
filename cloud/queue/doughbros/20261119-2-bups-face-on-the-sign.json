@@ -1,0 +1,971 @@
+{
+ "id": "20261119-2-bups-face-on-the-sign",
+ "plot": "Monday at sunset Mom tests her shop-window display on the dinner table and glazes old Bup with egg wash and sesame seeds, and jealous Lolly's one try to steal his cake stand lands her in the seed jar; then Mom turns over the old bakery sign Crispy warned them to leave face down, and the painted 1975 window loaf has Bup's big eye, small eye and stitch — Bup was the old bakery's window bread and remembers nothing, Lolly makes peace, and Crispy reveals Bup left because of a fire and that he wasn't the only bread in that window.",
+ "script": {
+  "title": "Why Is Bup's Face on the Old Bakery Sign?",
+  "set": {
+   "place": "table",
+   "time": "sunset"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "stand",
+    "type": "cake",
+    "color": [
+     0.95,
+     0.95,
+     0.97
+    ],
+    "on": null,
+    "at": [
+     0,
+     12,
+     0
+    ],
+    "visible": true,
+    "scale": 1.0
+   },
+   {
+    "id": "seeds",
+    "type": "box",
+    "color": [
+     0.93,
+     0.86,
+     0.62
+    ],
+    "on": null,
+    "at": [
+     2,
+     13,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "sign",
+    "type": "box",
+    "color": [
+     0.55,
+     0.36,
+     0.2
+    ],
+    "on": null,
+    "at": [
+     -6,
+     15,
+     1.5
+    ],
+    "visible": false,
+    "scale": 1.4
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Help! She's painting me! Something sticky is on my head!",
+    "cam": "two:bup,zeek",
+    "do": [
+     [
+      "bup",
+      "to:-1,11"
+     ],
+     [
+      "zeek",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Hold still, Bup! Why would Mom put YOU in her shop window?",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:1,9"
+     ],
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "BUP IS GETTING GLAZED",
+    "cam": "prop:stand",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "to:-4,9"
+     ],
+     [
+      "stand",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:8,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday, sunset, the dinner table. Mom is testing her new shop window.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "A cake stand. Dry wheat. Tiny lights. And in the middle… Bup.",
+    "cam": "prop:stand",
+    "do": [
+     [
+      "stand",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "She brushes egg wash on his crust. Shiny. Sticky. Very sticky.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Why him? He's lumpy. He's stale. I have actual sparkles!",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:-2,10"
+     ],
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Jealous, Lolly? Look at me. I glow. I'm basically famous.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mom shakes a jar of sesame seeds. All over Bup's head.",
+    "cam": "prop:seeds",
+    "do": [
+     [
+      "seeds",
+      "appear"
+     ],
+     [
+      "seeds",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "BUP IS A SESAME BUN!",
+    "cam": "close:bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I itch. I itch everywhere. Is this what being famous feels like?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fact. Bakeries sell fresh bread. Bup is the opposite of fresh.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "M-maybe she wants to scare the mice away with him?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-2,9"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Scare mice? Pim, he's the window star. I'm the decoration.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:-1,10"
+     ],
+     [
+      "lolly",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom leans an old wooden board against the wall. Face down.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "appear"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It's the old bakery sign. She brought it home to repaint it.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Leave that sign alone. Some things are better left face down.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "W-why? Is something scary painted on it? A face? Teeth?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom goes to the kitchen for her paint. The table goes quiet.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "My turn. Window stars should sparkle. Watch and learn, crusty.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly shoves Bup off the cake stand and climbs up herself.",
+    "cam": "prop:stand",
+    "do": [
+     [
+      "bup",
+      "to:-2,12"
+     ],
+     [
+      "lolly",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Hey! Find your own cake stand, cookie!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But the stand wobbles. Lolly slides. Right into the sesame jar.",
+    "cam": "prop:seeds",
+    "do": [
+     [
+      "lolly",
+      "to:2,12"
+     ],
+     [
+      "lolly",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY IS A SEED COOKIE!",
+    "cam": "close:lolly",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Don't. Say. Anything. Not one single word, Bup.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Mom's coming back! If she sees us moved, she'll know we're alive!",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "bup",
+      "to:0,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup jumps back on the stand. Lolly rolls under a napkin.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lolly",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom sits down with her brush. Then she stops. And stares.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "She's staring at you, Bup. Did you blink? Tell me no.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom turns the old sign over. Walter's Bakery, it says. Since 1975.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And under the words, there's a painted loaf of bread.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One big eye. One small eye. And a little stitched mouth.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "IT'S BUP?!",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Coincidence. Lots of bread is lumpy. Right? Right, Zeek?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "One stitch. One big eye. One small eye. Odds of coincidence: zero.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "S-so Bup is old? Like, really old? Fifty years old?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup. You are older than Mom. You are older than MOM.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:2,10"
+     ],
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom holds the sign up next to Bup. Same eyes. Same stitch.",
+    "cam": "prop:sign",
+    "do": [
+     [
+      "sign",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom smiles. The old baker painted his window loaf, she says.",
+    "cam": "overhead",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And this one looks just like it. Like it finally came home.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Came home? I don't remember any bakery. I don't remember anything.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Bup, if you lived in that window, why did you leave?",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "And if Mom puts you back there, you'll be alone again.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "text": "ALONE IN THE WINDOW?",
+    "cam": "close:bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "Th-then we all go in the window. As… decoration crumbs.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom finishes the sign and goes to wash her brush.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup. Sorry I pushed you. You're the real star. Seeds included.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Thanks, sparkles. But I'm not going anywhere without you four.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Crispy rolls out of the shadows. Slowly.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:5,10"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You left because of the fire, Bup. That night. I remember.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "text": "WHAT FIRE?!",
+    "cam": "two:bup,crispy",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy. How could you know? You weren't there. Were you?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You weren't the only bread in that window, old friend.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY WAS THERE TOO?!",
+    "cam": "close:crispy",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Why Is Bup's Face on the Old Bakery Sign? 🍞",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"Is this what being famous feels like? Because it itches.\" — Bup\nMom wants old Bup as the star of her new bakery window, jealous Lolly wants his spot — and then the old bakery sign gets turned over.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "animated comedy",
+   "funny animation",
+   "bakery",
+   "sesame bun",
+   "shop window",
+   "old sign",
+   "bup",
+   "crispy",
+   "lolly",
+   "mystery",
+   "cartoon series"
+  ],
+  "thumb_text": "50 YEARS OLD?!",
+  "thumb_beat": 11,
+  "localizations": {
+   "es": {
+    "title": "¿Por qué está la cara de Bup en el viejo letrero? 🍞",
+    "description": "¿Qué crees que pasa en la próxima parte? Cuéntamelo en los comentarios.\n\"¿Esto es la fama? Porque pica.\" — Bup\nMamá quiere al viejo Bup como estrella del escaparate de su panadería, Lolly, celosa, quiere su lugar… y entonces le dan la vuelta al viejo letrero.\n#series #3DAnimation #DoughBros"
+   },
+   "pt": {
+    "title": "Por que o rosto do Bup está na placa da padaria? 🍞",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Fama é isso? Porque coça.\" — Bup\nA mamãe quer o velho Bup como estrela da vitrine da padaria, a Lolly, com ciúmes, quer o lugar dele… e então viram a velha placa.\n#series #3DAnimation #DoughBros"
+   },
+   "ar": {
+    "title": "لماذا وجه باب على لافتة المخبز القديمة؟ 🍞",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"هل هذه هي الشهرة؟ لأنها تسبب الحكة.\" — باب\nتريد أمي أن يكون باب العجوز نجم واجهة مخبزها، ولولي الغيورة تريد مكانه… ثم تُقلب لافتة المخبز القديمة.\n#series #3DAnimation #DoughBros"
+   },
+   "fr": {
+    "title": "Pourquoi le visage de Bup est sur la vieille enseigne ? 🍞",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n\"C'est ça, la célébrité ? Parce que ça gratte.\" — Bup\nMaman veut le vieux Bup en vedette de sa vitrine, Lolly, jalouse, veut sa place… puis on retourne la vieille enseigne de la boulangerie.\n#series #3DAnimation #DoughBros"
+   },
+   "ja": {
+    "title": "古いパン屋の看板に、なぜバップの顔が？ 🍞",
+    "description": "次はどうなると思う？コメントで教えてね。\n「これが有名になるってこと？かゆいんだけど。」— バップ\nママは新しいパン屋のショーウィンドウに古いバップを飾りたい。やきもちのロリーはその場所をねらう…そして古い看板がひっくり返される。\n#series #3DAnimation #DoughBros"
+   },
+   "ko": {
+    "title": "오래된 빵집 간판에 왜 밥의 얼굴이? 🍞",
+    "description": "다음 편에서 무슨 일이 일어날 것 같아? 댓글로 알려줘.\n\"이게 유명해지는 거야? 근데 간지러워.\" — 밥\n엄마는 낡은 밥을 새 빵집 진열창의 주인공으로 삼고 싶고, 질투 난 롤리는 그 자리를 노린다… 그리고 오래된 간판이 뒤집힌다.\n#series #3DAnimation #DoughBros"
+   },
+   "de": {
+    "title": "Warum ist Bups Gesicht auf dem alten Bäckerschild? 🍞",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Fühlt sich Ruhm so an? Es juckt nämlich.\" — Bup\nMama will den alten Bup als Star ihres Schaufensters, die eifersüchtige Lolly will seinen Platz … und dann wird das alte Bäckereischild umgedreht.\n#series #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 6,
+   "dur": 22,
+   "top": "HE'S A BUN NOW",
+   "title": "Mom Turned Bup Into a Sesame Bun 😂 #shorts",
+   "description": "Egg wash, sesame seeds, and one very itchy loaf. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "sesame bun",
+    "bup",
+    "funny animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Mamá convirtió a Bup en un pan de sésamo 😂 #shorts",
+     "description": "Huevo batido, semillas de sésamo y un pan con mucha picazón. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A mamãe transformou o Bup num pão de gergelim 😂 #shorts",
+     "description": "Ovo, gergelim e um pão morrendo de coceira. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أمي حوّلت باب إلى خبز بالسمسم 😂 #shorts",
+     "description": "بيض مخفوق وبذور سمسم ورغيف يحكّه كل شيء. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Maman a transformé Bup en pain au sésame 😂 #shorts",
+     "description": "De la dorure, des graines de sésame et un pain qui gratte de partout. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ママがバップをごまパンにしちゃった 😂 #shorts",
+     "description": "たまごをぬって、ごまをパラパラ。かゆくてたまらないパンのできあがり。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "엄마가 밥을 참깨빵으로 만들어 버렸어 😂 #shorts",
+     "description": "달걀물, 참깨, 그리고 엄청 간지러운 빵 하나. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Mama hat Bup in ein Sesambrötchen verwandelt 😂 #shorts",
+     "description": "Eistreiche, Sesam und ein sehr juckendes Brot. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 20,
+   "dur": 24,
+   "top": "JEALOUS COOKIE",
+   "title": "Lolly Stole Bup's Spot. Big Mistake 😬 #shorts",
+   "description": "Window stars should sparkle, she said. The stand had other plans. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lolly",
+    "jealous",
+    "funny animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Lolly le robó el sitio a Bup. Gran error 😬 #shorts",
+     "description": "Las estrellas del escaparate deben brillar, dijo. El soporte opinaba distinto. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A Lolly roubou o lugar do Bup. Grande erro 😬 #shorts",
+     "description": "Estrela de vitrine tem que brilhar, ela disse. O suporte não concordou. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لولي سرقت مكان باب. خطأ كبير 😬 #shorts",
+     "description": "قالت إن نجوم الواجهة يجب أن تلمع. لكن الحامل كان له رأي آخر. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Lolly a volé la place de Bup. Grosse erreur 😬 #shorts",
+     "description": "Les stars de vitrine doivent briller, disait-elle. Le présentoir n'était pas d'accord. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ロリーがバップの場所をうばった。大失敗 😬 #shorts",
+     "description": "ショーウィンドウのスターはキラキラしなきゃ、と言ったけど…台は別の考えだった。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "롤리가 밥의 자리를 뺏었다. 큰 실수 😬 #shorts",
+     "description": "진열창 스타는 반짝여야 한다고 했지만, 받침대 생각은 달랐다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Lolly hat Bups Platz geklaut. Großer Fehler 😬 #shorts",
+     "description": "Schaufensterstars müssen glitzern, sagte sie. Der Ständer sah das anders. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
