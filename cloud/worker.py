@@ -605,6 +605,10 @@ def produce(job, jf):
         out = sh([PY, os.path.join(ENG, "voices.py"), os.path.join(d, "script.json"), d, "12"], cwd=os.path.join(ROOT, CFG["dir"])).stdout
         log((re.findall(r"TOTAL [\d.]+ s", out) or ["?"])[0])
     tl = json.load(open(os.path.join(d, "timeline.json")))
+    # 2026-11-19 review: hollow 'pompeii-last-morning' was voiced to 1012 s (16:53) and uploaded, but the channels are
+    # not phone-verified (YouTube max 15:00, owner rule 14:50) -> stop before rendering; the writer must shorten it.
+    if tl["duration"] > CFG.get("max_long_seconds", 890) and not QUICK:
+        return None, f"long too long: {tl['duration']:.0f} s > {CFG.get('max_long_seconds', 890)} s (channel not phone-verified, max 14:50)"
     status("render", job=jid, seconds=tl["duration"])
     rng = ["--range", "1-24"] if QUICK else []
     # 2026-11-11 owner: Full HD quality on every channel -> 1280 px EEVEE frames (was 854) upscaled to 1920x1080
@@ -762,6 +766,26 @@ def ahead(st, kind):
     return sum(1 for x in st["taken"] if x["kind"] == kind and x["t"] > dt.datetime.now(dt.timezone.utc).isoformat())
 
 
+def norm_title(t):
+    t = (t or "").lower().replace("#shorts", "")
+    return " ".join("".join(c if c.isalnum() else " " for c in t).split())
+
+
+def uploaded_titles():
+    """Titles already uploaded on this channel (cloud/results/<CH>/*.json long + shorts)."""
+    seen = set()
+    for f in glob.glob(os.path.join(RES, "*.json")):
+        try:
+            d = json.load(open(f))
+        except Exception:
+            continue
+        if not isinstance(d, dict):
+            continue
+        its = ([d["long"]] if isinstance(d.get("long"), dict) else []) + [x for x in (d.get("shorts") or []) if isinstance(x, dict)]
+        seen.update(norm_title(x.get("title")) for x in its if x.get("video"))
+    return seen
+
+
 def run_maker(st):
     """2026-11-06 — "maker" channels (funny, money, ufc, roblox, sleep): a channel script makes finished videos itself.
     cloud/makers/<ch>.py --out DIR --home HOME --repo ROOT --titles FILE  writes DIR/<name>.mp4 + DIR/<name>.json
@@ -819,6 +843,16 @@ def run_maker(st):
         dst = os.path.join(keep, os.path.basename(it["file"])); shutil.move(it["file"], dst); it["file"] = dst
         if it.get("thumb") and os.path.exists(it["thumb"]):
             th = os.path.join(keep, os.path.basename(it["thumb"])); shutil.move(it["thumb"], th); it["thumb"] = th
+        if norm_title(it["title"]) in uploaded_titles():
+            # 2026-11-19 review: milo ep008 Shorts were uploaded twice (11-18 and again 11-23/24) after the long was
+            # rejected and the episode was made again; 11-17 the same happened. Never upload a title already in results.
+            log("skip, already uploaded:", it["title"])
+            qf = it.get("queue_file")
+            if qf and os.path.exists(os.path.join(ROOT, qf)):
+                os.makedirs(DONE, exist_ok=True)
+                os.replace(os.path.join(ROOT, qf), os.path.join(DONE, os.path.basename(qf))); moved += [Q, DONE]
+            os.remove(jf)
+            continue
         qf = it.pop("queue_file", None)
         if qf and os.path.exists(os.path.join(ROOT, qf)):
             os.replace(os.path.join(ROOT, qf), os.path.join(DONE, os.path.basename(qf))); moved += [Q, DONE]
