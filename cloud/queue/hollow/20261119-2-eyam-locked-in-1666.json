@@ -1,0 +1,1645 @@
+{
+ "id": "20261119-2-eyam-locked-in-1666",
+ "plot": "Second person: you live in the lead-mining village of Eyam in 1665-66; chapters cover your home, job and food, the cloth with fleas, plague symptoms, the choice of Mompesson and Stanley to quarantine the village, the rules (boundary stones, vinegar coins, church in Cucklett Delf), the August 1666 peak, Elizabeth Hancock, the last death on November 1, 1666, and the last chapter's open mystery of why some people never got sick.",
+ "script": {
+  "title": "Eyam, 1666",
+  "lead_in": 0,
+  "set": {
+   "place": "village",
+   "fog": 0.02,
+   "eyes": 0,
+   "moonlight": 12
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_sky",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.4,
+     0.45,
+     0.5
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "mompesson": {
+    "name": "Rev. Mompesson",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.12,
+     0.14
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "stanley": {
+    "name": "Thomas Stanley",
+    "voice": "am_onyx",
+    "speed": 0.95,
+    "pitch": -2,
+    "color": [
+     0.2,
+     0.18,
+     0.16
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -7,
+     14
+    ]
+   },
+   "elizabeth": {
+    "name": "Elizabeth Hancock",
+    "voice": "af_sarah",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.4,
+     0.3,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     6,
+     13
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_liam",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.8,
+     0.5
+    ],
+    "glow": 2.3,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "cloth",
+    "type": "box",
+    "color": [
+     0.7,
+     0.55,
+     0.4
+    ],
+    "glow": 0.5,
+    "visible": true,
+    "scale": 1.0,
+    "at": [
+     0,
+     12,
+     0.6
+    ]
+   },
+   {
+    "id": "boundary",
+    "type": "cone",
+    "color": [
+     0.5,
+     0.5,
+     0.52
+    ],
+    "glow": 0.2,
+    "visible": false,
+    "scale": 1.1,
+    "at": [
+     6,
+     11,
+     0
+    ]
+   },
+   {
+    "id": "house",
+    "type": "box",
+    "color": [
+     0.5,
+     0.45,
+     0.4
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 2.2,
+    "at": [
+     0,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "sack",
+    "type": "ball",
+    "color": [
+     0.75,
+     0.7,
+     0.55
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     -2,
+     10.5,
+     0.6
+    ]
+   },
+   {
+    "id": "well",
+    "type": "box",
+    "color": [
+     0.35,
+     0.45,
+     0.6
+    ],
+    "glow": 0.9,
+    "visible": false,
+    "scale": 0.8,
+    "at": [
+     2,
+     12,
+     0.4
+    ]
+   },
+   {
+    "id": "cart",
+    "type": "box",
+    "color": [
+     0.45,
+     0.35,
+     0.25
+    ],
+    "glow": 0.3,
+    "visible": false,
+    "scale": 1.4,
+    "at": [
+     -2,
+     13,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "September 1665. A tailor in a tiny English village opened a bundle of cloth from London. A week later, he was dead. Within fourteen months, two hundred and sixty of his neighbors would be dead too.",
+    "cam": "prop:cloth",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "cloth",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "260 DEAD"
+   },
+   {
+    "who": "mompesson",
+    "say": "Nobody leaves this village. Not one person. Not even if you have kin on the other side of that hill.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "mompesson",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "NOBODY LEAVES"
+   },
+   {
+    "who": "you",
+    "say": "Not even my sister? She lives just three miles away!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "NOT EVEN MY SISTER?"
+   },
+   {
+    "who": "narr",
+    "say": "This is Eyam, in the hills of Derbyshire, England, in the year 1666. You live here. And you are about to make the hardest choice of your life.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "mompesson",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "EYAM, 1666"
+   },
+   {
+    "who": "narr",
+    "say": "Would you stay inside a sealed village, knowing the plague is spreading, so that strangers you will never meet can live?",
+    "cam": "prop:boundary",
+    "do": [
+     [
+      "boundary",
+      "show"
+     ],
+     [
+      "boundary",
+      "bounce"
+     ]
+    ],
+    "text": "WOULD YOU STAY?"
+   },
+   {
+    "who": "narr",
+    "say": "Let's go through your life, one question at a time. Your job, your food, your home, and the day everything changed.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "YOUR LIFE, 1666"
+   },
+   {
+    "who": "narr",
+    "say": "And at the very end, a mystery that scientists still cannot answer.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "THE MYSTERY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Where do you live?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "1. YOUR VILLAGE"
+   },
+   {
+    "who": "narr",
+    "say": "Eyam is a lead mining village high in the Peak District. Nobody is sure how many people lived here. Some say about three hundred and fifty. Others say seven hundred.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ]
+    ],
+    "text": "350 OR 700?"
+   },
+   {
+    "who": "narr",
+    "say": "Even at seven hundred, that's about the size of one big American high school. Everybody knows your name, your family and your business.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "ONE BIG HIGH SCHOOL"
+   },
+   {
+    "who": "narr",
+    "say": "Your home is a small stone cottage. The floor is packed dirt. The roof is heavy stone slabs, and in winter, the animals might sleep right next door.",
+    "cam": "prop:house",
+    "do": [
+     [
+      "house",
+      "show"
+     ],
+     [
+      "house",
+      "bounce"
+     ]
+    ],
+    "text": "A STONE COTTAGE"
+   },
+   {
+    "who": "narr",
+    "say": "You probably have one or two rooms, a fire, and a bed full of straw. Everyone in your family sleeps close together.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "ONE ROOM. ONE FIRE."
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. What is your job?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "2. YOUR JOB"
+   },
+   {
+    "who": "narr",
+    "say": "If you're a man, you most likely mine lead, working deep underground with just a candle. If you're a woman, you farm, spin wool and cook.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "LEAD MINER"
+   },
+   {
+    "who": "narr",
+    "say": "It is back-breaking work, and the pay is small. But lead pays better than a farm, and people in the hills are proud of it.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "sack",
+      "show"
+     ],
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "PROUD WORK"
+   },
+   {
+    "who": "mompesson",
+    "say": "And on Sunday you come to my church. Whether you like me or not.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "happy"
+     ],
+     [
+      "you",
+      "turn:mompesson"
+     ]
+    ],
+    "text": "SUNDAY CHURCH"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. What do you eat?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "3. DINNER"
+   },
+   {
+    "who": "narr",
+    "say": "Oatcakes and porridge. Barley bread. A little cheese, and some weak ale, since the water is not always safe to drink.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "OATS, BREAD, ALE"
+   },
+   {
+    "who": "narr",
+    "say": "Meat is for special days. Most families keep a pig or a few sheep, and use every part of the animal.",
+    "cam": "two:you,elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "enter:right"
+     ],
+     [
+      "you",
+      "turn:elizabeth"
+     ]
+    ],
+    "text": "MEAT IS RARE"
+   },
+   {
+    "who": "elizabeth",
+    "say": "My husband works the farm. My children help me. We are poor, but we are fed.",
+    "cam": "close:elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "turn:front"
+     ]
+    ],
+    "text": "WE ARE FED"
+   },
+   {
+    "who": "narr",
+    "say": "And what do you wear? Rough wool and linen, made by hand. You may own just two outfits, and you wear the same one for weeks.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "TWO OUTFITS"
+   },
+   {
+    "who": "narr",
+    "say": "Washing is rare, and soap costs money. That's another reason the fleas move in so easily.",
+    "cam": "two:you,elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "turn:you"
+     ],
+     [
+      "you",
+      "laugh"
+     ]
+    ],
+    "text": "NO LAUNDROMAT"
+   },
+   {
+    "who": "narr",
+    "say": "Life is hard in 1665. But in Eyam, people know each other, and they look out for each other.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "EVERYONE KNOWS EVERYONE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. The cloth.",
+    "cam": "prop:cloth",
+    "do": [
+     [
+      "cloth",
+      "bounce"
+     ]
+    ],
+    "text": "4. THE BUNDLE"
+   },
+   {
+    "who": "narr",
+    "say": "In late summer of 1665, a bundle of cloth arrives from London for the village tailor. A man named George Viccars opens it up.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "GEORGE VICCARS"
+   },
+   {
+    "who": "narr",
+    "say": "The cloth is damp, so he hangs it by the fire to dry. What he doesn't know is that tiny fleas are hiding inside. And the fleas carry the plague.",
+    "cam": "overhead",
+    "do": [
+     [
+      "cloth",
+      "spin"
+     ],
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "HIDDEN FLEAS"
+   },
+   {
+    "who": "narr",
+    "say": "On September seventh, Viccars is dead. That's the first death. Soon, the others in his house are sick too.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SEPTEMBER 7, 1665"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody in 1665 knows what fleas can do. People believe plague floats in bad air. So they burn herbs and carry flowers.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "BAD AIR?"
+   },
+   {
+    "who": "narr",
+    "say": "Quick question. How do you know you have the plague?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "HOW DO YOU KNOW?"
+   },
+   {
+    "who": "narr",
+    "say": "First, a fever and a terrible headache. Then painful lumps swell up under your arms or in your groin. Some grow as big as an egg.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "LUMPS AS BIG AS EGGS"
+   },
+   {
+    "who": "narr",
+    "say": "Dark spots may appear on the skin. Most people died within about a week, and some in just a few days.",
+    "cam": "two:you,elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "turn:you"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "DEAD IN DAYS"
+   },
+   {
+    "who": "elizabeth",
+    "say": "We rub herbs on the lumps. We burn sweet wood. We pray. What else can we do?",
+    "cam": "close:elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "sad"
+     ]
+    ],
+    "text": "WHAT ELSE CAN WE DO?"
+   },
+   {
+    "who": "narr",
+    "say": "Doctors had no idea what caused it. Some told people to smoke tobacco, hang bundles of herbs on the door, or keep a bowl of vinegar by the bed.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,10,0"
+     ],
+     [
+      "elizabeth",
+      "to:-5,12,0"
+     ]
+    ],
+    "text": "FAKE CURES"
+   },
+   {
+    "who": "narr",
+    "say": "None of it worked. The only real protection was to avoid the fleas, and nobody knew the fleas were the problem.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "NOTHING WORKED"
+   },
+   {
+    "who": "narr",
+    "say": "In London, the same plague kills about a hundred thousand people in just a few months. About one in five Londoners. You've only heard rumors.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "LONDON: 100,000 DEAD"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. The choice.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "5. THE CHOICE"
+   },
+   {
+    "who": "narr",
+    "say": "By winter, forty-two people in Eyam have died. Then the cold slows the fleas, and the deaths almost stop.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ]
+    ],
+    "text": "WINTER: A PAUSE"
+   },
+   {
+    "who": "narr",
+    "say": "But spring comes. And the sickness comes back with it. Families start packing carts. They want to run for their lives.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "SPRING: THE SICKNESS RETURNS"
+   },
+   {
+    "who": "narr",
+    "say": "Now two men step forward. The new rector, William Mompesson, and the old rector, Thomas Stanley. They did not even agree about religion.",
+    "cam": "two:mompesson,stanley",
+    "do": [
+     [
+      "stanley",
+      "enter:left"
+     ],
+     [
+      "mompesson",
+      "turn:stanley"
+     ]
+    ],
+    "text": "TWO RIVAL MINISTERS"
+   },
+   {
+    "who": "narr",
+    "say": "Stanley had lost his job as rector years before, because he was a Puritan. But when the plague came, the village listened to him anyway.",
+    "cam": "close:stanley",
+    "do": [
+     [
+      "stanley",
+      "turn:front"
+     ]
+    ],
+    "text": "THE OLD RECTOR"
+   },
+   {
+    "who": "narr",
+    "say": "He and Mompesson visited the sick, buried the dead, and held the village together. For many families, they were the only help they had.",
+    "cam": "wide",
+    "do": [
+     [
+      "stanley",
+      "to:-4,12,0"
+     ],
+     [
+      "mompesson",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "THEY HELD IT TOGETHER"
+   },
+   {
+    "who": "stanley",
+    "say": "If you run, you carry the sickness with you. To Bakewell. To Sheffield. To thousands who've done nothing wrong.",
+    "cam": "close:stanley",
+    "do": [
+     [
+      "stanley",
+      "turn:front"
+     ]
+    ],
+    "text": "YOU CARRY IT"
+   },
+   {
+    "who": "mompesson",
+    "say": "So we must stay. All of us. And I will stay with you. I will not leave this village.",
+    "cam": "close:mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:front"
+     ]
+    ],
+    "text": "I WILL STAY TOO"
+   },
+   {
+    "who": "narr",
+    "say": "They talked and talked, and in the early summer of 1666, Eyam agreed. The whole village locked itself in.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "elizabeth",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "THE VILLAGE AGREES"
+   },
+   {
+    "who": "you",
+    "say": "I don't want to die. But I don't want my sister to die either. All right. I'll stay.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "ALL RIGHT. I'LL STAY."
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. The rules.",
+    "cam": "prop:boundary",
+    "do": [
+     [
+      "boundary",
+      "bounce"
+     ]
+    ],
+    "text": "6. THE RULES"
+   },
+   {
+    "who": "narr",
+    "say": "Rule one. Nobody goes out, and nobody comes in. A ring of stones marks the edge of the village.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE BOUNDARY STONES"
+   },
+   {
+    "who": "narr",
+    "say": "So how do you eat? Neighbors leave food on a stone at the edge. You leave money in return, and you never touch each other.",
+    "cam": "prop:boundary",
+    "do": [
+     [
+      "boundary",
+      "spin"
+     ]
+    ],
+    "text": "NO TOUCHING"
+   },
+   {
+    "who": "narr",
+    "say": "And the money goes into holes or a well filled with vinegar. People then believed vinegar could clean away the sickness.",
+    "cam": "prop:well",
+    "do": [
+     [
+      "well",
+      "show"
+     ],
+     [
+      "well",
+      "bounce"
+     ]
+    ],
+    "text": "COINS IN VINEGAR"
+   },
+   {
+    "who": "narr",
+    "say": "A rich neighbor, the Earl of Devonshire, even sends food and medicine from his big house, Chatsworth. It's the only reason you can eat.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "CHATSWORTH HELPS"
+   },
+   {
+    "who": "narr",
+    "say": "And think about your wallet. The lead mines are quiet now, because you can't sell your lead outside the village. No market means no money.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "NO MARKET. NO MONEY."
+   },
+   {
+    "who": "narr",
+    "say": "So what do you do all day? You farm a little. You pray. You check on your neighbors from across the road, and you wait.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ]
+    ],
+    "text": "A LONG WAIT"
+   },
+   {
+    "who": "narr",
+    "say": "Rule two. No more church indoors. Families stand apart in a rocky hollow called Cucklett Delf, and Mompesson preaches to them from a natural stone arch.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mompesson",
+      "to:-1,12,0"
+     ],
+     [
+      "you",
+      "to:-4,9,0"
+     ]
+    ],
+    "text": "CHURCH IN THE ROCKS"
+   },
+   {
+    "who": "narr",
+    "say": "Rule three. No burials in the churchyard. Each family has to bury its own dead, usually in a field or garden, as fast as they can.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "BURY YOUR OWN"
+   },
+   {
+    "who": "narr",
+    "say": "And one more thing. Once a house had the plague, the fleas jumped from bed to bed. Whole families got sick together.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WHOLE FAMILIES"
+   },
+   {
+    "who": "narr",
+    "say": "That's why neighbors were so afraid. When a family fell sick, they usually shut the door and left it alone.",
+    "cam": "two:you,stanley",
+    "do": [
+     [
+      "stanley",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:stanley"
+     ]
+    ],
+    "text": "SHUT THE DOOR"
+   },
+   {
+    "who": "narr",
+    "say": "It's frightening. But for the first weeks, it seems to work. And then comes August.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "THEN CAME AUGUST"
+   },
+   {
+    "who": "narr",
+    "say": "Every few days, Mompesson writes a letter asking for food and medicine. The answers come, and each time, the helpers wait far outside the stones.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ]
+    ],
+    "text": "LETTERS FOR HELP"
+   },
+   {
+    "who": "mompesson",
+    "say": "They can't come in. But they can leave bread on a rock. And that is enough to keep us alive.",
+    "cam": "close:mompesson",
+    "do": [
+     [
+      "mompesson",
+      "happy"
+     ]
+    ],
+    "text": "BREAD ON A ROCK"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. The worst month.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "7. AUGUST 1666"
+   },
+   {
+    "who": "narr",
+    "say": "The summer is very hot. Hot weather makes fleas more active, and the plague runs wild. At its worst, five or six people die every day.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "5 TO 6 DEAD EVERY DAY"
+   },
+   {
+    "who": "narr",
+    "say": "And this is the saddest part. A farm woman named Elizabeth Hancock lost her husband and six children in just eight days.",
+    "cam": "two:you,elizabeth",
+    "do": [
+     [
+      "you",
+      "turn:elizabeth"
+     ],
+     [
+      "elizabeth",
+      "sad"
+     ]
+    ],
+    "text": "SEVEN OF HER FAMILY"
+   },
+   {
+    "who": "elizabeth",
+    "say": "No one can help me. If they touch them, they will die too. So I must do it myself.",
+    "cam": "close:elizabeth",
+    "do": [
+     [
+      "elizabeth",
+      "sad"
+     ]
+    ],
+    "text": "I MUST DO IT MYSELF"
+   },
+   {
+    "who": "narr",
+    "say": "She dragged each body to a field near their farm, and she buried them with her own hands. The graves are still there. They're called the Riley Graves.",
+    "cam": "overhead",
+    "do": [
+     [
+      "elizabeth",
+      "to:-5,10,0"
+     ],
+     [
+      "you",
+      "turn:elizabeth"
+     ]
+    ],
+    "text": "THE RILEY GRAVES"
+   },
+   {
+    "who": "narr",
+    "say": "It's said that people from a nearby village stood on a hill and watched her. They wanted to help, but they were too afraid to get close.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "TOO AFRAID TO HELP"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. A love story.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:-4,9,1.8"
+     ]
+    ],
+    "text": "8. TWO LOVERS"
+   },
+   {
+    "who": "narr",
+    "say": "Tradition tells of a girl named Emmott Sydall. Her sweetheart, Rowland Torre, lived in a village outside the stones.",
+    "cam": "two:you,elizabeth",
+    "do": [
+     [
+      "you",
+      "turn:elizabeth"
+     ]
+    ],
+    "text": "EMMOTT AND ROWLAND"
+   },
+   {
+    "who": "narr",
+    "say": "They met in the rocky hollow, and called out to each other across the gap. They could see each other but not touch.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "THEY COULD NOT TOUCH"
+   },
+   {
+    "who": "narr",
+    "say": "Then Emmott caught the plague. Six of the eight people in her family died that year.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SIX OF EIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. The rector.",
+    "cam": "wide",
+    "do": [
+     [
+      "mompesson",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "9. THE MINISTER"
+   },
+   {
+    "who": "narr",
+    "say": "Mompesson had told you he would stay, and he did. He prayed over the sick, and wrote letters begging for help.",
+    "cam": "close:mompesson",
+    "do": [
+     [
+      "mompesson",
+      "sad"
+     ]
+    ],
+    "text": "HE STAYED"
+   },
+   {
+    "who": "narr",
+    "say": "His wife, Catherine, helped him nurse the sick. On a warm evening in late August, she mentioned a sweet smell in the air.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:mompesson"
+     ]
+    ],
+    "text": "A SWEET SMELL"
+   },
+   {
+    "who": "narr",
+    "say": "It was a known sign of plague. A day or so later, Catherine Mompesson was dead. She was twenty-seven years old.",
+    "cam": "close:mompesson",
+    "do": [
+     [
+      "mompesson",
+      "sad"
+     ]
+    ],
+    "text": "CATHERINE, 27"
+   },
+   {
+    "who": "narr",
+    "say": "He buried her himself in the churchyard. He expected to die next. But he didn't.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "HE DID NOT DIE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. How does it end?",
+    "cam": "prop:boundary",
+    "do": [
+     [
+      "boundary",
+      "bounce"
+     ]
+    ],
+    "text": "10. THE END"
+   },
+   {
+    "who": "narr",
+    "say": "In September, the deaths slow down. In October, almost nobody gets sick. The village waits, and waits, afraid to believe it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "elizabeth",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "IT SLOWS DOWN"
+   },
+   {
+    "who": "narr",
+    "say": "Then, on November first, 1666, a farm worker named Abraham Morten dies. He turns out to be the very last.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NOVEMBER 1, 1666"
+   },
+   {
+    "who": "narr",
+    "say": "In fourteen months, about two hundred and sixty people died, in nearly eighty families. But the plague never spread to the towns around them.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "260 DEAD"
+   },
+   {
+    "who": "narr",
+    "say": "To get a feel for it, two hundred and sixty people is more than four full school buses. Gone from one small hilltop village.",
+    "cam": "prop:cart",
+    "do": [
+     [
+      "cart",
+      "show"
+     ],
+     [
+      "cart",
+      "bounce"
+     ]
+    ],
+    "text": "4 SCHOOL BUSES"
+   },
+   {
+    "who": "narr",
+    "say": "Think about how brave that was. Nobody forced them. Nobody had a doctor, a vaccine, or a drug. They only had a promise to each other.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "ONLY A PROMISE"
+   },
+   {
+    "who": "narr",
+    "say": "So did the village's choice work? In 2016, scientists ran the numbers again, with computer models. They asked a hard question.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ]
+    ],
+    "text": "DID IT WORK?"
+   },
+   {
+    "who": "narr",
+    "say": "Did locking Eyam in save thousands of lives outside? Or did it just trap the people inside with the fleas? Experts still argue about it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "STILL DEBATED"
+   },
+   {
+    "who": "narr",
+    "say": "It took more than two hundred years to learn the truth. In the 1890s, scientists finally found the germ, and proved that fleas from rats were spreading it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE TRUTH, 1890s"
+   },
+   {
+    "who": "narr",
+    "say": "So Mompesson was wrong about bad air, and wrong about vinegar. But he was right about one big thing. Keeping sick people away from healthy people saves lives.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "happy"
+     ],
+     [
+      "you",
+      "turn:mompesson"
+     ]
+    ],
+    "text": "HE WAS RIGHT ABOUT THIS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. The mystery.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "11. THE MYSTERY"
+   },
+   {
+    "who": "narr",
+    "say": "Not everyone in Eyam got sick. Some people lived in the same house as the dying, and never caught it at all.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "WHO NEVER GOT SICK?"
+   },
+   {
+    "who": "narr",
+    "say": "Mompesson himself lived. And so did a gravedigger named Marshall Howe, who had the plague early, got better, and buried dozens of his neighbors.",
+    "cam": "two:you,mompesson",
+    "do": [
+     [
+      "mompesson",
+      "turn:you"
+     ]
+    ],
+    "text": "MARSHALL HOWE"
+   },
+   {
+    "who": "narr",
+    "say": "Why did they live? Back then, people said it was God's will. But for hundreds of years, nobody had a better answer.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHY DID THEY LIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "In the 1990s, some scientists wondered if certain Eyam families carried a gene that protected them. The idea became famous.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "A SURVIVOR GENE?"
+   },
+   {
+    "who": "narr",
+    "say": "But later studies cast doubt on it. So today, nobody can say for sure why some people in Eyam survived.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NOBODY KNOWS"
+   },
+   {
+    "who": "narr",
+    "say": "If you go there, you can still find the boundary stone with holes drilled in the top, where villagers once dropped their coins in vinegar.",
+    "cam": "overhead",
+    "do": [
+     [
+      "boundary",
+      "bounce"
+     ],
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "THE VINEGAR HOLES"
+   },
+   {
+    "who": "narr",
+    "say": "Mompesson lived another forty years. He moved away in 1669 and became the minister of a village in Nottinghamshire, and he died in 1709.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mompesson",
+      "to:3,13,0"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "HE LIVED TO 1709"
+   },
+   {
+    "who": "narr",
+    "say": "And Eyam never forgot. Every year, on the last Sunday in August, people still gather in the rocky hollow to remember what the village did.",
+    "cam": "prop:boundary",
+    "do": [
+     [
+      "boundary",
+      "bounce"
+     ]
+    ],
+    "text": "PLAGUE SUNDAY"
+   },
+   {
+    "who": "narr",
+    "say": "Walk the lanes of Eyam today, and you'll see small green plaques on the old stone cottages. Each one lists the names of the family who died inside.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NAMES ON THE WALLS"
+   },
+   {
+    "who": "narr",
+    "say": "So would you have stayed? Would you have let the stones close around you, to save people you would never meet?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "WOULD YOU HAVE STAYED?"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments, and subscribe for more true history.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "mompesson",
+      "happy"
+     ]
+    ],
+    "text": "TELL ME BELOW"
+   }
+  ]
+ },
+ "long": {
+  "title": "Locked In With the Plague: Eyam, 1666 🕯️",
+  "description": "Would you have stayed? Tell me in the comments.\n\nIn 1665 a bundle of cloth from London brought the plague to a small English hill village. Then the villagers made a choice almost nobody else would make: they sealed themselves in, so the sickness would not reach the towns around them. Your food, your home, the rules, the worst month, and a mystery that scientists still cannot fully answer.\n\nSources:\nhttps://www.bbc.com/news/uk-england-35064071\nhttps://wellcomecollection.org/stories/wool--fleas--plague\nhttps://hekint.org/2020/03/11/the-bubonic-plague-in-eyam\nhttps://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00961.x\nhttps://picturethepast.org.uk/image-library/image-overview/poster/dchq007914/posterid/dchq007914.html\n\n#eyam #truestory #plague",
+  "tags": [
+   "eyam plague",
+   "eyam 1666",
+   "plague village",
+   "village that quarantined itself",
+   "william mompesson",
+   "elizabeth hancock riley graves",
+   "great plague of 1665",
+   "bubonic plague history",
+   "derbyshire history",
+   "mompesson's well",
+   "life in 1666",
+   "true story animated",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "260 DIED",
+  "localizations": {
+   "es": {
+    "title": "Encerrados con la peste: Eyam, 1666 🕯️",
+    "description": "¿Te habrías quedado? Cuéntamelo en los comentarios.\n\nEn 1665 un fardo de tela de Londres llevó la peste a un pequeño pueblo inglés. Entonces los vecinos tomaron una decisión casi imposible: se encerraron para que la enfermedad no llegara a las ciudades cercanas."
+   },
+   "pt": {
+    "title": "Trancados com a peste: Eyam, 1666 🕯️",
+    "description": "Você teria ficado? Conte nos comentários.\n\nEm 1665, um fardo de tecido de Londres levou a peste a uma pequena vila inglesa. Então os moradores tomaram uma decisão quase impossível: se isolaram para que a doença não chegasse às cidades vizinhas."
+   },
+   "ar": {
+    "title": "محبوسون مع الطاعون: إيام، 1666 🕯️",
+    "description": "هل كنت ستبقى؟ أخبرني في التعليقات.\n\nفي عام 1665 حملت لفافة قماش من لندن الطاعون إلى قرية إنجليزية صغيرة. فاتخذ أهلها قرارًا شبه مستحيل: عزلوا أنفسهم حتى لا يصل المرض إلى البلدات المجاورة."
+   },
+   "fr": {
+    "title": "Enfermés avec la peste : Eyam, 1666 🕯️",
+    "description": "Seriez-vous resté ? Dites-le-moi en commentaire.\n\nEn 1665, un ballot de tissu venu de Londres apporte la peste dans un petit village anglais. Les habitants prennent alors une décision presque impossible : s'enfermer pour que la maladie n'atteigne pas les villes voisines."
+   },
+   "ja": {
+    "title": "ペストと共に閉じ込められた村:イーム、1666年 🕯️",
+    "description": "あなたならそこに残りますか?コメントで教えてください。\n\n1665年、ロンドンから届いた布の束が、イギリスの小さな村にペストを運びました。村人たちは、周りの町に病気を広げないため、自ら村を封鎖するというほぼ不可能な決断をしました。"
+   },
+   "ko": {
+    "title": "페스트와 함께 갇힌 마을: 이암, 1666 🕯️",
+    "description": "당신이라면 남았을까요? 댓글로 알려 주세요.\n\n1665년 런던에서 온 천 꾸러미가 영국의 작은 마을에 페스트를 옮겼습니다. 마을 사람들은 주변 도시에 병이 퍼지지 않도록 스스로 마을을 봉쇄하는 거의 불가능한 결정을 내렸습니다."
+   },
+   "de": {
+    "title": "Eingesperrt mit der Pest: Eyam, 1666 🕯️",
+    "description": "Wärst du geblieben? Sag es mir in den Kommentaren.\n\n1665 brachte ein Stoffballen aus London die Pest in ein kleines englisches Dorf. Die Bewohner trafen eine fast unmögliche Entscheidung: Sie schlossen sich ein, damit die Krankheit die Nachbarstädte nicht erreicht."
+   }
+  },
+  "thumb_beat": 87
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "NOBODY LEAVES",
+   "title": "260 died so strangers could live 🕯️ #shorts",
+   "description": "1666: an English village sealed itself off from the world to stop the plague. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "eyam",
+    "plague",
+    "1666",
+    "true story"
+   ],
+   "localizations": {
+    "es": {
+     "title": "260 murieron para que otros vivieran 🕯️ #shorts",
+     "description": "1666: un pueblo inglés se aisló del mundo para frenar la peste. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "260 morreram para que estranhos vivessem 🕯️ #shorts",
+     "description": "1666: uma vila inglesa se isolou do mundo para conter a peste. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مات 260 شخصًا لينجو غرباء 🕯️ #shorts",
+     "description": "1666: قرية إنجليزية عزلت نفسها عن العالم لوقف الطاعون. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "260 sont morts pour que des inconnus vivent 🕯️ #shorts",
+     "description": "1666 : un village anglais s'est coupé du monde pour stopper la peste. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "260人が死んだ。見知らぬ人を救うために 🕯️ #shorts",
+     "description": "1666年、イギリスの村はペストを止めるため、自ら外の世界との行き来を断ちました。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "낯선 사람을 살리려고 260명이 죽었다 🕯️ #shorts",
+     "description": "1666년, 영국의 한 마을이 페스트를 막기 위해 스스로 세상과 단절했습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "260 starben, damit Fremde lebten 🕯️ #shorts",
+     "description": "1666: Ein englisches Dorf schottete sich ab, um die Pest zu stoppen. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 48,
+   "dur": 26,
+   "top": "COINS IN VINEGAR",
+   "title": "Why Eyam dropped coins in vinegar 🪙 #shorts",
+   "description": "In the plague village of Eyam, money went into vinegar before anyone touched it. Here's how the trade worked. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "eyam",
+    "vinegar",
+    "plague village",
+    "1666"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Por qué Eyam echaba monedas en vinagre 🪙 #shorts",
+     "description": "En el pueblo de la peste, el dinero se metía en vinagre antes de tocarlo. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que Eyam jogava moedas no vinagre 🪙 #shorts",
+     "description": "Na vila da peste, o dinheiro ia para o vinagre antes de alguém tocar. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا وضعت إيام العملات في الخل 🪙 #shorts",
+     "description": "في قرية الطاعون كان المال يوضع في الخل قبل أن يلمسه أحد. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi Eyam plongeait les pièces dans le vinaigre 🪙 #shorts",
+     "description": "Dans le village de la peste, l'argent trempait dans le vinaigre avant d'être touché. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "イームの村人がコインを酢に入れた理由 🪙 #shorts",
+     "description": "ペストの村では、お金は誰かが触れる前に酢に入れられました。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "이암 사람들이 동전을 식초에 담근 이유 🪙 #shorts",
+     "description": "페스트 마을에서는 돈을 만지기 전에 식초에 담갔습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum Eyam Münzen in Essig legte 🪙 #shorts",
+     "description": "Im Pestdorf kam das Geld in Essig, bevor jemand es anfasste. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "sparse solo cello with a few piano notes, slow and minor, no percussion, silence between chapters (different from the sea-shanty accordion and the prairie fiddle)",
+  "palette": "stone grey, candle amber, pale green hills, dim summer haze",
+  "opening_shot": "macro close-up of the cloth bundle (prop:cloth)",
+  "camera_set": "two-shots for the argument scenes, many close-ups, overhead only for the rules and the ending",
+  "transitions": "slow fades between chapters, hard cut at each death count, long hold on the Riley Graves",
+  "caption_style": "thin serif caps on a dark band, chapter number in amber"
+ }
+}

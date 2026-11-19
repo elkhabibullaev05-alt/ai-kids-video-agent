@@ -1,0 +1,1722 @@
+{
+ "id": "20261119-1-pirate-crew-ranks-1717",
+ "plot": "Second person, daily-life format: you sign on with Black Sam Bellamy's pirate crew in 1717; eleven chapters answer why join, who is who, shares and pay, food, sleep, the articles, the chase, danger, the ship Whydah, the April 26 storm, and the last chapter is the mystery of the Whydah: found in 1984 under 5 feet of sand, the bell 'THE WHYDAH GALLY 1716' in 1985, and the treasure nobody has found.",
+ "script": {
+  "title": "Pirate Crew, 1717",
+  "lead_in": 0,
+  "set": {
+   "place": "swamp",
+   "fog": 0.025,
+   "eyes": 0,
+   "moonlight": 18
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.5,
+     0.3,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "bellamy": {
+    "name": "Captain Bellamy",
+    "voice": "am_michael",
+    "speed": 0.98,
+    "pitch": -1,
+    "color": [
+     0.1,
+     0.1,
+     0.15
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "qm": {
+    "name": "The Quartermaster",
+    "voice": "am_echo",
+    "speed": 0.98,
+    "pitch": -2,
+    "color": [
+     0.45,
+     0.25,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "boy": {
+    "name": "John King",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 3,
+    "color": [
+     0.6,
+     0.5,
+     0.35
+    ],
+    "kind": "human",
+    "size": 0.6,
+    "home": [
+     6,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_eric",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.7,
+     0.3
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "wheel",
+    "type": "wheel",
+    "color": [
+     0.45,
+     0.3,
+     0.15
+    ],
+    "glow": 0.4,
+    "visible": true,
+    "scale": 1.2,
+    "at": [
+     0,
+     12,
+     1.2
+    ]
+   },
+   {
+    "id": "ship",
+    "type": "box",
+    "color": [
+     0.25,
+     0.2,
+     0.18
+    ],
+    "glow": 0.3,
+    "visible": true,
+    "scale": 2.4,
+    "at": [
+     0,
+     17,
+     0
+    ]
+   },
+   {
+    "id": "chest",
+    "type": "box",
+    "color": [
+     0.55,
+     0.4,
+     0.15
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.7,
+    "at": [
+     -2,
+     10.5,
+     0.5
+    ]
+   },
+   {
+    "id": "sack",
+    "type": "ball",
+    "color": [
+     0.7,
+     0.65,
+     0.5
+    ],
+    "glow": 0.4,
+    "visible": false,
+    "scale": 0.5,
+    "at": [
+     -2,
+     10.5,
+     0.6
+    ]
+   },
+   {
+    "id": "cannon",
+    "type": "cone",
+    "color": [
+     0.2,
+     0.2,
+     0.22
+    ],
+    "glow": 0.2,
+    "visible": false,
+    "scale": 0.9,
+    "at": [
+     5,
+     16,
+     0
+    ]
+   },
+   {
+    "id": "bell",
+    "type": "trophy",
+    "color": [
+     0.9,
+     0.7,
+     0.2
+    ],
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.8,
+    "at": [
+     0,
+     12,
+     0.4
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "April 1717. A pirate ship called the Whydah sank off Cape Cod with about a hundred and forty men aboard. Only two of them swam to shore.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "sfx": "alarm",
+    "text": "2 SURVIVORS"
+   },
+   {
+    "who": "bellamy",
+    "say": "All hands! The wind is up, and a ship is running from us. Sign the articles, or get off my deck!",
+    "cam": "two:you,bellamy",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "bellamy",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "ALL HANDS"
+   },
+   {
+    "who": "you",
+    "say": "Wait! I only came aboard to find a job! What do I even sign?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "WHAT DO I SIGN?"
+   },
+   {
+    "who": "narr",
+    "say": "This is a pirate crew in the year 1717. You are about to join it.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "bounce"
+     ]
+    ],
+    "text": "YOU'RE A PIRATE"
+   },
+   {
+    "who": "narr",
+    "say": "Why would anyone sign? How do you eat, sleep, get paid and fight? And what is the one thing a pirate ship did that no navy ship ever did?",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "bellamy",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "HOW DO YOU LIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "And at the very end, a storm, a bell, and a treasure that nobody has ever found.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "sfx": "suspicious",
+    "text": "THE LOST TREASURE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why would anyone become a pirate?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ]
+    ],
+    "text": "1. WHY JOIN?"
+   },
+   {
+    "who": "qm",
+    "say": "You came from a navy ship, didn't you? I can tell by your back.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "enter:right"
+     ],
+     [
+      "you",
+      "turn:qm"
+     ]
+    ],
+    "text": "FROM THE NAVY?"
+   },
+   {
+    "who": "you",
+    "say": "Yes. Bad food. Almost no pay. And the officers hit us with ropes for nothing.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NO PAY. NO FOOD."
+   },
+   {
+    "who": "narr",
+    "say": "That was real. A sailor in 1717 worked hard for little money, and the pay often came months late.",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "show"
+     ],
+     [
+      "chest",
+      "bounce"
+     ]
+    ],
+    "text": "LATE PAY"
+   },
+   {
+    "who": "qm",
+    "say": "On a pirate ship, every man gets a vote. We even choose our own captain.",
+    "cam": "close:qm",
+    "do": [
+     [
+      "qm",
+      "turn:front"
+     ]
+    ],
+    "text": "EVERY MAN VOTES"
+   },
+   {
+    "who": "narr",
+    "say": "That's true. Pirates elected the captain, and the crew could vote him out again.",
+    "cam": "two:you,bellamy",
+    "do": [
+     [
+      "bellamy",
+      "happy"
+     ],
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "VOTE HIM OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. How do you end up on the ship?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "2. HOW DO YOU JOIN?"
+   },
+   {
+    "who": "narr",
+    "say": "Some men volunteered. Others were forced, especially if you were a carpenter, a doctor or a musician.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "FORCED MEN"
+   },
+   {
+    "who": "narr",
+    "say": "Pirates stole skills the same way they stole gold. A good carpenter kept a ship alive, so he did not get a choice.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ],
+     [
+      "bellamy",
+      "turn:you"
+     ]
+    ],
+    "text": "SKILLS WERE LOOT"
+   },
+   {
+    "who": "narr",
+    "say": "And some were just kids. A boy named John King was about ten years old when Bellamy's crew captured the ship he was riding on.",
+    "cam": "two:you,boy",
+    "do": [
+     [
+      "boy",
+      "enter:right"
+     ],
+     [
+      "you",
+      "turn:boy"
+     ]
+    ],
+    "text": "JOHN KING, AGE 10"
+   },
+   {
+    "who": "boy",
+    "say": "Please! Let me join! I'll jump in the sea if you say no!",
+    "cam": "close:boy",
+    "do": [
+     [
+      "boy",
+      "jump"
+     ]
+    ],
+    "text": "LET ME JOIN!"
+   },
+   {
+    "who": "narr",
+    "say": "That's in the real record. He told his own mother he would hurt himself if they left him behind. She watched him go.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "HIS MOTHER WATCHED"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. Who is who on a pirate ship?",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "spin"
+     ]
+    ],
+    "text": "3. THE RANKS"
+   },
+   {
+    "who": "narr",
+    "say": "The captain was Samuel Bellamy. He was only about twenty-eight years old, and people called him Black Sam.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "\"BLACK SAM\" BELLAMY"
+   },
+   {
+    "who": "narr",
+    "say": "But here's the surprise. In a chase or a fight, the captain gave the orders. The rest of the time, the quartermaster ran the ship.",
+    "cam": "two:bellamy,qm",
+    "do": [
+     [
+      "qm",
+      "to:-5,12,0"
+     ],
+     [
+      "bellamy",
+      "turn:qm"
+     ]
+    ],
+    "text": "THE QUARTERMASTER"
+   },
+   {
+    "who": "qm",
+    "say": "I split the loot. I settle fights. If you break a rule, you answer to me.",
+    "cam": "close:qm",
+    "do": [
+     [
+      "qm",
+      "happy"
+     ]
+    ],
+    "text": "I SETTLE FIGHTS"
+   },
+   {
+    "who": "narr",
+    "say": "The crew voted for the quartermaster too. Nobody got the job just because he was rich.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,10,0"
+     ]
+    ],
+    "text": "NO RICH BOSSES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. How do you get paid?",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "bounce"
+     ]
+    ],
+    "text": "4. PAY DAY"
+   },
+   {
+    "who": "narr",
+    "say": "Not with a salary. With shares. After every ship they captured, the crew split what they stole by a fixed list.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "SHARES, NOT PAY"
+   },
+   {
+    "who": "narr",
+    "say": "Here's a real example from a pirate named Bartholomew Roberts, a few years later. The captain and the quartermaster got two shares each.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:qm"
+     ]
+    ],
+    "text": "2 SHARES"
+   },
+   {
+    "who": "narr",
+    "say": "The gunner and the boatswain got one and a half. Everybody else got one share.",
+    "cam": "close:qm",
+    "do": [
+     [
+      "qm",
+      "turn:front"
+     ]
+    ],
+    "text": "EVERYONE ELSE: 1"
+   },
+   {
+    "who": "narr",
+    "say": "The gap between the boss and a regular sailor was just double. On a navy ship, the captain could earn many times more than you.",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "spin"
+     ]
+    ],
+    "text": "ONLY DOUBLE"
+   },
+   {
+    "who": "narr",
+    "say": "And if you lost an arm or a leg in a fight? Roberts's crew promised eight hundred pieces of eight. That's an insurance plan, three hundred years ago.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "LOST A LIMB? PAID"
+   },
+   {
+    "who": "narr",
+    "say": "Quick question. What do you wear?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "WHAT DO YOU WEAR?"
+   },
+   {
+    "who": "narr",
+    "say": "Whatever you stole. Silk coats, velvet hats and fancy buckled shoes were all taken from rich passengers and worn on deck.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "STOLEN FASHION"
+   },
+   {
+    "who": "narr",
+    "say": "The story goes that Bellamy wore his own long hair, tied back with a ribbon, when other rich men wore wigs. That may be where Black Sam got his name.",
+    "cam": "two:you,bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:you"
+     ],
+     [
+      "you",
+      "laugh"
+     ]
+    ],
+    "text": "NO WIG"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. What do you eat?",
+    "cam": "wide",
+    "do": [
+     [
+      "qm",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "5. DINNER"
+   },
+   {
+    "who": "narr",
+    "say": "Mostly hard biscuit and salted meat. After a few weeks at sea, the biscuit had bugs in it, and the meat was as tough as a boot.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "sack",
+      "show"
+     ],
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "BUGGY BISCUIT"
+   },
+   {
+    "who": "you",
+    "say": "Do I have to eat the bugs?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE BUGS?"
+   },
+   {
+    "who": "qm",
+    "say": "In the dark, you can't see them. Eat fast.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "laugh"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "EAT FAST"
+   },
+   {
+    "who": "narr",
+    "say": "But pirates had a trick the navy didn't. When they captured a ship, they took the food too. Wine. Cheese. Sugar. Even fresh turtle meat.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "STOLEN FEASTS"
+   },
+   {
+    "who": "narr",
+    "say": "The fresh water was another story. Kept in wooden barrels, it turned green and slimy within weeks.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "GREEN WATER"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. Where do you sleep?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "6. BEDTIME"
+   },
+   {
+    "who": "narr",
+    "say": "There were no bedrooms. You slept on the deck, or in a hammock, packed in close with a hundred other men.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ],
+     [
+      "qm",
+      "turn:you"
+     ]
+    ],
+    "text": "NO BEDROOMS"
+   },
+   {
+    "who": "narr",
+    "say": "It was hot, loud and smelly. On the Roberts ship, the lights had to go out at eight o'clock at night.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sleep"
+     ]
+    ],
+    "text": "LIGHTS OUT: 8 PM"
+   },
+   {
+    "who": "qm",
+    "say": "If you want to keep drinking after eight, you drink on the open deck. In the dark. No candle.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "turn:you"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "NO CANDLES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. What are the rules?",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ]
+    ],
+    "text": "7. THE ARTICLES"
+   },
+   {
+    "who": "narr",
+    "say": "Every pirate signed a list of rules called the articles. They were serious, and they were written down.",
+    "cam": "close:qm",
+    "do": [
+     [
+      "qm",
+      "turn:front"
+     ]
+    ],
+    "text": "SIGN THE ARTICLES"
+   },
+   {
+    "who": "narr",
+    "say": "No gambling with dice or cards. Keep your pistol and sword clean. And no fighting on the ship, ever.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "NO FIGHTING ABOARD"
+   },
+   {
+    "who": "narr",
+    "say": "So how did pirates settle a fight? On shore. Two men stood back to back, took steps, and turned to shoot. If both missed, they used swords.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,10,0"
+     ],
+     [
+      "qm",
+      "to:-1,12,0"
+     ]
+    ],
+    "text": "BACK TO BACK"
+   },
+   {
+    "who": "narr",
+    "say": "And stealing from your own crew was the worst crime. The punishment was to be marooned, left alone on an empty beach.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "MAROONED"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. What do you do when you find a ship?",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "bounce"
+     ]
+    ],
+    "text": "8. THE CHASE"
+   },
+   {
+    "who": "bellamy",
+    "say": "Raise the black flag! Show them the skull! Let them see who we are!",
+    "cam": "two:bellamy,qm",
+    "do": [
+     [
+      "bellamy",
+      "jump"
+     ],
+     [
+      "qm",
+      "jump"
+     ]
+    ],
+    "text": "RAISE THE FLAG"
+   },
+   {
+    "who": "narr",
+    "say": "Here's something most movies get wrong. Pirates did not want to fight. A fight meant dead men and a damaged ship.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THEY AVOIDED FIGHTS"
+   },
+   {
+    "who": "narr",
+    "say": "The flag was a message. It said, give up now, and nobody gets hurt. Fight us, and it will be worse.",
+    "cam": "wide",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ],
+     [
+      "qm",
+      "turn:front"
+     ]
+    ],
+    "text": "\"SURRENDER NOW\""
+   },
+   {
+    "who": "narr",
+    "say": "Some pirates flew a red flag instead of a black one. A red flag meant no mercy at all, and ships that saw it were terrified.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "THE RED FLAG"
+   },
+   {
+    "who": "narr",
+    "say": "Most merchant captains gave up without firing a single shot. And the pirates let them live, took the cargo, and sailed on.",
+    "cam": "prop:cannon",
+    "do": [
+     [
+      "cannon",
+      "show"
+     ],
+     [
+      "cannon",
+      "bounce"
+     ]
+    ],
+    "text": "NO SHOTS FIRED"
+   },
+   {
+    "who": "you",
+    "say": "So the scariest part is the flag. Not the cannon.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "THE FLAG IS THE WEAPON"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. What can go wrong?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "9. DANGER"
+   },
+   {
+    "who": "narr",
+    "say": "Everything. Scurvy made your gums bleed. Fever killed men in a few days. And in a fight, flying splinters hurt more than the cannonballs.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SCURVY. FEVER. SPLINTERS"
+   },
+   {
+    "who": "qm",
+    "say": "There's a surgeon aboard. But his best tool is a saw.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "turn:you"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "THE SURGEON'S SAW"
+   },
+   {
+    "who": "narr",
+    "say": "Now for the boring part nobody puts in the movies. Cleaning the ship.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ]
+    ],
+    "text": "BORING WORK"
+   },
+   {
+    "who": "narr",
+    "say": "Barnacles and weeds grew on the bottom of the hull and slowed it down. So every few months, the crew pulled the ship onto a beach and scraped it by hand.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "SCRAPING BARNACLES"
+   },
+   {
+    "who": "qm",
+    "say": "Two weeks of scraping in the heat. And nobody gets an extra share for it.",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "laugh"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NO EXTRA SHARE"
+   },
+   {
+    "who": "narr",
+    "say": "But even pirates liked to have fun. Many ships carried musicians, who played fiddles and horns to keep the crew's spirits up.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "qm",
+      "happy"
+     ]
+    ],
+    "text": "PIRATE MUSIC"
+   },
+   {
+    "who": "qm",
+    "say": "And the articles say the musicians rest on Sunday. Every other day, they play when we tell them.",
+    "cam": "close:qm",
+    "do": [
+     [
+      "qm",
+      "turn:front"
+     ]
+    ],
+    "text": "MUSICIANS REST ON SUNDAY"
+   },
+   {
+    "who": "narr",
+    "say": "When they reached a port with a lot of money in their pockets, many pirates spent it all in a few weeks on food, drink and parties.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "qm",
+      "jump"
+     ]
+    ],
+    "text": "SPENT IT ALL"
+   },
+   {
+    "who": "narr",
+    "say": "A pirate's career was usually very short. Many of the famous ones were dead, hanged or gone within three years.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "3 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. The ship itself. The Whydah was built in London in 1715 as a slave ship, and this was her first trip.",
+    "cam": "overhead",
+    "do": [
+     [
+      "ship",
+      "show"
+     ],
+     [
+      "ship",
+      "spin"
+     ]
+    ],
+    "text": "1715: A SLAVE SHIP"
+   },
+   {
+    "who": "narr",
+    "say": "Pirates captured her in early 1717, south of the Bahamas. She was fast and big, about a hundred and ten feet long.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "110 FEET LONG"
+   },
+   {
+    "who": "narr",
+    "say": "The name Whydah comes from a port in West Africa, now called Ouidah. It was a place where enslaved people were loaded onto ships, and the ship was named for it.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "WHERE THE NAME COMES FROM"
+   },
+   {
+    "who": "narr",
+    "say": "They put in more cannons, raising the number from about eighteen to about twenty-eight. Now it was the flagship of a whole pirate fleet.",
+    "cam": "prop:cannon",
+    "do": [
+     [
+      "cannon",
+      "bounce"
+     ]
+    ],
+    "text": "28 CANNONS"
+   },
+   {
+    "who": "narr",
+    "say": "Historians think that roughly a third of the crew were Black men, some of them freed from slave ships, now voting equally with everyone else.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "A THIRD OF THE CREW"
+   },
+   {
+    "who": "narr",
+    "say": "So in a few short months, a young man from the English countryside had gone from a sailor to the captain of one of the richest ships on the sea.",
+    "cam": "wide",
+    "do": [
+     [
+      "bellamy",
+      "to:2,12,0"
+     ]
+    ],
+    "text": "FROM SAILOR TO CAPTAIN"
+   },
+   {
+    "who": "narr",
+    "say": "And the crew believed in him. They had a vote, they had a share, and they thought the ship would make them rich for life.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "RICH FOR LIFE"
+   },
+   {
+    "who": "narr",
+    "say": "It was a rare thing in 1717. A ship where every man had a voice, and every man got a share.",
+    "cam": "wide",
+    "do": [
+     [
+      "bellamy",
+      "turn:you"
+     ]
+    ],
+    "text": "EVERY MAN, A SHARE"
+   },
+   {
+    "who": "narr",
+    "say": "By spring, Bellamy's crew had captured more than fifty ships. And now, the legend says, he wanted to go home.",
+    "cam": "two:you,bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:bellamy"
+     ]
+    ],
+    "text": "50 SHIPS"
+   },
+   {
+    "who": "bellamy",
+    "say": "There's a girl on Cape Cod. Maria Hallett. I'll go back rich and ask her again.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "happy"
+     ]
+    ],
+    "text": "MARIA HALLETT"
+   },
+   {
+    "who": "narr",
+    "say": "That's the legend. Nobody can prove the girl was real. But the ship really did sail north, loaded down with loot.",
+    "cam": "prop:wheel",
+    "do": [
+     [
+      "wheel",
+      "spin"
+     ]
+    ],
+    "text": "HEADING FOR CAPE COD"
+   },
+   {
+    "who": "bellamy",
+    "say": "Whatever happens to this ship, remember it. We were free men, and every one of us had a vote.",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "WE HAD A VOTE"
+   },
+   {
+    "who": "narr",
+    "say": "That's the big idea behind the whole story. These were criminals. But their crews were run by votes, shares and written rules, long before most countries did the same.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "VOTES AND SHARES"
+   },
+   {
+    "who": "qm",
+    "say": "So tell me, new man. Do you sign, or do you get off my deck?",
+    "cam": "two:you,qm",
+    "do": [
+     [
+      "qm",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:qm"
+     ]
+    ],
+    "text": "SIGN OR LEAVE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. The storm. April twenty-sixth, 1717.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "11. THE STORM"
+   },
+   {
+    "who": "narr",
+    "say": "That evening, a thick fog rolled in. Then a monster nor'easter hit, one of the worst storms ever recorded in New England.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "shake"
+     ],
+     [
+      "bellamy",
+      "shake"
+     ]
+    ],
+    "text": "FOG. THEN THE STORM"
+   },
+   {
+    "who": "bellamy",
+    "say": "Take down the sails! Get us away from the beach! Now!",
+    "cam": "close:bellamy",
+    "do": [
+     [
+      "bellamy",
+      "eyes_big"
+     ]
+    ],
+    "text": "FROM THE BEACH!"
+   },
+   {
+    "who": "narr",
+    "say": "The Whydah slammed into a sandbar. The masts snapped like twigs, and the ship rolled over.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "shake"
+     ],
+     [
+      "ship",
+      "spin"
+     ]
+    ],
+    "text": "SNAP"
+   },
+   {
+    "who": "narr",
+    "say": "The beach was only about five hundred feet away. That's one and a half football fields. But the water was so cold that a strong swimmer lasted only minutes.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "500 FEET AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Of one hundred and forty-six men aboard, only two made it ashore. Thomas Davis, the carpenter, and John Julian, the pilot.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "ONLY TWO"
+   },
+   {
+    "who": "narr",
+    "say": "The boy, John King, did not. In the end, the same ship he begged to join took him down.",
+    "cam": "close:boy",
+    "do": [
+     [
+      "boy",
+      "sad"
+     ]
+    ],
+    "text": "THE BOY"
+   },
+   {
+    "who": "narr",
+    "say": "Of the nine men who lived through that night, six were hanged in Boston later that year. The carpenter, Davis, was forced aboard, and the court let him go.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SIX HANGED IN BOSTON"
+   },
+   {
+    "who": "narr",
+    "say": "And John Julian, the pilot, was sold into slavery after he survived the wreck. The ship had been a slave ship. And in the end, a man from its crew was sold as one.",
+    "cam": "two:you,boy",
+    "do": [
+     [
+      "boy",
+      "sad"
+     ],
+     [
+      "you",
+      "turn:boy"
+     ]
+    ],
+    "text": "JOHN JULIAN"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter twelve. The mystery. Over the next few days, more than a hundred bodies washed up on the beach. And almost everything the ship carried was gone.",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "hide"
+     ]
+    ],
+    "text": "WHERE IS IT ALL?"
+   },
+   {
+    "who": "narr",
+    "say": "The governor sent a captain named Cyprian Southack to save what he could. He found the ship capsized, and the sand already swallowing it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE SAND TOOK IT"
+   },
+   {
+    "who": "narr",
+    "say": "The wreck sank into the sand, and stayed there. For two hundred and sixty-seven years.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "ship",
+      "hide"
+     ]
+    ],
+    "text": "267 YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "Then, in 1984, an explorer named Barry Clifford used Southack's old map to look for it.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "1984"
+   },
+   {
+    "who": "narr",
+    "say": "It was lying in only fourteen feet of water, under five feet of sand. Searchers had been right on top of it, and had missed it for centuries.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "14 FEET DOWN"
+   },
+   {
+    "who": "narr",
+    "say": "But the pirates still had one proof to give. In 1985, divers pulled up a bronze bell, scraped off the crust, and read the words.",
+    "cam": "prop:bell",
+    "do": [
+     [
+      "bell",
+      "show"
+     ],
+     [
+      "bell",
+      "bounce"
+     ]
+    ],
+    "text": "THE BELL"
+   },
+   {
+    "who": "narr",
+    "say": "It said, The Whydah Gally, 1716. It was the first pirate ship ever positively identified.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "\"WHYDAH GALLY 1716\""
+   },
+   {
+    "who": "narr",
+    "say": "Since then, divers have brought up more than two hundred thousand pieces. Coins, cannons, pistols, buttons, even gold.",
+    "cam": "prop:chest",
+    "do": [
+     [
+      "chest",
+      "show"
+     ],
+     [
+      "chest",
+      "bounce"
+     ]
+    ],
+    "text": "200,000 PIECES"
+   },
+   {
+    "who": "narr",
+    "say": "They even found a tiny shoe, a silk stocking and a small leg bone. Scientists said it came from a child between eight and eleven. Most likely, John King.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE BOY'S SHOE"
+   },
+   {
+    "who": "narr",
+    "say": "But the real mystery is still down there. Old stories say the ship carried thirty thousand pounds of silver and ten thousand pounds of gold.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "30,000 POUNDS OF SILVER"
+   },
+   {
+    "who": "narr",
+    "say": "Even Clifford says it himself. They've never found what he calls the mother lode.",
+    "cam": "two:you,bellamy",
+    "do": [
+     [
+      "you",
+      "turn:bellamy"
+     ],
+     [
+      "bellamy",
+      "turn:front"
+     ]
+    ],
+    "text": "THE MOTHER LODE"
+   },
+   {
+    "who": "narr",
+    "say": "The treasure of the Whydah might still be buried somewhere under the sand of Cape Cod. Maybe right under the beach where families walk today.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "STILL BURIED?"
+   },
+   {
+    "who": "narr",
+    "say": "So think about it. A crew that voted for its leaders, shared the loot, and paid for every lost arm. Would you have signed the articles?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "WOULD YOU SIGN?"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments, and subscribe for more true history.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "bellamy",
+      "happy"
+     ]
+    ],
+    "text": "TELL ME BELOW"
+   }
+  ]
+ },
+ "long": {
+  "title": "Your Life at Every Rank of a Pirate Crew (1717) 🏴‍☠️",
+  "description": "Would you have signed the pirate articles? Tell me in the comments.\n\nHow did pirates really live in 1717? What did they eat, how did they get paid, who gave the orders, and what happened when the rules were broken? Follow the crew of the pirate ship Whydah, and then the storm that sank it off Cape Cod with only two survivors. At the end: a bell, a boy's shoe, and a treasure that has never been found.\n\nSources:\nhttps://www.discoverpirates.com/whydah-gally-history\nhttps://en.wikipedia.org/wiki/Whydah_Gally\nhttps://beej.us/docs/bartart.html\nhttps://www.historynewsnetwork.org/article/25989\nhttps://www.nytimes.com/1985/11/01/us/bell-confirms-that-salvors-found-pirate-ship-of-legend.html\n\n#pirates #truestory #history",
+  "tags": [
+   "pirate crew life",
+   "whydah gally",
+   "black sam bellamy",
+   "pirate ship 1717",
+   "golden age of piracy",
+   "pirate articles",
+   "how pirates lived",
+   "pirate shares and pay",
+   "john king boy pirate",
+   "cape cod shipwreck",
+   "bartholomew roberts",
+   "pirate treasure",
+   "true story animated",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "2 OF 146 LIVED",
+  "localizations": {
+   "es": {
+    "title": "Tu vida en cada rango de una tripulación pirata (1717) 🏴‍☠️",
+    "description": "¿Habrías firmado los artículos piratas? Cuéntamelo en los comentarios.\n\nCómo vivían de verdad los piratas en 1717: qué comían, cómo cobraban, quién mandaba. La historia del barco pirata Whydah y de la tormenta que lo hundió en Cape Cod con solo dos supervivientes."
+   },
+   "pt": {
+    "title": "Sua vida em cada posto de uma tripulação pirata (1717) 🏴‍☠️",
+    "description": "Você teria assinado os artigos dos piratas? Conte nos comentários.\n\nComo os piratas viviam de verdade em 1717: o que comiam, como eram pagos, quem mandava. A história do navio pirata Whydah e da tempestade que o afundou em Cape Cod, com apenas dois sobreviventes."
+   },
+   "ar": {
+    "title": "حياتك في كل رتبة من طاقم القراصنة (1717) 🏴‍☠️",
+    "description": "هل كنت ستوقّع على مواد القراصنة؟ أخبرني في التعليقات.\n\nكيف عاش القراصنة حقًا عام 1717: ماذا أكلوا، وكيف قبضوا أجورهم، ومن كان يصدر الأوامر. قصة سفينة القراصنة ويداه والعاصفة التي أغرقتها قرب كيب كود ولم ينجُ منها سوى رجلين."
+   },
+   "fr": {
+    "title": "Votre vie à chaque rang d'un équipage de pirates (1717) 🏴‍☠️",
+    "description": "Auriez-vous signé les articles des pirates ? Dites-le-moi en commentaire.\n\nComment vivaient vraiment les pirates en 1717 : ce qu'ils mangeaient, comment ils étaient payés, qui commandait. L'histoire du navire pirate Whydah et de la tempête qui l'a coulé au large de Cape Cod, avec seulement deux survivants."
+   },
+   "ja": {
+    "title": "海賊船の乗組員、全階級でのあなたの暮らし(1717年) 🏴‍☠️",
+    "description": "あなたは海賊の規約にサインしますか?コメントで教えてください。\n\n1717年の海賊は本当はどう暮らしていたのか。食事、報酬、命令を出す人。海賊船ワイダ号と、ケープコッドで船を沈め、生存者をわずか2人にした嵐の物語。"
+   },
+   "ko": {
+    "title": "해적 선원의 모든 계급, 당신의 삶 (1717) 🏴‍☠️",
+    "description": "당신은 해적의 규약에 서명했을까요? 댓글로 알려 주세요.\n\n1717년 해적들은 실제로 어떻게 살았을까요? 먹는 것, 보수, 명령하는 사람. 해적선 와이다호와 케이프코드에서 배를 침몰시켜 단 두 명만 살아남은 폭풍 이야기."
+   },
+   "de": {
+    "title": "Dein Leben auf jedem Rang einer Piratencrew (1717) 🏴‍☠️",
+    "description": "Hättest du die Piratenregeln unterschrieben? Sag es mir in den Kommentaren.\n\nWie Piraten 1717 wirklich lebten: was sie aßen, wie sie bezahlt wurden, wer das Kommando hatte. Die Geschichte des Piratenschiffs Whydah und des Sturms, der es vor Cape Cod versenkte, nur zwei Männer überlebten."
+   }
+  },
+  "thumb_beat": 82
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "ONLY TWO LIVED",
+   "title": "2 of 146 pirates survived this night ⚓ #shorts",
+   "description": "April 1717: the pirate ship Whydah hit a sandbar off Cape Cod in a monster storm. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "pirates",
+    "whydah",
+    "cape cod",
+    "shipwreck"
+   ],
+   "localizations": {
+    "es": {
+     "title": "2 de 146 piratas sobrevivieron esa noche ⚓ #shorts",
+     "description": "Abril de 1717: el barco pirata Whydah chocó con un banco de arena en Cape Cod. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "2 de 146 piratas sobreviveram àquela noite ⚓ #shorts",
+     "description": "Abril de 1717: o navio pirata Whydah bateu num banco de areia em Cape Cod. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "نجا رجلان فقط من 146 قرصانًا تلك الليلة ⚓ #shorts",
+     "description": "أبريل 1717: اصطدمت سفينة القراصنة ويداه بحاجز رملي قرب كيب كود. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "2 pirates sur 146 ont survécu à cette nuit ⚓ #shorts",
+     "description": "Avril 1717 : le navire pirate Whydah s'échoue sur un banc de sable à Cape Cod. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "146人の海賊のうち生き残ったのは2人だけ ⚓ #shorts",
+     "description": "1717年4月、海賊船ワイダ号はケープコッドで砂州に乗り上げました。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "해적 146명 중 단 2명만 살아남은 밤 ⚓ #shorts",
+     "description": "1717년 4월, 해적선 와이다호가 케이프코드 모래톱에 걸렸습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Nur 2 von 146 Piraten überlebten diese Nacht ⚓ #shorts",
+     "description": "April 1717: Das Piratenschiff Whydah läuft vor Cape Cod auf eine Sandbank. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 23,
+   "dur": 28,
+   "top": "LOST A LIMB? THE CREW PAID",
+   "title": "Pirate crews paid you for a lost leg 💰 #shorts",
+   "description": "Pirates split loot by shares, and some crews paid for a lost arm or leg. A real pirate insurance plan. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "pirates",
+    "pirate pay",
+    "bartholomew roberts",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Las tripulaciones piratas pagaban por una pierna perdida 💰 #shorts",
+     "description": "Los piratas repartían el botín en partes, y algunos pagaban por un brazo o una pierna perdidos. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Tripulações piratas pagavam por uma perna perdida 💰 #shorts",
+     "description": "Os piratas dividiam o butim em partes, e alguns pagavam por um braço ou perna perdidos. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "طواقم القراصنة كانت تدفع لك ثمن ساق مفقودة 💰 #shorts",
+     "description": "كان القراصنة يقسمون الغنائم بالحصص، وبعضهم يدفع تعويضًا عن ذراع أو ساق مفقودة. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Les équipages pirates payaient pour une jambe perdue 💰 #shorts",
+     "description": "Les pirates partageaient le butin en parts, et certains payaient un bras ou une jambe perdus. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "海賊は足を失うと報酬をもらえた 💰 #shorts",
+     "description": "海賊は略奪品を分け前で分け、腕や足を失った仲間にお金を払う船もありました。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "해적단은 다리를 잃으면 보상금을 줬다 💰 #shorts",
+     "description": "해적들은 약탈품을 몫으로 나눴고, 팔이나 다리를 잃으면 보상하는 배도 있었습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Piratencrews zahlten für ein verlorenes Bein 💰 #shorts",
+     "description": "Piraten teilten die Beute in Anteile, manche zahlten für einen verlorenen Arm oder ein Bein. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "rolling 6/8 sea-shanty feel: low accordion, hand drum and creaking-rope percussion, major key with a dark storm swell at chapter 11 (not the prairie fiddle of the last video)",
+  "palette": "teal sea at dusk, orange lantern light, storm grey in the last chapters",
+  "opening_shot": "ship-model macro (prop:ship) with a drifting lantern",
+  "camera_set": "overhead chart cuts, close-ups on hands and props, two-shots for dialogue; wide only at chapter openers",
+  "transitions": "hard cuts, quick whip to the sandbar crash, slow push-in on the bell",
+  "caption_style": "white block caps with a rope-style underline, chapter number first"
+ }
+}
