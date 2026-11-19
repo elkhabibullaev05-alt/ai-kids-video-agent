@@ -1,0 +1,1156 @@
+{
+ "id": "20261119-2-max-heard-vet",
+ "plot": "On the first snow day Max hears the word 'vet' and spends the morning hiding from Grandma's 10 A.M. appointment (orange-in-the-snow camouflage, Dog the double agent, the too-healthy act, a salmon-treat trap, a slippery shed roof) until he hides inside the carrier itself and learns the visit was Dog's yearly shots all along (planted by Dog's 'I've been very good' line); Max helps a panicking Dog, then sneezes from all the snow and both ride to the vet in one carrier.",
+ "script": {
+  "title": "Max Heard the Word Vet",
+  "set": {
+   "place": "snow",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "carrier",
+    "type": "box",
+    "color": [
+     0.55,
+     0.6,
+     0.68
+    ],
+    "at": [
+     -4.0,
+     10.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "treat",
+    "type": "star",
+    "color": [
+     0.98,
+     0.55,
+     0.45
+    ],
+    "at": [
+     -4.0,
+     9.6,
+     0.4
+    ],
+    "visible": false,
+    "scale": 0.25
+   },
+   {
+    "id": "shed",
+    "type": "box",
+    "color": [
+     0.5,
+     0.32,
+     0.2
+    ],
+    "at": [
+     -9.0,
+     16.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.8
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "Nope! Nope! I heard the word! I'm out of here!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:3,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max! Come back, sweetheart! It's just a little visit!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-3,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A little visit to the vet? I saw your calendar!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:5,10"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "VET: 10:00 A.M.",
+    "cam": "prop:carrier",
+    "hold": 1.2,
+    "do": [
+     [
+      "carrier",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "First snow day. One vet visit. Can Max hide until ten?",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Somebody has a check-up today. Somebody's been very good this week.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me! I've been very good! The goodest boy on the street!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "enter:right"
+     ],
+     [
+      "dog",
+      "to:2,8"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Yes, you have, Dog. Now help me find Max, please.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max's plan: blend into the snow. Become one with winter.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Lie flat. Think white thoughts. I am a snowflake.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, you're bright orange. The only orange thing for miles.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:4,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh! I'm a very warm snowflake. A sunset snowflake.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "I can see you from the kitchen window, sweetheart.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then close the curtains, please. Respect my privacy.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, Max. I'm on your side. Totally on your side.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you. Finally, somebody loyal. Don't tell anyone I'm here.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grandma! He's by the fence! Right here! I'm helping!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! Whose side are you on?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-6,14"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "The side with the treats. It's always been that side.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plan two. Prove you're far too healthy for a vet.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Look, Grandma! Jumping jacks! Strong heart! Shiny fur!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And ten push-ups! Okay, one push-up. A very good one.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, that's lovely. The vet will love to see that.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait, no! I take it back! I feel terrible! Very sick!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "We leave in twenty minutes, Max. The carrier's by the door.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "carrier",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Twenty minutes? I once hid under the sofa for two days.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma sets a trap. One salmon treat. Inside the carrier.",
+    "cam": "prop:carrier",
+    "do": [
+     [
+      "treat",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:-6,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A trap. Obviously. I'm insulted. Is it the good salmon?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It's the good salmon. I checked. Twice. Maybe three times.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:-2,7"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Long arm. Grab and go. Like a professional.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max reaches in. Takes the treat. Backs out. Very slowly.",
+    "cam": "prop:carrier",
+    "do": [
+     [
+      "treat",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ha! Not today, plastic box! Too fast for you!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "He's quicker than he looks. Dog, door duty, please.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Plan three. Go high. Nobody ever looks up.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-8,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The shed roof. Ten feet up. Perfect. Untouchable.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The roof is covered in fresh snow. Very slippery snow.",
+    "cam": "prop:shed",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm fine. I'm on the ground now. That was the plan.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "flat_roof"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Do it again! Do it again! That was amazing!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You slid down like a little orange sled!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-6,13"
+     ],
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird, write that down. Max invented sledding. Today.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Five minutes, Max. Grandma's putting her big coat on.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Five minutes. I need a place nobody would ever check.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max hides in the one place no cat would ever go.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,9.5"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the vet carrier.",
+    "cam": "prop:carrier",
+    "do": [
+     [
+      "carrier",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Genius. They'll search the whole yard. Nobody checks the carrier.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max? Max! Where did he go? Max!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:3,11"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Coat's on, keys are in my hand. Let's go, my dear.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, wait! I'm not coming! I'm not even here!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max? Why are you sitting in Dog's carrier?",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog's carrier? But my vet visit? At ten o'clock?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Your visit? Sweetheart, ten o'clock is Dog's yearly shots.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Somebody's been very good. Somebody gets the check-up.",
+    "cam": "prop:carrier",
+    "do": [
+     [
+      "carrier",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Me? Shots? The pointy ones? I take back very good!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And now Dog is the one running across the snow.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:8,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh, this is fun from this side. Dog! Come out, buddy!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,11"
+     ],
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "No! I'm a snowflake! I'm thinking white thoughts!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You're brown, buddy. The only brown thing for miles.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:6,13"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Also, your tail is wagging. Snowflakes don't wag.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:7,15"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hey. It's just a little visit. I'll be right there with you.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You'd come? Even after I told on you by the fence?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Especially after that. I want to see your face at the needle.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That's the nicest mean thing anyone has ever said to me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And then, from the cat who rolled in snow all morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ah... ah... ah-choo!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh dear. Good thing the vet has room for two.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ],
+     [
+      "carrier",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No. No, no, no. I was the hero. Heroes don't get check-ups.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Lesson: never hide in the snow from a vet.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Two pets. One carrier. One very long car ride.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:-4,9.5"
+     ],
+     [
+      "dog",
+      "to:-3,9.5"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Scoot over, buddy. Your tail is in my ear.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Your whole body is in my everything.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hush, both of you. Nobody gets a treat at this rate.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next time: the vet's scale. And it remembers Max's diet.",
+    "cam": "prop:carrier",
+    "do": [
+     [
+      "carrier",
+      "bounce"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Heard 'Vet' on the First Snow Day 🙀",
+  "description": "\"I heard one word through the door. And I was gone.\" 🐱\nFirst snow day, vet appointment at 10. Max tries snow camouflage while being bright orange, Dog swears he's on his side, a salmon treat is a trap and the shed roof is slippery… But whose appointment is it, really?\nDoes YOUR pet know when it's vet day? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "cat vet visit",
+   "cat hiding",
+   "first snow",
+   "cat in snow",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "max the curious cat",
+   "pet comedy",
+   "vet day"
+  ],
+  "thumb_text": "NOT THE VET!",
+  "thumb_beat": 49,
+  "localizations": {
+   "es": {
+    "title": "Max escuchó la palabra «veterinario» en la primera nevada 🙀",
+    "description": "\"Oí una sola palabra a través de la puerta. Y me fui.\" 🐱\nPrimer día de nieve, una cita en el veterinario a las 10. Max intenta camuflarse siendo naranja en la nieve, Dog jura estar de su lado, una golosina de salmón es una trampa y el techo del cobertizo resbala… Pero ¿de quién es la cita en realidad?\n¿Tu mascota también sabe cuándo toca ir al veterinario? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "pt": {
+    "title": "Max ouviu a palavra 'veterinário' na primeira neve 🙀",
+    "description": "\"Ouvi uma palavra através da porta. E sumi.\" 🐱\nPrimeiro dia de neve, consulta no veterinário às 10. Max tenta se camuflar sendo laranja na neve, Dog jura estar do lado dele, um petisco de salmão é uma armadilha e o telhado do galpão escorrega… Mas de quem é a consulta, afinal?\nSeu pet também sabe quando é dia de veterinário? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "ar": {
+    "title": "سمع ماكس كلمة «الطبيب البيطري» في أول يوم ثلج 🙀",
+    "description": "\"سمعتُ كلمة واحدة من خلف الباب. واختفيت.\" 🐱\nأول يوم ثلج، وموعد عند الطبيب البيطري في العاشرة. يحاول ماكس البرتقالي أن يختبئ في الثلج الأبيض، ويقسم دوغ أنه في صفّه، وقطعة السلمون فخّ، وسطح السقيفة زلق… لكن موعد من هذا في الحقيقة؟\nهل يعرف حيوانك الأليف متى يحين موعد الطبيب البيطري؟ 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "fr": {
+    "title": "Max a entendu le mot « véto » le jour de la première neige 🙀",
+    "description": "« J'ai entendu un seul mot à travers la porte. Et j'ai filé. » 🐱\nPremier jour de neige, rendez-vous chez le véto à 10 h. Max tente le camouflage en étant orange dans la neige, Dog jure être de son côté, une friandise au saumon est un piège et le toit de l'abri glisse… Mais à qui est ce rendez-vous, au fait ?\nTon animal sait-il aussi quand c'est le jour du véto ? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "ja": {
+    "title": "初雪の日、マックスは「動物病院」と聞いてしまった 🙀",
+    "description": "「ドア越しにひと言だけ聞こえた。だから逃げた」🐱\n初雪の日、10時に動物病院の予約。オレンジ色なのに雪にまぎれようとするマックス、「味方だよ」と言うドッグ、サーモンのおやつのワナ、すべる物置の屋根…でも、その予約は本当は誰の？\nあなたのペットも病院の日がわかりますか？👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "ko": {
+    "title": "첫눈 오는 날, 맥스가 '동물병원'이라는 말을 들었다 🙀",
+    "description": "\"문 너머로 단어 하나 들었어. 그리고 도망쳤지.\" 🐱\n첫눈 오는 날, 10시 동물병원 예약. 주황색인데 눈 속에 숨으려는 맥스, \"난 네 편이야\"라는 도그, 연어 간식 함정, 미끄러운 창고 지붕… 그런데 그 예약, 진짜 누구 거야?\n여러분의 반려동물도 병원 가는 날을 알아채나요? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   },
+   "de": {
+    "title": "Max hat am ersten Schneetag das Wort „Tierarzt“ gehört 🙀",
+    "description": "„Ich hab ein Wort durch die Tür gehört. Und war weg.“ 🐱\nErster Schneetag, Tierarzttermin um 10. Max will sich als orange Katze im Schnee tarnen, Dog schwört, auf seiner Seite zu sein, ein Lachs-Leckerli ist eine Falle und das Schuppendach ist glatt … Aber wessen Termin ist es eigentlich?\nMerkt dein Haustier auch, wenn ein Tierarzttag ansteht? 👇\n#MaxTheCuriousCat #FirstSnow #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 8,
+   "dur": 16,
+   "top": "HIDE FROM THE VET",
+   "title": "Hiding From the Vet While Orange 🙀 #shorts",
+   "description": "Think white thoughts. I am a snowflake. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat in snow",
+    "vet day"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Esconderse del veterinario siendo naranja 🙀 #shorts",
+     "description": "Piensa en cosas blancas. Soy un copo de nieve. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Fugindo do veterinário sendo laranja 🙀 #shorts",
+     "description": "Pense em coisas brancas. Sou um floco de neve. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الاختباء من البيطري وأنت برتقالي 🙀 #shorts",
+     "description": "فكّر بأفكار بيضاء. أنا ندفة ثلج. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Se cacher du véto quand on est orange 🙀 #shorts",
+     "description": "Pense blanc. Je suis un flocon de neige. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "オレンジ色で雪に隠れる猫 🙀 #shorts",
+     "description": "白いことを考えろ。ぼくは雪のひとひら。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "주황색으로 눈 속에 숨기 🙀 #shorts",
+     "description": "하얀 생각을 하자. 나는 눈송이다. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Orange im Schnee vor dem Tierarzt verstecken 🙀 #shorts",
+     "description": "Denk weiße Gedanken. Ich bin eine Schneeflocke. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 14,
+   "dur": 15,
+   "top": "\"I'M ON YOUR SIDE\"",
+   "title": "My Dog Said He Was on My Side 💀 #shorts",
+   "description": "The side with the treats. Always. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat and dog",
+    "snitch"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Mi perro dijo que estaba de mi lado 💀 #shorts",
+     "description": "Del lado de las golosinas. Siempre. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Meu cachorro disse que estava do meu lado 💀 #shorts",
+     "description": "Do lado dos petiscos. Sempre. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "كلبي قال إنه في صفّي 💀 #shorts",
+     "description": "في صفّ الحلوى. دائمًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Mon chien a dit qu'il était de mon côté 💀 #shorts",
+     "description": "Du côté des friandises. Toujours. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "犬が「味方だよ」と言った結果 💀 #shorts",
+     "description": "おやつの味方。いつだって。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "우리 개가 내 편이라고 했다 💀 #shorts",
+     "description": "간식 편이었다. 언제나. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Mein Hund sagte, er ist auf meiner Seite 💀 #shorts",
+     "description": "Auf der Seite der Leckerlis. Immer. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1221 @@
+{
+ "id": "20261119-1-what-did-max-buy",
+ "plot": "At sunset a box bigger than the sofa arrives for Max, who ordered something on Grandma's tablet at 2 A.M. and can't remember what; tape, bubble wrap, packing peanuts and a 40-page manual each go wrong while Grandma's return pickup counts down, and the twist (planted by the '1:12 scale' line) is that the five-floor Sky Palace is cupcake-sized, so Mouse moves in and Max falls in love with the empty box.",
+ "script": {
+  "title": "What Did Max Buy Last Night?",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bigbox",
+    "type": "box",
+    "color": [
+     0.72,
+     0.52,
+     0.3
+    ],
+    "at": [
+     1.0,
+     11.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "tablet",
+    "type": "box",
+    "color": [
+     0.15,
+     0.15,
+     0.2
+    ],
+    "at": [
+     -1.0,
+     7.0,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   },
+   {
+    "id": "manual",
+    "type": "box",
+    "color": [
+     0.96,
+     0.96,
+     0.92
+    ],
+    "at": [
+     0.0,
+     9.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.35
+   },
+   {
+    "id": "gift",
+    "type": "box",
+    "color": [
+     0.8,
+     0.62,
+     0.4
+    ],
+    "at": [
+     1.0,
+     9.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.5
+   },
+   {
+    "id": "tower",
+    "type": "trophy",
+    "color": [
+     0.6,
+     0.35,
+     0.75
+    ],
+    "at": [
+     1.5,
+     9.5,
+     0.3
+    ],
+    "visible": false,
+    "scale": 0.3
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "It's here! It's here! The thing I ordered is finally here!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Whoa, whoa. What thing? What did you order?",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter:left"
+     ],
+     [
+      "dog",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No idea. I ordered it at two in the morning.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "ORDER PLACED: 2:07 A.M.",
+    "cam": "prop:bigbox",
+    "hold": 1.2,
+    "do": [
+     [
+      "bigbox",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "A box bigger than the sofa. What did Max buy last night?",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You don't remember? Not even a tiny little bit?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I remember feeling very confident. And very, very sleepy.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The delivery guy needed two people to carry it in!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Two people! It must be amazing. Or a piano.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step one. Open the box. With claws.",
+    "cam": "prop:bigbox",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Easy. Cats were born for this. Watch the master work.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The packing tape has other plans.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My paw is stuck. Both paws. Now my whiskers are stuck.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hold still, buddy. I'll pull it off with my teeth.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now there are two of them stuck to one box.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "This is fine. We live here now. This is our home.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Let me check Grandma's tablet. The order page is still open.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:-1,8"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Sky Palace. Five floors. A hammock. A window with a view.",
+    "cam": "prop:tablet",
+    "do": [
+     [
+      "tablet",
+      "show"
+     ],
+     [
+      "tablet",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A palace! Past me is a genius. I love past me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "It also says scale one to twelve. What does that mean?",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Twelve times better, obviously. Everybody knows that.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Huh. I thought it meant something else. But okay.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then, a key in the door. Grandma is home early.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-5,9"
+     ],
+     [
+      "tablet",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Who ordered a box bigger than my sofa?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Define ordered. Define box. Define sofa.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, your paw prints are all over my tablet.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "If it's something silly, it goes back. Tonight.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's not silly! It's a palace! It's basically real estate!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The courier comes back at sunset for returns. Ten minutes.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "text": "RETURN PICKUP: 10 MINUTES",
+    "cam": "prop:bigbox",
+    "hold": 1.0,
+    "do": [
+     [
+      "bigbox",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma cuts the tape. The box opens. Bubble wrap.",
+    "cam": "prop:bigbox",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Bubble wrap! My favourite thing! Can I pop just one?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He pops all of them. In four seconds.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Is it fireworks? Are we under attack by popcorn?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:4,12"
+     ],
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog! That was our only packing material!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then we're unpacking faster! You're welcome! Again!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next, packing peanuts. Max dives in to find his palace.",
+    "cam": "prop:bigbox",
+    "do": [
+     [
+      "max",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I can't see anything! It's peanuts all the way down!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max, are you okay? We can only see your tail.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I live in here now. Tell Grandma I loved her.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Can I have his window spot? Asking for a friend. Me.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Out you come, dramatic boy. Eight minutes left.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "At the very bottom, the instructions. Forty pages.",
+    "cam": "prop:manual",
+    "do": [
+     [
+      "manual",
+      "show"
+     ],
+     [
+      "manual",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Page one says: assemble with two adults.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog. Quick question. Are you an adult?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm four. In dog years, that's like a lot of fours.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Good enough. Page two. Do not let the cat help.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Even the instructions know you, Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Page three is just a drawing of a crying cat.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The courier van! It's turning onto our street right now!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-3,13"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Last chance, Max. Show me this palace, or it goes back.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's in here somewhere! Five floors don't just hide!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,10"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the big box, there is a smaller box.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "manual",
+      "hide"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside that box, an even smaller box.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It's boxes all the way down. Buddy, you bought boxes.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "No! There's a palace in there. I can feel it.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And there it is. The Sky Palace. Five whole floors.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "show"
+     ],
+     [
+      "gift",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "It is exactly the size of a cupcake.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "tower",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One to twelve. It meant twelve times smaller!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well. It's not silly. It's very, very small.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Five floors. A hammock. A view. Is it still available?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse, I have never sold real estate this fast.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse moves in. It fits him perfectly.",
+    "cam": "prop:tower",
+    "do": [
+     [
+      "mouse",
+      "to:1.5,10"
+     ],
+     [
+      "tower",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I have a balcony! I've never had a balcony!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I visit? I promise I'll only sit on one floor.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "The courier is at the door! So what's going back?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Nothing, I suppose. Mouse has already signed the lease.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And Max? Max climbs back into the giant empty box.",
+    "cam": "prop:bigbox",
+    "do": [
+     [
+      "max",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh. Oh no. This is the best thing I've ever owned.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "You paid for a palace, and you love the box.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I paid for a palace. The box was free. I won.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Lesson learned, everyone. Read the size before you click buy.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! The tablet says you bought something else. At three A.M.!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:0,12"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Three A.M.? Hide the tablet. Hide everybody. Hide me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tomorrow, a second box arrives. And it's even bigger.",
+    "cam": "prop:bigbox",
+    "do": [
+     [
+      "bigbox",
+      "bounce"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "What Did Max Buy Last Night? 📦",
+  "description": "\"I ordered it at 2 A.M. I have no idea what it is.\" 🐱\nA box bigger than the sofa shows up at the house. Packing tape on the whiskers, bubble wrap popped in four seconds, a sea of packing peanuts, a 40-page manual… and ten minutes before it all goes back.\nWhat's the weirdest thing YOU ever bought at 2 A.M.? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "online shopping",
+   "late night shopping",
+   "cat loves box",
+   "unboxing fail",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "max the curious cat",
+   "pet comedy",
+   "expectation vs reality"
+  ],
+  "thumb_text": "2 A.M. ORDER?!",
+  "thumb_beat": 58,
+  "localizations": {
+   "es": {
+    "title": "¿Qué compró Max anoche? 📦",
+    "description": "\"Lo pedí a las 2 de la mañana. No tengo ni idea de qué es.\" 🐱\nUna caja más grande que el sofá llega a la casa. Cinta adhesiva pegada a los bigotes, plástico de burbujas explotado en cuatro segundos, un mar de bolitas de relleno, 40 páginas de instrucciones… y diez minutos antes de que se la lleven de vuelta.\n¿Qué es lo más raro que has comprado de madrugada? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "pt": {
+    "title": "O que o Max comprou ontem à noite? 📦",
+    "description": "\"Eu pedi às 2 da manhã. Não faço ideia do que é.\" 🐱\nUma caixa maior que o sofá chega em casa. Fita grudada nos bigodes, plástico bolha estourado em quatro segundos, um mar de isopor, 40 páginas de instruções… e dez minutos antes de a caixa ser devolvida.\nQual foi a compra mais estranha que você fez de madrugada? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "ar": {
+    "title": "ماذا اشترى ماكس الليلة الماضية؟ 📦",
+    "description": "\"طلبته في الثانية فجرًا. ولا أعرف ما هو.\" 🐱\nيصل إلى البيت صندوق أكبر من الأريكة. شريط لاصق على الشوارب، وفقاعات تغليف تنفجر في أربع ثوانٍ، وبحر من حشوات التغليف، وتعليمات من 40 صفحة… وعشر دقائق فقط قبل إعادته.\nما أغرب شيء اشتريته في منتصف الليل؟ 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "fr": {
+    "title": "Qu'est-ce que Max a acheté cette nuit ? 📦",
+    "description": "« Je l'ai commandé à 2 h du matin. Aucune idée de ce que c'est. » 🐱\nUn carton plus grand que le canapé arrive à la maison. Du scotch collé aux moustaches, du papier bulle éclaté en quatre secondes, une mer de chips de calage, 40 pages de notice… et dix minutes avant le retour du colis.\nQuel est ton achat de 2 h du matin le plus bizarre ? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "ja": {
+    "title": "マックスは昨夜なにを買った？ 📦",
+    "description": "「夜中の2時に注文した。なにを買ったか覚えてない」🐱\nソファより大きい箱が家に届いた。ヒゲにくっつくガムテープ、4秒で全部つぶされたプチプチ、緩衝材の海、40ページの説明書…そして返品まであと10分。\nあなたが深夜に買った一番ヘンなものは？👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "ko": {
+    "title": "맥스는 어젯밤 뭘 샀을까? 📦",
+    "description": "\"새벽 2시에 주문했어. 뭔지 하나도 기억 안 나.\" 🐱\n소파보다 큰 상자가 집에 도착한다. 수염에 붙은 테이프, 4초 만에 다 터진 뽁뽁이, 완충재의 바다, 40쪽짜리 설명서… 그리고 반품까지 남은 시간 10분.\n새벽에 산 물건 중 제일 이상한 건 뭐였나요? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   },
+   "de": {
+    "title": "Was hat Max letzte Nacht gekauft? 📦",
+    "description": "„Ich hab's um 2 Uhr nachts bestellt. Keine Ahnung, was es ist.“ 🐱\nEin Karton, größer als das Sofa, kommt an. Klebeband an den Schnurrhaaren, Luftpolsterfolie in vier Sekunden zerplatzt, ein Meer aus Füllflocken, 40 Seiten Anleitung … und zehn Minuten, bevor alles zurückgeht.\nWas war dein seltsamster Kauf um 2 Uhr nachts? 👇\n#MaxTheCuriousCat #OnlineShopping #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 9,
+   "dur": 17,
+   "top": "OPEN THE BOX. WITH CLAWS.",
+   "title": "Cat vs Packing Tape 💀 #shorts",
+   "description": "Step one: open the box. With claws. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat vs tape",
+    "unboxing"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Gato contra cinta de embalar 💀 #shorts",
+     "description": "Paso uno: abrir la caja. Con garras. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Gato contra fita adesiva 💀 #shorts",
+     "description": "Passo um: abrir a caixa. Com as garras. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قطّ ضد شريط التغليف 💀 #shorts",
+     "description": "الخطوة الأولى: افتح الصندوق. بالمخالب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Chat contre scotch d'emballage 💀 #shorts",
+     "description": "Étape un : ouvrir le carton. Avec les griffes. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "猫 vs ガムテープ 💀 #shorts",
+     "description": "ステップ1：箱を開ける。ツメで。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "고양이 vs 포장 테이프 💀 #shorts",
+     "description": "1단계: 상자를 연다. 발톱으로. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Katze gegen Paketklebeband 💀 #shorts",
+     "description": "Schritt eins: Karton öffnen. Mit Krallen. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 42,
+   "dur": 16,
+   "top": "ASSEMBLE WITH TWO ADULTS",
+   "title": "Page 2: Do Not Let the Cat Help 😭 #shorts",
+   "description": "Step one: two adults. Problem: there's only a dog. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat and dog",
+    "instructions"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Página 2: No dejes que el gato ayude 😭 #shorts",
+     "description": "Paso uno: dos adultos. Problema: solo hay un perro. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Página 2: Não deixe o gato ajudar 😭 #shorts",
+     "description": "Passo um: dois adultos. Problema: só tem um cachorro. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الصفحة 2: لا تدع القطّ يساعد 😭 #shorts",
+     "description": "الخطوة الأولى: شخصان بالغان. المشكلة: لدينا كلب واحد فقط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Page 2 : Ne laissez pas le chat aider 😭 #shorts",
+     "description": "Étape un : deux adultes. Problème : il n'y a qu'un chien. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "2ページ目：猫に手伝わせないこと 😭 #shorts",
+     "description": "組み立ては大人2人で。問題：犬が1匹しかいない。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "2쪽: 고양이가 돕지 못하게 하세요 😭 #shorts",
+     "description": "조립은 성인 2명. 문제: 개 한 마리뿐. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Seite 2: Lass die Katze nicht helfen 😭 #shorts",
+     "description": "Schritt eins: zwei Erwachsene. Problem: Es gibt nur einen Hund. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
