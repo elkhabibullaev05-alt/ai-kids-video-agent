@@ -411,6 +411,12 @@ def do_uploads(st):
         after = None
         if it["kind"] == "short" and (res.get("long") or {}).get("publish_at"):
             after = dt.datetime.fromisoformat(res["long"]["publish_at"].replace("Z", "+00:00")) + dt.timedelta(minutes=20)
+        if it["kind"] == "short" and norm_title(it.get("title")) in uploaded_titles():
+            # 2026-11-20 watchdog: Milo ep005/ep008 Shorts were uploaded twice (pack re-rendered after a rejected long),
+            # e.g. "The Sky Turned Green…" on 11-18 and again 11-23. A Short whose title is already on the channel is skipped.
+            log("skip duplicate Short (title already uploaded):", it.get("title"))
+            st["pending"].pop(0); save_state(st)
+            continue
         when = free_slot(st, it["kind"], after)
         if "gemini" not in it and os.path.exists(it["file"]) and not it.get("loop_seconds") and not CFG.get("no_rek"):
             # 2026-11-16 watchdog: Calm Rain's multi-hour long hit the 1800 s proxy-ffmpeg timeout here, the exception
