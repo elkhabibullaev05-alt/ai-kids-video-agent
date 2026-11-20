@@ -1,0 +1,1069 @@
+{
+ "id": "20261120-1-who-saved-bup-from-the-fire",
+ "plot": "Monday night in the pantry Lolly scrubs the sesame seeds off Bup and finds a round black burn mark on his back the size of Crispy, so everyone suspects Crispy burned him; Crispy threatens to leave for good and hides behind the flour bin, Bup's one try to drag him out ends with Pim falling into the flour and finding Walter's old tin, whose 1976 newspaper reveals the twist — Bup was the loaf who carried the little burnt roll Crispy out of the fire, the mark is from saving him; Crispy admits he hid out of guilt, Bup keeps his oldest friend, and the last line says the pot that started the fire had three dents like eyes.",
+ "script": {
+  "title": "Who Saved Bup From the Bakery Fire?",
+  "set": {
+   "place": "pantry",
+   "time": "night"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "box",
+    "type": "box",
+    "color": [
+     0.62,
+     0.45,
+     0.28
+    ],
+    "on": null,
+    "at": [
+     -5,
+     12,
+     0
+    ],
+    "visible": false,
+    "scale": 1.0
+   },
+   {
+    "id": "bin",
+    "type": "box",
+    "color": [
+     0.95,
+     0.94,
+     0.9
+    ],
+    "on": null,
+    "at": [
+     10,
+     16,
+     0
+    ],
+    "visible": true,
+    "scale": 1.3
+   },
+   {
+    "id": "tin",
+    "type": "box",
+    "color": [
+     0.35,
+     0.33,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     9,
+     13,
+     0.2
+    ],
+    "visible": false,
+    "scale": 0.6
+   }
+  ],
+  "beats": [
+   {
+    "who": "bup",
+    "say": "Crispy, stop rolling away! What fire? Tell me what happened!",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:-2,9"
+     ],
+     [
+      "crispy",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Not tonight, Bup. Some fires are better left cold.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:8,12"
+     ],
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "text": "WHO SAVED BUP?",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pim",
+      "to:-4,8"
+     ],
+     [
+      "zeek",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:3,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Monday night. The pantry. Bup still has sesame seeds stuck everywhere.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "On the floor sits Mom's box from the old bakery.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "appear"
+     ],
+     [
+      "box",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Hold still, seed head. I'm scrubbing you clean for the window.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Ow! Gentle! My crust is fifty years old, apparently.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly scrubs his back. Then she stops scrubbing.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup. There's a black mark on your back. A round one.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "text": "A BURN MARK?!",
+    "cam": "close:bup",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fact. That mark is exactly the size of Crispy.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "C-Crispy burned Bup? Our Crispy? The quiet one?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,10"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Crispy? He warms our toes every night. He'd never hurt anyone.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the dark corner, two ember eyes look away.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, did you do this to me? Is that why you hide?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:3,11"
+     ],
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Ask me again, and I leave this house. For good.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "text": "CRISPY IS LEAVING?",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "crispy",
+      "to:9,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy rolls behind the big flour bin. Into the darkest corner.",
+    "cam": "prop:bin",
+    "do": [
+     [
+      "crispy",
+      "to:10,15"
+     ],
+     [
+      "bin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Great. Now our grumpy rock is sulking behind the flour.",
+    "cam": "two:lolly,zeek",
+    "do": [
+     [
+      "lolly",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "If he leaves, I'll never know what happened that night.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Then we need evidence. Mom's bakery box. Somebody climb in.",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "zeek",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "N-not me. Old boxes have spiders. And memories. Mostly spiders.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Bup has one idea. He marches to the flour bin.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:8,14"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy! Out! I'm the leader, and that's an order!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy doesn't move. Bup pushes. Bup slips. Bup wobbles on the edge.",
+    "cam": "prop:bin",
+    "do": [
+     [
+      "bup",
+      "to:9,13"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim jumps to catch him. And lands headfirst in the flour.",
+    "cam": "two:pim,bup",
+    "do": [
+     [
+      "pim",
+      "to:9,14"
+     ],
+     [
+      "pim",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "POOF!",
+    "cam": "close:pim",
+    "hold": 0.8,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Pim comes up white. Totally white. A tiny bean ghost.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim! You look like a powdered donut with eyes!",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:7,12"
+     ],
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "D-don't laugh! There's something down here. An old tin!",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Under the flour, a dented tin. Walter's name on the lid.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "appear"
+     ],
+     [
+      "tin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Inside: one newspaper page. Burnt at the corners. Nineteen seventy-six.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "to:8,12"
+     ]
+    ]
+   },
+   {
+    "text": "THE NIGHT OF THE FIRE",
+    "cam": "overhead",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:zeek"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Fire at Walter's Bakery. A pot left on the stove all night.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The baker got out safe. And on the doorstep, he found…",
+    "cam": "two:zeek,bup",
+    "do": [
+     [
+      "tin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Found what? Read it, Zeek! Every word!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:7,12"
+     ],
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "His window loaf. Burnt on the back. Holding a tiny roll.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The tiny roll was black as coal. But it was alive.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "A tiny black roll? Th-that sounds like somebody we know.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:6,11"
+     ]
+    ]
+   },
+   {
+    "text": "BUP SAVED CRISPY?!",
+    "cam": "close:bup",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "bup",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "That mark isn't from Crispy hurting you, Bup.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "It's from carrying him. Out of the fire.",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "B-but Crispy's at the back door! He's really leaving!",
+    "cam": "overhead",
+    "do": [
+     [
+      "crispy",
+      "to:13,8"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup runs. Seeds flying. All the way across the pantry floor.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:11,9"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, wait! I read it. I know what happened.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then you know. You got burned because of me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I was a new little roll. I rolled onto the hot tray.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You pulled me off. Your back took all the heat.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "So you hid in the shadows all these years? For that?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "You forgot. I never wanted you to feel you owed me.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:bup"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup is quiet for a long time. Then he smiles.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I don't remember the fire. But my back does. Worth it.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Nobody leaves this family. Least of all my oldest friend.",
+    "cam": "two:bup,crispy",
+    "do": [
+     [
+      "bup",
+      "to:12,9"
+     ]
+    ]
+   },
+   {
+    "text": "OLDEST FRIENDS",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Group hug! Careful, Pim. You're still a flour ghost.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "to:10,10"
+     ],
+     [
+      "pim",
+      "to:11,11"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "I'm a f-friendly ghost. M-mostly friendly.",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Statistically, ghosts don't do group hugs. Pim is the exception.",
+    "cam": "two:zeek,pim",
+    "do": [
+     [
+      "zeek",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Zeek turns the newspaper over. One more line.",
+    "cam": "prop:tin",
+    "do": [
+     [
+      "tin",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The pot that started the fire was never found.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Big. Black. Three round dents on the side. Like three eyes.",
+    "cam": "two:zeek,crispy",
+    "do": [
+     [
+      "zeek",
+      "to:10,12"
+     ]
+    ]
+   },
+   {
+    "text": "MR. POT?!",
+    "cam": "close:crispy",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ],
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "overhead"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "overhead"
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Saved Bup From the Bakery Fire? 🔥",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"I don't remember the fire. But my back does.\" — Bup\nLolly finds a burn mark on Bup's back, Crispy threatens to leave for good — and an old tin hidden in the flour tells what really happened that night.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "animated comedy",
+   "funny animation",
+   "bakery fire",
+   "old friends",
+   "flour",
+   "pantry",
+   "bup",
+   "crispy",
+   "pim",
+   "mystery",
+   "cartoon series"
+  ],
+  "thumb_text": "WHO BURNED BUP?",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "¿Quién salvó a Bup del incendio de la panadería? 🔥",
+    "description": "¿Qué crees que pasa en la próxima parte? Cuéntamelo en los comentarios.\n\"No recuerdo el fuego. Pero mi espalda sí.\" — Bup\nLolly encuentra una marca quemada en la espalda de Bup, Crispy amenaza con irse para siempre… y una lata vieja escondida en la harina cuenta lo que pasó aquella noche.\n#series #3DAnimation #DoughBros"
+   },
+   "pt": {
+    "title": "Quem salvou o Bup do incêndio da padaria? 🔥",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Eu não lembro do fogo. Mas minhas costas lembram.\" — Bup\nA Lolly acha uma marca queimada nas costas do Bup, o Crispy ameaça ir embora para sempre… e uma lata velha escondida na farinha conta o que aconteceu naquela noite.\n#series #3DAnimation #DoughBros"
+   },
+   "ar": {
+    "title": "من أنقذ باب من حريق المخبز؟ 🔥",
+    "description": "ماذا تتوقع أن يحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"لا أتذكر الحريق. لكن ظهري يتذكره.\" — باب\nلولي تجد علامة حرق على ظهر باب، وكريسبي يهدد بالرحيل إلى الأبد… وعلبة قديمة مخبأة في الطحين تكشف ما حدث تلك الليلة.\n#series #3DAnimation #DoughBros"
+   },
+   "fr": {
+    "title": "Qui a sauvé Bup de l'incendie de la boulangerie ? 🔥",
+    "description": "À ton avis, que se passe-t-il dans la prochaine partie ? Dis-le-moi en commentaire.\n« Je ne me souviens pas du feu. Mais mon dos, si. » — Bup\nLolly découvre une marque de brûlure sur le dos de Bup, Crispy menace de partir pour toujours… et une vieille boîte cachée dans la farine raconte ce qui s'est passé cette nuit-là.\n#series #3DAnimation #DoughBros"
+   },
+   "ja": {
+    "title": "パン屋の火事からバップを救ったのは誰？ 🔥",
+    "description": "次はどうなると思う？コメントで教えてね。\n「火事のことは覚えてない。でも背中は覚えてる。」— バップ\nロリーがバップの背中に焦げあとを見つけ、クリスピーは家を出ていくと言い出す…そして小麦粉の中に隠れていた古い缶が、あの夜のことを語り出す。\n#series #3DAnimation #DoughBros"
+   },
+   "ko": {
+    "title": "빵집 화재에서 밥을 구한 건 누구? 🔥",
+    "description": "다음 편에서는 무슨 일이 일어날까? 댓글로 알려줘.\n\"불은 기억 안 나. 하지만 내 등은 기억해.\" — 밥\n롤리가 밥의 등에서 탄 자국을 발견하고, 크리스피는 영원히 떠나겠다고 해… 그리고 밀가루 속에 숨은 낡은 깡통이 그날 밤의 일을 들려줘.\n#series #3DAnimation #DoughBros"
+   },
+   "de": {
+    "title": "Wer hat Bup aus dem Bäckereibrand gerettet? 🔥",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n„Ich erinnere mich nicht an das Feuer. Aber mein Rücken schon.“ — Bup\nLolly entdeckt eine Brandstelle auf Bups Rücken, Crispy droht, für immer zu gehen … und eine alte Dose im Mehl erzählt, was in jener Nacht geschah.\n#series #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 30,
+   "dur": 24,
+   "top": "WOULD YOU READ IT?",
+   "title": "Would YOU Read This Burnt Newspaper? 📰 #shorts",
+   "description": "An old tin, a 1976 newspaper and a night Bup can't remember. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "mystery",
+    "bup",
+    "3d animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Leerías TÚ este periódico quemado? 📰 #shorts",
+     "description": "Una lata vieja, un periódico de 1976 y una noche que Bup no recuerda. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ leria este jornal queimado? 📰 #shorts",
+     "description": "Uma lata velha, um jornal de 1976 e uma noite que o Bup não lembra. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستقرأ هذه الجريدة المحروقة؟ 📰 #shorts",
+     "description": "علبة قديمة وجريدة من عام 1976 وليلة لا يتذكرها باب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Lirais-TU ce journal brûlé ? 📰 #shorts",
+     "description": "Une vieille boîte, un journal de 1976 et une nuit dont Bup ne se souvient pas. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "この焦げた新聞、きみなら読む？ 📰 #shorts",
+     "description": "古い缶、1976年の新聞、そしてバップが覚えていない夜。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 탄 신문을 읽을래? 📰 #shorts",
+     "description": "낡은 깡통, 1976년 신문, 그리고 밥이 기억하지 못하는 밤. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diese verbrannte Zeitung lesen? 📰 #shorts",
+     "description": "Eine alte Dose, eine Zeitung von 1976 und eine Nacht, an die sich Bup nicht erinnert. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 23,
+   "dur": 20,
+   "top": "POOF!",
+   "title": "One Jump and Pim Is a Flour Ghost 👻 #shorts",
+   "description": "Bup slips, Pim jumps… and lands headfirst in the flour. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "funny animation",
+    "pim",
+    "flour"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Un salto y Pim es un fantasma de harina 👻 #shorts",
+     "description": "Bup resbala, Pim salta… y aterriza de cabeza en la harina. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um pulo e o Pim virou um fantasma de farinha 👻 #shorts",
+     "description": "O Bup escorrega, o Pim pula… e cai de cabeça na farinha. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قفزة واحدة وصار بيم شبح طحين 👻 #shorts",
+     "description": "باب ينزلق، بيم يقفز… ويسقط برأسه في الطحين. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un saut et Pim devient un fantôme de farine 👻 #shorts",
+     "description": "Bup glisse, Pim saute… et plonge tête la première dans la farine. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ジャンプ一回でピムが小麦粉おばけに 👻 #shorts",
+     "description": "バップがすべって、ピムがジャンプ…そして小麦粉に頭から落ちた。本編： {LONG_URL}"
+    },
+    "ko": {
+     "title": "점프 한 번에 핌이 밀가루 유령이 됐어 👻 #shorts",
+     "description": "밥이 미끄러지고, 핌이 뛰어들고… 밀가루에 머리부터 쏙. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Sprung und Pim ist ein Mehlgespenst 👻 #shorts",
+     "description": "Bup rutscht, Pim springt … und landet kopfüber im Mehl. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
