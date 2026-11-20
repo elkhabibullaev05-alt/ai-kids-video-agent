@@ -59,10 +59,15 @@ if PLACE == "hill":  # Flatwoods hilltop: a dark grassy mound behind the field, 
     for i in range(60):
         bpy.ops.mesh.primitive_cone_add(radius1=0.25, depth=rnd.uniform(0.5, 1.1), location=(rnd.uniform(-16, 16), rnd.uniform(4, 28), 0.3)); add(bpy.context.object, gr_, False)
 if PLACE == "moor":  # Dartmoor: an empty road across the moor, low stone walls, heather, a granite tor on the skyline
-    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 11, 0.02)); rd = add(bpy.context.object, mat("road", (0.03, 0.03, 0.032), 0.6)); rd.scale = (160, 4.5, 1)
-    lm_ = mat("roadline", (0.75, 0.72, 0.6), 0.6, 0, 0.3)
-    for i in range(-20, 21):
-        bpy.ops.mesh.primitive_plane_add(size=1, location=(i * 4.0, 11, 0.03)); add(bpy.context.object, lm_, False).scale = (1.6, 0.12, 1)
+    # 2026-11-20 review: hollow is a historical channel now (Oregon Trail 1850 thumbnail showed an asphalt road with
+    # painted lane lines). Default = dirt track, no markings; set "modern": true in SET for a present-day road.
+    if SET.get("modern"):
+        bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 11, 0.02)); rd = add(bpy.context.object, mat("road", (0.03, 0.03, 0.032), 0.6)); rd.scale = (160, 4.5, 1)
+        lm_ = mat("roadline", (0.75, 0.72, 0.6), 0.6, 0, 0.3)
+        for i in range(-20, 21):
+            bpy.ops.mesh.primitive_plane_add(size=1, location=(i * 4.0, 11, 0.03)); add(bpy.context.object, lm_, False).scale = (1.6, 0.12, 1)
+    else:
+        bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 11, 0.02)); rd = add(bpy.context.object, mat("track", (0.09, 0.065, 0.04), 0.95)); rd.scale = (160, 3.2, 1)
     for wy in (14.4,):  # only the far wall: the near side stays open for the camera
         for i in range(-24, 25):
             bpy.ops.mesh.primitive_cube_add(size=1, location=(i * 2.0 + rnd.uniform(-0.2, 0.2), wy, 0.35)); ws_ = add(bpy.context.object, stone_m, False); ws_.scale = (1.9, 0.6, 0.7 + rnd.uniform(-0.15, 0.15))

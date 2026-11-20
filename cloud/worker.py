@@ -771,6 +771,23 @@ def norm_title(t):
     return " ".join("".join(c if c.isalnum() else " " for c in t).split())
 
 
+def recent_own_titles(n=40):
+    """2026-11-20 review: newest-first titles of our own uploads (results/<CH>/*.json, by publish_at). Scheduled private
+    videos are often missing from the YouTube uploads playlist (see sync_from_youtube), so the makers' "template used
+    recently?" checks never saw the last day of Shorts -> Funny Rank used 'Top 5 … #1 Hurts' 3x on 11-19."""
+    rows = []
+    for f in glob.glob(os.path.join(RES, "*.json")):
+        try:
+            d = json.load(open(f))
+        except Exception:
+            continue
+        if not isinstance(d, dict):
+            continue
+        its = ([d["long"]] if isinstance(d.get("long"), dict) else []) + [x for x in (d.get("shorts") or []) if isinstance(x, dict)]
+        rows += [(x.get("publish_at") or "", x["title"]) for x in its if x.get("video") and x.get("title")]
+    return [t for _, t in sorted(rows, reverse=True)[:n]]
+
+
 def uploaded_titles():
     """Titles already uploaded on this channel (cloud/results/<CH>/*.json long + shorts)."""
     seen = set()
@@ -810,7 +827,9 @@ def run_maker(st):
     os.makedirs(out, exist_ok=True)
     if not glob.glob(os.path.join(out, "*.json")):
         tf = os.path.join(HOME, "titles.json")
-        json.dump(st.get("titles", []), open(tf, "w"))
+        own = recent_own_titles()
+        yt_t = [t for t in st.get("titles", []) if t not in set(own)]
+        json.dump(own + yt_t, open(tf, "w"))  # newest first: our scheduled uploads, then the YouTube uploads list
         status("render"); push("making", [RES])
         p = sh([PY, os.path.join(ROOT, CFG["maker"]), "--out", out, "--home", HOME, "--repo", ROOT, "--titles", tf,
                 "--need-long", str(int(need_l)), "--need-short", str(int(need_s))],
@@ -891,7 +910,8 @@ def main():
         return
     need = CFG["per_day"]["long"] * 2  # keep two days of long videos scheduled
     if longs_ahead(st) >= need:
-        status("idle", ahead=longs_ahead(st)); return
+        # 2026-11-20 review: idle 3D channels never pushed status.json, so hollow/maxcat looked "stuck" for 25 h
+        status("idle", ahead=longs_ahead(st)); push("idle", [RES]); return
     jobs = sorted(glob.glob(os.path.join(Q, "*.json")))
     if not jobs:
         status("queue_empty", ahead=longs_ahead(st)); push("queue empty", [RES]); return
