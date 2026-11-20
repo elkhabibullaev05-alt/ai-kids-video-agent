@@ -924,7 +924,10 @@ def main():
             t = dt.datetime.strptime(free_slot(st, "long"), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
         except Exception:
             return False
-        return t <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=26)
+        # 2026-11-20 21:15 watchdog: hollow had longs on 11-21 and 11-24 ("2 ahead" = need) but 11-22/23 empty and
+        # 2 stories waiting in its queue -> 0 videos in 24 h. 26 h only saw tomorrow; look across the 2-day window
+        # the "need" rule promises (50 h), so every empty long slot of the next two days gets filled in time.
+        return t <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=50)
     if longs_ahead(st) >= need and not long_gap():
         # 2026-11-20 review: idle 3D channels never pushed status.json, so hollow/maxcat looked "stuck" for 25 h
         status("idle", ahead=longs_ahead(st)); push("idle", [RES]); return
