@@ -915,7 +915,17 @@ def main():
     if len(st["pending"]) > 2:
         return
     need = CFG["per_day"]["long"] * 2  # keep two days of long videos scheduled
-    if longs_ahead(st) >= need:
+
+    def long_gap():  # 2026-11-20 watchdog: maxcat had 2 longs "ahead" (11-23, 11-24) but none on 11-20..22 ->
+        # 1 video in 24 h instead of 3. If the next free long slot is within 26 h, make a video now.
+        if not CFG["per_day"].get("long", 0):
+            return False
+        try:
+            t = dt.datetime.strptime(free_slot(st, "long"), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+        except Exception:
+            return False
+        return t <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=26)
+    if longs_ahead(st) >= need and not long_gap():
         # 2026-11-20 review: idle 3D channels never pushed status.json, so hollow/maxcat looked "stuck" for 25 h
         status("idle", ahead=longs_ahead(st)); push("idle", [RES]); return
     jobs = sorted(glob.glob(os.path.join(Q, "*.json")))
