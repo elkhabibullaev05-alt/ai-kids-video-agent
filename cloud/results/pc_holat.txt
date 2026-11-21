@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-21 12:00 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-21 13:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -7,73 +7,100 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
 disk free: 886G
---- maxcat: 2026-11-21T09:31:37+00:00 render 
-    11-21 09:30:26 $ git push -q origin HEAD:main
-    11-21 09:30:29 $ /usr/bin/python3 /opt/kanal/repo/maxcat/engine3d/voices.py /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg/script.json /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg 12
-    11-21 09:31:37 TOTAL 229.6 s
-    11-21 09:31:37 $ /opt/bl/blender-4.2.3-linux-x64/blender -b --factory-startup --python-exit-code 1 -P /opt/kanal/repo/maxcat/engine3d/story.py -- --tl /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg/timeline.json
---- doughbros: 2026-11-21T08:50:25+00:00 idle 
-    11-21 08:50:25 $ git add -A -- /opt/kanal/repo/cloud/results/doughbros
-    11-21 08:50:25 $ git diff --cached --quiet
-    11-21 08:50:25 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] idle
-    11-21 08:50:25 $ git push -q origin HEAD:main
---- hollow: 2026-11-21T09:10:29+00:00 idle 
-    11-21 09:10:29 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
-    11-21 09:10:29 $ git diff --cached --quiet
-    11-21 09:10:29 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] idle
-    11-21 09:10:29 $ git push -q origin HEAD:main
---- bolt: 2026-11-21T08:30:15+00:00 idle 
-    11-21 08:30:17 $ git add -A -- /opt/kanal/repo/cloud/results/bolt
-    11-21 08:30:17 $ git diff --cached --quiet
-    11-21 08:30:17 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [bolt] idle
-    11-21 08:30:17 $ git push -q origin HEAD:main
---- roblox: 2026-11-21T11:30:10+00:00 idle 
-    11-21 11:30:16 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-21 11:30:16 $ git diff --cached --quiet
-    11-21 11:30:16 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-21 11:30:16 $ git push -q origin HEAD:main
---- funny: 2026-11-21T09:30:05+00:00 render 
-    11-21 09:30:05 $ git diff --cached --quiet
-    11-21 09:30:05 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] making
-    11-21 09:30:05 $ git push -q origin HEAD:main
-    11-21 09:30:08 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /root/kanal/funny/titles.json --need-long 0 --need-short 1
-    maker: 11-21 13:58:05 rendered /root/kanal/funny/made/funny-20261121-snowboard-fails-3470.mp4 in 5206s
-    maker: 11-21 13:58:08 rek-ball 93 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 3, 'texnik': 15, 'nom': 10} ['oxiri boshiga ulanmaydi']
-    maker: 11-21 13:58:08 made funny-20261121-snowboard-fails-3470 | Worst Day Ever? Snowboard Fails 💀 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 5206, 'rek': 93}
-    maker: 11-21 13:58:08 theme: Wedding Fails
-    maker: 11-21 13:58:11 31 CC BY candidates (searches so far 4)
-    maker: 11-21 14:00:18 timeline 19.5s in 7 shots, voice am_puck
---- money: 2026-11-21T11:30:09+00:00 queue_empty 
-    11-21 11:30:10 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-21 11:30:10 $ git diff --cached --quiet
-    11-21 11:30:10 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-21 11:30:10 $ git push -q origin HEAD:main
-    maker: 11-20 19:36:00 10 CC BY candidates (searches so far 5)
-    maker: 11-20 19:37:17 timeline 19.9s in 7 shots, voice am_puck
-    maker: 11-20 19:37:38 rendered /root/kanal/money/made/funny-20261120-science-experiment-fails-2629.mp4 in 25s
-    maker: 11-20 19:37:39 rek-ball 100 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
+--- maxcat: 2026-11-21T12:50:21+00:00 render 
+    11-21 12:50:14 $ git diff --cached --quiet
+    11-21 12:50:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [maxcat] 20261121-1-max-thanksgiving-leg started
+    11-21 12:50:14 $ git push -q origin HEAD:main
+    11-21 12:50:21 $ /opt/bl/blender-4.2.3-linux-x64/blender -b --factory-startup --python-exit-code 1 -P /opt/kanal/repo/maxcat/engine3d/story.py -- --tl /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg/timeline.json
+--- doughbros: 2026-11-21T12:10:17+00:00 idle 
+    11-21 12:10:17 $ git add -A -- /opt/kanal/repo/cloud/results/doughbros
+    11-21 12:10:17 $ git diff --cached --quiet
+    11-21 12:10:17 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] idle
+    11-21 12:10:17 $ git push -q origin HEAD:main
+--- hollow: 2026-11-21T12:30:41+00:00 idle 
+    11-21 12:30:41 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
+    11-21 12:30:41 $ git diff --cached --quiet
+    11-21 12:30:41 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] idle
+    11-21 12:30:41 $ git push -q origin HEAD:main
+--- bolt: 2026-11-21T12:01:44+00:00 idle 
+    11-21 12:02:24 $ git add -A -- /opt/kanal/repo/cloud/results/bolt
+    11-21 12:02:24 $ git diff --cached --quiet
+    11-21 12:02:24 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [bolt] idle
+    11-21 12:02:24 $ git push -q origin HEAD:main
+--- roblox: 2026-11-21T12:50:02+00:00 idle 
+    11-21 12:50:02 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-21 12:50:02 $ git diff --cached --quiet
+    11-21 12:50:02 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-21 12:50:02 $ git push -q origin HEAD:main
+--- funny: 2026-11-21T12:30:06+00:00 render 
+    11-21 12:30:06 $ git diff --cached --quiet
+    11-21 12:30:06 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] making
+    11-21 12:30:06 $ git push -q origin HEAD:main
+    11-21 12:30:09 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /root/kanal/funny/titles.json --need-long 0 --need-short 1
+    maker: 11-21 15:44:42 made funny-20261121-wedding-fails-4212 | Ranking Crazy Wedding Fails 😂 | {'duration': 20.17, 'voice': 'am_adam', 'shots': 7, 'render_s': 862, 'rek': 96}
+    maker: 11-21 15:44:42 theme: Bike Fails
+    maker: 11-21 15:44:44 22 CC BY candidates (searches so far 2)
+    maker: 11-21 15:45:12 yt-dlp failed KFFDHxnaum8 from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https
+    maker: 
+    maker: 11-21 15:46:34 timeline 19.5s in 7 shots, voice am_puck
+--- money: 2026-11-21T12:30:11+00:00 render 
+    11-21 12:30:11 $ git diff --cached --quiet
+    11-21 12:30:11 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] making
+    11-21 12:30:11 $ git push -q origin HEAD:main
+    11-21 12:30:15 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/physics.py --out /root/kanal/money/made --home /root/kanal/money --repo /opt/kanal/repo --titles /root/kanal/money/titles.json --need-long 1 --need-short 1
     maker: 11-20 19:37:39 made funny-20261120-science-experiment-fails-2629 | Ranking Top 5 Science Experiment Fails 😂 | {'duration': 19.88, 'voice': 'am_puck', 'shots': 7, 'render_s': 25, 'rek': 100}
     maker: 11-20 19:37:39 done: 3 Short(s); API calls: search 5, list 6
---- ufc: 2026-11-21T10:30:27+00:00 idle 
-    11-21 10:30:27 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
-    11-21 10:30:27 $ git diff --cached --quiet
-    11-21 10:30:27 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
-    11-21 10:30:27 $ git push -q origin HEAD:main
---- sleep: 2026-11-21T10:50:20+00:00 idle 
-    11-21 10:50:22 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
-    11-21 10:50:22 $ git diff --cached --quiet
-    11-21 10:50:22 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
-    11-21 10:50:22 $ git push -q origin HEAD:main
---- doodle: 2026-11-21T11:10:23+00:00 idle 
-    11-21 11:10:24 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
-    11-21 11:10:24 $ git diff --cached --quiet
-    11-21 11:10:24 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
-    11-21 11:10:24 $ git push -q origin HEAD:main
---- milo: 2026-11-21T11:30:16+00:00 idle 
-    11-21 11:30:20 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-21 11:30:20 $ git diff --cached --quiet
-    11-21 11:30:20 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
-    11-21 11:30:20 $ git push -q origin HEAD:main
+    maker: 11-21 15:30:15 === funny maker start, need-short 1
+    maker: 11-21 15:30:16 theme: Car Mud Fails
+    maker: 11-21 15:30:18 7 CC BY candidates (searches so far 2)
+    maker: 11-21 15:37:07 timeline 19.9s in 7 shots, voice am_puck
+--- ufc: 2026-11-21T12:01:28+00:00 idle 
+    11-21 12:02:00 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
+    11-21 12:02:00 $ git diff --cached --quiet
+    11-21 12:02:00 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
+    11-21 12:02:00 $ git push -q origin HEAD:main
+--- sleep: 2026-11-21T12:10:12+00:00 idle 
+    11-21 12:10:12 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-21 12:10:12 $ git diff --cached --quiet
+    11-21 12:10:12 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
+    11-21 12:10:12 $ git push -q origin HEAD:main
+--- doodle: 2026-11-21T12:30:20+00:00 idle 
+    11-21 12:30:22 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
+    11-21 12:30:23 $ git diff --cached --quiet
+    11-21 12:30:23 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
+    11-21 12:30:23 $ git push -q origin HEAD:main
+--- milo: 2026-11-21T12:50:06+00:00 idle 
+    11-21 12:50:08 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-21 12:50:08 $ git diff --cached --quiet
+    11-21 12:50:08 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
+    11-21 12:50:08 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
+        642    2227 flock -n /tmp/kanal-funny.lock timeout -k 60 5h python3 cloud/worker.py funny
+        664    2227 timeout -k 60 5h python3 cloud/worker.py funny
+        665    2227 python3 cloud/worker.py funny
+        714    2222 flock -n /tmp/kanal-money.lock timeout -k 60 5h python3 cloud/worker.py money
+        716    2222 timeout -k 60 5h python3 cloud/worker.py money
+        717    2222 python3 cloud/worker.py money
+        752    2216 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /ro
+       1064    2211 /usr/bin/python3 /opt/kanal/repo/cloud/makers/physics.py --out /root/kanal/money/made --home /root/kanal/money --repo /opt/kanal/repo --titles /
+       1069    2211 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/money/made --home /root/kanal/money --repo /opt/kanal/repo --titles /ro
+      40316    1103 flock -n /tmp/kanal-maxcat.lock timeout -k 60 5h python3 cloud/worker.py maxcat
+      40318    1103 timeout -k 60 5h python3 cloud/worker.py maxcat
+      40319    1103 python3 cloud/worker.py maxcat
 --- held channel locks:
+    /tmp/kanal-bolt.lock free
+    /tmp/kanal-codup.lock free
+    /tmp/kanal-codup2.lock free
+    /tmp/kanal-doodle.lock free
+    /tmp/kanal-doughbros.lock free
+    /tmp/kanal-funny.lock HELD
+    /tmp/kanal-git.lock free
+    /tmp/kanal-hollow.lock free
+    /tmp/kanal-maxcat.lock HELD
+    /tmp/kanal-milo.lock free
+    /tmp/kanal-money.lock HELD
+    /tmp/kanal-roblox.lock free
+    /tmp/kanal-sleep.lock free
+    /tmp/kanal-ufc.lock free
+    /tmp/kanal-yt.lock free
