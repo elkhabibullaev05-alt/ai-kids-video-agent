@@ -928,7 +928,18 @@ def main():
         # 2 stories waiting in its queue -> 0 videos in 24 h. 26 h only saw tomorrow; look across the 2-day window
         # the "need" rule promises (50 h), so every empty long slot of the next two days gets filled in time.
         return t <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=50)
-    if longs_ahead(st) >= need and not long_gap():
+
+    def short_gap():  # 2026-11-21 daily watchdog: hollow got 0 videos in 24 h — Fri 20 Nov Short slot stayed empty
+        # (its weekly plan has Shorts Mon/Wed/Fri/Sun) because this pipeline only looked at longs; the Shorts come from
+        # the same render, so a free Short slot in the next 30 h also means "make the next story now".
+        if not CFG["per_day"].get("short", 0):
+            return False
+        try:
+            t = dt.datetime.strptime(free_slot(st, "short"), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+        except Exception:
+            return False
+        return t <= dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=30)
+    if longs_ahead(st) >= need and not long_gap() and not short_gap():
         # 2026-11-20 review: idle 3D channels never pushed status.json, so hollow/maxcat looked "stuck" for 25 h
         status("idle", ahead=longs_ahead(st)); push("idle", [RES]); return
     jobs = sorted(glob.glob(os.path.join(Q, "*.json")))
