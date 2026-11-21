@@ -1,0 +1,1142 @@
+{
+ "id": "20261114-1-bell-hide-and-seek",
+ "plot": "On an autumn morning Grandma puts a little bell on Max's collar 'so I can always find you, even in the tall grass', which ruins his chances in the Garden Hide-and-Seek Cup; his hold-the-bell-on-three-legs try ends in a crunchy leaf pile, then he discovers Grandma's jingling keys hide his sound, but when tiny Mouse goes silent in the tall grass Max gives up the win, rings his bell so Mouse can follow it out, and Dog hands him the Cup for helping.",
+ "script": {
+  "title": "Max and the Tattletale Bell",
+  "set": {
+   "place": "garden",
+   "time": "day"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "bell",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     -3.0,
+     8.0,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.35
+   },
+   {
+    "id": "cup",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     -4.5,
+     13.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "keys",
+    "type": "key",
+    "color": "gold",
+    "at": [
+     -7.0,
+     11.5,
+     0.3
+    ],
+    "visible": true,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "dog",
+    "say": "Jingle jingle! Found you, Max! Behind the roses again!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-9,14"
+     ],
+     [
+      "dog",
+      "to:-6,12"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Not again! This bell tells everybody where I am!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,10"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "CAN MAX HIDE WITH A BELL?",
+    "cam": "prop:bell",
+    "hold": 1.2,
+    "do": [
+     [
+      "bell",
+      "spin"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "It's a bright autumn morning in Grandma's back garden.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "enter"
+     ],
+     [
+      "mouse",
+      "to:1,8"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Just after breakfast, Grandma gave Max a shiny new bell.",
+    "cam": "prop:bell",
+    "do": [
+     [
+      "bell",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It's on your collar now, Max. So I can always find you.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Even when you hide in the tall grass by the fence.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But Grandma, the Hide-and-Seek Cup is today!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "And this year, I'm going to win it!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "That tall grass is taller than me. I can't see over it.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:4,12"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Then stay where you can see the house, Mouse dear.",
+    "cam": "two:grandma,mouse",
+    "do": [
+     [
+      "grandma",
+      "turn:mouse"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Okay! But I'm finding a super, super secret spot!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog is the seeker. He covers his eyes and counts.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ],
+     [
+      "dog",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Everybody else runs off to hide.",
+    "cam": "wide",
+    "do": [
+     [
+      "mouse",
+      "to:9,16"
+     ],
+     [
+      "bird",
+      "to:5,15"
+     ],
+     [
+      "max",
+      "to:-9,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One, two, three... nineteen, twenty! Ready or not!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh. Tiny steps. I'm as quiet as a cloud.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-10,15"
+     ]
+    ]
+   },
+   {
+    "text": "JINGLE JINGLE!",
+    "cam": "prop:bell",
+    "hold": 1.0,
+    "do": [
+     [
+      "bell",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I hear a bell! It's coming from the roses!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-8,13"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Oh no! My bell is a little tattletale!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Found you! That's two rounds for me!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ha ha! I heard that bell from up in my tree!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay, new plan. I hold the bell still with my paw!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Max walks on three legs, holding his bell very tight.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,11"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hop... hop... whoa... whoa, whoa!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max wobbles, rolls, and lands in a big pile of crunchy leaves.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:3,12"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "text": "CRUNCH! JINGLE!",
+    "cam": "prop:bell",
+    "hold": 1.0,
+    "do": [
+     [
+      "bell",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Found you again! Rolling cats are very easy to hear!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "to:5,11"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is the worst! Dog wins every single round!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,9"
+     ],
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Last round before lunch, everyone! The Cup is waiting!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-5,10"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The shiny gold Cup sits on Grandma's garden table.",
+    "cam": "prop:cup",
+    "do": [
+     [
+      "cup",
+      "show"
+     ],
+     [
+      "cup",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One more win, and the Cup is mine forever!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I lose this round, I lose the Cup. Think, Max, think!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Grandma picks up her garden bag to look for her gloves.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-6,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "And something inside the bag goes jingle, jingle.",
+    "cam": "prop:keys",
+    "do": [
+     [
+      "keys",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wait a minute. Grandma's keys jingle too!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll hide by her bag. Dog will hear keys, not me!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "to:-5,11"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Eighteen, nineteen, twenty! Here I come, little bell!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "turn:front"
+     ],
+     [
+      "dog",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max curls up into a tiny orange ball behind Grandma's bag.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "to:-7,12"
+     ],
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Jingle! I hear it! Over there, next to Grandma!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's just my keys, Dog. I'm still looking for my gloves.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ],
+     [
+      "keys",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Keys? Hmm. Then where is that sneaky cat?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ],
+     [
+      "dog",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's working! He thinks I'm a bunch of keys!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog sniffs the shed, the flower pots, and the apple tree.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Bird! I see your blue tail in the tree! Found you!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Oh, feathers! My tail is too pretty to hide!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ],
+     [
+      "bird",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Now only two players are still hidden. Max and Mouse.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "If I can't find them soon, Max wins the Cup!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But wait. Nobody has heard one squeak from Mouse all round.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Mouse? Mouse, dear? Lunch is ready! You can come out!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "No answer. Only the wind, swishing through the tall grass.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grandma",
+      "to:1,13"
+     ],
+     [
+      "all",
+      "look:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The tall grass! Mouse said she can't see anything in there!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "She's so tiny. How do we find her in all that grass?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "If I come out now, Dog finds me and wins the Cup...",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "But Mouse is more important than any cup in the world!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:-1,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max jumps out from behind the bag and runs to the fence.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:6,14"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse! Listen for my bell! Walk toward the jingle!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "text": "JINGLE! JINGLE! JINGLE!",
+    "cam": "prop:bell",
+    "hold": 1.2,
+    "do": [
+     [
+      "bell",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Deep in the grass, a tiny voice answers.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mouse",
+      "to:9,15"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I hear it! I hear the jingle! I'm coming, Max!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:8,15"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This way, Mouse! Jingle, jingle, jingle!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Step by step, Mouse follows the little bell out of the grass.",
+    "cam": "two:max,mouse",
+    "do": [
+     [
+      "mouse",
+      "to:7,14"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Max! I went too far and everything looked the same!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh, Mouse! Thank goodness for that little bell!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:4,13"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, now I know why you gave me a bell.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:grandma"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "So the ones who love you can always find you.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max came out to help a friend. He's the real winner!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:5,12"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "So Dog pushes the shiny gold Cup over to Max.",
+    "cam": "prop:cup",
+    "do": [
+     [
+      "cup",
+      "give:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Well done, Max. I'm so proud of you, sweetheart.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Let's share it! Mouse can use it as a bathtub!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "A golden bathtub? Best prize ever!",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Some things that bug us are really there to keep us safe.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Next time I'm the seeker. I'll find everyone just by listening!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Then I'll hide without one single tweet. Ready, Max?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Jingle! A Bell Ruins Max's Hide-and-Seek 🔔",
+  "description": "\"Grandma says the bell is a gift. I say it's a tattletale.\" 🐱\nIt's the Garden Hide-and-Seek Cup, and Max's new collar bell gives away every hiding spot. He finds a sneaky trick with Grandma's keys... but then tiny Mouse goes quiet in the tall autumn grass.\n#MaxTheCuriousCat #series #3DAnimation",
+  "tags": [
+   "hide and seek",
+   "cat bell",
+   "collar bell",
+   "autumn garden",
+   "helping friends",
+   "lost in tall grass",
+   "grandma",
+   "max the curious cat",
+   "kids cartoon",
+   "3d animation for kids",
+   "stories for kids",
+   "cartoon series",
+   "cat cartoon",
+   "funny cat"
+  ],
+  "thumb_text": "FOUND AGAIN?!",
+  "thumb_beat": 31,
+  "localizations": {
+   "es": {
+    "title": "¡Jingle! Una campanita arruina el escondite de Max 🔔",
+    "description": "\"La abuela dice que la campanita es un regalo. Yo digo que es una chismosa.\" 🐱\nEs la Copa de las Escondidas del jardín, y la nueva campanita de Max delata cada escondite. Él descubre un truco con las llaves de la abuela... pero entonces la pequeña Ratoncita se queda callada en la hierba alta de otoño.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "pt": {
+    "title": "Plim! Um sininho estraga o esconde-esconde do Max 🔔",
+    "description": "\"A vovó diz que o sininho é um presente. Eu digo que é um dedo-duro.\" 🐱\nÉ a Copa de Esconde-Esconde do jardim, e o sininho novo do Max entrega todos os esconderijos. Ele descobre um truque com as chaves da vovó... mas aí a pequena Ratinha fica em silêncio no capim alto de outono.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ar": {
+    "title": "جلجل! جرس صغير يفسد لعبة الغميضة على ماكس 🔔",
+    "description": "\"الجدة تقول إن الجرس هدية. وأنا أقول إنه واشٍ صغير.\" 🐱\nإنها بطولة الغميضة في الحديقة، وجرس ماكس الجديد يكشف كل مخبأ. يجد حيلة ذكية بمفاتيح الجدة... لكن الفأرة الصغيرة تصمت فجأة في العشب الطويل في الخريف.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "fr": {
+    "title": "Ding ! Une clochette gâche le cache-cache de Max 🔔",
+    "description": "\"Mamie dit que la clochette est un cadeau. Moi je dis que c'est une rapporteuse.\" 🐱\nC'est la Coupe de cache-cache du jardin, et la nouvelle clochette de Max trahit chaque cachette. Il trouve une astuce avec les clés de Mamie... mais la petite Souris devient silencieuse dans les hautes herbes d'automne.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ja": {
+    "title": "チリン！すずのせいでマックスのかくれんぼが大ピンチ 🔔",
+    "description": "「おばあちゃんはすずをプレゼントって言うけど、ぼくには告げ口やさんだよ」🐱\nお庭のかくれんぼ大会。でもマックスの新しいすずが、どこにかくれてもバレちゃう！おばあちゃんのカギを使ったひみつの作戦を思いつくけど…秋の背の高い草の中で、小さなネズミの声が聞こえなくなって…。\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "ko": {
+    "title": "딸랑! 방울 때문에 맥스의 숨바꼭질이 엉망이 됐어요 🔔",
+    "description": "\"할머니는 방울이 선물이래요. 제 생각엔 고자질쟁이예요.\" 🐱\n정원 숨바꼭질 대회 날, 맥스의 새 방울이 숨는 곳마다 들켜 버려요. 할머니 열쇠로 기발한 꾀를 내지만... 그때 작은 생쥐가 가을의 키 큰 풀숲에서 조용해져요.\n#MaxTheCuriousCat #series #3DAnimation"
+   },
+   "de": {
+    "title": "Kling! Ein Glöckchen verdirbt Max' Versteckspiel 🔔",
+    "description": "\"Oma sagt, das Glöckchen ist ein Geschenk. Ich sage, es ist eine Petze.\" 🐱\nEs ist der große Versteckspiel-Pokal im Garten, und Max' neues Glöckchen verrät jedes Versteck. Er findet einen schlauen Trick mit Omas Schlüsseln... doch dann wird die kleine Maus im hohen Herbstgras ganz still.\n#MaxTheCuriousCat #series #3DAnimation"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 18,
+   "top": "FOUND IN 1 SECOND!",
+   "title": "Found Before He Even Hid! 🔔 #shorts",
+   "description": "Max's new bell keeps giving him away. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "max the curious cat",
+    "kids cartoon",
+    "hide and seek",
+    "funny cat"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡Lo encontraron antes de esconderse! 🔔 #shorts",
+     "description": "La nueva campanita de Max siempre lo delata. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Achado antes de se esconder! 🔔 #shorts",
+     "description": "O sininho novo do Max sempre o entrega. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "وجدوه قبل أن يختبئ! 🔔 #shorts",
+     "description": "جرس ماكس الجديد يكشفه في كل مرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Trouvé avant même de se cacher ! 🔔 #shorts",
+     "description": "La nouvelle clochette de Max le trahit à chaque fois. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "かくれる前に見つかっちゃった！🔔 #shorts",
+     "description": "マックスの新しいすずが、いつも居場所をバラしちゃう。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "숨기도 전에 들켰어요! 🔔 #shorts",
+     "description": "맥스의 새 방울이 자꾸 맥스를 들키게 해요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Gefunden, bevor er sich versteckt hat! 🔔 #shorts",
+     "description": "Max' neues Glöckchen verrät ihn jedes Mal. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
