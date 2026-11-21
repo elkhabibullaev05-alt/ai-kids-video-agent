@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-21 10:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-21 11:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -6,7 +6,7 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 887G
+disk free: 886G
 --- maxcat: 2026-11-21T09:31:37+00:00 render 
     11-21 09:30:26 $ git push -q origin HEAD:main
     11-21 09:30:29 $ /usr/bin/python3 /opt/kanal/repo/maxcat/engine3d/voices.py /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg/script.json /root/kanal/maxcat/work/20261121-1-max-thanksgiving-leg 12
@@ -27,65 +27,62 @@ disk free: 887G
     11-21 08:30:17 $ git diff --cached --quiet
     11-21 08:30:17 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [bolt] idle
     11-21 08:30:17 $ git push -q origin HEAD:main
---- roblox: 2026-11-21T10:02:25+00:00 upload 
-    11-21 10:05:51 $ ffmpeg -y -v error -i /root/kanal/roblox/ready/rbx20261121-023-1-short.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_roblox_rbx20261121-023-1-short.mp4
-    11-21 10:06:42 gemini short None
-    11-21 10:06:53 uploaded short IRYCFiqYQ5E 2026-11-23T12:45:00Z 135K Playing Right Now?! Hyper Realistic Ragdoll #shorts
-    11-21 10:06:53 $ ffmpeg -y -v error -i /root/kanal/roblox/ready/rbx20261121-023-2-short.mp4 -vf scale=-2:960,fps=24 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 96k /tmp/gem_roblox_rbx20261121-023-2-short.mp4
+--- roblox: 2026-11-21T10:50:12+00:00 idle 
+    11-21 10:50:14 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-21 10:50:14 $ git diff --cached --quiet
+    11-21 10:50:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-21 10:50:14 $ git push -q origin HEAD:main
 --- funny: 2026-11-21T09:30:05+00:00 render 
     11-21 09:30:05 $ git diff --cached --quiet
     11-21 09:30:05 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] making
     11-21 09:30:05 $ git push -q origin HEAD:main
     11-21 09:30:08 $ /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /root/kanal/funny/titles.json --need-long 0 --need-short 1
-    maker: 11-21 12:30:08 === funny maker start, need-short 1
-    maker: 11-21 12:30:10 theme: Camping Fails
-    maker: 11-21 12:30:11 4 CC BY candidates (searches so far 2)
-    maker: 11-21 12:30:11 theme: Snowboard Fails
-    maker: 11-21 12:30:12 20 CC BY candidates (searches so far 3)
-    maker: 11-21 12:31:31 timeline 19.5s in 7 shots, voice am_puck
---- money: 2026-11-21T09:50:04+00:00 queue_empty 
-    11-21 09:50:05 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-21 09:50:05 $ git diff --cached --quiet
-    11-21 09:50:05 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-21 09:50:05 $ git push -q origin HEAD:main
+    maker: 11-21 13:58:05 rendered /root/kanal/funny/made/funny-20261121-snowboard-fails-3470.mp4 in 5206s
+    maker: 11-21 13:58:08 rek-ball 93 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 3, 'texnik': 15, 'nom': 10} ['oxiri boshiga ulanmaydi']
+    maker: 11-21 13:58:08 made funny-20261121-snowboard-fails-3470 | Worst Day Ever? Snowboard Fails 💀 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 5206, 'rek': 93}
+    maker: 11-21 13:58:08 theme: Wedding Fails
+    maker: 11-21 13:58:11 31 CC BY candidates (searches so far 4)
+    maker: 11-21 14:00:18 timeline 19.5s in 7 shots, voice am_puck
+--- money: 2026-11-21T10:50:13+00:00 queue_empty 
+    11-21 10:50:18 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-21 10:50:18 $ git diff --cached --quiet
+    11-21 10:50:18 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-21 10:50:19 $ git push -q origin HEAD:main
     maker: 11-20 19:36:00 10 CC BY candidates (searches so far 5)
     maker: 11-20 19:37:17 timeline 19.9s in 7 shots, voice am_puck
     maker: 11-20 19:37:38 rendered /root/kanal/money/made/funny-20261120-science-experiment-fails-2629.mp4 in 25s
     maker: 11-20 19:37:39 rek-ball 100 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 10, 'texnik': 15, 'nom': 10} []
     maker: 11-20 19:37:39 made funny-20261120-science-experiment-fails-2629 | Ranking Top 5 Science Experiment Fails 😂 | {'duration': 19.88, 'voice': 'am_puck', 'shots': 7, 'render_s': 25, 'rek': 100}
     maker: 11-20 19:37:39 done: 3 Short(s); API calls: search 5, list 6
---- ufc: 2026-11-21T09:10:20+00:00 idle 
-    11-21 09:10:24 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
-    11-21 09:10:24 $ git diff --cached --quiet
-    11-21 09:10:24 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
-    11-21 09:10:24 $ git push -q origin HEAD:main
---- sleep: 2026-11-21T09:30:21+00:00 idle 
-    11-21 09:30:21 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
-    11-21 09:30:21 $ git diff --cached --quiet
-    11-21 09:30:21 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
-    11-21 09:30:21 $ git push -q origin HEAD:main
+--- ufc: 2026-11-21T10:30:27+00:00 idle 
+    11-21 10:30:27 $ git add -A -- /opt/kanal/repo/cloud/results/ufc
+    11-21 10:30:27 $ git diff --cached --quiet
+    11-21 10:30:27 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] idle
+    11-21 10:30:27 $ git push -q origin HEAD:main
+--- sleep: 2026-11-21T10:50:20+00:00 idle 
+    11-21 10:50:22 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-21 10:50:22 $ git diff --cached --quiet
+    11-21 10:50:22 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
+    11-21 10:50:22 $ git push -q origin HEAD:main
 --- doodle: 2026-11-21T09:50:12+00:00 idle 
     11-21 09:50:14 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
     11-21 09:50:14 $ git diff --cached --quiet
     11-21 09:50:14 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] idle
     11-21 09:50:14 $ git push -q origin HEAD:main
---- milo: 2026-11-21T08:50:11+00:00 idle 
-    11-21 08:50:15 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-21 08:50:15 $ git diff --cached --quiet
-    11-21 08:50:15 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
-    11-21 08:50:15 $ git push -q origin HEAD:main
+--- milo: 2026-11-21T10:10:06+00:00 idle 
+    11-21 10:10:07 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-21 10:10:07 $ git diff --cached --quiet
+    11-21 10:10:07 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
+    11-21 10:10:07 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
-        681    2302 flock -n /tmp/kanal-funny.lock timeout -k 60 5h python3 cloud/worker.py funny
-        683    2302 timeout -k 60 5h python3 cloud/worker.py funny
-        684    2302 python3 cloud/worker.py funny
-        751    2292 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /ro
-        905    2282 flock -n /tmp/kanal-maxcat.lock timeout -k 60 5h python3 cloud/worker.py maxcat
-        907    2282 timeout -k 60 5h python3 cloud/worker.py maxcat
-        908    2282 python3 cloud/worker.py maxcat
-      14218    1143 flock -n /tmp/kanal-roblox.lock timeout -k 60 5h python3 cloud/worker.py roblox
-      14220    1143 timeout -k 60 5h python3 cloud/worker.py roblox
-      14221    1143 python3 cloud/worker.py roblox
+        681    5725 flock -n /tmp/kanal-funny.lock timeout -k 60 5h python3 cloud/worker.py funny
+        683    5725 timeout -k 60 5h python3 cloud/worker.py funny
+        684    5725 python3 cloud/worker.py funny
+        751    5715 /usr/bin/python3 /opt/kanal/repo/cloud/makers/funny.py --out /root/kanal/funny/made --home /root/kanal/funny --repo /opt/kanal/repo --titles /ro
+        905    5705 flock -n /tmp/kanal-maxcat.lock timeout -k 60 5h python3 cloud/worker.py maxcat
+        907    5705 timeout -k 60 5h python3 cloud/worker.py maxcat
+        908    5705 python3 cloud/worker.py maxcat
 --- held channel locks:
     /tmp/kanal-bolt.lock free
     /tmp/kanal-codup.lock free
@@ -98,7 +95,7 @@ disk free: 887G
     /tmp/kanal-maxcat.lock HELD
     /tmp/kanal-milo.lock free
     /tmp/kanal-money.lock free
-    /tmp/kanal-roblox.lock HELD
+    /tmp/kanal-roblox.lock free
     /tmp/kanal-sleep.lock free
     /tmp/kanal-ufc.lock free
     /tmp/kanal-yt.lock free
