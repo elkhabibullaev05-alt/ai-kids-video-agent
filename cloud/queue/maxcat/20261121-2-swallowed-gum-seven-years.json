@@ -1,0 +1,855 @@
+{
+ "id": "20261121-2-swallowed-gum-seven-years",
+ "plot": "You swallow a piece of gum. Gus panics because acid can't dissolve gum base, Cortez hunts for proof of the seven-year rumor and finds none, Liv gets a partly absorbed sweetener box, the housekeeper wave sweeps Chewy Lou through the pyloric door, and Neff times the trip at a couple of days. Tease: a swallowed ice cube.",
+ "variation": {
+  "music": "marimba_sway",
+  "palette": "pastel_morning",
+  "opening_shot": "low_angle",
+  "camera_set": "crane",
+  "transitions": "whip",
+  "caption_style": "box"
+ },
+ "script": {
+  "title": "Swallowed Gum Stays 7 Years? Your Organs Disagree",
+  "seed": 47,
+  "clock": "3:12",
+  "episode": {
+   "action": "swallow a piece of chewing gum",
+   "guest": "Chewy Lou (gum base)",
+   "system": "digestive"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.85,
+     0.55,
+     0.3
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "bm_george",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "liv": {
+    "name": "Liv",
+    "organ": "liver",
+    "voice": "af_sarah",
+    "speed": 0.96
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "bm_lewis",
+    "speed": 1.0
+   },
+   "chewy": {
+    "name": "Chewy Lou",
+    "organ": "guest",
+    "voice": "am_onyx",
+    "speed": 0.97,
+    "guest": {
+     "shape": "cube",
+     "color": [
+      0.95,
+      0.45,
+      0.65
+     ],
+     "color2": [
+      0.99,
+      0.75,
+      0.85
+     ],
+     "accessory": "bowtie",
+     "tag": "CHEWY LOU"
+    }
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_fable",
+    "speed": 1.0
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Swallowed Gum Stays 7 Years? Your Organs Disagree",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "sip"
+     ]
+    ],
+    "mood": "tense"
+   },
+   {
+    "who": "gus",
+    "say": "Hold everything! Something rubbery just fell in the pool. It's not food and it's still sweet!",
+    "emotion": "panic",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "chewy"
+    ],
+    "cam": "close:gus",
+    "mood": "chase",
+    "counter": ""
+   },
+   {
+    "who": "chewy",
+    "say": "Easy, chef. Name's Chewy Lou. I'm gum. Don't worry, I've got plenty of stretch.",
+    "emotion": "deadpan",
+    "cam": "two:gus,chewy",
+    "do": [
+     [
+      "chewy",
+      "enter"
+     ]
+    ],
+    "label": "Gum base: synthetic rubbers and resins",
+    "label_on": "chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Plenty of stretch? I can't break you down. My acid is pH one point five!",
+    "emotion": "angry",
+    "cam": "close:gus",
+    "gap": 0.2
+   },
+   {
+    "who": "chewy",
+    "say": "Great. I'll be in the corner. Chewing. Without a mouth. Weird, right?",
+    "emotion": "happy",
+    "cam": "tight:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "All hands, emergency meeting! Mouth sent us a package and the label says gum.",
+    "emotion": "shock",
+    "chapter": "1. Gum Drop",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "cam": "close:cortez",
+    "mood": "office",
+    "alarm": true
+   },
+   {
+    "who": "beat",
+    "say": "Line two is Gus. Line three is Gus. Line four is also Gus. He is yelling!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ],
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "Quick audit. No calories, no nutrients, no paperwork. Why is it even here?",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Because somebody swallowed it. Rumor says it stays for SEVEN YEARS!",
+    "emotion": "shock",
+    "cam": "tight:cortez",
+    "do": [
+     [
+      "all",
+      "shock"
+     ]
+    ],
+    "gap": 0.3,
+    "sfx": "shock"
+   },
+   {
+    "who": "beat",
+    "say": "Seven years?! Do we have to give it a desk? A badge? A parking spot?",
+    "emotion": "panic",
+    "cam": "wide",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Everyone calm. We check the facts before we panic. Beat, you're on hold music.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "mood": "tense",
+    "gap": 0.25
+   },
+   {
+    "who": "gus",
+    "say": "Fine, the facts. Door's open. Welcome to my acid bath, Lou.",
+    "emotion": "deadpan",
+    "chapter": "2. The Acid Bath",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "chewy"
+    ],
+    "cam": "close:gus",
+    "counter": "DAY 0: 0 HOURS",
+    "mood": "office",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "My acid melts a turkey leg in a few hours. Watch it work!",
+    "emotion": "excited",
+    "cam": "prop:acid",
+    "label": "Gastric acid: pH 1.5 to 3.5",
+    "label_on": "gus",
+    "gap": 0.3,
+    "sfx": "splash"
+   },
+   {
+    "who": "chewy",
+    "say": "Ooh, warm. Nice spa. Is this the free sample?",
+    "emotion": "happy",
+    "cam": "close:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "The sweetener is dissolving! The mint flavor is leaving! You're shrinking!",
+    "emotion": "excited",
+    "cam": "two:gus,chewy",
+    "gap": 0.2
+   },
+   {
+    "who": "chewy",
+    "say": "Most of that was gone after the first ten minutes of chewing. Old news.",
+    "emotion": "deadpan",
+    "cam": "tight:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Okay, but the gum base? The rubbery part? Why won't you break?",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "gap": 0.2
+   },
+   {
+    "who": "chewy",
+    "say": "Enzymes cut food into small pieces. Nobody gave them a recipe for rubber.",
+    "emotion": "deadpan",
+    "cam": "low:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "So I can't digest you and I can't dissolve you. This is the worst shift ever!",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "do": [
+     [
+      "gus",
+      "sad"
+     ]
+    ],
+    "gap": 0.4
+   },
+   {
+    "who": "gus",
+    "say": "Fix number one: more acid! Everybody turn the dial up!",
+    "emotion": "excited",
+    "cam": "prop:acid",
+    "counter": "HOUR 1: ACID MAX",
+    "do": [
+     [
+      "set",
+      "alarm"
+     ]
+    ],
+    "alarm": true,
+    "gap": 0.2,
+    "sfx": "alarm"
+   },
+   {
+    "who": "chewy",
+    "say": "Still here. Still stretchy. Do you have a towel? I'm getting a tan.",
+    "emotion": "happy",
+    "cam": "close:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Fix number two: squash him! Wall muscles, churn like a washing machine!",
+    "emotion": "angry",
+    "cam": "wide",
+    "do": [
+     [
+      "set",
+      "shake"
+     ],
+     [
+      "gus",
+      "shake"
+     ]
+    ],
+    "counter": "HOUR 2: CHURN",
+    "gap": 0.2,
+    "sfx": "rumble"
+   },
+   {
+    "who": "chewy",
+    "say": "Fun! I'm a snack-sized stress ball. Do it again, I'm getting smaller sweet parts!",
+    "emotion": "excited",
+    "cam": "two:gus,chewy",
+    "do": [
+     [
+      "chewy",
+      "spin"
+     ]
+    ],
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Churning breaks food into mush. You just get squished and bounce back!",
+    "emotion": "shock",
+    "cam": "close:gus",
+    "gap": 0.25
+   },
+   {
+    "who": "chewy",
+    "say": "Welcome to my gym. Rubber doesn't quit. Rubber doesn't take lunch breaks either.",
+    "emotion": "deadpan",
+    "cam": "low:chewy",
+    "gap": 0.4
+   },
+   {
+    "who": "cortez",
+    "say": "Evidence time. Neff, pull the files on the seven-year rule.",
+    "emotion": "angry",
+    "chapter": "3. The Seven-Year Rumor",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "cam": "close:cortez",
+    "mood": "tense",
+    "counter": "",
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "Searching... searching... Nothing. No study, no lab, no records at all.",
+    "emotion": "deadpan",
+    "cam": "prop:screens",
+    "gap": 0.3
+   },
+   {
+    "who": "neff",
+    "say": "The rumor has no source. It's just a thing people tell little cousins.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "So nobody ever checked? Then I'm filing this myth under NOPE.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "FILED UNDER: NOPE",
+    "memo": "7 YEARS",
+    "gap": 0.4
+   },
+   {
+    "who": "beat",
+    "say": "So how long does it really stay? Asking for the front desk.",
+    "emotion": "excited",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Gut crews move stuff along all day. Gus, how fast is the road?",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "narr",
+    "say": "The stomach churns, but gum base rides along. The real exit plan is next.",
+    "emotion": "deadpan",
+    "cam": "wide",
+    "mood": "calm",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Delivery for the liver! Tiny box of sweetener, still warm from the mouth.",
+    "emotion": "excited",
+    "chapter": "4. Sweet Talk",
+    "set": "liver",
+    "cast": [
+     "liv"
+    ],
+    "cam": "prop:belt",
+    "counter": "",
+    "mood": "office",
+    "sfx": "ding"
+   },
+   {
+    "who": "liv",
+    "say": "Real sugar I know. This is a sugar alcohol. Gets absorbed only partly.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "label": "Sorbitol: only partly absorbed by the gut",
+    "label_on": "liv",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Nothing to filter. Nothing to fix. Honestly, a very short shift.",
+    "emotion": "tired",
+    "cam": "prop:filter",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Lou, I checked your badge. Your rubber part never even reached my door.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Right, I'm not in the blood. I'm just a passenger. Hi, Liv, nice hard hat!",
+    "emotion": "happy",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "chewy"
+    ],
+    "cam": "two:gus,chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Stop chatting. You're still sitting in my break room and my coffee is cold!",
+    "emotion": "angry",
+    "cam": "close:gus",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "I need to talk to the cleaning crew. Hit the big red button.",
+    "emotion": "tired",
+    "chapter": "5. Housekeeper Waves",
+    "cam": "prop:door",
+    "counter": "HOURS LATER: 3",
+    "mood": "calm",
+    "gap": 0.2
+   },
+   {
+    "who": "narr",
+    "say": "Between meals, the stomach sends strong waves down the tube. Little pieces move on.",
+    "emotion": "deadpan",
+    "cam": "wide",
+    "do": [
+     [
+      "set",
+      "shake"
+     ]
+    ],
+    "gap": 0.2,
+    "sfx": "rumble"
+   },
+   {
+    "who": "gus",
+    "say": "They call it the migrating motor complex. I call it the housekeeper wave.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "label": "Migrating motor complex: stomach's cleanup wave",
+    "label_on": "gus",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Whoa! The floor is moving! It's like a conveyor belt for people with no feet!",
+    "emotion": "excited",
+    "cam": "two:gus,chewy",
+    "do": [
+     [
+      "chewy",
+      "jump"
+     ]
+    ],
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "It sweeps out stuff I can't digest. Tough pieces, seeds, and you, you rubber ball!",
+    "emotion": "excited",
+    "cam": "close:gus",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Does it hurt? It looks like it should hurt.",
+    "emotion": "whisper",
+    "cam": "tight:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Nope. Just a big hug from the walls. Look, the door!",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "gap": 0.2
+   },
+   {
+    "who": "narr",
+    "say": "The stomach's exit is a muscle ring. It opens a little at a time.",
+    "emotion": "deadpan",
+    "chapter": "6. The Exit Door",
+    "cam": "prop:door",
+    "mood": "tense",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "Pyloric sphincter, you're up! Open wide for Lou!",
+    "emotion": "excited",
+    "cam": "close:gus",
+    "do": [
+     [
+      "set",
+      "open"
+     ]
+    ],
+    "label": "Pyloric sphincter: the stomach's exit door",
+    "label_on": "gus",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "It's tight in there. I'm a big gum, I've got squishy shoulders.",
+    "emotion": "panic",
+    "cam": "tight:chewy",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "Everyone out! Squeeze the gum! Left shoulder! Now the right!",
+    "emotion": "excited",
+    "cam": "two:gus,chewy",
+    "do": [
+     [
+      "gus",
+      "point"
+     ]
+    ],
+    "gap": 0.2
+   },
+   {
+    "who": "chewy",
+    "say": "I'm through! I'm through! Tell my mom I'm in the small intestine!",
+    "emotion": "excited",
+    "cam": "close:chewy",
+    "do": [
+     [
+      "chewy",
+      "exit"
+     ]
+    ],
+    "gap": 0.3,
+    "sfx": "whoosh"
+   },
+   {
+    "who": "gus",
+    "say": "Phew! That's a record. A full break room for the first time all day.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "gap": 0.3
+   },
+   {
+    "who": "narr",
+    "say": "Past the exit door is a very long road. The gut keeps squeezing, section after section.",
+    "emotion": "deadpan",
+    "chapter": "7. The Long Road",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "cam": "wide",
+    "mood": "calm",
+    "counter": "DAY 1"
+   },
+   {
+    "who": "cortez",
+    "say": "Status? How long will Lou be on the road?",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "Small intestine takes hours. Then the large intestine adds a day or two.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Peristalsis: muscle waves that push food along",
+    "label_on": "neff",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "So he's out in a few days? Not seven years?",
+    "emotion": "excited",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "Total trip is usually a couple of days. Not years. Not even a week.",
+    "emotion": "deadpan",
+    "cam": "two:neff,beat",
+    "counter": "DAY 2",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Make it official. Beat, write the memo in big letters.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "APPROVED",
+    "memo": "OUT IN DAYS",
+    "gap": 0.4
+   },
+   {
+    "who": "beat",
+    "say": "Done. I also ordered a farewell cake. It's mostly air.",
+    "emotion": "happy",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "One more rule, people. Chew your food, not your rumors.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "neff",
+    "say": "Noted. Filing that under things the brain says when it wants to look wise.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "Ooh, new voicemail. It's Lou from the large intestine. Everything's fine, he says.",
+    "emotion": "happy",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Tell him no more questions. Gum is a team player, even when nobody asked.",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Day three, folks. Lou here, reporting from the last mile. It got a bit... dark.",
+    "emotion": "tired",
+    "chapter": "8. Exit Interview",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "chewy"
+    ],
+    "cam": "close:chewy",
+    "counter": "DAY 3",
+    "mood": "resolve",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Any last words, Lou? Any regrets?",
+    "emotion": "deadpan",
+    "cam": "two:gus,chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Yes. Spit me out in a napkin next time. The mouth never got a vote.",
+    "emotion": "deadpan",
+    "cam": "tight:chewy",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "One piece of gum is a routine passenger for us. Tell the other gums, we've seen it all.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "gap": 0.3
+   },
+   {
+    "who": "chewy",
+    "say": "Gotcha. Goodbye, break room. You were warm, loud, and a little acidic.",
+    "emotion": "happy",
+    "cam": "close:chewy",
+    "do": [
+     [
+      "chewy",
+      "exit"
+     ]
+    ],
+    "gap": 0.3,
+    "sfx": "boing"
+   },
+   {
+    "who": "cortez",
+    "say": "Case closed. Every myth gets the same treatment: check the facts first.",
+    "emotion": "deadpan",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "cam": "close:cortez",
+    "counter": "",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "MYTH BUSTED",
+    "memo": "GUM",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Next time: someone swallows a whole ice cube and the break room goes frozen.",
+    "emotion": "happy",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "cam": "close:gus",
+    "counter": "",
+    "gap": 0.3
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Gum base can't be digested.",
+      "It usually exits in a few days."
+     ],
+     "source": "OpenStax A&P 2e; NIDDK Your Digestive System"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 4.2
+   }
+  ],
+  "variation": {
+   "music": "marimba_sway",
+   "palette": "pastel_morning",
+   "opening_shot": "low_angle",
+   "camera_set": "crane",
+   "transitions": "whip",
+   "caption_style": "box"
+  }
+ },
+ "long": {
+  "title": "Swallowed Gum Stays 7 Years? Your Organs Disagree",
+  "description": "You swallowed one piece of gum and your organs lost it. Gus can't dissolve Chewy Lou, Cortez tries to file a seven-year rule, and the housekeeper wave finally shows the real road out.\nA funny, body-accurate trip through the stomach: acid, the pyloric door, sugar alcohol, and why gum is not stuck for years.\n\n{CHAPTERS}\n\nReal body notes (sources): OpenStax Anatomy & Physiology 2e, The Stomach: https://openstax.org/books/anatomy-and-physiology-2e/pages/23-4-the-stomach ; NIDDK, Your Digestive System & How it Works: https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works ; NCBI Bookshelf, StatPearls: Physiology, Gastric Motility (migrating motor complex).\nEntertainment and general education, not medical advice. Original characters, animated in Blender.\n#SwallowedGum #HumanBody #DigestiveSystem",
+  "tags": [
+   "swallowed gum",
+   "does gum stay in your stomach for 7 years",
+   "gum myth",
+   "migrating motor complex",
+   "pyloric sphincter",
+   "stomach acid",
+   "digestive system animation",
+   "human body cartoon",
+   "gum base",
+   "myth busted body"
+  ],
+  "thumb_text": "7 YEARS?!",
+  "thumb_beat": 1
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 24,
+   "top": "THE 7-YEAR RULE",
+   "title": "Gum Stays 7 Years? Cortez Checks #shorts",
+   "description": "Cortez opens the file on the seven-year rule and finds it empty. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "gum myth",
+    "swallowed gum",
+    "human body"
+   ]
+  },
+  {
+   "beat": 40,
+   "dur": 26,
+   "top": "THE HOUSEKEEPER WAVE",
+   "title": "The Gut Wave That Sweeps Out Gum #shorts",
+   "description": "Gus calls the cleanup wave for Lou. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "migrating motor complex",
+    "digestive system",
+    "stomach"
+   ]
+  }
+ ]
+}
