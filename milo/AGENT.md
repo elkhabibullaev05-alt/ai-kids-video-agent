@@ -1,3 +1,6 @@
+# RETIRED 2026-11-21
+The owner repurposed this channel into **What If History** (English history documentaries). Do NOT make or upload Milo videos. Stop immediately with one Uzbek line: "Milo to'xtatilgan — kanal What If History'ga aylantirilgan."
+
 # Milo Survives — production run (instructions for Claude)
 
 Channel: **Milo Survives** — @MiloSurvivesDaily — Studio id `UCiaE4voy2yYUHOTDr2wfC5A` — Google account eldorbekhabibullaev6 (built-in browser `authuser=5` as of 2026-10-27). Not made for kids. Owner speaks Uzbek; video content is English.

@@ -9,7 +9,7 @@ Chrome authuser indexes were checked on 2026-11-06. If a channel has moved, re-c
 | max | Max the Curious Cat | UCxHeOROSVQQSZv7zeMaF4Vw | 1 | maxcat/ + cloud/WRITER.md | Made for Kids |
 | ufc | Wild Sketchbook (animals) | UCbWs87aJxQxohE0M2MaO7GQ | 1 | cloud/makers/ufc.py + cloud/ink/WRITER_INK.md | no fight footage; free-licence images only |
 | seoul | Seoul Night Remix | UCEgWmdwz8gvTmqtDgFMut-A | 2 | seoul/ | Suno Pro songs only; AI backgrounds marked altered/synthetic |
-| milo | Milo Survives | UCiaE4voy2yYUHOTDr2wfC5A | 2 | milo/ | |
+| milo | What If History (was Milo Survives; repurposed 2026-11-21 — Milo retired, do NOT re-enable Milo tasks or upload Milo videos; history docs made manually) | UCiaE4voy2yYUHOTDr2wfC5A | 2 | (retired milo/) | |
 | hollow | Hollowmere Tales | UCiOfdnuWUlHj5bPi6H5scgA | 3 | hollow/ + cloud/WRITER.md | 13+ |
 | dough | Dough Bros | UCsQ8TVoioR_IIJpU_1RE_IA | 3 | doughbros/ + cloud/WRITER.md | Made for Kids; no Ask Studio button (use Analytics) |
 | doodle | The Doodle Desk | UCQrteikptRbmzuR8kYD0q8g | 4 | doodle/ | |
