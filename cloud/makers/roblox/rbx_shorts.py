@@ -161,10 +161,13 @@ def fmt_losers(games, titles, rng, back):
     # so the 'Dying?' angle is the default here. Only block it when the SAME game had a 'Dying?' title recently
     # (AVOID.md 11-18: Steal An Egg twice in 2 days).
     dying = f"Is {lo[0]['clean']} Dying? Lost {short_num(-lo[0]['d_play'])} Players #shorts"
-    if not titles.recently(lo[0]['clean'] + " dying", n=30) and titles.ok(dying):
+    # 2026-11-21 review: 'Is Steal An Egg Dying?' 11-20 + 11-22 and 'Steal An Egg Lost 429K Players?!' 11-20 — the same
+    # game's 'Lost N Players' title also counts, and both name-based titles are skipped while it was used recently.
+    same = titles.recently(lo[0]['clean'] + " dying", n=30) or titles.recently(lo[0]['clean'] + " lost", n=30)
+    if not same and titles.ok(dying):
         title = titles.take(dying)
     else:
-        title = titles.pick([c for c in cands if "Dying?" not in c], rng)
+        title = titles.pick([c for c in cands if "Dying?" not in c and not (same and lo[0]['clean'] in c)], rng)
     if not title:
         return None
     cards = [dict(say="These three Roblox games lost the most players since yesterday.", head="LOSING PLAYERS?!",
@@ -441,7 +444,7 @@ def build(fmt_name, games, back, titles, rng, out_dir, name, day, voice="am_mich
     # 2026-11-17 review: 'Guess Today's #1 Roblox Game' and 'X vs Y — Who Wins' kept coming back (AVOID.md 11-13..11-15
     # said once a week). Skip these formats while one is among the last 14 titles (~2-3 days of uploads).
     sig = {"guess": "guess", "versus": "vs"}.get(fmt_name)
-    if sig and titles.recently(sig):
+    if sig and titles.recently(sig, n=30):  # 2026-11-21 review: 14 titles (<3 days) let 'Guess #1' back 11-19 -> 11-22
         return None
     r = FORMATS[fmt_name](games, titles, rng, back)
     if not r:

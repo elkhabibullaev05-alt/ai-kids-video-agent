@@ -18,7 +18,7 @@ class Titles:
         # 2026-11-18 review: the worker passes the channel's uploads playlist, which is NEWEST FIRST, so the old
         # '[-14:]' looked at the 14 oldest titles and the 11-17 'not again soon' checks never fired (MM2 vs RIVALS
         # and 'Is Steal An Egg Dying?' repeated 2 days apart). Newest first here; used for 'not again this week'.
-        self.recent = [norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in (used or [])][:14]
+        self.recent = [norm(t if isinstance(t, str) else (t or {}).get("title", "")) for t in (used or [])][:40]  # 2026-11-21 review: was [:14], so recently(..., n=30) only ever saw 14
 
     def recently(self, words, n=14):
         """2026-11-17 review: True if any of the last n titles contains these words (as whole words)."""

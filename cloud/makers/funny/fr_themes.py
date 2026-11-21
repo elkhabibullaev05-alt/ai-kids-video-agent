@@ -312,7 +312,9 @@ def pick_themes(titles, home, n, rng=random, skip=()):
     gen = {"fails", "fail", "physics", "funny", "the", "and", "of", "moments", "best"}
     kw = lambda s: {w.rstrip("s") for w in _norm(s).split() if w not in gen}
     seen = set()
-    for t in titles[:5] + titles[-5:]:
+    # 2026-11-21 review: titles are newest first; 5 titles = 1 day on Physics Rank, so 'Ski Jump' came back 2 days after
+    # 'Long Jump'/'Box Jump' (AVOID.md 11-19 said no jump theme until 11-26). Look at ~3 days of Shorts.
+    for t in titles[:15]:
         seen |= kw(t)
     out, left = [], list(ok)
     while left:
