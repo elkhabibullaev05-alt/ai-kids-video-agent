@@ -1,0 +1,1255 @@
+{
+ "id": "20261121-1-max-thanksgiving-leg",
+ "plot": "On Thanksgiving Max wants one of the turkey's two legs before twelve guests get them and tries everything (the kids' table, a thankful speech that puts the leg first, taste-testing a green bean, an empty gravy boat, posing as 'Cousin Maxwell'); when the last leg seems gone he bites the fancy leg on Grandma's centerpiece, which turns out to be her vanilla candle (planted by Bird's 'smells like vanilla'), and then Grandma brings out the leg she saves for him every year, which Max shares with Dog before the whole house falls into a turkey nap.",
+ "script": {
+  "title": "2 Turkey Legs, 12 Guests… and Max",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "turkey",
+    "type": "ball",
+    "color": [
+     0.72,
+     0.42,
+     0.18
+    ],
+    "at": [
+     3.0,
+     12.5,
+     0.6
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "center",
+    "type": "cake",
+    "color": [
+     0.95,
+     0.75,
+     0.35
+    ],
+    "at": [
+     0.0,
+     12.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.6
+   },
+   {
+    "id": "kidtable",
+    "type": "box",
+    "color": [
+     0.85,
+     0.3,
+     0.25
+    ],
+    "at": [
+     -7.0,
+     10.5,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.8
+   },
+   {
+    "id": "gravy",
+    "type": "trophy",
+    "color": [
+     0.55,
+     0.35,
+     0.2
+    ],
+    "at": [
+     1.0,
+     11.0,
+     0.5
+    ],
+    "visible": false,
+    "scale": 0.45
+   },
+   {
+    "id": "leg",
+    "type": "banana",
+    "color": [
+     0.7,
+     0.42,
+     0.2
+    ],
+    "at": [
+     -1.0,
+     10.5,
+     0.6
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "That smell! Turkey! Out of my way, I'm coming!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max! Stop right there! The kitchen is closed to cats!",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm not in the kitchen. I'm near the kitchen. Emotionally.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,10"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "2 LEGS. 12 GUESTS.",
+    "cam": "prop:turkey",
+    "hold": 1.2,
+    "do": [
+     [
+      "turkey",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Thanksgiving. One turkey, two legs, twelve hungry guests. Can Max get one?",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "enter:right"
+     ],
+     [
+      "dog",
+      "to:6,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Twelve guests? Grandma, that math does not work for me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The legs go to the guests, sweetheart. You get the gravy.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Gravy is not a meal. Gravy is a rumor about a meal.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And nobody touches my centerpiece. I made it myself. All week.",
+    "cam": "prop:center",
+    "do": [
+     [
+      "center",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Ooh, a fancy turkey leg on top. It smells like vanilla.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:left"
+     ],
+     [
+      "bird",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Vanilla turkey. Very fancy. Very rich people.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hands off, Max. Paws off. Whiskers off. Everything off.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I would never. I'm a guest. A very polite guest.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Five minutes later, the seating chart arrived.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-5,8"
+     ],
+     [
+      "kidtable",
+      "show"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you're at the little table. With Mouse.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "max",
+      "to:-6,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "The kids' table? I'm eleven! That's seventy-seven in cat years!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I'm two. That's also two. Please pass the crackers.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:-8,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is humiliating. My knees are touching my whiskers.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Also, the kids' table gets pie first. House rule.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I love the kids' table. I was born for this table.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Before we eat, everyone says what they're thankful for.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm thankful for Grandma, the couch, and my best friend Max.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:4,9"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I'm thankful for warm windows and nobody eating me.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm thankful for the left turkey leg. Specifically the left one.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And you, Grandma. Second place. Very close second.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wow. I said you were first. I'm keeping that in mind.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New plan. Get inside the kitchen with a job.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, every great chef needs a taste tester. It's the law.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Fine. Open wide. Here's your official taste.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "This is green. This is a bean. I've been betrayed.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Green beans are part of Thanksgiving too, sweetheart.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then I'm thankful they're far away from me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Okay, everybody! Pass the gravy down to Max, please!",
+    "cam": "prop:gravy",
+    "do": [
+     [
+      "gravy",
+      "show"
+     ],
+     [
+      "gravy",
+      "to:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Gravy, coming through. Passing it along, very carefully.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Got it. Passing it on. Wow, it's lighter than I thought.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "gravy",
+      "to:bird"
+     ],
+     [
+      "bird",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Here you go, Max. It's mostly... a boat now.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "gravy",
+      "to:max"
+     ],
+     [
+      "mouse",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It's empty! Who drank the gravy on the way down?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "It was a long trip, buddy. There were a lot of stops.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Bad news from the big table! Uncle Ray took a leg!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:2,12"
+     ],
+     [
+      "bird",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One leg left?! And eleven people with forks?!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "to:3,10"
+     ]
+    ]
+   },
+   {
+    "text": "ONE LEG LEFT",
+    "cam": "prop:turkey",
+    "hold": 1.2,
+    "do": [
+     [
+      "turkey",
+      "spin"
+     ]
+    ],
+    "sfx": "alarm"
+   },
+   {
+    "who": "narr",
+    "say": "Plan three. If you can't beat the guests, become one.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:5,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Good evening, everyone. I'm Cousin Maxwell. From out of town.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Cousin Maxwell has orange whiskers and a tail, sweetheart.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everyone in my family has a tail. It's a long story.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Nice to meet you, Cousin Maxwell. You look like my friend Max.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "to:7,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Never heard of him. Sounds very handsome, though.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Kids' table, Maxwell. Now. Pie is coming.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I ate so much, my collar is now a belt.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "dog",
+      "to:6,8"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Grandma, can I have a box to take leftovers home?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:-7,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You live in the wall, honey. You're already home.",
+    "cam": "two:grandma,mouse",
+    "do": [
+     [
+      "grandma",
+      "to:-4,9"
+     ],
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Then I'd like a very small box. For the wall.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Grandma leaves to slice the pie. The big table is empty.",
+    "cam": "wide",
+    "do": [
+     [
+      "grandma",
+      "to:-10,8"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Now or never. Pie first was nice. A leg would be nicer.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "One fancy leg. On the centerpiece. Nobody is watching.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, remember? Grandma said not to touch that one.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "She made it all week. It must be the best leg.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "CHOMP!",
+    "cam": "prop:center",
+    "hold": 0.9,
+    "do": [
+     [
+      "center",
+      "bounce"
+     ]
+    ],
+    "sfx": "suspicious"
+   },
+   {
+    "who": "max",
+    "say": "Why is it crunchy? Why does it taste like a candle?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Because it is a candle. I told you. Vanilla.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "My vanilla candle! I carved that turkey leg all week!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Who makes a candle that looks exactly like food?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "People who live with a cat, Max. That's who.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "turn:max"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Buddy, you have wax on your whiskers. Very festive.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "to:3,9"
+     ],
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "So the guests got both legs. I got wax. Happy Thanksgiving.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Not quite. Close your eyes, Cousin Maxwell.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "From the oven, wrapped in foil, came one more surprise.",
+    "cam": "prop:leg",
+    "do": [
+     [
+      "leg",
+      "show"
+     ],
+     [
+      "leg",
+      "to:max"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Every year you chase it. Every year I save one for you.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A real leg! Grandma, you're first place. Gold medal first.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "First place? I said you first an hour ago!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Okay. Dog, here. Half. You're also first place.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Ten minutes later, the turkey nap hit everybody at once.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'll finish my half... in just one... minute.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Next time: Grandma puts up the Christmas tree. Max has questions.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "2 Turkey Legs, 12 Guests… and Max 🦃",
+  "thumb_text": "NOT FOR CATS?!",
+  "thumb_beat": 2,
+  "description": "\"Two legs. Twelve guests. I did the math and I don't like it.\" 🐱\nIt's Thanksgiving and Max wants ONE turkey leg: the kids' table, a very honest thank-you speech, a green bean 'taste test', an empty gravy boat and Cousin Maxwell from out of town… and then there's Grandma's fancy centerpiece.\nWho gets the drumstick at YOUR Thanksgiving table? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "thanksgiving",
+   "thanksgiving dinner",
+   "turkey leg",
+   "kids table",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "max the curious cat",
+   "pet comedy",
+   "holiday comedy"
+  ],
+  "localizations": {
+   "es": {
+    "title": "2 muslos de pavo, 12 invitados… y Max 🦃",
+    "description": "\"Dos muslos. Doce invitados. Hice las cuentas y no me gustan.\" 🐱\nEs Acción de Gracias y Max quiere UN muslo de pavo: la mesa de los niños, un discurso de gracias demasiado sincero, una judía verde de 'prueba', una salsera vacía y el primo Maxwell que viene de fuera… y luego está el centro de mesa de la abuela.\n¿Quién se queda con el muslo en TU mesa? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "pt": {
+    "title": "2 coxas de peru, 12 convidados… e o Max 🦃",
+    "description": "\"Duas coxas. Doze convidados. Fiz as contas e não gostei.\" 🐱\nÉ Dia de Ação de Graças e o Max quer UMA coxa de peru: a mesa das crianças, um discurso de gratidão sincero demais, uma vagem de 'degustação', uma molheira vazia e o primo Maxwell de fora da cidade… e ainda tem o centro de mesa da vovó.\nQuem fica com a coxa na SUA mesa? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "ar": {
+    "title": "فخذان من الديك الرومي، 12 ضيفًا… وماكس 🦃",
+    "description": "\"فخذان. اثنا عشر ضيفًا. حسبتها ولم تعجبني النتيجة.\" 🐱\nإنه عيد الشكر وماكس يريد فخذًا واحدًا من الديك الرومي: طاولة الصغار، وكلمة شكر صادقة أكثر من اللازم، وتذوّق فاصولياء خضراء، وصحن مرق فارغ، والقريب ماكسويل القادم من بعيد… ثم هناك زينة الطاولة التي صنعتها الجدة.\nمن يأخذ الفخذ على مائدتكم؟ 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "fr": {
+    "title": "2 cuisses de dinde, 12 invités… et Max 🦃",
+    "description": "« Deux cuisses. Douze invités. J'ai fait le calcul et il ne me plaît pas. » 🐱\nC'est Thanksgiving et Max veut UNE cuisse de dinde : la table des enfants, un discours de remerciement trop honnête, un haricot vert « à goûter », une saucière vide et le cousin Maxwell venu de loin… et puis il y a le centre de table de Mamie.\nQui a la cuisse à TA table ? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "ja": {
+    "title": "七面鳥の足は2本、ゲストは12人…そしてマックス 🦃",
+    "description": "「足は2本。ゲストは12人。計算したけど、納得できない。」🐱\n感謝祭、マックスの狙いは七面鳥の足1本だけ。子ども用テーブル、正直すぎる感謝のスピーチ、いんげんの「味見」、空っぽのグレイビーボート、遠くから来た「いとこのマックスウェル」…そしておばあちゃんの手作りセンターピース。\nあなたの家では誰が足を食べる？👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "ko": {
+    "title": "칠면조 다리 2개, 손님 12명… 그리고 맥스 🦃",
+    "description": "\"다리는 두 개. 손님은 열두 명. 계산해 봤는데 마음에 안 들어.\" 🐱\n추수감사절, 맥스가 원하는 건 칠면조 다리 딱 하나! 어린이 식탁, 너무 솔직한 감사 인사, 그린빈 '시식', 텅 빈 그레이비 그릇, 멀리서 온 사촌 맥스웰… 그리고 할머니의 장식품까지.\n당신의 식탁에선 누가 다리를 먹나요? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   },
+   "de": {
+    "title": "2 Truthahnkeulen, 12 Gäste… und Max 🦃",
+    "description": "„Zwei Keulen. Zwölf Gäste. Ich hab's ausgerechnet und es gefällt mir nicht.“ 🐱\nEs ist Thanksgiving und Max will EINE Truthahnkeule: der Kindertisch, eine zu ehrliche Dankesrede, eine grüne Bohne zum „Probieren“, eine leere Soßenschüssel und Cousin Maxwell von auswärts… und dann ist da noch Omas Tischdeko.\nWer bekommt bei EUCH die Keule? 👇\n#MaxTheCuriousCat #Thanksgiving #FunnyCat"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 14,
+   "dur": 18,
+   "top": "THE KIDS' TABLE?!",
+   "title": "Seated at the Kids' Table at 77 😭 #shorts",
+   "description": "I'm eleven. That's seventy-seven in cat years. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "thanksgiving",
+    "kids table"
+   ],
+   "localizations": {
+    "es": {
+     "title": "En la mesa de los niños a los 77 😭 #shorts",
+     "description": "Tengo once. Eso son setenta y siete en años de gato. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Na mesa das crianças aos 77 😭 #shorts",
+     "description": "Tenho onze. Isso é setenta e sete em anos de gato. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "على طاولة الصغار في عمر 77 😭 #shorts",
+     "description": "عمري أحد عشر. أي سبعة وسبعون بعمر القطط. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "À la table des enfants à 77 ans 😭 #shorts",
+     "description": "J'ai onze ans. Soixante-dix-sept en années de chat. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "77歳で子ども用テーブル 😭 #shorts",
+     "description": "ぼくは11歳。猫の年なら77歳だよ。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "77세에 어린이 식탁 😭 #shorts",
+     "description": "난 열한 살. 고양이 나이로 일흔일곱이라고. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Mit 77 am Kindertisch 😭 #shorts",
+     "description": "Ich bin elf. Das sind siebenundsiebzig Katzenjahre. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 33,
+   "dur": 18,
+   "top": "WHO DRANK IT?",
+   "title": "We Passed the Gravy… It Arrived Empty 💀 #shorts",
+   "description": "It was a long trip. There were a lot of stops. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny dog",
+    "thanksgiving",
+    "gravy"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pasamos la salsa… y llegó vacía 💀 #shorts",
+     "description": "Fue un viaje largo. Hubo muchas paradas. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Passamos o molho… e chegou vazio 💀 #shorts",
+     "description": "Foi uma viagem longa. Teve muitas paradas. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مرّرنا المرق… فوصل فارغًا 💀 #shorts",
+     "description": "كانت رحلة طويلة. وفيها محطات كثيرة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "On a passé la sauce… elle est arrivée vide 💀 #shorts",
+     "description": "Le voyage était long. Il y avait beaucoup d'arrêts. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "グレイビーを回したら空で届いた 💀 #shorts",
+     "description": "長い旅だったんだ。途中でいっぱい止まったし。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "그레이비를 돌렸더니 빈 채로 도착 💀 #shorts",
+     "description": "먼 길이었어. 들른 데가 많았거든. 전체 영상: {LONG_URL}"
+    },
+    "de": {
+     "title": "Wir reichten die Soße… sie kam leer an 💀 #shorts",
+     "description": "Es war eine lange Reise. Mit vielen Zwischenstopps. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
