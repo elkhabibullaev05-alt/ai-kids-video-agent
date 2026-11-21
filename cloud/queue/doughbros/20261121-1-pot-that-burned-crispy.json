@@ -1,0 +1,1021 @@
+{
+ "id": "20261121-1-pot-that-burned-crispy",
+ "plot": "Tuesday morning in the backyard Crispy confronts Mr. Pot, the old black petunia pot with three dents that the 1976 newspaper blamed for the bakery fire, and Mr. Pot grumpily admits he was on the stove while snapping 'don't say Walter's name' before anyone did; Mom plans to put him on her new bakery's stove, Bup's push to hide him fails, angry Lolly tips him over (Bup comes up as a 'chocolate flower cake'), and Crispy reads the twist scratched on the bottom — 'My fault, not yours. Forgive me. W.': Walter fell asleep with the stove on and Mr. Pot let the town blame him for fifty years to protect the baker; Crispy forgives him, becomes the bakery's night guard, and Mia runs out — someone just ordered five hundred rolls before the bakery even opens.",
+ "script": {
+  "title": "The Pot That Burned Crispy",
+  "set": {
+   "place": "garden",
+   "time": "morning"
+  },
+  "chars": {
+   "bup": {
+    "name": "Bup",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.82,
+     0.6,
+     0.32
+    ],
+    "kind": "loaf",
+    "size": 1.0,
+    "home": [
+     -6,
+     6
+    ],
+    "eye_sizes": [
+     1.15,
+     0.8
+    ],
+    "stitch": true,
+    "brows": 10
+   },
+   "pim": {
+    "name": "Pim",
+    "voice": "am_puck",
+    "speed": 1.15,
+    "pitch": 2,
+    "color": [
+     0.75,
+     0.08,
+     0.08
+    ],
+    "kind": "bean",
+    "size": 0.9,
+    "home": [
+     -2.5,
+     4
+    ]
+   },
+   "zeek": {
+    "name": "Zeek",
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.4,
+     0.9
+    ],
+    "kind": "triangle",
+    "size": 0.9,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "lolly": {
+    "name": "Lolly",
+    "voice": "af_nicole",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     1.0,
+     0.45,
+     0.7
+    ],
+    "kind": "star",
+    "size": 0.85,
+    "home": [
+     5,
+     4
+    ]
+   },
+   "crispy": {
+    "name": "Crispy",
+    "voice": "am_onyx",
+    "speed": 0.85,
+    "pitch": -3,
+    "color": [
+     0.06,
+     0.05,
+     0.05
+    ],
+    "kind": "rock",
+    "size": 0.9,
+    "home": [
+     9,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_george",
+    "speed": 1.0,
+    "pitch": 0
+   },
+   "pot": {
+    "name": "Mr. Pot",
+    "voice": "am_fenrir",
+    "speed": 0.85,
+    "pitch": -4,
+    "color": [
+     0.15,
+     0.15,
+     0.17
+    ],
+    "kind": "pot",
+    "size": 1.1,
+    "home": [
+     2,
+     14
+    ],
+    "brows": 18
+   }
+  },
+  "props": [
+   {
+    "id": "can",
+    "type": "box",
+    "color": [
+     0.2,
+     0.6,
+     0.3
+    ],
+    "on": null,
+    "at": [
+     -9,
+     14,
+     0
+    ],
+    "visible": true,
+    "scale": 0.9
+   },
+   {
+    "id": "gloves",
+    "type": "box",
+    "color": [
+     1.0,
+     0.85,
+     0.1
+    ],
+    "on": null,
+    "at": [
+     -7,
+     15,
+     0
+    ],
+    "visible": false,
+    "scale": 0.7
+   }
+  ],
+  "beats": [
+   {
+    "who": "crispy",
+    "say": "There you are. Three dents. Like three eyes. It was you!",
+    "cam": "two:crispy,pot",
+    "do": [
+     [
+      "crispy",
+      "to:0,11"
+     ],
+     [
+      "bup",
+      "to:-4,8"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Fifty years I hid in the dark. Now you answer me!",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:1,12"
+     ],
+     [
+      "bup",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "text": "DID HE BURN CRISPY?",
+    "cam": "overhead",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "pim",
+      "to:-5,9"
+     ],
+     [
+      "zeek",
+      "to:5,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "New episode every day. Subscribe so you don't miss what happens next.",
+    "cam": "wide",
+    "do": [
+     [
+      "lolly",
+      "to:6,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Tuesday morning. The backyard. Cold dew on every leaf.",
+    "cam": "prop:can",
+    "do": [
+     [
+      "can",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "In the corner sits an old black pot full of petunias.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Fifty years, little cinder. You sure took your time.",
+    "cam": "two:pot,crispy",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Crispy, easy! We came to ask questions. Not to start a war.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "He was on that stove. The newspaper says so.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:front"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "Three round dents. A ninety-nine percent match.",
+    "cam": "two:zeek,pot",
+    "do": [
+     [
+      "zeek",
+      "to:4,11"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Ninety-nine? Ha! Make it a hundred, little triangle.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "HE ADMITS IT?!",
+    "cam": "close:crispy",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Excuse me, sir. You burned our friend, and you laugh?",
+    "cam": "two:lolly,pot",
+    "do": [
+     [
+      "lolly",
+      "to:5,12"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Don't. Say Walter's name, and this talk is over.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "W-wait. Nobody said Walter. Why did he say Walter?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "to:-3,11"
+     ],
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "And why does he sit so c-crooked? Like he's hiding his bottom?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Pim, sweetie. Nobody wants to look at a pot's bottom.",
+    "cam": "two:lolly,pim",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The back door bangs open. Mom walks out in yellow gloves.",
+    "cam": "wide",
+    "do": [
+     [
+      "gloves",
+      "appear"
+     ],
+     [
+      "pim",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom says the old pot goes to her bakery. Onto the stove.",
+    "cam": "prop:gloves",
+    "do": [
+     [
+      "gloves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "text": "BACK ON A STOVE?!",
+    "cam": "close:crispy",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "No. Not again. Not Mom's bakery. Not her dream.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:1,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom goes back inside for a bucket. She scrubs him after lunch.",
+    "cam": "two:bup,lolly",
+    "do": [
+     [
+      "gloves",
+      "vanish"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Team, if that bakery burns, Mom loses everything.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:0,11"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "Then he never leaves this garden. I'll stop him myself.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy's ember eyes glow hotter and hotter. The petunias droop.",
+    "cam": "two:crispy,pot",
+    "do": [
+     [
+      "crispy",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup jumps between them. New plan. Roll the pot behind the shed.",
+    "cam": "wide",
+    "do": [
+     [
+      "bup",
+      "to:1,13"
+     ],
+     [
+      "zeek",
+      "to:3,13"
+     ],
+     [
+      "pim",
+      "to:0,13"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "Push, team! On three! One, two... ugh! He weighs a ton!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Lolly's sweet smile disappears. Her icing drips start to shake.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Nobody. Laughs. At. My. Friends.",
+    "cam": "close:lolly",
+    "do": [
+     [
+      "lolly",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "text": "LOLLY IS ANGRY",
+    "cam": "two:lolly,pot",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "lolly",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "One tiny star. One huge shove. The old pot tips over.",
+    "cam": "wide",
+    "do": [
+     [
+      "pot",
+      "spin"
+     ],
+     [
+      "lolly",
+      "to:2,13"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Soil pours out. Right on top of Bup.",
+    "cam": "two:bup,pot",
+    "do": [
+     [
+      "bup",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bup pops up. Brown all over. A pink petunia on his head.",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "Bup! You're a chocolate cake! With a flower on top!",
+    "cam": "two:lolly,bup",
+    "do": [
+     [
+      "lolly",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "I'm a loaf! A dirty, flowery loaf! Nobody eat me!",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "But Crispy isn't laughing. He rolls to the bottom of the pot.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,15"
+     ]
+    ]
+   },
+   {
+    "text": "WRITING ON THE POT?",
+    "cam": "overhead",
+    "hold": 1.1,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "look:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Put me back! Don't read that! That's private!",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "It's scratched in the metal. It says: Old friend.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "My fault, not yours. Forgive me. W.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "turn:pot"
+     ]
+    ]
+   },
+   {
+    "text": "MY FAULT?!",
+    "cam": "two:crispy,pot",
+    "hold": 1.1,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bup",
+    "say": "W. Walter. Walter scratched that? For you?",
+    "cam": "close:bup",
+    "do": [
+     [
+      "bup",
+      "to:1,14"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mr. Pot is quiet. For the first time. No laugh. No steam.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "Walter fell asleep in his chair. Stove on. Me on top.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "pot",
+    "say": "I boiled dry. I rattled my lid. Nobody woke up.",
+    "cam": "two:pot,crispy",
+    "do": [
+     [
+      "pot",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "The paper blamed a pot. Not a sweet old baker. Fine.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "crispy",
+    "say": "You let the whole town hate you? For fifty years?",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "to:2,13"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "The town loved its baker. Walter loved his town. Easy choice.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "turn:crispy"
+     ]
+    ]
+   },
+   {
+    "who": "lolly",
+    "say": "So all that grumpy fry-you talk was just an act?",
+    "cam": "two:lolly,pot",
+    "do": [
+     [
+      "lolly",
+      "to:4,13"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "A grumpy pot is easier to be than a sorry one.",
+    "cam": "close:pot",
+    "do": [
+     [
+      "pot",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Crispy's eyes cool down. Slowly. From red to soft orange.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "crispy",
+    "say": "I hid in the dark. You hid in petunias. Same thing.",
+    "cam": "two:crispy,pot",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mom comes back. Bucket. Gloves. Scrub brush.",
+    "cam": "wide",
+    "do": [
+     [
+      "gloves",
+      "appear"
+     ],
+     [
+      "pim",
+      "to:-1,12"
+     ]
+    ]
+   },
+   {
+    "who": "pim",
+    "say": "H-he's going on a stove! What if it happens again?",
+    "cam": "close:pim",
+    "do": [
+     [
+      "pim",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "pot",
+    "say": "It won't. Not if somebody watches that stove every night.",
+    "cam": "close:pot"
+   },
+   {
+    "who": "crispy",
+    "say": "Somebody who glows in the dark. And never sleeps.",
+    "cam": "close:crispy",
+    "do": [
+     [
+      "crispy",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "NIGHT GUARD CRISPY",
+    "cam": "two:bup,crispy",
+    "hold": 1.0,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "all",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mom lifts the pot. Under it, she finds Walter's words.",
+    "cam": "prop:gloves",
+    "do": [
+     [
+      "gloves",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Then Mia runs out, waving Mom's phone.",
+    "cam": "wide",
+    "do": [
+     [
+      "pim",
+      "jump"
+     ],
+     [
+      "zeek",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "zeek",
+    "say": "The bakery isn't open yet. Someone just ordered five hundred rolls.",
+    "cam": "close:zeek",
+    "do": [
+     [
+      "zeek",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "text": "500 ROLLS BY SATURDAY?!",
+    "cam": "overhead",
+    "hold": 1.2,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "What do you think happens in the next part?",
+    "cam": "wide"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments.",
+    "cam": "wide"
+   }
+  ]
+ },
+ "long": {
+  "title": "The Pot That Burned Crispy Is in Our Garden 😳",
+  "description": "What do you think happens in the next part? Tell me in the comments.\n\"A grumpy pot is easier to be than a sorry one.\" — Mr. Pot\nCrispy finally faces the old black pot from the bakery fire — and words scratched on its bottom change everything.\n#series #3DAnimation #DoughBros",
+  "tags": [
+   "dough bros",
+   "3d animation",
+   "series",
+   "animated comedy",
+   "funny animation",
+   "mr pot",
+   "crispy",
+   "bakery fire",
+   "backyard",
+   "garden",
+   "old secret",
+   "lolly",
+   "cartoon series",
+   "mystery"
+  ],
+  "thumb_text": "HE DID IT?",
+  "thumb_beat": 8,
+  "localizations": {
+   "es": {
+    "title": "La olla que quemó a Crispy está en nuestro jardín 😳",
+    "description": "¿Qué crees que pasa en la próxima parte? Cuéntamelo en los comentarios.\n\"Una olla gruñona es más fácil de ser que una arrepentida.\" — Mr. Pot\nCrispy por fin enfrenta a la vieja olla negra del incendio de la panadería… y unas palabras rayadas en el fondo lo cambian todo.\n#series #3DAnimation #DoughBros"
+   },
+   "pt": {
+    "title": "A panela que queimou o Crispy está no nosso jardim 😳",
+    "description": "O que você acha que acontece na próxima parte? Conta nos comentários.\n\"Uma panela rabugenta é mais fácil de ser do que uma arrependida.\" — Mr. Pot\nCrispy finalmente enfrenta a velha panela preta do incêndio da padaria… e palavras riscadas no fundo mudam tudo.\n#series #3DAnimation #DoughBros"
+   },
+   "ar": {
+    "title": "القِدر الذي أحرق كريسبي موجود في حديقتنا 😳",
+    "description": "ماذا تظن سيحدث في الجزء القادم؟ أخبرني في التعليقات.\n\"أن تكون قِدرًا غاضبًا أسهل من أن تكون قِدرًا نادمًا.\" — مستر بوت\nيواجه كريسبي أخيرًا القِدر الأسود القديم من حريق المخبز… وكلمات محفورة في قاعه تغيّر كل شيء.\n#series #3DAnimation #DoughBros"
+   },
+   "fr": {
+    "title": "La marmite qui a brûlé Crispy est dans notre jardin 😳",
+    "description": "À ton avis, que se passe-t-il dans la suite ? Dis-le-moi en commentaire.\n\"C'est plus facile d'être une marmite grincheuse qu'une marmite désolée.\" — Mr. Pot\nCrispy affronte enfin la vieille marmite noire de l'incendie de la boulangerie… et des mots gravés sous son fond changent tout.\n#series #3DAnimation #DoughBros"
+   },
+   "ja": {
+    "title": "クリスピーを焦がした鍋が、うちの庭にいる 😳",
+    "description": "次のパートはどうなると思う？コメントで教えてね。\n「謝る鍋より、不機嫌な鍋のほうが楽なんだ」— ミスター・ポット\nクリスピーはついにパン屋の火事の古い黒い鍋と向き合う…そして鍋の底に刻まれた言葉がすべてを変える。\n#series #3DAnimation #DoughBros"
+   },
+   "ko": {
+    "title": "크리스피를 태운 냄비가 우리 정원에 있다 😳",
+    "description": "다음 편에서 무슨 일이 일어날까요? 댓글로 알려 주세요.\n\"미안해하는 냄비보다 심술궂은 냄비가 더 쉬워.\" — 미스터 팟\n크리스피가 마침내 빵집 화재의 낡은 검은 냄비와 마주하고… 바닥에 새겨진 글이 모든 걸 바꿔 놓는다.\n#series #3DAnimation #DoughBros"
+   },
+   "de": {
+    "title": "Der Topf, der Crispy verbrannte, steht in unserem Garten 😳",
+    "description": "Was glaubst du, passiert im nächsten Teil? Schreib es in die Kommentare.\n\"Ein grummeliger Topf zu sein ist leichter als ein reumütiger.\" — Mr. Pot\nCrispy stellt endlich den alten schwarzen Topf aus dem Bäckereibrand zur Rede … und eingeritzte Worte am Boden ändern alles.\n#series #3DAnimation #DoughBros"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 5,
+   "dur": 26,
+   "top": "WOULD YOU FLIP IT?",
+   "title": "Would YOU Flip This Old Black Pot? 🪴 #shorts",
+   "description": "Three dents like three eyes, and Crispy says it was him. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "mr pot",
+    "crispy",
+    "3d animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿TÚ volcarías esta vieja olla? 🪴 #shorts",
+     "description": "Tres abolladuras como tres ojos, y Crispy dice que fue él. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "VOCÊ viraria esta panela velha? 🪴 #shorts",
+     "description": "Três amassados como três olhos, e o Crispy diz que foi ela. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل كنت ستقلب هذا القِدر القديم؟ 🪴 #shorts",
+     "description": "ثلاث انبعاجات مثل ثلاث عيون، وكريسبي يقول إنه هو. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "TU renverserais cette vieille marmite ? 🪴 #shorts",
+     "description": "Trois bosses comme trois yeux, et Crispy dit que c'est elle. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "キミはこの古い鍋をひっくり返す？ 🪴 #shorts",
+     "description": "三つのへこみは三つの目みたい。クリスピーは犯人はこいつだと言う。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "너라면 이 낡은 냄비를 뒤집을래? 🪴 #shorts",
+     "description": "눈 세 개 같은 찌그러짐 세 개, 크리스피는 범인이 이 냄비라고 한다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Würdest DU diesen alten Topf umkippen? 🪴 #shorts",
+     "description": "Drei Dellen wie drei Augen – und Crispy sagt, er war's. Ganze Folge: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 27,
+   "dur": 28,
+   "top": "BUP OR CAKE?",
+   "title": "Is That Bup or a Chocolate Flower Cake? 😂 #shorts",
+   "description": "Lolly gets angry, the pot tips over… and there's writing underneath. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dough bros",
+    "series",
+    "lolly",
+    "bup",
+    "3d animation"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Eso es Bup o un pastel de chocolate con flor? 😂 #shorts",
+     "description": "Lolly se enfada, la olla vuelca… y debajo hay algo escrito. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Isso é o Bup ou um bolo de chocolate com flor? 😂 #shorts",
+     "description": "A Lolly se irrita, a panela tomba… e embaixo tem algo escrito. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "هل هذا باب أم كعكة شوكولاتة بزهرة؟ 😂 #shorts",
+     "description": "لولي تغضب، والقِدر ينقلب… وتحته شيء مكتوب. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "C'est Bup ou un gâteau au chocolat fleuri ? 😂 #shorts",
+     "description": "Lolly se fâche, la marmite bascule… et dessous, il y a des mots. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "これはバップ？それとも花のせチョコケーキ？ 😂 #shorts",
+     "description": "ロリーが怒り、鍋がひっくり返る…その底に何か書いてある。本編はこちら：{LONG_URL}"
+    },
+    "ko": {
+     "title": "이거 밥이야, 꽃 얹은 초코 케이크야? 😂 #shorts",
+     "description": "롤리가 화나자 냄비가 넘어지고… 바닥에 뭔가 쓰여 있다. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ist das Bup oder ein Schokokuchen mit Blume? 😂 #shorts",
+     "description": "Lolly wird wütend, der Topf kippt … und darunter steht etwas. Ganze Folge: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
