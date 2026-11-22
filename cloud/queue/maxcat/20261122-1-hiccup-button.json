@@ -1,0 +1,790 @@
+{
+ "id": "20261122-1-hiccup-button",
+ "plot": "You chug a soda in four seconds. Fizz the bubble stretches Gus's stomach walls, the nerve memo skips Cortez's desk through the brainstem reflex hallway, the diaphragm jumps and the glottis door slams (HIC), Liv bounces under the diaphragm, the fixes (hold breath, BOO, DENIED stamp) fail, Fizz burps out but the reflex loop keeps firing until it fades after about six minutes. Tease: a red-eye flight and Cortez's clock.",
+ "variation": {
+  "music": "synth_pulse",
+  "palette": "neon_alarm",
+  "opening_shot": "face_close",
+  "camera_set": "push",
+  "transitions": "punch",
+  "caption_style": "caps"
+ },
+ "script": {
+  "title": "Who Pressed the Hiccup Button? Inside Your Body",
+  "seed": 61,
+  "clock": "6:41",
+  "episode": {
+   "action": "chug a fizzy soda in four seconds",
+   "guest": "Fizz (swallowed soda bubble)",
+   "system": "digestive + respiratory + nervous"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.95,
+     0.6,
+     0.2
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "bm_george",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "liv": {
+    "name": "Liv",
+    "organ": "liver",
+    "voice": "af_sarah",
+    "speed": 0.96
+   },
+   "inout": {
+    "name": "In and Out",
+    "organ": "lungs",
+    "voice": "am_puck",
+    "speed": 1.1
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "bm_lewis",
+    "speed": 1.0
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_fable",
+    "speed": 1.0
+   },
+   "fizz": {
+    "name": "Fizz",
+    "organ": "guest",
+    "voice": "am_liam",
+    "speed": 1.04,
+    "guest": {
+     "shape": "sphere",
+     "color": [
+      0.55,
+      0.85,
+      1.0
+     ],
+     "color2": [
+      0.9,
+      0.97,
+      1.0
+     ],
+     "accessory": "hat",
+     "tag": "FIZZ"
+    }
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Who Pressed the Hiccup Button? Inside Your Body",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "sip"
+     ]
+    ],
+    "mood": "tense"
+   },
+   {
+    "who": "gus",
+    "say": "Hold everything! Somebody chugged a soda in four seconds, and now I'm swimming in bubbles!",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "fizz"
+    ],
+    "mood": "chase",
+    "counter": "",
+    "chapter": "1. Soda in Four Seconds",
+    "gap": 0.2
+   },
+   {
+    "who": "fizz",
+    "say": "Hey, chef. Fizz here. Half of me is gas, and the other half is also gas.",
+    "emotion": "deadpan",
+    "cam": "two:gus,fizz",
+    "do": [
+     [
+      "fizz",
+      "enter"
+     ]
+    ],
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "My walls are stretching! I'm a balloon at a birthday party, and nobody brought a pin!",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "label": "Stomach stretch: can irritate nearby nerves",
+    "label_on": "gus",
+    "gap": 0.2
+   },
+   {
+    "who": "fizz",
+    "say": "Relax. I'm just here for the pop. Then I'll leave the way I came in, probably.",
+    "emotion": "happy",
+    "cam": "tight:fizz",
+    "gap": 0.25
+   },
+   {
+    "who": "gus",
+    "say": "The way you came in is UP! Nothing in my kitchen goes up politely!",
+    "emotion": "angry",
+    "cam": "close:gus",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Alert! Stomach just sent a nerve memo, marked urgent, with a frowny face. Who approved a four-second soda?",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "mood": "office",
+    "alarm": true,
+    "chapter": "2. A Memo From Below",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "Line three, line four, line five! The stomach, the nerves, and a pizza place that dialed the wrong number!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ],
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "For the record, I filed a complaint against fizzy drinks in March. It's in the minutes.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Noted, and ignored. Here's the setup. Under the lungs sits a big dome of muscle, and it does most of your breathing.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "label": "Diaphragm: your main breathing muscle",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "inout",
+    "say": "Hi! Hi! We love the diaphragm! It pulls down, we breathe in. It relaxes, we breathe out.",
+    "emotion": "happy",
+    "cam": "two:inout,cortez",
+    "do": [
+     [
+      "inout",
+      "breathe"
+     ]
+    ],
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Today, the diaphragm got a message that says: JUMP. Nobody asked me. I'm the manager!",
+    "emotion": "shock",
+    "cam": "close:cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "gus",
+    "say": "Sending it now! A stretched stomach tickles the nerves that run up to the diaphragm. It's not personal.",
+    "emotion": "excited",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "counter": "HICS: 0",
+    "mood": "tense",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Wait. That message isn't coming to my desk. It's taking the reflex hallway through the brainstem, and I'm not on that route.",
+    "emotion": "shock",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "chapter": "3. The Reflex Hallway",
+    "label": "Reflex arc: skips conscious thought",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "So you're not even in the loop?",
+    "emotion": "deadpan",
+    "cam": "close:beat",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "I'm the manager. I'm never in the loop. Why do you think I drink so much coffee?",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "inout",
+    "say": "Everything is calm. We are inhaling nicely. We are inhal... GULP!",
+    "emotion": "shock",
+    "cam": "close:inout",
+    "do": [
+     [
+      "inout",
+      "shock"
+     ]
+    ],
+    "sfx": "thud",
+    "counter": "HICS: 1",
+    "gap": 0.15
+   },
+   {
+    "who": "cortez",
+    "say": "That's it. The diaphragm yanked down, and the door between the vocal cords slammed shut. That slam is the HIC.",
+    "emotion": "shock",
+    "cam": "close:cortez",
+    "label": "Glottis: the gap between your vocal cords",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "inout",
+    "say": "Rude! We were mid-breath! Nobody knocks on the door like that!",
+    "emotion": "angry",
+    "cam": "two:inout,beat",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "And every single hic bounces me around the chest! I'm a receptionist, not a drum!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "counter": "HICS: 4",
+    "do": [
+     [
+      "beat",
+      "jump"
+     ]
+    ],
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Okay, team. Fix number one. In and Out, hold your breath.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "chapter": "4. Fixes That Don't Fix",
+    "gap": 0.25
+   },
+   {
+    "who": "inout",
+    "say": "No! No way! We're couriers, not statues! We have deliveries!",
+    "emotion": "angry",
+    "cam": "close:inout",
+    "do": [
+     [
+      "inout",
+      "shake"
+     ]
+    ],
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Fix number two. Beat, jump out from behind the desk and scream BOO.",
+    "emotion": "deadpan",
+    "cam": "two:cortez,beat",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "BOO! ...Is that it? I was told there'd be a bigger reaction.",
+    "emotion": "excited",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "jump"
+     ]
+    ],
+    "counter": "HICS: 7",
+    "gap": 0.25
+   },
+   {
+    "who": "neff",
+    "say": "Nothing. Zero effect. And I wasted a full sheet of paper on the BOO budget.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Fix number three. Distraction. Beat, quick, what's seventeen times twenty-three?",
+    "emotion": "deadpan",
+    "cam": "two:cortez,beat",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "Four hundred and... hic! One? Hic! I lost track, and now I'm embarrassed!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "counter": "HICS: 8",
+    "gap": 0.25
+   },
+   {
+    "who": "neff",
+    "say": "I looked it up. Most folk tricks have little proof behind them. They mostly distract you until the reflex runs out.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Fine. New policy. Hiccups are hereby... denied!",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "DENIED",
+    "memo": "NO MORE HICCUPS",
+    "gap": 0.25
+   },
+   {
+    "who": "inout",
+    "say": "We checked. The diaphragm doesn't read memos. Hic. Sorry, hic.",
+    "emotion": "sad",
+    "cam": "close:inout",
+    "counter": "HICS: 9",
+    "gap": 0.25
+   },
+   {
+    "who": "liv",
+    "say": "Nine hics so far. I live right under the diaphragm. It's like having a trampoline park upstairs.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "set": "liver",
+    "cast": [
+     "liv"
+    ],
+    "mood": "office",
+    "chapter": "5. The Neighbor Upstairs",
+    "label": "Liver: sits right under the diaphragm",
+    "label_on": "liv",
+    "gap": 0.25
+   },
+   {
+    "who": "liv",
+    "say": "Every hic, my whole shift bounces. I just spilled a full flask of bile. Again.",
+    "emotion": "tired",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "narr",
+    "say": "Common hiccup triggers include eating too fast, fizzy drinks, alcohol, and sudden excitement.",
+    "emotion": "deadpan",
+    "cam": "wide",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Or all of the above, at a birthday party. Somebody get me a mop.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "I'm the biggest organ in this building, and the diaphragm still wins at bouncing. It's humbling.",
+    "emotion": "tired",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "narr",
+    "say": "A short spell of hiccups is usually harmless, and it ends on its own.",
+    "emotion": "deadpan",
+    "cam": "wide",
+    "gap": 0.3
+   },
+   {
+    "who": "fizz",
+    "say": "Good news, everyone! I'm leaving! One burp, coming right up!",
+    "emotion": "excited",
+    "cam": "close:fizz",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "fizz"
+    ],
+    "chapter": "6. Fizz Leaves the Building",
+    "do": [
+     [
+      "fizz",
+      "exit"
+     ]
+    ],
+    "sfx": "boing",
+    "gap": 0.2
+   },
+   {
+    "who": "gus",
+    "say": "BURP! And just like that, Fizz is gone. My stomach is back to normal size.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "counter": "HICS: 16",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "So why are we still hiccing?",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Because the reflex doesn't care that Fizz left. The loop keeps firing until the irritation settles.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "mood": "tense",
+    "chapter": "7. The Loop Keeps Going",
+    "label": "Hiccup spell: reflex repeats, then fades",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "neff",
+    "say": "Statistically, most spells fade on their own, in minutes to hours.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "Hours?! I have a full calendar! I have a calendar for my calendar!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "counter": "HICS: 22",
+    "gap": 0.2
+   },
+   {
+    "who": "inout",
+    "say": "We'll just keep breathing and ignore the door slamming. We are professionals.",
+    "emotion": "deadpan",
+    "cam": "two:inout,beat",
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Counting. Twenty-three. Twenty-four. Everything is fine. Stamp it.",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "FILED UNDER: HIC",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Hey, quick update. No more stretching down here. Nothing's poking the nerves anymore.",
+    "emotion": "happy",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "mood": "resolve",
+    "chapter": "8. The Quiet Part",
+    "counter": "HICS: 31",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "The reflex is quieting down. Do you hear that? That's nothing. Beautiful nothing.",
+    "emotion": "whisper",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "gap": 0.4
+   },
+   {
+    "who": "beat",
+    "say": "Is it over? Please say it's over.",
+    "emotion": "whisper",
+    "cam": "close:beat",
+    "gap": 0.4
+   },
+   {
+    "who": "inout",
+    "say": "We are inhaling. We are exhaling. We are... doing it! No door slam!",
+    "emotion": "happy",
+    "cam": "close:inout",
+    "do": [
+     [
+      "inout",
+      "happy"
+     ]
+    ],
+    "counter": "",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Case closed. Total spell: about six minutes. Felt like six weeks.",
+    "emotion": "happy",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "CLOSED",
+    "gap": 0.3
+   },
+   {
+    "who": "neff",
+    "say": "A spell that lasts more than forty-eight hours is called persistent. That one goes to a real doctor's desk.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Next time: a red-eye flight to New York. Somebody check Cortez's clock.",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "counter": "",
+    "gap": 0.25
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Hiccup = diaphragm spasm + glottis snap.",
+      "Over 48 hours is called persistent."
+     ],
+     "source": "StatPearls: Hiccups; NHS: Hiccups; OpenStax A&P 2e"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 4.0
+   }
+  ],
+  "variation": {
+   "music": "synth_pulse",
+   "palette": "neon_alarm",
+   "opening_shot": "face_close",
+   "camera_set": "push",
+   "transitions": "punch",
+   "caption_style": "caps"
+  }
+ },
+ "long": {
+  "title": "Who Pressed the Hiccup Button? Inside Your Body",
+  "description": "You chugged a soda in four seconds. Gus the stomach swims in bubbles, Cortez finds out the hiccup reflex skips his desk, and In and Out get their breath slammed by a tiny door.\nA funny, body-accurate look at why we hiccup: a stretched stomach, the diaphragm, the reflex arc and the glottis.\n\nReal body notes (sources): OpenStax Anatomy & Physiology 2e, The Process of Breathing: https://openstax.org/books/anatomy-and-physiology-2e/pages/22-3-the-process-of-breathing ; NHS, Hiccups: https://www.nhs.uk/conditions/hiccups/ ; NCBI Bookshelf, StatPearls: Hiccups (ncbi.nlm.nih.gov/books).\nEntertainment and general education, not medical advice. Original characters, animated in Blender.\n#Hiccups #HumanBody #InsideYourBody",
+  "tags": [
+   "why do we get hiccups",
+   "hiccups explained",
+   "what causes hiccups",
+   "diaphragm",
+   "glottis",
+   "reflex arc",
+   "fizzy drink",
+   "human body animation",
+   "inside your body",
+   "funny anatomy",
+   "organs cartoon"
+  ],
+  "thumb_text": "HIC?! WHO DID IT",
+  "localizations": {
+   "es": {
+    "title": "¿Quién apretó el botón del hipo? Dentro de tu cuerpo",
+    "description": "Te bebiste un refresco en cuatro segundos. Gus, el estómago, nada entre burbujas y el reflejo del hipo se salta el escritorio de Cortez. Una comedia fiel a la biología sobre por qué nos da hipo."
+   },
+   "pt": {
+    "title": "Quem apertou o botão do soluço? Dentro do seu corpo",
+    "description": "Você tomou um refrigerante em quatro segundos. Gus, o estômago, nada em bolhas e o reflexo do soluço pula a mesa do Cortez. Uma comédia fiel à biologia sobre por que damos soluço."
+   },
+   "ar": {
+    "title": "من ضغط زر الفواق؟ داخل جسمك",
+    "description": "شربتَ مشروبًا غازيًا في أربع ثوانٍ. غاس المعدة يسبح بين الفقاعات، وانعكاس الفواق يتجاوز مكتب كورتيز. كوميديا دقيقة علميًا عن سبب الفواق."
+   },
+   "fr": {
+    "title": "Qui a appuyé sur le bouton du hoquet ? Dans ton corps",
+    "description": "Tu as avalé un soda en quatre secondes. Gus l'estomac nage dans les bulles et le réflexe du hoquet contourne le bureau de Cortez. Une comédie fidèle à la biologie sur le hoquet."
+   },
+   "ja": {
+    "title": "しゃっくりのボタンを押したのは誰？体の中をのぞく",
+    "description": "4秒で炭酸を一気飲み。胃のガスは泡の海に、しゃっくりの反射はコルテスの机を素通り。しゃっくりの仕組みを正確に楽しく解説します。"
+   },
+   "ko": {
+    "title": "딸꾹질 버튼은 누가 눌렀을까? 내 몸속 이야기",
+    "description": "탄산음료를 4초 만에 마셨어요. 위장 거스는 거품 속에서 허우적, 딸꾹질 반사는 코르테즈의 책상을 건너뛰죠. 딸꾹질이 생기는 이유를 정확하고 재미있게 풀었어요."
+   },
+   "de": {
+    "title": "Wer hat den Schluckauf-Knopf gedrückt? In deinem Körper",
+    "description": "Du hast eine Limo in vier Sekunden getrunken. Magen Gus schwimmt in Bläschen, und der Schluckauf-Reflex umgeht Cortez' Schreibtisch. Eine biologisch korrekte Komödie über den Schluckauf."
+   }
+  },
+  "thumb_beat": 1
+ },
+ "shorts": [
+  {
+   "dur": 24,
+   "top": "WHAT IS A HIC?",
+   "title": "What Is a Hic? Your Body Slams a Tiny Door #shorts",
+   "description": "The diaphragm jumps, the glottis slams shut. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "hiccups",
+    "why do we hiccup",
+    "human body"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¿Por qué te da hipo? El 'hic' explicado #shorts",
+     "description": "El diafragma salta y la glotis se cierra de golpe. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que dá soluço? O 'hic' explicado #shorts",
+     "description": "O diafragma salta e a glote fecha de repente. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا يحدث الفواق؟ #shorts",
+     "description": "الحجاب الحاجز ينقبض والمزمار يُغلق فجأة. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi on a le hoquet ? Le « hic » expliqué #shorts",
+     "description": "Le diaphragme sursaute et la glotte se ferme d'un coup. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "しゃっくりの「ヒック」の正体 #shorts",
+     "description": "横隔膜がピクッと動き、声門がパタンと閉じる。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "딸꾹질 '딸꾹' 소리의 정체 #shorts",
+     "description": "가로막이 움찔하고 성문이 탁 닫혀요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum hast du Schluckauf? Das «Hick» erklärt #shorts",
+     "description": "Das Zwerchfell zuckt, die Stimmritze schnappt zu. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 16
+  },
+  {
+   "dur": 22,
+   "top": "HICCUPS: DENIED?",
+   "title": "Brain Says 'Denied.' Diaphragm Says 'Hic.' #shorts",
+   "description": "Cortez stamps DENIED, but the diaphragm doesn't read memos. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "hiccups",
+    "funny anatomy",
+    "reflex"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Fíjate cómo el cuerpo ignora un memo del jefe #shorts",
+     "description": "Cortez sella DENEGADO, pero el diafragma no lee memos. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O corpo ignora o memo do chefe do cérebro #shorts",
+     "description": "Cortez carimba NEGADO, mas o diafragma não lê memos. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الجسم يتجاهل مذكرة رئيس الدماغ #shorts",
+     "description": "كورتيز يختم مرفوض لكن الحجاب الحاجز لا يقرأ المذكرات. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le corps ignore la note du patron cerveau #shorts",
+     "description": "Cortez tamponne REFUSÉ, mais le diaphragme ne lit pas les notes. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "体は脳の上司のメモを無視する #shorts",
+     "description": "コルテスが「却下」のハンコを押しても、横隔膜はメモを読まない。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "몸은 뇌 팀장의 메모를 무시해요 #shorts",
+     "description": "코르테즈가 '거부' 도장을 찍어도 가로막은 메모를 안 읽어요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Körper ignoriert das Memo vom Gehirn-Chef #shorts",
+     "description": "Cortez stempelt ABGELEHNT, doch das Zwerchfell liest keine Memos. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 29
+  }
+ ]
+}

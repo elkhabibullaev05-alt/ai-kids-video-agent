@@ -1,0 +1,638 @@
+{
+ "id": "20261122-2-jet-lag-la-to-ny",
+ "plot": "You land in New York at 7 AM but your body clock says 4 AM. Cortez's master clock only resets from the light report, Melly (melatonin) keeps announcing nighttime, the clock moves about an hour a day, flying east is harder because the clock runs a bit longer than 24 hours, Gus wants lunch at midnight, Liv's organ clock lags behind. Three days later the clock matches the sun. Tease: a knuckle crack.",
+ "variation": {
+  "music": "pizz_strings",
+  "palette": "sunset_gold",
+  "opening_shot": "macro_pullback",
+  "camera_set": "zoom",
+  "transitions": "dip",
+  "caption_style": "name_tag"
+ },
+ "script": {
+  "title": "Jet Lag Inside You: LA to New York in 5 Hours",
+  "seed": 83,
+  "clock": "4:00",
+  "episode": {
+   "action": "land in New York from Los Angeles on a red-eye",
+   "guest": "Melly (melatonin, night signal)",
+   "system": "nervous + endocrine + circadian"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.3,
+     0.7,
+     0.55
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "bm_george",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "liv": {
+    "name": "Liv",
+    "organ": "liver",
+    "voice": "af_sarah",
+    "speed": 0.96
+   },
+   "inout": {
+    "name": "In and Out",
+    "organ": "lungs",
+    "voice": "am_puck",
+    "speed": 1.1
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "bm_lewis",
+    "speed": 1.0
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_fable",
+    "speed": 1.0
+   },
+   "mel": {
+    "name": "Melly",
+    "organ": "guest",
+    "voice": "am_onyx",
+    "speed": 0.95,
+    "guest": {
+     "shape": "drop",
+     "color": [
+      0.45,
+      0.4,
+      0.85
+     ],
+     "color2": [
+      0.75,
+      0.7,
+      1.0
+     ],
+     "accessory": "hat",
+     "tag": "MELLY"
+    }
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Jet Lag Inside You: LA to New York in 5 Hours",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "sip"
+     ]
+    ],
+    "mood": "tense"
+   },
+   {
+    "who": "cortez",
+    "say": "It's seven in the morning in New York. My clock says four. Somebody explain why we're awake!",
+    "emotion": "panic",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff"
+    ],
+    "mood": "chase",
+    "alarm": true,
+    "counter": "BODY CLOCK: 4:00 AM",
+    "chapter": "1. Wrong Side of the Clock",
+    "gap": 0.2
+   },
+   {
+    "who": "beat",
+    "say": "The sun moved! The sun just moved three hours and nobody told us!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Right. Five hours in a plane, three time zones, and my master clock hasn't read the news.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "label": "Master clock: a tiny group in the brain",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "neff",
+    "say": "Also, my night shift runs on low output. Nobody told the traveler. I'm closed.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Kidneys: make less urine at night",
+    "label_on": "neff",
+    "gap": 0.3
+   },
+   {
+    "who": "mel",
+    "say": "Hello, hello. Melly here. Melatonin. I get released when it's dark, and I tell everybody it's nighttime.",
+    "emotion": "deadpan",
+    "cam": "ride",
+    "set": "vessel",
+    "cast": [
+     "mel",
+     "beat"
+    ],
+    "mood": "calm",
+    "chapter": "2. Melly Clocks In",
+    "label": "Melatonin: the brain's night signal",
+    "label_on": "mel",
+    "gap": 0.25
+   },
+   {
+    "who": "mel",
+    "say": "Right now, my gland thinks it's four in the morning. So I'm doing my job. Sleepy time, everyone! Loudly!",
+    "emotion": "excited",
+    "cam": "ride",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "Melly! It's morning! There are bagels outside! Please wake up!",
+    "emotion": "panic",
+    "cam": "pov",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Melly! Quiet! There's a morning meeting and the sun's already out!",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "mel"
+    ],
+    "mood": "office",
+    "gap": 0.25,
+    "do": [
+     [
+      "mel",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "mel",
+    "say": "I have one job, boss. Dark means go time. Nobody gave me an update.",
+    "emotion": "deadpan",
+    "cam": "close:mel",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Eyes, send the light report. The retina is the only one who tells my master clock what time it really is.",
+    "emotion": "deadpan",
+    "cam": "prop:eyes",
+    "chapter": "3. The Light Memo",
+    "label": "Retina: light sensor wired to the clock",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "Memo from the eyes: bright morning sun, priority one, in all capital letters!",
+    "emotion": "excited",
+    "cam": "close:beat",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Excellent. Clock, reset to seven AM.",
+    "emotion": "happy",
+    "cam": "close:cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "narr",
+    "say": "The clock moved to... four oh five.",
+    "emotion": "deadpan",
+    "cam": "prop:screens",
+    "counter": "BODY CLOCK: 4:05 AM",
+    "gap": 0.4
+   },
+   {
+    "who": "cortez",
+    "say": "Five minutes?! That's it?! It only moves about an hour a day! We're three hours behind!",
+    "emotion": "shock",
+    "cam": "close:cortez",
+    "gap": 0.2
+   },
+   {
+    "who": "neff",
+    "say": "I ran the numbers. Three time zones, about three days. I made a spreadsheet.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Why is flying east so rough? Because our clock runs a little longer than twenty-four hours. Stretching a day is easy. Shrinking it is not.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "chapter": "4. Why East Is Harder",
+    "label": "Flying east: usually harder than west",
+    "label_on": "cortez",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "So going west is like sleeping in, and going east is like waking up early on purpose?",
+    "emotion": "deadpan",
+    "cam": "close:beat",
+    "gap": 0.25
+   },
+   {
+    "who": "cortez",
+    "say": "Exactly. And my body is a middle manager who hates both.",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Lunch break! Wait, why's the kitchen closed? My clock says it's the middle of the night.",
+    "emotion": "tired",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "mood": "office",
+    "chapter": "5. Lunch at 4 AM",
+    "label": "Gut rhythms: also follow a body clock",
+    "label_on": "gus",
+    "gap": 0.25
+   },
+   {
+    "who": "gus",
+    "say": "Travel breakfast at seven? My acid isn't even dressed! I'm still in my slippers!",
+    "emotion": "panic",
+    "cam": "close:gus",
+    "gap": 0.25
+   },
+   {
+    "who": "gus",
+    "say": "Then by midnight, I'm starving. It's a snack crisis.",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Cortez shifts his clock. I have my own clock. It doesn't take orders by memo.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "set": "liver",
+    "cast": [
+     "liv"
+    ],
+    "chapter": "6. The Slow Clocks",
+    "label": "Organ clocks: each one keeps its own rhythm",
+    "label_on": "liv",
+    "gap": 0.25
+   },
+   {
+    "who": "liv",
+    "say": "I'll catch up. Eventually. Organs adjust at different speeds. That's why you feel off all over.",
+    "emotion": "tired",
+    "cam": "close:liv",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "My heart rate dips at night and climbs by day. I'm running a day shift on a night schedule!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "mel"
+    ],
+    "mood": "tense",
+    "gap": 0.2
+   },
+   {
+    "who": "cortez",
+    "say": "Sleepy at noon? DENIED. Nap request? DENIED. Everything's denied.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "NAP: DENIED",
+    "memo": "WE'RE SLEEPY",
+    "gap": 0.25
+   },
+   {
+    "who": "mel",
+    "say": "Bad news, boss. It's noon in New York, but my records say nine. Bedtime announcements are still going out.",
+    "emotion": "tired",
+    "cam": "close:mel",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Day two. The clock moved one more hour. I'm learning patience. I hate it.",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "counter": "BODY CLOCK: 5:05 AM",
+    "chapter": "7. Day Two, Same Mess",
+    "gap": 0.3
+   },
+   {
+    "who": "inout",
+    "say": "Hello! We have no clock! We breathe when asked! Ask us again!",
+    "emotion": "happy",
+    "cam": "two:inout,cortez",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "mel",
+     "inout"
+    ],
+    "gap": 0.25
+   },
+   {
+    "who": "neff",
+    "say": "Day three. My budget's up on both sides, and I still have no idea what time it is.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "counter": "BODY CLOCK: 6:05 AM",
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Clock check. Light report says morning. And the master clock says... seven AM!",
+    "emotion": "happy",
+    "cam": "close:cortez",
+    "alarm": false,
+    "mood": "resolve",
+    "counter": "BODY CLOCK: 7:00 AM",
+    "chapter": "8. Back in Sync",
+    "gap": 0.25
+   },
+   {
+    "who": "beat",
+    "say": "It matches the sun! Somebody get me a bagel!",
+    "emotion": "excited",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "jump"
+     ]
+    ],
+    "gap": 0.25
+   },
+   {
+    "who": "liv",
+    "say": "Almost. I'm still half an hour behind. Don't wait up.",
+    "emotion": "deadpan",
+    "cam": "close:liv",
+    "set": "liver",
+    "cast": [
+     "liv"
+    ],
+    "gap": 0.3
+   },
+   {
+    "who": "mel",
+    "say": "My part's done. Dark means night, light means morning. I'll announce at the right time from here on.",
+    "emotion": "happy",
+    "cam": "close:mel",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "mel"
+    ],
+    "do": [
+     [
+      "mel",
+      "exit"
+     ]
+    ],
+    "gap": 0.3
+   },
+   {
+    "who": "cortez",
+    "say": "Everyone, back to normal. Except Gus. He's hungry.",
+    "emotion": "deadpan",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "BACK ON SCHEDULE",
+    "gap": 0.3
+   },
+   {
+    "who": "gus",
+    "say": "Next time: a knuckle crack. I heard a pop, and it wasn't me.",
+    "emotion": "deadpan",
+    "cam": "close:gus",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "counter": "",
+    "gap": 0.25
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Morning light is your clock's reset signal.",
+      "Flying east usually feels harder than west."
+     ],
+     "source": "NIGMS: Circadian Rhythms; StatPearls: Jet Lag"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 4.0
+   }
+  ],
+  "variation": {
+   "music": "pizz_strings",
+   "palette": "sunset_gold",
+   "opening_shot": "macro_pullback",
+   "camera_set": "zoom",
+   "transitions": "dip",
+   "caption_style": "name_tag"
+  }
+ },
+ "long": {
+  "title": "Jet Lag Inside You: LA to New York in 5 Hours",
+  "description": "You land in New York at 7 AM, but your body clock says 4 AM. Cortez's master clock hasn't read the news, Melly the night-signal drop keeps announcing bedtime, Liv's liver clock refuses to take memos, and Gus wants lunch at midnight.\nA funny, body-accurate look at jet lag: the master clock, melatonin, morning light, and why flying east is harder than flying west.\n\nReal body notes (sources): NIGMS, Circadian Rhythms fact sheet: https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx ; NCBI Bookshelf, StatPearls: Jet Lag Disorder (ncbi.nlm.nih.gov/books) ; OpenStax Anatomy & Physiology 2e, Endocrine System (openstax.org).\nEntertainment and general education, not medical advice. Original characters, animated in Blender.\n#JetLag #BodyClock #HumanBody",
+  "tags": [
+   "jet lag explained",
+   "why do we get jet lag",
+   "body clock",
+   "circadian rhythm",
+   "melatonin",
+   "flying east vs west",
+   "time zones",
+   "human body animation",
+   "inside your body",
+   "funny anatomy",
+   "suprachiasmatic nucleus"
+  ],
+  "thumb_text": "IT'S 4 AM?!",
+  "localizations": {
+   "es": {
+    "title": "Jet lag por dentro: de LA a Nueva York en 5 horas",
+    "description": "Aterrizas en Nueva York a las 7 AM, pero tu reloj corporal marca las 4 AM. El reloj maestro de Cortez no leyó las noticias, Melly sigue anunciando la hora de dormir y Gus quiere almorzar a medianoche. Comedia fiel a la biología sobre el jet lag."
+   },
+   "pt": {
+    "title": "Jet lag por dentro: de LA a Nova York em 5 horas",
+    "description": "Você pousa em Nova York às 7h, mas seu relógio biológico marca 4h. O relógio mestre do Cortez não soube da notícia, Melly continua avisando a hora de dormir e Gus quer almoçar à meia-noite. Comédia fiel à biologia sobre o jet lag."
+   },
+   "ar": {
+    "title": "اضطراب الرحلات الطويلة من الداخل: من لوس أنجلوس إلى نيويورك",
+    "description": "تهبط في نيويورك الساعة 7 صباحًا بينما ساعتك البيولوجية تشير إلى 4. الساعة الرئيسية لدى كورتيز لم تسمع الخبر، وميلي يعلن وقت النوم، وغاس يريد الغداء عند منتصف الليل. كوميديا دقيقة علميًا عن اضطراب الرحلات."
+   },
+   "fr": {
+    "title": "Le décalage horaire de l'intérieur : LA–New York en 5 h",
+    "description": "Tu atterris à New York à 7 h, mais ton horloge interne indique 4 h. L'horloge maîtresse de Cortez n'est pas au courant, Melly annonce l'heure du coucher et Gus veut déjeuner à minuit. Une comédie fidèle à la biologie sur le décalage horaire."
+   },
+   "ja": {
+    "title": "時差ボケの正体：LAからNYまで5時間",
+    "description": "ニューヨークに朝7時に着陸。でも体内時計はまだ朝4時。コルテスのマスター時計は知らん顔、メリーは就寝時間をアナウンスし続け、ガスは真夜中にお昼を食べたがる。時差ボケを正確に楽しく解説します。"
+   },
+   "ko": {
+    "title": "시차 적응의 속사정: LA에서 뉴욕까지 5시간",
+    "description": "뉴욕에 아침 7시에 도착했는데 몸속 시계는 새벽 4시예요. 코르테즈의 마스터 시계는 소식을 모르고, 멜리는 취침 시간을 계속 알리고, 거스는 한밤중에 점심을 원해요. 시차 적응을 정확하고 재미있게 풀었어요."
+   },
+   "de": {
+    "title": "Jetlag von innen: Von LA nach New York in 5 Stunden",
+    "description": "Du landest um 7 Uhr in New York, doch deine innere Uhr zeigt 4 Uhr. Cortez' Hauptuhr hat die Nachricht nicht gelesen, Melly meldet weiter Schlafenszeit und Gus will um Mitternacht Mittag essen. Eine biologisch korrekte Komödie über Jetlag."
+   }
+  },
+  "thumb_beat": 1
+ },
+ "shorts": [
+  {
+   "dur": 24,
+   "top": "MELLY SAYS: NIGHT!",
+   "title": "Why Your Body Thinks It's Night After a Flight #shorts",
+   "description": "Melly announces bedtime at 7 AM. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "jet lag",
+    "melatonin",
+    "body clock"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Por qué tu cuerpo cree que es de noche #shorts",
+     "description": "Melly anuncia la noche a las 7 de la mañana. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Por que seu corpo acha que ainda é noite #shorts",
+     "description": "Melly anuncia a noite às 7 da manhã. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لماذا يظن جسمك أنه ما زال ليلًا #shorts",
+     "description": "ميلي يعلن الليل عند السابعة صباحًا. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Pourquoi ton corps croit qu'il fait nuit #shorts",
+     "description": "Melly annonce la nuit à 7 h du matin. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "体がまだ夜だと思い込む理由 #shorts",
+     "description": "メリーは朝7時に夜を告げる。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "내 몸이 아직 밤이라고 믿는 이유 #shorts",
+     "description": "멜리가 아침 7시에 밤을 알려요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Warum dein Körper denkt, es sei noch Nacht #shorts",
+     "description": "Melly verkündet um 7 Uhr morgens die Nacht. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 5
+  },
+  {
+   "dur": 22,
+   "top": "ONE HOUR A DAY",
+   "title": "Jet Lag: Your Clock Moves One Hour a Day #shorts",
+   "description": "Three time zones, about three days. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "jet lag",
+    "time zones",
+    "circadian rhythm"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Tres husos horarios, tres días de caos #shorts",
+     "description": "El reloj sólo avanza una hora al día. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Três fusos, três dias de bagunça #shorts",
+     "description": "O relógio só avança uma hora por dia. Episódio completo: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ثلاث مناطق زمنية وثلاثة أيام من الفوضى #shorts",
+     "description": "الساعة تتقدم ساعة واحدة فقط كل يوم. الحلقة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Trois fuseaux, trois jours de chaos #shorts",
+     "description": "L'horloge n'avance que d'environ une heure par jour. Épisode complet : {LONG_URL}"
+    },
+    "ja": {
+     "title": "3つの時間帯、3日間のドタバタ #shorts",
+     "description": "体内時計は1日に約1時間しか進まない。フルエピソード：{LONG_URL}"
+    },
+    "ko": {
+     "title": "시간대 3개, 3일간의 대혼란 #shorts",
+     "description": "몸속 시계는 하루에 약 한 시간만 움직여요. 전체 에피소드: {LONG_URL}"
+    },
+    "de": {
+     "title": "Drei Zeitzonen, drei Tage Chaos #shorts",
+     "description": "Die Uhr rückt nur etwa eine Stunde pro Tag vor. Ganze Folge: {LONG_URL}"
+    }
+   },
+   "beat": 13
+  }
+ ]
+}
