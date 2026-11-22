@@ -1,0 +1,1693 @@
+{
+ "id": "20261122-1-valley-forge-could-you-survive",
+ "plot": "Second person: you are a Continental Army soldier at Valley Forge in winter 1777-78: why you are there, the 14 by 16 foot huts, firecakes and the food crisis, missing clothes, the snow myth, women and children in camp, disease as the real killer (about 2,000 dead, two-thirds in March-May), von Steuben's drill, why nobody quit, and the open question: the dead were buried in scattered, never-commemorated graveyards, so nobody knows where most of them lie.",
+ "script": {
+  "title": "Valley Forge, 1777",
+  "lead_in": 0,
+  "set": {
+   "place": "hill",
+   "fog": 0.02,
+   "eyes": 0,
+   "moonlight": 12
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.35,
+     0.4,
+     0.55
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "washington": {
+    "name": "General Washington",
+    "voice": "am_michael",
+    "speed": 0.95,
+    "pitch": -2,
+    "color": [
+     0.1,
+     0.15,
+     0.4
+    ],
+    "kind": "human",
+    "size": 1.0,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "steuben": {
+    "name": "Baron von Steuben",
+    "voice": "am_puck",
+    "speed": 1.1,
+    "pitch": 0,
+    "color": [
+     0.15,
+     0.2,
+     0.35
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     -7,
+     14
+    ]
+   },
+   "martin": {
+    "name": "Joseph Plumb Martin",
+    "voice": "am_eric",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.45,
+     0.35,
+     0.25
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     6,
+     8
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_liam",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.4
+    ],
+    "glow": 2.3,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "hut",
+    "type": "box",
+    "color": [
+     0.4,
+     0.3,
+     0.2
+    ],
+    "glow": 0.9,
+    "visible": false,
+    "scale": 1.8,
+    "at": [
+     0,
+     15,
+     0
+    ]
+   },
+   {
+    "id": "cake",
+    "type": "cake",
+    "color": [
+     0.8,
+     0.65,
+     0.4
+    ],
+    "glow": 0.8,
+    "visible": false,
+    "scale": 0.7,
+    "at": [
+     -1,
+     10.5,
+     0.6
+    ]
+   },
+   {
+    "id": "boots",
+    "type": "box",
+    "color": [
+     0.3,
+     0.22,
+     0.15
+    ],
+    "glow": 0.7,
+    "visible": false,
+    "scale": 0.6,
+    "at": [
+     1,
+     10.5,
+     0.4
+    ]
+   },
+   {
+    "id": "coin",
+    "type": "ball",
+    "color": "gold",
+    "glow": 1.2,
+    "visible": false,
+    "scale": 0.35,
+    "at": [
+     -2,
+     10.5,
+     0.8
+    ]
+   },
+   {
+    "id": "grave",
+    "type": "cone",
+    "color": [
+     0.5,
+     0.5,
+     0.52
+    ],
+    "glow": 0.5,
+    "visible": false,
+    "scale": 1.1,
+    "at": [
+     4,
+     11,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "In the winter of 1777, about two thousand American soldiers died in a single camp. Most of them didn't die from the cold. And none of them died in a battle.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hut",
+      "show"
+     ],
+     [
+      "hut",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "2,000 DIED. NO BATTLE."
+   },
+   {
+    "who": "narr",
+    "say": "This is Valley Forge, Pennsylvania. December 19, 1777. You just marched in with twelve thousand other soldiers.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "washington",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "VALLEY FORGE, 1777"
+   },
+   {
+    "who": "you",
+    "say": "Sir, where are the buildings? I don't see any buildings.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "WHERE ARE THE BUILDINGS?"
+   },
+   {
+    "who": "washington",
+    "say": "There are none, soldier. We will build them ourselves. And we will do it before the cold gets worse.",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "washington",
+      "to:2,12,0"
+     ],
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "WE BUILD THEM OURSELVES"
+   },
+   {
+    "who": "narr",
+    "say": "Here's the deal. For the next few minutes, you are a soldier in the Continental Army. Your job is to survive six months.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "YOU ARE THE SOLDIER"
+   },
+   {
+    "who": "narr",
+    "say": "We'll go through your life one question at a time. Where you sleep, what you eat, what you wear, and what really kills you.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "YOUR LIFE, 1777"
+   },
+   {
+    "who": "narr",
+    "say": "And at the very end, a mystery. Something about those two thousand soldiers that nobody can fully answer, even today.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "THE MYSTERY",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why are you even here?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "1. WHY ARE YOU HERE?"
+   },
+   {
+    "who": "narr",
+    "say": "Because the year went badly. The British beat Washington's army at Brandywine in September. They beat it again at Germantown in October.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "sad"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "TWO BIG LOSSES"
+   },
+   {
+    "who": "narr",
+    "say": "Then the British marched into Philadelphia. That was the biggest city in America, and the home of the Continental Congress.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "PHILADELPHIA FALLS"
+   },
+   {
+    "who": "narr",
+    "say": "Congress ran away to a little town called York. The British officers are now sleeping in warm houses, eating real dinners.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WARM HOUSES. REAL DINNER."
+   },
+   {
+    "who": "narr",
+    "say": "Meanwhile, you're twenty miles away in an empty field. Why this spot? Washington wanted to stay close enough to watch the British.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "20 MILES AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "But far enough that they couldn't surprise him. Twenty miles. Today, that's about a thirty-minute drive on the highway.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "turn:you"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "A FIELD, A HILL, A RIVER"
+   },
+   {
+    "who": "narr",
+    "say": "The land has a creek for water, woods for firewood, and hills you can defend. It looks like a great spot. It isn't. Not yet.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "turn:front"
+     ]
+    ],
+    "text": "NOT YET"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. Where do you sleep?",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "2. WHERE DO YOU SLEEP?"
+   },
+   {
+    "who": "narr",
+    "say": "For the first few nights, in a tent. In December. In Pennsylvania. Many soldiers just wrapped up in a thin blanket on the ground, if they had one.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "A TENT IN DECEMBER"
+   },
+   {
+    "who": "narr",
+    "say": "So Washington gives an order. Build a hut. Every hut will be fourteen feet by sixteen feet, with walls six and a half feet high.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "14 FT BY 16 FT"
+   },
+   {
+    "who": "narr",
+    "say": "Quick math. That's about the size of a one-car garage. And twelve men are going to live inside it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "ONE GARAGE. TWELVE MEN."
+   },
+   {
+    "who": "narr",
+    "say": "Twelve men. Every one of them cold, and most of them dirty. Nobody has a bed. You sleep on straw, if you can find some.",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "hut",
+      "spin"
+     ]
+    ],
+    "text": "SLEEPING ON STRAW"
+   },
+   {
+    "who": "narr",
+    "say": "You build the walls out of logs and fill the cracks with clay. You make a fireplace from sticks and more clay. And the smoke goes everywhere.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "SMOKE EVERYWHERE"
+   },
+   {
+    "who": "narr",
+    "say": "Washington knew the roofs were a problem. Nobody had enough boards, and there was no sawmill close by.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "turn:front"
+     ]
+    ],
+    "text": "NO BOARDS. NO SAWMILL."
+   },
+   {
+    "who": "narr",
+    "say": "So he offered cash rewards. He promised twelve dollars to soldiers who built a hut fast, and a hundred dollars for a roof idea that beat boards.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "enter:right"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "A $12 PRIZE"
+   },
+   {
+    "who": "narr",
+    "say": "Twelve dollars was real money to a soldier. But most of the huts still leaked, and they let the wind right in.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "turn:front"
+     ]
+    ],
+    "text": "THEY STILL LEAKED"
+   },
+   {
+    "who": "narr",
+    "say": "Some of the first huts took just two days. By the end of December, the whole camp was done. About fifteen hundred huts, in neat rows.",
+    "cam": "overhead",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "1,500 HUTS"
+   },
+   {
+    "who": "narr",
+    "say": "One officer looked at it from a hill and said it looked like a little city. And he was right. It was the fourth-largest city in America.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "martin",
+      "to:6,8,0"
+     ]
+    ],
+    "text": "A LITTLE CITY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. What do you eat?",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "show"
+     ],
+     [
+      "cake",
+      "bounce"
+     ]
+    ],
+    "text": "3. WHAT DO YOU EAT?"
+   },
+   {
+    "who": "narr",
+    "say": "Here's a little warning. This chapter is not about dinner. It's about a thing called a firecake.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE FIRECAKE"
+   },
+   {
+    "who": "narr",
+    "say": "A firecake is flour and water. That's it. You mix it into a paste, spread it on a hot rock by the fire, and bake it.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ],
+     [
+      "cake",
+      "spin"
+     ]
+    ],
+    "text": "FLOUR + WATER"
+   },
+   {
+    "who": "narr",
+    "say": "No butter. No salt, most days. It tastes like a hard, dry pancake made of dust. And for some soldiers, it was dinner for days in a row.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "DINNER FOR DAYS"
+   },
+   {
+    "who": "narr",
+    "say": "The very next day, one general wrote that his men had gone two days with no meat and three days with no bread.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "NO MEAT. NO BREAD."
+   },
+   {
+    "who": "martin",
+    "say": "Here's what I'd say if I were that general. Nobody here is lazy. They are just really, really hungry.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "sad"
+     ]
+    ],
+    "text": "REALLY HUNGRY"
+   },
+   {
+    "who": "narr",
+    "say": "In January, the army's records show an average of half a pound of beef per man each day. That's about two drive-thru hamburger patties. For one whole day.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "HALF A POUND A DAY"
+   },
+   {
+    "who": "narr",
+    "say": "February was worse. Some soldiers went several days in a row with no meat at all.",
+    "cam": "prop:cake",
+    "do": [
+     [
+      "cake",
+      "bounce"
+     ]
+    ],
+    "text": "FEBRUARY: NO MEAT"
+   },
+   {
+    "who": "narr",
+    "say": "Now you're probably wondering why. It's a farming area. There are barns and cows all around. Where is the food?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHERE IS THE FOOD?"
+   },
+   {
+    "who": "narr",
+    "say": "Problem one. The army's money was close to worthless. Congress printed paper dollars, and farmers did not trust them.",
+    "cam": "prop:coin",
+    "do": [
+     [
+      "coin",
+      "show"
+     ],
+     [
+      "coin",
+      "bounce"
+     ]
+    ],
+    "text": "WORTHLESS PAPER MONEY"
+   },
+   {
+    "who": "narr",
+    "say": "Many farmers would rather sell to the British in Philadelphia. The British paid in real coins, and a coin is a coin.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE BRITISH PAID IN COINS"
+   },
+   {
+    "who": "narr",
+    "say": "Problem two. The army didn't have enough wagons or horses. Food rotted in warehouses miles away, because nobody could carry it to camp.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ]
+    ],
+    "text": "FOOD STUCK MILES AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Then Washington put a trusted general in charge of supplies. His name was Nathanael Greene, and he really didn't want the job.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "happy"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "NATHANAEL GREENE"
+   },
+   {
+    "who": "narr",
+    "say": "He did it anyway. By spring, the food finally started to arrive. And that's when, strangely, things got even more dangerous. More on that soon.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "turn:front"
+     ]
+    ],
+    "text": "MORE ON THAT SOON"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. What do you wear?",
+    "cam": "prop:boots",
+    "do": [
+     [
+      "boots",
+      "show"
+     ],
+     [
+      "boots",
+      "bounce"
+     ]
+    ],
+    "text": "4. WHAT DO YOU WEAR?"
+   },
+   {
+    "who": "narr",
+    "say": "Maybe a coat. Maybe not. This is a big problem. Soldiers in 1777 got their shoes and clothes from the army, and the army was running out.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "CLOTHES RAN OUT"
+   },
+   {
+    "who": "narr",
+    "say": "A young French general named Lafayette, who served with the army, wrote that the soldiers had no coats, no hats, no shirts and no shoes.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "NO COATS. NO SHOES."
+   },
+   {
+    "who": "narr",
+    "say": "So what do you do without shoes? You wrap your feet in rags and scraps of old blanket. Many men did.",
+    "cam": "prop:boots",
+    "do": [
+     [
+      "boots",
+      "bounce"
+     ]
+    ],
+    "text": "FEET WRAPPED IN RAGS"
+   },
+   {
+    "who": "narr",
+    "say": "You've probably heard that soldiers left bloody footprints in the snow. That image is famous, and it comes from real accounts of men with bare, cut-up feet.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE BLOODY FOOTPRINTS"
+   },
+   {
+    "who": "narr",
+    "say": "Frostbite was real. Some soldiers lost toes, and some needed doctors to remove their frozen feet.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "FROSTBITE"
+   },
+   {
+    "who": "narr",
+    "say": "At the worst point, in early March, the army listed almost three thousand men as unfit for duty. Just because they had no clothes.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "2,898 UNFIT FOR DUTY"
+   },
+   {
+    "who": "narr",
+    "say": "That's about one in four soldiers. Picture a football team where one out of every four players shows up with no shoes and no pants.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "shake"
+     ]
+    ],
+    "text": "ONE IN FOUR"
+   },
+   {
+    "who": "narr",
+    "say": "But here's something that surprises people. Plenty of soldiers did have a full uniform. The army took turns. Well-dressed units went out on patrol, while poorly dressed ones stayed inside.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "happy"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "THEY TOOK TURNS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. How cold was it, really?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "5. HOW COLD WAS IT?"
+   },
+   {
+    "who": "narr",
+    "say": "You'd think this is the easy part. Valley Forge. Snow up to your knees. A blizzard every day. But it turns out that picture is mostly a myth.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "THE SNOW MYTH"
+   },
+   {
+    "who": "narr",
+    "say": "Historians counted the weather. In the entire winter, there were fewer than ten days with a real snowfall.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,10,1.8"
+     ]
+    ],
+    "text": "LESS THAN 10 SNOW DAYS"
+   },
+   {
+    "who": "narr",
+    "say": "What you got instead was mud. Cold, sticky, icy mud. It froze at night and melted by afternoon, and it got into everything.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "COLD MUD"
+   },
+   {
+    "who": "narr",
+    "say": "Wet feet, wet clothes, and wet straw. That's the real enemy. Not a snowstorm. Damp, every day, for months.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "sad"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "WET. EVERY DAY."
+   },
+   {
+    "who": "narr",
+    "say": "Washington himself called Valley Forge a dreary kind of place, and said the army was uncomfortably provided for. That's a very polite way to say this is terrible.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "sad"
+     ]
+    ],
+    "text": "A DREARY PLACE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. Who else is here?",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "6. WHO ELSE IS HERE?"
+   },
+   {
+    "who": "narr",
+    "say": "You are not alone with just soldiers. More than four hundred women and children lived in this camp.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "400 WOMEN AND CHILDREN"
+   },
+   {
+    "who": "narr",
+    "say": "They cooked, washed clothes, sewed and cared for the sick. Without them, the whole camp would have fallen apart much sooner.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ]
+    ],
+    "text": "THE WORKERS OF THE CAMP"
+   },
+   {
+    "who": "narr",
+    "say": "Martha Washington came too. She arrived in February, and she spent months in the camp, helping the sick and keeping up everyone's spirits.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "MARTHA WASHINGTON"
+   },
+   {
+    "who": "narr",
+    "say": "The camp was also very mixed. There were free and enslaved African American soldiers, Native Americans, and immigrants from all over Europe.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "turn:front"
+     ]
+    ],
+    "text": "A VERY MIXED CAMP"
+   },
+   {
+    "who": "narr",
+    "say": "Many of them spoke different languages. Some prayed in different ways. And now they all lived in one small city of mud and logs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "martin",
+      "to:6,8,0"
+     ]
+    ],
+    "text": "ONE CITY OF MUD AND LOGS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. What really kills you?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "7. WHAT KILLS YOU?"
+   },
+   {
+    "who": "narr",
+    "say": "Here is the big twist, and it's the reason for the title. It was not a battle. There was no battle at Valley Forge, not even one.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "NO BATTLE. NOT ONE.",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "And it was not the cold or hunger, either. Hunger made people weak, but it was disease that did the killing.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "DISEASE"
+   },
+   {
+    "who": "narr",
+    "say": "Influenza. Typhus. Typhoid fever. And dysentery. Those were the big four. Typhus spreads by lice, and that camp was full of lice.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "sad"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "THE BIG FOUR"
+   },
+   {
+    "who": "narr",
+    "say": "Typhoid and dysentery spread through dirty water and dirty hands. Remember, twelve men in one small garage. When one got sick, the whole hut caught it.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "ONE SICK. EVERYONE SICK."
+   },
+   {
+    "who": "narr",
+    "say": "Doctors back then did not know about germs. They thought bad air caused disease. So they could not stop it the way a modern hospital would.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "turn:front"
+     ]
+    ],
+    "text": "NOBODY KNEW ABOUT GERMS"
+   },
+   {
+    "who": "narr",
+    "say": "Now here's the part that surprised me. Two-thirds of the deaths happened later, in March, April and May. Not in the coldest months.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "MOST DIED IN SPRING"
+   },
+   {
+    "who": "narr",
+    "say": "By spring, soldiers weren't stuck inside their huts anymore, and the sickness had months to spread through the camp.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "WARMER. BUT DEADLIER."
+   },
+   {
+    "who": "narr",
+    "say": "Some things did help. Surgeons and nurses worked day and night. There was a smallpox shot program for the soldiers, and rules for keeping the camp cleaner.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "happy"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "SMALLPOX SHOTS"
+   },
+   {
+    "who": "narr",
+    "say": "Without those, the number could have been much higher. By the end, about one in six of the soldiers who marched in would never march out.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "sad"
+     ]
+    ],
+    "text": "1 IN 6"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. Who is that loud man?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ]
+    ],
+    "text": "8. WHO IS THAT LOUD MAN?"
+   },
+   {
+    "who": "narr",
+    "say": "On February 23, 1778, a very strange visitor rode into camp. He wore a fancy uniform, and he spoke almost no English.",
+    "cam": "two:you,steuben",
+    "do": [
+     [
+      "steuben",
+      "enter:left"
+     ],
+     [
+      "you",
+      "turn:steuben"
+     ]
+    ],
+    "text": "BARON VON STEUBEN"
+   },
+   {
+    "who": "narr",
+    "say": "His name was Friedrich von Steuben. He said he was a Prussian baron. And Washington gave him one job. Turn this crowd into an army.",
+    "cam": "close:steuben",
+    "do": [
+     [
+      "steuben",
+      "turn:front"
+     ]
+    ],
+    "text": "A BARON FROM PRUSSIA"
+   },
+   {
+    "who": "narr",
+    "say": "Von Steuben did not teach the whole army at once. He picked a hundred men, taught them to march and use a bayonet, and then sent them out to teach others.",
+    "cam": "overhead",
+    "do": [
+     [
+      "steuben",
+      "to:-7,14,0"
+     ]
+    ],
+    "text": "100 MEN FIRST"
+   },
+   {
+    "who": "narr",
+    "say": "The story goes that he got so frustrated he would swear in German and French. Then he'd call a translator over to swear in English too.",
+    "cam": "close:steuben",
+    "do": [
+     [
+      "steuben",
+      "shake"
+     ]
+    ],
+    "text": "THE SWEARING BARON"
+   },
+   {
+    "who": "steuben",
+    "say": "Halt! Not like this! Like this! Again!",
+    "cam": "two:you,steuben",
+    "do": [
+     [
+      "steuben",
+      "turn:you"
+     ],
+     [
+      "you",
+      "jump"
+     ]
+    ],
+    "text": "AGAIN!"
+   },
+   {
+    "who": "narr",
+    "say": "The soldiers loved it, believe it or not. Drilling gave them something to be proud of. They laughed, they practiced, and they got good.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "laugh"
+     ]
+    ],
+    "text": "THEY LOVED IT"
+   },
+   {
+    "who": "narr",
+    "say": "He also fixed the camp itself. He set rules for where kitchens and latrines went, away from the water. A cleaner camp meant fewer sick men.",
+    "cam": "prop:hut",
+    "do": [
+     [
+      "hut",
+      "bounce"
+     ]
+    ],
+    "text": "CLEANER CAMP"
+   },
+   {
+    "who": "narr",
+    "say": "Before Valley Forge, the American soldiers lost many fights to British troops who were better trained. After Valley Forge, that started to change.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "happy"
+     ]
+    ],
+    "text": "A REAL ARMY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. Why didn't you just quit?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "9. WHY NOT QUIT?"
+   },
+   {
+    "who": "narr",
+    "say": "It's a fair question. Some soldiers did leave. Some deserted. But here's what's amazing. There was never a mass mutiny at Valley Forge.",
+    "cam": "two:you,martin",
+    "do": [
+     [
+      "martin",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:martin"
+     ]
+    ],
+    "text": "NO MASS MUTINY"
+   },
+   {
+    "who": "narr",
+    "say": "One private, Joseph Plumb Martin, wrote something that still gets quoted. He said they were determined to persevere.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "turn:front"
+     ]
+    ],
+    "text": "WE WERE DETERMINED"
+   },
+   {
+    "who": "narr",
+    "say": "Why? Part of it was Washington. Soldiers saw him stay in that camp, in the same cold, week after week. He wrote letters begging Congress for help.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "turn:front"
+     ]
+    ],
+    "text": "HE STAYED, TOO"
+   },
+   {
+    "who": "narr",
+    "say": "And part of it was each other. Twelve men in a hut become something like a family. You fight to protect people who share your bread.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "THE HUT BECOMES FAMILY"
+   },
+   {
+    "who": "narr",
+    "say": "Then, on May 6, 1778, big news came. France had agreed to join the war on America's side. The whole camp celebrated with cheering and a parade of musket fire.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "martin",
+      "happy"
+     ],
+     [
+      "washington",
+      "happy"
+     ]
+    ],
+    "text": "FRANCE JOINS US"
+   },
+   {
+    "who": "narr",
+    "say": "And six weeks later, on June 19, the army marched out of Valley Forge. They were hungry, they were tired, but they were a real army.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-1,10,0"
+     ],
+     [
+      "martin",
+      "to:5,10,0"
+     ],
+     [
+      "steuben",
+      "to:-6,13,0"
+     ]
+    ],
+    "text": "JUNE 19, 1778"
+   },
+   {
+    "who": "narr",
+    "say": "Nine days after they left, they fought the British at Monmouth, in New Jersey. The Americans stood toe to toe with British regulars in an open field, and they did not run.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "happy"
+     ]
+    ],
+    "text": "THE PROOF AT MONMOUTH"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. The mystery.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "show"
+     ],
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "10. THE MYSTERY",
+    "sfx": "suspicious"
+   },
+   {
+    "who": "narr",
+    "say": "Remember the number. About two thousand soldiers died at Valley Forge. So here's the question. Where are they buried?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "WHERE ARE THEY BURIED?"
+   },
+   {
+    "who": "narr",
+    "say": "You would think there's a big cemetery. Row after row of white stones, like Arlington. But there isn't. Not at Valley Forge.",
+    "cam": "overhead",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "NO CEMETERY"
+   },
+   {
+    "who": "narr",
+    "say": "The army buried almost no one inside the camp itself. Washington did not want the sick near the healthy, so the worst cases were sent away.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "washington",
+      "turn:you"
+     ],
+     [
+      "you",
+      "turn:washington"
+     ]
+    ],
+    "text": "SENT AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "They went to army hospitals in small towns and villages all around southeastern Pennsylvania.",
+    "cam": "prop:grave",
+    "do": [
+     [
+      "grave",
+      "bounce"
+     ]
+    ],
+    "text": "HOSPITALS IN THE COUNTRYSIDE"
+   },
+   {
+    "who": "narr",
+    "say": "When a soldier died there, he was buried in the nearest church graveyard. Quietly. Often with no name on the grave. And often with no record of where.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NO NAME. NO RECORD."
+   },
+   {
+    "who": "narr",
+    "say": "The National Park Service says these scattered graves have never been systematically marked or honored. Many soldiers, in many small graveyards, and most of them lost.",
+    "cam": "close:martin",
+    "do": [
+     [
+      "martin",
+      "sad"
+     ]
+    ],
+    "text": "NEVER SYSTEMATICALLY MARKED"
+   },
+   {
+    "who": "narr",
+    "say": "Today, millions of people visit Valley Forge. They walk the fields, and they take photos of the cannons and the log huts.",
+    "cam": "wide",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "MILLIONS OF VISITORS"
+   },
+   {
+    "who": "narr",
+    "say": "And most have no idea that the men who gave the most for that place are not even there. They're somewhere else, under quiet grass, in towns nobody has marked.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "turn:front"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THEY'RE SOMEWHERE ELSE"
+   },
+   {
+    "who": "narr",
+    "say": "So what do you do with that? Well, maybe the lesson is simple. Freedom wasn't won only by famous battles. A lot of it was won by sick, hungry, ordinary people who stayed.",
+    "cam": "close:washington",
+    "do": [
+     [
+      "washington",
+      "turn:front"
+     ]
+    ],
+    "text": "ORDINARY PEOPLE STAYED"
+   },
+   {
+    "who": "narr",
+    "say": "So tell me honestly, in the comments. Could you have survived Valley Forge? And if you have an ancestor who served, share their story below.",
+    "cam": "two:you,washington",
+    "do": [
+     [
+      "you",
+      "jump"
+     ],
+     [
+      "washington",
+      "happy"
+     ]
+    ],
+    "text": "COULD YOU SURVIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "Thanks for watching. Subscribe for more true history.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "martin",
+      "happy"
+     ]
+    ],
+    "text": "SUBSCRIBE"
+   }
+  ]
+ },
+ "long": {
+  "title": "Could You Survive Valley Forge, Winter 1777? ❄️",
+  "description": "Could you have survived Valley Forge? Tell me in the comments.\n\nIn December 1777, twelve thousand American soldiers marched into an empty field in Pennsylvania. No buildings, not enough food, not enough clothes. About 2,000 of them would die, and none of them in a battle. Where you sleep, what you eat, what really kills you, and a mystery the National Park Service still can't fully solve: where are those soldiers buried?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution",
+  "tags": [
+   "valley forge",
+   "valley forge winter 1777",
+   "continental army",
+   "george washington",
+   "baron von steuben",
+   "firecake",
+   "life at valley forge",
+   "american revolution history",
+   "winter 1777",
+   "joseph plumb martin",
+   "where are valley forge soldiers buried",
+   "true story animated",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "2,000 DIED",
+  "thumb_beat": 15,
+  "localizations": {
+   "es": {
+    "title": "¿Podrías sobrevivir a Valley Forge? Invierno de 1777 ❄️",
+    "description": "¿Habrías sobrevivido a Valley Forge? Cuéntamelo en los comentarios.\n\nEn diciembre de 1777, doce mil soldados estadounidenses llegaron a un campo vacío en Pensilvania. Sin edificios, sin comida suficiente, sin ropa suficiente. Unos 2.000 morirían, y ninguno en combate. Dónde duermes, qué comes, qué te mata de verdad, y un misterio que ni el Servicio de Parques Nacionales puede resolver del todo: ¿dónde están enterrados esos soldados?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "pt": {
+    "title": "Você sobreviveria a Valley Forge? Inverno de 1777 ❄️",
+    "description": "Você teria sobrevivido a Valley Forge? Conte nos comentários.\n\nEm dezembro de 1777, doze mil soldados americanos chegaram a um campo vazio na Pensilvânia. Sem construções, sem comida suficiente, sem roupas suficientes. Cerca de 2.000 morreriam, e nenhum em batalha. Onde você dorme, o que come, o que realmente mata, e um mistério que nem o Serviço de Parques Nacionais consegue resolver por completo: onde esses soldados estão enterrados?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "ar": {
+    "title": "هل كنت ستنجو من فالي فورج؟ شتاء 1777 ❄️",
+    "description": "هل كنت ستنجو من فالي فورج؟ أخبرني في التعليقات.\n\nفي ديسمبر 1777 دخل اثنا عشر ألف جندي أمريكي حقلًا فارغًا في بنسلفانيا: بلا مبانٍ ولا طعام كافٍ ولا ملابس كافية. مات حوالي 2000 منهم، ولم يمت أي منهم في معركة. أين تنام، ماذا تأكل، ما الذي يقتلك حقًا، ولغز لم تحله حتى خدمة الحدائق الوطنية: أين دُفن هؤلاء الجنود؟\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "fr": {
+    "title": "Auriez-vous survécu à Valley Forge ? Hiver 1777 ❄️",
+    "description": "Auriez-vous survécu à Valley Forge ? Dites-le-moi en commentaire.\n\nEn décembre 1777, douze mille soldats américains arrivent dans un champ vide en Pennsylvanie. Pas de bâtiments, pas assez de nourriture, pas assez de vêtements. Environ 2 000 d'entre eux vont mourir, et aucun au combat. Où vous dormez, ce que vous mangez, ce qui vous tue vraiment, et un mystère que le National Park Service ne peut pas entièrement résoudre : où ces soldats sont-ils enterrés ?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "ja": {
+    "title": "バレーフォージの冬を生き延びられる？1777年 ❄️",
+    "description": "あなたはバレーフォージを生き延びられますか？コメントで教えてください。\n\n1777年12月、1万ひ2000人のアメリカ兵がペンシルベニアの何もない野原に到着しました。建物も、食料も、衣類も足りません。約2,000人が亡くなりましたが、戦闘で死んだ人はいません。どこで寝るか、何を食べるか、本当に何が命を奪うのか、そして国立公園局でさえ完全には解けない謎――兵士たちはどこに埋葬されたのか？\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "ko": {
+    "title": "밸리 포지의 겨울, 당신은 살아남을 수 있을까? 1777 ❄️",
+    "description": "밸리 포지에서 살아남을 수 있었을까요? 댓글로 알려주세요.\n\n1777년 12월, 미국 병사 1만 2천 명이 펜실베니아의 빈 들판에 도착했습니다. 건물도, 식량도, 옷도 부족했죠. 약 2,000명이 죽었지만 전투에서 죽은 사람은 없습니다. 어디서 자고, 무엇을 먹고, 무엇이 진짜로 목숨을 앞아가는지, 그리고 국립공원관리공단도 완전히 풀지 못한 수수께끼: 그 병사들은 어디에 묻혀 있을까요?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   },
+   "de": {
+    "title": "Hättest du Valley Forge überlebt? Winter 1777 ❄️",
+    "description": "Hättest du Valley Forge überlebt? Schreib es in die Kommentare.\n\nIm Dezember 1777 marschierten zwölftausend amerikanische Soldaten auf ein leeres Feld in Pennsylvania. Keine Gebäude, zu wenig Essen, zu wenig Kleidung. Etwa 2.000 von ihnen starben, und keiner im Kampf. Wo du schläfst, was du isst, was dich wirklich tötet, und ein Rätsel, das nicht einmal der National Park Service ganz lösen kann: Wo sind diese Soldaten begraben?\n\nSources:\nhttps://www.nps.gov/vafo/learn/historyculture/valley-forge-history-and-significance.htm\nhttps://www.battlefields.org/learn/articles/10-facts-valley-forge\nhttps://www.battlefields.org/learn/articles/winter-valley-forge\nhttps://www.battlefields.org/learn/maps/valley-forge-dec-19-1777-june-19-1778\nhttps://www.history.com/articles/valley-forge\n\n#valleyforge #truestory #americanrevolution"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 26,
+   "top": "NO BATTLE. 2,000 DIED.",
+   "title": "2,000 soldiers died here. No battle ❄️ #shorts",
+   "description": "Valley Forge, winter 1777: about 2,000 American soldiers died in one camp. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "valley forge",
+    "1777",
+    "american revolution",
+    "true story"
+   ],
+   "localizations": {
+    "es": {
+     "title": "2.000 soldados murieron aquí. Ninguno en combate ❄️ #shorts",
+     "description": "Valley Forge, invierno de 1777: unos 2.000 soldados estadounidenses murieron en un solo campamento. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "2.000 soldados morreram aqui. Nenhum em batalha ❄️ #shorts",
+     "description": "Valley Forge, inverno de 1777: cerca de 2.000 soldados americanos morreram em um único acampamento. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مات 2000 جندي هنا. ولم يمت أحد في معركة ❄️ #shorts",
+     "description": "فالي فورج، شتاء 1777: مات حوالي 2000 جندي أمريكي في معسكر واحد. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "2 000 soldats sont morts ici. Aucun au combat ❄️ #shorts",
+     "description": "Valley Forge, hiver 1777 : environ 2 000 soldats américains sont morts dans un seul camp. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "ここで2,000人の兵士が死ぬ。戦闘ではありません ❄️ #shorts",
+     "description": "バレーフォージ、1777年の冬：、1つの野営地で約2,000人のアメリカ兵が亡くなりました。フル版：{LONG_URL}"
+    },
+    "ko": {
+     "title": "여기서 2,000명이 죽었다. 전투는 아니었다 ❄️ #shorts",
+     "description": "밸리 포지, 1777년 겨울: 한 야영지에서 미국 병사 약 2,000명이 숨졌습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "2.000 Soldaten starben hier. Keiner im Kampf ❄️ #shorts",
+     "description": "Valley Forge, Winter 1777: Rund 2.000 amerikanische Soldaten starben in einem einzigen Lager. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 27,
+   "dur": 28,
+   "top": "DINNER = FLOUR + WATER",
+   "title": "What Valley Forge soldiers really ate 🥣 #shorts",
+   "description": "A firecake: flour, water and a hot rock. That was dinner for many soldiers at Valley Forge. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "firecake",
+    "valley forge",
+    "continental army",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Lo que comían de verdad en Valley Forge 🥣 #shorts",
+     "description": "Un \"firecake\": harina, agua y una piedra caliente. Esa fue la cena de muchos soldados en Valley Forge. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O que os soldados de Valley Forge comiam 🥣 #shorts",
+     "description": "Um \"firecake\": farinha, água e uma pedra quente. Esse era o jantar de muitos soldados em Valley Forge. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماذا كان يأكل جنود فالي فورج حقًا 🥣 #shorts",
+     "description": "قرص النار: دقيق وماء وحجر ساخن. هذا كان عشاء كثير من الجنود في فالي فورج. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Ce que mangeaient vraiment les soldats de Valley Forge 🥣 #shorts",
+     "description": "Un « firecake » : de la farine, de l'eau et une pierre chaude. C'était le dîner de nombreux soldats à Valley Forge. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "バレーフォージの兵士が本当に食べたもの 🥣 #shorts",
+     "description": "ファイアケーキ：小麦粉、水、熱い石。これがバレーフォージの多くの兵士の夕食でした。フル版：{LONG_URL}"
+    },
+    "ko": {
+     "title": "밸리 포지 병사들이 진짜 먹은 것 🥣 #shorts",
+     "description": "파이어케이크: 밀가루, 물, 뜨거운 돌. 밸리 포지의 많은 병사에게 이것이 저녁이었습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Was die Soldaten in Valley Forge wirklich aßen 🥣 #shorts",
+     "description": "Ein \"Firecake\": Mehl, Wasser und ein heißer Stein. Das war für viele Soldaten in Valley Forge das Abendessen. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "slow snare drum and a lone fife over cold wind, minor key, no strings (different from the cello, the sea-shanty accordion and the prairie fiddle)",
+  "palette": "slate blue, frost white and mud brown, small campfire-orange highlights",
+  "opening_shot": "top-down overhead of the huts (cam overhead, hut prop rises)",
+  "camera_set": "mostly close-ups on the soldier, props for firecake, boots and graves, overhead only for the huts, the army leaving and the final mystery",
+  "transitions": "hard cuts inside chapters, slow dissolve into each chapter card, long hold on the grave prop at the end",
+  "caption_style": "bold white sans-serif caps with a thin blue underline, chapter numbers in orange"
+ }
+}
