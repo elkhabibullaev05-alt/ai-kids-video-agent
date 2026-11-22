@@ -1,0 +1,1213 @@
+{
+ "id": "20261122-3-max-christmas-lights",
+ "plot": "While Grandma decorates the tree at sunset, Max wants to be the star on top and turns every step into a gag (tangled lights on his tail, a red ornament that swings back, Grandma's house rules), Dog spins himself into the lights and becomes the tree, Bird moves into the star, Mouse plugs Dog in, and Max ignores his new toy because the box is the real present.",
+ "script": {
+  "title": "Who Let Max Near the Christmas Lights? 🎄",
+  "set": {
+   "place": "house",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     6
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1.5,
+     5
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     5,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     2,
+     10
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "tree",
+    "type": "cone",
+    "color": "green",
+    "at": [
+     3.0,
+     13.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 2.0
+   },
+   {
+    "id": "star",
+    "type": "star",
+    "color": "gold",
+    "at": [
+     3.0,
+     13.0,
+     2.6
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "lights",
+    "type": "box",
+    "color": "red",
+    "at": [
+     -1.0,
+     10.5,
+     0.0
+    ],
+    "visible": true,
+    "scale": 0.7
+   },
+   {
+    "id": "ornament",
+    "type": "ball",
+    "color": "red",
+    "at": [
+     1.0,
+     11.5,
+     0.8
+    ],
+    "visible": true,
+    "scale": 0.4
+   },
+   {
+    "id": "gift",
+    "type": "gift",
+    "color": "blue",
+    "at": [
+     -4.0,
+     11.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.9
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "A box of tiny lights! Grandma bought me a disco!",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:right"
+     ],
+     [
+      "max",
+      "to:-1,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Those are for the tree, Max. Paws off the box.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm only checking the box. Quality control. With my face.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-1,10"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Forty seconds later, Max is the quality.",
+    "cam": "prop:lights",
+    "do": [
+     [
+      "lights",
+      "bounce"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, the lights attacked me. I need a lawyer.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You have a whole string around your tail.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That's not a tail. That's a festive extension cord.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hold still, buddy. I watched a video on knots once.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter:right"
+     ],
+     [
+      "dog",
+      "to:1,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "New plan. I will be the star on top of the tree.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:2,11"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The star goes on top. You go on the floor.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, look at me. I am basically a shining star.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "You are basically shedding on my tree skirt.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shedding is just glitter that comes from inside.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "He's not wrong. My glitter is mostly on the couch.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "text": "STAR AUDITIONS: CLOSED",
+    "cam": "prop:star",
+    "hold": 1.2,
+    "sfx": "suspicious",
+    "do": [
+     [
+      "star",
+      "show"
+     ],
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fine. I'll be a smaller star. Middle branch. Humble.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Okay, I'll untangle the lights. Spinning is my best skill.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:0,10"
+     ],
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "One spin. Two spins. Three spins. Easy.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, you're not untangling them. You're wearing them.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Wait. Why can't I feel my legs? Or my tail?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Oh no. Dog, you're wrapped like a holiday ham.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Good news, Grandma. We don't need a tree anymore.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm the tree? I've always wanted a real job.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Hang one ornament on him and I'll cry.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Already did. He's very festive and very confused.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "ornament",
+      "to:dog"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "House rules. Rule one. No cats in the tree.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm not IN the tree. I'm near the tree. Spiritually.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:3,12"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Your face is inside the branches, Max.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My face is independent. I don't control my face.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Rule two. No drinking the tree water.",
+    "cam": "close:grandma"
+   },
+   {
+    "who": "max",
+    "say": "Then why is it in a bowl? At cat height?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:2,12"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Honestly, that's a trap. That's a cat trap.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Rule three. Nobody listens to rule one or two.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "sad"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "A red ball hanging from a string. Just for me.",
+    "cam": "prop:ornament",
+    "do": [
+     [
+      "ornament",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Hello, little ball. I'm going to touch you very gently.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He did not touch it gently.",
+    "cam": "prop:ornament",
+    "do": [
+     [
+      "ornament",
+      "spin"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "It swung back! It swung back at my face!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Did the ball win? From here it looks like the ball won.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Rematch. Best of three. Nobody tell Grandma.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:1,11"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Grandma can see everything, Max. Grandma is right here.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-1,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Then Grandma saw me win. Write it down.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Excuse me! Who put a shiny nest on top of this tree?",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:3,13"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "That's my star, Bird. It's eighty years old.",
+    "cam": "two:grandma,bird",
+    "do": [
+     [
+      "grandma",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Great location. Great view. Some cat keeps shaking the building.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Bird got the star job? I auditioned first!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "I didn't audition. I just showed up and sat down.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "That's how I got this couch. It works every time.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Bird, the star is not a hotel.",
+    "cam": "close:grandma"
+   },
+   {
+    "who": "bird",
+    "say": "Then why is it so cozy? Five stars. Literally.",
+    "cam": "two:bird,grandma",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "star",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "I found the plug. Should I plug it in, everyone?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Yes, Mouse. Let's see my beautiful tree light up.",
+    "cam": "two:mouse,grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "text": "CLICK.",
+    "cam": "wide",
+    "hold": 1.0,
+    "sfx": "alarm",
+    "do": [
+     [
+      "all",
+      "look:dog"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why am I blinking? Am I the one blinking?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "You're blinking, buddy. You're the brightest thing in the house.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Red. Green. Red. Green. I can feel the music.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Should I unplug it? He's dancing a lot now.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "No, leave it. The neighbors are taking pictures.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hello, neighbors! I'm a tree now! I have a job!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Look, Max. I got you a real present. Under the tree.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "gift",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:-3,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "For me? Grandma, you shouldn't have. But you did. Correct.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,10"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Inside the box: a fancy toy mouse that squeaks.",
+    "cam": "prop:gift",
+    "do": [
+     [
+      "gift",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Wow. Amazing. Now please take the toy out of my box.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "The toy is the present, Max. Not the box.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, with respect, the box is the present.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-4,11"
+     ],
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Can I have the toy mouse? He looks like my cousin Kevin.",
+    "cam": "two:mouse,max",
+    "do": [
+     [
+      "mouse",
+      "to:-2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Take Kevin. I'm busy living in my new apartment.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Finally. The star goes on top. Everybody, quiet please.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:2,12"
+     ],
+     [
+      "star",
+      "home"
+     ]
+    ]
+   },
+   {
+    "text": "THE STAR IS ON",
+    "cam": "prop:star",
+    "hold": 1.2,
+    "do": [
+     [
+      "star",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Fine. I'll move. But I'm leaving a review.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "to:5,13"
+     ],
+     [
+      "bird",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It's perfect. A tree, a star, and no cats in it.",
+    "cam": "two:grandma,dog",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Grandma, small question. Can somebody unplug me now?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Unplugging the tree. Sorry, Dog. Your shift is over.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "to:0,8"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Best job I ever had. I'll put it on my resume.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "And I'll be in my box, if anyone needs a star.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max never got the star job. He got something better: a box.",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Who Let Max Near the Christmas Lights? 🎄",
+  "thumb_text": "I AM THE STAR",
+  "thumb_beat": 2,
+  "description": "\"A box of tiny lights! Grandma bought me a disco!\" 🐱\nMax wants to be the star on top of Grandma's Christmas tree. Instead: tangled lights, a red ornament that fights back, Dog wrapped up as the new tree, Bird moving into the star… and one very important box.\nDoes YOUR cat attack the tree too? 👇\n#MaxTheCuriousCat #Christmas #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "christmas lights",
+   "christmas tree cat",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "max the curious cat",
+   "pet comedy",
+   "holiday comedy",
+   "christmas comedy"
+  ],
+  "localizations": {
+   "es": {
+    "title": "¿Quién dejó a Max cerca de las luces de Navidad? 🎄",
+    "description": "Max quiere ser la estrella del árbol. En cambio: luces enredadas, una bola roja que devuelve el golpe, un perro convertido en árbol, un pájaro que vive en la estrella… y una caja.\n¿Tu gato también ataca el árbol? 👇\n#MaxTheCuriousCat #Navidad #GatoGracioso"
+   },
+   "pt": {
+    "title": "Quem deixou o Max perto das luzes de Natal? 🎄",
+    "description": "O Max quer ser a estrela da árvore. Em vez disso: luzes emboladas, uma bola vermelha que revida, um cachorro que virou árvore, um pássaro morando na estrela… e uma caixa.\nSeu gato também ataca a árvore? 👇\n#MaxTheCuriousCat #Natal #GatoEngraçado"
+   },
+   "fr": {
+    "title": "Qui a laissé Max près des guirlandes de Noël ? 🎄",
+    "description": "Max veut être l'étoile du sapin. À la place : des guirlandes emmêlées, une boule rouge qui riposte, un chien devenu sapin, un oiseau qui habite l'étoile… et un carton.\nVotre chat attaque aussi le sapin ? 👇\n#MaxTheCuriousCat #Noël #ChatDrôle"
+   },
+   "de": {
+    "title": "Wer hat Max an die Weihnachtslichter gelassen? 🎄",
+    "description": "Max will der Stern auf dem Baum sein. Stattdessen: verknotete Lichterketten, eine rote Kugel, die zurückschlägt, ein Hund, der zum Baum wird, ein Vogel, der im Stern wohnt… und ein Karton.\nGreift deine Katze auch den Baum an? 👇\n#MaxTheCuriousCat #Weihnachten #LustigeKatze"
+   },
+   "ar": {
+    "title": "من سمح لماكس بالاقتراب من أضواء الكريسماس؟ 🎄",
+    "description": "ماكس يريد أن يكون النجمة فوق الشجرة. بدلاً من ذلك: أضواء متشابكة، كرة حمراء ترد الضربة، كلب صار شجرة، طائر يسكن النجمة… وصندوق.\nهل يهاجم قطك الشجرة أيضاً؟ 👇\n#MaxTheCuriousCat #كريسماس #قطط_مضحكة"
+   },
+   "ja": {
+    "title": "マックスをクリスマスライトに近づけたのは誰？🎄",
+    "description": "マックスはツリーのてっぺんの星になりたい。でも実際は、絡まるライト、やり返してくる赤いボール、ツリーになった犬、星に住みつく鳥…そして箱。\nあなたの猫もツリーを攻撃する？👇\n#MaxTheCuriousCat #クリスマス #面白い猫"
+   },
+   "ko": {
+    "title": "누가 맥스를 크리스마스 전구 근처에 뒀어? 🎄",
+    "description": "맥스는 트리 꼭대기의 별이 되고 싶다. 하지만 현실은: 엉킨 전구, 되받아치는 빨간 공, 트리가 된 강아지, 별에 사는 새… 그리고 상자.\n당신의 고양이도 트리를 공격하나요? 👇\n#MaxTheCuriousCat #크리스마스 #웃긴고양이"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 16,
+   "dur": 20,
+   "top": "DOG BECAME THE TREE?!",
+   "title": "The Dog Became the Christmas Tree 😭 #shorts",
+   "description": "One spin. Two spins. Three spins… Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny dog",
+    "christmas lights",
+    "cat and dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "¡El perro se convirtió en el árbol de Navidad! 😭 #shorts",
+     "description": "Una vuelta, dos vueltas, tres vueltas… Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O cachorro virou a árvore de Natal! 😭 #shorts",
+     "description": "Uma volta, duas voltas, três voltas… Episódio completo: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Le chien est devenu le sapin de Noël ! 😭 #shorts",
+     "description": "Un tour, deux tours, trois tours… Épisode complet : {LONG_URL}"
+    },
+    "de": {
+     "title": "Der Hund wurde zum Weihnachtsbaum! 😭 #shorts",
+     "description": "Eine Drehung, zwei, drei… Ganze Folge: {LONG_URL}"
+    },
+    "ar": {
+     "title": "الكلب صار شجرة الكريسماس! 😭 #shorts",
+     "description": "لفة، لفتان، ثلاث لفات… الحلقة كاملة: {LONG_URL}"
+    },
+    "ja": {
+     "title": "犬がクリスマスツリーになった！😭 #shorts",
+     "description": "1回転、2回転、3回転… 本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "강아지가 크리스마스트리가 됐다! 😭 #shorts",
+     "description": "한 바퀴, 두 바퀴, 세 바퀴… 전체 에피소드: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 58,
+   "dur": 20,
+   "top": "THE BOX IS THE PRESENT",
+   "title": "They Bought Him a Toy. He Chose the Box 📦 #shorts",
+   "description": "With respect, Grandma: the box IS the present. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "cat box",
+    "christmas"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Le compraron un juguete. Eligió la caja 📦 #shorts",
+     "description": "Con respeto, Abuela: la caja ES el regalo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ganhou um brinquedo. Escolheu a caixa 📦 #shorts",
+     "description": "Com respeito, vovó: a caixa É o presente. Episódio completo: {LONG_URL}"
+    },
+    "fr": {
+     "title": "On lui offre un jouet. Il choisit le carton 📦 #shorts",
+     "description": "Avec respect, Mamie : le carton EST le cadeau. Épisode complet : {LONG_URL}"
+    },
+    "de": {
+     "title": "Er bekam ein Spielzeug. Er nahm den Karton 📦 #shorts",
+     "description": "Bei allem Respekt, Oma: Der Karton IST das Geschenk. Ganze Folge: {LONG_URL}"
+    },
+    "ar": {
+     "title": "اشتروا له لعبة. فاختار الصندوق 📦 #shorts",
+     "description": "مع احترامي يا جدتي: الصندوق هو الهدية. الحلقة كاملة: {LONG_URL}"
+    },
+    "ja": {
+     "title": "おもちゃをもらった。選んだのは箱 📦 #shorts",
+     "description": "おばあちゃん、失礼ながら箱こそがプレゼント。本編: {LONG_URL}"
+    },
+    "ko": {
+     "title": "장난감을 받았다. 고른 건 상자 📦 #shorts",
+     "description": "할머니, 실례지만 상자가 진짜 선물이에요. 전체 에피소드: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
