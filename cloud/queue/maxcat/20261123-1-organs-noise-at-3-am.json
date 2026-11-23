@@ -1,0 +1,865 @@
+{
+ "id": "20261123-1-organs-noise-at-3-am",
+ "plot": "You hear a thump in the kitchen at 3 AM. Cortez sounds the alarm, Neff says it's the ice maker, and the adrenal glands on top of Neff's kidneys send guest Adrian Alin through the bloodstream. Beat's heart rate climbs, Gus closes the kitchen, Liv opens the glycogen vault, the lungs and pupils open wide, and the body marches to the kitchen. Twist: it really was the ice maker. Cortez stamps DENIED on STAY CALM, then APPROVED on Neff being right. Tease: ice water in July.",
+ "variation": {
+  "music": "synth_pulse",
+  "palette": "night_shift",
+  "opening_shot": "low_angle",
+  "camera_set": "handheld",
+  "transitions": "punch",
+  "caption_style": "box"
+ },
+ "script": {
+  "title": "Your Organs When You Hear a Noise at 3 AM",
+  "seed": 31,
+  "ride_speed": 0.02,
+  "variation": {
+   "music": "synth_pulse",
+   "palette": "night_shift",
+   "opening_shot": "low_angle",
+   "camera_set": "handheld",
+   "transitions": "punch",
+   "caption_style": "box"
+  },
+  "episode": {
+   "action": "hear a thump at 3 AM",
+   "guest": "Adrian Alin (adrenaline / epinephrine)",
+   "system": "nervous + endocrine + cardiovascular"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.2,
+     0.45,
+     0.8
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "bm_george",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "liv": {
+    "name": "Liv",
+    "organ": "liver",
+    "voice": "af_sarah",
+    "speed": 0.96
+   },
+   "inout": {
+    "name": "In and Out",
+    "organ": "lungs",
+    "voice": "am_puck",
+    "speed": 1.1
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "bm_lewis",
+    "speed": 1.0
+   },
+   "adrian": {
+    "name": "Adrian Alin",
+    "organ": "guest",
+    "voice": "am_liam",
+    "speed": 1.06,
+    "guest": {
+     "shape": "molecule",
+     "color": [
+      0.95,
+      0.35,
+      0.15
+     ],
+     "color2": [
+      1.0,
+      0.8,
+      0.2
+     ],
+     "accessory": "bowtie",
+     "tag": "ADRIAN"
+    }
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_fable",
+    "speed": 1.0
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Your Organs When You Hear a Noise at 3 AM",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "sip"
+     ]
+    ],
+    "mood": "tense"
+   },
+   {
+    "who": "cortez",
+    "say": "Was that a THUMP?! In the kitchen?!",
+    "emotion": "panic",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "cam": "close:cortez",
+    "chapter": "1. The Thump",
+    "mood": "chase",
+    "alarm": true
+   },
+   {
+    "who": "beat",
+    "say": "Ears just called! Line one, line two, line three!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ]
+   },
+   {
+    "who": "inout",
+    "say": "Maybe it's a raccoon. Raccoons love kitchens.",
+    "emotion": "shock"
+   },
+   {
+    "who": "neff",
+    "say": "Raccoons don't pay rent. Neither does the brain, but here we are.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "neff",
+    "say": "Everyone relax. Ninety percent chance it's the ice maker.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "cortez",
+    "say": "I don't do percentages at 3 AM, Neff!",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "inout",
+    "say": "Breathing faster! In, out, in, out! Is that too much?",
+    "emotion": "panic",
+    "cam": "close:inout",
+    "do": [
+     [
+      "inout",
+      "breathe"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Memo from Neff: Stay calm. Adorable.",
+    "emotion": "deadpan",
+    "cam": "prop:memo",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "DENIED",
+    "memo": "STAY CALM",
+    "gap": 0.3
+   },
+   {
+    "who": "neff",
+    "say": "That's my third memo this week.",
+    "emotion": "sad",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "The amygdala flagged a threat. Nobody is sleeping tonight.",
+    "emotion": "whisper",
+    "cam": "tight:cortez",
+    "label": "Amygdala: the brain's threat detector",
+    "label_on": "cortez",
+    "mood": "tense"
+   },
+   {
+    "who": "cortez",
+    "say": "Fight or flight is a go. We need hormones. Now!",
+    "emotion": "excited",
+    "cam": "close:cortez",
+    "alarm": true
+   },
+   {
+    "who": "beat",
+    "say": "Who delivers hormones? Do we have a guy?",
+    "emotion": "panic",
+    "cam": "two:beat,cortez"
+   },
+   {
+    "who": "neff",
+    "say": "We do. He lives upstairs from me.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Focus! Who's got eyes on the doorway?",
+    "emotion": "angry"
+   },
+   {
+    "who": "beat",
+    "say": "The eyes say it's dark. Very dark. Extremely dark.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "neff",
+    "say": "The adrenal glands sit right on top of my kidneys. Loud neighbors.",
+    "emotion": "tired",
+    "chapter": "2. The Upstairs Neighbors",
+    "cam": "close:neff",
+    "mood": "office",
+    "label": "Adrenal glands: tiny glands on top of kidneys",
+    "label_on": "neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Send the order. Brain to adrenals. Urgent.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "do": [
+     [
+      "cortez",
+      "point"
+     ]
+    ]
+   },
+   {
+    "who": "adrian",
+    "say": "Did somebody say emergency? I'm Adrian Alin. Adrenaline, but classier.",
+    "emotion": "excited",
+    "cast": [
+     "cortez",
+     "neff",
+     "adrian"
+    ],
+    "cam": "two:neff,adrian",
+    "do": [
+     [
+      "adrian",
+      "enter"
+     ]
+    ],
+    "counter": "ALARM: 0:03"
+   },
+   {
+    "who": "neff",
+    "say": "Adrian. You never knock. You never wipe your feet.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "neff",
+    "say": "He's a hormone. He always shows up uninvited.",
+    "emotion": "tired"
+   },
+   {
+    "who": "adrian",
+    "say": "I prefer the word dramatic.",
+    "emotion": "happy"
+   },
+   {
+    "who": "adrian",
+    "say": "I'm a hormone. I ride the blood and tell everyone to panic.",
+    "emotion": "excited",
+    "cam": "low:adrian",
+    "label": "Epinephrine: the fight-or-flight hormone",
+    "label_on": "adrian"
+   },
+   {
+    "who": "cortez",
+    "say": "Perfect. Panic is my whole department.",
+    "emotion": "happy",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "cortez",
+    "say": "Adrian, I need heart, lungs, legs, and sugar. In that order.",
+    "emotion": "angry"
+   },
+   {
+    "who": "adrian",
+    "say": "I'll hit the whole city, zip code by zip code.",
+    "emotion": "excited"
+   },
+   {
+    "who": "adrian",
+    "say": "Great. Hold my coffee. I'm taking the express lane.",
+    "emotion": "excited",
+    "cam": "close:adrian",
+    "do": [
+     [
+      "adrian",
+      "exit"
+     ]
+    ],
+    "sfx": "whoosh"
+   },
+   {
+    "who": "adrian",
+    "say": "Bloodstream, baby! Everybody gets my text at once!",
+    "emotion": "excited",
+    "chapter": "3. The Express Lane",
+    "set": "vessel",
+    "cast": [
+     "adrian",
+     "beat"
+    ],
+    "cam": "ride",
+    "mood": "chase",
+    "counter": "HEART RATE: 70"
+   },
+   {
+    "who": "beat",
+    "say": "Adrian! Whoa! Slow down, I'm just the receptionist!",
+    "emotion": "panic",
+    "cam": "close:beat"
+   },
+   {
+    "who": "adrian",
+    "say": "Hello, left atrium! Hello, aorta! Is anyone hiring?",
+    "emotion": "excited"
+   },
+   {
+    "who": "beat",
+    "say": "Don't talk to me! I'm counting!",
+    "emotion": "panic"
+   },
+   {
+    "who": "adrian",
+    "say": "Slowing down is not in my contract. Pump harder!",
+    "emotion": "excited",
+    "cam": "pov"
+   },
+   {
+    "who": "beat",
+    "say": "Pumping! Pumping! My headset is sweating!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ],
+    "counter": "HEART RATE: 110",
+    "gap": 0.2
+   },
+   {
+    "who": "beat",
+    "say": "One-ten! One-twenty! Somebody put a bucket under me!",
+    "emotion": "panic",
+    "cam": "tight:beat",
+    "counter": "HEART RATE: 130",
+    "label": "Heart rate: climbs within seconds",
+    "label_on": "beat"
+   },
+   {
+    "who": "adrian",
+    "say": "Look at that. Faster heart, more blood to the muscles.",
+    "emotion": "happy",
+    "cam": "ride"
+   },
+   {
+    "who": "adrian",
+    "say": "Skin's turning pale. That's blood moving to the muscles.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "beat",
+    "say": "I wanted a nap. I got a marathon.",
+    "emotion": "tired",
+    "cam": "close:beat"
+   },
+   {
+    "who": "gus",
+    "say": "Whoa, whoa! Who's slamming my door?",
+    "emotion": "angry",
+    "chapter": "4. Gus Closes the Kitchen",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "adrian"
+    ],
+    "cam": "close:gus",
+    "mood": "tense",
+    "counter": "",
+    "do": [
+     [
+      "set",
+      "close"
+     ]
+    ]
+   },
+   {
+    "who": "adrian",
+    "say": "Sorry, chef. Emergency. Your blood is needed in the legs.",
+    "emotion": "deadpan",
+    "cam": "two:gus,adrian",
+    "do": [
+     [
+      "adrian",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "My blood? I was digesting a cold slice of pizza!",
+    "emotion": "sad",
+    "cam": "close:gus"
+   },
+   {
+    "who": "adrian",
+    "say": "Not tonight. Digestion slows down. Muscles get the blood.",
+    "emotion": "deadpan",
+    "cam": "tight:adrian",
+    "label": "Sympathetic system: slows gut, speeds heart",
+    "label_on": "adrian"
+   },
+   {
+    "who": "gus",
+    "say": "Fine. Kitchen's closed. Kitchen's closed!",
+    "emotion": "angry",
+    "cam": "close:gus",
+    "do": [
+     [
+      "gus",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "I'm putting a sign on the door. Back in ten minutes. Maybe twenty.",
+    "emotion": "sad"
+   },
+   {
+    "who": "gus",
+    "say": "Does anyone want a cold slice? It's free. I'm leaving.",
+    "emotion": "sad",
+    "cam": "close:gus",
+    "gap": 0.3
+   },
+   {
+    "who": "liv",
+    "say": "Night shift, hard hat on. Why is my sugar alarm going off?",
+    "emotion": "tired",
+    "chapter": "5. Liv's Sugar Run",
+    "set": "liver",
+    "cast": [
+     "liv",
+     "adrian"
+    ],
+    "cam": "close:liv",
+    "mood": "office"
+   },
+   {
+    "who": "adrian",
+    "say": "Liv! Your muscles need fuel. Open the vault!",
+    "emotion": "excited",
+    "cam": "two:liv,adrian",
+    "do": [
+     [
+      "adrian",
+      "enter"
+     ]
+    ]
+   },
+   {
+    "who": "liv",
+    "say": "The vault? That's stored glycogen, buddy. I only open it for you.",
+    "emotion": "deadpan",
+    "cam": "prop:belt",
+    "label": "Glycogen: sugar stored in the liver",
+    "label_on": "liv"
+   },
+   {
+    "who": "adrian",
+    "say": "The legs are packing. They think we're running.",
+    "emotion": "excited"
+   },
+   {
+    "who": "liv",
+    "say": "Muscles never call unless they want sugar.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "liv",
+    "say": "Breaking it down into glucose. Dropping it in the blood.",
+    "emotion": "excited",
+    "cam": "close:liv",
+    "counter": "BLOOD SUGAR: RISING",
+    "sfx": "ding"
+   },
+   {
+    "who": "liv",
+    "say": "Fast fuel. No coupon needed.",
+    "emotion": "happy",
+    "cam": "tight:liv"
+   },
+   {
+    "who": "liv",
+    "say": "Also, I still make bile. I'm very busy.",
+    "emotion": "tired"
+   },
+   {
+    "who": "adrian",
+    "say": "You're the best. Thanks, Liv.",
+    "emotion": "happy",
+    "cam": "two:liv,adrian"
+   },
+   {
+    "who": "liv",
+    "say": "Thank me later. I'm still on shift.",
+    "emotion": "tired",
+    "cam": "close:liv",
+    "counter": ""
+   },
+   {
+    "who": "inout",
+    "say": "Wide open! Our tiny airways are opening up! We breathe more air!",
+    "emotion": "excited",
+    "chapter": "6. Lights, Lungs, Action",
+    "set": "control",
+    "cast": [
+     "inout",
+     "cortez",
+     "beat",
+     "adrian"
+    ],
+    "cam": "close:inout",
+    "mood": "chase",
+    "do": [
+     [
+      "inout",
+      "breathe"
+     ]
+    ],
+    "label": "Bronchioles: small airways that widen",
+    "label_on": "inout"
+   },
+   {
+    "who": "inout",
+    "say": "Twice the air! Should we fill the whole house?",
+    "emotion": "excited"
+   },
+   {
+    "who": "cortez",
+    "say": "Careful. Too much breathing makes you lightheaded.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "cortez",
+    "say": "And the eyes? Give me the eyes.",
+    "emotion": "angry",
+    "cam": "prop:eyes"
+   },
+   {
+    "who": "adrian",
+    "say": "Pupils are wide open, boss. More light, better view.",
+    "emotion": "happy",
+    "cam": "close:adrian",
+    "label": "Pupils: widen to let in light",
+    "label_on": "adrian"
+   },
+   {
+    "who": "cortez",
+    "say": "I see everything. It is terrifying.",
+    "emotion": "shock",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Hands are shaking. Palms are sweating. Mom's spaghetti.",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Hearing, check. Heart, check. Breath, check. Time to go investigate.",
+    "emotion": "whisper",
+    "cam": "two:cortez,beat",
+    "mood": "tense",
+    "counter": "STEPS TO KITCHEN: 12"
+   },
+   {
+    "who": "beat",
+    "say": "Tell the knees to stop knocking. They're so loud.",
+    "emotion": "panic"
+   },
+   {
+    "who": "inout",
+    "say": "Tell the knees we're working on it.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "neff",
+    "say": "Quick reminder: it's the ice maker.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Statistics can wait.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "counter": "STEPS TO KITCHEN: 6"
+   },
+   {
+    "who": "narr",
+    "say": "And then the eyes report back.",
+    "emotion": "whisper",
+    "chapter": "7. The Verdict",
+    "cam": "prop:eyes",
+    "mood": "tense",
+    "counter": "STEPS TO KITCHEN: 0"
+   },
+   {
+    "who": "beat",
+    "say": "It's... the ice maker. It dropped a pile of ice.",
+    "emotion": "shock",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Who builds an ice maker that sounds like a burglar?",
+    "emotion": "angry"
+   },
+   {
+    "who": "beat",
+    "say": "The same people who built my pulse. Probably.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "inout",
+    "say": "That's it?! We hyperventilated for an ice cube?!",
+    "emotion": "angry",
+    "cam": "close:inout"
+   },
+   {
+    "who": "neff",
+    "say": "I said ninety percent.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Ninety percent is not a number I respect.",
+    "emotion": "angry",
+    "cam": "close:cortez",
+    "counter": ""
+   },
+   {
+    "who": "cortez",
+    "say": "Fine. Approved. Neff was right.",
+    "emotion": "sad",
+    "cam": "prop:memo",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "APPROVED",
+    "memo": "IT WAS THE ICE MAKER"
+   },
+   {
+    "who": "neff",
+    "say": "Can I have that in writing? Framed?",
+    "emotion": "excited",
+    "cam": "close:neff"
+   },
+   {
+    "who": "neff",
+    "say": "Let the record show I predicted this.",
+    "emotion": "happy"
+   },
+   {
+    "who": "cortez",
+    "say": "Let the record show I'm updating the memo policy. Slightly.",
+    "emotion": "tired"
+   },
+   {
+    "who": "adrian",
+    "say": "So... I'm free to go?",
+    "emotion": "deadpan",
+    "cam": "close:adrian"
+   },
+   {
+    "who": "cortez",
+    "say": "Stand down. Everybody breathe. Nice and easy.",
+    "emotion": "tired",
+    "chapter": "8. The Cooldown",
+    "cam": "close:cortez",
+    "mood": "calm"
+   },
+   {
+    "who": "beat",
+    "say": "Eighty. Ninety. Seventy-five. Okay, I can feel my headset again.",
+    "emotion": "tired",
+    "cam": "close:beat",
+    "counter": "HEART RATE: 85",
+    "label": "Parasympathetic system: the rest-and-digest brake",
+    "label_on": "beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Good job, team. Nobody did anything wrong. Except me.",
+    "emotion": "tired"
+   },
+   {
+    "who": "adrian",
+    "say": "Don't miss me. My effects wear off in minutes.",
+    "emotion": "sad",
+    "cam": "close:adrian",
+    "do": [
+     [
+      "adrian",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "liv",
+    "say": "I'll clean up. I always do.",
+    "emotion": "tired",
+    "set": "liver",
+    "cast": [
+     "liv"
+    ],
+    "cam": "close:liv",
+    "mood": "calm",
+    "counter": ""
+   },
+   {
+    "who": "narr",
+    "say": "Back in the kitchen, you finish your water and shuffle to bed.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "gus",
+    "say": "Kitchen's open. Anyone want a cold slice of pizza?",
+    "emotion": "happy",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "cam": "close:gus",
+    "do": [
+     [
+      "set",
+      "open"
+     ]
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "Next time: someone chugs ice water in July. Cortez, brace yourself.",
+    "emotion": "excited",
+    "cam": "close:gus",
+    "counter": "",
+    "gap": 0.3
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Epinephrine speeds your heart in seconds.",
+      "Adrenal glands sit on top of your kidneys."
+     ],
+     "source": "OpenStax A&P 2e; StatPearls: Physiology, Fight or Flight"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 3.8
+   }
+  ]
+ },
+ "long": {
+  "description": "Something went THUMP in the kitchen at 3 AM, and your body does not wait to find out what. Cortez sounds the alarm, Neff swears it's the ice maker, and Adrian Alin, a very classy adrenaline molecule, rushes out of the adrenal glands to speed up Beat, shut down Gus's kitchen and drain Liv's sugar vault.\n\nReal body notes (sources): OpenStax Anatomy & Physiology 2e, Autonomic Nervous System: https://openstax.org/books/anatomy-and-physiology-2e/pages/15-1-divisions-of-the-autonomic-nervous-system ; StatPearls, Physiology, Fight or Flight Response: https://www.ncbi.nlm.nih.gov/books/NBK551561/ ; NIDDK, Your Kidneys & How They Work: https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work\nEntertainment and general education, not medical advice. Original characters, animated in Blender. Made for adults and families, not made for kids.\n#YourOrgansWhenYou #FightOrFlight #HumanBody",
+  "tags": [
+   "your organs when you",
+   "noise at 3 am",
+   "fight or flight explained",
+   "what is adrenaline",
+   "adrenal glands",
+   "heart rate spike",
+   "why is my heart pounding",
+   "human body animation",
+   "funny anatomy",
+   "inner office",
+   "organ cartoon"
+  ],
+  "thumb_text": "WHAT WAS THAT?!",
+  "title": "Your Organs When You Hear a Noise at 3 AM",
+  "thumb_beat": 1
+ },
+ "shorts": [
+  {
+   "dur": 25,
+   "top": "WHY YOUR HEART POUNDS",
+   "title": "Why Your Heart Pounds at 3 AM #shorts",
+   "description": "Adrian Alin rides the blood and Beat can't keep up. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "adrenaline",
+    "heart rate",
+    "fight or flight"
+   ],
+   "beat": 27
+  },
+  {
+   "dur": 25,
+   "top": "YOUR LIVER'S SECRET STASH",
+   "title": "Your Liver Has a Secret Sugar Stash #shorts",
+   "description": "Liv opens the glycogen vault when the alarm rings. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "liver",
+    "glycogen",
+    "blood sugar"
+   ],
+   "beat": 44
+  }
+ ]
+}

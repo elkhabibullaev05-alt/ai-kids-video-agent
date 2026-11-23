@@ -1,0 +1,810 @@
+{
+ "id": "20261123-2-organs-ice-water-100-degrees",
+ "plot": "It's a hundred degrees and you chug a bucket-sized cup of ice water. Gus the stomach gets hit by a cold front called Cubert, Cortez gets a pain call from the trigeminal nerve (brain freeze), Neff runs the water budget, and Cortez stamps DENIED on MAKE IT STOP. Twist: the brain can't feel pain itself. A second cup arrives and the stamp does nothing. Tease: leg day.",
+ "variation": {
+  "music": "glass_bells",
+  "palette": "sunset_gold",
+  "opening_shot": "macro_pullback",
+  "camera_set": "crane",
+  "transitions": "dip",
+  "caption_style": "speaker_color"
+ },
+ "script": {
+  "title": "Your Organs When You Chug Ice Water on a 100°F Day",
+  "seed": 47,
+  "ride_speed": 0.03,
+  "variation": {
+   "music": "glass_bells",
+   "palette": "sunset_gold",
+   "opening_shot": "macro_pullback",
+   "camera_set": "crane",
+   "transitions": "dip",
+   "caption_style": "speaker_color"
+  },
+  "episode": {
+   "action": "chug ice water on a hot day",
+   "guest": "Cubert (ice cube / cold water)",
+   "system": "digestive + urinary + nervous"
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "organ": "you",
+    "color": [
+     0.2,
+     0.45,
+     0.8
+    ]
+   },
+   "cortez": {
+    "name": "Cortez",
+    "organ": "brain",
+    "voice": "bm_george",
+    "speed": 0.98
+   },
+   "beat": {
+    "name": "Beat",
+    "organ": "heart",
+    "voice": "af_bella",
+    "speed": 1.08
+   },
+   "gus": {
+    "name": "Gus",
+    "organ": "stomach",
+    "voice": "am_fenrir",
+    "speed": 1.02
+   },
+   "inout": {
+    "name": "In and Out",
+    "organ": "lungs",
+    "voice": "am_puck",
+    "speed": 1.1
+   },
+   "neff": {
+    "name": "Neff",
+    "organ": "kidney",
+    "voice": "bm_lewis",
+    "speed": 1.0
+   },
+   "cubert": {
+    "name": "Cubert",
+    "organ": "guest",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "guest": {
+     "shape": "cube",
+     "color": [
+      0.7,
+      0.9,
+      1.0
+     ],
+     "color2": [
+      0.4,
+      0.7,
+      0.95
+     ],
+     "accessory": "hat",
+     "tag": "CUBERT"
+    }
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bm_fable",
+    "speed": 1.0
+   }
+  },
+  "beats": [
+   {
+    "set": "you",
+    "cam": "close:you",
+    "title": "Your Organs When You Chug Ice Water on a 100°F Day",
+    "push": 1.6,
+    "hold": 2.6,
+    "do": [
+     [
+      "you",
+      "sip"
+     ]
+    ],
+    "mood": "office"
+   },
+   {
+    "who": "neff",
+    "say": "Weather report: a hundred degrees outside. Everybody drink something.",
+    "emotion": "tired",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "cam": "close:neff",
+    "chapter": "1. Heat Advisory",
+    "mood": "tense"
+   },
+   {
+    "who": "cortez",
+    "say": "The thermostat in here says we're fine. The thermostat is lying.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "beat",
+    "say": "Core temperature is ninety-eight point six. Barely holding on.",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "counter": "BODY TEMP: 98.6°F"
+   },
+   {
+    "who": "inout",
+    "say": "It's so hot, even the air is sweating!",
+    "emotion": "panic",
+    "cam": "close:inout",
+    "do": [
+     [
+      "inout",
+      "breathe"
+     ]
+    ]
+   },
+   {
+    "who": "neff",
+    "say": "Even my kidneys are sweating. I didn't know that was possible.",
+    "emotion": "tired"
+   },
+   {
+    "who": "beat",
+    "say": "Sweat is on. Blood is rushing to the skin to dump heat.",
+    "emotion": "panic",
+    "cam": "tight:beat",
+    "label": "Sweat: evaporation cools the skin",
+    "label_on": "beat"
+   },
+   {
+    "who": "cortez",
+    "say": "Sweat is good. Sweat is our friend. Let it flow.",
+    "emotion": "happy"
+   },
+   {
+    "who": "neff",
+    "say": "Which means my budget is bleeding. Water out, nothing in.",
+    "emotion": "sad",
+    "cam": "close:neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Order of the day: water. Emergency water. Ice if possible.",
+    "emotion": "angry",
+    "cam": "two:cortez,neff"
+   },
+   {
+    "who": "beat",
+    "say": "I vote for something frozen. Maybe a slushie.",
+    "emotion": "excited"
+   },
+   {
+    "who": "cortez",
+    "say": "Nobody asked for your vote, Beat.",
+    "emotion": "angry"
+   },
+   {
+    "who": "inout",
+    "say": "The eyes just spotted a gas station cup the size of a bucket!",
+    "emotion": "excited",
+    "cam": "close:inout"
+   },
+   {
+    "who": "beat",
+    "say": "Is that ice? That's mostly ice.",
+    "emotion": "shock",
+    "cam": "close:beat"
+   },
+   {
+    "who": "neff",
+    "say": "Mostly ice. It's basically a freezer with a straw.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "cortez",
+    "say": "Everybody brace. It's coming down the hatch.",
+    "emotion": "whisper",
+    "cam": "wide",
+    "mood": "chase",
+    "do": [
+     [
+      "all",
+      "shock"
+     ]
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "Cold front! Cold front! Who ordered a blizzard?",
+    "emotion": "panic",
+    "chapter": "2. Cold Front",
+    "set": "stomach",
+    "cast": [
+     "gus",
+     "cubert"
+    ],
+    "cam": "close:gus",
+    "counter": "",
+    "mood": "tense",
+    "do": [
+     [
+      "cubert",
+      "enter"
+     ]
+    ],
+    "sfx": "splash"
+   },
+   {
+    "who": "cubert",
+    "say": "Cubert. Ice cube. I'm cool. Technically.",
+    "emotion": "deadpan",
+    "cam": "two:gus,cubert"
+   },
+   {
+    "who": "gus",
+    "say": "Cubert? That sounds like a bad nickname.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "gus",
+    "say": "Do you know what temperature this kitchen runs at?",
+    "emotion": "angry",
+    "cam": "close:gus"
+   },
+   {
+    "who": "cubert",
+    "say": "A nice, comfy seventy?",
+    "emotion": "happy",
+    "cam": "close:cubert"
+   },
+   {
+    "who": "gus",
+    "say": "Ninety-eight point six. You are thirty-two. Show some respect.",
+    "emotion": "angry",
+    "cam": "tight:gus",
+    "label": "Core temperature: held near 98.6°F",
+    "label_on": "gus"
+   },
+   {
+    "who": "cubert",
+    "say": "I've never been this warm. It's overwhelming.",
+    "emotion": "sad",
+    "cam": "close:cubert"
+   },
+   {
+    "who": "gus",
+    "say": "Welcome to the human body, kid.",
+    "emotion": "happy"
+   },
+   {
+    "who": "gus",
+    "say": "Relax. My walls warm everything up fast. It's what I do.",
+    "emotion": "tired",
+    "cam": "prop:acid"
+   },
+   {
+    "who": "cubert",
+    "say": "Do you have a towel? I'm sweating. I'm melting. Same thing.",
+    "emotion": "panic"
+   },
+   {
+    "who": "cubert",
+    "say": "I think I'm getting smaller. Is that normal?",
+    "emotion": "panic",
+    "cam": "close:cubert",
+    "do": [
+     [
+      "cubert",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "gus",
+    "say": "Every cold drink takes a short vacation here. Then it goes to work.",
+    "emotion": "deadpan",
+    "cam": "two:gus,cubert"
+   },
+   {
+    "who": "cortez",
+    "say": "WHOA! Pain! Pain on line seven! Where's it coming from?!",
+    "emotion": "shock",
+    "chapter": "3. Brain Freeze",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "cam": "close:cortez",
+    "mood": "chase",
+    "alarm": true,
+    "counter": "BRAIN FREEZE: 30 SEC"
+   },
+   {
+    "who": "beat",
+    "say": "The roof of the mouth! The cold hit it way too fast!",
+    "emotion": "panic",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cortez",
+    "say": "The roof of the mouth? Why is nobody guarding the roof?!",
+    "emotion": "angry"
+   },
+   {
+    "who": "cortez",
+    "say": "Is it my brain?! Is my brain freezing?!",
+    "emotion": "panic",
+    "cam": "tight:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Your brain can't feel pain, Cortez. Not on its own.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Brain tissue: can't feel pain itself",
+    "label_on": "neff"
+   },
+   {
+    "who": "cortez",
+    "say": "Then who is screaming at me?!",
+    "emotion": "shock",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "The trigeminal nerve. It carries face pain to your desk.",
+    "emotion": "deadpan",
+    "cam": "two:neff,cortez",
+    "label": "Trigeminal nerve: carries face pain signals",
+    "label_on": "neff"
+   },
+   {
+    "who": "cortez",
+    "say": "So my face is yelling at me. Great.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "inout",
+    "say": "Should we breathe through it? In and out? In and out?",
+    "emotion": "excited"
+   },
+   {
+    "who": "cortez",
+    "say": "Yes. Slowly. Do not hyperventilate on me.",
+    "emotion": "angry"
+   },
+   {
+    "who": "beat",
+    "say": "Scientists think blood vessels up here squeeze, then open wide.",
+    "emotion": "deadpan",
+    "cam": "close:beat"
+   },
+   {
+    "who": "neff",
+    "say": "Squeeze, then open. Like a bad zipper.",
+    "emotion": "tired",
+    "cam": "close:neff",
+    "counter": "BRAIN FREEZE: 10 SEC"
+   },
+   {
+    "who": "cortez",
+    "say": "Memo: make it stop. Stamp it.",
+    "emotion": "angry",
+    "cam": "prop:memo",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "DENIED",
+    "memo": "MAKE IT STOP",
+    "gap": 0.3
+   },
+   {
+    "who": "neff",
+    "say": "Good news. It usually fades in under a minute.",
+    "emotion": "happy",
+    "cam": "close:neff",
+    "counter": ""
+   },
+   {
+    "who": "cortez",
+    "say": "Never again. I'm writing it down. Never. Again.",
+    "emotion": "whisper",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Same speech every summer. Same stamp. Same result.",
+    "emotion": "tired"
+   },
+   {
+    "who": "beat",
+    "say": "You say that every summer.",
+    "emotion": "deadpan",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cubert",
+    "say": "I'm almost water now! Small intestine, please take me in!",
+    "emotion": "excited",
+    "chapter": "4. The Water Run",
+    "set": "vessel",
+    "cast": [
+     "cubert",
+     "beat"
+    ],
+    "cam": "ride",
+    "mood": "office",
+    "counter": "HYDRATION: UP",
+    "label": "Small intestine: absorbs most of your water",
+    "label_on": "cubert"
+   },
+   {
+    "who": "cubert",
+    "say": "Ready or not, bloodstream, here I come!",
+    "emotion": "excited",
+    "cam": "pov"
+   },
+   {
+    "who": "beat",
+    "say": "Cubert, please keep your elbows in.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "beat",
+    "say": "More fluid in the pipes. Pressure's steady. I like it.",
+    "emotion": "happy",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cubert",
+    "say": "Everybody's so friendly! Hi, red blood cell! Hi, white blood cell!",
+    "emotion": "excited"
+   },
+   {
+    "who": "cubert",
+    "say": "Last words: I was a great ice cube.",
+    "emotion": "sad",
+    "cam": "ride"
+   },
+   {
+    "who": "cubert",
+    "say": "Also, I owe the straw ten bucks.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "beat",
+    "say": "You were a very cold ice cube.",
+    "emotion": "deadpan",
+    "cam": "close:beat"
+   },
+   {
+    "who": "cubert",
+    "say": "Tell Gus I said thanks for the warm welcome.",
+    "emotion": "sad",
+    "cam": "close:cubert",
+    "do": [
+     [
+      "cubert",
+      "exit"
+     ]
+    ]
+   },
+   {
+    "who": "neff",
+    "say": "Fresh water! My favorite delivery!",
+    "emotion": "excited",
+    "chapter": "5. Neff's Budget",
+    "set": "control",
+    "cast": [
+     "neff",
+     "cortez",
+     "beat"
+    ],
+    "cam": "close:neff",
+    "mood": "office"
+   },
+   {
+    "who": "cortez",
+    "say": "Neff, new rule. No more fresh water jokes.",
+    "emotion": "angry"
+   },
+   {
+    "who": "neff",
+    "say": "That was my best one this week.",
+    "emotion": "sad"
+   },
+   {
+    "who": "neff",
+    "say": "I filter about half a cup of blood every minute. All day.",
+    "emotion": "deadpan",
+    "cam": "tight:neff",
+    "label": "Kidneys: filter half a cup a minute",
+    "label_on": "neff"
+   },
+   {
+    "who": "cortez",
+    "say": "How much of it do we send out?",
+    "emotion": "angry",
+    "cam": "two:cortez,neff"
+   },
+   {
+    "who": "neff",
+    "say": "A quart or two a day. Depends how much you drink.",
+    "emotion": "tired",
+    "cam": "close:neff"
+   },
+   {
+    "who": "beat",
+    "say": "So we need a restroom soon.",
+    "emotion": "deadpan",
+    "cam": "close:beat"
+   },
+   {
+    "who": "neff",
+    "say": "Not yet. Give me a few minutes. Quality control.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "cortez",
+    "say": "Everyone's an expert on restrooms today.",
+    "emotion": "angry",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "Also, you're roughly half to sixty percent water.",
+    "emotion": "deadpan",
+    "cam": "close:neff",
+    "label": "Body water: about 50 to 60 percent",
+    "label_on": "neff"
+   },
+   {
+    "who": "cortez",
+    "say": "So we're basically a very fancy cup.",
+    "emotion": "tired",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "A cup with opinions.",
+    "emotion": "happy",
+    "cam": "two:neff,cortez"
+   },
+   {
+    "who": "inout",
+    "say": "Wait. The eyes say there's a second cup. Same size.",
+    "emotion": "shock",
+    "chapter": "6. Round Two",
+    "cam": "close:inout",
+    "mood": "tense",
+    "alarm": true,
+    "counter": "REFILL: 0:10"
+   },
+   {
+    "who": "cortez",
+    "say": "Round two?! Already?!",
+    "emotion": "panic",
+    "cam": "close:cortez"
+   },
+   {
+    "who": "neff",
+    "say": "This is why I never take a day off.",
+    "emotion": "tired"
+   },
+   {
+    "who": "beat",
+    "say": "My pulse hasn't even recovered from round one!",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "do": [
+     [
+      "beat",
+      "pump"
+     ]
+    ]
+   },
+   {
+    "who": "neff",
+    "say": "I just finished the first batch.",
+    "emotion": "sad",
+    "cam": "close:neff",
+    "counter": "REFILL: 0:05"
+   },
+   {
+    "who": "cortez",
+    "say": "Everyone, positions. We take this one slowly.",
+    "emotion": "whisper",
+    "cam": "wide",
+    "do": [
+     [
+      "all",
+      "shock"
+     ]
+    ]
+   },
+   {
+    "who": "cortez",
+    "say": "Stamp the memo. No more ice. Not ever.",
+    "emotion": "angry",
+    "cam": "prop:memo",
+    "do": [
+     [
+      "cortez",
+      "stamp"
+     ]
+    ],
+    "stamp": "DENIED",
+    "memo": "NO MORE ICE",
+    "counter": "",
+    "gap": 0.3
+   },
+   {
+    "who": "beat",
+    "say": "Pretty sure the stamp doesn't work on you.",
+    "emotion": "deadpan",
+    "cam": "close:beat"
+   },
+   {
+    "who": "gus",
+    "say": "Hey! Is it cold again? Do I need a coat?",
+    "emotion": "tired",
+    "set": "stomach",
+    "cast": [
+     "gus"
+    ],
+    "cam": "close:gus",
+    "mood": "calm"
+   },
+   {
+    "who": "gus",
+    "say": "No. Wait. This one is room temperature. Aww, thank you.",
+    "emotion": "happy",
+    "cam": "close:gus"
+   },
+   {
+    "who": "gus",
+    "say": "Finally. Someone who respects the kitchen.",
+    "emotion": "happy"
+   },
+   {
+    "who": "beat",
+    "say": "Heart rate is normal. Temperature is stable. I'm so proud of us.",
+    "emotion": "happy",
+    "chapter": "7. Cooling Down",
+    "set": "control",
+    "cast": [
+     "cortez",
+     "beat",
+     "neff",
+     "inout"
+    ],
+    "cam": "close:beat",
+    "mood": "calm",
+    "counter": "BODY TEMP: 98.6°F"
+   },
+   {
+    "who": "cortez",
+    "say": "Great teamwork. Gold stars for everyone. Except Neff.",
+    "emotion": "tired"
+   },
+   {
+    "who": "neff",
+    "say": "What did I do?!",
+    "emotion": "panic"
+   },
+   {
+    "who": "cortez",
+    "say": "Nothing. That's the problem. I'm kidding. Maybe.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "neff",
+    "say": "Cubert is now sweat, urine, or part of a blood cell. Respect.",
+    "emotion": "deadpan",
+    "cam": "close:neff"
+   },
+   {
+    "who": "inout",
+    "say": "We'll miss him. He was cool.",
+    "emotion": "sad",
+    "cam": "close:inout"
+   },
+   {
+    "who": "beat",
+    "say": "Moment of silence for the ice cube.",
+    "emotion": "sad"
+   },
+   {
+    "who": "inout",
+    "say": "In. Out. In. Out. That's our silence.",
+    "emotion": "deadpan"
+   },
+   {
+    "who": "cortez",
+    "say": "Never again. Quote me.",
+    "emotion": "tired",
+    "cam": "close:cortez",
+    "counter": ""
+   },
+   {
+    "who": "beat",
+    "say": "Next time: leg day. Somebody call in sick for me.",
+    "emotion": "panic",
+    "cam": "close:beat",
+    "gap": 0.3
+   },
+   {
+    "fact": {
+     "title": "REAL BODY NOTE",
+     "lines": [
+      "Your core stays near 98.6°F.",
+      "Kidneys filter half a cup of blood a minute."
+     ],
+     "source": "NIDDK: Your Kidneys & How They Work; OpenStax A&P 2e"
+    },
+    "cam": "wide",
+    "mood": "resolve",
+    "hold": 3.8
+   }
+  ]
+ },
+ "long": {
+  "description": "A hundred degrees outside, a cup the size of a bucket, and an ice cube named Cubert who just wanted a warm welcome. Gus gets hit by a cold front, Cortez fields an angry call from the trigeminal nerve, and Neff does the math on how much water your kidneys really handle.\n\nReal body notes (sources): NIDDK, Your Kidneys & How They Work: https://www.niddk.nih.gov/health-information/kidney-disease/kidneys-how-they-work ; NIDDK, Your Digestive System & How It Works: https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works ; OpenStax Anatomy & Physiology 2e: https://openstax.org/books/anatomy-and-physiology-2e\nBrain freeze mechanisms are still being studied; we describe the leading explanation.\nEntertainment and general education, not medical advice. Original characters, animated in Blender. Made for adults and families, not made for kids.\n#YourOrgansWhenYou #BrainFreeze #SummerHeat",
+  "tags": [
+   "ice water",
+   "brain freeze explained",
+   "why brain freeze happens",
+   "trigeminal nerve",
+   "how kidneys work",
+   "stay cool in summer heat",
+   "body temperature 98.6",
+   "your organs when you",
+   "human body animation",
+   "funny anatomy",
+   "inner office"
+  ],
+  "thumb_text": "ICE COLD PAIN",
+  "title": "Your Organs When You Chug Ice Water on a 100°F Day",
+  "thumb_beat": 3
+ },
+ "shorts": [
+  {
+   "dur": 28,
+   "top": "BRAIN FREEZE ISN'T YOUR BRAIN",
+   "title": "Brain Freeze Isn't Your Brain #shorts",
+   "description": "Cortez gets a pain call, and it's not from where you think. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "brain freeze",
+    "trigeminal nerve",
+    "human body"
+   ],
+   "beat": 28
+  },
+  {
+   "dur": 25,
+   "top": "45 GALLONS A DAY?",
+   "title": "Your Kidneys Filter 45 Gallons a Day #shorts",
+   "description": "Neff runs the water budget. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "kidneys",
+    "hydration",
+    "human body"
+   ],
+   "beat": 45
+  }
+ ]
+}
