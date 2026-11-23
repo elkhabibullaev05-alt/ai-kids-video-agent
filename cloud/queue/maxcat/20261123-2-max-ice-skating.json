@@ -1,0 +1,1278 @@
+{
+ "id": "20261123-2-max-ice-skating",
+ "plot": "At sunset on the frozen pond Max tries ice skating and turns every step into a gag (ear skates, eleven falls, a spin he can't stop, a snowball that grows into a snowman), Dog does accidental splits and becomes a pillow, Bird judges with absurd scores, Mouse skates perfectly and wins the trophy, and the next morning Max is the first one back on the ice.",
+ "script": {
+  "title": "Max Tried Ice Skating… It Did Not Go Well 😭",
+  "set": {
+   "place": "snow",
+   "time": "sunset"
+  },
+  "chars": {
+   "max": {
+    "name": "Max",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.98,
+     0.48,
+     0.1
+    ],
+    "kind": "cat",
+    "size": 1.0,
+    "home": [
+     -2,
+     7
+    ]
+   },
+   "mouse": {
+    "name": "Mouse",
+    "voice": "af_sky",
+    "speed": 1.1,
+    "pitch": 4,
+    "color": [
+     0.7,
+     0.7,
+     0.75
+    ],
+    "kind": "mouse",
+    "size": 1.0,
+    "home": [
+     1,
+     6
+    ]
+   },
+   "dog": {
+    "name": "Dog",
+    "voice": "am_michael",
+    "speed": 1.0,
+    "pitch": -1,
+    "color": [
+     0.75,
+     0.55,
+     0.3
+    ],
+    "kind": "dog",
+    "size": 1.0,
+    "home": [
+     4,
+     8
+    ]
+   },
+   "grandma": {
+    "name": "Grandma",
+    "voice": "bf_emma",
+    "speed": 0.95,
+    "pitch": 0,
+    "color": [
+     0.6,
+     0.35,
+     0.7
+    ],
+    "kind": "grandma",
+    "size": 1.0,
+    "home": [
+     -6,
+     9
+    ]
+   },
+   "bird": {
+    "name": "Bird",
+    "voice": "af_bella",
+    "speed": 1.15,
+    "pitch": 5,
+    "color": [
+     0.25,
+     0.6,
+     1.0
+    ],
+    "kind": "bird",
+    "size": 1.0,
+    "home": [
+     3,
+     11
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "bf_isabella",
+    "speed": 1.0,
+    "pitch": 0
+   }
+  },
+  "props": [
+   {
+    "id": "pond",
+    "type": "box",
+    "color": "blue",
+    "at": [
+     0.0,
+     10.0,
+     0.0
+    ],
+    "visible": true,
+    "scale": 1.6
+   },
+   {
+    "id": "snowball",
+    "type": "ball",
+    "color": "blue",
+    "at": [
+     -3.0,
+     9.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.4
+   },
+   {
+    "id": "trophy",
+    "type": "trophy",
+    "color": "gold",
+    "at": [
+     -5.0,
+     11.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.6
+   },
+   {
+    "id": "cocoa",
+    "type": "cake",
+    "color": "red",
+    "at": [
+     -6.0,
+     10.0,
+     0.0
+    ],
+    "visible": false,
+    "scale": 0.5
+   }
+  ],
+  "beats": [
+   {
+    "who": "max",
+    "say": "I'm not sliding. I'm arriving. Very slowly. Sideways.",
+    "cam": "overhead",
+    "do": [
+     [
+      "max",
+      "enter:left"
+     ],
+     [
+      "max",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, the skates go on your feet. Not on your ears.",
+    "cam": "two:max,grandma",
+    "do": [
+     [
+      "grandma",
+      "enter:left"
+     ],
+     [
+      "grandma",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ear skates are the future, Grandma. You'll see.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max has been on the ice for nine seconds. He has fallen eleven times.",
+    "cam": "prop:pond",
+    "do": [
+     [
+      "pond",
+      "bounce"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "That wasn't a fall. That was me checking if the ice is real.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "And is it real?",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Extremely. My whole back agrees.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Hold on, buddy! I'm coming to save you!",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "dog",
+      "enter:right"
+     ],
+     [
+      "dog",
+      "to:2,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog did not have a plan. Dog had four legs going in four directions.",
+    "cam": "wide",
+    "do": [
+     [
+      "dog",
+      "spin"
+     ],
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Why is the floor running away from me?",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Dog, the floor isn't moving. You are.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then tell my legs. They stopped listening to me.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Both of you, slowly. Little steps. Like penguins.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Penguins have practice, Grandma. I have dignity.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:right"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "He had dignity for two more seconds.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "DIGNITY: 0",
+    "cam": "prop:pond",
+    "do": [
+     [
+      "pond",
+      "spin"
+     ]
+    ],
+    "text": "DIGNITY: 0",
+    "hold": 1.2,
+    "sfx": "suspicious"
+   },
+   {
+    "who": "bird",
+    "say": "Good evening, everyone! Your judge has arrived!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "enter:right"
+     ],
+     [
+      "bird",
+      "to:3,11"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "We don't need a judge. We need a rope.",
+    "cam": "two:max,bird",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max, for that last fall: technical score, two. Drama score, ten.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Ten? So I'm winning?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "You're winning at falling. It's a very small trophy.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "What's my score? I've been doing the splits for a minute.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Dog, that's not the splits. You're just stuck.",
+    "cam": "two:bird,dog",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Then my score is a strong ten for being stuck.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Excuse me. Coming through. Left side, please.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "enter:left"
+     ],
+     [
+      "mouse",
+      "to:0,10"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Mouse glides across the pond like a tiny professional.",
+    "cam": "prop:pond",
+    "do": [
+     [
+      "mouse",
+      "spin"
+     ],
+     [
+      "mouse",
+      "to:2,10"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Mouse, how? You're the size of a sock!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Small feet, low center. Also I practiced every winter of my life.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I practiced too. Just now. For one minute.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Mouse: technical score, ten. Max: please leave the ice.",
+    "cam": "two:bird,mouse",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Fine. Watch this. The famous Max spin.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max started spinning. Nobody had told him how to stop.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma! Which way is the house? Every way is the house!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ],
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Put your tail down, Max! Use it like a brake!",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "My tail is not a brake! My tail is a decoration!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Don't worry, I'll stop him. With my face.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "to:0,9"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Dog did stop him. With his face.",
+    "cam": "prop:pond",
+    "do": [
+     [
+      "dog",
+      "squash"
+     ],
+     [
+      "max",
+      "squash"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "I'm okay. I'm a pillow now. A happy pillow.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thanks, buddy. You're the softest wall I've ever hit.",
+    "cam": "two:max,dog",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "NEW GAME: SNOWBALLS",
+    "cam": "prop:snowball",
+    "do": [
+     [
+      "snowball",
+      "show"
+     ],
+     [
+      "snowball",
+      "bounce"
+     ]
+    ],
+    "text": "NEW GAME: SNOWBALLS",
+    "hold": 1.2
+   },
+   {
+    "who": "max",
+    "say": "Forget skating. Snow is my sport. Watch me throw.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-2,8"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, gently. Don't throw it at Bird.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "to:-4,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I would never. I'm throwing it at the sky.",
+    "cam": "close:max",
+    "do": [
+     [
+      "snowball",
+      "to:bird"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "The sky was very close to Bird.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ],
+     [
+      "bird",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Max! Penalty! Minus five hundred points!",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, that's not even a real number!",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "It is now. Bird is the judge.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Bird threw it back. The snowball rolled downhill. And it grew.",
+    "cam": "prop:snowball",
+    "do": [
+     [
+      "snowball",
+      "to:max"
+     ],
+     [
+      "snowball",
+      "bounce"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Why is it bigger? Why is it bigger than me?",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Run, Max! Wait, no. Don't run. It's ice.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Max did not run. Max sat down. Max became a snowman.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Everyone stay calm. I am a snowman now. I have a new life.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "He's very round. I like him better like this.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Snowman Max: style, ten. Speed, zero. Hat, missing.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Max, you're not a snowman. You're a cat wearing a very cold jacket.",
+    "cam": "two:grandma,max",
+    "do": [
+     [
+      "grandma",
+      "to:-2,9"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Shh, Grandma. Snowmen don't talk to people who don't believe in them.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "turn:left"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Can I be a snowman too? I want a carrot nose. I would eat it, but still.",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "jump"
+     ],
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Snowman auditions are closed. One snowman per pond. Pond rules.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Who made the pond rules?",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "Me. Just now. I'm also the pond police.",
+    "cam": "two:bird,mouse",
+    "do": [
+     [
+      "bird",
+      "spin"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, my paws feel like ice cubes. My whiskers feel like ice cubes. I'm a drink now.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Who wants hot cocoa? Everyone off the ice, please.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "cocoa",
+      "show"
+     ],
+     [
+      "grandma",
+      "to:-5,10"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Cocoa! Finally a sport I'm good at!",
+    "cam": "close:dog",
+    "do": [
+     [
+      "dog",
+      "to:-4,9"
+     ],
+     [
+      "dog",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Can a snowman drink cocoa? Asking for me.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "to:-3,9"
+     ],
+     [
+      "max",
+      "shake"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Thirty seconds by the cocoa and Max is a cat again.",
+    "cam": "prop:cocoa",
+    "do": [
+     [
+      "cocoa",
+      "bounce"
+     ],
+     [
+      "max",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Now, the winter skating trophy goes to...",
+    "cam": "two:grandma,mouse",
+    "do": [
+     [
+      "trophy",
+      "show"
+     ],
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Me. It goes to me. Most falls. Biggest snowball.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "eyes_big"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "...Mouse. For actually skating.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "trophy",
+      "to:mouse"
+     ],
+     [
+      "grandma",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "mouse",
+    "say": "Thank you! I'd like to thank my small feet.",
+    "cam": "close:mouse",
+    "do": [
+     [
+      "mouse",
+      "jump"
+     ],
+     [
+      "mouse",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Grandma, I want to appeal. Bird gave me minus five hundred.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sad"
+     ]
+    ]
+   },
+   {
+    "who": "bird",
+    "say": "And I'd do it again. Judges never apologize.",
+    "cam": "close:bird",
+    "do": [
+     [
+      "bird",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "dog",
+    "say": "Max, look. You can have my prize. It's a cocoa mustache.",
+    "cam": "two:dog,max",
+    "do": [
+     [
+      "dog",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Thank you, buddy. It suits you better.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "laugh"
+     ]
+    ]
+   },
+   {
+    "who": "grandma",
+    "say": "Tomorrow we try again. With a helmet. And a rope.",
+    "cam": "close:grandma",
+    "do": [
+     [
+      "grandma",
+      "happy"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "Tomorrow I'm staying inside. Professionally.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "sleep"
+     ]
+    ]
+   },
+   {
+    "who": "narr",
+    "say": "Next morning, Max was the first one on the ice.",
+    "cam": "wide",
+    "do": [
+     [
+      "max",
+      "to:0,9"
+     ],
+     [
+      "max",
+      "jump"
+     ]
+    ]
+   },
+   {
+    "who": "max",
+    "say": "I'm not sliding. I'm arriving. Again.",
+    "cam": "close:max",
+    "do": [
+     [
+      "max",
+      "squash"
+     ],
+     [
+      "all",
+      "laugh"
+     ]
+    ]
+   }
+  ]
+ },
+ "long": {
+  "title": "Max Tried Ice Skating… It Did Not Go Well 😭",
+  "thumb_text": "11 FALLS",
+  "thumb_beat": 2,
+  "description": "\"I'm not sliding. I'm arriving. Very slowly. Sideways.\" 🐱\nMax tries ice skating on the frozen pond: ear skates, a spin he can't stop, Dog doing accidental splits, Bird judging every fall… and a snowball that gets out of hand.\nCould YOUR pet stand on ice? 👇\n#MaxTheCuriousCat #IceSkating #FunnyCat",
+  "tags": [
+   "funny cat",
+   "cat and dog",
+   "ice skating",
+   "cat on ice",
+   "winter comedy",
+   "cat comedy",
+   "funny animals",
+   "3d animation",
+   "animated comedy",
+   "max the curious cat",
+   "pet comedy",
+   "snow day"
+  ],
+  "localizations": {
+   "es": {
+    "title": "Max intentó patinar sobre hielo… y no salió bien 😭",
+    "description": "Max intenta patinar en el estanque helado: once caídas, un giro que no puede parar, un perro atascado y un pájaro que pone notas.\n¿Tu mascota se mantendría de pie en el hielo? 👇\n#MaxTheCuriousCat #Patinaje #GatoGracioso"
+   },
+   "pt": {
+    "title": "O Max tentou patinar no gelo… e não deu certo 😭",
+    "description": "O Max tenta patinar no lago congelado: onze quedas, um giro que não para, um cachorro preso e um pássaro dando notas.\nSeu pet ficaria de pé no gelo? 👇\n#MaxTheCuriousCat #Patinação #GatoEngraçado"
+   },
+   "fr": {
+    "title": "Max a essayé le patin à glace… et ça a mal tourné 😭",
+    "description": "Max essaie de patiner sur l'étang gelé : onze chutes, une pirouette impossible à arrêter, un chien coincé et un oiseau qui donne des notes.\nVotre animal tiendrait-il debout sur la glace ? 👇\n#MaxTheCuriousCat #Patinage #ChatDrôle"
+   },
+   "de": {
+    "title": "Max wollte Schlittschuh laufen… es lief nicht gut 😭",
+    "description": "Max versucht Schlittschuhlaufen auf dem zugefrorenen Teich: elf Stürze, eine Drehung ohne Bremse, ein festsitzender Hund und ein Vogel, der Punkte verteilt.\nKönnte dein Haustier auf Eis stehen? 👇\n#MaxTheCuriousCat #Schlittschuh #LustigeKatze"
+   },
+   "ar": {
+    "title": "ماكس جرّب التزلج على الجليد… ولم ينجح الأمر 😭",
+    "description": "ماكس يحاول التزلج على البحيرة المتجمدة: إحدى عشرة سقطة، دوران لا يتوقف، كلب عالق، وطائر يعطي الدرجات.\nهل يستطيع حيوانك الوقوف على الجليد؟ 👇\n#MaxTheCuriousCat #تزلج #قط_مضحك"
+   },
+   "ja": {
+    "title": "マックス、アイススケートに挑戦…結果はこうなった😭",
+    "description": "凍った池でスケートに挑戦するマックス。11回転倒、止まらないスピン、動けなくなった犬、点数をつける鳥…。\nあなたのペットは氷の上に立てる？👇\n#MaxTheCuriousCat #スケート #面白い猫"
+   },
+   "ko": {
+    "title": "맥스가 아이스 스케이트에 도전했다… 결과는 😭",
+    "description": "얼어붙은 연못에서 스케이트에 도전한 맥스: 열한 번 넘어지고, 멈추지 않는 스핀, 꼼짝 못하는 강아지, 점수를 매기는 새까지.\n여러분의 반려동물은 얼음 위에 설 수 있나요? 👇\n#MaxTheCuriousCat #스케이트 #웃긴고양이"
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 30,
+   "dur": 18,
+   "top": "HE CAN'T STOP SPINNING",
+   "title": "Nobody Told Max How to Stop Spinning 😵 #shorts",
+   "description": "The famous Max spin. No brakes. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "ice skating",
+    "cat and dog"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Nadie le dijo a Max cómo dejar de girar 😵 #shorts",
+     "description": "El famoso giro de Max. Sin frenos. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ninguém ensinou o Max a parar de girar 😵 #shorts",
+     "description": "O famoso giro do Max. Sem freio. Episódio completo: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Personne n'a appris à Max à arrêter de tourner 😵 #shorts",
+     "description": "La célèbre pirouette de Max. Sans frein. Épisode complet : {LONG_URL}"
+    },
+    "de": {
+     "title": "Keiner sagte Max, wie man aufhört zu drehen 😵 #shorts",
+     "description": "Die berühmte Max-Drehung. Ohne Bremse. Ganze Folge: {LONG_URL}"
+    },
+    "ar": {
+     "title": "لم يخبر أحد ماكس كيف يتوقف عن الدوران 😵 #shorts",
+     "description": "دوران ماكس الشهير. بلا فرامل. الحلقة كاملة: {LONG_URL}"
+    },
+    "ja": {
+     "title": "止まり方を知らないマックスのスピン😵 #shorts",
+     "description": "伝説のマックススピン。ブレーキなし。本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "아무도 맥스에게 멈추는 법을 안 알려줬다 😵 #shorts",
+     "description": "전설의 맥스 스핀. 브레이크 없음. 전체 에피소드: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 39,
+   "dur": 20,
+   "top": "THE SNOWBALL GREW",
+   "title": "Max Threw One Snowball… It Came Back BIGGER ☃️ #shorts",
+   "description": "He only threw it at the sky. Full episode: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "funny cat",
+    "snowball",
+    "winter"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Max lanzó una bola de nieve… y volvió MÁS GRANDE ☃️ #shorts",
+     "description": "Solo la lanzó al cielo. Episodio completo: {LONG_URL}"
+    },
+    "pt": {
+     "title": "O Max jogou uma bola de neve… e ela voltou MAIOR ☃️ #shorts",
+     "description": "Ele só jogou pro céu. Episódio completo: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Max a lancé une boule de neige… elle est revenue PLUS GROSSE ☃️ #shorts",
+     "description": "Il visait seulement le ciel. Épisode complet : {LONG_URL}"
+    },
+    "de": {
+     "title": "Max warf einen Schneeball… er kam GRÖSSER zurück ☃️ #shorts",
+     "description": "Er hat nur in den Himmel geworfen. Ganze Folge: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ماكس رمى كرة ثلج… فعادت أكبر ☃️ #shorts",
+     "description": "رماها نحو السماء فقط. الحلقة كاملة: {LONG_URL}"
+    },
+    "ja": {
+     "title": "マックスが投げた雪玉…大きくなって戻ってきた☃️ #shorts",
+     "description": "空に投げただけなのに。本編はこちら: {LONG_URL}"
+    },
+    "ko": {
+     "title": "맥스가 던진 눈덩이… 더 커져서 돌아왔다 ☃️ #shorts",
+     "description": "하늘에 던졌을 뿐인데. 전체 에피소드: {LONG_URL}"
+    }
+   }
+  }
+ ]
+}
