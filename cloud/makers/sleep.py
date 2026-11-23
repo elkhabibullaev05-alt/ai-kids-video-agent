@@ -581,5 +581,225 @@ def main():
     print("made", made, key, sc["name"])
 
 
+# Appended to cloud/makers/sleep.py — 2026-11-23 owner: follow YouTube Studio (Ask Studio) + vidIQ exactly.
+# Real rain footage only (rain on a window / puddle, Wikimedia Commons, free licence), clean rain-only sound,
+# seamless loop, long = 3 h real footage OR 8 h "Black Screen" (alternating), titles "[sound] | length + use",
+# dark warm thumbnail with a 2-3 word badge, keyword-rich first 2 description lines + chapters,
+# Short = vertical crop of the same footage with "Full 3-hour version below". Painted scenes are no longer used.
+import io as _io, shutil as _shutil
+
+FOOT = {  # curated by hand 2026-11-23 (frames checked): real rain only, no people, no text, no maps
+    "win07": dict(file="Radevormwald - Raindrops on a window 07 (1) ies.webm", kind="window", lic="CC BY-SA 3.0"),
+    "win08": dict(file="Radevormwald - Raindrops on a window 08 (1) ies.webm", kind="window", lic="CC BY-SA 3.0"),
+    "win09": dict(file="Radevormwald - Raindrops on a window 09 (1) ies.webm", kind="window", lic="CC BY-SA 3.0"),
+    "win10": dict(file="Radevormwald - Raindrops on a window 10 (1) ies.webm", kind="window", lic="CC BY-SA 3.0"),
+    "win11": dict(file="Radevormwald - Raindrops on a window 11 (1) ies.webm", kind="window", lic="CC BY-SA 3.0"),
+    "puddle": dict(file="Capillary waves from rain drops - Kanagawa - 2026 June 20.webm", kind="puddle", lic="CC BY 4.0"),
+}
+KIND = {
+    "window": dict(sound=["Gentle Rain on a Window at Night", "Soft Rain on Window Glass", "Steady Rain on a Bedroom Window",
+                          "Calm Rain Against the Window"], badge="RAIN ON WINDOW", short="Rain on the Window",
+                   prefer=["window", "glass"], q=["rain on window", "rain window"]),
+    "puddle": dict(sound=["Gentle Rain Falling on a Puddle", "Soft Rain Drops on Still Water"], badge="SOFT RAIN",
+                   short="Rain on a Puddle", prefer=["puddle", "drops", "light", "gentle"], q=["light rain", "rain drops"]),
+}
+BAD_AUDIO = re.compile(r"bird|frog|quail|cicada|insect|animal|song|music|ain.t.gonna|whisper|chuva|thunder|hail|\bwind\b|"
+                       r"traffic|\bcars?\b|airport|street|city|people|voice|talk|news|trailer|coturnix|wuselig",
+                       re.I)
+FOOT_CACHE = os.path.join(a.home, "foot_cache"); os.makedirs(FOOT_CACHE, exist_ok=True)
+
+
+def cached_audio(prefer):
+    """Already-downloaded clean recordings first (Commons rate-limits downloads): >= 60 s, not used in the last 2 videos."""
+    try:
+        idx = json.load(open(os.path.join(CACHE, "commons_index.json")))["files"]
+    except Exception:
+        return None
+    ok = []
+    for f in idx:
+        loc = os.path.join(CACHE, re.sub(r"[^\w.-]", "_", f["title"].split(":", 1)[1]))
+        if os.path.exists(loc) and os.path.getsize(loc) > 100000 and not BAD_AUDIO.search(f["title"]) \
+                and (f.get("dur") or 0) >= 60 and FREE.match((f.get("lic") or "").strip()) and f["title"] not in used["audio"][-2:]:
+            ok.append(dict(f, path=loc))
+    if not ok:
+        return None
+    random.shuffle(ok)
+    ok.sort(key=lambda f: not any(w in f["title"].lower() for w in prefer))
+    return ok[0]
+
+
+def clean_audio(prefer, queries):
+    """Studio: clean rain-only audio (no birds/frogs/songs/thunder). Skip any file whose name says otherwise."""
+    f = cached_audio(prefer)
+    if f:
+        return f
+    for _ in range(12):
+        f = pick_audio(prefer, queries)
+        if BAD_AUDIO.search(f["title"]):
+            print("skip not-clean rain audio:", f["title"], flush=True)
+            used["audio"].append(f["title"])
+            continue
+        return f
+    raise RuntimeError("no clean rain-only audio found")
+
+
+def get_foot(key):
+    f = FOOT[key]["file"]
+    dst = os.path.join(FOOT_CACHE, re.sub(r"[^\w.-]", "_", f))
+    if not os.path.exists(dst):
+        r = api(action="query", prop="imageinfo", titles="File:" + f, iiprop="url")
+        url = next(iter(r["query"]["pages"].values()))["imageinfo"][0]["url"]
+        for i in range(4):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=600) as rr, open(dst + ".part", "wb") as o:
+                    o.write(rr.read())
+                os.replace(dst + ".part", dst); break
+            except Exception as e:
+                print("footage download retry:", str(e)[:120], flush=True); time.sleep(20 * (i + 1))
+    if not os.path.exists(dst):
+        raise RuntimeError("footage download failed: " + f)
+    return dst
+
+
+def real_unit(src, path, vertical=False):
+    """Seamless loop of real footage: 2 s crossfade of the end into the start; a calm 'night' grade (darker, cooler,
+    soft vignette) so it suits sleep; 1080p (Short: 1080x1920 centre crop)."""
+    d = float(sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src).strip())
+    L = min(d - 1.0, 120.0); X = 2.0
+    crop = "crop=ih*9/16:ih,scale=1080:1920" if vertical else "scale=1920:1080"
+    grade = "eq=brightness=-0.10:contrast=1.05:saturation=0.75:gamma=0.92,colorbalance=bs=0.06:bm=0.03:rh=0.03,vignette=PI/5"
+    sh("ffmpeg", "-y", "-v", "error", "-i", src, "-filter_complex",
+       f"[0:v]trim=0:{L},setpts=PTS-STARTPTS,fps=30,{crop},format=yuv420p,split[a][b];"
+       f"[a]trim={X}:{L},setpts=PTS-STARTPTS[body];[b]trim=0:{X},setpts=PTS-STARTPTS[head];"
+       f"[body][head]xfade=transition=fade:duration={X}:offset={L - 2 * X},{grade}[v]",
+       "-map", "[v]", "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "22", "-maxrate", "2M", "-bufsize", "4M",
+       "-g", "60", "-pix_fmt", "yuv420p", path, timeout=3600)
+
+
+def black_unit(path):
+    sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=black:s=1920x1080:r=1:d=60", "-c:v", "libx264",
+       "-preset", "medium", "-tune", "stillimage", "-pix_fmt", "yuv420p", "-g", "60", path)
+
+
+def thumb_img(frame_src, path, badge, hours, dark):
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", "3", "-i", frame_src, "-frames:v", "1", "-f", "image2pipe",
+                          "-vcodec", "png", "-"], capture_output=True).stdout
+    im = Image.open(_io.BytesIO(raw)).convert("RGB").resize((1280, 720), Image.LANCZOS)
+    arr = np.asarray(im).astype(np.float32)
+    arr = arr * (0.55 if dark else 0.8) + np.array([18, 8, 0], np.float32)          # dark, slightly warm
+    yy, xx = np.mgrid[0:720, 0:1280]; v = 1 - 0.55 * (((xx - 640) / 900) ** 2 + ((yy - 360) / 560) ** 2)
+    im = Image.fromarray(np.clip(arr * v[..., None], 0, 255).astype(np.uint8))
+    d = ImageDraw.Draw(im); fb, fs = font(118), font(64)
+    big = f"{int(hours)} HOURS"
+    for txt, f_, y, col in ((badge, fs, 470, (255, 205, 140)), (big, fb, 540, (255, 238, 210))):
+        w = d.textlength(txt, font=f_)
+        d.text((640 - w / 2 + 4, y + 5), txt, font=f_, fill=(10, 6, 4))
+        d.text((640 - w / 2, y), txt, font=f_, fill=col)
+    im.save(path, quality=92)
+
+
+def chapters(hours):
+    return "\n".join(["00:00 Rain begins"] + [f"{h}:00:00 Hour {h + 1}" for h in range(1, int(hours))])
+
+
+def main_real():
+    tmp = os.path.join(a.home, "sleep_work"); os.makedirs(tmp, exist_ok=True)
+    get_soft_font()
+    recentf = [m for m in used["scenes"][-3:]]
+    key = a.scene if a.scene in FOOT else next((k for k in random.sample(list(FOOT), len(FOOT)) if k not in recentf), random.choice(list(FOOT)))
+    kd = KIND[FOOT[key]["kind"]]
+    modes = used.setdefault("modes", [])
+    mode = "dark" if (modes[-1:] == ["real"]) else "real"         # alternate: 3 h real footage, then 8 h black screen
+    print("step: audio", key, mode, flush=True)
+    aud = offline_audio(tmp) if a.offline_test else clean_audio(kd["prefer"], kd["q"])
+    print("step: audio =", aud["title"], flush=True)
+    stamp = time.strftime("%Y%m%d-%H%M")
+    au_len = float(sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", aud["path"]).strip() or 60)
+    aunit = os.path.join(tmp, "aunit.m4a")
+    AL = max(15.0, min(120.0, au_len - 1))
+    sh("ffmpeg", "-y", "-v", "error", "-i", aud["path"], "-i", aud["path"], "-filter_complex",
+       f"[0:a]aresample=48000,aformat=channel_layouts=stereo,atrim=3:{AL},asetpts=PTS-STARTPTS[body];"
+       f"[1:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:3,asetpts=PTS-STARTPTS[head];"
+       f"[body][head]acrossfade=d=3:c1=tri:c2=tri,highpass=f=60,lowpass=f=11000,loudnorm=I=-20:TP=-2:LRA=7[o]",
+       "-map", "[o]", "-c:a", "aac", "-b:a", "128k", aunit)
+    src = get_foot(key)
+    print("step: footage", src, flush=True)
+    credit = (f"Video: \"{FOOT[key]['file']}\" ({FOOT[key].get('lic', 'free licence')}), Wikimedia Commons — colour-graded and looped by Calm Rain for Sleep.\n"
+              f"Rain sound: \"{aud['title'].split(':', 1)[1]}\" by {aud['artist']} ({aud['lic']}), Wikimedia Commons.")
+    made = 0
+    unit = os.path.join(tmp, "runit.mp4")
+    real_unit(src, unit)
+    print("step: unit done", flush=True)
+    check_unit(unit, key)
+    if a.need_long:
+        sound = random.choice(kd["sound"])
+        hours = a.hours or (8 if mode == "dark" else 3)
+        secs = 60 if a.offline_test else int(hours * 3600)
+        long_f = os.path.join(a.out, f"{stamp}-0-long.mp4")
+        vunit = unit
+        if mode == "dark":
+            vunit = os.path.join(tmp, "bunit.mp4"); black_unit(vunit)
+        sh("ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", vunit, "-stream_loop", "-1", "-i", aunit, "-t", str(secs),
+           "-map", "0:v", "-map", "1:a", "-c", "copy", "-movflags", "+faststart", long_f, timeout=4 * 3600)
+        thumb = os.path.join(a.out, f"{stamp}-0-long.jpg")
+        thumb_img(unit, thumb, "BLACK SCREEN" if mode == "dark" else kd["badge"], hours, mode == "dark")
+        if mode == "dark":
+            variants = [f"Rain Sounds for Sleeping Black Screen | {hours} Hours of {sound.replace(' at Night', '')}",
+                        f"{sound} | Dark Screen Rain Sounds for Sleep & Insomnia | {hours} Hours",
+                        f"{hours} Hours Rain Sounds Black Screen 🌧️ {sound} for Deep Sleep"]
+            first = (f"{hours} hours of {sound.lower()} with a black screen — rain sounds for sleeping, insomnia and "
+                     f"relaxation. Dark screen, so your room stays dark all night.\n"
+                     "No music, no talking, no thunder, no ads in the middle: only clean, steady rain.")
+        else:
+            variants = [f"{sound} | {hours} Hours Rain Sounds for Sleep & Insomnia",
+                        f"{sound} 🌧️ {hours} Hours of Rain Sounds for Deep Sleep",
+                        f"{hours} Hours {sound} | Rain Sounds to Fall Asleep Fast"]
+            first = (f"{sound}: {hours} hours of real rain on window glass — rain sounds for sleep, insomnia, study and "
+                     f"relaxing. Cozy rain ambience, recorded rain, not animation.\n"
+                     "No music, no talking, no thunder, no ads in the middle: only clean, steady rain.")
+        title = next((t for t in variants if t not in titles and t not in used["titles"] and len(t) <= 100), variants[0][:90] + f" ({stamp[4:8]})")
+        tags = ["rain sounds", "rain sounds for sleeping", "rain on window", "rain for sleep", "sleep sounds", "insomnia",
+                "cozy rain ambience", "relaxing rain", f"{hours} hours rain", "deep sleep", "white noise rain",
+                "rain sounds black screen" if mode == "dark" else "real rain", "dark screen rain" if mode == "dark" else "rain on glass"]
+        json.dump({"file": os.path.basename(long_f), "kind": "long", "pack": stamp, "thumb": os.path.basename(thumb),
+                   "title": title[:100],
+                   "description": first + "\n\nChapters\n" + chapters(hours) + "\n\n" + credit +
+                                  "\n\n#rainsounds #sleep #insomnia" + (" #blackscreen" if mode == "dark" else " #rainonwindow"),
+                   "tags": tags},
+                  open(os.path.join(a.out, f"{stamp}-0-long.json"), "w"), ensure_ascii=False, indent=1)
+        used["titles"].append(title); made += 1
+    if a.need_short:
+        sunit = os.path.join(tmp, "rsunit.mp4")
+        real_unit(src, sunit, vertical=True)
+        check_unit(sunit, key)
+        short_f = os.path.join(a.out, f"{stamp}-1-short.mp4")
+        FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+        hook = random.choice(["Close your eyes", "Breathe slowly", "Listen to the rain", "Let the day go"])
+        sh("ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", sunit, "-stream_loop", "-1", "-i", aunit, "-t", "30",
+           "-filter_complex",
+           f"[0:v]drawtext=fontfile={FONT}:text='{hook}':fontsize=80:fontcolor=0xFFECCD:borderw=5:bordercolor=black@0.5:"
+           f"x=(w-tw)/2:y=h*0.15,drawtext=fontfile={FONT}:text='Full 3-hour version below':fontsize=50:fontcolor=white:"
+           f"borderw=4:bordercolor=black@0.55:x=(w-tw)/2:y=h*0.80:enable='gte(t,4)'[v];[1:a]volume=1.5,afade=t=in:d=0.3[a2]",
+           "-map", "[v]", "-map", "[a2]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-c:a", "aac", "-b:a", "128k",
+           "-r", "30", short_f)
+        st = f"{kd['short']} at Night 🌧️ Rain Sounds to Fall Asleep #shorts"
+        if st in titles or st in used["titles"]:
+            st = f"{hook} — {kd['short']} 🌧️ Sleep Sounds #shorts"
+        if st in titles or st in used["titles"]:
+            st = f"{hook} — {kd['short']} ({stamp[4:8]}) #shorts"
+        json.dump({"file": os.path.basename(short_f), "kind": "short", "pack": stamp, "title": st[:100],
+                   "description": "Real rain on a window to calm your mind. Full 3-hour version: {LONG_URL}\n\n" + credit +
+                                  "\n#rainsounds #sleep #shorts",
+                   "tags": ["rain sounds", "rain on window", "sleep sounds", "relaxing rain", "shorts"]},
+                  open(os.path.join(a.out, f"{stamp}-1-short.json"), "w"), ensure_ascii=False, indent=1)
+        used["titles"].append(st); made += 1
+    if not a.offline_test:
+        used["audio"].append(aud["title"]); used["scenes"].append(key)
+        if a.need_long:
+            modes.append(mode)
+        json.dump(used, open(USED_F, "w"), ensure_ascii=False)
+    print("made", made, key, mode)
+
+
 if __name__ == "__main__":
-    main()
+    main_real()
