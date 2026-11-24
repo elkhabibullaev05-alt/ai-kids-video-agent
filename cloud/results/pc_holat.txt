@@ -1,4 +1,4 @@
-=== kanal holati 2026-11-24 18:09 UTC, host KOMPUTER ===
+=== kanal holati 2026-11-24 19:09 UTC, host KOMPUTER ===
 warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 branch: ## main...origin/main
 local commits not on GitHub: 0
@@ -6,36 +6,36 @@ pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 pull: warning: core.fsyncObjectFiles is deprecated; use core.fsync instead
 PUSH: OK
-disk free: 886G
+disk free: 883G
 --- maxcat: 2026-11-24T17:30:30+00:00 queue_empty 
     11-24 17:30:30 $ git add -A -- /opt/kanal/repo/cloud/results/maxcat
     11-24 17:30:30 $ git diff --cached --quiet
     11-24 17:30:30 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [maxcat] queue empty
     11-24 17:30:30 $ git push -q origin HEAD:main
---- doughbros: 2026-11-24T16:50:28+00:00 queue_empty 
-    11-24 16:50:28 $ git add -A -- /opt/kanal/repo/cloud/results/doughbros
-    11-24 16:50:28 $ git diff --cached --quiet
-    11-24 16:50:28 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] queue empty
-    11-24 16:50:29 $ git push -q origin HEAD:main
---- hollow: 2026-11-24T17:10:32+00:00 idle 
-    11-24 17:10:35 $ git add -A -- /opt/kanal/repo/cloud/results/hollow
-    11-24 17:10:35 $ git diff --cached --quiet
-    11-24 17:10:35 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [hollow] idle
-    11-24 17:10:35 $ git push -q origin HEAD:main
+--- doughbros: 2026-11-24T18:10:34+00:00 queue_empty 
+    11-24 18:10:34 $ git add -A -- /opt/kanal/repo/cloud/results/doughbros
+    11-24 18:10:34 $ git diff --cached --quiet
+    11-24 18:10:34 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doughbros] queue empty
+    11-24 18:10:34 $ git push -q origin HEAD:main
+--- hollow: 2026-11-24T18:34:31+00:00 render 
+    11-24 18:31:01 $ git push -q origin HEAD:main
+    11-24 18:31:09 $ /usr/bin/python3 /opt/kanal/repo/hollow/engine3d/voices.py /root/kanal/hollow/work/20261119-2-eyam-locked-in-1666/script.json /root/kanal/hollow/work/20261119-2-eyam-locked-in-1666 12
+    11-24 18:34:31 TOTAL 649.8 s
+    11-24 18:34:31 $ /opt/bl/blender-4.2.3-linux-x64/blender -b --factory-startup --python-exit-code 1 -P /opt/kanal/repo/hollow/engine3d/story.py -- --tl /root/kanal/hollow/work/20261119-2-eyam-locked-in-1666/timeline.json 
 --- bolt: 2026-11-24T17:50:26+00:00 idle 
     11-24 17:50:29 $ git add -A -- /opt/kanal/repo/cloud/results/bolt
     11-24 17:50:29 $ git diff --cached --quiet
     11-24 17:50:29 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [bolt] idle
     11-24 17:50:29 $ git push -q origin HEAD:main
---- roblox: 2026-11-24T17:50:15+00:00 idle 
-    11-24 17:50:16 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
-    11-24 17:50:16 $ git diff --cached --quiet
-    11-24 17:50:16 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
-    11-24 17:50:16 $ git push -q origin HEAD:main
---- funny: 2026-11-24T17:52:52+00:00 error no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {
-    11-24 17:52:52 $ git diff --cached --quiet
-    11-24 17:52:52 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] error
-    11-24 17:52:52 $ git push -q origin HEAD:main
+--- roblox: 2026-11-24T18:50:08+00:00 idle 
+    11-24 18:50:13 $ git add -A -- /opt/kanal/repo/cloud/results/roblox
+    11-24 18:50:13 $ git diff --cached --quiet
+    11-24 18:50:13 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [roblox] idle
+    11-24 18:50:13 $ git push -q origin HEAD:main
+--- funny: 2026-11-24T18:50:08+00:00 error no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {
+    11-24 18:50:09 $ git diff --cached --quiet
+    11-24 18:50:09 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [funny] error
+    11-24 18:50:09 $ git push -q origin HEAD:main
     no token for Funny Rank Daily (UChKpt9p1vDhAlnWuMMKHUgQ) — stop. /root/kanal/funny/token.json: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant',; /root/kanal/bolt/token.json: other channe
     maker: 
     maker: 11-23 11:55:56 timeline 19.5s in 7 shots, voice am_puck
@@ -43,11 +43,11 @@ disk free: 886G
     maker: 11-23 11:56:15 rek-ball 96 {'hook': 30, 'temp': 25, 'uzunlik': 10, 'loop': 6, 'texnik': 15, 'nom': 10} []
     maker: 11-23 11:56:15 made funny-20261123-yoga-fails-4141 | Ranking Yoga Fails From Bad to WORST 💀 | {'duration': 19.5, 'voice': 'am_puck', 'shots': 7, 'render_s': 22, 'rek': 96}
     maker: 11-23 11:56:15 done: 3 Short(s); API calls: search 3, list 4
---- money: 2026-11-24T17:54:04+00:00 queue_empty 
-    11-24 17:54:04 $ git add -A -- /opt/kanal/repo/cloud/results/money
-    11-24 17:54:04 $ git diff --cached --quiet
-    11-24 17:54:04 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
-    11-24 17:54:04 $ git push -q origin HEAD:main
+--- money: 2026-11-24T18:55:07+00:00 queue_empty 
+    11-24 18:55:07 $ git add -A -- /opt/kanal/repo/cloud/results/money
+    11-24 18:55:07 $ git diff --cached --quiet
+    11-24 18:55:07 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [money] queue empty
+    11-24 18:55:07 $ git push -q origin HEAD:main
     maker: 11-24 19:35:34 made funny-20261124-wheelie-fails-8093 | Ranking Best Wheelie Fails (#1 is Wild) 💀 | {'duration': 20.09, 'voice': 'am_adam', 'shots': 7, 'render_s': 35, 'rek': 100}
     maker: 11-24 19:35:34 theme: Car Mud Fails
     maker: 11-24 19:35:37 2 CC BY candidates (searches so far 6)
@@ -59,21 +59,39 @@ disk free: 886G
     11-24 17:50:26 $ git diff --cached --quiet
     11-24 17:50:26 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [ufc] queue empty
     11-24 17:50:26 $ git push -q origin HEAD:main
---- sleep: 2026-11-24T16:53:44+00:00 ok 
-    11-24 16:53:44 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
-    11-24 16:53:44 $ git diff --cached --quiet
-    11-24 16:53:44 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] done
-    11-24 16:53:44 $ git push -q origin HEAD:main
---- doodle: 2026-11-24T17:10:30+00:00 queue_empty 
-    11-24 17:10:30 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
-    11-24 17:10:30 $ git diff --cached --quiet
-    11-24 17:10:30 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] queue empty
-    11-24 17:10:30 $ git push -q origin HEAD:main
---- milo: 2026-11-24T17:30:18+00:00 idle 
-    11-24 17:30:24 $ git add -A -- /opt/kanal/repo/cloud/results/milo
-    11-24 17:30:24 $ git diff --cached --quiet
-    11-24 17:30:24 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
-    11-24 17:30:24 $ git push -q origin HEAD:main
+--- sleep: 2026-11-24T18:10:27+00:00 idle 
+    11-24 18:10:29 $ git add -A -- /opt/kanal/repo/cloud/results/sleep
+    11-24 18:10:29 $ git diff --cached --quiet
+    11-24 18:10:29 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [sleep] idle
+    11-24 18:10:29 $ git push -q origin HEAD:main
+--- doodle: 2026-11-24T18:31:01+00:00 queue_empty 
+    11-24 18:31:09 $ git add -A -- /opt/kanal/repo/cloud/results/doodle
+    11-24 18:31:09 $ git diff --cached --quiet
+    11-24 18:31:09 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [doodle] queue empty
+    11-24 18:31:09 $ git push -q origin HEAD:main
+--- milo: 2026-11-24T18:50:22+00:00 idle 
+    11-24 18:50:22 $ git add -A -- /opt/kanal/repo/cloud/results/milo
+    11-24 18:50:22 $ git diff --cached --quiet
+    11-24 18:50:22 $ git -c user.name=kanal-worker -c user.email=worker@kanal.local commit -qm [milo] idle
+    11-24 18:50:22 $ git push -q origin HEAD:main
 --- stale locks (run_all.sh unstick_locks):
 --- running workers (pid, seconds, cmd):
+       1107    2365 flock -n /tmp/kanal-hollow.lock timeout -k 60 5h python3 cloud/worker.py hollow
+       1109    2365 timeout -k 60 5h python3 cloud/worker.py hollow
+       1110    2365 python3 cloud/worker.py hollow
 --- held channel locks:
+    /tmp/kanal-bolt.lock free
+    /tmp/kanal-codup.lock free
+    /tmp/kanal-codup2.lock free
+    /tmp/kanal-doodle.lock free
+    /tmp/kanal-doughbros.lock free
+    /tmp/kanal-funny.lock free
+    /tmp/kanal-git.lock free
+    /tmp/kanal-hollow.lock HELD
+    /tmp/kanal-maxcat.lock free
+    /tmp/kanal-milo.lock free
+    /tmp/kanal-money.lock free
+    /tmp/kanal-roblox.lock free
+    /tmp/kanal-sleep.lock free
+    /tmp/kanal-ufc.lock free
+    /tmp/kanal-yt.lock free
