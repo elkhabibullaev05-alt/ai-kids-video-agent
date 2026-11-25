@@ -1,0 +1,1772 @@
+{
+ "id": "20261125-1-klondike-ton-of-goods",
+ "plot": "Second person, daily-life format: you join the 1898 Klondike gold rush; eleven chapters cover why go, the ton-of-goods rule, the Chilkoot climb, the Golden Stairs, food, boats, the Palm Sunday avalanche, White Pass, Soapy Smith, Dawson, and the last chapter is the mystery of 533 film reels found in Dawson's frozen ground in 1978.",
+ "script": {
+  "title": "Klondike Ton of Goods, 1898",
+  "lead_in": 0,
+  "set": {
+   "place": "clearing",
+   "fog": 0.02,
+   "eyes": 0,
+   "moonlight": 22
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_sarah",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.35,
+     0.4,
+     0.55
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "mp": {
+    "name": "Mountie",
+    "voice": "am_onyx",
+    "speed": 0.95,
+    "pitch": -2,
+    "color": [
+     0.6,
+     0.12,
+     0.1
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "ned": {
+    "name": "Ned the Miner",
+    "voice": "am_puck",
+    "speed": 1.05,
+    "pitch": 2,
+    "color": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.9,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 0.97,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.35
+    ],
+    "glow": 2.5,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "sack",
+    "type": "box",
+    "color": [
+     0.6,
+     0.5,
+     0.3
+    ],
+    "glow": 0.5,
+    "visible": true,
+    "scale": 1.0,
+    "at": [
+     0,
+     12,
+     0
+    ]
+   },
+   {
+    "id": "sled",
+    "type": "wheel",
+    "color": [
+     0.45,
+     0.3,
+     0.15
+    ],
+    "glow": 0.4,
+    "visible": true,
+    "scale": 1.1,
+    "at": [
+     4,
+     10,
+     1.0
+    ]
+   },
+   {
+    "id": "reel",
+    "type": "trophy",
+    "color": [
+     0.85,
+     0.8,
+     0.55
+    ],
+    "glow": 1.0,
+    "visible": true,
+    "scale": 0.7,
+    "at": [
+     -1,
+     13,
+     0.3
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "Spring, 1898. A man stands at the bottom of a frozen mountain. A police officer tells him to turn around, unless he can carry two thousand pounds over the top.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "sack",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "2,000 POUNDS",
+    "sfx": "alarm"
+   },
+   {
+    "who": "mp",
+    "say": "Name, and your supplies. Where is your ton of goods? No ton, no Canada.",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "mp",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "NO TON, NO ENTRY"
+   },
+   {
+    "who": "you",
+    "say": "A ton? That's the weight of a pickup truck! How am I supposed to carry that?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "A PICKUP TRUCK?!"
+   },
+   {
+    "who": "narr",
+    "say": "This is the Klondike gold rush. For the next few minutes, you are one of the people who went. Almost everyone wanted gold. Almost nobody knew the price.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "YOU'RE A STAMPEDER"
+   },
+   {
+    "who": "narr",
+    "say": "You'll learn why the police made this rule, what a year of food looks like, and what happened on the mountain on Palm Sunday. And at the end, a very strange thing buried under a town in the snow.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE BURIED SECRET"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why would anyone leave home for this?",
+    "cam": "prop:sled",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "sled",
+      "bounce"
+     ]
+    ],
+    "text": "1. WHY GO?"
+   },
+   {
+    "who": "you",
+    "say": "I lost my job. Banks are closing everywhere. And the papers say there's gold lying in the creeks!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "NO JOBS. GOLD."
+   },
+   {
+    "who": "narr",
+    "say": "It was real. In August of 1896, three men found gold in a creek near the Klondike River in Canada's Yukon. A year later, a steamship docked in Seattle with a ton of gold on board.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "A SHIP FULL OF GOLD"
+   },
+   {
+    "who": "ned",
+    "say": "Did you hear that? A ton of gold! I'm quitting the farm today!",
+    "cam": "close:ned",
+    "do": [
+     [
+      "ned",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "QUIT THE FARM"
+   },
+   {
+    "who": "narr",
+    "say": "About a hundred thousand people set out. Clerks, farmers, teachers, even a few doctors. Only about thirty thousand ever reached the goldfields.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "100,000 WENT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. Why the ton?",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "reel",
+      "bounce"
+     ]
+    ],
+    "text": "2. WHY A TON?"
+   },
+   {
+    "who": "you",
+    "say": "But why so much? I only need a pan and a shovel, right?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "PAN AND SHOVEL?"
+   },
+   {
+    "who": "mp",
+    "say": "There's no store at the end of this trail. The Yukon winter lasts about eight months. If you arrive without food, you starve.",
+    "cam": "close:mp",
+    "do": [
+     [
+      "mp",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "NO STORES. NO FOOD."
+   },
+   {
+    "who": "narr",
+    "say": "The police were not being mean. In the winter before, hungry miners in Dawson had nearly run out of food. The rule was meant to save your life.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "THE RULE SAVES YOU"
+   },
+   {
+    "who": "narr",
+    "say": "By 1898, a ton meant about a year of supplies. Hundreds of pounds of flour. Beans. Bacon. Dried fruit. Tools, a tent, a stove, boots, and warm clothes.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "A YEAR OF FOOD"
+   },
+   {
+    "who": "you",
+    "say": "So that's my whole life in sacks. And I have to carry every pound myself?",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "EVERY POUND"
+   },
+   {
+    "who": "narr",
+    "say": "Pretty much. And it cost you several hundred dollars before you even left Seattle. That was more than many workers earned in a year.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "COSTS A YEAR'S PAY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. The mountain.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "3. THE MOUNTAIN"
+   },
+   {
+    "who": "narr",
+    "say": "You land in the little town of Dyea, Alaska. Ahead of you is the Chilkoot Trail, about thirty-three miles of mud, rock, and ice.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "DYEA, ALASKA"
+   },
+   {
+    "who": "you",
+    "say": "Thirty-three miles? That's not so bad. I could walk that in two days.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "EASY, RIGHT?"
+   },
+   {
+    "who": "narr",
+    "say": "If you were carrying nothing, maybe. But you aren't carrying nothing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "NOT NOTHING"
+   },
+   {
+    "who": "narr",
+    "say": "A strong person could carry about fifty or sixty pounds at a time. Two thousand pounds divided by sixty is more than thirty trips.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "30+ TRIPS"
+   },
+   {
+    "who": "you",
+    "say": "Thirty trips up the same mountain? I'd be walking a hundred miles just to move my stuff!",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "100 MILES BACK AND FORTH"
+   },
+   {
+    "who": "narr",
+    "say": "Think about it like this. Imagine carrying a full grocery cart from Walmart up a snowy hill. Now do it thirty more times, and don't drop the eggs.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "THE GROCERY CART"
+   },
+   {
+    "who": "narr",
+    "say": "That's exactly what people did. Up with a load, back down for the next. Day after day, for weeks.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "UP. DOWN. REPEAT."
+   },
+   {
+    "who": "narr",
+    "say": "Some people hired packers. Many were Tlingit men and women who knew the mountains well. They carried loads for pay, and it wasn't cheap.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "HIRED PACKERS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. The Golden Stairs.",
+    "cam": "prop:sled",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "sled",
+      "bounce"
+     ]
+    ],
+    "text": "4. THE GOLDEN STAIRS"
+   },
+   {
+    "who": "narr",
+    "say": "The last stretch is called the Scales, because packers weighed loads there. Right after it, the mountain turns into a wall of ice and snow.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "THE SCALES"
+   },
+   {
+    "who": "narr",
+    "say": "People chopped about fifteen hundred steps into the ice. Everybody climbed them in one long line, shoulder to shoulder, carrying their sacks.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "1,500 ICE STEPS"
+   },
+   {
+    "who": "you",
+    "say": "I can't step out of line! If I stop, everyone behind me has to stop too!",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "CAN'T STOP"
+   },
+   {
+    "who": "narr",
+    "say": "And that's true. Step out of line, and you might wait hours to get back in. So people climbed, rested for a breath, and climbed again.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "ONE LONG LINE"
+   },
+   {
+    "who": "narr",
+    "say": "Some of the steps were just a few inches wide. A slip with a sixty pound sack on your back could send you tumbling.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "A SLIP = A FALL"
+   },
+   {
+    "who": "you",
+    "say": "My legs are shaking. My hands are numb. How many steps are left?",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "HOW MANY LEFT?"
+   },
+   {
+    "who": "narr",
+    "say": "Nobody answered, because everyone was counting their own. One step, then a breath, then another step. That was the whole day.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "ONE STEP AT A TIME"
+   },
+   {
+    "who": "narr",
+    "say": "At the top, more than three thousand five hundred feet up, the wind never stops. There, the police waited to check every single sack.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THE POLICE WAIT"
+   },
+   {
+    "who": "mp",
+    "say": "Count it. Flour, beans, bacon. Good. You may pass.",
+    "cam": "close:mp",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "YOU MAY PASS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. Where do you sleep and eat?",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "reel",
+      "bounce"
+     ]
+    ],
+    "text": "5. SLEEP & EAT"
+   },
+   {
+    "who": "narr",
+    "say": "You sleep in a canvas tent, or under a sheet of cloth tied to a tree. When it's twenty degrees below zero, you pile everything you own on top of you.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "20° BELOW"
+   },
+   {
+    "who": "you",
+    "say": "So what do I eat all day? The same thing every night?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "SAME DINNER?"
+   },
+   {
+    "who": "narr",
+    "say": "Pretty much. Beans, bacon, bread called bannock, and tea. Fresh food was almost impossible to find. That led to a sickness called scurvy.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "BEANS AND BACON"
+   },
+   {
+    "who": "narr",
+    "say": "Scurvy comes from not eating fresh fruits or vegetables. Your gums bleed and your legs ache. Some miners paid a fortune for a single potato.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "SCURVY"
+   },
+   {
+    "who": "you",
+    "say": "One potato costs how much? That can't be right!",
+    "cam": "two:you,mp",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "ONE POTATO?!"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. Building a boat.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "6. BUILD A BOAT"
+   },
+   {
+    "who": "narr",
+    "say": "After the pass, you reach Lake Bennett. And here's something you didn't expect. To get to Dawson, you have to build your own boat.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "BUILD A BOAT"
+   },
+   {
+    "who": "you",
+    "say": "Build a boat? I've never built anything bigger than a birdhouse!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "A BIRDHOUSE?"
+   },
+   {
+    "who": "narr",
+    "say": "Thousands of people had never built a boat, and they built one anyway. They cut trees, sawed boards by hand, and waited through the winter for the ice to melt.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WAIT FOR THE ICE"
+   },
+   {
+    "who": "narr",
+    "say": "On one day in late May of 1898, the ice broke, and thousands of homemade boats floated away at once. Some were gorgeous. Some sank right away.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "7,000 BOATS?"
+   },
+   {
+    "who": "narr",
+    "say": "Then came the rapids, and about five hundred miles of river. Many boats flipped. Many people lost everything they carried.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "FIVE HUNDRED MILES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. The worst day on the mountain.",
+    "cam": "prop:sled",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "sled",
+      "bounce"
+     ]
+    ],
+    "text": "7. PALM SUNDAY"
+   },
+   {
+    "who": "narr",
+    "say": "Remember the Chilkoot? Back in April, before the boats, the weather turned. Days of heavy snow piled up on the slopes above the trail.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "HEAVY SNOW"
+   },
+   {
+    "who": "you",
+    "say": "The guides say it's not safe. But if I turn back now, I lose a whole winter. I'll go.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "IT'S RISKY"
+   },
+   {
+    "who": "narr",
+    "say": "Weather like that was nothing new on the Chilkoot. But with so many people on one narrow trail, a slide would find a crowd.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "A CROWD ON THE SLOPE"
+   },
+   {
+    "who": "narr",
+    "say": "Some did turn back. Many didn't. On Sunday, April third, 1898, a huge wall of snow slid down the mountain onto the trail.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "APRIL 3, 1898"
+   },
+   {
+    "who": "narr",
+    "say": "It buried dozens of people between Sheep Camp and the Scales. The park service says more than sixty may have died. It was the deadliest day of the whole gold rush.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "PALM SUNDAY"
+   },
+   {
+    "who": "narr",
+    "say": "The news flew down the trail. But many people just dug out their sacks and kept climbing. The gold was still waiting, they said.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THEY KEPT GOING"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. The other road.",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "reel",
+      "bounce"
+     ]
+    ],
+    "text": "8. THE OTHER ROAD"
+   },
+   {
+    "who": "narr",
+    "say": "Not everyone took the Chilkoot. Some took the White Pass, a trail that looked easier. It wasn't. It was narrow, muddy, and full of pack horses.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE WHITE PASS"
+   },
+   {
+    "who": "narr",
+    "say": "Horses were worked until they dropped. About three thousand died on that trail. Today people call it the Dead Horse Trail.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "DEAD HORSE TRAIL"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. A trap in town.",
+    "cam": "prop:sack",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "sack",
+      "bounce"
+     ]
+    ],
+    "text": "9. TROUBLE IN TOWN"
+   },
+   {
+    "who": "narr",
+    "say": "The nearest town was Skagway. And the man who ran it, in a way, was a crook named Soapy Smith.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "SOAPY SMITH"
+   },
+   {
+    "who": "ned",
+    "say": "Friend! Come play a little game. Easy money, I promise!",
+    "cam": "close:ned",
+    "do": [
+     [
+      "ned",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "EASY MONEY?"
+   },
+   {
+    "who": "narr",
+    "say": "Soapy's gang ran fake shell games, fake telegraph offices, and fake help desks. Honest people lost their savings before they ever saw the mountain.",
+    "cam": "overhead",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "FAKE EVERYTHING"
+   },
+   {
+    "who": "narr",
+    "say": "In July of 1898, a man named Frank Reid shot Soapy Smith dead on a Skagway wharf. Reid died of his wound, too, twelve days later.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "SHOT ON A WHARF"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. Dawson City.",
+    "cam": "prop:sled",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "sled",
+      "bounce"
+     ]
+    ],
+    "text": "10. DAWSON CITY"
+   },
+   {
+    "who": "narr",
+    "say": "If you survive all of that, you float into Dawson. Overnight it had become a town of about thirty thousand people, in the middle of nowhere.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "30,000 PEOPLE"
+   },
+   {
+    "who": "you",
+    "say": "There it is! Dawson! Now where's the gold? Where do I dig?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "WHERE'S THE GOLD?"
+   },
+   {
+    "who": "narr",
+    "say": "And here's the cruel part. By the time most stampeders arrived, the best creeks had already been claimed. Many people had climbed that mountain for nothing.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "ALREADY CLAIMED"
+   },
+   {
+    "who": "narr",
+    "say": "A few people did get rich. A lot more got rich selling them things. Most went home with less money than they started with.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "MOST WENT HOME"
+   },
+   {
+    "who": "narr",
+    "say": "The people who stayed in Dawson often did better than the diggers. A baker, a laundry worker, or a cook could earn real money from tired miners.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE COOKS GOT RICH"
+   },
+   {
+    "who": "you",
+    "say": "So all of that, the ice, the cold, the boat, for nothing?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "FOR NOTHING?"
+   },
+   {
+    "who": "narr",
+    "say": "Not for nothing. People remembered it for the rest of their lives. But now, here's the strange part I promised you.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THE STRANGE PART"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. The mystery under Dawson.",
+    "cam": "prop:reel",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "reel",
+      "bounce"
+     ]
+    ],
+    "text": "11. THE MYSTERY"
+   },
+   {
+    "who": "narr",
+    "say": "Dawson was a rich town, and rich people wanted entertainment. So around the nineteen tens, movies came to town. But Dawson was at the very end of the line.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "END OF THE LINE"
+   },
+   {
+    "who": "narr",
+    "say": "Film reels came last, after every other city had seen them. And sending them back cost more than the films were worth.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "TOO COSTLY TO SEND"
+   },
+   {
+    "who": "narr",
+    "say": "So the town kept them. For years, the reels piled up. Then, around nineteen twenty-nine, they got rid of a huge pile of them.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THE BIG PILE"
+   },
+   {
+    "who": "narr",
+    "say": "Those films were made of nitrate, which can catch fire very easily. So some were burned, and others were dumped in an old swimming pool, and covered over.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "DUMPED IN A POOL"
+   },
+   {
+    "who": "narr",
+    "say": "Then, in nineteen seventy-eight, a worker was digging at a building site in Dawson. His machine scraped something hard under the frozen ground.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "1978: A BACKHOE"
+   },
+   {
+    "who": "narr",
+    "say": "Hundreds of film reels. Five hundred and thirty-three of them, kept cold in the permafrost for almost fifty years.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "533 REELS"
+   },
+   {
+    "who": "narr",
+    "say": "Most of those movies had been lost everywhere else in the world. Inside the pile was even real film of the nineteen nineteen World Series.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "1919 WORLD SERIES"
+   },
+   {
+    "who": "you",
+    "say": "So all those silent movies were lying under the town the whole time?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "UNDER THE ICE"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. And that's the mystery that's still strange today. The thing that survived wasn't gold. It was a pile of trash that a town was too far away to throw out properly.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE REAL TREASURE"
+   },
+   {
+    "who": "narr",
+    "say": "Some of those films have been saved and restored. People can watch them today, because a town at the end of the earth couldn't afford to ship them home.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "SAVED AND RESTORED"
+   },
+   {
+    "who": "narr",
+    "say": "So think about it honestly. Two thousand pounds, fifteen hundred icy steps, and a boat you built yourself. Would you have made it to Dawson?",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "WOULD YOU GO?"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me in the comments, and subscribe for more true history.",
+    "cam": "close:you",
+    "do": [
+     [
+      "mp",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "TELL ME BELOW"
+   }
+  ]
+ },
+ "long": {
+  "title": "2,000 Pounds or Go Home: The Klondike Law, 1898 🥶",
+  "description": "Would you have carried a ton of gear up the Chilkoot? Tell me in the comments.\n\nIn 1898 the Mounties would not let you into Canada without about 2,000 pounds of supplies. This is what the Klondike gold rush was really like: 1,500 ice steps, the Palm Sunday avalanche, homemade boats, and a strange pile of movie reels found frozen under Dawson City in 1978.\n\nSources:\nhttps://www.nps.gov/klgo/learn/historyculture/tonofgoods.htm\nhttps://www.nps.gov/articles/palm-sunday-avalanche.htm\nhttps://www.nps.gov/klgo/learn/historyculture/historic-chilkoot-trail.htm\nhttps://www.nps.gov/klgo/learn/goldrush.htm\n\n#klondike #goldrush #truestory",
+  "tags": [
+   "klondike gold rush",
+   "chilkoot trail",
+   "ton of goods",
+   "palm sunday avalanche 1898",
+   "golden stairs chilkoot",
+   "dawson city",
+   "yukon gold rush 1898",
+   "soapy smith skagway",
+   "dead horse trail",
+   "dawson city film find",
+   "1919 world series film",
+   "how stampeders lived",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "1,500 ICE STEPS",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "2.000 libras o vuelta a casa: la ley del Klondike, 1898 🥶",
+    "description": "¿Habrías subido una tonelada de equipo por el Chilkoot? Cuéntamelo en los comentarios.\n\nEn 1898 la policía montada no te dejaba entrar en Canadá sin unas 2.000 libras de provisiones. Así fue de verdad la fiebre del oro del Klondike."
+   },
+   "pt": {
+    "title": "2.000 libras ou volte para casa: a lei do Klondike, 1898 🥶",
+    "description": "Você carregaria uma tonelada de equipamento pelo Chilkoot? Conte nos comentários.\n\nEm 1898 a polícia montada não deixava ninguém entrar no Canadá sem cerca de 2.000 libras de suprimentos. Assim foi a corrida do ouro do Klondike."
+   },
+   "ar": {
+    "title": "2000 رطل أو ارجع إلى بيتك: قانون كلوندايك 1898 🥶",
+    "description": "هل كنت ستحمل طنًا من المعدات فوق ممر تشيلكوت؟ أخبرني في التعليقات.\n\nفي عام 1898 لم تسمح الشرطة الكندية لأحد بالدخول دون نحو 2000 رطل من المؤن. هكذا كان سباق الذهب في كلوندايك فعلًا."
+   },
+   "fr": {
+    "title": "2 000 livres ou rentre chez toi : la loi du Klondike, 1898 🥶",
+    "description": "Aurais-tu porté une tonne de matériel sur le col Chilkoot ? Dis-le-moi en commentaire.\n\nEn 1898, la police montée refusait l'entrée au Canada sans environ 2 000 livres de provisions. Voici la vraie ruée vers l'or du Klondike."
+   },
+   "ja": {
+    "title": "2,000ポンド運べなければ帰れ:1898年クロンダイクの掟 🥶",
+    "description": "チルクート峠を1トンの荷物で登れましたか?コメントで教えてください。\n\n1898年、騎馬警察は約2,000ポンドの物資がなければカナダに入れませんでした。これが本当のクロンダイク・ゴールドラッシュです。"
+   },
+   "ko": {
+    "title": "2,000파운드를 못 지면 돌아가라: 1898 클론다이크의 법 🥶",
+    "description": "칠쿠트 고개로 1톤의 짐을 지고 올라갈 수 있었을까요? 댓글로 알려주세요.\n\n1898년 기마경찰은 약 2,000파운드의 물자가 없으면 캐나다 입국을 막았습니다. 진짜 클론다이크 골드러시 이야기입니다."
+   },
+   "de": {
+    "title": "2.000 Pfund oder zurück nach Hause: Das Klondike-Gesetz, 1898 🥶",
+    "description": "Hättest du eine Tonne Ausrüstung über den Chilkoot-Pass getragen? Schreib es in die Kommentare.\n\n1898 ließ die Mounted Police niemanden nach Kanada ohne etwa 2.000 Pfund Vorräte. So war der Klondike-Goldrausch wirklich."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "2,000 POUNDS OR TURN BACK",
+   "title": "Mounties made you haul 2,000 pounds ❄️ #shorts",
+   "description": "Klondike, 1898: the Mounties would not let you in without a ton of supplies. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "klondike",
+    "gold rush",
+    "chilkoot",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "La policía te hacía cargar 2.000 libras ❄️ #shorts",
+     "description": "Klondike, 1898: sin una tonelada de provisiones no pasabas. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "A polícia exigia que você carregasse 2.000 libras ❄️ #shorts",
+     "description": "Klondike, 1898: sem uma tonelada de suprimentos você não passava. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "أجبرتك الشرطة على حمل 2000 رطل ❄️ #shorts",
+     "description": "كلوندايك 1898: بدون طن من المؤن لا تعبر. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "La police t'obligeait à porter 2 000 livres ❄️ #shorts",
+     "description": "Klondike, 1898 : sans une tonne de provisions, tu ne passais pas. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "警察は2,000ポンドを運べと命じた ❄️ #shorts",
+     "description": "1898年クロンダイク:1トンの物資がなければ通れませんでした。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "경찰이 2,000파운드를 지라고 했다 ❄️ #shorts",
+     "description": "1898 클론다이크: 1톤의 물자가 없으면 통과할 수 없었습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Die Polizei zwang dich, 2.000 Pfund zu tragen ❄️ #shorts",
+     "description": "Klondike, 1898: Ohne eine Tonne Vorräte kam niemand durch. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 76,
+   "dur": 28,
+   "top": "BURIED FOR 50 YEARS",
+   "title": "A town buried 533 movies in the ice 🎞️ #shorts",
+   "description": "Dawson City, 1978: a backhoe hit a pile of lost film reels in frozen ground. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "dawson city",
+    "lost films",
+    "permafrost",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Un pueblo enterró 533 películas en el hielo 🎞️ #shorts",
+     "description": "Dawson City, 1978: una excavadora encontró cientos de películas perdidas. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Uma cidade enterrou 533 filmes no gelo 🎞️ #shorts",
+     "description": "Dawson City, 1978: uma escavadeira achou centenas de filmes perdidos. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "مدينة دفنت 533 فيلمًا في الجليد 🎞️ #shorts",
+     "description": "داوسون سيتي 1978: جرافة وجدت مئات الأفلام المفقودة. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Une ville a enterré 533 films dans la glace 🎞️ #shorts",
+     "description": "Dawson City, 1978 : une pelleteuse déterre des centaines de films perdus. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "町が533本の映画を氷の下に埋めた 🎞️ #shorts",
+     "description": "1978年ドーソン・シティ:重機が失われた映画の山を発見。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "한 마을이 영화 533편을 얼음에 묻었다 🎞️ #shorts",
+     "description": "1978 도슨시티: 굴착기가 잃어버린 영화 수백 편을 찾아냈습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Eine Stadt vergrub 533 Filme im Eis 🎞️ #shorts",
+     "description": "Dawson City, 1978: Ein Bagger fand Hunderte verlorene Filme. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "solo harmonica and sparse banjo plucks over steady boot-crunch percussion, major key turning minor at the avalanche (not snare/fife, shanty or fiddle)",
+  "palette": "icy white-blue with warm lantern-gold highlights",
+  "opening_shot": "macro of a heavy supply sack (prop:sack) with a drifting lantern",
+  "camera_set": "close-ups on strained faces, prop cuts on sled and film reel, overhead only for the stairs and the trail, one wide at chapter openers",
+  "transitions": "hard cuts, slow push-in on the avalanche, long hold on the film reel at the end",
+  "caption_style": "bold white caps with a gold underline, chapter number first"
+ }
+}

@@ -1,0 +1,1755 @@
+{
+ "id": "20261125-2-roanoke-one-word-croatoan",
+ "plot": "Second person, daily-life format: you sail with John White's 1587 Roanoke colonists; eleven chapters cover why go, the voyage, the empty fort, building a home, danger, Virginia Dare's birth, the secret carving code, three years of waiting, the 1590 return, the storm, and the last chapter is the mystery: the word CROATOAN, no cross, and three clues.",
+ "script": {
+  "title": "Roanoke Croatoan, 1590",
+  "lead_in": 0,
+  "set": {
+   "place": "forest",
+   "fog": 0.05,
+   "eyes": 0,
+   "moonlight": 14
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_bella",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.5,
+     0.35,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "white": {
+    "name": "John White",
+    "voice": "am_echo",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.25,
+     0.22,
+     0.2
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_michael",
+    "speed": 0.95,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.75,
+     0.35
+    ],
+    "glow": 2.2,
+    "visible": true,
+    "scale": 0.3,
+    "at": [
+     -6,
+     8.5,
+     1.6
+    ]
+   },
+   {
+    "id": "post",
+    "type": "cone",
+    "color": [
+     0.4,
+     0.3,
+     0.2
+    ],
+    "glow": 0.6,
+    "visible": true,
+    "scale": 1.2,
+    "at": [
+     0,
+     12,
+     0
+    ]
+   },
+   {
+    "id": "ship",
+    "type": "box",
+    "color": [
+     0.3,
+     0.25,
+     0.2
+    ],
+    "glow": 0.3,
+    "visible": true,
+    "scale": 2.2,
+    "at": [
+     0,
+     18,
+     0
+    ]
+   },
+   {
+    "id": "map",
+    "type": "wheel",
+    "color": [
+     0.8,
+     0.7,
+     0.5
+    ],
+    "glow": 0.5,
+    "visible": true,
+    "scale": 0.9,
+    "at": [
+     4,
+     10,
+     1.0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "August, 1590. A ship anchors off a quiet island. A man wades ashore to find his daughter, his son-in-law, and his three-year-old granddaughter. He finds one word carved on a post.",
+    "cam": "prop:post",
+    "do": [
+     [
+      "post",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "ONE WORD",
+    "sfx": "alarm"
+   },
+   {
+    "who": "white",
+    "say": "Hello? Eleanor? Ananias? Where is everyone? The houses are gone, and nobody is answering me!",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "white",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "WHERE IS EVERYONE?"
+   },
+   {
+    "who": "you",
+    "say": "Mr. White, look at the post. Somebody carved a word into it. Just one word.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "ONE WORD ON A POST"
+   },
+   {
+    "who": "narr",
+    "say": "This is the story of the Lost Colony of Roanoke. For a few minutes, you are one of the people who sailed there in 1587. You'll find out how life worked, and why a hundred and fifteen people disappeared.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "YOU'RE A COLONIST"
+   },
+   {
+    "who": "narr",
+    "say": "And at the very end, you'll learn what the word meant, and the three clues that still haunt historians today.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THREE CLUES"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why would you cross an ocean?",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "1. WHY GO?"
+   },
+   {
+    "who": "you",
+    "say": "I'm a farmer's child. In England, I will never own any land. In America, they promised me five hundred acres!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "FREE LAND"
+   },
+   {
+    "who": "narr",
+    "say": "That was the offer. Families would settle in a new place, and everyone would receive land. It sounded almost too good to be true.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "LAND FOR EVERYONE"
+   },
+   {
+    "who": "narr",
+    "say": "Their leader was a painter and mapmaker named John White. He'd already visited the island once, and his drawings of its people and animals still survive today.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "JOHN WHITE"
+   },
+   {
+    "who": "white",
+    "say": "The island is calm, and the neighbors are friendly. I've seen it myself. You'll be safe there.",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "white",
+      "shake"
+     ]
+    ],
+    "text": "YOU'LL BE SAFE"
+   },
+   {
+    "who": "narr",
+    "say": "So about a hundred and fifteen men, women, and children climbed aboard. In the spring of 1587, they left England.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "115 PEOPLE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. Three months at sea.",
+    "cam": "prop:map",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "map",
+      "bounce"
+     ]
+    ],
+    "text": "2. AT SEA"
+   },
+   {
+    "who": "narr",
+    "say": "The ship was small, loud, and crowded. Imagine living in a school bus for three months, with no bathroom, and your bed is a plank.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "A SCHOOL BUS AT SEA"
+   },
+   {
+    "who": "you",
+    "say": "I'm so seasick. What do we eat in here? And when are we there?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WHEN DO WE ARRIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "Mostly salted meat, hard biscuit, and beer. The water went bad quickly. Rats shared your food, and sailors shared the room.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "SALT, BISCUIT, BEER"
+   },
+   {
+    "who": "you",
+    "say": "I can't sleep. Every wave feels like it will tip us over.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "HOLD ON"
+   },
+   {
+    "who": "narr",
+    "say": "A storm could last for days. Most passengers stayed below deck, holding on, and hoping the ship would not break apart.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "DAYS OF STORM"
+   },
+   {
+    "who": "narr",
+    "say": "The captain's plan was to land farther north, in the Chesapeake Bay. But the ship's pilot refused to go on. He dropped the colonists at Roanoke Island instead.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "WRONG PLACE"
+   },
+   {
+    "who": "you",
+    "say": "Wait. This isn't where we were supposed to go! Why are they leaving us here?",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "WRONG PLACE?!"
+   },
+   {
+    "who": "white",
+    "say": "It's too late to argue. The pilot has made up his mind. We will make a home here.",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "NO CHOICE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. What you find when you land.",
+    "cam": "prop:post",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "post",
+      "bounce"
+     ]
+    ],
+    "text": "3. THE ISLAND"
+   },
+   {
+    "who": "narr",
+    "say": "On the island was a small fort from an earlier group of settlers. Nobody was home. The houses stood empty.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "AN EMPTY FORT"
+   },
+   {
+    "who": "narr",
+    "say": "Vines had grown over the walls. Deer wandered in and out of the rooms, eating the melons that grew inside.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "DEER IN THE HOUSES"
+   },
+   {
+    "who": "you",
+    "say": "And what is that, lying in the grass over there? Is that a person?",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "WHAT IS THAT?"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. It was the bones of one man, the only trace of fifteen soldiers left behind the year before. Nobody knew what happened to the rest.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "BONES IN THE GRASS"
+   },
+   {
+    "who": "narr",
+    "say": "That's the first mystery of Roanoke. It happened before your group even stepped off the boat.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "A MYSTERY BEFORE YOU"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. Making a home.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "4. MAKE A HOME"
+   },
+   {
+    "who": "you",
+    "say": "We have no town. So we fix the old houses and build new ones?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "FIX THE HOUSES"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. You repaired the empty houses, built new ones from wood, and put up a fence around the settlement. Roofs were thatched with dried grass.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "BUILD IT YOURSELF"
+   },
+   {
+    "who": "narr",
+    "say": "Each day was about food. Wheat and peas from the supplies, fish from the water, and corn if your neighbors would trade.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "FOOD EVERY DAY"
+   },
+   {
+    "who": "narr",
+    "say": "Cooking happened over open fires. There was no refrigerator, so whatever you could not eat that day was salted or dried to last.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "NO REFRIGERATOR"
+   },
+   {
+    "who": "you",
+    "say": "Trade? With who? Do people already live here?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "WHO LIVES HERE?"
+   },
+   {
+    "who": "narr",
+    "say": "Yes. The Croatoan people lived on a nearby island. Their friend Manteo had sailed to England and back, and he helped the colonists.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "MEET THE CROATOAN"
+   },
+   {
+    "who": "narr",
+    "say": "But not everyone nearby was friendly. Another group had fought with the earlier settlers, and they still did not trust newcomers.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "NOT ALL FRIENDS"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. The first week of danger.",
+    "cam": "prop:map",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "map",
+      "bounce"
+     ]
+    ],
+    "text": "5. DANGER"
+   },
+   {
+    "who": "narr",
+    "say": "About a week after landing, a colonist named George Howe went out alone to catch crabs in the shallow water.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "ALONE AT THE WATER"
+   },
+   {
+    "who": "narr",
+    "say": "He was attacked and killed. His body was found with sixteen arrows in it. It was a warning to everyone about how fragile the new town was.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "A WARNING"
+   },
+   {
+    "who": "you",
+    "say": "I don't want to stay here! What if it happens to us?",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "I'M SCARED"
+   },
+   {
+    "who": "white",
+    "say": "From now on, nobody goes out alone. Fish in pairs, and always keep a watch.",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:2,13,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "NEVER ALONE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. A baby is born.",
+    "cam": "prop:post",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "post",
+      "bounce"
+     ]
+    ],
+    "text": "6. A BABY"
+   },
+   {
+    "who": "narr",
+    "say": "On August eighteenth, 1587, John White's daughter, Eleanor Dare, had a baby girl. She was named Virginia, after the new land.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "VIRGINIA DARE"
+   },
+   {
+    "who": "narr",
+    "say": "Virginia Dare was the first English child born in the Americas. A few days earlier, Manteo had been baptized, too. For a moment, the colony felt hopeful.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "FIRST ENGLISH CHILD"
+   },
+   {
+    "who": "you",
+    "say": "Congratulations! She's tiny. We should all be proud of this day.",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "A NEW BABY"
+   },
+   {
+    "who": "narr",
+    "say": "Think about how small that is. A baby was born in a thatched house, in a village of a hundred and fifteen people, a long way from any hospital.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "NO HOSPITAL"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. A promise.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "7. THE PROMISE"
+   },
+   {
+    "who": "narr",
+    "say": "But the supplies weren't enough for a long winter. So the colonists asked John White to sail back to England and bring more.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "WHITE MUST GO"
+   },
+   {
+    "who": "white",
+    "say": "I don't want to leave my family. But if I don't go, we will run out of food by winter.",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:2,13,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "DON'T LEAVE"
+   },
+   {
+    "who": "narr",
+    "say": "Before he left, White and the colonists made a deal. If you ever have to leave Roanoke, carve the name of where you went into a tree or post.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "THE SECRET CODE"
+   },
+   {
+    "who": "narr",
+    "say": "And if you're in danger, carve a small cross above it. White would know to come find them.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "A CROSS = DANGER"
+   },
+   {
+    "who": "you",
+    "say": "Got it. Where we go, we carve the name. If trouble, we add a cross.",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "REMEMBER THE CROSS"
+   },
+   {
+    "who": "narr",
+    "say": "On August twenty-seventh, 1587, White sailed away. It was the last time he would see his family.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "HE SAILS AWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. Three years of waiting.",
+    "cam": "prop:map",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "map",
+      "bounce"
+     ]
+    ],
+    "text": "8. THREE YEARS"
+   },
+   {
+    "who": "narr",
+    "say": "When White reached England, Spain was getting ready to invade. In 1588, the great Spanish Armada attacked, and nearly every English ship was needed for the fight.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE ARMADA"
+   },
+   {
+    "who": "white",
+    "say": "I begged them for one ship. Just one! But the Queen needed every vessel for the war.",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "white",
+      "eyes_big"
+     ]
+    ],
+    "text": "NO SHIPS FOR ME"
+   },
+   {
+    "who": "narr",
+    "say": "For almost three years, John White could not get back to the island. Think about that. Imagine your family is stranded, and you can't reach them for three years.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THREE YEARS APART"
+   },
+   {
+    "who": "narr",
+    "say": "Meanwhile, back on the island, a dry spell was starting. Scientists who study old tree rings later found it was one of the worst droughts in about eight hundred years.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "A HUGE DROUGHT"
+   },
+   {
+    "who": "you",
+    "say": "The corn isn't growing. The creek is low. We can't last through another year like this.",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "NO RAIN"
+   },
+   {
+    "who": "narr",
+    "say": "A drought means no corn, and no corn means no trade. Even friendly neighbors cannot share what they do not have.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ]
+    ],
+    "text": "NO CORN, NO TRADE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. The return.",
+    "cam": "prop:post",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ],
+     [
+      "post",
+      "bounce"
+     ]
+    ],
+    "text": "9. THE RETURN"
+   },
+   {
+    "who": "narr",
+    "say": "At last, in August of 1590, White got a ship. After weeks at sea, he saw smoke rising from the island and thought, they're alive.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "SMOKE ON THE ISLAND"
+   },
+   {
+    "who": "white",
+    "say": "They lit a signal fire! They are alive! Row faster, faster!",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THEY'RE ALIVE?"
+   },
+   {
+    "who": "narr",
+    "say": "But when the boats landed that evening, nobody answered. The smoke came from a grass fire, not a camp. White walked in the dark through the silent island.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "NO ONE ANSWERED"
+   },
+   {
+    "who": "narr",
+    "say": "The next morning, White reached the old settlement, and what he saw made no sense.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "MORNING AT THE FORT"
+   },
+   {
+    "who": "narr",
+    "say": "The houses had been taken apart, not burned and not smashed. A strong fence now stood around the whole town, built from tall tree trunks.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "TAKEN APART"
+   },
+   {
+    "who": "narr",
+    "say": "And on one post at the gate, in neat capital letters, someone had carved a word.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "CARVED IN CAPITALS"
+   },
+   {
+    "who": "you",
+    "say": "C, R, O, A, T, O, A, N. Croatoan. That's the name of the island where the friendly people lived!",
+    "cam": "two:you,white",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "CROATOAN"
+   },
+   {
+    "who": "narr",
+    "say": "On a nearby tree, the letters C, R, O were also carved. And White looked everywhere for the cross, the sign of danger. There was no cross.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "NO CROSS"
+   },
+   {
+    "who": "white",
+    "say": "No cross. That means they left in peace. They went to Croatoan! My family is alive!",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "NO CROSS = SAFE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. The storm.",
+    "cam": "prop:ship",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ship",
+      "bounce"
+     ]
+    ],
+    "text": "10. THE STORM"
+   },
+   {
+    "who": "narr",
+    "say": "White wanted to sail to Croatoan the next day. But a fierce storm came, and the ships lost their anchors. The captain said the ships had to leave.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ]
+    ],
+    "text": "A STORM HITS"
+   },
+   {
+    "who": "white",
+    "say": "Please! The island is only a day away! Give me one more day!",
+    "cam": "close:white",
+    "do": [
+     [
+      "white",
+      "to:2,13,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "ONE MORE DAY!"
+   },
+   {
+    "who": "narr",
+    "say": "The captain refused. They sailed away for the Caribbean, and then back to England. John White never returned. He is thought to have died a few years later.",
+    "cam": "overhead",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "HE NEVER RETURNED"
+   },
+   {
+    "who": "narr",
+    "say": "And nobody ever saw the colonists again. That's the Lost Colony of Roanoke.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE LOST COLONY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eleven. The three clues.",
+    "cam": "prop:map",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "shake"
+     ],
+     [
+      "map",
+      "bounce"
+     ]
+    ],
+    "text": "11. THE CLUES"
+   },
+   {
+    "who": "narr",
+    "say": "Clue number one. The houses had been taken down on purpose. That sounds like people who planned to move, not people running for their lives.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-5,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "CLUE 1: TAKEN APART"
+   },
+   {
+    "who": "narr",
+    "say": "Clue number two. There were no graves, no sign of a fight, and no sign of disease. If the colony had been attacked, you'd expect to find evidence.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "CLUE 2: NO GRAVES"
+   },
+   {
+    "who": "narr",
+    "say": "Clue number three. A few years ago, researchers studying an old map found a hidden mark underneath a patch of paper. It may show a small fort, farther inland.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "CLUE 3: A HIDDEN MARK"
+   },
+   {
+    "who": "you",
+    "say": "So maybe they split up? Some to the coast, and some inland?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "sad"
+     ]
+    ],
+    "text": "SPLIT UP?"
+   },
+   {
+    "who": "narr",
+    "say": "That's one popular idea. Some colonists may have gone to live with the Croatoan people, and others may have moved inland to find food during the drought.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-2,9.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "THEY MOVED IN"
+   },
+   {
+    "who": "narr",
+    "say": "Searchers have dug at several places on the coast. They found pieces of English pottery far from the original fort. But nobody has found proof of what happened.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "ENGLISH POTTERY"
+   },
+   {
+    "who": "narr",
+    "say": "And there is a legend. For centuries, travelers heard stories of gray-eyed people living with tribes in the area. Nobody can prove they were descendants of the colonists.",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "GRAY-EYED PEOPLE"
+   },
+   {
+    "who": "narr",
+    "say": "So the word on the post was a message. It said, we are all right, we went to Croatoan. And yet after that, history goes silent.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:4.5,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "happy"
+     ]
+    ],
+    "text": "THE SILENCE"
+   },
+   {
+    "who": "narr",
+    "say": "What would you have done? Stayed and starved, or taken a chance on your neighbors?",
+    "cam": "overhead",
+    "do": [
+     [
+      "you",
+      "to:-4,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,10,1.8"
+     ]
+    ],
+    "text": "STAY OR GO?"
+   },
+   {
+    "who": "narr",
+    "say": "Tell me what you think in the comments, and subscribe for more true history.",
+    "cam": "close:you",
+    "do": [
+     [
+      "white",
+      "to:5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "TELL ME BELOW"
+   }
+  ]
+ },
+ "long": {
+  "title": "One Word Was Left Behind When 115 People Vanished 🪵",
+  "description": "What do you think happened to the Roanoke colonists? Tell me in the comments.\n\nIn 1590 John White came back to Roanoke Island and found his family gone, the houses taken apart, and one word carved on a post. This is what life in the Lost Colony was really like, and the three clues that still puzzle historians.\n\nSources:\nhttps://www.nps.gov/fora/learn/historyculture/1590-voyage.htm\nhttps://www.nps.gov/fora/learn/historyculture/major-theories-of-the-lost-colony.htm\nhttps://www.nationalgeographic.com/magazine/article/lost-colony-roanoke-history-theories-croatoan\nhttps://www.britannica.com/story/the-lost-colony-of-roanoke\n\n#roanoke #lostcolony #truestory",
+  "tags": [
+   "roanoke lost colony",
+   "croatoan",
+   "john white 1590",
+   "virginia dare",
+   "roanoke island 1587",
+   "what happened to roanoke",
+   "manteo croatoan",
+   "cro tree carving",
+   "lost colony mystery",
+   "north carolina history",
+   "english colonists 1587",
+   "spanish armada delay",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "3 YEARS TOO LATE",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "Una palabra quedó atrás cuando desaparecieron 115 personas 🪵",
+    "description": "¿Qué crees que les pasó a los colonos de Roanoke? Cuéntamelo en los comentarios.\n\nEn 1590 John White volvió a la isla de Roanoke y solo encontró una palabra tallada en un poste. La historia real de la Colonia Perdida."
+   },
+   "pt": {
+    "title": "Uma palavra ficou para trás quando 115 pessoas sumiram 🪵",
+    "description": "O que você acha que aconteceu com os colonos de Roanoke? Conte nos comentários.\n\nEm 1590 John White voltou à ilha de Roanoke e encontrou só uma palavra entalhada num poste. A história real da Colônia Perdida."
+   },
+   "ar": {
+    "title": "بقيت كلمة واحدة بعد اختفاء 115 شخصًا 🪵",
+    "description": "ماذا تظن أنه حدث لمستعمري رونوك؟ أخبرني في التعليقات.\n\nفي عام 1590 عاد جون وايت إلى جزيرة رونوك فلم يجد سوى كلمة منحوتة على عمود. القصة الحقيقية للمستعمرة المفقودة."
+   },
+   "fr": {
+    "title": "Un seul mot est resté quand 115 personnes ont disparu 🪵",
+    "description": "Que crois-tu qu'il soit arrivé aux colons de Roanoke ? Dis-le en commentaire.\n\nEn 1590, John White revient sur l'île de Roanoke et ne trouve qu'un mot gravé sur un poteau. La vraie histoire de la Colonie perdue."
+   },
+   "ja": {
+    "title": "115人が消え、たった一言が残された 🪵",
+    "description": "ロアノークの入植者に何が起きたと思いますか?コメントで教えてください。\n\n1590年、ジョン・ホワイトはロアノーク島に戻り、柱に刻まれた一語だけを見つけました。失われた植民地の本当の物語です。"
+   },
+   "ko": {
+    "title": "115명이 사라지고 한 단어만 남았다 🪵",
+    "description": "로어노크 이주민들에게 무슨 일이 있었다고 생각하나요? 댓글로 알려주세요.\n\n1590년 존 화이트는 로어노크 섬으로 돌아와 기둥에 새겨진 단어 하나만 발견했습니다. 사라진 식민지의 실화입니다."
+   },
+   "de": {
+    "title": "115 Menschen verschwanden, ein Wort blieb zurück 🪵",
+    "description": "Was glaubst du, ist mit den Siedlern von Roanoke passiert? Schreib es in die Kommentare.\n\n1590 kehrte John White nach Roanoke zurück und fand nur ein Wort in einen Pfosten geritzt. Die wahre Geschichte der Verlorenen Kolonie."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "ONE WORD LEFT BEHIND",
+   "title": "115 people vanished. One word was left 🪵 #shorts",
+   "description": "Roanoke, 1590: John White found one word carved on a post. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "roanoke",
+    "lost colony",
+    "croatoan",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "115 personas desaparecieron. Quedó una palabra 🪵 #shorts",
+     "description": "Roanoke, 1590: una sola palabra tallada en un poste. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "115 pessoas sumiram. Ficou uma palavra 🪵 #shorts",
+     "description": "Roanoke, 1590: uma única palavra entalhada num poste. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "اختفى 115 شخصًا وبقيت كلمة واحدة 🪵 #shorts",
+     "description": "رونوك 1590: كلمة واحدة منحوتة على عمود. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "115 personnes ont disparu. Un mot est resté 🪵 #shorts",
+     "description": "Roanoke, 1590 : un seul mot gravé sur un poteau. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "115人が消えた。残ったのは一語だけ 🪵 #shorts",
+     "description": "1590年ロアノーク:柱に刻まれた一語。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "115명이 사라지고 한 단어만 남았다 🪵 #shorts",
+     "description": "1590 로어노크: 기둥에 새겨진 단 한 단어. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "115 Menschen verschwanden. Ein Wort blieb 🪵 #shorts",
+     "description": "Roanoke, 1590: ein einziges Wort in einem Pfosten. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 54,
+   "dur": 28,
+   "top": "3 YEARS TOO LATE",
+   "title": "He was stuck 3 years from his family ⚓ #shorts",
+   "description": "John White sailed in 1587 and could not get back until 1590. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "john white",
+    "roanoke",
+    "spanish armada",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Pasó 3 años sin poder ver a su familia ⚓ #shorts",
+     "description": "John White zarpó en 1587 y no pudo volver hasta 1590. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Ele passou 3 anos sem ver a família ⚓ #shorts",
+     "description": "John White partiu em 1587 e só voltou em 1590. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "قضى 3 سنوات لا يستطيع رؤية عائلته ⚓ #shorts",
+     "description": "أبحر جون وايت عام 1587 ولم يعد إلا عام 1590. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "3 ans sans pouvoir revoir sa famille ⚓ #shorts",
+     "description": "John White embarque en 1587 et ne revient qu'en 1590. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "家族に3年間会えなかった男 ⚓ #shorts",
+     "description": "ジョン・ホワイトは1587年に出航し、戻れたのは1590年。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "3년 동안 가족을 볼 수 없었던 남자 ⚓ #shorts",
+     "description": "존 화이트는 1587년에 떠나 1590년에야 돌아왔습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "3 Jahre ohne seine Familie ⚓ #shorts",
+     "description": "John White segelte 1587 ab und kam erst 1590 zurück. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "hollow wooden flute and lute over tide and wind sounds, slow minor key, no strings swell until the carving scene",
+  "palette": "misty green-gray dawn with driftwood brown and candle-orange",
+  "opening_shot": "carved post close-up (prop:post) with a drifting lantern",
+  "camera_set": "close-ups on the colonists, two-shots for John White scenes, prop cuts on the post, ship and map, overhead for the fort and the clues",
+  "transitions": "hard cuts, slow push-in on the carved post, long fade after the storm",
+  "caption_style": "cream serif caps with a thin brown underline, chapter number first"
+ }
+}
