@@ -1,0 +1,1796 @@
+{
+ "id": "20261126-1-flannan-keep-the-light-on",
+ "plot": "Second person, daily-life format: you are a keeper on the Flannan Isles in 1900; ten chapters cover why take the job, where it is, landing, the lamp, the schedule, food, the sea, the ship that saw no light, Moore alone in the empty tower, and the last chapter is the unsolved mystery of three vanished keepers.",
+ "script": {
+  "title": "Flannan Isles Lighthouse, 1900",
+  "lead_in": 0,
+  "set": {
+   "place": "clearing",
+   "fog": 0.14,
+   "eyes": 0,
+   "moonlight": 20
+  },
+  "chars": {
+   "you": {
+    "name": "You",
+    "voice": "af_nicole",
+    "speed": 1.0,
+    "pitch": 0,
+    "color": [
+     0.25,
+     0.42,
+     0.5
+    ],
+    "kind": "human",
+    "size": 0.85,
+    "home": [
+     -3,
+     9
+    ]
+   },
+   "ducat": {
+    "name": "Principal Keeper Ducat",
+    "voice": "am_eric",
+    "speed": 0.95,
+    "pitch": -1,
+    "color": [
+     0.12,
+     0.16,
+     0.3
+    ],
+    "kind": "human",
+    "size": 0.95,
+    "home": [
+     3,
+     12
+    ]
+   },
+   "moore": {
+    "name": "Joseph Moore",
+    "voice": "am_echo",
+    "speed": 0.97,
+    "pitch": 0,
+    "color": [
+     0.4,
+     0.3,
+     0.18
+    ],
+    "kind": "human",
+    "size": 0.92,
+    "home": [
+     -6,
+     13
+    ]
+   },
+   "muir": {
+    "name": "Superintendent Muirhead",
+    "voice": "am_onyx",
+    "speed": 0.93,
+    "pitch": -2,
+    "color": [
+     0.2,
+     0.2,
+     0.22
+    ],
+    "kind": "human",
+    "size": 0.97,
+    "home": [
+     6,
+     14
+    ]
+   },
+   "narr": {
+    "name": "Narrator",
+    "voice": "am_fenrir",
+    "speed": 0.97,
+    "pitch": -1
+   }
+  },
+  "props": [
+   {
+    "id": "lamp",
+    "type": "ball",
+    "color": [
+     1.0,
+     0.85,
+     0.4
+    ],
+    "glow": 4.0,
+    "visible": true,
+    "scale": 0.35,
+    "at": [
+     -5,
+     8.5,
+     1.8
+    ]
+   },
+   {
+    "id": "clock",
+    "type": "wheel",
+    "color": [
+     0.7,
+     0.62,
+     0.4
+    ],
+    "glow": 0.8,
+    "visible": true,
+    "scale": 0.8,
+    "at": [
+     0,
+     11,
+     1.0
+    ]
+   },
+   {
+    "id": "box",
+    "type": "box",
+    "color": [
+     0.35,
+     0.25,
+     0.15
+    ],
+    "glow": 0.4,
+    "visible": true,
+    "scale": 1.0,
+    "at": [
+     3,
+     10,
+     0
+    ]
+   },
+   {
+    "id": "coat",
+    "type": "cone",
+    "color": [
+     0.9,
+     0.75,
+     0.15
+    ],
+    "glow": 0.6,
+    "visible": true,
+    "scale": 0.8,
+    "at": [
+     -2,
+     13,
+     0
+    ]
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "say": "December 15, 1900. A steamship sails from Philadelphia toward Scotland. In the dark, near a tiny island, the crew looks for the lighthouse beam. It isn't there.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "THE LIGHT WENT OUT",
+    "sfx": "alarm"
+   },
+   {
+    "who": "ducat",
+    "say": "Rule number one. The lamp never goes out. Not in a storm. Not when you're sick. Not ever. Understand?",
+    "cam": "two:you,ducat",
+    "do": [
+     [
+      "you",
+      "enter:left"
+     ],
+     [
+      "ducat",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "RULE ONE"
+   },
+   {
+    "who": "you",
+    "say": "Understood. But we're twenty miles from the nearest town. What could possibly go wrong?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,11,0"
+     ],
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ]
+    ],
+    "text": "WHAT COULD GO WRONG?"
+   },
+   {
+    "who": "narr",
+    "say": "Tonight, you're a lighthouse keeper on the Flannan Isles, in the winter of 1900. You'll learn the job, the rules, and the sea. And at the very end, a mystery that nobody has solved in over a hundred years.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "YOU'RE THE NEW KEEPER"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter one. Why would anyone take this job?",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "1. WHY TAKE THE JOB?"
+   },
+   {
+    "who": "you",
+    "say": "Be honest. Why would anybody choose to live on a rock in the ocean?",
+    "cam": "close:you",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "WHY LIVE ON A ROCK?"
+   },
+   {
+    "who": "ducat",
+    "say": "A steady paycheck, and a house to live in. Nobody bosses you around, as long as the light keeps shining.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "PAY AND A HOUSE"
+   },
+   {
+    "who": "narr",
+    "say": "In 1900, a steady paycheck was a big deal. Fishing and farming could leave a family with nothing after one bad season. Lighthouse work was safe, respected, and it came with a roof over your head.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "STEADY WORK"
+   },
+   {
+    "who": "narr",
+    "say": "And this lighthouse was brand new. It was first lit on December 7, 1899, just one year before our story. Its builders had spent four years getting it done.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "BUILT ONLY A YEAR AGO"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter two. Where on Earth are you?",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "2. WHERE IS THIS PLACE?"
+   },
+   {
+    "who": "ducat",
+    "say": "Welcome to Eilean Mor. It's the biggest of the Flannan Isles. Sailors call them the Seven Hunters.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "SEVEN HUNTERS"
+   },
+   {
+    "who": "narr",
+    "say": "The island sits about twenty miles west of the Isle of Lewis, off the coast of Scotland. Past it, there's nothing but open Atlantic Ocean. Across that ocean is North America.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "20 MILES FROM LAND"
+   },
+   {
+    "who": "you",
+    "say": "So if I look out the window, all I see is water?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-4,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ]
+    ],
+    "text": "NOTHING BUT WATER"
+   },
+   {
+    "who": "ducat",
+    "say": "All of it. Every day. You'll get used to it. Or you won't.",
+    "cam": "two:you,ducat",
+    "do": [
+     [
+      "ducat",
+      "to:2,11,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "ALL OF IT"
+   },
+   {
+    "who": "narr",
+    "say": "The cliffs here are about 148 feet tall. That's like a fourteen-story building. The builders had to haul every stone, every beam and every bag of cement up those cliffs, straight from small boats.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "148-FOOT CLIFFS"
+   },
+   {
+    "who": "narr",
+    "say": "They even built a little railway to carry supplies uphill, pulled by a cable and a small steam engine. That's how much work it took to put one light on one rock.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "drift:2,11,0.3"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "A TINY RAILWAY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter three. How do you even get on the island?",
+    "cam": "two:you,ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "3. HOW DO YOU GET HERE?"
+   },
+   {
+    "who": "you",
+    "say": "I almost fell in the water when the boat came in. Is it always like that?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "shake"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "HOW DID WE LAND?"
+   },
+   {
+    "who": "ducat",
+    "say": "Always. You wait for the swell, you jump, and you pray the boatman times it right. Some days, no boat can land at all.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "WAIT FOR THE SWELL"
+   },
+   {
+    "who": "narr",
+    "say": "That matters. A supply ship came every few weeks, but only if the sea allowed it. A storm could keep a ship away for days. If you ran out of something, you went without.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "NO BOAT, NO WORLD"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter four. The job itself. The light.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "4. THE LIGHT"
+   },
+   {
+    "who": "ducat",
+    "say": "Come on up. This is what everything is for.",
+    "cam": "two:you,ducat",
+    "do": [
+     [
+      "ducat",
+      "to:1,12,0"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ]
+    ],
+    "text": "COME UP THE STAIRS"
+   },
+   {
+    "who": "narr",
+    "say": "At the top of the tower sat an enormous glass lens, built like a beehive made of glass rings. It took the light from one small flame and bent it into a beam you could see from more than twenty miles away.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:-1,10,1.8"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "A GIANT GLASS EYE"
+   },
+   {
+    "who": "narr",
+    "say": "The lamp burned paraffin, a kind of lamp oil. The light used about twenty barrels of it in a year. Someone had to carry it up the tower, fill the lamp, and keep every piece of glass spotless, every single day.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "20 BARRELS A YEAR"
+   },
+   {
+    "who": "you",
+    "say": "The glass is already covered in salt. I just cleaned it yesterday!",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "SALT ON THE GLASS"
+   },
+   {
+    "who": "ducat",
+    "say": "Then clean it again. A dirty lens means a dim light. And a dim light means a ship on the rocks.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "CLEAN IT AGAIN"
+   },
+   {
+    "who": "narr",
+    "say": "That's the point of the job. Out in the dark, a captain steering a ship sees your light, and knows exactly where the rocks are. If your light is dim, or dead, his life is in your hands.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "LIVES DEPEND ON IT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter five. Your day.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "5. THE SCHEDULE"
+   },
+   {
+    "who": "narr",
+    "say": "Four men shared the work. Three stayed on the rock at a time, while the fourth rested on shore. The men on the island were a principal keeper, an assistant keeper, and a third man. They called the third man the Occasional, because he filled in when somebody was away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "FOUR MEN, THREE ON DUTY"
+   },
+   {
+    "who": "ducat",
+    "say": "At night, one of us is always awake. We trade the watches so nobody gets worn out.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "WATCHES AT NIGHT"
+   },
+   {
+    "who": "narr",
+    "say": "Every day, the keepers wrote down the weather and anything strange in the log. Quick notes went on a slate first, and later got copied into the book. Remember that slate. It comes back in a minute.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "THE SLATE"
+   },
+   {
+    "who": "you",
+    "say": "So it's lamp, glass, log, watch, and then again tomorrow?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ]
+    ],
+    "text": "IT NEVER STOPS"
+   },
+   {
+    "who": "ducat",
+    "say": "That's the job. Do it right for years, and nobody will ever notice you.",
+    "cam": "two:you,ducat",
+    "do": [
+     [
+      "ducat",
+      "to:3,12,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THAT'S THE JOB"
+   },
+   {
+    "who": "narr",
+    "say": "And there's one rule above all the others. The light must never be left alone. If a keeper is missing, the others have to stay and keep it burning. Leaving the lamp unwatched was a serious offense.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "ONE BIG RULE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter six. What do you eat, and who do you talk to?",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "coat",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "6. FOOD AND LONELINESS"
+   },
+   {
+    "who": "you",
+    "say": "Please tell me dinner isn't more canned fish.",
+    "cam": "close:you",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "WHAT'S FOR DINNER?"
+   },
+   {
+    "who": "ducat",
+    "say": "Canned food, salted meat, and bread, mostly. Be glad when the supply boat shows up with something fresh.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "CANNED FOOD AGAIN"
+   },
+   {
+    "who": "narr",
+    "say": "Think of a camping trip that lasts for weeks. The same food. The same three faces. And a wind that never quiets down, howling around the tower day and night.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "LIKE ENDLESS CAMPING"
+   },
+   {
+    "who": "narr",
+    "say": "The Northern Lighthouse Board picked its keepers carefully. These men had to be steady, careful, and able to live with two other people in a small house for weeks, with no one else to talk to.",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "coat",
+      "drift:-1,13,0.3"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "KEEPERS WERE TOUGH"
+   },
+   {
+    "who": "you",
+    "say": "Do you ever miss people? Home, I mean?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "sad"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "I MISS MY FAMILY"
+   },
+   {
+    "who": "ducat",
+    "say": "Every single day. But the sea is worse than the quiet. Come outside and I'll show you.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "ducat",
+      "to:2,11,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "EVERY SINGLE DAY"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter seven. The sea.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "7. THE SEA"
+   },
+   {
+    "who": "narr",
+    "say": "On this island, the danger isn't a ship hitting the rocks. It's the water itself. Down at the west landing, there's a box bolted into the rock to hold the ropes and tools for landing boats. That box sits about 108 feet above the sea. Ten stories up.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "108 FEET UP"
+   },
+   {
+    "who": "you",
+    "say": "That's ten stories up! The water can't reach that high. Can it?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "TEN STORIES UP?"
+   },
+   {
+    "who": "ducat",
+    "say": "In the worst storms, it can. The sea comes up the cliff like a hand. Never stand near the edge.",
+    "cam": "close:ducat",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "IT CAN, IN A STORM"
+   },
+   {
+    "who": "narr",
+    "say": "Keepers took their gear seriously, because losing it cost money. One researcher found that keeper Thomas Marshall had once been fined five shillings, when a huge gale washed his equipment away. Keep that in mind. It matters later.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "A BIG FINE"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter eight. Back to that steamship from Philadelphia.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "8. THE SHIP THAT SAW NOTHING"
+   },
+   {
+    "who": "narr",
+    "say": "The steamer was called the Archtor. It was sailing to a port in Scotland called Leith, and the weather was rough. On the night of December 15, the crew kept looking for the Flannan light. They never saw it.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "DECEMBER 15, 1900"
+   },
+   {
+    "who": "narr",
+    "say": "The ship docked in Leith on December 18. Only then did the crew report that the lighthouse had been dark. That meant the lighthouse board didn't hear about it for three days.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-2,10,0"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THEY TOLD NOBODY AT FIRST"
+   },
+   {
+    "who": "narr",
+    "say": "A relief ship, the Hesperus, was supposed to bring supplies and a fresh keeper. But bad weather held it back, and it didn't reach the island until December 26. Eleven days after the light went dark.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "A SUPPLY SHIP WAITS"
+   },
+   {
+    "who": "narr",
+    "say": "When the Hesperus finally arrived, something was wrong right away. There was no flag flying on the flagpole. And the supply boxes the keepers normally left out for the ship weren't there.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "NO FLAG. NO BOXES."
+   },
+   {
+    "who": "narr",
+    "say": "Captain Jim Harvie blew the ship's whistle. He fired a flare. Nobody came down to the landing. Nobody waved. The island was silent.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "NOBODY CAME OUT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter nine. One man goes up to look.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "9. ALONE ON THE ISLAND"
+   },
+   {
+    "who": "moore",
+    "say": "I'm going up. Maybe they're sick. Maybe they can't hear us.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "enter:left"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "I'LL GO UP"
+   },
+   {
+    "who": "narr",
+    "say": "The relief keeper, Joseph Moore, was put ashore. He went up the steep path to the lighthouse completely alone.",
+    "cam": "overhead",
+    "do": [
+     [
+      "moore",
+      "to:-5,12,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "JOSEPH MOORE"
+   },
+   {
+    "who": "narr",
+    "say": "He found the gate to the compound closed. He found the main door closed, too. He called out for the keepers. Nobody answered.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "to:-4,13,0"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ]
+    ],
+    "text": "BOTH DOORS CLOSED"
+   },
+   {
+    "who": "moore",
+    "say": "Hello? Ducat? Marshall? It's Moore! Hello?",
+    "cam": "two:moore,you",
+    "do": [
+     [
+      "moore",
+      "shake"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "moore",
+      "to:-5,12,0"
+     ]
+    ],
+    "text": "HELLO? ANYONE?"
+   },
+   {
+    "who": "narr",
+    "say": "Inside, the beds were unmade. The clock had stopped, because nobody had wound it. The three men were nowhere to be found.",
+    "cam": "prop:clock",
+    "do": [
+     [
+      "clock",
+      "shake"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "THE CLOCK HAD STOPPED"
+   },
+   {
+    "who": "narr",
+    "say": "But one thing made no sense. The lamps had been cleaned. They'd been refilled with oil. Everything was ready for the night. Someone had finished the job, and then simply left.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "bounce"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "THE LAMPS WERE READY"
+   },
+   {
+    "who": "narr",
+    "say": "Moore found a set of oilskins, the heavy waterproof coat keepers wore in storms. It was hanging inside. That meant at least one man had gone out into rough weather without it.",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "coat",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "ONE SET OF OILSKINS"
+   },
+   {
+    "who": "moore",
+    "say": "I searched every room. Every corner. They aren't here. They aren't anywhere.",
+    "cam": "close:moore",
+    "do": [
+     [
+      "moore",
+      "sad"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "moore",
+      "to:-4,13,0"
+     ]
+    ],
+    "text": "THEY JUST VANISHED"
+   },
+   {
+    "who": "narr",
+    "say": "Captain Harvie sent a message back to the mainland. It said, quote, a dreadful accident has happened at the Flannans. The three keepers, Ducat, Marshall and the Occasional, have disappeared from the island.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "A DREADFUL ACCIDENT"
+   },
+   {
+    "who": "narr",
+    "say": "Chapter ten. The last chapter. What really happened to the three keepers?",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "10. WHAT HAPPENED?"
+   },
+   {
+    "who": "narr",
+    "say": "The search team checked the whole island. The east landing was fine. But the west landing told a different story.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "THE WEST LANDING"
+   },
+   {
+    "who": "narr",
+    "say": "That box, the one nearly ten stories above the sea, was smashed open. Rope and tools were thrown all over the rocks. Iron railings were bent over like soft wire.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "shake"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "THE BOX WAS BROKEN"
+   },
+   {
+    "who": "narr",
+    "say": "The iron railway track beside the path had been ripped out of its concrete. A rock that weighed more than a ton, about as much as a small car, had been shoved out of place. And up on top of the cliff, over 200 feet above the water, chunks of grass had been torn away.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "A ROCK AS HEAVY AS A CAR"
+   },
+   {
+    "who": "narr",
+    "say": "On December 29, a lighthouse board superintendent named Robert Muirhead arrived to investigate. He had hired all three men himself. This wasn't just a job for him. It was personal.",
+    "cam": "close:muir",
+    "do": [
+     [
+      "muir",
+      "enter:right"
+     ],
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ]
+    ],
+    "text": "THE BOSS WHO KNEW THEM"
+   },
+   {
+    "who": "muir",
+    "say": "I want to know what happened to my men. Nothing else matters.",
+    "cam": "two:muir,you",
+    "do": [
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "muir",
+      "to:5,13,0"
+     ]
+    ],
+    "text": "I NEED THE TRUTH"
+   },
+   {
+    "who": "narr",
+    "say": "Muirhead said some of the damage at the west landing was, quote, difficult to believe unless actually seen. And then he studied the clothes left behind in the lighthouse.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "SOME DAMAGE WAS HARD TO BELIEVE"
+   },
+   {
+    "who": "narr",
+    "say": "He decided that two of the keepers, Ducat and Marshall, had worn their oilskins and gone down to the west landing. The third man, Donald McArthur, had run out in his shirt sleeves. His coat was still hanging on its peg.",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "coat",
+      "drift:-3,13,0.3"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "TWO MEN IN COATS"
+   },
+   {
+    "who": "narr",
+    "say": "Muirhead's conclusion: after dinner on Saturday, December 15, the men went down to secure the rope box. An unusually huge wave rushed up the cliff, climbed above them, and came crashing down, sweeping all of them into the sea.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "THE MOST LIKELY ANSWER"
+   },
+   {
+    "who": "you",
+    "say": "Just one wave? That's all it took?",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "eyes_big"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "A WAVE DID THIS?"
+   },
+   {
+    "who": "narr",
+    "say": "Think about that fine. Marshall had been punished once for losing his gear in a gale. One researcher thinks he and Ducat may have gone down to save the equipment, to avoid being fined again.",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "you",
+      "sad"
+     ],
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "ONE WAVE IS ENOUGH"
+   },
+   {
+    "who": "narr",
+    "say": "And McArthur? Some people think he saw a huge wave coming and ran down to warn his friends. A man who left his post, and his coat, to save them. Then the sea took him too.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "WHY RUN DOWN THERE?"
+   },
+   {
+    "who": "narr",
+    "say": "Scientists have studied the island. The west landing sits in a narrow gap in the cliffs, and it ends in a cave. When a big storm wave rushes into that gap, the water has nowhere to go but up, and it can explode out with terrifying force.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "THE CAVE AT THE BOTTOM"
+   },
+   {
+    "who": "narr",
+    "say": "But a plain accident didn't make a good story. So over the years, wilder ones got added. People said a sea serpent had snatched them. They said spies had kidnapped them. They said the men ran away to start new lives. And some blamed a ghost ship called the Phantom of the Seven Hunters.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:2,11,0"
+     ]
+    ],
+    "text": "THE STORY THAT GREW"
+   },
+   {
+    "who": "narr",
+    "say": "You may have read about a spooky log, where Marshall wrote about a terrible storm, Ducat being silent, and McArthur crying. Those pages were never real.",
+    "cam": "prop:box",
+    "do": [
+     [
+      "box",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-4,10,0"
+     ]
+    ],
+    "text": "THE STORM DIARY"
+   },
+   {
+    "who": "narr",
+    "say": "A researcher named Mike Dash looked into it for the magazine Fortean Times. He found that the scary diary was made up, added to the story long after. And no storms were reported in that area on the days it described.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:3,12,0"
+     ]
+    ],
+    "text": "NO STORM, NO DIARY"
+   },
+   {
+    "who": "narr",
+    "say": "In 1912, a poet named Wilfrid Gibson wrote a famous poem about the lighthouse. It describes an overturned chair and an uneaten meal on the table. None of that was real either. Moore never saw it.",
+    "cam": "prop:coat",
+    "do": [
+     [
+      "coat",
+      "bounce"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-3,9,0"
+     ]
+    ],
+    "text": "THE POEM GOT IT WRONG"
+   },
+   {
+    "who": "narr",
+    "say": "So here's what we truly don't know. If it was just a wave, why were both doors closed? Who closed them? Why did one man leave his coat, but not the others? And did the three men really leave the lamp unwatched, knowing the rule?",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "ducat",
+      "to:1,12,0"
+     ]
+    ],
+    "text": "SO WHAT'S STILL A MYSTERY?"
+   },
+   {
+    "who": "narr",
+    "say": "No bodies were ever found. No note. No witness. Some experts think a fight on the cliff may have ended in tragedy. Others think rogue waves swept them off one at a time, as they tried to save each other.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "to:-3,9,0"
+     ],
+     [
+      "lamp",
+      "drift:3,10,1.8"
+     ]
+    ],
+    "text": "NO BODIES, EVER"
+   },
+   {
+    "who": "narr",
+    "say": "After the accident, new keepers took over, and the lighthouse kept working for decades. It was finally made automatic in 1971, so no human has had to live there since.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "ducat",
+      "to:4,11,0"
+     ]
+    ],
+    "text": "THE LIGHT KEPT GOING"
+   },
+   {
+    "who": "narr",
+    "say": "So what really happened? Most historians say a giant wave. The doors, the coat and the missing log pages are the pieces that don't fit. And that's why people still talk about it more than a century later.",
+    "cam": "overhead",
+    "do": [
+     [
+      "lamp",
+      "drift:-2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-1,10.5,0"
+     ]
+    ],
+    "text": "A WAVE AND A RULE"
+   },
+   {
+    "who": "you",
+    "say": "I think I'd still take the job. But I'd never go near that west landing in a storm.",
+    "cam": "close:you",
+    "do": [
+     [
+      "you",
+      "happy"
+     ],
+     [
+      "lamp",
+      "drift:2,11,1.8"
+     ],
+     [
+      "you",
+      "to:-5,10,0"
+     ]
+    ],
+    "text": "WOULD YOU TAKE IT?"
+   },
+   {
+    "who": "narr",
+    "say": "So tell me honestly. Twenty miles from anywhere, canned food, endless wind, and a lamp that must never go out. Would you have taken the job? Tell me in the comments, and subscribe for more true history.",
+    "cam": "prop:lamp",
+    "do": [
+     [
+      "lamp",
+      "drift:-3,10,1.8"
+     ],
+     [
+      "you",
+      "to:-2,11,0"
+     ]
+    ],
+    "text": "WOULD YOU TAKE THE JOB?"
+   }
+  ]
+ },
+ "long": {
+  "title": "Your Job: Keep the Light On, 20 Miles From Land (1900) 🔦",
+  "description": "Would you have taken the job? Tell me in the comments.\n\nIn December 1900, three lighthouse keepers vanished from the Flannan Isles, 20 miles off Scotland. Here is what the job was really like: the giant glass lens, the canned food, the swell that can climb ten stories up a cliff, and what relief keeper Joseph Moore found when he walked in alone.\n\nSources:\nhttps://www.nlb.org.uk/HistoricalInformation/FlannanIsles/Report-by-Superintendent/\nhttps://en.wikipedia.org/wiki/Flannan_Isles_Lighthouse\nhttps://www.rmg.co.uk/stories/maritime-history/what-caused-disappearance-flannan-isle-lighthouse-keepers\nhttps://nrscotland.gov.uk/learning-and-events/research-guides/lighthouses/the-mystery-of-the-flannan-islands-lighthouse\n\n#lighthouse #truestory #flannanisles",
+  "tags": [
+   "flannan isles lighthouse",
+   "flannan isles mystery",
+   "lighthouse keepers vanished 1900",
+   "eilean mor",
+   "seven hunters",
+   "joseph moore",
+   "robert muirhead",
+   "james ducat",
+   "thomas marshall",
+   "donald macarthur",
+   "lighthouse keeper life",
+   "northern lighthouse board",
+   "hesperus 1900",
+   "archtor steamship",
+   "phantom of the seven hunters",
+   "Hollowmere Tales",
+   "3D animation"
+  ],
+  "thumb_text": "3 MEN VANISHED",
+  "thumb_beat": 2,
+  "localizations": {
+   "es": {
+    "title": "Tu trabajo: mantener la luz encendida, a 20 millas de tierra (1900) 🔦",
+    "description": "¿Habrías aceptado el trabajo? Cuéntamelo en los comentarios.\n\nEn diciembre de 1900, tres fareros desaparecieron de las islas Flannan, a 20 millas de Escocia. Así era de verdad el trabajo, y esto es lo que encontró Joseph Moore al llegar solo."
+   },
+   "pt": {
+    "title": "Seu trabalho: manter a luz acesa, a 20 milhas da costa (1900) 🔦",
+    "description": "Você aceitaria o emprego? Conte nos comentários.\n\nEm dezembro de 1900, três faroleiros desapareceram das ilhas Flannan, a 20 milhas da Escócia. Veja como era o trabalho de verdade e o que Joseph Moore encontrou ao chegar sozinho."
+   },
+   "ar": {
+    "title": "وظيفتك: أبقِ الضوء مشتعلًا على بعد 20 ميلًا من اليابسة (1900) 🔦",
+    "description": "هل كنت ستقبل هذه الوظيفة؟ أخبرني في التعليقات.\n\nفي ديسمبر 1900 اختفى ثلاثة حراس منارة من جزر فلانان على بعد 20 ميلًا من اسكتلندا. هذه حقيقة العمل هناك، وما وجده جوزيف مور حين وصل وحده."
+   },
+   "fr": {
+    "title": "Ton job : garder la lumière allumée, à 20 miles de la terre (1900) 🔦",
+    "description": "Aurais-tu accepté ce travail ? Dis-le-moi en commentaire.\n\nEn décembre 1900, trois gardiens de phare ont disparu des îles Flannan, à 20 miles de l'Écosse. Voici la vraie vie là-bas, et ce que Joseph Moore a trouvé en arrivant seul."
+   },
+   "ja": {
+    "title": "あなたの仕事:陸から20マイル、灯りを絶やすな(1900年) 🔦",
+    "description": "この仕事を引き受けましたか?コメントで教えてください。\n\n1900年12月、スコットランドの沖合20マイルにあるフラナン諸島で、灯台守3人が姿を消しました。本当の灯台守の暮らしと、ジョセフ・ムーアがたった一人で見つけたものを紹介します。"
+   },
+   "ko": {
+    "title": "당신의 일: 육지에서 20마일, 불을 꺼뜨리지 마라 (1900) 🔦",
+    "description": "이 일을 맡으셨을까요? 댓글로 알려주세요.\n\n1900년 12월, 스코틀랜드 앞바다 20마일의 플래넌 제도에서 등대지기 세 명이 사라졌습니다. 실제 등대지기의 삶과 조지프 무어가 혼자 발견한 것을 소개합니다."
+   },
+   "de": {
+    "title": "Dein Job: Das Licht am Brennen halten, 20 Meilen vom Land (1900) 🔦",
+    "description": "Hättest du den Job angenommen? Sag es mir in den Kommentaren.\n\nIm Dezember 1900 verschwanden drei Leuchtturmwärter von den Flannan-Inseln, 20 Meilen vor Schottland. So sah die Arbeit wirklich aus, und das fand Joseph Moore, als er allein ankam."
+   }
+  }
+ },
+ "shorts": [
+  {
+   "beat": 0,
+   "dur": 24,
+   "top": "THE LIGHT WENT DARK",
+   "title": "A Ship Saw This Lighthouse Go Dark 🔦 #shorts",
+   "description": "December 15, 1900: a ship from Philadelphia sailed past the Flannan Isles and saw no light. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "lighthouse",
+    "flannan isles",
+    "mystery",
+    "history"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Un barco vio apagarse este faro 🔦 #shorts",
+     "description": "15 de diciembre de 1900: un barco de Filadelfia no vio luz en las islas Flannan. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Um navio viu este farol apagado 🔦 #shorts",
+     "description": "15 de dezembro de 1900: um navio da Filadélfia não viu luz nas ilhas Flannan. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "سفينة رأت هذه المنارة مظلمة 🔦 #shorts",
+     "description": "15 ديسمبر 1900: سفينة من فيلادلفيا لم تر أي ضوء عند جزر فلانان. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Un navire a vu ce phare s'éteindre 🔦 #shorts",
+     "description": "15 décembre 1900 : un navire parti de Philadelphie n'a vu aucune lumière aux îles Flannan. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "船はこの灯台が消えているのを見た 🔦 #shorts",
+     "description": "1900年12月15日、フィラデルフィアからの船はフラナン諸島で灯りを見ませんでした。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "배 한 척이 이 등대가 꺼진 것을 봤다 🔦 #shorts",
+     "description": "1900년 12월 15일, 필라델피아발 배는 플래넌 제도에서 불빛을 보지 못했습니다. 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Ein Schiff sah diesen Leuchtturm erlöschen 🔦 #shorts",
+     "description": "15. Dezember 1900: Ein Schiff aus Philadelphia sah auf den Flannan-Inseln kein Licht. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  },
+  {
+   "beat": 57,
+   "dur": 26,
+   "top": "THE CLOCK HAD STOPPED",
+   "title": "Clock Stopped. Beds Empty. 3 Men Gone 🕰️ #shorts",
+   "description": "Joseph Moore walked into the empty lighthouse alone. Here is what he found. Full story: {LONG_URL}",
+   "tags": [
+    "shorts",
+    "lighthouse",
+    "vanished",
+    "true story",
+    "scotland"
+   ],
+   "localizations": {
+    "es": {
+     "title": "Reloj parado. Camas vacías. 3 hombres menos 🕰️ #shorts",
+     "description": "Joseph Moore entró solo en el faro vacío. Esto fue lo que encontró. Historia completa: {LONG_URL}"
+    },
+    "pt": {
+     "title": "Relógio parado. Camas vazias. 3 homens sumidos 🕰️ #shorts",
+     "description": "Joseph Moore entrou sozinho no farol vazio. Veja o que ele achou. História completa: {LONG_URL}"
+    },
+    "ar": {
+     "title": "ساعة متوقفة وأسرّة فارغة وثلاثة رجال اختفوا 🕰️ #shorts",
+     "description": "دخل جوزيف مور المنارة الفارغة وحده. هذا ما وجده. القصة كاملة: {LONG_URL}"
+    },
+    "fr": {
+     "title": "Horloge arrêtée. Lits vides. 3 hommes disparus 🕰️ #shorts",
+     "description": "Joseph Moore est entré seul dans le phare vide. Voici ce qu'il a trouvé. Histoire complète : {LONG_URL}"
+    },
+    "ja": {
+     "title": "止まった時計、空のベッド、消えた3人 🕰️ #shorts",
+     "description": "ジョセフ・ムーアは無人の灯台にひとりで入りました。そこで見たものとは。全編はこちら:{LONG_URL}"
+    },
+    "ko": {
+     "title": "멈춘 시계, 빈 침대, 사라진 세 사람 🕰️ #shorts",
+     "description": "조지프 무어는 텅 빈 등대에 혼자 들어갔습니다. 그가 본 것은? 전체 이야기: {LONG_URL}"
+    },
+    "de": {
+     "title": "Uhr stehengeblieben. Betten leer. 3 Männer weg 🕰️ #shorts",
+     "description": "Joseph Moore betrat den leeren Leuchtturm allein. Das fand er. Die ganze Geschichte: {LONG_URL}"
+    }
+   }
+  }
+ ],
+ "variation": {
+  "music": "slow music-box celesta over a low brass drone, distant foghorn and wave rumble, minor key, rising swell at the west landing (not harmonica/banjo, flute/lute, snare/fife, accordion, fiddle or cello)",
+  "palette": "midnight navy with a warm yellow lamp beam and salt-grey fog",
+  "opening_shot": "stopped clock close-up (prop:clock) with a drifting lamp glow",
+  "camera_set": "close-ups on faces, prop cuts on lamp, clock, box and coat, overhead for the island and the sea, no wide",
+  "transitions": "hard cuts, slow push-in on the stopped clock, a long hold on the lamp at the end",
+  "caption_style": "pale yellow block caps with a thin navy underline, chapter number first"
+ }
+}
